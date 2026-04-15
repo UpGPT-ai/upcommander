@@ -7,7 +7,7 @@
  *   - quality_regression: rolling quality score has dropped significantly
  *   - cost_spike: cost per task has increased >50% from baseline
  *
- * Alerts are stored in ~/.claude-commander/alerts/
+ * Alerts are stored in ~/.upcommander/alerts/
  */
 
 import {
@@ -61,7 +61,7 @@ interface WorkerPerformance {
 // Paths
 // ---------------------------------------------------------------------------
 
-const BASE_DIR = join(homedir(), '.claude-commander');
+const BASE_DIR = join(homedir(), '.upcommander');
 const ALERTS_DIR = join(BASE_DIR, 'alerts');
 const METRICS_DIR = join(BASE_DIR, 'metrics');
 

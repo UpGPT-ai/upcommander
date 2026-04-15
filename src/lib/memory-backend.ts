@@ -2,7 +2,7 @@
  * Abstract memory backend — provides a unified interface for fact/learning/session
  * storage, allowing future migration from local filesystem to cloud (Supabase).
  *
- * Local backend: delegates to filesystem operations within ~/.claude-commander/memory/
+ * Local backend: delegates to filesystem operations within ~/.upcommander/memory/
  * Cloud backend: placeholder — configure supabase_url + supabase_key in config.json
  */
 
@@ -73,7 +73,7 @@ export interface MemoryBackend {
 // Local backend — filesystem implementation
 // ---------------------------------------------------------------------------
 
-const MEMORY_BASE = join(homedir(), '.claude-commander', 'memory');
+const MEMORY_BASE = join(homedir(), '.upcommander', 'memory');
 
 function ensureMemoryDir(subdir: string): string {
   const dir = join(MEMORY_BASE, subdir);
@@ -174,7 +174,7 @@ export class LocalMemoryBackend implements MemoryBackend {
 // ---------------------------------------------------------------------------
 
 /**
- * Cloud backend configuration (read from ~/.claude-commander/config.json).
+ * Cloud backend configuration (read from ~/.upcommander/config.json).
  * Add these fields to the config when ready to enable cloud storage:
  *
  *   {
@@ -235,7 +235,7 @@ export class CloudMemoryBackend implements MemoryBackend {
 // ---------------------------------------------------------------------------
 
 /**
- * Create the appropriate memory backend based on ~/.claude-commander/config.json.
+ * Create the appropriate memory backend based on ~/.upcommander/config.json.
  * Defaults to 'local' if memory_backend is not set or config cannot be read.
  */
 export function createMemoryBackend(): MemoryBackend {

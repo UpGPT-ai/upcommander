@@ -5,7 +5,7 @@
  *  - Current window status / active pane PID
  *  - Prompt input at the bottom
  *  - Dark theme matching the PWA
- *  - Send button dispatches `claude-commander.sendPrompt` back into the extension
+ *  - Send button dispatches `upcommander.sendPrompt` back into the extension
  */
 
 import * as vscode from 'vscode';
@@ -33,7 +33,7 @@ export class SessionDetailPanel {
     const key = `${sessionName}:${windowName}`;
 
     this.panel = vscode.window.createWebviewPanel(
-      'claude-commander.sessionDetail',
+      'upcommander.sessionDetail',
       `Commander: ${key}`,
       vscode.ViewColumn.Beside,
       {
@@ -240,7 +240,7 @@ export class SessionDetailPanel {
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline';" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claude Commander — ${key}</title>
+  <title>UpCommander by UpGPT — ${key}</title>
   <style>
     :root {
       --bg: #0d1117;

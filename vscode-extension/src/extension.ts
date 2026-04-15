@@ -1,5 +1,5 @@
 /**
- * Claude Commander VS Code Extension — Main Entry Point
+ * UpCommander by UpGPT VS Code Extension — Main Entry Point
  *
  * Activates on startup, reads configuration, connects to the bridge server,
  * and registers all commands, tree views, and the status bar item.
@@ -23,7 +23,7 @@ let statusBarItem: vscode.StatusBarItem | null = null;
 let pollTimer: ReturnType<typeof setInterval> | null = null;
 
 // Context key for menu visibility
-const CONNECTED_CONTEXT = 'claude-commander.connected';
+const CONNECTED_CONTEXT = 'upcommander.connected';
 
 // ---------------------------------------------------------------------------
 // Activation
@@ -33,18 +33,18 @@ export function activate(context: vscode.ExtensionContext): void {
   // -------------------------------------------------------------------------
   // Read configuration
   // -------------------------------------------------------------------------
-  const config = vscode.workspace.getConfiguration('claude-commander');
+  const config = vscode.workspace.getConfiguration('upcommander');
   const bridgeUrl: string = config.get('bridgeUrl') ?? 'http://127.0.0.1:7700';
   let token: string = config.get('token') ?? '';
   const autoConnect: boolean = config.get('autoConnect') ?? true;
 
-  // Auto-read token from ~/.claude-commander/auth-token if not set in config
+  // Auto-read token from ~/.upcommander/auth-token if not set in config
   if (!token) {
     try {
       const os = require('os');
       const fs = require('fs');
       const path = require('path');
-      const tokenPath = path.join(os.homedir(), '.claude-commander', 'auth-token');
+      const tokenPath = path.join(os.homedir(), '.upcommander', 'auth-token');
       if (fs.existsSync(tokenPath)) {
         token = fs.readFileSync(tokenPath, 'utf-8').trim();
       }
@@ -65,7 +65,7 @@ export function activate(context: vscode.ExtensionContext): void {
   approvalProvider = new ApprovalTreeProvider(client);
 
   const sessionTreeView = vscode.window.createTreeView(
-    'claude-commander-sessions',
+    'upcommander-sessions',
     {
       treeDataProvider: sessionProvider,
       showCollapseAll: true,
@@ -73,7 +73,7 @@ export function activate(context: vscode.ExtensionContext): void {
   );
 
   const approvalTreeView = vscode.window.createTreeView(
-    'claude-commander-approvals',
+    'upcommander-approvals',
     {
       treeDataProvider: approvalProvider,
       showCollapseAll: false,
@@ -89,9 +89,9 @@ export function activate(context: vscode.ExtensionContext): void {
     vscode.StatusBarAlignment.Left,
     100
   );
-  statusBarItem.command = 'claude-commander.refresh';
-  statusBarItem.text = '$(robot) CC: disconnected';
-  statusBarItem.tooltip = 'Claude Commander — click to refresh';
+  statusBarItem.command = 'upcommander.refresh';
+  statusBarItem.text = '$(arrow-up) UC: disconnected';
+  statusBarItem.tooltip = 'UpCommander by UpGPT — click to refresh';
   statusBarItem.show();
   context.subscriptions.push(statusBarItem);
 
@@ -126,12 +126,12 @@ export function activate(context: vscode.ExtensionContext): void {
     await approvalProvider?.fetchAndRefresh();
     _updateStatusBarApprovals(approvalProvider?.getCount() ?? 0);
     void vscode.window.showWarningMessage(
-      'Claude Commander: Agent waiting for approval',
+      'UpCommander by UpGPT: Agent waiting for approval',
       'View Approvals'
     ).then((choice: string | undefined) => {
       if (choice === 'View Approvals') {
         void vscode.commands.executeCommand(
-          'claude-commander-approvals.focus'
+          'upcommander-approvals.focus'
         );
       }
     });
@@ -160,16 +160,16 @@ export function activate(context: vscode.ExtensionContext): void {
 
   // --- Connect ---
   context.subscriptions.push(
-    vscode.commands.registerCommand('claude-commander.connect', async () => {
-      const cfg = vscode.workspace.getConfiguration('claude-commander');
+    vscode.commands.registerCommand('upcommander.connect', async () => {
+      const cfg = vscode.workspace.getConfiguration('upcommander');
       const url: string = cfg.get('bridgeUrl') ?? 'http://127.0.0.1:7700';
       const tok: string = cfg.get('token') ?? '';
 
       if (!tok) {
         const entered = await vscode.window.showInputBox({
-          title: 'Claude Commander: Enter Bearer Token',
+          title: 'UpCommander by UpGPT: Enter Bearer Token',
           prompt:
-            'Paste the bearer token from your bridge server startup log or ~/.claude-commander/token',
+            'Paste the bearer token from your bridge server startup log or ~/.upcommander/token',
           ignoreFocusOut: true,
           password: true,
         });
@@ -188,14 +188,14 @@ export function activate(context: vscode.ExtensionContext): void {
 
   // --- Disconnect ---
   context.subscriptions.push(
-    vscode.commands.registerCommand('claude-commander.disconnect', () => {
+    vscode.commands.registerCommand('upcommander.disconnect', () => {
       client?.disconnect();
     })
   );
 
   // --- Refresh ---
   context.subscriptions.push(
-    vscode.commands.registerCommand('claude-commander.refresh', async () => {
+    vscode.commands.registerCommand('upcommander.refresh', async () => {
       await _fetchAll();
     })
   );
@@ -203,7 +203,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Send Prompt ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.sendPrompt',
+      'upcommander.sendPrompt',
       async (item?: SessionTreeItem) => {
         if (!client) return;
 
@@ -272,7 +272,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Approve ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.approve',
+      'upcommander.approve',
       async (item?: ApprovalTreeItem) => {
         if (!client) return;
 
@@ -325,7 +325,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Deny ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.deny',
+      'upcommander.deny',
       async (item?: ApprovalTreeItem) => {
         if (!client) return;
 
@@ -376,7 +376,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Broadcast to Session ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.broadcast',
+      'upcommander.broadcast',
       async (item?: SessionTreeItem) => {
         if (!client) return;
 
@@ -422,7 +422,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Open File (from tree item click) ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.openFile',
+      'upcommander.openFile',
       async (filePath: string) => {
         if (!filePath) return;
         try {
@@ -443,7 +443,7 @@ export function activate(context: vscode.ExtensionContext): void {
   // --- Broadcast to All ---
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'claude-commander.broadcastAll',
+      'upcommander.broadcastAll',
       async () => {
         if (!client) return;
 
@@ -485,8 +485,8 @@ export function activate(context: vscode.ExtensionContext): void {
   // -------------------------------------------------------------------------
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration((e: vscode.ConfigurationChangeEvent) => {
-      if (e.affectsConfiguration('claude-commander')) {
-        const newCfg = vscode.workspace.getConfiguration('claude-commander');
+      if (e.affectsConfiguration('upcommander')) {
+        const newCfg = vscode.workspace.getConfiguration('upcommander');
         const newUrl: string =
           newCfg.get('bridgeUrl') ?? 'http://127.0.0.1:7700';
         const newToken: string = newCfg.get('token') ?? '';
@@ -594,13 +594,13 @@ async function _fetchAll(): Promise<void> {
 function _updateStatusBar(connected: boolean): void {
   if (!statusBarItem) return;
   if (!connected) {
-    statusBarItem.text = '$(robot) CC: disconnected';
-    statusBarItem.tooltip = 'Claude Commander — not connected. Click to refresh.';
+    statusBarItem.text = '$(arrow-up) UC: disconnected';
+    statusBarItem.tooltip = 'UpCommander by UpGPT — not connected. Click to refresh.';
     statusBarItem.backgroundColor = new vscode.ThemeColor(
       'statusBarItem.warningBackground'
     );
   } else {
-    statusBarItem.text = '$(robot) CC: connected';
+    statusBarItem.text = '$(arrow-up) UC: connected';
     statusBarItem.backgroundColor = undefined;
   }
 }
@@ -641,7 +641,7 @@ function _recomputeStatusBar(): void {
     _todayPrompts > 0 ? ` · ${_todayPrompts} prompts` : '';
   const costSuffix =
     _todayCost > 0 ? ` · $${_todayCost.toFixed(2)}` : '';
-  statusBarItem.text = `$(robot) CC: ${_sessions}s/${_windows}w${approvalSuffix}${usageSuffix}${costSuffix}`;
+  statusBarItem.text = `$(arrow-up) UC: ${_sessions}s/${_windows}w${approvalSuffix}${usageSuffix}${costSuffix}`;
   statusBarItem.tooltip = [
     'Commander',
     `Sessions: ${_sessions}  |  Windows: ${_windows}`,

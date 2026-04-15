@@ -1,5 +1,5 @@
 /**
- * Claude Commander — 5-Stage Verification Pipeline
+ * UpCommander — 5-Stage Verification Pipeline
  *
  * Stage 1: Self-check — agent re-reads own findings, confirms evidence supports conclusion
  * Stage 2: Peer review — second agent reviews, flags disagreements

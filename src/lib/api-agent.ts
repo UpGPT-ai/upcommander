@@ -1,5 +1,5 @@
 /**
- * Claude Commander — API-Based Agent Execution
+ * UpCommander — API-Based Agent Execution
  *
  * Executes agent tasks via provider APIs (Anthropic, OpenAI, Google)
  * instead of tmux sessions. Routes to the correct provider based on
@@ -95,11 +95,11 @@ interface ApiKeys {
 }
 
 /**
- * Read API keys from ~/.claude-commander/config.json.
+ * Read API keys from ~/.upcommander/config.json.
  * Falls back to environment variables if not found in config.
  */
 export function loadApiKeys(): Record<string, string> {
-  const configPath = join(homedir(), '.claude-commander', 'config.json');
+  const configPath = join(homedir(), '.upcommander', 'config.json');
   let configKeys: ApiKeys = {};
 
   if (existsSync(configPath)) {

@@ -1,7 +1,7 @@
-# Claude Commander: High-Value Use Cases
+# UpCommander: High-Value Use Cases
 ## General-Purpose Parallel Data Analysis and Intelligence Platform
 
-This document describes the highest-value use cases for Claude Commander as it expands beyond programming assistance into a general-purpose parallel intelligence platform. Each use case exploits the same core architectural advantage: simultaneous multi-agent analysis with cross-document synthesis — the thing no single model and no human team can do at comparable speed and cost.
+This document describes the highest-value use cases for UpCommander as it expands beyond programming assistance into a general-purpose parallel intelligence platform. Each use case exploits the same core architectural advantage: simultaneous multi-agent analysis with cross-document synthesis — the thing no single model and no human team can do at comparable speed and cost.
 
 ---
 
@@ -78,7 +78,7 @@ Target: 10–15 engagements per year at an average of $150K = $1.5–2.25M ARR
 
 ### Human vs. AI Comparison
 
-| Metric | Human Team | Claude Commander |
+| Metric | Human Team | UpCommander |
 |---|---|---|
 | Team size | 25–120 specialists | 1–2 domain experts + system |
 | Timeline | 16–36 months | 4–16 weeks |
@@ -174,7 +174,7 @@ Target: 20–30 matters per year at an average of $75K = $1.5–2.25M ARR
 
 ### Human vs. AI Comparison
 
-| Metric | Human Team | Claude Commander |
+| Metric | Human Team | UpCommander |
 |---|---|---|
 | Team size | 20–50 contract reviewers + 3–5 attorneys | 1–2 attorneys + system |
 | Timeline | 4–12 weeks | 3–7 days |
@@ -247,7 +247,7 @@ Target: 15–25 deals per year at an average of $100K = $1.5–2.5M ARR
 
 ### Human vs. AI Comparison
 
-| Metric | Human Team | Claude Commander |
+| Metric | Human Team | UpCommander |
 |---|---|---|
 | Team size | 10–20 specialists | 2–3 domain experts + system |
 | Timeline | 6–8 weeks | 4–7 days |
@@ -373,7 +373,7 @@ Target: 30–50 clients at an average of $5K/month = $150–250K per month = $1.
 
 ### The Parallel Advantage
 
-SEM Sentinel currently runs agents sequentially on one account at a time. Claude Commander enables three step-changes: (1) all backward analysis agents running simultaneously on the same account — waste detection, cannibalization, trends, PMax audit, and opportunity mapping completing in parallel rather than in sequence; (2) multiple client accounts analyzed simultaneously for agencies; (3) cross-account intelligence for multi-brand companies that is not possible with sequential analysis.
+SEM Sentinel currently runs agents sequentially on one account at a time. UpCommander enables three step-changes: (1) all backward analysis agents running simultaneously on the same account — waste detection, cannibalization, trends, PMax audit, and opportunity mapping completing in parallel rather than in sequence; (2) multiple client accounts analyzed simultaneously for agencies; (3) cross-account intelligence for multi-brand companies that is not possible with sequential analysis.
 
 ### Agent Architecture
 
@@ -419,10 +419,10 @@ CTO Agent (Opus) — cross-account strategy
 
 ### Integration Specifics
 
-- Claude Commander template `sem-audit` creates workers that map directly to SEM Sentinel's Layer 1 agent definitions
+- UpCommander template `sem-audit` creates workers that map directly to SEM Sentinel's Layer 1 agent definitions
 - Document ingestion layer handles CSV and API data instead of PDFs — same orchestration model, different input format
 - Output schemas match SEM Sentinel's finding schema (`finding_id`, `severity`, `evidence_chain`, `dollar_impact`)
-- SEM Sentinel's dashboard consumes Claude Commander's structured output via API — no UI changes required
+- SEM Sentinel's dashboard consumes UpCommander's structured output via API — no UI changes required
 - Cross-reference engine detects keyword cannibalization across campaigns and across accounts in a single pass
 
 ### Human vs. AI Comparison (Single Account, $100K/Month Spend)
@@ -487,7 +487,7 @@ CTO Agent (Opus) — evidence synthesis strategy
 
 ### Human vs. AI Comparison
 
-| Metric | Human Team | Claude Commander |
+| Metric | Human Team | UpCommander |
 |--------|-----------|-----------------|
 | Team size | 8–15 researchers + statistician | 1–2 domain experts + system |
 | Timeline | 6–12 months | 2–4 weeks |
@@ -555,7 +555,7 @@ CTO Agent (Opus) — portfolio strategy, HARD risk limits (position sizing, max 
 
 ### Human vs. AI Comparison
 
-| Metric | Human Trader/Analyst | Claude Commander |
+| Metric | Human Trader/Analyst | UpCommander |
 |--------|---------------------|-----------------|
 | Scenarios modeled pre-trade | 2–3 | 20+ simultaneously |
 | Signal sources synthesized | 3–5 sequentially | 15+ in parallel |
@@ -567,7 +567,7 @@ CTO Agent (Opus) — portfolio strategy, HARD risk limits (position sizing, max 
 
 The risk management agent sits at the CTO level and enforces position limits and drawdown rules as HARD CONSTRAINTS that worker agents cannot override. This is architecturally different from every other use case where the CTO synthesizes recommendations. In trading, the CTO is a circuit breaker. If max drawdown is hit, all new positions are blocked regardless of how compelling the workers' analysis looks.
 
-### Required Infrastructure Beyond Claude Commander
+### Required Infrastructure Beyond UpCommander
 
 - Brokerage API integration layer (connector for Interactive Brokers, Alpaca, or Tastytrade)
 - Historical backtesting infrastructure with replay capability

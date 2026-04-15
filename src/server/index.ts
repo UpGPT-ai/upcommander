@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Bridge Server
+ * UpCommander — Bridge Server
  *
  * Express + WebSocket server that sits on the host machine, manages tmux
  * sessions, and pushes status updates to connected mobile clients (PWA).
@@ -373,7 +373,7 @@ app.get('/pane/:session/:window', (req, res) => {
 /** GET /logs/:session/:window — return full log file contents as plain text (streamed) */
 app.get('/logs/:session/:window', (req, res) => {
   const { session, window: win } = req.params;
-  const logFile = join(homedir(), '.claude-commander', 'logs', session, `${win}.log`);
+  const logFile = join(homedir(), '.upcommander', 'logs', session, `${win}.log`);
   if (!existsSync(logFile)) {
     res.setHeader('Content-Type', 'text/plain');
     res.status(200).send('');
@@ -392,7 +392,7 @@ app.get('/logs/:session/:window/tail', (req, res) => {
   const { session, window: win } = req.params;
   const linesParam = typeof req.query['lines'] === 'string' ? parseInt(req.query['lines'], 10) : 100;
   const numLines = isNaN(linesParam) || linesParam < 1 ? 100 : linesParam;
-  const logFile = join(homedir(), '.claude-commander', 'logs', session, `${win}.log`);
+  const logFile = join(homedir(), '.upcommander', 'logs', session, `${win}.log`);
   if (!existsSync(logFile)) {
     res.setHeader('Content-Type', 'text/plain');
     res.status(200).send('');
@@ -1173,12 +1173,12 @@ const logDirsCreated = new Set<string>();
 
 /** Returns the log file path for a given session:window */
 function getLogFilePath(session: string, window: string): string {
-  return join(homedir(), '.claude-commander', 'logs', session, `${window}.log`);
+  return join(homedir(), '.upcommander', 'logs', session, `${window}.log`);
 }
 
 /** Ensures the log directory exists (creates on first call per session) */
 function ensureLogDir(session: string): void {
-  const dirPath = join(homedir(), '.claude-commander', 'logs', session);
+  const dirPath = join(homedir(), '.upcommander', 'logs', session);
   if (!logDirsCreated.has(dirPath)) {
     mkdirSync(dirPath, { recursive: true });
     logDirsCreated.add(dirPath);
@@ -1317,7 +1317,7 @@ function detectFileActivity(session: string, window: string, output: string): vo
     if (!rawPath.startsWith('/') && !rawPath.startsWith('~')) {
       // Try resolving relative to known project directories
       const candidates = [
-        join(homedir(), '.gemini/antigravity/scratch/Claude Commander', rawPath),
+        join(homedir(), '.gemini/antigravity/scratch/UpCommander', rawPath),
         join(process.cwd(), rawPath),
       ];
       fullPath = candidates.find(c => existsSync(c)) ?? candidates[0];
@@ -1478,7 +1478,7 @@ const fileScanInterval = setInterval(() => {
 // ---------------------------------------------------------------------------
 
 const token = loadOrGenerateToken();
-console.log('[bridge] Claude Commander starting…');
+console.log('[bridge] UpCommander starting…');
 console.log(`[bridge] Auth token: ${token}`);
 console.log(`[bridge] Binding to http://${HOST}:${PORT}`);
 

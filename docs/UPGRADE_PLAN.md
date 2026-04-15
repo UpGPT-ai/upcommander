@@ -1,4 +1,4 @@
-# Claude Commander — Data Analysis Platform Upgrade Plan
+# UpCommander — Data Analysis Platform Upgrade Plan
 
 **Current:** Programming-focused multi-agent orchestrator (~9,945 lines)
 **Target:** General-purpose parallel data analysis and intelligence platform (~15,200 lines)
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Claude Commander currently orchestrates Claude Code sessions via tmux, with file-based coordination (STATUS.json, TASK.md, SYNTHESIS.md), templates, memory, performance tracking, A/B testing, drift detection, and a mobile PWA. This upgrade plan extends that foundation into a domain-agnostic parallel analysis engine capable of ingesting documents, extracting structured findings, cross-referencing entities across agents, and generating verified, professional-grade reports.
+UpCommander currently orchestrates Claude Code sessions via tmux, with file-based coordination (STATUS.json, TASK.md, SYNTHESIS.md), templates, memory, performance tracking, A/B testing, drift detection, and a mobile PWA. This upgrade plan extends that foundation into a domain-agnostic parallel analysis engine capable of ingesting documents, extracting structured findings, cross-referencing entities across agents, and generating verified, professional-grade reports.
 
 SEM Sentinel — a separate SEM auditing AI agent platform with 34 agent/library files running on the VISION/UpGPT platform — is the first integration target. SEM Sentinel currently runs agents sequentially. This upgrade enables parallel execution, cross-account intelligence, verified findings, and live data connectivity.
 
@@ -188,7 +188,7 @@ Workers matching SEM Sentinel Layer 1 agents:
 - Provider-specific API clients with unified response interface
 - Automatic fallback: if primary model fails or rate-limits, fall back to the model specified in `fallback` field
 - Token counting normalized across providers for consistent cost tracking
-- Provider API keys managed in `~/.claude-commander/config.json` under `apiKeys` section:
+- Provider API keys managed in `~/.upcommander/config.json` under `apiKeys` section:
   ```json
   {
     "apiKeys": {
@@ -232,7 +232,7 @@ Workers matching SEM Sentinel Layer 1 agents:
 - Vary: chunk size, overlap tokens, worker count, verification level, synthesis prompt
 - Measure per configuration: finding count, finding quality (human-scored), cross-reference recall, cross-reference precision, cost, time
 - Produce optimization surface: what configuration maximizes quality per dollar for each template
-- Store results in `~/.claude-commander/test-results/`
+- Store results in `~/.upcommander/test-results/`
 
 ### 2.5B. Benchmark Suites (`src/lib/testing/benchmark-suite.ts`)
 
@@ -240,7 +240,7 @@ Workers matching SEM Sentinel Layer 1 agents:
 - SEM benchmark: known-waste CSV with pre-identified waste, cannibalization, and opportunities
 - Legal benchmark: annotated discovery set with known privilege, hot documents, timeline events
 - Pharma benchmark: annotated CMC section with known gaps and cross-reference issues
-- Benchmarks stored in `~/.claude-commander/benchmarks/`
+- Benchmarks stored in `~/.upcommander/benchmarks/`
 
 ### 2.5C. Accuracy Scoring (`src/lib/testing/accuracy-scorer.ts`)
 
@@ -475,7 +475,7 @@ Phase 0 ──────────► Phase 1 ──────────
 ### What Changes for SEM Sentinel
 
 **Phase 0 + 1 (Immediate):**
-- SEM Sentinel's backward agents are orchestrated by Claude Commander in parallel
+- SEM Sentinel's backward agents are orchestrated by UpCommander in parallel
 - Agency clients receive 10-account simultaneous analysis
 - Cross-account cannibalization detection becomes possible
 - Audit time drops from 15-30 minutes to 3-5 minutes per account
@@ -501,10 +501,10 @@ SEM Sentinel moves from a partially-built sequential tool to a fully parallel, v
 
 | Stage | What It Delivers |
 |---|---|
-| Phase 0+1 | Claude Commander becomes the execution engine for SEM Sentinel's agents |
+| Phase 0+1 | UpCommander becomes the execution engine for SEM Sentinel's agents |
 | Phase 2+3 | API execution and verification make it production-grade |
 | Phase 4 | External connectors complete the data pipeline |
-| Ongoing | SEM Sentinel's own dashboard consumes Claude Commander's API for structured findings |
+| Ongoing | SEM Sentinel's own dashboard consumes UpCommander's API for structured findings |
 
 ---
 
@@ -595,4 +595,4 @@ Architecture decisions and cross-module integration reviews use Opus.
 ---
 
 *Plan written: 2026-03-22*
-*Based on Claude Commander v1 codebase at ~9,945 lines across 27 source files*
+*Based on UpCommander v1 codebase at ~9,945 lines across 27 source files*

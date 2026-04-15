@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Pipeline Testing Framework
+ * UpCommander — Pipeline Testing Framework
  *
  * Runs the same document set through multiple pipeline configurations
  * to identify optimal chunk size, overlap, worker count, and verification

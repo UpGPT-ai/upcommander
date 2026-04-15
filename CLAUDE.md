@@ -1,6 +1,6 @@
-# antigravity
+# UpCommander by UpGPT
 
-This project is managed by Claude Commander.
+This project is managed by UpCommander.
 
 ## Agents & Model Assignments
 - **orchestrator**: Project Lead — plans and coordinates development [`anthropic/claude-opus-4-6`]

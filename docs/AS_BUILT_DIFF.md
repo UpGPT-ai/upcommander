@@ -1,4 +1,4 @@
-# Claude Commander — As-Built vs. Planned Diff
+# UpCommander — As-Built vs. Planned Diff
 
 **Date:** 2026-03-23 (updated)
 **As-Built:** ~10,800 lines across 27 source files + 1 HTML PWA + VS Code extension
@@ -31,7 +31,7 @@
 | `src/lib/health.ts` | 131 | Built — 10s heartbeat, 3-strike pruning |
 | `src/lib/watcher.ts` | 130 | Built — chokidar STATUS.json watcher |
 | `src/lib/auth.ts` | 129 | Built — bearer token + rate limiting |
-| `src/lib/config.ts` | 122 | Built — ~/.claude-commander/config.json |
+| `src/lib/config.ts` | 122 | Built — ~/.upcommander/config.json |
 | `src/lib/session-recovery.ts` | 669 | Built — stall detection, auto-continue, prompt cache, rate limit recovery, swarm state persistence (2026-03-23) |
 | `src/lib/audit.ts` | 102 | Built — JSON line audit logging |
 | `public/index.html` | 1,363 | Built — mobile PWA |
@@ -50,7 +50,7 @@
 | 6 project templates | BUILT | dev, research, book, campaign, video, custom |
 | Multi-model worker assignment | BUILT | ModelConfig, MODEL_PRESETS, MODEL.json per worker |
 | Bearer token auth + rate limiting | BUILT | 32-byte random, 10-failure lockout |
-| Audit logging | BUILT | JSON lines to ~/.claude-commander/audit.log |
+| Audit logging | BUILT | JSON lines to ~/.upcommander/audit.log |
 | Mobile PWA | BUILT | Auth, session tree, voice input, approvals, metrics |
 | VS Code extension | BUILT | Sidebar, webview, status bar, 7 commands |
 | Progressive memory (3-level) | BUILT | Facts, learnings, failures with context assembly |
@@ -64,9 +64,9 @@
 | WebSocket real-time push | BUILT | status, health, coordination, approval events |
 | Session recovery (stall detection) | BUILT | 15s pane monitoring, auto-continue after 60s stall, prompt replay after 3 stalls |
 | Session recovery (rate limit) | BUILT | Parses rate limit refresh time, auto-restarts worker at refresh |
-| Swarm state persistence | BUILT | Writes to ~/.claude-commander/recovery/swarm-state.json every 30s, auto-resume on restart |
+| Swarm state persistence | BUILT | Writes to ~/.upcommander/recovery/swarm-state.json every 30s, auto-resume on restart |
 | Pane streaming | BUILT | Server captures tmux output every 1s, pushes via WebSocket with deduplication |
-| Session logging | BUILT | Append-only logs at ~/.claude-commander/logs/{session}/{window}.log, REST endpoints for retrieval |
+| Session logging | BUILT | Append-only logs at ~/.upcommander/logs/{session}/{window}.log, REST endpoints for retrieval |
 | Smart auto-scroll | BUILT | VS Code webview detects scroll position, stops auto-scroll when user scrolls up, "N new lines" indicator |
 | Commander global CLI | BUILT | ~/bin/commander, 21 slash commands, MCP servers (GitHub, Supabase, visual-gen) |
 | Training pipeline (pharma regulatory) | EXECUTED | 3 swarms, 29 workers, 507+ docs, ~70,000 pages processed in ~100 min |
@@ -158,7 +158,7 @@
 | `src/lib/claude-md-generator.ts` | Update | +30 | SKILL.md loading instructions in worker CLAUDE.md |
 | Move existing templates | Refactor | 0 | dev.ts, research.ts, book.ts, campaign.ts, video.ts, custom.ts |
 
-**Definition of done:** Can run `claude-commander init myproject /path --template sem-audit` and get 6 parallel SEM analysis workers with structured output. SEM Sentinel bridge can push findings.
+**Definition of done:** Can run `upcommander init myproject /path --template sem-audit` and get 6 parallel SEM analysis workers with structured output. SEM Sentinel bridge can push findings.
 
 ---
 

@@ -1,8 +1,8 @@
 /**
  * A/B testing for worker role definitions (CLAUDE.md variants).
  *
- * Tests are stored in ~/.claude-commander/ab-tests/{id}.json
- * Current CLAUDE.md for a worker lives at ~/.claude-commander/roles/{worker}.md
+ * Tests are stored in ~/.upcommander/ab-tests/{id}.json
+ * Current CLAUDE.md for a worker lives at ~/.upcommander/roles/{worker}.md
  */
 
 import {
@@ -48,7 +48,7 @@ export interface ABTest {
 // Paths
 // ---------------------------------------------------------------------------
 
-const BASE_DIR = join(homedir(), '.claude-commander');
+const BASE_DIR = join(homedir(), '.upcommander');
 const AB_TESTS_DIR = join(BASE_DIR, 'ab-tests');
 const ROLES_DIR = join(BASE_DIR, 'roles');
 
@@ -276,7 +276,7 @@ export function evaluateTest(
 
 /**
  * Conclude a test and promote the winning CLAUDE.md variant.
- * Saves the winner's claudeMd to ~/.claude-commander/roles/{worker}.md
+ * Saves the winner's claudeMd to ~/.upcommander/roles/{worker}.md
  */
 export function promoteWinner(testId: string): void {
   ensureDirs();

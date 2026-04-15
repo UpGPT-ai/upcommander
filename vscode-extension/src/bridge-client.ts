@@ -1,5 +1,5 @@
 /**
- * BridgeClient — HTTP + WebSocket client for the Claude Commander bridge server.
+ * BridgeClient — HTTP + WebSocket client for the UpCommander by UpGPT bridge server.
  *
  * Uses native `fetch` (available in Node 18+) for REST calls and the native
  * `WebSocket` global (available in VS Code 1.95+ which ships Node 20) for

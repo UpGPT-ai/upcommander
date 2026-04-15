@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Accuracy Scorer
+ * UpCommander — Accuracy Scorer
  *
  * Precision, recall, and F1 scoring for pipeline findings against a
  * gold-standard {@link BenchmarkSuite}. Also scores cross-reference

@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Memory Context Assembly (Progressive Disclosure)
+ * UpCommander — Memory Context Assembly (Progressive Disclosure)
  *
  * Assembles context payloads for agents at three disclosure levels:
  *   Level 0: Always injected — core facts + task (<500 tokens)

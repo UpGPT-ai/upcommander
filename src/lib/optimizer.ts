@@ -2,7 +2,7 @@
  * Optimization proposal engine — detects quality issues in worker performance
  * and proposes CLAUDE.md improvements for human review and approval.
  *
- * Proposals are stored in ~/.claude-commander/proposals/{pending,approved,rejected}/
+ * Proposals are stored in ~/.upcommander/proposals/{pending,approved,rejected}/
  */
 
 import {
@@ -59,7 +59,7 @@ export interface WorkerPerformance {
 // Paths
 // ---------------------------------------------------------------------------
 
-const BASE_DIR = join(homedir(), '.claude-commander');
+const BASE_DIR = join(homedir(), '.upcommander');
 const METRICS_DIR = join(BASE_DIR, 'metrics');
 const PROPOSALS_DIR = join(BASE_DIR, 'proposals');
 const PENDING_DIR = join(PROPOSALS_DIR, 'pending');
@@ -100,7 +100,7 @@ function readJsonDir<T>(dir: string): T[] {
   return results;
 }
 
-/** Read worker performance from ~/.claude-commander/metrics/worker-performance.json */
+/** Read worker performance from ~/.upcommander/metrics/worker-performance.json */
 function readWorkerPerformance(): WorkerPerformance[] {
   const file = join(METRICS_DIR, 'worker-performance.json');
   if (!existsSync(file)) return [];
@@ -153,7 +153,7 @@ export function analyzePerformance(workerName: string): OptimizationProposal | n
 
 /**
  * Generate a specific CLAUDE.md modification proposal based on metrics.
- * The proposal is saved to ~/.claude-commander/proposals/pending/ immediately.
+ * The proposal is saved to ~/.upcommander/proposals/pending/ immediately.
  */
 export function generateProposal(
   workerName: string,

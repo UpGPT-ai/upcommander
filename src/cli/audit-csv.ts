@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * Claude Commander — Local CSV SEM Audit Runner
+ * UpCommander — Local CSV SEM Audit Runner
  *
  * Runs a parallel SEM audit on a Google Ads search term CSV file.
  * Uses API-based execution when ANTHROPIC_API_KEY is available,
- * falls back to tmux-based execution via Claude Commander server.
+ * falls back to tmux-based execution via UpCommander server.
  *
  * Usage:
  *   npx tsx src/cli/audit-csv.ts /path/to/search-terms.csv [options]
@@ -118,7 +118,7 @@ function parseArgs(): CliArgs {
 
 function printUsage(): void {
   process.stdout.write(`
-Claude Commander — SEM Audit CSV Runner
+UpCommander — SEM Audit CSV Runner
 
 Usage:
   npx tsx src/cli/audit-csv.ts <csv-file> [options]
@@ -364,7 +364,7 @@ async function runTmuxMode(args: CliArgs): Promise<Finding[][]> {
   process.stdout.write(`
 === SEM Audit — Manual Execution Instructions ===
 
-No ANTHROPIC_API_KEY found. To run this audit via the Claude Commander server:
+No ANTHROPIC_API_KEY found. To run this audit via the UpCommander server:
 
 1. Ensure the server is running:
    http://127.0.0.1:7700

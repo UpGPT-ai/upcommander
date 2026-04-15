@@ -54,7 +54,7 @@ export interface RecoveryMonitorCallbacks {
 const STALL_THRESHOLD_MS = 60_000;        // 60 s of no change → stalled
 const STALL_CHECKS_BEFORE_CONTINUE = 2;   // 2 consecutive stall checks → auto-continue
 const STALL_CHECKS_BEFORE_ESCALATE = 3;   // 3 consecutive → escalate
-const RECOVERY_DIR = join(homedir(), '.claude-commander', 'recovery');
+const RECOVERY_DIR = join(homedir(), '.upcommander', 'recovery');
 
 // Patterns that indicate rate limiting
 const RATE_LIMIT_PATTERNS = [

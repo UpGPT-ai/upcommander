@@ -1,4 +1,4 @@
-# Claude Commander — Mobile Multi-Agent Orchestration Platform
+# UpCommander — Mobile Multi-Agent Orchestration Platform
 
 **Version:** 1.0
 **Date:** 2026-03-21
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Claude Commander is a mobile PWA that turns an iPhone into a command center for dozens of concurrent Claude Code sessions running on a host machine (local Mac or remote server). It replaces the current workflow of physically switching between Antigravity/VS Code windows with a hierarchical dashboard that shows every agent's status, accepts voice/text prompts, and routes them to the correct session via tmux.
+UpCommander is a mobile PWA that turns an iPhone into a command center for dozens of concurrent Claude Code sessions running on a host machine (local Mac or remote server). It replaces the current workflow of physically switching between Antigravity/VS Code windows with a hierarchical dashboard that shows every agent's status, accepts voice/text prompts, and routes them to the correct session via tmux.
 
 The system introduces a **file-based multi-agent coordination protocol** that allows Claude instances to orchestrate other Claude instances without sharing context windows — enabling massively parallel execution across multiple projects and domains simultaneously.
 
@@ -19,7 +19,7 @@ The system introduces a **file-based multi-agent coordination protocol** that al
 
 ### The Efficiency Thesis
 
-A single Claude session working sequentially through a complex task (build an app, write a book, run a research campaign) takes hours and degrades as its context window fills. Claude Commander inverts this:
+A single Claude session working sequentially through a complex task (build an app, write a book, run a research campaign) takes hours and degrades as its context window fills. UpCommander inverts this:
 
 - **Parallelism:** 30 agents working simultaneously on different facets of the same project, each with a clean context window
 - **Specialization:** Each agent carries only the context relevant to its domain — a research agent never sees code, a code agent never sees marketing copy
@@ -106,7 +106,7 @@ Greg runs 3+ Antigravity IDE sessions simultaneously, each with up to 6 Claude C
 ┌──────────────────────────────────────────────────────────┐
 │                       YOUR iPHONE                        │
 │                                                          │
-│  Claude Commander PWA                                    │
+│  UpCommander PWA                                    │
 │  ├── Hierarchical session tree                           │
 │  ├── Per-agent status badges                             │
 │  ├── Text + voice prompt input                           │
@@ -398,16 +398,16 @@ Orchestrators do NOT require human intervention to activate workers. When an orc
 
 **How orchestrators reach workers:**
 
-The orchestrator's CLAUDE.md grants it access to the `claude-commander` CLI as an allowed tool:
+The orchestrator's CLAUDE.md grants it access to the `upcommander` CLI as an allowed tool:
 
 ```markdown
 ## Orchestrator Tools
 
-You have access to the `claude-commander` CLI to direct workers:
+You have access to the `upcommander` CLI to direct workers:
 
-- `claude-commander send paula:backend "Check your TASK.md and begin work"` — activate a worker
-- `claude-commander send paula:frontend "Your dependency on backend is resolved. Begin work."` — unblock a worker
-- `claude-commander broadcast paula "Stop current work and run tests"` — broadcast to all workers
+- `upcommander send paula:backend "Check your TASK.md and begin work"` — activate a worker
+- `upcommander send paula:frontend "Your dependency on backend is resolved. Begin work."` — unblock a worker
+- `upcommander broadcast paula "Stop current work and run tests"` — broadcast to all workers
 
 Use these after writing TASK.md files. Never require the human to activate workers manually.
 Monitor STATUS.json files to know when to activate dependent workers.
@@ -542,8 +542,8 @@ watcher.on('change', (filepath) => {
 {
   "port": 7700,
   "host": "127.0.0.1",
-  "tokenFile": "~/.claude-commander/auth-token",
-  "logFile": "~/.claude-commander/audit.log",
+  "tokenFile": "~/.upcommander/auth-token",
+  "logFile": "~/.upcommander/audit.log",
   "coordGlob": "**/. claude-coord/**/STATUS.json",
   "projectRoots": [
     "~/projects/upgpt",
@@ -571,7 +571,7 @@ watcher.on('change', (filepath) => {
 
 ```
 ┌─────────────────────────────────────────────┐
-│  Claude Commander              [META] ●      │
+│  UpCommander              [META] ●      │
 ├─────────────────────────────────────────────┤
 │  ▼ PAULA              [ORCH] ●  12/30 done  │
 │    ▼ backend          [WORK] ●   3/6 agents │
@@ -670,7 +670,7 @@ This system can write files, run commands, and execute code on your laptop. The 
 
 | Layer | Implementation |
 |-------|----------------|
-| Bearer token | 32-byte random token generated on bridge startup, written to `~/.claude-commander/auth-token` |
+| Bearer token | 32-byte random token generated on bridge startup, written to `~/.upcommander/auth-token` |
 | Token validation | Every endpoint validates the `Authorization: Bearer <token>` header |
 | Rate limiting | 10 failed auth attempts → 5 minute lockout per IP |
 | Session expiry | Mobile auth expires after 30 minutes of inactivity |
@@ -683,7 +683,7 @@ This system can write files, run commands, and execute code on your laptop. The 
 **Mitigations:**
 - Input sanitization: strip shell metacharacters before passing to `send-keys`
 - Claude-only mode: pipe input to Claude Code's stdin rather than raw shell, constraining it to the Claude context
-- Audit log: every command sent through the bridge is logged to `~/.claude-commander/audit.log` with timestamp, source device, target session, and full prompt text
+- Audit log: every command sent through the bridge is logged to `~/.upcommander/audit.log` with timestamp, source device, target session, and full prompt text
 
 #### 4. Phone Compromise
 
@@ -706,7 +706,7 @@ Mac (Tailscale 100.x.x.z, bridge on 127.0.0.1:7700)
   ├── TLS (self-signed cert for HTTPS, required for mic/speech API)
   ├── Bearer token auth (32-byte random, per-session)
   ├── Rate limiting on all endpoints
-  ├── Command logging to ~/.claude-commander/audit.log
+  ├── Command logging to ~/.upcommander/audit.log
   ├── Input sanitization before send-keys
   └── Session timeout (30 min idle → re-auth required)
 ```
@@ -725,16 +725,16 @@ Mac (Tailscale 100.x.x.z, bridge on 127.0.0.1:7700)
 
 ```bash
 # 1. Start the bridge server
-claude-commander start
+upcommander start
 
 # 2. Create project sessions with named workers (any domain)
-claude-commander init paula ~/projects/upgpt/paula \
+upcommander init paula ~/projects/upgpt/paula \
   --workers orchestrator,backend,frontend,tests
 
-claude-commander init book ~/projects/ai-book \
+upcommander init book ~/projects/ai-book \
   --workers orchestrator,outline,chapter-1,chapter-2,chapter-3,edit,citations
 
-claude-commander init campaign ~/projects/upinbox-launch \
+upcommander init campaign ~/projects/upinbox-launch \
   --workers orchestrator,copy,social,paid-search,creative,analytics
 
 # Under the hood this runs (per project):
@@ -746,7 +746,7 @@ claude-commander init campaign ~/projects/upinbox-launch \
 # ... etc
 
 # 3. Initialize coordination directory
-claude-commander coord-init paula
+upcommander coord-init paula
 
 # Creates .claude-coord/ structure with CLAUDE.md references
 
@@ -765,7 +765,7 @@ claude-commander coord-init paula
    - Writes `workers/backend/TASK.md` with the JWT implementation spec
    - Writes `workers/tests/TASK.md` with what tests need to pass
    - Sets `workers/frontend/TASK.md` with a dependency on backend completion
-   - **Sends prompts to each worker** via `claude-commander send` to activate them
+   - **Sends prompts to each worker** via `upcommander send` to activate them
    - Monitors `STATUS.json` files for completion
    - When backend completes, activates frontend automatically
    - Synthesizes results into `SYNTHESIS.md`
@@ -813,13 +813,13 @@ From the airport, in one sitting:
 
 ```bash
 # Save all sessions (persist across reboot)
-claude-commander save
+upcommander save
 
 # Under the hood: tmux-resurrect saves session layout
 # Coordination files already persist on disk
 
 # Resume later
-claude-commander restore
+upcommander restore
 ```
 
 ---
@@ -840,7 +840,7 @@ claude-commander restore
 ### Component Mapping
 
 ```
-YOUR TOOL: "Claude Commander"
+YOUR TOOL: "UpCommander"
 
 ├── VS Code Extension (optional, TypeScript)
 │   ├── FROM: cafeTechne — extension.ts shell, status bar, QR webview
@@ -864,7 +864,7 @@ YOUR TOOL: "Claude Commander"
 ├── Coordination Protocol
 │   └── NEW: .claude-coord/ directory structure, JSON schemas, CLAUDE.md templates
 │
-├── CLI Tool (claude-commander)
+├── CLI Tool (upcommander)
 │   ├── NEW: init, start, stop, save, restore, coord-init commands
 │   └── FROM: claude-squad — tmux session management patterns
 │
@@ -891,7 +891,7 @@ YOUR TOOL: "Claude Commander"
 3. Bearer token auth + audit logging
 4. Minimal mobile page: session list + prompt input
 5. Tailscale setup (Mac + iPhone on same mesh)
-6. `claude-commander start` and `claude-commander init` CLI commands
+6. `upcommander start` and `upcommander init` CLI commands
 
 **Validation:** From your phone, send "create a file called hello.txt with today's date" to a Claude session. Verify the file appears on your laptop. This proves the full chain: phone → Tailscale → bridge → tmux → Claude → filesystem.
 
@@ -911,7 +911,7 @@ YOUR TOOL: "Claude Commander"
 5. Session detail view (terminal output stream)
 6. QR code pairing flow from bridge server
 7. Performance layer (gzip, ETag, 304s from thethrillgh fork)
-8. `claude-commander broadcast` CLI command
+8. `upcommander broadcast` CLI command
 
 **Validation:** Run 3 projects × 4 windows = 12 Claude sessions. Dashboard shows all of them. Send prompts to individual sessions. Broadcast "what are you working on?" to all. See responses stream in.
 
@@ -926,10 +926,10 @@ YOUR TOOL: "Claude Commander"
 **Deliverables:**
 1. `.claude-coord/` directory structure and JSON schemas (STATUS.json, TASK.md, SYNTHESIS.md)
 2. CLAUDE.md role templates for orchestrator, worker, and subagent
-3. Orchestrator self-direction: orchestrator calls `claude-commander send` to activate workers without human intervention
+3. Orchestrator self-direction: orchestrator calls `upcommander send` to activate workers without human intervention
 4. chokidar file watcher in bridge → WebSocket push for real-time status
 5. Approval queue view in PWA (swipe to approve/deny)
-6. `claude-commander coord-init` CLI command
+6. `upcommander coord-init` CLI command
 7. Status badges derived from STATUS.json (idle / running / blocked / waiting_approval / complete)
 8. Dependency resolution: orchestrator activates downstream workers when upstream completes
 
@@ -946,7 +946,7 @@ YOUR TOOL: "Claude Commander"
 **Goal:** Predefined project templates for common use cases so you can spin up any type of work instantly.
 
 **Deliverables:**
-1. Template system: `claude-commander init --template <name>`
+1. Template system: `upcommander init --template <name>`
 2. Built-in templates:
 
 | Template | Workers Created | Use Case |
@@ -963,7 +963,7 @@ YOUR TOOL: "Claude Commander"
 5. Template authoring: users can create and save their own templates
 
 **Validation:** From your phone:
-- `claude-commander init market-study ~/projects/sem-market --template research` → 6 workers spawn, ready for a directive
+- `upcommander init market-study ~/projects/sem-market --template research` → 6 workers spawn, ready for a directive
 - Send one prompt: "Analyze the AI SEM tool market for SEM Sentinel positioning"
 - Workers execute in parallel, produce research files, orchestrator synthesizes
 - Total elapsed: ~30 minutes for what would be 2 days of serial research
@@ -978,7 +978,7 @@ YOUR TOOL: "Claude Commander"
 1. Three-tier hierarchy: meta-orchestrator → project orchestrators → workers → subagents
 2. Meta-orchestrator support: direct multiple projects from a single prompt ("Today: ship UpInbox hotfix, finish HardRx research, draft Paula deck")
 3. Metrics view in PWA (agents running, tasks complete, files produced, time elapsed per project)
-4. Session lifecycle: `claude-commander save` / `restore` (tmux-resurrect integration)
+4. Session lifecycle: `upcommander save` / `restore` (tmux-resurrect integration)
 5. Health monitor with auto-reconnect and 3-strike pruning (from yazanbaker94 patterns)
 6. Pagination/virtualization for large session trees on mobile
 7. Mobile biometric auth + 30-min auto-lock
@@ -990,7 +990,7 @@ YOUR TOOL: "Claude Commander"
 
 **Validation — Scale:** Meta-orchestrator directing 3 project orchestrators (one code, one research, one content), each with 5 workers. Verify context isolation, status propagation, dependency resolution, and approval bubbling all work at scale.
 
-**Validation — Persistence:** Kill the terminal, reboot, run `claude-commander restore`. All sessions resume with coordination state intact.
+**Validation — Persistence:** Kill the terminal, reboot, run `upcommander restore`. All sessions resume with coordination state intact.
 
 **Validation — Remote:** Deploy to a Hetzner CX22. Confirm full functionality from phone + Mac via Tailscale. Verify latency is acceptable.
 
@@ -1023,7 +1023,7 @@ YOUR TOOL: "Claude Commander"
 **Launch with Tier 1 only** — flat files on disk, zero external dependencies. Build the Tier 2/3 adapters in parallel so they can be switched on later without code changes to agents.
 
 **Deliverables:**
-1. Tier 1 memory structure (`~/.claude-commander/memory/`) — all local JSON + Markdown files
+1. Tier 1 memory structure (`~/.upcommander/memory/`) — all local JSON + Markdown files
 2. Progressive disclosure: Level 0 always loaded, Level 1 on task start, Level 2 on demand via tool call
 3. Automatic fact extraction after every task completion (fire-and-forget, writes to local files)
 4. `recall_memory` tool available to all workers — grep/glob search on local learning files
@@ -1034,7 +1034,7 @@ YOUR TOOL: "Claude Commander"
 9. **Memory backend interface** — abstract adapter so the same agent tools work against Tier 1 (local files) or Tier 2+3 (pgvector + Supabase) with a config switch:
 
 ```json
-// ~/.claude-commander/config.json
+// ~/.upcommander/config.json
 {
   "memory_backend": "local",     // "local" at launch, switch to "cloud" later
   "memory_cloud": {              // ignored until memory_backend = "cloud"
@@ -1140,7 +1140,7 @@ With the performance layer (gzip + ETag + 304s), status updates are ~5KB per pus
 
 ## 12. Agent Learning System
 
-Agents that do the work should get smarter at the work. Claude Commander incorporates a three-tier memory and self-evolution system adapted from the VISION/CORTEX/NEXUS architecture — the same patterns that power UpGPT's skill engine, NEXUS's conversational memory, and the platform's feedback loops.
+Agents that do the work should get smarter at the work. UpCommander incorporates a three-tier memory and self-evolution system adapted from the VISION/CORTEX/NEXUS architecture — the same patterns that power UpGPT's skill engine, NEXUS's conversational memory, and the platform's feedback loops.
 
 ### The Core Principle
 
@@ -1407,7 +1407,7 @@ Over time, orchestrators may subtly change how they decompose tasks or what inst
 ### Memory File Structure
 
 ```
-~/.claude-commander/
+~/.upcommander/
 ├── memory/
 │   ├── domains/
 │   │   ├── software-dev/
@@ -1695,7 +1695,7 @@ The architecture is designed to start on your laptop and migrate to a server wit
 - Install Node, tmux, Claude Code, Tailscale on the VPS
 - `scp` or `git clone` your projects to the server
 - Copy `~/.claude/` config to the server
-- Run `claude-commander start` on the server instead of your Mac
+- Run `upcommander start` on the server instead of your Mac
 - Update Tailscale to point your phone + Mac at the server's IP
 - VS Code Remote-SSH from your Mac for IDE access
 - **Everything else is identical** — same bridge API, same PWA, same coordination files
@@ -1741,31 +1741,31 @@ Both interfaces hit the same REST + WebSocket API. The bridge server is the sing
 
 ```bash
 # Start/stop the bridge server
-claude-commander start [--port 7700]
-claude-commander stop
+upcommander start [--port 7700]
+upcommander stop
 
 # Initialize a project with tmux sessions
-claude-commander init <project-name> <project-path> \
+upcommander init <project-name> <project-path> \
   --workers <comma-separated window names>
 
 # Initialize coordination directory for a project
-claude-commander coord-init <project-name>
+upcommander coord-init <project-name>
 
 # Save/restore all sessions (tmux-resurrect)
-claude-commander save
-claude-commander restore
+upcommander save
+upcommander restore
 
 # Show the full session tree
-claude-commander tree
+upcommander tree
 
 # Send a prompt to a specific session
-claude-commander send <session>:<window> "prompt text"
+upcommander send <session>:<window> "prompt text"
 
 # Broadcast to all windows in a session
-claude-commander broadcast <session> "prompt text"
+upcommander broadcast <session> "prompt text"
 
 # Show the QR code for mobile pairing
-claude-commander pair
+upcommander pair
 ```
 
 ## Appendix B: Environment Prerequisites
@@ -1795,7 +1795,7 @@ claude-commander pair
 
 ## Appendix C: IDE Compatibility
 
-Claude Commander is IDE-agnostic by design. The agent sessions run in tmux terminal mode — the IDE is an optional overlay for when you want to browse/edit files visually.
+UpCommander is IDE-agnostic by design. The agent sessions run in tmux terminal mode — the IDE is an optional overlay for when you want to browse/edit files visually.
 
 | IDE | Compatibility | Notes |
 |-----|---------------|-------|

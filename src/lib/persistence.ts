@@ -1,6 +1,6 @@
 /**
  * Session persistence — save and restore tmux session state using
- * snapshots stored in ~/.claude-commander/snapshots/.
+ * snapshots stored in ~/.upcommander/snapshots/.
  */
 
 import { execSync } from 'node:child_process';
@@ -35,7 +35,7 @@ export interface SessionSnapshot {
 // Paths
 // ---------------------------------------------------------------------------
 
-const SNAPSHOTS_DIR = join(homedir(), '.claude-commander', 'snapshots');
+const SNAPSHOTS_DIR = join(homedir(), '.upcommander', 'snapshots');
 const LATEST_SNAPSHOT = join(SNAPSHOTS_DIR, 'latest.json');
 
 function ensureSnapshotsDir(): void {
@@ -83,8 +83,8 @@ function getWindowPath(sessionName: string, windowName: string): string {
 
 /**
  * Capture the current tmux state and write it to:
- *   ~/.claude-commander/snapshots/latest.json
- *   ~/.claude-commander/snapshots/{ISO-timestamp}.json
+ *   ~/.upcommander/snapshots/latest.json
+ *   ~/.upcommander/snapshots/{ISO-timestamp}.json
  *
  * Returns the snapshot object.
  */
@@ -123,7 +123,7 @@ export function saveAllSessions(): SessionSnapshot {
 
 /**
  * Restore tmux sessions from a snapshot.
- * If no snapshot is provided, reads ~/.claude-commander/snapshots/latest.json.
+ * If no snapshot is provided, reads ~/.upcommander/snapshots/latest.json.
  *
  * For each session in the snapshot:
  *   1. Create the tmux session (if it does not already exist)
@@ -194,7 +194,7 @@ export function restoreAllSessions(snapshot?: SessionSnapshot): void {
 }
 
 /**
- * List all available snapshots in ~/.claude-commander/snapshots/.
+ * List all available snapshots in ~/.upcommander/snapshots/.
  * Returns metadata sorted newest first.
  */
 export function listSnapshots(): Array<{

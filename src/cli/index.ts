@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * claude-commander CLI — route prompts to tmux sessions hosting Claude agents.
+ * upcommander CLI — route prompts to tmux sessions hosting Claude agents.
  *
  * Usage:
- *   claude-commander start [--port PORT]
- *   claude-commander init <project-name> <project-path> --template <name>
- *   claude-commander init <project-name> <project-path> --workers <w1,w2,...>
- *   claude-commander send <session>:<window> "<prompt>"
- *   claude-commander broadcast <session> "<prompt>"
- *   claude-commander tree
- *   claude-commander pair
- *   claude-commander templates
- *   claude-commander template-create <name> --workers <csv> --description "..."
- *   claude-commander help
+ *   upcommander start [--port PORT]
+ *   upcommander init <project-name> <project-path> --template <name>
+ *   upcommander init <project-name> <project-path> --workers <w1,w2,...>
+ *   upcommander send <session>:<window> "<prompt>"
+ *   upcommander broadcast <session> "<prompt>"
+ *   upcommander tree
+ *   upcommander pair
+ *   upcommander templates
+ *   upcommander template-create <name> --workers <csv> --description "..."
+ *   upcommander help
  */
 
 import { existsSync, writeFileSync, readFileSync } from 'node:fs';
@@ -89,10 +89,10 @@ const __dirname = dirname(__filename);
 
 function printHelp(): void {
   console.log(`
-claude-commander — route prompts to tmux sessions running Claude agents
+upcommander — route prompts to tmux sessions running Claude agents
 
 USAGE
-  claude-commander <command> [options]
+  upcommander <command> [options]
 
 COMMANDS
   start [--port PORT]
@@ -101,7 +101,7 @@ COMMANDS
 
   init <project-name> <project-path> --workers <w1,w2,...>
     Create a new tmux session with named worker windows, each running claude.
-    Example: claude-commander init paula ~/projects/paula --workers orchestrator,backend,frontend,tests
+    Example: upcommander init paula ~/projects/paula --workers orchestrator,backend,frontend,tests
 
   send <session>:<window> "<prompt>"
     Send a prompt to a specific session:window.
@@ -115,7 +115,7 @@ COMMANDS
   coord-init <session-or-path> [--workers <w1,w2,...>]
     Initialise .claude-coord/ directory structure in a project.
     Looks up project path from session registry, or use a direct path.
-    Example: claude-commander coord-init myproject --workers backend,frontend
+    Example: upcommander coord-init myproject --workers backend,frontend
 
   status [project-name-or-path]
     Show coordination status for a project or all configured projects.
@@ -128,7 +128,7 @@ COMMANDS
     Display the auth token and pairing information.
 
   save
-    Snapshot the current tmux session state to ~/.claude-commander/snapshots/.
+    Snapshot the current tmux session state to ~/.upcommander/snapshots/.
 
   restore
     Restore tmux sessions from the latest snapshot.
@@ -185,7 +185,7 @@ COMMANDS
     Show stall/rate-limit state of all tmux windows.
 
   resume
-    Resume workers from saved swarm state (~/.claude-commander/recovery/).
+    Resume workers from saved swarm state (~/.upcommander/recovery/).
 
   continue <session>:<window>
     Manually send a "please continue" to a specific worker.
@@ -286,7 +286,7 @@ function cmdInit(argv: string[]): void {
   if (templateName && typeof templateName === 'string') {
     const template = getTemplate(templateName);
     if (!template) {
-      die(`Unknown template "${templateName}". Run "claude-commander templates" for available options.`);
+      die(`Unknown template "${templateName}". Run "upcommander templates" for available options.`);
     }
 
     try {
@@ -371,7 +371,7 @@ function cmdTemplates(): void {
 /**
  * Create a custom template from CLI flags.
  *
- * claude-commander template-create <name> --workers <csv> --description "..."
+ * upcommander template-create <name> --workers <csv> --description "..."
  */
 function cmdTemplateCreate(argv: string[]): void {
   const name = argv[0];
@@ -412,8 +412,8 @@ function cmdTemplateCreate(argv: string[]): void {
     const prefix = i === template.workers.length - 1 ? '  └─' : '  ├─';
     console.log(`${prefix} ${w.name}`);
   });
-  console.log(`\nSaved to ~/.claude-commander/templates/${name}.json`);
-  console.log(`Use with: claude-commander init <project-name> <project-path> --template ${name}`);
+  console.log(`\nSaved to ~/.upcommander/templates/${name}.json`);
+  console.log(`Use with: upcommander init <project-name> <project-path> --template ${name}`);
 }
 
 function cmdSend(target: string | undefined, prompt: string | undefined): void {
@@ -480,10 +480,10 @@ function cmdTree(): void {
  * coord-init — initialise the .claude-coord/ directory structure.
  *
  * Usage:
- *   claude-commander coord-init <session-or-path> [--workers <csv>]
+ *   upcommander coord-init <session-or-path> [--workers <csv>]
  *
  * If the first argument is a recognised session name, the project path is
- * looked up from ~/.claude-commander/config.json.
+ * looked up from ~/.upcommander/config.json.
  * Otherwise it is treated as a literal project path.
  */
 function cmdCoordInit(argv: string[]): void {
@@ -554,7 +554,7 @@ function cmdCoordInit(argv: string[]): void {
  * status — show the coordination status tree.
  *
  * Usage:
- *   claude-commander status [project-name-or-path]
+ *   upcommander status [project-name-or-path]
  *
  * Without an argument, shows status for all configured project paths.
  */
@@ -642,7 +642,7 @@ function cmdPair(): void {
   const pad   = (text: string) => `│ ${text.padEnd(width - 4)} │`;
 
   console.log(`┌${bar}┐`);
-  console.log(pad('  Claude Commander — Pair'));
+  console.log(pad('  UpCommander — Pair'));
   console.log(`├${bar}┤`);
   console.log(pad(`  Token: ${token.slice(0, 32)}…`));
   console.log(pad(`  URL:   ${host}`));
@@ -659,7 +659,7 @@ function cmdPair(): void {
 function cmdSave(): void {
   try {
     const snapshot = saveAllSessions();
-    console.log(`Saved ${snapshot.sessions.length} session(s) to ~/.claude-commander/snapshots/latest.json`);
+    console.log(`Saved ${snapshot.sessions.length} session(s) to ~/.upcommander/snapshots/latest.json`);
     snapshot.sessions.forEach((s, i) => {
       const prefix = i === snapshot.sessions.length - 1 ? '  └─' : '  ├─';
       console.log(`${prefix} ${s.name}  (${s.windows.length} window${s.windows.length === 1 ? '' : 's'})`);
@@ -683,7 +683,7 @@ function cmdRestore(argv: string[]): void {
     } else {
       const snapshots = listSnapshots();
       if (snapshots.length === 0) {
-        die('No snapshots found. Run "claude-commander save" first.');
+        die('No snapshots found. Run "upcommander save" first.');
       }
       restoreAllSessions();
       const latest = snapshots[0];
@@ -1280,7 +1280,7 @@ function cmdRecoveryStatus(): void {
 function cmdResume(): void {
   const state = loadSwarmState();
   if (!state) {
-    console.log('No saved swarm state found at ~/.claude-commander/recovery/swarm-state.json');
+    console.log('No saved swarm state found at ~/.upcommander/recovery/swarm-state.json');
     return;
   }
 
@@ -1502,7 +1502,7 @@ switch (subcommand) {
 
   default: {
     console.error(`Unknown command: ${subcommand}`);
-    console.error('Run "claude-commander help" for usage.');
+    console.error('Run "upcommander help" for usage.');
     process.exit(1);
   }
 }

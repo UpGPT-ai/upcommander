@@ -2,7 +2,7 @@
  * Hard Risk Management Constraints
  *
  * Defines, loads, saves, and enforces constraint configurations for
- * Claude Commander projects. Constraints can block, warn, or log
+ * UpCommander projects. Constraints can block, warn, or log
  * when metric thresholds are exceeded. All constraint checks are
  * appended to an immutable JSONL audit log for traceability.
  */

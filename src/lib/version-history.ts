@@ -2,10 +2,10 @@
  * Version history for CLAUDE.md role definitions with rollback support.
  *
  * Each version is stored as a numbered JSON file under:
- *   ~/.claude-commander/role-history/{worker}/{version}.json
+ *   ~/.upcommander/role-history/{worker}/{version}.json
  *
  * The active role definition lives at:
- *   ~/.claude-commander/roles/{worker}.md
+ *   ~/.upcommander/roles/{worker}.md
  */
 
 import {
@@ -37,7 +37,7 @@ export interface RoleVersion {
 // Paths
 // ---------------------------------------------------------------------------
 
-const BASE_DIR = join(homedir(), '.claude-commander');
+const BASE_DIR = join(homedir(), '.upcommander');
 const ROLE_HISTORY_DIR = join(BASE_DIR, 'role-history');
 const ROLES_DIR = join(BASE_DIR, 'roles');
 
@@ -87,7 +87,7 @@ function getLatestVersionNumber(worker: string): number {
 /**
  * Save a new version of a worker's CLAUDE.md.
  * Automatically increments the version number.
- * Also updates the active role file at ~/.claude-commander/roles/{worker}.md
+ * Also updates the active role file at ~/.upcommander/roles/{worker}.md
  *
  * Returns the created RoleVersion.
  */

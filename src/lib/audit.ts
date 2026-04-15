@@ -7,7 +7,7 @@ import { appendFileSync, existsSync, mkdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
-const CONFIG_DIR = join(homedir(), '.claude-commander');
+const CONFIG_DIR = join(homedir(), '.upcommander');
 const LOG_FILE = join(CONFIG_DIR, 'audit.log');
 
 export interface AuditEntry {

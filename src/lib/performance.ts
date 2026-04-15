@@ -1,8 +1,8 @@
 /**
- * Claude Commander — Worker & Template Performance Tracking
+ * UpCommander — Worker & Template Performance Tracking
  *
  * Tracks per-worker and per-template performance metrics plus cost data.
- * All data persists in ~/.claude-commander/metrics/.
+ * All data persists in ~/.upcommander/metrics/.
  */
 
 import {
@@ -47,7 +47,7 @@ export interface TemplatePerformance {
 // Paths
 // ---------------------------------------------------------------------------
 
-const METRICS_DIR = join(homedir(), '.claude-commander', 'metrics');
+const METRICS_DIR = join(homedir(), '.upcommander', 'metrics');
 const WORKER_PERF_FILE = join(METRICS_DIR, 'worker-performance.json');
 const TEMPLATE_PERF_FILE = join(METRICS_DIR, 'template-performance.json');
 const COST_FILE = join(METRICS_DIR, 'cost-tracking.json');

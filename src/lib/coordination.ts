@@ -354,7 +354,7 @@ Example STATUS.json:
 
 ### Orchestrator Commands
 
-The orchestrator can send you instructions via \`claude-commander send\`. When you need approval:
+The orchestrator can send you instructions via \`upcommander send\`. When you need approval:
 1. Set your state to \`waiting_approval\` in STATUS.json
 2. Describe what you need in \`blocking_reason\`
 3. Wait — the human operator will approve or deny via the mobile PWA
@@ -381,7 +381,7 @@ export function generateOrchestratorClaudeMd(
     .slice(0, 2)
     .map(
       (w) =>
-        `claude-commander send ${projectName}:${w} "Your next task: ..."`
+        `upcommander send ${projectName}:${w} "Your next task: ..."`
     )
     .join('\n');
 
@@ -412,7 +412,7 @@ Root: \`.claude-coord/\`
 
 ## Sending Instructions to Workers
 
-Use \`claude-commander send\` to dispatch prompts to worker tmux windows:
+Use \`upcommander send\` to dispatch prompts to worker tmux windows:
 
 \`\`\`bash
 ${sendExamples}
@@ -423,7 +423,7 @@ ${sendExamples}
 1. Read \`PLAN.md\` to understand the project scope
 2. Update your \`ORCHESTRATOR_STATUS.json\` to reflect current state
 3. Write task instructions into each worker's \`TASK.md\`
-4. Send a prompt to each worker via \`claude-commander send\`
+4. Send a prompt to each worker via \`upcommander send\`
 5. Poll \`workers/*/STATUS.json\` to monitor progress
 6. When a worker reaches \`waiting_approval\`, surface this to the human operator
 7. When all workers are \`complete\`, synthesise results into \`SYNTHESIS.md\`
@@ -431,7 +431,7 @@ ${sendExamples}
 ## Approval Handling
 
 Workers may set their state to \`waiting_approval\`. The human operator monitors
-these via the Claude Commander mobile PWA and will send approval/denial back
+these via the UpCommander mobile PWA and will send approval/denial back
 through the tmux interface. Do not unblock workers manually — wait for the
 human signal.
 

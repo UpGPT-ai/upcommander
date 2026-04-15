@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Benchmark Suite
+ * UpCommander — Benchmark Suite
  *
  * Gold-standard test sets with known findings and cross-references. Used to
  * measure pipeline accuracy against human-validated ground truth. Suites are
@@ -49,7 +49,7 @@ export interface BenchmarkSuite {
 // Default storage location
 // ---------------------------------------------------------------------------
 
-const DEFAULT_BENCHMARK_DIR = join(homedir(), '.claude-commander', 'benchmarks');
+const DEFAULT_BENCHMARK_DIR = join(homedir(), '.upcommander', 'benchmarks');
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -166,7 +166,7 @@ export function createBenchmarkFromFindings(
  * List all available benchmark suites in `benchmarkDir`.
  * Returns full paths to `.json` files.
  *
- * Defaults to `~/.claude-commander/benchmarks/` if no dir is specified.
+ * Defaults to `~/.upcommander/benchmarks/` if no dir is specified.
  */
 export function listBenchmarks(benchmarkDir?: string): string[] {
   const dir = benchmarkDir ?? DEFAULT_BENCHMARK_DIR;

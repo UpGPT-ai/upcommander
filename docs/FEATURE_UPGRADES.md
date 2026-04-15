@@ -1,4 +1,4 @@
-# Claude Commander — Feature Upgrades for General-Purpose Data Analysis
+# UpCommander — Feature Upgrades for General-Purpose Data Analysis
 
 **Document Version:** 1.0
 **Date:** 2026-03-22
@@ -8,13 +8,13 @@
 
 ## Overview
 
-This document summarizes the feature upgrades required to evolve Claude Commander from a programming-focused multi-agent orchestration platform into a general-purpose parallel data analysis and intelligence platform. Each section describes the current state, the capability gap, and the estimated implementation scope.
+This document summarizes the feature upgrades required to evolve UpCommander from a programming-focused multi-agent orchestration platform into a general-purpose parallel data analysis and intelligence platform. Each section describes the current state, the capability gap, and the estimated implementation scope.
 
 ---
 
 ## Current State
 
-Claude Commander currently ships with:
+UpCommander currently ships with:
 
 - 6 built-in templates: dev, research, book, campaign, video, custom
 - File-based coordination via `.claude-coord/` (STATUS.json, TASK.md, SYNTHESIS.md)
@@ -308,7 +308,7 @@ For trading use cases, the system must connect to brokerages for execution. Mark
 
 For pharma use cases, electronic records must meet FDA 21 CFR Part 11 requirements. Basic audit logging is insufficient for regulated submissions.
 
-**Current:** Basic audit logging to `~/.claude-commander/audit.log` (JSON lines). Not compliant with regulatory electronic record requirements.
+**Current:** Basic audit logging to `~/.upcommander/audit.log` (JSON lines). Not compliant with regulatory electronic record requirements.
 
 **Needed:**
 

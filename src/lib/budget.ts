@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Cost & Budget Management
+ * UpCommander — Cost & Budget Management
  *
  * Enforces project-level budget caps, tracks spend per worker,
  * and provides cost projections before analysis begins.
@@ -70,7 +70,7 @@ export interface BudgetCheckResult {
 // Paths
 // ---------------------------------------------------------------------------
 
-const BUDGETS_DIR = join(homedir(), '.claude-commander', 'budgets');
+const BUDGETS_DIR = join(homedir(), '.upcommander', 'budgets');
 
 function ensureBudgetsDir(): void {
   if (!existsSync(BUDGETS_DIR)) {

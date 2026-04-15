@@ -1,5 +1,5 @@
 /**
- * Configuration management — reads/writes ~/.claude-commander/config.json.
+ * Configuration management — reads/writes ~/.upcommander/config.json.
  * Also manages the session→path registry used by coord-init and init.
  */
 
@@ -12,8 +12,25 @@ import {
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
-const CONFIG_DIR = join(homedir(), '.claude-commander');
+const CONFIG_DIR = join(homedir(), '.upcommander');
+const LEGACY_CONFIG_DIR = join(homedir(), '.claude-commander');
 const CONFIG_FILE = join(CONFIG_DIR, 'config.json');
+
+// Auto-migrate from legacy ~/.claude-commander/ if it exists and new dir doesn't
+if (!existsSync(CONFIG_DIR) && existsSync(LEGACY_CONFIG_DIR)) {
+  try {
+    const { cpSync } = await import('node:fs');
+    cpSync(LEGACY_CONFIG_DIR, CONFIG_DIR, { recursive: true });
+    console.log(
+      '[upcommander] Migrated config from ~/.claude-commander/ to ~/.upcommander/'
+    );
+    console.log(
+      '[upcommander] NOTE: ~/.claude-commander/ is deprecated and will be removed in v2.0'
+    );
+  } catch {
+    // Migration failed — create fresh config dir
+  }
+}
 
 export interface CommanderConfig {
   port: number;

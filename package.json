@@ -1,10 +1,11 @@
 {
-  "name": "claude-commander",
+  "name": "@upgpt/upcommander",
   "version": "0.1.0",
-  "description": "Mobile multi-agent orchestration platform for Claude Code sessions",
+  "description": "UpCommander by UpGPT — multi-model agent orchestration for developers",
   "type": "module",
   "bin": {
-    "claude-commander": "./dist/cli/index.js"
+    "upcommander": "./dist/cli/index.js",
+    "upc": "./dist/cli/index.js"
   },
   "scripts": {
     "build": "tsc",

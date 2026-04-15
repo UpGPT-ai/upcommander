@@ -1,6 +1,6 @@
 /**
  * Authentication layer — bearer token generation, validation, rate limiting.
- * Token is generated on bridge startup and written to ~/.claude-commander/auth-token.
+ * Token is generated on bridge startup and written to ~/.upcommander/auth-token.
  */
 
 import { randomBytes } from 'node:crypto';
@@ -9,7 +9,7 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import type { Request, Response, NextFunction } from 'express';
 
-const CONFIG_DIR = join(homedir(), '.claude-commander');
+const CONFIG_DIR = join(homedir(), '.upcommander');
 const TOKEN_FILE = join(CONFIG_DIR, 'auth-token');
 
 // Rate limiting state

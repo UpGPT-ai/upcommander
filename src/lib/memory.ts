@@ -1,10 +1,10 @@
 /**
- * Claude Commander — Agent Memory System (Tier 1: local files)
+ * UpCommander — Agent Memory System (Tier 1: local files)
  *
  * Manages core facts, session history, learnings, and failures across
  * three scopes: global, domain, and project.
  *
- * Storage root: ~/.claude-commander/memory/
+ * Storage root: ~/.upcommander/memory/
  */
 
 import {
@@ -66,7 +66,7 @@ export interface Failure {
 // Paths
 // ---------------------------------------------------------------------------
 
-const MEMORY_ROOT = join(homedir(), '.claude-commander', 'memory');
+const MEMORY_ROOT = join(homedir(), '.upcommander', 'memory');
 
 const DOMAINS = ['software-dev', 'research', 'marketing', 'book-writing'] as const;
 
@@ -87,7 +87,7 @@ function globalDir(): string {
 // ---------------------------------------------------------------------------
 
 /**
- * Creates the full memory directory structure under ~/.claude-commander/memory/
+ * Creates the full memory directory structure under ~/.upcommander/memory/
  * if it does not already exist.
  */
 export function initMemory(): void {

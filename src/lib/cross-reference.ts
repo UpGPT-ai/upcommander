@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Cross-Reference Detection
+ * UpCommander — Cross-Reference Detection
  *
  * Extracts entities from parallel agent outputs, builds a directed graph of
  * relationships, detects conflicts between workers, and traces reference chains

@@ -1,4 +1,4 @@
-# Claude Commander — Knowledge System & Training Pipeline
+# UpCommander — Knowledge System & Training Pipeline
 
 **Date:** 2026-03-23
 **Status:** Swarms 1-3 executed, Swarm 4 (corrections) pending
@@ -58,7 +58,7 @@ The pharma regulatory training system is a multi-stage pipeline that converts ra
 ## 2. Training Data Corpus
 
 All source documents are stored at:
-`/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training/stage-1/`
+`/Users/gregorybibas/.gemini/antigravity/scratch/UpCommander/training/stage-1/`
 
 | Source | Directory | Files | Size | Coverage |
 |--------|-----------|-------|------|----------|
@@ -194,7 +194,7 @@ Three iterations of CRL analysis scripts were developed to parse and categorize 
 The knowledge store is the runtime layer that workers load at analysis time. It is separate from the training corpus (source documents) and the training outputs (raw extraction results).
 
 ```
-~/.claude-commander/knowledge/
+~/.upcommander/knowledge/
 ├── rules/
 │   ├── by-module/              eCTD module → all rules that apply
 │   │   ├── module-2.3.json     Quality Overall Summary rules
@@ -286,7 +286,7 @@ The session recovery system monitors active worker panes and automatically recov
 
 **Rate limit recovery:** Parses the rate limit refresh time from pane output (e.g., "Rate limit exceeded. Retry after 2026-03-23T14:30:00Z"). Schedules automatic restart at the parsed time.
 
-**Swarm state persistence:** Writes full swarm state to `~/.claude-commander/recovery/swarm-state.json` every 30 seconds. Includes: session name, start time, worker list with prompts, expected outputs, and current state.
+**Swarm state persistence:** Writes full swarm state to `~/.upcommander/recovery/swarm-state.json` every 30 seconds. Includes: session name, start time, worker list with prompts, expected outputs, and current state.
 
 **Auto-resume on restart:** When the server starts, checks for persisted swarm state. If incomplete workers are found, resends their prompts to resume work.
 
@@ -303,7 +303,7 @@ The session recovery system monitors active worker panes and automatically recov
 
 ### 5.3 Session Logging
 
-**Storage:** Append-only log files at `~/.claude-commander/logs/{session}/{window}.log`
+**Storage:** Append-only log files at `~/.upcommander/logs/{session}/{window}.log`
 **Format:** Timestamped lines: `[2026-03-23T14:30:00.000Z] content`
 **Loading:** Full log loaded when a session panel is opened; live streaming appends new lines in real time.
 **REST endpoints:**
@@ -420,7 +420,7 @@ The swarm completed the extraction in ~100 minutes using 29 parallel workers. Ve
 ## 8. Next Steps
 
 1. **Execute Swarm 4 (Corrections):** Process verification results, re-extract and re-verify flagged rules.
-2. **Build Knowledge Store:** Aggregate verified rules from output-v2 and output-v3 into the `~/.claude-commander/knowledge/` directory structure.
+2. **Build Knowledge Store:** Aggregate verified rules from output-v2 and output-v3 into the `~/.upcommander/knowledge/` directory structure.
 3. **Index by module/topic/jurisdiction:** Transform flat rule files into the three-axis index described in Section 4.
 4. **CRL detection rules:** Convert CRL patterns into executable detection rules for the analysis pipeline.
 5. **Benchmark against Health Canada:** Use Health Canada data as held-out test set to measure system accuracy.

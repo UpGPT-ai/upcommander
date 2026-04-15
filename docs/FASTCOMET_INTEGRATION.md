@@ -1,8 +1,8 @@
-# SEM Sentinel + Claude Commander — Fastcomet Integration Spec
+# SEM Sentinel + UpCommander — Fastcomet Integration Spec
 
-**Purpose:** Integrate Claude Commander's parallel analysis, cross-reference detection, verification pipeline, and learning system into SEM Sentinel's existing codebase on Fastcomet.
+**Purpose:** Integrate UpCommander's parallel analysis, cross-reference detection, verification pipeline, and learning system into SEM Sentinel's existing codebase on Fastcomet.
 
-**Approach:** Library import (Option C) — no separate Claude Commander server. SEM Sentinel imports Claude Commander modules directly and calls them from its existing API routes.
+**Approach:** Library import (Option C) — no separate UpCommander server. SEM Sentinel imports UpCommander modules directly and calls them from its existing API routes.
 
 **What changes in SEM Sentinel:** One new file + modifications to the audit route.
 **What does NOT change:** Dashboard, auth, Google Ads OAuth, Supabase schema, pricing, client API.
@@ -20,7 +20,7 @@ SEM Sentinel (Fastcomet)
 │   ├── Skills system (defaults → vertical → account → user)
 │   └── API routes (/api/sentinel/*)
 │
-├── New: Claude Commander Library (copied or npm-linked)
+├── New: UpCommander Library (copied or npm-linked)
 │   ├── lib/ingestion.ts         → CSV parsing, chunking
 │   ├── lib/api-agent.ts         → Multi-model API execution
 │   ├── lib/output-schemas.ts    → FindingSchema, mergeFindings
@@ -37,9 +37,9 @@ SEM Sentinel (Fastcomet)
 
 ---
 
-## Step 1: Copy Claude Commander modules into SEM Sentinel
+## Step 1: Copy UpCommander modules into SEM Sentinel
 
-Copy the following files from Claude Commander's `src/lib/` into SEM Sentinel's `src/lib/commander/` directory:
+Copy the following files from UpCommander's `src/lib/` into SEM Sentinel's `src/lib/commander/` directory:
 
 ```
 src/lib/commander/
@@ -74,7 +74,7 @@ Create `src/lib/sentinel/parallel-runner.ts` — this is the single new file tha
  * SEM Sentinel — Parallel Audit Runner
  *
  * Replaces sequential agent pipeline with parallel execution
- * using Claude Commander's API agent and analysis modules.
+ * using UpCommander's API agent and analysis modules.
  */
 
 import { parseSemCsv, distributeDataToWorkers, formatFindingsForSentinel } from '../commander/connectors/sentinel-bridge';
@@ -264,7 +264,7 @@ OPENAI_API_KEY=sk-...
 GOOGLE_API_KEY=AIza...
 ```
 
-The API agent reads these from environment variables as a fallback when `~/.claude-commander/config.json` doesn't exist.
+The API agent reads these from environment variables as a fallback when `~/.upcommander/config.json` doesn't exist.
 
 ---
 
@@ -296,10 +296,10 @@ This function is called by `getWorkerSystemPrompt()` in the parallel runner.
 
 ## Step 6: Memory/learning persistence
 
-SEM Sentinel uses Supabase. Claude Commander uses local JSON files. For Fastcomet, store learnings in Supabase instead:
+SEM Sentinel uses Supabase. UpCommander uses local JSON files. For Fastcomet, store learnings in Supabase instead:
 
 Option A (simple): Store learnings in a new `sentinel.learnings` table
-Option B (quick): Use Claude Commander's memory.ts with the file system (Fastcomet VPS has persistent disk)
+Option B (quick): Use UpCommander's memory.ts with the file system (Fastcomet VPS has persistent disk)
 
 Recommendation: Option B for initial launch (no schema changes needed), migrate to Option A when you want learnings queryable from the dashboard.
 
@@ -334,7 +334,7 @@ Recommendation: Option B for initial launch (no schema changes needed), migrate 
 
 | Action | File | Description |
 |--------|------|-------------|
-| CREATE | `src/lib/commander/` (directory) | Copy of Claude Commander lib modules |
+| CREATE | `src/lib/commander/` (directory) | Copy of UpCommander lib modules |
 | CREATE | `src/lib/sentinel/parallel-runner.ts` | New parallel execution orchestrator |
 | MODIFY | `src/app/api/sentinel/audit/route.ts` | Replace sequential with parallel call |
 | MODIFY | `.env` | Add ANTHROPIC_API_KEY |
@@ -344,4 +344,4 @@ That's it — 1 new directory (copied), 1 new file, 1 modified route, 1 env var.
 ---
 
 *Integration spec written: 2026-03-22*
-*Source: Claude Commander v2 at /Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/*
+*Source: UpCommander v2 at /Users/gregorybibas/.gemini/antigravity/scratch/UpCommander/*

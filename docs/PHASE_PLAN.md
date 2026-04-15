@@ -1,4 +1,4 @@
-# Claude Commander — Phase Plan
+# UpCommander — Phase Plan
 
 **Status:** All 8 phases built. Full platform complete.
 **Date:** 2026-03-21
@@ -12,12 +12,12 @@
 ```
 src/                          (6,726 lines TypeScript)
 ├── server/index.ts           ← Express + WebSocket bridge server (port 7700)
-├── cli/index.ts              ← claude-commander CLI (20+ commands)
+├── cli/index.ts              ← upcommander CLI (20+ commands)
 ├── lib/
 │   ├── tmux.ts               ← tmux session registry & send-keys
 │   ├── auth.ts               ← Bearer token auth + rate limiting
-│   ├── audit.ts              ← Audit logging to ~/.claude-commander/audit.log
-│   ├── config.ts             ← Config management (~/.claude-commander/config.json)
+│   ├── audit.ts              ← Audit logging to ~/.upcommander/audit.log
+│   ├── config.ts             ← Config management (~/.upcommander/config.json)
 │   ├── coordination.ts       ← .claude-coord/ protocol (STATUS.json, TASK.md, SYNTHESIS.md)
 │   ├── watcher.ts            ← chokidar file watcher for STATUS.json changes
 │   ├── templates.ts          ← 6 built-in templates + custom template support
@@ -55,7 +55,7 @@ vscode-extension/             (1,856 lines TypeScript)
 - Bridge server (Express on 127.0.0.1:7700)
 - tmux session registry (parse, create, send-keys)
 - Bearer token auth (32-byte random, rate limiting)
-- Audit logging (JSON lines to ~/.claude-commander/audit.log)
+- Audit logging (JSON lines to ~/.upcommander/audit.log)
 - Minimal mobile PWA (auth, session list, prompt input)
 - CLI: start, init, send, broadcast, tree, pair, help
 
@@ -128,42 +128,42 @@ vscode-extension/             (1,856 lines TypeScript)
 
 ```bash
 # Session management
-claude-commander start [--port PORT]
-claude-commander init <project> <path> --workers <csv>
-claude-commander init <project> <path> --template <name>
-claude-commander tree
-claude-commander pair
+upcommander start [--port PORT]
+upcommander init <project> <path> --workers <csv>
+upcommander init <project> <path> --template <name>
+upcommander tree
+upcommander pair
 
 # Prompt routing
-claude-commander send <session>:<window> "<prompt>"
-claude-commander broadcast <session> "<prompt>"
-claude-commander broadcast-all "<prompt>"
+upcommander send <session>:<window> "<prompt>"
+upcommander broadcast <session> "<prompt>"
+upcommander broadcast-all "<prompt>"
 
 # Coordination
-claude-commander coord-init <project-or-path> [--workers <csv>]
-claude-commander status [project]
-claude-commander templates
-claude-commander template-create <name> --workers <csv> --description "..."
+upcommander coord-init <project-or-path> [--workers <csv>]
+upcommander status [project]
+upcommander templates
+upcommander template-create <name> --workers <csv> --description "..."
 
 # Persistence
-claude-commander save
-claude-commander restore
+upcommander save
+upcommander restore
 
 # Monitoring
-claude-commander metrics
-claude-commander health
+upcommander metrics
+upcommander health
 
 # Memory & Learning
-claude-commander recall "<query>" [--domain X]
-claude-commander performance
-claude-commander facts [--domain X] [--project Y]
+upcommander recall "<query>" [--domain X]
+upcommander performance
+upcommander facts [--domain X] [--project Y]
 
 # Self-Evolution
-claude-commander proposals
-claude-commander approve-proposal <id>
-claude-commander reject-proposal <id> [reason]
-claude-commander alerts
-claude-commander role-history <worker>
+upcommander proposals
+upcommander approve-proposal <id>
+upcommander reject-proposal <id> [reason]
+upcommander alerts
+upcommander role-history <worker>
 ```
 
 ## REST API Reference (Full)

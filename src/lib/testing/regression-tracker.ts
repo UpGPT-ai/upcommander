@@ -1,9 +1,9 @@
 /**
- * Claude Commander — Regression Tracker
+ * UpCommander — Regression Tracker
  *
  * Records accuracy scores over time and alerts when a metric drops
  * significantly compared to recent history. Scores are stored in a
- * JSONL file at ~/.claude-commander/test-results/regression.jsonl.
+ * JSONL file at ~/.upcommander/test-results/regression.jsonl.
  */
 
 import {
@@ -41,7 +41,7 @@ export interface RegressionAlert {
 // Constants
 // ---------------------------------------------------------------------------
 
-const RESULTS_DIR = join(homedir(), '.claude-commander', 'test-results');
+const RESULTS_DIR = join(homedir(), '.upcommander', 'test-results');
 const REGRESSION_FILE = join(RESULTS_DIR, 'regression.jsonl');
 
 /** Metrics tracked for regression. Must be numeric keys on AccuracyScore. */

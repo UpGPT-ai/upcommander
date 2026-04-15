@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Checkpoint / Resume Utility
+ * UpCommander — Checkpoint / Resume Utility
  *
  * Allows long-running workers to save incremental progress to disk.
  * On crash or restart, workers can resume from their last checkpoint

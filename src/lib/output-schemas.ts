@@ -1,5 +1,5 @@
 /**
- * Claude Commander — Structured Output Schemas
+ * UpCommander — Structured Output Schemas
  *
  * Defines the standard finding, evidence, and analysis result types
  * used across all data analysis templates. Domain-specific schemas

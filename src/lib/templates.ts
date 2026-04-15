@@ -1,9 +1,9 @@
 /**
- * Template registry and management system for Claude Commander.
+ * Template registry and management system for UpCommander.
  *
  * Provides 6 built-in project templates (dev, research, book, campaign,
  * video, custom) plus support for user-created custom templates stored
- * in ~/.claude-commander/templates/.
+ * in ~/.upcommander/templates/.
  */
 
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
@@ -122,7 +122,7 @@ export interface ProjectTemplate {
 // Internal helpers
 // ---------------------------------------------------------------------------
 
-const CONFIG_DIR = join(homedir(), '.claude-commander');
+const CONFIG_DIR = join(homedir(), '.upcommander');
 const TEMPLATES_DIR = join(CONFIG_DIR, 'templates');
 
 /**
@@ -524,7 +524,7 @@ export function listTemplates(): { name: string; description: string; workers: s
 
 /**
  * Create a custom template from user-supplied inputs and persist it to
- * ~/.claude-commander/templates/{name}.json.
+ * ~/.upcommander/templates/{name}.json.
  */
 export function createCustomTemplate(
   name: string,
@@ -653,7 +653,7 @@ export function applyTemplate(
   const rootClaudeMd = [
     `# ${projectName}`,
     '',
-    'This project is managed by Claude Commander.',
+    'This project is managed by UpCommander.',
     '',
     '## Agents & Model Assignments',
     ...modelSummary,

@@ -58,7 +58,7 @@ export class SessionTreeItem extends vscode.TreeItem {
 
       // Make file clickable — opens it in the editor
       this.command = {
-        command: 'claude-commander.openFile',
+        command: 'upcommander.openFile',
         title: 'Open File',
         arguments: [fileActivity.path],
       };

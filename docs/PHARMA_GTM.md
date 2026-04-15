@@ -1,4 +1,4 @@
-# Claude Commander — Pharma Regulatory Go-To-Market Playbook
+# UpCommander — Pharma Regulatory Go-To-Market Playbook
 
 **Date:** 2026-03-22
 
@@ -6,7 +6,7 @@
 
 ## Market Opportunity
 
-The pharmaceutical industry represents the highest-value application of the Claude Commander parallel analysis platform. The combination of massive document volumes (100,000-500,000 pages), critical cross-referencing requirements, multi-jurisdiction complexity, and catastrophic cost of errors creates a structural advantage for parallel AI that sequential systems cannot match.
+The pharmaceutical industry represents the highest-value application of the UpCommander parallel analysis platform. The combination of massive document volumes (100,000-500,000 pages), critical cross-referencing requirements, multi-jurisdiction complexity, and catastrophic cost of errors creates a structural advantage for parallel AI that sequential systems cannot match.
 
 ### Market Size
 - AI economic value for pharma/medical products: $60-110 billion/year (McKinsey Global Institute)
@@ -190,7 +190,7 @@ FDA requires that when AI influences regulated decisions, the AI solution must m
 - Explainability: every AI output explained and justified
 - Verification: show how outputs are verified, monitored, controlled
 
-Claude Commander's RESULT.md → SUMMARY.md → SYNTHESIS.md coordination chain produces this audit trail as a byproduct. The file-based coordination protocol is inherently traceable — every agent's reasoning is documented, every synthesis step links to its sources.
+UpCommander's RESULT.md → SUMMARY.md → SYNTHESIS.md coordination chain produces this audit trail as a byproduct. The file-based coordination protocol is inherently traceable — every agent's reasoning is documented, every synthesis step links to its sources.
 
 Additional requirements:
 - Immutable records: append-only log with cryptographic hash chain
@@ -238,4 +238,4 @@ Margins are extraordinary because the cost is almost entirely API tokens. The do
 ---
 
 *Document written: 2026-03-22*
-*Based on strategic analysis conversation and Claude Commander platform architecture*
+*Based on strategic analysis conversation and UpCommander platform architecture*

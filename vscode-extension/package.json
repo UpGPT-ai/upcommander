@@ -1,9 +1,9 @@
 {
-  "name": "claude-commander",
-  "displayName": "Commander",
-  "description": "Multi-agent orchestration dashboard for Claude Code sessions",
-  "version": "0.1.0",
-  "publisher": "commander",
+  "name": "upcommander",
+  "displayName": "UpCommander by UpGPT",
+  "description": "UpCommander by UpGPT — multi-model agent orchestration for developers",
+  "version": "1.0.0",
+  "publisher": "upgpt",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -14,126 +14,126 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "claude-commander",
-          "title": "Commander",
-          "icon": "$(robot)"
+          "id": "upcommander",
+          "title": "UpCommander",
+          "icon": "$(arrow-up)"
         }
       ]
     },
     "views": {
-      "claude-commander": [
+      "upcommander": [
         {
-          "id": "claude-commander-sessions",
+          "id": "upcommander-sessions",
           "name": "Sessions",
           "icon": "$(terminal-tmux)",
-          "contextualTitle": "Commander Sessions"
+          "contextualTitle": "UpCommander Sessions"
         },
         {
-          "id": "claude-commander-approvals",
+          "id": "upcommander-approvals",
           "name": "Approval Queue",
           "icon": "$(bell)",
-          "contextualTitle": "Commander Approvals"
+          "contextualTitle": "UpCommander Approvals"
         }
       ]
     },
     "commands": [
       {
-        "command": "claude-commander.connect",
+        "command": "upcommander.connect",
         "title": "Connect to Bridge",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(plug)"
       },
       {
-        "command": "claude-commander.disconnect",
+        "command": "upcommander.disconnect",
         "title": "Disconnect",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(debug-disconnect)"
       },
       {
-        "command": "claude-commander.sendPrompt",
+        "command": "upcommander.sendPrompt",
         "title": "Send Prompt to Session",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(send)"
       },
       {
-        "command": "claude-commander.approve",
+        "command": "upcommander.approve",
         "title": "Approve Action",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(check)"
       },
       {
-        "command": "claude-commander.deny",
+        "command": "upcommander.deny",
         "title": "Deny Action",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(x)"
       },
       {
-        "command": "claude-commander.broadcast",
+        "command": "upcommander.broadcast",
         "title": "Broadcast to Session",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(radio-tower)"
       },
       {
-        "command": "claude-commander.broadcastAll",
+        "command": "upcommander.broadcastAll",
         "title": "Broadcast to All",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(broadcast)"
       },
       {
-        "command": "claude-commander.refresh",
+        "command": "upcommander.refresh",
         "title": "Refresh Sessions",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(refresh)"
       },
       {
-        "command": "claude-commander.openFile",
+        "command": "upcommander.openFile",
         "title": "Open File",
-        "category": "Commander",
+        "category": "UpCommander",
         "icon": "$(go-to-file)"
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "claude-commander.refresh",
-          "when": "view == claude-commander-sessions",
+          "command": "upcommander.refresh",
+          "when": "view == upcommander-sessions",
           "group": "navigation"
         },
         {
-          "command": "claude-commander.broadcastAll",
-          "when": "view == claude-commander-sessions",
+          "command": "upcommander.broadcastAll",
+          "when": "view == upcommander-sessions",
           "group": "navigation"
         },
         {
-          "command": "claude-commander.connect",
-          "when": "view == claude-commander-sessions && !claude-commander.connected",
+          "command": "upcommander.connect",
+          "when": "view == upcommander-sessions && !upcommander.connected",
           "group": "navigation"
         },
         {
-          "command": "claude-commander.disconnect",
-          "when": "view == claude-commander-sessions && claude-commander.connected",
+          "command": "upcommander.disconnect",
+          "when": "view == upcommander-sessions && upcommander.connected",
           "group": "navigation"
         }
       ],
       "view/item/context": [
         {
-          "command": "claude-commander.sendPrompt",
-          "when": "view == claude-commander-sessions && viewItem == window",
+          "command": "upcommander.sendPrompt",
+          "when": "view == upcommander-sessions && viewItem == window",
           "group": "inline"
         },
         {
-          "command": "claude-commander.broadcast",
-          "when": "view == claude-commander-sessions && viewItem == session",
+          "command": "upcommander.broadcast",
+          "when": "view == upcommander-sessions && viewItem == session",
           "group": "inline"
         },
         {
-          "command": "claude-commander.approve",
-          "when": "view == claude-commander-approvals && viewItem == approval",
+          "command": "upcommander.approve",
+          "when": "view == upcommander-approvals && viewItem == approval",
           "group": "inline"
         },
         {
-          "command": "claude-commander.deny",
-          "when": "view == claude-commander-approvals && viewItem == approval",
+          "command": "upcommander.deny",
+          "when": "view == upcommander-approvals && viewItem == approval",
           "group": "inline"
         }
       ]
@@ -141,18 +141,18 @@
     "configuration": {
       "title": "Commander",
       "properties": {
-        "claude-commander.bridgeUrl": {
+        "upcommander.bridgeUrl": {
           "type": "string",
           "default": "http://127.0.0.1:7700",
           "description": "URL of the Commander bridge server"
         },
-        "claude-commander.token": {
+        "upcommander.token": {
           "type": "string",
           "default": "",
           "description": "Bearer token for authenticating with the bridge server",
-          "markdownDescription": "Bearer token. Find this in `~/.claude-commander/token` or from the bridge server's startup log."
+          "markdownDescription": "Bearer token. Find this in `~/.upcommander/token` or from the bridge server's startup log."
         },
-        "claude-commander.autoConnect": {
+        "upcommander.autoConnect": {
           "type": "boolean",
           "default": true,
           "description": "Automatically connect to the bridge server on startup"

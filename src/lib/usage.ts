@@ -1,8 +1,8 @@
 /**
- * Claude Commander — Usage Tracking
+ * UpCommander — Usage Tracking
  *
  * Tracks per-session and per-period usage: prompts sent, tokens consumed,
- * estimated cost, and time active. Persists to ~/.claude-commander/usage/.
+ * estimated cost, and time active. Persists to ~/.upcommander/usage/.
  *
  * Designed to give the user visibility into their Claude consumption
  * across all Commander sessions — visible in VS Code status bar and PWA.
@@ -95,7 +95,7 @@ export interface PromptEvent {
 // Paths
 // ---------------------------------------------------------------------------
 
-const USAGE_DIR = join(homedir(), '.claude-commander', 'usage');
+const USAGE_DIR = join(homedir(), '.upcommander', 'usage');
 const SESSIONS_FILE = join(USAGE_DIR, 'sessions.json');
 const DAILY_DIR = join(USAGE_DIR, 'daily');
 

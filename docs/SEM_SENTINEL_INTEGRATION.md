@@ -1,7 +1,7 @@
-# SEM Sentinel ↔ Claude Commander Integration Spec
+# SEM Sentinel ↔ UpCommander Integration Spec
 
 **Date:** 2026-03-22
-**Deployment:** SEM Sentinel on Fastcomet, Claude Commander modules imported as library
+**Deployment:** SEM Sentinel on Fastcomet, UpCommander modules imported as library
 **Approach:** Option C — library import, no separate server process
 
 ---
@@ -19,7 +19,7 @@
 │  │             account → user)                          │
 │  │                                                      │
 │  ├── NEW: lib/sentinel/parallel-runner.ts               │
-│  │   └── Imports Claude Commander modules:              │
+│  │   └── Imports UpCommander modules:              │
 │  │       ├── ingestion.ts    (CSV parsing + chunking)   │
 │  │       ├── api-agent.ts    (parallel API execution)   │
 │  │       ├── output-schemas.ts (FindingSchema)          │
@@ -44,7 +44,7 @@
 - Client-facing API routes — unchanged
 - Pricing tiers — unchanged
 
-**What does NOT change in Claude Commander:**
+**What does NOT change in UpCommander:**
 - Nothing. Its modules are general-purpose libraries.
 
 ---
@@ -56,12 +56,12 @@ This is the single new file in SEM Sentinel that replaces the sequential agent p
 ### Interface
 
 ```typescript
-import { parseSemCsv, distributeDataToWorkers, formatFindingsForSentinel } from 'claude-commander/connectors/sentinel-bridge';
-import { ApiAgent } from 'claude-commander/api-agent';
-import { mergeFindings } from 'claude-commander/output-schemas';
-import { CrossReferenceGraph } from 'claude-commander/cross-reference';
-import { runVerification } from 'claude-commander/verification';
-import { recordCost } from 'claude-commander/budget';
+import { parseSemCsv, distributeDataToWorkers, formatFindingsForSentinel } from 'upcommander/connectors/sentinel-bridge';
+import { ApiAgent } from 'upcommander/api-agent';
+import { mergeFindings } from 'upcommander/output-schemas';
+import { CrossReferenceGraph } from 'upcommander/cross-reference';
+import { runVerification } from 'upcommander/verification';
+import { recordCost } from 'upcommander/budget';
 
 export interface ParallelAuditConfig {
   auditRunId: string;
@@ -160,7 +160,7 @@ export async function runParallelAudit(config: ParallelAuditConfig): Promise<Par
 
 ### Skill → SKILL.md Conversion
 
-SEM Sentinel's 4-layer skill system (defaults → vertical → account → user) resolves to a single `ResolvedSkill` object. This function converts it to SKILL.md content that Claude Commander workers understand:
+SEM Sentinel's 4-layer skill system (defaults → vertical → account → user) resolves to a single `ResolvedSkill` object. This function converts it to SKILL.md content that UpCommander workers understand:
 
 ```typescript
 function convertSkillToSkillMd(skill: ResolvedSkill): Record<string, string> {
@@ -245,7 +245,7 @@ export async function POST(req: NextRequest) {
   // Resolve skill config (existing Sentinel logic — unchanged)
   const skill = await resolveSkill(clientId);
 
-  // Run parallel audit via Claude Commander modules
+  // Run parallel audit via UpCommander modules
   const result = await runParallelAudit({
     auditRunId: crypto.randomUUID(),
     accountId,
@@ -279,11 +279,11 @@ export async function POST(req: NextRequest) {
 
 ## Learning System Integration
 
-After each audit, findings and performance data feed back into Claude Commander's memory system:
+After each audit, findings and performance data feed back into UpCommander's memory system:
 
 ```typescript
 // After audit completes, record learnings
-import { saveFact, saveLearning } from 'claude-commander/memory';
+import { saveFact, saveLearning } from 'upcommander/memory';
 
 // Record domain fact
 if (result.findings.some(f => f.type === 'wasted_spend' && f.severity === 'critical')) {
@@ -296,7 +296,7 @@ if (result.findings.some(f => f.type === 'wasted_spend' && f.severity === 'criti
 }
 
 // Record performance for model optimization
-import { recordTaskCompletion } from 'claude-commander/performance';
+import { recordTaskCompletion } from 'upcommander/performance';
 
 for (const worker of result.workers) {
   await recordTaskCompletion(worker.name, result.duration_ms / 60000, false, 8);
@@ -312,15 +312,15 @@ for (const worker of result.workers) {
 - Fastcomet VPS (not shared hosting) — needs Node.js 20+
 - `ANTHROPIC_API_KEY` set in environment
 
-### Step 1: Add Claude Commander as a dependency
+### Step 1: Add UpCommander as a dependency
 
 ```bash
 # Option A: npm package (when published)
 cd /path/to/sem-sentinel
-npm install claude-commander
+npm install upcommander
 
 # Option B: Git submodule (before publishing)
-git submodule add https://github.com/antigravity/claude-commander.git lib/claude-commander
+git submodule add https://github.com/antigravity/upcommander.git lib/upcommander
 ```
 
 ### Step 2: Add the integration file
@@ -386,7 +386,7 @@ const crossAccountConflicts = crossAccountGraph.findConflicts();
 
 ## What This Enables
 
-| Capability | Before (Sequential) | After (Parallel + Claude Commander) |
+| Capability | Before (Sequential) | After (Parallel + UpCommander) |
 |---|---|---|
 | Audit speed | 15-30 min/account | 1-5 min/account |
 | Account concurrency | 1 at a time | 10+ simultaneous |

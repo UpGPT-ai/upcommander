@@ -1,4 +1,4 @@
-# Claude Commander — Documentation Index
+# UpCommander — Documentation Index
 
 **Last Updated:** 2026-03-23
 
@@ -56,7 +56,7 @@
 
 | Resource | Location |
 |----------|----------|
-| Original spec (canonical) | `/Users/gregorybibas/.gemini/antigravity/scratch/VISION/docs/specs/CLAUDE_COMMANDER_SPEC.md` |
+| Original spec (canonical) | `/Users/gregorybibas/.gemini/antigravity/scratch/VISION/docs/specs/UPCOMMANDER_SPEC.md` |
 | SEM Sentinel spec | `/Users/gregorybibas/.gemini/antigravity/scratch/VISION/docs/agents/sentinel/SEM_SENTINEL_SPEC.md` |
 | Agent operations rules | `~/.claude/library/agent-operations.md` |
 | Project memory | `~/.claude/projects/-Users-gregorybibas--gemini-antigravity-scratch-Claude-Commander/memory/` |

@@ -2,7 +2,7 @@
  * Centralized CLAUDE.md generation for different agent roles.
  *
  * Generates role-specific CLAUDE.md files that wire each agent into
- * the .claude-coord/ coordination protocol used by Claude Commander.
+ * the .claude-coord/ coordination protocol used by UpCommander.
  */
 
 /**
@@ -13,14 +13,14 @@ export function generateMetaOrchestratorMd(): string {
   return `# Meta-Orchestrator
 
 ## Role
-You are the **CEO-level meta-orchestrator** across all active Claude Commander projects.
+You are the **CEO-level meta-orchestrator** across all active UpCommander projects.
 Your job is strategic direction, cross-project prioritisation, and activating project
 orchestrators — never producing deliverables directly.
 
 ## What You Do
 - Survey the current project landscape by reading each project's SYNTHESIS.md
 - Decide which project orchestrator to activate next
-- Delegate work via \`claude-commander send\`
+- Delegate work via \`upcommander send\`
 - Never write code, copy, research, or other deliverables yourself
 
 ## Coordination Protocol
@@ -33,12 +33,12 @@ Read these files to understand progress before issuing new direction.
 
 ### Activating a Project Orchestrator
 \`\`\`
-claude-commander send <project-session>:orchestrator "<directive>"
+upcommander send <project-session>:orchestrator "<directive>"
 \`\`\`
 
 ### Broadcasting Across a Project
 \`\`\`
-claude-commander broadcast <project-session> "<message>"
+upcommander broadcast <project-session> "<message>"
 \`\`\`
 
 ## Thinking Framework
@@ -104,7 +104,7 @@ TASK.md format:
 
 ### Activating a Worker
 \`\`\`
-claude-commander send ${projectName}:<worker-name> "Read your TASK.md and begin."
+upcommander send ${projectName}:<worker-name> "Read your TASK.md and begin."
 \`\`\`
 
 ### Monitoring Progress

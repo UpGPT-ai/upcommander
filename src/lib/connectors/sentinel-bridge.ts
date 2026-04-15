@@ -1,11 +1,11 @@
 /**
- * SEM Sentinel Bridge — connects Claude Commander to SEM Sentinel data.
+ * SEM Sentinel Bridge — connects UpCommander to SEM Sentinel data.
  * Handles CSV data ingestion for SEM analysis and structured findings output.
  *
  * Responsibilities:
  * - Parse Google Ads search term report CSV files into typed SemDataRow objects
  * - Distribute parsed data to the appropriate audit workers based on analysis type
- * - Convert Claude Commander Finding objects to SEM Sentinel's native format
+ * - Convert UpCommander Finding objects to SEM Sentinel's native format
  * - Write formatted audit reports to disk for downstream consumption
  */
 
@@ -242,7 +242,7 @@ export function distributeDataToWorkers(
 // ---------------------------------------------------------------------------
 
 /**
- * Convert Claude Commander Finding objects to SEM Sentinel's native format.
+ * Convert UpCommander Finding objects to SEM Sentinel's native format.
  *
  * Maps:
  * - finding.finding_id → sentinel.finding_id
