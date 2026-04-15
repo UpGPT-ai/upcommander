@@ -1,0 +1,785 @@
+{
+  "metadata": {
+    "title": "ICH E2B(R3) / E2E / E2F Rules Extraction",
+    "source_files": [
+      "ICH_E2B(R3)_EWG_IWG_ICSR_Implementation_Guide_(QA integration)_Step3_2025_0718_Assembly_Approved_0.pdf",
+      "E2E_Guideline.pdf",
+      "E2F_Guideline.pdf"
+    ],
+    "source_directory": "training/stage-1/ich-complete/",
+    "extraction_date": "2026-03-24",
+    "extractor": "claude-sonnet-4-6",
+    "total_rules": 68
+  },
+  "guidelines": {
+    "E2B_R3": {
+      "title": "Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) — E2B(R3) Data Elements and Message Specification",
+      "document_date": "18 July 2025",
+      "document_version": "Version 5.03",
+      "rules": [
+        {
+          "rule_id": "ICH-E2B-001",
+          "rule_text": "An ICSR must include minimum information: at least one identifiable patient, one identifiable reporter, one adverse event or reaction (or outcome), and one suspect or interacting drug.",
+          "source_section": "3.3.1 Minimum Information",
+          "source_page": 32,
+          "verbatim_quote": "The minimum information for valid safety report should include at least: one identifiable patient - any one of several data elements is considered sufficient to define an identifiable patient (e.g., initials, age, sex); one identifiable reporter - any one of several data elements is considered sufficient to define an identifiable reporter (e.g., initials, address, qualifications); one adverse event/reaction (or outcome); and one suspect or interacting drug.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Additional validation rules for the required 'minimal information' might exist at the regional level.",
+          "cross_references": ["ICH-E2A", "ICH-E2D"]
+        },
+        {
+          "rule_id": "ICH-E2B-002",
+          "rule_text": "All ICSRs must be transmitted using the XML-based HL7 V3 / ISO 27953-2 message standard (E2B(R3) format); the legacy SGML/DTD format is no longer the standard.",
+          "source_section": "2.4.2 How ICSRs Are Presently Transmitted and the Advantages of Electronic Submissions",
+          "source_page": 19,
+          "verbatim_quote": "In spite of this fact, the SGML-based Document Type Definition (DTD) approach is no longer the optimal solution. As a result, the current messaging standard herein now relies upon XML schemas.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Some regions may still accept E2B(R2) for legacy compliance purposes.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-003",
+          "rule_text": "XML messages must use UTF-8 encoding for all ICSR transmissions.",
+          "source_section": "3.2.3.2 Use of message encoding",
+          "source_page": 32,
+          "verbatim_quote": "ICH M2 recommends to use UTF-8 for XML message encoding in all messages developed based on ICH electronic guidelines.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-004",
+          "rule_text": "All mandatory data elements must always be present in the ICSR XML message. A blank mandatory element must appear in the XML code for the message to be valid. Optional elements that are blank must not appear in the XML code.",
+          "source_section": "3.3.6 General rules for Data Entry",
+          "source_page": 37,
+          "verbatim_quote": "All mandatory data elements must always be part of the ICSR message, however optional elements do not have to be transmitted. A blank optional element may not appear in the XML code. A blank mandatory element needs to appear in the XML code for the message to be valid.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Null flavors (NI, MSK, UNK, NA, ASKU, NASK) may be used for mandatory elements where data is unavailable or protected.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-005",
+          "rule_text": "All free text data elements (except the native language fields E.i.1.1a and H.5.r) must be provided in English for international transmission.",
+          "source_section": "3.3.6 General rules for Data Entry",
+          "source_page": 35,
+          "verbatim_quote": "All free text data elements (with the exception of the 'Reaction / Event as Reported by the Primary Source in Native Language' (E.i.1.1a) and the 'Case Summary and Reporter's Comments in Native Language' (H.5.r)) are to be provided in English for international transmission.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Native language fields E.i.1.1a and H.5.r are exempt. Regional message exchanges may use language codes per regional implementation guides.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-006",
+          "rule_text": "Metric units must be used exclusively for all numerical data elements in the ICSR.",
+          "source_section": "3.3.6 General rules for Data Entry",
+          "source_page": 35,
+          "verbatim_quote": "Metric units should be used exclusively.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-007",
+          "rule_text": "Only one version of MedDRA may be used to code all relevant data elements within a single ICSR. The same MedDRA version must be identified each time a MedDRA term is populated within a single report.",
+          "source_section": "3.3.6 General rules for Data Entry",
+          "source_page": 36,
+          "verbatim_quote": "Only one version of MedDRA can be used to code the relevant data elements within a single ICSR. Therefore, the same MedDRA version should be identified each time a MedDRA term is populated. However, multiple ICSRs are submitted in a single batch, different ICSRs can refer to different MedDRA version.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When multiple ICSRs are submitted in a single batch, different ICSRs may reference different MedDRA versions.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-008",
+          "rule_text": "MedDRA coding of adverse reactions/events must be performed at the Lowest Level Term (LLT) level.",
+          "source_section": "3.2.1.2 MedDRA - the Medical Dictionary for Regulatory Activities",
+          "source_page": 25,
+          "verbatim_quote": "The ICH ICSR utilises MedDRA to code a number of medical concepts, such as adverse reactions or events, indications for drug use, medical history, etc. The following elements require MedDRA coding at the Lowest Level Term (LLT). Please note that only one version of MedDRA can be used in a single ICSR.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-009",
+          "rule_text": "Date and time data elements must use the HL7 V3 format CCYYMMDDHHMMSS.UUUU[+|-ZZzz]. Future dates cannot be transmitted in an ICH ICSR message.",
+          "source_section": "3.3.6 General rules for Data Entry — Date/Time Format",
+          "source_page": 35,
+          "verbatim_quote": "HL7 uses a single format to represent dates and times: CCYYMMDDHHMMSS.UUUU[+|-ZZzz]. Complete date time information down to seconds can be reported using this format. ... 'Future dates' cannot be transmitted in an ICH ICSR message when transmissions occur across different time zones, senders and receivers should configure their systems (e.g., attach the ZZzz offset to Coordinated Universal Time) to prevent dates and times to be interpreted as 'future dates'.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The minimum level of date precision for each date element is specified in Section 3.4 for each data element individually.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-010",
+          "rule_text": "The ICSR message structure must conform to the hierarchical E2B(R3) data element structure comprising two major sections: Section A (administrative/identification: C.1 through C.5) and Section B (case data: D through H).",
+          "source_section": "3.3.5 Notes on Format of Data Elements",
+          "source_page": 34,
+          "verbatim_quote": "E2B (R3) data elements have a hierarchical tree structure. It consists of two major sections A and B, where A contains administrative and identification information, and B contains information on the case. The subsidiary sections are categorised by the nature of the data, and are: Section A — C.1 Identification of the Case Safety Report; C.2 Primary Source(s) of Information; C.3 Information on Sender of Case Safety Report; C.4 Literature Reference(s); C.5 Study Identification. Section B — D Patient Characteristics; E Reaction(s)/Event(s); F Results of Tests and Procedures Relevant to the Investigation of the Patient; G Drug(s) Information; and H Narrative Case Summary and Further Information.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-011",
+          "rule_text": "When retransmitting a case, medical information received on the case must not be omitted or changed when no new information on the case is available to the retransmitting sender.",
+          "source_section": "3.3.4 Retransmission of cases",
+          "source_page": 33,
+          "verbatim_quote": "Based on regional reporting obligations and business arrangements in pharmacovigilance, an ICSR may be re-transmitted several times between different senders and receivers. During this re-transmission process, medical information 'received' on the case should not be omitted or changed during the retransmission when no new information on the case is available to the re-transmitting sender.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Certain data elements may be updated during retransmission: Sender's (case) Safety Report Unique Identifier (C.1.1); Date of Creation (C.1.2); Date Report Was First Received from Source (C.1.4); Date of Most Recent Information for This Report (C.1.5); Are Additional Documents Available? (C.1.6.1); Does This Case Fulfil the Local Criteria for an Expedited Report? (C.1.7); Information on Sender of Case Safety Report (C.3); Seriousness Criteria at Event Level (E.i.3.2); More Information Available (F.r.7); Assessment of Relatedness of Drug to Reaction(s)/Event(s) (G.k.9.i.2.r); Sender's Diagnosis (H.3.r); Sender's Comments (H.4); and English translation of the free text data elements.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-012",
+          "rule_text": "The ICSR must include specific mandatory administrative data elements: Sender's (case) Safety Report Unique Identifier (C.1.1), Type of Report (C.1.3), Date of Most Recent Information for This Report (C.1.5), Does This Case Fulfil the Local Criteria for an Expedited Report? (C.1.7), Worldwide Unique Case Identification (C.1.8), Reporter's Country Code (C.2.r.3), Sender's Organisation (C.3.2), and when Type of Report is 'Report from study', Study Type Where Reaction(s)/Event(s) Were Observed (C.5.4).",
+          "source_section": "3.3.2 Definition of Data Elements within a Message",
+          "source_page": 33,
+          "verbatim_quote": "Furthermore, in addition to the minimum information required for an ICSR report (See Section 3.3.1) certain specific administrative information should be provided to properly process the report: Sender's (case) Safety Report Unique Identifier (C.1.1); Type of Report (C.1.3); Date of Most Recent Information for This Report (C.1.5); Dose This Case Fulfil the Local Criteria for an Expedited Report? (C.1.7); Worldwide Unique Case Identification (C.1.8); Reporter's Country Code (C.2.r.3); Sender's Organisation (C.3.2); and When Type of Report = 'Report from study', Study Type Where Reaction(s) / Event(s) Were Observed (C.5.4).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-013",
+          "rule_text": "All information available must be reported in fully structured format using E2B(R3) data elements and applicable standard terminologies: ISO (country codes, gender codes, language codes), MedDRA (medical history, indication, reaction/event), UCUM (units of measurement), and ISO IDMP (medicinal product identification).",
+          "source_section": "3.3.3 General Principles",
+          "source_page": 33,
+          "verbatim_quote": "All the information available should be reported in fully structured format using the relevant E2B(R3) data elements and applicable standard terminologies. Those terminologies include; ISO (country codes, gender codes and language codes), MedDRA (e.g., medical history, indication, and reaction / event), UCUM (units of measurement), and ISO IDMP (see Section 3.2.1.1 for details).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Where ISO IDMP terms and/or identifiers (e.g., codes) are not available, the IG provides instructions for alternate means to code the information. Until the controlled vocabularies for the ISO IDMP are available, temporary rules are applied to the data elements.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-014",
+          "rule_text": "Country codes in the ICSR must use ISO 3166-1 alpha-2 format. The 'Unassigned' category of ISO 3166 codes must not be used.",
+          "source_section": "3.2.3.1 Use of ISO 3166 Country Codes",
+          "source_page": 31,
+          "verbatim_quote": "E2B (R3) references ISO 3166-1 alpha-2 country codes that includes 'Officially assigned' country codes plus 'EU' in the 'Exceptionally reserved' category, in the data elements which capture country codes. The 'Unassigned' category should not be used. 'Transitionally reserved', 'Indeterminately reserved' and 'Formerly used' categories may be used when appropriate, e.g., for legacy data.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "'Transitionally reserved', 'Indeterminately reserved', and 'Formerly used' categories may be used when appropriate for legacy data.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-015",
+          "rule_text": "The ICSR batch transmission must include the Batch Wrapper (N.1 elements) and at least one Message Wrapper (N.2.r elements) containing at least one ICSR.",
+          "source_section": "N.1 ICH ICSR Transmission Identification (batch wrapper) and N.2.r ICH ICSR Message Header (message wrapper)",
+          "source_page": 41,
+          "verbatim_quote": "The E2B(R3) specification defines inter-relationships between data elements allowing for various mandatory / required, optional, unique, or repeatable sections (information blocks). Relationships between elements vary, as indicated by: 1 ..1 (unique and mandatory); 0 ..1 (unique and optional); 1 ..n (one to many and mandatory); or 0 ..n (one to many and optional).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-016",
+          "rule_text": "The Sender's (case) Safety Report Unique Identifier (C.1.1) must be a unique identifier constructed according to the ICH OID namespace 2.16.840.1.113883.3.989.2.1.3.1, referencing an ISO 3166 country code as part of its construction.",
+          "source_section": "C.1.1 Sender's (case) Safety Report Unique Identifier",
+          "source_page": 46,
+          "verbatim_quote": "There is one exception not included in the table above. The identifier used in the 'Sender's (case) Safety Report Unique Identifier' (C.1.1) and the 'Worldwide Unique Case Identification Number' (C.1.8.1), is not listed as it is not exclusively coded using ISO 3166 Part 1. Nevertheless, it does reference the ISO Country Code system in its construction; see the user guidance for C.1.1 for more details.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-017",
+          "rule_text": "The ICSR message must include at least one Primary Source of Information (C.2.r) block. Reporter's Country Code (C.2.r.3) is mandatory administrative information.",
+          "source_section": "C.2.r Primary Source(s) of Information (repeat as necessary)",
+          "source_page": 56,
+          "verbatim_quote": "C.2.r Primary Source(s) of Information (repeat as necessary) ... C.2.r.3 Reporter's Country Code",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-018",
+          "rule_text": "The ICSR must include the Seriousness Criteria at Event Level (E.i.3.2) for each reported reaction/event. The six recognized seriousness criteria are: Results in Death (E.i.3.2a), Life Threatening (E.i.3.2b), Caused/Prolonged Hospitalisation (E.i.3.2c), Disabling/Incapacitating (E.i.3.2d), Congenital Anomaly/Birth Defect (E.i.3.2e), and Other Medically Important Condition (E.i.3.2f).",
+          "source_section": "E.i.3.2 Seriousness Criteria at Event Level",
+          "source_page": 104,
+          "verbatim_quote": "E.i.3.2 Seriousness Criteria at Event Level (more than one can be chosen) ... E.i.3.2a Results in Death ... E.i.3.2b Life Threatening ... E.i.3.2c Caused / Prolonged Hospitalisation ... E.i.3.2d Disabling / Incapacitating ... E.i.3.2e Congenital Anomaly / Birth Defect ... E.i.3.2f Other Medically Important Condition",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "More than one seriousness criterion can be chosen for a single event.",
+          "cross_references": ["ICH-E2A"]
+        },
+        {
+          "rule_id": "ICH-E2B-019",
+          "rule_text": "The Drug(s) Information section (G.k) must include Characterisation of Drug Role (G.k.1) for each drug reported. Reaction/event assessment (G.k.9.i drug-reaction matrix) must be completed for each drug-reaction combination.",
+          "source_section": "G.k Drug(s) Information (Repeat as Necessary) / G.k.1 Characterisation of Drug Role",
+          "source_page": 119,
+          "verbatim_quote": "G.k DRUG(S) INFORMATION (REPEAT AS NECESSARY) ... G.k.1 Characterisation of Drug Role ... G.k.9.i Drug-reaction(s) / Event(s) Matrix (repeat as necessary) ... G.k.9.i.2 Assessment of Relatedness of Drug to Reaction(s)/Event(s)",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-020",
+          "rule_text": "The ICSR must include a Narrative Case Summary (H.1) providing the clinical course, therapeutic measures, outcome, and additional relevant information. The Case Narrative must be provided as part of the complete ICSR.",
+          "source_section": "H Narrative Case Summary and Further Information / H.1",
+          "source_page": 142,
+          "verbatim_quote": "H NARRATIVE CASE SUMMARY AND FURTHER INFORMATION ... H.1 Case Narrative Including Clinical Course, Therapeutic Measures, Outcome and Additional Relevant Information",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-021",
+          "rule_text": "The E2B(R3) specification defines data element cardinality as mandatory (1..1 or 1..n) or optional (0..1 or 0..n). The C.1 Identification of the Case Safety Report block (1..1) and C.3 Information on Sender (1..1) are mandatory and unique. The C.2.r Primary Source(s) block (1..n) is mandatory and repeatable.",
+          "source_section": "3.1 ICH ICSR Relational Diagrams",
+          "source_page": 22,
+          "verbatim_quote": "The E2B(R3) specification defines inter-relationships between data elements allowing for various mandatory / required, optional, unique, or repeatable sections (information blocks). Relationships between elements vary, as indicated by: 1 ..1 (unique and mandatory); 0 ..1 (unique and optional); 1 ..n (one to many and mandatory); or 0 ..n (one to many and optional).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-022",
+          "rule_text": "Patient Section D must include at least one of the D.1 patient identifiers to meet minimum reporting requirements. Data privacy legislation may prevent exchange of patient initials and identifiers; however, at least one data element in section D.1 must be populated.",
+          "source_section": "3.3.1 Minimum Information",
+          "source_page": 32,
+          "verbatim_quote": "Due to data privacy legislation in some countries, the patient's initials and other patient identifiers might not be exchanged between countries. However, at least one of the data elements in the section D.1 must be populated and user guidance for this data element is provided.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Privacy legislation may restrict exchange of patient identifiers between countries. Null flavors must be used to indicate reasons for absence of data.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-023",
+          "rule_text": "ISO IDMP identifiers must be used for medicinal product identification where available. Elements G.k.2.1.1b (MPID), G.k.2.1.2b (PhPID), and G.k.2.3.r.2b (Substance TermID) require ISO IDMP OID references.",
+          "source_section": "3.2.1.1 ISO Identification of Medicinal Products (IDMP) / Table 1",
+          "source_page": 25,
+          "verbatim_quote": "The data elements that use ISO IDMP vocabularies are described in Section 3.4 of this document. However, where the ISO IDMP terms and / or identifiers (e.g., codes) are not available, the IG provides instructions for alternate means to code the information. Until the controlled vocabularies for the ISO IDMP are available, temporary rules are applied to the data elements. Terms and identifiers (codes) may be provided by each region until the ISO IDMP controlled vocabularies are implemented.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Until ISO IDMP controlled vocabularies are fully implemented, temporary regional rules apply and regions may provide their own terms and identifiers.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-024",
+          "rule_text": "The ICSR Acknowledgement Transaction must be returned by the receiver to the sender. The ACK message must include Batch Acknowledgement (ACK.M/A) and ICSR Message Acknowledgement (ACK.B) elements.",
+          "source_section": "4.0 THE ICSR ACKNOWLEDGEMENT TRANSACTION",
+          "source_page": 147,
+          "verbatim_quote": "4.0 THE ICSR ACKNOWLEDGEMENT TRANSACTION ... 4.1 Acknowledgement Message in HL7 ... 4.2 ICH ICSR Acknowledgement Message ... ACK.M / A ICH ICSR Batch Acknowledgement ... ACK.B ICH ICSR Message Acknowledgement",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-025",
+          "rule_text": "The codesystem version used in ICSR XML messages for submission must be acceptable to and designated by regulatory authorities in each region. Senders must update the codesystem version in ICSR messages for submission.",
+          "source_section": "3.2.2 ICH Maintained Code Sets and Object Identifiers (OIDs) Created for the ICH ICSR",
+          "source_page": 27,
+          "verbatim_quote": "Note: The codesystem versions for the E2B code lists used in the ICH E2B(R3) reference instances are not the latest version of the E2B code lists. A sender should update the codesystem version in ICSR messages (xml files) for submission. Acceptable codesystem version(s) are designated by regulatory authorities in each region.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-026",
+          "rule_text": "When a data element is null due to privacy protection, the nullFlavor 'MSK' (Masked) must be used. When a value is unknown, 'UNK' must be used. When not applicable, 'NA' must be used. The default exceptional value is 'NI' (No Information).",
+          "source_section": "3.3.6 General rules for Data Entry — nullFlavors",
+          "source_page": 38,
+          "verbatim_quote": "NI — No Information: No information whatsoever can be inferred from this exceptional value. This is the most general exceptional value. It is also the default exceptional value. MSK — Masked: There is information on this item available but it has not been provided by the sender due to security, privacy or other reasons. UNK — Unknown: A proper value is applicable, but not known. NA — Not Applicable: No proper value is applicable in this context (e.g., no previous exposure to a drug or vaccine).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "ASKU (Asked But Unknown) and NASK (Not Asked) are also valid nullFlavors. NINF and PINF are used only for Test Result (F.r.3.2) in range expressions.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2B-027",
+          "rule_text": "The OIDs provided in the Implementation Guide must be used in XML messages for the ICH ICSR. These OIDs identify specific code lists or namespaces applying to data elements.",
+          "source_section": "3.3.7 Details of ICH E2B(R3) Data Elements",
+          "source_page": 39,
+          "verbatim_quote": "an Object Identifier ('OID') — identifies if a specific code list or namespace applies to the data element. The OIDs provided in this IG should be used in XML messages for the ICH ICSR",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Code set specifications may evolve; organizations maintaining terminologies should be consulted for most current specifications.",
+          "cross_references": []
+        }
+      ]
+    },
+    "E2E": {
+      "title": "Pharmacovigilance Planning — ICH Harmonised Tripartite Guideline E2E",
+      "document_date": "18 November 2004",
+      "document_version": "Current Step 4 version",
+      "rules": [
+        {
+          "rule_id": "ICH-E2E-001",
+          "rule_text": "A Safety Specification must be prepared that summarises the important identified risks of a drug, important potential risks, and important missing information, including populations potentially at risk and situations where the product is likely to be used that have not been studied pre-approval.",
+          "source_section": "2. Safety Specification",
+          "source_page": 2,
+          "verbatim_quote": "The Safety Specification should be a summary of the important identified risks of a drug, important potential risks, and important missing information. It should also address the populations potentially at-risk (where the product is likely to be used), and outstanding safety questions which warrant further investigation to refine understanding of the benefit-risk profile during the post-approval period.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For products already on the market with emerging new safety concerns, only a subset of the elements might be relevant.",
+          "cross_references": ["ICH-E2F"]
+        },
+        {
+          "rule_id": "ICH-E2E-002",
+          "rule_text": "The Safety Specification must include non-clinical safety findings that have not been adequately addressed by clinical data, covering toxicity, general pharmacology, drug interactions, and other toxicity-related information or data.",
+          "source_section": "2.1.1 Non-Clinical",
+          "source_page": 3,
+          "verbatim_quote": "Within the Specification, this section should present non-clinical safety findings that have not been adequately addressed by clinical data, for example: Toxicity (including repeat-dose toxicity, reproductive/developmental toxicity, nephrotoxicity, hepatotoxicity, genotoxicity, carcinogenicity etc.); General pharmacology (cardiovascular, including QT interval prolongation; nervous system; etc.); Drug interactions; Other toxicity-related information or data.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If the product is intended for use in special populations, consideration should be given to whether specific non-clinical data needs exist.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-003",
+          "rule_text": "The Safety Specification must address limitations of the human safety database, including study population size, inclusion/exclusion criteria implications, and predictions of safety in the marketplace, with particular reference to populations likely to be exposed in medical practice.",
+          "source_section": "2.1.2 Clinical — a. Limitations of the Human Safety Database",
+          "source_page": 3,
+          "verbatim_quote": "Limitations of the safety database (e.g., related to the size of the study population, study inclusion/exclusion criteria) should be considered, and the implications of such limitations with respect to predicting the safety of the product in the marketplace should be explicitly discussed. Particular reference should be made to populations likely to be exposed during the intended or expected use of the product in medical practice.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E2B"]
+        },
+        {
+          "rule_id": "ICH-E2E-004",
+          "rule_text": "The Safety Specification must identify and discuss populations not studied or only studied to a limited degree in the pre-approval phase, including children, the elderly, pregnant or lactating women, patients with relevant co-morbidity, patients with disease severity differing from that studied in clinical trials, sub-populations carrying known genetic polymorphisms, and patients of different racial and/or ethnic origins.",
+          "source_section": "2.1.2 Clinical — b. Populations not Studied in the Pre-Approval Phase",
+          "source_page": 4,
+          "verbatim_quote": "The Specification should discuss which populations have not been studied or have only been studied to a limited degree in the pre-approval phase. The implications of this with respect to predicting the safety of the product in the marketplace should be explicitly discussed (CTD 2.5.5). Populations to be considered should include (but might not be limited to): Children; The elderly; Pregnant or lactating women; Patients with relevant co-morbidity such as hepatic or renal disorders; Patients with disease severity different from that studied in clinical trials; Sub-populations carrying known and relevant genetic polymorphism; Patients of different racial and/or ethnic origins.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-005",
+          "rule_text": "The Safety Specification must list important identified and potential risks that require further characterisation or evaluation (AEs/ADRs), including information on causal relationship, severity, seriousness, frequency, reversibility, and at-risk groups where available. Risk factors and potential mechanisms should be discussed.",
+          "source_section": "2.1.2 Clinical — c. Adverse Events (AEs)/Adverse Drug Reactions (ADRs)",
+          "source_page": 4,
+          "verbatim_quote": "This section should list the important identified and potential risks that require further characterisation or evaluation. ... More detailed information should be included on the most important identified AEs/ADRs, which would include those that are serious or frequent and that also might have an impact on the balance of benefits and risks of the product. This information should include evidence bearing on a causal relationship, severity, seriousness, frequency, reversibility and at-risk groups, if available.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-006",
+          "rule_text": "The Safety Specification must include discussion of identified and potential pharmacokinetic and pharmacodynamic interactions (including food-drug and drug-drug interactions), summarising the evidence supporting each interaction and possible mechanism.",
+          "source_section": "2.1.2 Clinical — d. Identified and Potential Interactions, Including Food-Drug and Drug-Drug Interactions",
+          "source_page": 5,
+          "verbatim_quote": "Identified and potential pharmacokinetic and pharmacodynamic interactions should be discussed. For each, the evidence supporting the interaction and possible mechanism should be summarised, and the potential health risks posed for the different indications and in the different populations should be discussed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-007",
+          "rule_text": "The Safety Specification must include epidemiological discussion of the indication(s), covering incidence, prevalence, mortality, and relevant co-morbidity, stratified by age, sex, and racial/ethnic origin where possible. Differences in epidemiology across regions should be discussed if information is available.",
+          "source_section": "2.1.2 Clinical — e. Epidemiology",
+          "source_page": 5,
+          "verbatim_quote": "The epidemiology of the indication(s) should be discussed. This discussion should include incidence, prevalence, mortality and relevant co-morbidity, and should take into account whenever possible stratification by age, sex, and racial and/or ethnic origin. Differences in the epidemiology in the different regions should be discussed (because the epidemiology of the indication(s) may vary across regions), if this information is available.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Requires available information.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-008",
+          "rule_text": "The Safety Specification must include a summary of important identified risks, important potential risks, and important missing information at the end of the specification section.",
+          "source_section": "2.2 Summary",
+          "source_page": 5,
+          "verbatim_quote": "At the end of the Safety Specification a summary should be provided of the: Important identified risks; Important potential risks; Important missing information. Sponsors are encouraged to summarise specific ongoing safety issues on an issue-by-issue basis, including both non-clinical and clinical data that are pertinent to the problem.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-009",
+          "rule_text": "A Pharmacovigilance Plan must be prepared based on the Safety Specification. The Plan must be based on identified risks, potential risks, and missing information, and must include an action plan for each important safety issue.",
+          "source_section": "3. Pharmacovigilance Plan",
+          "source_page": 5,
+          "verbatim_quote": "This section gives guidance on the structure of a Pharmacovigilance Plan. The Pharmacovigilance Plan should be based on the Safety Specification. The Specification and Plan can be written as two parts of the same document. The Plan would normally be developed by the sponsor and can be discussed with regulators during product development, prior to approval (i.e., when the marketing application is submitted) of a new product, or when a safety concern arises post-marketing.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For products for which no special concerns have arisen, routine pharmacovigilance as described in section 3.1.2 should be sufficient for post-approval safety monitoring, without the need for additional actions.",
+          "cross_references": ["ICH-E2F"]
+        },
+        {
+          "rule_id": "ICH-E2E-010",
+          "rule_text": "Routine pharmacovigilance must be conducted for all medicinal products regardless of whether or not additional actions are appropriate as part of a Pharmacovigilance Plan. Routine pharmacovigilance must include: systems for collection of all suspected adverse reactions, preparation of expedited ADR reports and Periodic Safety Update Reports (PSURs), continuous safety monitoring including signal detection, issue evaluation, updating of labeling, and liaison with regulatory authorities.",
+          "source_section": "3.1.2 Routine Pharmacovigilance Practices",
+          "source_page": 6,
+          "verbatim_quote": "Routine pharmacovigilance should be conducted for all medicinal products, regardless of whether or not additional actions are appropriate as part of a Pharmacovigilance Plan. This routine pharmacovigilance should include the following: Systems and processes that ensure that information about all suspected adverse reactions that are reported to the personnel of the company are collected and collated in an accessible manner; The preparation of reports for regulatory authorities: Expedited adverse drug reaction (ADR) reports; Periodic Safety Update Reports (PSURs). Continuous monitoring of the safety profile of approved products including signal detection, issue evaluation, updating of labeling, and liaison with regulatory authorities; Other requirements, as defined by local regulations.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Other requirements as defined by local regulations apply additionally.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-011",
+          "rule_text": "The Pharmacovigilance Plan must include, for each important safety issue: the safety issue, objective of proposed action(s), action(s) proposed, rationale for proposed action(s), monitoring by the sponsor for safety issue and proposed action(s), and milestones for evaluation and reporting.",
+          "source_section": "3.1.3 Action Plan for Safety Issues",
+          "source_page": 7,
+          "verbatim_quote": "The Plan for each important safety issue should be presented and justified according to the following structure: Safety issue; Objective of proposed action(s); Action(s) proposed; Rationale for proposed action(s); Monitoring by the sponsor for safety issue and proposed action(s); Milestones for evaluation and reporting.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-012",
+          "rule_text": "The overall Pharmacovigilance Plan for the product must include milestones for completion of studies and other evaluations, and for submission of safety results. Milestones should be considered when exposure to the product will have reached sufficient levels to identify/characterise AEs/ADRs of concern, and when results of ongoing or proposed safety studies are expected.",
+          "source_section": "3.1.4 Summary of Actions to be Completed, Including Milestones",
+          "source_page": 7,
+          "verbatim_quote": "It is recommended that milestones for completion of studies and other evaluations, and for submission of safety results, be included in the Pharmacovigilance Plan. In developing these milestones one should consider when: Exposure to the product will have reached a level sufficient to allow potential identification/characterisation of the AEs/ADRs of concern or resolution of a particular concern; and/or The results of ongoing or proposed safety studies are expected to be available.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "These milestones might be aligned with regulatory milestones (e.g., PSURs, annual reassessment and license renewals).",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-013",
+          "rule_text": "Before an observational study that is part of a Pharmacovigilance Plan commences, the protocol must be finalised and discussed with regulatory authorities before the study starts. A study report after completion, and interim reports if appropriate, must be submitted to authorities according to milestones within the Pharmacovigilance Plan.",
+          "source_section": "3.2.1 Design and Conduct of Observational Studies",
+          "source_page": 8,
+          "verbatim_quote": "Before the observational study that is part of a Pharmacovigilance Plan commences, a protocol should be finalised. Experts from relevant disciplines (e.g., pharmacovigilance experts, pharmacoepidemiologists and biostatisticians) should be consulted. It is recommended that the protocol be discussed with the regulatory authorities before the study starts. It is also suggested that the circumstances in which a study should be terminated early be discussed with regulatory authorities and documented in advance. A study report after completion, and interim reports if appropriate, should be submitted to the authorities according to the milestones within the Pharmacovigilance Plan.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-014",
+          "rule_text": "Observational study protocols must, as a minimum, include the study aims and objectives, the methods to be used, and the plan for analysis. The final study report must accurately and completely present the study objectives, methods, results, and the principal investigator's interpretation of the findings.",
+          "source_section": "3.2.1 Design and Conduct of Observational Studies",
+          "source_page": 8,
+          "verbatim_quote": "Study protocols should, as a minimum, include the study aims and objectives, the methods to be used, and the plan for analysis. The final study report should accurately and completely present the study objectives, methods, results, and the principal investigator's interpretation of the findings.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-015",
+          "rule_text": "The highest possible standards of professional conduct and confidentiality must always be maintained in observational studies and any relevant national legislation on data protection must be followed.",
+          "source_section": "3.2.1 Design and Conduct of Observational Studies",
+          "source_page": 8,
+          "verbatim_quote": "The highest possible standards of professional conduct and confidentiality should always be maintained and any relevant national legislation on data protection followed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-016",
+          "rule_text": "Spontaneous reports of adverse drug reactions must be collected and collated by company personnel in an accessible manner; sponsors should place particular emphasis on rapid follow-up for reports of certain adverse events known to be associated more frequently with drug therapy, such as anaphylaxis, aplastic anemia, toxic epidermal necrolysis and Stevens-Johnson Syndrome.",
+          "source_section": "Annex — Pharmacovigilance Methods / 1. Passive Surveillance",
+          "source_page": 9,
+          "verbatim_quote": "Therefore, when events such as these are spontaneously reported, sponsors should place more emphasis on these reports for detailed and rapid follow-up. ... certain distinct adverse events known to be associated more frequently with drug therapy, such as anaphylaxis, aplastic anemia, toxic epidermal necrolysis and Stevens-Johnson Syndrome.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Caution should be exercised in evaluating spontaneous reports, especially when comparing drugs. The data accompanying spontaneous reports are often incomplete.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-017",
+          "rule_text": "The Pharmacovigilance Plan must be updated as important information on safety becomes available and milestones are reached.",
+          "source_section": "3. Pharmacovigilance Plan",
+          "source_page": 6,
+          "verbatim_quote": "The Pharmacovigilance Plan should be updated as important information on safety becomes available and milestones are reached.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2E-018",
+          "rule_text": "The Safety Specification should identify risks believed to be common to the pharmacological class of the drug.",
+          "source_section": "2.1.2 Clinical — f. Pharmacological Class Effects",
+          "source_page": 5,
+          "verbatim_quote": "The Safety Specification should identify risks believed to be common to the pharmacological class.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        }
+      ]
+    },
+    "E2F": {
+      "title": "Development Safety Update Report (DSUR) — ICH Harmonised Tripartite Guideline E2F",
+      "document_date": "17 August 2010",
+      "document_version": "Current Step 4 version",
+      "rules": [
+        {
+          "rule_id": "ICH-E2F-001",
+          "rule_text": "The DSUR must be submitted annually to all concerned regulatory authorities no later than 60 calendar days after the DSUR data lock point.",
+          "source_section": "2.2 Periodicity and DSUR Data Lock Point",
+          "source_page": 4,
+          "verbatim_quote": "The DSUR should be submitted to all concerned regulatory authorities no later than 60 calendar days after the DSUR data lock point.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Japan will consider existing regulations on periodic safety reporting in implementing the DSUR.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-002",
+          "rule_text": "The Development International Birth Date (DIBD), defined as the sponsor's first authorisation to conduct a clinical trial in any country worldwide, must be used to determine the start of the annual period for the DSUR.",
+          "source_section": "2.2 Periodicity and DSUR Data Lock Point",
+          "source_page": 3,
+          "verbatim_quote": "The 'Development International Birth Date' (DIBD) is used to determine the start of the annual period for the DSUR. This date is the sponsor's first authorisation to conduct a clinical trial in any country worldwide. The start of the annual period for the DSUR is the month and date of the DIBD.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When the sponsor's first clinical trial is conducted in a country without a formal authorisation process, the sponsor should designate an appropriate date linked to the commencement of the first clinical trial.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-003",
+          "rule_text": "A single DSUR should be prepared covering all dosage forms, all strengths, all indications, and all patient populations under study with the investigational drug, wherever feasible.",
+          "source_section": "2.1 Single DSUR for an Active Substance",
+          "source_page": 3,
+          "verbatim_quote": "In order to promote a comprehensive analysis and presentation of the safety profile of the investigational drug, a sponsor should prepare a single DSUR with data pertinent to all dosage forms and strengths, all indications, and all patient populations under study with the investigational drug, wherever feasible. If this is not possible (e.g., when the data are not available to the sponsor), an explanation should be provided in the introduction section of the DSUR.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If a single DSUR is not possible (e.g., when data are not available to the sponsor), an explanation must be provided in the introduction section.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-004",
+          "rule_text": "The sponsor of a clinical trial is responsible for the preparation, content, and submission of a DSUR. The sponsor may delegate preparation to a third party (e.g., a contract research organisation) but retains responsibility.",
+          "source_section": "2.4.1 Sponsor's Responsibilities",
+          "source_page": 4,
+          "verbatim_quote": "The sponsor of a clinical trial is considered responsible for the preparation, content and submission of a DSUR. The sponsor can delegate the preparation of the DSUR to a third party (e.g., a contract research organisation).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In situations where the sponsor does not have access to information for specific sections (e.g., sponsor-investigators might not have information on manufacturing issues, non-clinical data, and marketing status), this should be stated in the DSUR.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-005",
+          "rule_text": "When more than one sponsor is involved in drug development, the parties should arrange to prepare a single DSUR where possible. Written agreements must be in place specifying how data will be exchanged and detailing responsibilities for preparation and submission of the DSUR.",
+          "source_section": "2.4.2 Responsibilities of Multiple Parties",
+          "source_page": 4,
+          "verbatim_quote": "When there is more than one sponsor of a clinical trial or drug development programme, the parties should arrange to prepare a single DSUR, if possible. ... Written agreements should be in place specifying how data will be exchanged and detailing the responsibilities for preparation and submission of the DSUR.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When a single DSUR cannot be arranged, multiple sponsors can agree to prepare separate DSURs; the rationale for separate DSURs should be provided in each report.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-006",
+          "rule_text": "The Investigator's Brochure (IB) in effect at the start of the reporting period must serve as the reference safety information to determine whether information received during the reporting period is consistent with previous knowledge of the investigational drug's safety profile.",
+          "source_section": "2.6 Reference Safety Information",
+          "source_page": 5,
+          "verbatim_quote": "The Investigator's Brochure (IB) in effect at the start of the reporting period should serve as the reference safety information to determine whether the information received during the reporting period remains consistent with previous knowledge of the safety profile of the investigational drug. Section 7.1 of the DSUR should clearly indicate the version number and date of the IB used for this purpose.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When an IB is not required by national or regional laws or regulations, the applicable national or regional product label should serve as the reference safety information.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-007",
+          "rule_text": "The DSUR must use the standardised 20-section format and table of contents structure as defined by ICH E2F. All sections must be completed; when no information is available or a section is not applicable, this must be stated.",
+          "source_section": "2.7 Format and Presentation of DSUR / 3. Guidance on Contents of DSUR",
+          "source_page": 7,
+          "verbatim_quote": "All sections should be completed; when no information is available, this should be stated. ... The recommended format and content of the DSUR, including table of contents, section numbering, and content of each section, is outlined below. For each heading where information is available, the information should be presented concisely; when no information is available or a DSUR section is not applicable, this should be stated.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-008",
+          "rule_text": "The DSUR title page must include: DSUR number (numbered sequentially), investigational drug(s), reporting period, date of the report, sponsor(s) name(s) and address(es), a statement on the confidentiality of the information included, and a cautionary statement that the DSUR includes unblinded information if applicable.",
+          "source_section": "3. Guidance on Contents of DSUR — Title Page",
+          "source_page": 7,
+          "verbatim_quote": "The title page of the DSUR should include the following information: DSUR number (reports should be numbered sequentially); Investigational drug(s); Reporting period; Date of the report; Sponsor(s) name(s) and address(es); Statement on the confidentiality of the information included in the DSUR; A cautionary statement that the DSUR includes unblinded information, if applicable.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-009",
+          "rule_text": "Section 3 (Actions Taken in the Reporting Period for Safety Reasons) must document all significant actions related to safety taken during the reporting period by the sponsor, regulators, DMCs, or ethics committees impacting clinical trials or the overall development programme.",
+          "source_section": "3.3 Actions Taken in the Reporting Period for Safety Reasons",
+          "source_page": 8,
+          "verbatim_quote": "This section should include a description of significant actions related to safety that have been taken during the reporting period by the sponsor, regulators, data monitoring committees (DMC) or ethics committees that had an impact on the conduct of a specific clinical trial(s) or on the overall clinical development programme. The reason(s) for each action should be provided if known.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Relevant updates to previous actions should also be summarised in this section. Changes to the IB should be discussed separately in section 3.4.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-010",
+          "rule_text": "Section 5 of the DSUR (Inventory of Clinical Trials) must provide a brief overview of all clinical trials ongoing and completed by the sponsor in the reporting period, with detailed information in a table as an appendix including study ID, phase, status, countries/regions, abbreviated study title, design, dosing regimen, study population, FVFP date, planned enrolment, and cumulative exposure estimates.",
+          "source_section": "3.5 Inventory of Clinical Trials Ongoing and Completed during the Reporting Period",
+          "source_page": 9,
+          "verbatim_quote": "This section should provide a brief overview of the clinical trials ongoing and completed by the sponsor in the reporting period, with detailed information presented in a table as an appendix (see examples in Appendix B, Table 1 of this guideline). ... The table(s) should include the following information for each clinical trial: Study ID (e.g., protocol number or other identifier); Phase (I, II, III, or IV); Status: Ongoing / Completed; Countries/regions where there is at least one investigational site for the protocol; Abbreviated study title; Design; Dose and regimen of investigational drug and any comparators; Study population; Date of clinical trial start (as defined by the sponsor, e.g., first visit of first patient (FVFP)); Planned enrolment for study as a whole; Estimates of cumulative numbers of exposed subjects for each treatment arm.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-011",
+          "rule_text": "Section 7 of the DSUR must include interval line listings of all Serious Adverse Reactions (SARs) reported during the reporting period and cumulative summary tabulations of serious adverse events (SAEs) from the DIBD.",
+          "source_section": "3.7 Data in Line Listings and Summary Tabulations",
+          "source_page": 11,
+          "verbatim_quote": "Sections 7.1-7.3 of the DSUR should present important clinical safety information through: Interval line listings of the SARs that were reported to the sponsor during the period covered by the DSUR; and Cumulative summary tabulations of serious adverse events that have been reported to the sponsor since the DIBD.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Certain adverse events can be excluded from the line listings and summary tabulations, but exclusions must be explained in the report.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-012",
+          "rule_text": "The DSUR line listings of serious adverse reactions must include, at minimum: study identification number and EudraCT number (EU), subject clinical trial identification number, sponsor's adverse reaction case reference number, country in which case occurred, age and sex of trial subject, treatment group, dose and dosing interval, date of onset and/or time to onset, dates of treatment, serious adverse reaction(s), outcome, and relevant comments.",
+          "source_section": "3.7.2 Line Listings of Serious Adverse Reactions during the Reporting Period",
+          "source_page": 12,
+          "verbatim_quote": "The following information should be included in the line listings: a) Study identification number and EudraCT number as applicable; b) Subject clinical trial identification number; c) Sponsor's adverse reaction case reference number; d) Country in which case occurred; e) Age and sex of trial subject; f) Treatment group; identified as 'blinded' if the blind has not been broken; g) Dose and dosing interval of investigational drug; h) Date of onset and/or time to onset of the most serious adverse reaction; i) Dates of treatment and/or best estimate of treatment duration; j) Serious adverse reaction(s); when MedDRA is used, the Preferred Term should be presented; k) Outcome; l) Comments, if relevant.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The EudraCT number is the unique identifier for trials authorised in the European Economic Area (EU-specific).",
+          "cross_references": ["ICH-E2B"]
+        },
+        {
+          "rule_id": "ICH-E2F-013",
+          "rule_text": "The cumulative summary tabulations of SAEs in the DSUR must be organised by System Organ Class (SOC) for the investigational drug and for the comparator arm(s). When MedDRA is used for coding adverse event/reaction terms, the Preferred Term level must be presented in line listings and summary tabulations.",
+          "source_section": "3.7.3 Cumulative Summary Tabulations of Serious Adverse Events / 3.7",
+          "source_page": 11,
+          "verbatim_quote": "The tabulation(s) should be organised by SOC, for the investigational drug, as well as for the comparator arm(s) (active comparators, placebo, and treatment unknown due to blinding) used in the programme. ... If the Medical Dictionary for Regulatory Activities (MedDRA) terminology is used for coding the adverse event/reaction terms, the Preferred Term level should be presented in the line listings and summary tabulations.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Data can be integrated across the programme or tabulated by protocol, indication, route of administration, or other variables when useful and feasible.",
+          "cross_references": ["ICH-E2B"]
+        },
+        {
+          "rule_id": "ICH-E2F-014",
+          "rule_text": "Section 18 of the DSUR (Overall Safety Assessment) must provide a concise, integrated evaluation of all new relevant clinical, non-clinical, and epidemiologic information obtained during the reporting period relative to previous knowledge of the investigational drug's safety. It must consider cumulative experience and new information collected in the DSUR period.",
+          "source_section": "3.18 Overall Safety Assessment",
+          "source_page": 16,
+          "verbatim_quote": "The overall safety assessment should be a concise, integrated evaluation of all new relevant clinical, non-clinical, and epidemiologic information obtained during the reporting period relative to previous knowledge of the investigational drug. This assessment should consider cumulative experience, new information collected in the period covered by the DSUR and, for investigational drugs with a marketing approval, clinically significant post-marketing data. It should not summarise or repeat information presented in previous sections of the DSUR, but should provide an interpretation of the information and its implications for the clinical trial population and the development programme.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Separate assessments can be provided by therapeutic area, route of administration, formulation and/or indication if appropriate.",
+          "cross_references": ["ICH-E2E"]
+        },
+        {
+          "rule_id": "ICH-E2F-015",
+          "rule_text": "Section 19 of the DSUR (Summary of Important Risks) must provide a concise, cumulative, issue-by-issue list of important identified and potential risks that might lead to warnings, precautions, or contraindications in labelling. Each risk must be re-evaluated annually and re-summarised as appropriate.",
+          "source_section": "3.19 Summary of Important Risks",
+          "source_page": 18,
+          "verbatim_quote": "This section should provide a concise, cumulative, issue-by-issue list of important identified and potential risks, e.g., those that might lead to warnings, precautions, or contraindications in labelling. ... Each risk should be re-evaluated annually and re-summarised as appropriate, based on the current state of knowledge. New information should be highlighted.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Risks that have been fully addressed or resolved should remain in the summary and be briefly described.",
+          "cross_references": ["ICH-E2E"]
+        },
+        {
+          "rule_id": "ICH-E2F-016",
+          "rule_text": "The DSUR must continue to be submitted for as long as indicated by national or regional laws or regulations. When submission of an annual report is no longer required in a country or region, the sponsor must indicate that the final DSUR serves as the last annual report for that country or region.",
+          "source_section": "2.3 Duration of DSUR Submissions",
+          "source_page": 4,
+          "verbatim_quote": "DSURs should continue to be submitted for as long as indicated by national or regional laws or regulations. When submission of an annual report is no longer required in an individual country or region, the sponsor should indicate that the final DSUR serves as the last annual report for the investigational drug in that country or region. The sponsor should also indicate whether or not clinical trials are continuing elsewhere.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In the US, sponsors might keep an IND open even if no clinical trials are ongoing or planned; annual reports are submitted for as long as the IND remains open.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-017",
+          "rule_text": "The DSUR data lock point must be the last day of the one-year reporting period. For administrative convenience, the data lock point of the DSUR may be designated as the last day of the month prior to the month of the DIBD.",
+          "source_section": "2.2 Periodicity and DSUR Data Lock Point",
+          "source_page": 4,
+          "verbatim_quote": "The data lock point of the DSUR should be the last day of the one-year reporting period. For administrative convenience, if desired by the sponsor, the data lock point of the DSUR can be designated as the last day of the month prior to the month of the DIBD.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If desired by the sponsor, a DSUR can be prepared based on the PSUR International Birth Date (IBD) so that the DSUR and PSUR can be synchronised. In synchronising the data lock points, the period covered by the next DSUR should be no longer than one year.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-018",
+          "rule_text": "The DSUR must include section 3.4 (Changes to Reference Safety Information) listing any significant safety-related changes to the IB or other reference safety information within the reporting period, including changes related to exclusion criteria, contraindications, warnings, precautions, serious adverse drug reactions, adverse events of special interest, interactions, and important findings from non-clinical studies.",
+          "source_section": "3.4 Changes to Reference Safety Information",
+          "source_page": 9,
+          "verbatim_quote": "This section should list any significant safety-related changes to the IB or other reference safety information within the reporting period. Such changes might include information relating to exclusion criteria, contraindications, warnings, precautions, serious adverse drug reactions, adverse events of special interest, interactions, and any important findings from non-clinical studies (e.g., carcinogenicity studies).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If the IB has been revised during the reporting period and not previously submitted to the relevant regulatory authority, the sponsor must provide a copy of the current version of the IB as an attachment to the DSUR.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-019",
+          "rule_text": "Section 17 of the DSUR (Late-Breaking Information) must summarise information on potentially important safety findings that arise after the data lock point but while the DSUR is in preparation. The Overall Safety Assessment must take these new data into account.",
+          "source_section": "3.17 Late-Breaking Information",
+          "source_page": 16,
+          "verbatim_quote": "This section should summarise information on potentially important safety findings that arise after the data lock point but while the DSUR is in preparation. Examples include clinically significant new case reports, important follow-up data, clinically relevant toxicological findings and any action that the sponsor, a DMC, or a regulatory authority has taken for safety reasons. The Overall Safety Assessment (see Section 3.18) should also take these new data into account.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-020",
+          "rule_text": "The DSUR must be accompanied by specified appendices including: Investigator's Brochure (if required by national or regional laws or requirements), Cumulative Table of Important Regulatory Requests, Status of Ongoing and Completed Clinical Trials, Cumulative Summary Tabulations of Demographic Data, Line Listings of Serious Adverse Reactions, Cumulative Summary Tabulation of Serious Adverse Events, and Scientific Abstracts (if relevant).",
+          "source_section": "3.20 Conclusions — Appendices to the DSUR",
+          "source_page": 18,
+          "verbatim_quote": "The DSUR should be accompanied by the following appendices, as appropriate, numbered as follows: 1. Investigator's Brochure (if required by national or regional laws or requirements); 2. Cumulative Table of Important Regulatory Requests; 3. Status of Ongoing and Completed Clinical Trials; 4. Cumulative Summary Tabulations of Demographic Data; 5. Line Listings of Serious Adverse Reactions; 6. Cumulative Summary Tabulation of Serious Adverse Events; 7. Scientific Abstracts (if relevant).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Regional Appendices are required as appropriate per national/regional regulations (see Section 3.16).",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E2F-021",
+          "rule_text": "Section 11 of the DSUR (Safety Findings from Marketing Experience) must include, where the drug is approved for marketing, a concise summary of key safety findings from marketing experience that arose during the reporting period, including findings related to off-label use, administration to special populations (e.g., pregnant women), medication errors, overdose, and abuse.",
+          "source_section": "3.11 Safety Findings from Marketing Experience",
+          "source_page": 14,
+          "verbatim_quote": "If the investigational drug has been approved for marketing in any country, this section should include a concise summary of key safety findings that have arisen from marketing experience and that became available to the sponsor during the reporting period, particularly if the findings resulted in changes to the product labelling, Investigator's Brochure, informed consent document or amendments to the product's risk management plan. This includes not only safety findings relating to approved use but also off-label use, administration to special populations (e.g., pregnant women), medication errors, overdose and abuse.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Only applicable when the investigational drug has been approved for marketing in any country.",
+          "cross_references": ["ICH-E2E"]
+        },
+        {
+          "rule_id": "ICH-E2F-022",
+          "rule_text": "The DSUR must provide an overall safety assessment (Section 18) that includes evaluation of risks and a benefit-risk considerations subsection, providing a succinct statement on the perceived balance between identified risks and anticipated efficacy/benefits, noting any changes in this balance since the previous DSUR.",
+          "source_section": "3.18.2 Benefit-risk Considerations",
+          "source_page": 17,
+          "verbatim_quote": "This section should provide a succinct statement on the perceived balance between risks that have been identified from cumulative safety data and anticipated efficacy/benefits and should note whether there have been any changes in this balance since the previous DSUR. This section is not intended to be a full benefit-risk assessment of the investigational drug.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "This section is not intended to be a full benefit-risk assessment.",
+          "cross_references": ["ICH-E2E"]
+        },
+        {
+          "rule_id": "ICH-E2F-023",
+          "rule_text": "Data indicating lack of efficacy, or lack of efficacy relative to established therapy, for investigational drugs intended to treat serious or life-threatening illnesses that could reflect a significant risk to clinical trial subjects must be summarised in the DSUR (Section 15).",
+          "source_section": "3.15 Lack of Efficacy",
+          "source_page": 15,
+          "verbatim_quote": "Data indicating lack of efficacy, or lack of efficacy relative to established therapy(ies), for investigational drugs intended to treat serious or life-threatening illnesses (e.g., excess cardiovascular adverse events in a trial of a new anti-platelet drug for acute coronary syndromes) could reflect a significant risk to clinical trial subjects and should be summarised in this section.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Only required when the drug is intended to treat serious or life-threatening illnesses.",
+          "cross_references": []
+        }
+      ]
+    }
+  }
+}

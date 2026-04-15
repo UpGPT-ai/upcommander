@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "title": "Human Gene Therapy for Retinal Disorders",
+    "source_file": "Human_Gene_Therapy_Retinal_Disorders.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "January 2020",
+    "document_version": "January 2020",
+    "extraction_date": "2026-03-24",
+    "total_rules": 24,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-RD-001",
+      "rule_text": "The endotoxin limit for intraocular gene therapy delivery must follow USP <771>: not more than (NMT) 2.0 EU/dose/eye OR NMT 0.5 EU/mL.",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "The endotoxin limit for intraocular delivery should follow the specifications in USP <771> (not more than (NMT) 2.0 Endotoxin Unit (EU)/dose/eye or NMT 0.5 EU/mL)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["USP <771>", "21 CFR 610.13", "FDA-SCT-1998-017"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-002",
+      "rule_text": "Particulate matter in retinal gene therapy products must be tested per USP <789>.",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "Particulate matter should be tested per USP <789>.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["USP <789>", "21 CFR 211.165"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-003",
+      "rule_text": "Gene therapy product testing must be performed on the final product configuration (i.e., as it will be administered), not merely an intermediate or bulk form.",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "Testing of the final product configuration is required.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-004",
+      "rule_text": "Compatibility between the gene therapy product and all delivery system(s) (e.g., needles, syringes, catheters) must be evaluated.",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "The GT product and delivery system(s) compatibility must be evaluated.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-005",
+      "rule_text": "All manufacturing processes and testing methods must be validated per 21 CFR 211.165(e) prior to submission of a Biologics License Application (BLA).",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "Manufacturing processes and all testing methods must be validated per 21 CFR 211.165(e) for licensure.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Validation expectations scale with phase of development; full validation required for BLA.",
+      "cross_references": ["21 CFR 211.165(e)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-006",
+      "rule_text": "A potency assay that assesses biological activity of the retinal gene therapy product must be established prior to the start of BLA-enabling clinical trials.",
+      "source_section": "II. Chemistry, Manufacturing, and Controls",
+      "source_page": 2,
+      "verbatim_quote": "Potency assay to assess biological activity established prior to BLA-enabling trials.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Early-phase studies may use surrogate potency measures.",
+      "cross_references": ["21 CFR 610.10", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-007",
+      "rule_text": "Proof-of-concept (POC) studies, both in vitro and in vivo, are required; the animal species selected must demonstrate a biological response to the gene therapy product similar to what is expected in humans.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "POC studies (in vitro and in vivo) are required; animal species must show biological response similar to humans.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-008",
+      "rule_text": "Biodistribution studies must be conducted to assess the distribution, persistence, and clearance of the vector (and possibly the expressed transgene product) in vivo, from the site of administration to target ocular and non-ocular tissues, intraocular fluids, and blood.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "Biodistribution studies should be conducted to assess the distribution, persistence, and clearance of the vector and possibly the expressed transgene product in vivo, from the site of administration to target ocular and non-ocular tissues, intraocular fluids, and blood.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-012", "FDA-SCT-1998-022"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-009",
+      "rule_text": "Toxicology studies must incorporate the planned clinical trial elements, including dose range, route of administration, and dosing schedule; ophthalmic findings that are abnormal must have their frequency, severity, cause, and clinical significance determined.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "Toxicology studies must incorporate planned clinical trial elements (dose range, ROA, dosing schedule); abnormal ophthalmic findings must have frequency/severity/cause/clinical significance determined.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-004"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-010",
+      "rule_text": "Inflammatory and immune responses observed in preclinical toxicology studies must be further characterized to attribute the response to the vector or the transgene product.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "Inflammatory/immune responses [must be] further characterized to attribute to vector or transgene.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-011", "FDA-GT-RD-009"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-011",
+      "rule_text": "Larger animal species with human-like eye anatomy (e.g., rabbits, pigs, non-human primates) must be used to evaluate delivery system safety beyond what can be assessed in rodents.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "Larger animals (rabbits, pigs, NHPs) with 'human-like' eyes [are] needed for delivery system safety beyond rodents.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-002", "FDA-GT-RD-007"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-012",
+      "rule_text": "For bilateral retinal disease, immune reactions may preclude repeat administration to the contralateral eye; for this situation, clinical data may be more informative than preclinical data to assess repeat-administration safety.",
+      "source_section": "III. Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "For bilateral disease: immune reactions may preclude repeat administration to contralateral eye — clinical data may be more informative than preclinical data for repeat administration.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to bilateral disease scenarios.",
+      "cross_references": ["FDA-GT-RD-018", "FDA-GT-RD-019"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-013",
+      "rule_text": "For gene replacement gene therapy products, genetic diagnosis of the retinal disorder must be confirmed prior to patient enrollment; a companion diagnostic may be required.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Genetic diagnosis confirmation prior to enrollment [is] recommended for gene replacement GT products; companion diagnostic may be needed.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to gene replacement products (not necessarily gene silencing or editing).",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-014",
+      "rule_text": "A randomized concurrent parallel control group is recommended whenever clinically and ethically feasible; for any marketing application with an efficacy claim, a concurrent parallel control group is required.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Randomized concurrent parallel control group [is] recommended whenever possible. For efficacy claim supporting marketing application: concurrent parallel group(s) required as control.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Concurrent parallel control may not be required for early-phase safety studies.",
+      "cross_references": ["21 CFR 314.126", "21 CFR 601.25"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-015",
+      "rule_text": "Masking procedures must be implemented; multiple measures to reduce bias are required, including at least two treatment arms with different doses and separation of clinical evaluators from study personnel involved in product administration.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Masking procedures [are] required; multiple measures to reduce bias (≥2 treatment arms, different doses, separation of clinical evaluators from administration personnel).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "FDA-GT-RD-014"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-016",
+      "rule_text": "The contralateral (untreated) eye is generally NOT recommended as a control arm in retinal gene therapy clinical trials.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Contralateral eye [is] generally NOT recommended as control.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD-014", "FDA-GT-RD-015"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-017",
+      "rule_text": "The study protocol must include a detailed description of the product delivery procedure and all devices used for intraocular administration.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Study protocol must include detailed description of product delivery procedure and devices.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "FDA-GT-RD-004"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-018",
+      "rule_text": "For bilateral disease requiring treatment of both eyes, gene therapy must be administered sequentially (not simultaneously); the protocol must justify which eye receives treatment first and specify the time interval between administrations.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Bilateral disease → sequential administration (not simultaneous); rationale for which eye receives treatment first; time interval between eyes carefully planned.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD-012", "FDA-GT-RD-019"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-019",
+      "rule_text": "For gene therapy products intended for treatment of both eyes, the clinical development plan must include trials in which both eyes receive the gene therapy product.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "For products intended for both eyes: development plan must include trials where both eyes receive GT product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD-018"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-020",
+      "rule_text": "Intraocular administration of gene therapy products must be performed only by experienced individuals.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Intraocular administration [must be] performed by experienced individuals only.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-021",
+      "rule_text": "Safety monitoring for retinal gene therapy clinical trials must include biomicroscopy and optical coherence tomography (OCT) to assess inflammatory reactions, and immunoassays to measure cellular and humoral immune responses to both the vector and the transgene-encoded protein.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Safety monitoring: biomicroscopy and OCT for inflammatory reactions; immunoassays for cellular and humoral immune responses (vector and transgene-encoded protein).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.32", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-022",
+      "rule_text": "Use of immunosuppressants (e.g., corticosteroids) in retinal gene therapy trials must be justified based on clinical data; monitoring for intraocular pressure increase and cataracts is required if immunosuppressants are used.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 5,
+      "verbatim_quote": "Immunosuppressants (e.g., corticosteroids) may be considered; justification based on clinical data; monitor for IOP increase, cataracts.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD-021"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-023",
+      "rule_text": "Early-phase efficacy endpoints for retinal gene therapy must include: OCT, retinal photography, fluorescein angiography, visual acuity (low and high luminance), visual fields, color vision, contrast sensitivity, and functional vision measures such as activities of daily living.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 5,
+      "verbatim_quote": "Early-phase endpoints: OCT, retinal photography, fluorescein angiography, visual acuity (low/high luminance), visual fields, color vision, contrast sensitivity, functional vision (activities of daily living).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD-024"]
+    },
+    {
+      "rule_id": "FDA-GT-RD-024",
+      "rule_text": "For established efficacy endpoints supporting a marketing application: (1) ETDRS visual acuity — a gain or loss of at least 15 letters (representing a halving or doubling of the visual angle) from baseline is considered clinically meaningful; (2) rate of photoreceptor loss by OCT/autofluorescence requires baseline and at least 2 subsequent images at ≥6-month intervals, with best-curve-fit reduction in loss rate exceeding measurement uncertainty.",
+      "source_section": "IV. Clinical Considerations",
+      "source_page": 5,
+      "verbatim_quote": "A halving (or doubling) of the visual angle represented by a gain (or loss), respectively, of at least 15 letters on the ETDRS chart from baseline is considered clinically meaningful... rate of photoreceptor loss by OCT/autofluorescence (baseline vs. ≥2 subsequent images at ≥6-month intervals; best curve fit reduction in loss rate exceeding measurement uncertainty).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to marketing applications with efficacy claims; earlier phases may use surrogate endpoints.",
+      "cross_references": ["FDA-GT-RD-014", "FDA-GT-RD-023"]
+    }
+  ]
+}

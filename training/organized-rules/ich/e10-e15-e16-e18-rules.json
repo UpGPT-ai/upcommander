@@ -1,0 +1,1009 @@
+{
+  "meta": {
+    "guidelines": ["ICH E10", "ICH E15", "ICH E16", "ICH E18"],
+    "extraction_date": "2026-03-23",
+    "sources": {
+      "E10": "Choice of Control Group and Related Issues in Clinical Trials, Step 4, 20 July 2000",
+      "E15": "Definitions for Genomic Biomarkers, Pharmacogenomics, Pharmacogenetics, Genomic Data and Sample Coding Categories, Step 4, 1 November 2007",
+      "E16": "Biomarkers Related to Drug or Biotechnology Product Development: Context, Structure and Format of Qualification Submissions, Step 4, 20 August 2010",
+      "E18": "Guideline on Genomic Sampling and Management of Genomic Data, Step 4, 3 August 2017"
+    }
+  },
+
+  "e10_rules": [
+    {
+      "rule_id": "E10-001",
+      "category": "control_group_purpose",
+      "rule": "A control group is required to discriminate patient outcomes caused by the test treatment from outcomes caused by other factors such as natural disease progression, observer or patient expectations, or other treatment.",
+      "conditions": "All controlled clinical trials intended to demonstrate efficacy",
+      "source_section": "1.2",
+      "source_quote": "Control groups have one major purpose: to allow discrimination of patient outcomes (for example, changes in symptoms, signs, or other morbidity) caused by the test treatment from outcomes caused by other factors, such as the natural progression of the disease, observer or patient expectations, or other treatment.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-002",
+      "category": "randomization",
+      "rule": "Randomization must be used to ensure that test and control populations are similar at the start of the study by randomly dividing a single sample population into groups.",
+      "conditions": "All concurrent controlled trials; randomization is required to avoid systematic differences between treatment groups",
+      "source_section": "1.2.1",
+      "source_quote": "Assurance that subject populations are similar in test and control groups is best attained by randomly dividing a single sample population into groups that receive the test or control treatments. Randomization avoids systematic differences between groups with respect to known or unknown baseline variables that could affect outcome.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-003",
+      "category": "blinding",
+      "rule": "Blinding must be implemented to minimize potential biases resulting from differences in management, treatment, or assessment of patients due to knowledge of assigned treatment.",
+      "conditions": "Standard in placebo-controlled and active-controlled trials; double-blind (double-masked) is the norm",
+      "source_section": "1.2.2",
+      "source_quote": "Clinical trials are often 'double-blind' (or 'double-masked'), meaning that both subjects and investigators, as well as sponsor or investigator staff involved in the treatment or clinical evaluation of subjects, are unaware of each subject's assigned treatment. Blinding is intended to minimize the potential biases resulting from differences in management, treatment, or assessment of patients, or interpretation of results that could arise as a result of subject or investigator knowledge of the assigned treatment.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-004",
+      "category": "placebo_control",
+      "rule": "A placebo-controlled trial assigns subjects by randomization to either a test treatment or an identical-appearing treatment that does not contain the test drug; it is almost always double-blind.",
+      "conditions": "When no effective treatment exists for the condition under study, or when modifications resolve ethical concerns",
+      "source_section": "1.3.1",
+      "source_quote": "In a placebo-controlled trial, subjects are randomly assigned to a test treatment or to an identical-appearing treatment that does not contain the test drug. The treatments may be titrated to effect or tolerance, or may be given at one or more fixed doses. Such trials are almost always double-blind.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-005",
+      "category": "no_treatment_control",
+      "rule": "No-treatment concurrent control is appropriate only when it is difficult or impossible to double-blind and when study endpoints are objective and unlikely to be influenced by knowledge of treatment assignment.",
+      "conditions": "When blinding is infeasible (e.g., treatments with easily recognized toxicity) and endpoints are objective",
+      "source_section": "1.3.2",
+      "source_quote": "Because of the advantages of double-blind designs, this design is likely to be needed and suitable only when it is difficult or impossible to double-blind (e.g., treatments with easily recognized toxicity) and only when there is reasonable confidence that study endpoints are objective and that the results of the trial are unlikely to be influenced by the factors listed in section 1.2.2.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-006",
+      "category": "dose_response",
+      "rule": "In a dose-response concurrent control trial, subjects are randomized to one of several fixed-dose groups; dose-response trials are usually double-blind and may include a placebo (zero dose) group.",
+      "conditions": "When establishing the dose-efficacy relationship or when the therapeutic dose range is not known",
+      "source_section": "1.3.3",
+      "source_quote": "In a randomized, fixed-dose, dose-response trial, subjects are randomized to one of several fixed-dose groups. Subjects may either be placed on their fixed dose initially or be raised to that dose gradually, but the intended comparison is between the groups on their final dose. Dose-response trials are usually double-blind. They may include a placebo (zero dose) and/or active control.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-007",
+      "category": "active_control",
+      "rule": "An active (positive) concurrent control trial compares the test treatment to a known active drug and has two distinct objectives: (1) showing efficacy by demonstrating the test is as good as a known effective treatment, or (2) showing superiority of the test treatment.",
+      "conditions": "When an effective therapy exists; assay sensitivity must be established for non-inferiority trials",
+      "source_section": "1.3.4",
+      "source_quote": "Active control trials can have two distinct objectives with respect to showing efficacy: (1) to show efficacy of the test treatment by showing it is as good as a known effective treatment or (2) to show efficacy by showing superiority of the test treatment to the active control.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-008",
+      "category": "external_control",
+      "rule": "External (historical) control groups should only be used in unusual circumstances due to serious concerns about comparability of test and control groups and inability to eliminate important biases.",
+      "conditions": "Only when the effect of treatment is dramatic and the usual disease course is highly predictable; endpoints must be objective",
+      "source_section": "1.3.5",
+      "source_quote": "External (historical) control groups, regardless of the comparator treatment, are considered together as the fifth type because of serious concerns about the ability of such trials to ensure comparability of test and control groups and their ability to minimize important biases, making this design usable only in unusual circumstances.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-009",
+      "category": "assay_sensitivity",
+      "rule": "Assay sensitivity is defined as the ability of a clinical trial to distinguish an effective treatment from a less effective or ineffective treatment; it is critical in non-inferiority and equivalence trials.",
+      "conditions": "Required in all efficacy trials, especially non-inferiority and equivalence trials; without it, a finding of non-inferiority cannot be interpreted as evidence of efficacy",
+      "source_section": "1.5",
+      "source_quote": "Assay sensitivity is a property of a clinical trial defined as the ability to distinguish an effective treatment from a less effective or ineffective treatment. Assay sensitivity is important in any trial but has different implications for trials intended to show differences between treatments (superiority trials) and trials intended to show non-inferiority.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-010",
+      "category": "assay_sensitivity_non_inferiority",
+      "rule": "Assay sensitivity in non-inferiority or equivalence trials must be deduced from two determinations: (1) historical evidence of sensitivity to drug effects, and (2) appropriate trial conduct.",
+      "conditions": "All non-inferiority and equivalence trials intended to demonstrate efficacy",
+      "source_section": "1.5.1",
+      "source_quote": "The presence of assay sensitivity in a non-inferiority or equivalence trial may be deduced from two determinations: 1) Historical evidence of sensitivity to drug effects, i.e., that similarly designed trials in the past regularly distinguished effective treatments from less effective or ineffective treatments and 2) Appropriate trial conduct, i.e., that the conduct of the trial did not undermine its ability to distinguish effective treatments from less effective or ineffective treatments.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-011",
+      "category": "non_inferiority_four_steps",
+      "rule": "The design and conduct of a non-inferiority trial involves four critical steps: (1) determining that historical evidence of sensitivity to drug effects exists, (2) designing the trial, (3) setting a margin, and (4) conducting the trial.",
+      "conditions": "All non-inferiority trials intended to demonstrate efficacy; without Step 1, demonstration of efficacy from a showing of non-inferiority is not possible and should not be attempted",
+      "source_section": "1.5.1",
+      "source_quote": "The design and conduct of a non-inferiority trial thus involve four critical steps: 1. Determining that historical evidence of sensitivity to drug effects exists. Without this determination, demonstration of efficacy from a showing of non-inferiority is not possible and should not be attempted. 2. Designing a trial. 3. Setting a margin. An acceptable non-inferiority margin should be defined, taking into account the historical data and relevant clinical and statistical considerations. 4. Conducting the trial. The trial conduct should also adhere closely to that of the historical trials and should be of high quality.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-012",
+      "category": "non_inferiority_margin",
+      "rule": "The non-inferiority margin cannot be greater than the smallest effect size that the active drug would be reliably expected to have compared with placebo in the setting of the planned trial.",
+      "conditions": "All non-inferiority trials; margin must be based on historical placebo-controlled trial data and reflect both statistical reasoning and clinical judgment",
+      "source_section": "1.5.1.1",
+      "source_quote": "The margin chosen for a non-inferiority trial cannot be greater than the smallest effect size that the active drug would be reliably expected to have compared with placebo in the setting of the planned trial. If a difference between active control and the new drug favors the control by as much as or more than this margin, the new drug might have no effect at all.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-013",
+      "category": "non_inferiority_margin",
+      "rule": "The non-inferiority design is appropriate and reliable only when the historical estimate of drug effect size can be well supported by reference to results of previous studies of the control drug that consistently distinguished the active control from placebo.",
+      "conditions": "Non-inferiority trials; if placebo-controlled trials more than occasionally show no difference, only superiority of the test drug would be interpretable",
+      "source_section": "1.5.1.1",
+      "source_quote": "The non-inferiority trial design is appropriate and reliable only when the historical estimate of drug effect size can be well supported by reference to the results of previous studies of the control drug. These studies should lead to the conclusion that the active control can consistently be distinguished from placebo in appropriately sized trials of design similar to the proposed trial.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-014",
+      "category": "assay_sensitivity_factors",
+      "rule": "Six conduct factors can reduce assay sensitivity in a non-inferiority trial and must be monitored: poor compliance, poor responsiveness of enrolled population, interfering concomitant medication, spontaneous improvement leaving no room for drug-induced improvement, poorly applied diagnostic criteria, and biased endpoint assessment.",
+      "conditions": "Non-inferiority and equivalence trials; review of conduct should check for all six factors",
+      "source_section": "1.5.1.2",
+      "source_quote": "There are many factors in the conduct of a trial that can reduce the observed difference between an effective treatment and a less effective or ineffective treatment and therefore may reduce a trial's assay sensitivity, such as: 1. Poor compliance with therapy 2. Poor responsiveness of the enrolled study population to drug effects 3. Use of concomitant non-protocol medication or other treatment that interferes with the test drug or that reduces the extent of the potential response 4. An enrolled population that tends to improve spontaneously, leaving no room for further drug-induced improvement 5. Poorly applied diagnostic criteria (patients lacking the disease to be studied) 6. Biased assessment of endpoint because of knowledge that all patients are receiving a potentially active drug.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-015",
+      "category": "ethical_requirements_placebo",
+      "rule": "When an effective treatment is known to prevent serious harm, such as death or irreversible morbidity, it is generally inappropriate to use a placebo control.",
+      "conditions": "Conditions where available treatment prevents death or irreversible morbidity; exceptions exist where standard therapy has severe toxicity that many patients refuse",
+      "source_section": "2.1.3",
+      "source_quote": "Use of a placebo control may raise problems of ethics, acceptability, and feasibility, however, when an effective treatment is available for the condition under study in a proposed trial. In cases where an available treatment is known to prevent serious harm, such as death or irreversible morbidity in the study population, it is generally inappropriate to use a placebo control. There are occasional exceptions, however, such as cases in which standard therapy has toxicity so severe that many patients have refused to receive it.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-016",
+      "category": "ethical_requirements_placebo",
+      "rule": "When no effective treatment exists for a condition, there is usually no ethical problem with a study comparing a new treatment to placebo.",
+      "conditions": "Conditions for which no effective treatment is known",
+      "source_section": "2.1.3",
+      "source_quote": "When a new treatment is tested for a condition for which no effective treatment is known, there is usually no ethical problem with a study comparing the new treatment to placebo.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-017",
+      "category": "ethical_requirements_placebo",
+      "rule": "When no serious harm results from withholding treatment, it is generally considered ethical to ask patients to participate in a placebo-controlled trial provided the setting is noncoercive and patients are fully informed about available therapies and consequences of delaying treatment.",
+      "conditions": "Non-serious or reversible conditions; patient must be fully informed; acceptability may vary by ICH region and depends on IRB/IEC judgment",
+      "source_section": "2.1.3",
+      "source_quote": "In other situations, when there is no serious harm, it is generally considered ethical to ask patients to participate in a placebo-controlled trial, even if they may experience discomfort as a result, provided the setting is noncoercive and patients are fully informed about available therapies and the consequences of delaying treatment.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-018",
+      "category": "ethical_requirements_placebo",
+      "rule": "Ethical acceptability of a placebo-controlled trial may depend on the specific circumstances of the trial including the severity of the disease and patient population; a short-term trial in mild disease may be acceptable while a longer trial or one with sicker patients may not be.",
+      "conditions": "Case-by-case IRB/IEC judgment required; short-term placebo in mild disease (e.g., mild essential hypertension with no end-organ disease) may be acceptable; longer trials with sicker patients are generally not",
+      "source_section": "2.1.3",
+      "source_quote": "Whether a particular placebo-controlled trial is ethical may, in some cases, depend on what is believed to have been clinically demonstrated and on the particular circumstances of the trial. For example, a short term placebo-controlled trial of a new antihypertensive agent in patients with mild essential hypertension and no end-organ disease might be considered generally acceptable, while a longer trial, or one that included sicker patients, probably would not be.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-019",
+      "category": "placebo_control",
+      "rule": "Use of a placebo or no-treatment control does not imply the patient receives no treatment at all; patients in placebo groups receive needed palliative treatment, best supportive care, or standard therapy in add-on study designs.",
+      "conditions": "All placebo-controlled and no-treatment-controlled trials; add-on designs are particularly important when standard treatment is known to decrease mortality or irreversible morbidity",
+      "source_section": "2.1.3",
+      "source_quote": "It should be emphasized that use of a placebo or no-treatment control does not imply that the patient does not get any treatment at all. For example, in an oncology trial, when no active drug is approved, patients in both the placebo or no-treatment group and the test drug group will receive needed palliative treatment, such as analgesics, and best supportive care.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-020",
+      "category": "placebo_control_advantages",
+      "rule": "Placebo-controlled trials are the most efficient design and can detect treatment effects with a smaller sample size than any other type of concurrently controlled study.",
+      "conditions": "When ethically acceptable",
+      "source_section": "2.1.6.3",
+      "source_quote": "Placebo-controlled trials are efficient in that they can detect treatment effects with a smaller sample size than any other type of concurrently controlled study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-021",
+      "category": "add_on_study",
+      "rule": "An add-on study is a placebo-controlled trial of a new agent conducted while all subjects also receive standard treatment; it is particularly important when standard treatment is known to decrease mortality or irreversible morbidity and a non-inferiority trial cannot be carried out or would be difficult to interpret.",
+      "conditions": "When standard treatment decreases mortality or irreversible morbidity; standard treatment must not be fully effective for the add-on study to be informative",
+      "source_section": "2.1.5.2.1",
+      "source_quote": "An add-on study is a placebo-controlled trial of a new agent conducted in people also receiving standard treatment. Such studies are particularly important when available treatment is known to decrease mortality or irreversible morbidity, and when a non-inferiority trial with standard treatment as the active control cannot be carried out or would be difficult to interpret.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-022",
+      "category": "active_control_ethical",
+      "rule": "Active control trials are generally considered to pose fewer ethical and practical problems than placebo-controlled trials because all subjects receive active treatment, but there should be a sound rationale for the test treatment.",
+      "conditions": "When effective therapy exists; if the active control is known to improve survival or decrease irreversible morbidity, a sound rationale must exist for the test treatment",
+      "source_section": "2.4.3",
+      "source_quote": "Active control trials are generally considered to pose fewer ethical and practical problems than placebo-controlled trials because all subjects receive active treatment. It should be appreciated, however, that subjects receiving a new treatment are not receiving standard therapy (just as a placebo control group is not) and may be receiving an ineffective or harmful drug. This is an important matter if the active control therapy is known to improve survival or decrease the occurrence of irreversible morbidity.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-023",
+      "category": "active_control_non_inferiority",
+      "rule": "In a non-inferiority or equivalence trial, the active control treatment must be of established efficacy at the dose used and under the conditions of the study; it should be a drug acceptable in the region for which data are intended.",
+      "conditions": "All non-inferiority and equivalence trials",
+      "source_section": "2.4.1",
+      "source_quote": "In a non-inferiority or equivalence trial, the active control treatment needs to be of established efficacy at the dose used and under the conditions of the study (see ICH E9: Statistical Principles for Clinical Trials). In general, this means it should be a drug acceptable in the region to which the studies will be submitted for the same indication at the dose being studied.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-024",
+      "category": "active_control_dose_fairness",
+      "rule": "In comparing the test drug with an active control, an appropriate dose and dose regimen of both the control and test drugs must be chosen; using too low a dose of control or too high a dose may unfairly favor one treatment.",
+      "conditions": "All active control trials, especially superiority and non-inferiority trials",
+      "source_section": "1.4.3.1",
+      "source_quote": "In comparing the test drug with an active control, it is important to choose an appropriate dose and dose regimen of the control and test drugs. In examining the results of a comparison of two treatments, it is important to consider whether an apparently less effective treatment has been used at too low a dose or whether the apparently less well tolerated treatment has been used at too high a dose.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-025",
+      "category": "external_control_bias",
+      "rule": "External control studies cannot be blinded and are subject to patient, observer, and analyst bias; they cannot ensure comparability of treatment and control groups; external controlled trials tend to overestimate efficacy.",
+      "conditions": "External controls are only usable in unusual circumstances; inability to control bias restricts use to situations where treatment effect is dramatic and disease course is highly predictable",
+      "source_section": "2.5.7",
+      "source_quote": "The externally controlled study cannot be blinded and is subject to patient, observer, and analyst bias; these are major disadvantages. It is well documented that externally controlled trials tend to overestimate efficacy of test therapies. It should be recognized that tests of statistical significance carried out in such studies are less reliable than in randomized trials.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-026",
+      "category": "external_control_conditions",
+      "rule": "An externally controlled trial should generally be considered only when prior belief in the superiority of the test therapy is so strong that alternative designs appear unacceptable and the disease has a well-documented, highly predictable course.",
+      "conditions": "Serious illness with no satisfactory treatment where course cannot be reliably predicted should be randomized from the earliest studies; externally controlled trials are most persuasive when treatment effect is objective and markedly different from external control outcome",
+      "source_section": "2.5.4",
+      "source_quote": "An externally controlled trial should generally be considered only when prior belief in the superiority of the test therapy to all available alternatives is so strong that alternative designs appear unacceptable and the disease or condition to be treated has a well-documented, highly predictable course.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-027",
+      "category": "dose_response_ethical",
+      "rule": "The ethical concerns related to dose-response studies are similar to those affecting placebo-controlled trials; where therapy is known to be effective in preventing death or irreversible morbidity, it is no more ethically acceptable to randomize deliberately to subeffective doses than to placebo.",
+      "conditions": "Dose-response studies; same ethical constraints as placebo-controlled trials apply",
+      "source_section": "2.3.3",
+      "source_quote": "The ethical and practical concerns related to a dose-response study are similar to those affecting placebo-controlled trials. Where there is therapy known to be effective in preventing death or irreversible morbidity, it is no more ethically acceptable to randomize deliberately to subeffective control therapy than it is to randomize to placebo.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-028",
+      "category": "three_arm_trial",
+      "rule": "A three-arm trial including both active control and placebo provides internal evidence of assay sensitivity by comparing placebo to standard drug, and can readily assess whether failure to distinguish test treatment from placebo implies ineffectiveness or trial inability to detect an active drug.",
+      "conditions": "When assay sensitivity must be verified in an active-controlled setting; particularly useful when there is uncertainty about whether the trial had adequate assay sensitivity",
+      "source_section": "2.1.5.1.1",
+      "source_quote": "Three-arm trials including an active control as well as a placebo-control group can readily assess whether a failure to distinguish test treatment from placebo implies ineffectiveness of the test treatment or is simply the result of a trial that lacked the ability to identify an active drug. The comparison of placebo to standard drug in such a trial provides internal evidence of assay sensitivity.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-029",
+      "category": "efficacy_demonstration",
+      "rule": "In most cases, evidence of efficacy is most convincingly demonstrated by showing superiority to a concurrent control treatment; if a superiority trial is not feasible for ethical or practical reasons and there is a defined treatment effect regularly seen with the active control, a non-inferiority trial can be used.",
+      "conditions": "General principle for choosing control type for demonstrating efficacy; see Figure 1 decision tree",
+      "source_section": "3",
+      "source_quote": "In most cases, evidence of efficacy is most convincingly demonstrated by showing superiority to a concurrent control treatment. If a superiority trial is not feasible or is inappropriate for ethical or practical reasons, and if a defined treatment effect of the active control is regularly seen (e.g., as it is for antibiotics in most situations), a non-inferiority or equivalence trial can be used and can be persuasive.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-030",
+      "category": "randomized_withdrawal",
+      "rule": "In a randomized withdrawal trial, subjects receiving test treatment are randomly assigned to continued treatment or to placebo; this design is useful for drugs treating recurring illness, chronic symptoms, and for determining duration of therapy.",
+      "conditions": "When long-term placebo treatment would be unacceptable; for drugs that suppress recurring illness or chronic symptoms; requires careful attention to withdrawal phenomena and tapering",
+      "source_section": "2.1.5.2.4",
+      "source_quote": "In a randomized withdrawal trial, subjects receiving a test treatment for a specified time are randomly assigned to continued treatment with the test treatment or to placebo (i.e., withdrawal of active therapy)... The randomized withdrawal approach is useful in several situations. First, it may be suitable for drugs that appear to resolve an episode of recurring illness (e.g., antidepressants)... Second, it may be used for drugs that suppress a symptom or sign (chronic pain, hypertension, angina), but where a long-term placebo-controlled trial would be difficult.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-031",
+      "category": "limited_placebo_period",
+      "rule": "In situations where long-term placebo treatment would not be acceptable, use of a placebo group for a short period at the beginning of an active control trial could establish assay sensitivity for at least short-term effects.",
+      "conditions": "Active control trials where long-term placebo is unacceptable but short-term assay sensitivity verification is needed",
+      "source_section": "2.1.5.2.3",
+      "source_quote": "In a situation where long-term placebo treatment would not be acceptable, the use of a placebo group for a short period at the beginning of an active control trial could establish assay sensitivity (at least for short-term effects). The trial would then continue without the placebo group.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E10-032",
+      "category": "comparative_efficacy_safety",
+      "rule": "Comparative efficacy and safety trials comparing two active treatments require that assay sensitivity (ability to detect a difference when one exists) be established because a trial incapable of distinguishing between different treatments cannot provide useful comparative information.",
+      "conditions": "Trials where the primary focus is on comparison of treatments rather than demonstration of efficacy per se",
+      "source_section": "1.4.2",
+      "source_quote": "Even though the primary focus of such a trial is the comparison of treatments, rather than demonstration of efficacy, the cautions described for conducting and interpreting non-inferiority trials need to be taken into account... Specifically, the ability of the comparative trial to detect a difference between treatments when one exists needs to be established because a trial incapable of distinguishing between treatments that are in fact different cannot provide useful comparative information.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "e10_control_group_decision_framework": {
+    "description": "Decision framework from ICH E10 Section 3, Figure 1 and Table 1 for choosing the concurrent control group to demonstrate efficacy",
+    "primary_principle": "In most cases, evidence of efficacy is most convincingly demonstrated by showing superiority to a concurrent control treatment (Section 3).",
+    "decision_tree": {
+      "step_1": {
+        "question": "Is there proven effective treatment?",
+        "if_NO": {
+          "options": [
+            "Placebo control (Section 2.1), with design modifications if appropriate",
+            "Dose-response control (Section 2.3)",
+            "Active control seeking to show superiority of test drug to active control (Section 2.4)",
+            "No-treatment control (Section 2.2), with design modifications if appropriate",
+            "Any combination of above controls (Section 1.3.6)"
+          ]
+        },
+        "if_YES": "proceed to step_2"
+      },
+      "step_2": {
+        "question": "Is the proven effective treatment life-saving or known to prevent irreversible morbidity?",
+        "if_YES": {
+          "options": [
+            "Active control; superiority, or non-inferiority if there is historical evidence of sensitivity to drug effect (see 1.5)",
+            "Placebo control with appropriate design modifications (e.g., add-on study)",
+            "Dose-response control (limited cases)"
+          ]
+        },
+        "if_NO": "proceed to step_3"
+      },
+      "step_3": {
+        "question": "Is there historical evidence of sensitivity to drug effects for an appropriately designed and conducted trial (see section 1.5)?",
+        "if_NO": {
+          "options": [
+            "Placebo control (Section 2.1), with design modifications if appropriate",
+            "Dose-response control (Section 2.3)",
+            "Active control showing superiority to control",
+            "No treatment control (Section 2.2), with design modifications if appropriate",
+            "Active and placebo controls (3-arm study; see 2.1.5.1.1)"
+          ]
+        },
+        "if_YES": {
+          "options": [
+            "Placebo control (Section 2.1), with design modifications if appropriate",
+            "Dose-response control",
+            "Active control showing superiority to control",
+            "Active and placebo controls (3-arm study; see 2.1.5.1.1)",
+            "Active control non-inferiority (see 1.5)"
+          ]
+        }
+      }
+    },
+    "table_1_usefulness_summary": {
+      "measure_absolute_effect_size": {
+        "placebo": "Yes",
+        "active_non_inferiority": "No",
+        "active_superiority": "No",
+        "dose_response": "No",
+        "placebo_plus_active": "Yes",
+        "placebo_plus_dose_response": "Yes",
+        "active_plus_dose_response": "No",
+        "placebo_plus_active_plus_dose_response": "Yes"
+      },
+      "show_existence_of_effect": {
+        "placebo": "Yes",
+        "active_non_inferiority": "Possible (depends on historical evidence of sensitivity to drug effects)",
+        "active_superiority": "Yes",
+        "dose_response": "Yes",
+        "placebo_plus_active": "Yes",
+        "placebo_plus_dose_response": "Yes",
+        "active_plus_dose_response": "Yes",
+        "placebo_plus_active_plus_dose_response": "Yes"
+      },
+      "show_dose_response_relationship": {
+        "placebo": "No",
+        "active_non_inferiority": "No",
+        "active_superiority": "No",
+        "dose_response": "Yes",
+        "placebo_plus_active": "No",
+        "placebo_plus_dose_response": "Yes",
+        "active_plus_dose_response": "Yes",
+        "placebo_plus_active_plus_dose_response": "Yes"
+      },
+      "compare_therapies": {
+        "placebo": "No",
+        "active_non_inferiority": "Possible (depends on historical evidence of sensitivity to drug effects)",
+        "active_superiority": "Yes",
+        "dose_response": "No",
+        "placebo_plus_active": "Yes",
+        "placebo_plus_dose_response": "No",
+        "active_plus_dose_response": "Possible (depends on historical evidence of sensitivity to drug effects)",
+        "placebo_plus_active_plus_dose_response": "Yes"
+      }
+    },
+    "ethical_constraints": {
+      "placebo_generally_acceptable": "When no effective treatment exists for the condition",
+      "placebo_generally_inappropriate": "When available treatment is known to prevent serious harm such as death or irreversible morbidity",
+      "placebo_exceptions": "Standard therapy with toxicity so severe many patients have refused to receive it; add-on designs; short-term trials in mild disease; randomized withdrawal; limited placebo period",
+      "active_control_requirements_for_non_inferiority": [
+        "Historical evidence of sensitivity to drug effects must exist",
+        "Non-inferiority margin must not exceed smallest reliably expected active drug effect vs placebo",
+        "Margin must be defined prospectively based on historical data",
+        "Trial conduct must be high quality and similar to historical trials"
+      ]
+    }
+  },
+
+  "e15_rules": [
+    {
+      "rule_id": "E15-001",
+      "category": "definitions",
+      "rule": "A genomic biomarker is a measurable DNA and/or RNA characteristic that is an indicator of normal biologic processes, pathogenic processes, and/or response to therapeutic or other interventions.",
+      "source_section": "2.1.1",
+      "source_quote": "A measurable DNA and/or RNA characteristic that is an indicator of normal biologic processes, pathogenic processes, and/or response to therapeutic or other interventions.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-002",
+      "category": "genomic_biomarker_scope",
+      "rule": "A genomic biomarker can consist of one or more DNA and/or RNA characteristics; DNA characteristics include SNPs, short sequence repeat variability, haplotypes, DNA modifications (e.g., methylation), insertions/deletions, copy number variations, and cytogenetic rearrangements.",
+      "source_section": "2.1.2",
+      "source_quote": "A genomic biomarker can consist of one or more deoxyribonucleic acid (DNA) and/or ribonucleic acid (RNA) characteristics. DNA characteristics include, but are not limited to: Single nucleotide polymorphisms (SNPs); Variability of short sequence repeats; Haplotypes; DNA modifications, e.g., methylation; Deletions or insertions of (a) single nucleotide(s); Copy number variations; Cytogenetic rearrangements, e.g., translocations, duplications, deletions or inversions.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-003",
+      "category": "genomic_biomarker_scope",
+      "rule": "RNA characteristics that constitute genomic biomarkers include, but are not limited to, RNA sequences, RNA expression levels, RNA processing (e.g., splicing and editing), and microRNA levels.",
+      "source_section": "2.1.2",
+      "source_quote": "RNA characteristics include, but are not limited to: RNA sequences; RNA expression levels; RNA processing, e.g., splicing and editing; microRNA levels.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-004",
+      "category": "genomic_biomarker_scope",
+      "rule": "The definition of a genomic biomarker is not limited to human samples but includes samples from viruses and infectious agents as well as animal samples, for application to non-clinical and/or toxicological studies.",
+      "source_section": "2.1.2",
+      "source_quote": "The definition of a genomic biomarker is not limited to human samples, but includes samples from viruses and infectious agents as well as animal samples, i.e., for the application of genomic biomarkers to non-clinical and/or toxicological studies.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-005",
+      "category": "genomic_biomarker_exclusion",
+      "rule": "The definition of a genomic biomarker does not include the measurement and characterisation of proteins or low molecular weight metabolites (i.e., proteomics and metabolomics are excluded).",
+      "source_section": "2.1.2",
+      "source_quote": "The definition of a genomic biomarker does not include the measurement and characterisation of proteins or low molecular weight metabolites.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-006",
+      "category": "pharmacogenomics",
+      "rule": "Pharmacogenomics (PGx) is defined as the study of variations of DNA and RNA characteristics as related to drug response.",
+      "source_section": "2.2.1.1",
+      "source_quote": "The study of variations of DNA and RNA characteristics as related to drug response.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-007",
+      "category": "pharmacogenetics",
+      "rule": "Pharmacogenetics (PGt) is a subset of pharmacogenomics (PGx) and is defined as the study of variations in DNA sequence as related to drug response.",
+      "source_section": "2.2.1.2",
+      "source_quote": "Pharmacogenetics (PGt) is a subset of pharmacogenomics (PGx) and is defined as: The study of variations in DNA sequence as related to drug response.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-008",
+      "category": "pharmacogenomics",
+      "rule": "The term 'drug' in PGx/PGt definitions should be considered synonymous with investigational (medicinal) product, medicinal product, medicine, and pharmaceutical product (including vaccines and other biological products).",
+      "source_section": "2.2.2",
+      "source_quote": "The term drug should be considered synonymous with investigational (medicinal) product, medicinal product, medicine and pharmaceutical product (including vaccines and other biological products).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-009",
+      "category": "pharmacogenomics",
+      "rule": "Drug response in PGx/PGt includes the processes of drug absorption and disposition (pharmacokinetics) and drug effects including pharmacodynamics, drug efficacy, and adverse effects.",
+      "source_section": "2.2.2",
+      "source_quote": "Drug response includes the processes of drug absorption and disposition (e.g., pharmacokinetics, (PK)), and drug effects (e.g., pharmacodynamics (PD), drug efficacy and adverse effects of drugs).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-010",
+      "category": "pharmacogenomics",
+      "rule": "The definitions of PGx and PGt do not include other disciplines such as proteomics and metabolomics.",
+      "source_section": "2.2.2",
+      "source_quote": "The definitions of PGx and PGt do not include other disciplines such as proteomics and metabalomics.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-011",
+      "category": "data_coding",
+      "rule": "There are four general categories of coding for genomic data and samples: identified, coded (single or double), anonymised, and anonymous. The implications of using a specific category should be considered in the design of PGx and PGt research studies.",
+      "source_section": "2.3",
+      "source_quote": "There are four general categories of coding: identified, coded, anonymised and anonymous. Coded data or samples can be single or double coded. The implications of using a specific data and sample coding category should be considered in the design of PGx and PGt research studies.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-012",
+      "category": "data_coding",
+      "rule": "Identified data and samples are labelled with personal identifiers such as name or identification numbers; they are generally not considered appropriate for purposes of clinical trials in drug development.",
+      "source_section": "2.3.1",
+      "source_quote": "Identified data and samples are labelled with personal identifiers such as name or identification numbers (e.g., social security or national insurance number)... Identified data and samples are generally not considered appropriate for purposes of clinical trials in drug development.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-013",
+      "category": "data_coding",
+      "rule": "Single coded data and samples are the current standard used in clinical research; they carry no personal identifiers, are traceable via a single coding key maintained by the clinical investigator, and allow for sample withdrawal or return of results.",
+      "source_section": "2.3.2.1",
+      "source_quote": "Single coding is the current standard used in clinical research and offers additional safeguards to the subject's identifiers compared to the general healthcare confidentiality and privacy protection in everyday medical practice.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-014",
+      "category": "data_coding",
+      "rule": "Double coded data and samples provide additional confidentiality over single coding; the clinical investigator maintains the first coding key and does not have access to the second coding key; access to both coding keys is needed to link data back to a subject identifier.",
+      "source_section": "2.3.2.2",
+      "source_quote": "In general, the clinical investigator is responsible for maintaining the first coding key and does not have access to the second coding key... Access to both coding keys is needed to link any data or samples back to a subject identifier.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-015",
+      "category": "data_coding",
+      "rule": "Anonymised data and samples have had their link to subjects' identifiers permanently deleted; once anonymised, sample withdrawal or return of individual results is not possible even at the subject's request.",
+      "source_section": "2.3.3",
+      "source_quote": "Anonymised data and samples are initially single or double coded but where the link between the subjects' identifiers and the unique code(s) is subsequently deleted. Once the link has been deleted it is no longer possible to trace the data and samples back to individual subjects through the coding key(s)... As anonymised samples and associated data are not traceable back to the subject, it is not possible to undertake actions such as sample withdrawal, or the return of individual results, even at the subject's request.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-016",
+      "category": "data_coding",
+      "rule": "Anonymous data and samples are never labelled with personal identifiers when originally collected and no coding key is ever generated; clinical monitoring, subject follow-up, and addition of new data are not possible.",
+      "source_section": "2.3.4",
+      "source_quote": "Anonymous data and samples are never labelled with personal identifiers when originally collected, neither is a coding key generated. Therefore there is no potential to trace back genomic data and samples to individual subjects... The use of anonymous data and samples does not allow for clinical monitoring, subject follow-up, or the addition of new data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E15-017",
+      "category": "data_coding",
+      "rule": "The conditions under which genomic data can be linked back to a subject's personal identifiers, including return of genomic data to the subject, must be described in research-related documents such as the informed consent document.",
+      "source_section": "2.3.5",
+      "source_quote": "The conditions under which the genomic data can be linked back to a subject's personal identifiers for any purpose, including the return of genomic data to the subject, should be described in research related documents, e.g., the informed consent document.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "e15_key_definitions": {
+    "genomic_biomarker": {
+      "definition": "A measurable DNA and/or RNA characteristic that is an indicator of normal biologic processes, pathogenic processes, and/or response to therapeutic or other interventions.",
+      "source_section": "2.1.1",
+      "notes": "Does not include proteins or low molecular weight metabolites; applies to human, animal, and microbial samples"
+    },
+    "pharmacogenomics_PGx": {
+      "definition": "The study of variations of DNA and RNA characteristics as related to drug response.",
+      "source_section": "2.2.1.1",
+      "notes": "Broader term that encompasses pharmacogenetics; includes both DNA and RNA variation; drug response includes PK and PD"
+    },
+    "pharmacogenetics_PGt": {
+      "definition": "The study of variations in DNA sequence as related to drug response.",
+      "source_section": "2.2.1.2",
+      "notes": "A subset of pharmacogenomics (PGx); restricted to DNA sequence variation only (not RNA)"
+    },
+    "identified_data_and_samples": {
+      "definition": "Data and samples labelled with personal identifiers such as name or identification numbers (e.g., social security or national insurance number); directly traceable to the subject.",
+      "source_section": "2.3.1",
+      "notes": "Generally not appropriate for clinical trials in drug development"
+    },
+    "coded_data_and_samples": {
+      "definition": "Data and samples labelled with at least one specific code that do not carry any personal identifiers.",
+      "source_section": "2.3.2",
+      "notes": "Can be single coded (standard for clinical research) or double coded (added privacy protection)"
+    },
+    "single_coded_data_and_samples": {
+      "definition": "Usually labelled with a single specific code with no personal identifiers; traceable via a single coding key maintained by the clinical investigator.",
+      "source_section": "2.3.2.1",
+      "notes": "Current standard used in clinical research"
+    },
+    "double_coded_data_and_samples": {
+      "definition": "Initially labelled with a single code, then relabelled with a second code linked to the first via a second coding key; the clinical investigator maintains the first key and does not have access to the second.",
+      "source_section": "2.3.2.2",
+      "notes": "Provides additional confidentiality and privacy protection over single coding"
+    },
+    "anonymised_data_and_samples": {
+      "definition": "Initially single or double coded data and samples where the link between the subjects' identifiers and the unique code(s) has subsequently been deleted; cannot be re-identified through coding keys.",
+      "source_section": "2.3.3",
+      "notes": "Anonymisation prevents subject re-identification; sample withdrawal and return of individual results are not possible"
+    },
+    "anonymous_data_and_samples": {
+      "definition": "Data and samples never labelled with personal identifiers when originally collected; no coding key is ever generated.",
+      "source_section": "2.3.4",
+      "notes": "No traceability to individual subjects possible; clinical monitoring and subject follow-up not possible"
+    }
+  },
+
+  "e16_rules": [
+    {
+      "rule_id": "E16-001",
+      "category": "biomarker_qualification_definition",
+      "rule": "Biomarker qualification is a conclusion that, within the stated context of use, the results of assessment with a biomarker can be relied upon to adequately reflect a biological process, response or event, and support use of the biomarker during drug or biotechnology product development.",
+      "source_section": "1.2",
+      "source_quote": "Qualification is a conclusion that, within the stated context of use, the results of assessment with a biomarker can be relied upon to adequately reflect a biological process, response or event, and support use of the biomarker during drug or biotechnology product development, ranging from discovery through post-approval.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-002",
+      "category": "submission_requirements",
+      "rule": "Biomarker qualification applications may be submitted as stand-alone submissions to regulatory authorities or as a component of NDA/BLA/MAA marketing authorization applications; it is recommended that submissions be made simultaneously to pertinent regulatory authorities.",
+      "source_section": "1.4",
+      "source_quote": "To facilitate the integration of biomarkers in global drug or biotechnology product development it is recommended that qualification submissions be submitted simultaneously to pertinent regulatory authorities.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-003",
+      "category": "submission_requirements",
+      "rule": "If a biomarker has already been endorsed as qualified by a regulatory authority, biomarker data generated within the qualified context of use do not need to be re-submitted to the authority for re-qualification in an NDA/BLA/MAA; a copy of the assessment report is sufficient.",
+      "source_section": "1.4",
+      "source_quote": "It should be noted that, if a biomarker has already been endorsed as qualified by a regulatory authority, biomarker data generated within the qualified context of use do not need to be re-submitted to the authority for re-qualification in an NDA / BLA / MAA. It would be appropriate to simply provide a copy of the assessment report of the authority in the NDA / BLA / MAA or other relevant regulatory procedure.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-004",
+      "category": "context_of_use",
+      "rule": "The proposed context of use of a biomarker corresponds to the data supporting its qualification and must be clearly detailed in the submission package with reference to the specific use of the biomarker in drug or biotechnology product development.",
+      "source_section": "1.4",
+      "source_quote": "The proposed context of use of a biomarker corresponds to the data supporting its qualification. The proposed context of use should be clearly detailed in the submission package. Reference should be made to the specific use of the biomarker in drug or biotechnology product development.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-005",
+      "category": "context_of_use",
+      "rule": "The context of use of a biomarker must be described according to three dimensions: (1) General Area (nonclinical/clinical, pharmacology, toxicology, efficacy, safety, disease), (2) Specific Biomarker Use, and (3) Critical Parameters including drug-specificity, disease diagnosis/phenotype, sample collection, and assay specifications.",
+      "source_section": "2.2.1.2",
+      "source_quote": "The elements describing the context of use for a biomarker should include (i) the general area, (ii) the specific biomarker use, and (iii) the critical parameters which define when and how the biomarker should be used.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-006",
+      "category": "submission_structure",
+      "rule": "A biomarker qualification submission must include five sections aligned with the CTD format: Section 1 (Regional Administrative Information), Section 2 (Summaries including Biomarker Qualification Overview and Data Summaries), Section 3 (Quality Reports), Section 4 (Nonclinical Reports), and Section 5 (Clinical Reports).",
+      "source_section": "2",
+      "source_quote": "The biomarker qualification submission should include the following sections: Section 1: Regional Administrative Information; Section 2: Summaries [Biomarker Qualification Overview]; Section 3: Quality Reports; Section 4: Nonclinical Reports [including] Analytical assay development reports, Analytical assay validation reports, Nonclinical study reports (in vitro), Nonclinical study reports (in vivo); Section 5: Clinical Reports [including] Analytical Assay development reports, Analytical assay validation reports, Clinical pharmacology study reports, Clinical efficacy and/or safety study reports.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-007",
+      "category": "analytical_validation",
+      "rule": "Analytical assay validation reports must be included in both Section 4 (nonclinical) and Section 5 (clinical) of a biomarker qualification submission.",
+      "source_section": "2 (structure listing)",
+      "source_quote": "Section 4: Nonclinical Reports: Analytical assay development reports; Analytical assay validation reports... Section 5: Clinical Reports: Analytical Assay development reports; Analytical assay validation reports.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-008",
+      "category": "biomarker_qualification_overview",
+      "rule": "The Biomarker Qualification Overview must summarize the key characteristics of the biomarker including strengths and limitations, whether it is a single or composite biomarker, and the objective and design of supporting studies.",
+      "source_section": "2.2.1.1",
+      "source_quote": "It should: Summarize the key characteristics of the biomarker, including: strengths and limitations (e.g., comparison with relevant standard methods where available, presence / absence of information on pertinent species / population); whether it is a single or composite biomarker; if it is a composite biomarker, its component markers and the process through which these were selected should be defined; objective and design of the studies supporting its use.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-009",
+      "category": "biomarker_qualification_overview",
+      "rule": "The Conclusion section of the Biomarker Qualification Overview must provide an assessment of expected benefits for application of the biomarker, address issues encountered during qualification studies and explain how they have been resolved, and identify unresolved issues with explanation of why they should not be barriers to qualification.",
+      "source_section": "2.2.1.4",
+      "source_quote": "The Conclusion should: Provide an assessment of expected benefits for the application of the biomarker based upon results of relevant studies, including interpretation of how the biomarker performance supports its use in the proposed context; Address issues encountered during the biomarker qualification studies, explaining how they have been evaluated and resolved; Identify unresolved issues, and explain why they should not be considered barriers to qualification for the proposed context of use and / or describe plans to resolve them, if applicable.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-010",
+      "category": "analytical_validation",
+      "rule": "The Data Summaries must describe the analytical performance characteristics of the assay (e.g., for in vitro assays, accuracy, precision, and other standard parameters) including any specific recommendations on sample handling, storage, and quality requirements.",
+      "source_section": "2.2.2",
+      "source_quote": "Describe the analytical performance characteristics of the assay (e.g., for in vitro assays, accuracy, precision, and other standard parameters) including any specific recommendations where applicable on sample handling, storage, and quality requirements.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-011",
+      "category": "submission_requirements",
+      "rule": "Full study reports for biomarker qualification must be provided in Sections 4 and 5, and raw data must be made available to regulatory authorities upon request; information on compliance with GCP can be included.",
+      "source_section": "2.4",
+      "source_quote": "In these sections, full study reports for biomarker qualification should be provided, and raw data made available to the regulatory authorities upon request. Information on compliance with Good Clinical Practices (GCP) can be included in these sections.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-012",
+      "category": "submission_requirements",
+      "rule": "Study reports must specify critical variables including: the number and classification of patients/clinical trial subjects with assessable biomarker data, performance characteristics of the biomarker test based on retrospective and/or prospective correlation with endpoint data, and variables that impact assay validity.",
+      "source_section": "2.4",
+      "source_quote": "Study reports used to generate the biomarker qualification data should specify critical variables including, but not limited to, the following examples: The number and classification of patients / clinical trial subjects who participated in the biomarker study, and the number and classification of patients / clinical trial subjects with assessable biomarker data; Performance characteristics of the biomarker test used, based on retrospective and / or prospective correlation with nonclinical and / or clinical endpoint data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-013",
+      "category": "analytical_validation",
+      "rule": "For genomic biomarkers, additional critical parameters in study reports must include: criteria for sample quality (e.g., DNA yield), methods for gene expression or DNA sequence determination, criteria for selection of candidate genes, and results described to current internationally recognized standards.",
+      "source_section": "2.4",
+      "source_quote": "As an example, in the case of genomic biomarkers, additional critical parameters could also include: Criteria for determining sample quality (e.g., age of specimen, DNA yield, etc.); Methods used for determination of gene expression or DNA sequence and other structural characteristics including modified DNA bases (e.g., epigenetic marks such as 5-methylcytosine); Criteria used for selection of candidate genes; Results of analyses of genomic biomarkers, all of which should be described, as applicable, to current internationally recognized standards.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-014",
+      "category": "data_format",
+      "rule": "The data format for qualifying a biomarker can vary significantly depending on context; the format should support evaluation of data and can include reports, tabulations, and raw data (if requested); it must be consistent with the methodology and platform used.",
+      "source_section": "1.4",
+      "source_quote": "The format of the data for qualifying a biomarker can vary significantly depending on the context... The format should support an evaluation of the data and can include reports, tabulations, and raw data (if requested by regulatory authorities according to the relevant practices in place). Data format should be consistent with the methodology and platform used for analysing the biomarker in question.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-015",
+      "category": "submission_requirements",
+      "rule": "Copies of supporting documents including peer-reviewed publications, expert statements, regulatory authority evaluation reports, and manufacturer's technical descriptions of commercially available assays should be provided in Section 4 (nonclinical) or Section 5 (clinical).",
+      "source_section": "2.4",
+      "source_quote": "Copies of other documents supporting the biomarker qualification submission should be provided in Section 4 for nonclinical information or Section 5 for clinical information. This includes, but is not limited to, copies of reference material relating to Sections 2, 4 and 5. This reference material can include, but is not limited to, the following: Published articles in peer-reviewed journals (including meta-analyses); Expert statements regarding the utility of the biomarker(s)...; Evaluation reports or other relevant documents as issued by regulatory authorities; Manufacturer's technical description of commercially available biomarker assays (if appropriate).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-016",
+      "category": "data_summaries",
+      "rule": "The Data Summaries section must describe the overall approach to the biomarker qualification program including methods and study design, technical and biological replication, statistical analysis, hypothesis statements, endpoints, justification for sample size, and criteria for determining sample suitability.",
+      "source_section": "2.2.2",
+      "source_quote": "To achieve these objectives, this section should: Describe and explain the overall approach to the biomarker qualification program including 1) methods and relevant aspects of study design, 2) technical and biological replication, and 3) statistical analysis, including hypothesis statements, endpoints and justification for sample size... Contain criteria for determining sample suitability (e.g., type, amount and / or age of specimen, DNA yield, etc.)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-017",
+      "category": "context_of_use",
+      "rule": "Biomarker qualification can take place at any time during drug or biotechnology product development, ranging from discovery through post-approval.",
+      "source_section": "1.2",
+      "source_quote": "Biomarker qualification can take place at any time during drug or biotechnology product development, ranging from discovery through post-approval.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E16-018",
+      "category": "submission_requirements",
+      "rule": "The CTD format (use of the eCTD format) should be considered appropriate when biomarker data are submitted as part of an NDA, BLA, MAA, other post-approval regulatory procedure, or upon request by regulatory authorities.",
+      "source_section": "1.2",
+      "source_quote": "The use of the CTD format would be considered appropriate when biomarker data are submitted as part of an NDA, a BLA, a MAA, other post-approval regulatory procedures or upon request by the regulatory authorities.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "e18_rules": [
+    {
+      "rule_id": "E18-001",
+      "category": "sample_collection_general",
+      "rule": "Genomic sample acquisition is strongly encouraged in all phases and studies of clinical development; samples should be collected from all subjects participating in the trial to fully represent the study population.",
+      "source_section": "1.4",
+      "source_quote": "Therefore, genomic sample acquisition is strongly encouraged in all phases and studies of clinical development. Moreover, the quality of genomic research is dependent upon unbiased systematic collection and analysis of samples, ideally from all subjects participating in the trial, in order to fully represent the study population.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-002",
+      "category": "sample_collection_general",
+      "rule": "Genomic samples and data should be securely stored, maintained, and access-controlled similar to non-genomic samples and health information.",
+      "source_section": "1.4",
+      "source_quote": "Genomic samples and data should be securely stored, maintained, and access-controlled similar to non-genomic samples and health information.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-003",
+      "category": "sample_collection",
+      "rule": "Pre-analytical variation must be minimized by developing and documenting standardized procedures for genomic sample collection, processing, transport, and storage; the pre-analytical process should be defined, documented, and verified prior to implementation.",
+      "source_section": "2",
+      "source_quote": "Pre-analytical variation should be minimized by developing and documenting standardized procedures for genomic sample collection, processing, transport, and storage... The pre-analytical process for specimen handling and preparation across study sites should be defined, documented, and verified prior to implementation.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-004",
+      "category": "sample_collection",
+      "rule": "The timing, method, location, and conditions (storage temperature, duration, fixation time) under which samples are collected must be recorded; any changes and deviations from defined procedures should be documented over the lifetime of each sample.",
+      "source_section": "2",
+      "source_quote": "It is important that the timing, method, location (e.g., study site), and conditions (e.g., storage temperature and duration, fixation time) under which samples are collected are recorded. Any changes and deviations from procedures defined should be well documented over the life time of each sample.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-005",
+      "category": "sample_collection",
+      "rule": "The chain of custody at all stages of collection, handling, and analysis including the timing of each step must be recorded for all samples and their aliquots; implementation of quality control programs is highly recommended.",
+      "source_section": "2",
+      "source_quote": "The chain of custody at all stages of collection, handling, and analysis including the timing of each step should be recorded for all samples and their aliquots. Implementation of quality control programs is highly recommended.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-006",
+      "category": "sample_collection",
+      "rule": "Specimens must be collected and labelled in accordance with appropriate biosafety practices, subject privacy regulations, and the informed consent.",
+      "source_section": "2.1",
+      "source_quote": "Specimens should be collected and labelled in accordance with appropriate biosafety practices, subject privacy regulations, and the informed consent.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-007",
+      "category": "specimen_type",
+      "rule": "The type of specimens to be collected should be compatible with the intended use; in pediatric subjects, only limited amounts of blood or tissue may be available and non-invasive alternatives (saliva, dried blood spot, skin scrapings) should be considered.",
+      "source_section": "2.1.1",
+      "source_quote": "The type of specimens to be collected should be compatible with the intended use... In pediatric subjects, only limited amounts of blood or other tissues may be available and therefore non-invasive alternatives, such as saliva, dried blood spot or skin scrapings could be considered.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-008",
+      "category": "sample_collection",
+      "rule": "Sample stability and degradation must be addressed: appropriate handling measures should be taken to prevent nucleic acid degradation and genomic profile alterations; the time from specimen collection to freezing, fixation, or processing should be optimized.",
+      "source_section": "2.1.4",
+      "source_quote": "Appropriate handling measures should be taken to prevent nucleic acid degradation and genomic profile alterations during sample collection and processing... In addition, the time from specimen collection to freezing, fixation, or processing, as well as the storage time, should be optimized as needed.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-009",
+      "category": "sample_collection",
+      "rule": "Repeated freezing and thawing of specimens prior to nucleic acid extraction can affect genomic sample integrity and should be avoided when possible or otherwise evaluated.",
+      "source_section": "2.1.6",
+      "source_quote": "Repeated freezing and thawing of specimens prior to nucleic acid extraction can affect genomic sample integrity and should be avoided when possible or otherwise evaluated.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-010",
+      "category": "transport",
+      "rule": "Appropriate transport conditions must be established prior to sample shipment; dates of shipment and receipt and approximate temperature upon receipt must be documented; deviations from intended shipment parameters must be documented.",
+      "source_section": "2.2.1",
+      "source_quote": "The appropriate transport conditions should be established prior to sample shipment. To ensure that specimens and/or extracted analytes are shipped under acceptable conditions, the dates of shipment and receipt should be documented, as well as the approximate temperature of the specimens when received... Deviations from the intended shipment parameters should be documented.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-011",
+      "category": "retention",
+      "rule": "It is highly recommended that samples are stored long-term, over the course of and beyond a drug development program, to enable re-use and/or future use; samples should be stored as multiple aliquots in separate locations to avoid simultaneous loss.",
+      "source_section": "2.2.2",
+      "source_quote": "It is highly recommended that samples are stored long-term, i.e., over the course of and beyond a drug development program, to enable re-use and/or future use... Storage of aliquots in separate locations avoids simultaneous loss of all samples.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-012",
+      "category": "retention",
+      "rule": "Samples should not be stored longer than the allowed total retention period as described in the informed consent document; procedures must be in place to ensure appropriate destruction of samples when a subject withdraws consent or at the end of the declared retention period.",
+      "source_section": "2.2.2",
+      "source_quote": "Samples should not be stored longer than the allowed total retention period as described in the informed consent document. Furthermore, procedures should be in place to ensure appropriate destruction of the sample(s) when a subject withdraws consent or at the end of the declared retention period.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-013",
+      "category": "sample_storage",
+      "rule": "Sample storage requires a physical infrastructure with appropriate electrical backup systems and disaster plans; the party responsible for samples must be clearly identified and the chain of custody documented at all times.",
+      "source_section": "2.2.2",
+      "source_quote": "Storage of samples requires a physical infrastructure, as well as a robust laboratory information and data management system... It is highly recommended that samples are stored in a physical infrastructure built with appropriate electrical backup systems and disaster plans. It is of the utmost importance that the party responsible for samples is clearly identified at all times and that the chain of custody is documented.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-014",
+      "category": "sample_inventory",
+      "rule": "Sample inventory must be monitored and curated relative to consent for use of samples, length of storage relative to retention policy, requests to withdraw samples from the biorepository, and record of sample destruction; reconciliation should be performed prior to use of each sample.",
+      "source_section": "2.2.3",
+      "source_quote": "Sample inventory should be monitored and curated relative to the following: consent for use of the samples, length of storage relative to the sample retention policy, requests to withdraw samples from the biorepository, and record of sample destruction. Reconciliation of each sample relative to the aforementioned aspects should be performed prior to the use of that sample.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-015",
+      "category": "data_management",
+      "rule": "The processing and analytical workflow for all stages of genomic data analysis must be documented including tools, versions, and parameters; source and version of genomic references and databases; and the computational environment and resources used.",
+      "source_section": "3.1",
+      "source_quote": "For genomic research, the processing and analytical workflow for all stages of analysis should be documented in as much depth as would be expected for upstream sample collection and processing. This documentation should include tools, versions, and parameters used at each stage of the analysis, source and version of genomic references and databases utilized (e.g. genome build, transcriptome assembly, variant annotation databases), and the computational environment and resources used to process data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-016",
+      "category": "data_management",
+      "rule": "QC procedures and metric thresholds must be set for all stages of the genomic data workflow before proceeding to downstream analyses; where possible QC procedures and thresholds should be fixed for a given type of assay and intended output to ensure consistency.",
+      "source_section": "3.1",
+      "source_quote": "Appropriate quality control (QC) procedures and metric thresholds should be set for all stages of the workflow before proceeding to downstream analyses. Such QC procedures and thresholds should be fixed for each stage of the workflow before proceeding to downstream analyses. Further, where possible QC procedures and thresholds should be fixed for a given type of assay and intended output to ensure consistency between different datasets.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-017",
+      "category": "data_management",
+      "rule": "Sponsors must ensure compliant use of samples and genomic data in accordance with purposeful and permitted use; use of genomic data must be in accordance with the protocol and the consent process in each region/jurisdiction.",
+      "source_section": "3.1",
+      "source_quote": "Sponsors should ensure compliant use of samples and genomic data in accordance with purposeful and permitted use of samples for genomic data generation. The use of the genomic data should be in accordance with the protocol and the consent process in each region/jurisdiction.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-018",
+      "category": "data_management",
+      "rule": "It is recommended to retain raw data files or derived analysis-ready files along with workflow documentation to allow for reconstruction of the primary data; genomic data files must be stored in secured media with long-term capabilities.",
+      "source_section": "3.2",
+      "source_quote": "In addition to the final processed dataset, it is recommended to retain data files that maintain the complete features of the raw data; these could be either the raw data files or derived analysis-ready files along with workflow documentation, which allows for reconstruction of the primary data. Genomic data files should be stored in secured media with long-term capabilities.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-019",
+      "category": "data_management",
+      "rule": "Destruction of genomic data contradicts the principles of scientific integrity in the context of clinical studies; once data has been analysed and incorporated in study results, the data cannot be destroyed without jeopardizing scientific integrity. Procedures may be developed to enable desired disposition of genomic data at the request of the subject.",
+      "source_section": "3.2",
+      "source_quote": "Whereas genomic samples may be destroyed upon participant request, destruction of data contradicts the principles of scientific integrity, particularly in the context of clinical studies. Indeed, once data has been analysed and incorporated in the study results, the data cannot be destroyed without jeopardizing the scientific integrity of the clinical study. Therefore it is recommended to retain data once generated and used in a study. Where applicable, procedures may have to be developed to enable desired disposition of genomic data at request of the subject.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-020",
+      "category": "privacy_confidentiality",
+      "rule": "Processing and handling of genomic samples and data must be conducted in a manner that protects subjects' privacy; appropriate security measures using coding schemata and restriction of access should be implemented at each step of sample collection, transport, analysis and storage.",
+      "source_section": "4",
+      "source_quote": "Processing and handling of genomic samples and data should be conducted in a manner that protects the subjects' privacy. For genomic data, as for other clinical data, coding techniques as well as security and access procedures help maintain confidentiality. Appropriate security measures using coding schemata and restriction of access should be implemented at each step of sample collection, transport, analysis and storage.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-021",
+      "category": "privacy_confidentiality",
+      "rule": "Single coding is recommended for genomic samples and data to decrease complexity and likelihood of error, but must be consistent with local regulation or legislation.",
+      "source_section": "4.1",
+      "source_quote": "To decrease complexity and likelihood of error, single coding is recommended for genomic samples and data, but should be consistent with local regulation or legislation.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-022",
+      "category": "privacy_confidentiality",
+      "rule": "Anonymization of genomic data has limitations: it is not always possible to prevent re-identification by deleting the link between subjects' identifiers and unique codes; anonymization also prevents reconnection of genomic data to phenotypic data and prevents sample destruction upon withdrawal of consent.",
+      "source_section": "4.1",
+      "source_quote": "Anonymization, as defined in ICH E15, in which coding does not allow for subjects to be re-identified as the coding keys have been deleted, has limitations. That is because with the increasing availability of genomic information and analysis methods, it is not always possible to prevent re-identification of each study participant by deleting the link between the subjects' identifiers and the unique code(s). Furthermore, anonymization carries two implications: 1) the process renders the ability to connect previously de-linked genomic data to phenotypic data impossible, and 2) sample destruction pursuant to withdrawal of consent or for long-term clinical monitoring will not be possible.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-023",
+      "category": "data_sharing",
+      "rule": "Policies and procedures involving systems for strict control of access rights with user access logs must be developed for all genomic samples and data; risk-based approaches to access should be applied both within the consenting research institution and for external institutions.",
+      "source_section": "4.2",
+      "source_quote": "Policies and procedures involving systems to ensure strict control of access rights with user access logs for all genomic samples and data, similar to those for other clinical data, should be developed... Risk-based approaches to access of genomic samples and data should be applied both within the consenting research institution as well as for external institutions with which samples and data are shared.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-024",
+      "category": "data_sharing",
+      "rule": "When outsourcing sample storage, genomic analysis or data storage, contractual agreements must specify that the responsible party will supervise the outsourced facility to ensure samples and/or data are properly safeguarded.",
+      "source_section": "4.2",
+      "source_quote": "When outsourcing sample storage, genomic analysis or data storage, contractual agreements should specify that the responsible party will supervise the outsourced facility in an appropriate manner to ensure that the samples and/or data are properly safeguarded.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-025",
+      "category": "data_sharing",
+      "rule": "Sharing data and/or samples with external organizations is encouraged to enhance medical science; however, different national and local rules governing sharing of individual level data with third parties including public databases shall be fully complied with.",
+      "source_section": "4.2",
+      "source_quote": "Sharing data and/or samples with external organizations or researchers enables the enhancement of medical science and offers benefits at several levels... Different national and local rules that govern sharing of individual level data with third parties including public databases shall be fully complied with.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-026",
+      "category": "informed_consent",
+      "rule": "Informed consent for genomic research must be conducted in accordance with applicable local legislation and within the scope of Good Clinical Practices (GCP) per ICH E6; consent for genomic research may be included in the consent for the clinical study or obtained separately.",
+      "source_section": "5",
+      "source_quote": "Informed consent is part of Good Clinical Practices (GCP) considerations per ICH E6. Consent for genomic research may be either included in the consent for the clinical study or obtained separately. Genomic research has to be conducted in accordance with applicable local legislation and within the scope of informed consent, which includes collection and storage of genomic samples and data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-027",
+      "category": "informed_consent",
+      "rule": "The informed consent for genomic research must describe, in simple language, the type and quantity of biological material to be collected, the collection procedures, and the position on returning genomic data.",
+      "source_section": "5",
+      "source_quote": "The informed consent should describe, in simple language, the type and quantity of biological material to be collected, the collection procedures and the position on returning genomic data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-028",
+      "category": "informed_consent",
+      "rule": "If there are opportunities to obtain genetic counseling, it is desirable to include this information in the informed consent form; specific considerations must be given to subjects who can only be enrolled with consent of legal representatives or guardians.",
+      "source_section": "5",
+      "source_quote": "If there are opportunities to obtain genetic counseling, it is desirable to include the information in the informed consent form. Specific considerations should be given to subjects who can only be enrolled in the study with the consent of the subjects' legal representatives or guardians (e.g., minors, subjects with dementia).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-029",
+      "category": "informed_consent",
+      "rule": "Informed consent for the collection and use of genomic samples should permit broad analysis of the samples (e.g., whole genome sequencing) regardless of the timing of analysis and should allow for broad use of the samples, such as assay development, disease research, drug response, or pharmacovigilance.",
+      "source_section": "5",
+      "source_quote": "Informed consent for the collection and use of genomic samples should permit broad analysis of the samples (e.g., sets of genes, transcriptome analysis or whole genome sequencing) regardless of the timing of analysis. Ideally, informed consent should allow for broad use of the samples, such as assay development, disease research, drug response, or pharmacovigilance. Local regulations and policies should be observed and respected.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-030",
+      "category": "incidental_findings",
+      "rule": "Research institutions and sponsors who generate genomic data must adopt a position and mechanisms regarding return of data to subjects; the position must articulate whether intended research findings, incidental findings, neither, or both will be communicated.",
+      "source_section": "6",
+      "source_quote": "Research institutions and sponsors who generate genomic data in a study are encouraged to adopt a position and mechanisms regarding return of data to subjects, as appropriate. The position should articulate whether the intended research findings, incidental findings, neither or both will be communicated.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-031",
+      "category": "incidental_findings",
+      "rule": "When communicating genomic results to subjects, the pertinence of genetic counseling should be evaluated; the impact of results on treatment decisions should be interpreted clinically and discussed with the subject; the subject's desire and consent as to whether receiving such information should be respected.",
+      "source_section": "6",
+      "source_quote": "When communicating results to subjects, the pertinence of genetic counseling should be evaluated; the impact of results on treatment decisions should be interpreted clinically and discussed with the subject (or the primary care giver or legal guardian). The subject's desire and consent as to whether receiving such information should be respected. In addition, the applied assay and its level of validation should be considered, as this may affect the accuracy and validity of the results.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-032",
+      "category": "incidental_findings",
+      "rule": "The timing of communication of genomic findings (during or after the clinical study), by whom (investigator, physician, genetic counselor), and to whom (subjects, primary care giver, legal guardian) must be addressed in the institutional/sponsor position on return of data.",
+      "source_section": "6",
+      "source_quote": "Ideally, the position would describe the timing of such communication (during or after the clinical study), by whom (e.g., investigator, physician, genetic counselor), and to whom (subjects, or the primary care giver or legal guardian in case subjects are children or subjects have been diagnosed with dementia).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E18-033",
+      "category": "data_management",
+      "rule": "When genomic data are to be used for clinical decision making, the appropriate level of assay validation should be considered in accordance with local regulations and policies; even under exploratory settings, sufficient analytical validation should be conducted to ensure accuracy and consistency.",
+      "source_section": "3.1",
+      "source_quote": "When genomic data are to be used for clinical decision making, the appropriate level of assay validation should be considered in accordance with local regulations and policies... However, even under exploratory settings where clinical-grade validation is not required, sufficient analytical validation should be conducted to ensure an adequate level of accuracy and consistency to allow for reliable interpretation of the results.",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

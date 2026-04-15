@@ -1,0 +1,932 @@
+{
+  "meta": {
+    "title": "ICH Q8-Q13 Quality Systems Framework Rules",
+    "description": "Comprehensive extraction of pharmaceutical quality system requirements, risk management methodology, design space concepts, control strategy requirements, and lifecycle management principles from ICH Q8(R2), Q9(R1), Q10, Q11, Q12, Q13, and Q8/Q9/Q10 Q&As",
+    "source_documents": [
+      "ICH Q8(R2) Pharmaceutical Development (Step 4, August 2009)",
+      "ICH Q9(R1) Quality Risk Management (Step 4, January 2023, corrected January 2025)",
+      "ICH Q10 Pharmaceutical Quality System (Step 4, June 2008)",
+      "ICH Q11 Development and Manufacture of Drug Substances (Step 4, May 2012)",
+      "ICH Q12 Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management (Step 4, November 2019)",
+      "ICH Q13 Continuous Manufacturing of Drug Substances and Drug Products (Step 4, November 2022)",
+      "ICH Q8/Q9/Q10 Q&As (R4/R5) Points to Consider and Concept Papers"
+    ],
+    "total_source_pdfs": 41,
+    "extraction_date": "2026-03-22",
+    "version": "2.0"
+  },
+
+  "foundational_principles": [
+    {
+      "id": "FP-001",
+      "principle": "Patient protection through managing risk to quality is of prime importance",
+      "source": "Q9(R1) Section 1",
+      "binding": true
+    },
+    {
+      "id": "FP-002",
+      "principle": "Quality should be built in by design, not tested into products",
+      "source": "Q8(R2) Section 2",
+      "binding": true
+    },
+    {
+      "id": "FP-003",
+      "principle": "The level of effort, formality, and documentation of quality risk management should be commensurate with the level of risk",
+      "source": "Q9(R1) Section 1",
+      "binding": true
+    },
+    {
+      "id": "FP-004",
+      "principle": "Knowledge gained, not volume of data collected, forms the basis for science-based submissions and regulatory evaluations",
+      "source": "Q8(R2) Annex Section 1",
+      "binding": true
+    },
+    {
+      "id": "FP-005",
+      "principle": "GMP compliance is always expected regardless of the development approach used",
+      "source": "Q8/Q9/Q10 Q&As Section 4",
+      "binding": true
+    },
+    {
+      "id": "FP-006",
+      "principle": "The degree of regulatory flexibility is predicated on the level of relevant scientific knowledge provided in the registration application",
+      "source": "Q8(R2) Annex Section 1",
+      "binding": true
+    }
+  ],
+
+  "quality_system_framework": {
+    "source": "Q10",
+    "model_name": "Pharmaceutical Quality System (PQS)",
+    "objectives": [
+      {
+        "id": "PQS-OBJ-1",
+        "name": "Product Realisation",
+        "description": "Establish, implement and maintain a system that allows delivery of products with quality attributes appropriate to meet needs of patients, healthcare professionals, and regulatory authorities"
+      },
+      {
+        "id": "PQS-OBJ-2",
+        "name": "State of Control",
+        "description": "Develop and use effective monitoring and control systems for process performance and product quality, providing assurance of continued suitability and capability of processes"
+      },
+      {
+        "id": "PQS-OBJ-3",
+        "name": "Continual Improvement",
+        "description": "Identify and implement appropriate product quality improvements, process improvements, variability reduction, innovations, and PQS enhancements"
+      }
+    ],
+    "lifecycle_stages": [
+      {
+        "stage": 1,
+        "name": "Pharmaceutical Development",
+        "includes": ["Drug substance development", "Formulation development", "Manufacturing process development", "Analytical method development", "Delivery system development", "Scale-up studies"]
+      },
+      {
+        "stage": 2,
+        "name": "Technology Transfer",
+        "includes": ["New product transfers during development", "Transfers within or between manufacturing and testing sites"]
+      },
+      {
+        "stage": 3,
+        "name": "Commercial Manufacturing",
+        "includes": ["Material acquisition and control", "Facilities/utilities/equipment", "Production including packaging", "Quality control and assurance", "Release", "Storage", "Distribution"]
+      },
+      {
+        "stage": 4,
+        "name": "Product Discontinuation",
+        "includes": ["Documentation retention", "Sample retention", "Continued product assessment and reporting"]
+      }
+    ],
+    "enablers": [
+      {
+        "name": "Knowledge Management",
+        "definition": "Systematic approach to acquiring, analysing, storing, and disseminating information related to products, manufacturing processes and components",
+        "source": "Q10 Section 1.6.1"
+      },
+      {
+        "name": "Quality Risk Management",
+        "definition": "A systematic process for the assessment, control, communication and review of risks to the quality of the drug product across the product lifecycle",
+        "source": "Q9(R1) Section 7"
+      }
+    ],
+    "pqs_elements": [
+      {
+        "element": "Process Performance and Product Quality Monitoring",
+        "key_requirements": [
+          "Use QRM to establish control strategy",
+          "Provide tools for measurement and analysis",
+          "Verify continued operation within state of control",
+          "Identify sources of variation for continual improvement",
+          "Include feedback from internal and external sources"
+        ]
+      },
+      {
+        "element": "Corrective and Preventive Action (CAPA)",
+        "key_requirements": [
+          "Structured approach to investigation with root cause determination",
+          "Level of effort commensurate with level of risk per Q9",
+          "Applied to complaints, rejections, non-conformances, recalls, deviations, audit findings",
+          "Corrective actions prevent recurrence; preventive actions prevent occurrence"
+        ]
+      },
+      {
+        "element": "Change Management",
+        "key_requirements": [
+          "Use QRM to evaluate proposed changes commensurate with risk level",
+          "Evaluate changes relative to marketing authorisation and design space",
+          "Expert teams from relevant areas must evaluate proposed changes",
+          "Post-implementation evaluation to confirm objectives met with no deleterious impact",
+          "All changes evaluated by company change management system even if within design space"
+        ]
+      },
+      {
+        "element": "Management Review",
+        "key_requirements": [
+          "Senior management responsible for PQS governance",
+          "Review inspection results, periodic quality reviews, customer satisfaction",
+          "Identify appropriate actions for improvements and resource alignment",
+          "Capture and disseminate knowledge from reviews"
+        ]
+      }
+    ],
+    "management_responsibilities": [
+      "Senior management has ultimate responsibility for effective PQS",
+      "Establish quality policy describing overall intentions and direction",
+      "Define quality objectives aligned with company strategies",
+      "Provide adequate and appropriate resources",
+      "Ensure appropriate communication and escalation processes",
+      "Conduct management reviews of process performance and PQS",
+      "Independent quality unit with authority required by regional regulations",
+      "Ensure processes for control and review of outsourced activities and purchased materials",
+      "Define responsibilities when product ownership changes"
+    ]
+  },
+
+  "risk_management_methodology": {
+    "source": "Q9(R1)",
+    "process_steps": [
+      {
+        "step": 1,
+        "name": "Initiation",
+        "activities": [
+          "Define the problem and/or risk question with pertinent assumptions",
+          "Assemble background information on potential hazard, harm, or health impact",
+          "Identify leader and necessary resources",
+          "Specify timeline, deliverables, and level of decision-making"
+        ]
+      },
+      {
+        "step": 2,
+        "name": "Risk Assessment",
+        "sub_steps": [
+          {
+            "name": "Hazard Identification",
+            "description": "Systematic use of information to identify potential sources of harm. Addresses 'What might go wrong?'",
+            "note": "Terminology changed from 'Risk Identification' in R1 revision"
+          },
+          {
+            "name": "Risk Analysis",
+            "description": "Estimation of risk associated with identified hazards. Links likelihood of occurrence and severity of harm. May include detectability.",
+            "three_questions": [
+              "What might go wrong?",
+              "What is the likelihood (probability) it will go wrong?",
+              "What are the consequences (severity)?"
+            ]
+          },
+          {
+            "name": "Risk Evaluation",
+            "description": "Compare identified and analyzed risk against given risk criteria. Output can be quantitative or qualitative (high/medium/low)."
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Risk Control",
+        "sub_steps": [
+          {
+            "name": "Risk Reduction",
+            "description": "Focus on mitigation or avoidance when risk exceeds acceptable level. Implementation may introduce new risks requiring reassessment."
+          },
+          {
+            "name": "Risk Acceptance",
+            "description": "Informed decision to accept residual risk after reduction to an acceptable level, determined case-by-case."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Risk Communication",
+        "description": "Sharing information about risk and risk management between decision makers and stakeholders at any stage"
+      },
+      {
+        "step": 5,
+        "name": "Risk Review",
+        "description": "Ongoing monitoring with frequency based on level of risk. Review on planned events (product review, audits) and unplanned events (failures, recalls)."
+      }
+    ],
+    "formality_spectrum": {
+      "description": "Formality is a continuum (NOT binary formal/informal)",
+      "determining_factors": [
+        {
+          "factor": "Uncertainty",
+          "rule": "Higher uncertainty requires higher formality"
+        },
+        {
+          "factor": "Importance",
+          "rule": "More important decisions require higher formality and greater need to reduce uncertainty"
+        },
+        {
+          "factor": "Complexity",
+          "rule": "More complex processes require higher formality"
+        }
+      ],
+      "critical_rule": "Resource constraints must NOT be used to justify lower levels of formality"
+    },
+    "subjectivity_management": {
+      "sources_of_subjectivity": [
+        "Differences in how risks are assessed",
+        "Differences in how hazards, harms, and risks are perceived (bias)",
+        "Inadequately defined risk questions",
+        "Poorly designed risk scoring scales"
+      ],
+      "controls": [
+        "Address bias and assumptions explicitly",
+        "Proper use of QRM tools",
+        "Maximize use of relevant data and knowledge sources",
+        "All participants must acknowledge, anticipate, and address subjectivity"
+      ]
+    },
+    "decision_making_approaches": [
+      {
+        "type": "Highly Structured",
+        "when": "High importance AND high uncertainty/complexity",
+        "description": "Formal analysis of available options with in-depth consideration"
+      },
+      {
+        "type": "Less Structured",
+        "when": "High importance but lower uncertainty/complexity",
+        "description": "Simpler approaches using existing knowledge"
+      },
+      {
+        "type": "Rule-Based (Standardized)",
+        "when": "Well-understood requirements with predetermined actions",
+        "description": "SOPs, policies based on previously obtained risk understanding"
+      }
+    ],
+    "assessment_tools": [
+      {
+        "name": "FMEA",
+        "full_name": "Failure Mode Effects Analysis",
+        "use": "Evaluate potential failure modes for processes and their effects on outcomes"
+      },
+      {
+        "name": "FMECA",
+        "full_name": "Failure Mode, Effects and Criticality Analysis",
+        "use": "Extension of FMEA with severity, probability, and detectability scoring"
+      },
+      {
+        "name": "FTA",
+        "full_name": "Fault Tree Analysis",
+        "use": "Establish pathway to root cause using logical operators (AND/OR)"
+      },
+      {
+        "name": "HACCP",
+        "full_name": "Hazard Analysis and Critical Control Points",
+        "use": "Systematic preventive tool with 7-step process for quality and safety assurance"
+      },
+      {
+        "name": "HAZOP",
+        "full_name": "Hazard Operability Analysis",
+        "use": "Brainstorming with guide-words applied to parameters for deviation analysis"
+      },
+      {
+        "name": "PHA",
+        "full_name": "Preliminary Hazard Analysis",
+        "use": "Early-stage analysis based on prior experience, precursor to further studies"
+      },
+      {
+        "name": "Risk Ranking and Filtering",
+        "use": "Compare and rank risks with weighting factors or cut-offs"
+      }
+    ],
+    "supporting_statistical_tools": [
+      "Control Charts (Acceptance, CUSUM, Shewhart, Weighted Moving Average)",
+      "Design of Experiments (DOE)",
+      "Histograms",
+      "Pareto Charts",
+      "Process Capability Analysis"
+    ],
+    "prohibitions": [
+      "QRM must NOT obviate obligation to comply with regulatory requirements",
+      "QRM must NOT replace appropriate communications between industry and regulators",
+      "QRM must NOT be used to justify practices that would otherwise be deemed unacceptable",
+      "Risk scores must be based on appropriate use of evidence, science, and knowledge"
+    ]
+  },
+
+  "design_space": {
+    "source": "Q8(R2), Q8/Q9/Q10 Q&As",
+    "definition": "The multidimensional combination and interaction of input variables (material attributes) and process parameters that have been demonstrated to provide assurance of quality",
+    "core_rules": [
+      {
+        "id": "DS-001",
+        "rule": "Working within the design space is NOT considered a change from a regulatory filing perspective",
+        "source": "Q8(R2) Glossary"
+      },
+      {
+        "id": "DS-002",
+        "rule": "Movement out of the design space IS considered a change and would normally initiate a regulatory post-approval change process",
+        "source": "Q8(R2) Glossary"
+      },
+      {
+        "id": "DS-003",
+        "rule": "Design space is proposed by the applicant and is subject to regulatory assessment and approval",
+        "source": "Q8(R2) Glossary"
+      },
+      {
+        "id": "DS-004",
+        "rule": "A combination of proven acceptable ranges based on univariate experimentation does NOT constitute a design space",
+        "source": "Q8(R2) Section 2.4.5"
+      },
+      {
+        "id": "DS-005",
+        "rule": "The entire design space does NOT have to be re-established (e.g., via DOE) at commercial scale",
+        "source": "Q8/Q9/Q10 Q&As Section 6.2"
+      },
+      {
+        "id": "DS-006",
+        "rule": "Design space verification should NOT be confused with process validation, though verification can be part of validation",
+        "source": "Q8/Q9/Q10 Q&As Section 6.2"
+      },
+      {
+        "id": "DS-007",
+        "rule": "Design space can be updated over the lifecycle as additional knowledge is gained",
+        "source": "Q8/Q9/Q10 Q&As Section 6.1"
+      },
+      {
+        "id": "DS-008",
+        "rule": "Near the edges of a design space, risk of excursions is higher due to normal process variation; the control strategy manages this residual risk",
+        "source": "Q8/Q9/Q10 Q&As Section 6.1"
+      },
+      {
+        "id": "DS-009",
+        "rule": "An appropriate statistical DOE incorporates a level of confidence that applies to the entire design space, including the edges",
+        "source": "Q8/Q9/Q10 Q&As Section 6.1"
+      },
+      {
+        "id": "DS-010",
+        "rule": "Determining the edge of failure is NOT an essential part of establishing a design space",
+        "source": "Q8(R2) Section 2.4.6"
+      }
+    ],
+    "development_approaches": [
+      "Prior knowledge and first principles",
+      "Empirical understanding from DOE studies",
+      "Combination of mechanistic and empirical models",
+      "Historical production data for existing products"
+    ],
+    "scope_options": [
+      "Per individual unit operation",
+      "Spanning multiple unit operations (provides more operational flexibility)",
+      "Single design space spanning the entire process"
+    ],
+    "scale_and_equipment": {
+      "rules": [
+        "Can be developed at any scale; must justify relevance to proposed production scale",
+        "Should be described in terms of scale-independent parameters where applicable",
+        "Dimensionless numbers and/or models for scaling can be included",
+        "Risk-based approach determines verification study design across scales"
+      ]
+    },
+    "presentation_formats": [
+      "Ranges of material attributes and process parameters",
+      "Mathematical relationships and equations",
+      "Time-dependent functions",
+      "Multivariate model components",
+      "Response surface plots and contour plots",
+      "Overlapping region of acceptable ranges for multiple CQAs"
+    ],
+    "documentation_requirements": [
+      "Clear statement of the proposed design space",
+      "Description including critical and relevant parameters with ranges or graphical representations",
+      "Relationship between inputs (material attributes, process parameters) and CQAs including interactions",
+      "Supporting data (prior knowledge, QRM conclusions, experimental studies, design assumptions)",
+      "Relationship to other unit operations or process steps",
+      "Scale-up study results and conclusions",
+      "Justification that control strategy maintains process within design space boundaries"
+    ]
+  },
+
+  "control_strategy": {
+    "source": "Q8(R2), Q10, Q11, Q8/Q9/Q10 Q&As",
+    "definition": "A planned set of controls, derived from current product and process understanding, that assures process performance and product quality",
+    "elements": [
+      "Control of input material attributes (drug substance, excipients, primary packaging materials)",
+      "Controls implicit in manufacturing process design (e.g., sequence of purification steps)",
+      "In-process controls (in-process tests and process parameters)",
+      "Controls on drug substance or drug product (e.g., release testing)",
+      "Product specification(s)",
+      "Controls for unit operations affecting downstream processing or product quality",
+      "In-process or real-time release testing in lieu of end-product testing",
+      "Monitoring programs for verifying multivariate prediction models"
+    ],
+    "cqa_control_approaches": [
+      {
+        "approach": 1,
+        "description": "CQA included on specification and confirmed through testing the final drug substance/product"
+      },
+      {
+        "approach": 2,
+        "description": "CQA included on specification and confirmed through upstream controls (e.g., RTRT)"
+      },
+      {
+        "approach": 3,
+        "description": "CQA NOT included on specification but ensured through upstream controls"
+      }
+    ],
+    "lifecycle_rules": [
+      "Should be improved over the lifecycle in response to data trends and new knowledge",
+      "Continuous process verification enables ongoing monitoring and adjustments",
+      "Different control strategies CAN be applied at different sites or with different technologies for the same product",
+      "Knowledge management is essential for ongoing effectiveness, especially with contract manufacturing",
+      "For contract manufacturing, knowledge transfer must flow in BOTH directions",
+      "When multivariate prediction models are used, systems must maintain and update the models"
+    ],
+    "batch_release_elements": [
+      "Regulatory compliance data",
+      "System-related data for the current batch (facility, utilities, equipment)",
+      "Product-related data from the manufacturing process",
+      "Product-related data from quality control (end product testing and/or RTRT)"
+    ],
+    "rtrt_rules": [
+      "RTR tests are considered specification testing methods",
+      "Must follow established regional regulatory requirements for release specifications",
+      "Attribute measured must be linked to the CQA and QTPP",
+      "RTRT can replace end-product testing but does NOT replace GMP review and quality control steps to release the batch",
+      "Not all CQAs need to be included in the specification"
+    ]
+  },
+
+  "pharmaceutical_development": {
+    "source": "Q8(R2)",
+    "qtpp": {
+      "definition": "A prospective summary of the quality characteristics of a drug product that ideally will be achieved to ensure the desired quality, taking into account safety and efficacy",
+      "considerations": [
+        "Intended use in clinical setting, route of administration, dosage form, delivery systems",
+        "Dosage strength(s)",
+        "Container closure system",
+        "Therapeutic moiety release or delivery and pharmacokinetic characteristics",
+        "Drug product quality criteria (sterility, purity, stability, drug release)"
+      ]
+    },
+    "cqa": {
+      "definition": "A physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality",
+      "rules": [
+        "Generally associated with drug substance, excipients, intermediates, and drug product",
+        "Derived from QTPP and/or prior knowledge to guide development",
+        "List of potential CQAs can be modified as knowledge and understanding increase",
+        "QRM can prioritize the list for subsequent evaluation",
+        "Identified through iterative process of risk management and experimentation"
+      ],
+      "criticality_vs_risk": {
+        "rule": "Quality attribute criticality is based on severity of harm and does NOT change as a result of risk management. Risk CAN change. A well-developed control strategy reduces risk but does NOT change criticality.",
+        "source": "Q8/Q9/Q10 Q&As Section 2",
+        "process_parameter_criticality": "Process parameter criticality IS linked to effect on CQAs and CAN change as a result of risk management because it is based on probability and detectability"
+      }
+    },
+    "minimum_requirements": [
+      "Define the QTPP as it relates to quality, safety, and efficacy",
+      "Identify potential CQAs so product characteristics impacting quality can be studied and controlled",
+      "Determine CQAs of drug substance, excipients, and select type/amount for desired quality",
+      "Select an appropriate manufacturing process",
+      "Define a control strategy"
+    ],
+    "enhanced_approach_additional": [
+      "Systematic evaluation, understanding, and refining of the formulation and manufacturing process",
+      "Identify material attributes and process parameters affecting product CQAs through prior knowledge, experimentation, and risk assessment",
+      "Determine functional relationships linking material attributes and process parameters to CQAs",
+      "Establish design space(s) and/or real-time release testing using enhanced understanding with QRM"
+    ],
+    "traditional_vs_enhanced_comparison": {
+      "overall_development": {
+        "traditional": "Mainly empirical, one variable at a time",
+        "enhanced": "Systematic, mechanistic understanding, multivariate experiments, design space, PAT tools"
+      },
+      "manufacturing_process": {
+        "traditional": "Fixed, validation based on initial full-scale batches",
+        "enhanced": "Adjustable within design space, lifecycle validation, continuous process verification"
+      },
+      "process_controls": {
+        "traditional": "In-process tests for go/no-go decisions, off-line analysis",
+        "enhanced": "PAT with feed forward/feedback controls, trending for continual improvement"
+      },
+      "specifications": {
+        "traditional": "Primary means of control, based on batch data at time of registration",
+        "enhanced": "Part of overall quality control strategy, based on desired product performance"
+      },
+      "lifecycle_management": {
+        "traditional": "Reactive (problem solving, corrective action)",
+        "enhanced": "Preventive action, continual improvement facilitated"
+      }
+    }
+  },
+
+  "drug_substance_development": {
+    "source": "Q11",
+    "approaches": {
+      "traditional": {
+        "description": "Set points and operating ranges based on batch history and univariate experiments, more emphasis on end-product testing",
+        "characteristics": [
+          "Narrowly set operating ranges",
+          "Limited flexibility for variability",
+          "Assessment of CQAs primarily at drug substance stage"
+        ]
+      },
+      "enhanced": {
+        "description": "Risk management and scientific knowledge used extensively to identify and understand process parameter impacts on CQAs",
+        "characteristics": [
+          "Systematic variability identification",
+          "Iterative control strategy development",
+          "Basis for design space(s)",
+          "More flexible operating ranges"
+        ]
+      },
+      "rule": "Traditional and enhanced approaches are NOT mutually exclusive; combination is acceptable"
+    },
+    "starting_material_principles": [
+      {
+        "principle": 1,
+        "rule": "Changes near the beginning of manufacturing have lower potential to impact drug substance quality"
+      },
+      {
+        "principle": 2,
+        "rule": "Enough of the process must be described to understand impurity formation, fate, and purge and why the control strategy is suitable. Typically includes multiple chemical transformation steps."
+      },
+      {
+        "principle": 3,
+        "rule": "Steps impacting the impurity profile should normally be included in Section 3.2.S.2.2"
+      },
+      {
+        "principle": 4,
+        "rule": "Each branch of a convergent process begins with one or more starting materials. GMP (Q7) applies from first use of starting material."
+      },
+      {
+        "principle": 5,
+        "rule": "Starting material should be a substance of defined chemical properties and structure. Non-isolated intermediates are usually not appropriate."
+      },
+      {
+        "principle": 6,
+        "rule": "Starting material is incorporated as a significant structural fragment. Commonly available chemicals for salts/esters are reagents, not starting materials."
+      }
+    ],
+    "mutagenic_impurity_threshold": "30% of ICH M7 acceptable limit (TTC) is the level above which a mutagenic impurity is considered to impact the impurity profile",
+    "process_validation_rules": [
+      "Process should be validated before commercial distribution",
+      "For non-sterile chemical entities, validation results NOT normally included in dossier",
+      "For biotech products, data from both commercial-scale and small-scale studies are provided",
+      "Number of validation batches depends on complexity, variability, and available knowledge",
+      "Continuous process verification (Q8) can be used as alternative to traditional validation"
+    ]
+  },
+
+  "lifecycle_management": {
+    "source": "Q12",
+    "regulatory_tools": [
+      {
+        "tool": "Categorisation of Post-Approval CMC Changes",
+        "categories": [
+          {
+            "name": "Prior Approval (PA)",
+            "description": "Sufficient risk to require regulatory review and approval PRIOR to implementation"
+          },
+          {
+            "name": "Notification (NM/NL)",
+            "description": "Moderate-to-low risk changes communicated as formal notification within defined period"
+          },
+          {
+            "name": "Not Reported (NR)",
+            "description": "Changes managed and documented within PQS only, verified during inspection"
+          }
+        ]
+      },
+      {
+        "tool": "Established Conditions (ECs)",
+        "definition": "Legally binding information considered necessary to assure product quality",
+        "rules": [
+          "Any change to ECs necessitates a submission to regulatory authority",
+          "ECs should NOT be confused with CMC regulatory commitments (supportive information)",
+          "Identifying ECs for a given product is NOT mandatory unless specified by regulatory requirement",
+          "Criticality and risk should be periodically reviewed and ECs/reporting categories updated"
+        ],
+        "identification_approaches": [
+          {
+            "name": "Minimal (Traditional)",
+            "result": "Large number of ECs with narrower ranges and generally higher reporting categories"
+          },
+          {
+            "name": "Enhanced",
+            "result": "Fewer ECs focused on most important parameters, potentially wider ranges and lower reporting categories"
+          },
+          {
+            "name": "Performance-Based",
+            "result": "ECs primarily focused on process outputs rather than inputs, enabled by PAT and enhanced control strategy"
+          }
+        ]
+      },
+      {
+        "tool": "Post-Approval Change Management Protocol (PACMP)",
+        "description": "Two-step process: (1) Protocol submitted and approved in advance, (2) Execution and reporting per approved categorisation",
+        "constraints": [
+          "Significant unanticipated changes CANNOT be implemented under the protocol",
+          "No change should introduce additional risks to patient safety, quality, or efficacy",
+          "Changes requiring clinical or non-clinical data NOT suitable for PACMP",
+          "If new information indicates increased risk, previously approved reporting category no longer appropriate"
+        ]
+      },
+      {
+        "tool": "Product Lifecycle Management (PLCM) Document",
+        "description": "Central repository for ECs, reporting categories, PACMPs, and post-approval commitments"
+      },
+      {
+        "tool": "Structured Approaches for Analytical Procedure Changes",
+        "description": "10-step process for managing analytical method changes without prior approval when prerequisites are met"
+      },
+      {
+        "tool": "Stability Data Approaches",
+        "description": "For post-approval changes, stability studies CONFIRM previously approved shelf-life, not establish anew"
+      }
+    ],
+    "ec_locations_drug_substance": {
+      "nomenclature_structure": "EC",
+      "manufacturer_sites": "EC",
+      "manufacturing_process_description": "EC",
+      "control_of_materials": "EC",
+      "critical_steps_intermediates": "EC",
+      "process_validation": "Supportive",
+      "process_development": "Supportive",
+      "characterisation": "Supportive",
+      "specification": "EC",
+      "analytical_procedures": "EC",
+      "reference_material": "EC",
+      "container_closure": "EC",
+      "storage_conditions_shelf_life": "EC",
+      "stability_data": "Supportive"
+    },
+    "change_management_principles": [
+      "Capture stimuli for change including improvements to product/process robustness",
+      "Ensure full understanding of scope and implications for all aspects",
+      "Leverage existing process performance and product quality knowledge",
+      "Require science-based risk management and risk categorisation",
+      "Determine data needed and develop study protocols with prospective acceptance criteria",
+      "Ensure appropriate regulatory submission when required",
+      "Use defined change control process involving Manufacturing, Quality, and Regulatory Affairs",
+      "Verify post-implementation that changes effective with no unintended consequences",
+      "Capture new knowledge gained and update regulatory filings as needed"
+    ]
+  },
+
+  "continuous_manufacturing": {
+    "source": "Q13",
+    "definition": "Continuous feeding of input materials into, transformation of in-process materials within, and concomitant removal of output materials from a manufacturing process",
+    "modes": [
+      {
+        "name": "Hybrid",
+        "description": "Some unit operations in batch mode, others integrated and continuous"
+      },
+      {
+        "name": "Fully Continuous",
+        "description": "All unit operations integrated and operating in continuous mode"
+      },
+      {
+        "name": "Integrated DS/DP",
+        "description": "Drug substance and drug product operations integrated into a single CM process"
+      }
+    ],
+    "batch_definition_rules": [
+      "ICH Q7 batch definition applies to all CM modes",
+      "Batch size can be defined by quantity of output, quantity of input, or run time at defined mass flow rate",
+      "Batch size range is permitted if justified",
+      "Actual intended size must be defined before manufacturing begins",
+      "Changes within approved range managed within PQS; beyond requires regulatory submission"
+    ],
+    "control_strategy_elements": [
+      {
+        "element": "State of Control",
+        "rules": [
+          "Can be demonstrated even when parameters change within specified ranges and process is not in steady state",
+          "Mechanisms must evaluate consistency and identify drift or trends",
+          "Root cause of drift should be identified"
+        ]
+      },
+      {
+        "element": "Process Dynamics and RTD",
+        "rules": [
+          "RTD characterises time for material transport and transformation",
+          "RTD is specific to process, composition, material properties, equipment design",
+          "Understanding RTD enables material tracking, sampling, and diversion strategies",
+          "Must be characterised over planned operating ranges and anticipated input variability"
+        ]
+      },
+      {
+        "element": "Material Traceability and Diversion",
+        "rules": [
+          "Ability to detect and divert non-conforming material is important CM characteristic",
+          "Criteria must be established for triggering start/end of diversion and restart of collection",
+          "Diversion strategy must account for impact on material flow and process dynamics",
+          "Amount diverted influenced by process dynamics, RTD, severity of disturbances, sampling/diversion locations"
+        ]
+      },
+      {
+        "element": "Process Monitoring and Control",
+        "rules": [
+          "PAT is well-suited for CM and enables real-time disturbance detection",
+          "CM is readily amenable to automated feedforward/feedback control",
+          "Data averaging should use appropriate time intervals rather than entire run time",
+          "Assessment of risks from data gaps must inform contingency methods"
+        ]
+      },
+      {
+        "element": "Process Models",
+        "rules": [
+          "Model is specific to system design, configuration, and material properties",
+          "Acceptance criteria must account for uncertainty in measurement and prediction",
+          "Model maintenance and monitoring must occur routinely during commercial manufacture",
+          "May need redevelopment and revalidation depending on extent of changes"
+        ]
+      }
+    ],
+    "production_output_changes": [
+      "Change run time: longer runs may reveal drift, build-up, degradation, fouling",
+      "Increase mass flow rates: may impact quality via changes to process dynamics",
+      "Scale-out (duplicate equipment): replicate lines follow same control strategy",
+      "Scale-up (increase equipment size): RTD and process dynamics may change"
+    ],
+    "rtrt_rules": [
+      "RTRT is NOT a regulatory requirement for CM implementation",
+      "When proposed, associated reference test method must be described",
+      "Risk assessment needed for how data collection lapses affect quality decisions",
+      "Alternative quality controls must mitigate risks from data lapses"
+    ],
+    "disturbance_management": {
+      "scenarios": [
+        {
+          "type": "Within acceptance criteria, infrequent",
+          "action": "No diversion needed, no investigation required"
+        },
+        {
+          "type": "Exceeding acceptance criteria, infrequent",
+          "action": "Divert non-conforming material per pre-established procedure, concurrent investigation"
+        },
+        {
+          "type": "Within criteria individually but frequent",
+          "action": "Monitor closely, divert when cumulative effect exceeds criteria, may pause process, root cause investigation"
+        }
+      ]
+    }
+  },
+
+  "model_governance": {
+    "source": "Q8/Q9/Q10 Q&As Section 5",
+    "impact_categories": [
+      {
+        "level": "Low Impact",
+        "description": "Support development; typically no verification needed",
+        "documentation": "Discussion of how models were used for process development decisions"
+      },
+      {
+        "level": "Medium Impact",
+        "description": "Useful in assuring quality but not sole indicator",
+        "documentation": "Model assumptions, summary of inputs/outputs, equations, statistical analysis, comparison with measured data"
+      },
+      {
+        "level": "High Impact",
+        "description": "Prediction is significant indicator of product quality (e.g., RTRT models)",
+        "documentation": "All medium-impact requirements plus sample size justification, data pre-treatment, variable selection rationale, full validation, lifecycle verification approaches"
+      }
+    ],
+    "rule": "The level of oversight must be commensurate with the risk associated with the specific model",
+    "lifecycle_requirements": [
+      "Model validation assesses fitness for intended use based on predetermined acceptance criteria",
+      "Verification continues throughout the lifecycle after implementation",
+      "Models supporting design space or control strategy at commercial scale must be verified at commercial scale",
+      "Validation data sets should account for variability anticipated in future routine production"
+    ]
+  },
+
+  "cross_cutting_rules": [
+    {
+      "id": "CC-001",
+      "rule": "The QTPP is the starting point for all development; it describes design criteria and forms the basis for CQAs, CPPs, and control strategy",
+      "source": "Q8(R2), Q8/Q9/Q10 Q&As"
+    },
+    {
+      "id": "CC-002",
+      "rule": "Criticality of quality attributes does NOT change with risk management; only the level of risk changes. Criticality is based on severity of harm.",
+      "source": "Q8/Q9/Q10 Q&As Section 2"
+    },
+    {
+      "id": "CC-003",
+      "rule": "Process parameter criticality CAN change with risk management because it is based on probability and detectability",
+      "source": "Q8/Q9/Q10 Q&As Section 2"
+    },
+    {
+      "id": "CC-004",
+      "rule": "CQAs and CPPs can evolve throughout the product lifecycle",
+      "source": "Q8/Q9/Q10 Q&As Section 4.1"
+    },
+    {
+      "id": "CC-005",
+      "rule": "QbD does NOT change regional regulatory requirements but provides opportunities for more flexible approaches",
+      "source": "Q8/Q9/Q10 Q&As Section 4"
+    },
+    {
+      "id": "CC-006",
+      "rule": "Movement within an approved design space does NOT require a regulatory filing",
+      "source": "Q8(R2) Glossary, Q8/Q9/Q10 Q&As Section 6.4"
+    },
+    {
+      "id": "CC-007",
+      "rule": "All changes should be evaluated by a company's change management system even when within design space (PQS perspective)",
+      "source": "Q10 Section 3.2.3"
+    },
+    {
+      "id": "CC-008",
+      "rule": "Knowledge management is bidirectional in contract manufacturing relationships",
+      "source": "Q8/Q9/Q10 Q&As Section 3.1, Q10 Section 2.7"
+    },
+    {
+      "id": "CC-009",
+      "rule": "Overages to compensate for degradation or extend shelf life are discouraged. Any overages must be justified.",
+      "source": "Q8(R2) Section 2.2.2"
+    },
+    {
+      "id": "CC-010",
+      "rule": "Sources of variability that can impact product quality should be identified, appropriately understood, and subsequently controlled",
+      "source": "Q8(R2) Section 2.5"
+    },
+    {
+      "id": "CC-011",
+      "rule": "Increased product and process knowledge contributes to a more precise understanding of which post-approval changes require regulatory submission and the appropriate reporting category",
+      "source": "Q12 Chapter 1"
+    },
+    {
+      "id": "CC-012",
+      "rule": "An effective PQS and compliance with regional GMPs are necessary to gain full benefit from Q12 lifecycle management tools",
+      "source": "Q12 Chapter 1"
+    },
+    {
+      "id": "CC-013",
+      "rule": "Established Conditions are legally binding; any change to them necessitates a submission to the regulatory authority",
+      "source": "Q12 Chapter 3"
+    },
+    {
+      "id": "CC-014",
+      "rule": "Quality/manufacturing issues including GMP non-compliance are a significant cause of product availability issues (drug shortages)",
+      "source": "Q9(R1) Section 6.1"
+    },
+    {
+      "id": "CC-015",
+      "rule": "For continuous manufacturing, RTRT is NOT a regulatory requirement",
+      "source": "Q13 Section 3.3"
+    },
+    {
+      "id": "CC-016",
+      "rule": "The pharmaceutical company is ultimately responsible for ensuring processes are in place to control outsourced activities and purchased materials",
+      "source": "Q10 Section 2.7"
+    }
+  ],
+
+  "glossary": {
+    "CAPA": "Corrective Action and Preventive Action",
+    "CM": "Continuous Manufacturing",
+    "CMC": "Chemistry, Manufacturing, and Controls",
+    "CMO": "Contract Manufacturing Organisation",
+    "CPP": "Critical Process Parameter - a process parameter whose variability has an impact on a critical quality attribute and therefore should be monitored or controlled",
+    "CPV": "Continuous Process Verification - an alternative approach to process validation in which manufacturing process performance is continuously monitored and evaluated",
+    "CQA": "Critical Quality Attribute - a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure desired product quality",
+    "CTD": "Common Technical Document",
+    "Design Space": "The multidimensional combination and interaction of input variables and process parameters that have been demonstrated to provide assurance of quality",
+    "DOE": "Design of Experiments - a structured, organized method for determining the relationship between factors affecting a process and its output",
+    "EC": "Established Condition - legally binding information considered necessary to assure product quality",
+    "FMEA": "Failure Mode Effects Analysis",
+    "FTA": "Fault Tree Analysis",
+    "GMP": "Good Manufacturing Practice",
+    "HACCP": "Hazard Analysis and Critical Control Points",
+    "HAZOP": "Hazard Operability Analysis",
+    "Knowledge Management": "Systematic approach to acquiring, analysing, storing, and disseminating information related to products, manufacturing processes and components",
+    "MAA": "Marketing Authorisation Application",
+    "MAH": "Marketing Authorisation Holder",
+    "PACMP": "Post-Approval Change Management Protocol",
+    "PAT": "Process Analytical Technology - a system for designing, analyzing, and controlling manufacturing through timely measurements of critical quality and performance attributes",
+    "PHA": "Preliminary Hazard Analysis",
+    "PLCM": "Product Lifecycle Management",
+    "PQS": "Pharmaceutical Quality System - management system to direct and control a pharmaceutical company with regard to quality",
+    "Process Robustness": "Ability of a process to tolerate variability of materials and changes of the process and equipment without negative impact on quality",
+    "QbD": "Quality by Design - a systematic approach to development that begins with predefined objectives and emphasizes product and process understanding and process control",
+    "QRM": "Quality Risk Management - a systematic process for the assessment, control, communication and review of risks to quality across the product lifecycle",
+    "QTPP": "Quality Target Product Profile - a prospective summary of quality characteristics that ideally will be achieved to ensure desired quality, taking into account safety and efficacy",
+    "RTRT": "Real-Time Release Testing - the ability to evaluate and ensure quality of in-process and/or final product based on process data",
+    "RTD": "Residence Time Distribution - a measure of the range of residence times experienced by material passing through a specific process environment",
+    "State of Control": "A condition in which the set of controls consistently provides assurance of continued process performance and product quality"
+  }
+}

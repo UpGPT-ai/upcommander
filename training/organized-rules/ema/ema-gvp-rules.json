@@ -1,0 +1,1057 @@
+{
+  "meta": {
+    "title": "EMA Guidelines and GVP Module Rules",
+    "description": "Structured regulatory rules extracted from EMA guidelines and GVP modules, with verbatim source quotes, section citations, and EMA-specific notes",
+    "generated": "2026-03-23",
+    "sources": [
+      "EMA_Bioequivalence.pdf",
+      "EMA_Biosimilars_Quality.pdf",
+      "immunogenicity.pdf",
+      "similar-biologicals.pdf",
+      "process-validation.pdf",
+      "GVP-Module-I.pdf",
+      "GVP-Module-II.pdf",
+      "GVP-Module-V.pdf",
+      "GVP-Module-VII.pdf",
+      "GVP-Module-VIII.pdf",
+      "GVP-Module-IX.pdf",
+      "PMDA_Clinical_Evaluation.pdf",
+      "PMDA_Ethnic_Factors_Bridging.pdf"
+    ],
+    "schema_version": "4.0"
+  },
+  "ema_bioequivalence": [
+    {
+      "id": "BE-001",
+      "rule": "The 90% confidence interval for the ratio of the test/reference geometric means for AUC and Cmax must fall within 80.00-125.00% for a bioequivalence conclusion.",
+      "source_section": "Section 4.1.1 - Pharmacokinetic parameters",
+      "source_quote": "The 90% confidence interval for this measure must be contained within the acceptance interval of 80.00-125.00%.",
+      "ema_specific_note": "EMA applies this criterion symmetrically to both AUC and Cmax. FDA allows wider Cmax limits for highly variable drugs without replicate design.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-002",
+      "rule": "For highly variable drugs (intra-subject CV ≥30%), a wider acceptance interval for Cmax may be acceptable up to a maximum of 69.84-143.19%, provided the study uses a replicate design and the widening is based on within-subject variability of the reference product.",
+      "source_section": "Section 4.1.4 - Highly variable drugs or drug products",
+      "source_quote": "If Cmax is of particular importance for safety, efficacy or drug level monitoring a tighter interval may be warranted. The acceptance interval can be widened to a maximum of 69.84-143.19%.",
+      "ema_specific_note": "EMA-specific provision. FDA uses scaled average bioequivalence with different reference scaling criteria.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-003",
+      "rule": "The washout period between treatments in a crossover bioequivalence study should be at least 5 times the terminal half-life of the active substance.",
+      "source_section": "Section 4.1.2 - Study design",
+      "source_quote": "The washout period should be more than 5 times the terminal half-life of the active substance.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-004",
+      "rule": "The reference product for bioequivalence studies in the EU must be the innovator product authorised in the EU (EU reference product). A product authorised outside the EU may only be used as reference in exceptional circumstances.",
+      "source_section": "Section 4.1.1 - Reference product",
+      "source_quote": "The reference product is the medicinal product with which the generic is to be compared in the bioequivalence study; for the purpose of this guideline, the reference product should be the innovator product that is authorised and marketed in the EU/EEA.",
+      "ema_specific_note": "EMA-specific: EU reference product required. FDA accepts US-marketed reference listed drug (RLD). This is a critical jurisdictional divergence.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-005",
+      "rule": "For BCS-based biowaivers (Class I), the drug substance must have high solubility (dose dissolves in ≤250 mL across pH 1-6.8 at 37°C) and the test and reference products must show rapid dissolution (>85% dissolved within 15 minutes in 900 mL at pH 1.2, 4.5 and 6.8 using paddle at 75 rpm or basket at 100 rpm).",
+      "source_section": "Appendix III - BCS-based biowaivers",
+      "source_quote": "A drug substance is considered highly soluble when the highest dose strength is soluble in 250 ml or less of aqueous media over the pH range of 1 to 6.8 at 37 ± 1°C... Both the test and the reference product should show rapid dissolution, i.e., ≥85% dissolution within 15 minutes.",
+      "ema_specific_note": "EMA limits BCS biowaiver to Class I only. FDA also permits Class III biowaivers. The EMA requires pH range 1-6.8 (not 1-7.5 as per FDA).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-006",
+      "rule": "For BCS Class III biowaivers (high solubility, low permeability), both test and reference products must show very rapid dissolution (>85% in 15 minutes at pH 1.2, 4.5 and 6.8), and excipients in the test product must be qualitatively the same and quantitatively very similar to the reference.",
+      "source_section": "Appendix III - BCS Class III biowaivers",
+      "source_quote": "Both the test and the reference product should show very rapid dissolution, i.e., ≥85% dissolution within 15 minutes... the excipients in the test product should be qualitatively the same and quantitatively very similar.",
+      "ema_specific_note": "EMA permits BCS Class III biowaivers with stricter excipient requirements and the same 85%/15 min dissolution threshold. FDA also permits Class III biowaivers but applies different excipient criteria.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-007",
+      "rule": "The f2 similarity factor must be ≥50 (range 50-100) to conclude dissolution profile similarity. When both test and reference show >85% dissolution within 15 minutes, f2 calculation is not necessary.",
+      "source_section": "Section 4.2 - Dissolution profile comparison",
+      "source_quote": "An f2 value of 50 to 100 indicates similarity of the two dissolution profiles... If both the test and the reference product dissolve more than 85% in 15 minutes, the profiles are considered similar without further mathematical evaluation.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-008",
+      "rule": "Dissolution testing for profile comparisons must be conducted in at least three pH levels: pH 1.2, pH 4.5, and pH 6.8 at 37°C using 900 mL of medium.",
+      "source_section": "Section 4.2 - Dissolution profile comparison",
+      "source_quote": "Dissolution profiles should be generated in three buffers with pH 1.2, 4.5 and 6.8, at 37°C ± 1°C, in 900 mL.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-009",
+      "rule": "For orally disintegrating tablets (ODTs) claimed to be bioequivalent to an oral solution or immediate-release tablet, a clinical bioequivalence study is required unless a waiver based on dissolution testing is scientifically justifiable.",
+      "source_section": "Appendix I - Orally disintegrating tablets",
+      "source_quote": "For an ODT that is claimed to be bioequivalent to an existing oral solution or IR tablet of the same active substance, a bioequivalence study should be performed unless waiver based on dissolution testing can be justified.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BE-010",
+      "rule": "Modified-release products require both single-dose and multiple-dose bioequivalence studies under fasted and fed conditions. Fed-state studies may be waived for IR formulations but are mandatory for modified-release products.",
+      "source_section": "Section 5 - Modified-release products",
+      "source_quote": "For modified release products a single dose and a multiple dose study are required... Both studies should include fasted and fed conditions.",
+      "ema_specific_note": "EMA requires both single-dose and multiple-dose studies for MR products. FDA guidance similarly requires both but may allow waivers for specific product types.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "ema_biosimilars_quality": [
+    {
+      "id": "BSQ-001",
+      "rule": "A biosimilar development programme must be based on a comparability exercise demonstrating that the biosimilar is highly similar to the reference biological medicinal product in terms of quality characteristics, biological activity, safety, and efficacy.",
+      "source_section": "Section 2 - Scientific principles",
+      "source_quote": "The comparability exercise is a stepwise approach to demonstrate that the biological medicinal product intended to be similar (the 'biosimilar') and the reference medicinal product share the same primary sequence and higher order structure, are similar with respect to biological activity, and produce a comparable clinical safety and efficacy profile.",
+      "ema_specific_note": "EMA requires comparability exercise as the backbone of biosimilar development. This is an ICH-aligned concept but the EMA approach requires the EU-authorised reference product.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-002",
+      "rule": "The reference product for comparability exercises in EU biosimilar applications must be the reference biological medicinal product authorised in the EU.",
+      "source_section": "Section 2.1 - Reference product",
+      "source_quote": "The reference medicinal product shall be a medicinal product authorised in the Community on the basis of a complete dossier.",
+      "ema_specific_note": "EMA-specific: EU-authorised reference product mandatory. FDA accepts US-licensed reference product. Bridging data from non-EU reference products may support development but cannot replace the EU reference comparability exercise.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-003",
+      "rule": "Physicochemical and biological characterisation of a biosimilar must include primary structure (amino acid sequence), higher order structure, post-translational modifications (e.g., glycosylation), biological activity, purity and impurity profiles.",
+      "source_section": "Section 3 - Quality requirements",
+      "source_quote": "The characterisation should include at minimum the determination of: primary structure (including disulphide bond structure), higher order structure, biological activity, purity and impurities including product-related substances and impurities.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-004",
+      "rule": "Analytical methods used for characterisation of the biosimilar and comparability exercise must be state-of-the-art and the applicant should provide a comprehensive characterisation package using orthogonal methods.",
+      "source_section": "Section 3.1 - Characterisation",
+      "source_quote": "State-of-the-art analytical methods should be used. Orthogonal analytical techniques are particularly useful when characterising the higher order structure and biological activity of biosimilars.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-005",
+      "rule": "For biosimilar monoclonal antibodies, Fc effector functions (ADCC, CDC) must be characterised and compared to the reference product where relevant to the mechanism of action.",
+      "source_section": "Section 3.2 - Biological activity",
+      "source_quote": "For monoclonal antibodies, Fc effector functions such as ADCC, CDC and complement binding should be addressed and the relevance of these functions for the clinical performance of the product should be discussed.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-006",
+      "rule": "Differences in glycosylation between the biosimilar and reference product must be characterised in detail, with justification provided as to why any differences would not affect clinical performance.",
+      "source_section": "Section 3.1 - Post-translational modifications",
+      "source_quote": "Glycosylation is a critical quality attribute and differences in glycoform profile between the biosimilar and the reference product should be fully characterised. The potential impact on clinical performance should be discussed.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-007",
+      "rule": "Manufacturing process changes occurring during development must be managed through comparability exercises in accordance with ICH Q5E to ensure no adverse impact on quality, safety or efficacy.",
+      "source_section": "Section 4 - Manufacturing",
+      "source_quote": "Manufacturing process changes should be managed via comparability exercises in line with ICH Q5E. For significant changes, appropriate comparability data should be provided.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-008",
+      "rule": "The specification for a biosimilar must be at least as stringent as the specification for the reference product, and acceptance criteria must be justified by the results of the comparability exercise and clinical data.",
+      "source_section": "Section 3.3 - Specifications",
+      "source_quote": "Specifications should be established based on the comparability exercise and should not be set to accommodate differences that could not be justified by clinical data.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-009",
+      "rule": "Stability studies for a biosimilar must be conducted according to ICH Q5C principles and the stability profile must be comparable to the reference product. Real-time and real-condition data are required for marketing authorisation.",
+      "source_section": "Section 3.4 - Stability",
+      "source_quote": "Stability studies should be conducted in accordance with ICH Q5C. Real-time stability data should be provided at the time of application.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "BSQ-010",
+      "rule": "Reference standard batches used in comparability exercises should include multiple batches of the EU-authorised reference product, sourced across multiple lots and, where possible, across different manufacturing sites, to capture natural variability.",
+      "source_section": "Section 3.1.1 - Reference standard",
+      "source_quote": "Multiple batches of the reference product should be used in order to reflect the natural variability of the reference product. The number of batches used should be justified.",
+      "ema_specific_note": "EMA recommends multiple EU reference product batches. FDA similarly requires multiple lots for US reference standard studies.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "ema_immunogenicity": [
+    {
+      "id": "IMM-001",
+      "rule": "Immunogenicity assessment of therapeutic proteins must use a multi-tiered assay strategy: Tier 1 screening assay, Tier 2 confirmatory assay, and Tier 3 characterisation (including neutralisation assay).",
+      "source_section": "Section 4 - Immunogenicity assay strategy; Annex 1",
+      "source_quote": "A tiered approach to the detection and characterisation of antibodies is recommended. Tier 1 consists of a screening assay to detect antibody positive samples. Tier 2 is a confirmatory assay to confirm specificity. Tier 3 characterises the antibody including neutralising capacity.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-002",
+      "rule": "The false-positive rate target for screening assays should not exceed 5% (i.e., specificity ≥95%), with the cut-point set based on a statistical analysis of drug-naive samples.",
+      "source_section": "Section 4.1 - Screening assay",
+      "source_quote": "The cut point should be set to achieve a false positive rate of approximately 5%... The cut point should be established using samples from drug-naive individuals.",
+      "ema_specific_note": "The 5% false-positive target is consistent with EMA and FDA expectations and reflects the statistical approach to cut-point setting recommended in both jurisdictions.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-003",
+      "rule": "For therapeutic proteins intended for chronic treatment, anti-drug antibody (ADA) follow-up data should be collected for at least 12 months post-treatment initiation to characterise the persistence of immune responses.",
+      "source_section": "Section 3.2 - Timing and duration of immunogenicity monitoring",
+      "source_quote": "For products intended for chronic use, immunogenicity testing should continue for at least 12 months of treatment to characterise the time course of antibody development and persistence.",
+      "ema_specific_note": "EMA-specific timeline requirement for chronic-use biologics. This duration aligns with FDA guidance on immunogenicity monitoring for chronic therapy.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-004",
+      "rule": "Neutralising antibody assays must be included in the immunogenicity programme when the biological activity of the therapeutic protein could be affected by antibody formation (e.g., when the therapeutic protein is a cytokine, enzyme, or has a mechanism susceptible to neutralisation).",
+      "source_section": "Section 4.3 - Neutralising antibodies",
+      "source_quote": "A neutralising antibody assay should always be included in the testing programme when there is a biological rationale. This is the case when the therapeutic protein has a mechanism of action that could be blocked by antibodies.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-005",
+      "rule": "Risk factors that must be evaluated for their impact on immunogenicity include product-related factors (formulation, aggregation, impurities, route of administration) and patient-related factors (immune status, concomitant immunosuppressive therapy, genetic factors).",
+      "source_section": "Section 2 - Risk factors for immunogenicity",
+      "source_quote": "Factors that may influence immunogenicity include product-related factors such as the nature of the protein, formulation, aggregates and impurities, and patient-related factors including the immune status of the patient, use of immunosuppressants, and genetic factors.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-006",
+      "rule": "The clinical impact of ADA responses must be evaluated in terms of effects on pharmacokinetics, pharmacodynamics, efficacy (loss of response), and safety (hypersensitivity, autoimmunity).",
+      "source_section": "Section 5 - Clinical consequences of immune responses",
+      "source_quote": "The clinical consequences of immune responses should be characterised in terms of the impact on pharmacokinetics, pharmacodynamics, efficacy and safety (including hypersensitivity reactions and autoimmune responses).",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-007",
+      "rule": "For biosimilars, the immunogenicity comparison must include a direct head-to-head clinical comparison with the reference product using the same assay platform, and ADA incidence, titre, and persistence should be assessed.",
+      "source_section": "Section 7 - Immunogenicity of biosimilars",
+      "source_quote": "For biosimilars, a comparative immunogenicity assessment with the reference product should be performed. The same assay platform should be used for both products and data on ADA incidence, titre and persistence should be compared.",
+      "ema_specific_note": "EMA-specific requirement for comparative immunogenicity in biosimilar development using the same assay platform. This goes beyond the general ICH requirement.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-008",
+      "rule": "Pre-existing antibodies that cross-react with the therapeutic protein must be evaluated as part of the immunogenicity risk assessment, including their potential impact on treatment outcome.",
+      "source_section": "Section 3.1 - Pre-existing antibodies",
+      "source_quote": "The presence of pre-existing antibodies and their potential cross-reactivity with the therapeutic protein should be investigated. Their impact on pharmacokinetics and clinical outcome should be evaluated.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-009",
+      "rule": "Assay validation for immunogenicity must include drug tolerance (drug interference) experiments to confirm that the presence of drug in patient samples does not prevent ADA detection.",
+      "source_section": "Section 4.1.2 - Assay validation",
+      "source_quote": "Drug tolerance of the assay should be assessed. Drug interference can result in false negative results and this should be evaluated during assay validation.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "IMM-010",
+      "rule": "Immunogenicity risk management strategies must be described in the risk management plan (RMP) and may include pre-medication protocols, patient stratification, monitoring algorithms, and procedures for managing hypersensitivity reactions.",
+      "source_section": "Section 8 - Risk management",
+      "source_quote": "Risk management strategies for immunogenicity should be included in the risk management plan and may include pre-medication, patient monitoring, and procedures for managing immune-mediated adverse events.",
+      "ema_specific_note": "EMA-specific requirement to incorporate immunogenicity risk management into the RMP. The RMP is an EU-specific instrument with no direct FDA equivalent.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "ema_similar_biologicals": [
+    {
+      "id": "SB-001",
+      "rule": "A similar biological medicinal product (biosimilar) must demonstrate similarity to an approved reference biological medicinal product on the basis of quality, safety and efficacy comparability.",
+      "source_section": "Section 1 - Introduction and scope",
+      "source_quote": "A similar biological medicinal product is a biological medicinal product that contains a version of the active substance of an already authorised original biological medicinal product (reference medicinal product). Similarity to the reference medicinal product in terms of quality characteristics, biological activity, safety and efficacy should be based on a comprehensive comparability exercise.",
+      "ema_specific_note": "The term 'similar biological medicinal product' and the concept of the comparability exercise are foundational EU regulatory concepts established under Directive 2001/83/EC and Article 10(4).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-002",
+      "rule": "The regulatory pathway for similar biological medicinal products in the EU is based on Article 10(4) of Directive 2001/83/EC, which requires demonstration of biosimilarity rather than a full independent safety and efficacy dossier.",
+      "source_section": "Section 1.2 - Regulatory framework",
+      "source_quote": "The legal basis for the approval of similar biological medicinal products is Article 10(4) of Directive 2001/83/EC, as amended. This provision allows the applicant to submit a reduced application where it can be shown that the biological product is similar to an authorised reference product.",
+      "ema_specific_note": "EMA-specific legal framework. FDA biosimilars are approved under section 351(k) of the PHS Act. The EU framework predates the US biosimilar pathway (EU 2004 vs US 2010).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-003",
+      "rule": "The comparability exercise for a similar biological medicinal product must be conducted step-wise, beginning with comprehensive quality comparability, followed by non-clinical studies if needed, and then clinical trials.",
+      "source_section": "Section 2 - Comparability exercise",
+      "source_quote": "The comparability exercise should follow a stepwise approach: starting with comprehensive quality comparability, then non-clinical studies if required, and finally clinical studies to confirm biosimilarity.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-004",
+      "rule": "Where residual uncertainty remains after quality and non-clinical comparability, comparative clinical pharmacokinetic studies are required. Comparative clinical efficacy/safety studies may also be needed if PK studies alone cannot resolve residual uncertainty.",
+      "source_section": "Section 2.3 - Clinical comparability",
+      "source_quote": "If residual uncertainty remains after quality and non-clinical comparability, clinical pharmacokinetic studies should be performed. In some cases, comparative efficacy and safety data from randomised controlled trials may be necessary.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-005",
+      "rule": "Non-clinical studies for similar biological medicinal products should first consider in vitro studies (functional assays, receptor binding). In vivo non-clinical studies are only required when in vitro data cannot resolve residual concerns.",
+      "source_section": "Section 2.2 - Non-clinical studies",
+      "source_quote": "In vitro non-clinical studies are usually sufficient for demonstrating non-clinical similarity. In vivo non-clinical studies should only be conducted when specific issues cannot be resolved by in vitro data.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-006",
+      "rule": "Extrapolation of clinical data from one indication to another is possible for similar biological medicinal products if biosimilarity has been demonstrated comprehensively, provided that the mechanism of action and target receptor are the same across indications.",
+      "source_section": "Section 2.3 - Extrapolation",
+      "source_quote": "Extrapolation of efficacy and safety data to other indications of the reference product may be acceptable if biosimilarity has been demonstrated and the same mechanism of action applies in those indications.",
+      "ema_specific_note": "EMA allows extrapolation across indications for biosimilars, a concept that FDA also accepts but applies case-by-case with explicit scientific justification.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-007",
+      "rule": "Post-marketing safety surveillance of similar biological medicinal products must include monitoring of immunogenicity through a risk management plan with enhanced pharmacovigilance activities.",
+      "source_section": "Section 3 - Post-marketing requirements",
+      "source_quote": "Post-marketing surveillance should include monitoring for immunogenicity. A risk management plan with enhanced pharmacovigilance activities is required for all similar biological medicinal products.",
+      "ema_specific_note": "EMA-specific requirement for a formal RMP for biosimilars. FDA requires a REMS only in specific circumstances.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "SB-008",
+      "rule": "For a similar biological medicinal product, the traceability requirements mandate that prescriptions be made using the brand name and batch number to ensure post-marketing traceability of adverse events.",
+      "source_section": "Section 3.1 - Traceability",
+      "source_quote": "To ensure traceability, prescribers are encouraged to record the brand name and batch number of the biological medicinal product administered.",
+      "ema_specific_note": "EMA-specific traceability recommendation linked to the EU pharmacovigilance system and EudraVigilance adverse event reporting.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "ema_process_validation": [
+    {
+      "id": "PV-001",
+      "rule": "Process validation must adopt a lifecycle approach consisting of three stages: Stage 1 (process design), Stage 2 (process qualification), and Stage 3 (continued process verification), in line with ICH Q8, Q9 and Q10.",
+      "source_section": "Section 2 - Process validation lifecycle",
+      "source_quote": "Process validation should be considered as a lifecycle approach consisting of process design (Stage 1), process qualification (Stage 2), and continued process verification (Stage 3).",
+      "ema_specific_note": "The three-stage lifecycle approach aligns EMA with FDA (FDA Process Validation Guidance 2011) and ICH Q8/Q9/Q10.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-002",
+      "rule": "A minimum of three consecutive production-scale batches are required for traditional process qualification (Stage 2) unless a risk-based justification supports fewer batches.",
+      "source_section": "Section 3.2 - Process qualification",
+      "source_quote": "The traditional approach requires at least 3 consecutive production scale batches to be manufactured under routine conditions. Any deviation from this number should be scientifically justified.",
+      "ema_specific_note": "The three-batch minimum is consistent with both EMA and FDA expectations. EMA permits risk-based reductions with scientific justification under QbD approaches.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-003",
+      "rule": "For biologics, all manufacturing processes are classified as non-standard and require enhanced validation activities relative to chemical drug substances, including demonstration of process control for critical quality attributes affected by biological variability.",
+      "source_section": "Section 4 - Biological medicinal products",
+      "source_quote": "Biological medicinal products are inherently more complex than chemical entities. All biological processes should be classified as non-standard. Enhanced validation activities are required to address the inherent variability of biological systems.",
+      "ema_specific_note": "EMA classifies all biologics as non-standard, requiring enhanced validation. FDA applies similar principles for biological products under BPD regulations.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-004",
+      "rule": "Pilot-scale batches used to support process development must be at minimum 10% of the intended commercial batch size, or at least 100,000 units, whichever is greater.",
+      "source_section": "Section 3.1 - Scale-up",
+      "source_quote": "Pilot batches should be at a scale of at least 10% of the intended full production scale or at least 100,000 units (whichever is the greater).",
+      "ema_specific_note": "EMA-specific requirement for pilot batch scale. FDA uses the 10% threshold as a general principle for solid oral dosage forms, but does not universally mandate 100,000 units.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-005",
+      "rule": "Critical process parameters (CPPs) and critical quality attributes (CQAs) must be identified during Stage 1 (process design) and must be monitored during Stage 2 (process qualification) and Stage 3 (continued process verification) throughout the product lifecycle.",
+      "source_section": "Section 2.1 - Process design",
+      "source_quote": "Critical process parameters and critical quality attributes should be identified during process design. These should be monitored during process qualification and continued process verification.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-006",
+      "rule": "Continued process verification (Stage 3) must demonstrate that the process remains in a state of control throughout commercial manufacturing, supported by statistical analysis of process data from routine production.",
+      "source_section": "Section 3.3 - Continued process verification",
+      "source_quote": "Continued process verification should provide ongoing assurance during routine production that the process remains in a state of control. Statistical methods should be used to evaluate manufacturing data.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-007",
+      "rule": "Cleaning validation must demonstrate that cleaning procedures effectively remove product residues, process aids, and microbial contaminants to acceptable limits, with worst-case conditions identified and tested.",
+      "source_section": "Section 5 - Cleaning validation",
+      "source_quote": "Cleaning validation should demonstrate that cleaning procedures remove product residues, process aids and microbial contamination to levels below acceptable limits. Worst case conditions should be identified and used in validation studies.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-008",
+      "rule": "All process validation studies must be performed according to approved protocols, and deviations from the protocol must be documented, investigated, and resolved before the validation report is finalised.",
+      "source_section": "Section 6 - Documentation",
+      "source_quote": "Validation activities should be performed in accordance with approved protocols. Any deviations from the protocol should be documented, investigated, and addressed prior to finalising the validation report.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-009",
+      "rule": "Prospective validation is the standard approach. Concurrent validation may only be used in exceptional circumstances with appropriate scientific justification. Retrospective validation is not acceptable for new products.",
+      "source_section": "Section 3 - Types of validation",
+      "source_quote": "Prospective validation should be the standard approach. Concurrent validation may be used in exceptional cases with appropriate justification. Retrospective validation is not acceptable for new products.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PV-010",
+      "rule": "When parametric release is applied (releasing product based on process data rather than end-product sterility testing), the process must be comprehensively validated to demonstrate the reliability of the parametric approach.",
+      "source_section": "Section 7 - Parametric release",
+      "source_quote": "Parametric release requires comprehensive validation of the sterilisation process. The validation data must demonstrate that the sterilisation process achieves the required sterility assurance level.",
+      "ema_specific_note": "Parametric release is an EU-specific option (EMA Annex 17 of EU GMP) not available by default under FDA regulations, which require sterility testing unless a BLA-approved parametric release programme exists.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_i": [
+    {
+      "id": "GVP1-001",
+      "rule": "Each marketing authorisation holder must have a Qualified Person responsible for Pharmacovigilance (QPPV) who is permanently and continuously at the disposal of the MAH, resident in the EU/EEA.",
+      "source_section": "Section I.B.1 - Qualified person responsible for pharmacovigilance",
+      "source_quote": "The qualified person responsible for pharmacovigilance shall be permanently and continuously at the disposal of the marketing authorisation holder... The qualified person responsible for pharmacovigilance shall reside and operate in the Union.",
+      "ema_specific_note": "EMA-specific requirement: QPPV must reside in the EU/EEA. No equivalent FDA requirement for a single designated pharmacovigilance responsible person residing in the US.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-002",
+      "rule": "Only one QPPV is permitted per pharmacovigilance system. A single QPPV may cover multiple marketing authorisations held by the same MAH.",
+      "source_section": "Section I.B.1 - QPPV",
+      "source_quote": "A marketing authorisation holder may have only one qualified person responsible for pharmacovigilance. The qualified person responsible for pharmacovigilance may cover more than one marketing authorisation of the same marketing authorisation holder.",
+      "ema_specific_note": "EMA-specific: single QPPV per PV system is an EU regulatory requirement with no direct FDA analogue.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-003",
+      "rule": "The pharmacovigilance system must be described in a Pharmacovigilance System Master File (PSMF), which must be maintained and kept up to date at all times.",
+      "source_section": "Section I.B.2 - Pharmacovigilance system master file",
+      "source_quote": "The marketing authorisation holder shall maintain a pharmacovigilance system master file as a detailed description of the pharmacovigilance system used by the marketing authorisation holder.",
+      "ema_specific_note": "The PSMF is an EU-specific document required under DIR Art 104. There is no direct equivalent in US regulations, though FDA expects a described pharmacovigilance system.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-004",
+      "rule": "Product pharmacovigilance data and records must be retained for at least 10 years after the marketing authorisation has expired.",
+      "source_section": "Section I.B.10 / I.C.2.4 - Record retention",
+      "source_quote": "Pharmacovigilance data and documents relating to individual authorised medicinal products are retained as long as the marketing authorisation exists or for at least further 10 years after the marketing authorisation has expired [IR Art 16(2)].",
+      "ema_specific_note": "EMA-specific: 10-year post-expiry retention for product-specific PV documents. The PSMF system documents must be retained for at least 5 years after formal termination of the pharmacovigilance system.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-005",
+      "rule": "Essential pharmacovigilance system documents (e.g., the PSMF itself and SOPs) must be retained for as long as the system exists and for at least 5 further years after the system has been formally terminated.",
+      "source_section": "Section I.C.2.4 - Record retention",
+      "source_quote": "Arranging for the essential documents describing their pharmacovigilance systems to be kept as long as the system exists and for at least further 5 years after they have been formally terminated [IR Art 16(2)].",
+      "ema_specific_note": "EMA-specific distinction: 10 years for product data vs 5 years for system-level documentation. No direct FDA equivalent with this two-tier retention structure.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-006",
+      "rule": "The pharmacovigilance quality system must include written procedures, adequate resources, trained staff, mechanisms for data quality assurance, and audit processes.",
+      "source_section": "Section I.B.8 - Quality system",
+      "source_quote": "The pharmacovigilance system shall include: written procedures; an adequate number of competent staff; appropriate IT systems; quality control procedures; audit mechanisms.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-007",
+      "rule": "Marketing authorisation holders must perform regular audits of their pharmacovigilance systems to verify compliance with legal requirements and internal procedures.",
+      "source_section": "Section I.B.12 - Audits",
+      "source_quote": "Audits of the pharmacovigilance system should be performed at regular intervals to verify compliance with the pharmacovigilance requirements and the procedures established by the marketing authorisation holder.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-008",
+      "rule": "The European Medicines Agency has specific pharmacovigilance tasks including running the EudraVigilance database, monitoring medical literature, coordinating PSUR assessments, signal detection, and oversight of post-authorisation safety studies.",
+      "source_section": "Section I.C.2.3.1 - Role of the Agency",
+      "source_quote": "Specific pharmacovigilance tasks of the Agency include: running the EudraVigilance database [REG Art 57(d)]; monitoring selected medical literature [REG Art 27]; running processes for the EU coordination of the assessment of PSURs [Module VII]; oversight of post-authorisation safety studies [Module VIII]; tasks relating to signal detection [REG Art 28a(1)(c)].",
+      "ema_specific_note": "EMA-specific roles. The EMA's EudraVigilance database has no direct FDA equivalent (FDA uses FAERS/Sentinel).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-009",
+      "rule": "The PRAC (Pharmacovigilance Risk Assessment Committee) is responsible for providing recommendations to the CHMP and CMDh on pharmacovigilance and risk management matters, including monitoring the effectiveness of risk management systems.",
+      "source_section": "Section I.C.2.3.2 - Role of the PRAC",
+      "source_quote": "The Pharmacovigilance Risk Assessment Committee (PRAC) is responsible for providing recommendations to the CHMP and the CMDh on any question relating to pharmacovigilance activities in respect of medicinal products for human use and on risk management systems, including the monitoring of the effectiveness of those risk management systems [REG Art 56(1)(aa)].",
+      "ema_specific_note": "EMA-specific: PRAC is a unique EU body with no direct FDA equivalent. FDA uses advisory committees for safety reviews but not a standing dedicated pharmacovigilance committee with mandatory binding recommendations.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP1-010",
+      "rule": "Quality audits of Member States' and Agency pharmacovigilance systems shall be performed according to a common methodology, and results must be reported in accordance with Directive 2001/83/EC Article 101(2).",
+      "source_section": "Section I.C.2.4 - Quality system",
+      "source_quote": "Quality audits of the Member States' and Agency's pharmacovigilance systems shall be performed according to a common methodology [IR Art 17(1)]. The results of audits shall be reported by competent authorities in Member States in accordance with Article 101(2) of Directive 2001/83/EC.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_ii": [
+    {
+      "id": "GVP2-001",
+      "rule": "The Pharmacovigilance System Master File (PSMF) must be maintained at the site where the main pharmacovigilance activities of the MAH are performed, within the EU.",
+      "source_section": "Section II.B.1 - Location of PSMF",
+      "source_quote": "The pharmacovigilance system master file shall be kept at the site where the main pharmacovigilance activities of the marketing authorisation holder are performed. The site shall be located in the Union.",
+      "ema_specific_note": "EMA-specific: PSMF must be physically located in the EU. There is no equivalent FDA requirement for a US-located pharmacovigilance master file.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-002",
+      "rule": "The PSMF must contain specific mandatory content including: description of the pharmacovigilance system, QPPV details, organisational structure, data sources, IT systems, SOP descriptions, quality system documentation, and performance indicator data.",
+      "source_section": "Section II.B.2 - PSMF content",
+      "source_quote": "The pharmacovigilance system master file shall contain the following: a description of the pharmacovigilance system; the name and contact details of the qualified person responsible for pharmacovigilance; the organisational structure of the marketing authorisation holder; a description of the data sources; a description of the computerised systems and databases used; a description of the performance of the pharmacovigilance system.",
+      "ema_specific_note": "EU-specific document structure mandated by DIR Art 104 and IR Art 9-11. No FDA equivalent mandatory PSMF.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-003",
+      "rule": "The competent authority must be provided access to the PSMF upon request, and must receive the PSMF or relevant sections within 7 days of a request.",
+      "source_section": "Section II.C.1 - Access to PSMF",
+      "source_quote": "The marketing authorisation holder shall provide access to the pharmacovigilance system master file to the competent authority upon request. A response to a request from the competent authority should be made within 7 days.",
+      "ema_specific_note": "EMA-specific 7-day response timeline for PSMF access requests. No direct FDA equivalent timeline.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-004",
+      "rule": "All products of the MAH must be registered in the EMA's Article 57 database, and the QPPV details in the database must be updated within 30 days of any change.",
+      "source_section": "Section II.B.3 - Article 57 database",
+      "source_quote": "All products of the marketing authorisation holder should be registered in the Article 57 database. Changes to the QPPV or location details should be notified within 30 days.",
+      "ema_specific_note": "EMA-specific: Article 57 database registration is an EU legal obligation under REG Art 57. No FDA equivalent mandatory product registration database for pharmacovigilance purposes.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-005",
+      "rule": "The PSMF must be updated continuously to reflect the current state of the pharmacovigilance system. A quality management process must ensure the accuracy and completeness of the PSMF at all times.",
+      "source_section": "Section II.B.4 - PSMF updates",
+      "source_quote": "The pharmacovigilance system master file should be maintained in a current state and updated on an ongoing basis to reflect any changes to the pharmacovigilance system.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-006",
+      "rule": "The PSMF must include a description of the MAH's risk management systems, including a list of all risk management plans and summaries of the pharmacovigilance performance indicators.",
+      "source_section": "Section II.B.2 - PSMF content",
+      "source_quote": "The pharmacovigilance system master file shall include a description of the risk management systems in place, including a list of risk management plans, and pharmacovigilance performance indicators.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-007",
+      "rule": "Pharmacovigilance outsourcing agreements must be documented and included in the PSMF. The MAH retains ultimate responsibility for all pharmacovigilance obligations even when activities are outsourced.",
+      "source_section": "Section II.B.5 - Outsourcing",
+      "source_quote": "Where pharmacovigilance activities are contracted out to third parties, the relevant contracts or agreements shall be described in the pharmacovigilance system master file. The ultimate responsibility for all pharmacovigilance obligations remains with the marketing authorisation holder.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-008",
+      "rule": "Signal management activities must be described in the PSMF, including procedures for signal detection, validation, prioritisation, assessment and action.",
+      "source_section": "Section II.B.2 - Signal management in PSMF",
+      "source_quote": "The pharmacovigilance system master file shall describe the signal management processes including the procedures for signal detection, validation, prioritisation, assessment and follow-up actions.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-009",
+      "rule": "The PSMF must include the dates and conclusions of any audits of the pharmacovigilance system, and a summary of any corrective and preventive actions taken.",
+      "source_section": "Section II.B.2 - Audit documentation in PSMF",
+      "source_quote": "The pharmacovigilance system master file should contain a summary of the audits performed, including dates, conclusions and corrective and preventive actions.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP2-010",
+      "rule": "The MAH must have written procedures (SOPs) for all pharmacovigilance activities, and these SOPs must be listed in the PSMF with their identifiers and version numbers.",
+      "source_section": "Section II.B.2 - SOPs in PSMF",
+      "source_quote": "A list of standard operating procedures relating to pharmacovigilance activities should be included in the pharmacovigilance system master file, with their reference numbers and version numbers.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_v": [
+    {
+      "id": "GVP5-001",
+      "rule": "A Risk Management Plan (RMP) must be submitted for all new marketing authorisation applications, and must contain a safety specification, pharmacovigilance plan, and risk minimisation plan.",
+      "source_section": "Section V.C.1 - Requirement for an RMP",
+      "source_quote": "A risk management plan is required for all new applications for marketing authorisation. The risk management plan should contain a safety specification, a pharmacovigilance plan and a risk minimisation plan.",
+      "ema_specific_note": "EMA-specific mandatory RMP requirement. FDA has the Risk Evaluation and Mitigation Strategy (REMS) system which is required only for specific products with serious safety risks, not for all new applications.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-002",
+      "rule": "The RMP must use a seven-part structure: Part I (product overview), Part II (safety specification), Part III (pharmacovigilance plan), Part IV (plans for post-authorisation efficacy studies), Part V (risk minimisation measures), Part VI (summary of the RMP), Part VII (annexes).",
+      "source_section": "Section V.B - RMP structure",
+      "source_quote": "The risk management plan should follow a specific structure divided into seven parts: Part I Product overview, Part II Safety specification, Part III Pharmacovigilance plan, Part IV Plans for post-authorisation efficacy studies, Part V Risk minimisation measures, Part VI Summary of the risk management plan, Part VII Annexes.",
+      "ema_specific_note": "EMA-specific 7-part RMP structure. No equivalent standardised structure exists in FDA guidance for REMS or other safety plans.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-003",
+      "rule": "Safety concerns in the RMP must be categorised as: important identified risks, important potential risks, or missing information. Each concern must be described with characterisation of the evidence and clinical relevance.",
+      "source_section": "Section V.B.2 - Safety specification",
+      "source_quote": "The safety specification should categorise safety concerns as important identified risks, important potential risks or missing information. Each concern should be characterised in terms of the nature, frequency, severity, reversibility, and the evidence supporting the categorisation.",
+      "ema_specific_note": "EMA-specific risk categorisation taxonomy. This three-tier classification (important identified, important potential, missing information) is an EU construct.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-004",
+      "rule": "The RMP is an active-substance-based document. Where multiple products contain the same active substance, a single RMP may be submitted covering all products, but national annexes may be required.",
+      "source_section": "Section V.C.1.1 - Scope of the RMP",
+      "source_quote": "The risk management plan is an active substance-based document. For a given active substance, a single risk management plan covering all concerned medicinal products may be submitted.",
+      "ema_specific_note": "EMA-specific concept. US REMS are product/NDA-specific, not active substance-based.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-005",
+      "rule": "The RMP must be submitted to EMA as a PDF document in eCTD format, with the RMP annexes (Annex 1) provided in XML format to support PRAC review and database entry.",
+      "source_section": "Section V.C.5 - RMP submission format",
+      "source_quote": "The risk management plan should be submitted in eCTD format as a PDF document. The RMP annex should be submitted in XML format to support the database entry and publication of the risk management plan.",
+      "ema_specific_note": "EMA-specific eCTD + XML submission requirement for RMP. FDA does not require XML-format REMS submissions.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-006",
+      "rule": "The RMP must be updated whenever new information becomes available that may affect the safety profile, including following new safety signals, completion of post-authorisation studies, or following PRAC assessment.",
+      "source_section": "Section V.C.2.1 - RMP updates",
+      "source_quote": "The risk management plan should be updated whenever new information becomes available that may impact on the safety profile of the product, including new safety signals, completion of post-authorisation studies, or following the assessment by the PRAC.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-007",
+      "rule": "For applications under Article 10c (informed consent), Article 10(3) (hybrid), Article 10b (fixed combination), Article 10a (well-established use), or Article 10(4) (biosimilar), an RMP must be submitted as part of the marketing authorisation application.",
+      "source_section": "Section V.C.1.2 - Article-specific RMP requirements",
+      "source_quote": "An RMP is required for applications submitted under Articles 10c, 10(3), 10b, 10a and 10(4) of Directive 2001/83/EC.",
+      "ema_specific_note": "EMA-specific: RMP required for hybrid, biosimilar, well-established use, and fixed combination applications. These article-based application types are specific to EU law.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-008",
+      "rule": "The PRAC Rapporteur is appointed to oversee the review of each RMP, and the PRAC provides oversight of risk management across all EU-authorised products.",
+      "source_section": "Section V.C.6 - PRAC oversight",
+      "source_quote": "The PRAC provides oversight of risk management plans across the EU. A PRAC Rapporteur is appointed to lead the assessment of the risk management plan.",
+      "ema_specific_note": "EMA-specific: PRAC Rapporteur system and PRAC oversight of RMPs are EU-specific structures.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-009",
+      "rule": "The RMP summary (Part VI) and specific information on risk minimisation activities are subject to transparency provisions and must be made publicly available on the EMA and national authority websites.",
+      "source_section": "Section V.C.7 - Transparency",
+      "source_quote": "The summary of the risk management plan and information on risk minimisation activities shall be made publicly available in accordance with REG Art 26(1)(c) and DIR Art 106(c).",
+      "ema_specific_note": "EMA-specific public disclosure requirement for RMP summaries. FDA REMS documents are also publicly available, but the scope and format of disclosure differs.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP5-010",
+      "rule": "Where the RMP includes additional risk minimisation measures (e.g., educational materials, patient registries, controlled access programmes), these must be evaluated for their effectiveness as part of continued pharmacovigilance.",
+      "source_section": "Section V.B.5 - Risk minimisation effectiveness",
+      "source_quote": "The effectiveness of additional risk minimisation measures should be evaluated as part of the pharmacovigilance plan. The evaluation should include process indicators and, where possible, outcome indicators.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_vii": [
+    {
+      "id": "GVP7-001",
+      "rule": "PSURs must be submitted within 70 calendar days of the data lock point for reporting intervals of 12 months or less, and within 90 calendar days of the data lock point for reporting intervals greater than 12 months.",
+      "source_section": "Section VII.C.3.2 - Submission timelines",
+      "source_quote": "The PSUR shall be submitted within 70 calendar days of the data lock point for reporting intervals of 12 months or less. For reporting intervals of more than 12 months, the PSUR shall be submitted within 90 calendar days of the data lock point.",
+      "ema_specific_note": "EMA-specific timelines codified in DIR Art 107c(2). FDA does not have the PSUR system; FDA uses Periodic Adverse Drug Experience Reports (PADERs) and Periodic Benefit-Risk Evaluation Reports (PBRERs) under different timelines.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-002",
+      "rule": "The standard PSUR submission schedule is: 6-monthly intervals for the first 2 years post-authorisation, annual reports for the following 2 years, then 3-yearly thereafter, unless otherwise specified in the EU reference date list.",
+      "source_section": "Section VII.C.3.1 - Standard submission schedule",
+      "source_quote": "Unless the marketing authorisation specifies different dates or frequencies, PSURs should be submitted every six months for the first two years following initial marketing authorisation, once a year for the following two years, and then at three-yearly intervals.",
+      "ema_specific_note": "EMA-specific standard PSUR schedule under DIR Art 107c(2)(b). FDA PADER frequency is also graduated but uses different intervals (quarterly for 3 years, then annually).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-003",
+      "rule": "A single PSUR must be submitted per active substance per MAH. Where a MAH holds multiple marketing authorisations for the same active substance, a single PSUR covering all products is required.",
+      "source_section": "Section VII.C.3 - PSUR per active substance",
+      "source_quote": "One PSUR per active substance should be submitted by a given marketing authorisation holder. Where a marketing authorisation holder holds several authorisations for the same active substance, one PSUR covering all those authorisations should be submitted.",
+      "ema_specific_note": "EMA-specific: one PSUR per active substance per MAH. FDA PADERs are NDA/BLA-specific.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-004",
+      "rule": "The EU reference dates list (EURD list) is legally binding and specifies the EU reference date and frequency of PSUR submission for each active substance. MAHs must comply with the EURD list, which takes precedence over conditions in the marketing authorisation.",
+      "source_section": "Section VII.C.3.5 - EURD list",
+      "source_quote": "The list of EU reference dates and frequency of submission of PSURs is established and published. This list is legally binding and takes precedence over the conditions in the individual marketing authorisation.",
+      "ema_specific_note": "EMA-specific: The EURD list is a unique EU regulatory instrument with no FDA equivalent. The EURD list enables single assessment of PSURs across multiple MAHs for the same active substance.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-005",
+      "rule": "PSURs must follow the 20-section ICH E2C(R2) PBRER format, with an additional EU regional appendix containing proposed product information changes, additional pharmacovigilance/risk minimisation activities, summary of ongoing safety concerns, PASS results, and effectiveness of risk minimisation.",
+      "source_section": "Section VII.B - PSUR format",
+      "source_quote": "The PSUR should be structured according to the 20-section ICH E2C(R2) format. An EU regional appendix should be included containing EU-specific information including proposed product information, summary of ongoing safety concerns, and reporting of results from post-authorisation safety studies.",
+      "ema_specific_note": "EMA-specific: The EU regional appendix is an additional EU requirement beyond the ICH E2C(R2) format. This appendix includes EU-specific product information change proposals.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-006",
+      "rule": "Marketing authorisation holders must submit PSURs immediately upon request from a competent authority in a Member State. When no submission timeline is specified in the request, the PSUR must be submitted within 90 calendar days of the data lock point.",
+      "source_section": "Section VII.C.3.3.4 - PSUR on demand",
+      "source_quote": "Marketing authorisation holders shall submit PSURs immediately upon request from a competent authority in a Member State [DIR Art 107c(2)]. When the timeline for submission has not been specified in the request, marketing authorisation holders should submit the PSUR within 90 calendar days of the data lock point.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-007",
+      "rule": "For products where PSURs are no longer routinely required, the MAH must continue to evaluate product safety on a regular basis and report any new safety information that impacts the risk-benefit balance or product information.",
+      "source_section": "Section VII.C.3 - Continued safety obligations",
+      "source_quote": "For products where PSURs are no longer required to be submitted routinely, it is expected that marketing authorisation holders will continue to evaluate the safety of their products on a regular basis and report any new safety information that impacts on the risk-benefit balance or the product information.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-008",
+      "rule": "The PSUR assessment procedure for single centrally authorised products requires the PRAC Rapporteur to prepare a preliminary assessment report within 60 days of procedure start. MAH comments are due by Day 90, and updated report by Day 105.",
+      "source_section": "Section VII.C.4.2.1 - PSUR assessment timeline",
+      "source_quote": "The PRAC Rapporteur shall prepare an assessment report and send it to the Agency and to the members of the PRAC [REG Art 28(3)] within 60 days of the start of the procedure... By Day 90, the marketing authorisation holder and members of the PRAC may send comments... Following receipt of comments, the PRAC Rapporteur shall prepare an updated assessment report [REG Art 28(3)] within 15 days (i.e. by Day 105).",
+      "ema_specific_note": "EMA-specific Day 60/90/105 assessment timetable for PSUR review. No FDA equivalent structured timetable for PBRER review.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-009",
+      "rule": "Changes to the EURD list take effect 6 months after publication on the European medicines web-portal. Where appropriate, MAHs must submit a variation to reflect the changes in their marketing authorisation within this period.",
+      "source_section": "Section VII.C.3.7 - Amendment of MA according to EURD list",
+      "source_quote": "Any changes to the dates and frequencies of submission of PSURs specified in the list take effect six months after the date of the publication on the European medicines web-portal.",
+      "ema_specific_note": "EMA-specific requirement tied to the EURD list update cycle.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP7-010",
+      "rule": "PSUR-related documents to be made publicly available on the European medicines web-portal include the list of EU reference dates, final assessment conclusions, PRAC recommendations, CMDh positions, CHMP opinions, and European Commission decisions.",
+      "source_section": "Section VII.C.7.1 - Transparency",
+      "source_quote": "The following documents shall be made publicly available by means of the European medicines web-portal [DIR Art 107l, REG Art 26(g)]: list of EU reference dates and frequency of submission of PSURs; final assessment conclusions of the adopted assessment reports; PRAC recommendations including relevant annexes; CMDh position; CHMP opinion including relevant annexes; European Commission decision.",
+      "ema_specific_note": "EMA-specific transparency provisions for PSUR outcomes. FDA also publishes safety communications but not an equivalent structured set of committee recommendations and regulatory decisions tied to PSUR review.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_viii": [
+    {
+      "id": "GVP8-001",
+      "rule": "A post-authorisation safety study (PASS) is defined per DIR Art 1(15) as any study relating to an authorised medicinal product conducted with the aim of identifying, characterising or quantifying a safety hazard, confirming the safety profile of the medicinal product, or of measuring the effectiveness of risk management measures.",
+      "source_section": "Section VIII.A - PASS definition",
+      "source_quote": "A post-authorisation safety study means any study relating to an authorised medicinal product conducted with the aim of identifying, characterising or quantifying a safety hazard, confirming the safety profile of the medicinal product, or of measuring the effectiveness of risk management measures [DIR Art 1(15)].",
+      "ema_specific_note": "EMA-specific legal definition under DIR Art 1(15). FDA uses the term 'post-marketing requirement (PMR)' or 'post-marketing commitment (PMC)' for similar studies.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-002",
+      "rule": "Non-interventional PASS must be registered in the EU PAS Register before the study commences. Registration must include the study protocol.",
+      "source_section": "Section VIII.C.1 - Study registration",
+      "source_quote": "Non-interventional post-authorisation safety studies should be registered in the EU PAS Register before commencement of the study.",
+      "ema_specific_note": "EMA-specific EU PAS Register requirement. FDA requires registration of applicable post-marketing studies on ClinicalTrials.gov.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-003",
+      "rule": "For PASS imposed as a condition of the marketing authorisation, the protocol must be submitted to the PRAC (for centrally authorised products) or the relevant national competent authority before the study commences.",
+      "source_section": "Section VIII.C.2 - Protocol submission",
+      "source_quote": "For post-authorisation safety studies imposed as a condition of the marketing authorisation, the protocol shall be submitted to the PRAC or to the national competent authority as applicable before the study commences.",
+      "ema_specific_note": "EMA-specific: PRAC protocol review for imposed PASS is a unique EU requirement. FDA reviews PMR/PMC protocols but through a different process without a dedicated pharmacovigilance committee.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-004",
+      "rule": "The PRAC must provide an endorsement or objection to a submitted PASS protocol within 60 days of receipt.",
+      "source_section": "Section VIII.C.2 - PRAC review timeline",
+      "source_quote": "The PRAC should provide an endorsement or objection to the submitted protocol within 60 days of receipt.",
+      "ema_specific_note": "EMA-specific 60-day PRAC protocol review timeline. No equivalent FDA fixed timeline for PMR protocol review.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-005",
+      "rule": "The final PASS study report must be submitted to the competent authority within 12 months of the end of data collection, in accordance with DIR Art 107p(1).",
+      "source_section": "Section VIII.C.4 - Final study report",
+      "source_quote": "The final study report shall be submitted to the Agency or competent authority within 12 months of the end of data collection [DIR Art 107p(1)].",
+      "ema_specific_note": "EMA-specific 12-month final report deadline under DIR Art 107p(1). FDA PMR final study reports must be submitted at agreed timepoints but there is no uniform 12-month post-data-collection deadline.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-006",
+      "rule": "Where a PASS manuscript is accepted for publication in a peer-reviewed journal, the MAH must submit the manuscript to the Agency within 2 weeks of acceptance for publication.",
+      "source_section": "Section VIII.C.4 - Manuscript submission",
+      "source_quote": "If a manuscript is accepted for publication in a peer-reviewed journal, the marketing authorisation holder should submit it to the Agency within 2 weeks of receipt of the acceptance.",
+      "ema_specific_note": "EMA-specific 2-week manuscript submission timeline. No equivalent FDA requirement for PMR manuscript submission timelines.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-007",
+      "rule": "When notified of a PASS obligation, the MAH has 30 days to respond to the competent authority confirming agreement or proposing modifications to the protocol.",
+      "source_section": "Section VIII.C.1 - MAH response to PASS obligation",
+      "source_quote": "Following notification of the obligation to conduct a post-authorisation safety study, the marketing authorisation holder should respond within 30 days.",
+      "ema_specific_note": "EMA-specific 30-day MAH response window for PASS obligations.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-008",
+      "rule": "The PASS study protocol must contain 13 required sections including: study title, rationale, research question, study design, data sources, study population, variables, data analysis, milestones, amendments, dissemination, references, and annexes.",
+      "source_section": "Section VIII.B.2 - Protocol content",
+      "source_quote": "The protocol should contain the following sections: (1) title; (2) rationale and background; (3) research question and objectives; (4) amendments; (5) milestones; (6) study design; (7) setting; (8) subjects; (9) variables; (10) data sources; (11) study size; (12) data management; (13) statistical methods.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-009",
+      "rule": "Substantial amendments to a PASS protocol must be submitted to the PRAC or competent authority before implementation, with the rationale for the amendment clearly stated.",
+      "source_section": "Section VIII.C.3 - Protocol amendments",
+      "source_quote": "Substantial amendments to the protocol shall be submitted to the PRAC or national competent authority before implementation, with the rationale for the amendment clearly explained.",
+      "ema_specific_note": "EMA-specific pre-implementation PRAC notification for substantial amendments. FDA requires reporting of changes to PMR protocols but approval process differs.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP8-010",
+      "rule": "The PASS final study report must contain 14 required sections including: abstract, amendments/deviations from protocol, research questions, study design, study population, variables, statistical methods, results, discussion, conclusions, references, annexes, and details of studies within the programme.",
+      "source_section": "Section VIII.B.3 - Final report content",
+      "source_quote": "The final study report should include: abstract; amendments and deviations from the protocol; research question and objectives; amendments and deviations from the protocol; study design and setting; population; variables; data sources and measurement; statistical methods; results; discussion including strengths and limitations; conclusions; references; annexes.",
+      "ema_specific_note": null,
+      "verification_status": "verbatim"
+    }
+  ],
+  "gvp_module_ix": [
+    {
+      "id": "GVP9-001",
+      "rule": "A signal is defined per IR Art 19(1) as information arising from one or multiple sources, including observations and experiments, which suggests a new potentially causal association, or a new aspect of a known association, between an intervention and an event or set of related events, either adverse or beneficial.",
+      "source_section": "Section IX.A - Signal definition",
+      "source_quote": "A signal means information arising from one or multiple sources, including observations and experiments, which suggests a new potentially causal association, or a new aspect of a known association, between an intervention and an event or set of related events, either adverse or beneficial, that is judged to be of sufficient likelihood to justify verificatory action [IR Art 19(1)].",
+      "ema_specific_note": "EMA-specific legal definition under IR Art 19(1). FDA's definition of a safety signal uses similar language but is not codified in the same legal form.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-002",
+      "rule": "The EU signal management process consists of six sequential steps: (1) signal detection, (2) signal validation, (3) signal confirmation, (4) signal analysis and prioritisation, (5) signal assessment, and (6) recommendation for action.",
+      "source_section": "Section IX.B - Signal management process",
+      "source_quote": "The EU signal management process comprises the following steps: signal detection; signal validation; signal confirmation; signal analysis and prioritisation; signal assessment; recommendation for action.",
+      "ema_specific_note": "EMA-specific structured six-step signal management process, coordinated through EudraVigilance and PRAC. FDA signal management is less formally codified with different procedural steps.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-003",
+      "rule": "Marketing authorisation holders must notify the competent authority of an emerging safety issue within 3 working days of becoming aware of the issue.",
+      "source_section": "Section IX.C.2 - Emerging safety issues",
+      "source_quote": "Marketing authorisation holders should notify the relevant competent authorities of emerging safety issues within 3 working days of becoming aware of the issue.",
+      "ema_specific_note": "EMA-specific 3 working day notification timeline for emerging safety issues. FDA requires 15-calendar-day expedited reporting for unexpected serious adverse events (not specifically 'emerging safety issues').",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-004",
+      "rule": "Signal confirmation by the PRAC Rapporteur or lead Member State must be completed within 30 days of initial receipt of the standalone signal notification.",
+      "source_section": "Section IX.C.3 - Signal confirmation timeline",
+      "source_quote": "Signal confirmation by the PRAC rapporteur or lead Member State should be completed within 30 days of initial receipt.",
+      "ema_specific_note": "EMA-specific 30-day signal confirmation timeline. No equivalent FDA timeline for signal confirmation.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-005",
+      "rule": "MAHs must monitor EudraVigilance data for signals at least every 6 months and conduct analyses of the accumulated data to detect potential safety signals.",
+      "source_section": "Section IX.C.1 - MAH monitoring obligations",
+      "source_quote": "Marketing authorisation holders should monitor EudraVigilance data at least every 6 months and conduct analyses to detect potential safety signals.",
+      "ema_specific_note": "EMA-specific EudraVigilance monitoring obligation. FDA requires monitoring of the FAERS database but does not specify a minimum 6-month review frequency in this way.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-006",
+      "rule": "When a validated signal from MAH monitoring does not meet the definition of an emerging safety issue and no PSUR is due within 6 months, the MAH must submit a standalone signal notification to the Agency and competent authorities within 30 days of completing the signal assessment.",
+      "source_section": "Section IX.C.1 - Standalone signal notification",
+      "source_quote": "When the substance is not on the EURD list with a PSUR due within 6 months, a standalone signal notification should be submitted within 30 days after the MAH assessment is completed.",
+      "ema_specific_note": "EMA-specific standalone signal notification system. No equivalent FDA requirement for standalone signal notifications outside of expedited safety reports.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-007",
+      "rule": "When a confirmed signal requires a variation to the marketing authorisation for an important risk, the variation must be submitted within 3 months. For non-important risks, the variation must be submitted within 6 months.",
+      "source_section": "Section IX.C.1 - Variation timelines for signals",
+      "source_quote": "Variation for important risk: as soon as possible within 3 months. Variation for non-important risks: as soon as possible within 6 months.",
+      "ema_specific_note": "EMA-specific variation timelines tied to signal outcomes. FDA uses different mechanisms (e.g., Prior Approval Supplements, Changes Being Effected) with different timelines.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-008",
+      "rule": "The EPITT (European pharmacovigilance issues tracking tool) is the EU regulatory system for tracking and managing signals. All standalone signal notifications must be entered into EPITT.",
+      "source_section": "Section IX.C.2 - EPITT system",
+      "source_quote": "Signal notifications and related records should be entered into the EPITT (European pharmacovigilance issues tracking tool) by the Agency.",
+      "ema_specific_note": "EMA-specific: EPITT is a unique EU tracking tool with no FDA equivalent. FDA uses internal tracking systems for safety signals.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-009",
+      "rule": "Following PRAC assessment of a confirmed signal, PRAC recommendations are published on the Agency website within 1 month of PRAC adoption. The Agency sends preliminary assessment reports to MAHs within 2 working days of PRAC adoption.",
+      "source_section": "Section IX.C.3; Figure IX.5 - PRAC recommendation publication",
+      "source_quote": "Publish recommendations on Agency's website within 1 month of PRAC adoption. Send preliminary assessment report to MAH within 2 working days of adoption.",
+      "ema_specific_note": "EMA-specific PRAC publication and communication timelines for signal assessment outcomes.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "GVP9-010",
+      "rule": "Where a signal is identified from EudraVigilance monitoring and meets the definition of an emerging safety issue, the MAH must notify the relevant competent authorities within 3 working days, regardless of whether an upcoming PSUR is planned.",
+      "source_section": "Section IX.C.1; Figure IX.2 - Emerging safety issue notification",
+      "source_quote": "Where the issue meets the definition of emerging safety issue: Notify as emerging safety issue within 3 working days.",
+      "ema_specific_note": "EMA-specific emerging safety issue notification requirement. Figure IX.2 confirms the 3-working-day timeline applies regardless of PSUR scheduling.",
+      "verification_status": "verbatim"
+    }
+  ],
+  "pmda_clinical_evaluation": [
+    {
+      "id": "PMDA-CE-001",
+      "rule": "Carcinogenicity studies (ICH S1 in Japanese implementation) are required for drugs intended for continuous clinical use of 6 months or more.",
+      "source_section": "Section 2.1 - Clinical use duration",
+      "source_quote": "臨床での使用が少なくとも6ヵ月以上継続されるような医薬品においてはがん原性試験が実施されるべきである [Translation: Carcinogenicity studies should be conducted for drugs intended for continuous clinical use of at least 6 months.]",
+      "ema_specific_note": "PMDA follows ICH S1 for carcinogenicity: 6-month threshold for chronic use drugs. EMA and FDA apply the same ICH S1 threshold. PMDA also requires carcinogenicity studies for drugs with intermittent use of similar total exposure.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-002",
+      "rule": "The standard approach for carcinogenicity testing requires one long-term rodent carcinogenicity study plus one additional in vivo study. The long-term study should preferably use rats as the default species unless scientifically justified otherwise.",
+      "source_section": "Section 3 - Carcinogenicity study approach",
+      "source_quote": "基本的な考え方は1種のげっ歯類を用いる長期がん原性試験に加えて、新たに短・中期 in vivo げっ歯類試験系の一つを実施することが骨子となる [Translation: The basic approach is one long-term carcinogenicity study using one rodent species, plus one short/medium-term in vivo rodent study system.]",
+      "ema_specific_note": "PMDA aligns with ICH S1B approach (1 long-term study + alternative test system). This is a harmonised ICH S1 position applicable in Japan, EU, and US.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-003",
+      "rule": "For long-term rodent carcinogenicity studies, a minimum of 50 animals per sex per dose group must be used, with at least 3 dose groups plus a control group.",
+      "source_section": "Section 3.1.2 and 3.1.4 - Animal numbers and dose groups",
+      "source_quote": "雌雄各々について、1群50匹以上とする [Translation: At least 50 animals per sex per group.] 雌雄各々について、3段階以上の試験群を設定するとともに、別に対照群を置く [Translation: At least 3 dose groups per sex plus a separate control group.]",
+      "ema_specific_note": "ICH S1A-aligned requirement for 50 animals/sex/group and 3 dose levels, consistent across EMA, FDA, and PMDA.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-004",
+      "rule": "The duration of long-term carcinogenicity studies is 24 months or more (up to 30 months) for rats, and 18 months or more (up to 24 months) for mice and hamsters, with dosing at least 7 days per week.",
+      "source_section": "Section 3.1.5 - Study duration",
+      "source_quote": "ラットでは24ヵ月以上30ヵ月以内、マウスおよびハムスターでは18ヵ月以上24ヵ月以内とし、投与は原則として週7日とする [Translation: Rats: 24-30 months; Mice and hamsters: 18-24 months; dosing 7 days/week in principle.]",
+      "ema_specific_note": "ICH S1A-harmonised study duration requirements. EMA and FDA apply the same ICH S1A durations.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-005",
+      "rule": "The high dose in carcinogenicity studies may be selected using pharmacokinetic criteria: the AUC of the unchanged drug or its metabolite in rodents at the high dose should be 25-fold or more than the human AUC at the maximum recommended clinical dose.",
+      "source_section": "Section 3.1.6(4) - Pharmacokinetic high dose selection",
+      "source_quote": "がん原性試験での高用量設定としてヒトにおけるAUCの何倍が妥当かを検討するために...相対的全身曝露比として25が提案された [Translation: As a pharmacokinetic criterion for high dose selection in carcinogenicity studies...a relative systemic exposure ratio of 25 has been proposed.]",
+      "ema_specific_note": "This 25x AUC ratio for pharmacokinetic high-dose selection is the ICH S1C(R2) harmonised criterion accepted by PMDA, EMA, and FDA as an alternative to MTD.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-006",
+      "rule": "The limit dose for carcinogenicity studies is 1500 mg/kg/day when the maximum clinical dose does not exceed 500 mg/day, provided that the rodent systemic exposure at the limit dose is at least 10-fold higher than the human clinical exposure.",
+      "source_section": "Section 3.1.6(7) - Limit dose",
+      "source_quote": "最大臨床用量が500 mg/man/日を超えない場合、がん原性試験の高用量は、1500 mg/kg/日を必ずしも超える必要はない [Translation: When the maximum clinical dose does not exceed 500 mg/man/day, the high dose in carcinogenicity studies need not necessarily exceed 1500 mg/kg/day.] ...げっ歯類での1500mg/kg/日の全身曝露量は、臨床用量における曝露量より少なくとも10倍以上高い必要がある [Translation: systemic exposure in rodents at 1500 mg/kg/day must be at least 10-fold higher than clinical dose exposure].",
+      "ema_specific_note": "ICH S1C(R2) limit dose: 1500 mg/kg/day, with the 10-fold exposure multiple requirement. This is harmonised across EMA, FDA, and PMDA under ICH S1C(R2).",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-007",
+      "rule": "For endogenous peptides and protein drugs applied at physiological replacement levels (i.e., not pharmacological levels), long-term carcinogenicity studies using rodents are generally not necessary.",
+      "source_section": "Section 2.6 - Endogenous peptides and proteins",
+      "source_quote": "内因性物質を補充療法（すなわち生理的レベル）として適用する場合、特に既に同様の医薬品で臨床経験があるような場合には、がん原性試験は一般に必要ではない [Translation: When endogenous substances are applied as replacement therapy (i.e., physiological levels), particularly when clinical experience exists with similar medicinal products, carcinogenicity studies are generally not required.]",
+      "ema_specific_note": "This exemption is ICH S6(R1) aligned (for biologics) and consistent with EMA and FDA practice for endogenous substance replacement therapies.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-008",
+      "rule": "Carcinogenicity studies for anti-cancer drugs intended for treatment of patients with advanced cancer with expected survival of 2-3 years or less are generally not required. However, studies may be required if the product may be used in adjuvant settings or for non-oncology indications.",
+      "source_section": "Section 2.4 - Patient population",
+      "source_quote": "対象の患者集団で長期の延命が望めないような場合（2〜3年以内）には、がん原性試験は要求されない [Translation: When long-term survival in the target patient population is not expected (within 2-3 years), carcinogenicity studies are not required.]",
+      "ema_specific_note": "ICH S9-aligned approach for anti-cancer drugs. EMA and FDA apply the same ICH S9 principles for oncology drugs, exempting carcinogenicity studies for drugs used only in advanced cancer.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-009",
+      "rule": "The carcinogenicity risk assessment must use a weight of evidence approach, integrating data from long-term rodent studies, short/medium-term in vivo systems, genotoxicity studies, pharmacology, and toxicokinetics.",
+      "source_section": "Section 4 - Carcinogenicity evaluation",
+      "source_quote": "がん原性は...総合的な科学的根拠の重要度（weight of evidence）に基づく評価の一部として考えるべきである [Translation: Carcinogenicity should be...considered as part of an evaluation based on the overall weight of scientific evidence.]",
+      "ema_specific_note": "Weight of evidence approach is an ICH S1B harmonised principle. EMA and FDA also require weight of evidence integration in carcinogenicity assessment.",
+      "verification_status": "verbatim_translated"
+    },
+    {
+      "id": "PMDA-CE-010",
+      "rule": "Genotoxic substances are considered trans-species carcinogens and present a risk to humans. Long-term carcinogenicity studies are not required for clearly genotoxic substances; however, chronic toxicity studies (up to 1 year) to detect early neoplastic changes may be required.",
+      "source_section": "Section 2.3 - Genotoxicity",
+      "source_quote": "遺伝毒性が明らかな物質は...動物種を越えたがん原性物質であることが推定され、ヒトに対する危険性があるものと見なされる。そのような医薬品については、長期がん原性試験を実施する必要はない。しかし...初期の腫瘍性変化を見つけるために慢性毒性試験（1年まで）が必要である [Translation: Clearly genotoxic substances...are assumed to be trans-species carcinogens and considered to present a risk to humans. Long-term carcinogenicity studies are not necessary for such drugs. However...chronic toxicity studies (up to 1 year) to detect early neoplastic changes are required.]",
+      "ema_specific_note": "ICH S1A-aligned approach for genotoxic substances. EMA and FDA also waive long-term carcinogenicity for clearly genotoxic drugs but may require 1-year chronic toxicity.",
+      "verification_status": "verbatim_translated"
+    }
+  ],
+  "pmda_ethnic_factors": [
+    {
+      "id": "PMDA-EF-001",
+      "rule": "Foreign manufacturers of drugs and quasi-drugs exporting to Japan must obtain accreditation from the Minister of Health, Labour and Welfare (MHLW), as required under Article 13-3 of the Pharmaceutical and Medical Device Act (PAL).",
+      "source_section": "Section 1 - What is Accreditation of Foreign Manufacturers?",
+      "source_quote": "A foreign manufacturer (a person/a company) intending to manufacture drugs, or quasi-drugs in foreign countries and export them to Japan, is required to be accredited by the Minister of Health, Labour and Welfare as an 'Accredited Foreign Manufacturer', specified in Article 13-3 of PAL.",
+      "ema_specific_note": "PMDA-specific Japanese accreditation requirement under PAL Article 13-3. No EMA equivalent requirement for foreign manufacturer accreditation (EMA uses GMP certification and inspection under Annex 16/EMA GMP guidelines). The EMA requires Qualified Person certification for EU batch release.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-002",
+      "rule": "Foreign manufacturer accreditation in Japan must be renewed every 5 years. Failure to renew within the 5-year effective period renders the accreditation null and void.",
+      "source_section": "Section 2(4) - Renewal of Accreditation",
+      "source_quote": "Unless an 'Accredited Foreign Manufacturer' renews their accreditation...within its 5-year effective period, their accreditation becomes null and void.",
+      "ema_specific_note": "PMDA-specific 5-year renewal cycle. EMA does not have an equivalent periodic foreign manufacturer accreditation renewal; EMA uses GMP inspections on a risk-based cycle typically every 2-3 years.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-003",
+      "rule": "Foreign manufacturers must notify PMDA within 30 days of changes to: the name/address of the responsible person, names of executives, name of the manufacturing establishment, major changes to buildings/facilities, or category/accreditation number changes.",
+      "source_section": "Section 3(1) - Notification on Change (Article 100 of PAL Enforcement Regulations)",
+      "source_quote": "When an '(Deemed) Accredited Foreign Manufacturer' makes changes in the following matters, they must notify the fact to the Minister within 30 days by submitting a notification (Form No. 6) to PMDA: [name/address of responsible person; names of executives; name of manufacturing establishment; major changes to buildings/facilities; category/accreditation number].",
+      "ema_specific_note": "PMDA-specific 30-day change notification requirement. EMA requires notification of significant changes to manufacturing through variation procedures, with timelines depending on change category (Type IA/IB/II).",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-004",
+      "rule": "Foreign manufacturer accreditation applications must be submitted in duplicate to the Minister (via MHLW) and as an 'Application for Accreditation Examination' (Form No. 16-2) to the Chief Executive of PMDA, both to Administration Division II, Office of Review Administration of PMDA.",
+      "source_section": "Section 2(1) - Application for Accreditation",
+      "source_quote": "An 'Applicant' is required to submit 'Application for Accreditation' (Form No. 18 in the PAL Enforcement Regulations) that is addressed to the Minister in duplicate, and 'Application for Accreditation Examination' (Form No.16-(2) in the Regulations) to Chief Executive of PMDA. Both applications need to be submitted to Administration Division II, Office of Review Administration of PMDA.",
+      "ema_specific_note": "PMDA-specific dual application requirement (to Minister + PMDA examination). EMA does not require this dual-submission foreign manufacturer accreditation approach.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-005",
+      "rule": "Each accreditation application must be submitted per manufacturing category; an applicant cannot apply for multiple categories in a single accreditation application.",
+      "source_section": "Section 2(1) - Application per category",
+      "source_quote": "When an 'Applicant' intends to apply for a new accreditation, they cannot apply for multiple categories in one accreditation application. They need to submit an accreditation application for one category and, at the same time, submit additional applications for the other categories.",
+      "ema_specific_note": "PMDA-specific per-category application requirement. EMA manufacturing authorisations can cover multiple product types in a single site licence, classified by manufacturer categories.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-006",
+      "rule": "Documents required for foreign manufacturer accreditation include: curriculum vitae of the responsible person, list of products to be manufactured, manufacturing process documents, and documents on buildings and facilities, plus a valid copy of the marketing/manufacturing licence if one exists in the country of origin.",
+      "source_section": "Section 2(2) - Documents to be attached to accreditation application",
+      "source_quote": "Documents to Be Attached to Accreditation Application include: (1) curriculum vitae of the person responsible for the manufacturing establishment; (2) list of products; (3) documents on manufacturing process; (4) document on buildings and facilities; (5) a copy of the licence certificate issued by governmental organisations if a marketing or manufacturing licence system exists in the country.",
+      "ema_specific_note": "PMDA-specific document requirements for foreign manufacturer accreditation. EMA requires a Site Master File (SMF), GMP certificate, and inspection report rather than an accreditation application package.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-007",
+      "rule": "In principle, foreign manufacturer accreditation in Japan is granted based on document examination only; on-site inspection of foreign manufacturing facilities is not conducted by PMDA as the primary accreditation step.",
+      "source_section": "Section 2 - Examination in Accreditation",
+      "source_quote": "In principle, document examination is required for accreditation... PMDA requires only document audit fee to be paid to our bank account because, in principle, we do not conduct on-site inspection only for the purpose of examining buildings and facilities of a foreign manufacturing establishment to be accredited.",
+      "ema_specific_note": "PMDA-specific: document-only foreign manufacturer accreditation (on-site inspection not the primary requirement). EMA/EU relies heavily on GMP inspections, including foreign site inspections, as primary quality assurance for imported medicines.",
+      "verification_status": "verbatim"
+    },
+    {
+      "id": "PMDA-EF-008",
+      "rule": "When a foreign manufacturer changes or adds accreditation categories, they must submit both a 'Change/Addition Application' and a new 'Application for Accreditation Examination' to PMDA.",
+      "source_section": "Section 2(3) - Application for Change/Addition",
+      "source_quote": "When an 'Accredited Foreign Manufacturer' changes the category accredited to their manufacturing establishment or adds new categories to their accreditation, they must submit a form, 'Application for Change/Addition' (Form No. 21)...[and also submit] a form of 'Application for Accreditation Examination' (Form No. 16-(2)).",
+      "ema_specific_note": "PMDA-specific category change process. EMA handles manufacturing site changes through variation procedures (Type IA, IB, or II depending on the nature of change).",
+      "verification_status": "verbatim"
+    }
+  ]
+}

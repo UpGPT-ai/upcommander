@@ -1,0 +1,921 @@
+{
+  "metadata": {
+    "title": "EU GMP & EMA Manufacturing and Quality Requirements",
+    "source_documents": 43,
+    "eu_gmp_chapters": [
+      "Chapter 1: Pharmaceutical Quality System",
+      "Chapter 2: Personnel",
+      "Chapter 3: Premises and Equipment",
+      "Chapter 4: Documentation",
+      "Chapter 5: Production",
+      "Chapter 6: Quality Control",
+      "Chapter 7: Outsourced Activities",
+      "Chapter 8: Complaints, Quality Defects and Product Recalls",
+      "Chapter 9: Self Inspection"
+    ],
+    "eu_gmp_parts": [
+      "Part I: Medicinal Products",
+      "Part II: Active Substances (ICH Q7A)",
+      "Part III: GMP Related Documents"
+    ],
+    "eu_gmp_annexes": [
+      "Annex 1: Sterile Manufacturing",
+      "Annex 2: Biological Products",
+      "Annex 3: Radiopharmaceuticals",
+      "Annex 4: Veterinary Non-Immunological",
+      "Annex 5: Veterinary Immunologicals",
+      "Annex 6: Medicinal Gases",
+      "Annex 7: Herbal Products",
+      "Annex 8: Starting Materials Sampling",
+      "Annex 9: Liquids/Creams/Ointments",
+      "Annex 10: Pressurised MDIs",
+      "Annex 11: Computerised Systems",
+      "Annex 12: Use of Ionising Radiation",
+      "Annex 13: Investigational Medicinal Products",
+      "Annex 14: Blood/Plasma Products",
+      "Annex 15: Qualification and Validation",
+      "Annex 16: Qualified Person Certification",
+      "Annex 17: Parametric Release",
+      "Annex 19: Reference and Retention Samples",
+      "Annex 21: Importation"
+    ],
+    "ema_guidelines": [
+      "Bioequivalence",
+      "Biosimilars Quality",
+      "Anticancer Evaluation",
+      "Clinical Trials Small Populations",
+      "Excipients",
+      "Finished Dosage Form",
+      "Immunogenicity",
+      "Missing Data",
+      "Monoclonal Antibodies Immunogenicity",
+      "Process Validation",
+      "Similar Biologicals"
+    ],
+    "extraction_date": "2026-03-22",
+    "version": "3.0"
+  },
+  "requirements": {
+    "pharmaceutical_quality_system": {
+      "source": "EU GMP Part I Chapter 1",
+      "legal_basis": "Directive 2003/94/EC, Directive 91/412/EEC",
+      "rules": [
+        {
+          "id": "PQS-001",
+          "requirement": "Manufacturing Authorisation holder must manufacture medicinal products fit for intended use, complying with Marketing Authorisation requirements",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PQS-002",
+          "requirement": "Pharmaceutical Quality System must incorporate GMP and Quality Risk Management, be fully documented, and its effectiveness monitored",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PQS-003",
+          "requirement": "Product and process knowledge must be managed throughout all lifecycle stages",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PQS-004",
+          "requirement": "No batch sold or supplied before Qualified Person certification that each batch produced and controlled per Marketing Authorisation",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.22 - Quality Control Unit responsibilities, but no QP role"
+        },
+        {
+          "id": "PQS-005",
+          "requirement": "Annual Product Quality Review (PQR) required for all authorised products including export-only, covering 12 specified elements",
+          "type": "mandatory",
+          "eu_specific": true,
+          "pqr_elements": [
+            "starting materials review",
+            "critical in-process controls",
+            "failed batches",
+            "deviations/non-conformances",
+            "process/method changes",
+            "MA variations",
+            "stability monitoring",
+            "returns/complaints/recalls",
+            "corrective actions",
+            "post-marketing commitments",
+            "equipment qualification status",
+            "contractual arrangements"
+          ]
+        },
+        {
+          "id": "PQS-006",
+          "requirement": "Quality Risk Management must be systematic, based on scientific knowledge, and commensurate with level of risk per ICH Q9",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PQS-007",
+          "requirement": "Senior management periodic review of PQS required",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PQS-008",
+          "requirement": "Quality Manual or equivalent documentation must describe the quality management system including management responsibilities",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "personnel": {
+      "source": "EU GMP Part I Chapter 2",
+      "rules": [
+        {
+          "id": "PER-001",
+          "requirement": "Qualified Person(s) must be designated per Article 51 of Directive 2001/83/EC with specific education qualifications per Article 49",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No equivalent role in FDA system"
+        },
+        {
+          "id": "PER-002",
+          "requirement": "Heads of Production and Quality Control must be independent from each other",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PER-003",
+          "requirement": "Organisation chart required showing relationships between Production, QC, QA heads and QP positions",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PER-004",
+          "requirement": "Medical examination required upon recruitment for all personnel",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.28 only requires health reporting, not mandatory medical exam"
+        },
+        {
+          "id": "PER-005",
+          "requirement": "Consultant records must include name, address, qualifications, and type of service",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PER-006",
+          "requirement": "QP must certify each batch in a register before any release, covering full qualitative analysis and quantitative analysis of all active substances for imported products",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "premises_and_equipment": {
+      "source": "EU GMP Part I Chapter 3",
+      "rules": [
+        {
+          "id": "PRE-001",
+          "requirement": "Dedicated facilities required when toxicological evaluation does not support controllable risk (e.g., beta-lactams) or residue limits cannot be determined by validated method",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA requires dedicated facilities for penicillin/cephalosporin but uses different risk framework"
+        },
+        {
+          "id": "PRE-002",
+          "requirement": "Health-based exposure limits (HBELs) must be used for risk identification in shared facilities per EMA guideline",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA uses 1/1000th therapeutic dose approach"
+        },
+        {
+          "id": "PRE-003",
+          "requirement": "Separate sampling area required for starting materials",
+          "type": "should",
+          "eu_specific": false
+        },
+        {
+          "id": "PRE-004",
+          "requirement": "QC laboratories must be separated from production areas; biological, microbiological, and radioisotope labs separated from each other",
+          "type": "should",
+          "eu_specific": false
+        },
+        {
+          "id": "PRE-005",
+          "requirement": "Water pipes must be sanitised per written procedures with action limits for microbiological contamination",
+          "type": "should",
+          "eu_specific": false
+        }
+      ]
+    },
+    "documentation": {
+      "source": "EU GMP Part I Chapter 4",
+      "rules": [
+        {
+          "id": "DOC-001",
+          "requirement": "Site Master File required describing GMP-related activities",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No FDA equivalent document required"
+        },
+        {
+          "id": "DOC-002",
+          "requirement": "Batch documentation retained for 1 year after batch expiry OR 5 years after QP certification, whichever is longer",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.180 requires 1 year after batch expiry or 1 year after distribution, no 5-year QP rule"
+        },
+        {
+          "id": "DOC-003",
+          "requirement": "IMP batch documentation retained 5 years after completion/discontinuation of last clinical trial using the batch",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "DOC-004",
+          "requirement": "Technical Agreements required between contract givers and acceptors",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "production": {
+      "source": "EU GMP Part I Chapter 5",
+      "rules": [
+        {
+          "id": "PRD-001",
+          "requirement": "Cross-contamination prevention must use Quality Risk Management approach with health-based exposure limits from toxicological evaluation",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PRD-002",
+          "requirement": "Technical and organisational measures for cross-contamination prevention include: dedicated facilities, self-contained areas, campaign manufacturing, validated cleaning with HBEL-based limits",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PRD-003",
+          "requirement": "Starting materials must be identity-tested; each container must have identity test unless validated reduced procedure",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.84(d) requires at least one specific identity test per component lot"
+        },
+        {
+          "id": "PRD-004",
+          "requirement": "Water used in manufacture must comply with European Pharmacopoeia monographs",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA references USP"
+        },
+        {
+          "id": "PRD-005",
+          "requirement": "Reprocessing permitted only if final product meets all specifications; recovery of materials only if predefined procedure exists",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "quality_control": {
+      "source": "EU GMP Part I Chapter 6",
+      "rules": [
+        {
+          "id": "QC-001",
+          "requirement": "QC department must be independent from Production under person with appropriate qualifications",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QC-002",
+          "requirement": "OOS and OOT investigation procedure required",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QC-003",
+          "requirement": "On-going stability programme required post-marketing: minimum 1 batch per year per strength per primary packaging type",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QC-004",
+          "requirement": "Technical transfer of test methods requires gap analysis vs ICH/VICH, detailed protocol, and documented transfer report",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QC-005",
+          "requirement": "Reference standards must preferably be compendial (European Pharmacopoeia); secondary standards require documented traceability to primary",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "outsourced_activities": {
+      "source": "EU GMP Part I Chapter 7",
+      "rules": [
+        {
+          "id": "OUT-001",
+          "requirement": "Written Contract required establishing duties of Contract Giver and Contract Acceptor",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "OUT-002",
+          "requirement": "QP certification responsibility must be clearly stated in Contract Giver QMS",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "OUT-003",
+          "requirement": "Contract Acceptor must not subcontract without Contract Giver's prior evaluation and approval",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "complaints_and_recalls": {
+      "source": "EU GMP Part I Chapter 8",
+      "rules": [
+        {
+          "id": "CR-001",
+          "requirement": "Quality defects must be reported to all concerned Competent Authorities in a timely manner when product recall or abnormal supply restriction may result",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA reporting via MedWatch/Field Alert Reports with different triggers"
+        },
+        {
+          "id": "CR-002",
+          "requirement": "Falsification assessment required for all quality defect complaints",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No specific FDA requirement for falsification screening of complaints"
+        },
+        {
+          "id": "CR-003",
+          "requirement": "Mock recall evaluations should be periodically performed, including out-of-office hours scenarios",
+          "type": "should",
+          "eu_specific": true
+        }
+      ]
+    },
+    "self_inspection": {
+      "source": "EU GMP Part I Chapter 9",
+      "rules": [
+        {
+          "id": "SI-001",
+          "requirement": "Self inspections at intervals per pre-arranged programme covering personnel, premises, equipment, documentation, production, QC, distribution, complaints/recalls",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "sterile_manufacturing": {
+      "source": "EU GMP Annex 1 (2022 Revision)",
+      "effective_date": "25 August 2023",
+      "rules": [
+        {
+          "id": "ST-001",
+          "requirement": "Contamination Control Strategy (CCS) required: formal documented strategy covering 16 mandatory elements across entire facility",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No FDA equivalent documented strategy requirement"
+        },
+        {
+          "id": "ST-002",
+          "requirement": "Four-grade cleanroom classification system (A/B/C/D) with mandatory at-rest AND in-operation particle limits",
+          "type": "mandatory",
+          "eu_specific": true,
+          "grades": {
+            "A": {
+              "particles_0.5um_at_rest": 3520,
+              "particles_0.5um_in_operation": 3520,
+              "microbial_air_cfu_m3": "no growth",
+              "use": "Critical zone for aseptic operations"
+            },
+            "B": {
+              "particles_0.5um_at_rest": 3520,
+              "particles_0.5um_in_operation": 352000,
+              "microbial_air_cfu_m3": 10,
+              "use": "Background for Grade A (non-isolator)"
+            },
+            "C": {
+              "particles_0.5um_at_rest": 352000,
+              "particles_0.5um_in_operation": 3520000,
+              "microbial_air_cfu_m3": 100,
+              "use": "Less critical stages, solution prep"
+            },
+            "D": {
+              "particles_0.5um_at_rest": 3520000,
+              "particles_0.5um_in_operation": "not predetermined",
+              "microbial_air_cfu_m3": 200,
+              "use": "Least critical stages, component handling"
+            }
+          },
+          "fda_equivalent": "FDA uses ISO 14644 classifications without dual at-rest/in-operation states"
+        },
+        {
+          "id": "ST-003",
+          "requirement": "Sinks and drains PROHIBITED in Grade A and Grade B areas",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA has no such prohibition"
+        },
+        {
+          "id": "ST-004",
+          "requirement": "Minimum 10 Pa pressure differential between adjacent rooms of different grades",
+          "type": "guidance",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-005",
+          "requirement": "Pre-Use Post-Sterilisation Integrity Test (PUPSIT) required for sterilising grade filters",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not mandate PUPSIT"
+        },
+        {
+          "id": "ST-006",
+          "requirement": "Requalification intervals: Grade A/B every 6 months maximum; Grade C/D every 12 months maximum",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA has no set requalification frequency"
+        },
+        {
+          "id": "ST-007",
+          "requirement": "Aseptic Process Simulation (APS/media fill): minimum 3 consecutive initial, then every 6 months per line/shift/process; minimum 5,000-10,000 units; zero growth target",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA guidance less prescriptive on frequency and unit count"
+        },
+        {
+          "id": "ST-008",
+          "requirement": "Annual gowning requalification with microbial assessment required",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-009",
+          "requirement": "100% container closure integrity testing for fusion-sealed containers <=100mL; visual inspection NOT acceptable",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not require 100% CCIT"
+        },
+        {
+          "id": "ST-010",
+          "requirement": "Disinfectants and detergents in Grade A and B must be sterile prior to use",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-011",
+          "requirement": "Airflow visualization studies required at rest and in operation with video recordings retained",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-012",
+          "requirement": "UV irradiation is NOT an acceptable sterilisation method",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-013",
+          "requirement": "WFI may be produced by distillation, reverse osmosis, EDI, ultrafiltration, or nanofiltration (aligned with PhEur since 2017)",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-014",
+          "requirement": "Daily water sampling from at least one representative point when water used for manufacturing",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-015",
+          "requirement": "Personnel disqualification system required based on adverse trends or failed APS; retraining and successful APS participation needed for requalification",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-016",
+          "requirement": "Wristwatches, make-up, jewellery, mobile phones prohibited in clean areas",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "ST-017",
+          "requirement": "Depyrogenation must achieve minimum 3 log10 endotoxin reduction",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "biological_products": {
+      "source": "EU GMP Annex 2",
+      "rules": [
+        {
+          "id": "BIO-001",
+          "requirement": "Traceability records for human cells/tissues retained for 30 years after product expiry per Directive 2004/23/EC",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "BIO-002",
+          "requirement": "Dedicated production areas required for live cells capable of persistence and pathogenic organisms",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "BIO-003",
+          "requirement": "TSE compliance mandatory per EU Note for Guidance",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "BIO-004",
+          "requirement": "For products with shelf life <=14 days, two-stage QP certification allowed (conditional then final)",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "computerised_systems": {
+      "source": "EU GMP Annex 11",
+      "rules": [
+        {
+          "id": "CS-001",
+          "requirement": "Risk assessment required for each computerised system considering patient safety, data integrity, and product quality",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR Part 11 focuses on electronic records/signatures without explicit risk assessment"
+        },
+        {
+          "id": "CS-002",
+          "requirement": "Validation documentation and reports must cover entire system lifecycle",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "CS-003",
+          "requirement": "Data must be secured by physical or electronic means against damage; stored data checked for accessibility, readability, and accuracy at periodic intervals",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "CS-004",
+          "requirement": "Audit trails must be available and convertible to generally intelligible form; entries cannot be altered without recording the previous entry",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "qualification_and_validation": {
+      "source": "EU GMP Annex 15",
+      "rules": [
+        {
+          "id": "QV-001",
+          "requirement": "Qualification stages: User Requirements Specification (URS), Design Qualification (DQ), Factory Acceptance Testing (FAT), Site Acceptance Testing (SAT), Installation Qualification (IQ), Operational Qualification (OQ), Performance Qualification (PQ)",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QV-002",
+          "requirement": "Process validation using traditional approach, continuous process verification, or hybrid approach",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "QV-003",
+          "requirement": "Cleaning validation must use health-based exposure limits (HBELs) for setting acceptance criteria in shared facilities",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA traditionally uses 1/1000th dose or 10ppm criteria"
+        },
+        {
+          "id": "QV-004",
+          "requirement": "Transport verification required for products shipped between manufacturing sites",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "qualified_person_certification": {
+      "source": "EU GMP Annex 16",
+      "rules": [
+        {
+          "id": "QP-001",
+          "requirement": "Each batch must be certified by a QP before release; QP must have university degree in pharmacy, chemistry, biology, or medicine per Article 49 Directive 2001/83/EC",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No FDA equivalent; QCU head has release authority under 21 CFR 211.22"
+        },
+        {
+          "id": "QP-002",
+          "requirement": "QP must personally ensure each batch meets MA requirements and was manufactured/checked in compliance with GMP",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "QP-003",
+          "requirement": "For imported products: full qualitative analysis + quantitative analysis of all actives + all tests ensuring quality must be performed in an EU Member State",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "QP-004",
+          "requirement": "QP certification allows product to move freely within EU/EEA without re-testing in other Member States",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "parametric_release": {
+      "source": "EU GMP Annex 17",
+      "rules": [
+        {
+          "id": "PR-001",
+          "requirement": "Parametric release only permitted for terminally sterilised products as alternative to sterility testing",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PR-002",
+          "requirement": "Requires specific approval in Marketing Authorisation; competent authority must approve",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "reference_retention_samples": {
+      "source": "EU GMP Annex 19",
+      "rules": [
+        {
+          "id": "RS-001",
+          "requirement": "Reference samples of each batch of finished product retained in final packaging for minimum 1 year after expiry",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "RS-002",
+          "requirement": "Starting material reference samples retained for minimum 2 years after release of batch in which used",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "ema_bioequivalence": {
+      "source": "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1",
+      "rules": [
+        {
+          "id": "BE-001",
+          "requirement": "90% CI for AUC and Cmax ratio must fall within 80.00-125.00% (log-transformed)",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "BE-002",
+          "requirement": "Reference product must be authorised in EU/EEA Member State",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA requires US-marketed Reference Listed Drug"
+        },
+        {
+          "id": "BE-003",
+          "requirement": "RSABE for highly variable drugs: widening to max 69.84-143.19% permitted for Cmax ONLY, never for AUC",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA allows RSABE for BOTH AUC and Cmax"
+        },
+        {
+          "id": "BE-004",
+          "requirement": "Narrow therapeutic index drugs: 90.00-111.11% limits on case-by-case basis",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA uses scaled approach for NTIDs"
+        },
+        {
+          "id": "BE-005",
+          "requirement": "BCS biowaiver only for Class I (high solubility, high permeability); NOT for Class III",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA allows BCS Class I AND Class III biowaivers"
+        },
+        {
+          "id": "BE-006",
+          "requirement": "Test batch minimum 1/10th production scale or 100,000 units, whichever is greater",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "BE-007",
+          "requirement": "Both fasting AND fed BE studies generally required unless waiver justified",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "ema_biosimilars_quality": {
+      "source": "EMA Biosimilars Quality Guideline EMA/CHMP/BWP/247713/2012",
+      "rules": [
+        {
+          "id": "BS-001",
+          "requirement": "Comprehensive physicochemical and biological characterisation using state-of-the-art analytical methods required",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "BS-002",
+          "requirement": "Side-by-side quality comparison with reference product at key development milestones using multiple batches",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "BS-003",
+          "requirement": "Reference product must be authorised in EU/EEA; non-EEA data supportive only with scientific bridge",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "BS-004",
+          "requirement": "HCP must be measured by orthogonal methods (ELISA and mass spec recommended)",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "BS-005",
+          "requirement": "Forced degradation comparative studies required: thermal, oxidative, photolytic, pH, mechanical",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "ema_process_validation": {
+      "source": "EMA Process Validation Guideline EMA/CHMP/CVMP/QWP/BWP/70278/2012-Rev1",
+      "rules": [
+        {
+          "id": "PV-001",
+          "requirement": "Three approaches recognised: traditional, continuous process verification, hybrid",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "PV-002",
+          "requirement": "Pilot batch minimum 10% of production scale or 100,000 units for solid oral, whichever is greater",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PV-003",
+          "requirement": "Scale-up factor must not exceed 10x from pilot to production",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not specify maximum scale-up factor"
+        },
+        {
+          "id": "PV-004",
+          "requirement": "Minimum 3 production-scale batches for traditional validation unless otherwise justified",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA moved away from prescriptive batch numbers"
+        },
+        {
+          "id": "PV-005",
+          "requirement": "Validation scheme must be submitted in MAA dossier (Module 3); full-scale data may be deferred for standard processes",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PV-006",
+          "requirement": "Non-standard processes (biologics, sterile, MDIs, modified-release, novel tech) require full production-scale validation data at MAA submission",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "PV-007",
+          "requirement": "Validation report must be signed by Qualified Person",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "ema_excipients": {
+      "source": "EMA Excipients Guideline EMEA/CHMP/QWP/396951/2006",
+      "rules": [
+        {
+          "id": "EX-001",
+          "requirement": "Novel excipients require full drug-substance-level dossier including manufacturing process, impurity profiling, and toxicology package",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA requires bridge safety assessment, not full NDA-level package"
+        },
+        {
+          "id": "EX-002",
+          "requirement": "Excipients must comply with European Pharmacopoeia monographs where they exist",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA references USP-NF"
+        },
+        {
+          "id": "EX-003",
+          "requirement": "Certificate of Suitability (CEP) from EDQM accepted as alternative to full description",
+          "type": "accepted",
+          "eu_specific": true,
+          "fda_equivalent": "No CEP equivalent; FDA uses DMFs"
+        },
+        {
+          "id": "EX-004",
+          "requirement": "TSE/BSE risk assessment mandatory for excipients of animal or human origin",
+          "type": "mandatory",
+          "eu_specific": true
+        }
+      ]
+    },
+    "ema_finished_dosage_form": {
+      "source": "EMA Finished Dosage Form Guideline EMA/362427/2017",
+      "rules": [
+        {
+          "id": "FDF-001",
+          "requirement": "Commercial batch for solid oral: minimum 100,000 units unless orphan justification",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "FDF-002",
+          "requirement": "Process parameters must have target values or ranges, not 'typical' or 'suitable'",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "FDF-003",
+          "requirement": "Hold times >30 days for solid oral or >24 hours for sterile must be justified with stability data on at least 2 pilot batches",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "FDF-004",
+          "requirement": "Design Space subject to regulatory approval; movement within is not a change, movement outside requires variation",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    },
+    "ema_immunogenicity": {
+      "source": "EMA Immunogenicity Guideline EMEA/CHMP/BMWP/14327/2006 Rev1",
+      "rules": [
+        {
+          "id": "IM-001",
+          "requirement": "Multi-tiered ADA assay strategy mandatory: screening (5% false positive rate), confirmatory, neutralizing antibody characterisation",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "IM-002",
+          "requirement": "Drug tolerance of ADA assay must exceed therapeutic trough levels",
+          "type": "mandatory",
+          "eu_specific": true
+        },
+        {
+          "id": "IM-003",
+          "requirement": "Immunogenicity data for 1 year of treatment normally required pre-authorisation for chronic therapy",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA more flexible on duration"
+        },
+        {
+          "id": "IM-004",
+          "requirement": "Brand name AND batch number must be collected for all immunogenicity-related adverse events (traceability)",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not mandate batch-level AE traceability"
+        }
+      ]
+    },
+    "active_substances": {
+      "source": "EU GMP Part II (based on ICH Q7)",
+      "rules": [
+        {
+          "id": "AS-001",
+          "requirement": "GMP applicable from the defined starting material point through to final API purification and packaging",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "AS-002",
+          "requirement": "Written agreement required between API manufacturer and drug product manufacturer defining GMP responsibilities",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "AS-003",
+          "requirement": "Reprocessing of API batches failing specifications permitted if predefined procedure; retreatment (different process) requires investigation and regulatory impact assessment",
+          "type": "mandatory",
+          "eu_specific": false
+        },
+        {
+          "id": "AS-004",
+          "requirement": "Impurity profiles of API batches compared to reference standard/clinical batches; when patterns change, investigation required",
+          "type": "mandatory",
+          "eu_specific": false
+        }
+      ]
+    }
+  }
+}

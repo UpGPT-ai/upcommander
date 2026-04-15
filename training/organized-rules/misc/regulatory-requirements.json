@@ -1,0 +1,922 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "generated": "2026-03-22",
+    "source_documents": {
+      "cfr_volumes": [
+        "21 CFR Parts 1-99 (Rev. April 1, 2024)",
+        "21 CFR Parts 200-299 (Rev. April 1, 2024)",
+        "21 CFR Parts 300-499 (Rev. April 1, 2024)",
+        "21 CFR Parts 600-799 (Rev. April 1, 2024)"
+      ],
+      "ema_guidelines": [
+        "EMA Bioequivalence (CPMP/EWP/QWP/1401/98 Rev.1)",
+        "EMA Biosimilars Quality (EMEA/CHMP/BMWP/42832/2005 Rev1)"
+      ],
+      "pmda_guidelines": [
+        "PMDA Foreign Manufacturer Accreditation (PAL Art. 13-3)",
+        "PMDA Safety Information No. 200",
+        "PMDA/ICH S1 Carcinogenicity Testing",
+        "PMDA/ICH E16 Biomarker Qualification",
+        "PMDA R&D Promotion / Orphan Drug Framework"
+      ],
+      "fda_guidance": [
+        "Q1A(R2) Stability Testing",
+        "Container Closure Systems",
+        "Adaptive Designs for Clinical Trials",
+        "Process Validation: General Principles",
+        "Analytical Procedures Validation",
+        "Comparability Protocols CMC",
+        "Dissolution Testing BCS Class 1/3",
+        "Immunogenicity Assessment",
+        "Bioequivalence Studies (ANDA)",
+        "Pediatric Study Plans (iPSP)",
+        "Expedited Programs (Breakthrough Therapy)"
+      ]
+    }
+  },
+  "jurisdictions": {
+    "US_FDA": {
+      "binding_regulations": {
+        "subchapter_A_general": {
+          "part_1": {
+            "title": "General Enforcement Regulations",
+            "ectd_module": "M1",
+            "requirements": [
+              {
+                "section": "1.3",
+                "type": "binding",
+                "description": "Definitions of 'labeling' and 'label' — governs misbranding determinations",
+                "ectd_module": "M1.14"
+              },
+              {
+                "section": "1.20-1.24",
+                "type": "binding",
+                "description": "Mandatory label information SHALL appear; failure to reveal material facts = misleading (1.21)",
+                "ectd_module": "M1.14"
+              }
+            ]
+          },
+          "part_11": {
+            "title": "Electronic Records; Electronic Signatures",
+            "ectd_module": "M1",
+            "requirements": [
+              {
+                "section": "11.10",
+                "type": "binding",
+                "description": "Controls for closed systems: validation, audit trails, operational checks, authority checks, device checks",
+                "ectd_module": "M1"
+              },
+              {
+                "section": "11.50",
+                "type": "binding",
+                "description": "Electronic signatures SHALL be unique to one individual; SHALL NOT be reused or reassigned",
+                "ectd_module": "M1"
+              },
+              {
+                "section": "11.100",
+                "type": "binding",
+                "description": "Electronic signatures SHALL employ at least two distinct identification components (e.g., ID code + password)",
+                "ectd_module": "M1"
+              }
+            ]
+          },
+          "part_50": {
+            "title": "Protection of Human Subjects",
+            "ectd_module": "M5",
+            "requirements": [
+              {
+                "section": "50.20",
+                "type": "binding",
+                "description": "No human subject SHALL be involved in research without legally effective informed consent",
+                "ectd_module": "M5.3"
+              },
+              {
+                "section": "50.25",
+                "type": "binding",
+                "description": "Informed consent MUST include 8 basic elements and 6 additional elements when appropriate",
+                "ectd_module": "M5.3"
+              }
+            ]
+          },
+          "part_54": {
+            "title": "Financial Disclosure by Clinical Investigators",
+            "ectd_module": "M1",
+            "requirements": [
+              {
+                "section": "54.4",
+                "type": "binding",
+                "description": "Applicant MUST submit financial certification or disclosure statement for each clinical investigator",
+                "ectd_module": "M1.3"
+              },
+              {
+                "section": "54.5",
+                "type": "binding",
+                "description": "If compensation affected by study outcome OR investigator had proprietary interest OR significant equity interest OR significant payments: MUST disclose",
+                "ectd_module": "M1.3"
+              }
+            ]
+          },
+          "part_56": {
+            "title": "Institutional Review Boards",
+            "ectd_module": "M5",
+            "requirements": [
+              {
+                "section": "56.103",
+                "type": "binding",
+                "description": "No clinical investigation SHALL be initiated without IRB review and approval",
+                "ectd_module": "M5.3"
+              },
+              {
+                "section": "56.109",
+                "type": "binding",
+                "description": "IRB SHALL conduct continuing review at intervals no less than once per year",
+                "ectd_module": "M5.3"
+              }
+            ]
+          },
+          "part_58": {
+            "title": "Good Laboratory Practice for Nonclinical Studies",
+            "ectd_module": "M4",
+            "requirements": [
+              {
+                "section": "58.29",
+                "type": "binding",
+                "description": "Testing facility management SHALL designate a study director and quality assurance unit",
+                "ectd_module": "M4.2"
+              },
+              {
+                "section": "58.35",
+                "type": "binding",
+                "description": "Quality assurance unit SHALL maintain copy of master schedule and maintain copies of all protocols and amendments",
+                "ectd_module": "M4.2"
+              },
+              {
+                "section": "58.185",
+                "type": "binding",
+                "description": "Final report MUST include: study objectives, methods, results, QA statement, dated signatures of study director and contributing scientists",
+                "ectd_module": "M4.2"
+              }
+            ]
+          }
+        },
+        "subchapter_C_drugs_general": {
+          "part_200": {
+            "title": "Drugs: General",
+            "ectd_module": "M1",
+            "requirements": [
+              {
+                "section": "200.50",
+                "type": "binding",
+                "description": "Ophthalmic preparations SHALL be sterile at time of filling and closing",
+                "ectd_module": "M3.2.P.5"
+              },
+              {
+                "section": "200.51",
+                "type": "binding",
+                "description": "All aqueous-based drug products for oral inhalation MUST be manufactured to be sterile",
+                "ectd_module": "M3.2.P.5"
+              }
+            ]
+          },
+          "part_201": {
+            "title": "Labeling",
+            "ectd_module": "M1.3.1",
+            "requirements": [
+              {
+                "section": "201.1",
+                "type": "binding",
+                "description": "Drug label MUST bear name and place of business of manufacturer, packer, or distributor",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.5",
+                "type": "binding",
+                "description": "Adequate directions for use SHALL cover all conditions for which drug is intended",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.10",
+                "type": "binding",
+                "description": "Established name MUST accompany proprietary name on label per FD&C Act 502(e)",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.17",
+                "type": "binding",
+                "description": "Expiration date MUST appear on immediate container AND outer package",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.25",
+                "type": "binding",
+                "description": "Bar code (NDC) SHALL meet EAN/UCC or HIBCC standards on drug labels",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.56",
+                "type": "binding",
+                "description": "Rx labeling MUST contain summary of essential scientific information; MUST be informative, accurate, not promotional; MUST conform to 201.57 format",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.57",
+                "type": "binding",
+                "description": "FPI requires 17 numbered sections: Boxed Warning, Indications, Dosage, Dosage Forms, Contraindications, Warnings/Precautions, Adverse Reactions, Drug Interactions, Specific Populations (Pregnancy/Lactation/Pediatric/Geriatric), Overdosage, Description, Clinical Pharmacology, Nonclinical Tox, Clinical Studies, References, How Supplied, Patient Counseling",
+                "ectd_module": "M1.3.1",
+                "highlights_requirements": [
+                  "HOPI MUST NOT exceed 20 lines for boxed warning summary",
+                  "Recent Major Changes section MUST list changes in past 12 months",
+                  "Adverse reactions listed MUST have >=10% incidence or as specified",
+                  "Revision date MUST be included",
+                  "Minimum 8-point type (6-point for on/within package)"
+                ]
+              },
+              {
+                "section": "201.24",
+                "type": "binding",
+                "description": "Systemic antibacterial drugs MUST bear antibiotic stewardship statement",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.66",
+                "type": "binding",
+                "description": "OTC Drug Facts labeling: content order MUST follow prescribed sequence; warnings section MUST include all applicable subsections",
+                "ectd_module": "M1.3.1"
+              },
+              {
+                "section": "201.323",
+                "type": "binding",
+                "description": "Aluminum in LVP/TPN SHALL NOT exceed 25 mcg/L; manufacturers MUST use validated assay",
+                "ectd_module": "M1.3.1"
+              }
+            ]
+          },
+          "part_207": {
+            "title": "Drug Establishment Registration and Listing",
+            "ectd_module": "M1",
+            "requirements": [
+              {
+                "section": "207.17",
+                "type": "binding",
+                "description": "All domestic and foreign drug establishments MUST register annually with FDA",
+                "ectd_module": "M1"
+              }
+            ]
+          },
+          "part_210_211": {
+            "title": "Current Good Manufacturing Practice",
+            "ectd_module": "M3.2.P.3/M3.2.P.5",
+            "requirements": [
+              {
+                "section": "211.22",
+                "type": "binding",
+                "description": "Quality control unit SHALL have authority to approve/reject all components, in-process materials, and finished products",
+                "ectd_module": "M3.2.P.3"
+              },
+              {
+                "section": "211.68",
+                "type": "binding",
+                "description": "Automated equipment SHALL be routinely calibrated, inspected, and checked per written program",
+                "ectd_module": "M3.2.P.3"
+              },
+              {
+                "section": "211.84",
+                "type": "binding",
+                "description": "Each lot of components SHALL be tested for identity and conformity to specifications",
+                "ectd_module": "M3.2.P.4"
+              },
+              {
+                "section": "211.94",
+                "type": "binding",
+                "description": "Drug product containers SHALL be safe, not reactive, additive, or absorptive",
+                "ectd_module": "M3.2.P.7"
+              },
+              {
+                "section": "211.100",
+                "type": "binding",
+                "description": "Written procedures SHALL be designed to assure drug products have identity, strength, quality, and purity",
+                "ectd_module": "M3.2.P.3"
+              },
+              {
+                "section": "211.110",
+                "type": "binding",
+                "description": "In-process specifications SHALL be derived from previous acceptable process averages and variability estimates",
+                "ectd_module": "M3.2.P.3"
+              },
+              {
+                "section": "211.113",
+                "type": "binding",
+                "description": "Appropriate written procedures designed to prevent microbiological contamination SHALL be established and followed",
+                "ectd_module": "M3.2.P.3"
+              },
+              {
+                "section": "211.137",
+                "type": "binding",
+                "description": "Expiration dating SHALL be determined from stability testing; no drug SHALL be distributed past expiration date",
+                "ectd_module": "M3.2.P.8"
+              },
+              {
+                "section": "211.165",
+                "type": "binding",
+                "description": "Each batch SHALL be tested for identity, strength, quality, and purity per sampling plan providing statistical confidence",
+                "ectd_module": "M3.2.P.5"
+              },
+              {
+                "section": "211.166",
+                "type": "binding",
+                "description": "Written stability testing program SHALL include sample size and test intervals based on statistical criteria",
+                "ectd_module": "M3.2.P.8"
+              },
+              {
+                "section": "211.180",
+                "type": "binding",
+                "description": "Records SHALL be retained for at least 1 year after expiration date of the batch",
+                "ectd_module": "M3.2.P.5"
+              },
+              {
+                "section": "211.194",
+                "type": "binding",
+                "description": "Laboratory records SHALL include complete data derived from all tests; suitability of methods SHALL be verified under actual conditions of use",
+                "ectd_module": "M3.2.P.5"
+              }
+            ]
+          }
+        },
+        "subchapter_D_drugs_human_use": {
+          "part_312": {
+            "title": "Investigational New Drug Application",
+            "ectd_module": "M1/M5",
+            "requirements": [
+              {
+                "section": "312.21",
+                "type": "binding",
+                "description": "Clinical investigations SHALL consist of Phase 1 (pharmacology/safety), Phase 2 (effectiveness/dose), Phase 3 (expanded safety/effectiveness)",
+                "ectd_module": "M5.3"
+              },
+              {
+                "section": "312.23",
+                "type": "binding",
+                "description": "IND MUST contain: cover sheet (Form FDA-1571), TOC, introductory statement, general investigational plan, investigator's brochure, clinical protocol, CMC information, pharmacology/toxicology information, previous human experience",
+                "ectd_module": "M1-M5"
+              },
+              {
+                "section": "312.30",
+                "type": "binding",
+                "description": "Protocol amendments MUST be submitted for new Phase 2/3 studies and significant changes to existing protocols",
+                "ectd_module": "M5.3"
+              },
+              {
+                "section": "312.32",
+                "type": "binding",
+                "description": "IND safety reports: sponsor MUST report suspected adverse reactions that are both serious AND unexpected within 15 calendar days; fatal/life-threatening within 7 calendar days",
+                "ectd_module": "M5.3.6"
+              },
+              {
+                "section": "312.50-312.56",
+                "type": "binding",
+                "description": "Sponsor responsibilities: select qualified investigators, ensure proper monitoring, ensure protocol compliance, maintain IND records",
+                "ectd_module": "M5.3"
+              },
+              {
+                "section": "312.60-312.70",
+                "type": "binding",
+                "description": "Investigator responsibilities: conduct study per protocol, maintain adequate records, report adverse events promptly",
+                "ectd_module": "M5.3"
+              }
+            ]
+          },
+          "part_314": {
+            "title": "Applications for FDA Approval to Market a New Drug",
+            "ectd_module": "M1-M5",
+            "requirements": [
+              {
+                "section": "314.50",
+                "type": "binding",
+                "description": "NDA MUST contain: (a) application form, (b) TOC, (c) labeling, (d)(1) CMC, (d)(2) nonclinical pharmacology/tox, (d)(3) human PK and bioavailability, (d)(5) clinical data, (e) samples, (f) case report forms/tabulations",
+                "ectd_module": "M1-M5",
+                "subsections": {
+                  "d1_cmc": "M3 — full description of drug substance and drug product including manufacturing, controls, specifications, stability",
+                  "d2_nonclinical": "M4 — adequate nonclinical studies demonstrating safety, GLP statement required per Part 58",
+                  "d3_pk_ba": "M5.3.1 — bioavailability/pharmacokinetic data",
+                  "d5_clinical": "M5 — adequate and well-controlled clinical studies per 314.126"
+                }
+              },
+              {
+                "section": "314.70",
+                "type": "binding",
+                "description": "Post-approval changes: Major=Prior Approval Supplement; Moderate=CBE-30; Minor=Annual Report",
+                "ectd_module": "M1.12"
+              },
+              {
+                "section": "314.81",
+                "type": "binding",
+                "description": "Annual reports MUST be filed within 60 days of anniversary date of approval",
+                "ectd_module": "M1.12"
+              },
+              {
+                "section": "314.94",
+                "type": "binding",
+                "description": "ANDA MUST contain: bioequivalence data, labeling, CMC information, patent certifications per 314.52",
+                "ectd_module": "M1-M3, M5.3.1"
+              },
+              {
+                "section": "314.110",
+                "type": "binding",
+                "description": "Complete Response Letter: FDA WILL issue CRL describing ALL deficiencies; applicant MUST respond within 1 year or application may be considered withdrawn",
+                "ectd_module": "M1"
+              },
+              {
+                "section": "314.125",
+                "type": "binding",
+                "description": "FDA SHALL refuse NDA approval if: insufficient evidence of safety/effectiveness, inadequate labeling, manufacturing methods inadequate, lack of bioavailability data, or lack of substantial evidence from adequate and well-controlled studies",
+                "ectd_module": "M1-M5"
+              },
+              {
+                "section": "314.126",
+                "type": "binding",
+                "description": "Adequate and well-controlled studies MUST include: clear objectives, comparison with control, subject selection criteria, method of assignment, measures to minimize bias, methods of assessment, adequate analysis of results",
+                "ectd_module": "M5.3.5"
+              }
+            ]
+          },
+          "part_320": {
+            "title": "Bioavailability and Bioequivalence Requirements",
+            "ectd_module": "M5.3.1",
+            "requirements": [
+              {
+                "section": "320.21",
+                "type": "binding",
+                "description": "Bioequivalence MUST be demonstrated for drug products meeting criteria in 320.21(b) — oral dosage forms, specific drug substances, route/dosage form changes",
+                "ectd_module": "M5.3.1"
+              },
+              {
+                "section": "320.22",
+                "type": "binding",
+                "description": "Waiver of in vivo BE studies may be granted for: solutions, parenteral solutions, BCS Class 1 drugs meeting dissolution criteria",
+                "ectd_module": "M5.3.1"
+              },
+              {
+                "section": "320.24",
+                "type": "binding",
+                "description": "Hierarchy of BE approaches: (1) PK studies in humans, (2) PD studies, (3) clinical endpoint studies, (4) in vitro studies",
+                "ectd_module": "M5.3.1"
+              },
+              {
+                "section": "320.29",
+                "type": "binding",
+                "description": "Analytical methods MUST be validated for accuracy, sensitivity, specificity, and reproducibility",
+                "ectd_module": "M5.3.1"
+              }
+            ]
+          },
+          "part_310": {
+            "title": "New Drugs",
+            "ectd_module": "M1/M5",
+            "requirements": [
+              {
+                "section": "310.305",
+                "type": "binding",
+                "description": "Adverse drug experience reporting for marketed Rx drugs without approved NDAs: serious/unexpected within 15 days; fatal/life-threatening within 7 days; records retained 10 years",
+                "ectd_module": "M1.12/M5.3.6"
+              }
+            ]
+          }
+        },
+        "subchapter_F_biologics": {
+          "part_600": {
+            "title": "Biological Products: General",
+            "ectd_module": "M3/M5",
+            "requirements": [
+              {
+                "section": "600.3",
+                "type": "binding",
+                "description": "Key definitions: biological product, safety, purity, potency, sterility, dating period, expiration date, complete response letter",
+                "ectd_module": "M1"
+              },
+              {
+                "section": "600.10",
+                "type": "binding",
+                "description": "Personnel SHALL have capabilities commensurate with functions; sterile operations personnel SHALL wear clean/sterilized protective clothing",
+                "ectd_module": "M3.2.A"
+              },
+              {
+                "section": "600.11",
+                "type": "binding",
+                "description": "Work areas SHALL be clean/orderly; sterilization minimum 121.5C/20min saturated steam or 170C/2hr dry heat; live vaccine areas require separate/dedicated facilities",
+                "ectd_module": "M3.2.P.3/M3.2.A"
+              },
+              {
+                "section": "600.12",
+                "type": "binding",
+                "description": "Manufacturing records SHALL be concurrent; retained minimum 5 years or 6 months after expiration (whichever later); sterilization records by automatic devices",
+                "ectd_module": "M3.2.P.5"
+              },
+              {
+                "section": "600.13",
+                "type": "binding",
+                "description": "Retention samples SHALL be kept for at least 6 months after expiration date",
+                "ectd_module": "M3.2.P.5"
+              },
+              {
+                "section": "600.14",
+                "type": "binding",
+                "description": "Biological product deviation reporting: within 45 calendar days of discovery on Form FDA-3486",
+                "ectd_module": "M5.3.7"
+              },
+              {
+                "section": "600.15",
+                "type": "binding",
+                "description": "Product-specific shipment temperature table (e.g., live vaccines <=10C, Fresh Frozen Plasma <=-18C, Whole Blood 1-10C)",
+                "ectd_module": "M3.2.P.7/M3.2.P.8"
+              },
+              {
+                "section": "600.80",
+                "type": "binding",
+                "description": "Postmarketing AE reporting: 15-day alert for serious/unexpected; quarterly for 3 years then annual; 10-year recordkeeping; electronic format required",
+                "ectd_module": "M5.3.7"
+              },
+              {
+                "section": "600.82",
+                "type": "binding",
+                "description": "Manufacturing discontinuance notification: 6 months prior or 5 business days if not feasible",
+                "ectd_module": "M1.12"
+              }
+            ]
+          },
+          "part_601": {
+            "title": "Licensing (BLA)",
+            "ectd_module": "M1-M5",
+            "requirements": [
+              {
+                "section": "601.2",
+                "type": "binding",
+                "description": "BLA SHALL contain: nonclinical/clinical data demonstrating safety/purity/potency; GLP statement per Part 58; IRB/informed consent statements; financial disclosure per Part 54; manufacturing description; stability data; samples; labels",
+                "ectd_module": "M1-M5"
+              },
+              {
+                "section": "601.3",
+                "type": "binding",
+                "description": "Complete Response Letter: applicant MUST resubmit or withdraw within 1 year",
+                "ectd_module": "M1"
+              },
+              {
+                "section": "601.12",
+                "type": "binding",
+                "description": "Changes to approved BLA: Major=Prior Approval Supplement; Moderate=CBE-30; Minor=Annual Report; assessment of effects on identity/strength/quality/purity/potency MUST be demonstrated",
+                "ectd_module": "M1.12"
+              },
+              {
+                "section": "601.14",
+                "type": "binding",
+                "description": "Electronic format submissions MUST be in form FDA can process, review, and archive",
+                "ectd_module": "All modules"
+              },
+              {
+                "section": "601.20",
+                "type": "binding",
+                "description": "BLA approved ONLY after establishment inspection; must comply with GMP Parts 210/211/600/606/820",
+                "ectd_module": "M3"
+              },
+              {
+                "section": "601.27",
+                "type": "binding",
+                "description": "Pediatric studies required for new active ingredient, indication, dosage form, dosing regimen, or route",
+                "ectd_module": "M5.3.5"
+              },
+              {
+                "section": "601.41-601.46",
+                "type": "binding",
+                "description": "Accelerated Approval: surrogate endpoint approval with mandatory postmarketing confirmatory studies; withdrawal if studies fail to verify benefit",
+                "ectd_module": "M5.3/M1.12"
+              },
+              {
+                "section": "601.70",
+                "type": "binding",
+                "description": "Annual progress reports for postmarketing studies due within 60 days of approval anniversary",
+                "ectd_module": "M1.12"
+              },
+              {
+                "section": "601.90-601.95",
+                "type": "binding",
+                "description": "Animal Rule: approval based on animal efficacy when human studies not ethical/feasible; requires >1 animal species, PK/PD data, postmarketing verification",
+                "ectd_module": "M4/M5"
+              }
+            ]
+          },
+          "part_606": {
+            "title": "Blood and Blood Components cGMP",
+            "ectd_module": "M3.2.A",
+            "requirements": [
+              {
+                "section": "606.20",
+                "type": "binding",
+                "description": "Personnel SHALL be adequate in number, education, training, and experience",
+                "ectd_module": "M3.2.A"
+              },
+              {
+                "section": "606.40",
+                "type": "binding",
+                "description": "Facilities SHALL provide adequate quarantine storage, processing, and labeling areas",
+                "ectd_module": "M3.2.A"
+              },
+              {
+                "section": "606.60",
+                "type": "binding",
+                "description": "Equipment calibration per mandated frequency table; sterilization minimum 121.5C/20min or 170C/2hr",
+                "ectd_module": "M3.2.A"
+              },
+              {
+                "section": "606.100",
+                "type": "binding",
+                "description": "SOPs MUST cover 14 mandatory topic areas for all blood collection/processing/testing/distribution steps",
+                "ectd_module": "M3.2.P.3"
+              }
+            ]
+          }
+        }
+      },
+      "guidance_recommendations": {
+        "note": "FDA guidance documents represent the Agency's current thinking and are NOT legally binding. Alternative approaches may be used if they satisfy applicable statutes and regulations.",
+        "documents": [
+          {
+            "title": "ICH Q1A(R2) Stability Testing",
+            "ectd_module": "M3.2.S.7/M3.2.P.8",
+            "key_thresholds": {
+              "long_term": "25C/60%RH or 30C/65%RH, 12 months minimum at submission",
+              "accelerated": "40C/75%RH, 6 months minimum",
+              "significant_change": "5% assay change from initial, or any degradation product exceeding criterion",
+              "testing_frequency": "Every 3 months year 1, every 6 months year 2, annually thereafter",
+              "minimum_batches": 3
+            }
+          },
+          {
+            "title": "Container Closure Systems",
+            "ectd_module": "M3.2.P.7",
+            "key_thresholds": {
+              "case_1s_highest_risk": "Inhalation/injection: USP Biological Reactivity + extraction + tox evaluation + batch monitoring",
+              "case_4s_lowest_risk": "Oral tablets/capsules: indirect food additive reference sufficient",
+              "prohibition": "Postconsumer recycled plastic prohibited for primary containers"
+            }
+          },
+          {
+            "title": "Process Validation: General Principles",
+            "ectd_module": "M3.2.P.3/M3.2.S.2",
+            "key_thresholds": {
+              "stage_1": "Process Design — DOE studies recommended; early experiments need not be CGMP compliant",
+              "stage_2": "Process Performance Qualification — CGMP required; must complete before commercial distribution",
+              "stage_3": "Continued Process Verification — ongoing per 21 CFR 211.180(e)"
+            }
+          },
+          {
+            "title": "Analytical Procedures Validation",
+            "ectd_module": "M3.2.P.5/M3.2.S.4",
+            "key_thresholds": {
+              "LOD": "Signal-to-noise ratio >= 3:1",
+              "LOQ": "Signal-to-noise ratio >= 10:1",
+              "linearity": "Minimum 5 concentration levels; r-squared typically >= 0.999"
+            }
+          },
+          {
+            "title": "Dissolution Testing BCS Class 1/3",
+            "ectd_module": "M3.2.P.5/M5.3.1",
+            "key_thresholds": {
+              "BCS_class_1_biowaiver": ">=85% dissolved in 15 minutes at pH 1.2, 4.5, and 6.8",
+              "BCS_class_3_biowaiver": ">=85% dissolved in 15 minutes; excipients qualitatively same, quantitatively similar to RLD",
+              "f2_similarity": ">= 50"
+            }
+          },
+          {
+            "title": "Bioequivalence Studies (ANDA)",
+            "ectd_module": "M5.3.1",
+            "key_thresholds": {
+              "standard": "90% CI for AUC and Cmax ratio within 80.00-125.00%",
+              "NTI_drugs": "90% CI within 90.00-111.11% for both AUC and Cmax",
+              "highly_variable": "Reference-scaled BE for Cmax when CV >= 30%; max widening 69.84-143.19%; GMR must remain 80-125%",
+              "minimum_subjects": 12
+            }
+          },
+          {
+            "title": "Immunogenicity Assessment",
+            "ectd_module": "M2.7/M5",
+            "key_thresholds": {
+              "screening_cut_point": "95% of drug-naive healthy donors classified as negative",
+              "testing_tiers": "Screening -> Confirmatory -> Titration -> NAb assay",
+              "particle_concern_range": "2-10 micron subvisible particles of particular concern",
+              "chronic_dosing_sampling": "Minimum every 3 months during treatment"
+            }
+          },
+          {
+            "title": "Adaptive Designs for Clinical Trials",
+            "ectd_module": "M5/M2.7",
+            "key_thresholds": {
+              "type_I_error": "<= 0.025 one-sided",
+              "prespecification": "All adaptive design details must be prespecified before trial initiation",
+              "data_access": "Comparative interim results limited to independent personnel"
+            }
+          },
+          {
+            "title": "Pediatric Study Plans (iPSP)",
+            "ectd_module": "M1.18.1",
+            "key_thresholds": {
+              "submission_timing": "60 days after EOP2 meeting or 210 days before marketing application",
+              "fda_response": "90 calendar days",
+              "total_negotiation": "<= 210 calendar days"
+            }
+          },
+          {
+            "title": "Expedited Programs (Breakthrough/Fast Track/Accelerated/Priority)",
+            "ectd_module": "M1",
+            "key_thresholds": {
+              "breakthrough_response": "FDA responds within 60 days",
+              "priority_review_clock": "6 months vs 10 months standard",
+              "accelerated_approval": "Surrogate endpoint + mandatory postmarketing confirmatory study"
+            }
+          }
+        ]
+      }
+    },
+    "EU_EMA": {
+      "binding_regulations": [
+        {
+          "document": "Guideline on Investigation of Bioequivalence (CPMP/EWP/QWP/1401/98 Rev.1)",
+          "effective": "2010-08-01",
+          "ectd_module": "M5.3.1.2/M2.7.1",
+          "requirements": [
+            {
+              "id": "EMA-BE-001",
+              "type": "binding",
+              "description": "90% CI for AUC(0-t) and Cmax must fall within 80.00-125.00%",
+              "ectd_module": "M5.3.1.2"
+            },
+            {
+              "id": "EMA-BE-002",
+              "type": "binding",
+              "description": "Minimum 12 evaluable subjects required",
+              "ectd_module": "M5.3.1.2"
+            },
+            {
+              "id": "EMA-BE-003",
+              "type": "binding",
+              "description": "Test batch must be >= 1/10 of production scale or 100,000 units (whichever larger)",
+              "ectd_module": "M5.3.1.2"
+            },
+            {
+              "id": "EMA-BE-004",
+              "type": "binding",
+              "description": "NTID drugs: AUC 90% CI within 90.00-111.11%",
+              "ectd_module": "M5.3.1.2"
+            },
+            {
+              "id": "EMA-BE-005",
+              "type": "binding",
+              "description": "HVDP (CV>=30%): Cmax interval may widen to 69.84-143.19% using scaled average BE with replicate crossover",
+              "ectd_module": "M5.3.1.2"
+            },
+            {
+              "id": "EMA-BE-006",
+              "type": "binding",
+              "description": "In vitro dissolution profiling required at pH 1.2, 4.5, 6.8",
+              "ectd_module": "M3.2.P.2"
+            },
+            {
+              "id": "EMA-BE-007",
+              "type": "binding",
+              "description": "Washout period must be >= 5 elimination half-lives",
+              "ectd_module": "M5.3.1.2"
+            }
+          ],
+          "biowaivers": {
+            "BCS_Class_I": "Accepted with high solubility + high permeability + rapid dissolution",
+            "BCS_Class_III": "Accepted with conditions (high solubility + low permeability + very rapid dissolution + similar excipients)"
+          }
+        },
+        {
+          "document": "Biosimilars Non-Clinical and Clinical Issues (EMEA/CHMP/BMWP/42832/2005 Rev1)",
+          "effective": "2015-07-01",
+          "ectd_module": "M3-M5",
+          "requirements": [
+            {
+              "id": "EMA-BIO-001",
+              "type": "binding",
+              "description": "Stepwise comparability exercise: Step 1 (in vitro) -> Step 2 (justify in vivo need) -> Step 3 (in vivo only if residual uncertainty)",
+              "ectd_module": "M3/M4/M5"
+            },
+            {
+              "id": "EMA-BIO-002",
+              "type": "binding",
+              "description": "PK comparability study required (single-dose crossover preferred)",
+              "ectd_module": "M5.3.1"
+            },
+            {
+              "id": "EMA-BIO-003",
+              "type": "binding",
+              "description": "Immunogenicity: minimum 1-year follow-up pre-authorization for chronic-use products",
+              "ectd_module": "M5.3.5"
+            },
+            {
+              "id": "EMA-BIO-004",
+              "type": "binding",
+              "description": "Risk Management Plan (RMP) mandatory at submission",
+              "ectd_module": "M1.8.2"
+            }
+          ]
+        }
+      ]
+    },
+    "Japan_PMDA": {
+      "binding_regulations": [
+        {
+          "document": "Foreign Manufacturer Accreditation (PAL Article 13-3)",
+          "ectd_module": "M1 (Japan regional)",
+          "requirements": [
+            {
+              "id": "PMDA-MFR-001",
+              "type": "binding",
+              "description": "Foreign manufacturers MUST obtain accreditation from MHLW prior to manufacturing for Japan import",
+              "ectd_module": "M1"
+            },
+            {
+              "id": "PMDA-MFR-002",
+              "type": "binding",
+              "description": "5-year mandatory renewal cycle; failure = loss of accreditation",
+              "ectd_module": "M1"
+            },
+            {
+              "id": "PMDA-MFR-003",
+              "type": "binding",
+              "description": "Notification of changes within 30 days (PAL Article 100)",
+              "ectd_module": "M1"
+            }
+          ]
+        },
+        {
+          "document": "ICH S1 Carcinogenicity Testing (Japanese adoption)",
+          "ectd_module": "M4.2.2.2",
+          "requirements": [
+            {
+              "id": "PMDA-CARC-001",
+              "type": "binding",
+              "description": "1 rodent species long-term study (rat preferred, 24-30 months) PLUS 1 short/medium-term alternative system",
+              "ectd_module": "M4.2.2.2"
+            },
+            {
+              "id": "PMDA-CARC-002",
+              "type": "binding",
+              "description": "Minimum 50 animals/sex/group, 3 dose levels + control",
+              "ectd_module": "M4.2.2.2"
+            },
+            {
+              "id": "PMDA-CARC-003",
+              "type": "binding",
+              "description": "High-dose AUC must be >= 25x human AUC at maximum therapeutic dose",
+              "ectd_module": "M4.2.2.2"
+            },
+            {
+              "id": "PMDA-CARC-004",
+              "type": "binding",
+              "description": "Limit dose: 1,500 mg/kg/day when human dose <= 500 mg/day",
+              "ectd_module": "M4.2.2.2"
+            }
+          ]
+        },
+        {
+          "document": "ICH E16 Biomarker Qualification (Japanese adoption)",
+          "ectd_module": "M1-M5",
+          "requirements": [
+            {
+              "id": "PMDA-BM-001",
+              "type": "binding",
+              "description": "Biomarker qualification submissions MUST use CTD/eCTD structure",
+              "ectd_module": "M1-M5"
+            },
+            {
+              "id": "PMDA-BM-002",
+              "type": "binding",
+              "description": "Context of Use (COU) must be explicitly defined and scientifically justified",
+              "ectd_module": "M2"
+            }
+          ]
+        },
+        {
+          "document": "Orphan Drug Framework (PAL provisions)",
+          "ectd_module": "M1",
+          "requirements": [
+            {
+              "id": "PMDA-ORPH-001",
+              "type": "binding",
+              "description": "Orphan designation grants priority review and re-examination period up to 10 years",
+              "ectd_module": "M1"
+            },
+            {
+              "id": "PMDA-ORPH-002",
+              "type": "binding",
+              "description": "15% R&D tax credit on designated orphan product development expenditures",
+              "ectd_module": "M1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

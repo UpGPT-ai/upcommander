@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "M3(R2) Partially-Verified Rule Upgrades — Verbatim Quote Verification",
+    "source_document": "ICH M3(R2) — Guidance on Nonclinical Safety Studies for the Conduct of Human Clinical Trials and Marketing Authorization for Pharmaceuticals (Step 4, 11 June 2009)",
+    "source_file": "training/stage-1/ich-complete/M3_R2__Guideline.pdf",
+    "upgraded_from": "training/gap-close/fully-verified-safety-pharm.json",
+    "generated": "2026-03-23",
+    "method": "Full M3(R2) document read (pages 1-31). All three PARTIALLY_VERIFIED rules citing M3 or M3(R2) identified. Verbatim quotes extracted and pages confirmed from PDF images.",
+    "rules_upgraded": 3
+  },
+
+  "upgrades": [
+
+    {
+      "rule_id": "UPGRADE-M3-001",
+      "json_path": "timing_relative_to_clinical_development.combination_drugs",
+      "status_field": "combination_drugs_verification_status",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "upgraded_verification_status": "VERIFIED",
+      "rule_description": "Combination safety pharmacology, genotoxicity, or carcinogenicity studies generally not recommended if individual agents tested according to current standards. WOCBP/embryo-fetal exception applies.",
+      "m3r2_section": "Section 17 — Combination Drug Toxicity Testing",
+      "source_page": 22,
+      "source_quote": "Combination genotoxicity, safety pharmacology, or carcinogenicity studies generally are not recommended to support clinical trials or marketing if the individual agents have been tested according to current standards. In those cases where the patient population includes WOCBP and studies with the individual agent(s) have shown findings indicative of embryo-fetal risk, combination studies are not recommended as a potential human developmental hazard has already been identified. If nonclinical embryo-fetal studies have indicated that neither agent poses a potential human developmental risk, combination studies are not recommended unless concerns exist, based on the properties of individual components, that their combination could give rise to a hazard for humans. In circumstances when the individual agents have been tested in embryo-fetal studies but embryo-fetal studies of the drug combination are warranted, the study(ies) of the combination should be available to support the marketing application.",
+      "verification_note": "Full Section 17 text confirmed from PDF page 22. The general rule (combination genotox/safety pharm/carcinogenicity not recommended if individual agents tested to current standards) and the WOCBP/embryo-fetal exception are both verbatim-confirmed. Prior PARTIALLY_VERIFIED status reflected unconfirmed WOCBP exception clause — now fully verified."
+    },
+
+    {
+      "rule_id": "UPGRADE-M3-002",
+      "json_path": "incorporation_into_toxicology_studies.key_considerations",
+      "status_field": "key_considerations_verification_status",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "upgraded_verification_status": "VERIFIED",
+      "rule_description": "Safety pharmacology endpoints can be incorporated into general toxicology studies to reduce animal use; M3(R2) encourages this where feasible.",
+      "m3r2_section": "Section 2 — Pharmacology Studies",
+      "source_page": 5,
+      "source_quote": "Consideration should be given to inclusion of any in vivo evaluations as additions to general toxicity studies, to the extent feasible, in order to reduce animal use.",
+      "verification_note": "Found verbatim in M3(R2) Section 2 (Pharmacology Studies), page 5, third paragraph. This directly supports key_considerations items 3 and 4 (technology availability for integrated assessment, longitudinal assessment in toxicology). The prior PARTIALLY_VERIFIED status noted items 3-4 were confirmed only indirectly via E14/S7B IWG 2024 Concept Paper citing M3(R2) Q&A 5(1). The primary M3(R2) source text is now directly confirmed here. Items 1 and 2 remain confirmed from S7A/S7B as previously noted."
+    },
+
+    {
+      "rule_id": "UPGRADE-M3-003",
+      "json_path": "regional_differences",
+      "status_field": "verification_status",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "upgraded_verification_status": "VERIFIED",
+      "rule_description": "Regional differences (US/EU/Japan) in nonclinical timing requirements exist but are limited; ongoing harmonization efforts per M3(R2) Section 18. Sub-items (embryo-fetal development timing, local tolerance IV route) already individually confirmed from M3(R2) Sections 8 and 11.3.",
+      "m3r2_section": "Section 18 — Continuing Efforts to Improve Harmonization",
+      "source_page": 23,
+      "source_quote": "It is recognised that significant advances in harmonisation of the timing of nonclinical safety studies for the conduct of human clinical trials for pharmaceuticals have already been achieved and are detailed in this guideline. However, differences remain in a few areas. Regulators and industry will continue to consider these differences and work towards further improving the drug development process.",
+      "additional_supporting_quotes": [
+        {
+          "m3r2_section": "Section 8 — Local Tolerance Studies",
+          "source_page": 17,
+          "source_quote": "Such studies are generally not recommended in the United States (an example of an exception would be intrathecal for the epidural route). Japan and the EU recommend single dose paravenous administration for the i.v. route."
+        },
+        {
+          "m3r2_section": "Section 11.3 — Women of Childbearing Potential",
+          "source_page": 19,
+          "source_quote": "In the United States, assessment of embryo-fetal development can be deferred until before Phase III for WOCBP using precautions to prevent pregnancy in clinical trials (see above). In the EU and Japan, other than the situations described in the above paragraphs, definitive nonclinical developmental toxicity studies should be completed before exposure of WOCBP."
+        }
+      ],
+      "verification_note": "Prior PARTIALLY_VERIFIED status reflected that the harmonization_note ('ongoing per M3(R2) Section 18') lacked a direct verbatim confirmation. Section 18 (page 23) text now confirmed verbatim. The regional sub-items (us_fda, eu_ema, japan_pmda) were already individually CONFIRMED ACCURATE in the source JSON from Sections 8 and 11.3 — those supporting quotes are reproduced here for completeness."
+    }
+
+  ]
+}

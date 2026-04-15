@@ -1,0 +1,1161 @@
+{
+  "meta": {
+    "guideline": "ICH M12 — Drug Interaction Studies",
+    "step": "Step 4",
+    "date": "21 May 2024",
+    "total_rules": 78,
+    "extraction_date": "2026-03-23",
+    "sources": [
+      "ICH_M12_Step4_Guideline_2024_0521_0.pdf (68 pages)",
+      "ICH_M12_Step4_Q&As_2023_0521.pdf (9 pages)"
+    ]
+  },
+
+  "definitions": {
+    "DDI": {
+      "term": "Drug-Drug Interaction",
+      "definition": "A pharmacokinetic or pharmacodynamic interaction occurring when two or more drugs are co-administered.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "object": {
+      "term": "Object (also: victim, substrate)",
+      "definition": "A substrate of enzyme or transporter — the drug whose exposure is affected by the precipitant.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "precipitant": {
+      "term": "Precipitant (also: perpetrator)",
+      "definition": "A drug that can induce or inhibit an enzyme or a transporter.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "index_precipitant": {
+      "term": "Index precipitant",
+      "definition": "A drug recommended for use in a stand-alone clinical DDI study because it has a well-established potency and selectivity profile that causes a defined degree of inhibition or induction of a given elimination pathway when administered with a sensitive and specific substrate of that pathway.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "index_substrate": {
+      "term": "Index substrate",
+      "definition": "A drug recommended for use in a stand-alone clinical DDI study as substrate because it has a well-established sensitivity and specificity profile that demonstrates a defined degree of change in exposures when administered with a strong inhibitor or inducer for that specific elimination pathway.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "sensitive_index_substrate": {
+      "term": "Sensitive index substrate",
+      "definition": "An index drug that demonstrates an increase in AUC of ≥5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies.",
+      "source_section": "Section 7.7.1.1"
+    },
+    "moderately_sensitive_substrate": {
+      "term": "Moderately sensitive substrate",
+      "definition": "A drug that demonstrates an increase in AUC of ≥2- to <5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies.",
+      "source_section": "Section 7.7.1.1"
+    },
+    "strong_inhibitor": {
+      "term": "Strong CYP inhibitor",
+      "definition": "An inhibitor that increases the AUC of a sensitive index CYP substrate ≥5-fold.",
+      "source_section": "Section 5.3.2"
+    },
+    "moderate_inhibitor": {
+      "term": "Moderate CYP inhibitor",
+      "definition": "An inhibitor that increases the AUC of a sensitive index CYP substrate ≥2- to <5-fold.",
+      "source_section": "Section 5.3.2"
+    },
+    "weak_inhibitor": {
+      "term": "Weak CYP inhibitor",
+      "definition": "An inhibitor that increases the AUC of a sensitive index CYP substrate ≥1.25- to <2-fold.",
+      "source_section": "Section 5.3.2"
+    },
+    "strong_inducer": {
+      "term": "Strong CYP inducer",
+      "definition": "An inducer that decreases the AUC of a sensitive index CYP substrate by ≥80%.",
+      "source_section": "Section 5.3.2"
+    },
+    "moderate_inducer": {
+      "term": "Moderate CYP inducer",
+      "definition": "An inducer that decreases the AUC of a sensitive index CYP substrate by ≥50 to <80%.",
+      "source_section": "Section 5.3.2"
+    },
+    "weak_inducer": {
+      "term": "Weak CYP inducer",
+      "definition": "An inducer that decreases the AUC of a sensitive index CYP substrate by ≥20 to <50%.",
+      "source_section": "Section 5.3.2"
+    },
+    "no_effect_boundaries": {
+      "term": "No-effect boundaries",
+      "definition": "Interval within which a change in a systemic exposure measure is considered not significant enough to warrant clinical action (e.g., dose or schedule adjustment, additional therapeutic monitoring, avoid use).",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "TDI": {
+      "term": "Time-Dependent Inhibition (TDI)",
+      "definition": "Enzyme inhibition where the inhibitory effect increases with pre-incubation time (mechanism-based inhibition); characterized by KI and kinact.",
+      "source_section": "Section 7.1 Glossary / Section 2.1.2.2"
+    },
+    "Ki_u": {
+      "term": "Ki,u",
+      "definition": "Unbound inhibition constant causing half-maximal inactivation.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "Cmax_u": {
+      "term": "Cmax,u",
+      "definition": "Unbound Cmax at the highest recommended dose at steady state.",
+      "source_section": "Section 2.1.2.1"
+    },
+    "Cmax_inlet_u": {
+      "term": "Cmax,inlet,u",
+      "definition": "Estimated unbound maximum plasma concentration of an inhibitor at liver inlet. Calculated as: fu,p x (Cmax + (Fa×Fg×ka×Dose)/Qh/RB).",
+      "source_section": "Section 7.1 Glossary / Table 1 footnote"
+    },
+    "fm": {
+      "term": "fm",
+      "definition": "Fraction of systemic clearance of the substrate mediated by the CYP enzyme that is subject to inhibition/induction.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "fu_p": {
+      "term": "fu,p",
+      "definition": "Unbound fraction in plasma.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "AUCR": {
+      "term": "AUCR",
+      "definition": "Ratio of AUCs of the substrate (object) drug in the presence and absence of a precipitant drug.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "nested_DDI_study": {
+      "term": "Nested DDI study",
+      "definition": "A DDI investigation that is part of a clinical study (e.g., phase 2/3) in which the assessment of DDI is not the primary objective.",
+      "source_section": "Section 7.1 Glossary"
+    },
+    "RIS": {
+      "term": "Relative Induction Score (RIS)",
+      "definition": "A metric used in correlation methods for CYP induction: RIS = (Emax × Cmax,u) / (EC50,u + Cmax,u).",
+      "source_section": "Section 2.1.4.2"
+    }
+  },
+
+  "rules": [
+    {
+      "rule_id": "M12-001",
+      "category": "in_vitro_substrate_identification",
+      "rule": "In vitro screening to identify main metabolizing enzymes must cover at minimum CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A (CYP3A4 and CYP3A5) using phenotyping experiments.",
+      "conditions": "Required when oxidative metabolism is important for the investigational drug",
+      "threshold_values": "The seven primary CYPs listed; additional enzymes investigated if drug is not metabolized by these",
+      "source_section": "Section 2.1.1",
+      "source_quote": "If oxidative metabolism is important, the identification of catalyzing enzymes usually starts by determining whether the investigational drug is an in vitro substrate for the most common CYP enzymes involved in drug metabolism: CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A (CYP3A4 and CYP3A5) using in vitro phenotyping experiments.",
+      "jurisdiction_note": "Harmonized across ICH regions",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-002",
+      "category": "in_vitro_substrate_identification",
+      "rule": "Any enzyme contributing ≥25% of total elimination requires additional clinical characterization (clinical DDI study with strong index inhibitor) to quantify the interaction risk.",
+      "conditions": "Applies to any metabolizing enzyme identified via phenotyping/metabolic profiling/mass balance",
+      "threshold_values": "≥25% of total elimination",
+      "source_section": "Section 2.1.1",
+      "source_quote": "An enzyme that is estimated to contribute to ≥25% of total elimination generally needs additional clinical characterization to quantify the risk of interaction with the investigational drug as a substrate.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-003",
+      "category": "in_vitro_inhibition_cyp_reversible",
+      "rule": "The risk for reversible CYP enzyme inhibition can be excluded by the basic method if: Ki,u > 50 × Cmax,u (i.e., Cmax,u/Ki,u < 0.02).",
+      "conditions": "Applies to reversible inhibition of CYP enzymes; uses unbound concentrations",
+      "threshold_values": "Ki,u > 50 × Cmax,u; equivalently Cmax,u/Ki,u < 0.02",
+      "source_section": "Section 2.1.2.1",
+      "source_quote": "The risk for reversible enzyme inhibition can be excluded based on in vitro data ('basic method') if: Ki,u > 50 × Cmax,u (i.e., Cmax,u/Ki,u < 0.02). Ki,u is the unbound inhibition constant. Cmax,u is the unbound Cmax at the highest recommended dose at steady state.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-004",
+      "category": "in_vitro_inhibition_cyp_reversible",
+      "rule": "For orally administered drugs as CYP3A inhibitors, the risk of intestinal CYP3A inhibition can be excluded if: Ki,u > 0.1 × (maximum clinical dose / 250 mL), i.e., Dose/(250 mL)/Ki,u < 10.",
+      "conditions": "Orally administered drugs only; applies specifically to intestinal CYP3A inhibition",
+      "threshold_values": "Ki,u > 0.1 × Dose/250 mL; equivalently Dose/(250 mL)/Ki,u < 10",
+      "source_section": "Section 2.1.2.1",
+      "source_quote": "For orally administered drugs that are inhibitors of CYP3A, the risk of intestinal CYP3A inhibition can be excluded if: Ki,u > 0.1 × maximum clinical dose/250 mL (i.e., Dose/(250 mL)/Ki,u < 10).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-005",
+      "category": "in_vitro_inhibition_cyp_reversible",
+      "rule": "If reliability of fu,p measurements <1% cannot be demonstrated, a default value of fu,p = 0.01 (1% unbound fraction) must be used for all calculations.",
+      "conditions": "Applies when protein binding assay cannot reliably measure fu,p <1%; applies to basic, mechanistic static, and PBPK models",
+      "threshold_values": "fu,p = 0.01 (1%) as minimum default",
+      "source_section": "Section 2.1.2.1",
+      "source_quote": "If the reliability of fu,p measurements <1% cannot be demonstrated, a default value of 1% unbound fraction in plasma (i.e., fu,p= 0.01) should be used (see Section 7.2 for details).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-006",
+      "category": "in_vitro_inhibition_cyp_reversible",
+      "rule": "fu,p can be used for highly protein-bound drugs (>99% binding) only if the protein binding assay has been validated with positive controls (drugs with high binding to relevant plasma proteins) and bioanalytical methods with appropriate precision and accuracy (calibration standards and QCs at 15%; LLOQ at 20%).",
+      "conditions": "For highly protein-bound drugs; assay must be qualified against an orthogonal method for highly bound compounds",
+      "threshold_values": "Protein binding >99%; calibration standards/QC precision at 15%; LLOQ at 20%; positive control within 3-fold of mean fu,p",
+      "source_section": "Section 2.1.2.1 / Section 7.2",
+      "source_quote": "Such a demonstration should include validation data of the protein binding assay including bioanalytical method and appropriate positive controls (e.g., drugs with high binding to relevant plasma proteins)... The bioanalytical methods used in these experiments should have appropriate precision and accuracy at the required sensitivity range (i.e., Calibration standards and Quality Controls at 15%; Lower Limit of Quantification at 20%).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-007",
+      "category": "in_vitro_inhibition_cyp_tdi",
+      "rule": "The risk for time-dependent CYP inhibition (TDI) can be excluded by the basic method if: (kobs + kdeg)/kdeg < 1.25, where kobs = (kinact × 5 × Cmax,u) / (KI,u + 5 × Cmax,u).",
+      "conditions": "Applies when in vitro assay indicates increased inhibition with pre-incubation (TDI signal present)",
+      "threshold_values": "(kobs + kdeg)/kdeg < 1.25",
+      "source_section": "Section 2.1.2.2",
+      "source_quote": "The risk for clinical inhibition can be excluded based on in vitro data if: (kobs+kdeg)/kdeg < 1.25, where kobs = (kinact × 5 × Cmax,u)/(KI,u + 5 × Cmax,u).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-008",
+      "category": "in_vitro_inhibition_cyp_tdi",
+      "rule": "If TDI ratio ≥ 1.25, mechanistic static and/or PBPK models should be used; if modeling also does not exclude clinical inhibition, a clinical DDI study with a sensitive index substrate must be conducted.",
+      "conditions": "When (kobs + kdeg)/kdeg ≥ 1.25 from in vitro TDI data",
+      "threshold_values": "Ratio ≥ 1.25 triggers further evaluation",
+      "source_section": "Section 2.1.2.2",
+      "source_quote": "If the above ratio is ≥ 1.25, mechanistic static and/or PBPK models can be used to interpret the in vitro experiment results (refer to Section 7.5). If in vitro data and modeling do not exclude the risk for clinical inhibition, a clinical DDI study with a sensitive index substrate should be conducted.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-009",
+      "category": "in_vitro_inhibition_cyp_tdi",
+      "rule": "The TDI IC50 shift assay: pooled HLM must be pre-incubated for 30 min with the investigational drug with or without NADPH. A left shift of IC50 ≥ 1.5- or 2-fold from NADPH pre-incubated samples compared to those without NADPH suggests potential for enzyme inactivation.",
+      "conditions": "Initial TDI screening step; standard assay format",
+      "threshold_values": "IC50 shift ≥ 1.5- to 2-fold as positive threshold",
+      "source_section": "Section 7.3.3",
+      "source_quote": "A left shift of the IC50 curve (e.g., ≥ 1.5- or 2-fold) from the samples pre-incubated with NADPH compared to those without, suggests a potential for enzyme inactivation by the investigational drug.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-010",
+      "category": "in_vitro_inhibition_cyp_tdi",
+      "rule": "A reduction in CYP enzyme activity >20% or a kobs value >0.01 min-1 at a single concentration can be used as a positive TDI screening result.",
+      "conditions": "Alternative single-concentration TDI screening method",
+      "threshold_values": ">20% reduction in activity OR kobs > 0.01 min-1",
+      "source_section": "Section 7.3.3",
+      "source_quote": "A reduction in CYP enzyme activity greater than a pre-defined threshold for the assay (e.g., of >20% reduction in activity or a kobs value of >0.01 min-1) can be used to define a positive result.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-011",
+      "category": "in_vitro_inhibition_ugt",
+      "rule": "Routine evaluation of UGT inhibition may not be warranted for all drugs. UGT inhibition in vitro is recommended when: (a) direct glucuronidation is the major elimination pathway, OR (b) the drug will be commonly co-administered with drugs mainly metabolized by glucuronidation.",
+      "conditions": "UGT inhibition screening is triggered by elimination route or anticipated co-medication",
+      "threshold_values": "No specific threshold established; Cmax,u/Ki,u < 0.02 can be applied as interim criterion (same as CYPs)",
+      "source_section": "Section 2.1.3",
+      "source_quote": "Considering the generally limited magnitude of UGT inhibition-mediated DDIs, a routine evaluation of investigational drugs to inhibit UGTs may not be warranted. If direct glucuronidation is the major elimination pathway of an investigational drug, it is recommended to study in vitro whether the drug can inhibit UGTs.",
+      "jurisdiction_note": "Harmonized; cutoffs not yet established — sponsors can use same Cmax,u/Ki,u <0.02 criterion as CYPs or propose alternative with justification",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-012",
+      "category": "in_vitro_inhibition_ugt",
+      "rule": "UGTs to be evaluated for inhibition include UGT1A1, UGT1A4, UGT1A9, UGT2B7, and UGT2B15.",
+      "conditions": "When UGT inhibition assessment is warranted",
+      "threshold_values": "Minimum panel: UGT1A1, UGT1A4, UGT1A9, UGT2B7, UGT2B15",
+      "source_section": "Section 2.1.3",
+      "source_quote": "Potential UGTs to be studied include UGT1A1, UGT1A4, UGT1A9, UGT2B7, and UGT2B15.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-013",
+      "category": "in_vitro_induction_cyp",
+      "rule": "CYP induction studies must be performed in human hepatocytes from at least 3 individual donors, with enzyme induction measured at the mRNA level. Minimum enzymes to include: CYP3A4, CYP2B6 (PXR/CAR markers) and CYP1A2 (AhR marker).",
+      "conditions": "Required for all investigational drugs to assess induction potential",
+      "threshold_values": "Minimum 3 donors; mRNA measurement required",
+      "source_section": "Section 2.1.4",
+      "source_quote": "To assess the DDI liability of a drug as an inducer, studies should be performed in human hepatocytes from at least 3 individual donors, and the extent of enzyme induction should be measured at the mRNA level. The enzymes CYP3A4, CYP2B6 and CYP1A2 should always be included as markers of induction mediated via PXR/CAR (CYP3A4, CYP2B6) and AhR (CYP1A2).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-014",
+      "category": "in_vitro_induction_cyp",
+      "rule": "In vivo induction potential cannot be excluded if the drug in hepatocytes from at least ONE donor meets BOTH: (a) increases mRNA of a CYP enzyme in a concentration-dependent manner, AND (b) the fold-change of CYP mRNA is ≥2-fold at concentrations ≤ 50 × Cmax,u.",
+      "conditions": "Basic mRNA fold-change method; applies when positive control response is ≥6-fold",
+      "threshold_values": "≥2-fold mRNA increase at ≤50 × Cmax,u; requires concentration-dependent increase",
+      "source_section": "Section 2.1.4.1",
+      "source_quote": "In vivo induction potential cannot be excluded if the drug in hepatocytes from at least one donor meets both of the following criteria, and further evaluation of the induction potential should be conducted: increases mRNA expression of a CYP enzyme in a concentration-dependent manner; and the fold-change of CYP mRNA expression is ≥ 2-fold at concentrations ≤ 50× Cmax,u.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-015",
+      "category": "in_vitro_induction_cyp",
+      "rule": "When the positive control response is <6-fold mRNA increase, induction cannot be ruled out for a drug that increases CYP enzyme mRNA less than 2-fold of vehicle control but more than 20% of the response of the positive control (with concentration-dependent relationship).",
+      "conditions": "Applies to less inducible CYPs (CYP2C8, CYP2C9, CYP2C19, sometimes CYP2B6) where positive control typically gives <6-fold",
+      "threshold_values": "<2-fold of vehicle control but >20% of positive control response; must show concentration-dependence",
+      "source_section": "Section 2.1.4.1",
+      "source_quote": "When the response of the positive control is <6-fold increase in mRNA, the induction potential cannot be ruled out for an investigational drug that increases CYP enzyme mRNA less than 2-fold of the vehicle control but more than 20% of the response of the positive control.",
+      "jurisdiction_note": "Harmonized; clarified in Q&A 2.2",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-016",
+      "category": "in_vitro_induction_cyp",
+      "rule": "The percent of positive control response is calculated as: % of positive control = [(mRNA fold increase of test drug treated cells - 1) / (mRNA fold increase of positive control - 1)] × 100.",
+      "conditions": "Formula for evaluating induction relative to positive control",
+      "threshold_values": ">20% of positive control: inconclusive/requires further evaluation; ≤20%: induction unlikely (when drug fold-change <2)",
+      "source_section": "Section 2.1.4.1",
+      "source_quote": "% of positive control = (mRNA fold increase of test drug treated cells − 1)/(mRNA fold increase of positive control − 1) × 100",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-017",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Correlation methods: if the predicted AUC ratio > 0.8, the analysis can be used to exclude the risk for in vivo induction.",
+      "conditions": "Using RIS or Cmax,u/EC50u correlation method calibrated against known inducers",
+      "threshold_values": "Predicted AUC ratio > 0.8 excludes induction risk",
+      "source_section": "Section 2.1.4.2",
+      "source_quote": "If the predicted AUC ratio > 0.8, the analysis can be used to exclude the risk for in vivo induction.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-018",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Basic kinetic model (R value): If R > 0.8, the analysis can be used to exclude the risk for in vivo induction, where R = 1 / [1 + d × (Emax × 10 × Cmax,u) / (EC50,u + 10 × Cmax,u)].",
+      "conditions": "Basic kinetic model for induction; uses scaling factor d (default d=1 if not calibrated)",
+      "threshold_values": "R > 0.8 excludes induction risk; d = 1 if not determined from calibrated batch",
+      "source_section": "Section 2.1.4.3",
+      "source_quote": "A limited version of this approach is described as below. If R > 0.8, the analysis can be used to exclude the risk for in vivo induction. R = 1 / (1 + d × (Emax × 10 × Cmax,u)/(EC50,u + 10 × Cmax,u))",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-019",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Positive control response for hepatocyte induction experiments should normally be at least 6-fold increase in mRNA for CYP1A2, CYP2B6, and CYP3A4; this is considered indicative of satisfactory sensitivity of hepatocyte lots.",
+      "conditions": "Quality criterion for hepatocyte batch acceptability in induction studies",
+      "threshold_values": "≥6-fold mRNA increase for positive control for CYP1A2, CYP2B6, CYP3A4",
+      "source_section": "Section 7.3.4",
+      "source_quote": "The response of positive controls (measured as mRNA fold change) is normally at least a 6-fold increase for CYP1A2, CYP2B6, and CYP3A4, which is considered indicative of satisfactory sensitivity of hepatocyte lots.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-020",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Hepatocytes must be replaced if: (a) donor does not respond satisfactorily to positive induction controls, (b) viability <80% before addition of investigational drug, OR (c) viability <70% at end of incubation compared to solvent control.",
+      "conditions": "Quality/acceptability criteria for hepatocyte lots",
+      "threshold_values": "Viability thresholds: <80% pre-treatment or <70% post-incubation",
+      "source_section": "Section 7.3.4",
+      "source_quote": "If hepatocytes from a donor: (a) do not respond satisfactorily to the positive induction controls, (b) demonstrate viability <80% before addition of the investigational drug, or (c) demonstrate viability <70% at the end of the incubation compared to solvent (vehicle) control, the cells should be replaced by hepatocytes from a new donor.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-021",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Induction experiments must include: 3 donor hepatocytes, at least 3 replicates, 3-5 different concentrations of the test drug encompassing 50 × Cmax,u.",
+      "conditions": "Minimum experimental requirements to rule out induction using basic mRNA fold-change method",
+      "threshold_values": "Minimum: 3 donors, 3 replicates, 3-5 concentrations covering 50 × Cmax,u",
+      "source_section": "Section 7.3.4",
+      "source_quote": "To rule out that the investigational drug is an in vitro inducer, an induction study including 3 donor hepatocytes should be run with at least 3 replicates of 3-5 different concentrations of the test investigational drug, encompassing 50 × Cmax,u.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-022",
+      "category": "in_vitro_induction_cyp",
+      "rule": "Incubation duration for induction experiments is usually 48-72 hours. Shorter incubation requires justification.",
+      "conditions": "Standard induction assay duration",
+      "threshold_values": "48-72 hours standard; shorter only with justified adequate sensitivity",
+      "source_section": "Section 7.3.4",
+      "source_quote": "Duration of incubation of an investigational drug is usually 48-72 hours to allow complete induction to occur. Justification should be provided for shorter incubation times.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-023",
+      "category": "in_vitro_induction_cyp",
+      "rule": "In vitro induction study medium concentrations <80% of nominal should trigger discussion with regulatory authorities about potential impact on data interpretation.",
+      "conditions": "When measured drug concentrations in induction medium are low",
+      "threshold_values": "<80% of nominal concentration in medium on last day of incubation",
+      "source_section": "Section 7.3.1 / Q&A 7.1",
+      "source_quote": "When measured concentrations in medium are <80% of concentrations due to non-metabolism/transporter related confounders, sponsors should discuss the potential impact of the discrepancy on data interpretation with regulatory authorities.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-024",
+      "category": "in_vitro_induction_cyp",
+      "rule": "CYP2C8, CYP2C9, and CYP2C19 need only be evaluated for induction in vitro and/or in vivo when the drug has been shown to be a CYP3A4 inducer in a clinical study. A negative CYP3A4 clinical induction result can rule out induction of CYP2C8, CYP2C9, and CYP2C19, provided CYP3A4 inhibition by the drug and its major metabolites can be excluded.",
+      "conditions": "When drug is not a CYP3A4 inducer clinically",
+      "threshold_values": "Negative clinical CYP3A4 induction plus CYP3A4 inhibition exclusion",
+      "source_section": "Section 2.1.4",
+      "source_quote": "Therefore, the potential of the investigational drug to induce CYP2C8, CYP2C9, and CYP2C19 should be evaluated in vitro and/or in vivo when it has been shown to be an inducer of CYP3A4 in a clinical study. A negative result for induction in a clinical study with a sensitive CYP3A4 substrate can be used to rule out an investigational drug's potential to induce CYP2C8, CYP2C9, and CYP2C19 enzymes provided that the potential of CYP3A4 inhibition by the drug and its major metabolite(s) can be excluded.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-025",
+      "category": "in_vitro_transporter_substrate",
+      "rule": "In vitro evaluation as P-gp and/or BCRP substrate is required for orally administered drugs (GI absorption). Also required if biliary excretion or active renal secretion is a major elimination pathway.",
+      "conditions": "Orally administered drugs; drugs with significant biliary or renal active secretion",
+      "threshold_values": "No explicit threshold for triggering; linked to relevance of route",
+      "source_section": "Section 2.2.1",
+      "source_quote": "P-glycoprotein (P-gp) and breast cancer resistance protein (BCRP) are efflux transporters expressed in the GI tract and can affect the oral bioavailability of drugs. Thus, the possibility of being a substrate of P-gp and/or BCRP is often evaluated in vitro for investigational drugs given orally.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-026",
+      "category": "in_vitro_transporter_substrate",
+      "rule": "OATP1B1 and OATP1B3 substrate evaluation must be considered when hepatic metabolism or biliary excretion accounts for ≥25% of elimination of the drug, or when the pharmacological target is in the liver.",
+      "conditions": "Hepatic elimination ≥25% OR pharmacological target is in the liver",
+      "threshold_values": "≥25% of elimination via hepatic/biliary route",
+      "source_section": "Section 2.2.1",
+      "source_quote": "Examination of whether an investigational drug is a substrate for OATP1B1 and 1B3 should be considered if hepatic metabolism or biliary excretion accounts for ≥25% of elimination of a drug or if the pharmacological target of a drug is in the liver.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-027",
+      "category": "in_vitro_transporter_substrate",
+      "rule": "Renal transporter substrate evaluation (OAT1, OAT3, OCT2, MATE1, MATE2-K) must be considered when renal active secretion accounts for ≥25% of systemic clearance.",
+      "conditions": "Active renal secretion ≥25% of systemic clearance; calculated as CLr - (fu,p × GFR)",
+      "threshold_values": "≥25% of systemic clearance via renal active secretion",
+      "source_section": "Section 2.2.1",
+      "source_quote": "In vitro studies to evaluate a drug as a substrate of these transporters should be considered if the drug clearance by renal active secretion is ≥25% of its systemic clearance. Assuming there is no reabsorption... active secretion clearance can be calculated as (CLr – (fu,p × GFR)).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-028",
+      "category": "in_vitro_transporter_substrate",
+      "rule": "For uptake transporter studies: a drug can be considered a transporter substrate if uptake in transporter-expressed cells is ≥2-fold greater than vehicle control-transfected cells AND uptake is inhibited >50% by a known inhibitor.",
+      "conditions": "Standard uptake assay criteria for determining transporter substrate status",
+      "threshold_values": "≥2-fold uptake vs. controls; >50% inhibition by known inhibitor",
+      "source_section": "Section 2.2.1.1",
+      "source_quote": "For uptake studies, if there is significant uptake of a tested drug in transporter-expressed cells relative to the vehicle control-transfected cells (e.g., ≥2-fold of controls), and the uptake in transporter-expressed cells can be inhibited by more than 50% by a known inhibitor of the transporter, the tested drug can be considered a substrate of the transporter examined.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-029",
+      "category": "in_vitro_transporter_substrate",
+      "rule": "For bidirectional transport assays: a drug can be considered a transporter substrate if net efflux ratio ≥2 (in transporter-expressed cells vs. parental) AND efflux ratio is inhibited >50% by a known inhibitor.",
+      "conditions": "Standard bidirectional transport criteria for efflux transporter substrate determination (e.g., P-gp, BCRP via Caco-2 or transfected cells)",
+      "threshold_values": "Net efflux ratio ≥2; >50% inhibition by known inhibitor",
+      "source_section": "Section 2.2.1.1",
+      "source_quote": "For bidirectional transport studies, if there is significant directional transport of a tested drug in transporter-expressed cells relative to un-transfected or parental cells (e.g., net efflux ratio ≥2) or Caco-2 cells (e.g., efflux ratio ≥2), and the efflux ratio can be inhibited by more than 50% by a known inhibitor of the transporter, the tested drug can be considered as a substrate of the transporter examined.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-030",
+      "category": "in_vitro_transporter_inhibition",
+      "rule": "In vitro inhibition evaluation of transporters is required for: P-gp, BCRP, OATP1B1, OATP1B3, OAT1, OAT3, OCT2, MATE1, and MATE2-K.",
+      "conditions": "Required for all investigational drugs as part of DDI evaluation",
+      "threshold_values": "Mandatory transporter inhibition panel: 9 transporters listed",
+      "source_section": "Section 2.2.2",
+      "source_quote": "Studies should be conducted to evaluate whether an investigational drug is an inhibitor of P-gp, BCRP, OATP1B1, OATP1B3, OAT1, OAT3, OCT2, MATE1 and MATE2-K.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-031",
+      "category": "in_vitro_transporter_inhibition",
+      "rule": "Transporter inhibition risk exclusion cutoffs (basic method) — Table 1 criteria: P-gp or BCRP (oral): IC50,u* > 0.1 × Dose/250 mL (i.e., Dose/250 mL / IC50,u < 10); OATP1B1 or OATP1B3: IC50,u,t > 10 × Cmax,inlet,u (i.e., Cmax,inlet,u/IC50,u < 0.1); OAT1, OAT3, OCT2: IC50,u > 10 × Cmax,u (i.e., Cmax,u/IC50,u < 0.1); MATE1/MATE2-K: IC50,u > 50 × Cmax,u (i.e., Cmax,u/IC50,u < 0.02).",
+      "conditions": "Basic method using unbound IC50 values; applies to inhibitor screening decision",
+      "threshold_values": "P-gp/BCRP (oral): Dose/(250 mL)/IC50,u < 10; OATP1B1/1B3: Cmax,inlet,u/IC50,u < 0.1; OAT1/OAT3/OCT2: Cmax,u/IC50,u < 0.1; MATE1/MATE2-K: Cmax,u/IC50,u < 0.02",
+      "source_section": "Section 2.2.2 Table 1",
+      "source_quote": "Table 1: Recommended ratio and cutoff value for drug as inhibitor of transporters: P-gp or BCRP: IC50,u* > 0.1 × (Dose/250 mL) (i.e., (Dose/250 mL)/IC50,u < 10) for orally administered drugs; OATP1B1 or OATP1B3: IC50,u,t > 10 × Cmax, inlet,u# (i.e., Cmax,inlet,u/IC50,u < 0.1); OAT1, OAT3, OCT2: IC50,u > 10 × Cmax,u (i.e., Cmax,u/IC50,u < 0.1); MATE1/MATE2-K: IC50,u > 50 × Cmax,u (i.e., Cmax,u/IC50,u < 0.02).",
+      "jurisdiction_note": "Harmonized; Q&A 2.4 clarifies that cutoffs for transporters not in Table 1 (e.g., OCT1, MRP2) may be deduced from Table 1 based on organ and cellular localization similarity",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-032",
+      "category": "in_vitro_transporter_inhibition",
+      "rule": "For parenteral drugs or metabolites (not oral): P-gp/BCRP inhibition risk exclusion uses IC50,u > 50 × Cmax,u (i.e., Cmax,u/IC50,u < 0.02) instead of the oral Dose/250 mL criterion.",
+      "conditions": "Applies to parenterally administered drugs or metabolites formed post-absorption that inhibit P-gp or BCRP",
+      "threshold_values": "IC50,u > 50 × Cmax,u; Cmax,u/IC50,u < 0.02",
+      "source_section": "Section 2.2.2",
+      "source_quote": "The recommended ratio and cutoff value for P-gp or BCRP is for orally administered drugs. If the investigational drug is administered parenterally or if it is a metabolite formed post-absorption that inhibits P-gp or BCRP, IC50,u > 50 × Cmax,u (i.e., Cmax,u/ IC50,u < 0.02) can be used.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-033",
+      "category": "in_vitro_transporter_inhibition",
+      "rule": "Transporter inhibitor screening starting concentration: 10 × Cmax,u for OAT1/3 and OCT2; 50 × Cmax,u for MATEs; 10 × liver inlet Cmax,u for OATP1B1/3; and 0.1 × highest therapeutic dose/250 mL for orally administered P-gp or BCRP inhibitors.",
+      "conditions": "Initial screening concentration for in vitro transporter inhibition assays",
+      "threshold_values": "OAT1/3, OCT2: 10 × Cmax,u; MATE: 50 × Cmax,u; OATP1B1/3: 10 × liver inlet Cmax,u; P-gp/BCRP (oral): 0.1 × dose/250 mL",
+      "source_section": "Section 7.4.3",
+      "source_quote": "Normally the investigation of transporter inhibition starts with testing a high concentration of the test drug, for example, 10 × Cmax,u for OAT1/3 and OCT2, 50 × Cmax,u for MATEs, 10 × liver inlet Cmax,u for OATP1B1/3, and 0.1 × the highest therapeutic dose/250 mL for orally administered P-gp or BCRP inhibitors.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-034",
+      "category": "in_vitro_reversible_inhibition_method",
+      "rule": "For reversible CYP inhibition Ki,u determination: at least 4 different concentrations of the investigational drug must be tested; substrate concentration should cover ranges above and below the substrate's Km.",
+      "conditions": "When Ki,u value needs to be determined (not just basic screening)",
+      "threshold_values": "Minimum 4 concentrations tested; concentrations above and below substrate Km",
+      "source_section": "Section 7.3.3",
+      "source_quote": "It is recommended to examine at least four different concentrations of the investigational drug. To determine the Ki,u for inhibition, varying concentrations of both the inhibitor and substrate, to cover ranges above and below the substrate's Km, should be tested.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-035",
+      "category": "metabolite_ddi",
+      "rule": "Metabolite DDI potential (as inhibitor) must be investigated for metabolites with: total AUCmetabolite ≥ 25% of AUCparent AND accounting for ≥10% of drug-related material in circulation (i.e., major metabolite).",
+      "conditions": "Applies when parent drug alone does not inhibit major CYPs/transporters or is not expected to inhibit clinically",
+      "threshold_values": "AUCmetabolite ≥ 25% AUCparent AND ≥10% of drug-related material in circulation",
+      "source_section": "Section 2.3.2",
+      "source_quote": "As a pragmatic rule, it is recommended to investigate the CYP enzyme and transporter inhibitory potential of metabolites that have total AUCmetabolite ≥ 25% of AUCparent and also account for at least 10% of drug-related material in circulation (i.e., considered as a major metabolite, often determined based on radioactivity data).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-036",
+      "category": "metabolite_ddi",
+      "rule": "Metabolite induction potential must be evaluated in vitro when the metabolite: (a) is a major metabolite (AUCmetabolite/AUCparent ≥ 25% AND ≥10% of drug-related material in circulation), AND (b) the drug is a prodrug or metabolite is mainly formed extra-hepatically.",
+      "conditions": "When parent drug induction evaluation may not reflect metabolite induction (prodrugs; extra-hepatic formation)",
+      "threshold_values": "AUCmetabolite/AUCparent ≥ 25%; ≥10% of drug-related material",
+      "source_section": "Section 2.3.3",
+      "source_quote": "When the drug is a prodrug or when a metabolite is mainly formed extra-hepatically, in vitro evaluation of a metabolite's induction potential on CYP enzymes is recommended if the metabolite is a major metabolite and has AUCmetabolite/AUCparent ≥ 25% and accounts for at least 10% of drug-related material in circulation.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-037",
+      "category": "metabolite_ddi",
+      "rule": "Metabolite substrate DDI evaluation is required when available non-clinical or clinical data indicate that a change in metabolite exposure can result in clinically meaningful alteration of efficacy or safety. The metabolite must contribute to in vivo target effect to a similar or greater extent than the parent drug.",
+      "conditions": "When metabolite has significant pharmacological or toxicological activity",
+      "threshold_values": "Metabolite contribution to target effect comparable or greater than parent; assessed via molar exposure-adjusted pharmacological potency",
+      "source_section": "Section 2.3.1",
+      "source_quote": "The risk of DDIs through altered formation or elimination of a metabolite should be investigated if available non-clinical or clinical data indicate that a change in metabolite exposure can result in clinically meaningful alteration of efficacy or safety of a drug... The enzymes responsible for formation and elimination of a metabolite should be identified in vitro if the metabolite contributes to an in vivo target effect to a similar or greater extent than the parent drug.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-038",
+      "category": "timing_of_studies",
+      "rule": "In vitro data on the investigational drug as a substrate of metabolic enzymes is generally recommended BEFORE starting the clinical phase in patients (to evaluate metabolic stability and identify main metabolic enzymes).",
+      "conditions": "Timing requirement for initiating clinical studies in patients",
+      "threshold_values": "Before first clinical study in patients",
+      "source_section": "Section 1.4",
+      "source_quote": "In vitro data on the investigational drug as a substrate of metabolic enzymes is generally recommended to be obtained before starting the clinical phase in patients to evaluate metabolic stability and identify the potential main metabolic pathway(s) and enzyme(s) that metabolize the investigational drug.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-039",
+      "category": "timing_of_studies",
+      "rule": "If drug has limited absorption, significant hepatic uptake, biliary excretion, or active renal secretion, relevant transporter(s) must be identified in vitro BEFORE initiating clinical studies in patients.",
+      "conditions": "Before first clinical studies in patients when transporter-mediated disposition is anticipated",
+      "threshold_values": "Before first patient study",
+      "source_section": "Section 1.4",
+      "source_quote": "If a drug has limited absorption or is expected to undergo significant active hepatic uptake, biliary excretion, or active renal secretion as unchanged drug, the relevant transporter(s) should be identified in vitro before initiating clinical studies in patients to avoid restrictions on concomitant medications in protocols.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-040",
+      "category": "timing_of_studies",
+      "rule": "In vitro data on the investigational drug as a precipitant (inhibitor/inducer of major CYPs and transporters) is generally recommended BEFORE initiating larger studies in patients.",
+      "conditions": "Timing of precipitant characterization",
+      "threshold_values": "Before larger studies in patients",
+      "source_section": "Section 1.4",
+      "source_quote": "In vitro data on the effects of the investigational drug as a precipitant on the major cytochrome P450 (CYP) enzymes and transporters is generally recommended to be available before initiating larger studies in patients.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-041",
+      "category": "timing_of_studies",
+      "rule": "Mass balance study results are generally recommended to be available BEFORE starting Phase 3. Based on mass balance and in vitro results, clinical DDI studies with strong index inhibitors and inducers should be considered to quantify metabolism pathways.",
+      "conditions": "Timing of mass balance and clinical DDI studies",
+      "threshold_values": "Before Phase 3; Q&A 1.1 clarifies flexibility is ensured based on drug characteristics",
+      "source_section": "Section 1.4 / Q&A 1.1",
+      "source_quote": "The results of the mass balance study are generally recommended to be available before starting phase 3. Based on the results of the mass balance study and in vitro studies, clinical studies with strong index enzyme inhibitors and inducers should be considered to confirm and quantify the main metabolism pathways and define the risk for clinically significant DDIs.",
+      "jurisdiction_note": "Harmonized; Q&A 1.1 clarifies this does not restrict timing — flexibility should be ensured according to drug characteristics",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-042",
+      "category": "clinical_ddi_study_design",
+      "rule": "For clinical DDI studies intended to identify the interaction of greatest magnitude (index studies), the precipitant drug should be dosed at: maximum dose AND shortest dosing interval under recommended clinical use.",
+      "conditions": "Index inhibitor/inducer studies; dose selection for precipitant",
+      "threshold_values": "Maximum dose, shortest dosing interval",
+      "source_section": "Section 3.2.1.2",
+      "source_quote": "For studies intended to identify the interaction of greatest magnitude, the doses of the precipitant drug used in DDI studies should maximize the possibility of identifying a DDI. Thus, the maximum dose and the shortest dosing interval of the precipitant under the recommended clinical use should generally be evaluated.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-043",
+      "category": "clinical_ddi_study_design",
+      "rule": "Inducers must be administered as multiple doses to achieve maximal induction. Typical pre-treatment durations range from 7 to 14 days.",
+      "conditions": "Clinical DDI studies with inducers as precipitants",
+      "threshold_values": "7-14 days pre-treatment typical",
+      "source_section": "Section 3.2.1.3",
+      "source_quote": "Inducers should be administered as multiple doses to ensure the maximal induction of a specific pathway. The duration should consider the time to reach steady-state of the inducer, the turnover time of the affected enzyme or transporter, and the half-life of substrate drug. Typical pre-treatment durations range from 7 to 14 days.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-044",
+      "category": "clinical_ddi_study_design",
+      "rule": "Duration of precipitant dosing must cover at least 90% of the plasma concentration-time curve of the substrate, considering potentially longer half-life in the presence of inhibitor.",
+      "conditions": "Inhibitor pre-treatment duration determination",
+      "threshold_values": "At least 90% of AUC coverage of substrate",
+      "source_section": "Section 3.2.1.3",
+      "source_quote": "The duration of the treatment with the precipitant should be long enough to cover at least 90% of the plasma concentration-time curve of the substrate, considering that its half-life may be longer in the presence of an inhibitor drug.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-045",
+      "category": "clinical_ddi_study_design",
+      "rule": "Crossover studies are preferred over parallel study designs to reduce variability. Parallel (two-arm) studies are acceptable when a drug or major active metabolite has a long half-life.",
+      "conditions": "Study design selection; parallel design requires larger sample sizes with subjects matched for intrinsic factors",
+      "threshold_values": "No specific half-life threshold defined; 'long half-life' is contextual",
+      "source_section": "Section 3.2.1.5",
+      "source_quote": "Crossover studies (one-sequence or randomized) are preferred over parallel study designs to reduce variability... Parallel, two-arm studies can be appropriate when a crossover study design is not feasible, such as when one of the drugs (or major active metabolite, if applicable) has a long half-life.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-046",
+      "category": "clinical_ddi_study_design",
+      "rule": "PK sampling times for single-dose studies must ensure that the mean difference between AUC0-t and AUC0-inf is less than 20%.",
+      "conditions": "Sample collection planning for single-dose DDI studies",
+      "threshold_values": "Mean difference between AUC0-t and AUC0-inf < 20%",
+      "source_section": "Section 3.2.1.8",
+      "source_quote": "The sampling times for single-dose studies should be planned so that the mean difference between the AUC0-t and the AUC0-inf is less than 20%, accounting for potential longer elimination half-life due to the DDI.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-047",
+      "category": "clinical_ddi_study_design",
+      "rule": "Co-medications, dietary/nutritional supplements, herbal supplements, tobacco, alcohol, foods, and fruit juices that may affect enzyme/transporter expression must be excluded from DDI studies for a sufficient time before subjects enter and continue for study duration.",
+      "conditions": "Protocol restriction requirements for DDI studies",
+      "threshold_values": "All enzyme/transporter-affecting substances excluded; duration: sufficient time before and throughout study",
+      "source_section": "Section 3.2.1.7",
+      "source_quote": "To reduce variability in the magnitude of DDIs, use of the following should be excluded to the extent possible during DDI studies: other medications, dietary/nutritional supplements, herbal supplements, tobacco, smoking, alcohol, foods, and fruit juices that may affect the expression or function of enzymes and transporters.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-048",
+      "category": "clinical_ddi_study_design",
+      "rule": "Typical clinical DDI study sample size: approximately 12-20 subjects, but larger studies may be needed when variability is high or based on specific objectives.",
+      "conditions": "Sample size guidance for stand-alone DDI studies",
+      "threshold_values": "Typically 12-20 subjects; larger when variability is high",
+      "source_section": "Q&A 4.1",
+      "source_quote": "Typically, a clinical DDI study includes around 12-20 subjects, but larger studies may be needed, for example, when variability is high or based on the specific objectives of the study.",
+      "jurisdiction_note": "Harmonized (Q&A clarification)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-049",
+      "category": "clinical_ddi_cyp_substrate",
+      "rule": "When evaluating the investigational drug as a CYP substrate, the first clinical DDI studies should use both a strong index inhibitor AND a strong index inducer of the relevant enzyme.",
+      "conditions": "First clinical DDI studies for CYP substrate evaluation; moderate inhibitors/inducers acceptable if no strong ones available",
+      "threshold_values": "Strong index inhibitor and strong index inducer; first study requirement",
+      "source_section": "Section 3.2.3.1",
+      "source_quote": "When evaluating the investigational drug as a substrate, the first clinical DDI studies should, in general, determine the effects of a strong index inhibitor and a strong index inducer on the investigational drug.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-050",
+      "category": "clinical_ddi_cyp_substrate",
+      "rule": "If pharmacokinetic comparison of PM versus NM phenotype (for polymorphic enzymes such as CYP2D6, CYP2C19) can characterize exposure, this comparison can substitute for a clinical DDI study with a strong inhibitor for that specific pathway.",
+      "conditions": "Enzyme must have well-defined poor metabolizer (PM) phenotype with absent/nonfunctional enzyme activity",
+      "threshold_values": "Well-defined PM phenotype with non-functional enzyme activity",
+      "source_section": "Section 3.2.3.1 / Section 4.1",
+      "source_quote": "If an investigational drug is subject to significant metabolism by a genetically polymorphic enzyme for which a well-defined poor metabolizer phenotype exists that results in non-functional enzyme activity, a comparison of the pharmacokinetic parameters of the drug in individuals with the poor metabolizer phenotype versus those with a normal metabolizer phenotype can substitute for an interaction study for that particular pathway.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-051",
+      "category": "clinical_ddi_cyp_substrate",
+      "rule": "Exclusion of poor metabolizers (PMs) is recommended from DDI studies involving substrates/inhibitors of polymorphic enzymes, to allow characterization of the greatest magnitude of interaction.",
+      "conditions": "DDI studies with substrates of polymorphic enzymes (e.g., CYP2D6, CYP2C19); prospective genotyping recommended",
+      "threshold_values": "Exclusion of PM phenotype; if PMs not excluded, DDI effect must be evaluated separately in PM, IM, and NM",
+      "source_section": "Section 4.1",
+      "source_quote": "If an investigational drug is a substrate/inhibitor for a polymorphic enzyme and a DDI study with an index inhibitor/substrate is conducted to evaluate pharmacokinetic changes, it is recommended to prospectively characterize the subjects' genotypes. Exclusion of PMs is recommended, to allow characterization of the greatest magnitude of interaction.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-052",
+      "category": "clinical_ddi_cyp_substrate",
+      "rule": "If a DDI study with a strong index inhibitor or inducer shows no DDI is present, additional clinical studies with other inhibitors/inducers of the same enzyme are not needed.",
+      "conditions": "Extrapolation from negative index inhibitor/inducer study",
+      "threshold_values": "Negative study with strong index inhibitor/inducer is sufficient to rule out DDI for all weaker inhibitors/inducers",
+      "source_section": "Section 3.2.3.1",
+      "source_quote": "If a DDI study with a strong index inhibitor or inducer indicates no DDI is present, additional clinical studies with other inhibitors or inducers of the same enzyme are not needed.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-053",
+      "category": "clinical_ddi_ugt_substrate",
+      "rule": "For UGT induction: if a drug reduces the AUC of a sensitive CYP3A substrate by ≥50%, a clinical DDI study with UGT substrates should be considered.",
+      "conditions": "Drug found to induce CYP3A4 in vitro and is evaluated clinically; ≥50% AUC reduction of CYP3A substrate indicates moderate or strong CYP3A induction",
+      "threshold_values": "≥50% AUC reduction of sensitive CYP3A substrate",
+      "source_section": "Section 3.2.4.3",
+      "source_quote": "If a drug reduces the AUC of a sensitive substrate of CYP3A by ≥50%, a clinical DDI study should be considered taking into account the following: the magnitude of exposure change of the CYP3A substrate, the likelihood of concomitant use of the investigational drug with UGT substrates...",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-054",
+      "category": "clinical_ddi_transporter_substrate",
+      "rule": "Clinical DDI studies for transporter substrates should be considered based on Table 2 criteria: P-gp and BCRP: when intestinal absorption is limited or biliary excretion/active renal secretion is a major elimination pathway; OATP1B1/1B3: when hepatic elimination ≥25% or pharmacological target is liver; OAT1, OAT3, OCT2, MATE1, MATE2-K: when active renal secretion accounts for ≥25% of systemic clearance.",
+      "conditions": "Triggers for clinical transporter DDI study based on in vitro substrate findings",
+      "threshold_values": "P-gp/BCRP: limited oral absorption or major biliary/renal elimination; OATP: ≥25% hepatic elimination; renal transporters: ≥25% active renal secretion",
+      "source_section": "Section 3.2.5.1 Table 2",
+      "source_quote": "Table 2: Considerations for clinical evaluation of drug as substrate of transporters: P-gp and BCRP: When intestinal absorption is limited, or biliary excretion/active renal secretion is a major elimination pathway; OATP1B1 and OATP1B3: When hepatic (metabolic/biliary) elimination is a significant clearance pathway (≥25%) for the investigational drug or the action site of the drug is in liver; OAT1 and OAT3, OCT2, MATE1, and MATE2-K: When the investigational drug undergoes significant active renal secretion (i.e., accounting for ≥ 25% of systemic clearance).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-055",
+      "category": "clinical_ddi_transporter_induction_pgp",
+      "rule": "If an investigational drug reduces the AUC of a sensitive CYP3A substrate by 50% or more (moderate or strong CYP3A inducer), a further clinical study to evaluate potential P-gp induction effect should be considered.",
+      "conditions": "P-gp is co-regulated with CYP3A via PXR/CAR; applies when drug is a moderate or strong CYP3A inducer",
+      "threshold_values": "≥50% AUC reduction of sensitive CYP3A substrate",
+      "source_section": "Section 3.2.5.3",
+      "source_quote": "Since P-gp is co-regulated with CYP3A, for example by agonists of PXR and/or CAR, but is less inducible than CYP3A, if an investigational drug reduces the AUC of a sensitive substrate of CYP3A by 50% or more (i.e., being a moderate or strong inducer), a further clinical study to evaluate potential induction effect of the drug on P-gp substrates should be considered.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-056",
+      "category": "cyp_inhibitor_classification",
+      "rule": "CYP inhibitor classification based on effect on sensitive index CYP substrate AUC: Strong: increases AUC ≥5-fold; Moderate: increases AUC ≥2- to <5-fold; Weak: increases AUC ≥1.25- to <2-fold.",
+      "conditions": "Based on the highest clinical dose and shortest dosing interval; used for labeling and extrapolation",
+      "threshold_values": "Strong: AUC increase ≥5-fold; Moderate: ≥2 to <5-fold; Weak: ≥1.25 to <2-fold",
+      "source_section": "Section 5.3.2",
+      "source_quote": "A strong inhibitor increases the AUC of a sensitive index CYP substrate ≥ 5-fold. A moderate inhibitor increases the AUC of a sensitive index CYP substrate ≥ 2- to < 5-fold. A weak inhibitor increases the AUC of a sensitive index CYP substrate ≥ 1.25- to < 2-fold.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-057",
+      "category": "cyp_inducer_classification",
+      "rule": "CYP inducer classification based on decrease in AUC of sensitive index CYP substrate: Strong: decreases AUC ≥80%; Moderate: decreases AUC ≥50 to <80%; Weak: decreases AUC ≥20 to <50%.",
+      "conditions": "Based on highest clinical dose and shortest dosing interval",
+      "threshold_values": "Strong: AUC decrease ≥80%; Moderate: ≥50 to <80%; Weak: ≥20 to <50%",
+      "source_section": "Section 5.3.2",
+      "source_quote": "A strong inducer decreases the AUC of a sensitive index CYP substrate by ≥ 80%. A moderate inducer decreases the AUC of a sensitive index CYP substrate by ≥ 50 to < 80%. A weak inducer decreases the AUC of a sensitive index CYP substrate by ≥ 20 to < 50%.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-058",
+      "category": "reporting_ddi_results",
+      "rule": "PK results from DDI studies must be reported as geometric mean ratio with associated 90% confidence interval for observed PK exposure measures (AUC, Cmax) with and without the precipitant.",
+      "conditions": "Reporting requirement for all clinical DDI studies",
+      "threshold_values": "90% confidence interval required; geometric mean ratio",
+      "source_section": "Section 5.2",
+      "source_quote": "Pharmacokinetic results of DDI studies should be reported as the geometric mean ratio of the observed pharmacokinetic exposure measures with and without the precipitant drug and the associated 90 percent confidence interval.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-059",
+      "category": "reporting_ddi_results",
+      "rule": "Minimum PK parameters to determine for each subject in NCA: AUC0-inf, AUC0-t, percent extrapolated from AUC0-t to AUC0-inf, Cmax, and Tmax. For multiple-dose studies also: Cmax, Cmin, AUCTAU at steady state.",
+      "conditions": "Standard PK data collection requirement for DDI studies",
+      "threshold_values": "All listed parameters mandatory",
+      "source_section": "Section 5.1.1",
+      "source_quote": "The following exposure measures should be determined for each subject: AUC0-inf, AUC0-t, the percent extrapolated from AUC0-t to AUC0-inf, Cmax, and time to Cmax (Tmax). For multiple-dose studies, Cmax, Cmin, AUCTAU at steady-state should also be reported.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-060",
+      "category": "no_effect_boundary",
+      "rule": "A 90% CI of 80%-125% is commonly proposed as a default no-effect boundary for clinical DDI studies, but this is considered overly conservative for most drugs. Drug-specific no-effect boundaries based on exposure-response relationships are preferred.",
+      "conditions": "For interpreting DDI results when drug-specific no-effect boundaries are not established",
+      "threshold_values": "Default: 90% CI 80%-125%; drug-specific preferred",
+      "source_section": "Section 5.3.1",
+      "source_quote": "Sometimes, a 90% confidence interval of 80%-125% is proposed as a default no-effect boundary. This is in general an acceptable approach but is considered overly conservative for most drugs, where small changes in exposure are unlikely to be of clinical consequence.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-061",
+      "category": "mechanistic_static_model",
+      "rule": "AUCR mechanistic static model: if estimated AUCR is between 0.80 and 1.25, the risk of clinically relevant interaction is low and no further evaluation as precipitant for the studied enzyme is needed. If AUCR is outside 0.80 to 1.25, further evaluation should be conducted.",
+      "conditions": "Using mechanistic static model AUCR calculation; applies to both inhibition and induction evaluation as precipitant",
+      "threshold_values": "AUCR 0.80-1.25: no clinical concern; outside 0.80-1.25: further evaluation required",
+      "source_section": "Section 7.5.1.2",
+      "source_quote": "If the model estimates AUCR between 0.80 to 1.25, the risk of a clinically relevant interaction is low, and additional evaluations of the drug as a precipitant for the studied enzyme are not needed. If AUCR is outside 0.80 to 1.25, further evaluation should be conducted to quantify the effect.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-062",
+      "category": "mechanistic_static_model",
+      "rule": "Mechanistic static model AUCR equation: AUCR = [1/([Ag × Bg × Cg] × (1-Fg) + Fg)] × [1/([Ah × Bh × Ch] × fm + (1-fm))], where A = reversible inhibition effect, B = TDI effect, C = induction effect; subscripts h = liver, g = gut.",
+      "conditions": "Full mechanistic static model incorporating reversible inhibition, TDI, and induction simultaneously",
+      "threshold_values": "Equations for A, B, C in gut and liver provided in Table 3",
+      "source_section": "Section 7.5.1.2",
+      "source_quote": "AUCR = (1/([Ag × Bg × Cg] × (1 − Fg) + Fg)) × (1/([Ah × Bh × Ch] × fm + (1 − fm)))",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-063",
+      "category": "pbpk_requirements",
+      "rule": "When PBPK modeling is used to support regulatory decisions on DDI, the analysis report must include: context of use, model structure and development plan, sources and justifications for system- and drug-dependent parameters, and an adequate sensitivity analysis plan.",
+      "conditions": "PBPK modeling for regulatory DDI submissions",
+      "threshold_values": "Sensitivity analyses required; model must be demonstrated fit-for-purpose",
+      "source_section": "Section 7.5.2",
+      "source_quote": "When PBPK modeling is used to support drug development and regulatory decisions, it is important to justify any model assumptions, the physiological and biochemical plausibility of the model, variability, and uncertainty measures. PBPK analysis reports should include a description of the context of use for the model, model structure and development plan, the sources and justifications for both system- and drug-dependent parameters, and an adequate sensitivity analysis plan.",
+      "jurisdiction_note": "Regional guidelines apply for full PBPK verification/validation requirements",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-064",
+      "category": "pbpk_requirements",
+      "rule": "PBPK simulation for precipitant evaluation must include the highest clinical dose and shortest dosing interval of the investigational precipitant. Pharmacokinetics and modulating effect at highest dose must be confirmed before use in simulation.",
+      "conditions": "PBPK model simulations for CYP precipitant assessment",
+      "threshold_values": "Highest dose + shortest interval required in simulation",
+      "source_section": "Section 7.5.2.1.2",
+      "source_quote": "The simulation should include the highest clinical dose and shortest dosing interval of the investigational precipitant. The pharmacokinetics and modulating effect of the highest dose should be confirmed before use in the simulation.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-065",
+      "category": "protein_binding",
+      "rule": "Protein binding experiments must always include a positive control for which the assay was previously qualified; positive control must be within 3-fold of the mean fu,p value previously reported with assay qualification.",
+      "conditions": "Required for all protein binding experiments used in DDI calculations",
+      "threshold_values": "Positive control within 3-fold of previously established mean fu,p",
+      "source_section": "Section 7.2",
+      "source_quote": "The positive control should be demonstrated to be within 3-fold of the mean fu,p value that was previously reported with the qualification of the protein binding assay method.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-066",
+      "category": "in_vitro_systems",
+      "rule": "For phenotyping and inhibition experiments, hepatocytes pooled from at least 5-10 donors are suggested. For induction experiments, hepatocytes from at least 3 individual donors must be used. For HLM, a pool of at least 10 donors is suggested.",
+      "conditions": "Minimum donor requirements for in vitro metabolism studies",
+      "threshold_values": "HLM: ≥10 donors; hepatocytes (phenotyping/inhibition): ≥5-10 donors; hepatocytes (induction): ≥3 individual donors",
+      "source_section": "Section 7.3.1",
+      "source_quote": "For HLM, a pool of at least 10 donors is suggested... For phenotyping and inhibition experiments, hepatocytes pooled from at least 5-10 donors is suggested, whereas for induction experiments usually hepatocytes from at least 3 individual donors should be used.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-067",
+      "category": "in_vitro_systems",
+      "rule": "Organic solvents in in vitro enzyme/transporter assays must be kept at low concentrations: <1% volume/volume and preferably <0.5%, because solvents can inhibit or activate enzymes and affect transporter function.",
+      "conditions": "All in vitro enzyme inhibition, induction, and transporter assays",
+      "threshold_values": "<1% v/v; preferably <0.5% v/v",
+      "source_section": "Section 7.3.1 / Section 7.4.1",
+      "source_quote": "Any organic solvents should be used at low concentrations (<1% volume/volume and preferably < 0.5%) because some solvents can inhibit or activate enzymes.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-068",
+      "category": "oatp_biomarker",
+      "rule": "OATP1B inhibition assessment using plasma coproporphyrin I (CPI) biomarker: if the ratio of CPI Cmax and AUC0-t after administration of the investigational drug to baseline is less than 1.25, this indicates a low likelihood of a clinical DDI via OATP1B inhibition.",
+      "conditions": "Biomarker approach for hepatic OATP1B inhibition evaluation; applicable in Phase 1 single or multiple dose escalation studies",
+      "threshold_values": "CPI Cmax ratio and AUC0-t ratio < 1.25 indicates low DDI likelihood",
+      "source_section": "Section 3.2.7.1",
+      "source_quote": "If the ratio is less than 1.25, this indicates a low likelihood of a clinical DDI via OATP1B inhibition.",
+      "jurisdiction_note": "Harmonized; emerging approach",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-069",
+      "category": "therapeutic_proteins",
+      "rule": "For drugs that are cytokines or cytokine modifiers with proinflammatory activity or that increase cytokine levels (e.g., peginterferon), sponsors must consider conducting a clinical DDI study on sensitive CYP substrates. Disease type/severity, CYP substrate exposure differences healthy vs. patients, and magnitude of drug effect on cytokine levels must be considered.",
+      "conditions": "Therapeutic proteins that modulate cytokine levels; affects CYP enzyme expression",
+      "threshold_values": "No specific numeric threshold; based on disease type, cytokine level magnitude, and exposure differences",
+      "source_section": "Section 4.2.1",
+      "source_quote": "If the investigational drug is a cytokine or a cytokine modifier, sponsors should consider whether to perform a clinical DDI study to evaluate the effects of the investigational therapeutic protein on sensitive substrates for CYP enzymes.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-070",
+      "category": "therapeutic_proteins",
+      "rule": "For antibody-drug conjugates (ADCs), the DDI potential of both the antibody component and the small molecule drug component must be assessed. The small molecule component must be evaluated for inhibition/induction of enzymes and transporters in the same manner as small molecules.",
+      "conditions": "ADCs with releasable small molecule component",
+      "threshold_values": "Same thresholds as small molecules apply to the released small molecule",
+      "source_section": "Section 4.2.2",
+      "source_quote": "For antibody-drug conjugates (ADCs), the small molecule drug component conjugated to the antibody component can be released in unconjugated form. Therefore, the DDI potential of both the antibody and the small molecule drug component should be considered. In general, for the small molecule component, the potential to inhibit or induce enzymes and transporters should be addressed in a similar manner as described for small molecules in this guideline.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-071",
+      "category": "risk_management",
+      "rule": "A DDI is clinically relevant if concomitant use leads to safety, effectiveness, or tolerability concerns greater than those present when drugs are administered alone. DDI management strategies must result in drug concentrations falling within no-effect boundaries.",
+      "conditions": "Risk assessment trigger for DDI management; applies when clinical DDI is identified",
+      "threshold_values": "Concentrations must remain within no-effect boundaries",
+      "source_section": "Section 6",
+      "source_quote": "A DDI is clinically relevant if concomitant use of the drugs leads to safety, effectiveness, or tolerability concerns greater than those present when the drugs are administered alone. In general, DDI management strategies should result in drug concentrations of the substrate drug falling within the no-effect boundaries.",
+      "jurisdiction_note": "Note: regional regulatory differences may exist in how DDI management recommendations are worded in labeling",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-072",
+      "category": "cyp2d6_non_inducible",
+      "rule": "CYP2D6 is generally considered not inducible by drugs and therefore does not require a clinical induction study for CYP2D6.",
+      "conditions": "Applies when characterizing CYP induction potential of an investigational drug",
+      "threshold_values": "CYP2D6 exempted from induction studies; no threshold",
+      "source_section": "Section 2.1.1",
+      "source_quote": "A clinical study with a strong inducer is also generally needed to fully characterize the risk of DDI, since inducers can up-regulate expression of multiple enzymes and some transporters (except CYP2D6, which is generally considered not inducible by drugs).",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-073",
+      "category": "cyp2c19_induction_special",
+      "rule": "When evaluating CYP2C19 induction in vitro, enzyme activity (not just mRNA) should be measured, since mRNA change for CYP2C19 is often limited even in response to positive controls.",
+      "conditions": "In vitro CYP2C19 induction evaluation",
+      "threshold_values": "Enzyme activity measurement required for CYP2C19; 6-fold positive control not mandatory for these less-inducible enzymes",
+      "source_section": "Section 7.3.4",
+      "source_quote": "However, when in vitro induction of CYP2C19 is evaluated, enzyme activity should be measured, since its mRNA change is often limited even in response to positive control.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-074",
+      "category": "enzyme_down_regulation",
+      "rule": "If concentration-dependent down-regulation (<50% of the mRNA control response) is observed in vitro and is not attributable to cytotoxicity, additional in vitro or clinical studies can be considered to understand potential clinical consequences.",
+      "conditions": "In vitro enzyme down-regulation signal not explained by cytotoxicity",
+      "threshold_values": "<50% of mRNA control response as down-regulation threshold",
+      "source_section": "Section 2.1.4.4",
+      "source_quote": "If concentration-dependent down-regulation (<50% of the mRNA control response) is observed in vitro and is not attributable to cytotoxicity, additional in vitro or clinical studies can be considered to understand the potential clinical consequences.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-075",
+      "category": "cocktail_study",
+      "rule": "Cocktail studies must meet two criteria for the substrates: (a) the substrates are specific for individual CYP enzymes or transporters; AND (b) there are no interactions among the substrates. If criteria are not met, specificity limitations must be incorporated into result interpretation.",
+      "conditions": "Requirements for valid cocktail DDI study design",
+      "threshold_values": "Specificity for individual CYP/transporter; no substrate-substrate interactions",
+      "source_section": "Section 3.2.6",
+      "source_quote": "The criteria for the selection of cocktail drugs are: (a) the substrates are specific for individual CYP enzymes or transporters; and (b) there are no interactions among the substrates.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-076",
+      "category": "in_vitro_systems",
+      "rule": "For correlation or mechanistic static induction methods, a calibration set of at least 8 inducers (n ≥ 8) covering the full clinical induction potency range, including at least 2 weak inducers, is required for hepatocyte batch calibration.",
+      "conditions": "When using correlation methods or mechanistic static models for induction prediction",
+      "threshold_values": "n ≥ 8 inducers in calibration set; at least 2 must be weak inducers; 5-8 concentrations recommended for Emax/EC50,u determination",
+      "source_section": "Section 7.3.4",
+      "source_quote": "For the correlation method, a large set of inducers (n ≥ 8) covering the full clinical induction potency range and including at least 2 weak inducers, are recommended for calibration.",
+      "jurisdiction_note": "Harmonized",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-077",
+      "category": "pharmacogenetics_ddi",
+      "rule": "Race/ethnicity of subjects must be considered in pharmacogenetic analysis, as frequency of genetic variants can vary across populations. Regional regulations on sampling and analyzing human-derived materials must be followed.",
+      "conditions": "When pharmacogenetic analyses are performed as part of DDI evaluation",
+      "threshold_values": "No numeric threshold; qualitative requirement",
+      "source_section": "Section 4.1",
+      "source_quote": "The frequency of certain pharmacogenetic variations can vary across populations. Therefore, when performing pharmacogenetic analysis, an individual's race/ethnicity should be considered. In addition, regional regulations on sampling and analyzing human derived materials need to be followed.",
+      "jurisdiction_note": "Regional regulations may differ",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M12-078",
+      "category": "contraceptive_steroids",
+      "rule": "For drugs intended for use in women of childbearing potential, the risk of DDI with contraceptive steroids must be considered and evaluated. Regional guidance should be consulted.",
+      "conditions": "Drug intended for women of childbearing potential; teratogenic potential makes this especially important",
+      "threshold_values": "No specific numeric threshold; risk must be considered",
+      "source_section": "Q&A 3.1",
+      "source_quote": "The risk of a DDI with contraceptive steroids for drugs that have teratogenic potential should be considered if the drug is intended for use in women of childbearing potential. For more information, refer to regional guidance where available or contact the relevant regulatory authorities.",
+      "jurisdiction_note": "Regional guidance applies; FDA, EMA, and PMDA may have specific requirements",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "decision_trees": {
+    "in_vitro_reversible_CYP_inhibition": {
+      "description": "Decision logic for in vitro reversible CYP inhibition assessment",
+      "steps": [
+        "1. Screen at high concentration (50 × Cmax,u or 0.1 × Dose/250 mL for intestinal CYP3A)",
+        "2. If no inhibition at cutoff: STOP — clinical inhibition excluded (basic method)",
+        "3. If inhibition present: determine Ki,u using ≥4 concentrations",
+        "4. Apply basic method: if Cmax,u/Ki,u < 0.02 → excluded",
+        "5. If not excluded: apply mechanistic static model or PBPK",
+        "6. If AUCR 0.80-1.25: no further evaluation needed",
+        "7. If AUCR outside 0.80-1.25: conduct clinical DDI study with sensitive index substrate"
+      ]
+    },
+    "in_vitro_TDI_assessment": {
+      "description": "Decision logic for TDI evaluation",
+      "steps": [
+        "1. IC50 shift assay: pre-incubate HLM 30 min ± NADPH",
+        "2. If IC50 shift < 1.5-fold: TDI unlikely (may stop or confirm with single-concentration kobs)",
+        "3. If IC50 shift ≥ 1.5-2 fold: proceed to definitive TDI parameter determination",
+        "4. Determine kinact and KI,u in pooled HLM",
+        "5. Calculate (kobs + kdeg)/kdeg using kdeg from Table 6",
+        "6. If ratio < 1.25: clinical TDI risk excluded",
+        "7. If ratio ≥ 1.25: apply mechanistic static/PBPK models",
+        "8. If models do not exclude: clinical DDI study required"
+      ]
+    },
+    "in_vitro_CYP_induction": {
+      "description": "Decision logic for CYP induction assessment",
+      "steps": [
+        "1. Perform mRNA assay in ≥3 donors, ≥3 replicates, 3-5 concentrations up to 50×Cmax,u",
+        "2. Basic mRNA fold-change method:",
+        "   a. If fold-change ≥2-fold AND concentration-dependent in ≥1 donor: POSITIVE (induction cannot be excluded)",
+        "   b. If positive control ≥6-fold AND drug <2-fold: check % of positive control",
+        "   c. If drug <2-fold AND <20% of positive control: NEGATIVE",
+        "   d. If drug <2-fold but >20% of positive control: INCONCLUSIVE — further evaluation",
+        "3. If positive/inconclusive: apply correlation method (if predicted AUC ratio >0.8: exclude induction)",
+        "4. Or apply basic kinetic model (if R >0.8: exclude induction)",
+        "5. Or apply mechanistic static/PBPK model",
+        "6. If risk not excluded: conduct clinical DDI study with sensitive index substrate"
+      ]
+    },
+    "transporter_inhibition_screening": {
+      "description": "Decision flow for transporter inhibition in vitro to clinical",
+      "steps": [
+        "1. Test at cutoff concentration (see Rule M12-033) for each transporter",
+        "2. Compare IC50,u to Table 1 criteria (Rule M12-031)",
+        "3. If ratio below cutoff: risk excluded — no clinical study needed",
+        "4. If ratio above cutoff: consider clinical DDI study",
+        "5. Decision on clinical study considers: likely concomitant medications, safety profiles of substrates",
+        "6. Alternative: use mechanistic static model, PBPK, or endogenous biomarkers (with validation evidence)"
+      ]
+    },
+    "drug_as_CYP_substrate_clinical": {
+      "description": "Clinical study decision logic for investigational drug as CYP enzyme substrate",
+      "steps": [
+        "1. Identify major metabolic pathways (≥25% of elimination) from in vitro and mass balance data",
+        "2. For each major pathway: conduct clinical DDI study with strong index inhibitor",
+        "3. Also conduct clinical DDI study with strong index inducer",
+        "4. If strong index not available: use moderate index inhibitor/inducer",
+        "5. Negative with strong inhibitor: no further inhibitor studies needed for that enzyme",
+        "6. Positive with strong inhibitor: evaluate moderate inhibitors if clinically relevant",
+        "7. For polymorphic enzymes (CYP2D6, CYP2C19): PM vs NM comparison may substitute for inhibitor study"
+      ]
+    }
+  },
+
+  "jurisdiction_differences": {
+    "general_note": "ICH M12 is a harmonized guideline. However, regional implementation may differ in specific aspects.",
+    "FDA": {
+      "labeling_language": "FDA labeling standards for DDI wording may differ from EMA; regional DDI-labeling guidance applies",
+      "contraceptive_steroids": "Specific FDA guidance on contraceptive DDI evaluation exists; refer to relevant FDA guidance",
+      "PBPK_validation": "FDA has specific PBPK reporting requirements (FDA PBPK Analysis Guidance); refer to regional guidance"
+    },
+    "EMA": {
+      "labeling_language": "EMA SmPC wording for DDI statements may differ from FDA",
+      "PBPK_validation": "EMA has guideline on reporting of PBPK modeling (EMA/CHMP/900113/2019); refer to regional guidance",
+      "pharmacogenetics_sampling": "Regional regulations on human-derived material sampling apply"
+    },
+    "PMDA": {
+      "labeling_language": "PMDA DDI labeling requirements follow Japanese guidelines",
+      "pharmacogenetics": "Frequency of CYP polymorphisms differs in Japanese vs. Western populations; must be considered"
+    },
+    "common_differences": {
+      "DDI_management_wording": "Note that there may be regional regulatory differences in how recommendations are worded (Section 6 explicit note)",
+      "oligonucleotides_peptides": "Oligonucleotides, siRNA, peptides are out of scope for M12; regional guidelines apply",
+      "protein_binding_types": "Gastric pH changes, motility, chelation, food effects, and protein binding displacement DDIs are out of scope; regional guidelines may cover them",
+      "pharmacodynamic_interactions": "PD interactions are out of scope for M12; regional guidelines apply"
+    }
+  },
+
+  "reference_tables": {
+    "cyp_kdeg_values_table6": {
+      "description": "Representative hepatic CYP enzyme degradation rate constants for TDI assessment",
+      "enzymes": {
+        "CYP1A2": {"t1_2_hr": 38, "kdeg_per_min": 0.00030},
+        "CYP2B6": {"t1_2_hr": 32, "kdeg_per_min": 0.00036},
+        "CYP2C8": {"t1_2_hr": 22, "kdeg_per_min": 0.00053},
+        "CYP2C9": {"t1_2_hr": 104, "kdeg_per_min": 0.00011},
+        "CYP2C19": {"t1_2_hr": 26, "kdeg_per_min": 0.00044},
+        "CYP2D6": {"t1_2_hr": 51, "kdeg_per_min": 0.00023},
+        "CYP3A4_hepatic": {"t1_2_hr": 36, "kdeg_per_min": 0.00032},
+        "CYP3A4_intestinal": {"t1_2_hr": 24, "kdeg_per_min": 0.00048}
+      },
+      "source_section": "Table 6, Section 7.6.1.2"
+    },
+    "cyp_index_substrates_clinical_table12": {
+      "description": "Recommended sensitive index substrates for CYP enzymes in clinical studies",
+      "entries": {
+        "CYP1A2": "Caffeine",
+        "CYP2B6": "Bupropion (note: also non-CYP; measure hydroxybupropion)",
+        "CYP2C8": "Repaglinide (also CYP3A and OATP1B1 substrate)",
+        "CYP2C9": "S-warfarin, Flurbiprofen, Tolbutamide (moderately sensitive)",
+        "CYP2C19": "Omeprazole (also CYP3A substrate)",
+        "CYP2D6": "Desipramine, Dextromethorphan, Nebivolol",
+        "CYP3A": "Midazolam, Triazolam"
+      },
+      "source_section": "Table 12, Section 7.7.1.1"
+    },
+    "cyp_index_inhibitors_clinical_table13": {
+      "description": "Strong index inhibitors for CYP enzymes in clinical studies",
+      "entries": {
+        "CYP1A2": "Fluvoxamine",
+        "CYP2B6": "No strong index inhibitors available; Ticlopidine can be used",
+        "CYP2C8": "Gemfibrozil",
+        "CYP2C9": "Fluconazole (moderate inhibitor)",
+        "CYP2C19": "Fluvoxamine, Fluconazole",
+        "CYP2D6": "Fluoxetine, Paroxetine",
+        "CYP3A": "Clarithromycin, Itraconazole"
+      },
+      "source_section": "Table 13, Section 7.7.1.2"
+    },
+    "cyp_index_inducers_clinical_table14": {
+      "description": "Inducers for CYP enzymes in clinical studies",
+      "entries": {
+        "CYP1A2_moderate": "Phenytoin, Rifampin, Cigarette smoking",
+        "CYP2B6_strong": "Carbamazepine",
+        "CYP2B6_moderate": "Rifampin, Efavirenz",
+        "CYP2C8_moderate": "Rifampin",
+        "CYP2C9_moderate": "Rifampin",
+        "CYP2C19_strong": "Rifampin",
+        "CYP3A_strong": "Carbamazepine, Phenytoin, Rifampin",
+        "CYP3A_moderate": "Efavirenz"
+      },
+      "source_section": "Table 14, Section 7.7.1.3"
+    },
+    "transporter_inhibitors_clinical_table19": {
+      "description": "Transporter inhibitors for clinical studies",
+      "entries": {
+        "P-gp": "Itraconazole, Quinidine, Verapamil",
+        "BCRP": "Cyclosporine, Darolutamide, Fostamatinib",
+        "OATP1B1_OATP1B3": "Rifampin (single dose), Cyclosporine",
+        "OAT1_OAT3": "Probenecid",
+        "MATE1_MATE2K_OCT2": "Dolutegravir, Pyrimethamine"
+      },
+      "source_section": "Table 19, Section 7.7.3.2"
+    },
+    "endogenous_biomarkers": {
+      "description": "Endogenous biomarkers as transporter/enzyme substrates for DDI evaluation",
+      "entries": [
+        {"biomarker": "Plasma coproporphyrin I (CPI)", "pathway": "Hepatic OATP1B1/3", "use": "CPI ratio <1.25 indicates low OATP1B inhibition likelihood"},
+        {"biomarker": "Plasma and urine N1-methylnicotinamide, N1-methyladenosine", "pathway": "Renal OCT2, MATE1, MATE2K"},
+        {"biomarker": "Plasma pyridoxic acid", "pathway": "Renal OAT1/3"},
+        {"biomarker": "Plasma 4β-hydroxycholesterol/cholesterol ratio", "pathway": "CYP3A"},
+        {"biomarker": "Urine 6β-hydroxycortisol/cortisol ratio", "pathway": "CYP3A"}
+      ],
+      "source_section": "Section 3.2.7"
+    }
+  }
+}

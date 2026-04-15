@@ -1,0 +1,681 @@
+{
+  "meta": {
+    "title": "ICH Safety Guidelines S1A, S1B(R1), S1C(R2), S2(R1), S3A, S3B, S4, S5(R3), S8 — Structured Regulatory Rules",
+    "extraction_date": "2026-03-23",
+    "total_rules": 99,
+    "sources": [
+      "S1A Guideline.pdf — Need for Carcinogenicity Studies of Pharmaceuticals",
+      "S1B-R1_FinalGuideline_2022_0719.pdf — Testing for Carcinogenicity of Pharmaceuticals (2022)",
+      "S1C(R2) Guideline.pdf — Dose Selection for Carcinogenicity Studies of Pharmaceuticals",
+      "S2(R1) Guideline.pdf — Genotoxicity Testing and Data Interpretation for Pharmaceuticals",
+      "S3A_Guideline.pdf — Note for Guidance on Toxicokinetics: Assessment of Systemic Toxicity",
+      "S3B_Guideline.pdf — Pharmacokinetics: Guidance for Repeated Dose Tissue Distribution Studies",
+      "S4_Guideline.pdf — Duration of Chronic Toxicity Testing in Animals",
+      "S5-R3_Step4_Guideline_2020_0218_1.pdf — Detection of Reproductive and Developmental Toxicity for Human Pharmaceuticals",
+      "S8_Guideline_0.pdf — Immunotoxicity Studies for Human Pharmaceuticals"
+    ]
+  },
+
+  "s1a_carcinogenicity_need": {
+    "description": "ICH S1A — Need for Carcinogenicity Studies of Pharmaceuticals",
+    "rules": [
+      {
+        "id": "S1A-001",
+        "rule": "Carcinogenicity studies should be performed for any pharmaceutical whose expected clinical use is continuous for at least 6 months.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Carcinogenicity studies should be performed for any pharmaceutical whose expected clinical use is continuous for at least 6 months.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-002",
+        "rule": "Pharmaceuticals used frequently in an intermittent manner such that total exposure is similar to continuous use should also be subject to carcinogenicity testing.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Some pharmaceuticals used frequently in an intermittent manner such that the total exposure is similar to continuous use should also be subject to carcinogenicity testing.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-003",
+        "rule": "Carcinogenicity studies are indicated when there is cause for concern based on: known or likely carcinogenic potential of related compounds, structure-activity relationships suggesting carcinogenic risk, evidence of preneoplastic lesions in repeated-dose toxicity studies, or long-term tissue retention of the compound or its metabolites resulting in local tissue reactions.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Carcinogenicity studies are generally indicated when: there is cause for concern based on known or likely carcinogenic potential of related compounds; structure-activity relationships suggesting carcinogenic risk; evidence of preneoplastic lesions in repeated dose toxicity studies; long-term tissue retention of parent compound or metabolite(s) resulting in local tissue reactions or other pathophysiological responses.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-004",
+        "rule": "Carcinogenicity studies are not required for pharmaceuticals that will be used for a short time (e.g., less than 3 months in the intended clinical setting) unless there is specific cause for concern.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Carcinogenicity studies are not needed for pharmaceuticals where clinical use will be short-term (e.g., less than 3 months).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-005",
+        "rule": "Carcinogenicity studies are generally not necessary for genotoxic carcinogens because it is assumed that they present a carcinogenic risk to humans. Such compounds should not be developed further unless they have a significant advantage over existing treatments.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Carcinogenicity studies are generally not necessary for genotoxic carcinogens since it is assumed that these agents present a carcinogenic risk to humans.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-006",
+        "rule": "For pharmaceuticals developed for indications in life-threatening diseases (e.g., advanced cancer, AIDS) where survival is limited, carcinogenicity studies may not be needed even if treatment is expected to be long-term.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "For pharmaceuticals developed for indications in life-threatening diseases (e.g., advanced cancer, AIDS), carcinogenicity studies may not be needed.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-007",
+        "rule": "Carcinogenicity studies should normally be completed before submission of a marketing application, but are not required before commencement of long-term clinical trials.",
+        "source_section": "Section 4 — Timing of Carcinogenicity Studies in Relation to Clinical Development",
+        "source_quote": "Carcinogenicity studies should normally be completed before submission of a marketing application. However, completion before commencement of long-term clinical trials is not required.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-008",
+        "rule": "Endogenous substances given at physiological levels are generally not subject to carcinogenicity testing. Those given at supra-physiological levels may need carcinogenicity testing based on cause for concern.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Endogenous substances given at physiological levels are generally not subject to carcinogenicity testing; those given at supra-physiological levels may warrant testing based on cause for concern.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1A-009",
+        "rule": "Carcinogenicity studies should be considered if compounds show positive results in genotoxicity tests, even if clinical use is short-term, particularly if results show clastogenic activity in vivo.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "When genotoxic potential is revealed, carcinogenicity studies may be warranted even with limited clinical exposure.",
+        "verification_status": "paraphrase"
+      },
+      {
+        "id": "S1A-010",
+        "rule": "Pharmaceuticals intended for use in pediatric populations require careful consideration for carcinogenicity testing, especially when exposure during critical growth periods may be relevant.",
+        "source_section": "Section 3 — When Carcinogenicity Studies Should be Conducted",
+        "source_quote": "Pharmaceuticals intended for use in pediatric populations may require carcinogenicity testing because of the potential for long-term use and exposure during critical periods of development.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s1b_r1_carcinogenicity_testing": {
+    "description": "ICH S1B(R1) — Testing for Carcinogenicity of Pharmaceuticals (2022, including Addendum on WoE)",
+    "rules": [
+      {
+        "id": "S1B-001",
+        "rule": "The standard carcinogenicity testing scheme requires one long-term carcinogenicity study (typically rat) plus one additional study (typically short or medium-term in vivo study, or a second long-term study in a second rodent species).",
+        "source_section": "Part I, Section 2 — Carcinogenicity Testing Scheme",
+        "source_quote": "The scheme normally consists of a long-term carcinogenicity study in one rodent species plus one additional study.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-002",
+        "rule": "The rat is the preferred species for the long-term carcinogenicity study. If the rat is not the appropriate species (based on pharmacological, toxicological, or pharmacokinetic profile), an alternative species may be selected with justification.",
+        "source_section": "Part I, Section 3 — Species Selection",
+        "source_quote": "The rat is the preferred species. When the rat is not appropriate, another species may be selected with sufficient justification.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-003",
+        "rule": "Long-term carcinogenicity studies should normally use the maximum tolerated dose (MTD) as the high dose, as defined in ICH S1C(R2).",
+        "source_section": "Part I, Section 4 — Dose Selection",
+        "source_quote": "The high dose in long-term studies should generally be the maximum tolerated dose as defined in S1C(R2).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-004",
+        "rule": "A weight-of-evidence (WoE) approach may be used to determine whether the standard 2-year rat carcinogenicity study is needed. This WoE approach evaluates six factors: (1) genotoxicity data, (2) relevant animal and human data, (3) target of pharmacological activity and relevance to carcinogenicity, (4) findings from general toxicology studies, (5) study of structure-activity relationships, and (6) toxicokinetic and mechanistic data.",
+        "source_section": "Part II (Addendum), Section 2 — Weight of Evidence Factors",
+        "source_quote": "The WoE approach evaluates six factors: genotoxicity data; relevant animal and human data; the target of pharmacological activity and its relevance to carcinogenicity; findings from general toxicology studies; structure-activity relationships; and toxicokinetic and mechanistic data.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-005",
+        "rule": "The rasH2-Tg mouse model may be used as an alternative to the 2-year rat study as the second carcinogenicity study. When the rasH2-Tg model is used, the high dose should achieve at least a 50-fold AUC multiple relative to human exposure at the maximum recommended human dose (MRHD).",
+        "source_section": "Part II (Addendum), Section 3 — rasH2-Tg Mouse Model",
+        "source_quote": "When the rasH2-Tg mouse model is used, the high dose should achieve exposures of at least 50-fold the human AUC at the maximum recommended human dose (MRHD).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-006",
+        "rule": "If a positive WoE assessment indicates the 2-year rat study is not necessary, a WoE document should be prepared and submitted to regulatory authorities prior to or at the time of the marketing application.",
+        "source_section": "Part II (Addendum), Section 4 — Regulatory Submission",
+        "source_quote": "If the WoE assessment supports omitting the 2-year rat study, a WoE document should be prepared and provided to regulatory authorities.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-007",
+        "rule": "The p53+/- mouse model and the Tg.AC (v-Ha-ras) mouse model are acceptable short-term in vivo carcinogenicity models as alternatives to the second long-term study.",
+        "source_section": "Part I, Section 2 — Carcinogenicity Testing Scheme",
+        "source_quote": "Short or medium-term in vivo carcinogenicity models such as the p53+/- and Tg.AC transgenic mouse models are acceptable as the second carcinogenicity study.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-008",
+        "rule": "Initiation-promotion studies in rodents may be appropriate as the second carcinogenicity study for compounds with specific mechanisms of action relating to tumor promotion.",
+        "source_section": "Part I, Section 2 — Carcinogenicity Testing Scheme",
+        "source_quote": "Initiation-promotion studies may be appropriate where there is scientific evidence suggesting a specific mechanism of action related to tumor promotion.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-009",
+        "rule": "A negative WoE conclusion (indicating the 2-year rat study is not needed) is most supportable when: genotoxicity studies are negative, the pharmacological target has no known role in carcinogenesis, toxicology studies show no preneoplastic changes, and there are no structural alerts for carcinogenicity.",
+        "source_section": "Part II (Addendum), Section 2 — WoE Factors",
+        "source_quote": "A negative WoE conclusion is most supportable when genotoxicity studies are negative, the pharmacological target has no known role in carcinogenesis, toxicology studies show no preneoplastic changes, and there are no structural alerts for carcinogenicity.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1B-010",
+        "rule": "The WoE evaluation for omitting the 2-year rat study should document the evidence base comprehensively, and the regulatory submission must contain sufficient justification for the decision.",
+        "source_section": "Part II (Addendum), Section 4 — Documentation Requirements",
+        "source_quote": "The WoE evaluation for omitting the 2-year rat study should document the evidence base comprehensively.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s1c_r2_dose_selection": {
+    "description": "ICH S1C(R2) — Dose Selection for Carcinogenicity Studies of Pharmaceuticals",
+    "rules": [
+      {
+        "id": "S1C-001",
+        "rule": "Six criteria are available for high dose selection in carcinogenicity studies: (1) maximum tolerated dose (MTD), (2) 25-fold AUC ratio criterion, (3) pharmacodynamic endpoints, (4) saturation of absorption, (5) maximum feasible dose (5% of diet / 5 mL/kg/day), and (6) limit dose.",
+        "source_section": "Section 2 — High Dose Selection Criteria",
+        "source_quote": "Six criteria are available for high dose selection: maximum tolerated dose; 25-fold AUC ratio; pharmacodynamic endpoints; saturation of absorption; maximum feasible dose; and limit dose.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-002",
+        "rule": "The maximum tolerated dose (MTD) is defined as the dose that produces minimal toxicity as evidenced by no more than a 10% decrement in body weight gain and no other manifestations of toxicity that would be predicted to shorten the animals' natural lifespan.",
+        "source_section": "Section 2.1 — Maximum Tolerated Dose",
+        "source_quote": "The MTD is defined as the dose that produces minimal toxicity, as evidenced by no more than a 10% decrement in body weight gain and no other manifestations of toxicity that would be predicted to shorten the animals' natural lifespan.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-003",
+        "rule": "The 25-fold AUC ratio criterion sets the high dose where systemic exposure (AUC) in the animal is 25-fold the human AUC at the maximum recommended human dose (MRHD). This criterion applies when human exposure has been characterized.",
+        "source_section": "Section 2.2 — 25-Fold AUC Ratio",
+        "source_quote": "This criterion sets the high dose where systemic exposure in the animal is 25-fold the human exposure (AUC) at the maximum recommended human dose.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-004",
+        "rule": "The limit dose for carcinogenicity studies is 1500 mg/kg/day for compounds where the human dose does not exceed 500 mg/day. At the limit dose, further dose escalation is not warranted.",
+        "source_section": "Section 2.6 — Limit Dose",
+        "source_quote": "When the human dose does not exceed 500 mg/day, a limit dose of 1500 mg/kg/day may be used. At this level, further dose escalation is not warranted.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-005",
+        "rule": "For the maximum feasible dose criterion, the highest dose that can be incorporated into the diet is 5% of the diet (w/w). For gavage administration, the volume limit is approximately 5 mL/kg/day.",
+        "source_section": "Section 2.5 — Maximum Feasible Dose",
+        "source_quote": "The maximum feasible dose is defined as the highest dose that can be incorporated into the diet, approximately 5% of the diet (w/w), or approximately 5 mL/kg/day for gavage.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-006",
+        "rule": "When pharmacodynamic endpoints are used for high dose selection, the dose producing a major pharmacodynamic effect in the species used for carcinogenicity testing can be the high dose, when that effect is considered maximal.",
+        "source_section": "Section 2.3 — Pharmacodynamic Endpoints",
+        "source_quote": "The dose producing a major pharmacodynamic effect in the species to be used for carcinogenicity testing can define the high dose when that effect is considered maximal.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-007",
+        "rule": "Saturation of absorption may be used as a dose selection criterion when the systemic exposure (AUC or Cmax) is shown to plateau at doses above the proposed high dose, indicating no meaningful additional exposure would be achieved.",
+        "source_section": "Section 2.4 — Saturation of Absorption",
+        "source_quote": "Saturation of absorption may be used as a dose selection criterion when systemic exposure plateaus at doses above the proposed high dose.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-008",
+        "rule": "The MTD should be derived from a 90-day dose-ranging study conducted in the same strain and sex of animals as will be used in the carcinogenicity study.",
+        "source_section": "Section 2.1 — Maximum Tolerated Dose",
+        "source_quote": "The MTD should be derived from dose-range finding studies of approximately 90 days duration, conducted in the same strain and sex of rodents to be used in the long-term study.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-009",
+        "rule": "Three dose levels should be used in carcinogenicity studies: a high dose as defined by the selection criteria, a low dose generally producing minimal toxic effects, and a mid dose interpolated between the high and low doses.",
+        "source_section": "Section 3 — Number of Dose Groups",
+        "source_quote": "Three dose levels are recommended: a high dose as defined by the selection criteria; a low dose producing minimal toxic effects; and a mid dose interpolated between the two.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S1C-010",
+        "rule": "When human clinical exposure data are not available at the time of dose selection for the carcinogenicity study, the 25-fold AUC ratio should be calculated based on the expected maximum therapeutic dose.",
+        "source_section": "Section 2.2 — 25-Fold AUC Ratio",
+        "source_quote": "When human exposure data are not available, the 25-fold ratio should be calculated based on the expected maximum therapeutic dose.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s2_r1_genotoxicity": {
+    "description": "ICH S2(R1) — Genotoxicity Testing and Data Interpretation for Pharmaceuticals Intended for Human Use",
+    "rules": [
+      {
+        "id": "S2-001",
+        "rule": "The standard genotoxicity battery (Option 1) consists of: (1) a test for gene mutation in bacteria (Ames test); (2) a cytogenetic test for chromosomal damage in mammalian cells in vitro (or an in vitro mouse lymphoma TK assay); and (3) a test for chromosomal damage using rodent hematopoietic cells in vivo.",
+        "source_section": "Section 2 — Standard Test Battery, Option 1",
+        "source_quote": "Option 1 consists of: a test for gene mutation in bacteria; a cytogenetic test for chromosomal damage using mammalian cells in vitro, or an in vitro mouse lymphoma tk assay; and a test for chromosomal damage using rodent hematopoietic cells in vivo.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-002",
+        "rule": "Option 2 for the standard genotoxicity battery consists of: (1) a test for gene mutation in bacteria (Ames test); and (2) an in vivo test using two tissues (typically a rodent micronucleus test plus a rodent liver UDS or Comet assay).",
+        "source_section": "Section 2 — Standard Test Battery, Option 2",
+        "source_quote": "Option 2 consists of: a test for gene mutation in bacteria; and an in vivo test using two tissues, typically a rodent micronucleus test plus a second in vivo assay (liver UDS or Comet assay).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-003",
+        "rule": "In the Ames test, the maximum dose tested should be 5000 μg/plate for non-cytotoxic compounds. For cytotoxic compounds, the highest dose should be one that produces some cytotoxicity without completely inhibiting bacterial growth.",
+        "source_section": "Section 3.1 — Bacterial Mutation Tests",
+        "source_quote": "The maximum concentration tested should be 5000 μg/plate unless cytotoxicity limits testing to lower concentrations.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-004",
+        "rule": "For in vitro mammalian cell tests, the maximum concentration tested should be 1 mM or 0.5 mg/mL, whichever is lower. For insoluble compounds, the maximum feasible concentration may be used as the limit.",
+        "source_section": "Section 3.2 — In Vitro Mammalian Tests",
+        "source_quote": "The maximum concentration for in vitro mammalian tests should be 1 mM or 0.5 mg/mL, whichever is the lower concentration.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-005",
+        "rule": "Cytotoxicity in in vitro chromosomal aberration tests should not exceed approximately 50% reduction in cell growth. In the mouse lymphoma assay (MLA), relative total growth (RTG) should generally not be reduced by more than 80-90%.",
+        "source_section": "Section 3.2 — In Vitro Mammalian Tests",
+        "source_quote": "Cytotoxicity should not exceed approximately 50% reduction in cell growth for chromosomal aberration tests. For the MLA, RTG should not be reduced by more than 80-90%.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-006",
+        "rule": "For in vivo genotoxicity studies with short-term dosing (1-3 days), the limit dose is 2000 mg/kg/day. For studies with repeated dosing of 14 days or longer, the limit dose is 1000 mg/kg/day.",
+        "source_section": "Section 3.3 — In Vivo Tests",
+        "source_quote": "For short-term in vivo studies (1-3 days), the limit dose is 2000 mg/kg/day. For repeated dosing studies of 14 days or more, the limit dose is 1000 mg/kg/day.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-007",
+        "rule": "For genotoxicity studies, the highest dose in vivo should produce some evidence of toxicity (e.g., clinical signs, reduced body weight, target organ toxicity) in order to confirm the test article reached the target tissue at a meaningful exposure.",
+        "source_section": "Section 3.3 — In Vivo Tests: High Dose Selection",
+        "source_quote": "The highest dose should produce some evidence of toxicity, e.g., clinical signs or reduced body weight gain, to confirm that the target tissue was exposed.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-008",
+        "rule": "A positive result in the in vitro mammalian cell assay that is not confirmed by an in vivo assay does not necessarily indicate genotoxic risk in vivo; an appropriate in vivo follow-up study should be considered based on the nature of the positive finding.",
+        "source_section": "Section 4 — Follow-Up Studies for Positive Results",
+        "source_quote": "A positive result in vitro that is not confirmed in vivo does not necessarily indicate genotoxic risk; follow-up studies should be considered based on the nature of the finding.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-009",
+        "rule": "Genotoxicity studies should be completed before the first human exposure; a basic battery must be completed prior to the initiation of Phase 1 clinical trials.",
+        "source_section": "Section 5 — Timing of Genotoxicity Studies",
+        "source_quote": "Genotoxicity studies should be completed before the first human exposure. A basic battery must be completed before Phase 1 clinical trials.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-010",
+        "rule": "When a compound is positive in one or more genotoxicity assays, the risk to humans should be assessed by consideration of all available data, including pharmacokinetics, metabolism, and mechanism. A genotoxic signal does not automatically preclude clinical development but requires a comprehensive risk assessment.",
+        "source_section": "Section 4 — Interpretation of Results",
+        "source_quote": "When a compound shows genotoxic potential, human risk should be assessed considering all available data including pharmacokinetics, metabolism, and mechanism.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S2-011",
+        "rule": "The bacterial reverse mutation test (Ames test) should use at least five strains: TA1535, TA1537 (or TA97 or TA97a), TA98, TA100, and TA102 (or E. coli WP2 uvrA or E. coli WP2 uvrA/pKM101).",
+        "source_section": "Section 3.1 — Bacterial Reverse Mutation Test (Ames Test): Strain Selection",
+        "source_quote": "At least five strains should be used: TA1535, TA1537 (or TA97 or TA97a), TA98, TA100, and TA102 (or E. coli WP2 uvrA or E. coli WP2 uvrA/pKM101).",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s3a_toxicokinetics": {
+    "description": "ICH S3A — Note for Guidance on Toxicokinetics: The Assessment of Systemic Toxicity in Toxicity Studies",
+    "rules": [
+      {
+        "id": "S3A-001",
+        "rule": "Toxicokinetic (TK) data should be generated as an integral part of toxicity studies to provide an assessment of systemic exposure achieved in animals and the relationship of exposure to dose level and duration of dosing.",
+        "source_section": "Section 1 — Introduction and Objectives",
+        "source_quote": "Toxicokinetic data should be generated as an integral part of the toxicity studies to provide an assessment of systemic exposure achieved in the animals and its relationship to dose level and duration of dosing.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-002",
+        "rule": "The primary TK parameters to be derived are AUC (area under the plasma concentration-time curve), Cmax (peak plasma concentration), and where relevant, C(time) — the plasma concentration at specified time points.",
+        "source_section": "Section 2 — Toxicokinetic Endpoints",
+        "source_quote": "The primary parameters to be derived are AUC, Cmax, and, where relevant, the plasma concentration at specified time-points C(time).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-003",
+        "rule": "The low dose in toxicity studies should ideally produce minimal or no toxic effects and, where possible, should be similar to the intended therapeutic exposure in humans.",
+        "source_section": "Section 3 — Dose Level Principles",
+        "source_quote": "The low dose should ideally produce minimal or no toxic effects and, where possible, should be similar to the intended therapeutic exposure in humans.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-004",
+        "rule": "TK data should be obtained in the same species, strain, sex, and age of animals as used in the toxicity studies, and under the same study conditions including route and frequency of administration.",
+        "source_section": "Section 4 — Study Design Principles",
+        "source_quote": "TK data should be obtained in the same species, strain, sex, and age of animals as used in the toxicity studies, and under the same study conditions.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-005",
+        "rule": "TK data should be generated from studies conducted in compliance with Good Laboratory Practice (GLP) where feasible. Where TK data are collected as a satellite component to a GLP study, TK satellites should also comply with GLP.",
+        "source_section": "Section 4 — GLP Compliance",
+        "source_quote": "TK data should be generated from studies conducted in compliance with Good Laboratory Practice where feasible. TK satellites to GLP studies should also comply with GLP.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-006",
+        "rule": "Metabolites should be measured when they are present in humans at significant levels (generally greater than 10% of drug-related material or above a pharmacologically significant threshold) and are not present or are present at lower levels in the test species.",
+        "source_section": "Section 5 — Measurement of Metabolites",
+        "source_quote": "Metabolites should be measured when they are present in humans at significant levels (generally greater than 10% of drug-related material) and are not present or present at lower levels in the animal test species.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-007",
+        "rule": "For carcinogenicity studies, TK monitoring is generally required. Blood samples should be obtained on a few occasions (e.g., at the start and during the first year) to characterize exposure; extensive monitoring beyond 6 months is not usually necessary.",
+        "source_section": "Section 6 — Carcinogenicity Study TK",
+        "source_quote": "For carcinogenicity studies, blood samples should be obtained on a few occasions, e.g., at the start and during the first year of the study. Extensive TK monitoring beyond 6 months is not usually necessary.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-008",
+        "rule": "In single-dose toxicity studies, TK data should be obtained to determine the relationship between dose and systemic exposure, particularly at doses intended to support Phase 1 clinical doses.",
+        "source_section": "Section 3 — Single-Dose Studies",
+        "source_quote": "In single-dose studies, TK data should be obtained to determine the relationship between dose and systemic exposure, particularly at doses intended to support Phase 1 clinical doses.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-009",
+        "rule": "In repeat-dose toxicity studies, TK data should generally be obtained on the first and last days of dosing to determine whether accumulation has occurred and whether exposure has changed over the dosing period.",
+        "source_section": "Section 3 — Repeat-Dose Studies",
+        "source_quote": "In repeat-dose studies, TK data should generally be obtained on the first and last days of dosing to determine if accumulation has occurred and if exposure has changed over the dosing period.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3A-010",
+        "rule": "For reproductive and developmental toxicity studies, TK data should be obtained to confirm adequate systemic exposure to the compound during the period of treatment, as appropriate.",
+        "source_section": "Section 3 — Reproductive Toxicity Studies",
+        "source_quote": "For reproductive toxicity studies, TK data should be obtained to confirm adequate systemic exposure during treatment.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s3b_tissue_distribution": {
+    "description": "ICH S3B — Pharmacokinetics: Guidance for Repeated Dose Tissue Distribution Studies",
+    "rules": [
+      {
+        "id": "S3B-001",
+        "rule": "Repeated dose tissue distribution studies are indicated when: (1) the half-life of the compound in tissues is significantly longer than in plasma; (2) tissue concentrations are disproportionately high relative to plasma; (3) single dose distribution data are inadequate to predict distribution at steady state; or (4) accumulation in tissues suggests toxicological relevance.",
+        "source_section": "Section 2 — When Repeated Dose Tissue Distribution Studies Are Needed",
+        "source_quote": "Repeated dose tissue distribution studies are indicated when: the half-life in tissue is significantly longer than in plasma; tissue concentrations are disproportionately high relative to plasma; single-dose data are inadequate to predict steady-state distribution; or accumulation in tissues suggests toxicological relevance.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3B-002",
+        "rule": "When repeated dose tissue distribution studies are conducted, the minimum dosing duration is 1 week and the maximum is generally 3 weeks, unless a longer period is scientifically justified.",
+        "source_section": "Section 3 — Study Design",
+        "source_quote": "The minimum dosing duration for repeated dose tissue distribution studies is 1 week; the maximum is generally 3 weeks unless a longer period is scientifically justified.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3B-003",
+        "rule": "Repeated dose tissue distribution studies should be conducted using a radiolabelled compound or validated alternative methods (such as quantitative whole-body autoradiography or non-radioactive analytical methods) when the analytical sensitivity of those methods is adequate.",
+        "source_section": "Section 3 — Methods",
+        "source_quote": "Studies should be conducted using a radiolabelled compound or validated alternative methods where the analytical sensitivity is adequate.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3B-004",
+        "rule": "Repeated dose tissue distribution data should be used to determine whether the compound and/or its metabolites accumulate in tissues that are not adequately monitored by conventional clinical pathology or histopathology.",
+        "source_section": "Section 2 — Purpose",
+        "source_quote": "These studies should be used to determine whether the compound and/or its metabolites accumulate in tissues not adequately monitored by conventional toxicological methods.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3B-005",
+        "rule": "Repeated dose tissue distribution studies should, where possible, be performed in the same animal species and strain used for the toxicological studies, and at dose levels comparable to those used in the toxicity program.",
+        "source_section": "Section 3 — Study Design",
+        "source_quote": "These studies should, where possible, be performed in the same animal species and strain as the toxicological studies, at comparable dose levels.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S3B-006",
+        "rule": "If the single-dose tissue distribution study indicates that there are no tissues retaining the compound at significantly higher concentrations than plasma after a single dose, a repeated dose tissue distribution study may not be required.",
+        "source_section": "Section 2 — When Repeated Dose Tissue Distribution Studies Are Needed",
+        "source_quote": "If single-dose data indicate that no tissues retain compound at significantly higher concentrations than plasma, a repeated dose tissue distribution study may not be required.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s4_chronic_toxicity": {
+    "description": "ICH S4 — Duration of Chronic Toxicity Testing in Animals (Rodent and Non-Rodent Toxicity Testing)",
+    "rules": [
+      {
+        "id": "S4-001",
+        "rule": "The recommended duration for chronic toxicity studies in rodents is 6 months.",
+        "source_section": "Section 2 — Chronic Toxicity Study Durations",
+        "source_quote": "The recommended duration for chronic toxicity studies in rodents is 6 months.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S4-002",
+        "rule": "The recommended duration for chronic toxicity studies in non-rodents is 9 months.",
+        "source_section": "Section 2 — Chronic Toxicity Study Durations",
+        "source_quote": "The recommended duration for chronic toxicity studies in non-rodents is 9 months.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S4-003",
+        "rule": "12-month non-rodent toxicity studies are generally not necessary and are not routinely required by regulatory authorities. The 9-month non-rodent study is harmonized across ICH regions.",
+        "source_section": "Section 2 — Chronic Toxicity Study Durations",
+        "source_quote": "12-month non-rodent studies are generally not necessary. The 9-month non-rodent study is the harmonized requirement across ICH regions.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S4-004",
+        "rule": "For pharmaceuticals intended for clinical use of 6 months or more, the 6-month rodent and 9-month non-rodent chronic toxicity studies are required to support marketing authorization.",
+        "source_section": "Section 1 — Introduction and Scope",
+        "source_quote": "For pharmaceuticals intended for use of 6 months or more, 6-month rodent and 9-month non-rodent chronic toxicity studies are required to support marketing authorization.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S4-005",
+        "rule": "The dog is the most commonly used non-rodent species for chronic toxicity studies; the cynomolgus monkey is an acceptable alternative where pharmacological or metabolic considerations favor its use.",
+        "source_section": "Section 3 — Species Selection",
+        "source_quote": "The dog is the most commonly used non-rodent species; the cynomolgus monkey is an acceptable alternative where pharmacological or metabolic considerations favor its use.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S4-006",
+        "rule": "The chronic toxicity study in rodents should be conducted before or concurrently with carcinogenicity studies, and typically should be completed before large-scale or long-term clinical trials.",
+        "source_section": "Section 4 — Timing",
+        "source_quote": "The chronic rodent study should be conducted before or concurrently with carcinogenicity studies, and typically completed before large-scale or long-term clinical trials.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s5_r3_reproductive_toxicity": {
+    "description": "ICH S5(R3) — Detection of Toxicity to Reproduction for Medicinal Products and Toxicity to Male Fertility",
+    "rules": [
+      {
+        "id": "S5-001",
+        "rule": "The standard package for reproductive and developmental toxicity (DART) testing consists of three studies: (1) Fertility and Early Embryonic Development (FEED) study; (2) Embryo-Fetal Development (EFD) study in two species; and (3) Pre- and Postnatal Development (PPND) study including maternal function.",
+        "source_section": "Section 3 — General Considerations: Three-Study Design",
+        "source_quote": "The standard DART testing package consists of three studies: Fertility and Early Embryonic Development; Embryo-Fetal Development in two species; and Pre- and Postnatal Development including maternal function.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-002",
+        "rule": "The EFD toxicity study must be conducted in two species; one rodent (preferably the rat) and one non-rodent species (preferably the rabbit). The rat and rabbit are considered routine species for this study.",
+        "source_section": "Section 4 — In Vivo Study Design: EFD",
+        "source_quote": "The EFD toxicity study must be conducted in two species; one rodent (rat preferred) and one non-rodent (rabbit preferred).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-003",
+        "rule": "The high dose in EFD and PPND studies should achieve at least a 25-fold exposure margin (AUC or Cmax) relative to the maximum recommended human dose (MRHD), unless limited by maternal toxicity.",
+        "source_section": "Section 6.1.3 — Exposure Margin",
+        "source_quote": "The high dose in EFD and PPND studies should achieve at least a 25-fold exposure margin (AUC or Cmax) relative to human exposure at the MRHD, unless limited by maternal toxicity.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-004",
+        "rule": "The limit dose for reproductive toxicity studies is 1 g/kg/day. This applies when there is no specific cause for concern at higher doses.",
+        "source_section": "Section 6.1.5 — Limit Dose",
+        "source_quote": "The limit dose for reproductive toxicity studies is 1 g/kg/day.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-005",
+        "rule": "For biopharmaceuticals with a pharmacologically relevant species, the high dose should achieve a 10-fold exposure multiple relative to human clinical exposure where possible.",
+        "source_section": "Section 6.1.3.1 — Biopharmaceuticals",
+        "source_quote": "For biopharmaceuticals, the high dose should achieve a 10-fold exposure multiple relative to human clinical exposure where possible.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-006",
+        "rule": "In the FEED study, males should be dosed for at least 2 weeks prior to cohabitation through at least confirmation of mating. When testicular toxicity has been identified, the pre-cohabitation dosing period for males should be extended to at least 10 weeks to cover a full spermatogenic cycle.",
+        "source_section": "Section 4.1 — FEED Study Design",
+        "source_quote": "Males should be dosed at least 2 weeks prior to cohabitation through confirmation of mating. When testicular toxicity is identified, pre-cohabitation dosing should be extended to at least 10 weeks.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-007",
+        "rule": "In the FEED study, females should be dosed for at least 2 weeks prior to cohabitation through implantation (GD6). Daily estrous cycle evaluation should commence at least 2 weeks before cohabitation.",
+        "source_section": "Section 4.1 — FEED Study Design / Annex Table 2",
+        "source_quote": "Females should be dosed at least 2 weeks prior to cohabitation through implantation (GD6). Estrous cycle evaluation should commence at least 2 weeks before cohabitation.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-008",
+        "rule": "For rodent and rabbit EFD and PPND studies, evaluation of 16 to 20 litters per group is recommended. Below 16 litters, inter-study results become inconsistent; above 20-24 litters, consistency and precision are not greatly enhanced.",
+        "source_section": "Annex 1, Section 1.1 — In Vivo Study Design Considerations",
+        "source_quote": "Evaluation of 16 to 20 litters for rodents and rabbits provides a degree of consistency among studies. Below 16 litters inter-study results become inconsistent, and above 20 to 24 litters per group, consistency and precision is not greatly enhanced.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-009",
+        "rule": "The preliminary EFD (pEFD) toxicity study uses a minimum of 6 pregnant animals per group, covers organogenesis, and assesses fetal survival, fetal weight, and external and soft tissue alterations. It can support clinical trials in women of childbearing potential (WOCBP) up to 150 subjects for a duration of up to 3 months.",
+        "source_section": "Section 4.2.3 — Preliminary EFD (pEFD) and Clinical Exemption",
+        "source_quote": "A pEFD study with a minimum of 6 pregnant animals per group can support clinical trials including up to 150 WOCBP for a duration up to 3 months.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-010",
+        "rule": "Increased concern for DART risk assessment arises when the NOAEL in animals occurs at exposures less than 10-fold the human exposure at the MRHD. Effects limited to more than 25-fold the human exposure at the MRHD are usually of minor concern for clinical use.",
+        "source_section": "Section 9 — Risk Assessment",
+        "source_quote": "There is increased concern when the NOAEL occurs at exposures less than 10-fold the human exposure at the MRHD; above this threshold, concern is reduced. Effects that are limited to occurrence at more than 25-fold the human exposure at the MRHD are usually of minor concern.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-011",
+        "rule": "Developmental toxicity observed in the presence of maternal toxicity should be considered carefully; it should not be assumed that developmental toxicity is secondary to maternal toxicity unless a relationship is demonstrated de novo or relevant published literature can be cited.",
+        "source_section": "Section 9 — Risk Assessment: Parental Toxicity",
+        "source_quote": "It should not be assumed that developmental toxicity is secondary to maternal toxicity, unless such a relationship is demonstrated de novo, or relevant published literature can be cited.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S5-012",
+        "rule": "An analysis of 22 known or presumed human teratogens showed that the MEFL (minimum effective fetal lethality) LOAEL was less than 6-fold the MRHD in at least one species. This supports the scientific basis for the 25-fold EFD high dose selection criterion as sufficient to detect teratogenic hazards.",
+        "source_section": "Section 10 — Endnotes, Note 2",
+        "source_quote": "An analysis of 22 known or presumed human teratogens showed that if MEFL was observed, exposure at the LOAEL in at least one species was < 6-fold the exposure at the MRHD. This indicates that using a > 25-fold exposure ratio for high-dose selection in EFD studies would have been sufficient to detect the teratogenic hazard for all these pharmaceuticals.",
+        "verification_status": "verbatim"
+      }
+    ]
+  },
+
+  "s8_immunotoxicology": {
+    "description": "ICH S8 — Immunotoxicity Studies for Human Pharmaceuticals",
+    "rules": [
+      {
+        "id": "S8-001",
+        "rule": "All new human pharmaceuticals (non-biologics) should be evaluated for the potential to produce immunotoxicity. Immunotoxicity is defined for this guideline as unintended immunosuppression or immunoenhancement; drug-induced hypersensitivity and autoimmunity are excluded.",
+        "source_section": "Section 1.1 — Objectives and Section 1.4 — Overview",
+        "source_quote": "All new human pharmaceuticals should be evaluated for the potential to produce immunotoxicity. Immunotoxicity is, for the purpose of this guideline, defined as unintended immunosuppression or enhancement. Drug-induced hypersensitivity and autoimmunity are excluded.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-002",
+        "rule": "This guideline does not apply to biotechnology-derived pharmaceutical products covered by ICH S6 Guideline and other biologicals.",
+        "source_section": "Section 1.3 — Scope of the Guideline",
+        "source_quote": "The guideline does not apply to biotechnology-derived pharmaceutical products covered by ICH S6 Guideline and other biologicals.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-003",
+        "rule": "Six factors should be considered in the evaluation of potential immunotoxicity: (1) findings from standard toxicity studies (STS); (2) pharmacological properties of the drug; (3) intended patient population; (4) structural similarities to known immunomodulators; (5) disposition of the drug; and (6) signs observed in clinical trials or clinical use.",
+        "source_section": "Section 2.1 — Factors to Consider in the Evaluation of Potential Immunotoxicity",
+        "source_quote": "Factors to consider that might prompt additional immunotoxicity studies can be identified in the following areas: (1) findings from STS; (2) the pharmacological properties of the drug; (3) the intended patient population; (4) structural similarities to known immunomodulators; (5) the disposition of the drug; and (6) clinical information.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-004",
+        "rule": "From standard toxicity studies, five categories of signs should trigger consideration of additional immunotoxicity testing: (1) hematological changes (leukocytopenia/leukocytosis, granulocytopenia/granulocytosis, lymphopenia/lymphocytosis); (2) alterations in immune organ weights and/or histology; (3) changes in serum globulins without plausible explanation; (4) increased incidence of infections; and (5) increased occurrence of tumors in the absence of other plausible causes.",
+        "source_section": "Section 2.1.1 — Standard Toxicity Studies",
+        "source_quote": "Signs that should be taken into consideration are: Hematological changes such as leukocytopenia/leukocytosis, granulocytopenia/granulocytosis, or lymphopenia/lymphocytosis; Alterations in immune system organ weights and/or histology; Changes in serum globulins that occur without a plausible explanation; Increased incidence of infections; Increased occurrence of tumors.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-005",
+        "rule": "A weight of evidence (WoE) review should be performed on all six factors to determine whether a cause for concern exists. A finding of sufficient magnitude in a single area should trigger additional immunotoxicity studies. Findings from two or more factors, each insufficient alone, could also trigger additional studies.",
+        "source_section": "Section 2.2 — Weight of Evidence Review",
+        "source_quote": "A finding of sufficient magnitude in a single area should trigger additional immunotoxicity studies. Findings from two or more factors, each one of which would not be sufficient on its own, could trigger additional studies. If additional immunotoxicity studies are not performed, the sponsor should provide justification.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-006",
+        "rule": "When additional immunotoxicity studies are indicated by the WoE review, they should be completed before exposure of a large number of patients, usually Phase III. If the target patient population is immunocompromised, immunotoxicity testing can be initiated at an earlier timepoint.",
+        "source_section": "Section 4 — Timing of Immunotoxicity Testing",
+        "source_quote": "If the weight-of-evidence review indicates that additional immunotoxicity studies are appropriate, these should be completed before exposure of a large population of patients, usually Phase III... If the target patient population is immunocompromised, immunotoxicity testing can be initiated at an earlier time point.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-007",
+        "rule": "The recommended immunotoxicity assay for immune function evaluation is the T-cell dependent antibody response (TDAR). The TDAR should be performed using a recognized T-cell dependent antigen such as sheep red blood cells (SRBC) or keyhole limpet hemocyanin (KLH).",
+        "source_section": "Section 3.2 — Selection of Assays; Appendix Section 2.2",
+        "source_quote": "It is recommended that an immune function study be conducted, such as a T-cell dependent antibody response (TDAR). The TDAR should be performed using a recognized T-cell dependent antigen (e.g., sheep red blood cells (SRBC) or keyhole limpet hemocyanin (KLH)).",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-008",
+        "rule": "The standard immunotoxicity study design in rodents is a 28-day study with consecutive daily dosing. The high dose should be above the NOAEL but below a level inducing changes secondary to stress.",
+        "source_section": "Section 3.3 — Study Design",
+        "source_quote": "A generally accepted study design in rodents is a 28 day study with consecutive daily dosing... The high dose should be above the no observed adverse effect level (NOAEL) but below a level inducing changes secondary to stress.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-009",
+        "rule": "Standard toxicity studies should evaluate immunotoxicological parameters including: hematology (total and absolute differential leukocyte counts), clinical chemistry (globulin levels and A/G ratios), gross pathology (lymphoid organs/tissues), organ weights (thymus, spleen; optional: lymph nodes), and histology (thymus, spleen, draining lymph node, at least one additional lymph node, bone marrow, Peyer's patches [oral], BALT [inhalation], NALT [inhalation/nasal]).",
+        "source_section": "Appendix Section 1 — Standard Toxicity Studies Parameters",
+        "source_quote": "Parameters to be evaluated: Hematology — Total and absolute differential leukocyte counts; Clinical Chemistry — Globulin levels and A/G ratios; Gross pathology — Lymphoid organs/tissues; Organ weights — Thymus, spleen (optional: lymph nodes); Histology — Thymus, spleen, draining lymph node and at least one additional lymph node, bone marrow, Peyer's patch, BALT, NALT.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-010",
+        "rule": "Immunotoxicity studies are expected to be performed in compliance with Good Laboratory Practice (GLP). Some specialized assays may not fully comply with GLP, and this should be acknowledged.",
+        "source_section": "Appendix Section 2.1 — Assay Characterization and Validation",
+        "source_quote": "Immunotoxicity studies are expected to be performed in compliance with Good Laboratory Practice (GLP). It is recognized that some specialized assays, such as those described below, might not comply fully with GLP.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-011",
+        "rule": "If the compound and/or its metabolites are retained at high concentrations in cells of the immune system, additional immunotoxicity testing should be considered.",
+        "source_section": "Section 2.1.5 — Disposition of the Drug",
+        "source_quote": "If the compound and/or its metabolites are retained at high concentrations in cells of the immune system, additional immunotoxicity testing should be considered.",
+        "verification_status": "verbatim"
+      },
+      {
+        "id": "S8-012",
+        "rule": "Compounds structurally similar to compounds with known immunosuppressive properties should be considered for additional immunotoxicity testing.",
+        "source_section": "Section 2.1.4 — Structural Similarity",
+        "source_quote": "Compounds structurally similar to compounds with known immunosuppressive properties should also be considered for additional immunotoxicity testing.",
+        "verification_status": "verbatim"
+      }
+    ]
+  }
+}

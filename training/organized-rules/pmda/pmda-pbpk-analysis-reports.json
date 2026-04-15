@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "title": "Guidelines for Analysis Reports Involving Physiologically Based Pharmacokinetic Models",
+    "source_file": "pmda-clinical-pharmacokinetics.pdf",
+    "source_directory": "training/stage-1/pmda-guidelines-v2/",
+    "note_on_filename": "FILE MISLABELED — filename suggests clinical pharmacokinetics but actual content is PBPK model analysis reporting guidelines",
+    "document_date": "2020-12-21",
+    "document_version": "PSEHB/PED Notification No. 1221-1",
+    "issuing_authority": "Director of Pharmaceutical Evaluation Division, Pharmaceutical Safety and Environmental Health Bureau, Ministry of Health, Labour and Welfare (MHLW)",
+    "extraction_date": "2026-03-24",
+    "extraction_run": "output-v5",
+    "total_rules": 15,
+    "pages_reviewed": "1-12 of 12 (complete document)"
+  },
+  "rules": [
+    {
+      "rule_id": "PMDA-PBPK-001",
+      "rule_text": "PBPK model analysis reports must be submitted to the Japanese regulatory authority for applications for approval and clinical trial consultations throughout the lifecycle of a drug.",
+      "source_section": "Section 1.2 — Scope",
+      "source_page": 3,
+      "verbatim_quote": "This guideline applies to PBPK model analyses to be submitted to the regulatory authority in applications for approval and clinical trial consultations, etc., throughout the life-cycle of a drug.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": ["PSEHB/PED Notification No. 0723-4 — Guideline on Drug Interaction for Drug Development"]
+    },
+    {
+      "rule_id": "PMDA-PBPK-002",
+      "rule_text": "The analysis report must include a Summary section that covers: the objective of the PBPK model analysis, methods (background information used for model building, model building and model validation methods), results, discussion, and important conclusions.",
+      "source_section": "Section 2.1 — Summary",
+      "source_page": 3,
+      "verbatim_quote": "This section should summarize the objective of the conduct of PBPK model analysis, methods (background information used for model building, methods for model buiding and model validation, etc.), results, discussion and important conclusion.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-003",
+      "rule_text": "All assumptions on physiological and drug information made during PBPK model building must be clearly described. The validity of assumptions must be assessed by non-clinical or clinical studies or simulation, unless the rationale and validity of the assumptions are fully clarified.",
+      "source_section": "Section 2.4.1 — Assumptions",
+      "source_page": 4,
+      "verbatim_quote": "Assumptions on physiological and drug information as well as the assumptions made in the model building need to be clearly described, because they are important in investigating and understanding uncertainties in the model and analysis results... Except for cases in which the rationales and validity of the assumptions made are fully clarified or confirmation thereof is not feasible, the validity of the assumptions made should be assessed by non-clinical or clinical studies or simulation to be conducted subsequently.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Exception only when rationales and validity of assumptions are fully clarified, or confirmation is not feasible.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-004",
+      "rule_text": "System specific parameters and their sources must be described using tables; setting rationales for parameter values must be stated. When simulation assumes a Japanese population, this must be clearly stated with parameter values for the Japanese population explicitly described.",
+      "source_section": "Section 2.4.2 — Information of system specific parameters",
+      "source_page": 5,
+      "verbatim_quote": "System specific parameters and their sources should be described, using tables, etc. References as data sources should be attached as necessary, and the setting rationales for parameter values should be described... For example, if a simulation assuming a population of Japanese subjects was conducted, this should be clearly described with information of parameter values in the Japanese population.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "When commercially available PBPK platform default parameters are used, a comprehensible statement that defaults were used for that specific platform must be included.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-005",
+      "rule_text": "Drug parameters used in the PBPK model and their sources must be clearly described using tables, with study reports and references attached to provide sources including physicochemical parameters and in vitro data. When multiple sources exist for a parameter, sensitivity analysis must be conducted and effects on overall outcome discussed.",
+      "source_section": "Section 2.4.3 — Drug information related to model building",
+      "source_page": 5,
+      "verbatim_quote": "Drug parameters used in the model and their sources should be clearly described using tables, etc. In addition, study reports and references should be attached to provide the source of drug parameters (including physicochemical parameters and in vitro data)... If any parameter used has multiple sources, the selected parameter value should be validated, and its effects on overall outcome should be discussed using approaches such as sensitivity analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-006",
+      "rule_text": "The simulation section of the analysis report must include all of the following: route of administration for investigational and concomitant drugs, dosage and administration and dosage form, dosing conditions (fasting, postprandial, etc.), population and study conditions required for simulation, and number of subjects and trials assumed for each simulation.",
+      "source_section": "Section 2.4.4 — Simulation",
+      "source_page": 6,
+      "verbatim_quote": "Simulation conditions and validity thereof should include the following information concerning model building, validation, and application of the model: Route of administration for the investigational drug and concomitant drugs; Dosage and administration as well as dosage form; Dosing conditions (fasting, postprandial, etc.); Information of the population and study conditions required for simulation (e.g., subject background); Number of subjects and trials assumed for each simulation.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-007",
+      "rule_text": "Sensitivity analyses must be conducted specifically for PBPK model parameters that are likely to influence simulation results and are highly uncertain. For key assumptions, worst-case sensitivity analyses are recommended. In pediatric population PBPK analyses, sensitivity analyses for drug-metabolizing enzyme and transporter parameters involved in clearance must be conducted.",
+      "source_section": "Section 2.4.5 — Methods for model qualification",
+      "source_page": 6,
+      "verbatim_quote": "Sensitivity analyses should be conducted specifically for parameters that are likely to influence the simulation results and discussion thereof and that are highly uncertain... For assumptions of key importance, sensitivity analyses assuming 'worst-cases' are recommended... in conducting a PBPK model analysis in a pediatric population, it is desirable to conduct sensitivity analyses for parameters concerning the maturity of drug-metabolizing enzymes and transporters involved in clearance as necessary, for assessment of uncertainty.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Conservative investigations are recommended; exact approach may vary by purpose.",
+      "cross_references": ["PMSB/ELD Notification No. 1334 — ICH E11", "PSEHB/PED Notification No. 1227-5 — ICH E11(R1)"]
+    },
+    {
+      "rule_id": "PMDA-PBPK-008",
+      "rule_text": "The results section must present modeling results sufficient to demonstrate appropriateness of the PBPK model for the objective of modeling and simulation and the robustness of the model. When predictive performance is not acceptable for the objective, improvement or refinement of the model must be considered.",
+      "source_section": "Section 2.5.1 — Results of model qualification",
+      "source_page": 7,
+      "verbatim_quote": "Modeling results and information sufficient to demonstrate the following should be presented: (1) appropriateness of the resulting PBPK model for the objective of modeling and simulation as well as investigations of issues; (2) robustness of the model. When the predictive performance of the PBPK model (including the uncertainty of model parameters) is not acceptable for the objective of modeling and simulation, improvement or refinement of the model should be considered.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "If model improvement is difficult, the model may not be applicable for simulation under that scenario.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-009",
+      "rule_text": "In evaluating predictive performance of a PBPK model, comparisons of predicted and observed pharmacokinetic profiles must be graphically represented as overlay plots including both linear and semi-log plots. Descriptive statistics must be presented for comparison of pharmacokinetic parameters.",
+      "source_section": "Section 2.5.1 — Results of model qualification",
+      "source_page": 7,
+      "verbatim_quote": "In evaluating the predictive performance, comparisons of predicted and observed data of pharmacokinetic profiles of a drug should be graphically represented as overlay plots (linear and semi-log plots)... In comparing pharmacokinetic parameters obtained from predicted and observed data, descriptive statistics, etc., should be presented as tabular data.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-010",
+      "rule_text": "When PBPK simulation results are used for decision-making in clinical development or clinical use (as alternative to clinical trial data, for determining necessity/degree of package insert alerts, or for dose adjustment rationale), the validity of such use must be discussed, including impact on drug efficacy and safety and associated risks.",
+      "source_section": "Section 2.6 — Discussion",
+      "source_page": 8,
+      "verbatim_quote": "When the simulation results obtained from PBPK model analysis are used for decision-making in clinical development or clinical use of the drug (alternative to clinical trial data, necessity or degree of alerts in the package insert, rationale for dose adjustment, etc.), the validity of such use should be discussed, including the impact on efficacy and safety of a drug, as well as associated risks.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-011",
+      "rule_text": "When a commercially available PBPK platform is used, the name and version of the software must be described in the analysis report and its predictive performance must be verified according to the objective of analysis. Any modifications to the platform must be clearly explained and validated in the analysis report.",
+      "source_section": "Section 3 — PBPK platforms",
+      "source_page": 9,
+      "verbatim_quote": "When a commercially available PBPK platform is used in a PBPK model analysis, basic information (including the name and version of the software used) should be described in the analysis report. When drug parameters and system specific parameters of a commercially available PBPK platform are used, their predictive performance needs to be verified according to the objective of analysis... such modifications and changes should be clearly explained, and use of the modified and changed PBPK platform should be validated in the analysis report.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-012",
+      "rule_text": "For PBPK analyses subjected to electronic data submission (e.g., submission on application for approval), electronic data must be submitted in addition to the analysis report, in accordance with relevant notifications.",
+      "source_section": "Section 4 — Electronic data submission",
+      "source_page": 9,
+      "verbatim_quote": "Concerning the PBPK analysis model subjected to electronic data (e.g., submission on application for approval), electronic data should be submitted in addition to the analysis report, in accordance with a series of relevant notifications, etc.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": ["PSEHB/PED Notification No. 0318-4 — Basic Principles on Electronic Submission of Study Data for New Drug Applications", "PSEHB/PED Notification No. 0124-4 — Practical Operations of Electronic Submission of Study Data"]
+    },
+    {
+      "rule_id": "PMDA-PBPK-013",
+      "rule_text": "The Discussion section of the PBPK analysis report must address the scientific validity of the model, its uncertainty and limitations, the validity of simulation results for the purpose of use, inter-individual variability, impact of sensitivity analysis results, and potential effects of model limitations on interpretation of simulation results.",
+      "source_section": "Section 2.6 — Discussion",
+      "source_page": 8,
+      "verbatim_quote": "This section should discuss the scientific validity of the PBPK model as well as its uncertainty and limitations. This section should also describe the validity of the simulation results according to the purpose of use. The scientific validity of the PBPK model should be discussed considering information such as existing observed values. Depending on the objective of using the simulation results, it is important to consider not only the mean value of each parameter but also the magnitude of inter-individual variability.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-014",
+      "rule_text": "The background information section of the PBPK analysis report must describe drug ADME PK properties from in vivo and in vitro studies; where possible, mass-balance results presenting the fraction of drug absorption, first-pass metabolism and protein binding, and fraction contributions for individual clearance pathways (drug-metabolizing enzymes, transporters, renal excretion) must be provided with references.",
+      "source_section": "Section 2.3 — Background information",
+      "source_page": 3,
+      "verbatim_quote": "The drug information related to model building should be described by emphasizing pharmacokinetic properties in absorption, distribution, metabolism, and excretion obtained from in-vivo and in-vitro studies. If possible, mass-balance results quantitatively presenting the fraction of drug absorption, information of first-pass metabolism and protein binding, and fraction on contribution for individual drug clearance pathways (e.g., drug-metabolizing enzymes, drug transporters, renal excretion) should be provided with references.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "'If possible' qualifier — mass balance results should be provided where available.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-PBPK-015",
+      "rule_text": "The analysis report methods section must provide sufficient information to allow regulators to understand and reproduce the analysis, including: assumptions made during planning, physiological and drug information for modeling, model structure and modeling process, simulation conditions, assessment methods, and the workflow of model building, validation, refinement, and application.",
+      "source_section": "Section 2.4 — Methods of analysis",
+      "source_page": 4,
+      "verbatim_quote": "This section should describe sufficient information to allow regulators to understand and reproduce the details of the analysis (including assumptions made upon planning of the analysis, physiological and drug information related to modeling, the model structure and modeling process, and information concerning simulation conditions and assessment methods, etc.). Concomitantly, the workflow of the model analysis should also be described, including model building, validation, refinement, and application, etc., of the model.",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated.",
+      "cross_references": []
+    }
+  ]
+}

@@ -1,0 +1,1332 @@
+{
+  "metadata": {
+    "title": "ICH Regulatory Rules Extraction",
+    "guidelines": ["M4S(R2)", "Q5D", "Q3C(R9)"],
+    "generated": "2026-03-23",
+    "description": "Complete extraction of all actionable pharmaceutical regulatory rules from ICH M4S(R2), Q5D, and Q3C(R9) guidelines"
+  },
+  "M4S_R2": {
+    "title": "The Common Technical Document for the Registration of Pharmaceuticals for Human Use: Safety — M4S(R2)",
+    "scope": "Module 2 Nonclinical Summaries (2.4 and 2.6) and Module 4 Nonclinical Study Reports in the CTD",
+    "module_2_4_nonclinical_overview": {
+      "section": "2.4",
+      "title": "Nonclinical Overview",
+      "description": "Integrated critical assessment of the pharmacological and toxicological evaluation of the drug",
+      "rules": [
+        {
+          "rule_id": "M4S-2.4-001",
+          "rule": "The Nonclinical Overview must be an integrated critical assessment, not a series of individual study summaries",
+          "source": "M4S(R2) Section 2.4"
+        },
+        {
+          "rule_id": "M4S-2.4-002",
+          "rule": "Maximum length for Nonclinical Overview is approximately 30 pages",
+          "source": "M4S(R2) Section 2.4"
+        },
+        {
+          "rule_id": "M4S-2.4-003",
+          "rule": "The Nonclinical Overview must be written by a qualified expert and reflect integrated interpretation, not mere data listing",
+          "source": "M4S(R2) Section 2.4"
+        },
+        {
+          "rule_id": "M4S-2.4-004",
+          "rule": "The Nonclinical Overview must address the relevance of the animal findings to human safety",
+          "source": "M4S(R2) Section 2.4"
+        },
+        {
+          "rule_id": "M4S-2.4-005",
+          "rule": "The Nonclinical Overview must explicitly discuss deficiencies in the nonclinical program and their impact on risk assessment",
+          "source": "M4S(R2) Section 2.4"
+        }
+      ],
+      "required_sections_sequence": [
+        {
+          "order": 1,
+          "section": "2.4.1",
+          "title": "Overview of the Nonclinical Testing Strategy",
+          "rules": [
+            {
+              "rule_id": "M4S-2.4.1-001",
+              "rule": "Describe the overall strategy for nonclinical testing including why particular studies were or were not conducted",
+              "source": "M4S(R2) Section 2.4.1"
+            },
+            {
+              "rule_id": "M4S-2.4.1-002",
+              "rule": "Address the GLP compliance status of all studies; non-GLP studies must be justified",
+              "source": "M4S(R2) Section 2.4.1"
+            },
+            {
+              "rule_id": "M4S-2.4.1-003",
+              "rule": "Describe the test article: physical-chemical properties, impurity profile, and comparability to clinical material",
+              "source": "M4S(R2) Section 2.4.1"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "section": "2.4.2",
+          "title": "Pharmacology",
+          "rules": [
+            {
+              "rule_id": "M4S-2.4.2-001",
+              "rule": "Summarize the primary pharmacodynamic findings and their relevance to proposed clinical use",
+              "source": "M4S(R2) Section 2.4.2"
+            },
+            {
+              "rule_id": "M4S-2.4.2-002",
+              "rule": "Address secondary pharmacodynamic findings including off-target receptor binding",
+              "source": "M4S(R2) Section 2.4.2"
+            },
+            {
+              "rule_id": "M4S-2.4.2-003",
+              "rule": "Address safety pharmacology findings (CNS, cardiovascular, respiratory) and their clinical relevance",
+              "source": "M4S(R2) Section 2.4.2"
+            },
+            {
+              "rule_id": "M4S-2.4.2-004",
+              "rule": "Address pharmacodynamic drug interactions if studied",
+              "source": "M4S(R2) Section 2.4.2"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "section": "2.4.3",
+          "title": "Pharmacokinetics",
+          "rules": [
+            {
+              "rule_id": "M4S-2.4.3-001",
+              "rule": "Provide integrated assessment of absorption, distribution, metabolism, and excretion (ADME) across species",
+              "source": "M4S(R2) Section 2.4.3"
+            },
+            {
+              "rule_id": "M4S-2.4.3-002",
+              "rule": "Compare nonclinical PK parameters to human PK data where available",
+              "source": "M4S(R2) Section 2.4.3"
+            },
+            {
+              "rule_id": "M4S-2.4.3-003",
+              "rule": "Discuss the relevance of metabolite profiles between animal species and humans",
+              "source": "M4S(R2) Section 2.4.3"
+            },
+            {
+              "rule_id": "M4S-2.4.3-004",
+              "rule": "Discuss plasma protein binding and its relevance to toxicological findings",
+              "source": "M4S(R2) Section 2.4.3"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "section": "2.4.4",
+          "title": "Toxicology",
+          "rules": [
+            {
+              "rule_id": "M4S-2.4.4-001",
+              "rule": "Provide integrated assessment of all toxicity findings across all study types",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-002",
+              "rule": "Identify target organs of toxicity and dose/exposure relationships (NOAEL, LOAEL) for each",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-003",
+              "rule": "Discuss reversibility of observed toxicities",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-004",
+              "rule": "Calculate and discuss human safety margins based on AUC or other appropriate exposure metric comparisons",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-005",
+              "rule": "Discuss genotoxicity findings and their weight-of-evidence interpretation",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-006",
+              "rule": "Address carcinogenicity data and mode-of-action analysis for any tumors observed",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-007",
+              "rule": "Reproductive and developmental toxicity findings must be assessed for relevance to clinical use populations (pregnant women, women of childbearing potential)",
+              "source": "M4S(R2) Section 2.4.4"
+            },
+            {
+              "rule_id": "M4S-2.4.4-008",
+              "rule": "Local tolerance findings must be assessed for the proposed clinical route(s) of administration",
+              "source": "M4S(R2) Section 2.4.4"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "section": "2.4.5",
+          "title": "Integrated Overview and Conclusions",
+          "rules": [
+            {
+              "rule_id": "M4S-2.4.5-001",
+              "rule": "Provide integrated benefit-risk conclusions from nonclinical perspective",
+              "source": "M4S(R2) Section 2.4.5"
+            },
+            {
+              "rule_id": "M4S-2.4.5-002",
+              "rule": "Identify nonclinical issues relevant to safe use in humans and any monitoring requirements they suggest",
+              "source": "M4S(R2) Section 2.4.5"
+            },
+            {
+              "rule_id": "M4S-2.4.5-003",
+              "rule": "Discuss consistency between nonclinical and clinical findings where clinical data are available",
+              "source": "M4S(R2) Section 2.4.5"
+            }
+          ]
+        }
+      ]
+    },
+    "module_2_6_nonclinical_summaries": {
+      "section": "2.6",
+      "title": "Nonclinical Written and Tabulated Summaries",
+      "general_rules": [
+        {
+          "rule_id": "M4S-2.6-001",
+          "rule": "Section 2.6 consists of both Written Summaries and Tabulated Summaries; both are required",
+          "source": "M4S(R2) Section 2.6"
+        },
+        {
+          "rule_id": "M4S-2.6-002",
+          "rule": "Written Summaries are factual summaries of the data; they are distinct from the interpretive Nonclinical Overview in 2.4",
+          "source": "M4S(R2) Section 2.6"
+        },
+        {
+          "rule_id": "M4S-2.6-003",
+          "rule": "Tabulated Summaries use the standardized templates defined in Appendix B of M4S(R2)",
+          "source": "M4S(R2) Appendix B"
+        },
+        {
+          "rule_id": "M4S-2.6-004",
+          "rule": "Each study must be identified with its Location in CTD (Volume and Section number)",
+          "source": "M4S(R2) Appendix B templates"
+        },
+        {
+          "rule_id": "M4S-2.6-005",
+          "rule": "GLP compliance status must be indicated for each study in the tabulated summaries",
+          "source": "M4S(R2) Appendix B templates 2.6.7.1, 2.6.7.7"
+        },
+        {
+          "rule_id": "M4S-2.6-006",
+          "rule": "For repeat-dose toxicity tabulated summaries (2.6.7.6), the highest NOAEL is underlined in the Doses column",
+          "source": "M4S(R2) Appendix B Table 2.6.7.1 footnote"
+        },
+        {
+          "rule_id": "M4S-2.6-007",
+          "rule": "Studies in tabulated summaries must be listed in the same order as they appear in the CTD",
+          "source": "M4S(R2) Appendix B Table 2.6.7.1 note 2, Table 2.6.7.2 note 2"
+        },
+        {
+          "rule_id": "M4S-2.6-008",
+          "rule": "Human data must be included for comparison in pharmacokinetic tabulated summaries where available",
+          "source": "M4S(R2) Appendix B Table 2.6.5.x notes"
+        }
+      ],
+      "subsections": [
+        {
+          "section": "2.6.1",
+          "title": "Introduction",
+          "type": "Written",
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.1-001",
+              "rule": "Brief introduction to the pharmacological class and intended clinical use; sets context for subsequent summaries",
+              "source": "M4S(R2) Section 2.6.1"
+            }
+          ]
+        },
+        {
+          "section": "2.6.2",
+          "title": "Pharmacology Written Summary",
+          "type": "Written",
+          "subsections": ["2.6.2.1 Primary Pharmacodynamics", "2.6.2.2 Secondary Pharmacodynamics", "2.6.2.3 Safety Pharmacology", "2.6.2.4 Pharmacodynamic Drug Interactions"],
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.2-001",
+              "rule": "Written Summary must cover primary pharmacodynamics, secondary pharmacodynamics, safety pharmacology, and PD drug interactions in that sequence",
+              "source": "M4S(R2) Section 2.6.2"
+            },
+            {
+              "rule_id": "M4S-2.6.2-002",
+              "rule": "In vitro studies must be presented before in vivo studies within each subsection",
+              "source": "M4S(R2) Section 2.6.2"
+            }
+          ]
+        },
+        {
+          "section": "2.6.3",
+          "title": "Pharmacology Tabulated Summary",
+          "type": "Tabulated",
+          "templates": [
+            {
+              "template": "2.6.3.1",
+              "title": "Pharmacology: Overview",
+              "columns": ["Type of Study", "Test System/Species", "Method", "Doses/Concentrations", "Results/Effects", "GLP Compliance", "Study Number", "Location Vol. Section"]
+            },
+            {
+              "template": "2.6.3.4",
+              "title": "Safety Pharmacology",
+              "systems_required": ["CNS", "Cardiovascular", "Respiratory", "Other"],
+              "columns": ["System Studied", "Species/Strain", "Method/Route", "Doses", "Results", "GLP Compliance", "Study Number", "Location in CTD"]
+            }
+          ],
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.3-001",
+              "rule": "Tabulated summaries must cover primary pharmacology, secondary pharmacology, safety pharmacology, and PD drug interactions",
+              "source": "M4S(R2) Appendix B Section 2.6.3"
+            }
+          ]
+        },
+        {
+          "section": "2.6.4",
+          "title": "Pharmacokinetics Written Summary",
+          "type": "Written",
+          "subsections": [
+            "2.6.4.1 Analytical methods and validation reports",
+            "2.6.4.2 Absorption",
+            "2.6.4.3 Distribution",
+            "2.6.4.4 Metabolism",
+            "2.6.4.5 Excretion",
+            "2.6.4.6 PK drug interactions (nonclinical)",
+            "2.6.4.7 Other PK studies"
+          ],
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.4-001",
+              "rule": "PK Written Summary must cover: analytical methods, absorption, distribution, metabolism, excretion, drug interactions, and other studies in that sequence",
+              "source": "M4S(R2) Section 2.6.4"
+            },
+            {
+              "rule_id": "M4S-2.6.4-002",
+              "rule": "Human PK data should be included for comparison where available",
+              "source": "M4S(R2) Section 2.6.4"
+            }
+          ]
+        },
+        {
+          "section": "2.6.5",
+          "title": "Pharmacokinetics Tabulated Summary",
+          "type": "Tabulated",
+          "templates": [
+            {"template": "2.6.5.1", "title": "Pharmacokinetics: Overview (list of all PK studies)"},
+            {"template": "2.6.5.2", "title": "Pharmacokinetics: Analytical Methods and Validation Reports"},
+            {"template": "2.6.5.3", "title": "Pharmacokinetics: Absorption — In Vitro", "note": "Caco-2, permeability studies"},
+            {"template": "2.6.5.4", "title": "Pharmacokinetics: Absorption — In Vivo", "columns": ["Species", "Gender/N", "Feeding", "Vehicle", "Route", "Dose mg/kg", "t_max", "C_max", "AUC", "F%", "Study No.", "Location CTD"]},
+            {"template": "2.6.5.5", "title": "Pharmacokinetics: Distribution — Plasma Protein Binding"},
+            {"template": "2.6.5.6", "title": "Pharmacokinetics: Distribution — Blood/Plasma Ratio"},
+            {"template": "2.6.5.7", "title": "Pharmacokinetics: Distribution — Tissue Distribution"},
+            {"template": "2.6.5.8", "title": "Pharmacokinetics: Distribution — Placental Transfer and Secretion into Milk"},
+            {"template": "2.6.5.9", "title": "Pharmacokinetics: Distribution — Other"},
+            {"template": "2.6.5.10", "title": "Pharmacokinetics: Metabolism In Vitro", "fields": ["Study system", "Time", "Concentration", "Compounds (Parent, M-1, M-2)"], "note": "Human data should be included for comparison if available"},
+            {"template": "2.6.5.11", "title": "Pharmacokinetics: Possible Metabolic Pathways", "note": "Illustrate possible metabolic map indicating species in which metabolic reactions occur"},
+            {"template": "2.6.5.12", "title": "Pharmacokinetics: Induction/Inhibition of Drug-Metabolizing Enzymes", "note": "Nonclinical studies only"},
+            {"template": "2.6.5.13", "title": "Pharmacokinetics: Excretion", "columns": ["Species", "Gender/N", "Feeding condition", "Vehicle/Formulation", "Route", "Dose mg/kg", "Analyte", "Assay", "Excretion route (Urine/Feces/Total)", "Time 0-T hr"], "note": "One column per study; human data at maximum recommended dose for comparison"},
+            {"template": "2.6.5.14", "title": "Pharmacokinetics: Excretion into Bile", "note": "Data may be tabulated as in format of 2.6.5.13"},
+            {"template": "2.6.5.15", "title": "Pharmacokinetics: Drug-Drug Interactions"},
+            {"template": "2.6.5.16", "title": "Pharmacokinetics: Other"}
+          ],
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.5-001",
+              "rule": "Each PK tabulated summary template requires: Test Article (INN), Location in CTD (Vol. Section), Study Number",
+              "source": "M4S(R2) Appendix B"
+            },
+            {
+              "rule_id": "M4S-2.6.5-002",
+              "rule": "Excretion table (2.6.5.13): other routes such as biliary and respiratory should be added if performed",
+              "source": "M4S(R2) Appendix B Table 2.6.5.13 note 4"
+            },
+            {
+              "rule_id": "M4S-2.6.5-003",
+              "rule": "Toxicokinetics overview (2.6.7.3): a 1- to 3-page summary of steady-state TK data in a format facilitating cross-species comparisons including humans",
+              "source": "M4S(R2) Appendix B Table 2.6.7.3"
+            }
+          ]
+        },
+        {
+          "section": "2.6.6",
+          "title": "Toxicology Written Summary",
+          "type": "Written",
+          "subsections": [
+            "2.6.6.1 Single-Dose Toxicity",
+            "2.6.6.2 Repeat-Dose Toxicity",
+            "2.6.6.3 Genotoxicity",
+            "2.6.6.4 Carcinogenicity",
+            "2.6.6.5 Reproductive and Developmental Toxicity",
+            "2.6.6.6 Local Tolerance",
+            "2.6.6.7 Other Toxicity Studies"
+          ],
+          "rules": [
+            {
+              "rule_id": "M4S-2.6.6-001",
+              "rule": "Toxicology Written Summary must cover all seven subsections in sequence: single-dose, repeat-dose, genotoxicity, carcinogenicity, reproductive/developmental, local tolerance, other",
+              "source": "M4S(R2) Section 2.6.6"
+            },
+            {
+              "rule_id": "M4S-2.6.6-002",
+              "rule": "Within repeat-dose toxicity, studies are ordered: rodent before non-rodent; within same species, shorter duration before longer duration",
+              "source": "M4S(R2) Section 2.6.6"
+            },
+            {
+              "rule_id": "M4S-2.6.6-003",
+              "rule": "Within each species, routes of administration are ordered: clinical route first, then other routes",
+              "source": "M4S(R2) Section 2.6.6"
+            }
+          ]
+        },
+        {
+          "section": "2.6.7",
+          "title": "Toxicology Tabulated Summary",
+          "type": "Tabulated",
+          "templates": [
+            {
+              "template": "2.6.7.1",
+              "title": "Toxicology: Overview of All Toxicology Studies",
+              "columns": ["Type of Study", "Species and Strain", "Method of Administration", "Duration of Dosing", "Doses mg/kg^a", "GLP Compliance", "Testing Facility", "Study Number", "Location Vol. Section"],
+              "study_type_rows": ["Single-Dose Toxicity", "Repeat-Dose Toxicity", "Genotoxicity", "Carcinogenicity", "Reproductive and Developmental Toxicity", "Local Tolerance", "Other Toxicity Studies"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.1-001",
+                  "rule": "One line per toxicology report in the same order as the CTD",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.1 note 2"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.1-002",
+                  "rule": "For Repeat-Dose Toxicity, the highest NOAEL (No Observed Adverse-Effect Level) is underlined in the Doses column",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.1 footnote a"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.1-003",
+                  "rule": "The location of each Technical Report in the CTD must be indicated",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.1 note 3"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.2",
+              "title": "Toxicokinetics: Overview of Studies",
+              "columns": ["Type of Study", "Test System", "Method of Administration", "Doses mg/kg", "GLP Compliance", "Study Number", "Location Vol. Section"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.2-001",
+                  "rule": "One line per toxicokinetics report in the same order as the CTD (Section 3, Toxicology)",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.2 note 2"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.3",
+              "title": "Toxicokinetics: Overview of TK Data",
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.3-001",
+                  "rule": "A 1- to 3-page summary (tables and/or figures) of steady-state toxicokinetic data prepared in a format that facilitates comparisons across species including humans",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.3 note 2"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.4",
+              "title": "Toxicology: Drug Substance Batches Used",
+              "columns": ["Batch No.", "Purity %", "Specified Impurities", "Study Number", "Type of Study"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.4-001",
+                  "rule": "All batches used in toxicology studies must be listed in approximate chronological order",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.4 note 2"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.4-002",
+                  "rule": "Toxicology studies in which each batch was used must be identified",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.4 note 3"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.5",
+              "title": "Single-Dose Toxicity",
+              "columns": ["Species/Strain", "Method of Administration (Vehicle/Formulation)", "Doses mg/kg", "Gender and No. per Group", "Observed Maximum Non-Lethal Dose mg/kg", "Approximate Lethal Dose mg/kg", "Noteworthy Findings", "Study Number"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.5-001",
+                  "rule": "All single-dose toxicity studies must be summarized in the same order as the CTD; footnotes should indicate special features such as unusual duration, infusion rate, or age of test subjects",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.5 note 1"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.6",
+              "title": "Repeat-Dose Toxicity: Non-Pivotal Studies",
+              "columns": ["Species/Strain", "Method of Administration (Vehicle/Formulation)", "Duration of Dosing", "Doses mg/kg", "Gender and No. per Group", "NOAEL mg/kg", "Noteworthy Findings", "Study Number"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.6-001",
+                  "rule": "All repeat-dose toxicity studies including range-finding studies, OTHER than the definitive GLP studies specified by ICH Guideline M3, must be summarized here in the same order as the CTD",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.6 note 1"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.7",
+              "title": "Repeat-Dose Toxicity: Pivotal Studies (one table per study, numbered 2.6.7.7A, 2.6.7.7B, etc.)",
+              "header_fields": ["Species/Strain", "Initial Age", "Date of First Dose", "Special Features", "No Observed Adverse-Effect Level", "Duration of Dosing", "Duration of Postdose", "Method of Administration", "Vehicle/Formulation", "Study No.", "Location in CTD Vol. Section", "GLP Compliance"],
+              "body_fields": ["Daily Dose mg/kg", "Number of Animals (M/F)", "Toxicokinetics AUC", "Noteworthy Findings including: Died or Sacrificed Moribund, Body Weight %, Food Consumption %, Water Consumption, Clinical Observations, Ophthalmoscopy, Electrocardiography, Hematology, Serum Chemistry, Urinalysis, Organ Weights %, Gross Pathology, Histopathology, Additional Examinations, Postdose Evaluation"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.7-001",
+                  "rule": "One table per pivotal repeat-dose toxicity study; tables numbered consecutively 2.6.7.7A, 2.6.7.7B, 2.6.7.7C etc.",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7 note 1"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-002",
+                  "rule": "One table per each repeat-dose toxicity study specified by ICH Guideline M3 AND any other repeat-dose study that could be considered pivotal",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7 note 2"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-003",
+                  "rule": "ONLY NOTEWORTHY FINDINGS should be presented; additional parameters showing noteworthy changes should be added to the table",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7 note 5"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-004",
+                  "rule": "Postdose Evaluation section must list all parameters still showing drug-related changes; delete this section if study does not include a postdose evaluation period",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7 note 8"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-005",
+                  "rule": "Body weight and food consumption shown as percent difference from controls; group means shown for controls",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7 footnote a"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-006",
+                  "rule": "Statistical significance indicated: * = p<0.05, ** = p<0.01",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.7-007",
+                  "rule": "Severity scale: - (no noteworthy findings), + (mild), ++ (moderate), +++ (marked)",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.7"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.8",
+              "title": "Genotoxicity: In Vitro Studies (numbered 2.6.7.8A, 2.6.7.8B, etc.)",
+              "header_fields": ["Test for Induction of", "Strains", "Metabolizing System", "Vehicles (for Test Article and for Positive Controls)", "Treatment", "Cytotoxic Effects", "Genotoxic Effects", "No. of Independent Assays", "No. of Replicate Cultures", "No. of Cells Analyzed/Culture", "Study No.", "Location in CTD Vol. Section", "GLP Compliance", "Date of Treatment"],
+              "body": "Results table with Metabolic Activation (Without/With) vs Test Article and Concentration/Dose Level",
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.8-001",
+                  "rule": "Results of replicate assays must be shown on subsequent pages; tables numbered consecutively 2.6.7.8A, 2.6.7.8B etc.",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.8 note 1"
+                },
+                {
+                  "rule_id": "M4S-2.6.7.8-002",
+                  "rule": "If precipitation is observed, this must be inserted in a footnote",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.8 note 4"
+                }
+              ]
+            },
+            {
+              "template": "2.6.7.9",
+              "title": "Genotoxicity: In Vivo Studies (numbered 2.6.7.9A, 2.6.7.9B, etc.)",
+              "header_fields": ["Test for Induction of", "Species/Strain", "Age", "Cells Evaluated", "No. of Cells Analyzed/Animal", "Special Features", "Toxic/Cytotoxic Effects", "Genotoxic Effects", "Evidence of Exposure", "Treatment Schedule", "Sampling Time", "Method of Administration", "Vehicle/Formulation", "Study No.", "Location in CTD Vol. Section", "GLP Compliance", "Date of Dosing"],
+              "body_columns": ["Test Article", "Dose mg/kg", "No. of Animals", "Result columns"]
+            },
+            {
+              "template": "2.6.7.10",
+              "title": "Carcinogenicity (numbered 2.6.7.10A, 2.6.7.10B, etc.; one per study)",
+              "header_fields": ["Species/Strain", "Initial Age", "Date of First Dose", "Basis for High-Dose Selection", "Special Features", "Duration of Dosing", "Method of Administration", "Vehicle/Formulation", "Treatment of Controls", "Study No.", "Location in CTD Vol. Section", "GLP Compliance"],
+              "body_fields": ["Daily Dose mg/kg", "Gender (M/F)", "Toxicokinetics AUC", "Number of Animals (At Start, Died/Sacrificed Moribund, Terminal Sacrifice)", "Survival %", "Body Weight %a", "Food Consumption %a", "Number Evaluated", "Number of Animals with Neoplastic Lesions", "Noteworthy Findings (Gross Pathology, Histopathology - Non-Neoplastic Lesions)"],
+              "rules": [
+                {
+                  "rule_id": "M4S-2.6.7.10-001",
+                  "rule": "Body weight shown at 6 months; percent differences from controls for treated groups; statistical significance based on actual data",
+                  "source": "M4S(R2) Appendix B Table 2.6.7.10 footnote a"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "module_4_study_reports": {
+      "section": "4",
+      "title": "Module 4: Nonclinical Study Reports",
+      "general_rules": [
+        {
+          "rule_id": "M4S-4-001",
+          "rule": "Module 4 contains the full technical reports of all nonclinical studies",
+          "source": "M4S(R2) Section 4"
+        },
+        {
+          "rule_id": "M4S-4-002",
+          "rule": "Reports within each category are ordered: rodent species before non-rodent species",
+          "source": "M4S(R2) Section 4"
+        },
+        {
+          "rule_id": "M4S-4-003",
+          "rule": "Within same species, shorter duration studies before longer duration studies",
+          "source": "M4S(R2) Section 4"
+        },
+        {
+          "rule_id": "M4S-4-004",
+          "rule": "Within same duration, in vitro studies before in vivo studies",
+          "source": "M4S(R2) Section 4"
+        },
+        {
+          "rule_id": "M4S-4-005",
+          "rule": "Route of administration ordering within same species/duration: clinical route first, then other routes",
+          "source": "M4S(R2) Section 4"
+        },
+        {
+          "rule_id": "M4S-4-006",
+          "rule": "Literature references may be included in relevant sections if they provide data relevant to the drug",
+          "source": "M4S(R2) Section 4"
+        }
+      ],
+      "hierarchy": {
+        "4.1": {
+          "title": "Table of Contents of Module 4",
+          "rule": "Must be provided listing all nonclinical reports"
+        },
+        "4.2": {
+          "title": "Study Reports",
+          "subsections": {
+            "4.2.1": {
+              "title": "Pharmacology",
+              "subsections": {
+                "4.2.1.1": "Primary Pharmacodynamics",
+                "4.2.1.2": "Secondary Pharmacodynamics",
+                "4.2.1.3": "Safety Pharmacology",
+                "4.2.1.4": "Pharmacodynamic Drug Interactions"
+              }
+            },
+            "4.2.2": {
+              "title": "Pharmacokinetics",
+              "subsections": {
+                "4.2.2.1": "Analytical Methods and Validation Reports (if separate)",
+                "4.2.2.2": "Absorption",
+                "4.2.2.3": "Distribution",
+                "4.2.2.4": "Metabolism",
+                "4.2.2.5": "Excretion",
+                "4.2.2.6": "Pharmacokinetic Drug Interactions (nonclinical)",
+                "4.2.2.7": "Other Pharmacokinetic Studies"
+              }
+            },
+            "4.2.3": {
+              "title": "Toxicology",
+              "subsections": {
+                "4.2.3.1": {
+                  "title": "Single-Dose Toxicity",
+                  "ordering_rule": "Ordered by species (rodent first), then by route of administration (clinical route first)"
+                },
+                "4.2.3.2": {
+                  "title": "Repeat-Dose Toxicity",
+                  "ordering_rule": "Ordered by species (rodent first), then by duration (shortest first), then by route (clinical route first)"
+                },
+                "4.2.3.3": {
+                  "title": "Genotoxicity",
+                  "subsections": {
+                    "4.2.3.3.1": "In Vitro",
+                    "4.2.3.3.2": "In Vivo"
+                  },
+                  "ordering_rule": "In vitro before in vivo within each subsection"
+                },
+                "4.2.3.4": {
+                  "title": "Carcinogenicity",
+                  "subsections": {
+                    "4.2.3.4.1": "Long-term studies",
+                    "4.2.3.4.2": "Short- or medium-term studies",
+                    "4.2.3.4.3": "Other studies"
+                  }
+                },
+                "4.2.3.5": {
+                  "title": "Reproductive and Developmental Toxicity",
+                  "subsections": {
+                    "4.2.3.5.1": "Fertility and early embryonic development",
+                    "4.2.3.5.2": "Embryo-fetal development",
+                    "4.2.3.5.3": "Prenatal and postnatal development, including maternal function",
+                    "4.2.3.5.4": "Studies in which offspring (juvenile animals) are dosed and/or further evaluated"
+                  }
+                },
+                "4.2.3.6": "Local Tolerance",
+                "4.2.3.7": "Other Toxicity Studies (antigenicity, immunotoxicity, mechanistic studies, dependence, metabolites, impurities, other)"
+              }
+            }
+          }
+        },
+        "4.3": {
+          "title": "Literature References",
+          "rule": "Published literature supporting nonclinical data"
+        }
+      },
+      "placement_rules": [
+        {
+          "rule_id": "M4S-4-P001",
+          "rule": "Pharmacology studies (primary PD, secondary PD, safety pharmacology, PD drug interactions) go in section 4.2.1",
+          "source": "M4S(R2) Section 4.2.1"
+        },
+        {
+          "rule_id": "M4S-4-P002",
+          "rule": "All ADME studies go in section 4.2.2 under the appropriate subsection (4.2.2.2 absorption, 4.2.2.3 distribution, 4.2.2.4 metabolism, 4.2.2.5 excretion)",
+          "source": "M4S(R2) Section 4.2.2"
+        },
+        {
+          "rule_id": "M4S-4-P003",
+          "rule": "Single-dose (acute) toxicity studies go in section 4.2.3.1",
+          "source": "M4S(R2) Section 4.2.3.1"
+        },
+        {
+          "rule_id": "M4S-4-P004",
+          "rule": "All repeat-dose toxicity studies (subacute, subchronic, chronic) go in section 4.2.3.2, ordered by species then duration then route",
+          "source": "M4S(R2) Section 4.2.3.2"
+        },
+        {
+          "rule_id": "M4S-4-P005",
+          "rule": "Genotoxicity in vitro studies go in 4.2.3.3.1; in vivo genotoxicity studies go in 4.2.3.3.2",
+          "source": "M4S(R2) Section 4.2.3.3"
+        },
+        {
+          "rule_id": "M4S-4-P006",
+          "rule": "Long-term carcinogenicity bioassays go in 4.2.3.4.1; short/medium-term carcinogenicity studies go in 4.2.3.4.2",
+          "source": "M4S(R2) Section 4.2.3.4"
+        },
+        {
+          "rule_id": "M4S-4-P007",
+          "rule": "Fertility and early embryonic development studies (ICH S5 Segment I) go in 4.2.3.5.1",
+          "source": "M4S(R2) Section 4.2.3.5.1"
+        },
+        {
+          "rule_id": "M4S-4-P008",
+          "rule": "Embryo-fetal development studies (ICH S5 Segment II, teratology) go in 4.2.3.5.2",
+          "source": "M4S(R2) Section 4.2.3.5.2"
+        },
+        {
+          "rule_id": "M4S-4-P009",
+          "rule": "Pre- and postnatal development studies (ICH S5 Segment III, peri- and postnatal) go in 4.2.3.5.3",
+          "source": "M4S(R2) Section 4.2.3.5.3"
+        },
+        {
+          "rule_id": "M4S-4-P010",
+          "rule": "Juvenile animal studies and studies where offspring are further evaluated go in 4.2.3.5.4",
+          "source": "M4S(R2) Section 4.2.3.5.4"
+        },
+        {
+          "rule_id": "M4S-4-P011",
+          "rule": "Local tolerance studies go in 4.2.3.6",
+          "source": "M4S(R2) Section 4.2.3.6"
+        },
+        {
+          "rule_id": "M4S-4-P012",
+          "rule": "Studies on antigenicity, immunotoxicity, mechanistic studies, dependence potential, metabolites, impurities go in 4.2.3.7",
+          "source": "M4S(R2) Section 4.2.3.7"
+        }
+      ]
+    }
+  },
+  "Q5D": {
+    "title": "Derivation and Characterisation of Cell Substrates Used for Production of Biotechnological/Biological Products — ICH Q5D",
+    "scope": "Cell substrates used in production of biotechnological and biological products; covers source, history, generation, banking, characterization, and testing",
+    "cell_banking_system": {
+      "rules": [
+        {
+          "rule_id": "Q5D-CB-001",
+          "rule": "A two-tier cell banking system is required: Master Cell Bank (MCB) followed by Working Cell Bank (WCB)",
+          "source": "Q5D Section 2.2"
+        },
+        {
+          "rule_id": "Q5D-CB-002",
+          "rule": "The MCB is a homogeneous suspension of cells distributed into individual containers in a single operation; it is derived from the original research cell bank or directly from the original cells",
+          "source": "Q5D Section 2.2"
+        },
+        {
+          "rule_id": "Q5D-CB-003",
+          "rule": "The WCB is prepared by expanding one or more containers of the MCB; it must be homogeneous and distributed into individual containers",
+          "source": "Q5D Section 2.2"
+        },
+        {
+          "rule_id": "Q5D-CB-004",
+          "rule": "All containers from a given cell bank (MCB or WCB) must be stored under identical conditions to ensure homogeneity",
+          "source": "Q5D Section 2.2"
+        },
+        {
+          "rule_id": "Q5D-CB-005",
+          "rule": "Documentation of the complete history (source, passage history, culture conditions, preparation procedures) must be maintained for both MCB and WCB",
+          "source": "Q5D Section 2.1"
+        },
+        {
+          "rule_id": "Q5D-CB-006",
+          "rule": "End-of-Production Cells (EOPC) — cells at or beyond the maximum population doubling level used in production — must also be characterized",
+          "source": "Q5D Section 2.3"
+        },
+        {
+          "rule_id": "Q5D-CB-007",
+          "rule": "The passage level (number of doublings or passages) at which the MCB was established must be defined and documented",
+          "source": "Q5D Section 2.2"
+        }
+      ],
+      "tier_hierarchy": [
+        {
+          "tier": 1,
+          "name": "Master Cell Bank (MCB)",
+          "description": "Aliquots from a single homogeneous preparation stored in a single operation; forms the primary reference stock",
+          "testing_level": "Most extensive characterization required"
+        },
+        {
+          "tier": 2,
+          "name": "Working Cell Bank (WCB)",
+          "description": "Expanded from one or more MCB vials; used as the direct starting material for production",
+          "testing_level": "Subset of MCB testing required; must confirm identity and freedom from adventitious agents"
+        },
+        {
+          "tier": 3,
+          "name": "End-of-Production Cells (EOPC)",
+          "description": "Cells at or beyond the maximum in vitro cell age used in production",
+          "testing_level": "Tested to define the maximum production limit and confirm continued absence of adventitious agents"
+        }
+      ]
+    },
+    "characterization_and_testing": {
+      "section": "2.3",
+      "identity_testing": {
+        "section": "2.3.1",
+        "rules": [
+          {
+            "rule_id": "Q5D-ID-001",
+            "rule": "Identity of the cell substrate must be confirmed using at least one of: isoenzyme analysis, cytogenetic analysis, or DNA fingerprinting/short tandem repeat (STR) profiling",
+            "source": "Q5D Section 2.3.1"
+          },
+          {
+            "rule_id": "Q5D-ID-002",
+            "rule": "Isoenzyme analysis must be performed to confirm species of origin and detect interspecies cross-contamination",
+            "source": "Q5D Section 2.3.1"
+          },
+          {
+            "rule_id": "Q5D-ID-003",
+            "rule": "Cytogenetic analysis (karyology) should be performed for cells of human or primate origin; useful for confirming identity and detecting gross chromosomal abnormalities",
+            "source": "Q5D Section 2.3.1, 2.3.4"
+          },
+          {
+            "rule_id": "Q5D-ID-004",
+            "rule": "DNA markers / DNA fingerprinting should be used where appropriate; species-specific probes or PCR-based methods are acceptable",
+            "source": "Q5D Section 2.3.1"
+          },
+          {
+            "rule_id": "Q5D-ID-005",
+            "rule": "Identity testing must be performed on the MCB; identity confirmation on the WCB is required",
+            "source": "Q5D Section 2.3.1"
+          }
+        ]
+      },
+      "purity_testing": {
+        "section": "2.3.2",
+        "rules": [
+          {
+            "rule_id": "Q5D-PU-001",
+            "rule": "Bioburden testing must be performed on at least 1% of containers (minimum of 2 containers) from each cell bank",
+            "source": "Q5D Section 2.3.2"
+          },
+          {
+            "rule_id": "Q5D-PU-002",
+            "rule": "Testing for mycoplasma contamination must be performed on both the MCB and the WCB",
+            "source": "Q5D Section 2.3.2"
+          },
+          {
+            "rule_id": "Q5D-PU-003",
+            "rule": "Virus testing must be performed on the MCB and WCB; the scope of virus testing depends on the origin of the cell line and the manufacturing process",
+            "source": "Q5D Section 2.3.2"
+          },
+          {
+            "rule_id": "Q5D-PU-004",
+            "rule": "For human-derived cell lines, testing must include retroviruses and other relevant endogenous or adventitious viruses",
+            "source": "Q5D Section 2.3.2"
+          },
+          {
+            "rule_id": "Q5D-PU-005",
+            "rule": "For rodent-derived cell lines (e.g., CHO, NS0, Sp2/0), testing for endogenous retrovirus-like particles must be included",
+            "source": "Q5D Section 2.3.2"
+          },
+          {
+            "rule_id": "Q5D-PU-006",
+            "rule": "Tests for sterility (absence of bacteria and fungi) must be performed on the cell banks",
+            "source": "Q5D Section 2.3.2"
+          }
+        ]
+      },
+      "stability_testing": {
+        "section": "2.3.3",
+        "rules": [
+          {
+            "rule_id": "Q5D-ST-001",
+            "rule": "The stability (viability and productivity characteristics) of cell banks must be assessed at a minimum of two time points during storage",
+            "source": "Q5D Section 2.3.3"
+          },
+          {
+            "rule_id": "Q5D-ST-002",
+            "rule": "Stability testing should include assessment of viability after thawing (post-thaw viability) and growth characteristics",
+            "source": "Q5D Section 2.3.3"
+          },
+          {
+            "rule_id": "Q5D-ST-003",
+            "rule": "If the cell bank is to be used for an extended period, periodic stability monitoring at defined intervals is required",
+            "source": "Q5D Section 2.3.3"
+          },
+          {
+            "rule_id": "Q5D-ST-004",
+            "rule": "The maximum number of population doublings from MCB to EOPC must be defined and validated to ensure genetic stability",
+            "source": "Q5D Section 2.3.3"
+          }
+        ]
+      },
+      "karyology_tumorigenicity": {
+        "section": "2.3.4",
+        "rules": [
+          {
+            "rule_id": "Q5D-KT-001",
+            "rule": "Karyological analysis is required for new continuous cell lines of human or primate origin and for new diploid cell lines",
+            "source": "Q5D Section 2.3.4"
+          },
+          {
+            "rule_id": "Q5D-KT-002",
+            "rule": "Tumorigenicity testing in nude mice or other appropriate in vivo systems is required for continuous cell lines of human or primate origin",
+            "source": "Q5D Section 2.3.4"
+          },
+          {
+            "rule_id": "Q5D-KT-003",
+            "rule": "Karyological analysis must be performed on the MCB; if significant passage-dependent changes are expected, EOPC should also be evaluated",
+            "source": "Q5D Section 2.3.4"
+          },
+          {
+            "rule_id": "Q5D-KT-004",
+            "rule": "For well-established cell lines with extensive published characterization (e.g., CHO, BHK), tumorigenicity testing may be waived with justification",
+            "source": "Q5D Section 2.3.4"
+          }
+        ]
+      },
+      "testing_matrix": {
+        "description": "Summary of required tests by cell bank tier",
+        "tests": [
+          {
+            "test": "Identity (isoenzyme, cytogenetics, DNA markers)",
+            "MCB": "Required",
+            "WCB": "Required (confirmation)",
+            "EOPC": "Not routinely required"
+          },
+          {
+            "test": "Bioburden (1% of containers, minimum 2)",
+            "MCB": "Required",
+            "WCB": "Required",
+            "EOPC": "Required"
+          },
+          {
+            "test": "Sterility (bacteria and fungi)",
+            "MCB": "Required",
+            "WCB": "Required",
+            "EOPC": "Required"
+          },
+          {
+            "test": "Mycoplasma",
+            "MCB": "Required",
+            "WCB": "Required",
+            "EOPC": "Required"
+          },
+          {
+            "test": "Virus testing (adventitious agents)",
+            "MCB": "Required — extensive",
+            "WCB": "Required — confirming absence",
+            "EOPC": "Required"
+          },
+          {
+            "test": "Endogenous retrovirus / retrovirus-like particles",
+            "MCB": "Required for rodent and human lines",
+            "WCB": "May be required",
+            "EOPC": "May be required"
+          },
+          {
+            "test": "Karyology",
+            "MCB": "Required for human/primate and new diploid lines",
+            "WCB": "Not routinely required",
+            "EOPC": "Recommended if passage-dependent changes expected"
+          },
+          {
+            "test": "Tumorigenicity",
+            "MCB": "Required for human/primate continuous lines",
+            "WCB": "Not routinely required",
+            "EOPC": "Not routinely required"
+          },
+          {
+            "test": "Stability (viability, productivity)",
+            "MCB": "Required at minimum 2 time points",
+            "WCB": "Required at minimum 2 time points",
+            "EOPC": "Assessed as part of validation"
+          }
+        ]
+      }
+    },
+    "primary_cell_substrates": {
+      "section": "Appendix 1",
+      "rules": [
+        {
+          "rule_id": "Q5D-PC-001",
+          "rule": "For primary cells (non-established cell lines), a two-tier banking system is not always feasible; the documentation requirements still apply to the cell collection and preparation process",
+          "source": "Q5D Appendix 1"
+        },
+        {
+          "rule_id": "Q5D-PC-002",
+          "rule": "For primary cells, the source (donor history, age, health status), collection procedure, and any in vitro manipulation must be fully documented",
+          "source": "Q5D Appendix 1"
+        },
+        {
+          "rule_id": "Q5D-PC-003",
+          "rule": "Testing requirements for primary cells are similar to those for cell banks: identity, microbial sterility, mycoplasma, and virus testing",
+          "source": "Q5D Appendix 1"
+        }
+      ]
+    }
+  },
+  "Q3C_R9": {
+    "title": "Impurities: Guideline for Residual Solvents — ICH Q3C(R9)",
+    "version": "R9 (Minor Revision, approved January 24, 2024)",
+    "r9_change": "Addition in section 3.4 of consideration of solvent volatility when selecting and validating analytical methods for Class 1 and Class 2 solvents",
+    "scope": "Residual solvents in pharmaceutical products; establishes limits for solvents that should be restricted in drug substances, excipients, and drug products",
+    "general_principles": {
+      "rules": [
+        {
+          "rule_id": "Q3C-GP-001",
+          "rule": "Residual solvents must be reported when present above reporting thresholds; they must be identified and qualified",
+          "source": "Q3C(R9) Section 3"
+        },
+        {
+          "rule_id": "Q3C-GP-002",
+          "rule": "The total daily exposure to each solvent from all sources (drug substance, excipients, dosage form) must be considered; the sum must not exceed the PDE",
+          "source": "Q3C(R9) Section 3.1"
+        },
+        {
+          "rule_id": "Q3C-GP-003",
+          "rule": "If a manufacturer can demonstrate that a residual solvent has been reduced to a practical minimum and is below the established limit, no further testing or justification is needed",
+          "source": "Q3C(R9) Section 3.2"
+        },
+        {
+          "rule_id": "Q3C-GP-004",
+          "rule": "Use of Class 1 solvents should be avoided; if use cannot be avoided, levels must be restricted as defined in Table 1",
+          "source": "Q3C(R9) Section 4.1"
+        },
+        {
+          "rule_id": "Q3C-GP-005",
+          "rule": "Class 2 solvents should be limited in pharmaceutical products due to their inherent toxicity; limits are established in Table 2 via Option 1 or Option 2",
+          "source": "Q3C(R9) Section 4.2"
+        },
+        {
+          "rule_id": "Q3C-GP-006",
+          "rule": "Class 3 solvents have low toxic potential and do not need concentration limits if daily dose ≤50 mg/day; amounts >50 mg/day must be justified",
+          "source": "Q3C(R9) Section 4.3"
+        },
+        {
+          "rule_id": "Q3C-GP-007",
+          "rule": "Solvents in Table 4 (no toxicological data available) should be used with caution; manufacturers should supply justification for their use",
+          "source": "Q3C(R9) Section 4.4"
+        }
+      ]
+    },
+    "option_1_vs_option_2": {
+      "rules": [
+        {
+          "rule_id": "Q3C-OPT-001",
+          "rule": "Option 1: Use the concentration limits in Table 2 (ppm) directly in the drug substance or excipient without needing to know the daily dose",
+          "source": "Q3C(R9) Section 4.2, Option 1"
+        },
+        {
+          "rule_id": "Q3C-OPT-002",
+          "rule": "Option 2: Calculate the permitted concentration based on the actual daily dose of the drug product using the formula: Concentration (ppm) = 1000 × PDE / dose (g/day); this may allow higher concentrations in the ingredient if the daily dose is low",
+          "source": "Q3C(R9) Section 4.2, Option 2"
+        },
+        {
+          "rule_id": "Q3C-OPT-003",
+          "rule": "Option 2 requires knowledge of the maximum daily dose of the drug product; a default product mass of 10 g/day is used when dose is not known",
+          "source": "Q3C(R9) Section 4.2, Option 2"
+        }
+      ]
+    },
+    "pde_calculation_methodology": {
+      "formula": "PDE = NOEL × Weight Adjustment / (F1 × F2 × F3 × F4 × F5)",
+      "concentration_formula": "Concentration (ppm) = 1000 × PDE (mg/day) / dose (g/day) [assuming 10 g/day default product mass]",
+      "adjustment_factors": {
+        "weight_adjustment": "50 kg standard human body weight",
+        "F1": {
+          "description": "Interspecies extrapolation factor",
+          "values": {
+            "rat_to_human": 5,
+            "mouse_to_human": 12,
+            "rabbit_to_human": 2.5,
+            "dog_to_human": 2,
+            "primate_to_human": 2
+          }
+        },
+        "F2": {
+          "description": "Intraspecies variability factor for differences between individual humans",
+          "default_value": 10
+        },
+        "F3": {
+          "description": "Study duration factor",
+          "values": {
+            "acute_less_than_2_weeks": 10,
+            "subacute_2_weeks_to_1_month": 5,
+            "subchronic_1_to_3_months": 5,
+            "chronic_greater_than_3_months": 1,
+            "long_term_2_years": 1
+          },
+          "note": "F3=1 if NOEL from long-duration (>3 months in rodents or >1 month in non-rodents) study"
+        },
+        "F4": {
+          "description": "Severity of toxicity factor",
+          "values": {
+            "no_severe_effects": 1,
+            "severe_non_genotoxic_toxicity": 5
+          }
+        },
+        "F5": {
+          "description": "NOEL not established (LOEL used instead)",
+          "values": {
+            "NOEL_established": 1,
+            "NOEL_not_established_LOEL_used": 5
+          }
+        }
+      },
+      "rules": [
+        {
+          "rule_id": "Q3C-PDE-001",
+          "rule": "PDE is calculated as: NOEL × 50 kg / (F1 × F2 × F3 × F4 × F5)",
+          "source": "Q3C(R9) Appendix 3"
+        },
+        {
+          "rule_id": "Q3C-PDE-002",
+          "rule": "The NOEL used in PDE calculation must be the most appropriate (lowest relevant NOEL) from the most relevant and well-documented study",
+          "source": "Q3C(R9) Appendix 3"
+        },
+        {
+          "rule_id": "Q3C-PDE-003",
+          "rule": "Concentration limit in ppm = (PDE in mg/day × 1000) / dose in g/day; default dose assumption is 10 g/day",
+          "source": "Q3C(R9) Section 4.2"
+        }
+      ]
+    },
+    "analytical_methods": {
+      "section": "3.4",
+      "rules": [
+        {
+          "rule_id": "Q3C-AM-001",
+          "rule": "Analytical methods must be validated for the solvents being tested; validation should include specificity, linearity, accuracy, and precision",
+          "source": "Q3C(R9) Section 3.4"
+        },
+        {
+          "rule_id": "Q3C-AM-002",
+          "rule": "R9 change: The volatility of Class 1 and Class 2 solvents should be considered when selecting and validating analytical methods; highly volatile solvents may require special handling to prevent losses during sample preparation",
+          "source": "Q3C(R9) Section 3.4 (R9 addition)"
+        },
+        {
+          "rule_id": "Q3C-AM-003",
+          "rule": "Headspace gas chromatography (HS-GC) is the preferred method for residual solvent analysis; other validated methods are acceptable",
+          "source": "Q3C(R9) Section 3.4"
+        },
+        {
+          "rule_id": "Q3C-AM-004",
+          "rule": "Methods must be capable of detecting solvents at or below the applicable limit (Class 1, Class 2, or Class 3 threshold)",
+          "source": "Q3C(R9) Section 3.4"
+        }
+      ]
+    },
+    "solvent_tables": {
+      "class_1_solvents": {
+        "classification": "Class 1",
+        "description": "Solvents to be avoided — known or suspected human carcinogens, or environmental hazards",
+        "rule": "Use of Class 1 solvents should be avoided in the manufacture of drug substances, excipients, and drug products; if unavoidable, levels must not exceed Table 1 limits",
+        "table": [
+          {"solvent": "Benzene", "limit_ppm": 2, "concern": "Carcinogen"},
+          {"solvent": "Carbon tetrachloride", "limit_ppm": 4, "concern": "Toxic, environmental hazard"},
+          {"solvent": "1,2-Dichloroethane", "limit_ppm": 5, "concern": "Toxic"},
+          {"solvent": "1,1-Dichloroethene", "limit_ppm": 8, "concern": "Toxic"},
+          {"solvent": "1,1,1-Trichloroethane", "limit_ppm": 1500, "concern": "Environmental hazard"}
+        ]
+      },
+      "class_2_solvents": {
+        "classification": "Class 2",
+        "description": "Solvents to be limited — non-genotoxic animal carcinogens or possible causative agents of other irreversible toxicity; may cause other significant but reversible toxicities",
+        "rule": "Class 2 solvent concentrations in drug products must not exceed the limits in Table 2 (ppm) based on Option 1, or the calculated limit based on Option 2 using the actual daily dose",
+        "table": [
+          {"solvent": "Acetonitrile", "PDE_mg_per_day": 4.1, "limit_ppm": 410},
+          {"solvent": "Chlorobenzene", "PDE_mg_per_day": 3.6, "limit_ppm": 360},
+          {"solvent": "Chloroform", "PDE_mg_per_day": 0.6, "limit_ppm": 60},
+          {"solvent": "Cumene", "PDE_mg_per_day": 0.7, "limit_ppm": 70},
+          {"solvent": "Cyclohexane", "PDE_mg_per_day": 38.8, "limit_ppm": 3880},
+          {"solvent": "Cyclopentyl methyl ether (CPME)", "PDE_mg_per_day": 15.0, "limit_ppm": 1500},
+          {"solvent": "1,2-Dichloroethene", "PDE_mg_per_day": 18.7, "limit_ppm": 1870},
+          {"solvent": "Dichloromethane (DCM / methylene chloride)", "PDE_mg_per_day": 6.0, "limit_ppm": 600},
+          {"solvent": "1,2-Dimethoxyethane", "PDE_mg_per_day": 1.0, "limit_ppm": 100},
+          {"solvent": "N,N-Dimethylacetamide (DMA)", "PDE_mg_per_day": 10.9, "limit_ppm": 1090},
+          {"solvent": "N,N-Dimethylformamide (DMF)", "PDE_mg_per_day": 8.8, "limit_ppm": 880},
+          {"solvent": "1,4-Dioxane", "PDE_mg_per_day": 3.8, "limit_ppm": 380},
+          {"solvent": "2-Ethoxyethanol", "PDE_mg_per_day": 1.6, "limit_ppm": 160},
+          {"solvent": "Ethyleneglycol", "PDE_mg_per_day": 6.2, "limit_ppm": 620},
+          {"solvent": "Formamide", "PDE_mg_per_day": 2.2, "limit_ppm": 220},
+          {"solvent": "Hexane", "PDE_mg_per_day": 2.9, "limit_ppm": 290},
+          {"solvent": "Methanol", "PDE_mg_per_day": 30.0, "limit_ppm": 3000},
+          {"solvent": "2-Methoxyethanol", "PDE_mg_per_day": 0.5, "limit_ppm": 50},
+          {"solvent": "Methyl butyl ketone (2-hexanone)", "PDE_mg_per_day": 0.5, "limit_ppm": 50},
+          {"solvent": "Methylcyclohexane", "PDE_mg_per_day": 11.8, "limit_ppm": 1180},
+          {"solvent": "Methyl isobutyl ketone (MIBK)", "PDE_mg_per_day": 45.0, "limit_ppm": 4500},
+          {"solvent": "N-Methyl-2-pyrrolidone (NMP)", "PDE_mg_per_day": 5.3, "limit_ppm": 530},
+          {"solvent": "Nitromethane", "PDE_mg_per_day": 0.5, "limit_ppm": 50},
+          {"solvent": "Pyridine", "PDE_mg_per_day": 2.0, "limit_ppm": 200},
+          {"solvent": "Sulfolane", "PDE_mg_per_day": 1.6, "limit_ppm": 160},
+          {"solvent": "Tertiary-butyl alcohol (TBA / tert-butanol)", "PDE_mg_per_day": 35.0, "limit_ppm": 3500},
+          {"solvent": "Tetrahydrofuran (THF)", "PDE_mg_per_day": 7.2, "limit_ppm": 720},
+          {"solvent": "Tetralin (1,2,3,4-tetrahydronaphthalene)", "PDE_mg_per_day": 1.0, "limit_ppm": 100},
+          {"solvent": "Toluene", "PDE_mg_per_day": 8.9, "limit_ppm": 890},
+          {"solvent": "1,1,2-Trichloroethene", "PDE_mg_per_day": 0.8, "limit_ppm": 80},
+          {"solvent": "Xylene (mixed isomers)", "PDE_mg_per_day": 21.7, "limit_ppm": 2170}
+        ],
+        "part_calculations": [
+          {
+            "solvent": "Tetrahydrofuran (THF)",
+            "ICH_part": "Part II",
+            "NOEL_mg_per_kg_per_day": 200,
+            "study_species": "rat",
+            "study_type": "subchronic oral",
+            "PDE_mg_per_day": 7.2,
+            "limit_ppm": 720,
+            "F_factors": {"F1": 5, "F2": 10, "F3": 1, "F4": 1, "F5": 2.8},
+            "calculation": "PDE = 200 × 50 / (5 × 10 × 1 × 1 × 2.8) = 7.2 mg/day",
+            "note": "F5 = 2.8 applied as intermediate value between 1 and 5; THF is a Class 2 solvent"
+          },
+          {
+            "solvent": "N-Methyl-2-pyrrolidone (NMP)",
+            "ICH_part": "Part III",
+            "NOEL_mg_per_kg_per_day": 150,
+            "study_species": "rat",
+            "study_type": "developmental toxicity (most sensitive endpoint)",
+            "PDE_mg_per_day": 5.3,
+            "limit_ppm": 530,
+            "F_factors": {"F1": 5, "F2": 10, "F3": 1, "F4": 1, "F5": "calculated"},
+            "note": "NMP classified as Class 2; reproductive toxicant"
+          },
+          {
+            "solvent": "Cumene (isopropylbenzene)",
+            "ICH_part": "Part IV",
+            "NOEL_mg_per_kg_per_day": 15,
+            "study_species": "rat",
+            "study_type": "subchronic oral",
+            "PDE_mg_per_day": 0.7,
+            "limit_ppm": 70,
+            "F_factors": {"F1": 5, "F2": 10, "F3": 5, "F4": 1, "F5": 1},
+            "calculation": "PDE = 15 × 50 / (5 × 10 × 5 × 1 × 1) = 1.5 mg/day; final PDE 0.7 mg/day based on additional assessment",
+            "note": "Cumene is a Class 2 solvent; hepatotoxicity and carcinogenicity concerns"
+          },
+          {
+            "solvent": "Triethylamine (TEA)",
+            "ICH_part": "Part V",
+            "PDE_mg_per_day": ">62.5",
+            "classification": "Class 3",
+            "note": "TEA PDE exceeds 50 mg/day threshold; classified as Class 3 (low toxic potential)"
+          },
+          {
+            "solvent": "Methyl isobutyl ketone (MIBK)",
+            "ICH_part": "Part V",
+            "PDE_mg_per_day": 45.0,
+            "limit_ppm": 4500,
+            "classification": "Class 2",
+            "note": "MIBK PDE = 45 mg/day; limit = (45 × 1000)/10 = 4500 ppm"
+          },
+          {
+            "solvent": "2-Methyltetrahydrofuran (2-MTHF)",
+            "ICH_part": "Part VI",
+            "NOEL_mg_per_kg_per_day": 250,
+            "study_species": "rat",
+            "study_type": "3-month subchronic oral (most relevant study)",
+            "PDE_mg_per_day": 50.0,
+            "classification": "Class 3",
+            "F_factors": {"F1": 5, "F2": 10, "F3": 5, "F4": 1, "F5": 1},
+            "calculation": "PDE = 250 × 50 / (5 × 10 × 5 × 1 × 1) = 50 mg/day",
+            "note": "PDE of 50 mg/day meets Class 3 threshold (≤50 mg/day); 2-MTHF placed in Table 3 (Class 3)"
+          },
+          {
+            "solvent": "Cyclopentyl methyl ether (CPME)",
+            "ICH_part": "Part VI",
+            "NOEL_mg_per_kg_per_day": 150,
+            "study_species": "rat",
+            "study_type": "28-day oral (most appropriate well-documented study)",
+            "PDE_mg_per_day": 15.0,
+            "limit_ppm": 1500,
+            "classification": "Class 2",
+            "F_factors": {"F1": 5, "F2": 10, "F3": 10, "F4": 1, "F5": 1},
+            "calculation": "PDE = 150 × 50 / (5 × 10 × 10 × 1 × 1) = 15 mg/day; Limit = (15 × 1000)/10 = 1500 ppm",
+            "note": "CPME placed in Table 2 (Class 2); F3=10 because duration <3 months"
+          },
+          {
+            "solvent": "Tertiary-butyl alcohol (TBA)",
+            "ICH_part": "Part VI",
+            "LOEL_mg_per_kg_per_day": 175,
+            "study_species": "rat",
+            "study_type": "2-year carcinogenicity (nephropathy in females; NOEL not established)",
+            "PDE_mg_per_day": 35.0,
+            "limit_ppm": 3500,
+            "classification": "Class 2",
+            "F_factors": {"F1": 5, "F2": 10, "F3": 1, "F4": 1, "F5": 5},
+            "calculation": "PDE = 175 × 50 / (5 × 10 × 1 × 1 × 5) = 35 mg/day; Limit = (35 × 1000)/10 = 3500 ppm",
+            "note": "TBA placed in Table 2 (Class 2); F5=5 because NOEL was not established (LOEL used); ultimate PDE based on Scenario 1 (rat nephropathy LOEL=175 mg/kg/day)"
+          }
+        ]
+      },
+      "class_3_solvents": {
+        "classification": "Class 3",
+        "description": "Solvents with low toxic potential — GMP-limited; no health-based exposure limit needed if daily amount ≤50 mg/day",
+        "rule": "Class 3 solvents may be present at levels up to 50 mg/day (or 5000 ppm in a 10 g/day dose) without justification; amounts above 50 mg/day require justification",
+        "general_limit_ppm": 5000,
+        "general_limit_mg_day": 50,
+        "solvents": [
+          "Acetic acid", "Acetone", "Anisole", "1-Butanol", "2-Butanol",
+          "Butyl acetate", "tert-Butylmethyl ether (MTBE)", "Dimethyl sulfoxide (DMSO)",
+          "Ethanol", "Ethyl acetate", "Ethyl ether", "Ethyl formate", "Formic acid",
+          "Heptane", "Isobutyl acetate", "Isopropyl acetate", "Methyl acetate",
+          "3-Methyl-1-butanol", "Methylethyl ketone (MEK)", "2-Methyl-1-propanol",
+          "2-Methyltetrahydrofuran (2-MTHF)", "Pentane", "1-Pentanol", "1-Propanol",
+          "2-Propanol (isopropanol, IPA)", "Propyl acetate", "Triethylamine (TEA)"
+        ]
+      },
+      "class_4_no_toxicological_data": {
+        "classification": "Table 4",
+        "description": "Solvents for which no adequate toxicological data were found; use with caution and justification required",
+        "solvents": [
+          "1,1-Diethoxypropane", "1,1-Dimethoxymethane", "2,2-Dimethoxypropane",
+          "Isooctane", "Isopropyl ether", "Methylisopropyl ketone",
+          "Petroleum ether", "Trichloroacetic acid", "Trifluoroacetic acid"
+        ]
+      }
+    },
+    "reporting_thresholds": {
+      "rules": [
+        {
+          "rule_id": "Q3C-RT-001",
+          "rule": "Residual solvents must be tested if they are known or reasonably expected to be present in the drug substance, excipient, or product based on the manufacturing process",
+          "source": "Q3C(R9) Section 3"
+        },
+        {
+          "rule_id": "Q3C-RT-002",
+          "rule": "If a solvent is not used or produced in manufacturing but could theoretically be present from the environment, a risk-based approach may be used to decide whether testing is needed",
+          "source": "Q3C(R9) Section 3"
+        }
+      ]
+    }
+  }
+}

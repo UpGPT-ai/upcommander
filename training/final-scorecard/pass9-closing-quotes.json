@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Pass 9 — Final Recording-Gap Closure: PV-18 and PV-19",
+    "date": "2026-03-23",
+    "purpose": "Close the last 2 remaining PARTIALLY_VERIFIED items (PV-18 and PV-19). Both quotes were encountered in prior passes but never recorded as standalone verified items. No new source reads required — quotes extracted directly from S7B_Guideline.pdf pages 7 (§3.1.1) and 9 (§3.1.3).",
+    "source_document": "ICH S7B — The Non-Clinical Evaluation of the Potential for Delayed Ventricular Repolarization (QT Interval Prolongation) by Human Pharmaceuticals, Step 4, 12 May 2005",
+    "pdf_file": "training/stage-1/ich-complete/S7B_Guideline.pdf",
+    "pages_read": "PDF pages 11 (content p.7, §§3.1.1-3.1.2) and 13 (content p.9, §3.1.3)",
+    "score_before": "97.7 (129/132)",
+    "score_after": "99.2 (131/132)",
+    "delta": "+1.5 points",
+    "remaining_unverifiable": 1,
+    "path_to_absolute_maximum": "131/132 = 99.2% is the verifiable ceiling. UV-01 (J-Tpeakc) is unverifiable from all finalized ICH guidance as of 2026-03-23."
+  },
+
+  "upgrades": [
+
+    {
+      "id": "PV-18",
+      "rule_path": "core_battery.cardiovascular_system.s7b_specific_requirements.in_vivo_qt_study.design_source_verified",
+      "rule_text": "Include and exceed anticipated therapeutic concentrations",
+      "prior_status": "CONFIRMED ACCURATE — S7B Section 3.1.3 (page 9) cited, no verbatim quote recorded as standalone item",
+      "upgraded_status": "VERIFIED",
+      "source_section": "S7B Section 3.1.3 — In Vivo Electrophysiology Studies",
+      "source_page": 9,
+      "source_quote": "The dose range should be in accord with that discussed in ICH S7A and, whenever feasible, should include and exceed the anticipated human exposure. The dose range can be limited by animal intolerance to the test substance, e.g., emesis, tremor, or hyperactivity.",
+      "upgrade_note": "S7B §3.1.3 (content page 9) states verbatim that the dose range 'should include and exceed the anticipated human exposure.' The rule text ('Include and exceed anticipated therapeutic concentrations') accurately captures this requirement — 'anticipated human exposure' is the clinical exposure benchmark synonymous with 'anticipated therapeutic concentrations' in the rule. The caveat about animal intolerance limiting dose range is an important practical qualifier confirming the rule reflects mandatory aspiration (not an absolute hard requirement when intolerance intervenes). VERIFIED. This was a recording-gap item: the S7B §3.1.3 PDF page was read in Pass 6 for the heart-rate-confounding text on the same page; the dose-range sentence above it was not extracted as a standalone record at that time."
+    },
+
+    {
+      "id": "PV-19",
+      "rule_path": "core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay — S7B §3.1.1 positive control sub-item (best_practices[3])",
+      "rule_text": "Include positive control from reference drugs with known clinical TdP risk (in vitro: required in every study; in vivo: required to validate sensitivity, need not be in every study)",
+      "prior_status": "Verbatim text quoted inline in s7b-quotes.json UPGRADE-002 upgrade_note but not recorded as standalone verified item in the PV tracking system",
+      "upgraded_status": "VERIFIED",
+      "source_section": "S7B Section 3.1.1 — Use of Positive Control Substances and Reference Compounds",
+      "source_page": 7,
+      "source_quote": "A sub-maximally effective concentration of a positive control substance should be used to demonstrate the responsiveness of in vitro preparations for ion channel and action potential duration assays and should be included in every study. In the case of in vivo studies, positive control substances should be used to validate and define the sensitivity of the test system, but need not be included in every study.",
+      "upgrade_note": "S7B §3.1.1 (content page 7) provides the verbatim positive control requirement with its critical in vitro / in vivo distinction: in vitro studies require a positive control in every study; in vivo studies require it for sensitivity validation but not necessarily in every study. The rule in best_practices[3] cites 'ICH S7B Section 3.1.1 (2005) + E14/S7B Q&A 2.1 item 7' and the field 'in_original_S7B_2005: true.' Both the sub-maximally effective concentration specification and the every-study requirement for in vitro assays are now verbatim-confirmed. VERIFIED. This was a recording-gap item: the text was quoted in s7b-quotes.json UPGRADE-002 upgrade_note to support key_considerations item 2 but was not assigned its own PV record."
+    }
+
+  ],
+
+  "score_summary": {
+    "total_rules": 132,
+    "fully_verified_before_pass9": 129,
+    "newly_verified_in_pass9": 2,
+    "fully_verified_after_pass9": 131,
+    "partially_verified_after_pass9": 0,
+    "unverifiable_after_pass9": 1,
+    "d1_score_before": "97.7 (129/132)",
+    "d1_score_after": "99.2 (131/132)",
+    "delta": "+1.5 points",
+    "verifiable_ceiling_reached": true,
+    "ceiling_note": "131/132 = 99.2% is the maximum achievable D1 score from finalized ICH guidance as of 2026-03-23. UV-01 (J-Tpeakc biomarker) is absent from all finalized ICH sources. The only path beyond 99.2% requires a finalized second-round ICH E14/S7B Q&A explicitly endorsing J-Tpeakc (anticipated ~September 2025 per IWG 2024 Concept Paper — not yet published as of this date)."
+  }
+}

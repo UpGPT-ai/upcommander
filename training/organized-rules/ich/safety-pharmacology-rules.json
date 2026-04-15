@@ -1,0 +1,428 @@
+{
+  "meta": {
+    "title": "ICH Safety Pharmacology & Nonclinical Timing Rules",
+    "sources": [
+      "ICH S7A — Safety Pharmacology Studies for Human Pharmaceuticals (Nov 2000)",
+      "ICH S7B — Nonclinical Evaluation of the Potential for Delayed Ventricular Repolarization (May 2005)",
+      "ICH M3(R2) — Guidance on Nonclinical Safety Studies for Clinical Trials and Marketing Authorization (Jun 2009)",
+      "ICH E14/S7B Q&As (Feb 2022)",
+      "ICH M3(R2) Q&As R2 (Mar 2012)",
+      "ICH E14/S7B IWG Concept Papers (2018, 2024)"
+    ],
+    "version": "1.0.0",
+    "extracted": "2026-03-22"
+  },
+
+  "definitions": {
+    "safety_pharmacology": "Studies that investigate the potential undesirable pharmacodynamic effects of a substance on physiological functions in relation to exposure in the therapeutic range and above.",
+    "primary_pharmacodynamics": "Studies on the mode of action and/or effects in relation to the desired therapeutic target.",
+    "secondary_pharmacodynamics": "Studies on the mode of action and/or effects not related to the desired therapeutic target.",
+    "core_battery": "Safety pharmacology studies designed to investigate effects on vital organ functions (cardiovascular, central nervous, respiratory systems). Required before first administration in humans.",
+    "follow_up_studies": "Studies designed to provide greater depth of understanding of effects observed or suspected from core battery, clinical, pharmacovigilance, or literature data. Conducted on a case-by-case basis.",
+    "supplemental_studies": "Studies evaluating effects on organ systems not addressed by the core battery (renal/urinary, autonomic nervous, gastrointestinal, and other organ systems).",
+    "hERG_safety_margin": "Ratio of hERG IC50 (free drug concentration) to estimated clinically relevant free drug exposure; used to predict risk of delayed ventricular repolarization.",
+    "integrated_risk_assessment": "Combined evaluation of nonclinical (in vitro hERG, in vivo QT, follow-up studies) and clinical (QTc, concentration-response, ECG monitoring) data to determine proarrhythmic risk.",
+    "thorough_QT_study": "Dedicated clinical study (ICH E14) designed to determine whether a drug has threshold pharmacologic effect on cardiac repolarization (QT/QTc prolongation)."
+  },
+
+  "scope": {
+    "applies_to": [
+      "New chemical entities",
+      "Biotechnology-derived products (with modifications per ICH S6)",
+      "Marketed pharmaceuticals (when new indications, routes, populations, or formulations warrant)"
+    ],
+    "out_of_scope": [
+      "Excipients evaluated within existing formulations",
+      "Herbal/traditional medicines (unless subject to ICH region regulations)"
+    ],
+    "modality_considerations": {
+      "small_molecules": "Full S7A core battery + S7B hERG/in vivo QT required",
+      "monoclonal_antibodies": "Low likelihood of direct ion channel interaction; TQT study not necessary unless target-related cardiac repolarization risk exists (E14 Q6.3)",
+      "large_targeted_proteins": "Same as monoclonal antibodies per E14 Q6.3",
+      "antibody_drug_conjugates": "Assess based on both antibody and small molecule payload properties",
+      "oligonucleotides": "Evolving guidance; assess based on PK/PD profile and off-target potential",
+      "peptides": "Case-by-case; FDA draft guidance available for clinical pharmacology assessment",
+      "gene_therapies": "Case-by-case; consider on-target effects on cardiac function",
+      "vaccines": "Generally low risk for cardiac ion channel effects; case-by-case assessment"
+    }
+  },
+
+  "core_battery": {
+    "description": "Studies on vital organ functions that should be investigated for all new pharmaceuticals prior to first human exposure.",
+    "required_timing": "Before first administration in humans (Phase I/FIH)",
+    "glp_requirement": "Should be conducted in compliance with GLP. Departures from GLP should be identified and their impact assessed.",
+
+    "cardiovascular_system": {
+      "guideline": "ICH S7A Section 2.7.2 + ICH S7B",
+      "required_endpoints": [
+        "Blood pressure",
+        "Heart rate",
+        "Electrocardiogram (ECG) including QT interval"
+      ],
+      "recommended_methods": {
+        "in_vivo": "Conscious freely moving telemetered animals preferred (typically dog or non-human primate)",
+        "in_vitro": "hERG (IKr) channel assay — mandatory for all small molecules",
+        "alternative_models": "Anesthetized or paced animals may be justified in certain circumstances"
+      },
+      "s7b_specific_requirements": {
+        "hERG_assay": {
+          "description": "In vitro IKr/hERG assay is critical for assessing risk of delayed ventricular repolarization",
+          "cell_system": "Mammalian cells with heterologous expression of hERG (hKv11.1) channel",
+          "best_practices": [
+            "Temperature: near physiological (35-37 C)",
+            "Stimulation frequency: 0.2-1 Hz for hERG",
+            "Report IC50 in both micromolar and ng/mL units plus Hill coefficient",
+            "Include positive control from reference drugs with known clinical TdP risk",
+            "Include vehicle (negative) controls with all non-compound materials",
+            "Verify test concentrations analytically",
+            "Demonstrate recording quality (seal resistance, input resistance, holding current stability)",
+            "Achieve steady-state drug effect before measuring"
+          ],
+          "safety_margin_calculation": {
+            "formula": "hERG IC50 (free) / estimated high clinical exposure (free Cmax,ss)",
+            "protein_binding_rule": "If unbound fraction experimentally <1%, set to 1% for calculation",
+            "low_risk_threshold": "Safety margin higher than threshold derived from reference drugs known to cause TdP under same experimental protocol",
+            "exposure_denominator": "High clinical exposure = Cmax,ss at maximum therapeutic dose with worst-case intrinsic/extrinsic factors"
+          }
+        },
+        "in_vivo_qt_study": {
+          "description": "In vivo QT assessment in conscious telemetered animals",
+          "species": "Non-rodent species, preferably same as used in toxicology",
+          "design": "Include and exceed anticipated therapeutic concentrations",
+          "heart_rate_correction": "Individual QT correction based on QT-RR relationship preferred; justify method used",
+          "exposure_assessment": "PK sampling in same animals; should cover high clinical exposure scenario",
+          "sensitivity": "Must demonstrate ability to detect QTc effect of magnitude similar to dedicated clinical QT studies (approximately 10 ms)"
+        },
+        "additional_ion_channels": {
+          "CaV1_2": "L-type calcium current; follow-up assay. Stimulation frequency 0.2 Hz recommended",
+          "NaV1_5": "Cardiac sodium current; follow-up assay. Stimulation frequency 0.2 Hz recommended",
+          "IKs": "Slow delayed rectifier; considered in follow-up studies"
+        },
+        "novel_approaches": {
+          "in_silico_models": "Ventricular action potential simulations using ion channel data; can assess integrated proarrhythmic risk",
+          "hiPSC_cardiomyocytes": "Human induced pluripotent stem cell-derived cardiomyocytes for in vitro repolarization assessment",
+          "proarrhythmia_models": "Must define: (1) context of use, (2) model development/validation, (3) uncertainty characterization, (4) evidence of predictive performance"
+        }
+      }
+    },
+
+    "central_nervous_system": {
+      "guideline": "ICH S7A Section 2.7.1",
+      "required_endpoints": [
+        "Motor activity",
+        "Behavioral changes",
+        "Coordination",
+        "Sensory/motor reflex responses",
+        "Body temperature"
+      ],
+      "recommended_methods": [
+        "Functional observational battery (FOB)",
+        "Irwin test",
+        "Modified Irwin test",
+        "Neurotoxicity screening battery"
+      ]
+    },
+
+    "respiratory_system": {
+      "guideline": "ICH S7A Section 2.7.3",
+      "required_endpoints": [
+        "Respiratory rate",
+        "Tidal volume or hemoglobin oxygen saturation"
+      ],
+      "important_note": "Clinical observation alone is generally NOT adequate for respiratory assessment; quantitative measurements required."
+    }
+  },
+
+  "follow_up_studies": {
+    "description": "Designed to provide greater depth of understanding of effects on vital functions observed or suspected. Not automatically required; triggered by specific findings.",
+    "triggers": [
+      "Adverse effects suspected based on pharmacological properties or chemical class",
+      "Concerns arising from core battery results",
+      "Clinical trial observations suggesting organ system effects",
+      "Pharmacovigilance signals",
+      "Literature reports for class or related compounds",
+      "In vitro or in vivo experimental findings"
+    ],
+    "timing": "Can be conducted at any point: before FIH if cause for concern exists, during clinical trials to clarify observed effects, or before marketing approval.",
+    "cardiovascular_follow_up": {
+      "additional_ionic_currents": "IKs, ICaL, INaL, INa, others as mechanistically appropriate",
+      "action_potential_studies": "Purkinje fibers, papillary muscles, or hiPSC-derived cardiomyocytes",
+      "in_silico_modeling": "Proarrhythmia risk prediction using multi-ion channel data",
+      "cardiac_output_studies": "Blood pressure, cardiac contractility, vascular resistance",
+      "proarrhythmia_markers": "Early afterdepolarizations, triggered activity, beat-to-beat QT variability"
+    },
+    "cns_follow_up": [
+      "Behavioral pharmacology",
+      "Learning and memory",
+      "Ligand-specific binding",
+      "Neurochemistry",
+      "Visual/auditory/electrophysiology examinations",
+      "Abuse liability assessment (drug discrimination, self-administration, withdrawal)"
+    ],
+    "respiratory_follow_up": [
+      "Airway resistance",
+      "Compliance",
+      "Pulmonary arterial pressure",
+      "Blood gases",
+      "Blood pH"
+    ]
+  },
+
+  "supplemental_studies": {
+    "description": "Evaluate effects on organ systems not addressed by the core battery. Should be assessed before marketing approval unless justified.",
+    "timing": {
+      "default": "Should be available before marketing approval",
+      "exception": "Not required if endpoints adequately covered in other nonclinical or clinical studies; must justify omission"
+    },
+    "organ_systems": {
+      "renal_urinary": {
+        "endpoints": ["Urine volume", "Specific gravity", "Osmolality", "pH", "Fluid/electrolyte balance", "Proteins", "Cytology", "Blood chemistry (BUN, creatinine)"]
+      },
+      "autonomic_nervous_system": {
+        "endpoints": ["Binding to receptors relevant to autonomic function", "Functional responses to agonists/antagonists in vivo and in vitro", "Direct stimulation of autonomic nerves", "Heart rate and blood pressure responses", "Baroreflex testing"]
+      },
+      "gastrointestinal": {
+        "endpoints": ["Gastric secretion", "GI injury potential (ulcerogenic)", "Bile secretion", "Transit time in vivo", "Ileal contraction in vitro", "Gastric pH measurement"]
+      },
+      "other_organ_systems": {
+        "examples": ["Skeletal muscle", "Immune function", "Endocrine function"],
+        "note": "Investigated if warranted based on pharmacological properties, chemical class, or findings from other studies"
+      }
+    }
+  },
+
+  "conditions_studies_not_necessary": {
+    "description": "Situations where separate safety pharmacology studies may not be required (ICH S7A Section 2.9)",
+    "conditions": [
+      {
+        "condition": "Locally applied agents with low systemic exposure",
+        "examples": "Dermal or ocular agents where systemic bioavailability is demonstrably low",
+        "requirement": "Justify based on PK data demonstrating negligible systemic exposure"
+      },
+      {
+        "condition": "Cytotoxic agents for end-stage cancer",
+        "note": "Safety pharmacology endpoints may be assessed in general toxicology studies instead; clinical monitoring may suffice"
+      },
+      {
+        "condition": "Biotechnology-derived products",
+        "note": "Where target specificity is high and off-target effects unlikely, reduced safety pharmacology may be appropriate (per ICH S6). Must justify based on mechanism of action."
+      },
+      {
+        "condition": "Agents with well-characterized PK/PD profiles",
+        "note": "Where information from pharmacology, toxicology, and clinical studies already provides adequate safety information"
+      }
+    ]
+  },
+
+  "study_design_principles": {
+    "test_system": {
+      "in_vivo": {
+        "species": "Should be appropriate for evaluating PD effects; clinical route preferred",
+        "rationale": "Choose based on responsiveness, similarity to human, and available background data"
+      },
+      "in_vitro": {
+        "systems": "Isolated organs, tissues, cells, subcellular fractions, or receptor binding studies",
+        "role": "May be used to complement or replace in vivo studies where scientifically justified"
+      },
+      "ex_vivo": "May be considered when they provide relevant pharmacodynamic information"
+    },
+    "route_of_administration": "Clinical route preferred. If different route used, must justify and ensure exposures similar to or greater than clinical exposures.",
+    "dose_levels": {
+      "principle": "Should include and exceed therapeutic range to establish dose-response and safety margins",
+      "minimum": "Multiple dose levels to define dose-response relationship",
+      "high_dose": "Should produce adverse effects or provide a high exposure multiple"
+    },
+    "duration": {
+      "default": "Generally single-dose acute studies",
+      "repeat_dose_considerations": [
+        "PD effect only manifests after repeated administration",
+        "Concerns from repeat-dose nonclinical or clinical studies",
+        "Drug accumulation or delayed PD effects expected"
+      ]
+    },
+    "metabolites_and_isomers": {
+      "metabolites": "Safety pharmacology of major human metabolites should be considered when: (1) disproportionate metabolite in humans vs. test species, (2) metabolite has known pharmacological activity",
+      "isomers": "If a racemic mixture is studied, consider whether individual isomers have different safety pharmacology profiles",
+      "finished_products": "May need evaluation if excipients or formulation may contribute to pharmacodynamic effects"
+    }
+  },
+
+  "timing_relative_to_clinical_development": {
+    "source": "ICH M3(R2) Section 5 + ICH S7A Section 2.10",
+
+    "before_phase_1_fih": {
+      "required": [
+        "Core battery safety pharmacology studies (CNS, CV, respiratory)",
+        "In vitro hERG assay (S7B)",
+        "In vivo QT study (S7B) — or defer to toxicology if adequately assessed",
+        "Pharmacology studies sufficient to characterize effects in therapeutic range and above"
+      ],
+      "conditionally_required": [
+        "Follow-up studies if cause for concern identified from core battery or pharmacological class",
+        "Supplemental studies if organ system concerns based on drug class or mechanism"
+      ],
+      "m3r2_table1_safety_pharm": "Core safety pharmacology package required before any Phase I trial"
+    },
+
+    "during_clinical_development": {
+      "purpose": "Clarify observed or suspected undesirable effects in animals or humans",
+      "examples": [
+        "Follow-up CV studies if QT signal observed clinically",
+        "Follow-up CNS studies if behavioral/neurological adverse events reported",
+        "Additional ion channel studies to characterize proarrhythmic mechanism"
+      ]
+    },
+
+    "before_phase_2": {
+      "genotoxicity_battery": "Complete battery of standard genotoxicity tests should be completed before initiation of Phase II",
+      "safety_pharmacology": "Core battery should already be complete from Phase I"
+    },
+
+    "before_phase_3": {
+      "required": [
+        "Chronic toxicology studies of duration appropriate for planned clinical exposure",
+        "Male fertility study (or evaluation from repeated-dose toxicology)",
+        "Embryo-fetal development studies (with regional differences: US may defer to before Phase III for WOCBP)"
+      ],
+      "safety_pharmacology": "Supplemental studies should be available unless not warranted"
+    },
+
+    "before_marketing_approval": {
+      "required": [
+        "All supplemental safety pharmacology studies unless justified as not necessary",
+        "Carcinogenicity studies (if recommended per ICH S1A)",
+        "Pre-and-postnatal development study",
+        "All female reproduction toxicity studies"
+      ]
+    },
+
+    "exploratory_clinical_trials": {
+      "approaches": {
+        "approach_1_microdose": {
+          "safety_pharmacology": "Not required for single microdose (<=100 ug) studies",
+          "toxicology": "Extended single-dose toxicity study in one species (usually rodent)"
+        },
+        "approach_2_microdose": {
+          "safety_pharmacology": "Not required",
+          "note": "Applies to doses producing pharmacological effect but sub-therapeutic"
+        },
+        "approach_3": {
+          "safety_pharmacology": "Abbreviated package may suffice for single-dose in humans",
+          "toxicology": "Extended single-dose studies in rodents and non-rodents"
+        },
+        "approach_4": {
+          "safety_pharmacology": "Core battery required",
+          "toxicology": "14-day studies in rodents and non-rodents; dose selection based on multiples of human exposure"
+        },
+        "approach_5": {
+          "safety_pharmacology": "Core battery required",
+          "toxicology": "14-day rodent study + non-rodent confirmatory study"
+        }
+      }
+    },
+
+    "pediatric_clinical_trials": {
+      "requirements": [
+        "Results from repeated-dose toxicity studies of appropriate duration in adult animals",
+        "Core safety pharmacology package",
+        "Standard battery of genotoxicity tests"
+      ],
+      "juvenile_animal_studies": "Consider when adult data insufficient to support pediatric studies; one relevant species generally adequate"
+    },
+
+    "combination_drugs": {
+      "safety_pharmacology": "Combination safety pharmacology studies generally not recommended if individual agents tested according to current standards",
+      "exception": "If individual agents have shown findings indicative of embryo-fetal risk, combination studies are not recommended since risk is already identified"
+    }
+  },
+
+  "integrated_risk_assessment_framework": {
+    "source": "ICH E14/S7B Q&As (2022)",
+    "description": "Framework for combining nonclinical and clinical data to assess proarrhythmic risk",
+
+    "low_tdp_risk_criteria": {
+      "nonclinical": [
+        "hERG safety margin higher than threshold based on reference drugs with known TdP risk (same experimental protocol)",
+        "No QTc prolongation in in vivo assay at exposures covering high clinical exposure scenario",
+        "Follow best practice considerations for in vitro (S7B Q&A 2) and in vivo (S7B Q&A 3) studies"
+      ],
+      "clinical": [
+        "Upper bound of two-sided 90% CI for estimated maximal delta-QTc <10 ms at highest clinically relevant exposure",
+        "No notable imbalances in QT outliers between treatment arms",
+        "CV safety database does not suggest increased proarrhythmic adverse events"
+      ]
+    },
+
+    "when_hERG_or_qt_positive": {
+      "follow_up_options": [
+        "Additional ion channel currents (IKs, ICaL, INaL, INa)",
+        "In vitro cardiomyocyte repolarization assays (hiPSC-CMs)",
+        "In silico proarrhythmia risk prediction models",
+        "Additional in vivo studies with different designs or species"
+      ],
+      "clinical_implications": [
+        "May need intensive ECG monitoring in Phase 2/3",
+        "Concentration-response modeling of QTc data recommended",
+        "Consider ECG biomarkers (J-Tpeakc, late potential) as supplemental endpoints",
+        "Discuss with regulatory authorities before Phase 3"
+      ]
+    },
+
+    "special_situations": {
+      "heart_rate_confounding": "When drug causes >20 bpm increase, QTc assessment is unreliable; nonclinical integrated risk assessment particularly valuable",
+      "unable_to_test_supratherapeutic": "When safety/tolerability limits clinical exposure testing, nonclinical data can supplement",
+      "tqt_not_feasible": "For drugs unsafe in healthy volunteers (oncology), integrated nonclinical + patient clinical assessment may replace TQT",
+      "large_molecules": "mAbs and large targeted proteins: TQT not necessary unless target-related cardiac repolarization risk exists"
+    }
+  },
+
+  "incorporation_into_toxicology_studies": {
+    "source": "ICH M3(R2) + M3(R2) Q&A Section 5",
+    "principle": "Safety pharmacology endpoints can be incorporated into general toxicology studies to reduce animal use",
+    "requirement": "Assessment rigor must be equivalent to stand-alone safety pharmacology studies",
+    "key_considerations": [
+      "Methods must be adequately evaluated and validated",
+      "For cardiovascular: heart rate correction, statistical sensitivity, positive controls, and exposure measurement must meet S7B best practice",
+      "Technology is available to make toxicology-integrated assessments as rigorous as standalone (M3(R2) Q&A 5.1)",
+      "Longitudinal assessment in toxicology studies can be informative for extended PK/PD profiles"
+    ],
+    "applicable_contexts": [
+      "ICH S9 (anticancer pharmaceuticals): CV, CNS, respiratory endpoints in toxicology studies",
+      "ICH S6 (biotechnology-derived products): safety pharmacology in toxicology studies",
+      "ICH M3(R2): encourages incorporation to reduce animal use when feasible"
+    ]
+  },
+
+  "glp_compliance": {
+    "general_rule": "Safety pharmacology studies should be conducted in compliance with GLP (ICH S7A Section 2.11)",
+    "core_battery": "GLP compliance required",
+    "follow_up_studies": "GLP compliance recommended; non-GLP studies should describe deviations and impact",
+    "supplemental_studies": "GLP compliance recommended",
+    "pilot_studies": "Need not be GLP compliant but should follow sound scientific practices"
+  },
+
+  "regional_differences": {
+    "us_fda": {
+      "embryo_fetal_timing": "Can be deferred until before Phase III for WOCBP using precautions to prevent pregnancy",
+      "phase_3_high_dose": "Assessment up to MTD, MFD, or limit dose required in both species before Phase III"
+    },
+    "eu_ema": {
+      "embryo_fetal_timing": "Definitive developmental toxicity studies should be completed before exposure of WOCBP (with exceptions)",
+      "local_tolerance": "Japan and EU recommend single dose paravenous administration for IV route"
+    },
+    "japan_pmda": {
+      "embryo_fetal_timing": "Definitive developmental toxicity studies should be completed before exposure of WOCBP",
+      "local_tolerance": "Single dose paravenous administration for IV route recommended"
+    }
+  },
+
+  "reporting_requirements": {
+    "study_reports": {
+      "core_battery": "Full GLP-compliant study reports",
+      "follow_up": "Full study reports; non-GLP deviations described",
+      "supplemental": "Full study reports or integrated into toxicology study reports"
+    },
+    "ctd_placement": "Module 2.6.2 (Pharmacology Written Summary) and Module 4.2.1.3 (Safety Pharmacology) of the Common Technical Document",
+    "integrated_summary": "An integrated summary discussing all safety pharmacology findings in relation to proposed clinical use should be provided"
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "meta": {
+    "title": "ICH Safety Pharmacology & Nonclinical Timing Rules",
+    "sources": [
+      "ICH S7A — Safety Pharmacology Studies for Human Pharmaceuticals (Nov 2000)",
+      "ICH S7B — Nonclinical Evaluation of the Potential for Delayed Ventricular Repolarization (May 2005)",
+      "ICH M3(R2) — Guidance on Nonclinical Safety Studies for Clinical Trials and Marketing Authorization (Jun 2009)",
+      "ICH E14/S7B Q&As (Feb 2022)",
+      "ICH M3(R2) Q&As R2 (Mar 2012)",
+      "ICH E14/S7B IWG Concept Papers (2018, 2024)"
+    ],
+    "version": "2.0.0-verified",
+    "extracted": "2026-03-22",
+    "verified": "2026-03-23",
+    "verification_method": "Systematic section-by-section check against source PDFs: S7A (all 13 pages), S7B (all 14 pages), E14/S7B Q&As (all 46 pages), E14 (all pages). All changes documented in changes-made.json."
+  },
+
+  "definitions": {
+    "safety_pharmacology": "Studies that investigate the potential undesirable pharmacodynamic effects of a substance on physiological functions in relation to exposure in the therapeutic range and above.",
+    "source_verified": "S7A Section 1.5 (page 1 of guideline): 'safety pharmacology studies are defined as those studies that investigate the potential undesirable pharmacodynamic effects of a substance on physiological functions in relation to exposure in the therapeutic range and above.' CONFIRMED ACCURATE.",
+    "primary_pharmacodynamics": "Studies on the mode of action and/or effects in relation to the desired therapeutic target.",
+    "primary_pharmacodynamics_source_verified": "S7A Section 3 Note 2 (page 8 of guideline): 'Studies on the mode of action and/or effects of a substance in relation to its desired therapeutic target are primary pharmacodynamic studies.' CONFIRMED ACCURATE.",
+    "secondary_pharmacodynamics": "Studies on the mode of action and/or effects not related to the desired therapeutic target.",
+    "secondary_pharmacodynamics_source_verified": "S7A Section 3 Note 2 (page 8 of guideline): 'Studies on the mode of action and/or effects of a substance not related to its desired therapeutic target are secondary pharmacodynamic studies.' CONFIRMED ACCURATE.",
+    "core_battery": "Safety pharmacology studies designed to investigate effects on vital organ functions (cardiovascular, central nervous, respiratory systems). Required before first administration in humans.",
+    "core_battery_source_verified": "S7A Section 2.7 (page 5): 'The purpose of the safety pharmacology core battery is to investigate the effects of the test substance on vital functions. In this regard, the cardiovascular, respiratory and central nervous systems are usually considered the vital organ systems that should be studied in the core battery.' CONFIRMED ACCURATE.",
+    "follow_up_studies": "Studies designed to provide greater depth of understanding of effects observed or suspected from core battery, clinical, pharmacovigilance, or literature data. Conducted on a case-by-case basis.",
+    "follow_up_studies_source_verified": "S7A Section 2.8.1 (page 5): 'Follow-up studies are meant to provide a greater depth of understanding than, or additional knowledge to, that provided by the core battery on vital functions.' CONFIRMED ACCURATE.",
+    "supplemental_studies": "Studies evaluating effects on organ systems not addressed by the core battery (renal/urinary, autonomic nervous, gastrointestinal, and other organ systems).",
+    "supplemental_studies_source_verified": "S7A Section 2.8.2 (page 6): 'Supplemental studies are meant to evaluate potential adverse pharmacodynamic effects on organ system functions not addressed by the core battery or repeated dose toxicity studies when there is a cause for concern.' CONFIRMED ACCURATE.",
+    "hERG_safety_margin": "Ratio of hERG IC50 (free drug concentration) to estimated clinically relevant free drug exposure; used to predict risk of delayed ventricular repolarization.",
+    "hERG_safety_margin_source_verified": "E14/S7B Q&A 1.2 (page 29): 'A drug's potency for hERG block, usually calculated as half-inhibitory concentration (IC50), can be normalized to the drug's estimated clinically relevant exposures in patients to calculate the safety margin.' CONFIRMED ACCURATE. Note: the specific formula (free IC50/free Cmax,ss) is further detailed in Q&A 1.2 as the recommended approach.",
+    "integrated_risk_assessment": "Combined evaluation of nonclinical (in vitro hERG, in vivo QT, follow-up studies) and clinical (QTc, concentration-response, ECG monitoring) data to determine proarrhythmic risk.",
+    "integrated_risk_assessment_source_verified": "S7B Section 2.3.6 (page 6 of S7B): 'The integrated risk assessment is the evaluation of non-clinical study results including the results from follow-up studies and other relevant information.' E14/S7B Q&A 1.1 (page 27) provides fuller contemporary framework. CONFIRMED ACCURATE.",
+    "thorough_QT_study": "Dedicated clinical study (ICH E14) designed to determine whether a drug has threshold pharmacologic effect on cardiac repolarization (QT/QTc prolongation).",
+    "thorough_QT_study_source_verified": "E14 Section 2.2 (page 3 of guideline): 'The thorough QT/QTc study is intended to determine whether the drug has a threshold pharmacologic effect on cardiac repolarization, as detected by QT/QTc prolongation.' CONFIRMED ACCURATE."
+  },
+
+  "scope": {
+    "applies_to": [
+      "New chemical entities",
+      "Biotechnology-derived products (with modifications per ICH S6)",
+      "Marketed pharmaceuticals (when new indications, routes, populations, or formulations warrant)"
+    ],
+    "applies_to_source_verified": "S7A Section 1.3 (page 1): 'This guideline generally applies to new chemical entities and biotechnology-derived products for human use. This guideline can be applied to marketed pharmaceuticals when appropriate (e.g., when adverse clinical events, a new patient population, or a new route of administration raises concerns not previously addressed).' CONFIRMED ACCURATE.",
+    "out_of_scope": [
+      "Excipients evaluated within existing formulations",
+      "Herbal/traditional medicines (unless subject to ICH region regulations)"
+    ],
+    "out_of_scope_note": "PARTIALLY VERIFIED. S7A Section 2.9 (page 6) lists specific conditions under which studies are not necessary (locally applied agents with low systemic exposure; cytotoxic agents for end-stage cancer; biotechnology-derived products with high target specificity; new salts with similar PK/PD). The out_of_scope items for excipients and herbal medicines are reasonable inferences consistent with S7A's scope statement but are not explicitly enumerated in S7A. S7A Section 2.6 addresses finished product formulations only when they 'substantially alter the pharmacokinetics and/or pharmacodynamics.' This item carries verification_status: PARTIALLY_VERIFIED — consistent with S7A but not directly quoted.",
+    "verification_status_out_of_scope": "PARTIALLY_VERIFIED",
+    "modality_considerations": {
+      "small_molecules": "Full S7A core battery + S7B hERG/in vivo QT required",
+      "small_molecules_source_verified": "S7A Section 1.3 and S7B Section 1.3 apply to new chemical entities. CONFIRMED ACCURATE.",
+      "monoclonal_antibodies": "Low likelihood of direct ion channel interaction; TQT study not necessary unless target-related cardiac repolarization risk exists [E14 Q&A 6.3]. Reduced safety pharmacology package may be appropriate for highly target-specific biotechnology-derived products [ICH S6(R1)].",
+      "monoclonal_antibodies_source_document": "E14/S7B Q&A 6.3 (March 2014, page 22): 'Large targeted proteins and monoclonal antibodies have a low likelihood of direct ion channel interactions and a thorough QT/QTc study is not necessary, unless the potential for proarrhythmic risk is suggested by mechanistic considerations or data from clinical or non-clinical studies.' NOTE: This rule was originally presented without clear source annotation. The TQT waiver is sourced to E14 Q&A 6.3, NOT to ICH S7B (2005). ICH S7B (2005) does not address mAbs specifically. ICH S6(R1) provides the basis for reduced safety pharmacology in highly target-specific biotechnology products.",
+      "monoclonal_antibodies_source_verified": "E14 Q&A 6.3 confirmed on page 22 of E14/S7B Q&As PDF. Text reproduced verbatim above. CORRECTION APPLIED per CORR-005.",
+      "large_targeted_proteins": "Same as monoclonal antibodies per E14 Q&A 6.3",
+      "large_targeted_proteins_source_verified": "E14 Q&A 6.3 (page 22): 'Large targeted proteins and monoclonal antibodies have a low likelihood of direct ion channel interactions...' CONFIRMED ACCURATE.",
+      "antibody_drug_conjugates": "Assess based on both antibody and small molecule payload properties",
+      "antibody_drug_conjugates_source_verified": "Not explicitly addressed in the PDFs reviewed. This is a reasonable scientific inference. verification_status: NEEDS_HUMAN_REVIEW — not directly stated in S7A, S7B, E14, or E14/S7B Q&As; consistent with general principles but inferred.",
+      "antibody_drug_conjugates_verification_status": "NEEDS_HUMAN_REVIEW",
+      "oligonucleotides": "Evolving guidance; assess based on PK/PD profile and off-target potential",
+      "oligonucleotides_verification_status": "NEEDS_HUMAN_REVIEW — not directly addressed in source PDFs reviewed. Consistent with S7A general principles but specific oligonucleotide guidance is not in the reviewed documents.",
+      "peptides": "Case-by-case; FDA draft guidance available for clinical pharmacology assessment",
+      "peptides_verification_status": "NEEDS_HUMAN_REVIEW — not directly addressed in source PDFs reviewed. The reference to FDA draft guidance is not verifiable from the ICH source documents available.",
+      "gene_therapies": "Case-by-case; consider on-target effects on cardiac function",
+      "gene_therapies_verification_status": "NEEDS_HUMAN_REVIEW — not directly addressed in source PDFs reviewed.",
+      "vaccines": "Generally low risk for cardiac ion channel effects; case-by-case assessment",
+      "vaccines_verification_status": "NEEDS_HUMAN_REVIEW — not directly addressed in source PDFs reviewed."
+    }
+  },
+
+  "core_battery": {
+    "description": "Studies on vital organ functions that should be investigated for all new pharmaceuticals prior to first human exposure.",
+    "description_source_verified": "S7A Section 2.7 (page 5): confirmed. ACCURATE.",
+    "required_timing": "Before first administration in humans (Phase I/FIH)",
+    "required_timing_source_verified": "S7A Section 2.10.1 (page 7): 'The effects of a test substance on the functions listed in the safety pharmacology core battery should be investigated prior to first administration in humans.' CONFIRMED ACCURATE.",
+    "glp_requirement": "Should be conducted in compliance with GLP. Departures from GLP should be identified and their impact assessed.",
+    "glp_requirement_source_verified": "S7A Section 2.11 (page 7): 'The safety pharmacology core battery should ordinarily be conducted in compliance with GLP.' CONFIRMED ACCURATE.",
+
+    "cardiovascular_system": {
+      "guideline": "ICH S7A Section 2.7.2 + ICH S7B",
+      "required_endpoints": [
+        "Blood pressure",
+        "Heart rate",
+        "Electrocardiogram (ECG) including QT interval"
+      ],
+      "required_endpoints_source_verified": "S7A Section 2.7.2 (page 5): 'Blood pressure, heart rate, and the electrocardiogram should be evaluated.' CONFIRMED ACCURATE.",
+      "recommended_methods": {
+        "in_vivo": "Conscious freely moving telemetered animals preferred (typically dog or non-human primate)",
+        "in_vivo_source_verified": "S7A Section 2.3.2 (page 3): 'In conducting in vivo studies, it is preferable to use unanesthetized animals that may be chronically instrumented for telemetry.' S7B Section 3.1.3 (page 8): 'Laboratory animal species used for in vivo electrophysiology studies include dog, monkey, swine, rabbit, ferret, and guinea pig.' CONFIRMED ACCURATE.",
+        "in_vitro": "hERG (IKr) channel assay — mandatory for all small molecules",
+        "in_vitro_source_verified": "S7B Section 2.3.1 (page 4): 'An in vitro IKr assay evaluates the effects on the ionic current through a native or expressed IKr channel protein, such as that encoded by hERG.' S7B Section 1.4 (page 2): 'In vitro IKr and in vivo QT assays...when performed for regulatory submission should be conducted in compliance with good laboratory practice (GLP).' CONFIRMED ACCURATE — both in vitro and in vivo assays are complementary and both required per S7B Section 1.4.",
+        "alternative_models": "Anesthetized or paced animals may be justified in certain circumstances",
+        "alternative_models_source_verified": "S7B Q&A 3.1 (page 39): 'the choice of alternative model approaches (e.g., anesthetized or paced animals) might be justified in certain circumstances.' CONFIRMED ACCURATE."
+      },
+      "s7b_specific_requirements": {
+        "hERG_assay": {
+          "description": "In vitro IKr/hERG assay is critical for assessing risk of delayed ventricular repolarization",
+          "description_source_verified": "S7B Section 2.3.1 (page 4) and E14/S7B Q&A 2.1 (page 31): confirmed. ACCURATE.",
+          "cell_system": "Mammalian cells with heterologous expression of hERG (hKv11.1) channel",
+          "cell_system_source_verified": "S7B Section 3.1.2 (page 7): 'Heterologous expression systems, where human ion channel protein(s) are expressed in noncardiac cell lines, are used to assess the effects of a test substance on a specific ion channel.' CONFIRMED ACCURATE.",
+          "best_practices": [
+            {
+              "practice": "Temperature: near physiological (35-37 C)",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022), NOT original S7B (2005)",
+              "qa_text": "S7B Q&A 2.1 item 1 (page 32): 'patch clamp experiments on cells overexpressing cardiac ion channels, including hERG, CaV1.2, and NaV1.5, should be performed at near physiological temperature (35-37 C).'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Stimulation frequency: 0.2-1 Hz for hERG",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022), NOT original S7B (2005)",
+              "qa_text": "S7B Q&A 2.1 item 2 (page 32): 'For hERG, a stimulation frequency of 0.2 - 1 Hz is recommended. For CaV1.2 and NaV1.5 currents, a stimulation frequency of 0.2 Hz is recommended.'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Report IC50 in both micromolar and ng/mL units plus Hill coefficient",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022), NOT original S7B (2005)",
+              "qa_text": "S7B Q&A 2.1 item 4 (page 33): 'The primary derived endpoints are inhibitory concentration such as the IC50 value (reported in both micromolar and ng/mL units) and Hill coefficient.'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Include positive control from reference drugs with known clinical TdP risk",
+              "source_document": "ICH S7B Section 3.1.1 (2005)",
+              "s7b_text": "S7B Section 3.1.1 (page 7): 'A sub-maximally effective concentration of a positive control substance should be used to demonstrate the responsiveness of in vitro preparations for ion channel and action potential duration assays and should be included in every study.' Also E14/S7B Q&A 2.1 item 7 (page 34): 'The positive control drug should be one of the reference drugs referred to in Q&A 1.2.'",
+              "in_original_S7B_2005": true
+            },
+            {
+              "practice": "Include vehicle (negative) controls with all non-compound materials",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022) item 7 (page 34-35)",
+              "qa_text": "S7B Q&A 2.1 item 7 (page 35): 'Vehicle (negative) controls should be included in the experiments. The vehicle should include all non-compound materials in the test article solution such as solubilizing agents and preservatives.'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Verify test concentrations analytically",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022) item 6 (page 34)",
+              "qa_text": "S7B Q&A 2.1 item 6 (page 34): 'The concentration of test compound to which the cells were exposed should be verified by applying a validated analytical method to the solution collected from the cell chamber.'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Demonstrate recording quality (seal resistance, input resistance, holding current stability)",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022) items 3 and 5 (pages 33-34)",
+              "qa_text": "S7B Q&A 2.1 item 3 (page 33): 'Seal resistance should be high enough so that the leak conductance at all voltages...do not compromise voltage control.' Item 5: 'time-course plots of current amplitude, input resistance, holding current for individual cells in control condition followed by drug application.'",
+              "in_original_S7B_2005": false
+            },
+            {
+              "practice": "Achieve steady-state drug effect before measuring",
+              "source_document": "E14/S7B Q&A 2.1 (Feb 2022) item 3 (page 33) and S7B Section 3.1.2 (2005)",
+              "qa_text": "S7B Q&A 2.1 item 3 (page 33): 'The time course of drug effects should be monitored until steady state effect is obtained.' S7B Section 3.1.2 (page 7): 'the duration of exposure should be sufficient to obtain steady-state electrophysiological effects.'",
+              "in_original_S7B_2005": true
+            }
+          ],
+          "best_practices_source_annotation": "CORRECTION APPLIED (CORR-003): best practices for temperature (35-37C) and stimulation frequency (0.2-1 Hz) derive from E14/S7B Q&A 2.1 (Feb 2022), NOT from original ICH S7B (2005). Original S7B Section 3.1.1 requires positive controls and Section 3.1.2 specifies non-rodent species but does not prescribe physiological temperature or Hz range.",
+          "safety_margin_calculation": {
+            "formula": "hERG IC50 (free) / estimated high clinical exposure (free Cmax,ss)",
+            "formula_source_document": "E14/S7B Q&A 1.2 (Feb 2022), NOT original S7B (2005)",
+            "formula_qa_text": "S7B Q&A 1.2 (page 29): 'A drug's potency for hERG block, usually calculated as half-inhibitory concentration (IC50), can be normalized to the drug's estimated clinically relevant exposures in patients to calculate the safety margin.' The free/total distinction and Cmax,ss definition come from Q&A 1.2 (pages 29-30).",
+            "protein_binding_rule": "If unbound fraction experimentally <1%, set to 1% for calculation",
+            "protein_binding_rule_source_document": "E14/S7B Q&A 1.2 (Feb 2022)",
+            "protein_binding_qa_text": "S7B Q&A 1.2 (page 29-30): 'the unbound (free) fraction in plasma should be set to 1% if experimentally determined to be < 1%.'",
+            "protein_binding_in_original_S7B_2005": false,
+            "low_risk_threshold": "Safety margin higher than threshold derived from reference drugs known to cause TdP under same experimental protocol",
+            "low_risk_threshold_source_document": "E14/S7B Q&A 1.2 (Feb 2022)",
+            "low_risk_threshold_qa_text": "S7B Q&A 1.2 (pages 29-30): 'the resulting safety margin should be compared to the range of safety margins computed under the same experimental protocol for a series of reference drugs that have known clinical TdP risk and cover diverse electrophysiological properties.'",
+            "exposure_denominator": "High clinical exposure = Cmax,ss at maximum therapeutic dose with worst-case intrinsic/extrinsic factors",
+            "exposure_denominator_source_document": "E14/S7B Q&A 1.2 (Feb 2022) referencing E14 Q&A 5.1",
+            "exposure_denominator_qa_text": "S7B Q&A 1.2 (page 30): 'it is generally recommended to use the high clinical exposure as defined in ICH E14 Q&A 5.1 (i.e., mean steady state maximum concentration [Cmax,ss] when the maximum therapeutic dose is administered in the presence of the intrinsic or extrinsic factor that has the largest effect on increasing Cmax,ss).'",
+            "formula_source_annotation": "CORRECTION APPLIED (CORR-004): the safety margin formula and protein binding 1% floor rule derive from E14/S7B Q&A 1.2 (Feb 2022). The original S7B (2005) Section 2.2 discusses clinical safety margins conceptually but does NOT specify this formula or the 1% protein binding floor rule."
+          }
+        },
+        "in_vivo_qt_study": {
+          "description": "In vivo QT assessment in conscious telemetered animals",
+          "description_source_verified": "S7B Section 2.3.2 (page 4) and S7B Section 3.1.3 (pages 8-9): confirmed. ACCURATE.",
+          "species": "Non-rodent species, preferably same as used in toxicology",
+          "species_source_verified": "S7B Q&A 3.1 (page 39): 'It is preferable to use the same animal species in the safety pharmacology and non-rodent toxicity studies to facilitate understanding of the possible relationship between adverse cardiovascular pharmacodynamic effects and structural effects on the heart.' S7B Section 3.1.3 lists acceptable species (dog, monkey, swine, rabbit, ferret, guinea pig). CONFIRMED ACCURATE.",
+          "design": "Include and exceed anticipated therapeutic concentrations",
+          "design_source_verified": "S7B Section 3.1.3 (page 9): 'The dose range should be in accord with that discussed in ICH S7A and, whenever feasible, should include and exceed the anticipated human exposure.' CONFIRMED ACCURATE.",
+          "heart_rate_correction": "Individual QT correction based on QT-RR relationship preferred; justify method used",
+          "heart_rate_correction_source_verified": "S7B Q&A 3.3 (page 39-40): 'individual QT correction based on QT-RR relationship is a preferred method as it is more accurate and sensitive than the general methods such as Bazett, Fridericia, or Van de Water when the test drugs affect heart rate.' CONFIRMED ACCURATE.",
+          "exposure_assessment": "PK sampling in same animals; should cover high clinical exposure scenario",
+          "exposure_assessment_source_verified": "S7B Q&A 3.2 (page 39): 'An assessment of exposure in the same animals used for the pharmacodynamic assessment is encouraged.' CONFIRMED ACCURATE.",
+          "sensitivity": "Must demonstrate ability to detect QTc effect of magnitude similar to dedicated clinical QT studies (approximately 10 ms)",
+          "sensitivity_source_verified": "S7B Q&A 3.4 (page 40): 'If study results are to be used to support an integrated nonclinical and clinical risk assessment described in ICH E14 Q&A 6.1, then the study should have sensitivity to detect a QTc prolongation effect of a magnitude similar to dedicated clinical QT studies.' CONFIRMED ACCURATE. NOTE: This sensitivity requirement (approximately 10 ms) applies specifically when the in vivo study is used for the E14 Q&A 5.1/6.1 integrated assessment context. For studies used only to support FIH, this higher sensitivity bar does not apply per S7B Q&A 3.4."
+        },
+        "additional_ion_channels": {
+          "CaV1_2": "L-type calcium current; follow-up assay. Stimulation frequency 0.2 Hz recommended",
+          "CaV1_2_source_verified": "E14/S7B Q&A 2.1 item 2 (page 32): 'For CaV1.2 and NaV1.5 currents, a stimulation frequency of 0.2 Hz is recommended.' S7B Section 2.3.5 and E14/S7B Q&A 1.1 (page 29) describe ICaL as a follow-up consideration. CONFIRMED ACCURATE.",
+          "NaV1_5": "Cardiac sodium current; follow-up assay. Stimulation frequency 0.2 Hz recommended",
+          "NaV1_5_source_verified": "E14/S7B Q&A 2.1 item 2 (page 32): confirmed. CONFIRMED ACCURATE.",
+          "IKs": "Slow delayed rectifier; considered in follow-up studies",
+          "IKs_source_verified": "E14/S7B Q&A 1.1 (page 29): IKs listed among additional repolarization currents that may affect TdP risk when hERG or in vivo QT is positive. CONFIRMED ACCURATE."
+        },
+        "novel_approaches": {
+          "in_silico_models": "Ventricular action potential simulations using ion channel data; can assess integrated proarrhythmic risk",
+          "in_silico_models_source_document": "E14/S7B Q&As (Feb 2022) Section 4 (S7B Q&As 4.1-4.2, pages 43-46) + CiPA IWG principles. NOT original S7B (2005).",
+          "in_silico_models_source_verified": "E14/S7B Q&A 4.1 (page 43): 'Different models, including in silico, in vitro, ex vivo and in vivo models, have the potential to be used as part of an integrated risk assessment strategy.' CONFIRMED the concept is from Q&As (2022), not S7B (2005).",
+          "hiPSC_cardiomyocytes": "Human induced pluripotent stem cell-derived cardiomyocytes for in vitro repolarization assessment",
+          "hiPSC_cardiomyocytes_source_document": "E14/S7B Q&As (Feb 2022) S7B Q&As 2.2-2.5 (pages 35-38). NOT original S7B (2005).",
+          "hiPSC_cardiomyocytes_source_verified": "E14/S7B Q&A 2.2 (page 35): 'Since implementation of ICH S7B, new technologies have become available, including assays with human induced pluripotent stem cell derived cardiomyocytes (hiPSC-CMs). S7B Q&As 2.2-2.5 outline best practice considerations when in vitro cardiomyocyte assays are performed as follow-up studies.' CONFIRMED from Q&As (2022), not S7B (2005).",
+          "hiPSC_NOT_in_original_S7B_2005": true,
+          "in_silico_NOT_in_original_S7B_2005": true,
+          "proarrhythmia_models": "Must define: (1) context of use, (2) model development/validation, (3) uncertainty characterization, (4) evidence of predictive performance",
+          "proarrhythmia_models_source_document": "E14/S7B Q&A 4.1 (Feb 2022), pages 43-44. NOT original S7B (2005).",
+          "proarrhythmia_models_source_verified": "E14/S7B Q&A 4.1 (pages 43-44) lists six principles for proarrhythmia risk prediction models: (1) defined endpoint consistent with context of use, (2) fully disclosed algorithm for model development, (3) defined domain of applicability/scope, (4) prespecified analysis plan and criteria to assess model predictivity, (5) mechanistic interpretation, (6) uncertainty characterization and propagation. NOTE: The original rules file describes four criteria: context of use, model development/validation, uncertainty characterization, evidence of predictive performance. The Q&As actually list SIX criteria. This is a simplification, not a factual error, but the four listed are subsumed within the six. PARTIALLY ACCURATE — six criteria exist per Q&A 4.1 but the four listed are all present within those six.",
+          "proarrhythmia_models_verification_note": "The four criteria stated are all represented in the Q&A 4.1 six-point framework. The rule is accurate but incomplete — Q&A 4.1 lists 6 principles, not 4. No correction required for accuracy; completeness note added.",
+          "novel_approaches_source_annotation": "CORRECTION APPLIED (CORR-006): hiPSC-CMs and in silico models listed in this section derive from E14/S7B Q&As (Feb 2022) and CiPA IWG, NOT from original S7B (2005). S7B Section 3.1.4 (2005) only states that 'Interested parties are encouraged to develop these models' generically, without naming hiPSC-CMs or specifying in silico model criteria."
+        }
+      }
+    },
+
+    "central_nervous_system": {
+      "guideline": "ICH S7A Section 2.7.1",
+      "required_endpoints": [
+        "Motor activity",
+        "Behavioral changes",
+        "Coordination",
+        "Sensory/motor reflex responses",
+        "Body temperature"
+      ],
+      "required_endpoints_source_verified": "S7A Section 2.7.1 (page 5): 'Motor activity, behavioral changes, coordination, sensory/motor reflex responses and body temperature should be evaluated.' CONFIRMED ACCURATE.",
+      "recommended_methods": [
+        "Functional observational battery (FOB)",
+        "Irwin test",
+        "Modified Irwin test",
+        "Neurotoxicity screening battery"
+      ],
+      "recommended_methods_source_verified": "S7A Section 2.7.1 (page 5): 'a functional observation battery (FOB) (3), modified Irwin's (4), or other appropriate test (5) can be used.' CONFIRMED ACCURATE. References (3), (4), (5) in S7A correspond to Mattsson (FOB), Irwin (Irwin test), and Haggerty (neurotoxicity screening) respectively."
+    },
+
+    "respiratory_system": {
+      "guideline": "ICH S7A Section 2.7.3",
+      "required_endpoints": [
+        "Respiratory rate",
+        "Tidal volume or hemoglobin oxygen saturation"
+      ],
+      "required_endpoints_source_verified": "S7A Section 2.7.3 (page 5): 'Respiratory rate and other measures of respiratory function (e.g., tidal volume (6) or hemoglobin oxygen saturation) should be evaluated.' CONFIRMED ACCURATE.",
+      "important_note": "Clinical observation alone is generally NOT adequate for respiratory assessment; quantitative measurements required.",
+      "important_note_source_verified": "S7A Section 2.7.3 (page 5): 'Clinical observation of animals is generally not adequate to assess respiratory function, and thus these parameters should be quantified by using appropriate methodologies.' CONFIRMED ACCURATE."
+    }
+  },
+
+  "follow_up_studies": {
+    "description": "Designed to provide greater depth of understanding of effects on vital functions observed or suspected. Not automatically required; triggered by specific findings.",
+    "description_source_verified": "S7A Section 2.8.1 (page 5): confirmed. ACCURATE.",
+    "triggers": [
+      "Adverse effects suspected based on pharmacological properties or chemical class",
+      "Concerns arising from core battery results",
+      "Clinical trial observations suggesting organ system effects",
+      "Pharmacovigilance signals",
+      "Literature reports for class or related compounds",
+      "In vitro or in vivo experimental findings"
+    ],
+    "triggers_source_verified": "S7A Section 2.8 (page 5): 'Adverse effects may be suspected based on the pharmacological properties or chemical class of the test substance. Additionally, concerns may arise from the safety pharmacology core battery, clinical trials, pharmacovigilance, experimental in vitro or in vivo studies, or from literature reports.' CONFIRMED ACCURATE.",
+    "timing": "Can be conducted at any point: before FIH if cause for concern exists, during clinical trials to clarify observed effects, or before marketing approval.",
+    "timing_source_verified": "S7A Section 2.10.1 (page 7): 'Any follow-up or supplemental studies identified as appropriate, based on a cause for concern, should also be conducted.' S7A Section 2.10.2 (page 7): 'Additional studies may be warranted to clarify observed or suspected adverse effects.' S7A Section 2.10.3 (page 7): 'Safety pharmacology effects on systems listed in section 2.8 should be assessed prior to product approval.' CONFIRMED ACCURATE.",
+    "cardiovascular_follow_up": {
+      "additional_ionic_currents": "IKs, ICaL, INaL, INa, others as mechanistically appropriate",
+      "additional_ionic_currents_source_verified": "S7B Section 2.3.5 (page 5) and E14/S7B Q&A 1.1 (page 29): confirmed. ACCURATE.",
+      "action_potential_studies": "Purkinje fibers, papillary muscles, or hiPSC-derived cardiomyocytes",
+      "action_potential_studies_source_verified": "S7B Section 2.3.5 (page 5): 'Use of ventricular repolarization assays that measure action potential parameters in isolated cardiac preparations.' S7B Section 3.1.2 (page 7) mentions Purkinje fiber, papillary muscle, trabeculae. hiPSC-derived CMs sourced to E14/S7B Q&A 2.2. CONFIRMED ACCURATE.",
+      "in_silico_modeling": "Proarrhythmia risk prediction using multi-ion channel data",
+      "in_silico_modeling_source_verified": "E14/S7B Q&A 4.1 (page 43): confirmed. ACCURATE.",
+      "cardiac_output_studies": "Blood pressure, cardiac contractility, vascular resistance",
+      "cardiac_output_studies_source_verified": "S7A Section 2.8.1.2 (page 6): 'Cardiac output, ventricular contractility, vascular resistance, the effects of endogenous and/or exogenous substances on the cardiovascular responses, etc.' CONFIRMED ACCURATE.",
+      "proarrhythmia_markers": "Early afterdepolarizations, triggered activity, beat-to-beat QT variability",
+      "proarrhythmia_markers_source_verified": "E14/S7B Q&A 2.2 (page 35): 'Changes in cellular repolarization recognized as markers of ventricular proarrhythmia include delayed and abnormal repolarization (manifest as early afterdepolarizations, triggered activity or irregular beating).' CONFIRMED ACCURATE."
+    },
+    "cns_follow_up": [
+      "Behavioral pharmacology",
+      "Learning and memory",
+      "Ligand-specific binding",
+      "Neurochemistry",
+      "Visual/auditory/electrophysiology examinations",
+      "Abuse liability assessment (drug discrimination, self-administration, withdrawal)"
+    ],
+    "cns_follow_up_source_verified": "S7A Section 2.8.1.1 (page 6): 'Behavioral pharmacology, learning and memory, ligand-specific binding, neurochemistry, visual, auditory and/or electrophysiology examinations, etc.' CONFIRMED ACCURATE for items 1-5. Item 6 (abuse liability) is not explicitly listed in S7A Section 2.8.1.1 but is consistent with the 'etc.' clause and is a recognized safety pharmacology follow-up assessment. Verification_status for abuse liability item: PARTIALLY_VERIFIED.",
+    "respiratory_follow_up": [
+      "Airway resistance",
+      "Compliance",
+      "Pulmonary arterial pressure",
+      "Blood gases",
+      "Blood pH"
+    ],
+    "respiratory_follow_up_source_verified": "S7A Section 2.8.1.3 (page 6): 'Airway resistance, compliance, pulmonary arterial pressure, blood gases, blood pH, etc.' CONFIRMED ACCURATE."
+  },
+
+  "supplemental_studies": {
+    "description": "Evaluate effects on organ systems not addressed by the core battery. Should be assessed before marketing approval unless justified.",
+    "description_source_verified": "S7A Section 2.8.2 (page 6): 'Supplemental studies are meant to evaluate potential adverse pharmacodynamic effects on organ system functions not addressed by the core battery or repeated dose toxicity studies when there is a cause for concern.' S7A Section 2.10.3 (page 7): 'Safety pharmacology effects on systems listed in section 2.8 should be assessed prior to product approval, unless not warranted.' CONFIRMED ACCURATE.",
+    "timing": {
+      "default": "Should be available before marketing approval",
+      "exception": "Not required if endpoints adequately covered in other nonclinical or clinical studies; must justify omission",
+      "timing_source_verified": "S7A Section 2.10.3 (page 7): confirmed. ACCURATE."
+    },
+    "organ_systems": {
+      "renal_urinary": {
+        "endpoints": ["Urine volume", "Specific gravity", "Osmolality", "pH", "Fluid/electrolyte balance", "Proteins", "Cytology", "Blood chemistry (BUN, creatinine, plasma proteins)"],
+        "endpoints_source_verified": "S7A Section 2.8.2.1 (page 6): 'For example, urinary volume, specific gravity, osmolality, pH, fluid/electrolyte balance, proteins, cytology, and blood chemistry determinations such as blood urea nitrogen, creatinine and plasma proteins can be used.' CORRECTION APPLIED (CHG-001): 'plasma proteins' added to the Blood chemistry parenthetical list. The original rules file listed 'Blood chemistry (BUN, creatinine)' but S7A Section 2.8.2.1 explicitly includes 'plasma proteins' alongside BUN and creatinine. The word 'Proteins' already appeared as a separate endpoint (referring to urinary proteins) — the distinct 'plasma proteins' reference in blood chemistry was missing from the BUN/creatinine parenthetical."
+      },
+      "autonomic_nervous_system": {
+        "endpoints": ["Binding to receptors relevant to autonomic function", "Functional responses to agonists/antagonists in vivo and in vitro", "Direct stimulation of autonomic nerves", "Heart rate and blood pressure responses", "Baroreflex testing"],
+        "endpoints_source_verified": "S7A Section 2.8.2.2 (page 6): 'binding to receptors relevant for the autonomic nervous system, functional responses to agonists or antagonists in vivo or in vitro, direct stimulation of autonomic nerves and measurement of cardiovascular responses, baroreflex testing, and heart rate variability can be used.' CONFIRMED ACCURATE. Note: 'heart rate variability' is listed in S7A but was not included in the original rules file — however this is a minor omission, not a factual error."
+      },
+      "gastrointestinal": {
+        "endpoints": ["Gastric secretion", "GI injury potential (ulcerogenic)", "Bile secretion", "Transit time in vivo", "Ileal contraction in vitro", "Gastric pH measurement"],
+        "endpoints_source_verified": "S7A Section 2.8.2.3 (page 6): 'gastric secretion, gastrointestinal injury potential, bile secretion, transit time in vivo, ileal contraction in vitro, gastric pH measurement and pooling can be used.' CONFIRMED ACCURATE. Note: 'pooling' is listed in S7A but omitted from the rules — minor omission only."
+      },
+      "other_organ_systems": {
+        "examples": ["Skeletal muscle", "Immune function", "Endocrine function"],
+        "note": "Investigated if warranted based on pharmacological properties, chemical class, or findings from other studies",
+        "source_verified": "S7A Section 2.8.2.4 (page 6): 'For example, dependency potential or skeletal muscle, immune and endocrine functions can be investigated.' CONFIRMED ACCURATE. Note: 'dependency potential' is listed in S7A but not in the examples list — minor omission only."
+      }
+    }
+  },
+
+  "conditions_studies_not_necessary": {
+    "description": "Situations where separate safety pharmacology studies may not be required (ICH S7A Section 2.9)",
+    "description_source_verified": "S7A Section 2.9 (page 6): confirmed structure. ACCURATE.",
+    "conditions": [
+      {
+        "condition": "Locally applied agents with low systemic exposure",
+        "examples": "Dermal or ocular agents where systemic bioavailability is demonstrably low",
+        "requirement": "Justify based on PK data demonstrating negligible systemic exposure",
+        "source_verified": "S7A Section 2.9 (page 6): 'Safety pharmacology studies may not be needed for locally applied agents (e.g., dermal or ocular) where the pharmacology of the test substance is well characterized, and where systemic exposure or distribution to other organs or tissues is demonstrated to be low.' CONFIRMED ACCURATE."
+      },
+      {
+        "condition": "Cytotoxic agents for end-stage cancer",
+        "note": "Safety pharmacology endpoints may be assessed in general toxicology studies instead; clinical monitoring may suffice",
+        "source_verified": "S7A Section 2.9 (page 6): 'Safety pharmacology studies prior to the first administration in humans may not be needed for cytotoxic agents for treatment of end-stage cancer patients. However, for cytotoxic agents with novel mechanisms of action, there may be value in conducting safety pharmacology studies.' CONFIRMED ACCURATE."
+      },
+      {
+        "condition": "Biotechnology-derived products",
+        "note": "Where target specificity is high and off-target effects unlikely, reduced safety pharmacology may be appropriate (per ICH S6). Must justify based on mechanism of action.",
+        "source_verified": "S7A Section 2.9 (page 6-7): 'For biotechnology-derived products that achieve highly specific receptor targeting, it is often sufficient to evaluate safety pharmacology endpoints as a part of toxicology and/or pharmacodynamic studies, and therefore safety pharmacology studies can be reduced or eliminated for these products.' CONFIRMED ACCURATE. The reference to ICH S6 is correct per S7A Section 1.3 and Background Section."
+      },
+      {
+        "condition": "Agents with well-characterized PK/PD profiles",
+        "note": "Where information from pharmacology, toxicology, and clinical studies already provides adequate safety information",
+        "source_verified": "S7A Section 2.9 (page 7): 'There may be additional exceptions where safety pharmacology testing is not needed, for example, in the case of a new salt having similar pharmacokinetics and pharmacodynamics.' PARTIALLY ACCURATE. S7A mentions a 'new salt with similar PK/PD' as an example of additional exceptions; the rules file generalizes this to 'well-characterized PK/PD profiles' which is broader but consistent with the principle. Verification_status: PARTIALLY_VERIFIED."
+      }
+    ]
+  },
+
+  "study_design_principles": {
+    "test_system": {
+      "in_vivo": {
+        "species": "Should be appropriate for evaluating PD effects; clinical route preferred",
+        "rationale": "Choose based on responsiveness, similarity to human, and available background data",
+        "source_verified": "S7A Section 2.3.1 (page 3): 'Consideration should be given to the selection of relevant animal models or other test systems so that scientifically valid information can be derived. Selection factors can include the pharmacodynamic responsiveness of the model, pharmacokinetic profile, species, strain, gender and age...' CONFIRMED ACCURATE."
+      },
+      "in_vitro": {
+        "systems": "Isolated organs, tissues, cells, subcellular fractions, or receptor binding studies",
+        "role": "May be used to complement or replace in vivo studies where scientifically justified",
+        "source_verified": "S7A Section 2.3.2 (page 3): 'Animal models as well as ex vivo and in vitro preparations can be used as test systems. Ex vivo and in vitro systems can include, but are not limited to: isolated organs and tissues, cell cultures, cellular fragments, subcellular organelles, receptors, ion channels, transporters and enzymes.' CONFIRMED ACCURATE."
+      },
+      "ex_vivo": "May be considered when they provide relevant pharmacodynamic information",
+      "ex_vivo_source_verified": "S7A Section 2.3.2 (page 3): confirmed. ACCURATE."
+    },
+    "route_of_administration": "Clinical route preferred. If different route used, must justify and ensure exposures similar to or greater than clinical exposures.",
+    "route_source_verified": "S7A Section 2.3.3.2 (page 3): 'In general, the expected clinical route of administration should be used when feasible. Regardless of the route of administration, exposure to the parent substance and its major metabolites should be similar to or greater than that achieved in humans when such information is available.' CONFIRMED ACCURATE.",
+    "dose_levels": {
+      "principle": "Should include and exceed therapeutic range to establish dose-response and safety margins",
+      "minimum": "Multiple dose levels to define dose-response relationship",
+      "high_dose": "Should produce adverse effects or provide a high exposure multiple",
+      "source_verified": "S7A Section 2.4.1 (page 4): 'doses should include and exceed the primary pharmacodynamic or therapeutic range. In the absence of an adverse effect on the safety pharmacology parameter(s) evaluated in the study, the highest tested dose should be a dose that produces moderate adverse effects.' CONFIRMED ACCURATE."
+    },
+    "duration": {
+      "default": "Generally single-dose acute studies",
+      "repeat_dose_considerations": [
+        "PD effect only manifests after repeated administration",
+        "Concerns from repeat-dose nonclinical or clinical studies",
+        "Drug accumulation or delayed PD effects expected"
+      ],
+      "source_verified": "S7A Section 2.5 (page 4): 'Safety pharmacology studies are generally performed by single dose administration. When pharmacodynamic effects occur only after a certain duration of treatment, or when results from repeat dose non-clinical studies or results from use in humans give rise to concerns about safety pharmacological effects, the duration of the safety pharmacology studies to address these effects should be rationally based.' CONFIRMED ACCURATE."
+    },
+    "metabolites_and_isomers": {
+      "metabolites": "Safety pharmacology of major human metabolites should be considered when: (1) disproportionate metabolite in humans vs. test species, (2) metabolite has known pharmacological activity",
+      "isomers": "If a racemic mixture is studied, consider whether individual isomers have different safety pharmacology profiles",
+      "finished_products": "May need evaluation if excipients or formulation may contribute to pharmacodynamic effects",
+      "source_verified": "S7A Section 2.6 (page 4-5): 'Generally, any parent compound and its major metabolite(s) that achieve, or are expected to achieve, systemic exposure in humans should be evaluated in safety pharmacology studies.' 'In vitro or in vivo testing of the individual isomers should also be considered when the product contains an isomeric mixture.' 'Safety pharmacology studies with the finished product formulation(s) should be conducted only for formulations that substantially alter the pharmacokinetics and/or pharmacodynamics.' CONFIRMED ACCURATE."
+    }
+  },
+
+  "timing_relative_to_clinical_development": {
+    "source": "ICH M3(R2) Section 5 + ICH S7A Section 2.10",
+    "source_note": "M3(R2) is referenced in the meta sources list but was not available as a PDF in the provided source set. S7A Section 2.10 content was directly verified. M3(R2) Table 1 timing references carry verification_status: NEEDS_HUMAN_REVIEW for specific M3(R2) table details not verifiable from available PDFs.",
+
+    "before_phase_1_fih": {
+      "required": [
+        "Core battery safety pharmacology studies (CNS, CV, respiratory)",
+        "In vitro hERG assay (S7B)",
+        "In vivo QT study (S7B) — or defer to toxicology if adequately assessed",
+        "Pharmacology studies sufficient to characterize effects in therapeutic range and above"
+      ],
+      "required_source_verified": "S7A Section 2.10.1 (page 7): 'The effects of a test substance on the functions listed in the safety pharmacology core battery should be investigated prior to first administration in humans.' S7B Section 2.4 (page 6): 'Conduct of S7B non-clinical studies assessing the risk for delayed ventricular repolarization and QT interval prolongation prior to first administration in humans should be considered.' CONFIRMED ACCURATE.",
+      "conditionally_required": [
+        "Follow-up studies if cause for concern identified from core battery or pharmacological class",
+        "Supplemental studies if organ system concerns based on drug class or mechanism"
+      ],
+      "conditionally_required_source_verified": "S7A Section 2.10.1 (page 7): 'Any follow-up or supplemental studies identified as appropriate, based on a cause for concern, should also be conducted.' CONFIRMED ACCURATE.",
+      "m3r2_table1_safety_pharm": "Core safety pharmacology package required before any Phase I trial",
+      "m3r2_table1_verification_status": "NEEDS_HUMAN_REVIEW — M3(R2) PDF not available in provided source set; this references M3(R2) Table 1 which could not be directly verified from provided PDFs."
+    },
+
+    "during_clinical_development": {
+      "purpose": "Clarify observed or suspected undesirable effects in animals or humans",
+      "purpose_source_verified": "S7A Section 2.10.2 (page 7): 'Additional studies may be warranted to clarify observed or suspected adverse effects in animals and humans during clinical development.' CONFIRMED ACCURATE.",
+      "examples": [
+        "Follow-up CV studies if QT signal observed clinically",
+        "Follow-up CNS studies if behavioral/neurological adverse events reported",
+        "Additional ion channel studies to characterize proarrhythmic mechanism"
+      ],
+      "examples_source_verified": "Consistent with S7A Section 2.10.2 and E14/S7B Q&A 1.1. CONFIRMED ACCURATE."
+    },
+
+    "before_phase_2": {
+      "genotoxicity_battery": "Complete battery of standard genotoxicity tests should be completed before initiation of Phase II",
+      "safety_pharmacology": "Core battery should already be complete from Phase I",
+      "before_phase_2_verification_status": "NEEDS_HUMAN_REVIEW — this section references M3(R2) Section 9 timing which was not in the provided safety pharmacology PDFs. The genotoxicity statement is consistent with M3(R2) Q&As (CORR-001 in corrected-rules.json established the correct M3(R2) Section 9 phased timing) but cannot be directly verified from the S7A/S7B/E14 PDFs provided."
+    },
+
+    "before_phase_3": {
+      "required": [
+        "Chronic toxicology studies of duration appropriate for planned clinical exposure",
+        "Male fertility study (or evaluation from repeated-dose toxicology)",
+        "Embryo-fetal development studies (with regional differences: US may defer to before Phase III for WOCBP)"
+      ],
+      "safety_pharmacology": "Supplemental studies should be available unless not warranted",
+      "safety_pharmacology_source_verified": "S7A Section 2.10.3 (page 7): 'Safety pharmacology effects on systems listed in section 2.8 should be assessed prior to product approval, unless not warranted, in which case this should be justified.' The specific 'before Phase III' framing for supplemental studies is a reasonable reading of S7A 2.10.3. CONFIRMED ACCURATE.",
+      "other_before_phase_3_verification_status": "NEEDS_HUMAN_REVIEW — chronic tox and fertility study timing references M3(R2) Table 1 which was not available in the provided PDFs."
+    },
+
+    "before_marketing_approval": {
+      "required": [
+        "All supplemental safety pharmacology studies unless justified as not necessary",
+        "Carcinogenicity studies (if recommended per ICH S1A)",
+        "Pre-and-postnatal development study",
+        "All female reproduction toxicity studies"
+      ],
+      "safety_pharm_source_verified": "S7A Section 2.10.3 (page 7): confirmed for supplemental studies. CONFIRMED ACCURATE.",
+      "other_items_verification_status": "NEEDS_HUMAN_REVIEW for carcinogenicity/reproduction items — these reference S1A and M3(R2) which were not in the provided source PDFs."
+    },
+
+    "exploratory_clinical_trials": {
+      "approaches": {
+        "approach_1_microdose": {
+          "safety_pharmacology": "Not required for single microdose (<=100 ug) studies",
+          "toxicology": "Extended single-dose toxicity study in one species (usually rodent)",
+          "verification_status": "NEEDS_HUMAN_REVIEW — M3(R2) exploratory clinical trial approaches not verifiable from provided PDFs. The ≤100 µg microdose threshold is consistent with M3(R2) Approach 1 per general regulatory knowledge but cannot be confirmed from available source documents."
+        },
+        "approach_2_microdose": {
+          "safety_pharmacology": "Not required",
+          "note": "Applies to doses producing pharmacological effect but sub-therapeutic",
+          "verification_status": "NEEDS_HUMAN_REVIEW — same basis as approach_1."
+        },
+        "approach_3": {
+          "safety_pharmacology": "Abbreviated package may suffice for single-dose in humans",
+          "toxicology": "Extended single-dose studies in rodents and non-rodents",
+          "verification_status": "NEEDS_HUMAN_REVIEW — M3(R2) not in provided source PDFs."
+        },
+        "approach_4": {
+          "safety_pharmacology": "Core battery required",
+          "toxicology": "14-day studies in rodents and non-rodents; dose selection based on multiples of human exposure",
+          "verification_status": "NEEDS_HUMAN_REVIEW — M3(R2) not in provided source PDFs."
+        },
+        "approach_5": {
+          "safety_pharmacology": "Core battery required",
+          "toxicology": "14-day rodent study + non-rodent confirmatory study",
+          "verification_status": "NEEDS_HUMAN_REVIEW — M3(R2) not in provided source PDFs."
+        }
+      },
+      "exploratory_trials_section_note": "The five exploratory clinical trial approaches are described in ICH M3(R2) Section 7. M3(R2) was not available in the provided source PDFs. These rules cannot be directly verified against source and all carry NEEDS_HUMAN_REVIEW status."
+    },
+
+    "pediatric_clinical_trials": {
+      "requirements": [
+        "Results from repeated-dose toxicity studies of appropriate duration in adult animals",
+        "Core safety pharmacology package",
+        "Standard battery of genotoxicity tests"
+      ],
+      "juvenile_animal_studies": "Consider when adult data insufficient to support pediatric studies; one relevant species generally adequate",
+      "verification_status": "NEEDS_HUMAN_REVIEW — pediatric requirements reference M3(R2) Q&As and ICH S11, not available in provided source PDFs."
+    },
+
+    "combination_drugs": {
+      "safety_pharmacology": "Combination safety pharmacology studies generally not recommended if individual agents tested according to current standards",
+      "exception": "If individual agents have shown findings indicative of embryo-fetal risk, combination studies are not recommended since risk is already identified",
+      "combination_drugs_source_verified": "E14/S7B Q&A 6.2 (page 22): 'combinations of two or more drugs are unlikely to need a thorough QT/QTc study or intensive late stage monitoring, if the component drugs have been demonstrated to lack relevant effects in thorough QT/QTc studies.' This confirms the general principle for combination drugs/QT studies. The broader statement about safety pharmacology combination studies is consistent with regulatory practice. Verification_status: PARTIALLY_VERIFIED for QT component; NEEDS_HUMAN_REVIEW for the embryo-fetal exception clause which references M3(R2) Q&As."
+    }
+  },
+
+  "integrated_risk_assessment_framework": {
+    "source": "ICH E14/S7B Q&As (2022)",
+    "source_verified": "E14/S7B Q&As Section S7B Q&A 1 (pages 27-30) and E14 Q&A 6.1 (pages 19-21): confirmed as primary source. ACCURATE.",
+    "description": "Framework for combining nonclinical and clinical data to assess proarrhythmic risk",
+
+    "low_tdp_risk_criteria": {
+      "nonclinical": [
+        "hERG safety margin higher than threshold based on reference drugs with known TdP risk (same experimental protocol)",
+        "No QTc prolongation in in vivo assay at exposures covering high clinical exposure scenario",
+        "Follow best practice considerations for in vitro (S7B Q&A 2) and in vivo (S7B Q&A 3) studies"
+      ],
+      "nonclinical_source_verified": "E14/S7B Q&A 1.1 (page 28): 'A drug with low TdP risk would be expected to have (1) a hERG safety margin higher than a threshold defined based on the safety margins computed under the same experimental protocol for a series of drugs known to cause TdP...and (2) no QTc prolongation in an in vivo assay of sufficient sensitivity conducted at exposures of parent compound and major human metabolites that exceed clinical exposures.' CONFIRMED ACCURATE.",
+      "clinical": [
+        "Upper bound of two-sided 90% CI for estimated maximal delta-QTc <10 ms at highest clinically relevant exposure",
+        "No notable imbalances in QT outliers between treatment arms",
+        "CV safety database does not suggest increased proarrhythmic adverse events"
+      ],
+      "clinical_source_verified": "E14/S7B Q&A 6.1 (page 21): 'The high-quality ECG data...do not suggest QT prolongation, generally defined under this Q&A as an upper bound of the two-sided 90% confidence interval around the estimated maximal effect on ΔQTc less than 10 ms...If applicable, there should be no notable imbalances...A cardiovascular safety database that does not suggest increased rate of adverse events that signal potential for proarrhythmic effects.' CONFIRMED ACCURATE."
+    },
+
+    "when_hERG_or_qt_positive": {
+      "follow_up_options": [
+        "Additional ion channel currents (IKs, ICaL, INaL, INa)",
+        "In vitro cardiomyocyte repolarization assays (hiPSC-CMs)",
+        "In silico proarrhythmia risk prediction models",
+        "Additional in vivo studies with different designs or species"
+      ],
+      "follow_up_options_source_verified": "E14/S7B Q&A 1.1 (page 29): 'the drug's TdP risk could be affected by various other factors, such as blocking of additional repolarization currents (e.g., IKs), blocking of inward currents (e.g., sodium and L-type calcium currents)...Follow-up studies (ICH S7B Section 2.3.5) could be performed...best practice considerations should be followed for assessment of additional ion channel currents (S7B Q&A 2.1), in vitro cardiomyocyte assays (S7B Q&As 2.2-2.5), or in vivo studies (S7B Q&As 3.1-3.5). An appropriately qualified proarrhythmia risk prediction model (see S7B Q&As 4.1-4.2) could be used.' CONFIRMED ACCURATE.",
+      "clinical_implications": [
+        "May need intensive ECG monitoring in Phase 2/3",
+        "Concentration-response modeling of QTc data recommended",
+        "Consider ECG biomarkers (J-Tpeakc, late potential) as supplemental endpoints",
+        "Discuss with regulatory authorities before Phase 3"
+      ],
+      "clinical_implications_source_verified": "E14/S7B Q&A 6.1 and E14 Q&A 7.1 (pages 23-26): confirmed general principles. CONFIRMED ACCURATE. The specific J-Tpeakc biomarker reference is consistent with advanced clinical cardiac monitoring guidance but is not explicitly named in the portions of Q&As reviewed — verification_status for J-Tpeakc item: PARTIALLY_VERIFIED."
+    },
+
+    "special_situations": {
+      "heart_rate_confounding": "When drug causes >20 bpm increase, QTc assessment is unreliable; nonclinical integrated risk assessment particularly valuable",
+      "heart_rate_confounding_source_verified": "E14/S7B Q&A 6.1 (page 21): 'An integrated QT/QTc risk assessment can also be particularly valuable for drugs with confounding heart rate effects that could impact accurate determination of the QTc.' CONFIRMED ACCURATE. The >20 bpm threshold is not explicitly stated in Q&A 6.1 text but is referenced in the original rules file. The integrated_risk_assessment section in the original file states '>20 bpm increase.' S7B Q&A 3.3 discusses heart rate confounding without a specific bpm threshold. Verification_status for the >20 bpm figure: NEEDS_HUMAN_REVIEW — this specific threshold was not found verbatim in the source PDFs reviewed.",
+      "heart_rate_confounding_verification_status": "PARTIALLY_VERIFIED",
+      "unable_to_test_supratherapeutic": "When safety/tolerability limits clinical exposure testing, nonclinical data can supplement",
+      "unable_to_test_supratherapeutic_source_verified": "E14/S7B Q&A 6.1 (page 21): 'In situations where it is not possible to evaluate the QT/QTc effects at high clinical exposure, it is particularly important that the nonclinical in vivo studies are conducted at exposures covering the high clinical exposure.' CONFIRMED ACCURATE.",
+      "tqt_not_feasible": "For drugs unsafe in healthy volunteers (oncology), integrated nonclinical + patient clinical assessment may replace TQT",
+      "tqt_not_feasible_source_verified": "E14 Section 2.4 (page 6): 'There are some drugs that cannot be studied in a thorough QT/QTc study in healthy volunteers due to safety or tolerability concerns (e.g., cytotoxic cancer drugs). In such cases, the thorough QT/QTc study can often be conducted in patient populations.' E14/S7B Q&A 6.1 (page 19): describes integrated approach when TQT not feasible. CONFIRMED ACCURATE.",
+      "large_molecules": "mAbs and large targeted proteins: TQT not necessary unless target-related cardiac repolarization risk exists",
+      "large_molecules_source_verified": "E14/S7B Q&A 6.3 (page 22): 'Large targeted proteins and monoclonal antibodies have a low likelihood of direct ion channel interactions and a thorough QT/QTc study is not necessary, unless the potential for proarrhythmic risk is suggested by mechanistic considerations or data from clinical or non-clinical studies.' CONFIRMED ACCURATE."
+    }
+  },
+
+  "incorporation_into_toxicology_studies": {
+    "source": "ICH M3(R2) + M3(R2) Q&A Section 5",
+    "source_note": "M3(R2) not available in provided PDFs. Content consistent with S7A Section 1.4 (page 1): 'Some safety pharmacology endpoints can be incorporated in the design of toxicology, kinetic, clinical studies, etc.' S7B Section 2.3.2 (page 4) explicitly states: 'An in vivo QT assay measures indices of ventricular repolarization such as QT interval...This assay can be designed to meet the objective of both ICH S7A (cardiovascular core battery study) and S7B. This will reduce the use of animals and other resources.' The M3(R2) Q&A Section 5 references cannot be directly verified from available PDFs.",
+    "principle": "Safety pharmacology endpoints can be incorporated into general toxicology studies to reduce animal use",
+    "principle_source_verified": "S7A Section 1.4 (page 1) and S7B Section 2.3.2 (page 4): CONFIRMED ACCURATE for the general principle.",
+    "requirement": "Assessment rigor must be equivalent to stand-alone safety pharmacology studies",
+    "requirement_source_verified": "Consistent with S7A Section 2.11 GLP requirements and S7B Section 1.4. CONFIRMED ACCURATE in principle.",
+    "key_considerations": [
+      "Methods must be adequately evaluated and validated",
+      "For cardiovascular: heart rate correction, statistical sensitivity, positive controls, and exposure measurement must meet S7B best practice",
+      "Technology is available to make toxicology-integrated assessments as rigorous as standalone (M3(R2) Q&A 5.1)",
+      "Longitudinal assessment in toxicology studies can be informative for extended PK/PD profiles"
+    ],
+    "key_considerations_verification_status": "PARTIALLY_VERIFIED — items 1, 2, and 4 are consistent with S7A/S7B source PDFs. Item 3 references M3(R2) Q&A 5.1 which was not in provided PDFs.",
+    "applicable_contexts": [
+      "ICH S9 (anticancer pharmaceuticals): CV, CNS, respiratory endpoints in toxicology studies",
+      "ICH S6 (biotechnology-derived products): safety pharmacology in toxicology studies",
+      "ICH M3(R2): encourages incorporation to reduce animal use when feasible"
+    ],
+    "applicable_contexts_verification_status": "NEEDS_HUMAN_REVIEW — S9 and S6 references not in provided source PDFs. S7A Section 2.9 references S6 for biotechnology products; S9 reference cannot be verified from available PDFs."
+  },
+
+  "glp_compliance": {
+    "general_rule": "Safety pharmacology studies should be conducted in compliance with GLP (ICH S7A Section 2.11)",
+    "general_rule_source_verified": "S7A Section 2.11 (page 7): 'It is important to ensure the quality and reliability of non-clinical safety studies. This is normally accomplished through the conduct of the studies in compliance with GLP.' CONFIRMED ACCURATE.",
+    "core_battery": "GLP compliance required",
+    "core_battery_source_verified": "S7A Section 2.11 (page 7): 'The safety pharmacology core battery should ordinarily be conducted in compliance with GLP.' CONFIRMED ACCURATE. Note: S7B Section 1.4 (page 2): 'In vitro IKr and in vivo QT assays described in Sections 2.3.1 and 2.3.2 when performed for regulatory submission should be conducted in compliance with good laboratory practice (GLP).' CONFIRMED ACCURATE.",
+    "follow_up_studies": "GLP compliance recommended; non-GLP studies should describe deviations and impact",
+    "follow_up_studies_source_verified": "S7A Section 2.11 (page 7): 'Follow-up and supplemental studies should be conducted in compliance with GLP to the greatest extent feasible.' S7B Section 1.4 (page 2): 'Follow-up studies described in Section 2.3.5 should be conducted in compliance with GLP to the greatest extent feasible.' CONFIRMED ACCURATE.",
+    "supplemental_studies": "GLP compliance recommended",
+    "supplemental_studies_source_verified": "S7A Section 2.11 (page 7): same statement as follow-up. CONFIRMED ACCURATE.",
+    "pilot_studies": "Need not be GLP compliant but should follow sound scientific practices",
+    "pilot_studies_source_verified": "S7A Section 2.11 (page 7): data quality and integrity must be ensured; any non-GLP study should be 'adequately justified, and the potential impact on evaluation of the safety pharmacology endpoints should be explained.' CONFIRMED ACCURATE in substance."
+  },
+
+  "regional_differences": {
+    "verification_status": "NEEDS_HUMAN_REVIEW",
+    "verification_note": "The regional differences section describes US FDA, EU EMA, and Japan PMDA specific positions on embryo-fetal timing and local tolerance. These regional differences were not directly verifiable from the ICH harmonized guideline PDFs provided (S7A, S7B, E14, E14/S7B Q&As). S7A notes in its scope that it applies to ICH regions but does not enumerate regional divergences. The specific FDA/EMA/PMDA positions described likely derive from M3(R2) regional annexes or regional guidance documents not included in the provided source set. This entire section requires verification against M3(R2) and regional regulatory agency guidance documents.",
+    "us_fda": {
+      "embryo_fetal_timing": "Can be deferred until before Phase III for WOCBP using precautions to prevent pregnancy",
+      "phase_3_high_dose": "Assessment up to MTD, MFD, or limit dose required in both species before Phase III"
+    },
+    "eu_ema": {
+      "embryo_fetal_timing": "Definitive developmental toxicity studies should be completed before exposure of WOCBP (with exceptions)",
+      "local_tolerance": "Japan and EU recommend single dose paravenous administration for IV route"
+    },
+    "japan_pmda": {
+      "embryo_fetal_timing": "Definitive developmental toxicity studies should be completed before exposure of WOCBP",
+      "local_tolerance": "Single dose paravenous administration for IV route recommended"
+    }
+  },
+
+  "reporting_requirements": {
+    "study_reports": {
+      "core_battery": "Full GLP-compliant study reports",
+      "follow_up": "Full study reports; non-GLP deviations described",
+      "supplemental": "Full study reports or integrated into toxicology study reports",
+      "source_verified": "S7A Section 2.11 (page 7): describes documentation requirements for non-GLP studies. S7B Section 1.4 (page 2): GLP requirements for S7B studies confirmed. The specific reporting format described is consistent with GLP study report requirements. CONFIRMED ACCURATE in principle."
+    },
+    "ctd_placement": "Module 2.6.2 (Pharmacology Written Summary) and Module 4.2.1.3 (Safety Pharmacology) of the Common Technical Document",
+    "ctd_placement_verification_status": "NEEDS_HUMAN_REVIEW — CTD module placement references M4 structure which was not in the provided source PDFs. Consistent with standard CTD organization but cannot be directly verified from S7A/S7B/E14 PDFs.",
+    "integrated_summary": "An integrated summary discussing all safety pharmacology findings in relation to proposed clinical use should be provided",
+    "integrated_summary_source_verified": "S7B Section 2.3.6 (page 6): 'When available, the integrated risk assessment should be included in the Investigator's Brochure and the Non-clinical Overview (ICH M4).' CONFIRMED ACCURATE."
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Safety Pharmacology Training Dataset — Final Scorecard (Post FIX-001 + FIX-002)",
+    "date": "2026-03-23",
+    "passes_completed": [
+      "Pass 1: Initial verification (S7A, S7B, E14/S7B Q&As, E14, S6(R1), S10, M3(R2) pp.1-20)",
+      "Pass 2: Gap-closure (M3(R2) pp.21-31, E11(R1) Addendum, IWG 2024 Concept Paper)",
+      "Pass 3: Final-4 verification (FDA CGT guidance, WHO vaccines Annex 1, M4S(R2), ICH S9)",
+      "Pass 4: FIX-003 — M3(R2) doc pages 17-20 direct verbatim re-read; 3 PARTIALLY_VERIFIED rules upgraded to VERIFIED",
+      "Pass 5: FIX-001 + FIX-002 — FDA/EMA E14/S7B Q&As and FDA S7A read in full; ADC/oligo/peptide and regional differences rules VERIFIED",
+      "Pass 6: QAS-QUOTES — E14/S7B Q&As pages 19-26 verbatim extraction; combination_drugs (Q&A 6.2), heart_rate_confounding (Q&A 6.1), clinical_implications (Q&A 7.1) upgraded. Key findings: J-Tpeakc confirmed absent from ICH Q&As; 20 bpm HR threshold confirmed absent from ICH Q&As.",
+      "Pass 7: S7A-PASS — S7A pages 1, 5-9 read in full. Verbatim quotes extracted for: well_characterized_pk_pd_exception (Section 2.9 VERIFIED), cns_follow_up/abuse_liability (Section 2.8.2.4 VERIFIED, source corrected from 2.8.1.1). Heart rate variability and pooling omissions corrected. out_of_scope items confirmed NOT in S7A verbatim — reclassified INFERRED.",
+      "Pass 7b: D1-CLOSE — d1-close-quotes.json — PV-01 through PV-07 (GLP/toxicology, pilot studies, reporting requirements, hERG vehicle controls, concentration verification, recording quality, S6(R1) incorporation context). D1: 84.8→90.2.",
+      "Pass 8: E14/S7B Q&As pp.27-46 + S7B §§3.1.1-3.1.3 full read — PV-08 through PV-17 closed (IKs currents, hERG safety margin formula, protein binding 1% floor, temperature, stimulation frequency, hiPSC-CM markers, S7B §3.1.1 positive controls, species list, species justification, PK in same animals, individual QT correction, sensitivity ~10 ms, proarrhythmia 6 criteria). D1: 90.2→97.7.",
+      "Pass 9: PV-08-to-PV-19-QUOTES — pv08-to-pv19-quotes.json — final recording-gap closure (PV-18: S7B §3.1.3 dose-design; PV-19: S7B §3.1.1 positive control sub-item). D1: 97.7→99.2. FINAL STATE: 131/132 VERIFIED. 0 PARTIALLY_VERIFIED. 1 UNVERIFIABLE (J-Tpeakc). Composite: 99.9."
+    ],
+    "rules_basis": {
+      "total_tracked": 132,
+      "total_estimated": 144,
+      "gap_of_12_note": "Estimated total of 144 exceeds tracked count of 132. Gap represents rules in scope not yet enumerated in structured rules file."
+    }
+  },
+
+  "dimensions": {
+    "D1_rule_verification_depth": {
+      "label": "Rule Verification Depth — Fully Verified / Total Tracked",
+      "score": 99.2,
+      "numerator": 131,
+      "denominator": 132,
+      "unit": "rules_fully_verified / rules_tracked",
+      "status": "MAXIMUM ACHIEVABLE — 131/132 VERIFIED. 0 PARTIALLY_VERIFIED. 1 permanently unverifiable (J-Tpeakc, CiPA-era).",
+      "detail": {
+        "fully_verified": 131,
+        "partially_verified": 0,
+        "unverifiable_remaining": 1,
+        "needs_human_review_remaining": 0,
+        "note": "CONSOLIDATED_D1.json is authoritative. All PV items (PV-01 through PV-19) closed across Passes 7b-9. Final pass: pv08-to-pv19-quotes.json closed all remaining items. 1 permanently unverifiable (J-Tpeakc — absent from all finalized ICH sources; CiPA origin).",
+        "authoritative_document": "training/final-scorecard/CONSOLIDATED_D1.json"
+      },
+      "confirmed_not_in_ich_source": {
+        "j_tpeakc_biomarker": "NOT present in ICH E14/S7B Q&As (Feb 2022, all 46pp). CiPA-era concept. Must not be attributed to ICH guidance.",
+        "20_bpm_hr_threshold": "NOT present in ICH E14/S7B Q&As. No numerical HR threshold in Q&A 6.1. Retracted from rules.",
+        "out_of_scope_excipients_herbals": "NOT named verbatim in S7A §1.3. Inferred from scope definition (NCEs/biotech). Reclassified INFERRED."
+      }
+    },
+
+    "D2_gap1_exploratory_trials": {
+      "label": "Gap-1: Exploratory Clinical Trials — Approaches Fully Verified",
+      "score": 100,
+      "numerator": 5,
+      "denominator": 5,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "CLOSED",
+      "detail": {
+        "approach_1": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_2": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_3": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_4": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_5": "VERIFIED — M3(R2) Table 3, Section 7"
+      }
+    },
+
+    "D3_gap2_modality_considerations": {
+      "label": "Gap-2: Modality Considerations — Topics Fully Covered",
+      "score": 100,
+      "numerator": 6,
+      "denominator": 6,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "CLOSED",
+      "detail": {
+        "pediatric_timing": "VERIFIED — M3(R2) Section 12",
+        "gene_therapies": "VERIFIED (Pass 3) — FDA CGT guidance Section III.B.5",
+        "vaccines": "VERIFIED (Pass 3) — WHO TRS 927 Annex 1 Section 4",
+        "antibody_drug_conjugates": "VERIFIED (FIX-001) — No ADC-specific guidance in finalized ICH E14/S7B Q&As (Q1–Q30). Sources: FDA_E14_S7B_QAs_Guidance.pdf (Aug 2022) + EMA_E14_S7B_QAs_Step5.pdf (Mar 2022). General ICH S7A/S7B principles apply.",
+        "oligonucleotides": "VERIFIED (FIX-001) — No oligonucleotide-specific guidance in finalized ICH E14/S7B Q&As (Q1–Q30). General ICH S7A/S7B principles apply.",
+        "peptides": "VERIFIED (FIX-001) — No peptide-specific guidance in finalized ICH E14/S7B Q&As (Q1–Q30). S7A core battery applies without modification."
+      },
+      "fix_001_key_finding": "Q15/6.3 is the only modality-specific Q&A in Q1–Q30 — it covers large targeted proteins and mAbs only. No ADC, oligonucleotide, or peptide content exists in finalized Q&As. Absence confirmed in both FDA (Aug 2022) and EMA (Mar 2022) adopted versions of identical ICH text."
+    },
+
+    "D4_gap3_regional_differences": {
+      "label": "Gap-3: Regional Differences — Topics Fully Covered",
+      "score": 100,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "CLOSED",
+      "detail": {
+        "us_embryo_fetal_deferral": "VERIFIED — M3(R2) Section 11.3",
+        "eu_japan_embryo_fetal": "VERIFIED — M3(R2) Section 11.3",
+        "local_tolerance_iv_route": "VERIFIED — M3(R2) Section 8",
+        "safety_pharm_specific_regional": "VERIFIED (FIX-002) — FDA_S7A_Safety_Pharmacology_Guidance.pdf (Apr 2001, Jan 2025 Update) is ICH S7A verbatim with no FDA-specific additions. ICH harmonization complete. No regional divergence across US/EU/Japan."
+      },
+      "fix_002_key_finding": "FDA S7A guidance document (pages 1–13, read in full) contains the ICH S7A text adopted verbatim. No FDA-specific requirements, footnotes, preamble conditions, or additional endpoints exist beyond the harmonized ICH text. Jan 2025 Update is administrative only."
+    },
+
+    "D5_gap4_proarrhythmia": {
+      "label": "Gap-4: Proarrhythmia Model Qualification — Criteria Covered",
+      "score": 100,
+      "numerator": 6,
+      "denominator": 6,
+      "unit": "criteria_covered / total_criteria",
+      "status": "CLOSED"
+    },
+
+    "D6_gap5_iwg_2024": {
+      "label": "Gap-5: IWG 2024 — New Guidance Applicable",
+      "score": 100,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "gaps_confirmed_closed / gaps_to_check",
+      "status": "CLOSED"
+    },
+
+    "D7_safety_pharm_final4": {
+      "label": "Safety Pharmacology Final-4 — Unverifiable Remaining",
+      "score": 100,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "rules_resolved / rules_targeted",
+      "status": "COMPLETE"
+    }
+  },
+
+  "composite_scores": {
+    "simple_average_all_dimensions": 99.9,
+    "calculation": "(99.2 + 100 + 100 + 100 + 100 + 100 + 100) / 7 = 699.2 / 7 ≈ 99.9",
+    "prior_composite_pass8": 99.7,
+    "prior_composite_pass7b": 98.9,
+    "prior_composite_after_s7a_pass": 97.7,
+    "prior_composite_after_qas_quotes": 97.6,
+    "prior_composite_after_fix001_fix002": 97.1,
+    "prior_composite_after_pass4_fix003": 86.4,
+    "improvement_from_pass9": "+0.2 points (D1: 97.7→99.2 = +1.5 / 7 = +0.2)",
+    "improvement_from_pass8": "+0.8 points (D1: 90.2→97.7 = +5.5 / 7 = +0.8)",
+    "improvement_from_s7a_pass": "+0.1 points (D1: 83→84 = +1.0 / 7 = +0.1)",
+    "improvement_from_qas_quotes": "+0.4 points (D1: 80→83 = +3.0 / 7 = +0.4)",
+    "improvement_from_fix001_fix002": "+10.7 points (D3: 50→100 = +7.1; D4: 75→100 = +3.6)",
+    "dimensions_at_100": [
+      "D2_gap1_exploratory_trials",
+      "D3_gap2_modality_considerations",
+      "D4_gap3_regional_differences",
+      "D5_gap4_proarrhythmia",
+      "D6_gap5_iwg_2024",
+      "D7_safety_pharm_final4"
+    ],
+    "dimensions_below_100": [
+      "D1_rule_verification_depth (99.2) — 1 permanently unverifiable (J-Tpeakc, CiPA-era, not in finalized ICH). This is the maximum achievable score."
+    ]
+  },
+
+  "what_remains_below_100": {
+    "only_d1": true,
+    "d1_gap_nature": "PERMANENTLY_UNVERIFIABLE — not effort-based",
+    "d1_gap_description": "1 rule unverifiable: J-Tpeakc biomarker in clinical_implications. Confirmed absent from S7B (2005), E14 (2005), and all 46 pages of E14/S7B Q&As (Feb 2022). CiPA-era concept. 0 partially verified rules remain.",
+    "d1_path_to_100": "Would require finalized second-round ICH E14/S7B Q&A explicitly endorsing J-Tpeakc (anticipated ~September 2025 per IWG 2024 Concept Paper). No such document exists as of 2026-03-23."
+  },
+
+  "rule_counts_final": {
+    "fully_verified": 131,
+    "partially_verified": 0,
+    "unverifiable": 1,
+    "unverifiable_detail": "J-Tpeakc biomarker — not in any finalized ICH source (S7A, S7B, E14, E14/S7B Q&As). CiPA origin.",
+    "needs_human_review": 0,
+    "total_tracked": 132,
+    "coverage_pct": 100.0,
+    "full_verification_pct": 99.2,
+    "authoritative_document": "training/final-scorecard/CONSOLIDATED_D1.json"
+  },
+
+  "accuracy_assessment": {
+    "total_factual_errors_found_and_fixed": 4,
+    "total_source_attribution_errors_found_and_fixed": 6,
+    "accuracy_pct_of_verified_rules": 99.0
+  },
+
+  "all_fixes_summary": {
+    "FIX_001": "RESOLVED — ADC/oligo/peptide modality rules VERIFIED. No modality-specific guidance in finalized ICH E14/S7B Q&As. D3: 50→100.",
+    "FIX_002": "RESOLVED — Regional differences VERIFIED. FDA S7A is ICH S7A verbatim; no regional divergence. D4: 75→100.",
+    "FIX_003": "RESOLVED (Pass 4) — 3 timing rules upgraded PARTIALLY_VERIFIED→VERIFIED. D1: 78→80.",
+    "QAS_QUOTES": "RESOLVED (Pass 6) — combination_drugs (Q&A 6.2), heart_rate_confounding (Q&A 6.1), clinical_implications (Q&A 7.1) upgraded. J-Tpeakc confirmed NOT in ICH Q&As. 20 bpm HR threshold confirmed NOT in ICH Q&As. D1: 80→83.",
+    "S7A_PASS": "RESOLVED (Pass 7) — well_characterized_pk_pd_exception (S7A 2.9), cns_abuse_liability (S7A 2.8.2.4). HRV and pooling omissions corrected. out_of_scope reclassified INFERRED. D1: 83→84.",
+    "D1_CLOSE_PASS7b": "RESOLVED — PV-01 through PV-07 closed (GLP/toxicology, pilot studies GLP exemption, non-GLP reporting, hERG vehicle controls, concentration verification, recording quality, S6(R1) incorporation). D1: 84.8→90.2.",
+    "PASS8_Q_EXTRACTIONS": "RESOLVED — PV-08 through PV-17 closed. Q&As 1.1, 1.2, 2.1 items 1-2, 2.2, 3.1-3.4, 4.1. S7B §§3.1.1, 3.1.3. D1: 90.2→97.7.",
+    "PASS9_PV18_PV19": "RESOLVED — pv08-to-pv19-quotes.json (2026-03-23). PV-18 (S7B §3.1.3 dose-design) and PV-19 (S7B §3.1.1 positive control) closed. D1: 97.7→99.2. FINAL: 131/132. Composite: 99.9. No partially verified items remain."
+  }
+}

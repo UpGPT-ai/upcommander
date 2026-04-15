@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "title": "eCTD Module Mapping Corrections",
+    "authority": "ICH M4(R4) Organisation of the Common Technical Document — Step 4, June 15, 2016",
+    "generated": "2026-03-23",
+    "version": "1.0",
+    "scope": "All rule JSON files from output-v2/ and output-v3/; corrections verified against M4(R4) Tables 1-6 (Granularity Document)"
+  },
+
+  "ctd_module_reference": {
+    "note": "Definitive ICH M4(R4) CTD structure — use this as ground truth for all eCTD module assignments",
+    "module_1": {
+      "title": "Administrative Information and Prescribing Information",
+      "note": "Region-specific. Content and sub-sections defined by each regulatory authority (FDA, EMA, PMDA, Health Canada). Sub-sections below 1.1/1.2 are NOT harmonized and MUST be labeled as region-specific.",
+      "harmonized_sections": ["1.1 Table of Contents", "1.2 Documents Specific to Each Region"],
+      "fda_specific": ["1.3.1 Patent Certifications", "1.5 Environmental Assessment", "1.8 User Fees", "1.12 Debarment Certification", "1.14 Labeling", "1.18 Pediatric Administrative Information"],
+      "ema_specific": ["1.2 Application Form", "1.3 Product Information", "1.6 Environmental Risk Assessment"]
+    },
+    "module_2": {
+      "title": "Common Technical Document Summaries",
+      "sections": {
+        "2.1": "CTD Table of Contents (Modules 2-5)",
+        "2.2": "CTD Introduction",
+        "2.3": "Quality Overall Summary (QOS)",
+        "2.3.S": "Drug Substance QOS (mirrors 3.2.S subsections: S.1-S.7)",
+        "2.3.P": "Drug Product QOS (mirrors 3.2.P subsections: P.1-P.8)",
+        "2.3.A": "QOS Appendices (A.1 Facilities, A.2 Adventitious Agents, A.3 Excipients)",
+        "2.3.R": "Regional Information",
+        "2.4": "Nonclinical Overview (narrative critical analysis of nonclinical program)",
+        "2.5": "Clinical Overview (narrative critical analysis of clinical program)",
+        "2.6": "Nonclinical Written and Tabulated Summaries",
+        "2.6.1": "Introduction (Pharmacology)",
+        "2.6.2": "Pharmacology Written Summary (primary PD, secondary PD, safety pharmacology, PD interactions)",
+        "2.6.3": "Pharmacology Tabulated Summary",
+        "2.6.4": "Pharmacokinetics Written Summary",
+        "2.6.5": "Pharmacokinetics Tabulated Summary",
+        "2.6.6": "Toxicology Written Summary",
+        "2.6.7": "Toxicology Tabulated Summary",
+        "2.7": "Clinical Summary",
+        "2.7.1": "Summary of Biopharmaceutics Studies and Associated Analytical Methods",
+        "2.7.2": "Summary of Clinical Pharmacology Studies",
+        "2.7.3": "Summary of Clinical Efficacy",
+        "2.7.4": "Summary of Clinical Safety",
+        "2.7.5": "Literature References",
+        "2.7.6": "Synopses of Individual Studies"
+      }
+    },
+    "module_3": {
+      "title": "Quality",
+      "sections": {
+        "3.1": "Table of Contents",
+        "3.2": "Body of Data",
+        "3.2.S": "Drug Substance",
+        "3.2.S.1": "General Information (nomenclature, structure, properties)",
+        "3.2.S.2": "Manufacture (manufacturer, process, controls, validation)",
+        "3.2.S.3": "Characterisation (structure/elucidation, impurity profiling — NOT analytical procedures for control)",
+        "3.2.S.4": "Control of Drug Substance (specifications, analytical procedures, validation, batch analysis, justification)",
+        "3.2.S.5": "Reference Standards or Materials",
+        "3.2.S.6": "Container Closure System",
+        "3.2.S.7": "Stability (drug substance stability data)",
+        "3.2.P": "Drug Product",
+        "3.2.P.1": "Description and Composition",
+        "3.2.P.2": "Pharmaceutical Development (formulation, overages, physicochemical properties, excipients, DP, manufacturing, dissolution, microbiological attributes, compatibility; includes design space, control strategy per Q8/Q11/Q13)",
+        "3.2.P.3": "Manufacture (manufacturer, batch formula, process description, controls, validation)",
+        "3.2.P.4": "Control of Excipients",
+        "3.2.P.5": "Control of Drug Product (specifications, analytical procedures, validation, batch analysis, characterization of impurities, justification)",
+        "3.2.P.6": "Reference Standards or Materials",
+        "3.2.P.7": "Container Closure System",
+        "3.2.P.8": "Stability (drug product stability data)",
+        "3.2.A": "Appendices",
+        "3.2.A.1": "Facilities and Equipment (site information, GMP manufacturing)",
+        "3.2.A.2": "Adventitious Agents Safety Evaluation (per ICH Q5A — viral safety of biotech products)",
+        "3.2.A.3": "Excipients (novel excipients — human or animal safety data)",
+        "3.2.R": "Regional Information (region-specific quality data)",
+        "3.3": "Literature References"
+      }
+    },
+    "module_4": {
+      "title": "Nonclinical Study Reports",
+      "sections": {
+        "4.1": "Table of Contents",
+        "4.2": "Study Reports",
+        "4.2.1": "Pharmacology",
+        "4.2.1.1": "Primary Pharmacodynamics",
+        "4.2.1.2": "Secondary Pharmacodynamics",
+        "4.2.1.3": "Safety Pharmacology (per ICH S7A/S7B)",
+        "4.2.1.4": "Pharmacodynamic Drug Interactions",
+        "4.2.2": "Pharmacokinetics",
+        "4.2.2.1": "Analytical Methods and Validation Reports",
+        "4.2.2.2": "Absorption",
+        "4.2.2.3": "Distribution",
+        "4.2.2.4": "Metabolism",
+        "4.2.2.5": "Excretion",
+        "4.2.2.6": "Pharmacokinetic Drug Interactions",
+        "4.2.2.7": "Other Pharmacokinetic Studies",
+        "4.2.3": "Toxicology",
+        "4.2.3.1": "Single-Dose Toxicity",
+        "4.2.3.2": "Repeat-Dose Toxicity",
+        "4.2.3.3": "Genotoxicity",
+        "4.2.3.3.1": "In vitro",
+        "4.2.3.3.2": "In vivo",
+        "4.2.3.4": "Carcinogenicity",
+        "4.2.3.4.1": "Long-term studies",
+        "4.2.3.4.2": "Short/medium-term studies",
+        "4.2.3.4.3": "Other carcinogenicity studies",
+        "4.2.3.5": "Reproductive and Developmental Toxicology",
+        "4.2.3.5.1": "Fertility and early embryonic development (ICH S5)",
+        "4.2.3.5.2": "Embryo-fetal development",
+        "4.2.3.5.3": "Prenatal and postnatal development",
+        "4.2.3.5.4": "Studies in which offspring were dosed",
+        "4.2.3.6": "Local Tolerance",
+        "4.2.3.7": "Other Toxicity Studies",
+        "4.2.3.7.1": "Antigenicity",
+        "4.2.3.7.2": "Immunotoxicity (ICH S8)",
+        "4.2.3.7.3": "Mechanistic studies",
+        "4.2.3.7.4": "Dependence (ICH S9 Q&As)",
+        "4.2.3.7.5": "Metabolites",
+        "4.2.3.7.6": "Impurities (per ICH Q3A/Q3B nonclinical qualification)",
+        "4.2.3.7.7": "Other",
+        "4.3": "Literature References"
+      }
+    },
+    "module_5": {
+      "title": "Clinical Study Reports",
+      "sections": {
+        "5.1": "Table of Contents",
+        "5.2": "Tabular Listing of All Clinical Studies",
+        "5.3": "Clinical Study Reports",
+        "5.3.1": "Reports of Biopharmaceutic Studies",
+        "5.3.1.1": "Bioavailability Study Reports",
+        "5.3.1.2": "Comparative BA and Bioequivalence Study Reports",
+        "5.3.1.3": "In Vitro-In Vivo Correlation Study Reports",
+        "5.3.1.4": "Reports of Bioanalytical and Analytical Methods (per ICH M10)",
+        "5.3.2": "Reports of Studies Pertinent to Pharmacokinetics Using Human Biomaterials",
+        "5.3.2.1": "Plasma Protein Binding Study Reports",
+        "5.3.2.2": "Reports of Hepatic Metabolism and Drug Interaction Studies",
+        "5.3.2.3": "Reports of Studies Using Other Human Biomaterials",
+        "5.3.3": "Reports of Human Pharmacokinetic Studies",
+        "5.3.3.1": "Healthy Subject PK and Initial Tolerability Study Reports",
+        "5.3.3.2": "Patient PK and Initial Tolerability Study Reports",
+        "5.3.3.3": "Intrinsic Factor PK Study Reports (renal/hepatic impairment, age, gender, race)",
+        "5.3.3.4": "Extrinsic Factor PK Study Reports (drug interactions, food effect, tobacco, antacids)",
+        "5.3.3.5": "Population PK Study Reports",
+        "5.3.4": "Reports of Human Pharmacodynamic Studies",
+        "5.3.4.1": "Healthy Subject PD and PK/PD Study Reports",
+        "5.3.4.2": "Patient PD and PK/PD Study Reports",
+        "5.3.5": "Reports of Efficacy and Safety Studies",
+        "5.3.5.1": "Study Reports of Controlled Clinical Trials",
+        "5.3.5.2": "Study Reports of Uncontrolled Clinical Trials",
+        "5.3.5.3": "Reports of Analyses of Data from More than One Study (meta-analyses, pooled analyses)",
+        "5.3.5.4": "Other Study Reports",
+        "5.3.6": "Reports of Post-Marketing Experience",
+        "5.3.7": "Case Report Forms and Individual Patient Listings",
+        "5.4": "Literature References"
+      }
+    }
+  },
+
+  "corrections": [
+    {
+      "correction_id": "ECTD-CORR-001",
+      "file": "output-v2/q-stability/stability-rules.json",
+      "rule_scope": "All stability rules (meta note + all stability data rules)",
+      "issue_type": "MISSING_MODULE_2_CROSS_REFERENCE",
+      "severity": "high",
+      "original": "CTD Module 3.2.P.8 and 3.2.S.7",
+      "corrected": "Module 3.2.S.7 (drug substance stability data) AND Module 3.2.P.8 (drug product stability data) — with mandatory cross-reference to Module 2.3.S.7 (QOS drug substance stability summary) and Module 2.3.P.8 (QOS drug product stability summary)",
+      "applicable_modules": ["Module 3.2.S.7", "Module 3.2.P.8", "Module 2.3.S.7", "Module 2.3.P.8"],
+      "cross_reference": {
+        "primary_data": ["Module 3.2.S.7", "Module 3.2.P.8"],
+        "summary_required_in": ["Module 2.3.S.7", "Module 2.3.P.8"],
+        "rationale": "ICH M4Q requires stability protocol and results summarized in the QOS (Module 2.3); the QOS stability section MUST cross-reference the full data in Module 3.2"
+      },
+      "m4_basis": "M4Q Section 2.3.S.7 and 2.3.P.8; M4(R4) Table 1/2"
+    },
+    {
+      "correction_id": "ECTD-CORR-002",
+      "file": "output-v2/q-cmc-methods/analytical-impurity-rules.json",
+      "rule_scope": "Entire file — no ectd_module fields present on any rule",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "No ectd_module fields on any of the ~87 analytical/impurity rules",
+      "corrected": "Each rule category requires the following module assignments:",
+      "rule_category_module_map": {
+        "analytical_procedure_lifecycle_drug_substance": ["Module 3.2.S.4.2", "Module 3.2.S.4.3", "Module 2.3.S.4"],
+        "analytical_procedure_lifecycle_drug_product": ["Module 3.2.P.5.2", "Module 3.2.P.5.3", "Module 2.3.P.5"],
+        "analytical_target_profile_and_validation": ["Module 3.2.S.4.3 (DS)", "Module 3.2.P.5.3 (DP)", "Module 2.3.S.4 or 2.3.P.5 (QOS)"],
+        "impurity_limits_drug_substance_Q3A": ["Module 3.2.S.3.2 (impurity profiling/characterization)", "Module 3.2.S.4.5 (justification of specifications)", "Module 2.3.S.3"],
+        "impurity_limits_drug_product_Q3B": ["Module 3.2.P.5.5 (characterization of impurities)", "Module 3.2.P.5.6 (justification of specifications)", "Module 2.3.P.5"],
+        "residual_solvents_Q3C": ["Module 3.2.S.4 (DS control)", "Module 3.2.P.5 (DP control)", "Module 3.2.P.4 (excipient solvents)", "Module 2.3.S.4 or 2.3.P.5"],
+        "elemental_impurities_Q3D": ["Module 3.2.P.5 (DP)", "Module 3.2.S.4 (DS)", "Module 3.2.P.4 (excipients)", "Module 3.2.P.2 (pharmaceutical development risk assessment)", "Module 2.3.P.5"],
+        "extractables_leachables_Q3E": ["Module 3.2.P.7 (container closure system)", "Module 3.2.P.5 (control of DP)", "Module 2.3.P.7"],
+        "specifications_Q6A_chemical": ["Module 3.2.S.4.1 (DS specifications)", "Module 3.2.P.5.1 (DP specifications)", "Module 2.3.S.4.1", "Module 2.3.P.5.1"],
+        "specifications_Q6B_biotech": ["Module 3.2.S.4.1", "Module 3.2.P.5.1", "Module 2.3.S.4.1", "Module 2.3.P.5.1"],
+        "gmp_api_manufacturing_Q7": ["Module 3.2.S.2 (manufacture)", "Module 3.2.A.1 (facilities)", "Module 2.3.S.2"],
+        "pharmacopoeial_harmonisation_Q4B": ["Module 3.2.S.4.2 (analytical procedures)", "Module 3.2.P.5.2 (DP analytical procedures)"]
+      },
+      "m4_basis": "M4Q (Quality — CMC) Sections 2.3.S and 2.3.P; M4(R4) Table 2 rows for 3.2.S.3, 3.2.S.4, 3.2.P.5, 3.2.P.7"
+    },
+    {
+      "correction_id": "ECTD-CORR-003",
+      "file": "output-v2/q-biotech/biotech-quality-rules.json",
+      "rule_scope": "Entire file — 147 rules, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "critical",
+      "original": "No ectd_module assignments on any of the 147 biotech quality rules (ICH Q5A-Q5E)",
+      "corrected": "Required module assignments by Q5 sub-guideline:",
+      "rule_category_module_map": {
+        "viral_safety_Q5A_cell_bank_testing": ["Module 3.2.A.2 (Adventitious Agents Safety Evaluation — primary location)", "Module 2.3.A.2 (QOS Appendix 2 — summary)"],
+        "viral_safety_Q5A_clearance_studies": ["Module 3.2.A.2", "Module 2.3.A.2"],
+        "viral_safety_Q5A_cell_line_selection": ["Module 3.2.S.2.3 (control of materials)", "Module 3.2.A.2"],
+        "expression_construct_Q5B": ["Module 3.2.S.2.3 (control of materials — cell bank)", "Module 3.2.S.1 (general information — structure)"],
+        "stability_biotech_Q5C": ["Module 3.2.S.7 (DS stability)", "Module 3.2.P.8 (DP stability)", "Module 2.3.S.7", "Module 2.3.P.8"],
+        "cell_substrates_Q5D": ["Module 3.2.S.2.3 (control of materials — MCB/WCB)", "Module 3.2.A.2"],
+        "comparability_Q5E": ["Module 3.2.S.2 (manufacture — process changes)", "Module 3.2.S.4 (control — pre/post comparability data)", "Module 3.2.P.2 (pharma development)", "Module 2.3.S.2", "Module 2.3.S.4"]
+      },
+      "critical_note": "Module 3.2.A.2 is THE canonical location for all adventitious agents / viral safety evaluation data per both M4Q and ICH Q5A. This must be the primary module reference for all VS-series rules.",
+      "m4_basis": "M4Q Section 2.3.A.2; M4(R4) Table 2 row 3.2.A.2"
+    },
+    {
+      "correction_id": "ECTD-CORR-004",
+      "file": "output-v2/q-systems/quality-systems-rules.json",
+      "rule_scope": "Entire file — Q8-Q13 rules, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "No ectd_module fields for Q8-Q13 framework rules",
+      "corrected": "Required module assignments by ICH Q-guideline:",
+      "rule_category_module_map": {
+        "pharmaceutical_development_Q8": ["Module 3.2.P.2 (primary location for all Q8 pharmaceutical development content)", "Module 2.3.P.2 (QOS summary)"],
+        "design_space_Q8": ["Module 3.2.P.2 (design space definition and justification)", "Module 3.2.S.2 (DS design space, if applicable)", "Module 2.3.P.2"],
+        "quality_risk_management_Q9": ["Module 3.2.P.2 (risk assessments for DP)", "Module 3.2.S.2 (risk assessments for DS)", "Module 3.2.A.1 (facilities risk assessment)"],
+        "pharmaceutical_quality_system_Q10": ["Module 3.2.A.1 (GMP/PQS site description)", "Module 3.2.P.3 (manufacturing process controls)", "Module 3.2.S.2 (DS manufacturing controls)"],
+        "drug_substance_development_Q11": ["Module 3.2.S.2 (manufacture — development history)", "Module 3.2.S.4 (control strategy)", "Module 2.3.S.2"],
+        "lifecycle_management_Q12": ["Module 3.2.P.2 (established conditions, PAC, PACMP)", "Module 3.2.S.2 (DS established conditions)", "Module 3.2.R (regional post-approval information)"],
+        "continuous_manufacturing_Q13": ["Module 3.2.P.3 (manufacturing — CM process description)", "Module 3.2.P.2 (pharmaceutical development — CM justification)", "Module 2.3.P.3"]
+      },
+      "m4_basis": "M4Q Sections 3.2.P.2, 3.2.S.2, 3.2.P.3; M4(R4) Table 2"
+    },
+    {
+      "correction_id": "ECTD-CORR-005",
+      "file": "output-v2/s-toxicology/nonclinical-requirements.json",
+      "rule_scope": "Entire file — S1-S13 nonclinical requirements, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "critical",
+      "original": "No ectd_module fields on nonclinical study requirements",
+      "corrected": "Required module assignments by ICH S-guideline:",
+      "rule_category_module_map": {
+        "carcinogenicity_S1A_S1B": {
+          "study_reports": ["Module 4.2.3.4.1 (long-term carcinogenicity studies)", "Module 4.2.3.4.2 (short/medium-term studies)"],
+          "summary": ["Module 2.6.6 (Toxicology Written Summary)", "Module 2.6.7 (Toxicology Tabulated Summary)", "Module 2.4 (Nonclinical Overview)"]
+        },
+        "genotoxicity_S2": {
+          "study_reports": ["Module 4.2.3.3.1 (in vitro genotoxicity)", "Module 4.2.3.3.2 (in vivo genotoxicity)"],
+          "summary": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"]
+        },
+        "toxicokinetics_S3A": {
+          "study_reports": ["Module 4.2.2 (nonclinical PK — integrated with toxicology studies)"],
+          "summary": ["Module 2.6.4 (Pharmacokinetics Written Summary)", "Module 2.6.5 (Pharmacokinetics Tabulated Summary)", "Module 2.4"]
+        },
+        "single_dose_toxicity_S3B_legacy": {
+          "study_reports": ["Module 4.2.3.1 (single-dose toxicity)"],
+          "summary": ["Module 2.6.6", "Module 2.4"]
+        },
+        "repeat_dose_toxicity_S4": {
+          "study_reports": ["Module 4.2.3.2 (repeat-dose toxicity)"],
+          "summary": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"]
+        },
+        "reproductive_tox_S5": {
+          "study_reports": ["Module 4.2.3.5.1 (fertility/early embryonic)", "Module 4.2.3.5.2 (embryo-fetal dev)", "Module 4.2.3.5.3 (pre/postnatal)", "Module 4.2.3.5.4 (offspring studies)"],
+          "summary": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"]
+        },
+        "biotech_preclinical_S6": {
+          "study_reports": ["Module 4.2.1 (pharmacology)", "Module 4.2.2 (pharmacokinetics)", "Module 4.2.3 (toxicology)"],
+          "summary": ["Module 2.6.2", "Module 2.6.4", "Module 2.6.6", "Module 2.4"]
+        },
+        "safety_pharmacology_S7A_S7B": {
+          "study_reports": ["Module 4.2.1.3 (safety pharmacology)"],
+          "summary": ["Module 2.6.2 (Pharmacology Written Summary — safety pharmacology section)", "Module 2.4 (Nonclinical Overview)"]
+        },
+        "immunotoxicity_S8": {
+          "study_reports": ["Module 4.2.3.7.2 (immunotoxicity)"],
+          "summary": ["Module 2.6.6", "Module 2.4"]
+        },
+        "oncology_nonclinical_S9": {
+          "study_reports": ["Module 4.2.3 (toxicology)", "Module 4.2.1 (pharmacology — efficacy in tumor models)"],
+          "summary": ["Module 2.6.6", "Module 2.6.2", "Module 2.4"]
+        },
+        "phototoxicity_S10": {
+          "study_reports": ["Module 4.2.3.7.7 (other toxicity — phototoxicity)", "Module 4.2.1.2 (secondary PD if mechanism-related)"],
+          "summary": ["Module 2.6.6", "Module 2.4"]
+        },
+        "pediatric_nonclinical_S11": {
+          "study_reports": ["Module 4.2.3.2 (repeat-dose)", "Module 4.2.3.5 (reproductive/developmental)"],
+          "summary": ["Module 2.6.6", "Module 2.4"]
+        },
+        "oligonucleotide_S12": {
+          "study_reports": ["Module 4.2.3 (toxicology)", "Module 4.2.2 (PK/TK)"],
+          "summary": ["Module 2.6.4", "Module 2.6.6", "Module 2.4"]
+        },
+        "mutagenic_impurities_M7": {
+          "study_reports": ["Module 4.2.3.3 (genotoxicity — qualification data)", "Module 4.2.3.7.6 (impurities toxicology)"],
+          "quality_location": ["Module 3.2.S.3.2 (impurity profiling)", "Module 3.2.S.4.5 (justification of specification limits)", "Module 2.3.S.3"],
+          "summary": ["Module 2.6.6", "Module 2.4"]
+        }
+      },
+      "m4_basis": "M4S (Safety — Nonclinical) guideline; M4(R4) Table 5 (Module 4 granularity)"
+    },
+    {
+      "correction_id": "ECTD-CORR-006",
+      "file": "output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_scope": "ctd_placement field (line 425) and all S7A/S7B rules",
+      "issue_type": "INCOMPLETE_MODULE_REFERENCE",
+      "severity": "medium",
+      "original": "Module 2.6.2 (Pharmacology Written Summary) and Module 4.2.1.3 (Safety Pharmacology)",
+      "corrected": "Module 4.2.1.3 (Safety Pharmacology study reports — primary data location) AND Module 2.6.2 (Pharmacology Written Summary — specifically the safety pharmacology sub-section) AND Module 2.4 (Nonclinical Overview — integrated risk assessment narrative)",
+      "applicable_modules": ["Module 4.2.1.3", "Module 2.6.2", "Module 2.4"],
+      "note": "Module 2.6.2 includes sub-sections for primary PD, secondary PD, AND safety pharmacology. The safety pharmacology section of 2.6.2 must reference 4.2.1.3. Module 2.4 must provide the integrated risk assessment narrative that incorporates hERG/QTc data.",
+      "m4_basis": "M4S Section 2.6.2; M4(R4) Tables 1 and 5"
+    },
+    {
+      "correction_id": "ECTD-CORR-007",
+      "file": "output-v2/e-clinical-design/clinical-design-rules.json",
+      "rule_scope": "Entire file — 583 clinical design rules (E1, E3, E4, E7, E8, E9, E10, E20), no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "critical",
+      "original": "No ectd_module fields — rule categories contain ICH guideline references only",
+      "corrected": "Required module assignments by ICH E-guideline and rule category:",
+      "rule_category_module_map": {
+        "population_exposure_E1": {
+          "primary": ["Module 5.3.5.1 (controlled trials)", "Module 5.3.5.2 (uncontrolled trials)"],
+          "summary": ["Module 2.7.4 (Clinical Safety Summary — exposure duration/size tables)", "Module 2.5 (Clinical Overview)"]
+        },
+        "study_reports_E3": {
+          "primary": ["Module 5.3.5.1 (pivotal controlled trials)", "Module 5.3.5.2 (uncontrolled)", "Module 5.3.5.3 (integrated analyses)", "Module 5.3.5.4 (other)"],
+          "summary": ["Module 2.7.3 (Efficacy Summary)", "Module 2.7.4 (Safety Summary)", "Module 2.5"]
+        },
+        "dose_response_E4": {
+          "primary": ["Module 5.3.4 (PD studies)", "Module 5.3.5.1 (dose-ranging trials)", "Module 5.3.3 (PK — dose linearity)"],
+          "summary": ["Module 2.7.2 (Clinical Pharmacology Summary — dose-response section)", "Module 2.5"]
+        },
+        "elderly_E7": {
+          "primary": ["Module 5.3.3.3 (intrinsic factor PK — elderly)", "Module 5.3.5.1 (efficacy/safety in elderly subgroups)"],
+          "summary": ["Module 2.7.2", "Module 2.7.4", "Module 2.5"]
+        },
+        "study_design_E8": {
+          "primary": ["Module 5.3 (all clinical study reports)"],
+          "summary": ["Module 2.5 (Clinical Overview)", "Module 2.7 (Clinical Summary)"]
+        },
+        "statistical_principles_E9": {
+          "primary": ["Module 5.3.5 (study reports — statistical analysis sections)"],
+          "summary": ["Module 2.7.3 (Clinical Efficacy — statistical methodology section)", "Module 2.5"]
+        },
+        "control_groups_E10": {
+          "primary": ["Module 5.3.5.1 (controlled clinical trials)"],
+          "summary": ["Module 2.7.3", "Module 2.5"]
+        },
+        "adaptive_trials_E20": {
+          "primary": ["Module 5.3.5.1 (adaptive design trial reports)", "Module 5.3.5.3 (integrated analyses across adaptive stages)"],
+          "summary": ["Module 2.7.3", "Module 2.5"]
+        }
+      },
+      "m4_basis": "M4E (Efficacy — Clinical) guideline; M4(R4) Table 6 (Module 5 granularity)"
+    },
+    {
+      "correction_id": "ECTD-CORR-008",
+      "file": "output-v2/e-safety-pharma/safety-reporting-rules.json",
+      "rule_scope": "Entire file — E2A-E2F, E14, E19-E23 rules, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "critical",
+      "original": "No ectd_module fields on any safety reporting rules",
+      "corrected": "Required module assignments by rule type:",
+      "rule_category_module_map": {
+        "SAE_SUSAR_expedited_reporting_E2A": {
+          "primary": ["Module 5.3.5 (study reports — safety sections)", "Module 5.3.7 (individual patient CRFs for fatal/unexpected SAEs)"],
+          "submission_vehicle": ["Module 1 (CIOMS/MedWatch reports — region-specific)", "Module 5.3.6 (post-marketing reports if applicable)"]
+        },
+        "icsr_E2B_r3": {
+          "primary": ["Module 1 (electronic individual case safety reports — region-specific administrative)"],
+          "note": "E2B(R3) ICSRs are submitted as regulatory transactions in Module 1 regional section"
+        },
+        "psur_pbrer_E2C": {
+          "primary": ["Module 2.7.4 (Clinical Safety Summary — basis for PBRER narrative)", "Module 5.3.6 (post-marketing study reports)"],
+          "note": "PSUR/PBRER itself is a standalone submission document but references Module 5.3.6 and Module 2.7.4 content"
+        },
+        "post_approval_adverse_events_E2D": {
+          "primary": ["Module 5.3.6 (post-marketing experience reports)", "Module 1 (regional safety submissions)"]
+        },
+        "risk_management_E2E": {
+          "primary": ["Module 1 (RMP — EU/regional)", "Module 2.5 (Clinical Overview — benefit-risk)", "Module 2.7.4 (Clinical Safety — risk characterization)"]
+        },
+        "pbrer_E2F": {
+          "primary": ["Module 5.3.6 (post-marketing study reports)", "Module 2.7.4 (safety data compilation)"]
+        },
+        "qt_qtc_E14": {
+          "primary": ["Module 5.3.4.1 (TQT study report)", "Module 5.3.3.4 (extrinsic factor PK — drug interaction on QTc)"],
+          "nonclinical_cross_ref": ["Module 4.2.1.3 (safety pharmacology — hERG/in vivo QT)"],
+          "summary": ["Module 2.7.2 (Clinical Pharmacology Summary — cardiac safety sub-section)", "Module 2.5"]
+        },
+        "patient_safety_decentralized_E19": {
+          "primary": ["Module 5.3.5.1 (clinical trial safety)", "Module 5.3.7 (patient listings)"],
+          "summary": ["Module 2.7.4", "Module 2.5"]
+        }
+      },
+      "m4_basis": "M4E Sections 5.3.4-5.3.7; M4(R4) Table 6"
+    },
+    {
+      "correction_id": "ECTD-CORR-009",
+      "file": "output-v2/e-special-pops/special-populations-rules.json",
+      "rule_scope": "412 rules — E5, E6, E11, E11A, E12, E15, E16, E17, E18, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "No ectd_module fields on any special populations rules",
+      "corrected": "Required module assignments by guideline:",
+      "rule_category_module_map": {
+        "ethnic_bridging_E5": {
+          "primary": ["Module 5.3.3.3 (intrinsic factor PK — race/ethnic PK differences)", "Module 5.3.5.1 (bridging study clinical report)"],
+          "summary": ["Module 2.7.2 (Clinical Pharmacology — PK in new region)", "Module 2.5"]
+        },
+        "gcp_E6": {
+          "primary": ["Module 5 (applies to conduct and documentation of all clinical studies)", "Module 1 (investigator certifications, regional GCP submissions)"],
+          "note": "GCP is a framework that applies to all of Module 5; no single CTD section"
+        },
+        "pediatric_E11": {
+          "primary": ["Module 5.3.3.3 (pediatric PK)", "Module 5.3.5.1 (pediatric efficacy/safety trials)", "Module 5.3.3.1 (pediatric tolerability)"],
+          "summary": ["Module 2.7.2", "Module 2.7.3", "Module 2.7.4", "Module 2.5"],
+          "regional": ["Module 1 (pediatric study plans — PSP/PIP)"]
+        },
+        "pediatric_extrapolation_E11A": {
+          "primary": ["Module 5.3.5.3 (model-based analyses/extrapolation)", "Module 5.3.3.5 (population PK supporting extrapolation)"],
+          "summary": ["Module 2.7.2", "Module 2.7.3", "Module 2.5"]
+        },
+        "antihypertensive_E12": {
+          "primary": ["Module 5.3.5.1 (antihypertensive efficacy trials)", "Module 5.3.4.2 (patient PD — BP endpoints)"],
+          "summary": ["Module 2.7.3", "Module 2.7.4"]
+        },
+        "genomic_biomarkers_E15": {
+          "primary": ["Module 5.3.3.5 (population PK with genomic covariates)", "Module 5.3.5.1 (trials stratified by biomarker)"],
+          "summary": ["Module 2.7.2", "Module 2.7.3", "Module 2.5"]
+        },
+        "biomarker_qualification_E16": {
+          "primary": ["Module 5.3.3 or 5.3.4 (biomarker clinical study reports)", "Module 4.2.1 or 4.2.2 (nonclinical biomarker validation)"],
+          "summary": ["Module 2.7.2 (if PK biomarker)", "Module 2.7.3 (if efficacy biomarker)", "Module 2.5"]
+        },
+        "mrct_E17": {
+          "primary": ["Module 5.3.5.1 (MRCT trial report)", "Module 5.3.5.3 (region-specific subgroup analyses)"],
+          "summary": ["Module 2.7.3", "Module 2.7.4", "Module 2.5"]
+        },
+        "genomic_sampling_E18": {
+          "primary": ["Module 5.3.5.1 (trials with genomic sampling)", "Module 5.3.7 (patient listings with genomic data)"],
+          "summary": ["Module 2.7.3", "Module 2.7.4"]
+        }
+      },
+      "m4_basis": "M4E; M4(R4) Table 6"
+    },
+    {
+      "correction_id": "ECTD-CORR-010",
+      "file": "output-v2/m-multidisciplinary/multidisciplinary-rules.json",
+      "rule_scope": "249 rules — M1, M2, M7, M8, M9, M10, M11, M12, M13A-C, M14",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "Domain-level coverage noted but no per-rule ectd_module fields",
+      "corrected": "Required module assignments by ICH M-guideline:",
+      "rule_category_module_map": {
+        "meddra_M1": {
+          "primary": ["Module 5.3.5 (adverse event coding in trial reports)", "Module 5.3.6 (post-marketing — MedDRA coded spontaneous reports)", "Module 2.7.4 (safety summary — MedDRA PT/SOC tables)"]
+        },
+        "electronic_standards_M2": {
+          "primary": ["Module 1 (eCTD submission technical requirements)", "All modules (data standards for eCTD content)"]
+        },
+        "mutagenic_impurities_M7": {
+          "primary": ["Module 3.2.S.3.2 (impurity profiling — structure/identification)", "Module 3.2.S.4.5 (justification of specification limits for DS)", "Module 3.2.P.5.6 (justification of specification limits for DP)", "Module 4.2.3.7.6 (toxicology of impurities — if separate tox study)", "Module 4.2.3.3 (genotoxicity — Ames assay for impurity)"],
+          "summary": ["Module 2.3.S.3 (QOS impurity characterization)", "Module 2.3.S.4.5 (QOS specification justification)", "Module 2.6.6 (Toxicology Written Summary)", "Module 2.4"]
+        },
+        "ectd_submission_M8": {
+          "primary": ["Module 1 (eCTD administrative/technical)", "All modules (M8 governs the electronic format of the entire CTD)"],
+          "note": "M8 rules apply to all five modules; the eCTD_module field for M8 rules should reference the specific module being formatted/submitted"
+        },
+        "bcs_biowaivers_M9": {
+          "primary": ["Module 5.3.1.2 (bioequivalence study reports — or waiver justification)", "Module 3.2.P.2 (pharmaceutical development — dissolution/BCS classification)", "Module 3.2.P.5.6 (dissolution specifications justification)"],
+          "summary": ["Module 2.7.1 (Summary of Biopharmaceutics Studies)", "Module 2.5"]
+        },
+        "bioanalytical_validation_M10": {
+          "primary": ["Module 5.3.1.4 (bioanalytical method reports — clinical)", "Module 4.2.2.1 (nonclinical PK analytical methods)"],
+          "note": "M10 bioanalytical validation reports go in Module 5.3.1.4 for clinical studies and Module 4.2.2.1 for nonclinical"
+        },
+        "clinical_protocol_M11": {
+          "primary": ["Module 5.3.5 (clinical study reports include protocol)", "Module 1 (protocol submission in CTAs)"],
+          "note": "CeSHarP-structured protocols are submitted as part of the study report in Module 5.3.5"
+        },
+        "drug_interactions_M12": {
+          "nonclinical": ["Module 4.2.1.4 (PD drug interactions)", "Module 4.2.2.6 (PK drug interactions — in vitro)"],
+          "clinical": ["Module 5.3.3.4 (extrinsic factor PK — DDI studies)", "Module 5.3.2.2 (human hepatic metabolism and DDI)"],
+          "summary": ["Module 2.6.4 (Nonclinical PK Written Summary — DDI section)", "Module 2.7.2 (Clinical Pharmacology Summary — DDI section)", "Module 2.4", "Module 2.5"]
+        },
+        "bioequivalence_M13A": {
+          "primary": ["Module 5.3.1.2 (comparative BA and BE study reports)", "Module 3.2.P.2 (pharma development — dissolution and BE correlation)"],
+          "summary": ["Module 2.7.1 (Summary of Biopharmaceutics)", "Module 2.5"]
+        },
+        "biowaiver_strengths_M13B": {
+          "primary": ["Module 5.3.1.2 (BE studies for reference strength)", "Module 3.2.P.2 (dissolution data supporting biowaiver)"],
+          "summary": ["Module 2.7.1", "Module 2.5"]
+        },
+        "rwd_M14": {
+          "primary": ["Module 5.3.5.3 (analyses from multiple studies / RWE analyses)", "Module 5.3.6 (post-marketing real-world studies)"],
+          "summary": ["Module 2.7.3 (efficacy — if RWE supports efficacy)", "Module 2.7.4 (safety — if RWE supports safety)", "Module 2.5"]
+        }
+      },
+      "m4_basis": "M4E, M4Q, M4S; M4(R4) Tables 5 and 6"
+    },
+    {
+      "correction_id": "ECTD-CORR-011",
+      "file": "output-v2/regulations-crl/regulatory-requirements.json",
+      "rule_scope": "All rules using abbreviated 'MX.Y.Z' format without 'Module' prefix",
+      "issue_type": "FORMAT_NONSTANDARD",
+      "severity": "medium",
+      "original": "Uses abbreviated format: 'M1', 'M3.2.P.8', 'M5.3.1.2', 'M4.2.2.2', etc.",
+      "corrected": "All module references MUST use format: 'Module 1', 'Module 3.2.P.8', 'Module 5.3.1.2', 'Module 4.2.2.2'",
+      "affected_instances": 213,
+      "standardization_rule": "Prefix 'M' is an internal shorthand only. Public-facing rule JSON must use full 'Module X.Y.Z' notation to match the ICH M4(R4) document and eCTD submission tooling conventions.",
+      "exceptions": {
+        "valid_abbreviated_forms": ["None — all must use full 'Module X.Y.Z' format"],
+        "multi_module_separator": "Use comma+space: 'Module 3.2.P.8, Module 2.3.P.8' (not slash: 'M3.2.P.8/M3.2.S.7')"
+      }
+    },
+    {
+      "correction_id": "ECTD-CORR-012",
+      "file": "output-v2/regulations-crl/regulatory-requirements.json",
+      "rule_scope": "Rules using 'M1.8.2', 'M1.12', 'M1.14', 'M1.18.1' without qualifier",
+      "issue_type": "MISSING_REGION_QUALIFIER",
+      "severity": "medium",
+      "original": "\"ectd_module\": \"M1.8.2\" — no qualifier; implies harmonized CTD section",
+      "corrected": "Must add jurisdiction qualifier: e.g., \"Module 1.8.2 (FDA-specific)\" or \"Module 1.14 (FDA-specific — labeling)\"",
+      "affected_rules": [
+        {"original": "M1.8.2", "corrected": "Module 1.8.2 (FDA-specific — CDER proprietary name review or labeling sub-section)", "line_approx": 89},
+        {"original": "M1.12", "corrected": "Module 1.12 (FDA-specific — debarment/field copy certification)", "line_approx": 316},
+        {"original": "M1.14", "corrected": "Module 1.14 (FDA-specific — proposed labeling: PI, PPI, MedGuide)", "line_approx": 50},
+        {"original": "M1.18.1", "corrected": "Module 1.18.1 (FDA-specific — pediatric administrative information)", "line_approx": 720}
+      ],
+      "rationale": "ICH M4(R4) explicitly states Module 1 is region-specific. Sub-sections of Module 1 beyond 1.1 and 1.2 are defined by each regulatory authority. Using region-specific sub-section numbers without a qualifier creates confusion about applicability.",
+      "m4_basis": "M4(R4) page 2: 'Module 1 is region specific. The content and format of this module can be specified by the relevant regulatory authorities.'"
+    },
+    {
+      "correction_id": "ECTD-CORR-013",
+      "file": "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json",
+      "rule_scope": "Rules using 'M3.2.A' without sub-section specification",
+      "issue_type": "MODULE_TOO_VAGUE",
+      "severity": "high",
+      "original": "\"ectd_module\": \"M3.2.A\" (used for manufacturing/facility/GMP deficiencies)",
+      "corrected": "Must specify which appendix: Module 3.2.A.1 (Facilities and Equipment), Module 3.2.A.2 (Adventitious Agents), or Module 3.2.A.3 (Novel Excipients)",
+      "affected_rules": [
+        {"context": "GMP/facility deficiencies", "corrected": "Module 3.2.A.1 (Facilities and Equipment)", "cross_ref": ["Module 2.3.A.1"]},
+        {"context": "Viral contamination/biological source material", "corrected": "Module 3.2.A.2 (Adventitious Agents Safety Evaluation)", "cross_ref": ["Module 2.3.A.2"]},
+        {"context": "Novel excipients human safety", "corrected": "Module 3.2.A.3 (Excipients)", "cross_ref": ["Module 2.3.A.3"]}
+      ],
+      "m4_basis": "M4Q Section 3.2.A; M4(R4) Table 2 rows 3.2.A.1, 3.2.A.2, 3.2.A.3"
+    },
+    {
+      "correction_id": "ECTD-CORR-014",
+      "file": "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json",
+      "rule_scope": "One rule using 'M3.2.P.5/M3.2.S.3' for analytical method context",
+      "issue_type": "POTENTIAL_MODULE_ERROR",
+      "severity": "high",
+      "original": "\"ectd_module\": \"M3.2.P.5/M3.2.S.3\" — implies analytical control data in Module 3.2.S.3",
+      "corrected": "Depends on content type: (A) For analytical procedure validation of drug substance: Module 3.2.S.4.3 — NOT 3.2.S.3. (B) For impurity structure elucidation/identification: Module 3.2.S.3.2 is correct.",
+      "module_disambiguation": {
+        "Module_3_2_S_3": {
+          "title": "Characterisation",
+          "contains": ["Structure elucidation", "Stereochemistry determination", "Impurity profiling (identity, structure)", "Physicochemical characterization"],
+          "does_NOT_contain": ["Analytical procedures for release testing", "Method validation data", "Specification setting"]
+        },
+        "Module_3_2_S_4": {
+          "title": "Control of Drug Substance",
+          "contains": ["Specifications (3.2.S.4.1)", "Analytical procedures (3.2.S.4.2)", "Validation of analytical procedures (3.2.S.4.3)", "Batch analysis (3.2.S.4.4)", "Justification of specification (3.2.S.4.5)"],
+          "does_NOT_contain": ["Structure elucidation", "Impurity identification per se"]
+        }
+      },
+      "rule": "IF the CRL deficiency concerns 'analytical method validation' or 'specifications' → Module 3.2.S.4 (NOT S.3). IF the deficiency concerns 'impurity identification/structure' → Module 3.2.S.3 is correct.",
+      "m4_basis": "M4Q Section 3.2.S"
+    },
+    {
+      "correction_id": "ECTD-CORR-015",
+      "file": "output-v2/regulations-crl/regulatory-requirements.json",
+      "rule_scope": "Rules using range notation 'M3-M5', 'M1-M5', 'M1-M3, M5.3.1'",
+      "issue_type": "FORMAT_RANGE_NOTATION",
+      "severity": "low",
+      "original": "\"ectd_module\": \"M3-M5\" or \"M1-M5\" or \"M3/M4/M5\"",
+      "corrected": "Replace range notation with specific module list or use descriptive phrase with specific cross-references",
+      "examples": [
+        {"original": "M3-M5", "corrected": "Module 3 (Quality), Module 4 (Nonclinical), Module 5 (Clinical) — specify applicable sub-sections per rule"},
+        {"original": "M1-M5", "corrected": "All modules — use only when rule genuinely applies equally to all five modules (e.g., GCP, data integrity)"},
+        {"original": "M3/M4/M5", "corrected": "Module 3.2.P.2, Module 4.2.3, Module 5.3.5 — specify the relevant sub-sections"}
+      ],
+      "rationale": "Range notation obscures which specific section of the dossier should be checked, defeating the purpose of the module mapping."
+    },
+    {
+      "correction_id": "ECTD-CORR-016",
+      "file": "output-v3/eu-law/eu-legislation-requirements.json",
+      "rule_scope": "Entire file — 412 requirements, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "No ectd_module fields",
+      "corrected": "EU legislation requirements map to CTD modules as follows:",
+      "rule_category_module_map": {
+        "marketing_authorisation_application": {
+          "primary": ["Module 1 (EU-specific: application form, product info, labeling)", "Module 2, 3, 4, 5 (harmonized CTD content)"]
+        },
+        "quality_dossier_directive": {
+          "primary": ["Module 3 (Quality)", "Module 2.3 (Quality Overall Summary)"]
+        },
+        "nonclinical_directive": {
+          "primary": ["Module 4 (Nonclinical Study Reports)", "Module 2.4 (Nonclinical Overview)", "Module 2.6 (Nonclinical Written Summaries)"]
+        },
+        "clinical_directive": {
+          "primary": ["Module 5 (Clinical Study Reports)", "Module 2.5 (Clinical Overview)", "Module 2.7 (Clinical Summary)"]
+        },
+        "rmp_eu": {
+          "primary": ["Module 1 (EU-specific — RMP as EU Module 1 section)", "Module 2.7.4 (safety data basis for RMP)"]
+        },
+        "paediatric_regulation": {
+          "primary": ["Module 1 (PIP decision reference)", "Module 5.3.3.3 (pediatric PK)", "Module 5.3.5.1 (pediatric trials)"]
+        },
+        "orphan_designation": {
+          "primary": ["Module 1 (EU-specific — orphan designation documents)"]
+        }
+      }
+    },
+    {
+      "correction_id": "ECTD-CORR-017",
+      "file": "output-v3/eu-gmp-ema/eu-gmp-rules.json",
+      "rule_scope": "Line 781 uses only 'Module 3' for process validation — too vague",
+      "issue_type": "MODULE_TOO_VAGUE",
+      "severity": "medium",
+      "original": "\"Module 3\" for process validation requirements",
+      "corrected": "Module 3.2.P.3 (Manufacture — process validation) AND Module 3.2.P.2 (Pharmaceutical Development — process design, validation strategy) AND Module 3.2.A.1 (Facilities and Equipment — GMP site description)",
+      "applicable_modules": ["Module 3.2.P.3", "Module 3.2.P.2", "Module 3.2.A.1", "Module 2.3.P.3"],
+      "m4_basis": "M4Q Section 3.2.P.2 and 3.2.P.3"
+    },
+    {
+      "correction_id": "ECTD-CORR-018",
+      "file": "output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json",
+      "rule_scope": "Entire file — EU GVP Module rules, no ectd_module fields",
+      "issue_type": "MISSING_MODULE_FIELDS",
+      "severity": "high",
+      "original": "No ectd_module fields",
+      "corrected": "EU pharmacovigilance GVP modules map to CTD as follows:",
+      "rule_category_module_map": {
+        "GVP_Module_I_II_pharmacovigilance_systems": {
+          "primary": ["Module 1 (EU RMP as regional Module 1 section)", "Module 2.7.4 (clinical safety summary — risk characterization basis)"]
+        },
+        "GVP_Module_V_risk_management": {
+          "primary": ["Module 1 (EU-specific — RMP document)", "Module 2.5 (Clinical Overview — benefit-risk)", "Module 2.7.4 (safety data supporting RMP risks)"]
+        },
+        "GVP_Module_VII_PSUR": {
+          "primary": ["Module 5.3.6 (post-marketing study reports)", "Module 2.7.4 (clinical safety — post-marketing update basis)"]
+        },
+        "GVP_Module_VIII_PASS": {
+          "primary": ["Module 5.3.5 (PASS study reports as clinical study)", "Module 5.3.6 (if post-approval observational)"]
+        },
+        "GVP_Module_IX_signal_management": {
+          "primary": ["Module 5.3.6 (post-marketing reports)", "Module 2.7.4 (safety summary update)"]
+        },
+        "GVP_Module_XV_XVI_safety_communications": {
+          "primary": ["Module 1 (EU-specific — DHPC, labeling updates)", "Module 2.7.4 (updated clinical safety summary)"]
+        }
+      }
+    },
+    {
+      "correction_id": "ECTD-CORR-019",
+      "file": "output-v3/health-canada/health-canada-requirements.json",
+      "rule_scope": "Module references inconsistently describe CTD structure",
+      "issue_type": "FORMAT_INCONSISTENCY",
+      "severity": "low",
+      "original": "Uses 'Module 1 (Administrative/Regional)', 'Module 2', 'Module 3 (Quality)' — inconsistent with granularity level",
+      "corrected": "Health Canada uses the ICH CTD with Canada-specific Module 1. Rules should specify both the harmonized module (Module 2-5) AND the Canada-specific Module 1 section where applicable.",
+      "specific_corrections": [
+        {"original": "Module 1.5 (Environmental Assessment)", "corrected": "Module 1.5 (Health Canada-specific — Environmental Assessment Statement per CEPA)", "status": "valid_but_needs_qualifier"},
+        {"original": "Module 1.2.8 (waiver justification)", "corrected": "Module 1.2.8 (Health Canada-specific — comparative bioavailability waiver justification)", "status": "valid_but_needs_qualifier"},
+        {"original": "Module 2 (2.1-2.3 only if CS-BE used)", "corrected": "Module 2.3 (Quality Overall Summary — required for CS-BE applications); Module 2.1 (CTD ToC)", "status": "corrected"}
+      ]
+    },
+    {
+      "correction_id": "ECTD-CORR-020",
+      "file": "output-v3/who-regs/japan-specific-requirements.json",
+      "rule_scope": "Japan/PMDA rules use 'Section X: CTD Module X' terminology — correct but inconsistent format",
+      "issue_type": "FORMAT_INCONSISTENCY",
+      "severity": "low",
+      "original": "Uses 'Section 1: Regional administrative information (CTD Module 1)' etc.",
+      "corrected": "Standardize to: 'Module 1 (Japan-specific — regional administrative information per PMDA)', 'Module 2 (CTD Summaries)', etc.",
+      "note": "Content is substantively correct. Japan uses the ICH CTD format with Japan-specific Module 1 per PMDA requirements. The 'Section' terminology reflects historical PMDA usage and should be mapped to official CTD module numbers."
+    }
+  ],
+
+  "summary": {
+    "total_corrections": 20,
+    "by_type": {
+      "MISSING_MODULE_FIELDS": 9,
+      "MISSING_MODULE_2_CROSS_REFERENCE": 1,
+      "FORMAT_NONSTANDARD": 1,
+      "FORMAT_RANGE_NOTATION": 1,
+      "FORMAT_INCONSISTENCY": 2,
+      "MODULE_TOO_VAGUE": 3,
+      "MISSING_REGION_QUALIFIER": 1,
+      "POTENTIAL_MODULE_ERROR": 1,
+      "INCOMPLETE_MODULE_REFERENCE": 1
+    },
+    "by_severity": {
+      "critical": 4,
+      "high": 10,
+      "medium": 4,
+      "low": 2
+    },
+    "files_affected": 16,
+    "files_with_correct_modules_but_missing_cross_refs": ["output-v2/q-stability/stability-rules.json", "output-v2/s-pharmacology/safety-pharmacology-rules.json"],
+    "files_with_no_module_fields": [
+      "output-v2/q-cmc-methods/analytical-impurity-rules.json",
+      "output-v2/q-biotech/biotech-quality-rules.json",
+      "output-v2/q-systems/quality-systems-rules.json",
+      "output-v2/s-toxicology/nonclinical-requirements.json",
+      "output-v2/e-clinical-design/clinical-design-rules.json",
+      "output-v2/e-safety-pharma/safety-reporting-rules.json",
+      "output-v2/e-special-pops/special-populations-rules.json",
+      "output-v2/m-multidisciplinary/multidisciplinary-rules.json",
+      "output-v3/eu-law/eu-legislation-requirements.json",
+      "output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json"
+    ],
+    "files_with_module_fields_that_needed_format_fixes": [
+      "output-v2/regulations-crl/regulatory-requirements.json",
+      "output-v2/regulations-crl/jurisdiction-divergences.json",
+      "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json",
+      "output-v3/health-canada/health-canada-requirements.json",
+      "output-v3/who-regs/japan-specific-requirements.json",
+      "output-v3/eu-gmp-ema/eu-gmp-rules.json"
+    ]
+  }
+}

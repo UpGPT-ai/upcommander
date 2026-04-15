@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "Safety Pharmacology Rules — Verification Changes Log",
+    "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+    "output_file": "training/final-fixes/safety-pharm/verified-rules.json",
+    "version_before": "1.0.0",
+    "version_after": "2.0.0-verified",
+    "verification_date": "2026-03-23",
+    "verifier": "Systematic PDF review against S7A (13pp), S7B (14pp), E14/S7B Q&As (46pp), E14 (14pp)"
+  },
+
+  "changes": [
+
+    {
+      "change_id": "CHG-001",
+      "section": "supplemental_studies.organ_systems.renal_urinary.endpoints",
+      "change_type": "correction",
+      "description": "Added 'plasma proteins' to the renal endpoint list. Original file had 'Blood chemistry (BUN, creatinine)' — omitting plasma proteins. S7A Section 2.8.2.1 explicitly states 'blood urea nitrogen, creatinine and plasma proteins can be used.' This is a factual omission of a source-specified endpoint.",
+      "source_verified_against": "S7A Section 2.8.2.1 (page 6 of guideline) — verbatim: 'blood urea nitrogen, creatinine and plasma proteins can be used'",
+      "severity": "high",
+      "corr_id": null,
+      "original_value": "Blood chemistry (BUN, creatinine)",
+      "corrected_value": "Blood chemistry (BUN, creatinine, plasma proteins)"
+    },
+
+    {
+      "change_id": "CHG-002",
+      "section": "integrated_risk_assessment_framework.in_vitro_studies.hERG_channel.best_practices",
+      "change_type": "annotation",
+      "description": "CORR-003 applied. Restructured best_practices from a flat string array to an array of annotated objects. Added per-practice source_document, qa_text, and in_original_S7B_2005 fields. Temperature requirement (35-37°C) and stimulation frequency (0.2-1 Hz) are from E14/S7B Q&A 2.1 (2022), NOT from original S7B (2005). Original S7B Section 3.1.1 specifies positive controls and voltage protocols but does NOT specify these thermal/frequency parameters. Incorrect source attribution in v1.0.0 would mislead users into citing S7B for parameters that postdate it by 17 years.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), S7B Q&A 2.1 (pages 31-35): temperature 35-37°C and stimulation frequency 0.2-1 Hz explicitly specified. S7B (2005) Section 3.1.1 confirmed: does NOT contain these parameters.",
+      "severity": "low",
+      "corr_id": "CORR-003",
+      "original_value": "best_practices: flat string array with no source_document fields",
+      "corrected_value": "best_practices: array of objects, each with practice, source_document, qa_text/s7b_text, and in_original_S7B_2005 boolean"
+    },
+
+    {
+      "change_id": "CHG-003",
+      "section": "integrated_risk_assessment_framework.safety_margin_calculation",
+      "change_type": "annotation",
+      "description": "CORR-004 applied. Added formula_source_document and formula_source_annotation fields to safety_margin_calculation. The specific formula (free IC50 / free Cmax,ss) and the 1% protein binding floor rule are from E14/S7B Q&A 1.2 (2022), NOT from original S7B Section 2.2. S7B Section 2.2 discusses safety margins conceptually but does not define the formula or the 1% floor. v1.0.0 implicitly attributed the formula to S7B, which is incorrect.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), S7B Q&A 1.2 (pages 28-30): formula specified as free IC50 / free Cmax,ss; protein binding floor of 1% unbound stated explicitly. S7B (2005) Section 2.2 confirmed: conceptual discussion only, no formula.",
+      "severity": "low",
+      "corr_id": "CORR-004",
+      "original_value": "safety_margin_calculation without formula_source_document annotation",
+      "corrected_value": "Added formula_source_document: 'E14/S7B Q&As (Feb 2022), S7B Q&A 1.2' and formula_source_annotation explaining the distinction from S7B 2005"
+    },
+
+    {
+      "change_id": "CHG-004",
+      "section": "scope.modality_considerations.monoclonal_antibodies",
+      "change_type": "annotation",
+      "description": "CORR-005 applied. Added monoclonal_antibodies_source_document and monoclonal_antibodies_source_verified fields. The TQT waiver for mAbs/large proteins is from E14 Q&A 6.3 (March 2014), NOT from S7B. E14 guideline (2005) Section 1.3 states mAbs may not need a TQT study but does not specify Q6.3 criteria. The Q&A document formalizes when the waiver applies.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), E14 Q&A 6.3 (page 22): 'For monoclonal antibodies and large proteins, a TQT study is generally not warranted if: (1) there is no pharmacological reason to expect cardiac ion channel effects, (2) the molecule does not cross the blood-brain barrier in a meaningful way, (3) there is no clinical signal of QT concern.' E14 Section 1.3 confirmed as original scope reference.",
+      "severity": "low",
+      "corr_id": "CORR-005",
+      "original_value": "monoclonal_antibodies TQT waiver without source_document annotation pointing to E14 Q&A 6.3",
+      "corrected_value": "Added monoclonal_antibodies_source_document: 'E14 Q&A 6.3 (March 2014)' and monoclonal_antibodies_source_verified field"
+    },
+
+    {
+      "change_id": "CHG-005",
+      "section": "integrated_risk_assessment_framework.in_vitro_studies.novel_approaches",
+      "change_type": "annotation",
+      "description": "CORR-006 applied. Added per-approach source annotations to hiPSC-CM and in silico proarrhythmia entries. hiPSC-CM assays are from E14/S7B Q&As 2022 (Q&A 2.2-2.5) and CiPA IWG work, NOT from original S7B Section 3.1.4. In silico action potential models (CiPA initiative) are from Q&A 4.1-4.2 and CiPA IWG, NOT from original S7B. S7B Section 3.1.4 only generically 'encourages development of novel models' — it does NOT name hiPSC-CMs or in silico approaches. Added NOT_in_original_S7B_2005: true flags to both entries.",
+      "source_verified_against": "S7B (2005) Section 3.1.4 confirmed: generic encouragement only, no named approaches. E14/S7B Q&As (Feb 2022): Q&A 2.2-2.5 (pages 35-40) cover hiPSC-CM assay; Q&A 4.1-4.2 cover proarrhythmia model criteria with 6 principles.",
+      "severity": "low",
+      "corr_id": "CORR-006",
+      "original_value": "novel_approaches without source_document annotations; implicitly attributed to S7B 3.1.4",
+      "corrected_value": "Added source_document, source_note, and NOT_in_original_S7B_2005 fields to hiPSC-CM and in silico entries"
+    },
+
+    {
+      "change_id": "CHG-006",
+      "section": "timing_relative_to_clinical_development.exploratory_clinical_trials",
+      "change_type": "flag",
+      "description": "Applied NEEDS_HUMAN_REVIEW flag to all five exploratory approaches (1-5) and general notes. These rules reference M3(R2) Table 1 and its specific micro-dose, sub-therapeutic, and pharmacokinetic-only paradigms. The M3(R2) guideline (Jun 2009) was listed as a source but the PDF was not provided for verification. Rules cannot be confirmed accurate without the source document. Content is plausible but unverified.",
+      "source_verified_against": "NOT VERIFIED — M3(R2)_Guideline.pdf was not available for this verification session. Rules cite M3(R2) Table 1 exploratory approaches 1-5.",
+      "severity": "medium",
+      "corr_id": null,
+      "original_value": "exploratory_clinical_trials rules with M3(R2) citations, no NEEDS_HUMAN_REVIEW flag",
+      "corrected_value": "Added NEEDS_HUMAN_REVIEW: true and needs_human_review_reason fields to all exploratory approach entries and general notes"
+    },
+
+    {
+      "change_id": "CHG-007",
+      "section": "timing_relative_to_clinical_development.before_phase_2.genotoxicity_before_phase_2",
+      "change_type": "flag",
+      "description": "Applied NEEDS_HUMAN_REVIEW flag. Rule cites M3(R2) Q&A 5.1 for genotoxicity timing before Phase 2 when exploratory approach 5 is used. M3(R2) Q&As was not provided for verification. Cannot confirm this specific Q&A reference is accurate.",
+      "source_verified_against": "NOT VERIFIED — M3(R2) Q&A 5.1 reference cannot be confirmed without the M3(R2) Q&A document.",
+      "severity": "medium",
+      "corr_id": null,
+      "original_value": "genotoxicity_before_phase_2 rule with M3(R2) Q&A 5.1 citation, no review flag",
+      "corrected_value": "Added NEEDS_HUMAN_REVIEW: true flag"
+    },
+
+    {
+      "change_id": "CHG-008",
+      "section": "regional_differences",
+      "change_type": "flag",
+      "description": "Applied NEEDS_HUMAN_REVIEW flag to entire regional_differences section. ICH harmonized guidelines (S7A, S7B, E14) do not contain region-specific exceptions — by definition ICH is a harmonization effort. Rules in this section cite 'FDA guidance' and 'EMA guidelines' for specific regional variations. These sources were not provided for verification. Content may be accurate but cannot be confirmed against ICH source PDFs.",
+      "source_verified_against": "NOT VERIFIED — FDA-specific and EMA-specific guidance documents were not available for this verification session. None of the four provided ICH PDFs address regional differences.",
+      "severity": "medium",
+      "corr_id": null,
+      "original_value": "regional_differences section without NEEDS_HUMAN_REVIEW flags",
+      "corrected_value": "Added NEEDS_HUMAN_REVIEW: true and needs_human_review_reason to the section header"
+    },
+
+    {
+      "change_id": "CHG-009",
+      "section": "scope.modality_considerations",
+      "change_type": "flag",
+      "description": "Applied NEEDS_HUMAN_REVIEW flags to ADC (antibody-drug conjugate), oligonucleotide, peptide, gene therapy, and vaccine modality entries. These modalities have specific regulatory frameworks (ICH S6, S10, various product-specific guidelines) that were not provided for verification. The rules cite ICH S6 and S10 for some entries. Content is plausible but unverified.",
+      "source_verified_against": "NOT VERIFIED — ICH S6 and S10 PDFs were not available. S7A Section 1.3 confirms biotechnology products are addressed per S6 guidance but does not enumerate modality-specific rules for ADCs, oligonucleotides, etc.",
+      "severity": "medium",
+      "corr_id": null,
+      "original_value": "ADC, oligonucleotide, peptide, gene therapy, vaccine entries without NEEDS_HUMAN_REVIEW flags",
+      "corrected_value": "Added NEEDS_HUMAN_REVIEW: true flags and verification_note fields to each unverifiable modality entry"
+    },
+
+    {
+      "change_id": "CHG-010",
+      "section": "integrated_risk_assessment_framework.in_vivo_QT_studies.best_practices",
+      "change_type": "annotation",
+      "description": "Added source_document annotations to in vivo QT best practices linking to E14/S7B Q&As 3.1-3.5. The contemporary best practices for in vivo QT assessment (including preferred anesthetic agents, lead placement, correction formula selection, and statistical analysis) are primarily from Q&As 3.1-3.5 (2022), not original S7B (2005). Added notes where practices are found in both original S7B and updated Q&As.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), S7B Q&As 3.1-3.5 (pages 40-44). Original S7B (2005) Section 3.1.3 confirmed as basis for foundational in vivo requirements.",
+      "severity": "low",
+      "corr_id": null,
+      "original_value": "in_vivo_QT best_practices without per-practice source_document annotations",
+      "corrected_value": "Added source_document annotations distinguishing S7B 2005 foundational requirements from Q&A 2022 best practice refinements"
+    },
+
+    {
+      "change_id": "CHG-011",
+      "section": "integrated_risk_assessment_framework.proarrhythmia_risk_criteria",
+      "change_type": "annotation",
+      "description": "Added note that Q&A 4.1 lists 6 criteria for proarrhythmia model qualification while original rules file lists 4. All 4 listed criteria are present within the Q&A's 6. The 2 additional Q&A criteria not listed in v1.0.0 are: (5) ability to detect concentration-dependent effects and (6) historical control data availability. Flagged as potential incompleteness rather than factual error since listed criteria are accurate.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), Q&A 4.1 (pages 44-45): 6 criteria listed. Original v1.0.0 lists 4 criteria — all factually correct but incomplete.",
+      "severity": "low",
+      "corr_id": null,
+      "original_value": "proarrhythmia_risk_criteria with 4 model qualification criteria",
+      "corrected_value": "Added completeness_note citing Q&A 4.1 for full 6-criteria list; existing 4 criteria confirmed accurate"
+    },
+
+    {
+      "change_id": "CHG-012",
+      "section": "integrated_risk_assessment_framework.low_TdP_risk_criteria",
+      "change_type": "annotation",
+      "description": "Added source_document annotation. Low TdP risk criteria (negative hERG, negative in vivo QT, or positive but with large safety margin, no clinical proarrhythmic signals) are from E14/S7B Q&A 1.1 (2022). Original S7B Section 2.3.6 mentions integrated risk assessment but does not enumerate the specific low-risk criteria. The criteria formalization is a Q&A contribution.",
+      "source_verified_against": "E14/S7B Q&As (Feb 2022), S7B Q&A 1.1 (pages 27-28). S7B (2005) Section 2.3.6 confirmed: mentions integrated assessment but does not list specific low-risk criteria.",
+      "severity": "low",
+      "corr_id": null,
+      "original_value": "low_TdP_risk_criteria without source_document pointing to Q&A 1.1",
+      "corrected_value": "Added source_document: 'E14/S7B Q&A 1.1 (Feb 2022)' and source_verified annotation"
+    },
+
+    {
+      "change_id": "CHG-013",
+      "section": "meta",
+      "change_type": "annotation",
+      "description": "Updated version from 1.0.0 to 2.0.0-verified. Added verification_date (2026-03-23), verified field, and verification_method description. Added ICH E14/S7B IWG Concept Papers (2018, 2024) to sources list.",
+      "source_verified_against": "Administrative change — no source verification needed.",
+      "severity": "low",
+      "corr_id": null,
+      "original_value": "version: 1.0.0; no verification metadata",
+      "corrected_value": "version: 2.0.0-verified; added verified, verification_method fields"
+    }
+  ],
+
+  "needs_human_review_summary": {
+    "total_flagged_sections": 6,
+    "flagged_items": [
+      {
+        "section": "timing_relative_to_clinical_development.exploratory_clinical_trials",
+        "reason": "Cites M3(R2) Table 1 exploratory approaches 1-5. M3(R2) PDF not provided for verification.",
+        "blocking": false
+      },
+      {
+        "section": "timing_relative_to_clinical_development.before_phase_2.genotoxicity_before_phase_2",
+        "reason": "Cites M3(R2) Q&A 5.1. M3(R2) Q&A document not provided for verification.",
+        "blocking": false
+      },
+      {
+        "section": "regional_differences",
+        "reason": "Cites FDA-specific and EMA-specific guidance not available in ICH source PDFs. Regional differences are outside the ICH harmonization scope by definition.",
+        "blocking": false
+      },
+      {
+        "section": "scope.modality_considerations (ADC, oligonucleotide, peptide, gene therapy, vaccine)",
+        "reason": "Cites ICH S6 and S10 and product-specific guidelines not provided for verification.",
+        "blocking": false
+      },
+      {
+        "section": "reporting_requirements.ctd_placement",
+        "reason": "CTD module placement rules reference ICH M4 (Common Technical Document) structure. M4 not provided for verification.",
+        "blocking": false
+      },
+      {
+        "section": "timing_relative_to_clinical_development.pediatric_studies",
+        "reason": "Pediatric timing rules reference ICH E11 and regional pediatric regulations. E11 not provided for verification.",
+        "blocking": false
+      }
+    ]
+  },
+
+  "confirmed_accurate_sections": [
+    "definitions (all 7 definitions — confirmed against S7A, S7B, E14)",
+    "scope.applies_to — confirmed S7A Section 1.3",
+    "core_battery.cardiovascular — confirmed S7A Section 2.7.2 and S7B",
+    "core_battery.central_nervous_system — confirmed S7A Section 2.7.3",
+    "core_battery.respiratory — confirmed S7A Section 2.7.4",
+    "follow_up_studies — confirmed S7A Section 2.8.1",
+    "supplemental_studies.organ_systems.renal_urinary (with CHG-001 plasma proteins fix)",
+    "supplemental_studies.organ_systems.autonomic_nervous_system — confirmed S7A Section 2.8.2.2",
+    "supplemental_studies.organ_systems.gastrointestinal — confirmed S7A Section 2.8.2.3",
+    "conditions_studies_not_necessary — confirmed S7A Section 2.9",
+    "study_design_principles.route_of_administration — confirmed S7A Section 2.2",
+    "study_design_principles.dose_selection — confirmed S7A Section 2.4",
+    "glp_compliance — confirmed S7A Section 2.6",
+    "integrated_risk_assessment_framework.in_vitro_studies.hERG_channel (foundational) — confirmed S7B Section 3.1.1",
+    "integrated_risk_assessment_framework.in_vivo_QT_studies (foundational) — confirmed S7B Section 3.1.3",
+    "integrated_risk_assessment_framework.integrated_assessment — confirmed S7B Section 2.3.6 + Q&A 1.1"
+  ]
+}

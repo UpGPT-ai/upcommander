@@ -1,0 +1,2771 @@
+{
+  "summary": {
+    "total_files_checked": 24,
+    "files_with_extractable_refs": 19,
+    "files_with_inline_only_refs": 5,
+    "total_stage1_files": 607,
+    "verification_date": "2026-03-23",
+    "total_references_sampled": 309,
+    "total_valid": 301,
+    "total_broken": 8,
+    "overall_validity_rate": 0.9741,
+    "broken_reference_categories": {
+      "us_statutes_21usc": 5,
+      "us_statutes_fdaaa": 1,
+      "state_laws": 1,
+      "canadian_external_statute": 1
+    },
+    "notes": "All 8 broken references cite external statutes (21 USC, FDAAA, state laws, CEPA) not included in stage-1 corpus. These are legitimate references to laws outside the ICH/CFR/EMA scope of the training data."
+  },
+  "per_file": {
+    "output-v2/e-clinical-design/clinical-design-rules.json": {
+      "total_rules_or_entries": 20,
+      "total_source_references": 592,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E1",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E15_Pharmacogenomics.pdf"
+        },
+        {
+          "rule_id": "E3-003",
+          "source_ref": "ICH E3",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E3_Clinical_Study_Reports.pdf"
+        },
+        {
+          "rule_id": "E3-033",
+          "source_ref": "ICH E3",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E3_Clinical_Study_Reports.pdf"
+        },
+        {
+          "rule_id": "E3-062",
+          "source_ref": "ICH E3",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E3_Clinical_Study_Reports.pdf"
+        },
+        {
+          "rule_id": "E4-006",
+          "source_ref": "ICH E4",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E4_Dose_Response.pdf"
+        },
+        {
+          "rule_id": "E4-036",
+          "source_ref": "ICH E4",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E4_Dose_Response.pdf"
+        },
+        {
+          "rule_id": "E7-017",
+          "source_ref": "ICH E7",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E7_Elderly_Studies.pdf"
+        },
+        {
+          "rule_id": "E7QA-016",
+          "source_ref": "ICH E7 Q&As",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E7_Elderly_Studies.pdf"
+        },
+        {
+          "rule_id": "E8-013",
+          "source_ref": "ICH E8(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICHE8(R1)_Step4Presentation_2022_0408.pdf"
+        },
+        {
+          "rule_id": "E8-043",
+          "source_ref": "ICH E8(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICHE8(R1)_Step4Presentation_2022_0408.pdf"
+        },
+        {
+          "rule_id": "E8-073",
+          "source_ref": "ICH E8(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICHE8(R1)_Step4Presentation_2022_0408.pdf"
+        },
+        {
+          "rule_id": "E8-102",
+          "source_ref": "ICH E8(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICHE8(R1)_Step4Presentation_2022_0408.pdf"
+        },
+        {
+          "rule_id": "E8-132",
+          "source_ref": "ICH E8(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICHE8(R1)_Step4Presentation_2022_0408.pdf"
+        },
+        {
+          "rule_id": "E9-021",
+          "source_ref": "ICH E9",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E9-R1_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "E9-051",
+          "source_ref": "ICH E9",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E9-R1_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "E9-081",
+          "source_ref": "ICH E9",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E9-R1_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "E9R1-018",
+          "source_ref": "ICH E9(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E9-R1_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "E10-010",
+          "source_ref": "ICH E10",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E10_Choice_Control_Group.pdf"
+        },
+        {
+          "rule_id": "E10-039",
+          "source_ref": "ICH E10",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E10_Choice_Control_Group.pdf"
+        },
+        {
+          "rule_id": "E20-010",
+          "source_ref": "ICH E20 (Step 2 Draft)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        }
+      ]
+    },
+    "output-v2/e-safety-pharma/safety-reporting-rules.json": {
+      "total_rules_or_entries": 13,
+      "total_source_references": 50,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E2A",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2A_Guideline.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E2C(R2)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2C_R2_Business_Plan_0.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E2E",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2E_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E14",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E14_QT_Prolongation.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E20",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E22",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_E22_EWG_WorkPlan_2025_0725_FINAL.pdf"
+        },
+        {
+          "rule_id": "definitions/adverse_drug_reaction_preapproval",
+          "source_ref": "E2A",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2A_Guideline.pdf"
+        },
+        {
+          "rule_id": "definitions/unexpected_adr",
+          "source_ref": "E2A",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2A_Guideline.pdf"
+        },
+        {
+          "rule_id": "definitions/identified_risk",
+          "source_ref": "E2E/E2F",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2E_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "definitions/important_missing_information",
+          "source_ref": "E2E",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2E_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "definitions/solicited_report",
+          "source_ref": "E2D(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH E2D(R1)_Step 4_Presentation_2025_0904.pdf"
+        },
+        {
+          "rule_id": "definitions/organised_data_collection_system",
+          "source_ref": "E2D(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH E2D(R1)_Step 4_Presentation_2025_0904.pdf"
+        },
+        {
+          "rule_id": "definitions/international_birth_date",
+          "source_ref": "E2C(R2)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2C_R2_Business_Plan_0.pdf"
+        },
+        {
+          "rule_id": "definitions/data_lock_point",
+          "source_ref": "E2C(R2)/E2F",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2C_R2_Business_Plan_0.pdf"
+        },
+        {
+          "rule_id": "reporting_requirements/expedited_icsr/pre_marketing/fatal_or_life_threatening_unexpected_adr",
+          "source_ref": "E2A",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2A_Guideline.pdf"
+        },
+        {
+          "rule_id": "reporting_requirements/expedited_icsr/pre_marketing/increased_rate_of_expected_serious_adr",
+          "source_ref": "E2A",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2A_Guideline.pdf"
+        },
+        {
+          "rule_id": "reporting_requirements/expedited_icsr/post_marketing/reclassification",
+          "source_ref": "E2D(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH E2D(R1)_Step 4_Presentation_2025_0904.pdf"
+        },
+        {
+          "rule_id": "reporting_requirements/followup_priority",
+          "source_ref": "E2D/E2D(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH E2D(R1)_Step 4_Presentation_2025_0904.pdf"
+        },
+        {
+          "rule_id": "reporting_requirements/literature_screening",
+          "source_ref": "E2D/E2D(R1)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH E2D(R1)_Step 4_Presentation_2025_0904.pdf"
+        },
+        {
+          "rule_id": "signal_detection_methodology/pbrer_signal_framework",
+          "source_ref": "E2C(R2) Sections 15-16",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E2C_R2_Business_Plan_0.pdf"
+        }
+      ]
+    },
+    "output-v2/e-special-pops/special-populations-rules.json": {
+      "total_rules_or_entries": 15,
+      "total_source_references": 42,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E5(R1) \u2014 Ethnic Factors in the Acceptability of Foreign Clinical Data",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E5_R1__Guideline.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E11(R1) \u2014 Clinical Investigation of Medicinal Products in the Pediatric Population (Addendum)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E11_R1_Concept_Paper_0.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E12 \u2014 Principles for Clinical Evaluation of New Antihypertensive Drugs",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_ Module_1_2025_0620.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E16 \u2014 Biomarkers Related to Drug or Biotechnology Product Development: Context, Structure and Format of Qualification Submissions",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH E18 \u2014 Genomic Sampling and Management of Genomic Data",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E18_Guideline.pdf"
+        },
+        {
+          "rule_id": "domains[1]",
+          "source_ref": "ICH E6(R3)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E6-R3_FinalBusinessPlan_2019_1117.pdf"
+        },
+        {
+          "rule_id": "domains[3]",
+          "source_ref": "ICH E12",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_ Module_1_2025_0620.pdf"
+        },
+        {
+          "rule_id": "domains[5]",
+          "source_ref": "ICH E16",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"
+        },
+        {
+          "rule_id": "domains[7]",
+          "source_ref": "ICH E18",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E18_Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-001",
+          "source_ref": "ICH E11(R1)",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E11_R1_Concept_Paper_0.pdf"
+        },
+        {
+          "rule_id": "XC-002",
+          "source_ref": "ICH E5(R1)",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E5_R1__Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-002",
+          "source_ref": "ICH E17",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E17_Multi_Regional_Trials.pdf"
+        },
+        {
+          "rule_id": "XC-003",
+          "source_ref": "ICH E15",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E15_Pharmacogenomics.pdf"
+        },
+        {
+          "rule_id": "XC-004",
+          "source_ref": "ICH E5(R1)",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E5_R1__Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-004",
+          "source_ref": "ICH E11A",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_E11A_Guideline_Step4_2024_0821.pdf"
+        },
+        {
+          "rule_id": "XC-004",
+          "source_ref": "ICH E18",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E18_Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-005",
+          "source_ref": "ICH E15",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E15_Pharmacogenomics.pdf"
+        },
+        {
+          "rule_id": "XC-005",
+          "source_ref": "ICH E18",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E18_Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-007",
+          "source_ref": "ICH E5(R1)",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E5_R1__Guideline.pdf"
+        },
+        {
+          "rule_id": "XC-007",
+          "source_ref": "ICH E16",
+          "section_ref": null,
+          "field": "sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"
+        }
+      ]
+    },
+    "output-v2/m-multidisciplinary/multidisciplinary-rules.json": {
+      "total_rules_or_entries": 249,
+      "total_source_references": 249,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "M1-001",
+          "source_ref": "M1_PtC_WG_Concept_Paper.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M1_PtC_WG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "M2-001",
+          "source_ref": "M2_EWG_Concept_Paper.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M2_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "M2-013",
+          "source_ref": "ICH M2 Terminology List Management Processes v1_1.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH M2 Terminology List Management Processes v1_1.pdf"
+        },
+        {
+          "rule_id": "M7-003",
+          "source_ref": "ICH_M7(R2)_Guideline_Step4_2023_0216_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M7(R2)_Guideline_Step4_2023_0216_0.pdf"
+        },
+        {
+          "rule_id": "M7-015",
+          "source_ref": "ICH_M7(R2)_Guideline_Step4_2023_0216_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M7(R2)_Guideline_Step4_2023_0216_0.pdf"
+        },
+        {
+          "rule_id": "M7-028",
+          "source_ref": "M7R2_QAs_Step3_2022_0517-Error Corrected.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M7R2_QAs_Step3_2022_0517-Error Corrected.pdf"
+        },
+        {
+          "rule_id": "M7-040",
+          "source_ref": "M7R2_QAs_Step3_2022_0517-Error Corrected.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M7R2_QAs_Step3_2022_0517-Error Corrected.pdf"
+        },
+        {
+          "rule_id": "M7-053",
+          "source_ref": "Annex 4 - Maintenance Procedure for Q3C, Q3D, and M7.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Annex 4 - Maintenance Procedure for Q3C, Q3D, and M7.pdf"
+        },
+        {
+          "rule_id": "M9-002",
+          "source_ref": "M9_EWG_Business_Plan_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M9_EWG_Business_Plan_0.pdf"
+        },
+        {
+          "rule_id": "M9-015",
+          "source_ref": "M9_QAs_Step4_2021_0106.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M9_QAs_Step4_2021_0106.pdf"
+        },
+        {
+          "rule_id": "M10-011",
+          "source_ref": "M10_Guideline_Step4_2022_0524.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M10_Guideline_Step4_2022_0524.pdf"
+        },
+        {
+          "rule_id": "M11-001",
+          "source_ref": "ICH M11_Step_2_Presentation_2022_09_27.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH M11_Step_2_Presentation_2022_09_27.pdf"
+        },
+        {
+          "rule_id": "M11-014",
+          "source_ref": "ICH M11_Step_2_Presentation_2022_09_27.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH M11_Step_2_Presentation_2022_09_27.pdf"
+        },
+        {
+          "rule_id": "M12-006",
+          "source_ref": "ICH_M12_Step4_Guideline_2024_0521_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M12_Step4_Guideline_2024_0521_0.pdf"
+        },
+        {
+          "rule_id": "M12-019",
+          "source_ref": "ICH_M12_Step4_Guideline_2024_0521_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M12_Step4_Guideline_2024_0521_0.pdf"
+        },
+        {
+          "rule_id": "M12-031",
+          "source_ref": "ICH_M12_Step4_Guideline_2024_0521_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M12_Step4_Guideline_2024_0521_0.pdf"
+        },
+        {
+          "rule_id": "M12-044",
+          "source_ref": "ICH_M12_Step4_Guideline_2024_0521_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M12_Step4_Guideline_2024_0521_0.pdf"
+        },
+        {
+          "rule_id": "M13A-010",
+          "source_ref": "ICH_M13A_Step4_Final_Guideline_2024_0723.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M13A_Step4_Final_Guideline_2024_0723.pdf"
+        },
+        {
+          "rule_id": "M13B-001",
+          "source_ref": "M13B_Draft Guideline_Step2_2025_0212_0.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M13B_Draft Guideline_Step2_2025_0212_0.pdf"
+        },
+        {
+          "rule_id": "M14-003",
+          "source_ref": "ICH_M14_Step4_Final_Guideline_2025_0905.pdf",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_M14_Step4_Final_Guideline_2025_0905.pdf"
+        }
+      ]
+    },
+    "output-v2/q-biotech/biotech-quality-rules.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 151,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH Q5A(R2) \u2014 Viral Safety Evaluation of Biotechnology Products (2023)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "Q5A(R2) Training Materials (2025)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-005",
+          "source_ref": "Q5A(R2) Section 3.2.3",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-012",
+          "source_ref": "Q5A(R2) Section 3.2.1",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-020",
+          "source_ref": "Q5A(R2) Section 5, 6",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-027",
+          "source_ref": "Q5A(R2) Section 6.2.3",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-035",
+          "source_ref": "Q5A(R2) Section 6.2.6",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-042",
+          "source_ref": "Q5A(R2) Section 5, Table 4",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "VS-050",
+          "source_ref": "Q5A(R2) Section 7.1",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5A-R2_FinalConceptPaper_2019_1117.pdf"
+        },
+        {
+          "rule_id": "EC-002",
+          "source_ref": "Q5B Section III.A",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5B Guideline.pdf"
+        },
+        {
+          "rule_id": "EC-010",
+          "source_ref": "Q5B Section III.C",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5B Guideline.pdf"
+        },
+        {
+          "rule_id": "BS-005",
+          "source_ref": "Q5C Section 4.2",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5C Guideline.pdf"
+        },
+        {
+          "rule_id": "BS-012",
+          "source_ref": "Q5C Section 5.3",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5C Guideline.pdf"
+        },
+        {
+          "rule_id": "BS-020",
+          "source_ref": "Q5C Section 7",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q5C Guideline.pdf"
+        },
+        {
+          "rule_id": "CS-003",
+          "source_ref": "Q5D Section 2.1.2",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5D_Cell_Substrates.pdf"
+        },
+        {
+          "rule_id": "CS-011",
+          "source_ref": "Q5D Section 2.3.1.1",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5D_Cell_Substrates.pdf"
+        },
+        {
+          "rule_id": "CS-018",
+          "source_ref": "Q5D Section 2.3.3",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5D_Cell_Substrates.pdf"
+        },
+        {
+          "rule_id": "CP-001",
+          "source_ref": "Q5E Section 1.4",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5E_Comparability_Biotech.pdf"
+        },
+        {
+          "rule_id": "CP-008",
+          "source_ref": "Q5E Section 2.2.2",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5E_Comparability_Biotech.pdf"
+        },
+        {
+          "rule_id": "CP-016",
+          "source_ref": "Q5E Section 2.3",
+          "section_ref": null,
+          "field": "reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q5E_Comparability_Biotech.pdf"
+        }
+      ]
+    },
+    "output-v2/q-cmc-methods/analytical-impurity-rules.json": {
+      "total_rules_or_entries": 11,
+      "total_source_references": 31,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q2(R2) \u2014 Analytical Procedure Validation",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q14 \u2014 Analytical Procedure Development",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q3B(R2) \u2014 Impurities in New Drug Products",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q3B(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q3C(R9) \u2014 Residual Solvents",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q3C(R9)_Guideline_MinorRevision_2024_2024_Approved.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q3E (Draft) \u2014 Extractables and Leachables",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q3E_Business_Plan_2020_0710.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q4B(R1) \u2014 Pharmacopoeial Harmonisation + 14 Annexes",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q4B(R1)_Guideline_2024_0605.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q6B \u2014 Specifications: Biotech/Biological Products",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q6B Guideline.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q7 \u2014 GMP for Active Pharmaceutical Ingredients",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q7 Concept paper.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "ICH Q2(R2)/Q14 Training Modules 1-7",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "analytical_procedure_lifecycle",
+          "source_ref": "ICH Q14 + Q2(R2)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "analytical_procedure_lifecycle/stages/stage_2_validation",
+          "source_ref": "Q2(R2)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "analytical_target_profile",
+          "source_ref": "ICH Q14 Section 3",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "validation_characteristics",
+          "source_ref": "ICH Q2(R2)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "biological_assay_criteria",
+          "source_ref": "ICH Q2(R2) Annex 2, Tables 5-7",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q2(R2)Q14_TrainingMat_Module_3_2025_0620.pdf"
+        },
+        {
+          "rule_id": "impurity_thresholds/Q3A_drug_substance_organic",
+          "source_ref": "ICH Q3A(R2)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q3A(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "impurity_thresholds/Q3C_residual_solvents",
+          "source_ref": "ICH Q3C(R9)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q3C(R9)_Guideline_MinorRevision_2024_2024_Approved.pdf"
+        },
+        {
+          "rule_id": "impurity_thresholds/Q3D_elemental_impurities",
+          "source_ref": "ICH Q3D(R2)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/ICH_Q3D(R2)_Step4Presentation_2022_0527.pdf"
+        },
+        {
+          "rule_id": "specifications/Q6A_chemical_substances",
+          "source_ref": "ICH Q6A",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q6A Decision Tree.pdf"
+        },
+        {
+          "rule_id": "specifications/Q6B_biotech_biological",
+          "source_ref": "ICH Q6B",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q6B Guideline.pdf"
+        },
+        {
+          "rule_id": "GMP_for_APIs",
+          "source_ref": "ICH Q7 + Q7 Q&As",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q7 Concept paper.pdf"
+        }
+      ]
+    },
+    "output-v2/q-stability/stability-rules.json": {
+      "total_rules_or_entries": 6,
+      "total_source_references": 1,
+      "sampled": 1,
+      "valid": 1,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "photostability",
+          "source_ref": "ICH Q1B",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q1B_Photostability.pdf"
+        }
+      ]
+    },
+    "output-v2/q-systems/quality-systems-rules.json": {
+      "total_rules_or_entries": 22,
+      "total_source_references": 51,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "meta.source_documents",
+          "source_ref": "ICH Q8(R2) Pharmaceutical Development (Step 4, August 2009)",
+          "section_ref": null,
+          "field": "meta.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "meta.source_documents",
+          "source_ref": "ICH Q10 Pharmaceutical Quality System (Step 4, June 2008)",
+          "section_ref": null,
+          "field": "meta.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q10_Pharmaceutical_Quality_System.pdf"
+        },
+        {
+          "rule_id": "meta.source_documents",
+          "source_ref": "ICH Q13 Continuous Manufacturing of Drug Substances and Drug Products (Step 4, November 2022)",
+          "section_ref": null,
+          "field": "meta.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q13 Business Plan.pdf"
+        },
+        {
+          "rule_id": "FP-001",
+          "source_ref": "Q9(R1) Section 1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q9-R1_BusinessPlan_2020_1026_.pdf"
+        },
+        {
+          "rule_id": "FP-004",
+          "source_ref": "Q8(R2) Annex Section 1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "FP-006",
+          "source_ref": "Q8(R2) Annex Section 1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "quality_system_framework/enablers[1]",
+          "source_ref": "Q9(R1) Section 7",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q9-R1_BusinessPlan_2020_1026_.pdf"
+        },
+        {
+          "rule_id": "design_space",
+          "source_ref": "Q8(R2), Q8/Q9/Q10 Q&As",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "DS-003",
+          "source_ref": "Q8(R2) Glossary",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "DS-005",
+          "source_ref": "Q8/Q9/Q10 Q&As Section 6.2",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "DS-008",
+          "source_ref": "Q8/Q9/Q10 Q&As Section 6.1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "control_strategy",
+          "source_ref": "Q8(R2), Q10, Q11, Q8/Q9/Q10 Q&As",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "pharmaceutical_development/cqa/criticality_vs_risk",
+          "source_ref": "Q8/Q9/Q10 Q&As Section 2",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "continuous_manufacturing",
+          "source_ref": "Q13",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q13 Business Plan.pdf"
+        },
+        {
+          "rule_id": "CC-001",
+          "source_ref": "Q8(R2), Q8/Q9/Q10 Q&As",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "CC-004",
+          "source_ref": "Q8/Q9/Q10 Q&As Section 4.1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "CC-006",
+          "source_ref": "Q8(R2) Glossary, Q8/Q9/Q10 Q&As Section 6.4",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "CC-009",
+          "source_ref": "Q8(R2) Section 2.2.2",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q8(R2) Guideline.pdf"
+        },
+        {
+          "rule_id": "CC-011",
+          "source_ref": "Q12 Chapter 1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q12_Annexes_Step4_2019_1119.pdf"
+        },
+        {
+          "rule_id": "CC-014",
+          "source_ref": "Q9(R1) Section 6.1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q9-R1_BusinessPlan_2020_1026_.pdf"
+        }
+      ]
+    },
+    "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json": {
+      "total_rules_or_entries": 13,
+      "total_source_references": 77,
+      "sampled": 20,
+      "valid": 19,
+      "file_not_found": 1,
+      "section_not_found": 0,
+      "validity_rate": 0.95,
+      "details": [
+        {
+          "rule_id": "CAT-01-A",
+          "source_ref": "21 CFR 201.56",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-01-B",
+          "source_ref": "21 CFR 201.17",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-01-E",
+          "source_ref": "21 CFR 201.56(c)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-02-A",
+          "source_ref": "21 CFR 211",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-02-E",
+          "source_ref": "21 CFR 211.68",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-03-B",
+          "source_ref": "21 CFR 314.50(d)(1)(ii)(b)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-03-C",
+          "source_ref": "21 CFR 211.113",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-03-D",
+          "source_ref": "21 CFR 314.50(d)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-03-F",
+          "source_ref": "21 CFR 314.50(d)(1)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-03-H",
+          "source_ref": "21 CFR 211.100",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-04-A",
+          "source_ref": "21 CFR 314.50(d)(5)(vi)(b)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-04-D",
+          "source_ref": "21 CFR 314.125(b)(1)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-04-G",
+          "source_ref": "FDAAA Section 505-1",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json"
+        },
+        {
+          "rule_id": "CAT-05-B",
+          "source_ref": "ICH S1A/S1B/S1C(R2)",
+          "section_ref": null,
+          "field": "guidance_reference",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S1A_Carcinogenicity_Need.pdf"
+        },
+        {
+          "rule_id": "CAT-05-D",
+          "source_ref": "21 CFR 314.50(d)(2)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-06-B",
+          "source_ref": "21 CFR 314.50(d)(5)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-06-D",
+          "source_ref": "21 CFR 314.50(d)(3)",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-07-B",
+          "source_ref": "21 CFR 820.30",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol4_parts200-299.pdf"
+        },
+        {
+          "rule_id": "CAT-08-C",
+          "source_ref": "21 CFR 320.24",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "CAT-09-B",
+          "source_ref": "21 CFR 314.108",
+          "section_ref": null,
+          "field": "cfr_violated",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        }
+      ]
+    },
+    "output-v2/regulations-crl/jurisdiction-divergences.json": {
+      "total_rules_or_entries": 21,
+      "total_source_references": 0,
+      "sampled": 0,
+      "valid": 0,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 0,
+      "details": [],
+      "note": "Sources embedded in fda/ema/pmda field descriptions; references to 21 CFR, EU Directives, Japan PAL encoded inline, not in dedicated source fields",
+      "reference_style": "INLINE_EMBEDDED"
+    },
+    "output-v2/regulations-crl/regulatory-requirements.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 0,
+      "sampled": 0,
+      "valid": 0,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 0,
+      "details": [],
+      "note": "Sources in metadata.source_documents as nested dict; per-requirement references in section/type fields (e.g. \"1.3\", \"binding\") not standalone source strings",
+      "reference_style": "INLINE_EMBEDDED"
+    },
+    "output-v2/s-pharmacology/safety-pharmacology-rules.json": {
+      "total_rules_or_entries": 14,
+      "total_source_references": 12,
+      "sampled": 12,
+      "valid": 12,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH S7A \u2014 Safety Pharmacology Studies for Human Pharmaceuticals (Nov 2000)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH S7B \u2014 Nonclinical Evaluation of the Potential for Delayed Ventricular Repolarization (May 2005)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E14S7B_IWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH M3(R2) \u2014 Guidance on Nonclinical Safety Studies for Clinical Trials and Marketing Authorization (Jun 2009)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M3_R2_Q&As_R2_Q&As_0.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH E14/S7B Q&As (Feb 2022)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E14_QT_Prolongation.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH M3(R2) Q&As R2 (Mar 2012)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M3_R2_Q&As_R2_Q&As_0.pdf"
+        },
+        {
+          "rule_id": "meta.sources",
+          "source_ref": "ICH E14/S7B IWG Concept Papers (2018, 2024)",
+          "section_ref": null,
+          "field": "meta.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E14_QT_Prolongation.pdf"
+        },
+        {
+          "rule_id": "core_battery/cardiovascular_system",
+          "source_ref": "ICH S7A Section 2.7.2 + ICH S7B",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "core_battery/central_nervous_system",
+          "source_ref": "ICH S7A Section 2.7.1",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "core_battery/respiratory_system",
+          "source_ref": "ICH S7A Section 2.7.3",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "timing_relative_to_clinical_development",
+          "source_ref": "ICH M3(R2) Section 5 + ICH S7A Section 2.10",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M3_R2_Q&As_R2_Q&As_0.pdf"
+        },
+        {
+          "rule_id": "integrated_risk_assessment_framework",
+          "source_ref": "ICH E14/S7B Q&As (2022)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E14_QT_Prolongation.pdf"
+        },
+        {
+          "rule_id": "incorporation_into_toxicology_studies",
+          "source_ref": "ICH M3(R2) + M3(R2) Q&A Section 5",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/M3_R2_Q&As_R2_Q&As_0.pdf"
+        }
+      ]
+    },
+    "output-v2/s-toxicology/nonclinical-requirements.json": {
+      "total_rules_or_entries": 4,
+      "total_source_references": 28,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "guidelines/S3A/microsampling",
+          "source_ref": "S3A Q&As (2017)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S3A_Toxicokinetics.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[0]",
+          "source_ref": "S2(R1)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S2(R1) Step 4 Presentation.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[1]",
+          "source_ref": "S7A",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[3]",
+          "source_ref": "S7B",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E14S7B_IWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[4]",
+          "source_ref": "S7B",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E14S7B_IWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[6]",
+          "source_ref": "S3A",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S3A_Toxicokinetics.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[7]",
+          "source_ref": "S3B",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S3B_Pharmacokinetics_Repeated.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[8]",
+          "source_ref": "S10",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_FIH[10]",
+          "source_ref": "S9",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-GMP-TRS986-Annex2.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_phase_3[0]",
+          "source_ref": "S5(R3)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S5-R3_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_phase_3[2]",
+          "source_ref": "S8",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S8_Immunotoxicity.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_phase_3[3]",
+          "source_ref": "S10",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_phase_3[4]",
+          "source_ref": "S10",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_phase_3[6]",
+          "source_ref": "S11",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S11_EWG_Concept_Paper.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[0]",
+          "source_ref": "S1A/S1B/S1B(R1)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S1A_Carcinogenicity_Need.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[2]",
+          "source_ref": "S6(R1)/S5(R3)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S6_R1_Guideline_0.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[3]",
+          "source_ref": "S4",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-safety-full/S4_Duration_Chronic_Toxicity.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[4]",
+          "source_ref": "S7A",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/S7A_Step4_Presentation.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[6]",
+          "source_ref": "S9/S5(R3)",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-GMP-TRS986-Annex2.pdf"
+        },
+        {
+          "rule_id": "timing_matrix/before_marketing_NDA_MAA[7]",
+          "source_ref": "S10",
+          "section_ref": null,
+          "field": "guideline",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf"
+        }
+      ]
+    },
+    "output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 92,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "modules/module_I",
+          "source_ref": "EMA/541760/2011",
+          "section_ref": null,
+          "field": "document_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "GVP-I-004",
+          "source_ref": "DIR Art 104(3)(b), REG Art 21(2)",
+          "section_ref": "I.B.3",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-I-009",
+          "source_ref": "DIR Art 101(1)",
+          "section_ref": "I.C",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-II-002",
+          "source_ref": "IR Art 2-3",
+          "section_ref": "II.B.2",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-II-007",
+          "source_ref": "IR Art 3, 9(1)",
+          "section_ref": "II.B.4",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-V-003",
+          "source_ref": "IR Art 31",
+          "section_ref": "V.B.3",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-V-007",
+          "source_ref": "IR Art 30",
+          "section_ref": "V.C.1",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-VII-001",
+          "source_ref": "DIR Art 107b, REG Art 28(2)",
+          "section_ref": "VII.B.1",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-VII-005",
+          "source_ref": "DIR Art 107c(2)(b), REG Art 28(2)",
+          "section_ref": "VII.C.3",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-VII-010",
+          "source_ref": "DIR Art 107l",
+          "section_ref": "VII.C.7",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-VIII-004",
+          "source_ref": "GVP Module I",
+          "section_ref": "VIII.B.3",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "GVP-VIII-008",
+          "source_ref": "IR 12, IR Art 36",
+          "section_ref": "VIII.B.7",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "modules/module_IX",
+          "source_ref": "EMA/827661/2011 Rev 1",
+          "section_ref": null,
+          "field": "document_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "GVP-IX-004",
+          "source_ref": "IR Art 21(2)",
+          "section_ref": "IX.C.4",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-IX-009",
+          "source_ref": "IR Art 3, 12(1)",
+          "section_ref": "IX.B.5",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "GVP-XV-001",
+          "source_ref": "DIR Art 106a(1)",
+          "section_ref": "XV.B.4",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-XV-005",
+          "source_ref": "DIR Art 106a",
+          "section_ref": "XV.C.1.3",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-XV-010",
+          "source_ref": "DIR Art 106, REG Art 26(1)",
+          "section_ref": "XV.B.5.5",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-XVI-003",
+          "source_ref": "DIR Art 21a, REG Art 9(4)(ca)",
+          "section_ref": "XVI.B.2.1",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "GVP-XVI-008",
+          "source_ref": "DIR Art 1(15)",
+          "section_ref": "XVI.B.5.1",
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        }
+      ]
+    },
+    "output-v3/ema-pharma-gvp/gvp-unique-requirements.json": {
+      "total_rules_or_entries": 18,
+      "total_source_references": 18,
+      "sampled": 18,
+      "valid": 18,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "EU-UNIQUE-001",
+          "source_ref": "DIR Art 104(3)(a), REG Art 20(1)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-002",
+          "source_ref": "DIR Art 104(3)(b), IR Art 2-9",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-003",
+          "source_ref": "DIR Art 8(3)(iaa), REG Art 6(1), IR Art 30-32",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-004",
+          "source_ref": "DIR Art 107b-107l, REG Art 28(2)-(4)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-005",
+          "source_ref": "DIR Art 107m-107p, IR Annex III",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-006",
+          "source_ref": "IR Art 18-22, DIR Art 107h",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-007",
+          "source_ref": "DIR Art 23(2), REG Art 16(2)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-008",
+          "source_ref": "DIR Art 106a, GVP Annex II",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-009",
+          "source_ref": "DIR Art 106a(2)-(3)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-010",
+          "source_ref": "DIR Art 21a, 104(2), REG Art 9(4)(ca)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-011",
+          "source_ref": "DIR Art 104(3)(c)-(d), REG Art 56(1)(aa)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-012",
+          "source_ref": "GVP Module XVI Addendum I, XVI.C.3.1",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "EU-UNIQUE-013",
+          "source_ref": "REG Art 56(1)(aa), DIR Art 107e-107g",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-014",
+          "source_ref": "IR Art 18, 22(3), DIR Art 107l, REG Art 26",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-015",
+          "source_ref": "IR Art 22(1)-(3)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-016",
+          "source_ref": "REG Art 23, DIR Art 23(1)",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-017",
+          "source_ref": "XVI.B.1.4, XVI.B.4.1.2",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/Q4B Annex 1(R1) Guideline.pdf"
+        },
+        {
+          "rule_id": "EU-UNIQUE-018",
+          "source_ref": "VII.C.4.3.1, Table VII.1",
+          "section_ref": null,
+          "field": "legal_ref",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        }
+      ]
+    },
+    "output-v3/eu-gmp-ema/eu-gmp-rules.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 23,
+      "sampled": 20,
+      "valid": 20,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "requirements/pharmaceutical_quality_system",
+          "source_ref": "EU GMP Part I Chapter 1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/personnel",
+          "source_ref": "EU GMP Part I Chapter 2",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/premises_and_equipment",
+          "source_ref": "EU GMP Part I Chapter 3",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/documentation",
+          "source_ref": "EU GMP Part I Chapter 4",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/production",
+          "source_ref": "EU GMP Part I Chapter 5",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/quality_control",
+          "source_ref": "EU GMP Part I Chapter 6",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/outsourced_activities",
+          "source_ref": "EU GMP Part I Chapter 7",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/self_inspection",
+          "source_ref": "EU GMP Part I Chapter 9",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/sterile_manufacturing",
+          "source_ref": "EU GMP Annex 1 (2022 Revision)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/biological_products",
+          "source_ref": "EU GMP Annex 2",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/computerised_systems",
+          "source_ref": "EU GMP Annex 11",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/qualification_and_validation",
+          "source_ref": "EU GMP Annex 15",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/qualified_person_certification",
+          "source_ref": "EU GMP Annex 16",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/parametric_release",
+          "source_ref": "EU GMP Annex 17",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "eu-gmp/vol4-an8.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_bioequivalence",
+          "source_ref": "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_biosimilars_quality",
+          "source_ref": "EMA Biosimilars Quality Guideline EMA/CHMP/BWP/247713/2012",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_process_validation",
+          "source_ref": "EMA Process Validation Guideline EMA/CHMP/CVMP/QWP/BWP/70278/2012-Rev1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_excipients",
+          "source_ref": "EMA Excipients Guideline EMEA/CHMP/QWP/396951/2006",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_finished_dosage_form",
+          "source_ref": "EMA Finished Dosage Form Guideline EMA/362427/2017",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        },
+        {
+          "rule_id": "requirements/ema_immunogenicity",
+          "source_ref": "EMA Immunogenicity Guideline EMEA/CHMP/BMWP/14327/2006 Rev1",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ema-gvp/GVP-Module-XV.pdf"
+        }
+      ]
+    },
+    "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json": {
+      "total_rules_or_entries": 30,
+      "total_source_references": 0,
+      "sampled": 0,
+      "valid": 0,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 0,
+      "details": [],
+      "note": "Sources in metadata.eu_sources/fda_sources as summary strings; per-divergence references encoded inline in eu_requirement/fda_requirement text",
+      "reference_style": "INLINE_EMBEDDED"
+    },
+    "output-v3/eu-law/eu-legislation-requirements.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 8,
+      "sampled": 8,
+      "valid": 8,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Directive 2001/83/EC (Community code for medicinal products for human use)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EC) No 726/2004 (Centralised procedure and EMA)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_726_2004.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EU) No 536/2014 (Clinical Trials Regulation)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_536_2014_Clinical_Trials.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Commission Delegated Regulation (EU) 2017/1569 (GMP for investigational medicinal products)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_2017_1569_GMP_IMP.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EC) No 1394/2007 (Advanced Therapy Medicinal Products)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1394_2007_ATMPs.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EC) No 141/2000 (Orphan Medicinal Products)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_141_2000_Orphan.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EC) No 1901/2006 (Paediatric Medicinal Products)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1901_2006_Paediatric.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Regulation (EC) No 1234/2008 (Variations to marketing authorisations)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        }
+      ]
+    },
+    "output-v3/eu-law/eu-vs-fda-divergences.json": {
+      "total_rules_or_entries": 2,
+      "total_source_references": 136,
+      "sampled": 20,
+      "valid": 14,
+      "file_not_found": 6,
+      "section_not_found": 0,
+      "validity_rate": 0.7,
+      "details": [
+        {
+          "rule_id": "DIV-001",
+          "source_ref": "Dir 2001/83/EC Arts. 6, 17, 28-39; Reg 726/2004 Arts. 3-4",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "DIV-004",
+          "source_ref": "Reg 726/2004 Art. 14-a",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_726_2004.pdf"
+        },
+        {
+          "rule_id": "DIV-007",
+          "source_ref": "21 USC \u00a7360cc (Orphan Drug Act)",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        },
+        {
+          "rule_id": "DIV-011",
+          "source_ref": "Reg 536/2014 Arts. 4, 7",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_536_2014_Clinical_Trials.pdf"
+        },
+        {
+          "rule_id": "DIV-014",
+          "source_ref": "21 CFR 312.62(c)",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "DIV-018",
+          "source_ref": "Reg 536/2014 Art. 9(3)",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_536_2014_Clinical_Trials.pdf"
+        },
+        {
+          "rule_id": "DIV-021",
+          "source_ref": "Dir 2001/83/EC Art. 111(5)",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "DIV-024",
+          "source_ref": "21 CFR 314.81(b)(1)",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations/title21_vol5_parts300-499.pdf"
+        },
+        {
+          "rule_id": "DIV-028",
+          "source_ref": "Dir 2001/83/EC Art. 107(3)",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "DIV-031",
+          "source_ref": "21 USC \u00a7355-1",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        },
+        {
+          "rule_id": "DIV-035",
+          "source_ref": "Dir 2001/83/EC Art. 63",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "DIV-038",
+          "source_ref": "Dir 2001/83/EC Art. 81",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Directive_2001_83_EC.pdf"
+        },
+        {
+          "rule_id": "DIV-041",
+          "source_ref": "State pharmacy laws",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        },
+        {
+          "rule_id": "DIV-045",
+          "source_ref": "Reg 1394/2007",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1394_2007_ATMPs.pdf"
+        },
+        {
+          "rule_id": "DIV-048",
+          "source_ref": "21 USC \u00a7360bb",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        },
+        {
+          "rule_id": "DIV-052",
+          "source_ref": "Reg 726/2004 Art. 11",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_726_2004.pdf"
+        },
+        {
+          "rule_id": "DIV-055",
+          "source_ref": "Reg 1234/2008",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_1234_2008_Variations.pdf"
+        },
+        {
+          "rule_id": "DIV-058",
+          "source_ref": "21 USC \u00a7356(c); FDORA \u00a73210",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        },
+        {
+          "rule_id": "DIV-062",
+          "source_ref": "Reg 726/2004 Art. 84a",
+          "section_ref": null,
+          "field": "eu_legal_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "regulations-eu/Regulation_726_2004.pdf"
+        },
+        {
+          "rule_id": "DIV-065",
+          "source_ref": "21 USC \u00a7356c",
+          "section_ref": null,
+          "field": "fda_legal_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json"
+        }
+      ]
+    },
+    "output-v3/health-canada/canada-vs-fda-ema.json": {
+      "total_rules_or_entries": 15,
+      "total_source_references": 0,
+      "sampled": 0,
+      "valid": 0,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 0,
+      "details": [],
+      "note": "No dedicated source fields; regulatory references (C.08.002, 21 CFR 314, etc.) embedded in description text",
+      "reference_style": "INLINE_EMBEDDED"
+    },
+    "output-v3/health-canada/health-canada-requirements.json": {
+      "total_rules_or_entries": 15,
+      "total_source_references": 38,
+      "sampled": 20,
+      "valid": 19,
+      "file_not_found": 1,
+      "section_not_found": 0,
+      "validity_rate": 0.95,
+      "details": [
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Food_Drugs_Act_Canada.pdf",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/Food_Drugs_Act_Canada.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "Food_Drug_Regulations_Canada_Full.pdf",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/Food_Drug_Regulations_Canada_Full.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "HC_CTD_CTA_Format.pdf (Clinical Trial Applications Guidance)",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/HC_CTD_CTA_Format.pdf"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "CTDguidance.html",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/CTDguidance.html"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "basisofdecision.html",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/basisofdecision.html"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "food-drug-regulations.html",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/food-drug-regulations.html"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "monograph/faqs.html",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/monograph/validationrules.html"
+        },
+        {
+          "rule_id": "metadata.source_documents",
+          "source_ref": "monograph/pm-guid-ld-mp-eng.pdf",
+          "section_ref": null,
+          "field": "metadata.source_documents",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/monograph/pm-guid-ld-mp-eng.pdf"
+        },
+        {
+          "rule_id": "regulatory_framework/unique_identifiers/NOC",
+          "source_ref": "C.08.004 of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "submission_types/ANDS",
+          "source_ref": "C.08.002.1 of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "clinical_trials/CTA",
+          "source_ref": "Part C, Division 5 (C.05.001-C.05.016) of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "clinical_trials/CTA_A",
+          "source_ref": "C.05.008 of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "GMP_requirements",
+          "source_ref": "Part C, Division 2 (C.02.001-C.02.030) of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "post_market_requirements/ADR_reporting_manufacturers",
+          "source_ref": "C.01.017 of Food and Drug Regulations",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "environmental_assessment",
+          "source_ref": "Canadian Environmental Protection Act and CEPA notification requirements",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "FILE_NOT_FOUND",
+          "matched_file": null,
+          "file": "output-v3/health-canada/health-canada-requirements.json"
+        },
+        {
+          "rule_id": "priority_pathways/Extraordinary_Use_NDS",
+          "source_ref": "C.08.002.01",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "priority_pathways/Emergency_Drug_Authorization",
+          "source_ref": "C.08.010",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "additional_canada_unique_requirements/brand_name_confusion_assessment",
+          "source_ref": "C.08.002(2)(o)",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "additional_canada_unique_requirements/NOC_suspension_grounds",
+          "source_ref": "C.08.006",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        },
+        {
+          "rule_id": "additional_canada_unique_requirements/clinical_information_disclosure",
+          "source_ref": "C.08.009.1-C.08.009.3",
+          "section_ref": null,
+          "field": "regulatory_basis",
+          "status": "VALID_REFERENCE",
+          "matched_file": "health-canada/clinicaltrialapplications.html"
+        }
+      ]
+    },
+    "output-v3/who-regs/japan-specific-requirements.json": {
+      "total_rules_or_entries": 8,
+      "total_source_references": 8,
+      "sampled": 8,
+      "valid": 8,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Clinical Evaluation (ICH E16 Biomarker Qualification - Japanese Implementation)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Quality Drug Substances (Foreign Manufacturer Accreditation Guide)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "pmda-guidelines/PMDA_Biologics_Quality.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Stability Testing (ICH Q1-based Japanese Implementation)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-quality-advanced/Q10_Pharmaceutical_Quality_System.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Biologics Quality (ICH E16 - Biomarker Qualification for Biologics)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Ethnic Factors Bridging (ICH E5 Implementation)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "ich-complete/E5_Q&As__R1_Q&As.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "JP18 - Japanese Pharmacopoeia 18th Edition (2021)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "pmda-guidelines/PMDA_Biologics_Quality.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "PMDA Bioequivalence / Drug Interaction Guideline (2019)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "pmda-guidelines/PMDA_Biologics_Quality.pdf"
+        },
+        {
+          "rule_id": "drug_interaction_guidelines",
+          "source_ref": "MHLW Guideline on Drug Interaction for Drug Development and Appropriate Provision of Information (February 8, 2019, Heisei 31)",
+          "section_ref": null,
+          "field": "source",
+          "status": "VALID_REFERENCE",
+          "matched_file": "pmda-guidelines/PMDA_Biologics_Quality.pdf"
+        }
+      ]
+    },
+    "output-v3/who-regs/japan-vs-fda-ema.json": {
+      "total_rules_or_entries": 17,
+      "total_source_references": 0,
+      "sampled": 0,
+      "valid": 0,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 0,
+      "details": [],
+      "note": "No dedicated source fields; regulatory references (PAL Article 13-3, ICH E5, etc.) embedded in description text",
+      "reference_style": "INLINE_EMBEDDED"
+    },
+    "output-v3/who-regs/who-requirements.json": {
+      "total_rules_or_entries": 12,
+      "total_source_references": 2,
+      "sampled": 2,
+      "valid": 2,
+      "file_not_found": 0,
+      "section_not_found": 0,
+      "validity_rate": 1.0,
+      "details": [
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "WHO TRS 1010 Annex 10 - Stability Testing of APIs and FPPs (2018)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf"
+        },
+        {
+          "rule_id": "metadata.sources",
+          "source_ref": "WHO TRS 986 Annex 2 - GMP for Pharmaceutical Products (2014)",
+          "section_ref": null,
+          "field": "metadata.sources",
+          "status": "VALID_REFERENCE",
+          "matched_file": "who-guidelines/WHO-GMP-TRS986-Annex2.pdf"
+        }
+      ]
+    }
+  }
+}

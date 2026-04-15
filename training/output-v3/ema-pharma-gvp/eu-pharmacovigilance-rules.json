@@ -1,0 +1,730 @@
+{
+  "metadata": {
+    "source": "EMA Good Pharmacovigilance Practices (GVP) Modules I, II, V, VII, VIII, IX, XV, XVI",
+    "extracted_date": "2026-03-22",
+    "legal_basis": ["Regulation (EC) No 726/2004", "Directive 2001/83/EC", "Commission Implementing Regulation (EU) No 520/2012"],
+    "note": "Requirements identified by modal verb 'shall' (legal obligation) vs 'should' (recommendation). All requirements listed here are uniquely EU — no FDA equivalent exists at this level of prescriptive detail."
+  },
+  "modules": {
+    "module_I": {
+      "title": "Pharmacovigilance Systems and their Quality Systems",
+      "document_ref": "EMA/541760/2011",
+      "requirements": [
+        {
+          "id": "GVP-I-001",
+          "section": "I.B.1",
+          "requirement": "Marketing authorisation holder shall establish and maintain a pharmacovigilance system for each medicinal product",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(1), REG Art 21(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-002",
+          "section": "I.B.2",
+          "requirement": "MAH shall designate a qualified person responsible for pharmacovigilance (QPPV) permanently and continuously available, residing and operating in the EU",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(a), REG Art 20(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-003",
+          "section": "I.B.2",
+          "requirement": "QPPV shall have sufficient authority to influence the pharmacovigilance system and its quality system, including input into risk management plans and safety-related regulatory actions",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)",
+          "responsible_party": "QPPV"
+        },
+        {
+          "id": "GVP-I-004",
+          "section": "I.B.3",
+          "requirement": "MAH shall have a pharmacovigilance system master file (PSMF) describing the pharmacovigilance system",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(b), REG Art 21(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-005",
+          "section": "I.B.4",
+          "requirement": "MAH shall operate a quality system covering organisational structure, responsibilities, procedures, processes and resources for the pharmacovigilance system",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 4",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-006",
+          "section": "I.B.4",
+          "requirement": "Quality system shall include document management with version control, training records, auditing and CAPA procedures for the PV system",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 4, 12",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-007",
+          "section": "I.B.5",
+          "requirement": "MAH shall have a record management system ensuring retrievability of documents, traceability of investigations and decisions on safety concerns",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 12(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-008",
+          "section": "I.B.6",
+          "requirement": "Staff performing pharmacovigilance activities shall be appropriately qualified, trained and experienced",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 10",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-I-009",
+          "section": "I.C",
+          "requirement": "Competent authorities in each Member State shall have a pharmacovigilance system for the fulfilment of their pharmacovigilance tasks",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 101(1)",
+          "responsible_party": "NCA"
+        },
+        {
+          "id": "GVP-I-010",
+          "section": "I.B.4",
+          "requirement": "Pharmacovigilance system shall be regularly audited by the MAH and findings documented with corrective and preventive actions tracked to completion",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 4(3)",
+          "responsible_party": "MAH"
+        }
+      ]
+    },
+    "module_II": {
+      "title": "Pharmacovigilance System Master File (PSMF)",
+      "document_ref": "EMA/816573/2011 Rev 2",
+      "requirements": [
+        {
+          "id": "GVP-II-001",
+          "section": "II.B.1",
+          "requirement": "MAH shall maintain a PSMF at the site where main pharmacovigilance activities are performed by or on behalf of the MAH",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(b), IR Art 2",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-002",
+          "section": "II.B.2",
+          "requirement": "PSMF shall contain QPPV details (name, contact, CV summary), organisational structure, data sources, computerised systems, quality system description, and list of products covered",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 2-3",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-003",
+          "section": "II.B.3",
+          "requirement": "PSMF shall be kept up to date and available for inspection within 7 calendar days upon request from a competent authority",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 5",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-004",
+          "section": "II.B.3",
+          "requirement": "PSMF shall include a logbook documenting all significant changes to the pharmacovigilance system",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 3, 9(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-005",
+          "section": "II.B.4",
+          "requirement": "PSMF shall include annexes with list of medicinal products covered, list of delegated activities with contractual partners, performance indicators, and audit schedule/findings",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 3, 9",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-006",
+          "section": "II.B.5",
+          "requirement": "The location of the PSMF shall be notified to the competent authorities and included in the marketing authorisation application",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(b), REG Art 21(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-007",
+          "section": "II.B.4",
+          "requirement": "Performance indicators shall be presented in the annexes of the PSMF, measuring timeliness and quality of PV activities including ICSR reporting compliance",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 3, 9(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-II-008",
+          "section": "II.B.2",
+          "requirement": "PSMF shall describe the signal management process including the description included in the pharmacovigilance system master file",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 3",
+          "responsible_party": "MAH"
+        }
+      ]
+    },
+    "module_V": {
+      "title": "Risk Management Systems",
+      "document_ref": "EMA/838713/2011 Rev 2",
+      "requirements": [
+        {
+          "id": "GVP-V-001",
+          "section": "V.B.1",
+          "requirement": "MAH shall submit a risk management plan (RMP) with every application for a new marketing authorisation and when significant changes to the benefit-risk balance are identified",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 8(3)(iaa), REG Art 6(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-002",
+          "section": "V.B.2",
+          "requirement": "RMP shall include safety specification (epidemiology, non-clinical safety, clinical trial exposure, identified risks, potential risks, missing information), pharmacovigilance plan, and risk minimisation measures",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 30-32",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-003",
+          "section": "V.B.3",
+          "requirement": "Safety specification shall present identified risks, potential risks, and missing information in a summary table with characterisation of each risk",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 31",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-004",
+          "section": "V.B.5",
+          "requirement": "RMP shall categorise post-authorisation studies into three categories: imposed as an obligation (Category 1), imposed as a condition under exceptional circumstances (Category 2), and required in the RMP (Category 3)",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 21a, 22a; REG Art 9(4), 10a(1)(a)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-005",
+          "section": "V.B.6",
+          "requirement": "Risk minimisation measures shall be described in the RMP including both routine measures (SmPC, PL, packaging, legal status) and additional measures (educational materials, controlled distribution, etc.)",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(2), REG Art 9(4)(ca)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-006",
+          "section": "V.B.7",
+          "requirement": "RMP shall include milestones for effectiveness evaluation of risk minimisation measures and pharmacovigilance activities",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 32",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-007",
+          "section": "V.C.1",
+          "requirement": "RMP shall be submitted in EU-RMP format (Part I: Product Overview; Part II: Safety Specification; Part III: Pharmacovigilance Plan; Part IV: PASS; Part V: RMM; Part VI: Summary; Part VII: Annexes)",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 30",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-008",
+          "section": "V.C.2",
+          "requirement": "MAH shall update the RMP when new information becomes available that may impact the safety specification, PV plan, or risk minimisation activities, and shall submit updated RMP at request of competent authority",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(c), REG Art 21(3)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-009",
+          "section": "V.B.4",
+          "requirement": "Pharmacovigilance plan within the RMP shall specify actions to characterise and quantify safety concerns and shall include objectives, milestones and proposed study designs",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 32",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-V-010",
+          "section": "V.B.8",
+          "requirement": "RMP summary shall be made publicly available and shall include a simplified overview in lay language of identified risks, potential risks, missing information and risk minimisation measures",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106b(1), REG Art 26",
+          "responsible_party": "MAH"
+        }
+      ]
+    },
+    "module_VII": {
+      "title": "Periodic Safety Update Report (PSUR)",
+      "document_ref": "EMA/816292/2011 Rev 1",
+      "requirements": [
+        {
+          "id": "GVP-VII-001",
+          "section": "VII.B.1",
+          "requirement": "MAH shall submit PSURs containing evaluation of the risk-benefit balance including all new safety data, cumulative data analysis and status of risk minimisation measures",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107b, REG Art 28(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VII-002",
+          "section": "VII.B.3",
+          "requirement": "PSUR shall follow the format specified in ICH-E2C(R2) with mandatory EU-specific appendix containing proposed product information changes, proposed additional PV/RMM activities, ongoing safety concerns summary, PASS results and RMM effectiveness",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 34(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VII-003",
+          "section": "VII.B.4",
+          "requirement": "PSUR data lock point shall coincide with the international birth date (IBD) or the EU birth date for nationally authorised products, plus 90 calendar days for submission",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107c(2), IR Art 34(3)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VII-004",
+          "section": "VII.B.5",
+          "requirement": "PSUR shall include estimated patient exposure data, worldwide safety data from all sources, signal evaluation, risk-benefit analysis and conclusions on need for changes to MA",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 34(1)-(5)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VII-005",
+          "section": "VII.C.3",
+          "requirement": "Frequency of PSUR submission shall be determined by the EU reference dates list (EURD list) maintained by CHMP/CMDh after consultation with PRAC",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107c(2)(b), REG Art 28(2)",
+          "responsible_party": "MAH/CHMP/CMDh"
+        },
+        {
+          "id": "GVP-VII-006",
+          "section": "VII.C.4",
+          "requirement": "PRAC shall assess PSURs and adopt recommendation on maintenance, variation, suspension or revocation of marketing authorisation within defined procedural timelines (60-day assessment + 30-day comments + 15-day update)",
+          "obligation_level": "shall",
+          "legal_ref": "REG Art 28(3)-(4), DIR Art 107e(2)-(3)",
+          "responsible_party": "PRAC"
+        },
+        {
+          "id": "GVP-VII-007",
+          "section": "VII.C.4.2",
+          "requirement": "EU single assessment shall apply to PSURs for products in multiple Member States with same active substance, with PRAC recommendation forwarded to CHMP or CMDh for binding decision",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107e-107g",
+          "responsible_party": "PRAC/CHMP/CMDh"
+        },
+        {
+          "id": "GVP-VII-008",
+          "section": "VII.C.5",
+          "requirement": "EU regional appendix to PSUR shall include proposed product information text changes, proposed additional PV and RMM activities, summary of ongoing safety concerns, PASS results, and effectiveness of RMM",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 34(5)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VII-009",
+          "section": "VII.C.6",
+          "requirement": "MAH quality systems shall include procedures for scheduling PSUR production according to EURD list, ensuring QPPV oversight of correctness and completeness",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 11(1)(f), DIR Art 104(e)",
+          "responsible_party": "MAH/QPPV"
+        },
+        {
+          "id": "GVP-VII-010",
+          "section": "VII.C.7",
+          "requirement": "PSUR assessment reports, PRAC recommendations and CHMP/CMDh opinions shall be published on the European medicines web-portal",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107l",
+          "responsible_party": "EMA"
+        }
+      ]
+    },
+    "module_VIII": {
+      "title": "Post-Authorisation Safety Studies (PASS)",
+      "document_ref": "EMA/813938/2011 Rev 3",
+      "requirements": [
+        {
+          "id": "GVP-VIII-001",
+          "section": "VIII.B.1",
+          "requirement": "PASS shall be classified as post-authorisation safety study when main aim includes quantifying risks, evaluating risks in special populations, evaluating long-term risks, measuring RMM effectiveness, or assessing drug utilisation patterns",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 1(15)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-002",
+          "section": "VIII.B.2",
+          "requirement": "Non-interventional PASS shall be registered in the EU PAS Register before study commencement, with protocol uploaded prior to data collection start",
+          "obligation_level": "shall",
+          "legal_ref": "IR Annex III",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-003",
+          "section": "VIII.B.3",
+          "requirement": "Non-interventional PASS shall have a written study protocol following IR Annex III format with 13 mandatory sections including title, MAH, responsible parties, abstract, milestones, rationale, research methods, human subjects protection, AE management, dissemination plans, and references",
+          "obligation_level": "shall",
+          "legal_ref": "IR Annex III, DIR Art 107m",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-004",
+          "section": "VIII.B.3",
+          "requirement": "QPPV or delegate shall be involved in review and sign-off of PASS study protocols required in the RMP or conducted in the EU",
+          "obligation_level": "should",
+          "legal_ref": "GVP Module I",
+          "responsible_party": "QPPV"
+        },
+        {
+          "id": "GVP-VIII-005",
+          "section": "VIII.B.4.1",
+          "requirement": "MAH shall monitor data generated during PASS conduct and communicate any new information affecting the risk-benefit balance immediately to competent authorities as emerging safety issue",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107m(7)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-006",
+          "section": "VIII.B.4.3.2",
+          "requirement": "Final study report shall be submitted within 12 months of end of data collection and follow IR Annex III format with 14 mandatory sections",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107p(1), IR Annex III",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-007",
+          "section": "VIII.B.6",
+          "requirement": "MAH and investigators shall follow national data protection legislation and Directive 95/46/EC ensuring confidentiality of study subject records",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107m(2), IR Art 36",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-008",
+          "section": "VIII.B.7",
+          "requirement": "For imposed PASS, analytical datasets and statistical programmes shall be kept in electronic format available for audit and inspection",
+          "obligation_level": "shall",
+          "legal_ref": "IR 12, IR Art 36",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-009",
+          "section": "VIII.C.1",
+          "requirement": "Obligation to conduct PASS can be imposed at initial MA, during post-authorisation regulatory procedures, or due to emerging safety concerns — must be notified in writing with objectives and timeframe",
+          "obligation_level": "shall",
+          "legal_ref": "REG Art 9(4)(cb), 10a(1)(a); DIR Art 21a(b), 22a(1)(a)",
+          "responsible_party": "NCA/EMA"
+        },
+        {
+          "id": "GVP-VIII-010",
+          "section": "VIII.C.2",
+          "requirement": "Imposed non-interventional PASS shall be supervised by PRAC with protocol endorsement/objection within 60 days, and study may only commence after written endorsement",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107n-107p",
+          "responsible_party": "PRAC/NCA"
+        },
+        {
+          "id": "GVP-VIII-011",
+          "section": "VIII.B.1",
+          "requirement": "Non-interventional PASS shall not promote the use of the medicinal product — applies to all study activities and personnel including third parties",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107m(3)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-VIII-012",
+          "section": "VIII.B.1",
+          "requirement": "Payments to healthcare professionals for PASS participation shall be restricted to compensation for time and expenses incurred",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107m(4)",
+          "responsible_party": "MAH"
+        }
+      ]
+    },
+    "module_IX": {
+      "title": "Signal Management",
+      "document_ref": "EMA/827661/2011 Rev 1",
+      "requirements": [
+        {
+          "id": "GVP-IX-001",
+          "section": "IX.C.1.1",
+          "requirement": "MAH shall continuously monitor safety of medicinal products and inform authorities of new safety information that may impact the marketing authorisation",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 23(2), REG Art 16(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-002",
+          "section": "IX.C.3",
+          "requirement": "MAH shall monitor EudraVigilance database to the extent they have access, for signal detection purposes — continuously and at frequency proportionate to identified risk",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 18(2)-(3)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-003",
+          "section": "IX.C.3.2",
+          "requirement": "EudraVigilance monitoring recommended at least every 6 months, more frequently for products on the additional monitoring list",
+          "obligation_level": "should",
+          "legal_ref": "IR Art 18(3)",
+          "responsible_party": "MAH/NCA/EMA"
+        },
+        {
+          "id": "GVP-IX-004",
+          "section": "IX.C.4",
+          "requirement": "When MAH detects a new signal from EudraVigilance, it shall validate it and forthwith inform the Agency and NCAs",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 21(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-005",
+          "section": "IX.C.2",
+          "requirement": "Emerging safety issues shall be notified to competent authorities and EMA within 3 working days of establishing the issue meets the definition criteria",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 23(2), REG Art 16(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-006",
+          "section": "IX.C.4.1",
+          "requirement": "MAH variation application for product information update based on signal assessment shall be submitted within 3 months for important risks or within 6 months for non-important risks",
+          "obligation_level": "should",
+          "legal_ref": "GVP Annex I",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-007",
+          "section": "IX.C.4.3",
+          "requirement": "Standalone signal notification form shall be submitted to EMA and NCAs as soon as possible and no later than 30 days after MAH completes assessment concluding further analysis is required",
+          "obligation_level": "should",
+          "legal_ref": "IR Art 21(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-008",
+          "section": "IX.C.5",
+          "requirement": "PRAC rapporteur or lead Member State shall confirm or not confirm validated signals within 30 days of receipt",
+          "obligation_level": "should",
+          "legal_ref": "DIR Art 107h(2), REG Art 28a(2)",
+          "responsible_party": "PRAC/Lead MS"
+        },
+        {
+          "id": "GVP-IX-009",
+          "section": "IX.B.5",
+          "requirement": "Signal management system shall be documented in the PSMF with quality requirements including audit trail, traceability, trained staff, and performance indicators",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 3, 12(1)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-IX-010",
+          "section": "IX.C.8",
+          "requirement": "EMA shall record validated signals and signal management outcomes in EPITT (European Pharmacovigilance Issues Tracking Tool) with description, justification and PRAC recommendations",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 21",
+          "responsible_party": "EMA"
+        },
+        {
+          "id": "GVP-IX-011",
+          "section": "IX.C.1.2",
+          "requirement": "Lead Member State shall be responsible for EudraVigilance monitoring, signal detection, validation and confirmation for nationally authorised products with shared active substances",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 22(1)-(4)",
+          "responsible_party": "Lead Member State"
+        },
+        {
+          "id": "GVP-IX-012",
+          "section": "IX.C.9",
+          "requirement": "PRAC agendas, recommendations (with product information wording in all EU languages), cumulative signal lists, and worksharing lists shall be published on EMA web-portal",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 22(3)",
+          "responsible_party": "EMA"
+        }
+      ]
+    },
+    "module_XV": {
+      "title": "Safety Communication",
+      "document_ref": "EMA/118465/2012 Rev 1",
+      "requirements": [
+        {
+          "id": "GVP-XV-001",
+          "section": "XV.B.4",
+          "requirement": "Safety communication content shall not be misleading and shall be presented objectively, not constituting advertising",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a(1)",
+          "responsible_party": "MAH/NCA"
+        },
+        {
+          "id": "GVP-XV-002",
+          "section": "XV.B.5.1",
+          "requirement": "DHPC (Direct Healthcare Professional Communication) shall be issued for MA suspension/withdrawal/revocation, important changes to use, restriction in availability, and other major safety actions",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XV-003",
+          "section": "XV.C.1",
+          "requirement": "Prior to publication of safety announcements, Member States, EMA and European Commission shall inform each other at least 24 hours in advance unless urgent public health reasons apply",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a(2)",
+          "responsible_party": "NCA/EMA/EC"
+        },
+        {
+          "id": "GVP-XV-004",
+          "section": "XV.C.1.1",
+          "requirement": "Safety announcements shall be sent under embargo at least 24 hours before publication through the EU Early Notification System (ENS) to allow network-wide coordination",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a(2)-(3)",
+          "responsible_party": "NCA/EMA"
+        },
+        {
+          "id": "GVP-XV-005",
+          "section": "XV.C.1.3",
+          "requirement": "MAH shall inform NCAs, EMA and EC simultaneously or before making any public safety announcement, providing information under embargo at least 24 hours prior",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XV-006",
+          "section": "XV.C.2.1",
+          "requirement": "DHPC content and communication plan shall follow GVP Annex II template and be agreed with PRAC (centrally authorised) or Reference Member State (MRP/DCP) before dissemination",
+          "obligation_level": "should",
+          "legal_ref": "GVP Annex II",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XV-007",
+          "section": "XV.C.2.2",
+          "requirement": "MAH shall translate agreed DHPC into official languages of Member States where product is marketed and submit for national competent authority language review within 4-5 working days",
+          "obligation_level": "should",
+          "legal_ref": "DIR Art 106a",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XV-008",
+          "section": "XV.C.1.5",
+          "requirement": "EMA shall use English for coordination of safety announcements across the EU regulatory network",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a(3)",
+          "responsible_party": "EMA"
+        },
+        {
+          "id": "GVP-XV-009",
+          "section": "XV.B.6",
+          "requirement": "MAH shall inform competent authorities about number of healthcare professionals who received the DHPC and any difficulties in dissemination for effectiveness evaluation",
+          "obligation_level": "should",
+          "legal_ref": "GVP Module XVI",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XV-010",
+          "section": "XV.B.5.5",
+          "requirement": "Each Member State shall set up and maintain a national medicines web-portal linked to EU medicines web-portal for communicating safety information in official national languages",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106, REG Art 26(1)",
+          "responsible_party": "Member States"
+        }
+      ]
+    },
+    "module_XVI": {
+      "title": "Risk Minimisation Measures (RMM)",
+      "document_ref": "EMA/204715/2012 Rev 3",
+      "requirements": [
+        {
+          "id": "GVP-XVI-001",
+          "section": "XVI.A",
+          "requirement": "MAH shall evaluate all information scientifically, consider risk minimisation and prevention options, and take appropriate measures as necessary",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-002",
+          "section": "XVI.B.1.5",
+          "requirement": "RMM materials shall not contain or be combined with any promotional elements, direct or veiled, and studies evaluating RMM effectiveness shall be separate from promotional activity",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 62, 107m(3)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-003",
+          "section": "XVI.B.2.1",
+          "requirement": "RMM are categorised as routine (SmPC, PL, labelling, pack size, legal status) and additional (educational tools, HCP checklists, patient cards, risk awareness forms, controlled access/distribution programmes)",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 21a, REG Art 9(4)(ca)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-004",
+          "section": "XVI.B.2.3.2",
+          "requirement": "Risk minimisation control tools include: HCP qualification requirements, facility accreditation, traceability systems, documented patient information exchange, and patient certificate checks",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 21a, REG Art 9(4)(ca)",
+          "responsible_party": "MAH/NCA"
+        },
+        {
+          "id": "GVP-XVI-005",
+          "section": "XVI.B.3",
+          "requirement": "Additional RMM tools shall only be required when routine tools alone are insufficient to keep the benefit-risk balance positive, targeting important identified or potential risks",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(2), 101(2)",
+          "responsible_party": "MAH/NCA"
+        },
+        {
+          "id": "GVP-XVI-006",
+          "section": "XVI.B.4.1.1",
+          "requirement": "Additional RMM materials shall contain: RMM tool name as heading, product name (invented name + active substance), risk/action statements, SmPC/PL reference, competent authority approval statement with version and date",
+          "obligation_level": "should",
+          "legal_ref": "GVP Module XV",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-007",
+          "section": "XVI.B.5",
+          "requirement": "RMM effectiveness shall be evaluated measuring dissemination and coverage, knowledge and behavioural outcomes, and health outcomes — with initial evaluation within 12-24 months and overall within 4 years",
+          "obligation_level": "should",
+          "legal_ref": "DIR Art 104(3)(c)-(d), REG Art 9(4)(ca)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-008",
+          "section": "XVI.B.5.1",
+          "requirement": "Any study evaluating RMM effectiveness is classified as a PASS per DIR Art 1(15) and shall follow GVP Module VIII guidance",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 1(15)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-009",
+          "section": "XVI.B.1.4",
+          "requirement": "Patient and healthcare professional engagement shall be sought for RMM development, user-testing, dissemination planning and effectiveness evaluation — separate from promotional activities",
+          "obligation_level": "should",
+          "legal_ref": "DIR Art 104(2)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-010",
+          "section": "XVI.C.2",
+          "requirement": "MAH shall submit RMM materials and dissemination plan for approval by NCAs at national level, coordinate RMM for same active substance across MAHs, and include RMM evaluation results in PSURs",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(c)-(d), REG Art 28a(1)(a)",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-011",
+          "section": "XVI.B.1.5",
+          "requirement": "Contact information gathered through RMM activities shall not be used for promotional purposes and must comply with GDPR Regulation (EU) 2016/679",
+          "obligation_level": "shall",
+          "legal_ref": "GDPR, DIR Art 62",
+          "responsible_party": "MAH"
+        },
+        {
+          "id": "GVP-XVI-012",
+          "section": "XVI.B.7",
+          "requirement": "Quality management system shall be applied to RMM activities throughout the lifecycle, with deviations from the RMM plan documented and reported to competent authorities",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(2), GVP Module I",
+          "responsible_party": "MAH"
+        }
+      ]
+    }
+  }
+}

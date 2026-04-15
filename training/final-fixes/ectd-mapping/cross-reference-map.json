@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "eCTD Cross-Reference Map — Required Inter-Module Links",
+    "authority": "ICH M4(R4) Organisation of the CTD, Step 4, June 15, 2016; ICH M4Q (Quality), M4S (Safety), M4E (Efficacy)",
+    "generated": "2026-03-23",
+    "version": "1.0",
+    "principle": "The CTD is a layered document. Module 2 summarizes Modules 3-5. Every element of data in Modules 3, 4, and 5 MUST have a corresponding summary entry in Module 2. Cross-references ensure reviewers can navigate between the detailed study reports and the integrated summaries without redundant data."
+  },
+
+  "fundamental_rules": [
+    {
+      "rule_id": "XR-FUND-001",
+      "rule": "Module 2.3 (Quality Overall Summary) MUST summarize ALL quality data in Module 3",
+      "implication": "Every section of Module 3.2.S and 3.2.P has a corresponding section in 2.3.S and 2.3.P. Any rule that maps data to Module 3 MUST also map the summary to the corresponding Module 2.3 sub-section."
+    },
+    {
+      "rule_id": "XR-FUND-002",
+      "rule": "Module 2.4 (Nonclinical Overview) and Module 2.6 (Nonclinical Written/Tabulated Summaries) MUST summarize ALL nonclinical study reports in Module 4",
+      "implication": "Any rule mapping data to Module 4.2.x MUST also reference Module 2.6 (written summary) and Module 2.4 (integrated overview)."
+    },
+    {
+      "rule_id": "XR-FUND-003",
+      "rule": "Module 2.5 (Clinical Overview) and Module 2.7 (Clinical Summary) MUST summarize ALL clinical study reports in Module 5",
+      "implication": "Any rule mapping data to Module 5.3.x MUST also reference Module 2.7 (sub-section summary) and Module 2.5 (integrated clinical overview)."
+    },
+    {
+      "rule_id": "XR-FUND-004",
+      "rule": "Module 2 summaries cross-reference Module 3-5 for supporting data; Modules 3-5 cross-reference Module 2 for the synthesized interpretation",
+      "implication": "The cross-reference is bidirectional. Automated compliance checking must verify BOTH directions."
+    }
+  ],
+
+  "cross_reference_map": {
+    "quality_domain": {
+      "stability": {
+        "primary_data_modules": ["Module 3.2.S.7", "Module 3.2.P.8"],
+        "summary_modules": ["Module 2.3.S.7", "Module 2.3.P.8"],
+        "cross_references": {
+          "Module 3.2.S.7_MUST_REFERENCE": ["Module 2.3.S.7 (QOS stability summary must match 3.2.S.7 protocol and results)", "Module 3.2.S.4 (specifications — shelf life drives retest date in spec)"],
+          "Module 3.2.P.8_MUST_REFERENCE": ["Module 2.3.P.8 (QOS stability summary)", "Module 3.2.P.5 (product specifications — shelf life/expiry)"],
+          "Module 2.3.S.7_MUST_REFERENCE": ["Module 3.2.S.7 (full data tables, protocols, results)"],
+          "Module 2.3.P.8_MUST_REFERENCE": ["Module 3.2.P.8 (full stability data)"]
+        },
+        "affected_guidelines": ["ICH Q1A(R2)", "ICH Q1B", "ICH Q1C", "ICH Q1D", "ICH Q1E", "ICH Q5C (biologics)"],
+        "note": "For biologics, stability (Q5C) data goes in same 3.2.S.7/3.2.P.8 locations, with QOS summary in 2.3.S.7/2.3.P.8"
+      },
+      "analytical_procedures_and_validation": {
+        "primary_data_modules": {
+          "drug_substance": ["Module 3.2.S.4.2 (analytical procedures)", "Module 3.2.S.4.3 (validation)"],
+          "drug_product": ["Module 3.2.P.5.2 (analytical procedures)", "Module 3.2.P.5.3 (validation)"]
+        },
+        "summary_modules": {
+          "drug_substance": ["Module 2.3.S.4.2 (QOS analytical procedures — reference to 3.2.S.4.2)", "Module 2.3.S.4.3 (QOS validation summary)"],
+          "drug_product": ["Module 2.3.P.5.2", "Module 2.3.P.5.3"]
+        },
+        "cross_references": {
+          "Module_3_2_S_4_2_MUST_REFERENCE": ["Module 3.2.S.4.3 (corresponding validation)", "Module 2.3.S.4.2"],
+          "Module_3_2_S_4_3_MUST_REFERENCE": ["Module 3.2.S.4.2 (procedure being validated)", "Module 3.2.S.4.1 (specifications using this procedure)"],
+          "Module_3_2_P_5_2_MUST_REFERENCE": ["Module 3.2.P.5.3 (validation)", "Module 2.3.P.5.2"],
+          "Module_3_2_P_5_3_MUST_REFERENCE": ["Module 3.2.P.5.2 (procedure)", "Module 3.2.P.5.1 (specifications)"]
+        },
+        "affected_guidelines": ["ICH Q2(R2)", "ICH Q14", "ICH Q6A", "ICH Q6B"]
+      },
+      "specifications": {
+        "primary_data_modules": {
+          "drug_substance": ["Module 3.2.S.4.1 (specifications)", "Module 3.2.S.4.4 (batch analysis)", "Module 3.2.S.4.5 (justification)"],
+          "drug_product": ["Module 3.2.P.5.1 (specifications)", "Module 3.2.P.5.4 (batch analysis)", "Module 3.2.P.5.6 (justification)"]
+        },
+        "summary_modules": {
+          "drug_substance": ["Module 2.3.S.4.1"],
+          "drug_product": ["Module 2.3.P.5.1"]
+        },
+        "cross_references": {
+          "Module_3_2_S_4_1_MUST_REFERENCE": ["Module 3.2.S.4.2 (analytical methods)", "Module 3.2.S.7 (stability — limits derived from stability data)", "Module 3.2.S.3 (characterization — identifies impurities that appear in specs)", "Module 2.3.S.4.1"],
+          "Module_3_2_P_5_1_MUST_REFERENCE": ["Module 3.2.P.5.2 (analytical methods)", "Module 3.2.P.8 (stability — expiry specification limits)", "Module 3.2.P.4 (excipient specs)", "Module 2.3.P.5.1"]
+        },
+        "affected_guidelines": ["ICH Q6A", "ICH Q6B", "ICH Q3A(R2)", "ICH Q3B(R2)", "ICH Q3C(R9)", "ICH Q3D(R2)"]
+      },
+      "impurities": {
+        "primary_data_modules": {
+          "identification_characterization": ["Module 3.2.S.3.2 (DS impurity profiling)", "Module 3.2.P.5.5 (DP characterization of impurities)"],
+          "control_in_specification": ["Module 3.2.S.4.1 (DS specifications — impurity limits)", "Module 3.2.P.5.1 (DP specifications — impurity limits)"],
+          "nonclinical_qualification": ["Module 4.2.3.7.6 (impurity-specific toxicology study reports)"],
+          "mutagenic_impurities_M7": ["Module 3.2.S.3.2 (structure/identification)", "Module 3.2.S.4.5 (limit justification — TTC-based)", "Module 4.2.3.3 (Ames assay for qualification)"]
+        },
+        "summary_modules": ["Module 2.3.S.3 (QOS DS characterization)", "Module 2.3.P.5 (QOS DP control)", "Module 2.6.6 (Toxicology Written Summary — impurity qualification)"],
+        "cross_references": {
+          "Module_3_2_S_3_2_MUST_REFERENCE": ["Module 3.2.S.4.5 (specification limit justification)", "Module 4.2.3.7.6 (if tox study performed for qualification)", "Module 2.3.S.3"],
+          "Module_4_2_3_7_6_MUST_REFERENCE": ["Module 3.2.S.3.2 (impurity being qualified)", "Module 3.2.S.4.5 (limit set based on this study)", "Module 2.6.6"]
+        },
+        "affected_guidelines": ["ICH Q3A(R2)", "ICH Q3B(R2)", "ICH Q3C(R9)", "ICH Q3D(R2)", "ICH Q3E (draft)", "ICH M7(R2)"]
+      },
+      "manufacture_and_process": {
+        "primary_data_modules": {
+          "drug_substance": ["Module 3.2.S.2 (manufacture — route, process, controls, validation)"],
+          "drug_product": ["Module 3.2.P.3 (manufacture — formula, process, controls, validation)"],
+          "pharmaceutical_development": ["Module 3.2.P.2 (formulation development, manufacturing rationale, QbD)"]
+        },
+        "summary_modules": ["Module 2.3.S.2", "Module 2.3.P.2", "Module 2.3.P.3"],
+        "cross_references": {
+          "Module_3_2_S_2_MUST_REFERENCE": ["Module 3.2.S.4 (control strategy flows from process understanding)", "Module 3.2.A.1 (site listed in manufacture section)", "Module 2.3.S.2"],
+          "Module_3_2_P_2_MUST_REFERENCE": ["Module 3.2.P.3 (development rationale → manufacturing process)", "Module 3.2.P.5 (control strategy from development)", "Module 3.2.P.8 (stability supporting shelf life)", "Module 2.3.P.2"],
+          "Module_3_2_P_3_MUST_REFERENCE": ["Module 3.2.A.1 (manufacturing facility)", "Module 3.2.P.2 (development basis)", "Module 2.3.P.3"]
+        },
+        "affected_guidelines": ["ICH Q7", "ICH Q8(R2)", "ICH Q11", "ICH Q13"]
+      },
+      "adventitious_agents_biotech": {
+        "primary_data_modules": ["Module 3.2.A.2 (Adventitious Agents Safety Evaluation — THE primary location)"],
+        "summary_modules": ["Module 2.3.A.2 (QOS Appendix 2 — viral safety summary)"],
+        "cross_references": {
+          "Module_3_2_A_2_MUST_REFERENCE": ["Module 3.2.S.2.3 (cell bank used in manufacture — listed in control of materials)", "Module 2.3.A.2 (QOS summary)"],
+          "Module_3_2_S_2_3_MUST_REFERENCE": ["Module 3.2.A.2 (full viral safety evaluation for cell bank)"],
+          "Module_2_3_A_2_MUST_REFERENCE": ["Module 3.2.A.2 (full adventitious agents data)"]
+        },
+        "affected_guidelines": ["ICH Q5A(R2)", "ICH Q5D"]
+      },
+      "container_closure": {
+        "primary_data_modules": {
+          "drug_substance": ["Module 3.2.S.6"],
+          "drug_product": ["Module 3.2.P.7"]
+        },
+        "summary_modules": ["Module 2.3.S.6", "Module 2.3.P.7"],
+        "cross_references": {
+          "Module_3_2_P_7_MUST_REFERENCE": ["Module 3.2.P.8 (container affects stability)", "Module 3.2.P.5.5 (extractables/leachables in DP specs)", "Module 2.3.P.7"],
+          "Module_3_2_S_6_MUST_REFERENCE": ["Module 3.2.S.7 (container affects DS stability)", "Module 2.3.S.6"]
+        },
+        "affected_guidelines": ["ICH Q3E (draft)", "21 CFR 211.94", "EMA Container Closure Guidelines"]
+      }
+    },
+
+    "nonclinical_domain": {
+      "safety_pharmacology": {
+        "primary_data_modules": ["Module 4.2.1.3 (Safety Pharmacology study reports)"],
+        "summary_modules": ["Module 2.6.2 (Pharmacology Written Summary — safety pharmacology sub-section)", "Module 2.4 (Nonclinical Overview — cardiac safety integrated narrative)"],
+        "cross_references": {
+          "Module_4_2_1_3_MUST_REFERENCE": ["Module 2.6.2 (summary)", "Module 2.4 (integrated risk narrative)", "Module 5.3.4.1 (TQT/clinical cardiac safety — bidirectional link to nonclinical)"],
+          "Module_2_6_2_safety_pharm_MUST_REFERENCE": ["Module 4.2.1.3 (supporting study reports)", "Module 2.4"],
+          "Module_2_4_MUST_REFERENCE": ["Module 4.2.1.3 (safety pharm)", "Module 4.2.1.1 (primary PD)", "Module 4.2.2 (PK/TK for exposure context)"]
+        },
+        "bidirectional_clinical_link": {
+          "nonclinical_to_clinical": "Module 4.2.1.3 hERG/QT data → Module 5.3.4.1 (TQT study) — nonclinical findings drive clinical cardiac monitoring design",
+          "clinical_to_nonclinical": "Module 5.3.4.1 TQT results → inform adequacy of Module 4.2.1.3 nonclinical package; ICH E14/S7B integrated assessment required"
+        },
+        "affected_guidelines": ["ICH S7A", "ICH S7B", "ICH E14", "ICH E14/S7B Q&As"]
+      },
+      "toxicology": {
+        "single_dose": {
+          "primary_data_modules": ["Module 4.2.3.1"],
+          "summary_modules": ["Module 2.6.6", "Module 2.4"]
+        },
+        "repeat_dose": {
+          "primary_data_modules": ["Module 4.2.3.2"],
+          "summary_modules": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"],
+          "cross_references": {
+            "Module_4_2_3_2_MUST_REFERENCE": ["Module 4.2.2 (TK within tox studies)", "Module 2.6.6", "Module 2.6.7", "Module 2.4"]
+          }
+        },
+        "genotoxicity": {
+          "primary_data_modules": ["Module 4.2.3.3.1 (in vitro)", "Module 4.2.3.3.2 (in vivo)"],
+          "summary_modules": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"],
+          "cross_references": {
+            "Module_4_2_3_3_MUST_REFERENCE": ["Module 3.2.S.3.2 (if impurity-specific genotoxicity)", "Module 3.2.S.4.5 (if result drives specification limit)", "Module 2.6.6", "Module 2.4"]
+          }
+        },
+        "carcinogenicity": {
+          "primary_data_modules": ["Module 4.2.3.4.1 (long-term)", "Module 4.2.3.4.2 (short/medium-term)", "Module 4.2.3.4.3 (other)"],
+          "summary_modules": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"],
+          "affected_guidelines": ["ICH S1A", "ICH S1B", "ICH S1B(R1)", "ICH S1C(R2)"]
+        },
+        "reproductive_developmental": {
+          "primary_data_modules": ["Module 4.2.3.5.1", "Module 4.2.3.5.2", "Module 4.2.3.5.3", "Module 4.2.3.5.4"],
+          "summary_modules": ["Module 2.6.6", "Module 2.6.7", "Module 2.4"],
+          "label_cross_reference": ["Module 1 (prescribing information / SmPC — reproductive risk language derived from these studies)"],
+          "affected_guidelines": ["ICH S5(R3)"]
+        },
+        "immunotoxicity": {
+          "primary_data_modules": ["Module 4.2.3.7.2"],
+          "summary_modules": ["Module 2.6.6", "Module 2.4"],
+          "affected_guidelines": ["ICH S8"]
+        }
+      },
+      "pharmacokinetics_nonclinical": {
+        "primary_data_modules": ["Module 4.2.2.1 (analytical methods)", "Module 4.2.2.2 (absorption)", "Module 4.2.2.3 (distribution)", "Module 4.2.2.4 (metabolism)", "Module 4.2.2.5 (excretion)", "Module 4.2.2.6 (PK drug interactions)", "Module 4.2.2.7 (other)"],
+        "summary_modules": ["Module 2.6.4 (Pharmacokinetics Written Summary)", "Module 2.6.5 (Pharmacokinetics Tabulated Summary)", "Module 2.4 (Nonclinical Overview)"],
+        "cross_references": {
+          "Module_4_2_2_MUST_REFERENCE": ["Module 2.6.4", "Module 2.6.5", "Module 2.4"],
+          "Module_4_2_2_4_metabolism_MUST_REFERENCE": ["Module 5.3.2.2 (human hepatic metabolism — compare to animal metabolism for species relevance)", "Module 5.3.3.4 (clinical DDI — if nonclinical metabolism predicts clinical interaction)"]
+        },
+        "affected_guidelines": ["ICH S3A", "ICH S3B", "ICH M12"]
+      }
+    },
+
+    "clinical_domain": {
+      "biopharmaceutics": {
+        "primary_data_modules": ["Module 5.3.1.1 (BA)", "Module 5.3.1.2 (comparative BA/BE)", "Module 5.3.1.3 (IVIVC)", "Module 5.3.1.4 (bioanalytical methods)"],
+        "summary_modules": ["Module 2.7.1 (Summary of Biopharmaceutics Studies and Associated Analytical Methods)", "Module 2.5 (Clinical Overview)"],
+        "cross_references": {
+          "Module_5_3_1_2_BE_MUST_REFERENCE": ["Module 3.2.P.2 (dissolution and BCS class — basis for biowaiver if applicable)", "Module 3.2.P.5.1 (dissolution specification — derived from BE study)", "Module 2.7.1"],
+          "Module_5_3_1_4_bioanalytical_MUST_REFERENCE": ["Module 5.3.3 (PK studies that used this method)", "Module 4.2.2.1 (nonclinical analytical methods for comparison)"]
+        },
+        "affected_guidelines": ["ICH M9", "ICH M10", "ICH M13A", "ICH M13B", "ICH M13C"]
+      },
+      "clinical_pharmacology": {
+        "primary_data_modules": ["Module 5.3.2 (biomaterials PK)", "Module 5.3.3 (human PK studies)", "Module 5.3.4 (human PD studies)"],
+        "summary_modules": ["Module 2.7.2 (Summary of Clinical Pharmacology Studies)", "Module 2.5"],
+        "cross_references": {
+          "Module_5_3_3_3_intrinsic_factors_MUST_REFERENCE": ["Module 1 (PSP/PIP — pediatric plan)", "Module 2.7.2 (clinical pharm summary — special populations section)", "Module 2.5"],
+          "Module_5_3_3_4_drug_interactions_MUST_REFERENCE": ["Module 4.2.2.6 (nonclinical DDI — bidirectional)", "Module 5.3.2.2 (in vitro DDI from human biomaterials)", "Module 2.7.2"],
+          "Module_5_3_4_QT_TQT_MUST_REFERENCE": ["Module 4.2.1.3 (nonclinical cardiac safety — S7A/S7B)", "Module 2.7.2 (clinical pharm — cardiac safety section)", "Module 2.5"]
+        },
+        "affected_guidelines": ["ICH E7", "ICH E14", "ICH E17", "ICH M12"]
+      },
+      "efficacy_studies": {
+        "primary_data_modules": ["Module 5.3.5.1 (controlled trials)", "Module 5.3.5.2 (uncontrolled)", "Module 5.3.5.3 (multi-study analyses)", "Module 5.3.5.4 (other)"],
+        "summary_modules": ["Module 2.7.3 (Summary of Clinical Efficacy)", "Module 2.5 (Clinical Overview)"],
+        "cross_references": {
+          "Module_5_3_5_1_MUST_REFERENCE": ["Module 2.7.3 (efficacy summary)", "Module 2.7.4 (safety data from same trials)", "Module 5.3.7 (individual patient CRFs)", "Module 2.5"],
+          "Module_5_3_5_3_integrated_MUST_REFERENCE": ["Module 5.3.5.1 (individual trials being pooled)", "Module 2.7.3 (the integrated analysis informs the efficacy summary)"]
+        },
+        "affected_guidelines": ["ICH E1", "ICH E3", "ICH E4", "ICH E8(R1)", "ICH E9", "ICH E9(R1)", "ICH E10", "ICH E20"]
+      },
+      "clinical_safety": {
+        "primary_data_modules": ["Module 5.3.5 (safety data in trial reports)", "Module 5.3.6 (post-marketing)", "Module 5.3.7 (patient listings for SAEs)"],
+        "summary_modules": ["Module 2.7.4 (Summary of Clinical Safety)", "Module 2.5 (Clinical Overview — benefit-risk)"],
+        "cross_references": {
+          "Module_2_7_4_MUST_REFERENCE": ["Module 5.3.5 (all safety data from trials)", "Module 5.3.6 (post-marketing safety)", "Module 5.3.7 (serious AE patient listings)", "Module 2.5 (benefit-risk context)"],
+          "Module_5_3_6_MUST_REFERENCE": ["Module 2.7.4 (updated clinical safety summary)", "Module 1 (PSUR/PBRER regional submission link)"]
+        },
+        "affected_guidelines": ["ICH E2A", "ICH E2B(R3)", "ICH E2C(R2)", "ICH E2E", "ICH E2F"]
+      },
+      "post_marketing": {
+        "primary_data_modules": ["Module 5.3.6 (post-marketing experience reports)"],
+        "summary_modules": ["Module 2.7.4 (Clinical Safety — post-marketing section)"],
+        "regional_modules": ["Module 1 (PSUR/RMP/PBRER — regional submissions in EU, US, Japan)"],
+        "cross_references": {
+          "Module_5_3_6_MUST_REFERENCE": ["Module 2.7.4", "Module 1 (regional pharmacovigilance documents)"]
+        }
+      }
+    },
+
+    "multidisciplinary_cross_cuts": {
+      "drug_interaction_complete": {
+        "description": "Drug interaction data spans nonclinical and clinical domains and must be cross-referenced across three modules",
+        "nonclinical_in_vitro": ["Module 4.2.1.4 (PD interactions)", "Module 4.2.2.6 (PK/CYP in vitro)", "Module 5.3.2.2 (human hepatic metabolism biomaterials)"],
+        "clinical": ["Module 5.3.3.4 (extrinsic factor PK — DDI clinical studies)"],
+        "summary": ["Module 2.6.4 (Nonclinical PK Written Summary — in vitro DDI section)", "Module 2.7.2 (Clinical Pharmacology Summary — DDI clinical section)", "Module 2.4 (Nonclinical Overview — metabolic profile)", "Module 2.5 (Clinical Overview — DDI impact on dosing)"],
+        "cross_references": {
+          "Module_4_2_2_6_MUST_REFERENCE": ["Module 5.3.3.4 (does clinical DDI confirm nonclinical prediction?)", "Module 5.3.2.2 (human biomaterials DDI)", "Module 2.6.4"],
+          "Module_5_3_3_4_MUST_REFERENCE": ["Module 4.2.2.6 (nonclinical basis for clinical DDI study design)", "Module 5.3.2.2 (in vitro human DDI)", "Module 2.7.2"]
+        },
+        "affected_guidelines": ["ICH M12", "ICH S3A"]
+      },
+      "pediatric_complete": {
+        "description": "Pediatric data spans nonclinical, clinical, and administrative modules",
+        "nonclinical": ["Module 4.2.3.5 (juvenile animal toxicology — ICH S11)", "Module 4.2.3.2 (repeat-dose with juvenile animals)"],
+        "clinical": ["Module 5.3.3.3 (pediatric PK — intrinsic factor)", "Module 5.3.5.1 (pediatric efficacy/safety trials)"],
+        "administrative": ["Module 1 (PSP (FDA) / PIP (EMA) decision documents)"],
+        "summary": ["Module 2.6.6 (juvenile animal tox)", "Module 2.7.2 (pediatric PK)", "Module 2.7.3 (pediatric efficacy)", "Module 2.7.4 (pediatric safety)", "Module 2.4", "Module 2.5"],
+        "cross_references": {
+          "Module_4_2_3_5_juvenile_MUST_REFERENCE": ["Module 5.3.3.3 (pediatric clinical PK — does juvenile animal data predict pediatric clinical findings?)", "Module 2.6.6", "Module 2.4"],
+          "Module_5_3_3_3_pediatric_PK_MUST_REFERENCE": ["Module 4.2.3.5 (nonclinical juvenile support)", "Module 5.3.5.1 (pediatric trials using this PK data)", "Module 2.7.2"],
+          "Module_1_PSP_PIP_MUST_REFERENCE": ["Module 5.3.3.3", "Module 5.3.5.1 (pediatric study reports fulfilling PSP/PIP commitments)"]
+        },
+        "affected_guidelines": ["ICH S11", "ICH E11(R1)", "ICH E11A", "ICH M3(R2)"]
+      },
+      "mutagenic_impurities_complete": {
+        "description": "Mutagenic impurities (ICH M7) span quality characterization, specification justification, and nonclinical genotoxicity",
+        "quality_primary": ["Module 3.2.S.3.2 (impurity profiling — identification/structure)", "Module 3.2.S.4.5 (specification justification — TTC-based limits)"],
+        "nonclinical": ["Module 4.2.3.3.1 (Ames assay — in vitro genotoxicity for impurity qualification)", "Module 4.2.3.7.6 (impurity-specific toxicology)"],
+        "summary": ["Module 2.3.S.3 (QOS characterization)", "Module 2.3.S.4.5 (QOS spec justification)", "Module 2.6.6 (Toxicology Written Summary — impurity qualification narrative)", "Module 2.4"],
+        "cross_references": {
+          "Module_3_2_S_3_2_M7_MUST_REFERENCE": ["Module 3.2.S.4.5 (limit flowing from M7 assessment)", "Module 4.2.3.3.1 (Ames result if structural alert present)", "Module 2.3.S.3"],
+          "Module_4_2_3_3_1_impurity_Ames_MUST_REFERENCE": ["Module 3.2.S.3.2 (impurity being qualified)", "Module 3.2.S.4.5 (limit set based on assay result)", "Module 2.6.6"]
+        },
+        "affected_guidelines": ["ICH M7(R2)", "ICH Q3A(R2)", "ICH Q3B(R2)"]
+      },
+      "bioequivalence_complete": {
+        "description": "Bioequivalence data spans clinical studies, formulation development, and quality specifications",
+        "clinical": ["Module 5.3.1.2 (BE study report)"],
+        "quality": ["Module 3.2.P.2 (dissolution, BCS classification, formulation development)", "Module 3.2.P.5.1 (dissolution specification — set based on BE)"],
+        "summary": ["Module 2.7.1 (Biopharmaceutics Summary)", "Module 2.5 (Clinical Overview)"],
+        "cross_references": {
+          "Module_5_3_1_2_MUST_REFERENCE": ["Module 3.2.P.2 (formulation context for BE study)", "Module 3.2.P.5.1 (dissolution spec validated by BE)", "Module 2.7.1"],
+          "Module_3_2_P_2_dissolution_MUST_REFERENCE": ["Module 5.3.1.2 (in vivo BE data supporting dissolution spec)", "Module 5.3.1.3 (IVIVC if established)", "Module 3.2.P.5.1"]
+        },
+        "affected_guidelines": ["ICH M9", "ICH M13A", "ICH M13B", "ICH M13C", "ICH E14"]
+      }
+    },
+
+    "module_2_to_module_3_5_complete_map": {
+      "description": "Every Module 2 section and its corresponding Module 3/4/5 data sources",
+      "module_2_3_S_REFERENCES_3_2_S": {
+        "2.3.S.1": "→ Module 3.2.S.1",
+        "2.3.S.2": "→ Module 3.2.S.2",
+        "2.3.S.3": "→ Module 3.2.S.3",
+        "2.3.S.4": "→ Module 3.2.S.4 (all sub-sections: .4.1 through .4.5)",
+        "2.3.S.5": "→ Module 3.2.S.5",
+        "2.3.S.6": "→ Module 3.2.S.6",
+        "2.3.S.7": "→ Module 3.2.S.7"
+      },
+      "module_2_3_P_REFERENCES_3_2_P": {
+        "2.3.P.1": "→ Module 3.2.P.1",
+        "2.3.P.2": "→ Module 3.2.P.2",
+        "2.3.P.3": "→ Module 3.2.P.3",
+        "2.3.P.4": "→ Module 3.2.P.4",
+        "2.3.P.5": "→ Module 3.2.P.5 (all sub-sections)",
+        "2.3.P.6": "→ Module 3.2.P.6",
+        "2.3.P.7": "→ Module 3.2.P.7",
+        "2.3.P.8": "→ Module 3.2.P.8"
+      },
+      "module_2_6_REFERENCES_4_2": {
+        "2.6.2_pharmacology_written_summary": "→ Module 4.2.1.1 (primary PD) + 4.2.1.2 (secondary PD) + 4.2.1.3 (safety pharm) + 4.2.1.4 (PD DDI)",
+        "2.6.3_pharmacology_tabulated": "→ same as 2.6.2",
+        "2.6.4_PK_written_summary": "→ Module 4.2.2.1 through 4.2.2.7",
+        "2.6.5_PK_tabulated": "→ same as 2.6.4",
+        "2.6.6_toxicology_written_summary": "→ Module 4.2.3.1 through 4.2.3.7.7",
+        "2.6.7_toxicology_tabulated": "→ same as 2.6.6"
+      },
+      "module_2_7_REFERENCES_5_3": {
+        "2.7.1_biopharmaceutics": "→ Module 5.3.1 (all sub-sections)",
+        "2.7.2_clinical_pharmacology": "→ Module 5.3.2 + 5.3.3 + 5.3.4",
+        "2.7.3_clinical_efficacy": "→ Module 5.3.5",
+        "2.7.4_clinical_safety": "→ Module 5.3.5 (safety data) + 5.3.6 + 5.3.7",
+        "2.7.6_synopses": "→ Synopses of individual studies from Module 5.3 (all sub-sections)"
+      }
+    },
+
+    "automated_validation_rules": {
+      "description": "Machine-executable cross-reference validation rules for automated compliance checking",
+      "rules": [
+        {
+          "rule_id": "XR-VAL-001",
+          "check": "IF rule maps to Module 3.2.S.7 (DS stability) OR Module 3.2.P.8 (DP stability) THEN cross_reference MUST include Module 2.3.S.7 or Module 2.3.P.8 respectively",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-002",
+          "check": "IF rule maps to Module 4.2.x (any nonclinical study) THEN cross_reference MUST include at minimum Module 2.6.x (corresponding nonclinical summary) AND Module 2.4",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-003",
+          "check": "IF rule maps to Module 5.3.x (any clinical study) THEN cross_reference MUST include at minimum Module 2.7.x (corresponding clinical summary) AND Module 2.5",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-004",
+          "check": "IF rule maps to Module 3.2.S.4 (DS control/analytical methods) THEN cross_reference MUST include both Module 3.2.S.4.2 (procedure) AND Module 3.2.S.4.3 (validation) — not just one",
+          "severity": "warning"
+        },
+        {
+          "rule_id": "XR-VAL-005",
+          "check": "IF rule maps to Module 4.2.1.3 (safety pharmacology) THEN cross_reference MUST include Module 5.3.4.1 (TQT — bidirectional E14/S7B link)",
+          "severity": "warning"
+        },
+        {
+          "rule_id": "XR-VAL-006",
+          "check": "IF ectd_module uses 'M' prefix notation (e.g. 'M3.2.P.8') THEN flag as format_error — must use 'Module 3.2.P.8'",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-007",
+          "check": "IF ectd_module contains Module 1.x sub-sections beyond 1.1 and 1.2 THEN must include jurisdiction qualifier (FDA-specific, EMA-specific, etc.)",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-008",
+          "check": "IF ectd_module is 'Module 3.2.A' without sub-section (A.1, A.2, or A.3) THEN flag as too_vague",
+          "severity": "error"
+        },
+        {
+          "rule_id": "XR-VAL-009",
+          "check": "IF rule maps data to Module 3.2.S.3 (characterization) AND rule description mentions 'analytical procedure' or 'method validation' THEN likely_wrong_module — should be Module 3.2.S.4",
+          "severity": "warning"
+        },
+        {
+          "rule_id": "XR-VAL-010",
+          "check": "IF ectd_module contains range notation (e.g. 'M3-M5', 'M1-M5') THEN flag as imprecise — requires specific module enumeration",
+          "severity": "warning"
+        }
+      ]
+    }
+  }
+}

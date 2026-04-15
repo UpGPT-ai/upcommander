@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Points to Consider on Applications with 1. Meta-Analyses; 2. One Pivotal Study",
+    "source_file": "points-to-consider-meta-analyses.pdf",
+    "source_directory": "training/stage-1/ema-guidelines-v2",
+    "document_date": "31 May 2001",
+    "document_version": "CPMP/EWP/2330/99",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "EMA-META-001",
+      "rule_text": "A meta-analysis included in an application must be performed in accordance with a pre-specified protocol that defines the objective of the analysis.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "When a meta-analysis is included in an application it should be performed in accordance with a protocol specifying [the objective of the analysis].",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "Retrospective specification is permissible only when the need for meta-analysis becomes apparent after study results are known, but a protocol must still be written.",
+      "cross_references": ["ICH E9", "EMA-META-002", "EMA-META-003"]
+    },
+    {
+      "rule_id": "EMA-META-002",
+      "rule_text": "The meta-analysis protocol must specify criteria for inclusion and exclusion of studies, including study populations, study design (with preference for randomised and blinded studies), dosage, and study duration.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "Criteria for inclusion and exclusion of studies, e.g. study populations, study design (the norm is to accept only randomised and preferably blinded studies), dosage, study duration etc.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-001", "EMA-META-006"]
+    },
+    {
+      "rule_id": "EMA-META-003",
+      "rule_text": "When the meta-analysis includes studies not performed by the sponsor, the strategy for the identification of those studies must be specified in the protocol.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "In cases when the meta-analysis includes studies not performed by the sponsor, the strategy for the identification of studies should be specified.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Applies only when non-sponsor studies are included.",
+      "cross_references": ["EMA-META-001", "EMA-META-010"]
+    },
+    {
+      "rule_id": "EMA-META-004",
+      "rule_text": "The meta-analysis protocol must specify hypotheses and endpoints.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "Hypotheses and endpoints.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-001", "ICH E9"]
+    },
+    {
+      "rule_id": "EMA-META-005",
+      "rule_text": "The meta-analysis protocol must specify statistical methods including methods for investigation of heterogeneity, and where applicable, methods for handling studies with different designs.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "Statistical methods (including methods for investigation of heterogeneity). In cases where the meta-analysis provides the pivotal evidence for an indication, a p-value more extreme than the conventional significance level of 0.05 would generally be required, and narrow confidence interval for the treatment effect would be expected. The required degree of significance will be judged on a case by case basis considering factors such as the amount of supportive data, plausibility of the hypothesis tested and whether the analysis is pre-specified or not. Where applicable, the methods for handling studies with different designs, e.g. parallel groups and cross-over designs, should be specified.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "The required significance level is judged on a case-by-case basis.",
+      "cross_references": ["EMA-META-001", "EMA-META-004", "ICH E9"]
+    },
+    {
+      "rule_id": "EMA-META-006",
+      "rule_text": "When the meta-analysis provides pivotal evidence for an indication, a p-value more extreme than the conventional significance level of 0.05 is generally required, accompanied by a narrow confidence interval for the treatment effect.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "In cases where the meta-analysis provides the pivotal evidence for an indication, a p-value more extreme than the conventional significance level of 0.05 would generally be required, and narrow confidence interval for the treatment effect would be expected.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "The required degree of significance will be judged on a case by case basis considering factors such as the amount of supportive data, plausibility of the hypothesis tested and whether the analysis is pre-specified or not.",
+      "cross_references": ["EMA-META-005", "EMA-META-014"]
+    },
+    {
+      "rule_id": "EMA-META-007",
+      "rule_text": "The meta-analysis protocol must include approaches to maximise data quality across all included studies and to explore the influence of any variation in quality, including methods to minimise or deal with missing data.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "Approaches to maximise the quality of the data in all the studies included and to explore the influence of any variation in quality, including methods to minimise or deal with missing data.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-001", "EMA-META-019"]
+    },
+    {
+      "rule_id": "EMA-META-008",
+      "rule_text": "The meta-analysis protocol must include a plan for evaluation of consistency and robustness, demonstrating similar effects in alternative analyses of different endpoints, different sub-populations, different subsets of studies.",
+      "source_section": "II.1.1 The meta-analysis protocol",
+      "source_page": 2,
+      "verbatim_quote": "Plan for evaluation of consistency and robustness. This should aim to demonstrate similar effects in alternative analyses of different endpoints, different sub-populations, different subsets of studies (studies from different regions, of different duration or different design, high-quality studies etc).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-001", "EMA-META-016", "EMA-META-018"]
+    },
+    {
+      "rule_id": "EMA-META-009",
+      "rule_text": "When the need for a meta-analysis is prospectively identified, the protocol for the meta-analysis must be prospectively specified during the planning of the clinical development program.",
+      "source_section": "II.1.2 Timing of pre-specification",
+      "source_page": 2,
+      "verbatim_quote": "Thus, when the need for a meta-analysis is prospectively identified, the protocol for the meta-analysis should be prospectively specified during the planning of the clinical development program.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "Retrospective specification is permitted when the need for meta-analysis becomes apparent after results from some or all studies are known (e.g., to put conflicting results in perspective).",
+      "cross_references": ["EMA-META-001", "EMA-META-010"]
+    },
+    {
+      "rule_id": "EMA-META-010",
+      "rule_text": "A retrospective specification when the results from all or some of the studies are known should be avoided; when unavoidable, the primary specifications and definitions from the individual studies must be followed to minimise data dependence.",
+      "source_section": "II.1.2 Timing of pre-specification",
+      "source_page": 3,
+      "verbatim_quote": "To minimise the opportunity for a retrospectively specified meta-analysis protocol in such cases to be data dependent, the primary specifications and definitions set up in the individual studies should be followed. The credibility of the meta-analysis will depend on the degree of adherence to the specifications in the individual study protocols. In this situation, a protocol for the conduct of the meta-analysis should still be written.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Retrospective specification is permitted only when placing conflicting results in perspective or when meta-analysis is the only way to provide reliable proof of efficacy.",
+      "cross_references": ["EMA-META-009", "EMA-META-011"]
+    },
+    {
+      "rule_id": "EMA-META-011",
+      "rule_text": "For a retrospective meta-analysis to provide sufficient evidence for a claim, it must meet all of the following prerequisites: some studies clearly positive; inconclusive studies showing positive trends; no statistically significant heterogeneity; pooled 95% confidence interval well away from zero; justification that biased selection is unlikely; and a sensitivity analysis demonstrating robustness.",
+      "source_section": "II.1.3 Regulatory prerequisites of retrospective meta-analyses",
+      "source_page": 3,
+      "verbatim_quote": "Prerequisites for a retrospective meta-analysis to provide sufficient evidence for a claim include: Some studies clearly positive. Inconclusive studies showing positive trends in the primary variable. No statistically significant heterogeneity. Pooled 95% confidence interval well away from zero (or unity for odds ratios, or the pre-defined margin for non-inferiority trials). A justification that a biased selection of studies and/or endpoints is unlikely. A sensitivity analysis demonstrating robustness of the findings.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "For meta-analyses where these requirements are not fulfilled it will prove difficult to get a regulatory acceptance.",
+      "cross_references": ["EMA-META-010", "EMA-META-012", "EMA-META-013"]
+    },
+    {
+      "rule_id": "EMA-META-012",
+      "rule_text": "A retrospective meta-analysis of only two studies originally intended to stand on their own is not expected to add useful information, and cannot be used to reconcile the conflicting results of one positive and one inconclusive study.",
+      "source_section": "II.1.3 Regulatory prerequisites of retrospective meta-analyses",
+      "source_page": 3,
+      "verbatim_quote": "A retrospective meta-analysis of only two studies originally intended to stand on their own is not expected to add any useful information. In particular, a meta-analysis cannot be used to reconcile the conflicting results of one positive and one inconclusive study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-011"]
+    },
+    {
+      "rule_id": "EMA-META-013",
+      "rule_text": "The applicant has the obligation to submit all studies that are relevant to the claims made in the application.",
+      "source_section": "II.2.1 Applications relying on fully reported trials",
+      "source_page": 3,
+      "verbatim_quote": "The applicant has the obligation to submit all studies that are relevant to the claims that are made.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "For new chemical entities it should normally be possible to accept that all relevant studies have been identified in the application.",
+      "cross_references": ["EMA-META-014", "EMA-META-015"]
+    },
+    {
+      "rule_id": "EMA-META-014",
+      "rule_text": "For bibliographical applications relying on meta-analysis, the strategy for identifying relevant studies must be presented together with a thorough discussion of potential selection bias.",
+      "source_section": "II.2.2 Bibliographical applications",
+      "source_page": 3,
+      "verbatim_quote": "In such applications the strategy for the identification of relevant studies should be presented together with a thorough discussion of a potential selection bias.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "Applies to applications relying wholly or partly on bibliographical data (e.g. new indications, orphan drugs etc).",
+      "cross_references": ["EMA-META-013", "EMA-META-015"]
+    },
+    {
+      "rule_id": "EMA-META-015",
+      "rule_text": "If a regulatory authority identifies additional relevant studies not included in the sponsor's bibliographical meta-analysis, this may seriously question the validity of the meta-analysis provided by the sponsor.",
+      "source_section": "II.2.2 Bibliographical applications",
+      "source_page": 3,
+      "verbatim_quote": "In case a regulatory authority identifies additional relevant studies, this may seriously question the validity of the meta-analysis provided by the sponsor.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-013", "EMA-META-014"]
+    },
+    {
+      "rule_id": "EMA-META-016",
+      "rule_text": "Excluded studies must be listed with their results summarised and the reason for exclusion stated, to enable evaluation of any potential bias; and the robustness of the result must be investigated in alternative analyses based on different subsets of studies.",
+      "source_section": "II.2.2 Bibliographical applications",
+      "source_page": 4,
+      "verbatim_quote": "excluded studies should be listed and their results summarised as well as the reason for excluding them to enable an evaluation of any potential bias due to these exclusions. Furthermore, the robustness of the obtained result should be investigated in alternative analyses based on different subsets of the studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-008", "EMA-META-014"]
+    },
+    {
+      "rule_id": "EMA-META-017",
+      "rule_text": "The clinical relevance of findings from a meta-analysis must be judged on clinical grounds; a positive effect established through a methodologically valid meta-analysis does not necessarily mean a drug application is approvable.",
+      "source_section": "II.3.1 Clinical relevance",
+      "source_page": 4,
+      "verbatim_quote": "It is certainly true that a positive effect established through a methodologically valid meta-analysis does not necessarily mean that a drug application is approvable. The clinical relevance of the findings will be judged on clinical grounds. The magnitude of the effect, and range of effects of different endpoints, might very well be too small or limited to result in a positive overall benefit/risk assessment, and this is more likely to be true when it has required a meta-analysis to establish statistical significance.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-006", "EMA-META-018"]
+    },
+    {
+      "rule_id": "EMA-META-018",
+      "rule_text": "The external validity of a meta-analysis average result must be judged on a case-by-case basis considering both clinical and statistical aspects, including whether study populations are sufficiently representative of a common target population and whether variable estimates are consistent with random fluctuation.",
+      "source_section": "II.3.2 Heterogeneity and external validity",
+      "source_page": 4,
+      "verbatim_quote": "The external validity of the average result from a meta-analysis of several studies with more or less inconsistent results has to be judged on a case by case basis considering clinical as well as statistical aspects. From the clinical point of view, are the study populations in the different studies sufficiently representative of a common target population, and to what extent can dosage, treatment duration, sample size and other study conditions differ among studies and still make a common estimate meaningful?",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Some deviations in study conditions are acceptable and might even increase the external validity of the pooled result.",
+      "cross_references": ["EMA-META-017", "EMA-META-019"]
+    },
+    {
+      "rule_id": "EMA-META-019",
+      "rule_text": "Evaluation of heterogeneity must involve graphical and other descriptive methods as well as tests for study-by-treatment interaction; any suspected interaction must be judged on clinical relevance and evaluated in alternative analyses to demonstrate robustness.",
+      "source_section": "II.3.2 Heterogeneity and external validity",
+      "source_page": 4,
+      "verbatim_quote": "Tests for interaction are usually insensitive and therefore a critical evaluation of heterogeneity should involve graphical and other descriptive methods as well as tests for study-by-treatment interaction. Any suspected interaction, statistically significant or not, should be judged on its clinical relevance and the impact on the overall result should be evaluated in alternative analyses with the aim to demonstrate the robustness of the results (c.f. Plan for evaluation of consistency and robustness in Section II.1.1).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-008", "EMA-META-018"]
+    },
+    {
+      "rule_id": "EMA-META-020",
+      "rule_text": "The meta-analysis report must include sufficient data to assess the comparability of individual studies, the impact of each study on the overall estimate, and the impact of each study on the heterogeneity test, together with a thorough discussion of potential sources of bias.",
+      "source_section": "II.3.3 The meta-analysis report",
+      "source_page": 4,
+      "verbatim_quote": "To facilitate a critical evaluation of external validity and heterogeneity, the meta-analysis report should include sufficient data for the assessment of the comparability of the individual studies, the impact of each study on the overall estimate, and the impact of each study on the heterogeneity test, together with a thorough discussion of the impact of the potential sources of bias outlined above.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-016", "EMA-META-018", "EMA-META-019"]
+    },
+    {
+      "rule_id": "EMA-META-021",
+      "rule_text": "For pooled analyses of safety endpoints, a consistent methodology for the collection and evaluation of safety data must be used throughout the clinical program.",
+      "source_section": "II.4 Pooled analyses of safety endpoints",
+      "source_page": 5,
+      "verbatim_quote": "it is recommended that a consistent methodology for the collection and evaluation of safety data is used throughout the clinical program.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Stringent meta-analysis of safety data is in many cases not a feasible approach; a meta-analysis of all controlled trials may be valuable for in-depth follow-up of safety signals.",
+      "cross_references": ["EMA-META-022", "EMA-META-023"]
+    },
+    {
+      "rule_id": "EMA-META-022",
+      "rule_text": "In pooled safety analyses, the possibility of any bias due to differential study factors must be discussed, and particular consideration must be given to a potential dilution of negative effects due to inclusion of studies of inadequately short duration.",
+      "source_section": "II.4 Pooled analyses of safety endpoints",
+      "source_page": 5,
+      "verbatim_quote": "The possibility of any bias due to differential study factors should be discussed and particular consideration should be given to a potential dilution of negative effects due to the inclusion of studies of inadequately short duration.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-021", "EMA-META-023"]
+    },
+    {
+      "rule_id": "EMA-META-023",
+      "rule_text": "In comparative safety evaluations, it must be a minimum requirement that pooled results are based on intra-study comparisons.",
+      "source_section": "II.4 Pooled analyses of safety endpoints",
+      "source_page": 5,
+      "verbatim_quote": "In comparative safety evaluations it should be a minimum requirement that pooled results are based on intra-study comparisons.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-021", "EMA-META-022"]
+    },
+    {
+      "rule_id": "EMA-META-024",
+      "rule_text": "The fundamental requirement for Phase III documentation is that it consists of adequate and well-controlled data of good quality from a sufficient number of patients, collected by a sufficient number of investigators, demonstrating a positive benefit/risk in the intended population at the intended dose and manner of use.",
+      "source_section": "III.1 The need for replication",
+      "source_page": 5,
+      "verbatim_quote": "The fundamental requirement on the phase III documentation is that it consists of adequate and well-controlled data of good quality from a sufficient number of patients, with a sufficient variety of symptoms and disease conditions, collected by a sufficient number of investigators, demonstrating a positive benefit/risk in the intended population at the intended dose and manner of use.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "The extent of confirmatory phase III data needed will depend upon what is established for the product in earlier phases and what is known about related products.",
+      "cross_references": ["EMA-META-025", "ICH E9"]
+    },
+    {
+      "rule_id": "EMA-META-025",
+      "rule_text": "The minimum requirement for a Phase III program is generally one controlled study with statistically compelling and clinically relevant results; however, more than one study is generally prudent to plan.",
+      "source_section": "III.1 The need for replication",
+      "source_page": 5,
+      "verbatim_quote": "The minimum requirement is generally one controlled study with statistically compelling and clinically relevant results. However there are many reasons why it is usually prudent to plan for more than one study in the phase III program.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Circumstances favouring more than one study include: lack of pharmacological rationale, new pharmacological principle, limited Phase I/II data, history of failed studies, need to demonstrate efficacy in different sub-populations, additional questions in the Phase III program.",
+      "cross_references": ["EMA-META-024", "EMA-META-026"]
+    },
+    {
+      "rule_id": "EMA-META-026",
+      "rule_text": "When confirmatory evidence is provided by only one pivotal study, the study must be exceptionally compelling, with special regulatory attention paid to internal validity, external validity, clinical relevance, degree of statistical significance, data quality, internal consistency, centre effects, and plausibility of the hypothesis.",
+      "source_section": "III.2 Prerequisites for one pivotal study applications",
+      "source_page": 5,
+      "verbatim_quote": "In cases where the confirmatory evidence is provided by one pivotal study only, this study will have to be exceptionally compelling, and in the regulatory evaluation special attention will be paid to: The internal validity. There should be no indications of a potential bias. The external validity. The study population should be suitable for extrapolation to the population to be treated.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-024", "EMA-META-025", "EMA-META-027", "EMA-META-028", "EMA-META-029", "EMA-META-030"]
+    },
+    {
+      "rule_id": "EMA-META-027",
+      "rule_text": "For a single pivotal study application, the estimated size of treatment benefit must be large enough to be clinically valuable.",
+      "source_section": "III.2 Prerequisites for one pivotal study applications",
+      "source_page": 6,
+      "verbatim_quote": "Clinical relevance. The estimated size of treatment benefit must be large enough to be clinically valuable.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-026", "EMA-META-028"]
+    },
+    {
+      "rule_id": "EMA-META-028",
+      "rule_text": "For a single pivotal study application, statistical evidence considerably stronger than p<0.05 is usually required, accompanied by precise estimates of treatment effects (narrow confidence intervals); for non-inferiority demonstrations the lower 95% confidence bound must be well away from the non-inferiority margin.",
+      "source_section": "III.2 Prerequisites for one pivotal study applications",
+      "source_page": 6,
+      "verbatim_quote": "The degree of statistical significance. Statistical evidence considerably stronger than p<0.05 is usually required, accompanied by precise estimates of treatment effects, i.e. narrow confidence intervals. The required degree of significance will depend on factors such as the therapeutic indication, the primary endpoint, the amount of supportive data and whether the alternative analyses demonstrating consistency are pre-specified. When the aim is to demonstrate non-inferiority, one study is more likely to be accepted if the lower 95% confidence bound is well away from the non-inferiority margin.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "The required degree of significance depends on the therapeutic indication, primary endpoint, amount of supportive data, and whether consistency analyses are pre-specified.",
+      "cross_references": ["EMA-META-026", "EMA-META-027", "EMA-META-006"]
+    },
+    {
+      "rule_id": "EMA-META-029",
+      "rule_text": "For a single pivotal study application, internal consistency must be demonstrated: similar effects in different pre-specified sub-populations, and all-important endpoints showing similar findings.",
+      "source_section": "III.2 Prerequisites for one pivotal study applications",
+      "source_page": 6,
+      "verbatim_quote": "Internal consistency. Similar effects demonstrated in different pre-specified sub-populations. All-important endpoints showing similar findings.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-026", "EMA-META-028", "EMA-META-030"]
+    },
+    {
+      "rule_id": "EMA-META-030",
+      "rule_text": "For a single pivotal study application, none of the study centres should dominate the overall result, neither in terms of number of subjects nor in terms of magnitude of effect.",
+      "source_section": "III.2 Prerequisites for one pivotal study applications",
+      "source_page": 6,
+      "verbatim_quote": "Centre effects. None of the study centres should dominate the overall result, neither in terms of number of subjects nor in terms of magnitude of effect.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None stated.",
+      "cross_references": ["EMA-META-026", "EMA-META-029"]
+    }
+  ]
+}

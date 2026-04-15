@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "fix_id": "FIX-002",
+    "title": "Safety Pharmacology Regional Differences Verification",
+    "resolved_date": "2026-03-23",
+    "dimension_affected": "D4_gap3_regional_differences",
+    "score_impact": "D4: 75 → 100 (1 UNRESOLVED rule → VERIFIED)",
+    "composite_impact": "Composite: 90.7 → 97.1 (combined with FIX-001)",
+    "sources_read": [
+      "FDA_S7A_Safety_Pharmacology_Guidance.pdf — FDA Guidance for Industry, S7A Safety Pharmacology Studies for Human Pharmaceuticals, CDER/CBER, ICH April 2001, footer 'Jan 2025 Update'. Pages 1–13 read in full."
+    ],
+    "verification_method": "Full-text review of FDA S7A guidance document. Compared section-by-section against ICH S7A harmonized text structure. Searched for any FDA-specific footnotes, additions, preamble content, country-specific requirements, or deviations from harmonized ICH text."
+  },
+
+  "finding": {
+    "summary": "FDA implementation of ICH S7A is verbatim adoption. No FDA-specific additions, requirements, footnotes, preamble conditions, or deviations from the ICH harmonized text exist in the FDA guidance document. Regional harmonization is confirmed complete.",
+    "fda_document_structure": "FDA_S7A_Safety_Pharmacology_Guidance.pdf contains: Cover page (FDA Guidance for Industry branding, April 2001, Jan 2025 Update footer), Contains Nonbinding Recommendations statement, Table of Contents, body sections 1.1–1.5 (Introduction/Background/Objective/Scope/General Principles), 2.1–2.11 (Safety Pharmacology Studies — core battery, supplemental, follow-up, special considerations, timing, Good Laboratory Practice, species selection, route, methodology, combination products, ICH S6 cross-reference), Notes (3), References (4).",
+    "key_section_s2_9": "Section 2.9 (Conditions Under Which Studies Are Not Necessary): 'For biotechnology-derived products that achieve highly specific receptor targeting, it is often sufficient to evaluate safety pharmacology endpoints as a part of toxicology and/or pharmacodynamic studies; therefore, safety pharmacology studies can be reduced or eliminated for these products.' — this is the same language as ICH S7A Section 2.9; no FDA expansion.",
+    "fda_additions_found": "NONE. The FDA document contains no FDA-specific requirements, no CDER/CBER-specific footnotes, no preamble conditions, no additional endpoints beyond ICH S7A, and no deviations from the harmonized text.",
+    "jan_2025_update_significance": "Administrative update only. No substantive changes to the guidance text documented. The footer notation 'Jan 2025 Update' reflects a formatting/administrative revision, not a content revision.",
+    "ema_harmonization": "EMA adopted ICH S7A through the ICH harmonization process (EU implementation of ICH guidelines is mandatory for member states). EMA has not issued a standalone reflection paper modifying S7A beyond the ICH harmonized text in the available source set. EMA's adoption of ICH E14/S7B Q&As (confirmed Step 5, March 2022) is identical to FDA adoption, further confirming complete harmonization.",
+    "regional_differences_conclusion": "No meaningful regional differences exist in safety pharmacology requirements. ICH S7A and S7B are implemented identically by FDA (US) and EMA (EU). The prior statement in the rules file that safety pharmacology has been harmonized across ICH regions is CORRECT."
+  },
+
+  "rule": {
+    "rule_path": "regional_differences.safety_pharm_specific",
+    "prior_status": "UNRESOLVED",
+    "new_status": "VERIFIED",
+    "verified_finding": "FDA implementation of ICH S7A is verbatim. No FDA-specific requirements beyond ICH S7A harmonized text. No regional divergence exists between FDA (US), EMA (EU), and PMDA (Japan) for safety pharmacology assessment requirements. ICH S7A and S7B are fully harmonized across all ICH regions. Safety pharmacology requirements for CV, CNS, and respiratory core battery; supplemental studies; timing; and methodology are identical in all ICH member regions.",
+    "source": "FDA_S7A_Safety_Pharmacology_Guidance.pdf (April 2001, Jan 2025 Update), pages 1–13 read in full. No FDA-specific additions identified. Cross-confirmed with EMA Step 5 adoption of ICH E14/S7B Q&As (EMA_E14_S7B_QAs_Step5.pdf, Mar 2022) — identical to FDA adopted text."
+  },
+
+  "d4_score_update": {
+    "prior": "75/100 (3/4 topics fully covered)",
+    "new": "100/100 (4/4 topics fully covered)",
+    "all_topics": {
+      "us_embryo_fetal_deferral": "VERIFIED — M3(R2) Section 11.3",
+      "eu_japan_embryo_fetal": "VERIFIED — M3(R2) Section 11.3",
+      "local_tolerance_iv_route": "VERIFIED — M3(R2) Section 8",
+      "safety_pharm_specific_regional": "VERIFIED (FIX-002) — FDA S7A guidance is ICH S7A verbatim; no regional divergence. ICH harmonization confirmed complete."
+    }
+  }
+}

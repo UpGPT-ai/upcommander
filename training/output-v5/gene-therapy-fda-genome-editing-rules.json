@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "title": "FDA CBER Webinar: Human Gene Therapy Products Incorporating Human Genome Editing",
+    "source_file": "Human_Gene_Therapy_Genome_Editing.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "February 29, 2024",
+    "document_version": "Webinar transcript — clarifications on finalized guidance document",
+    "extraction_date": "2026-03-24",
+    "total_rules": 18,
+    "notes": "This is a webinar transcript, not a formal guidance document. Rules reflect FDA staff clarifications of the finalized guidance on Human Gene Therapy Products Incorporating Human Genome Editing. Verbatim quotes are from speaker statements during the webinar. Cross-references include the formal guidance (FDA-GT-GE) and related documents.",
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-GE-001",
+      "rule_text": "Human genome editing (GE) products must be assessed for safety and quality using a science-based approach that weighs benefits and risks for each product and proposed indication. Sponsors should consider the therapeutic editing threshold — the degree of genome modification needed for the desired therapeutic effect — when designing their product.",
+      "source_section": "CMC Recommendations — General (Dr. Kwilas)",
+      "source_page": 2,
+      "verbatim_quote": "Sponsors should also consider the degree of genome modification needed for the desired therapeutic effect when designing their product. We termed this the therapeutic editing threshold.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Therapeutic editing threshold may be informed by clinical data from alternative therapies (e.g., stem cell transplants) or from nonclinical studies.",
+      "cross_references": ["21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-002",
+      "rule_text": "Genome editing (GE) components must be described in detail in the IND, including how each component is manufactured and tested. For Phase 1 clinical trials, sponsors should consult the FDA Phase 1 CGMP guidance. For later-phase studies and licensure, GE component manufacturing must comply with complete CGMPs.",
+      "source_section": "CMC Recommendations — GE Components (Dr. Kwilas)",
+      "source_page": 2,
+      "verbatim_quote": "Sponsors will need to provide detailed descriptions of how each GE component is manufactured and tested in their IND. It's important to note that, for Phase 1 clinical trials, sponsors should consult the FDA Phase 1 current good manufacturing practice (CGMP) guidance for an understanding of the level of CGMPs needed at this phase of development. For later-phase studies and for licensure, the expectation is that GE component manufacturing would comply with complete CGMPs.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Phase 1 allows flexibility per Phase 1 CGMP guidance.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "21 CFR 211"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-003",
+      "rule_text": "GE components must be evaluated for bioburden or sterility, identity, purity, activity, and residuals based on their manufacturing process. Stability studies must include stability-indicating assays and be conducted on all applicable component presentations (e.g., lyophilized and reconstituted materials). Outlines of testing plans, stability protocols, and engineering runs data or stability data must be provided in the IND.",
+      "source_section": "CMC Recommendations — GE Component Testing (Dr. Kwilas)",
+      "source_page": 2,
+      "verbatim_quote": "GE components should be evaluated for bioburden or sterility, identity, purity, and activity, as well as residuals based on their manufacturing process. If being stored, these components should also be assessed for stability. Outlines of your testing plan and your stability study protocols and any available engineering runs data or stability data should be provided in the IND. In the case of the stability studies, these should include stability-indicating assays and be conducted on all applicable component presentations (for example, lyophilized and reconstituted materials).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["FDA-GT-GE-002", "21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-004",
+      "rule_text": "For ex vivo GE drug products, sponsors must assess: on-target editing efficiency and total number/frequency of genome-edited cells; off-target editing frequency; intrachromosomal and interchromosomal chromosomal abnormalities; and residual GE components — based on outcomes of nonclinical and process characterization studies and a risk assessment.",
+      "source_section": "CMC Recommendations — Ex Vivo DP Testing (Dr. Kwilas)",
+      "source_page": 3,
+      "verbatim_quote": "Ex vivo GE products should also be assessed for on-target editing efficiency and the total number (or frequency) of genome-edited cells, as well as off-target editing frequency, intrachromosomal and interchromosomal rearrangements, and residual GE components based on outcomes of nonclinical and process characterization studies, as well as a risk assessment.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "If DP manufacture involves expansion or differentiation of a cell bank, it may be acceptable to perform some testing on the cell bank; discuss with FDA in advance.",
+      "cross_references": ["FDA-GT-GE-003"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-005",
+      "rule_text": "For potency assays for BLA-enabling efficacy studies of GE products, the assay must include an assessment of the intended downstream biological modification or altered cellular function, not merely genetic sequence modification. For early-phase studies, potency assays evaluating the presence of the desired genetic sequence modification (genotypically and phenotypically) may be adequate.",
+      "source_section": "CMC Recommendations — Potency (Dr. Kwilas)",
+      "source_page": 3,
+      "verbatim_quote": "For early-phase studies, potency assays evaluating the presence of the desired genetic sequence modification, both genotypically and phenotypically, may be adequate. However, if intended to support a Biologics License Application (BLA), potency assays for BLA-enabling efficacy studies should include an assessment of the intended downstream biological modification or altered cellular function.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Phase 1/2 early-phase assays evaluating sequence modification may suffice.",
+      "cross_references": ["21 CFR 610.10", "FDA-GT-GE-002"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-006",
+      "rule_text": "gRNA purity must be assessed by HPLC and/or mass spectrometry. The recommended acceptance criterion is purity of full-length gRNA product ≥80% (by HPLC/MS), with identification of impurities present at ≥1%. If ≥80% purity cannot be achieved due to method sensitivity limitations, further justification with impurity identification and risk assessment for off-target editing impact is required.",
+      "source_section": "Q&A — gRNA Purity (Dr. Kwilas)",
+      "source_page": 8,
+      "verbatim_quote": "we recommend the purity of gRNA full-length product to be greater than or equal to 80% and that you identify any impurities that are present at greater than or equal to 1%... if you're unable to obtain gRNA purity of greater than or equal to 80% due to this method sensitivity, we ask that you provide further justification for the proposed acceptance criterion. In your justification, we'd like you to include data on the impurities present and a risk assessment on how these impurities may affect the safety of your product as it pertains to off-target editing.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Method sensitivity limitations may justify lower purity with additional characterization.",
+      "cross_references": ["FDA-GT-GE-003"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-007",
+      "rule_text": "gRNA identity must be assessed by a sequencing assay that not only confirms the correct full-length gRNA sequence but also serves as an orthogonal purity assay to identify and quantify sequence variants. NGS at a read depth of 30X is recommended for this application.",
+      "source_section": "Q&A — gRNA Purity (Dr. Kwilas)",
+      "source_page": 9,
+      "verbatim_quote": "The sequencing assay should not only be used to confirm the correct full-length gRNA sequence, but it should also be used as an orthogonal purity assay to identify and quantify the presence of sequence variants... we also recommend using a sensitive, high-throughput sequencing method, such as next-generation sequencing (NGS), which is more sensitive and has a better capacity for quantifying sequence variants as well... we recommend a read depth of 30X.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["FDA-GT-GE-006"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-008",
+      "rule_text": "Nonclinical pharmacology and toxicology data must support the overall goal of establishing rationale and safety of product administration in the intended clinical population. Sponsors should test the intended clinical product; if species-specific constraints require use of a surrogate product, the rationale for surrogate use and how surrogate data supports activity and safety of the intended human GE product must be provided.",
+      "source_section": "Nonclinical Recommendations (Dr. Sanduja)",
+      "source_page": 4,
+      "verbatim_quote": "We recommend that sponsors test the intended clinical product to demonstrate its activity and safety. If there are species-specific constraints between the human product and what could be tested in animals, whether these are models of disease or healthy animals, use of the surrogate product may be appropriate. And if that's the case, we request that sponsors provide their rationale for the use of the surrogate product, along with a discussion of how data generated using the surrogate product supports the activity and safety of the intended human GE product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Surrogate products acceptable with justification.",
+      "cross_references": ["FDA-CGT-PRE-003", "21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-009",
+      "rule_text": "Nonclinical studies must assess on- and off-target editing events using multiple methods. In silico prediction tools must be followed by biochemical and cellular assays using genome-wide and targeted approaches. Appropriate controls must be included; for ex vivo GE products, on/off-target characterization must be performed using the intended clinical cell type.",
+      "source_section": "Nonclinical Recommendations — Safety (Dr. Sanduja)",
+      "source_page": 4,
+      "verbatim_quote": "Sponsors should conduct appropriately designed in vitro and in vivo studies to evaluate safety, which involves identification and characterization of on- and off-target editing events. This should be done using multiple methods. In silico prediction tools are usually a good start, and they should be followed by biochemical and cellular assays to identify and validate on- and off-target events. We recommend using genome-wide and targeted approaches. Using more than one method is recommended to reduce bias... for ex vivo GE products, this should be evaluated using the intended clinical cell type.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "For in vivo GE products, cell types that can be edited based on in vivo biodistribution data should be evaluated.",
+      "cross_references": ["FDA-CGT-PRE-016", "FDA-CGT-PRE-019"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-010",
+      "rule_text": "Clinical dose levels for GE products must be proposed based on the activity and safety data from supporting nonclinical studies. The therapeutic editing threshold must be determined — the minimum number of corrected cells (ex vivo) or minimum percentage of editing in target tissues (in vivo) needed for clinical benefit. The method of dose level extrapolation from animals to humans must be justified with supporting data.",
+      "source_section": "Q&A — Clinical Dose Levels (Dr. Sanduja)",
+      "source_page": 9,
+      "verbatim_quote": "We recommend that sponsors propose clinical dose levels for GE products based on the activity and safety data from supporting nonclinical studies... it is critical to determine the degree of editing that is needed for the desired therapeutic effect—what we call in the guidance therapeutic editing threshold... A human-equivalent dose level should therefore be calculated based on minimally effective and safe dose information from nonclinical studies or clinical experience, as applicable.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Anatomical differences and ROA must be accounted for in dose extrapolation.",
+      "cross_references": ["FDA-GT-GE-001", "FDA-CGT-PRE-006"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-011",
+      "rule_text": "G-band karyotyping alone is NOT sufficient for assurance of chromosomal stability following genome editing. Sponsors must use sensitive assays to confirm chromosomal stability. For iPSC-derived GE products, whole genome sequencing (WGS) is highly recommended at 50–60X coverage to establish genetic and chromosomal stability throughout the manufacturing process.",
+      "source_section": "Q&A — Chromosomal Stability (Dr. Kwilas)",
+      "source_page": 12,
+      "verbatim_quote": "FDA recommends that sponsors utilize very sensitive assays to confirm chromosomal stability following genome editing. And this is to help ensure product safety... FDA highly recommends the use of whole genome sequencing to establish genetic consistency throughout the manufacturing process... we do recommend a 50X to a 60X coverage in these cases.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "G-band karyotyping may serve as supplementary data but is insufficient alone.",
+      "cross_references": ["FDA-GT-GE-004"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-012",
+      "rule_text": "If biodistribution data show that a GE product distributes to gonadal tissue and editing is observed in gonadal cell types, sponsors must proceed with a comprehensive assessment of the risk for germline transmission and the risk for developmental and reproductive toxicity. The determination of whether to conduct nonclinical safety evaluation of GE in gonadal tissue must be based on the biodistribution profile.",
+      "source_section": "Q&A — Reproductive Organ Safety (Dr. Sanduja)",
+      "source_page": 12,
+      "verbatim_quote": "The determination of whether to conduct additional nonclinical safety evaluation of genome editing in gonadal tissue should be based on the biodistribution profile of the human GE product. If the product distributes to gonadal tissue and editing is observed, then sponsors should proceed with a more comprehensive assessment of the risk... scenarios like this would require a more comprehensive assessment of potential for germline transmission, as well as the risk for development and reproductive toxicity.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "A stepwise, science-based, data-driven approach is recommended.",
+      "cross_references": ["FDA-CGT-PRE-019", "FDA-CGT-PRE-022"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-013",
+      "rule_text": "First-in-human clinical trials for GE products generally should enroll only subjects for whom no other treatment options are available or justified. Clinical development programs must address both the risks associated with the gene therapy product and the additional risks specific to genome editing, including off-target editing and unintended consequences of on-target editing.",
+      "source_section": "Clinical Recommendations (Dr. Imperato)",
+      "source_page": 6,
+      "verbatim_quote": "We acknowledge that genome editing products may have significant risks and an uncertain potential for benefit, so first-in-human trials involving these products generally should enroll only subjects for whom no other treatment options are available or justified... clinical development programs should address both the risks associated with the gene therapy product itself and the additional risks associated with the genome editing, as these may be discrete.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Subject selection depends on product-specific risk-benefit analysis; subjects with less advanced disease may be more appropriate in some cases.",
+      "cross_references": ["21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-014",
+      "rule_text": "Clinical trials for GE products must include staggered enrollment with a specified time interval between administration to sequential subjects within and between cohorts. The staggering interval must be sufficient to detect acute and subacute adverse events prior to treating additional subjects or escalating dose.",
+      "source_section": "Clinical Recommendations — Treatment Plan (Dr. Imperato)",
+      "source_page": 6,
+      "verbatim_quote": "We recommend that any risk or risks anticipated in association with the genome editing product be mitigated by staggered enrollment, with a specified time interval between administration to sequential subjects within and between cohorts. The staggering interval should be of sufficient duration to detect acute and subacute adverse events prior to treatment of additional subjects at the same dose, or prior to increasing the dose of subjects who are treated subsequently.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Staggering interval must also account for the expected duration of activity of the GE product.",
+      "cross_references": ["FDA-GT-GE-013"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-015",
+      "rule_text": "Long-term follow-up (LTFU) is a critical component of safety monitoring for GE products. Subjects must be asked to provide voluntary informed consent to LTFU prior to enrollment. LTFU should be conducted for up to 15 years after product administration. A plan must be provided for follow-up continuity, including funding, in the event the sponsor ceases to operate or withdraws the IND before completion of LTFU.",
+      "source_section": "Clinical Recommendations — LTFU (Dr. Imperato)",
+      "source_page": 7,
+      "verbatim_quote": "Prior to enrolling subjects in a clinical study that evaluates a human GE product, they should be asked to provide voluntary, informed consent to long term follow-up, or LTFU... we recommend, in accordance with our established guidance for long term follow-up, that sponsors conduct LTFU for up to 15 years after product administration... we also recommend that a plan be provided for follow-up, including funding, in the event that the sponsor ceases to operate or decides to inactivate, transfer, or withdraw the IND before the completion of the long term follow-up, to ensure subject safety.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Consistent with FDA LTFU guidance for gene therapy (see FDA-GT-LTFU-001).",
+      "cross_references": ["FDA-GT-LTFU-001", "FDA-GT-LTFU-002"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-016",
+      "rule_text": "Clinical trials for GE products must include a thorough safety monitoring strategy with a well-defined toxicity grading system, a toxicity management plan, and adequate monitoring for: off-target editing outcomes; unintended consequences of on-target editing; aberrant cellular and chromosomal changes; immunogenicity; and tumorigenicity. The monitoring plan and toxicity management strategy must be well described in the clinical protocol.",
+      "source_section": "Clinical Recommendations — Monitoring (Dr. Imperato)",
+      "source_page": 7,
+      "verbatim_quote": "A thorough safety monitoring strategy, with a well-defined toxicity grading system, and a toxicity management plan is crucial for clinical trials that evaluate human genome editing products. Specific consideration should be given by sponsors for adequate monitoring of any off-target editing and adequate assessment of the outcomes of off-target editing, as well as unintended consequences of on-target editing that are anticipated from nonclinical studies. Additional monitoring should also capture adverse events that are related to aberrant cellular and chromosomal changes, immunogenicity, and tumorigenicity. The product-related adverse event monitoring plan and toxicity grading and management strategy should be well described in the clinical protocol.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["FDA-GT-GE-015", "21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-017",
+      "rule_text": "When using donor templates in GE, template insertion must be characterized at the intended on-target site AND at potentially unintended sites (including off-target editing sites). For multiplex GE, the frequency of cells with different combinations of edits must be characterized to understand product composition and set thresholds for therapeutically active cells.",
+      "source_section": "Q&A — Donor Templates / Multiplex Editing (Dr. Kwilas)",
+      "source_page": 13,
+      "verbatim_quote": "we recommend characterizing template insertion at the intended as well as potentially unintended sites—for example, off-target editing sites... when you're performing multiplex genome editing, it is important to characterize the frequency of cells with different combinations of edits. This information is important to understand the composition of your product, as well as to set thresholds for the frequency of cells believed to be actual therapeutic active ingredients.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies when double-strand DNA breaks are introduced; also applies to unintended on-target insertion sites in multiplex editing.",
+      "cross_references": ["FDA-GT-GE-004", "FDA-GT-GE-009"]
+    },
+    {
+      "rule_id": "FDA-GT-GE-018",
+      "rule_text": "Analyses for potential on- and off-target editing considering population-specific genetic diversity must use a database appropriate and relevant to the target patient population. A reasonable variant allele frequency cutoff must be selected with appropriate justification. These analyses must be completed as part of nonclinical testing strategies performed prior to initiation of clinical studies.",
+      "source_section": "Q&A — Genetic Diversity and On/Off-target Editing (Dr. Sanduja)",
+      "source_page": 14,
+      "verbatim_quote": "what we do recommend is that sponsors use an appropriate database that is relevant to the patient population proposed under the clinical study to capture genetic heterogeneity. We recommend that you select a reasonable variant allele frequency and provide appropriate justification for your selection... we recommend that you perform these analyses and appropriately design confirmatory tests to measure editing potential at target sites. These analyses should be part of your nonclinical testing strategies that are performed prior to initiation of clinical studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "No specific public database is required or endorsed by FDA.",
+      "cross_references": ["FDA-GT-GE-009"]
+    }
+  ]
+}

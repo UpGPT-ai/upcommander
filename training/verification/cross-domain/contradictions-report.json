@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "title": "Cross-Domain Contradiction Report — output-v2 vs output-v3",
+    "generated": "2026-03-23",
+    "files_analyzed": {
+      "output_v2": [
+        "s-pharmacology/safety-pharmacology-rules.json",
+        "q-biotech/biotech-quality-rules.json",
+        "e-special-pops/special-populations-rules.json",
+        "q-cmc-methods/analytical-impurity-rules.json",
+        "q-stability/stability-rules.json",
+        "s-toxicology/nonclinical-requirements.json",
+        "e-safety-pharma/safety-reporting-rules.json",
+        "e-clinical-design/clinical-design-rules.json",
+        "regulations-crl/regulatory-requirements.json",
+        "regulations-crl/crl-deficiency-taxonomy-v2.json",
+        "m-multidisciplinary/multidisciplinary-rules.json",
+        "regulations-crl/jurisdiction-divergences.json",
+        "q-systems/quality-systems-rules.json"
+      ],
+      "output_v3": [
+        "who-regs/who-requirements.json",
+        "who-regs/japan-specific-requirements.json",
+        "who-regs/japan-vs-fda-ema.json",
+        "ema-pharma-gvp/eu-pharmacovigilance-rules.json",
+        "ema-pharma-gvp/gvp-unique-requirements.json",
+        "eu-law/eu-legislation-requirements.json",
+        "health-canada/health-canada-requirements.json",
+        "eu-gmp-ema/eu-gmp-rules.json",
+        "health-canada/canada-vs-fda-ema.json",
+        "eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "eu-law/eu-vs-fda-divergences.json"
+      ]
+    },
+    "analysis_method": "Pairwise comparison of overlapping topics across v2 and v3 rule files, plus intra-v3 consistency checks",
+    "total_contradictions_found": 11,
+    "severity_breakdown": {
+      "CRITICAL": 2,
+      "HIGH": 4,
+      "MEDIUM": 3,
+      "LOW": 2
+    }
+  },
+
+  "contradictions": [
+    {
+      "id": "CONTRA-001",
+      "severity": "CRITICAL",
+      "category": "Factual Contradiction",
+      "topic": "BCS Biowaivers — FDA Position on Class III",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "rule_id": "DIV-004",
+        "statement": "FDA: 'Class I only (high solubility + high permeability + rapid dissolution); Class III more restrictive'",
+        "implication": "FDA does NOT accept BCS Class III biowaivers; EMA is 'most permissive'"
+      },
+      "source_B": {
+        "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "rule_id": "DIV-016",
+        "statement": "FDA: 'BCS biowaiver for Class I AND Class III'",
+        "implication": "FDA accepts both BCS Class I and Class III biowaivers"
+      },
+      "analysis": "Direct factual contradiction. FDA's 2021 guidance 'Biopharmaceutics Classification System-Based Biowaivers' expanded BCS biowaiver eligibility to include Class III drugs with very rapid dissolution (85% in 15 min). Additionally, ICH M9 (2019) harmonized BCS-based biowaivers for Class I and Class III across ICH regions.",
+      "correct_source": "output-v3 (eu-gmp-vs-fda-cgmp.json) is correct that FDA accepts Class III. However, see CONTRA-002 for a related issue in the same file.",
+      "training_impact": "HIGH — A model trained on v2 would incorrectly advise sponsors that BCS Class III biowaivers are unavailable at FDA, potentially leading to unnecessary in vivo BE studies."
+    },
+    {
+      "id": "CONTRA-002",
+      "severity": "CRITICAL",
+      "category": "Factual Contradiction",
+      "topic": "BCS Biowaivers — EMA Position on Class III",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "rule_id": "DIV-004",
+        "statement": "EMA: 'Class I AND Class III accepted (high solubility + very rapid dissolution + similar excipients for Class III)'",
+        "implication": "EMA accepts BCS Class III biowaivers"
+      },
+      "source_B": {
+        "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "rule_id": "DIV-016",
+        "statement": "EMA BE Guideline: 'BCS biowaiver only for Class I'",
+        "implication": "EMA does NOT accept BCS Class III biowaivers"
+      },
+      "analysis": "Direct factual contradiction. The EMA Guideline on the Investigation of Bioequivalence (CPMP/EWP/QWP/1401/98 Rev. 1/Corr, 2010) does accept BCS Class III biowaivers under specific conditions (very rapid dissolution, qualitatively and quantitatively similar excipients). Furthermore, ICH M9 (adopted by EMA) explicitly covers Class I and Class III biowaivers. EMA accepts Class III biowaivers.",
+      "correct_source": "output-v2 (jurisdiction-divergences.json) is correct. EMA does accept BCS Class III biowaivers.",
+      "training_impact": "HIGH — A model trained on v3 would incorrectly advise that EMA rejects BCS Class III biowaivers, potentially leading to unnecessary clinical BE studies for EU submissions."
+    },
+    {
+      "id": "CONTRA-003",
+      "severity": "HIGH",
+      "category": "Factual Contradiction",
+      "topic": "EU Data Exclusivity — Nature of +1 Year Extension",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "rule_id": "DIV-021",
+        "statement": "EMA: '8 years data exclusivity + 2 years market exclusivity + 1 year pediatric extension = 8+2+1 formula'",
+        "implication": "The +1 year in the 8+2+1 formula is a pediatric extension"
+      },
+      "source_B": {
+        "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+        "rule_id": "DIV-006",
+        "statement": "EU: '8 years data exclusivity + 2 years marketing protection (8+2=10 total). Extendable to 11 years for significant new indication.'",
+        "implication": "The +1 year is triggered by a significant new therapeutic indication, NOT pediatric extension"
+      },
+      "analysis": "Directive 2001/83/EC Article 10(1) fourth subparagraph provides the +1 year for a significant new indication with significant clinical benefit. The pediatric extension is a separate +6-month SPC extension under Regulation 1901/2006. v2 incorrectly attributes the +1 year to pediatric studies. v3 DIV-008 correctly identifies the pediatric reward as a '6-month SPC extension' separate from the 8+2+1 formula.",
+      "correct_source": "output-v3 (eu-vs-fda-divergences.json DIV-006 and DIV-008) is correct. The +1 year is for new indication; pediatric reward is a separate 6-month SPC extension.",
+      "training_impact": "HIGH — Conflating the new-indication +1 year with pediatric extension would produce incorrect regulatory strategy advice regarding EU market protection timelines."
+    },
+    {
+      "id": "CONTRA-004",
+      "severity": "HIGH",
+      "category": "Severity Rating Discrepancy",
+      "topic": "Japan Stability Conditions — Divergence Severity",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "rule_id": "DIV-009",
+        "statement": "divergence_level: 'moderate'",
+        "context": "Japan stability conditions rated as moderate divergence due to Zone IVb acceptance for tropical export markets"
+      },
+      "source_B": {
+        "file": "output-v3/who-regs/japan-vs-fda-ema.json",
+        "rule_id": "JP-013",
+        "statement": "gap_severity: 'LOW'",
+        "context": "Japan stability rated LOW because 'conditions are harmonized across Zone II'"
+      },
+      "analysis": "Both files address Japan's stability testing conditions relative to FDA/EMA. v2 rates it 'moderate' because Japan accepts Zone IVb data. v3 rates it 'LOW' because Japan is Zone II and harmonized. The disagreement stems from different framing: v2 considers the broader implication (Zone IVb acceptance complicates label claims), while v3 focuses on the standard Zone II alignment.",
+      "correct_source": "Both are partially valid perspectives, but for a global program the v2 'moderate' rating is more useful because it flags the Zone IVb complexity. Recommend standardizing to 'LOW' for Japan-domestic programs and 'MEDIUM' for global programs targeting tropical markets.",
+      "training_impact": "MEDIUM — Inconsistent severity ratings could cause contradictory risk assessments depending on which training data the model weights more heavily."
+    },
+    {
+      "id": "CONTRA-005",
+      "severity": "HIGH",
+      "category": "Incomplete Extraction / Scope Claim Violation",
+      "topic": "WHO Batch Requirements — v2 Claims WHO Scope but Misses WHO Divergence",
+      "source_A": {
+        "file": "output-v2/q-stability/stability-rules.json",
+        "rule_id": "batch_requirements.drug_product",
+        "statement": "minimum_batches: 3, scale: 'At least 2 of 3 at pilot scale; 3rd can be smaller if justified'",
+        "context": "v2 meta.scope includes 'WHO TRS 1010 Annex 10' but only states the ICH Q1A 3-batch requirement"
+      },
+      "source_B": {
+        "file": "output-v3/who-regs/who-requirements.json",
+        "rule_id": "who_vs_ich_divergences[2]",
+        "statement": "WHO allows 2 batches for uncomplicated FPPs with existing APIs (at least pilot scale); 3rd batch may be smaller",
+        "context": "WHO diverges from ICH Q1A by allowing reduced batch count for generics"
+      },
+      "analysis": "v2 lists 'WHO TRS 1010 Annex 10' in its scope but does not capture WHO's 2-batch allowance for generics. This is not a factual contradiction between the files — rather, v2 makes an incomplete extraction claim. A model reading v2 alone would apply the 3-batch rule universally, which is incorrect for WHO-prequalified generic products.",
+      "correct_source": "output-v3 correctly identifies the WHO divergence. v2 should either remove WHO from its scope or add the 2-batch allowance.",
+      "training_impact": "MEDIUM — Affects guidance for generic manufacturers targeting WHO prequalification; could result in unnecessarily large stability programs."
+    },
+    {
+      "id": "CONTRA-006",
+      "severity": "HIGH",
+      "category": "Incomplete Extraction / Scope Claim Violation",
+      "topic": "WHO Minimum Submission Data — v2 Claims WHO Scope but Misses 6-Month Allowance",
+      "source_A": {
+        "file": "output-v2/q-stability/stability-rules.json",
+        "rule_id": "storage_conditions.drug_substance.general_case.long_term[*].min_duration_months",
+        "statement": "min_duration_months: 12 (all options)",
+        "context": "v2 states 12 months minimum universally, despite claiming WHO TRS 1010 in scope"
+      },
+      "source_B": {
+        "file": "output-v3/who-regs/who-requirements.json",
+        "rule_id": "who_vs_ich_divergences[4]",
+        "statement": "WHO allows 6 months minimum for FPPs containing existing APIs",
+        "context": "WHO reduces minimum submission data requirement for generics with existing APIs"
+      },
+      "analysis": "Same pattern as CONTRA-005. v2 claims WHO scope but only captures the ICH 12-month minimum without noting the WHO 6-month reduction for existing APIs.",
+      "correct_source": "output-v3 correctly identifies the WHO divergence. v2 should either add the WHO exception or remove WHO TRS 1010 from its scope declaration.",
+      "training_impact": "MEDIUM — Could delay generic product submissions to WHO by advising sponsors to wait for 12 months of data when 6 months would suffice."
+    },
+    {
+      "id": "CONTRA-007",
+      "severity": "MEDIUM",
+      "category": "Data Extraction Discrepancy",
+      "topic": "Semi-Permeable Container Water Loss Rate Ratios",
+      "source_A": {
+        "file": "output-v2/q-stability/stability-rules.json",
+        "rule_id": "drug_product.semi_permeable_containers.water_loss_rate_ratios",
+        "statement": "Four ratios listed: 1.9 (60%/25%), 1.5 (60%/40%), 1.9 (65%/35%), 3.0 (75%/25%)",
+        "context": "Sourced from ICH Q1A(R2). Missing ratio 2.6."
+      },
+      "source_B": {
+        "file": "output-v3/who-regs/who-requirements.json",
+        "rule_id": "fpp_semi_permeable_containers.water_loss_rate_ratios",
+        "statement": "Four ratios listed: 1.5 (25C 40%/60%), 1.9 (30C 35%/65%), 2.6 (30C 35%/75%), 3.0 (40C 25%/75%)",
+        "context": "Sourced from WHO TRS 1010 Annex 10. Includes ratio 2.6 not present in v2."
+      },
+      "analysis": "v2 lists four ratios but is missing the 2.6 ratio for 30C 35%RH-to-75%RH conditions (Zone IVb relevant). v2 instead has a duplicate 1.9 entry. The WHO document includes the 2.6 ratio because it covers Zone IVb conditions not present in ICH Q1A. Since v2 claims WHO scope, the 2.6 ratio should be present. Additionally, v2's first entry (alt_rh 60%, ref_rh 25%, ratio 1.9) appears to be a mis-extraction — this should be 1.5 based on WHO data, or represents a different comparison from ICH Q1A.",
+      "correct_source": "output-v3 ratios align with WHO TRS 1010 Annex 10 Table 4. v2 ratios appear partially mis-extracted or incomplete.",
+      "training_impact": "MEDIUM — Incorrect water loss rate ratios could lead to erroneous stability assessments for semi-permeable container products in hot/humid climates."
+    },
+    {
+      "id": "CONTRA-008",
+      "severity": "MEDIUM",
+      "category": "Incomplete Information / Omission",
+      "topic": "FDA RSABE Scope — AUC vs Cmax Only",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "rule_id": "DIV-003",
+        "statement": "FDA: 'Reference-scaled average BE for Cmax when intra-subject CV >= 30%; GMR constraint 80-125%'",
+        "implication": "Implies RSABE applies only to Cmax"
+      },
+      "source_B": {
+        "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "rule_id": "DIV-016",
+        "statement": "FDA: 'RSABE allowed for BOTH AUC and Cmax in highly variable drugs'",
+        "implication": "RSABE applies to both AUC and Cmax"
+      },
+      "analysis": "FDA does allow RSABE for both AUC and Cmax for HVDPs. v2 only mentions Cmax, which is technically incomplete rather than wrong, but the omission of AUC creates a misleading picture. The contrast with EMA (which restricts RSABE to Cmax only) makes this omission significant for regulatory strategy.",
+      "correct_source": "output-v3 is correct. FDA allows RSABE for both PK parameters.",
+      "training_impact": "MEDIUM — Omitting FDA's AUC RSABE allowance could lead to larger-than-necessary study designs for highly variable drugs."
+    },
+    {
+      "id": "CONTRA-009",
+      "severity": "LOW",
+      "category": "Severity Scale Inconsistency",
+      "topic": "Inconsistent Severity/Divergence Rating Scales Across Files",
+      "source_A": {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "statement": "Uses three-level scale: 'aligned', 'moderate', 'significant'",
+        "context": "Applied to 21 divergences across FDA/EMA/PMDA"
+      },
+      "source_B_files": [
+        {
+          "file": "output-v3/who-regs/japan-vs-fda-ema.json",
+          "statement": "Uses three-level scale: 'HIGH', 'MEDIUM', 'LOW'"
+        },
+        {
+          "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+          "statement": "Uses four-level scale: 'critical', 'high', 'medium', 'low'"
+        },
+        {
+          "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+          "statement": "Uses four-level scale: 'critical', 'high', 'medium', 'low'"
+        }
+      ],
+      "analysis": "Three different severity scales are used across the corpus. v2 uses a 3-level qualitative scale (aligned/moderate/significant). v3 Japan uses a 3-level impact scale (HIGH/MEDIUM/LOW). v3 EU files use a 4-level scale (critical/high/medium/low). This makes cross-file severity comparison unreliable. For example, v2 'significant' and v3 'critical' may or may not represent the same level of concern.",
+      "correct_source": "N/A — this is a standardization issue. Recommend adopting the 4-level scale (critical/high/medium/low) uniformly.",
+      "training_impact": "LOW for individual rules, but systematically degrades the model's ability to prioritize risks across domains."
+    },
+    {
+      "id": "CONTRA-010",
+      "severity": "LOW",
+      "category": "Misplaced Content",
+      "topic": "Japan-Specific Content in WHO Requirements File",
+      "source_A": {
+        "file": "output-v3/who-regs/who-requirements.json",
+        "rule_id": "who_gmp_unique_requirements.key_differences",
+        "statement": "Contains entries about 'Japan and EU historically accepted doses at 100x clinical dose (mg/kg)' and 'PMDA requires Accredited Foreign Manufacturer status under PAL Article 13-3'",
+        "context": "These are Japan/PMDA-specific requirements, not WHO requirements"
+      },
+      "source_B": {
+        "file": "output-v3/who-regs/japan-specific-requirements.json",
+        "statement": "Contains the same Japan-specific information in its proper location",
+        "context": "This is the correct file for Japan-specific requirements"
+      },
+      "analysis": "The WHO requirements file contains two entries under 'who_gmp_unique_requirements' that are actually about Japan's carcinogenicity dose selection history and foreign manufacturer accreditation — neither is a WHO requirement. This content is duplicated in the correct Japan-specific file. The WHO file's section title 'WHO GMP unique requirements' is misleading when it contains Japan/EU content.",
+      "correct_source": "The content belongs in japan-specific-requirements.json only. It should be removed from who-requirements.json or the section should be clearly relabeled.",
+      "training_impact": "LOW — The misattribution could confuse the model about which authority mandates the requirement, but the factual content is correct."
+    },
+    {
+      "id": "CONTRA-011",
+      "severity": "MEDIUM",
+      "category": "eCTD Module Assignment Gap",
+      "topic": "Inconsistent eCTD Module Mapping Across File Sets",
+      "source_A": {
+        "file": "output-v2 files (jurisdiction-divergences.json, stability-rules.json, safety-pharmacology-rules.json)",
+        "statement": "Explicit eCTD module assignments provided: e.g., bioequivalence → M5.3.1, stability → M3.2.S.7/M3.2.P.8, safety pharmacology → M2.6.2/M4.2.1.3, labeling → M1.3.1",
+        "context": "v2 files systematically map rules to CTD modules"
+      },
+      "source_B": {
+        "file": "output-v3 files (all)",
+        "statement": "No systematic eCTD module assignments. Rules are organized by regulatory authority/topic but not mapped to CTD sections.",
+        "context": "v3 files focus on jurisdiction divergences without CTD placement guidance"
+      },
+      "analysis": "This is not a factual contradiction but a structural inconsistency. v2 provides CTD module mapping that a submission automation tool would need, while v3 does not. Where both file sets cover the same topic (e.g., stability, safety reporting, bioequivalence), a model cannot verify that v3 rules land in the same CTD sections as v2 rules because v3 omits this mapping entirely. No INCORRECT assignments were found — rather, v3 has NO assignments to verify against.",
+      "correct_source": "v2's module assignments appear correct where verifiable. v3 should be augmented with eCTD module mapping for completeness.",
+      "training_impact": "MEDIUM — A model trained on v3 alone would lack CTD placement guidance, reducing its utility for eCTD assembly automation."
+    }
+  ],
+
+  "topics_verified_consistent": [
+    {
+      "topic": "Climatic zone definitions (I, II, III, IVa, IVb)",
+      "files_compared": ["v2/q-stability/stability-rules.json", "v3/who-regs/who-requirements.json"],
+      "result": "CONSISTENT — Both files define identical temperature/humidity conditions for all five zones"
+    },
+    {
+      "topic": "Accelerated stability conditions (40C/75% RH, 6 months)",
+      "files_compared": ["v2/q-stability/stability-rules.json", "v3/who-regs/who-requirements.json"],
+      "result": "CONSISTENT — Universal accelerated conditions match across both extractions"
+    },
+    {
+      "topic": "Safety reporting timelines (7-day fatal, 15-day serious)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/eu-law/eu-vs-fda-divergences.json"],
+      "result": "CONSISTENT — 7-day and 15-day SUSAR/IND safety reporting timelines match"
+    },
+    {
+      "topic": "Foreign manufacturer accreditation (Japan PAL 13-3, 5-year renewal)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/who-regs/japan-specific-requirements.json", "v3/who-regs/japan-vs-fda-ema.json"],
+      "result": "CONSISTENT — All three files agree on PAL Article 13-3 basis, 5-year renewal, MHLW filing"
+    },
+    {
+      "topic": "Carcinogenicity harmonization (ICH S1C, 25x AUC ratio)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/who-regs/japan-vs-fda-ema.json"],
+      "result": "CONSISTENT — Both files agree on harmonized ICH S1C position with 25x AUC metric"
+    },
+    {
+      "topic": "QP (Qualified Person) system as EU-unique requirement",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json", "v3/eu-law/eu-vs-fda-divergences.json"],
+      "result": "CONSISTENT — All files correctly identify QP as EU-only with no FDA/PMDA equivalent"
+    },
+    {
+      "topic": "Biosimilar interchangeability (FDA-only designation)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json"],
+      "result": "CONSISTENT — Both files agree FDA is the only jurisdiction with formal interchangeability"
+    },
+    {
+      "topic": "NTI bioequivalence criteria (90-111% interval at FDA/EMA)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json"],
+      "result": "CONSISTENT — No contradicting data in v3 (v3 does not separately address NTI)"
+    },
+    {
+      "topic": "HVDP Cmax widening at EMA (69.84-143.19%)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json"],
+      "result": "CONSISTENT — Both files report the same EMA Cmax widening range"
+    },
+    {
+      "topic": "Japan re-examination period (8 years NCE, 10 years orphan)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/who-regs/japan-specific-requirements.json", "v3/who-regs/japan-vs-fda-ema.json"],
+      "result": "CONSISTENT — All files agree on 8-year standard and 10-year orphan periods"
+    },
+    {
+      "topic": "Orphan drug tax credit Japan (15%)",
+      "files_compared": ["v2/regulations-crl/jurisdiction-divergences.json", "v3/who-regs/japan-specific-requirements.json"],
+      "result": "CONSISTENT — Both files report 15%. v3 adds detail about PMDA grant deduction"
+    },
+    {
+      "topic": "ICH E5 bridging study framework (Japan-driven)",
+      "files_compared": ["v2/e-special-pops/special-populations-rules.json", "v3/who-regs/japan-specific-requirements.json"],
+      "result": "CONSISTENT — Both files correctly identify Japan as the primary driver of ICH E5"
+    },
+    {
+      "topic": "Photostability requirements (1.2M lux hours, 200 Wh/m2)",
+      "files_compared": ["v2/q-stability/stability-rules.json"],
+      "result": "CONSISTENT — No contradicting data in v3 (v3 does not separately extract photostability)"
+    },
+    {
+      "topic": "Safety pharmacology core battery timing (before FIH)",
+      "files_compared": ["v2/s-pharmacology/safety-pharmacology-rules.json"],
+      "result": "CONSISTENT — No contradicting data in v3 (v3 covers different domains)"
+    }
+  ]
+}

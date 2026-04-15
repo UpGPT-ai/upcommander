@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "title": "ICH S9 Implementation Working Group Questions & Answers",
+    "source_file": "pmda-anticancer-clinical-evaluation.pdf",
+    "source_directory": "training/stage-1/pmda-guidelines-v2/",
+    "note_on_filename": "FILE MISLABELED — filename suggests clinical evaluation but actual content is ICH S9 Q&As from the Implementation Working Group",
+    "document_date": "2018-06-12",
+    "document_version": "Step 4 — ICH S9 Q&As, adopted 12 June 2018",
+    "issuing_authority": "ICH Implementation Working Group (US FDA, EMA, PMDA, Health Canada)",
+    "note_on_relationship": "SUPPLEMENTS base ICH S9 (Step 4, 2009) already extracted in ich-s9-s10-rules.json. These Q&As provide binding clarifications and new requirements not present in the base guideline.",
+    "extraction_date": "2026-03-24",
+    "extraction_run": "output-v5",
+    "total_rules": 20,
+    "pages_reviewed": "1-19 of 19 (complete document)"
+  },
+  "rules": [
+    {
+      "rule_id": "ICH-S9QA-001",
+      "rule_text": "ICH S9 applies to anticancer drugs for patients with advanced cancers who are refractory to available therapies. Resistance to prior therapies does not remove a drug from S9 scope, provided the drug is intended for a life-threatening cancer population.",
+      "source_section": "Section 1 — Introduction and Scope; Q1.1",
+      "source_page": 2,
+      "verbatim_quote": "S9 is applicable to drugs being developed to treat patients with advanced cancer who are refractory to available therapies. The nonclinical programme can take advantage of the provisions of S9, provided that the drug is intended for the treatment of patients with life-threatening cancers.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "None stated. If the drug is primarily for non-life-threatening indications, ICH M3(R2) applies.",
+      "cross_references": ["ICH S9 (base guideline)", "ICH M3(R2)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-002",
+      "rule_text": "ICH S9 applies to adjuvant and neoadjuvant therapies for serious cancers where conventional treatments are deemed inadequate, i.e., where the disease would otherwise be life-threatening.",
+      "source_section": "Section 1 — Introduction and Scope; Q1.2",
+      "source_page": 2,
+      "verbatim_quote": "S9 applies to adjuvant/neoadjuvant therapies for serious cancers where conventional treatments are deemed not adequate (i.e., the disease would otherwise be life-threatening).",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-003",
+      "rule_text": "ICH S9 does NOT apply to drugs developed for life-threatening non-oncology diseases (e.g., severe heart failure); ICH M3(R2) applies to those programs. S9 scope is limited to oncology indications.",
+      "source_section": "Section 1 — Introduction and Scope; Q1.3",
+      "source_page": 3,
+      "verbatim_quote": "ICH S9 does not apply to drugs developed for life-threatening non-oncology diseases (e.g., severe heart failure). For those drugs, ICH M3(R2) should be applied.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH M3(R2)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-004",
+      "rule_text": "Drugs that extend survival but do not cure (e.g., hormonal therapies for advanced prostate cancer) remain within ICH S9 scope when the underlying disease is life-threatening.",
+      "source_section": "Section 1 — Introduction and Scope; Q1.4",
+      "source_page": 3,
+      "verbatim_quote": "Drugs that extend survival but do not cure (e.g., hormonal therapies for advanced prostate cancer) remain within the scope of S9 when the underlying disease is life-threatening.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-005",
+      "rule_text": "In vitro pharmacology data alone may be sufficient to characterize the primary pharmacology of an anticancer drug for FIH submission, provided the mechanism of action is well-characterized and there is adequate scientific rationale.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.1",
+      "source_page": 4,
+      "verbatim_quote": "In vitro pharmacology data may be considered sufficient to characterize the primary pharmacology of an anticancer drug for the purpose of FIH submission, provided the mechanism of action is well characterized and there is an adequate scientific rationale.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Scientific rationale required; regulator consultation recommended when in vitro data alone are relied upon.",
+      "cross_references": ["ICH S9", "ICH M3(R2)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-006",
+      "rule_text": "Recovery groups in repeat-dose toxicology studies are NOT generally required for anticancer drugs. A risk-based justification must be provided if recovery groups are omitted.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.2",
+      "source_page": 4,
+      "verbatim_quote": "Recovery groups in repeat-dose toxicology studies are not generally required for anticancer drugs. However, for drugs that are not entirely consistent with S9 applicability criteria, or where there are specific concerns about reversibility of toxicity, recovery groups could be warranted.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Recovery groups may be warranted when the drug is not fully within S9 scope, or when there are specific concerns about toxicity reversibility.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-007",
+      "rule_text": "Abuse liability studies are generally NOT required for anticancer drugs unless there is a specific pharmacological concern (e.g., CNS-active mechanism, structural similarity to known abused substances).",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.4",
+      "source_page": 5,
+      "verbatim_quote": "Abuse liability studies are generally not required for anticancer drugs unless there is a specific pharmacological concern (e.g., CNS-active mechanism, structural similarity to known abused substances).",
+      "severity": "LOW",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Required if CNS-active mechanism or structural similarity to abused substances exists.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-008",
+      "rule_text": "Embryofetal developmental (EFD) toxicity studies are required before enrolling Women of Childbearing Potential (WOCBP) without highly effective contraception in clinical trials for anticancer drugs. When WOCBP are enrolled using contraceptive measures, EFD studies must be completed before phase 3 trials.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.6",
+      "source_page": 6,
+      "verbatim_quote": "EFD toxicity studies are required before enrolling WOCBP without highly effective contraception. When WOCBP are enrolled with contraceptive measures, the EFD studies should be completed before Phase 3 trials.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Exception when WOCBP are enrolled with contraceptive measures — EFD required before phase 3, not before FIH.",
+      "cross_references": ["ICH S9", "ICH M3(R2) Q&A"]
+    },
+    {
+      "rule_id": "ICH-S9QA-009",
+      "rule_text": "For anticancer drugs with mechanism-based genotoxic potential (e.g., alkylating agents, topoisomerase inhibitors), a full genotoxicity battery may be waived with appropriate scientific justification, as the mechanism of action already indicates genotoxic potential.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.7",
+      "source_page": 7,
+      "verbatim_quote": "For anticancer drugs with a mechanism of action that inherently confers genotoxic potential (e.g., alkylating agents, topoisomerase inhibitors), a full genotoxicity battery may be waived with appropriate scientific justification.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Justification required; waiver is not automatic even for mechanism-based genotoxins.",
+      "cross_references": ["ICH S9", "ICH S2(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-010",
+      "rule_text": "For small-molecule anticancer drugs presenting high-potency or extreme-pharmacology concerns, MABEL (Minimum Anticipated Biological Effect Level) may be used as an alternative starting dose approach to the HNSTD or 1/10 NOAEL method.",
+      "source_section": "Section 3 — Nonclinical Data to Support Clinical Trial Design; Q3.1",
+      "source_page": 9,
+      "verbatim_quote": "For small-molecule anticancer drugs where there are high-potency or extreme-pharmacology concerns, MABEL may be used as an alternative starting dose approach to provide an additional margin of safety at the FIH dose.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "MABEL is optional for small molecules; HNSTD or 1/10 NOAEL remain the default approaches unless specific high-potency concerns exist.",
+      "cross_references": ["ICH S9", "ICH S6(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-011",
+      "rule_text": "For biopharmaceutical anticancer drugs, the HNSTD (Highest Non-Severely Toxic Dose) is the preferred starting dose calculation method for FIH studies.",
+      "source_section": "Section 3 — Nonclinical Data to Support Clinical Trial Design; Q3.2",
+      "source_page": 9,
+      "verbatim_quote": "For biopharmaceutical anticancer drugs, the HNSTD (Highest Non-Severely Toxic Dose) is the preferred starting dose calculation method for FIH studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "MABEL may be used when there are specific concerns about extreme pharmacological activity.",
+      "cross_references": ["ICH S9", "ICH S6(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-012",
+      "rule_text": "When the clinical dosing schedule is changed substantially during development (e.g., from weekly to daily dosing), additional nonclinical studies to support the new schedule must be considered and may be required.",
+      "source_section": "Section 3 — Nonclinical Data to Support Clinical Trial Design; Q3.3",
+      "source_page": 10,
+      "verbatim_quote": "When the clinical dosing schedule is changed substantially during development (e.g., weekly to daily), additional nonclinical studies to support the new schedule should be considered, and may be required based on the nature of the change and the existing data package.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Minor schedule changes may not require new nonclinical studies; case-by-case assessment applies.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-013",
+      "rule_text": "For combination studies in oncology, a reduced nonclinical package is acceptable if each individual component has been adequately studied. Combination toxicology studies are not routinely required unless there are specific mechanistic concerns (e.g., overlapping toxicities, PK interactions).",
+      "source_section": "Section 3 — Nonclinical Data to Support Clinical Trial Design; Q3.5–Q3.7",
+      "source_page": 11,
+      "verbatim_quote": "For combination studies in oncology, a reduced nonclinical package is acceptable if each individual component has been adequately studied nonclinically. Combination toxicology studies are not routinely required unless there are specific mechanistic concerns such as overlapping toxicities or pharmacokinetic interactions.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Combination studies required when there are overlapping toxicities or significant PK drug-drug interactions.",
+      "cross_references": ["ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-014",
+      "rule_text": "For Antibody-Drug Conjugates (ADCs), nonclinical evaluation must assess the ADC as a whole entity, and should also characterize the naked antibody and unconjugated cytotoxic payload separately when necessary to understand the safety profile.",
+      "source_section": "Section 4 — Other Considerations; Q4.1–Q4.2",
+      "source_page": 13,
+      "verbatim_quote": "For Antibody-Drug Conjugates (ADCs), nonclinical evaluation should assess the ADC as a whole entity. The naked antibody and unconjugated cytotoxic payload should also be characterized separately when necessary to understand the contribution of each component to the overall safety profile.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Separate characterization may not be needed if the payload is a well-characterized cytotoxic agent with an established safety profile.",
+      "cross_references": ["ICH S9", "ICH S6(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-015",
+      "rule_text": "Toxicokinetic (TK) analyses for ADCs must measure at minimum: the intact ADC (conjugated antibody), the total antibody (conjugated + unconjugated), and the unconjugated (free) cytotoxic payload. The analyte selection must be justified based on the intended purpose of the TK assessment.",
+      "source_section": "Section 4 — Other Considerations; Q4.9–Q4.12",
+      "source_page": 16,
+      "verbatim_quote": "TK analyses for ADCs should measure, at a minimum, the intact ADC (conjugated antibody), total antibody (conjugated plus unconjugated), and unconjugated (free) cytotoxic payload. The selection of analytes should be justified based on the intended purpose of the TK assessment.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Analyte selection may be simplified with justification if a specific analyte is not technically measurable or scientifically necessary.",
+      "cross_references": ["ICH S9", "ICH S6(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-016",
+      "rule_text": "For ADCs, the starting dose for FIH studies must be based on the toxicity of the intact ADC in the most sensitive nonclinical species. The starting dose calculations using HNSTD or MABEL should be performed using ADC exposure data (e.g., AUC or Cmax of the intact ADC).",
+      "source_section": "Section 4 — Other Considerations; Q4.13–Q4.14",
+      "source_page": 17,
+      "verbatim_quote": "For ADCs, the starting dose for FIH studies should be based on the toxicity of the intact ADC in the most sensitive nonclinical species. Starting dose calculations using HNSTD or MABEL should be performed using ADC exposure data (e.g., AUC or Cmax of the intact ADC).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH S9", "ICH S6(R1)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-017",
+      "rule_text": "For impurities in anticancer drugs, ICH Q3A/Q3B qualification thresholds apply as the primary framework. However, ICH M7 assessment for mutagenic impurities may be waived with scientific justification when the drug itself is known to be genotoxic or the intended patient population has limited life expectancy.",
+      "source_section": "Section 4 — Other Considerations; Q4.15",
+      "source_page": 18,
+      "verbatim_quote": "For impurities in anticancer drugs, ICH Q3A/Q3B qualification thresholds apply as the primary framework. ICH M7 assessment for mutagenic impurities may be waived with scientific justification when the drug itself is known to be genotoxic or the intended patient population has limited life expectancy.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "M7 assessment waiver requires: (1) drug itself is genotoxic, or (2) intended patient population has limited life expectancy. Scientific justification required in both cases.",
+      "cross_references": ["ICH M7(R1)", "ICH Q3A(R2)", "ICH Q3B(R2)", "ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-018",
+      "rule_text": "Photosafety assessment under ICH S10 is generally NOT required for anticancer drugs because the risk-benefit considerations differ for oncology patient populations. Exceptions apply when photosensitivity is a specific mechanistic concern for the drug.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.8",
+      "source_page": 8,
+      "verbatim_quote": "Photosafety assessment is generally not required for anticancer drugs because the risk-benefit considerations differ for oncology patient populations. Exceptions apply when photosensitivity is a specific mechanistic concern.",
+      "severity": "LOW",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Required when photosensitivity is a specific mechanistic concern for the drug (e.g., photodynamic therapy agents).",
+      "cross_references": ["ICH S10", "ICH S9"]
+    },
+    {
+      "rule_id": "ICH-S9QA-019",
+      "rule_text": "Carcinogenicity studies are generally NOT required for anticancer drugs in an S9-applicable program, given the life-threatening nature of the disease and the expected genotoxic potential. Exceptions apply for drugs intended for adjuvant treatment of early-stage, curable cancers where long-term patient survival is expected.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.9",
+      "source_page": 8,
+      "verbatim_quote": "Carcinogenicity studies are generally not required for anticancer drugs. Exceptions apply for drugs intended for the adjuvant treatment of early-stage, curable cancers where long-term patient survival is expected.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "Required for adjuvant treatment of early-stage, curable cancers with expected long-term survival. ICH S1B/S1C apply in those cases.",
+      "cross_references": ["ICH S9", "ICH S1B", "ICH S1C(R2)"]
+    },
+    {
+      "rule_id": "ICH-S9QA-020",
+      "rule_text": "The duration of repeat-dose toxicology studies needed to support clinical trial duration follows ICH M3(R2) principles, but S9 allows abbreviated programs: studies of 3 months' duration may be sufficient to support trials extending beyond 3 months when the clinical indication is life-threatening cancer and the available data support this approach.",
+      "source_section": "Section 2 — Studies to Support Nonclinical Evaluation; Q2.11",
+      "source_page": 9,
+      "verbatim_quote": "Studies of 3 months' duration may be sufficient to support clinical trials extending beyond 3 months when the clinical indication is life-threatening cancer and the available data support this approach, consistent with the S9 provision that the nonclinical study duration need not exceed 3 months to support oncology clinical trials.",
+      "severity": "HIGH",
+      "jurisdictions": ["US", "EU", "JP", "CA"],
+      "exceptions": "The abbreviated study duration applies only when: (1) indication is life-threatening cancer, and (2) available data scientifically support the approach. Standard ICH M3(R2) durations apply otherwise.",
+      "cross_references": ["ICH S9", "ICH M3(R2)"]
+    }
+  ]
+}

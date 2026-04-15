@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "title": "Human Gene Therapy for Rare Diseases",
+    "source_file": "Human_Gene_Therapy_Rare_Diseases.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "January 2020",
+    "document_version": "January 2020 (finalizes July 2018 draft)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 24,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-RD2-001",
+      "rule_text": "CMC requirements for GT products for rare diseases are the same as for other GT products; demonstrating process control to ensure a consistent product with defined CQAs for potency, identity, and purity is required to demonstrate compliance with licensure and regulatory requirements per 42 U.S.C. 262(a)(2)(C)(i), 21 CFR 601.2, 21 CFR 601.20, 21 CFR Part 610 Subpart B, and 21 CFR 312.23(a)(7).",
+      "source_section": "III. Chemistry, Manufacturing and Controls",
+      "source_page": 2,
+      "verbatim_quote": "The general chemistry, manufacturing and controls (CMC) considerations for product manufacturing, testing and release of GT products for rare diseases are the same as those described for other GT products... demonstrating process control to ensure a consistent product with defined CQAs for potency, identity and purity is required to demonstrate compliance with licensure and regulatory requirements.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Fewer manufacturing lots due to limited population may make it more challenging to establish CQAs and CPPs, but the requirement remains.",
+      "cross_references": ["42 U.S.C. 262(a)(2)(C)(i)", "21 CFR 601.2", "21 CFR 601.20", "21 CFR Part 610 Subpart B", "21 CFR 312.23(a)(7)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-002",
+      "rule_text": "Sponsors of rare disease GT products must establish a well-controlled manufacturing process with analytical assays to assess product CQAs (including concentration, potency, identity, and purity) as early as possible in development, optimally before administration of the GT product to the first subject.",
+      "source_section": "III. Chemistry, Manufacturing and Controls",
+      "source_page": 2,
+      "verbatim_quote": "It is even more critical that a sponsor of a GT product for a rare disease establish a well-controlled manufacturing process along with suitable analytical assays to assess product CQAs for product concentration, potency, identity and purity as early in development as possible, optimally before administration of the GT product to the first subject.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA-GT-CMC-001", "FDA-CGT-POT-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-003",
+      "rule_text": "Assays for characterization of product-related variants and impurities (e.g., empty and wild-type viral particles in viral vectors, variability in genetically-modified cell therapies from intrinsic donor cell differences) must be established; this is particularly critical for rare disease GT programs due to limited manufacturing lots.",
+      "source_section": "III. Chemistry, Manufacturing and Controls",
+      "source_page": 3,
+      "verbatim_quote": "Product-related variations may have a pronounced effect on the interpretability of clinical data in rare disease studies. Examples of product variations include impurities such as empty and wild-type viral particles in viral vectors, and variability in genetically-modified cell therapies caused by intrinsic differences among subject's cells. Establishment of assays for characterization of product-related variants and impurities will be important for program success.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-004",
+      "rule_text": "A potency test that measures a relevant biological activity must be qualified for suitability (i.e., accuracy, precision, sensitivity, specificity) prior to conducting trials intended to provide substantial evidence of effectiveness for a marketing application, and validated prior to licensure.",
+      "source_section": "III. Chemistry, Manufacturing and Controls",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that a potency test that measures a relevant biological activity be qualified for suitability (i.e., accuracy, precision, sensitivity, specificity) prior to conducting trials intended to provide substantial evidence of effectiveness for a marketing application and validated prior to licensure.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 610.10", "21 CFR 601.2", "FDA-CGT-POT-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-005",
+      "rule_text": "Manufacturing changes required for commercial-scale production should be implemented and product comparability demonstrated prior to initiation of clinical trials intended to provide substantial evidence of effectiveness for a marketing application; if comparability cannot be demonstrated, additional clinical data may be needed.",
+      "source_section": "III. Chemistry, Manufacturing and Controls",
+      "source_page": 3,
+      "verbatim_quote": "Sponsors are encouraged to consider, where possible, implementing manufacturing changes needed for commercial-scale production and demonstrating product comparability prior to the initiation of clinical trials intended to provide substantial evidence of effectiveness for a marketing application. Importantly, if product comparability cannot be demonstrated, additional clinical data may be needed.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 601.12", "ICH Q5E", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-006",
+      "rule_text": "Preclinical in vitro and in vivo proof-of-concept (POC) studies are recommended for rare disease GT products to establish feasibility and support the scientific rationale; the animal species and/or models selected must demonstrate a biological response to the investigational GT product similar to the expected response in humans.",
+      "source_section": "IV. Considerations for Preclinical Studies",
+      "source_page": 4,
+      "verbatim_quote": "Preclinical in vitro and in vivo proof-of-concept (POC) studies are recommended to establish feasibility and support the scientific rationale for administration of the investigational GT product in a clinical trial. The animal species and/or models selected should demonstrate a biological response to the investigational GT product that is similar to the expected response in humans.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-007",
+      "rule_text": "Biodistribution studies must be conducted to assess the distribution, persistence, and clearance of the vector from the site of administration to target and non-target tissues, including applicable biofluids (e.g., blood, lymph node fluid, cerebrospinal fluid) as feasible; these data must inform the design of preclinical toxicology studies and early-phase clinical trials.",
+      "source_section": "IV. Considerations for Preclinical Studies",
+      "source_page": 4,
+      "verbatim_quote": "Biodistribution studies should be conducted to assess the distribution, persistence, and clearance of the vector from the site of administration to target and non-target tissues, including applicable biofluids (e.g., blood, lymph node fluid, cerebrospinal fluid (CSF)) as feasible. These data can determine extent of tissue transduction and transgene expression, evaluate whether expression is transient or persistent, and guide the design of the preclinical toxicology studies as well as the early-phase clinical trials.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-012", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-008",
+      "rule_text": "Toxicology studies for rare disease GT products must incorporate elements of the planned clinical trial (dose range, ROA, dosing schedule, evaluation endpoints) to the extent feasible; study designs must be sufficiently comprehensive to permit identification, characterization, and quantification of potential local and systemic toxicities, their onset (acute or delayed), potential resolution, and dose-response relationship.",
+      "source_section": "IV. Considerations for Preclinical Studies",
+      "source_page": 4,
+      "verbatim_quote": "Toxicology studies for an investigational GT product should incorporate elements of the planned clinical trial (e.g., dose range, ROA, dosing schedule, evaluation endpoints, etc.) to the extent feasible. Study designs should be sufficiently comprehensive to permit identification, characterization, and quantification of potential local and systemic toxicities, their onset (i.e., acute or delayed) and potential resolution, and the effect of dose level on these findings.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-004"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-009",
+      "rule_text": "For a pediatric first-in-human clinical trial of a GT product that is associated with more than a minor increase over minimal risk, the preclinical program must include studies designed to demonstrate a prospect of direct benefit of the investigational GT product per 21 CFR 50.52; preclinical evidence of a prospect of direct benefit is most important when clinical evidence of effectiveness is not available from adult subjects with the same disease.",
+      "source_section": "IV. Considerations for Preclinical Studies",
+      "source_page": 3,
+      "verbatim_quote": "To justify conducting a pediatric first-in-human clinical trial that is associated with more than a minor increase over minimal risk, the preclinical program should include studies designed to demonstrate a prospect of direct benefit (21 CFR 50.52) of the investigational GT product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to pediatric FIH trials with more than minor increase over minimal risk only.",
+      "cross_references": ["21 CFR 50.52", "21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-010",
+      "rule_text": "For rare disease GT products for genetic diseases, the sponsor must perform genetic test(s) for the specific defect(s) of interest in all clinical trial subjects to ensure correct diagnosis; if no readily available reliable means of obtaining the needed genetic diagnosis exists, a companion diagnostic must be considered early in development.",
+      "source_section": "V.A Study Population",
+      "source_page": 5,
+      "verbatim_quote": "If the disease is caused by a genetic defect, the sponsor should perform genetic test(s) for the specific defect(s) of interest in all clinical trial subjects. This information is important to ensure correct diagnosis of the disorder of interest... if there are no readily available, reliable means of obtaining the needed genetic diagnosis, a companion diagnostic may be needed and therefore should be considered early in development.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "21 CFR 809.10"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-011",
+      "rule_text": "If an in vitro companion diagnostic device is needed to appropriately select patients for study (and later for treatment) with a rare disease GT product, the submission of the companion diagnostic marketing application and the BLA for the GT product must be coordinated to support contemporaneous marketing authorizations.",
+      "source_section": "V.A Study Population",
+      "source_page": 6,
+      "verbatim_quote": "If an in vitro companion diagnostic is needed to appropriately select patients for study (and later, once the GT product is approved, for treatment), then submission of the marketing application for the companion diagnostic and submission of the biologics license application for the GT product should be coordinated to support contemporaneous marketing authorizations.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 809.10", "21 CFR 601.2"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-012",
+      "rule_text": "Pre-existing antibodies to any component of the GT product (including the therapeutic agent) must be evaluated as they may pose a patient safety risk and limit therapeutic potential and potential for re-administration; if patients with pre-existing antibodies are excluded, contemporaneous development of a companion diagnostic to detect these antibodies is strongly recommended.",
+      "source_section": "V.A Study Population",
+      "source_page": 5,
+      "verbatim_quote": "Pre-existing antibodies to any component of the GT product may pose a potential risk to patient safety and limit its therapeutic potential. Antibodies to the gene therapeutic agent may also limit the potential for re-administration of the product... In such cases, the sponsor should strongly consider contemporaneous development of a companion diagnostic to detect antibodies to the GT product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD2-010", "FDA-GT-RD2-011"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-013",
+      "rule_text": "Pediatric investigations involving rare disease GT products must comply with 21 CFR Part 50, Subpart D: no greater than minimal risk → 21 CFR 50.51; greater than minimal risk with prospect of direct benefit → 21 CFR 50.52; greater than minimal risk without prospect of direct benefit but likely to yield generalizable knowledge → 21 CFR 50.53 (requires IRB finding of minor increase over minimal risk); otherwise approvable only via 21 CFR 50.54 process; parental permission and child assent required per 21 CFR 50.55.",
+      "source_section": "V.A Study Population",
+      "source_page": 6,
+      "verbatim_quote": "Clinical investigations involving no greater than minimal risk may involve children in accordance with 21 CFR 50.51. Clinical investigations involving greater than minimal risk but presenting the prospect of direct benefit to individual subjects may involve children as set forth in 21 CFR 50.52. An investigation involving greater than minimal risk and no prospect of direct benefit to individual subjects, but which is likely to yield generalizable knowledge about the disorder or condition, may involve children as set forth in 21 CFR 50.53, which includes, for example, a finding by the IRB that the risk represents a minor increase over minimal risk. FDA's regulation at 21 CFR 50.54 also addresses clinical investigations not otherwise approvable and describes a process to follow to determine whether the investigation may involve children. In addition to the determinations required under applicable provisions of subpart D, adequate provisions must be made to obtain the permission of the parents and the assent of the child as described in 21 CFR 50.55.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Each CFR provision has specific applicability criteria; use of 21 CFR 50.53 and 50.54 requires specific IRB/FDA determinations.",
+      "cross_references": ["21 CFR Part 50 Subpart D", "21 CFR 50.51", "21 CFR 50.52", "21 CFR 50.53", "21 CFR 50.54", "21 CFR 50.55"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-014",
+      "rule_text": "Enrollment of normal, healthy volunteers into rare disease GT clinical studies is generally not acceptable given the potential for permanent unintended effects and adverse effects from invasive administration procedures; a well-written informed consent document is also essential.",
+      "source_section": "V.A Study Population",
+      "source_page": 6,
+      "verbatim_quote": "The risks of most GT products include the possibility of unintended effects that may be permanent, along with adverse effects due to invasive procedures that may be necessary for product administration. Because of these risks, it is generally not acceptable to enroll normal, healthy volunteers into GT studies. A well-written informed consent document is also essential.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 50.25", "21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-015",
+      "rule_text": "The randomized, concurrent-controlled trial is the ideal standard for rare disease GT studies; sponsors should design their FIH study to be an adequate and well-controlled investigation that has the potential, depending on study results, to provide evidence of effectiveness to support a marketing application; randomization in early stages of development is encouraged.",
+      "source_section": "V.B Study Design",
+      "source_page": 7,
+      "verbatim_quote": "The randomized, concurrent-controlled trial is generally considered the ideal standard for establishing effectiveness and providing treatment-related safety data. Randomization in early stages of development is encouraged. Sponsors should consider designing their first-in-human study to be an adequate and well-controlled investigation that has the potential, depending on the study results, to provide evidence of effectiveness to support a marketing application.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Single-arm with historical controls may be acceptable when randomized controlled trial is not feasible.",
+      "cross_references": ["21 CFR 314.126", "21 CFR 601.25"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-016",
+      "rule_text": "When using a single-arm trial design with a historical control for rare disease GT products, knowledge of the natural history of disease is critical; the control and treatment populations must be adequately matched in terms of demographics, concurrent treatment, disease state, and other relevant factors.",
+      "source_section": "V.B Study Design",
+      "source_page": 7,
+      "verbatim_quote": "If a single-arm trial design with a historical control is necessary, then knowledge of the natural history of disease is critical. Natural history data may provide the basis of a historical control, but only if the control and treatment populations are adequately matched, in terms of demographics, concurrent treatment, disease state, and other relevant factors.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applicable only when randomized controlled trials are not feasible.",
+      "cross_references": ["21 CFR 314.126(b)", "FDA-GT-RD2-015"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-017",
+      "rule_text": "For rare disease GT studies enrolling subjects with different disease stages or severities, stratified randomization based on disease stage/severity must be considered to promote interpretability of data.",
+      "source_section": "V.B Study Design",
+      "source_page": 7,
+      "verbatim_quote": "To promote interpretability of data for studies that enroll subjects with different disease stages or severities, it is important for sponsors, when applicable, to consider stratified randomization based on disease stage/severity.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 314.126(b)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-018",
+      "rule_text": "Concomitant medications in rare disease GT trials: pre-study medications may be continued if discontinuation would pose substantial risk and if their use would not interfere with trial objectives; the dose of concomitant medication must be stable over a specific time period (e.g., until measurement of the primary endpoint), and this requirement must be justified in the clinical protocol.",
+      "source_section": "V.B Study Design",
+      "source_page": 8,
+      "verbatim_quote": "In some situations, study subjects may continue to take their pre-study medication(s), particularly if medication discontinuation would pose substantial clinical risks, and if use of such concomitant medication(s) would not interfere with the objectives of the trial. The dose of concomitant medication should be stable over a specific time period (e.g., until measurement of the primary endpoint), which should be justified in the clinical protocol.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies when pre-study medication discontinuation would pose substantial risk.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-019",
+      "rule_text": "For early-phase studies in subjects with serious or life-threatening rare diseases with unmet medical need, study treatment should ideally start at a potentially therapeutic dose; dose exploration may still be needed to identify an optimal therapeutic dose.",
+      "source_section": "V.C Dose Selection",
+      "source_page": 8,
+      "verbatim_quote": "For early-phase studies in subjects with serious or life-threatening diseases and an unmet medical need, study treatment should ideally start with a potentially therapeutic dose. However, dose exploration may be needed to identify an optimal therapeutic dose.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "FDA-CGT-EP-004"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-020",
+      "rule_text": "When repeat administration of a rare disease GT product is considered because transgene expression decreases over time, assessment of immunogenicity and its clinical manifestations (loss of treatment effect and toxicity) must be prioritized; subjects may experience enhanced immune responses with repeat administration.",
+      "source_section": "V.C Dose Selection",
+      "source_page": 9,
+      "verbatim_quote": "If the transgene expression and consequent treatment effect decrease over time, consideration may be given to repeat administration of the GT product. Subjects given a GT product may experience an enhanced immune response with repeat administration. Assessment of immunogenicity and its clinical manifestations (loss of treatment effect and toxicity) are even more critical in the setting of repeat administration.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RD2-012", "FDA-CGT-EP-010"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-021",
+      "rule_text": "Both innate and adaptive immune responses directed against GT product components (vector and/or transgene) must be monitored throughout the entire clinical trial; early development of appropriate assays to measure product-directed immune responses may be critical to program success.",
+      "source_section": "V.D Safety Considerations",
+      "source_page": 9,
+      "verbatim_quote": "Innate and adaptive immune responses directed against one or more components of GT products (e.g., against the vector and/or transgene) may impact product safety and efficacy. Early development of appropriate assays to measure product-directed immune responses may be critical to program success. Development of neutralizing and non-neutralizing immune responses that are directed against the product should be monitored throughout the clinical trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.32", "FDA-GT-RD2-012"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-022",
+      "rule_text": "Most first-in-human rare disease GT trials must stagger administration to consecutively enrolled subjects for at least an initial group, followed by staggering between dose cohorts; the optimal dosing interval between consecutively enrolled subjects and dose cohorts must be discussed with OTAT prior to beginning the trial.",
+      "source_section": "V.D Safety Considerations",
+      "source_page": 9,
+      "verbatim_quote": "Most first-in-human trials of GT products should stagger administration to consecutively enrolled subjects, for at least an initial group of subjects, followed by staggering between dose cohorts. This approach limits the number of subjects who might be exposed to an unanticipated safety risk. The optimal dosing interval between consecutively enrolled subjects and dose cohorts should be discussed with OTAT prior to beginning the trial.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-EP-006", "21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-023",
+      "rule_text": "Prior to commencing clinical trials of rare disease GT products, sponsors must discuss the primary efficacy endpoint(s) with FDA; disease-specific efficacy endpoints are often not available for rare diseases, and the pathophysiology and natural history must be understood as fully as possible to inform endpoint selection.",
+      "source_section": "V.E Efficacy Endpoints",
+      "source_page": 10,
+      "verbatim_quote": "Prior to commencing clinical trials of GT products for rare diseases, it is critically important to have a discussion with FDA about the primary efficacy endpoint(s). For many rare diseases, well-established, disease-specific efficacy endpoints are not available. Endpoint selection for a clinical trial of a GT product for a rare disease should consider... Sponsors should understand the pathophysiology and natural history of a disease as fully as possible at the outset of product development.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Full understanding of MOA is not required for marketing approval.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "21 CFR 601.25"]
+    },
+    {
+      "rule_id": "FDA-GT-RD2-024",
+      "rule_text": "Sponsors may pursue accelerated approval of a rare disease GT product under section 506(c) of the FD&C Act based on a surrogate endpoint; to support accelerated approval, the sponsor must provide sufficient data to support a conclusion that the proposed endpoint is reasonably likely to predict clinical benefit, at minimum demonstrating a correlation between changes in the surrogate endpoint and a beneficial clinical effect.",
+      "source_section": "V.E Efficacy Endpoints",
+      "source_page": 10,
+      "verbatim_quote": "Sponsors may consider seeking accelerated approval of a GT product for a rare disease pursuant to section 506(c) of the Federal Food, Drug, and Cosmetic Act (FD&C Act) based on a surrogate endpoint... To support accelerated approval, the sponsor should provide sufficient data to support a conclusion that the proposed endpoint is reasonably likely to predict clinical benefit. In general, such data should, at a minimum, demonstrate a correlation between changes in the proposed surrogate endpoint and a beneficial clinical effect.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Accelerated approval requires post-approval trials to verify clinical benefit.",
+      "cross_references": ["Section 506(c) FD&C Act", "21 CFR 601.41", "21 CFR 601.43"]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "generated": "2026-03-23",
+    "source": "CRL verification of 30 sampled letters"
+  },
+  "missed_deficiency_types": [
+    {
+      "pattern_name": "Device/Combination Product Deficiencies",
+      "description": "CRLs for combination products (drug-device) reference PMA (Premarket Approval) deficiencies for the device component. The taxonomy has no category for device-specific deficiencies in combination product applications.",
+      "examples_found": 1,
+      "example_crls": [
+        "NDA 208276"
+      ],
+      "suggested_taxonomy_id": "CAT-11-A",
+      "suggested_parent_category": "NEW: CAT-11 DEVICE_COMBINATION_PRODUCT"
+    },
+    {
+      "pattern_name": "Postmarketing Requirements (PMR/PMC)",
+      "description": "CRLs sometimes include postmarketing requirements under 505(o)(3) or 506B as a formal section. These are regulatory commitments that the taxonomy does not track as a distinct deficiency type.",
+      "examples_found": 2,
+      "example_crls": [
+        "NDA 215244",
+        "NDA 207987"
+      ],
+      "suggested_taxonomy_id": "CAT-09-C",
+      "suggested_parent_category": "CAT-09 ADMINISTRATIVE_REGULATORY"
+    },
+    {
+      "pattern_name": "Clinical Site GCP Inspection Deficiencies",
+      "description": "Good Clinical Practice (GCP) inspection findings at clinical trial sites, including unblinding events, protocol deviations, and data quality issues. Distinct from facility GMP inspections and from clinical efficacy assessment.",
+      "examples_found": 1,
+      "example_crls": [
+        "BLA 761192"
+      ],
+      "suggested_taxonomy_id": "CAT-04-H",
+      "suggested_parent_category": "CAT-04 CLINICAL"
+    },
+    {
+      "pattern_name": "Non-Proprietary Name/Suffix Assignment",
+      "description": "For biologics, FDA assigns a four-letter suffix for inclusion in the proper name. This is a distinct regulatory step referenced in CRLs for biosimilar and biologic products.",
+      "examples_found": 1,
+      "example_crls": [
+        "BLA 761133"
+      ],
+      "suggested_taxonomy_id": "CAT-09-C",
+      "suggested_parent_category": "CAT-09 ADMINISTRATIVE_REGULATORY"
+    }
+  ],
+  "miscategorization_patterns": [
+    {
+      "pattern": "Impurity qualification studies labeled as NONCLINICAL instead of CMC/Impurities",
+      "affected_taxonomy_ids": [
+        "CAT-05-A",
+        "CAT-03-G"
+      ],
+      "frequency": 3,
+      "suggested_fix": "When a CRL NONCLINICAL section discusses impurity specifications exceeding ICH Q3B(R2) qualification thresholds and requires toxicological qualification studies, the primary category should be CAT-03-G (Impurities) with a secondary tag of CAT-05 (Nonclinical). The CRL section header 'NONCLINICAL' is misleading - the root deficiency is an impurity specification issue requiring qualification data, not a standalone nonclinical safety study gap. Apply a dual-tagging approach: primary=CAT-03-G, secondary=CAT-05-A."
+    }
+  ],
+  "taxonomy_observations": [
+    "The taxonomy achieves 95.5% categorization accuracy and 97.2% coverage across 179 deficiencies in 30 sampled CRLs, indicating strong overall quality.",
+    "CAT-04-A (Safety Update) is confirmed as overwhelmingly boilerplate - present in 29 of 30 CRLs (96.7%) with identical 21 CFR 314.50(d)(5)(vi)(b) language. The 75.4% estimate in the taxonomy may undercount this.",
+    "CAT-01 (Labeling) subcategories are well-validated: PI format (CAT-01-A), carton/container (CAT-01-B), proprietary name (CAT-01-C), and medication guide (CAT-01-D) all appeared in the sample with clear CRL text matches.",
+    "18 of 40 taxonomy subcategories (45%) were not observed in the 30-CRL sample. Most of these are lower-frequency categories (CAT-06 through CAT-10) that would require a larger sample or targeted selection to validate.",
+    "The boundary between NONCLINICAL (CAT-05) and IMPURITIES (CAT-03-G) is the primary source of miscategorization. FDA CRL letters sometimes place impurity qualification discussions under a 'NONCLINICAL' section header, which can mislead taxonomy assignment.",
+    "Facility inspection deficiencies (CAT-02-C) are the most common non-labeling, non-safety-update deficiency type, appearing in 14 of 30 CRLs (46.7%).",
+    "The taxonomy correctly identifies FACILITY_GMP as a high-frequency category (44.5% per taxonomy vs. 46.7% observed in sample).",
+    "Biosimilar-specific deficiencies (comparative analytical assessment, highly similar determination) map reasonably well to existing CMC categories (CAT-03-A, CAT-03-E) but could benefit from a dedicated subcategory.",
+    "COVID-19 inspection delays are referenced in several 2020-2021 CRLs under facility inspection sections, representing a temporal phenomenon that the taxonomy does not need to separately capture.",
+    "The HUMAN FACTORS category (CAT-07) is well-validated by the Takeda and Luye CRLs, confirming that HF validation study failures and use-related risk analyses are real deficiency types found in CRL text."
+  ]
+}

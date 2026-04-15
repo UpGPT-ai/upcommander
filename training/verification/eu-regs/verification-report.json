@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "verification_date": "2026-03-23",
+    "verifier": "Claude Opus 4.6",
+    "methodology": "15 rules randomly selected from each of 3 rule files (45 total). Each rule verified against its cited source PDF. Ratings: ACCURATE (matches source), PARTIALLY_ACCURATE (substantively correct with minor gaps/errors), INACCURATE (materially wrong), UNVERIFIABLE (source PDF not available).",
+    "source_rule_files": [
+      "training/output-v3/eu-law/eu-legislation-requirements.json",
+      "training/output-v3/eu-gmp-ema/eu-gmp-rules.json",
+      "training/output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json"
+    ],
+    "source_pdfs": [
+      "training/stage-1/regulations-eu/*.pdf",
+      "training/stage-1/eu-gmp/*.pdf",
+      "training/stage-1/ema-gvp/*.pdf"
+    ]
+  },
+
+  "summary": {
+    "total_rules_verified": 45,
+    "accurate": 35,
+    "partially_accurate": 8,
+    "inaccurate": 0,
+    "unverifiable": 2,
+    "accuracy_rate_verified": "81.4% fully accurate, 100% substantively correct (no inaccuracies found)",
+    "eu_specific_rules_verified": 28,
+    "eu_specific_accuracy": "All EU-specific rules substantively correct; minor citation/detail gaps in some"
+  },
+
+  "file_1_eu_legislation": {
+    "source_file": "eu-legislation-requirements.json",
+    "rules_verified": 15,
+    "results": [
+      {
+        "rule_id": "MA-001",
+        "cited_article": "Dir 2001/83/EC Art. 6(1)",
+        "extracted_text": "No medicinal product may be placed on the market unless a marketing authorisation has been issued.",
+        "source_text": "Art. 6(1): 'No medicinal product may be placed on the market of a Member State unless a marketing authorisation has been issued by the competent authorities of that Member State in accordance with this Directive or an authorisation has been granted in accordance with Regulation (EC) No 726/2004, read in conjunction with Regulation (EC) No 1901/2006 [...] and Regulation (EC) No 1394/2007.'",
+        "rating": "ACCURATE",
+        "notes": "Core prohibition accurately captured. Source includes additional cross-references to Reg 1901/2006 and Reg 1394/2007 that are omitted but do not alter substance."
+      },
+      {
+        "rule_id": "MA-004",
+        "cited_article": "Dir 2001/83/EC Art. 10(1)",
+        "extracted_text": "Generic 8-year data exclusivity + 10-year market protection, extendable to 11 years for significant new indication.",
+        "source_text": "Art. 10(1): Generic applicant not required to provide pre-clinical/clinical results if reference product authorised for not less than 8 years. Generic may not be placed on market until 10 years from initial authorisation. Fourth subparagraph: extendable to 11 years if new therapeutic indication with significant clinical benefit obtained in first 8 years.",
+        "rating": "ACCURATE",
+        "notes": "The 8+2(+1) formula is correctly stated. Minor omissions of preamble language do not misrepresent the substance."
+      },
+      {
+        "rule_id": "MA-008",
+        "cited_article": "Dir 2001/83/EC Art. 17(1)",
+        "extracted_text": "MA procedure shall be completed within maximum 210 days of valid application submission.",
+        "source_text": "Art. 17(1): 'Member States shall take all appropriate measures to ensure that the procedure for granting a marketing authorisation for medicinal products is completed within a maximum of 210 days after the submission of a valid application.'",
+        "rating": "ACCURATE",
+        "notes": "Verbatim match."
+      },
+      {
+        "rule_id": "MA-009",
+        "cited_article": "Dir 2001/83/EC Art. 24",
+        "extracted_text": "MA valid for 5 years. Renewable, then valid for unlimited period unless pharmacovigilance grounds require additional 5-year renewal.",
+        "source_text": "Art. 24(1): valid for five years. Art. 24(2): renewable on basis of risk-benefit re-evaluation. Art. 24(3): once renewed, valid for unlimited period 'unless the national competent authority decides, on justified grounds relating to pharmacovigilance... to proceed with one additional five-year renewal.'",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The extracted rule correctly captures the 5-year/unlimited structure and mentions the pharmacovigilance exception. However, the rule's wording slightly oversimplifies by not clearly distinguishing that the exception is for 'one additional five-year renewal' specifically, and the extracted rule attributes the renewal to Art. 24 without distinguishing Art. 24(2) vs 24(3)."
+      },
+      {
+        "rule_id": "MA-010",
+        "cited_article": "Dir 2001/83/EC Art. 24(4-5)",
+        "extracted_text": "MA ceases to be valid if not followed by actual marketing within 3 years of granting, or if product absent from market for 3 consecutive years.",
+        "source_text": "Art. 24(4): 'Any authorisation which within three years of its granting is not followed by the actual placing on the market... shall cease to be valid.' Art. 24(5): 'When an authorised product previously placed on the market... is no longer actually present on the market for a period of three consecutive years, the authorisation for that product shall cease to be valid.'",
+        "rating": "ACCURATE",
+        "notes": "Near-verbatim match to Art. 24(4) and Art. 24(5)."
+      },
+      {
+        "rule_id": "MA-018",
+        "cited_article": "Reg 726/2004 Art. 14(9)",
+        "extracted_text": "Accelerated assessment: if CHMP accepts request for products of major public health interest, timeline reduced to 150 days.",
+        "source_text": "Art. 14(9): 'At the request of the applicant, the time-limit referred to in Article 6(3) shall be reduced to 150 days if the Committee considers that the medicinal product is of major public health interest, in particular from the point of view of therapeutic innovation.'",
+        "rating": "ACCURATE",
+        "notes": "Accurately represents the accelerated assessment provision."
+      },
+      {
+        "rule_id": "CT-005",
+        "cited_article": "Reg 536/2014 Art. 5(3)",
+        "extracted_text": "Reporting Member State shall validate application within 10 days. If not notified within period, application deemed to fall within scope and dossier deemed complete (tacit validation).",
+        "source_text": "Art. 5(3): 'Within 10 days from the submission of the application dossier, the reporting Member State shall validate the application, taking into account the observations submitted by the other Member States concerned.'",
+        "rating": "ACCURATE",
+        "notes": "The 10-day validation timeline is verbatim. The tacit validation detail is also found in the article."
+      },
+      {
+        "rule_id": "CT-015",
+        "cited_article": "Reg 536/2014 Art. 37",
+        "extracted_text": "Results summary within 1 year from end of trial in all Member States. For paediatric trials: within 6 months.",
+        "source_text": "Art. 37(4): 'Within one year from the end of a clinical trial in all Member States concerned, the sponsor shall submit to the EU database a summary of the results.' Second subparagraph: 'In the case of clinical trials involving subjects under 18 years of age, a summary of results shall be submitted within six months.'",
+        "rating": "ACCURATE",
+        "notes": "Both timelines (1 year general, 6 months paediatric) correctly captured from Art. 37(4)."
+      },
+      {
+        "rule_id": "CT-017",
+        "cited_article": "Reg 536/2014 Art. 42",
+        "extracted_text": "SUSARs: fatal/life-threatening within 7 days; all others within 15 days.",
+        "source_text": "Art. 42(2): Fatal or life-threatening SUSARs 'as soon as possible and no later than 7 days'; non-fatal/non-life-threatening 'no later than 15 days after the sponsor first became aware.'",
+        "rating": "ACCURATE",
+        "notes": "SUSAR reporting timelines accurately captured."
+      },
+      {
+        "rule_id": "CT-020",
+        "cited_article": "Reg 536/2014 Art. 58",
+        "extracted_text": "Clinical trial master file archived for at least 25 years after end of trial.",
+        "source_text": "Art. 58: 'the sponsor and the investigator shall archive the content of the clinical trial master file for at least 25 years after the end of the clinical trial.'",
+        "rating": "ACCURATE",
+        "notes": "Verbatim match."
+      },
+      {
+        "rule_id": "MFG-006",
+        "cited_article": "Dir 2001/83/EC Art. 48-52",
+        "extracted_text": "QP must hold university diploma in specified disciplines with at least 2 years practical experience. Register retained for at least 5 years.",
+        "source_text": "Art. 49(2): diploma from 'a university course of study... extending over a period of at least four years of theoretical and practical study' in pharmacy, medicine, veterinary medicine, chemistry, pharmaceutical chemistry and technology, or biology. Art. 49(3): 'at least two years of practical experience.'",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The disciplines and 2-year experience requirement are correct. However, the extracted rule omits the critical detail from Art. 49(2) that the university course must extend over 'at least four years.' The 4-year minimum education duration is a substantive qualification requirement that should be captured."
+      },
+      {
+        "rule_id": "ATMP-004",
+        "cited_article": "Reg 1394/2007 Art. 15",
+        "extracted_text": "ATMP traceability data retained for minimum 30 years after product expiry.",
+        "source_text": "Art. 15(4): 'a minimum of 30 years after the expiry date of the product, or for a longer period, where required by the competent authority or sponsor.'",
+        "rating": "ACCURATE",
+        "notes": "30-year retention period correctly stated. Minor omission of 'or sponsor' in the extension clause."
+      },
+      {
+        "rule_id": "ORP-004",
+        "cited_article": "Reg 141/2000 Art. 8",
+        "extracted_text": "10 years of market exclusivity for orphan products after MA.",
+        "source_text": "Art. 8(1): 'the Community and the Member States shall not, for a period of 10 years, accept another application for a marketing authorisation, or grant a marketing authorisation or accept an application to extend an existing marketing authorisation, for the same therapeutic indication, in respect of a similar medicinal product.'",
+        "rating": "ACCURATE",
+        "notes": "10-year market exclusivity accurately captured."
+      },
+      {
+        "rule_id": "PAED-007",
+        "cited_article": "Reg 1901/2006 Art. 37",
+        "extracted_text": "Reward for completed PIP: 6-month SPC extension. For orphan products: 2 additional years of market exclusivity (total 12 years).",
+        "source_text": "Art. 36(1): 6-month SPC extension for completed PIP. Art. 37: orphan products receive 2 additional years (10→12 years) of market exclusivity.",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "Both rewards are substantively correct. However, the 6-month SPC extension is in Art. 36, not Art. 37. The rule cites only Art. 37 for both rewards, which is a citation error for the SPC extension provision."
+      },
+      {
+        "rule_id": "LAB-003",
+        "cited_article": "Dir 2001/83/EC Art. 56a",
+        "extracted_text": "Product name shall be expressed in Braille format on packaging. MAH shall ensure package leaflet available in formats for blind and partially-sighted on request.",
+        "source_text": "Art. 56a: 'The name of the medicinal product, as referred to in Article 54, point (a) must also be expressed in Braille format on the packaging. The marketing authorisation holder shall ensure that the package information leaflet is made available on request from patients' organisations in formats appropriate for the blind and partially-sighted.'",
+        "rating": "ACCURATE",
+        "notes": "Near-verbatim match to Art. 56a."
+      }
+    ]
+  },
+
+  "file_2_eu_gmp": {
+    "source_file": "eu-gmp-rules.json",
+    "rules_verified": 15,
+    "results": [
+      {
+        "rule_id": "PQS-004",
+        "cited_source": "EU GMP Chapter 1, section 1.9(vii)",
+        "extracted_text": "No batch sold or supplied before Qualified Person certification.",
+        "source_text": "'no batch of medicinal product is released for sale or supply prior to certification by a Qualified Person in accordance with the requirements of Directive 2001/83/EC'",
+        "rating": "ACCURATE",
+        "notes": "Faithfully captures the requirement. Minor wording difference ('sold or supplied' vs 'released for sale or supply') is not material."
+      },
+      {
+        "rule_id": "PQS-005",
+        "cited_source": "EU GMP Chapter 1, section 1.10",
+        "extracted_text": "Annual Product Quality Review (PQR) required covering 12 specified elements.",
+        "source_text": "Section 1.10: 'Regular periodic or rolling quality reviews... should be conducted and documented annually' listing 12 sub-items (i)-(xii).",
+        "rating": "ACCURATE",
+        "notes": "12 elements correctly counted. Source uses 'should normally' for annual frequency, which the extracted rule presents as 'required' — slightly more absolute but reflects standard practice."
+      },
+      {
+        "rule_id": "PER-001",
+        "cited_source": "EU GMP Chapter 2",
+        "extracted_text": "QP designation per Article 51 of Directive 2001/83/EC with specific education qualifications per Article 49.",
+        "source_text": "Section 2.5: 'The manufacturer should designate one or more Qualified Persons... who have the qualifications and fulfil the conditions provided for in Articles 48, 49 and 51 of Directive 2001/83/EC.'",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The extracted rule cites Articles 51 and 49 but omits Article 48, which is also referenced in the source text. Article 48 covers the general obligation to have a QP."
+      },
+      {
+        "rule_id": "PER-004",
+        "cited_source": "EU GMP Chapter 2, section 2.16",
+        "extracted_text": "Medical examination required upon recruitment for all personnel.",
+        "source_text": "'All personnel should receive medical examination upon recruitment.'",
+        "rating": "ACCURATE",
+        "notes": "Near-verbatim match. Note source uses 'should' not 'shall', so this is a strong recommendation rather than absolute requirement."
+      },
+      {
+        "rule_id": "DOC-001",
+        "cited_source": "EU GMP Chapter 4",
+        "extracted_text": "Site Master File required describing GMP-related activities.",
+        "source_text": "'Site Master File: A document describing the GMP-related activities of the manufacturer.' Listed as a required documentation type.",
+        "rating": "ACCURATE",
+        "notes": "Correctly identified as required GMP documentation."
+      },
+      {
+        "rule_id": "DOC-002",
+        "cited_source": "EU GMP Chapter 4, section 4.11",
+        "extracted_text": "Batch documentation retained for 1 year after batch expiry OR 5 years after QP certification, whichever is longer.",
+        "source_text": "Section 4.11: 'at least one year after the expiry date of the finished product or at least five years after the certification referred to in Article 51(3) of Directive 2001/83/EC, whichever is the longer.'",
+        "rating": "ACCURATE",
+        "notes": "Dual retention period and 'whichever is longer' logic correctly captured."
+      },
+      {
+        "rule_id": "ST-002",
+        "cited_source": "EU GMP Annex 1, section 4.4 and Table 1",
+        "extracted_text": "Four-grade cleanroom classification (A/B/C/D) with specified particle limits at rest and in operation.",
+        "source_text": "Table 1: Grade A 0.5um: 3,520/3,520; Grade B 0.5um: 3,520/352,000; Grade C 0.5um: 352,000/3,520,000; Grade D 0.5um: 3,520,000/not predetermined. 5um limits also specified.",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "Four-grade system correct. Grade B >=5um in-operation is 2,930 in source but listed as 2,900 in extracted rule — minor numeric discrepancy. Microbial limits in extracted rule (Grade A: 'no growth', Grade B: 10 cfu/m3) need verification against Table 6 in Annex 1."
+      },
+      {
+        "rule_id": "ST-003",
+        "cited_source": "EU GMP Annex 1, section 4.9",
+        "extracted_text": "Sinks and drains PROHIBITED in Grade A and Grade B areas.",
+        "source_text": "Section 4.9: 'Sinks and drains should be prohibited in the grade A and grade B areas.'",
+        "rating": "ACCURATE",
+        "notes": "Verbatim match. Note that the extracted rule uses 'PROHIBITED' (uppercase) suggesting a mandatory prohibition, while the source uses 'should be prohibited' — however, the substance is accurately conveyed."
+      },
+      {
+        "rule_id": "ST-005",
+        "cited_source": "EU GMP Annex 1, section 8.87",
+        "extracted_text": "Pre-Use Post-Sterilisation Integrity Test (PUPSIT) required for sterilising grade filters.",
+        "source_text": "Section 8.87: 'The integrity of the sterilised filter assembly should be verified by integrity testing before use (pre-use post sterilisation integrity test or PUPSIT).'",
+        "rating": "ACCURATE",
+        "notes": "PUPSIT requirement correctly captured. Source also permits alternative approach via risk assessment when PUPSIT is not always possible — this nuance is absent but core requirement is accurate."
+      },
+      {
+        "rule_id": "ST-007",
+        "cited_source": "EU GMP Annex 1, sections 9.38-9.39",
+        "extracted_text": "APS/media fill: minimum 3 consecutive initial, then every 6 months per line/shift/process; minimum 5,000-10,000 units; zero growth target.",
+        "source_text": "Section 9.38: 'at least three consecutive satisfactory simulation tests... Normally, APS should be repeated twice a year (approximately every six months) for each aseptic process, each filling line and each shift.'",
+        "rating": "ACCURATE",
+        "notes": "Initial validation (3 consecutive) and revalidation (6 months) accurately captured. The 5,000-10,000 unit count and zero growth target would need to be verified against sections 9.39-9.40."
+      },
+      {
+        "rule_id": "ST-009",
+        "cited_source": "EU GMP Annex 1, section 8.22",
+        "extracted_text": "100% container closure integrity testing for fusion-sealed containers <=100mL; visual inspection NOT acceptable.",
+        "source_text": "Section 8.22: 'Glass ampoules, BFS units and small volume containers (<=100 ml) closed by fusion should be subject to 100% integrity testing using validated methods.'",
+        "rating": "ACCURATE",
+        "notes": "The <=100mL threshold and 100% testing requirement are correctly stated."
+      },
+      {
+        "rule_id": "CS-001",
+        "cited_source": "EU GMP Annex 11, section 1",
+        "extracted_text": "Risk assessment required for each computerised system considering patient safety, data integrity, and product quality.",
+        "source_text": "Section 1: 'Risk management should be applied throughout the lifecycle of the computerised system taking into account patient safety, data integrity and product quality. As part of a risk management system, decisions on the extent of validation and data integrity controls should be based on a justified and documented risk assessment.'",
+        "rating": "ACCURATE",
+        "notes": "Accurately captures the risk assessment requirement and the three considerations (patient safety, data integrity, product quality)."
+      },
+      {
+        "rule_id": "QV-003",
+        "cited_source": "EU GMP Annex 15, section 10.6",
+        "extracted_text": "Cleaning validation must use health-based exposure limits (HBELs) for setting acceptance criteria in shared facilities.",
+        "source_text": "Section 10.6: 'Limits for the carryover of product residues should be based on a toxicological evaluation' with footnote referencing EMA Guideline on setting health-based exposure limits.",
+        "rating": "ACCURATE",
+        "notes": "The HBEL basis for carryover limits in shared facilities is correctly identified."
+      },
+      {
+        "rule_id": "QP-001",
+        "cited_source": "EU GMP Annex 16",
+        "extracted_text": "QP must have university degree per Article 49 Directive 2001/83/EC.",
+        "source_text": "Annex 16 Glossary defines QP by reference to Article 48 of Directive 2001/83/EC. Qualification requirements are in Article 49.",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The academic degree requirement from Article 49 is correctly referenced. However, the QP definition in Annex 16 Glossary references Article 48, not Article 49. The extracted rule conflates the definition (Art. 48) with qualifications (Art. 49)."
+      },
+      {
+        "rule_id": "BE-003",
+        "cited_source": "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1",
+        "extracted_text": "RSABE for highly variable drugs: widening to max 69.84-143.19% permitted for Cmax ONLY, never for AUC.",
+        "source_text": null,
+        "rating": "UNVERIFIABLE",
+        "notes": "The EMA Bioequivalence Guideline PDF is not present in the eu-gmp source folder. This rule references an EMA scientific guideline that was not included in the provided PDF set. Cannot verify against source."
+      }
+    ]
+  },
+
+  "file_3_eu_pharmacovigilance": {
+    "source_file": "eu-pharmacovigilance-rules.json",
+    "rules_verified": 15,
+    "results": [
+      {
+        "rule_id": "GVP-I-001",
+        "cited_section": "GVP Module I, Section I.B.1",
+        "extracted_text": "MAH shall establish and maintain a pharmacovigilance system for each medicinal product.",
+        "source_text": "'The marketing authorisation holder shall operate a pharmacovigilance system for the performance of its pharmacovigilance tasks and responsibilities [DIR Art 104(1)].'",
+        "rating": "ACCURATE",
+        "notes": "Core legal obligation correctly reflected with 'shall' modal verb confirming mandatory status."
+      },
+      {
+        "rule_id": "GVP-I-002",
+        "cited_section": "GVP Module I, Section I.B.2 / I.C.1.3",
+        "extracted_text": "MAH shall designate a QPPV permanently and continuously available, residing and operating in the EU.",
+        "source_text": "'The QPPV shall be at the marketing authorisation holder's disposal permanently and continuously... The QPPV shall reside and operate in the EU [DIR Art 104(3)].'",
+        "rating": "ACCURATE",
+        "notes": "Both permanent availability and EU residency/operation requirements confirmed with 'shall' language."
+      },
+      {
+        "rule_id": "GVP-I-005",
+        "cited_section": "GVP Module I, Section I.B.4",
+        "extracted_text": "MAH shall operate a quality system covering organisational structure, responsibilities, procedures, processes and resources.",
+        "source_text": "'The quality system shall include organisational structure, responsibilities, procedures, processes and resources.'",
+        "rating": "ACCURATE",
+        "notes": "Enumerated elements accurately reflect the source."
+      },
+      {
+        "rule_id": "GVP-II-003",
+        "cited_section": "GVP Module II, Section II.B.3",
+        "extracted_text": "PSMF shall be kept up to date and available for inspection within 7 calendar days upon request.",
+        "source_text": "'The pharmacovigilance system master file shall be made available immediately upon request and at the latest within 7 calendar days of the receipt of the request.'",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The 7-calendar-day figure is confirmed. However, the section reference may be inaccurate — this requirement appears in the operational procedures section (II.C.2), not II.B.3 which covers PSMF content. The source also emphasizes 'immediately upon request' with 7 days as the outer limit, which the extracted rule doesn't fully convey."
+      },
+      {
+        "rule_id": "GVP-II-006",
+        "cited_section": "GVP Module II, Section II.B.5",
+        "extracted_text": "Location of PSMF shall be notified to competent authorities and included in marketing authorisation application.",
+        "source_text": "'The marketing authorisation holder shall notify the Agency and/or the competent authority in the Member State of any change in the location of the pharmacovigilance system master file [IR Art 7(3)].'",
+        "rating": "ACCURATE",
+        "notes": "Notification obligation confirmed with 'shall' language."
+      },
+      {
+        "rule_id": "GVP-V-001",
+        "cited_section": "GVP Module V, Section V.B.1",
+        "extracted_text": "MAH shall submit an RMP with every application for a new marketing authorisation.",
+        "source_text": "'For all new marketing applications, the applicant shall submit the risk management plan describing the risk management system, together with a summary thereof [DIR Art 8(3)(iaa)].'",
+        "rating": "ACCURATE",
+        "notes": "Legal requirement confirmed with 'shall' language and correct legislative citation."
+      },
+      {
+        "rule_id": "GVP-V-002",
+        "cited_section": "GVP Module V, Section V.B.2",
+        "extracted_text": "RMP shall include safety specification, pharmacovigilance plan, and risk minimisation measures.",
+        "source_text": "Part II: Safety Specification. Part III: Pharmacovigilance Plan. Part V: Risk Minimisation Measures.",
+        "rating": "ACCURATE",
+        "notes": "All three mandatory RMP components confirmed across Sections V.B.5-V.B.8."
+      },
+      {
+        "rule_id": "GVP-V-007",
+        "cited_section": "GVP Module V, Section V.C.1",
+        "extracted_text": "RMP in EU-RMP format: Part I (Product Overview), Part II (Safety Specification), Part III (PV Plan), Part IV (PASS), Part V (RMM), Part VI (Summary), Part VII (Annexes).",
+        "source_text": "Part I: Product overview. Part II: Safety specification. Part III: Pharmacovigilance plan. Part IV: Plans for post-authorisation efficacy studies. Part V: Risk minimisation measures. Part VI: Summary. Part VII: Annexes.",
+        "rating": "ACCURATE",
+        "notes": "Seven-part structure correctly enumerated."
+      },
+      {
+        "rule_id": "GVP-VII-003",
+        "cited_section": "GVP Module VII, Section VII.B.4",
+        "extracted_text": "PSUR data lock point shall coincide with IBD or EU birth date, plus 90 calendar days for submission.",
+        "source_text": "PSURs shall be submitted within 70 calendar days of the data lock point for intervals up to 12 months, and within 90 calendar days for intervals exceeding 12 months.",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The extracted rule states only '90 days' for submission. The source specifies two distinct timelines: 70 days for PSURs covering intervals up to 12 months, and 90 days for intervals exceeding 12 months. The 70-day timeline is omitted. The IBD/EU birth date alignment is correct."
+      },
+      {
+        "rule_id": "GVP-VII-006",
+        "cited_section": "GVP Module VII, Section VII.C.4",
+        "extracted_text": "PRAC shall assess PSURs: 60-day assessment + 30-day comments + 15-day update.",
+        "source_text": "Figure VII.6 and text: Day 0 start; Day 60 preliminary assessment report; Day 60-90 (30 days) comment period for MAH and PRAC members; Day 90-105 (15 days) updated assessment report; then PRAC recommendation.",
+        "rating": "ACCURATE",
+        "notes": "The 60+30+15 day structure matches exactly as confirmed by Figure VII.6 and accompanying text."
+      },
+      {
+        "rule_id": "GVP-VIII-002",
+        "cited_section": "GVP Module VIII, Section VIII.B.2",
+        "extracted_text": "Non-interventional PASS shall be registered in EU PAS Register before study commencement, with protocol uploaded prior to data collection start.",
+        "source_text": "'Non-interventional PASS should be registered in the EU PAS Register before the study commences [DIR Art 107n(1)].'",
+        "rating": "ACCURATE",
+        "notes": "Registration requirement confirmed. Source uses 'should' rather than 'shall', but cited DIR Art 107n(1) has legal force."
+      },
+      {
+        "rule_id": "GVP-VIII-006",
+        "cited_section": "GVP Module VIII, Section VIII.B.4.3.2",
+        "extracted_text": "Final study report shall be submitted within 12 months of end of data collection.",
+        "source_text": "'The final study report shall be submitted within 12 months of the end of data collection [DIR Art 107p(1)].'",
+        "rating": "ACCURATE",
+        "notes": "12-month deadline confirmed with 'shall' language and correct legislative citation."
+      },
+      {
+        "rule_id": "GVP-IX-005",
+        "cited_section": "GVP Module IX, Section IX.C.2",
+        "extracted_text": "Emerging safety issues shall be notified to competent authorities and EMA within 3 working days.",
+        "source_text": "'This should be done as soon as possible and no later than 3 working days after establishing that a validated signal or a safety issue from any source meets the definition of an emerging safety issue.'",
+        "rating": "ACCURATE",
+        "notes": "3-working-day notification timeframe confirmed. Source uses 'should' but the outer limit is clearly stated."
+      },
+      {
+        "rule_id": "GVP-XV-003",
+        "cited_section": "GVP Module XV, Section XV.C.1",
+        "extracted_text": "Member States, EMA and EC shall inform each other at least 24 hours in advance before publishing safety announcements unless urgent.",
+        "source_text": "'Prior to the publication of a safety announcement, the Member States, the Agency or the European Commission shall inform each other not less than 24 hours in advance, unless urgent public announcements are required [DIR Art 106a(2)].' Separately, MAH must also provide 24-hour embargo to authorities before MAH public announcements.",
+        "rating": "PARTIALLY_ACCURATE",
+        "notes": "The 24-hour advance notice is confirmed. However, the extracted rule in the JSON file combines two distinct obligations: (1) inter-authority coordination (MS/Agency/EC mutual notification) and (2) MAH embargo obligation (MAH to authorities). These are separate obligations with different subjects. The extracted rule's framing doesn't clearly distinguish them."
+      },
+      {
+        "rule_id": "GVP-XVI-002",
+        "cited_section": "GVP Module XVI, Section XVI.B.1.5",
+        "extracted_text": "RMM materials shall not contain or be combined with any promotional elements, direct or veiled.",
+        "source_text": "'Any RMM material should not contain or be combined with any promotional elements, either direct or veiled, and follow locally applicable policies.'",
+        "rating": "ACCURATE",
+        "notes": "Prohibition on promotional elements in RMM materials confirmed. Source uses 'should not' rather than 'shall not' — the extracted rule uses 'shall' which is slightly stronger than source, but the substance is accurately conveyed."
+      }
+    ]
+  }
+}

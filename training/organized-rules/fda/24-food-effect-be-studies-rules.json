@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Guidance for Industry: Food-Effect Bioavailability and Fed Bioequivalence Studies",
+    "source_file": "training/stage-1/fda-guidance-v2/24-food-effect-be-studies.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "December 2002",
+    "document_version": "Final Guidance",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-FOODBE-001",
+      "rule_text": "A food-effect BA study must be conducted for all new chemical entities (NCEs) during the IND period.",
+      "source_section": "Section III.A.1 (INDs/NDAs)",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that a food-effect BA study be conducted for all new chemical entities (NCEs) during the IND period.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320", "21 CFR 314.50(d)(3)", "21 CFR 314.94(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-002",
+      "rule_text": "Food-effect BA studies should be conducted early in the drug development process to guide and select formulations for further development and to provide information for Clinical Pharmacology and Dosage and Administration labeling sections.",
+      "source_section": "Section III.A.1 (INDs/NDAs)",
+      "source_page": 3,
+      "verbatim_quote": "Food-effect BA studies should be conducted early in the drug development process to guide and select formulations for further development. Food-effect BA information should be available to design clinical safety and efficacy studies and to provide information for the CLINICAL PHARMACOLOGY and/or DOSAGE AND ADMINISTRATION sections of product labels.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 201"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-003",
+      "rule_text": "If a sponsor makes changes in components, composition, and/or method of manufacture in the clinical trial formulation prior to approval, BE must be demonstrated between the to-be-marketed formulation and the clinical trial formulation.",
+      "source_section": "Section III.A.1 (INDs/NDAs)",
+      "source_page": 3,
+      "verbatim_quote": "If a sponsor makes changes in components, composition, and/or method of manufacture in the clinical trial formulation prior to approval, BE should be demonstrated between the to-be-marketed formulation and the clinical trial formulation.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320", "SUPAC-IR guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-004",
+      "rule_text": "For ANDAs, a BE study under fed conditions is required for all orally administered immediate-release drug products, with limited exceptions.",
+      "source_section": "Section III.A.2 (ANDAs)",
+      "source_page": 3,
+      "verbatim_quote": "In addition to a BE study under fasting conditions, we recommend a BE study under fed conditions for all orally administered immediate-release drug products, with the following exceptions:",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "When both test product and RLD are rapidly dissolving, have similar dissolution profiles, and contain a BCS Class I drug substance; or when the DOSAGE AND ADMINISTRATION section of the RLD label states the product should be taken only on an empty stomach; or when the RLD label does not make any statements about food effect on absorption or administration.",
+      "cross_references": ["21 CFR 320", "21 CFR 314.94(a)(7)", "BCS guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-005",
+      "rule_text": "Food-effect BA and fed BE studies must be performed for all modified-release dosage forms.",
+      "source_section": "Section III.B (Modified-Release Drug Products)",
+      "source_page": 4,
+      "verbatim_quote": "We recommend that food-effect BA and fed BE studies be performed for all modified-release dosage forms.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320", "SUPAC-MR guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-006",
+      "rule_text": "For modified-release ANDAs, a BE study under fed conditions must be conducted in addition to a BE study under fasting conditions.",
+      "source_section": "Section III.B.2 (ANDAs)",
+      "source_page": 4,
+      "verbatim_quote": "In addition to a BE study under fasting conditions, a BE study under fed conditions should be conducted for all orally administered modified-release drug products.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320", "21 CFR 314.94(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-007",
+      "rule_text": "For postapproval changes in an approved immediate- or modified-release drug product that requires in vivo redocumentation of BE under fasting conditions, fed BE studies are generally unnecessary.",
+      "source_section": "Section III (Recommendations for Food-Effect BA and Fed BE Studies)",
+      "source_page": 3,
+      "verbatim_quote": "For postapproval changes in an approved immediate- or modified-release drug product that requires in vivo redocumentation of BE under fasting conditions, fed BE studies are generally unnecessary.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.70", "SUPAC-IR guidance", "SUPAC-MR guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-008",
+      "rule_text": "The recommended study design is a randomized, balanced, single-dose, two-treatment (fed vs. fasting), two-period, two-sequence crossover design.",
+      "source_section": "Section IV.A (General Design)",
+      "source_page": 4,
+      "verbatim_quote": "We recommend a randomized, balanced, single-dose, two-treatment (fed vs. fasting), two-period, two-sequence crossover design for studying the effects of food on the BA of either an immediate-release or a modified-release drug product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Sponsor may propose alternative study designs with scientific rationale and justification in the study protocol.",
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-009",
+      "rule_text": "For a fed BE study, both test and reference formulations are administered following a test meal (fed condition), using a two-treatment, two-period, two-sequence crossover design.",
+      "source_section": "Section IV.A (General Design)",
+      "source_page": 4,
+      "verbatim_quote": "We recommend a similar, two-treatment, two-period, two-sequence crossover design for a fed BE study except that the treatments should consist of both test and reference formulations administered following a test meal (fed condition).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.94(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-010",
+      "rule_text": "An adequate washout period must separate the two treatments in food-effect BA and fed BE studies.",
+      "source_section": "Section IV.A (General Design)",
+      "source_page": 4,
+      "verbatim_quote": "An adequate washout period should separate the two treatments in food-effect BA and fed BE studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-011",
+      "rule_text": "Studies may be carried out in healthy volunteers; patient population is appropriate if safety concerns preclude enrollment of healthy subjects.",
+      "source_section": "Section IV.B (Subject Selection)",
+      "source_page": 5,
+      "verbatim_quote": "Both food-effect BA and fed BE studies can be carried out in healthy volunteers drawn from the general population. Studies in the patient population are also appropriate if safety concerns preclude the enrollment of healthy subjects.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Patient population when safety concerns preclude healthy subjects.",
+      "cross_references": ["21 CFR 320.21"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-012",
+      "rule_text": "A minimum of 12 subjects must complete the food-effect BA and fed BE studies.",
+      "source_section": "Section IV.B (Subject Selection)",
+      "source_page": 5,
+      "verbatim_quote": "A minimum of 12 subjects should complete the food-effect BA and fed BE studies.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-013",
+      "rule_text": "In general, the highest strength of a drug product intended to be marketed should be tested in food-effect BA and fed BE studies.",
+      "source_section": "Section IV.C (Dosage Strength)",
+      "source_page": 5,
+      "verbatim_quote": "In general, the highest strength of a drug product intended to be marketed should be tested in food-effect BA and fed BE studies. In some cases, clinical safety concerns can prevent the use of the highest strength and warrant the use of lower strengths of the dosage form.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Clinical safety concerns may warrant use of lower strengths.",
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-014",
+      "rule_text": "For ANDAs, the same lot and strength used in the fasting BE study must be tested in the fed BE study.",
+      "source_section": "Section IV.C (Dosage Strength)",
+      "source_page": 5,
+      "verbatim_quote": "For ANDAs, the same lot and strength used in the fasting BE study should be tested in the fed BE study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.94(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-015",
+      "rule_text": "The test meal for food-effect BA and fed BE studies must be a high-fat (approximately 50% of total caloric content), high-calorie (approximately 800 to 1000 calories) meal.",
+      "source_section": "Section IV.D (Test Meal)",
+      "source_page": 5,
+      "verbatim_quote": "A high-fat (approximately 50 percent of total caloric content of the meal) and high-calorie (approximately 800 to 1000 calories) meal is recommended as a test meal for food-effect BA and fed BE studies.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "In NDAs, sponsor may choose to conduct food-effect BA studies using meals with different combinations of fats, carbohydrates, and proteins for exploratory or label purposes, but one of the meals must be the high-fat, high-calorie test meal described.",
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-016",
+      "rule_text": "The test meal must derive approximately 150, 250, and 500-600 calories from protein, carbohydrate, and fat, respectively.",
+      "source_section": "Section IV.D (Test Meal)",
+      "source_page": 5,
+      "verbatim_quote": "This test meal should derive approximately 150, 250, and 500-600 calories from protein, carbohydrate, and fat, respectively.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If the caloric breakdown is significantly different, the sponsor must provide a scientific rationale.",
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-017",
+      "rule_text": "The caloric breakdown of the test meal must be provided in the study report.",
+      "source_section": "Section IV.D (Test Meal)",
+      "source_page": 5,
+      "verbatim_quote": "The caloric breakdown of the test meal should be provided in the study report. If the caloric breakdown of the meal is significantly different from the one described above, the sponsor should provide a scientific rationale for this difference.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-018",
+      "rule_text": "For fasted treatments, subjects must fast overnight for at least 10 hours and be administered the drug product with 240 mL (8 fluid ounces) of water.",
+      "source_section": "Section IV.E (Administration)",
+      "source_page": 6,
+      "verbatim_quote": "Fasted Treatments: Following an overnight fast of at least 10 hours, subjects should be administered the drug product with 240 mL (8 fluid ounces) of water.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-019",
+      "rule_text": "For fasted treatments, no food must be allowed for at least 4 hours post-dose, and water must not be allowed for one hour before and after drug administration.",
+      "source_section": "Section IV.E (Administration)",
+      "source_page": 6,
+      "verbatim_quote": "No food should be allowed for at least 4 hours post-dose. Water can be allowed as desired except for one hour before and after drug administration.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-020",
+      "rule_text": "For fed treatments, subjects must fast overnight for at least 10 hours, start the recommended meal 30 minutes prior to drug administration, eat the meal in 30 minutes or less, and the drug product must be administered 30 minutes after start of the meal.",
+      "source_section": "Section IV.E (Administration)",
+      "source_page": 6,
+      "verbatim_quote": "Fed Treatments: Following an overnight fast of at least 10 hours, subjects should start the recommended meal 30 minutes prior to administration of the drug product. Study subjects should eat this meal in 30 minutes or less; however, the drug product should be administered 30 minutes after start of the meal.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-021",
+      "rule_text": "For fed treatments, the drug product must be administered with 240 mL (8 fluid ounces) of water, and no food must be allowed for at least 4 hours post-dose.",
+      "source_section": "Section IV.E (Administration)",
+      "source_page": 6,
+      "verbatim_quote": "The drug product should be administered with 240 mL (8 fluid ounces) of water. No food should be allowed for at least 4 hours post-dose.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-022",
+      "rule_text": "Subjects must receive standardized meals scheduled at the same time in each period of the study.",
+      "source_section": "Section IV.E (Administration)",
+      "source_page": 6,
+      "verbatim_quote": "Subjects should receive standardized meals scheduled at the same time in each period of the study.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-023",
+      "rule_text": "Timed samples in biological fluid (usually plasma) must be collected to permit characterization of the complete shape of the plasma concentration-time profile for the parent drug.",
+      "source_section": "Section IV.F (Sample Collection)",
+      "source_page": 6,
+      "verbatim_quote": "For both fasted and fed treatment periods, timed samples in biological fluid, usually plasma, should be collected from the subjects to permit characterization of the complete shape of the plasma concentration-time profile for the parent drug.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "It may be advisable to measure other moieties in the plasma, such as active metabolites.",
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-024",
+      "rule_text": "The following pharmacokinetic parameters must be obtained: AUC(0-inf), AUC(0-t), Cmax, Tmax, lag-time (tlag) for modified-release products if present, terminal elimination half-life, and other relevant pharmacokinetic parameters.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 6,
+      "verbatim_quote": "The following exposure measures and pharmacokinetic parameters should be obtained from the resulting concentration-time curves for the test and reference products in food-effect BA and fed BE studies: Total exposure, or area under the concentration-time curve (AUC0-inf, AUC0-t); Peak exposure (Cmax); Time to peak exposure (Tmax); Lag-time (tlag) for modified-release products, if present; Terminal elimination half-life; Other relevant pharmacokinetic parameters",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 320"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-025",
+      "rule_text": "Log-transformation of exposure measurements (AUC and Cmax) prior to analysis is required, and the 90 percent CI for the ratio of population geometric means must be provided for AUC(0-inf), AUC(0-t), and Cmax.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 7,
+      "verbatim_quote": "Log-transformation of exposure measurements (AUC and Cmax) prior to analysis is recommended. The 90 percent CI for the ratio of population geometric means between test and reference products should be provided for AUC0-inf, AUC0-t, and Cmax.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Statistical Approaches to Establishing Bioequivalence guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-026",
+      "rule_text": "For NDA food-effect BA studies, the fasted treatment serves as the reference; for ANDA fed BE studies, the RLD administered under fed conditions serves as the reference treatment.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 7,
+      "verbatim_quote": "For IND or NDA food-effect BA studies, the fasted treatment serves as the reference. For ANDA fed BE studies, the RLD administered under fed condition serves as the reference treatment.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.50(d)(3)", "21 CFR 314.94(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-027",
+      "rule_text": "For an NDA, absence of food effect on BA is not established if the 90% CI for the ratio of geometric means between fed and fasted treatments is not contained in the equivalence limits of 80-125 percent for either AUC(0-inf) (or AUC(0-t) when appropriate) or Cmax.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 7,
+      "verbatim_quote": "For an NDA, an absence of food effect on BA is not established if the 90 percent CI for the ratio of population geometric means between fed and fasted treatments, based on log-transformed data, is not contained in the equivalence limits of 80-125 percent for either AUC0-inf (AUC0-t when appropriate) or Cmax.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Statistical Approaches to Establishing Bioequivalence guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-028",
+      "rule_text": "For ANDA fed BE studies, BE is concluded when the 90% CI for the ratio of geometric means between test and RLD product is contained in the BE limits of 80-125 percent for AUC and Cmax.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 8,
+      "verbatim_quote": "For an ANDA, BE of a test product to the RLD product under fed conditions is concluded when the 90 percent CI for the ratio of population geometric means between the test and RLD product, based on log-transformed data, is contained in the BE limits of 80-125 percent for AUC and Cmax.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "No criterion applies to Tmax, but Tmax values for test and reference products are expected to be comparable based on clinical relevance.",
+      "cross_references": ["21 CFR 314.94(a)(7)", "Statistical Approaches to Establishing Bioequivalence guidance"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-029",
+      "rule_text": "The effect of food on the absorption and BA of a drug product must be described in the Clinical Pharmacology section of labeling; the Dosage and Administration section must provide instructions for drug administration in relation to food based on clinical relevance.",
+      "source_section": "Section V (Data Analysis and Labeling)",
+      "source_page": 7,
+      "verbatim_quote": "The effect of food on the absorption and BA of a drug product should be described in the CLINICAL PHARMACOLOGY section of the labeling. In addition, the DOSAGE AND ADMINISTRATION section of the labeling should provide instructions for drug administration in relation to food based on clinical relevance.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 201"]
+    },
+    {
+      "rule_id": "FDA-FOODBE-030",
+      "rule_text": "For NDA sprinkle formulations, additional in vivo relative BA studies must be performed by sprinkling the product on soft foods and comparing it to the product administered in the intact form on an empty stomach.",
+      "source_section": "Section VI.A (Sprinkles)",
+      "source_page": 8,
+      "verbatim_quote": "For the labeling to indicate that the drug product can be sprinkled on soft foods, additional in vivo relative BA studies should be performed by sprinkling the product on the soft foods to be listed in the labeling (test treatment) and comparing it to the product administered in the intact form (reference treatment), then administering both on an empty stomach.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.50(d)(3)"]
+    }
+  ]
+}

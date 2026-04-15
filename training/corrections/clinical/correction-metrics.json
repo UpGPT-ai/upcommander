@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "title": "ICH E-Series Correction Metrics",
+    "date": "2026-03-23",
+    "source_corrections_file": "training/verification/ich-clinical/corrections.json",
+    "output_file": "training/corrections/clinical/corrected-rules.json",
+    "verifier": "Claude Sonnet 4.6 — source PDFs read for each correction"
+  },
+
+  "summary": {
+    "total_corrections": 10,
+    "corrections_applied": 10,
+    "adversarial_tests_run": 10,
+    "adversarial_tests_passed": 9,
+    "adversarial_tests_failed": 1,
+    "issues_by_severity": {
+      "HIGH": 1,
+      "MEDIUM": 4,
+      "LOW": 5
+    },
+    "corrections_confirmed_accurate": 9,
+    "corrections_with_modified_outcome": 1,
+    "note": "All 10 corrections applied. CORR-006 adversarial test revealed the correction instruction contained an incorrect factual premise (Appendix A does list ADME and receptor sensitivity). Rule retained; attribution note added rather than items removed."
+  },
+
+  "details": [
+    {
+      "correction_id": "CORR-001",
+      "severity": "HIGH",
+      "file": "safety-reporting-rules.json",
+      "description": "PBRER annual submission deadline 90→70 days",
+      "pdf_read": "ICH E2C(R2), Section 2.8.3",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Verified Section 2.8.3 text directly: 6 or 12 months → 70 days; >12 months → 90 days. Unambiguous.",
+          "Checked for ad hoc PBRER deadline: 90 days unless otherwise specified — correctly added as separate field.",
+          "Checked whether E2C(R2) was superseded: No superseding guideline found; remains current ICH guidance.",
+          "Checked for any Q&A documents modifying the deadline: None found in available materials."
+        ],
+        "verdict": "Correction fully verified. The original rule was wrong. Annual PBRERs (12-month intervals) require 70 days, not 90. The 90-day deadline applies only to intervals exceeding 12 months."
+      }
+    },
+
+    {
+      "correction_id": "CORR-002",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "description": "SAE criteria: 5 formal + separate important medical event note",
+      "pdf_read": "ICH E2A, Sections II.B and III.A.2",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Verified E2A Section II.B for the 5 formal SAE criteria (death, life-threatening, hospitalisation, disability, congenital anomaly).",
+          "Verified Section III.A.2 treats 'important medical events' separately as a supplementary reporting consideration.",
+          "Checked whether any ICH Q&A reintegrates 'important medical event' as a 6th formal criterion: No — E2A Q&As confirm the supplementary nature.",
+          "Checked for any regional (FDA, EMA) divergence that would make 6 criteria correct: FDA 21 CFR 312.32 uses the same 5-criterion structure."
+        ],
+        "verdict": "Correction verified. 'Important medical event' is correctly separated into a supplementary note. The original 6-item flat list was a structural misrepresentation of E2A."
+      }
+    },
+
+    {
+      "correction_id": "CORR-003",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "description": "PBRER Section 7 title: 'Reporting Period' → 'Reporting Interval'",
+      "pdf_read": "ICH E2C(R2), Sections 2.9.2 and 3.7",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Checked Section 2.9.2 sample TOC: Uses 'Reporting Period' for Section 7 heading.",
+          "Checked Section 3.7 guidance body text: Uses 'Reporting Interval' as the section heading.",
+          "Internal inconsistency within E2C(R2): Section 3.7 guidance uses 'Reporting Interval'; sample TOC in 2.9.2 uses 'Reporting Period'.",
+          "Resolution: 'Reporting Interval' is the dominant term throughout the guideline body text and is the deliberate terminology choice per the correction guidance.",
+          "No superseding Q&A found that resolves this discrepancy in favor of 'Reporting Period'."
+        ],
+        "verdict": "Correction applied as directed. Minor internal inconsistency exists within E2C(R2) itself, but 'Reporting Interval' is the correct predominant term per guideline body text."
+      }
+    },
+
+    {
+      "correction_id": "CORR-004",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "description": "E19 mandatory safety data: split baseline (Section 2.3) from mandatory list (Section 2.4)",
+      "pdf_read": "ICH E19, Sections 2.3 and 2.4",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Verified Section 2.4 contains a 6-item mandatory safety data list; baseline data is not part of this list.",
+          "Verified Section 2.3 contains baseline data requirements as a distinct category.",
+          "Checked whether E19 was superseded or amended: E19 Step 4 2022 — current guidance.",
+          "Checked whether any regional implementation merges sections: No evidence found."
+        ],
+        "verdict": "Correction verified. The original 7-item list incorrectly merged two distinct ICH E19 sections into a single list."
+      }
+    },
+
+    {
+      "correction_id": "CORR-005",
+      "severity": "MEDIUM",
+      "file": "special-populations-rules.json",
+      "rule_id": "E6-018",
+      "description": "E6-018 section citation: '3.3' → '3.11.4'",
+      "pdf_read": "ICH E6(R3), Sections 3.3 and 3.11.4",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Confirmed from E6(R3) TOC: Section 3.3 = Allocation of Activities (delegation of trial activities).",
+          "Confirmed from E6(R3) TOC and pages 30-34: Section 3.11.4 = Monitoring; 3.11.4.2 = Centralised Monitoring.",
+          "Verified rule text content (risk-based monitoring, centralised monitoring) matches 3.11.4 not 3.3.",
+          "Checked whether E6(R3) has any content about monitoring under section 3.3: No — 3.3 is exclusively about allocation/delegation of activities."
+        ],
+        "verdict": "Correction verified. Original citation '3.3' was wrong. Risk-based and centralised monitoring requirements are in Section 3.11.4."
+      }
+    },
+
+    {
+      "correction_id": "CORR-006",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E5-002",
+      "description": "E5-002 Appendix A intrinsic factors: ADME and receptor sensitivity attribution",
+      "pdf_read": "ICH E5(R1), Appendix A (factor table)",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": false,
+        "adversarial_finding": "CORRECTION INSTRUCTION INCORRECT. The correction stated that ADME characteristics and receptor sensitivity are 'discussed in body text but NOT enumerated in Appendix A's factor table.' Direct reading of the Appendix A intrinsic ethnic factors table in E5(R1) confirms both items ARE listed in the table. The original rule correctly attributed them to Appendix A.",
+        "checks_performed": [
+          "Read Appendix A table directly (E5(R1), pages 11-14): Table explicitly lists 'ADME characteristics' and 'Receptor sensitivity' as intrinsic factors.",
+          "Checked the Glossary definition of intrinsic factors (page 8): Does not enumerate ADME/receptor sensitivity — creating a source of confusion.",
+          "The correction instruction appears to have relied on the Glossary definition rather than the Appendix A table.",
+          "Outcome: Rule text is factually correct as written. Items correctly attributed to Appendix A."
+        ],
+        "outcome": "Rule retained with section_note added confirming accuracy. Items NOT removed. Correction instruction was based on incorrect premise about Appendix A content.",
+        "verdict": "ADVERSARIAL TEST FAILED. The original rule was accurate. The correction would have introduced an error by removing valid Appendix A citations."
+      }
+    },
+
+    {
+      "correction_id": "CORR-007",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E6-005",
+      "description": "E6-005 section citation: add 'see also Section 2.8.1'",
+      "pdf_read": "ICH E6(R3), Principle 4 and Section 2.8.1",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Verified Principle 4 text in E6(R3): States freely given informed consent should be obtained from every participant prior to clinical trial participation.",
+          "Verified Section 2.8.1 text: 'the investigator should comply with the applicable regulatory requirement(s) and should adhere to GCP and to the ethical principles that have their origin in the Declaration of Helsinki.'",
+          "Confirmed that the clause 'in accordance with regulatory requirements' in the rule text derives from Section 2.8.1, not from Principle 4 alone.",
+          "No superseding content found that would make the combined citation incorrect."
+        ],
+        "verdict": "Correction verified. Secondary citation 'see also Section 2.8.1' correctly acknowledges the source of the regulatory requirements clause."
+      }
+    },
+
+    {
+      "correction_id": "CORR-008",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E11-015",
+      "description": "E11-015 section citation: '2.5' → '2.4.3, 2.4.4'",
+      "pdf_read": "ICH E11(R1), Sections 2.4.3, 2.4.4, and 2.5",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Confirmed from E11(R1) TOC: Section 2.4.3 = Safety; Section 2.4.4 = Postmarketing; Section 2.5 = Age Classification.",
+          "Verified that long-term follow-up content (growth, development, maturation assessment) is in 2.4.3/2.4.4, not in 2.5.",
+          "Section 2.5 (Age Classification) discusses age group definitions (preterm, neonate, infant, etc.) — unrelated to the rule content.",
+          "Checked E11(R1) addendum date: Published 2017; current ICH guidance."
+        ],
+        "verdict": "Correction verified. Original citation '2.5' (Age Classification) was wrong. Long-term safety follow-up requirements are in Sections 2.4.3 and 2.4.4."
+      }
+    },
+
+    {
+      "correction_id": "CORR-009",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E17-003",
+      "description": "E17-003 section citation: '2.3' → '2.2.5'",
+      "pdf_read": "ICH E17, Table of Contents and Section 2.2.5",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Confirmed from E17 TOC: Section 2.2.5 = Sample Size Planning (page 13 of guideline).",
+          "Confirmed Section 2.3 does not exist in ICH E17 structure: The outline goes 2.2 → 2.2.1 → ... → 2.2.5, then directly to Section 3.",
+          "Rule content (sample size determination, regional allocation for consistency) matches Section 2.2.5 scope precisely.",
+          "E17 Step 4 2017: Current ICH guidance."
+        ],
+        "verdict": "Correction verified. Section '2.3' does not exist in E17. Sample Size Planning content is in Section 2.2.5."
+      }
+    },
+
+    {
+      "correction_id": "CORR-010",
+      "severity": "LOW",
+      "file": "clinical-design-rules.json",
+      "rule_id": "E3-072",
+      "description": "E3-072: Add Chemical Abstracts alternative and expand full Vancouver Declaration title",
+      "pdf_read": "ICH E3, Section 15 (Reference List)",
+      "pdf_confirmed": true,
+      "correction_applied": true,
+      "adversarial_test": {
+        "passed": true,
+        "checks_performed": [
+          "Read E3 Section 15 directly: 'References should be given in accordance with the internationally accepted standards of the 1979 Vancouver Declaration on \"Uniform Requirements for Manuscripts Submitted to Biomedical Journals\" or the system used in \"Chemical Abstracts\".'",
+          "Both the full Vancouver Declaration title and Chemical Abstracts alternative are explicitly present in the PDF.",
+          "Checked E3 Q&As (R1) for any modification to Section 15 reference requirements: Q&As address structural flexibility but do not modify the referencing standard.",
+          "Checked whether 'Vancouver Declaration' alone (abbreviated form) is used elsewhere to suggest the full title is optional: E3 Section 15 uses the full title only."
+        ],
+        "verdict": "Correction verified. Original rule omitted 'Chemical Abstracts' as an alternative and used an abbreviated Vancouver Declaration title. Both are required per E3 Section 15 verbatim text."
+      }
+    }
+  ],
+
+  "adversarial_summary": {
+    "tests_run": 10,
+    "tests_passed": 9,
+    "tests_failed": 1,
+    "failed_test_ids": ["CORR-006"],
+    "failed_test_detail": "CORR-006 instruction claimed ADME characteristics and receptor sensitivity are not in Appendix A's enumeration. Direct reading of the Appendix A table confirms they are present. The correction would have incorrectly removed or qualified accurate rule content. Rule was retained as written with a clarifying note.",
+    "impact_of_failure": "LOW — the original rule (E5-002) was factually correct. No regulatory risk from retaining the rule as-is. The correction instruction, if blindly applied, would have introduced an inaccuracy."
+  }
+}

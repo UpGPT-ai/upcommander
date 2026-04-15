@@ -1,0 +1,1092 @@
+{
+  "meta": {
+    "guidelines": ["ICH E19", "ICH E2D(R1)", "ICH M9"],
+    "extraction_date": "2026-03-23",
+    "sources": {
+      "e19": "ICH E19 Guideline Step4 2022_0826 - A Selective Approach to Safety Data Collection in Specific Late-Stage Pre-approval or Post-Approval Clinical Trials",
+      "e2d_r1": "ICH E2D(R1) Step4 Final Guideline 2025_0819 - Post-Approval Safety Data: Definitions and Standards for Management and Reporting of Individual Case Safety Reports",
+      "m9_main": "ICH M9 Guideline Step4 2019_1116 - Biopharmaceutics Classification System-Based Biowaivers",
+      "m9_qas": "ICH M9 Q&As Step4 2021_0106 - Biopharmaceutics Classification System-Based Biowaivers Q&A"
+    },
+    "notes": "All quotes are verbatim from guideline text. Verification status VERIFIED means rule was directly confirmed in source PDF."
+  },
+
+  "e19_rules": [
+    {
+      "rule_id": "E19-001",
+      "category": "scope",
+      "rule": "Selective safety data collection applies mainly to interventional clinical trials in the post-approval setting; in rare cases it may be considered in phase 3 pre-approval trials if sufficient safety data from completed trials are available.",
+      "conditions": "Post-approval setting (primary); pre-approval phase 3 only if sufficient prior safety data exist",
+      "source_section": "1.3",
+      "source_quote": "This Guideline is intended to apply mainly to collection of safety data from interventional clinical trials primarily in the post-approval setting. In some circumstances, it may be considered for use in the pre-approval setting. In rare cases, when sufficient safety data are available from completed clinical trials, selective safety data collection may be justifiable in phase 3 trials.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-002",
+      "category": "scope_exclusions",
+      "rule": "Selective safety data collection is NOT applicable to gene therapy or rare/orphan disease clinical trials; comprehensive safety data from every participant is required for those populations.",
+      "conditions": "Gene therapy trials and rare/orphan disease trials are excluded entirely from E19 scope",
+      "source_section": "1.3",
+      "source_quote": "This guidance is not applicable to gene therapy or rare/orphan disease clinical trials. With limited numbers of prospective participants for such trials, the collection of comprehensive safety data, from every participant, is warranted.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-003",
+      "category": "scope_exclusions",
+      "rule": "Selective safety data collection under E19 does not alter local/regional safety reporting requirements.",
+      "conditions": "Always applies — E19 is additive to, not a replacement for, local regulations",
+      "source_section": "1.3",
+      "source_quote": "Selective collection of safety data following the principles of this Guideline does not alter local/regional safety reporting requirements.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-004",
+      "category": "participant_safety",
+      "rule": "Selective safety data collection does not affect the responsibilities of investigators to monitor trial participants and ensure they are treated according to prevailing standards of care. It does not affect clinical care or documentation of adverse events in medical records, nor does it obviate local/regional safety reporting obligations of HCPs.",
+      "conditions": "Always applies when selective safety data collection is used",
+      "source_section": "2.1",
+      "source_quote": "Importantly, this approach does not affect the responsibilities of investigators, as health care professionals, to monitor trial participants and ensure they are treated according to prevailing standards of care. Specifically, selective safety data collection does not affect the monitoring and clinical care of individual trial participants or documentation of their adverse events in medical records. Moreover, selective safety data collection does not obviate other reporting obligations of health care professionals, such as safety reporting in accordance with local/regional requirements.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-005",
+      "category": "eligibility_criteria",
+      "rule": "The regulatory status of the product (whether the drug has received marketing authorisation) is a factor supporting eligibility for selective safety data collection.",
+      "conditions": "One of 14 factors contributing to sufficiently characterised safety profile; presence strengthens the case",
+      "source_section": "2.2 (Factor 1 - Regulatory Status)",
+      "source_quote": "The regulatory status of the product, i.e., whether the drug has received marketing authorisation from a regulatory authority.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-006",
+      "category": "eligibility_criteria",
+      "rule": "Understanding of the drug's mechanism of action and characterisation of off-target effects is a factor supporting eligibility for selective safety data collection.",
+      "conditions": "One of 14 factors; mechanistic understanding reduces residual safety uncertainty",
+      "source_section": "2.2 (Factor 2 - Mechanistic)",
+      "source_quote": "Understanding of the drug's mechanism of action; characterisation of off-target effects (untoward effects mediated through targets other than the target of interest, e.g., mineralocorticoids and gynecomastia; minoxidil and hirsutism).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-007",
+      "category": "eligibility_criteria",
+      "rule": "Knowledge of the safety profiles of drugs in the same pharmacologic class supports selective safety data collection; support is stronger for a well-established pharmacologic class member.",
+      "conditions": "One of 14 factors; class membership provides surrogate safety knowledge",
+      "source_section": "2.2 (Factor 3 - Mechanistic)",
+      "source_quote": "Knowledge of the safety profile of drugs in the same pharmacologic class, e.g., support for selective safety data collection would be stronger for a member of a well-established pharmacologic class of drugs than for a drug that is the only member of its class.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-008",
+      "category": "eligibility_criteria",
+      "rule": "The number of drug-exposed trial participants from prior studies contributes to eligibility; the larger the prior safety database, the greater the confidence. In principle, the number should sufficiently exceed those outlined in ICH E1.",
+      "conditions": "One of 14 factors; applies to Clinical Safety Database category",
+      "source_section": "2.2 (Factor 4 - Clinical Safety Database)",
+      "source_quote": "The number of drug-exposed trial participants who contributed to the characterisation of the drug's safety. In general, the larger the number, the greater the confidence in the prior characterisation of safety.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-009",
+      "category": "eligibility_criteria",
+      "rule": "Consistency of the safety profile across clinical trials where comprehensive safety data collection was utilised supports eligibility.",
+      "conditions": "One of 14 factors; inconsistency across trials would undermine the case for selective collection",
+      "source_section": "2.2 (Factor 5 - Clinical Safety Database)",
+      "source_quote": "The consistency of the safety profile across clinical trials where comprehensive safety data collection was utilised.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-010",
+      "category": "eligibility_criteria",
+      "rule": "Intensity of safety monitoring in previous clinical trials (number and type of parameters, thoroughness, frequency, and duration) contributes to eligibility for selective safety data collection.",
+      "conditions": "One of 14 factors; clinical safety database category",
+      "source_section": "2.2 (Factor 6 - Clinical Safety Database)",
+      "source_quote": "The intensity of safety monitoring in the previous clinical trials used to characterise the drug's safety. For example, the number and type of safety parameters monitored (e.g., laboratory measures, vital signs), thoroughness of assessment, and frequency and duration of monitoring can be important.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-011",
+      "category": "eligibility_criteria",
+      "rule": "The planned dose and dosing frequency in the proposed trial should not exceed what was studied in prior trials used to characterise safety.",
+      "conditions": "One of 14 factors; Similarity of Planned Clinical Trial to Previous Trials category",
+      "source_section": "2.2 (Factor 7 - Similarity of Planned Trial)",
+      "source_quote": "The planned dose and dosing frequency in the proposed clinical trial. In general, the planned dose or dosing frequency of the drug should not exceed what was studied in previous clinical trials used to characterise the drug's safety.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-012",
+      "category": "eligibility_criteria",
+      "rule": "The duration of exposure in previous clinical trials must be adequate to support the duration in the proposed trial.",
+      "conditions": "One of 14 factors; Similarity of Planned Trial to Previous Trials",
+      "source_section": "2.2 (Factor 8 - Similarity of Planned Trial)",
+      "source_quote": "The duration of exposure. The duration of exposure in previous clinical trials should be adequate to support the duration in the proposed trial.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-013",
+      "category": "eligibility_criteria",
+      "rule": "The drug product (pharmaceutical form, drug substance, excipients) and route of administration in the proposed trial must be comparable to those used in previous trials to characterise safety.",
+      "conditions": "One of 14 factors; Similarity of Planned Trial category",
+      "source_section": "2.2 (Factor 9 - Similarity of Planned Trial)",
+      "source_quote": "Comparability of the drug product (e.g., pharmaceutical form, drug substance, excipients) and route of administration. The drug product and route of administration for the proposed clinical trial should be comparable to those used in previous trials to characterise safety.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-014",
+      "category": "eligibility_criteria",
+      "rule": "Similarity of population in previous trials to the planned trial population is required. Selective safety data collection is not feasible if the planned population is more susceptible to adverse drug effects (e.g., older/younger participants, renal or hepatic impairment, greater cardiovascular risk).",
+      "conditions": "One of 14 factors; if population is more susceptible, selective collection cannot be applied",
+      "source_section": "2.2 (Factor 10 - Similarity of Planned Trial)",
+      "source_quote": "Similarity of the population in previous clinical trials to the population in the planned trial with respect to important demographic characteristics, concurrent and previous illnesses, concomitant therapies, and other factors, e.g., cytochrome P450 (CYP) phenotype. Selective safety data collection would not be feasible if the population to be studied is more susceptible to adverse drug effects than the population included in the clinical trials used to characterise safety, e.g., older or younger trial participants, or trial participants who have renal or hepatic impairment or factors associated with greater cardiovascular risk.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-015",
+      "category": "eligibility_criteria",
+      "rule": "Well-characterised drug-drug interactions and well-described drug metabolism and excretion support eligibility for selective safety data collection.",
+      "conditions": "Factors 11 and 12 in the Clinical Pharmacology category",
+      "source_section": "2.2 (Factors 11-12 - Clinical Pharmacology)",
+      "source_quote": "Drug-drug interactions have been well characterised. Drug metabolism and excretion are well described and understood.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-016",
+      "category": "eligibility_criteria",
+      "rule": "Well-characterised nonclinical toxicology data contribute to the justification for selective safety data collection.",
+      "conditions": "Factor 13 - Non-clinical Data category",
+      "source_section": "2.2 (Factor 13 - Non-clinical Data)",
+      "source_quote": "Nonclinical toxicology data have been well characterised.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-017",
+      "category": "eligibility_criteria",
+      "rule": "Quantity and quality of post-approval safety data (duration of marketing, number of participants exposed, method of data collection) contribute to justification for selective safety data collection.",
+      "conditions": "Factor 14 - Post-authorisation Data; relevant only in the post-approval setting",
+      "source_section": "2.2 (Factor 14 - Post-authorisation Data)",
+      "source_quote": "Quantity and quality of post-approval safety data. Sufficiency of data is related to several factors, e.g., duration of marketing, number of participants exposed, method of data collection.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-018",
+      "category": "baseline_data",
+      "rule": "Use of selective safety data collection does NOT change baseline data collection requirements. Baseline data are essential for eligibility assessment, efficacy and safety subgroup analyses, and are not subject to reduction.",
+      "conditions": "Always applies when selective safety data collection is used",
+      "source_section": "2.3",
+      "source_quote": "Use of a selective safety data collection approach does not change considerations for baseline data collection determined by the clinical trial objectives. Baseline data are essential to ensure that prospective trial participants are eligible for trial enrolment. Furthermore, baseline data are needed for assessment of efficacy and safety in subgroups based on, for example, demographics, baseline disease characteristics, concurrent and previous illnesses, and concomitant therapies.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-019",
+      "category": "data_that_must_always_be_collected",
+      "rule": "The following data elements should generally always be collected in clinical trials, regardless of selective safety data collection approach: (1) Serious adverse events; (2) Important medical events; (3) Medication error/overdose (intentional or unintentional); (4) Adverse event that led to study drug discontinuation; (5) Pregnancy and lactation exposure and outcomes; (6) Adverse events of special interest (AESI), including laboratory abnormalities identified in the protocol as critical to safety evaluations.",
+      "conditions": "Applies to all clinical trials, including those using selective safety data collection; these data elements CANNOT be reduced",
+      "source_section": "2.4",
+      "source_quote": "The following list includes the data elements that should generally be collected, but is not meant to be comprehensive: 1. Serious adverse events (see ICH E2A; ICH E6) 2. Important medical events (see ICH E2A) 3. Medication error/overdose (intentional or unintentional) 4. Adverse event that led to study drug discontinuation 5. Pregnancy and lactation exposure and outcomes 6. Adverse events of special interest, including laboratory abnormalities, identified in the protocol as critical to safety evaluations (see ICH E6; ICH E2F: Development Safety Update Report; CIOMS VI).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-020",
+      "category": "data_that_must_always_be_collected",
+      "rule": "SAEs considered efficacy or safety endpoints, which would not be subject to unblinding and expedited reporting, must be prospectively agreed upon with regulatory authority(ies), described in the protocol, collected and monitored on a regular basis by an IDMC established by the sponsor.",
+      "conditions": "When SAEs serve as efficacy endpoints; must be pre-specified",
+      "source_section": "2.4",
+      "source_quote": "Serious adverse events considered efficacy or safety endpoints, which would not be subject to unblinding and expedited reporting (see ICH E2A), should be prospectively agreed upon with the regulatory authority(ies) and described in the clinical trial protocol. They should be collected and monitored on a regular basis through an independent data monitoring committee (IDMC) established by the sponsor (see ICH E6).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-021",
+      "category": "safety_data_reduction",
+      "rule": "When selective safety data collection is justified, collection of the following data types may be limited or reduced: (1) Non-serious adverse events (may not need collection, or collection may be reduced in frequency); (2) Laboratory monitoring, ECGs, and imaging (may not be necessary or may be performed at reduced frequency); (3) Physical examinations and vital signs (may not need collection or may be at reduced frequency); (4) Changes in concomitant therapies after baseline documentation (may not need to be collected).",
+      "conditions": "Only when selective safety data collection is justified per Section 2.2; always subject to regional/local regulatory approval",
+      "source_section": "2.5",
+      "source_quote": "When selective safety data collection is justified, it may be acceptable to limit collection of certain data (while ensuring the safety of trial participants in line with Section 2.1): 1. Non-serious adverse events may not need to be collected, or collection may be reduced in frequency. 2. Various types of laboratory monitoring (e.g., serum chemistries, haematology) electrocardiograms, and imaging trials may not be necessary, or monitoring may be performed at a reduced frequency. 3. Physical examinations and vital sign data may not need to be collected or may be collected at reduced frequency. 4. Once concomitant medication use is documented at baseline, changes in concomitant therapies (e.g., changes in dose, added therapies, discontinuation of therapies) may not need to be collected.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-022",
+      "category": "safety_data_reduction",
+      "rule": "When events listed in Section 2.4 (mandatory data) do occur during a trial using selective safety data collection, sponsors must also collect relevant ancillary information (e.g., medical records, laboratory data) to characterise those events, including follow-up information.",
+      "conditions": "Triggered when a mandatory event (SAE, AESI, etc.) occurs during a selective data collection trial",
+      "source_section": "2.5",
+      "source_quote": "However, should any of the events listed in Section 2.4 be required for collection as per the study protocol, sponsors may also need to collect relevant information (e.g., medical records, laboratory data) to characterise such event(s) should they occur, including any follow-up information.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-023",
+      "category": "benefit_risk",
+      "rule": "When a drug's safety is characterised in a severe disease population, comprehensive safety data collection may still be warranted in a less severe disease population to ensure benefits outweigh risks in that population.",
+      "conditions": "Population severity mismatch between prior trials and new trial population",
+      "source_section": "2.6",
+      "source_quote": "Specifically, when the safety of a drug is sufficiently characterised in a patient population with severe disease (e.g., late-stage cancer, heart failure), comprehensive safety data collection may still be warranted in a patient population with less severe disease (e.g., migraine, hypertension) to ensure that the benefits outweigh the risks in the latter patient population.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-024",
+      "category": "regulatory_consultation",
+      "rule": "Sponsors considering selective safety data collection MUST gain prospective agreement with regulatory authorities covering: (1) whether the safety profile is sufficiently characterised; and (2) the specifics of the planned implementation methods.",
+      "conditions": "Before trial initiation; mandatory requirement",
+      "source_section": "2.7",
+      "source_quote": "Sponsors considering selective safety data collection should gain prospective agreement with regulatory authorities. Considerations include: 1) whether the safety profile of a drug is sufficiently characterised to justify selective safety data collection; and 2) the specifics of the planned methods of implementation (see Section 3).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-025",
+      "category": "regulatory_consultation",
+      "rule": "For multi-regional clinical trials intended for regulatory purposes in multiple regions, obtaining scientific advice in those regions prior to trial initiation is strongly recommended.",
+      "conditions": "Multi-regional trials using selective safety data collection",
+      "source_section": "2.7",
+      "source_quote": "If a sponsor or applicant plans to use clinical trial results for regulatory purposes in multiple regions, obtaining scientific advice in those regions prior to trial initiation is strongly recommended.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-026",
+      "category": "eligible_situations",
+      "rule": "Clinical trials to support a new indication of an approved drug where the two populations are similar (demographics, comorbidities, concomitant therapies) or where the new indication population was well represented in prior trials may use selective safety data collection.",
+      "conditions": "Drug approved for an indication; new trial targets similar or overlapping population",
+      "source_section": "2.8 (Situation 1)",
+      "source_quote": "Clinical trials to support a new indication of an approved drug where the two populations are similar (e.g., with respect to demographic characteristics, comorbidities, concomitant therapies), or when the patient population in the new indication was well represented in the trials that supported the approved indication.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-027",
+      "category": "eligible_situations",
+      "rule": "Clinical trials to expand label information of an approved drug with additional endpoints in the same patient population may use selective safety data collection if the safety profile is well characterised.",
+      "conditions": "Same patient population; safety profile already well characterised in that population",
+      "source_section": "2.8 (Situation 2)",
+      "source_quote": "Clinical trials intended to expand the label information of an approved drug with additional endpoints in the same patient population.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-028",
+      "category": "eligible_situations",
+      "rule": "Safety trials designed to further investigate potential safety concerns focusing on specific parameters (e.g., visual impairment, pulmonary toxicity, MACE) may use selective safety data collection if the safety profile has been well characterised.",
+      "conditions": "Targeted safety investigation trials; overall safety profile well characterised",
+      "source_section": "2.8 (Situation 3)",
+      "source_quote": "Safety trials designed to further investigate potential safety concerns focussing on specific parameters, e.g., visual impairment, pulmonary toxicity, cognitive dysfunction, major adverse cardiovascular events (MACE). Selective safety data collection may be appropriate if the safety profile has been well characterised.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-029",
+      "category": "eligible_situations",
+      "rule": "Clinical trials providing additional evidence of efficacy where the drug's safety profile has been well characterised (e.g., additional efficacy trial required by regulator prior to authorisation) may use selective safety data collection.",
+      "conditions": "Safety profile already well characterised; additional efficacy data needed for approval",
+      "source_section": "2.8 (Situation 4)",
+      "source_quote": "Clinical trials designed to provide additional evidence of efficacy, where the safety profile of the drug has been well characterised. For example, consider a situation where a drug is submitted to a regulatory authority for authorisation. After comprehensive review, the regulatory authority(ies) determines that the safety profile of the drug has been well characterised; however, an additional clinical trial is required prior to authorisation to provide additional evidence of efficacy. Selective safety data collection may be appropriate for this clinical trial.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-030",
+      "category": "implementation",
+      "rule": "The selective safety data collection approach must be carefully planned and clearly described within all relevant clinical trial documents (protocol, monitoring plan, statistical analysis plan), with reference to this Guideline. CRFs should be well-designed and investigators should receive appropriate training.",
+      "conditions": "All trials using selective safety data collection",
+      "source_section": "3 (Implementation intro)",
+      "source_quote": "The selective safety data collection approach should be carefully planned and clearly described within the relevant clinical trial documents (e.g., protocol; monitoring plan; statistical analysis plan), with reference to this Guideline (see Section 4). Given that investigators may not be familiar with selective safety data collection, CRFs should be well-designed, and investigators should receive appropriate training.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-031",
+      "category": "implementation",
+      "rule": "Method 3.1 - Selective Safety Data Collection for ALL patients: For all participants, Section 2.4 data are collected throughout the trial, while some or all Section 2.5 data types are limited (e.g., no non-serious AE collection, or transaminases evaluated at regular intervals only, while Section 2.5 data not collected).",
+      "conditions": "Uniform selective approach across all trial participants; appropriate when safety profile is uniformly well characterised",
+      "source_section": "3.1",
+      "source_quote": "For all participants in a clinical trial, the parameters listed in Section 2.4 would be collected throughout the trial; however, collection of some or all of the data types listed in Section 2.5 would be limited.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-032",
+      "category": "implementation",
+      "rule": "Method 3.2 - Comprehensive safety data collection for a specific subset(s), with selective data collection for other patients: Comprehensive data is collected for higher-risk or under-studied subsets (e.g., patients ≥65 years old if few were in prior trials), while selective collection applies to the remainder.",
+      "conditions": "When additional safety data is needed for specific subpopulations; used to enrich safety knowledge for underrepresented groups",
+      "source_section": "3.2",
+      "source_quote": "Comprehensive safety data would be collected for specific subset(s) of the patient population where additional information is deemed important; however, safety data collection would be reduced for other patients.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-033",
+      "category": "implementation",
+      "rule": "Method 3.3 - Comprehensive safety data collection for the initial period of the trial, with selective data collection thereafter: Full collection during early trial period; reduced collection after a pre-determined duration (e.g., 12 months of follow-up) once the safety profile for that period is established.",
+      "conditions": "Longer clinical trials; safety profile established for early follow-up period; pre-specified switch point",
+      "source_section": "3.3",
+      "source_quote": "In certain settings, comprehensive safety data could be collected from the beginning of the clinical trial through some pre-determined period, with selective safety data collection thereafter... specifically, collection of some types of safety data could be reduced or discontinued for patients once a specific duration of follow-up is achieved, e.g., interval physical examinations and laboratory investigations could be discontinued once patients have been followed through 12 months.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-034",
+      "category": "implementation",
+      "rule": "Method 3.4 - Comprehensive safety data collection in a representative subset, with selective safety data collection for other subsets: In very large trials, comprehensive safety data are collected at randomly selected sites or for randomly selected patients (e.g., half of sites per country), with selective collection for others. Selection bias must be avoided and diversity must be maintained.",
+      "conditions": "Very large clinical outcomes trials where comprehensive collection for all participants greatly exceeds statistical need; random selection is required",
+      "source_section": "3.4",
+      "source_quote": "In this setting, comprehensive safety data could be collected for only a representative subset of participants, with selective safety data collection in other participants (see Section 2.5)... it is important that patients who receive comprehensive safety monitoring are representative of the entire population. Thus, selection bias should be avoided, adequate diversity of the patient population with comprehensive data collection needs to be ensured, and the method for randomly selecting sites or patients should be described in the protocol and other relevant trial documents.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-035",
+      "category": "practical_considerations",
+      "rule": "When safety data collection methods are not consistent for all patients or not consistent throughout a trial, data obtained under comprehensive and selective approaches cannot be pooled; methods for aggregating data must be pre-specified in the protocol and analysis plans.",
+      "conditions": "Mixed-approach trials (Methods 3.2, 3.3, 3.4)",
+      "source_section": "4",
+      "source_quote": "If the methods of safety data collection are not consistent for all patients in a clinical trial or are not consistent throughout the duration of a trial, data obtained under a comprehensive safety data approach and data collected under a selective safety data approach cannot be pooled. Methods for aggregating the data should be delineated within the protocol and associated analysis plans.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-036",
+      "category": "stopping_rules",
+      "rule": "Concerns emerging during a trial using selective safety data collection that require intensification of safety monitoring or reversion to comprehensive collection must be anticipated; such changes create logistical challenges that must be planned for.",
+      "conditions": "During conduct of selective safety data collection trials; monitoring must include triggers for escalation",
+      "source_section": "4",
+      "source_quote": "Concerns may emerge during the conduct of clinical trials utilising selective safety data collection that will require intensification of safety monitoring or reversion to comprehensive safety data collection. Such changes may create logistical challenges with respect to trial sites, protocols, and data collection forms.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-037",
+      "category": "definitions",
+      "rule": "A Serious Adverse Event (SAE) is any untoward medical occurrence that at any dose: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+      "conditions": "Standard definition used throughout E19 to define data that must always be collected",
+      "source_section": "6 (Glossary)",
+      "source_quote": "Any untoward medical occurrence that at any dose: - results in death, - is life-threatening, - requires inpatient hospitalisation or prolongation of existing hospitalisation, - results in persistent or significant disability/incapacity, or - is a congenital anomaly/birth defect (see ICH E2A and ICH E6).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E19-038",
+      "category": "definitions",
+      "rule": "An Adverse Event of Special Interest (AESI) is an event (serious or non-serious) of scientific and medical concern specific to the sponsor's product or programme, for which ongoing monitoring and rapid communication by the investigator to the sponsor is appropriate.",
+      "conditions": "AESIs identified in the protocol are part of the mandatory data that must be collected even under selective safety data collection",
+      "source_section": "6 (Glossary)",
+      "source_quote": "An event (serious or non-serious) of scientific and medical concern specific to the sponsor's product or programme, for which ongoing monitoring and rapid communication by the investigator to the sponsor can be appropriate. Such an event might warrant further investigation in order to characterise and understand it.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "e19_eligibility_criteria": {
+    "summary": "A drug qualifies for selective safety data collection when its safety profile is sufficiently characterised. This is assessed across 14 factors in 5 categories. No single factor is determinative; the more applicable factors, the stronger the case.",
+    "categories": {
+      "regulatory_status": {
+        "description": "Whether the drug has marketing authorisation",
+        "factors": ["1. Marketing authorisation from a regulatory authority"]
+      },
+      "mechanistic_factors": {
+        "description": "Understanding of how the drug works and its off-target effects",
+        "factors": [
+          "2. Mechanism of action and off-target effect characterisation",
+          "3. Knowledge of safety profiles of drugs in same pharmacologic class"
+        ]
+      },
+      "clinical_safety_database": {
+        "description": "Strength and consistency of prior human safety data",
+        "factors": [
+          "4. Number of drug-exposed participants in prior trials (should exceed ICH E1 thresholds)",
+          "5. Consistency of safety profile across comprehensive trials",
+          "6. Intensity of prior safety monitoring (parameters, thoroughness, frequency, duration)"
+        ]
+      },
+      "similarity_to_previous_trials": {
+        "description": "How closely the planned trial resembles prior characterisation trials",
+        "factors": [
+          "7. Planned dose/frequency does not exceed prior trials",
+          "8. Duration of exposure in prior trials adequate for proposed duration",
+          "9. Comparable drug product (form, substance, excipients) and route of administration",
+          "10. Similar population (demographics, comorbidities, concomitant therapies, CYP phenotype) — MORE SUSCEPTIBLE populations DISQUALIFY selective collection"
+        ]
+      },
+      "clinical_pharmacology": {
+        "description": "Understanding of the drug's pharmacokinetic profile",
+        "factors": [
+          "11. Drug-drug interactions well characterised",
+          "12. Drug metabolism and excretion well described"
+        ]
+      },
+      "non_clinical_data": {
+        "description": "Preclinical safety characterisation",
+        "factors": [
+          "13. Nonclinical toxicology data well characterised"
+        ]
+      },
+      "post_authorisation_data": {
+        "description": "Real-world post-marketing safety data",
+        "factors": [
+          "14. Quantity and quality of post-approval safety data (duration of marketing, patients exposed, collection method)"
+        ]
+      }
+    },
+    "hard_exclusions": [
+      "Gene therapy trials",
+      "Rare/orphan disease trials",
+      "Populations more susceptible to adverse drug effects than prior characterisation populations",
+      "Doses exceeding those studied in prior trials"
+    ],
+    "data_never_reducible": [
+      "Serious adverse events (SAEs)",
+      "Important medical events (IMEs)",
+      "Medication errors/overdoses",
+      "AEs leading to study drug discontinuation",
+      "Pregnancy and lactation exposure and outcomes",
+      "Protocol-specified Adverse Events of Special Interest (AESIs)"
+    ]
+  },
+
+  "e2d_r1_rules": [
+    {
+      "rule_id": "E2DR1-001",
+      "category": "definitions",
+      "rule": "An Adverse Event (AE) is any untoward medical occurrence in a patient exposed to a medicinal product which does not necessarily have a causal relationship with the medicinal product. It can be any unfavourable and unintended sign (including an abnormal laboratory finding), symptom, or disease temporally associated with the use of a medicinal product, whether or not considered causally related.",
+      "source_section": "2.1.1",
+      "source_quote": "An adverse event is any untoward medical occurrence in a patient exposed to a medicinal product and which does not necessarily have a causal relationship with the medicinal product. An adverse event can therefore be any unfavourable and unintended sign (for example, an abnormal laboratory finding), symptom, or disease temporally associated with the use of a medicinal product, whether or not considered causally related to this medicinal product.",
+      "key_change_from_e2d": "Consistent with E2D original; no material change to AE definition",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-002",
+      "category": "definitions",
+      "rule": "An Adverse Drug Reaction (ADR) is a noxious and unintended response to a medicinal product where a causal relationship between the product and the adverse event is at least a reasonable possibility. For regulatory reporting purposes, if an event is spontaneously reported, even if the relationship is unknown or unstated, it meets the definition of an ADR.",
+      "source_section": "2.1.2",
+      "source_quote": "An adverse drug reaction, as defined by regional and local requirements, concerns a noxious and unintended response to a medicinal product. The phrase 'response to a medicinal product' means that a causal relationship between a medicinal product and an adverse event is at least a reasonable possibility... For regulatory reporting purposes, if an event is spontaneously reported, even if the relationship is unknown or unstated, it meets the definition of an adverse drug reaction.",
+      "key_change_from_e2d": "Consistent with E2D; spontaneous reporting implies causality rule unchanged",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-003",
+      "category": "serious_adr",
+      "rule": "A serious AE/ADR is any untoward medical occurrence that at any dose: results in death; is life-threatening (meaning the patient was at risk of death AT THE TIME of the event, not hypothetically); requires inpatient hospitalisation or results in prolongation of existing hospitalisation; results in persistent or significant disability/incapacity; is a congenital anomaly/birth defect; or is an important medical event.",
+      "source_section": "2.1.3",
+      "source_quote": "In accordance with the ICH E2A guideline, a serious AE/ADR is any untoward medical occurrence that at any dose: results in death; is life-threatening (NOTE: The term 'life-threatening' in the definition of 'serious' refers to an AE/ADR in which the patient was at risk of death at the time of the AE/ADR; it does not refer to an AE/ADR which hypothetically might have caused death if it were more severe); requires inpatient hospitalisation or results in prolongation of existing hospitalisation; results in persistent or significant disability/incapacity; is a congenital anomaly/birth defect; is an important medical event as described below.",
+      "key_change_from_e2d": "Clarification added for 'life-threatening' — explicitly states patient was at risk of death at time of event, not hypothetically. This is a clarification, not a substantive change.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-004",
+      "category": "serious_adr",
+      "rule": "Important Medical Events (IMEs) that might not be immediately life-threatening may be considered serious AEs/ADRs when, based on medical and scientific judgement, they might jeopardise the patient or require intervention to prevent one of the listed serious outcomes. Examples: emergency treatment for allergic bronchospasm, blood dyscrasias, convulsions without hospitalisation, development of dependency or substance use disorder.",
+      "source_section": "2.1.3",
+      "source_quote": "Important medical events that might not be immediately life-threatening or result in death or hospitalisation may also be considered serious AEs/ADRs when, based on medical and scientific judgement, they might jeopardise the patient or might require intervention to prevent one of the other outcomes listed in the definition above. Examples of such events which may occur following the use of a medicinal product are intensive treatment in an emergency room or at home for allergic bronchasm, blood dyscrasias or convulsions that do not result in hospitalisation, or development of dependency or substance use disorder.",
+      "key_change_from_e2d": "Substance use disorder added as example of IME; this is an R1 addition",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-005",
+      "category": "unexpected_adr",
+      "rule": "An AE/ADR in an ICSR is unexpected if: (a) not included in regional/local product labelling; (b) nature, severity, or specificity is not consistent with labelling; or (c) when uncertain, it should be treated as unexpected. An ADR in labelling is considered unexpected when reported with a fatal outcome unless labelling specifically states it might be associated with a fatal outcome.",
+      "source_section": "2.1.4",
+      "source_quote": "MAHs should consider AEs/ADRs in ICSRs as unexpected if the reported AE/ADR is not included in the regional or local product labelling (e.g., Prescribing Information or Summary of Product Characteristics). In addition, an AE/ADR in an ICSR whose nature, severity, or specificity is not consistent with the term or description used in the regional or local product labelling should be considered unexpected. When an MAH is uncertain whether an AE/ADR in an ICSR should be treated as expected or unexpected for a region or country, the AE/ADR should be treated as unexpected for that region or country. An ADR included in the regional or local product labelling should be considered unexpected when it is reported with a fatal outcome in an ICSR unless the labelling specifically states that the ADR might be associated with a fatal outcome.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-006",
+      "category": "unexpected_adr",
+      "rule": "Class ADRs mentioned in labelling for a pharmaceutical class should NOT automatically be considered 'expected' for individual products in that class when reported in an ICSR; MAHs should refer to relevant regional or local requirements.",
+      "source_section": "2.1.4",
+      "source_quote": "Product labelling may include information related to ADRs for the pharmaceutical class to which the medicinal product belongs. This situation is often referred to as 'Class ADRs', and such class ADRs should not automatically be considered 'expected' when reported in an ICSR for one of the medicinal products. In this instance, MAHs should refer to the relevant regional or local requirements.",
+      "key_change_from_e2d": "Clarification of class ADR handling",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-007",
+      "category": "icsr_minimum_criteria",
+      "rule": "An ICSR is eligible for submission to any regulatory authority only if it has ALL four minimum criteria: (1) At least one AE/ADR or other observation; (2) At least one suspect or interacting medicinal product; (3) An identifiable patient; (4) An identifiable reporter.",
+      "source_section": "2.2",
+      "source_quote": "In order to be eligible for submission to any regulatory authority, ICSRs must have at least these minimum criteria: At least one AE/ADR – see Section 5.1.1, or other observation – see Section 5.1.3; At least one suspect or interacting medicinal product; An identifiable patient – see Section 6.1; At least one identifiable reporter – see Section 6.1.",
+      "key_change_from_e2d": "R1 adds 'other observation' as qualifying criterion alongside AE/ADR; also adds digital platform context",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-008",
+      "category": "expedited_reporting",
+      "rule": "An expedited report is an ICSR submitted as soon as possible, but no later than 15 calendar days after day zero. This applies to ICSRs meeting regional/local criteria for expedited reporting.",
+      "source_section": "2.3",
+      "source_quote": "An expedited report is an individual case safety report that meets the requirements for reporting as soon as possible, but no later than 15 calendar days after day zero (see Section 5.2, Reporting Timeframes).",
+      "key_change_from_e2d": "15-day timeline unchanged from E2D; no change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-009",
+      "category": "source_data",
+      "rule": "A Digital Platform is software and technology used to enable information transmission between users. It includes but is not limited to social media, websites, internet forums, chat rooms, mobile health technologies, and software applications. This is a new defined term in E2D(R1).",
+      "source_section": "2.7",
+      "source_quote": "A digital platform is the software and technology used to enable transmission of information between users (see Section 4.3, Digital Platforms). Digital platforms include but are not limited to social media, web sites, internet forums, chat rooms, mobile health technologies, and software applications (apps).",
+      "key_change_from_e2d": "NEW definition added in R1 — digital platforms were not defined in E2D",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-010",
+      "category": "source_data",
+      "rule": "An Organised Data Collection System (ODCS) is any activity that gathers data relevant to an MAH's medicinal product or medical disease area in a planned manner. Examples include clinical trials, non-interventional studies, registries, PSPs, MRPs, digital listening/social listening activities.",
+      "source_section": "2.8",
+      "source_quote": "For the purposes of this document, an organised data collection system (ODCS) is an activity that gathers data relevant to an MAH's medicinal product or a medical disease area, in a planned manner, thereby enabling review to be performed.",
+      "key_change_from_e2d": "R1 significantly expands ODCS scope to include digital platform activities, PSPs, MRPs. New in R1.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-011",
+      "category": "source_data",
+      "rule": "MAHs are encouraged, and in some regions required, to regularly monitor the worldwide scientific literature for safety information. MAHs should refer to regional and local requirements regarding obligations to perform literature screening and frequency of such screening. The regulatory time clock (day zero) starts as soon as the MAH or third party identifies sufficient information to determine that ICSR reporting criteria are met.",
+      "source_section": "4.2",
+      "source_quote": "Each MAH is encouraged, and in some regions required, to regularly monitor the worldwide scientific literature for safety information concerning their products by conducting a search and literature review using large reference databases with broad coverage. MAHs should refer to regional and local requirements regarding their obligations to perform literature screening and the frequency of such screening.",
+      "key_change_from_e2d": "Largely consistent; R1 adds detail on day zero calculation for literature cases and digital platforms",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-012",
+      "category": "literature",
+      "rule": "If AEs/ADRs are suspected by the article's author to be associated with one or more medicinal products in a literature article, the MAH should report the case as an ICSR if it otherwise meets reporting requirements. If multiple products are mentioned, each MAH of a suspect product submits ICSRs. If author suspicion is not stated, MAHs should consider the product-event relationship themselves.",
+      "source_section": "4.2",
+      "source_quote": "If AEs/ADRs are suspected by the article's author to be associated with one or more medicinal products in a literature article, then the MAH should report the case as an ICSR if it otherwise meets reporting requirements. If multiple products are mentioned in an article, an ICSR should be reported by the MAH(s) whose product(s) is/are suspected by the article's author to be associated with one or more AEs/ADRs.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-013",
+      "category": "literature",
+      "rule": "The day zero clock for literature ICSRs starts as soon as the MAH (or third party acting on their behalf) identifies sufficient information to determine that ICSR reporting criteria are met. If follow-up is required to confirm criteria are met, day zero is the date the MAH receives sufficient follow-up information.",
+      "source_section": "4.2",
+      "source_quote": "The regulatory time clock for the reporting of ICSRs from the scientific literature starts (day zero) as soon as the MAH or third party acting on their behalf identifies sufficient information to determine that the criteria for ICSR reporting are met (refer to Section 2.2, ICSR Including Minimum Criteria, and 5.2, Reporting Timeframes). This date should be considered day zero unless otherwise specified by regional or local requirements. If follow-up is required to determine that the criteria for ICSR reporting are met, then day zero is the date the MAH receives sufficient follow-up information to determine that these criteria are met.",
+      "key_change_from_e2d": "R1 provides explicit clarification on day zero for literature cases",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-014",
+      "category": "digital_platforms",
+      "rule": "MAHs are responsible for content on and must regularly screen digital platforms under their responsibility (owned, controlled, or operated by or on behalf of MAH) for AEs/ADRs. Screening frequency must allow identification and reporting within required timelines. Day zero starts when minimum ICSR criteria are posted on the platform.",
+      "source_section": "4.3.1",
+      "source_quote": "MAHs should regularly screen digital platforms under their responsibility for AEs/ADRs. The frequency of the screening should allow for the MAH to identify and report AEs/ADRs within the required reporting timeline (see Section 5.2, Reporting Timeframes). The regulatory time clock for reporting starts (day zero) as soon as sufficient information to determine that the criteria for an ICSR (i.e., the minimum criteria as defined in Section 2.2, ICSR Including Minimum Criteria) was posted on the digital platform.",
+      "key_change_from_e2d": "NEW in R1 — digital platform screening obligation and day zero rules are entirely new",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-015",
+      "category": "digital_platforms",
+      "rule": "MAHs are NOT expected to screen or review digital platforms NOT under their responsibility for AEs/ADRs. However, if an MAH screens data from a non-MAH-responsibility platform in a planned manner consistent with an ODCS, the MAH should consider the activity as an ODCS.",
+      "source_section": "4.3.2",
+      "source_quote": "MAHs are not expected to screen or review digital platforms not under their responsibility for AE(s)/ADR(s). However, if an MAH screens or accesses data from a digital platform not under its responsibility, and the MAH's activity is conducted in a planned manner consistent with an organised data collection, the MAH should consider the activity to be an ODCS (see Section 2.8, ODCS).",
+      "key_change_from_e2d": "NEW in R1 — digital platform obligations for non-MAH platforms",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-016",
+      "category": "digital_platforms",
+      "rule": "If an MAH becomes aware of AEs/ADRs on a digital platform not under MAH responsibility, outside the context of an ODCS, the MAH is expected to review the safety information and collect AEs/ADRs per regional/local requirements. If the AE/ADR meets reporting requirements, it should be managed as a spontaneous report.",
+      "source_section": "4.3.2",
+      "source_quote": "If an MAH becomes aware of AEs/ADRs on a digital platform not under the MAH's responsibility, and the MAH received the information outside of the context of an ODCS (e.g., an MAH employee is viewing a website to identify possible answers or solutions to a business question and sees an AE/ADR mentioned), the MAH is expected to review the safety information and collect AEs/ADRs in accordance with regional and local requirements... if an AE/ADR collected from a digital platform outside the context of an ODCS meets reporting requirements, then it should be managed as a spontaneous report.",
+      "key_change_from_e2d": "NEW in R1",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-017",
+      "category": "non_interventional_studies",
+      "rule": "AEs/ADRs from non-interventional studies with primary data collection (conducted by or on behalf of MAH) should be managed as solicited reports with causality assessment. The ICH E2B 'Study Type' field should reflect 'Other studies'. AEs/ADRs from non-interventional studies with secondary use of data should generally NOT be reported as ICSRs unless regional/local requirements indicate otherwise.",
+      "source_section": "4.4.1 / 4.4.2",
+      "source_quote": "AEs/ADRs that the MAH collects in the context of primary data collection should be managed as solicited reports which includes an appropriate causality assessment to determine reporting (see Section 5.1.1, AEs/ADRs)... AEs/ADRs that the MAH identifies in the context of secondary use of data should not be reported as ICSRs, unless regional or local requirements indicate otherwise.",
+      "key_change_from_e2d": "R1 adds the secondary use of data exclusion rule; clarifies solicited report management for non-interventional studies",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-018",
+      "category": "patient_support_programs",
+      "rule": "MAHs must review all information received in a PSP for AEs/ADRs. AEs/ADRs from PSPs must be managed as solicited reports with causality assessment and reported per regional/local requirements. The ICH E2B 'Study Type' field should reflect 'PSP' origin. MAHs must have contractual agreements with third-party PSP providers requiring AEs/ADRs to be reported to the MAH.",
+      "source_section": "4.5",
+      "source_quote": "MAHs should review all information received in a PSP for AEs/ADRs. AEs/ADRs that the MAH becomes aware of in the context of a PSP should be recorded, managed and assessed for reporting as required by regional or local requirements... If an AE/ADR from a PSP meets reporting requirements, it should be managed as a solicited report which includes an appropriate causality assessment.",
+      "key_change_from_e2d": "R1 significantly expands PSP obligations; PSPs were not separately addressed in E2D",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-019",
+      "category": "market_research_programs",
+      "rule": "MAHs must review all information received in a Market Research Program (MRP) for AEs/ADRs. AEs/ADRs from MRPs must be recorded, managed and assessed for reporting per regional/local requirements. If meeting reporting requirements, MRP cases are managed as solicited reports with causality assessment; ICH E2B 'Study Type' should reflect 'MRP' origin.",
+      "source_section": "4.6",
+      "source_quote": "MAHs should review all information received in an MRP for AEs/ADRs. AEs/ADRs that the MAH becomes aware of in the context of an MRP should be recorded, managed and assessed for reporting as required by regional or local requirements. If an AE/ADR from an MRP meets reporting requirements, it should be managed as a solicited report which includes an appropriate causality assessment.",
+      "key_change_from_e2d": "NEW in R1 — MRP category and obligations are entirely new",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-020",
+      "category": "expedited_reporting",
+      "rule": "Cases of AEs/ADRs that are BOTH serious AND unexpected are subject to expedited reporting. Reporting of serious EXPECTED AEs/ADRs in an expedited manner varies according to regional/local requirements. Non-serious AEs/ADRs (expected or not) are normally NOT subject to expedited reporting but may be reportable as ICSRs per regional timelines.",
+      "source_section": "5.1.1",
+      "source_quote": "Cases of AEs/ADRs that are both serious and unexpected are subject to expedited reporting. The reporting of serious expected AEs/ADRs in an expedited manner varies according to regional and local requirements. Non-serious AEs/ADRs, whether expected or not, would normally not be subject to expedited reporting but may be reportable as ICSRs per regional or local requirements and timelines.",
+      "key_change_from_e2d": "Consistent with E2D; no material change to the serious+unexpected = expedited rule",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-021",
+      "category": "expedited_reporting",
+      "rule": "Solicited reports must only be submitted if a causal relationship between a medicinal product and an adverse event is at least a reasonable possibility, as assessed by either the reporter or the MAH.",
+      "source_section": "5.1.1",
+      "source_quote": "For purposes of reporting, solicited reports are classified as 'report from study' in ICH E2B and should have a causality assessment; solicited reports should only be submitted if a causal relationship between a medicinal product and an adverse event is at least a reasonable possibility, as assessed by either the reporter or the MAH.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-022",
+      "category": "important_safety_findings",
+      "rule": "Safety findings that do not qualify for ICSR reporting but may change the known risk-benefit balance or impact public health must be communicated as soon as possible to regulatory authorities per regional/local requirements. Examples: significant unanticipated safety findings from in vitro, animal, epidemiological or clinical studies suggesting mutagenicity, teratogenicity, carcinogenicity, immunogenicity or increased mortality.",
+      "source_section": "5.1.2",
+      "source_quote": "Safety findings which do not qualify for ICSR reporting and which may lead to changes in the known risk-benefit balance of a medicinal product and/or impact on public health should be communicated as soon as possible to the regulatory authorities in accordance with regional or local requirements. Examples include any significant unanticipated safety findings from an in vitro, animal, epidemiological, or clinical study that suggest a significant human risk, such as evidence of mutagenicity, teratogenicity, carcinogenicity, immunogenicity or increased mortality.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-023",
+      "category": "non_serious_adr",
+      "rule": "Reports of lack of efficacy or lack of effect without associated AE/ADR should only be reported as ICSRs if required by regional or local requirements. Special consideration applies to critical products: products for critical conditions, life-threatening diseases, vaccines, and contraceptives — lack of efficacy may be subject to ICSR reporting per regional requirements.",
+      "source_section": "5.1.3.1",
+      "source_quote": "Reports of lack of efficacy or lack of effect occurring independently (i.e., with no associated AE/ADR) should only be reported as ICSRs if required by regional or local requirements or other regulatory authority conditions... Products used in critical conditions or for the treatment of life-threatening diseases, vaccines, and contraceptives are examples of classes of medicinal products where lack of efficacy or lack of effect with no associated AE/ADR may be subject to ICSR reporting according to regional or local requirements.",
+      "key_change_from_e2d": "R1 adds substance use disorder as IME example; expands list of product types where lack of efficacy may be reportable",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-024",
+      "category": "other_observations",
+      "rule": "Reports associated with overdose, abuse, misuse, medication error, or occupational exposure without associated AE/ADR should only be reported as ICSRs if required by regional or local requirements. Medication errors where no AE/ADR occurred (near-miss, intercepted errors) may also require reporting per regional requirements; in that instance the ICSR should include minimum criteria except for identifiable patient.",
+      "source_section": "5.1.3.2",
+      "source_quote": "Reports associated with overdose, abuse, misuse, medication error, or occupational exposure, with no associated AE/ADR should only be reported as ICSRs if required by regional or local requirements or other regulatory authority conditions... Medication errors where no associated AE/ADR has occurred may, in some instances, not involve a patient (e.g., near miss events or intercepted medication errors where a medication error occurred but did not reach a patient) and may also be required to be reported as an ICSR per regional and local requirements; in this instance, the ICSR should include the minimum criteria (see Section 2.2, ICSR Including Minimum Criteria) except for the identifiable patient.",
+      "key_change_from_e2d": "R1 adds explicit near-miss medication error ICSR rules; new guidance on identifiable patient exception",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-025",
+      "category": "other_observations",
+      "rule": "Reports of exposure during pregnancy or breastfeeding without associated AE/ADR should only be reported as ICSRs if required by regional/local requirements. MAHs are NOT expected to record exposures during pregnancy for products specifically indicated for use during pregnancy if not associated with an AE/ADR. AEs/ADRs in parent or child (congenital anomalies, foetal death, spontaneous abortion, etc.) are subject to ICSR reporting.",
+      "source_section": "5.1.3.3",
+      "source_quote": "Reports of exposure through a parent, such as the use of medicinal products in pregnancy or breastfeeding or paternal exposure, with no associated AE/ADR in either the parent or the child should only be reported as ICSRs if required by regional or local requirements or other regulatory authority conditions. The MAH is not expected to record exposures during pregnancy for products specifically indicated for use during pregnancy, if not associated with an AE/ADR. AEs/ADRs, such as abnormal outcome following parental exposure, including congenital anomalies, potential epigenetic responses, developmental disorders in the foetus or child, foetal death, spontaneous abortion, or AEs/ADRs in the mother or new-born, are subject to ICSR reporting requirements.",
+      "key_change_from_e2d": "R1 adds epigenetic responses and developmental disorders as examples; adds explicit exception for products indicated for use in pregnancy",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-026",
+      "category": "reporting_timeframes",
+      "rule": "ICSRs meeting regional/local criteria for expedited reporting must be submitted no later than 15 calendar days after day zero. The time clock starts on the date when any MAH personnel (including third parties acting on their behalf) obtains sufficient information that a case meets minimum criteria. Non-expedited ICSRs may have longer timelines per regional/local requirements.",
+      "source_section": "5.2",
+      "source_quote": "In general, ICSRs that fulfil regional or local criteria for expedited reporting (see Section 5.1, What Should Be Reported?) should be submitted as soon as possible, but not later than 15 calendar days after day zero (see below)... The regulatory reporting time clock is considered to start on the date when any personnel of the MAH (including third parties, such as service providers and other contractual partners, acting on behalf of the MAH) obtains sufficient information to determine that a case report fulfils the minimum criteria for reporting.",
+      "key_change_from_e2d": "15-day deadline unchanged; R1 clarifies third-party time clock starts simultaneously with MAH",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-027",
+      "category": "reporting_timeframes",
+      "rule": "When additional medically relevant follow-up information is received for a previously reported case, the 15-day reporting clock restarts from the date the MAH receives the follow-up information (new day zero). A case initially classified as non-expedited that receives follow-up qualifying it as serious/unexpected must be re-classified as expedited, with day zero as the date of receipt of the reclassifying follow-up.",
+      "source_section": "5.2",
+      "source_quote": "When additional medically relevant information is received for a previously reported case, the reporting time clock is considered to begin again for submission of the follow-up report, as such day zero for follow-up information is the date the MAH receives the additional information. In addition, a case initially classified as a non-expedited report would qualify for expedited reporting upon receipt of follow-up information that indicates the case should be re-classified (e.g., from non-serious to serious), and day zero is the date of receipt of the follow-up information.",
+      "key_change_from_e2d": "Consistent with E2D; clarified in R1",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-028",
+      "category": "reporting_timeframes",
+      "rule": "When submitting an amendment to a previously submitted report based on MAH internal quality review (not additional information from a primary source), a new clock start date (day zero) should NOT be assigned.",
+      "source_section": "5.2",
+      "source_quote": "When submitting an amendment to a previously submitted report (e.g., a correction based on MAH internal quality review) with no receipt of additional information, a new clock start date (day zero) should not be assigned.",
+      "key_change_from_e2d": "R1 explicitly clarifies this amendment rule; new explicit guidance",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-029",
+      "category": "follow_up",
+      "rule": "For follow-up prioritisation: highest priority are cases that are both serious AND unexpected. Lower priority: serious expected and non-serious unexpected cases. Cases 'of special interest' (e.g., AEs/ADRs under enhanced monitoring at request of regulatory authorities) should be prioritised.",
+      "source_section": "6.4",
+      "source_quote": "To optimise the value of follow-up, the first consideration should be prioritisation of case reports by importance. Highest priority for follow-up are cases which are both serious and unexpected. At a slightly lower priority are serious, expected and non-serious, unexpected cases. In addition to seriousness and unexpectedness as criteria, cases 'of special interest' (e.g., AEs/ADRs under enhanced monitoring at the request of regulatory authorities) should be prioritised.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-030",
+      "category": "follow_up",
+      "rule": "MAHs are expected to follow up ALL pregnancy reports from HCPs or consumers where the embryo or foetus could have been exposed (maternal or paternal) to one of its medicinal products. Follow-up must collect information on pregnancy outcome, health of newborn, and development of child. This follow-up is NOT required for products specifically indicated for use during pregnancy when not associated with an AE/ADR.",
+      "source_section": "6.4.1.2",
+      "source_quote": "MAHs are expected to follow up all pregnancy reports from HCPs or consumers where the embryo or foetus could have been exposed (through maternal or paternal exposure) to one of its medicinal products. For certain types of medicinal products, potential for embryo-foetal exposure may need to be considered even if the medicinal product was taken before the gestational period commenced. MAHs should collect information on the outcome of the pregnancy, health of the newborn, and, where appropriate, development of the child. This follow up is not expected for cases of exposure during pregnancy for products specifically indicated for use during pregnancy if not associated with an AE/ADR.",
+      "key_change_from_e2d": "R1 adds paternal exposure follow-up obligation; adds exception for pregnancy-indicated products",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-031",
+      "category": "patient_identifiability",
+      "rule": "To have an identifiable patient, there should be enough information to indicate the existence of a specific patient. Qualifying identifiers include: age or age category, gestational age, sex, initials, date of birth, name, patient identification number, or other identifiers per regional requirements. A digital platform username/handle alone is insufficient to confirm a real patient.",
+      "source_section": "6.1",
+      "source_quote": "To have an identifiable patient, there should be enough information to indicate the existence of a specific patient. One or more of the following should automatically qualify a patient as identifiable: age (or age category, e.g., adolescent, adult, elderly), gestational age, sex, initials, date of birth, name, patient identification number, or other identifiers specified by regional or local requirements... The presence of a digital platform username or identifier (i.e., 'handle') in the absence of qualifying identifiers is insufficient to confirm that there is a real patient and/or reporter.",
+      "key_change_from_e2d": "R1 adds digital platform username rule; new guidance",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-032",
+      "category": "how_to_report",
+      "rule": "ICSRs must be transmitted electronically using the ICH E2B format. In regions where ICH E2B has not yet been implemented, other formats (e.g., CIOMS I) may be used. ICH E2B uses MedDRA (ICH M1) for coding medical information.",
+      "source_section": "6.7",
+      "source_quote": "ICSRs should be transmitted electronically using the ICH E2B format, according to the ICH E2B guidelines. In regions or countries where ICH E2B has yet to be implemented, other formats (e.g., CIOMS I) may be utilised. ICH E2B uses the Medical Dictionary for Regulatory Activities (MedDRA, ICH M1) for coding medical information.",
+      "key_change_from_e2d": "Consistent with E2D; no material change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "E2DR1-033",
+      "category": "contractual_agreements",
+      "rule": "MAHs must have contractual agreements with third parties who perform activities foreseeably involving receipt of safety information, specifying ICSR management and reporting processes, timelines, and regulatory reporting responsibilities. The MAH remains ultimately responsible for reporting within required timelines.",
+      "source_section": "6.5",
+      "source_quote": "It is important that these agreements specify the management and reporting of ICSRs (i.e., processes for exchange of safety information, including timelines and regulatory reporting responsibilities) in accordance with regional and local requirements... Whatever the nature of the agreements, the MAH is ultimately responsible for reporting within the required timelines.",
+      "key_change_from_e2d": "R1 significantly expands contractual agreement requirements to cover PSPs, MRPs, digital platforms",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "m9_biowaiver_rules": [
+    {
+      "rule_id": "M9-001",
+      "category": "scope",
+      "rule": "BCS-based biowaivers are applicable ONLY to immediate-release, solid orally administered dosage forms or suspensions designed to deliver drug to the systemic circulation. Drug products with buccal or sublingual absorption are NOT eligible.",
+      "threshold_values": "Immediate release, oral solid dosage forms or suspensions only",
+      "source_section": "1.2",
+      "source_quote": "The BCS-based biowaiver is only applicable to immediate release, solid orally administered dosage forms or suspensions designed to deliver drug to the systemic circulation. Drug products having a narrow therapeutic index are excluded from consideration for a BCS-based biowaiver in this guidance. Drug products with buccal or sublingual absorption are not eligible for a BCS-based biowaiver application.",
+      "jurisdiction_note": "Harmonised across FDA, EMA, PMDA via ICH M9",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-002",
+      "category": "scope",
+      "rule": "Drugs with a narrow therapeutic index (NTI) are EXCLUDED from BCS-based biowaiver consideration. NTI drugs are those where small differences in dose or blood concentration may lead to serious therapeutic failures or adverse drug reactions.",
+      "threshold_values": "NTI drugs typically subject to tightened BE acceptance criteria (e.g., Cmax and/or AUC: 90-111%) in some regions",
+      "source_section": "1.2 / M9 Q&A 1.4",
+      "source_quote": "Drug products having a narrow therapeutic index are excluded from consideration for a BCS-based biowaiver in this guidance. Drugs with a narrow therapeutic index can be defined as those drugs where small differences in dose or blood concentration may lead to dose and blood concentration dependent, serious therapeutic failures or adverse drug reactions. They are characterised by a steep drug dose-response relationship within the usual dose range or a narrow span between effective drug concentrations and concentrations associated with serious toxicity.",
+      "jurisdiction_note": "No international list of NTI drugs; region-specific determination",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-003",
+      "category": "scope",
+      "rule": "Fixed-dose combination (FDC) drug products are eligible for a BCS-based biowaiver when ALL drug substances in the combination meet the criteria as defined in Sections 2 and 3. If one drug substance does not meet BCS Class I or III criteria, the FDC is not eligible.",
+      "threshold_values": "All individual drug substances must be BCS Class I or III",
+      "source_section": "1.2 / M9 Q&A 1.3",
+      "source_quote": "Fixed-dose combination (FDC) products are eligible for a BCS-based biowaiver when all drug substances contained in the combination drug product meet the criteria as defined in sections 2 and 3 of this guidance. All drug substances in a fixed-dose combination product must fulfill the criteria for either BCS Class I or III to qualify for a biowaiver.",
+      "jurisdiction_note": "Harmonised; no regional differences identified",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-004",
+      "category": "bcs_classification",
+      "rule": "BCS-based biowaivers are applicable only to drug products where the drug substance(s) exhibit HIGH SOLUBILITY and either HIGH permeability (BCS Class I) or LOW permeability (BCS Class III). BCS Classes II and IV drug substances are NOT eligible for biowaivers under M9.",
+      "threshold_values": "High solubility + high permeability = BCS Class I; High solubility + low permeability = BCS Class III",
+      "source_section": "2 (Introduction)",
+      "source_quote": "BCS-based biowaivers are applicable to drug products where the drug substance(s) exhibit high solubility and, either high permeability (BCS Class I) or low permeability (BCS Class III).",
+      "jurisdiction_note": "Harmonised; FDA historically only allowed Class I biowaivers for generics; M9 extends to Class III",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-005",
+      "category": "solubility",
+      "rule": "A drug substance is classified as HIGHLY SOLUBLE if the HIGHEST SINGLE THERAPEUTIC DOSE is completely soluble in 250 mL or less of aqueous media over the pH range of 1.2-6.8 at 37±1°C.",
+      "threshold_values": "Volume: ≤250 mL; pH range: 1.2 to 6.8; Temperature: 37±1°C; Dose: highest single therapeutic dose",
+      "source_section": "2.1",
+      "source_quote": "A drug substance is classified as highly soluble if the highest single therapeutic dose is completely soluble in 250 ml or less of aqueous media over the pH range of 1.2–6.8 at 37±1°C.",
+      "jurisdiction_note": "Harmonised via M9; prior to M9, FDA used pH 1.0-7.5, EMA used 1.2-6.8. M9 adopts pH 1.2-6.8.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-006",
+      "category": "solubility",
+      "rule": "Solubility must be experimentally established over pH range 1.2-6.8 at 37±1°C. At minimum, buffers at pH 1.2, 4.5, and 6.8 must be evaluated, plus the pH of lowest solubility if within the range. A minimum of 3 replicate determinations at each pH condition using appropriate compendial media is required. The LOWEST measured solubility over pH 1.2-6.8 is used to classify the drug substance.",
+      "threshold_values": "Minimum 3 pH points: 1.2, 4.5, 6.8 + pH of lowest solubility; minimum 3 replicates per condition; degradation ≤10% over solubility assessment",
+      "source_section": "2.1",
+      "source_quote": "The sponsor is expected to establish experimentally the solubility of the drug substance over the pH range of 1.2–6.8 at 37±1ºC. At least three pHs within this range, including buffers at pH 1.2, 4.5 and 6.8, should be evaluated. In addition, solubility at the pH of lowest solubility of the drug substance should be evaluated if it is within the specified pH range... A minimum of three replicate determinations at each solubility condition/pH using appropriate compendial media is necessary to demonstrate solubility using a suitably validated method... The lowest measured solubility over the pH range of 1.2–6.8 will be used to classify the drug substance.",
+      "jurisdiction_note": "Harmonised; M9 adopted EMA's 1.2-6.8 range over FDA's historical 1.0-7.5",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-007",
+      "category": "solubility",
+      "rule": "If the drug substance degrades more than 10% over the extent of the solubility assessment, solubility cannot be adequately determined and the drug substance cannot be classified as highly soluble.",
+      "threshold_values": "Degradation threshold: >10% means high solubility classification cannot be made",
+      "source_section": "2.1",
+      "source_quote": "In cases where the drug substance is not stable with >10% degradation over the extent of the solubility assessment, solubility cannot be adequately determined and thus the drug substance cannot be classified.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-008",
+      "category": "solubility",
+      "rule": "When the highest single therapeutic dose does not meet the high solubility criterion but the highest strength of the reference product IS soluble under the required conditions, additional data must be submitted to justify the BCS-based biowaiver approach (e.g., demonstration of dose proportional pharmacokinetics).",
+      "threshold_values": "Dose proportional PK (AUC and Cmax) over a dose range including the highest single therapeutic dose",
+      "source_section": "2.1 / 3 (Eligibility)",
+      "source_quote": "In cases where the highest single therapeutic dose does not meet this criterion but the highest strength of the reference product is soluble under the aforementioned conditions, additional data should be submitted to justify the BCS-based biowaiver approach... BCS-based biowaivers can be supported based on demonstration of dose proportional pharmacokinetics (i.e., AUC and Cmax) over a dose range that includes the highest single therapeutic dose.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-009",
+      "category": "permeability",
+      "rule": "HIGH PERMEABILITY is concluded when absolute bioavailability is ≥85%, OR when ≥85% of the administered dose is recovered in urine as unchanged drug or as the sum of parent drug + Phase 1 oxidative + Phase 2 conjugative metabolites.",
+      "threshold_values": "Absolute bioavailability ≥85%; OR urine recovery ≥85% (parent + Phase 1/Phase 2 metabolites, not reduction/hydrolysis metabolites)",
+      "source_section": "2.2",
+      "source_quote": "High permeability can be concluded when the absolute bioavailability is ≥85%. High permeability can also be concluded if ≥85% of the administered dose is recovered in urine as unchanged (parent drug), or as the sum of parent drug, Phase 1 oxidative and Phase 2 conjugative metabolites.",
+      "jurisdiction_note": "Harmonised; prior to M9, FDA used ≥90% for high permeability. M9 adopts ≥85%.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-010",
+      "category": "permeability",
+      "rule": "Significant GI degradation (>10%) of a drug precludes BCS high permeability classification. GI stability must be documented when mass balance studies are used to demonstrate high permeability, unless ≥85% of the dose is recovered as unchanged drug in urine. Stability testing: 1 hour in simulated gastric fluid and 3 hours in simulated intestinal fluid at 37°C.",
+      "threshold_values": "GI degradation >10% = cannot classify as high permeability; incubation: 1h gastric, 3h intestinal at 37°C",
+      "source_section": "2.2",
+      "source_quote": "Significant degradation (>10%) of a drug precludes BCS high permeability classification... Drug solutions should be incubated at 37°C for a period that is representative of the in vivo contact of the drug substance with these fluids, i.e., one hour in gastric fluid and three hours in intestinal fluid.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-011",
+      "category": "permeability",
+      "rule": "Permeability may also be assessed using Caco-2 cell in vitro methods (validated per Annex I). Caco-2 assays as the SOLE data source for high permeability classification are limited to passively transported drugs; for actively transported drugs, human in vivo pharmacokinetic data are required.",
+      "threshold_values": "Caco-2 Papp must be ≥ the high permeability reference standard; efflux ratio (BL-to-AP / AP-to-BL) must be <2 to confirm passive transport",
+      "source_section": "2.2 / Annex I",
+      "source_quote": "Permeability can be also assessed by validated and standardized in vitro methods using Caco-2 cells (see Annex I)... due to a potential for low or absent expression of efflux (e.g., P-gp, BCRP, MRP2) and uptake (e.g., PepT1, OATP2B1, MCT1) transporters, the use of Caco-2 cell assays as the sole data in support of high permeability for BCS classification is limited to passively transported drugs.",
+      "jurisdiction_note": "Caco-2 method acceptance established primarily at FDA; M9 harmonises Caco-2 use; PMDA and EMA gaining experience with in vitro methods",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-012",
+      "category": "waiver_criteria",
+      "rule": "A drug product is eligible for a BCS-based biowaiver if ALL of the following are met: (1) Drug substance is BCS Class I or III; (2) Drug product is an immediate-release oral solid dosage form or suspension with systemic action; (3) Drug product is the same dosage form and strength as the reference product; (4) Excipient criteria are satisfied (Section 3.1); (5) In vitro dissolution criteria are satisfied (Section 3.2).",
+      "threshold_values": "All five conditions must be simultaneously met",
+      "source_section": "3 (Introduction)",
+      "source_quote": "A drug product is eligible for a BCS-based biowaiver provided that the drug substance(s) satisfy the criteria regarding solubility and permeability (BCS Class I and III), the drug product is an immediate-release oral dosage form with systemic action, and the drug product is the same dosage form and strength as the reference product.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-013",
+      "category": "waiver_criteria",
+      "rule": "A biowaiver is NOT applicable when the test product contains a different ester, ether, isomer, mixture of isomers, complex, or derivative of a drug substance from that of the reference product (these differences may lead to different bioavailabilities not detectable by BCS biowaiver experiments). Pro-drugs may be considered for BCS biowaiver when absorbed as the pro-drug.",
+      "threshold_values": "N/A — qualitative rule",
+      "source_section": "2 (Introduction to Section 2)",
+      "source_quote": "A biowaiver is not applicable when the test product contains a different ester, ether, isomer, mixture of isomers, complex or derivative of a drug substance from that of the reference product, since these differences may lead to different bioavailabilities not deducible by means of experiments used in the BCS biowaiver concept. Pro-drugs may be considered for a BCS-based biowaiver when absorbed as the pro-drug.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-014",
+      "category": "waiver_criteria",
+      "rule": "BCS-based biowaiver requires that administration must include water. If administration without water is also intended (e.g., orodispersible products), a separate bioequivalence study with the product dosed without water must be conducted.",
+      "threshold_values": "Orodispersible tablets (ODTs) dosed without water require a separate BE study without water",
+      "source_section": "3 (Introduction) / M9 Q&A 3.2",
+      "source_quote": "Furthermore, the BCS-based biowaiver approach is applicable only when the mode of administration includes water. If administration without water is also intended (e.g., orodispersible products), a bioequivalence study in which the product is dosed without water should be conducted.",
+      "jurisdiction_note": "Harmonised; Q&A 3.2 explains the rationale: residual gastric volume is well below 250 mL so solubility in 250 mL is not applicable to ODTs without water",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-015",
+      "category": "excipients",
+      "rule": "For BCS Class I drug products, qualitative and quantitative differences in excipients are permitted EXCEPT for excipients that may affect absorption — those must be qualitatively the same and quantitatively within ±10% of the reference product amount. The cumulative difference for absorption-affecting excipients must also be within ±10%.",
+      "threshold_values": "Absorption-affecting excipients: each within ±10%; cumulative difference within ±10%",
+      "source_section": "3.1",
+      "source_quote": "For BCS Class I drugs, qualitative and quantitative differences in excipients are permitted, except for excipients that may affect absorption, which should be qualitatively the same and quantitatively similar, i.e., within ± 10% of the amount of excipient in the reference product. Additionally, the cumulative difference for excipients that may affect absorption should be within ± 10%.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-016",
+      "category": "excipients",
+      "rule": "For BCS Class III drug products, ALL excipients must be qualitatively the same and quantitatively similar (except for film coating or capsule shell excipients). Excipients that may affect absorption must be within ±10% per excipient and ±10% cumulative. All excipients must also meet the Table 1 quantitative targets (Filler ±10%, Disintegrant starch ±6%, other disintegrant ±2%, Binder ±1%, Lubricant stearates ±0.5%, other lubricant ±2%, Glidant talc ±2%, other glidant ±0.2%) relative to core weight. Total change for all excipients ≤10%.",
+      "threshold_values": "See Table 1 for specific per-excipient class limits; all relative to core weight (w/w); colorants and flavoring may be permitted when very small amounts",
+      "source_section": "3.1 / Table 1",
+      "source_quote": "For BCS Class III drugs, all of the excipients should be qualitatively the same and quantitatively similar (except for film coating or capsule shell excipients). Excipients that may affect absorption should be qualitatively the same and quantitatively similar, i.e., within ± 10% of the amount of excipient in the reference product, and the cumulative difference for these excipients should be within ± 10%. This is defined in Table 1.",
+      "jurisdiction_note": "Harmonised; Class III excipient strictness is a key differentiator from Class I in M9",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-017",
+      "category": "excipients",
+      "rule": "Excipients that may affect absorption include sugar-alcohols (e.g., mannitol, sorbitol) and surfactants (e.g., sodium lauryl sulfate). Risk assessment must consider: amount of excipient used; mechanism by which it may affect absorption; absorption properties of the drug substance (rate, extent, mechanism).",
+      "threshold_values": "Sugar-alcohols: no defined threshold (limits vary depending on drug substance sensitivity); limits same as other absorption-affecting excipients (±10%)",
+      "source_section": "3.1 / M9 Q&A 3.1.5",
+      "source_quote": "Excipients that may affect absorption include sugar-alcohols, e.g., mannitol, sorbitol, and surfactants, e.g., sodium lauryl sulfate. The risk that a given excipient will affect the absorption of a drug substance should be assessed mechanistically by considering: the amount of excipient used, the mechanism by which the excipient may affect absorption, absorption properties (rate, extent and mechanism of absorption) of the drug substance.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-018",
+      "category": "dissolution",
+      "rule": "Comparative in vitro dissolution tests for BCS biowaiver must be conducted using: Apparatus paddle or basket; Volume ≤900 mL; Temperature 37±1°C; Agitation: paddle 50 rpm, basket 100 rpm; At least 12 units per product; Three buffers: pH 1.2, 4.5, and 6.8 (pharmacopoeial); No organic solvents; No surfactants; Batch size at least 1/10 production scale or 100,000 units (whichever is greater).",
+      "threshold_values": "Volume ≤900 mL; temperature 37±1°C; paddle 50 rpm; basket 100 rpm; n≥12 units; pH 1.2, 4.5, 6.8; batch ≥1/10 production or ≥100,000 units",
+      "source_section": "3.2",
+      "source_quote": "Apparatus: paddle or basket. Volume of dissolution medium: 900 ml or less (it is recommended to use the volume selected for the quality control (QC) test). Temperature of the dissolution medium: 37±1°C. Agitation: paddle apparatus - 50 rpm. basket apparatus - 100 rpm. At least 12 units of reference and test product should be used for each dissolution profile determination. Three buffers: pH 1.2, pH 4.5, and pH 6.8. Pharmacopoeial buffers should be employed. Organic solvents are not acceptable and no surfactants should be added.",
+      "jurisdiction_note": "Harmonised; No surfactants rule is stricter than some historical regional practices",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-019",
+      "category": "dissolution",
+      "rule": "BCS Class I biowaiver dissolution criteria: Both test and reference products must display either VERY RAPID dissolution (≥85% dissolved in ≤15 minutes) OR RAPID dissolution (≥85% dissolved in ≤30 minutes) AND similar dissolution profiles (f2 ≥50 or other approved comparison), under ALL defined conditions. When one product has very rapid and the other has rapid dissolution, similarity must be demonstrated.",
+      "threshold_values": "Very rapid: ≥85% dissolved in ≤15 min; Rapid: ≥85% dissolved in ≤30 min; f2 ≥50 for similarity",
+      "source_section": "3.2",
+      "source_quote": "To qualify for a BCS-based biowaiver for BCS Class I drug substances both the test product and reference product should display either very rapid (≥85% for the mean percent dissolved in ≤ 15 minutes) in vitro dissolution characteristics, or rapid (≥85% for the mean percent dissolved in ≤ 30 minutes) and similar in vitro dissolution characteristics (i.e., based on f2 comparison), under all of the defined conditions.",
+      "jurisdiction_note": "Harmonised; f2 comparison for rapid dissolution is key addition vs some regional approaches",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-020",
+      "category": "dissolution",
+      "rule": "BCS Class III biowaiver dissolution criteria: Both test and reference products must display VERY RAPID dissolution (≥85% dissolved in ≤15 minutes) under ALL defined conditions. The stricter very-rapid requirement (vs Class I's rapid option) reflects the tighter excipient constraints required for Class III.",
+      "threshold_values": "Very rapid ONLY: ≥85% dissolved in ≤15 minutes; no f2-based option available for Class III",
+      "source_section": "3.2",
+      "source_quote": "To qualify for a BCS-based biowaiver for BCS Class III drug substances both the test product and reference product should display very rapid (≥85% for the mean percent dissolved in ≤15 minutes) in vitro dissolution characteristics under the defined conditions.",
+      "jurisdiction_note": "Harmonised; Class III very-rapid requirement is stricter than Class I option; ensures less reliance on dissolution to drive bioequivalence",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-021",
+      "category": "dissolution",
+      "rule": "Dissolution profile similarity (f2 factor) evaluation requires: minimum 3 time points (zero excluded); same time points for both products; mean values used; not more than one mean value ≥85% dissolved for either product; coefficient of variation ≤20% at early time points (up to 10 min); ≤10% at other time points. Two profiles are similar when f2 ≥50.",
+      "threshold_values": "f2 ≥50 = similar; min 3 time points; CV ≤20% early, ≤10% other; only one time point ≥85%",
+      "source_section": "3.2",
+      "source_quote": "The evaluation of the similarity factor is based on the following conditions: A minimum of three time points (zero excluded). The time points should be the same for the two products. Mean of the individual values for every time point for each product. Not more than one mean value of ≥85% dissolved for either of the products. To allow the use of mean data, the coefficient of variation should not be more than 20% at early time-points (up to 10 minutes), and should not be more than 10% at other time points. Two dissolution profiles are considered similar when the f2 value is ≥50.",
+      "jurisdiction_note": "Harmonised; f2 method widely used across FDA, EMA, PMDA",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-022",
+      "category": "dissolution",
+      "rule": "When both test and reference products demonstrate ≥85% dissolved in 15 minutes, f2 comparison is unnecessary; profiles are automatically considered similar.",
+      "threshold_values": "Both products ≥85% at ≤15 min → f2 calculation not required",
+      "source_section": "3.2",
+      "source_quote": "When both test and reference products demonstrate that ≥85% of the labelled amount of the drug is dissolved in 15 minutes, comparison with an f2 test is unnecessary and the dissolution profiles are considered similar.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-023",
+      "category": "dissolution",
+      "rule": "For products with more than one strength, the BCS biowaiver approach must be applied for EACH strength individually; test and reference product dissolution profiles must be compared at each strength.",
+      "threshold_values": "Per-strength comparison required; no extrapolation from one strength to another",
+      "source_section": "3.2 / M9 Q&A 3.2.6",
+      "source_quote": "For products with more than one strength, the BCS approach should be applied for each strength, i.e., it is expected that test and reference product dissolution profiles are compared at each strength. No; a BCS-based biowaiver requires supporting data for each strength in a product series.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-024",
+      "category": "dissolution",
+      "rule": "FDC dissolution criteria: FDCs with only BCS Class I drugs must meet Class I dissolution criteria. FDCs with only BCS Class III drugs or mixed Class I and III must meet Class III dissolution criteria (very rapid, ≥85% in ≤15 min). For FDCs with both Class I and III, the Class-specific criteria apply per component.",
+      "threshold_values": "Class I FDC: ≥85% in ≤30 min (rapid) with f2; Class III or mixed FDC: ≥85% in ≤15 min (very rapid)",
+      "source_section": "3.2",
+      "source_quote": "FDC formulations containing only BCS Class I drugs should meet dissolution criteria for a BCS Class I drug. FDC formulations containing only BCS Class III drugs should meet dissolution criteria for a BCS Class III drug. For FDCs containing both BCS Class I and BCS Class III drugs the dissolution criteria for the applicable BCS class for each component should be applied.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-025",
+      "category": "permeability",
+      "rule": "For Caco-2 passive transport validation, passive transport must be demonstrated: efflux ratio (P_appBL→AP / P_appAP→BL) must be <2 at studied drug concentrations. Method validation requires rank-order relationships with model drugs characterising zero, low (<50%), moderate (50-84%), and high (≥85%) permeability (minimum 5 per group + zero permeability marker).",
+      "threshold_values": "Efflux ratio <2 for passive transport; high permeability model drugs fa ≥85%; minimum 5 model drugs per permeability group + zero marker; minimum 3 cell assay replicates",
+      "source_section": "Annex I",
+      "source_quote": "Passive transport of the test compound should be demonstrated... ratio of apparent permeability (Papp) between the basolateral-to-apical and apical-to-basolateral directions <2 for the selected drug concentrations... The suitability of the Caco-2 cell assays for BCS permeability determination should be demonstrated by establishing a rank-order relationship between experimental permeability values and the extent of drug absorption in human subjects using zero, low (<50%), moderate (50–84%), and high (≥85%) permeability model drugs. A sufficient number of model drugs are recommended for the validation to characterize high, moderate and low permeability (a minimum 5 for each), plus a zero permeability marker.",
+      "jurisdiction_note": "Caco-2 method primarily standardised via FDA experience; adopted into M9 as harmonised standard",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-026",
+      "category": "bcs_classification",
+      "rule": "Drug substances with non-linear pharmacokinetics are still eligible for a BCS-based biowaiver if they meet the solubility and permeability criteria for BCS Class I or III classification.",
+      "threshold_values": "Non-linear PK does not disqualify; eligibility based on solubility and permeability classification",
+      "source_section": "M9 Q&A 1.1",
+      "source_quote": "Drug substances that exhibit non-linear pharmacokinetics are eligible for a BCS-based biowaiver if they meet the solubility and permeability criteria for BCS Class I or III classification.",
+      "jurisdiction_note": "Harmonised; Q&A clarification",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-027",
+      "category": "solubility",
+      "rule": "When different salt forms of the same drug substance are used in test vs reference product, the dose of the specific active moiety must be identical irrespective of salt forms; weight change associated with different salt forms is NOT relevant to the solubility assessment. A biowaiver may be applicable if both salts belong to BCS Class I (high solubility AND high permeability).",
+      "threshold_values": "Dose of active moiety must be identical; biowaiver only if both salt forms are BCS Class I",
+      "source_section": "M9 Q&A 2.2 / 2.1",
+      "source_quote": "The BCS classifies a specific drug substance. The dose of the specific active moiety needs to be identical irrespective of the salt forms. Hence, there is no relevance for weight change. A BCS-based biowaiver may be applicable if the test and reference products contain different (simple) salts, provided that both belong to BCS Class I (high solubility and high permeability).",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-028",
+      "category": "dissolution",
+      "rule": "For dissolution profile comparison between Class I products where one has very rapid (≥85% in ≤15 min) and the other has rapid (≥85% in ≤30 min) dissolution, sufficient sampling points must be taken to calculate f2 to demonstrate similarity.",
+      "threshold_values": "f2 must be calculated; sufficient sampling points at ≤15 min needed",
+      "source_section": "M9 Q&A 3.2.2",
+      "source_quote": "If one product exhibits dissolution at greater than 85% at 15 minutes but the other does not, sufficient sampling points should be taken to calculate f2 to demonstrate similarity.",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M9-029",
+      "category": "waiver_criteria",
+      "rule": "Uncoated tablets and non-functional film-coated tablets are considered the same dosage form and a comparison between these is eligible for a BCS-based biowaiver. Tablets and capsules are NOT considered the same dosage form; a BCS-based biowaiver comparison between tablets and capsules may not be acceptable in principle.",
+      "threshold_values": "Same dosage form requirement: uncoated = non-functional film-coated tablets; tablets ≠ capsules",
+      "source_section": "M9 Q&A 3.2.7",
+      "source_quote": "Uncoated tablets and non-functional film-coated tablets are considered to be the same dosage form; a comparison between these dosage forms would be eligible for a BCS-based biowaiver. Tablets and capsules are not considered to be the same dosage form and in principle a BCS-based biowaiver may not be acceptable (see also response to 3.1).",
+      "jurisdiction_note": "Harmonised",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "m9_bcs_classes": {
+    "class_I": {
+      "solubility": "High — highest single therapeutic dose completely soluble in ≤250 mL aqueous media over pH 1.2-6.8 at 37±1°C",
+      "permeability": "High — absolute bioavailability ≥85% OR ≥85% dose recovered in urine as parent + Phase 1/Phase 2 metabolites",
+      "biowaiver_eligible": true,
+      "dissolution_requirement": "Very rapid (≥85% in ≤15 min) OR Rapid (≥85% in ≤30 min) with f2 ≥50",
+      "excipient_requirement": "Absorption-affecting excipients: qualitatively same, within ±10% quantitatively; cumulative ±10%. Other excipients: differences permitted.",
+      "notes": "Lowest risk for excipient effects on absorption; BCS Class I biowaivers most broadly accepted"
+    },
+    "class_II": {
+      "solubility": "Low — does not meet the ≤250 mL / pH 1.2-6.8 high solubility criterion",
+      "permeability": "High — absolute bioavailability ≥85%",
+      "biowaiver_eligible": false,
+      "dissolution_requirement": "N/A — not eligible for BCS biowaiver",
+      "excipient_requirement": "N/A",
+      "notes": "Dissolution rate-limiting; BCS biowaiver not applicable under M9"
+    },
+    "class_III": {
+      "solubility": "High — highest single therapeutic dose completely soluble in ≤250 mL aqueous media over pH 1.2-6.8 at 37±1°C",
+      "permeability": "Low — does not meet ≥85% bioavailability or urine recovery criterion",
+      "biowaiver_eligible": true,
+      "dissolution_requirement": "Very rapid ONLY — ≥85% in ≤15 minutes under ALL test conditions",
+      "excipient_requirement": "All excipients qualitatively same and quantitatively similar (except film coat/capsule shell, colorants, flavoring). Absorption-affecting excipients: within ±10% per excipient, ±10% cumulative. All excipients must meet Table 1 limits relative to core weight.",
+      "notes": "Permeability rate-limiting; stricter excipient and dissolution requirements than Class I; site-specific absorption possible"
+    },
+    "class_IV": {
+      "solubility": "Low",
+      "permeability": "Low",
+      "biowaiver_eligible": false,
+      "dissolution_requirement": "N/A — not eligible for BCS biowaiver",
+      "excipient_requirement": "N/A",
+      "notes": "Both solubility and permeability limiting; BCS biowaiver not applicable under M9"
+    }
+  },
+
+  "m9_waiver_conditions": {
+    "eligible_classes": ["BCS Class I", "BCS Class III"],
+    "not_eligible_classes": ["BCS Class II", "BCS Class IV"],
+    "universal_conditions_required": [
+      "Drug substance must be BCS Class I or III per M9 classification criteria",
+      "Drug product must be immediate-release, oral solid dosage form or suspension with systemic action",
+      "Drug product must be the same dosage form and strength as the reference product",
+      "Drug substances in test and reference must be identical (same active moiety form — no different esters, ethers, isomers, complexes, derivatives)",
+      "Narrow therapeutic index drugs are excluded",
+      "Gene therapy products are excluded",
+      "Buccal and sublingual absorption products are excluded",
+      "Administration must include water (products intended for dosing without water require additional BE study without water)",
+      "Excipient criteria per Section 3.1 must be satisfied",
+      "In vitro dissolution criteria per Section 3.2 must be satisfied under all three pH conditions",
+      "Regulatory agreement/approval in the applicable region(s)"
+    ],
+    "class_I_specific_conditions": {
+      "dissolution": "Both test and reference must achieve ≥85% dissolved in ≤30 min (rapid) with demonstrated similarity (f2 ≥50), OR both achieve ≥85% in ≤15 min (very rapid) — f2 unnecessary if both very rapid",
+      "excipients": "Absorption-affecting excipients qualitatively same and within ±10%; cumulative ±10%; other excipients may differ qualitatively/quantitatively"
+    },
+    "class_III_specific_conditions": {
+      "dissolution": "Both test and reference must achieve ≥85% dissolved in ≤15 min (very rapid) under all defined conditions — no f2-based option",
+      "excipients": "All excipients must be qualitatively the same and quantitatively similar per Table 1 (except film coat, capsule shell, colorants, flavoring); absorption-affecting excipients within ±10% per excipient and cumulative"
+    },
+    "fdc_conditions": {
+      "rule": "ALL drug substances in FDC must be BCS Class I or III; FDC dissolution criteria determined by most restrictive class present",
+      "class_I_only_fdc": "Meet Class I dissolution and excipient criteria",
+      "class_III_only_or_mixed_fdc": "Must meet Class III dissolution criteria (very rapid ≥85% in ≤15 min) and Class III excipient criteria"
+    },
+    "exceptions_and_special_cases": {
+      "salt_forms": "Biowaiver may apply if test and reference contain different simple salts provided BOTH are BCS Class I; dose of active moiety must be identical",
+      "nonlinear_pk": "Non-linear pharmacokinetics does not disqualify from BCS biowaiver if solubility and permeability criteria are met",
+      "solubility_borderline": "If highest single dose doesn't meet high solubility but highest reference strength is soluble under conditions, may still qualify with demonstration of dose-proportional PK (AUC and Cmax)",
+      "different_strengths": "Each strength requires separate dissolution comparison; no extrapolation between strengths",
+      "tablet_vs_capsule": "Tablets and capsules not considered same dosage form; BCS biowaiver not applicable in principle for tablet-to-capsule comparisons",
+      "uncoated_vs_film_coated": "Uncoated and non-functional film-coated tablets considered same dosage form; comparison eligible for biowaiver"
+    }
+  }
+}

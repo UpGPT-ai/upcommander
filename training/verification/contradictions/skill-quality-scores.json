@@ -1,0 +1,425 @@
+{
+  "verification_date": "2026-03-23",
+  "scoring_methodology": {
+    "clarity": "1-10: How clear and unambiguous are the instructions? Can a reviewer follow them without interpretation?",
+    "completeness": "1-10: Does the skill cover all topics its source guidelines require? Are there gaps in coverage?",
+    "actionability": "1-10: Does the skill produce concrete, structured outputs? Are pass/fail criteria defined?"
+  },
+
+  "scores": [
+    {
+      "file": "skill-stability-analysis.md",
+      "directory": "output-v2/q-stability",
+      "clarity": 10,
+      "completeness": 9,
+      "actionability": 10,
+      "overall": 9.7,
+      "strengths": [
+        "Exceptionally detailed phase-by-phase evaluation with exact numerical thresholds",
+        "Quick reference tables and decision trees for rapid lookup",
+        "Clear output template with checklist format",
+        "Covers both current ICH Q1 and 2025 draft provisions",
+        "Severity classification table with concrete examples"
+      ],
+      "weaknesses": [
+        "Companion JSON file (stability-rules.json) has only 6 IDs out of ~100+ data points — not machine-addressable",
+        "No explicit cross-reference to skill-biotech-quality.md for biological products (could mislead if applied to biologicals)"
+      ],
+      "json_alignment": "PARTIAL — SKILL.md is self-contained but JSON lacks IDs for automation"
+    },
+    {
+      "file": "skill-cmc-methods.md",
+      "directory": "output-v2/q-cmc-methods",
+      "clarity": 9,
+      "completeness": 10,
+      "actionability": 9,
+      "overall": 9.3,
+      "strengths": [
+        "Covers the full analytical lifecycle (development → validation → verification)",
+        "Complete impurity threshold tables for Q3A/Q3B/Q3C/Q3D/Q3E with exact values",
+        "Decision tree coverage for Q6A specification setting",
+        "Q4B pharmacopoeial interchangeability restrictions clearly enumerated",
+        "Q7 API GMP audit checklist is comprehensive",
+        "Quick reference table of critical numerical thresholds"
+      ],
+      "weaknesses": [
+        "JSON file (analytical-impurity-rules.json) has ZERO IDs — entirely unaddressable for automation",
+        "No formal severity classification for findings",
+        "Output format lacks scoring/rating rubric"
+      ],
+      "json_alignment": "POOR — JSON is well-structured content but has no IDs"
+    },
+    {
+      "file": "skill-biotech-quality.md",
+      "directory": "output-v2/q-biotech",
+      "clarity": 10,
+      "completeness": 9,
+      "actionability": 10,
+      "overall": 9.7,
+      "strengths": [
+        "Explicit rule ID citations throughout (VS-001, EC-001, etc.) — most traceable skill",
+        "Three decision trees for common regulatory questions (NGS, process change, viral clearance)",
+        "Common deficiency patterns section based on regulatory experience",
+        "Clear product scope definition (in-scope and out-of-scope)",
+        "Phase-based framework maps cleanly to CTD sections",
+        "Integration table linking to other ICH guidelines"
+      ],
+      "weaknesses": [
+        "JSON metadata claims 147 rules but actual count is 136 — metadata inconsistency",
+        "Q5C stability section could cross-reference skill-stability-analysis.md for general stability methodology"
+      ],
+      "json_alignment": "EXCELLENT — All cited rule IDs exist in JSON; complete sequential coverage"
+    },
+    {
+      "file": "skill-quality-systems.md",
+      "directory": "output-v2/q-systems",
+      "clarity": 9,
+      "completeness": 9,
+      "actionability": 9,
+      "overall": 9.0,
+      "strengths": [
+        "10-section evaluation framework covering Q8-Q13 comprehensively",
+        "Red flags section for each area provides rapid deficiency identification",
+        "Scoring rubric (0-3 per section) enables consistent evaluation",
+        "Quick reference table of critical distinctions (criticality vs risk, design space vs proven ranges)",
+        "Continuous manufacturing (Q13) coverage is thorough and current"
+      ],
+      "weaknesses": [
+        "Does not cite specific rule IDs from quality-systems-rules.json in the evaluation text",
+        "Output template references 'specific rule references from quality-systems-rules.json' but does not show examples",
+        "No cross-reference to skill-cmc-methods.md for analytical method lifecycle (Q14 overlap)"
+      ],
+      "json_alignment": "MODERATE — JSON has rules but SKILL.md does not cite them by ID"
+    },
+    {
+      "file": "skill-nonclinical-review.md",
+      "directory": "output-v2/s-toxicology",
+      "clarity": 9,
+      "completeness": 10,
+      "actionability": 9,
+      "overall": 9.3,
+      "strengths": [
+        "Comprehensive 12-step review covering all S-series guidelines",
+        "Product-type routing table (Step 1) correctly identifies modified requirements per product type",
+        "Exposure margin framework with quantitative thresholds from S5(R3)",
+        "Covers gene therapy (S12), oligonucleotides (S13), and pediatric (S11) — forward-looking",
+        "Reference data table with all key numerical thresholds"
+      ],
+      "weaknesses": [
+        "Does not cite rule IDs from nonclinical-requirements.json despite that file having 70 well-formed IDs",
+        "Overlaps with skill-safety-pharmacology.md on S7A/S7B without cross-reference",
+        "No formal scoring rubric — output format uses PASS/FAIL/PARTIAL per study but no overall score"
+      ],
+      "json_alignment": "MODERATE — JSON has excellent IDs (S1A-01 format) but SKILL.md doesn't reference them"
+    },
+    {
+      "file": "skill-safety-pharmacology.md",
+      "directory": "output-v2/s-pharmacology",
+      "clarity": 10,
+      "completeness": 9,
+      "actionability": 10,
+      "overall": 9.7,
+      "strengths": [
+        "Exceptionally detailed hERG assay best practice checklist (15+ sub-items)",
+        "Modality-specific routing table for scope determination",
+        "Decision trees for S7B package, TQT requirement, and follow-up triggers",
+        "Integrated risk assessment framework per E14/S7B Q&As",
+        "Timing alignment matrix for each clinical development stage",
+        "Risk classification with clear definitions (LOW/MODERATE/HIGH/CRITICAL)"
+      ],
+      "weaknesses": [
+        "JSON file (safety-pharmacology-rules.json) has ZERO IDs",
+        "No cross-reference to skill-nonclinical-review.md (which covers S7A/S7B at a higher level)",
+        "Metabolite section (6A) could be more detailed on when metabolite SP studies are warranted"
+      ],
+      "json_alignment": "POOR — JSON has no IDs despite well-structured content"
+    },
+    {
+      "file": "skill-clinical-design.md",
+      "directory": "output-v2/e-clinical-design",
+      "clarity": 9,
+      "completeness": 10,
+      "actionability": 10,
+      "overall": 9.7,
+      "strengths": [
+        "583 rules with complete JSON alignment — largest and most comprehensive skill",
+        "Explicit rule ID citations throughout (E8-005, E9-004, etc.)",
+        "E9(R1) estimands framework covered in detail",
+        "ICH E20 adaptive design coverage is current and thorough",
+        "Weighted scoring methodology with category breakdown",
+        "Clear integration points (upstream dependencies, downstream consumers)",
+        "Usage examples for different scenarios"
+      ],
+      "weaknesses": [
+        "E9-R1-001 format in SKILL.md vs E9R1-001 in JSON — cosmetic mismatch could cause lookup failures",
+        "Length may be overwhelming for a single evaluation session",
+        "No cross-reference to skill-safety-reporting.md for E14 cardiac safety overlap"
+      ],
+      "json_alignment": "EXCELLENT — 583 rules, all IDs verified, complete coverage"
+    },
+    {
+      "file": "skill-safety-reporting.md",
+      "directory": "output-v2/e-safety-pharma",
+      "clarity": 10,
+      "completeness": 10,
+      "actionability": 10,
+      "overall": 10.0,
+      "strengths": [
+        "Covers entire safety reporting lifecycle: definitions (E2A) → ICSR (E2B) → PBRER (E2C) → post-market (E2D) → PV planning (E2E) → DSUR (E2F) → cardiac (E14) → selective collection (E19) → adaptive (E20) → pregnancy (E21)",
+        "E2B(R3) data element table with exact field requirements",
+        "Null flavor usage rules clearly documented",
+        "PBRER 20-section structural checklist",
+        "DSUR 20-section structural checklist with all 12 line listing fields",
+        "Timeline compliance summary table",
+        "Cross-cutting evaluation for MedDRA coding and controlled vocabulary",
+        "Output format is clear and structured"
+      ],
+      "weaknesses": [
+        "JSON file (safety-reporting-rules.json) has ZERO IDs — major gap for automation",
+        "No cross-reference to skill-eu-pharmacovigilance.md for EU-specific PSUR requirements",
+        "E22 (RWE) and E23 mentioned in frontmatter but not detailed in evaluation sections"
+      ],
+      "json_alignment": "POOR — SKILL.md is excellent but JSON lacks IDs entirely"
+    },
+    {
+      "file": "skill-special-populations.md",
+      "directory": "output-v2/e-special-pops",
+      "clarity": 9,
+      "completeness": 10,
+      "actionability": 9,
+      "overall": 9.3,
+      "strengths": [
+        "8 domain-specific evaluation checklists (E5, E6, E11/E11A, E12, E15, E16, E17, E18)",
+        "Cross-cutting integration checks table bridges all domains",
+        "Pediatric extrapolation framework (E11A) is detailed and current",
+        "MRCT consistency assessment (E17) includes preservation-of-fraction method",
+        "Genomic sampling (E18) checklist is uniquely comprehensive",
+        "PASS criteria defined for each domain"
+      ],
+      "weaknesses": [
+        "JSON metadata claims 412 rules but only 132 exist — CRITICAL count discrepancy",
+        "SKILL.md states '412 rules across 7 domains + 7 cross-cutting rules' which propagates the JSON error",
+        "No formal severity classification for individual findings within domains",
+        "No cross-reference to skill-clinical-design.md for E7/E1 thresholds"
+      ],
+      "json_alignment": "MODERATE — IDs exist and are complete for the 132 actual rules, but count claim is wrong by 3x"
+    },
+    {
+      "file": "skill-cross-domain.md",
+      "directory": "output-v2/m-multidisciplinary",
+      "clarity": 9,
+      "completeness": 9,
+      "actionability": 8,
+      "overall": 8.7,
+      "strengths": [
+        "249 rules with complete JSON alignment",
+        "5 critical cross-domain patterns clearly articulated",
+        "Decision matrix with 6-step routing",
+        "Domain interaction statistics quantify cross-domain relationships",
+        "Cross-reference map identifies most-cited guidelines",
+        "Implementation notes are practical and specific"
+      ],
+      "weaknesses": [
+        "No output template — the skill describes what to check but not how to format findings",
+        "No scoring rubric for cross-domain compliance assessment",
+        "M13C coverage is minimal (1 rule noted) despite being important for NTI drugs",
+        "No worked examples showing how the decision matrix produces an assessment"
+      ],
+      "json_alignment": "EXCELLENT — 249 rules, all IDs verified"
+    },
+    {
+      "file": "skill-regulatory-compliance.md",
+      "directory": "output-v2/regulations-crl",
+      "clarity": 9,
+      "completeness": 9,
+      "actionability": 9,
+      "overall": 9.0,
+      "strengths": [
+        "4-level check framework (structural → cross-reference → jurisdiction → CRL risk)",
+        "CRL risk assessment based on 419 real Complete Response Letters — data-driven",
+        "Three-jurisdiction comparison (FDA/EMA/PMDA) with specific criteria",
+        "Bioequivalence acceptance criteria comparison table",
+        "Automation architecture section (Tier 1/2/3) shows implementation path",
+        "Key regulatory timelines table is a valuable quick reference"
+      ],
+      "weaknesses": [
+        "US FDA section of regulatory-requirements.json has ZERO IDs",
+        "Does not reference jurisdiction-divergences.json (DIV-001 format) in the SKILL.md text",
+        "Level 4 (CRL risk) is described but has no structured checklist",
+        "No cross-reference to v3 EU skills or Canada skill for deeper jurisdiction-specific analysis"
+      ],
+      "json_alignment": "PARTIAL — divergences file is well-IDed; requirements file has sparse IDs"
+    },
+    {
+      "file": "skill-eu-regulatory.md",
+      "directory": "output-v3/eu-law",
+      "clarity": 9,
+      "completeness": 9,
+      "actionability": 9,
+      "overall": 9.0,
+      "strengths": [
+        "7-step analysis framework covering entire EU regulatory lifecycle",
+        "Critical EU-FDA divergence table with 15 mapped differences and risk levels",
+        "Clinical trial compliance section covers Reg 536/2014 thoroughly",
+        "Post-authorisation maintenance section (renewal, sunset clause, variations)",
+        "Output format includes gap analysis, divergence mapping, and risk register"
+      ],
+      "weaknesses": [
+        "JSON (eu-legislation-requirements.json) claims 412 requirements but only 139 exist — 66% shortfall",
+        "No cross-reference to skill-eu-gmp-analysis.md or skill-eu-pharmacovigilance.md",
+        "Missing coverage of Regulation (EU) 2024/1938 (amended 726/2004) if applicable",
+        "Pharmacovigilance section overlaps with skill-eu-pharmacovigilance.md without delineation"
+      ],
+      "json_alignment": "MODERATE — IDs exist and are well-formatted but count is critically inflated"
+    },
+    {
+      "file": "skill-eu-gmp-analysis.md",
+      "directory": "output-v3/eu-gmp-ema",
+      "clarity": 9,
+      "completeness": 10,
+      "actionability": 10,
+      "overall": 9.7,
+      "strengths": [
+        "6-phase analysis framework from product classification through sterile/biosimilar-specific deep dives",
+        "20-row FDA-to-EU gap analysis table — extremely practical for dual-jurisdiction sponsors",
+        "Annex 1 (2022) sterile product checklist with exact numerical limits",
+        "Biosimilar-specific analytical characterisation checklist is detailed",
+        "QP certification readiness assessment in output format",
+        "EU-specific requirements clearly flagged throughout"
+      ],
+      "weaknesses": [
+        "FACTUAL ERROR in Gap #13: States EMA does not accept BCS Class III biowaivers (incorrect)",
+        "No cross-reference to skill-eu-regulatory.md or skill-eu-pharmacovigilance.md",
+        "JSON (eu-gmp-rules.json) has 112 IDs but SKILL.md does not cite them"
+      ],
+      "json_alignment": "MODERATE — JSON is well-IDed but SKILL.md doesn't reference IDs"
+    },
+    {
+      "file": "skill-eu-pharmacovigilance.md",
+      "directory": "output-v3/ema-pharma-gvp",
+      "clarity": 10,
+      "completeness": 9,
+      "actionability": 9,
+      "overall": 9.3,
+      "strengths": [
+        "8-section framework covering all major GVP modules (I, II, V, VII, VIII, IX, XV, XVI)",
+        "PASS protocol requirements per IR Annex III — uniquely detailed",
+        "Signal management process with 6 defined steps and MAH obligations",
+        "DHPC template and communication plan requirements",
+        "RMM taxonomy (routine + additional educational + control tools)",
+        "RMM effectiveness evaluation framework (4 outcome levels)",
+        "EU vs FDA comparison table",
+        "15-item red flags checklist"
+      ],
+      "weaknesses": [
+        "Does not reference gvp-unique-requirements.json (separate file in same directory)",
+        "No cross-reference to skill-safety-reporting.md for ICH E2C(R2) baseline",
+        "GVP Modules III, IV, VI, X-XIV not covered (some may be less relevant but should be noted)",
+        "No formal scoring rubric — evaluation is checklist-based without aggregated score",
+        "JSON (eu-pharmacovigilance-rules.json) has 84 IDs but SKILL.md doesn't cite them"
+      ],
+      "json_alignment": "MODERATE — JSON is well-structured with GVP-I-001 format but SKILL.md doesn't cite IDs"
+    },
+    {
+      "file": "skill-canada-regulatory.md",
+      "directory": "output-v3/health-canada",
+      "clarity": 10,
+      "completeness": 10,
+      "actionability": 10,
+      "overall": 10.0,
+      "strengths": [
+        "13-section checklist covering all Canadian submission aspects",
+        "Detailed PM-to-FDA-PI and PM-to-EU-SmPC conversion checklists — uniquely practical",
+        "CTA vs FDA IND conversion checklist",
+        "CS-BE (Comprehensive Summary: Bioequivalence) requirements — Canada-only format",
+        "Product Monograph v7 XML validation requirements with specific detail",
+        "17-item red flags list based on common rejection reasons",
+        "Canada-only requirements section (13 items) clearly separated",
+        "Bilingual requirements consistently flagged"
+      ],
+      "weaknesses": [
+        "JSON (health-canada-requirements.json) has ZERO IDs — not machine-addressable",
+        "No cross-reference to skill-regulatory-compliance.md or skill-multi-jurisdiction.md",
+        "No formal scoring rubric"
+      ],
+      "json_alignment": "POOR — SKILL.md is excellent but JSON has no IDs"
+    },
+    {
+      "file": "skill-multi-jurisdiction.md",
+      "directory": "output-v3/who-regs",
+      "clarity": 9,
+      "completeness": 9,
+      "actionability": 9,
+      "overall": 9.0,
+      "strengths": [
+        "5-jurisdiction coverage (FDA, EMA, PMDA, Health Canada, WHO) — broadest scope",
+        "12-category gap analysis framework",
+        "4-level severity classification with timeline impact",
+        "5 common multi-jurisdiction pitfalls with prevention strategies",
+        "4-step gap analysis with resolution strategies table",
+        "Jurisdiction profiles with key unique requirements clearly listed"
+      ],
+      "weaknesses": [
+        "Both JSON files (who-requirements.json, japan-specific-requirements.json) have ZERO IDs",
+        "Japan-specific content partially duplicates v2 regulatory-requirements.json PMDA section",
+        "No output template for the gap analysis report",
+        "Coverage of Health Canada is thinner than the dedicated skill-canada-regulatory.md",
+        "No cross-references to any other skills"
+      ],
+      "json_alignment": "POOR — Neither JSON file has IDs"
+    }
+  ],
+
+  "aggregate_statistics": {
+    "average_clarity": 9.4,
+    "average_completeness": 9.5,
+    "average_actionability": 9.4,
+    "average_overall": 9.5,
+    "highest_rated": [
+      {"file": "skill-safety-reporting.md", "score": 10.0},
+      {"file": "skill-canada-regulatory.md", "score": 10.0}
+    ],
+    "lowest_rated": [
+      {"file": "skill-cross-domain.md", "score": 8.7}
+    ],
+    "skills_with_json_id_alignment": {
+      "EXCELLENT": ["skill-biotech-quality.md", "skill-clinical-design.md", "skill-cross-domain.md"],
+      "MODERATE": ["skill-quality-systems.md", "skill-nonclinical-review.md", "skill-special-populations.md", "skill-eu-regulatory.md", "skill-eu-gmp-analysis.md", "skill-eu-pharmacovigilance.md"],
+      "PARTIAL": ["skill-stability-analysis.md", "skill-regulatory-compliance.md"],
+      "POOR": ["skill-cmc-methods.md", "skill-safety-pharmacology.md", "skill-safety-reporting.md", "skill-canada-regulatory.md", "skill-multi-jurisdiction.md"]
+    }
+  },
+
+  "top_recommendations": [
+    {
+      "priority": 1,
+      "action": "Fix factual error in skill-eu-gmp-analysis.md Gap #13 — BCS Class III biowaivers ARE accepted by EMA",
+      "impact": "Prevents incorrect regulatory advice"
+    },
+    {
+      "priority": 2,
+      "action": "Add rule IDs to 6 zero-ID JSON files: analytical-impurity-rules.json, safety-pharmacology-rules.json, safety-reporting-rules.json, health-canada-requirements.json, who-requirements.json, japan-specific-requirements.json",
+      "impact": "Enables machine-readable rule citation and automated compliance checking"
+    },
+    {
+      "priority": 3,
+      "action": "Correct metadata count discrepancies in special-populations-rules.json (claims 412, has 132) and eu-legislation-requirements.json (claims 412, has 139)",
+      "impact": "Prevents misleading coverage claims"
+    },
+    {
+      "priority": 4,
+      "action": "Add cross-references between overlapping skills: (a) nonclinical↔safety-pharmacology, (b) safety-reporting↔eu-pharmacovigilance, (c) all three EU skills to each other, (d) regulatory-compliance↔canada↔multi-jurisdiction",
+      "impact": "Prevents users from applying one skill in isolation and missing requirements covered by another"
+    },
+    {
+      "priority": 5,
+      "action": "Harmonize severity scales or add a mapping table showing how each skill's scale relates to a common framework",
+      "impact": "Enables consistent cross-skill reporting"
+    },
+    {
+      "priority": 6,
+      "action": "Add output templates to skill-cross-domain.md and skill-multi-jurisdiction.md (both currently lack structured output format)",
+      "impact": "Improves actionability of the two skills that scored lowest on this dimension"
+    }
+  ]
+}

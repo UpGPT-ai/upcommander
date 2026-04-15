@@ -1,0 +1,563 @@
+{
+  "meta": {
+    "title": "ICH Q1A(R2)/Q1B/Q1C/Q1D/Q1E — Stability Testing Suite",
+    "extraction_date": "2026-03-23",
+    "total_rules": 72,
+    "sources": [
+      {
+        "id": "Q1A(R2)",
+        "title": "Stability Testing of New Drug Substances and Products",
+        "version": "Step 4, dated 6 February 2003",
+        "file": "Q1A(R2) Guideline.pdf"
+      },
+      {
+        "id": "Q1B",
+        "title": "Stability Testing: Photostability Testing of New Drug Substances and Products",
+        "version": "Step 4, dated 6 November 1996",
+        "file": "Q1B Guideline.pdf"
+      },
+      {
+        "id": "Q1C",
+        "title": "Stability Testing for New Dosage Forms",
+        "version": "Step 4, dated 6 November 1996",
+        "file": "Q1C Guideline.pdf"
+      },
+      {
+        "id": "Q1D",
+        "title": "Bracketing and Matrixing Designs for Stability Testing of New Drug Substances and Products",
+        "version": "Step 4, dated 7 February 2002",
+        "file": "Q1D Guideline.pdf"
+      },
+      {
+        "id": "Q1E",
+        "title": "Evaluation for Stability Data",
+        "version": "Step 4, dated 6 February 2003",
+        "file": "Q1E Guideline.pdf"
+      }
+    ]
+  },
+  "q1a_r2_stability_testing": {
+    "rules": [
+      {
+        "id": "Q1A-001",
+        "rule": "Drug substance long-term stability studies must be conducted at 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH, with a minimum data coverage of 12 months at submission.",
+        "source_section": "Q1A Section 2.1.7.1 — Storage Conditions, General Case (Drug Substance)",
+        "source_quote": "Long term*: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH — Minimum time period covered by data at submission: 12 months. *It is up to the applicant to decide whether long term stability studies are performed at 25 ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-002",
+        "rule": "Drug substance intermediate stability studies must be conducted at 30°C ± 2°C/65% RH ± 5% RH, with a minimum data coverage of 6 months at submission. If 30°C ± 2°C/65% RH ± 5% RH is the long-term condition, there is no intermediate condition.",
+        "source_section": "Q1A Section 2.1.7.1 — Storage Conditions, General Case (Drug Substance)",
+        "source_quote": "Intermediate**: 30°C ± 2°C/65% RH ± 5% RH — 6 months. **If 30°C ± 2°C/65% RH ± 5% RH is the long-term condition, there is no intermediate condition.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-003",
+        "rule": "Drug substance accelerated stability studies must be conducted at 40°C ± 2°C/75% RH ± 5% RH, with a minimum data coverage of 6 months at submission.",
+        "source_section": "Q1A Section 2.1.7.1 — Storage Conditions, General Case (Drug Substance)",
+        "source_quote": "Accelerated: 40°C ± 2°C/75% RH ± 5% RH — 6 months",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-004",
+        "rule": "For drug substances intended for storage in a refrigerator, the long-term condition is 5°C ± 3°C (minimum 12 months at submission) and the accelerated condition is 25°C ± 2°C/60% RH ± 5% RH (minimum 6 months at submission).",
+        "source_section": "Q1A Section 2.1.7.2 — Drug Substances Intended for Storage in a Refrigerator",
+        "source_quote": "Long term: 5°C ± 3°C — 12 months. Accelerated: 25°C ± 2°C/60% RH ± 5% RH — 6 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-005",
+        "rule": "For drug substances intended for storage in a freezer, the long-term condition is -20°C ± 5°C with a minimum data coverage of 12 months at submission. There is no accelerated storage condition.",
+        "source_section": "Q1A Section 2.1.7.3 — Drug Substances Intended for Storage in a Freezer",
+        "source_quote": "Long term: - 20°C ± 5°C — 12 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-006",
+        "rule": "Significant change for a drug substance is defined as failure to meet its specification.",
+        "source_section": "Q1A Section 2.1.7.1 — Storage Conditions, General Case (Drug Substance)",
+        "source_quote": "\"Significant change\" for a drug substance is defined as failure to meet its specification.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-007",
+        "rule": "For long-term drug substance studies with a proposed re-test period of at least 12 months, testing frequency at the long-term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed re-test period.",
+        "source_section": "Q1A Section 2.1.6 — Testing Frequency (Drug Substance)",
+        "source_quote": "For drug substances with a proposed re-test period of at least 12 months, the frequency of testing at the long term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed re-test period.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-008",
+        "rule": "At the accelerated storage condition for drug substances, a minimum of three time points, including the initial and final time points (e.g., 0, 3, and 6 months), from a 6-month study is recommended.",
+        "source_section": "Q1A Section 2.1.6 — Testing Frequency (Drug Substance)",
+        "source_quote": "At the accelerated storage condition, a minimum of three time points, including the initial and final time points (e.g., 0, 3, and 6 months), from a 6-month study is recommended.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-009",
+        "rule": "When testing at the intermediate storage condition is called for as a result of significant change at the accelerated storage condition for drug substances, a minimum of four time points, including the initial and final time points (e.g., 0, 6, 9, 12 months), from a 12-month study is recommended.",
+        "source_section": "Q1A Section 2.1.6 — Testing Frequency (Drug Substance)",
+        "source_quote": "When testing at the intermediate storage condition is called for as a result of significant change at the accelerated storage condition, a minimum of four time points, including the initial and final time points (e.g., 0, 6, 9, 12 months), from a 12-month study is recommended.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-010",
+        "rule": "Data from formal stability studies for drug substances should be provided on at least three primary batches, manufactured to a minimum of pilot scale by the same synthetic route and using a method of manufacture and procedure that simulates the final process to be used for production batches.",
+        "source_section": "Q1A Section 2.1.3 — Selection of Batches (Drug Substance)",
+        "source_quote": "Data from formal stability studies should be provided on at least three primary batches of the drug substance. The batches should be manufactured to a minimum of pilot scale by the same synthetic route as, and using a method of manufacture and procedure that simulates the final process to be used for, production batches.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-011",
+        "rule": "If long-term studies are conducted at 25°C ± 2°C/60% RH ± 5% RH and significant change occurs at any time during 6 months' testing at the accelerated storage condition, additional testing at the intermediate storage condition (30°C ± 2°C/65% RH ± 5% RH) should be conducted. The initial application should include a minimum of 6 months' data from a 12-month study at the intermediate storage condition.",
+        "source_section": "Q1A Section 2.1.7.1 — Storage Conditions, General Case (Drug Substance)",
+        "source_quote": "If long-term studies are conducted at 25°C ± 2°C/60% RH ± 5% RH and \"significant change\" occurs at any time during 6 months' testing at the accelerated storage condition, additional testing at the intermediate storage condition should be conducted and evaluated against significant change criteria. Testing at the intermediate storage condition should include all tests, unless otherwise justified. The initial application should include a minimum of 6 months' data from a 12-month study at the intermediate storage condition.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-012",
+        "rule": "Stress testing of drug substances should include the effect of temperatures in 10°C increments (e.g., 50°C, 60°C, etc.) above that for accelerated testing, humidity (e.g., 75% RH or greater) where appropriate, oxidation, and photolysis.",
+        "source_section": "Q1A Section 2.1.2 — Stress Testing",
+        "source_quote": "It should include the effect of temperatures (in 10°C increments (e.g., 50°C, 60°C, etc.) above that for accelerated testing), humidity (e.g., 75% RH or greater) where appropriate, oxidation, and photolysis on the drug substance.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-013",
+        "rule": "Drug product long-term stability studies (general case) must be conducted at 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH, with a minimum data coverage of 12 months at submission.",
+        "source_section": "Q1A Section 2.2.7.1 — Storage Conditions, General Case (Drug Product)",
+        "source_quote": "Long term*: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH — Minimum time period covered by data at submission: 12 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-014",
+        "rule": "Drug product accelerated stability studies (general case) must be conducted at 40°C ± 2°C/75% RH ± 5% RH, with a minimum data coverage of 6 months at submission.",
+        "source_section": "Q1A Section 2.2.7.1 — Storage Conditions, General Case (Drug Product)",
+        "source_quote": "Accelerated: 40°C ± 2°C/75% RH ± 5% RH — 6 months",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-015",
+        "rule": "For drug products intended for storage in a refrigerator, the long-term condition is 5°C ± 3°C (minimum 12 months at submission) and the accelerated condition is 25°C ± 2°C/60% RH ± 5% RH (minimum 6 months at submission).",
+        "source_section": "Q1A Section 2.2.7.4 — Drug Products Intended for Storage in a Refrigerator",
+        "source_quote": "Long term: 5°C ± 3°C — 12 months. Accelerated: 25°C ± 2°C/60% RH ± 5% RH — 6 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-016",
+        "rule": "For drug products intended for storage in a freezer, the long-term condition is -20°C ± 5°C with a minimum data coverage of 12 months at submission.",
+        "source_section": "Q1A Section 2.2.7.5 — Drug Products Intended for Storage in a Freezer",
+        "source_quote": "Long term: - 20°C ± 5°C — 12 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-017",
+        "rule": "Significant change for a drug product is defined as: (1) a 5% change in assay from its initial value; or failure to meet the acceptance criteria for potency when using biological or immunological procedures; (2) any degradation product's exceeding its acceptance criterion; (3) failure to meet acceptance criteria for appearance, physical attributes, and functionality test; (4) failure to meet the acceptance criterion for pH; or (5) failure to meet the acceptance criteria for dissolution for 12 dosage units.",
+        "source_section": "Q1A Section 2.2.7.1 — Storage Conditions, General Case (Drug Product)",
+        "source_quote": "In general, \"significant change\" for a drug product is defined as: 1. A 5% change in assay from its initial value; or failure to meet the acceptance criteria for potency when using biological or immunological procedures; 2. Any degradation product's exceeding its acceptance criterion; 3. Failure to meet the acceptance criteria for appearance, physical attributes, and functionality test (e.g., color, phase separation, resuspendibility, caking, hardness, dose delivery per actuation); however, some changes in physical attributes (e.g., softening of suppositories, melting of creams) may be expected under accelerated conditions; and, as appropriate for the dosage form: 4. Failure to meet the acceptance criterion for pH; or 5. Failure to meet the acceptance criteria for dissolution for 12 dosage units.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-018",
+        "rule": "For drug products packaged in semi-permeable containers, long-term storage conditions are 25°C ± 2°C/40% RH ± 5% RH or 30°C ± 2°C/35% RH ± 5% RH (minimum 12 months at submission); intermediate is 30°C ± 2°C/65% RH ± 5% RH (6 months); and accelerated is 40°C ± 2°C/not more than (NMT) 25% RH (6 months).",
+        "source_section": "Q1A Section 2.2.7.3 — Drug Products Packaged in Semi-Permeable Containers",
+        "source_quote": "Long term*: 25°C ± 2°C/40% RH ± 5% RH or 30°C ± 2°C/35% RH ± 5% RH — 12 months. Intermediate**: 30°C ± 2°C/65% RH ± 5% RH — 6 months. Accelerated: 40°C ± 2°C/not more than (NMT) 25% RH — 6 months.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-019",
+        "rule": "A 5% loss in water from its initial value is considered a significant change for a product packaged in a semi-permeable container after an equivalent of 3 months' storage at 40°C/NMT 25% RH.",
+        "source_section": "Q1A Section 2.2.7.3 — Drug Products Packaged in Semi-Permeable Containers",
+        "source_quote": "A 5% loss in water from its initial value is considered a significant change for a product packaged in a semi-permeable container after an equivalent of 3 months' storage at 40°C/NMT 25% RH.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-020",
+        "rule": "Water loss rate ratios at a given temperature: 60% RH to 25% RH = 1.9; 60% RH to 40% RH = 1.5; 65% RH to 35% RH = 1.9; 75% RH to 25% RH = 3.0. These ratios are used to derive water loss at reference relative humidity from studies conducted at alternative relative humidity.",
+        "source_section": "Q1A Section 2.2.7.3 — Drug Products Packaged in Semi-Permeable Containers",
+        "source_quote": "60% RH [alternative] | 25% RH [reference] | 1.9 [ratio]. 60% RH | 40% RH | 1.5. 65% RH | 35% RH | 1.9. 75% RH | 25% RH | 3.0.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-021",
+        "rule": "The long-term testing for drug substances and drug products should cover a minimum of 12 months' duration on at least three primary batches at the time of submission and should be continued for a period of time sufficient to cover the proposed re-test period or shelf life.",
+        "source_section": "Q1A Section 2.1.7 and 2.2.7 — Storage Conditions",
+        "source_quote": "The long term testing should cover a minimum of 12 months' duration on at least three primary batches at the time of submission and should be continued for a period of time sufficient to cover the proposed re-test period.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-022",
+        "rule": "For drug products with a proposed shelf life of at least 12 months, the frequency of testing at the long-term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed shelf life.",
+        "source_section": "Q1A Section 2.2.6 — Testing Frequency (Drug Product)",
+        "source_quote": "For products with a proposed shelf life of at least 12 months, the frequency of testing at the long term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed shelf life.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-023",
+        "rule": "An approach for analyzing stability data on a quantitative attribute expected to change with time is to determine the time at which the 95% one-sided confidence limit for the mean curve intersects the acceptance criterion.",
+        "source_section": "Q1A Section 2.1.9 — Evaluation (Drug Substance)",
+        "source_quote": "An approach for analyzing the data on a quantitative attribute that is expected to change with time is to determine the time at which the 95 one-sided confidence limit for the mean curve intersects the acceptance criterion.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-024",
+        "rule": "For batch poolability testing, statistical tests (e.g., p values for level of significance of rejection of more than 0.25) should be applied to the slopes of the regression lines and zero time intercepts for the individual batches to determine whether data from multiple batches can be combined.",
+        "source_section": "Q1A Section 2.1.9 — Evaluation (Drug Substance)",
+        "source_quote": "This can be done by first applying appropriate statistical tests (e.g., p values for level of significance of rejection of more than 0.25) to the slopes of the regression lines and zero time intercepts for the individual batches.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1A-025",
+        "rule": "Storage condition tolerances: excursions that exceed the defined tolerances for more than 24 hours should be described in the study report and their effect assessed.",
+        "source_section": "Q1A Section 3 — Glossary (Storage condition tolerances)",
+        "source_quote": "Excursions that exceed the defined tolerances for more than 24 hours should be described in the study report and their effect assessed.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q1b_photostability": {
+    "rules": [
+      {
+        "id": "Q1B-001",
+        "rule": "For confirmatory photostability studies, samples should be exposed to light providing an overall illumination of not less than 1.2 million lux hours and an integrated near ultraviolet energy of not less than 200 watt hours/square meter.",
+        "source_section": "Q1B Section 1.C — Procedure",
+        "source_quote": "For confirmatory studies, samples should be exposed to light providing an overall illumination of not less than 1.2 million lux hours and an integrated near ultraviolet energy of not less than 200 watt hours/square meter to allow direct comparisons to be made between the drug substance and drug product.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-002",
+        "rule": "Option 1 light source for photostability testing: any light source designed to produce output similar to the D65/ID65 emission standard, such as an artificial daylight fluorescent lamp combining visible and UV outputs, xenon, or metal halide lamp. D65 is the internationally recognized standard for outdoor daylight as defined in ISO 10977 (1993). ID65 is the equivalent indoor indirect daylight standard.",
+        "source_section": "Q1B Section 1.B — Light Sources, Option 1",
+        "source_quote": "Any light source that is designed to produce an output similar to the D65/ID65 emission standard such as an artificial daylight fluorescent lamp combining visible and ultraviolet (UV) outputs, xenon, or metal halide lamp. D65 is the internationally recognized standard for outdoor daylight as defined in ISO 10977 (1993). ID65 is the equivalent indoor indirect daylight standard.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-003",
+        "rule": "Option 2 light source for photostability testing requires simultaneous exposure to both a cool white fluorescent lamp (output similar to ISO 10977(1993)) and a near UV fluorescent lamp with spectral distribution from 320 nm to 400 nm, maximum energy emission between 350 nm and 370 nm, with significant proportion of UV in both bands of 320 to 360 nm and 360 to 400 nm.",
+        "source_section": "Q1B Section 1.B — Light Sources, Option 2",
+        "source_quote": "For option 2 the same sample should be exposed to both the cool white fluorescent and near ultraviolet lamp. 1. A cool white fluorescent lamp designed to produce an output similar to that specified in ISO 10977(1993); and 2. A near UV fluorescent lamp having a spectral distribution from 320 nm to 400 nm with a maximum energy emission between 350 nm and 370 nm; a significant proportion of UV should be in both bands of 320 to 360 nm and 360 to 400 nm.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-004",
+        "rule": "Photostability testing for drug substances consists of two parts: forced degradation testing and confirmatory testing. Normally, only one batch of drug substance is tested during the development phase, with photostability characteristics confirmed on a single batch selected as described in the Parent Guideline.",
+        "source_section": "Q1B Section 2 — Drug Substance",
+        "source_quote": "For drug substances, photostability testing should consist of two parts: forced degradation testing and confirmatory testing. Normally, only one batch of drug substance is tested during the development phase, and then the photostability characteristics should be confirmed on a single batch selected as described in the Parent Guideline if the drug is clearly photostable or photolabile.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-005",
+        "rule": "If the results of the confirmatory study for a drug substance are equivocal, testing of up to two additional batches should be conducted.",
+        "source_section": "Q1B Section 2 — Drug Substance",
+        "source_quote": "If the results of the confirmatory study are equivocal, testing of up to two additional batches should be conducted. Samples should be selected as described in the Parent Guideline.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-006",
+        "rule": "Solid drug substance samples for photostability testing should be spread across the container to give a thickness of typically not more than 3 millimeters.",
+        "source_section": "Q1B Section 2.A — Presentation of Samples (Drug Substance)",
+        "source_quote": "Solid drug substances should be spread across the container to give a thickness of typically not more than 3 millimeters.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-007",
+        "rule": "Drug product photostability studies should be carried out in a sequential manner starting with testing the fully exposed product then progressing as necessary to the product in the immediate pack and then in the marketing pack. Testing should progress until the results demonstrate that the drug product is adequately protected from exposure to light.",
+        "source_section": "Q1B Section 3 — Drug Product",
+        "source_quote": "Normally, the studies on drug products should be carried out in a sequential manner starting with testing the fully exposed product then progressing as necessary to the product in the immediate pack and then in the marketing pack. Testing should progress until the results demonstrate that the drug product is adequately protected from exposure to light.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-008",
+        "rule": "For photostability testing of solid oral dosage form drug products, testing should be conducted on an appropriately sized composite of, for example, 20 tablets or capsules.",
+        "source_section": "Q1B Section 3.B — Analysis of Samples (Drug Product)",
+        "source_quote": "For solid oral dosage form products, testing should be conducted on an appropriately sized composite of, for example, 20 tablets or capsules.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-009",
+        "rule": "A systematic approach to photostability testing is recommended covering: (i) tests on the drug substance; (ii) tests on the exposed drug product outside of the immediate pack; (iii) if necessary, tests on the drug product in the immediate pack; and (iv) if necessary, tests on the drug product in the marketing pack.",
+        "source_section": "Q1B Section 1.A — Preamble",
+        "source_quote": "A systematic approach to photostability testing is recommended covering, as appropriate, studies such as: i) Tests on the drug substance; ii) Tests on the exposed drug product outside of the immediate pack; and if necessary; iii) Tests on the drug product in the immediate pack; and if necessary; iv) Tests on the drug product in the marketing pack.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-010",
+        "rule": "For the Quinine Chemical Actinometry procedure (Option 1 ampoule method), the length of exposure should be sufficient to ensure a change in absorbance of at least 0.9 (measured at 400 nm using a 1 cm path length).",
+        "source_section": "Q1B Section 4.A — Annex: Quinine Chemical Actinometry, Option 1",
+        "source_quote": "The length of exposure should be sufficient to ensure a change in absorbance of at least 0.9.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-011",
+        "rule": "For the Quinine Chemical Actinometry procedure (Option 2 quartz cell method), the length of exposure should be sufficient to ensure a change in absorbance of at least 0.5.",
+        "source_section": "Q1B Section 4.A — Annex: Quinine Chemical Actinometry, Option 2",
+        "source_quote": "The length of exposure should be sufficient to ensure a change in absorbance of at least 0.5.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1B-012",
+        "rule": "For Option 1 light source: if a light source emits significant radiation below 320 nm, an appropriate filter(s) may be fitted to eliminate such radiation.",
+        "source_section": "Q1B Section 1.B — Light Sources, Option 1",
+        "source_quote": "For a light source emitting significant radiation below 320 nm, an appropriate filter(s) may be fitted to eliminate such radiation.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q1c_new_dosage_forms": {
+    "rules": [
+      {
+        "id": "Q1C-001",
+        "rule": "A new dosage form is defined as a drug product which is a different pharmaceutical product type, but contains the same active substance as included in the existing drug product approved by the pertinent regulatory authority.",
+        "source_section": "Q1C Section 2 — New Dosage Forms",
+        "source_quote": "A new dosage form is defined as a drug product which is a different pharmaceutical product type, but contains the same active substance as included in the existing drug product approved by the pertinent regulatory authority.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1C-002",
+        "rule": "New dosage forms include products of different administration route (e.g., oral to parenteral), new specific functionality/delivery systems (e.g., immediate release tablet to modified release tablet), and different dosage forms of the same administration route (e.g., capsule to tablet, solution to suspension).",
+        "source_section": "Q1C Section 2 — New Dosage Forms",
+        "source_quote": "Such pharmaceutical product types include products of different administration route (e.g., oral to parenteral), new specific functionality/delivery systems (e.g., immediate release tablet to modified release tablet) and different dosage forms of the same administration route (e.g., capsule to tablet, solution to suspension).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1C-003",
+        "rule": "Stability protocols for new dosage forms should follow the guidance in the parent stability guideline in principle. However, a reduced stability database at submission time (e.g., 6 months accelerated and 6 months long-term data from ongoing studies) may be acceptable in certain justified cases.",
+        "source_section": "Q1C Section 2 — New Dosage Forms",
+        "source_quote": "Stability protocols for new dosage forms should follow the guidance in the parent stability guideline in principle. However, a reduced stability database at submission time (e.g., 6 months accelerated and 6 months long term data from ongoing studies) may be acceptable in certain justified cases.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1C-004",
+        "rule": "Q1C is an annex to the ICH parent stability guideline and addresses recommendations on what should be submitted regarding stability of new dosage forms by the owner of the original application, after the original submission for new drug substances and products.",
+        "source_section": "Q1C Section 1 — General",
+        "source_quote": "This document is an annex to the ICH parent stability guideline and addresses the recommendations on what should be submitted regarding stability of new dosage forms by the owner of the original application, after the original submission for new drug substances and products.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1C-005",
+        "rule": "The minimum reduced stability database at submission for a new dosage form requires 6 months of accelerated data and 6 months of long-term data from ongoing studies, where justified.",
+        "source_section": "Q1C Section 2 — New Dosage Forms",
+        "source_quote": "a reduced stability database at submission time (e.g., 6 months accelerated and 6 months long term data from ongoing studies) may be acceptable in certain justified cases.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q1d_bracketing_matrixing": {
+    "rules": [
+      {
+        "id": "Q1D-001",
+        "rule": "Bracketing is the design of a stability schedule such that only samples on the extremes of certain design factors (e.g., strength, container size and/or fill) are tested at all time points as in a full design. The design assumes that the stability of any intermediate levels is represented by the stability of the extremes tested.",
+        "source_section": "Q1D Section 2.3 — Bracketing",
+        "source_quote": "As defined in the glossary to the parent guideline, bracketing is the design of a stability schedule such that only samples on the extremes of certain design factors (e.g., strength, container size and/or fill) are tested at all time points as in a full design. The design assumes that the stability of any intermediate levels is represented by the stability of the extremes tested.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-002",
+        "rule": "The use of a bracketing design would not be considered appropriate if it cannot be demonstrated that the strengths or container sizes and/or fills selected for testing are indeed the extremes.",
+        "source_section": "Q1D Section 2.3 — Bracketing",
+        "source_quote": "The use of a bracketing design would not be considered appropriate if it cannot be demonstrated that the strengths or container sizes and/or fills selected for testing are indeed the extremes.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-003",
+        "rule": "Bracketing can be applied to studies with multiple strengths of identical or closely related formulations (e.g., capsules of different strengths made with different fill plug sizes from the same powder blend, tablets of different strengths manufactured by compressing varying amounts of the same granulation, oral solutions of different strengths with formulations that differ only in minor excipients). In cases where different excipients are used among strengths, bracketing generally should not be applied.",
+        "source_section": "Q1D Section 2.3.1.1 — Strength",
+        "source_quote": "Bracketing can be applied to studies with multiple strengths of identical or closely related formulations. Examples include but are not limited to (1) capsules of different strengths made with different fill plug sizes from the same powder blend, (2) tablets of different strengths manufactured by compressing varying amounts of the same granulation, and (3) oral solutions of different strengths with formulations that differ only in minor excipients (e.g., colourants, flavourings). In cases where different excipients are used among strengths, bracketing generally should not be applied.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-004",
+        "rule": "Matrixing is the design of a stability schedule such that a selected subset of the total number of possible samples for all factor combinations would be tested at a specified time point. At a subsequent time point, another subset of samples for all factor combinations would be tested. The design assumes that the stability of each subset of samples tested represents the stability of all samples at a given time point.",
+        "source_section": "Q1D Section 2.4 — Matrixing",
+        "source_quote": "As defined in the glossary of the parent guideline, matrixing is the design of a stability schedule such that a selected subset of the total number of possible samples for all factor combinations would be tested at a specified time point. At a subsequent time point, another subset of samples for all factor combinations would be tested. The design assumes that the stability of each subset of samples tested represents the stability of all samples at a given time point.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-005",
+        "rule": "For the study of drug substances, matrixing is of limited utility and bracketing is generally not applicable.",
+        "source_section": "Q1D Section 2.2 — Applicability of Reduced Designs",
+        "source_quote": "For the study of drug substances, matrixing is of limited utility and bracketing is generally not applicable.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-006",
+        "rule": "Each storage condition should be treated separately under its own matrixing design. Matrixing should not be performed across test attributes. However, alternative matrixing designs for different test attributes can be applied if justified.",
+        "source_section": "Q1D Section 2.4 — Matrixing",
+        "source_quote": "Each storage condition should be treated separately under its own matrixing design. Matrixing should not be performed across test attributes. However, alternative matrixing designs for different test attributes can be applied if justified.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-007",
+        "rule": "In a matrixing design where time points are matrixed, all selected factor combinations should be tested at the initial and final time points, while only certain fractions of the designated combinations should be tested at each intermediate time point. If full long-term data for the proposed shelf life will not be available before approval, all selected combinations should also be tested at 12 months or at the last time point prior to submission.",
+        "source_section": "Q1D Section 2.4.2 — Design Considerations (Matrixing)",
+        "source_quote": "In a design where time points are matrixed, all selected factor combinations should be tested at the initial and final time points, while only certain fractions of the designated combinations should be tested at each intermediate time point. If full long-term data for the proposed shelf life will not be available for review before approval, all selected combinations of batch, strength, container size, and fill, among other things, should also be tested at 12 months or at the last time point prior to submission.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-008",
+        "rule": "Data from at least three time points, including initial, should be available for each selected combination through the first 12 months of the study. For matrixing at an accelerated or intermediate storage condition, testing must occur at a minimum of three time points, including initial and final, for each selected combination of factors.",
+        "source_section": "Q1D Section 2.4.2 — Design Considerations (Matrixing)",
+        "source_quote": "In addition, data from at least three time points, including initial, should be available for each selected combination through the first 12 months of the study. For matrixing at an accelerated or intermediate storage condition, care should be taken to ensure testing occurs at a minimum of three time points, including initial and final, for each selected combination of factors.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-009",
+        "rule": "If, after starting bracketing studies, one of the extremes is no longer expected to be marketed, the study design can be maintained to support the bracketed intermediates. A commitment should be provided to carry out stability studies on the marketed extremes post-approval.",
+        "source_section": "Q1D Section 2.3.2 — Design Considerations and Potential Risks (Bracketing)",
+        "source_quote": "If, after starting the studies, one of the extremes is no longer expected to be marketed, the study design can be maintained to support the bracketed intermediates. A commitment should be provided to carry out stability studies on the marketed extremes post-approval.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-010",
+        "rule": "Before a bracketing design is applied, its effect on the retest period or shelf life estimation should be assessed. If the stability of the extremes is shown to be different, the intermediates should be considered no more stable than the least stable extreme (i.e., the shelf life for the intermediates should not exceed that for the least stable extreme).",
+        "source_section": "Q1D Section 2.3.2 — Design Considerations and Potential Risks (Bracketing)",
+        "source_quote": "Before a bracketing design is applied, its effect on the retest period or shelf life estimation should be assessed. If the stability of the extremes is shown to be different, the intermediates should be considered no more stable than the least stable extreme (i.e., the shelf life for the intermediates should not exceed that for the least stable extreme).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-011",
+        "rule": "A matrixing design is generally applicable if supporting data indicate predictable product stability. Matrixing is appropriate when supporting data exhibit only small variability. Where supporting data exhibit moderate variability, a matrixing design should be statistically justified. If supportive data show large variability, a matrixing design should not be applied.",
+        "source_section": "Q1D Section 2.4.4 — Applicability and Degree of Reduction",
+        "source_quote": "In general, a matrixing design is applicable if the supporting data indicate predictable product stability. Matrixing is appropriate when the supporting data exhibit only small variability. However, where the supporting data exhibit moderate variability, a matrixing design should be statistically justified. If the supportive data show large variability, a matrixing design should not be applied.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1D-012",
+        "rule": "Stability data from studies in a reduced design should be treated in the same manner as data from full design studies.",
+        "source_section": "Q1D Section 2.5 — Data Evaluation",
+        "source_quote": "Stability data from studies in a reduced design should be treated in the same manner as data from full design studies.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q1e_evaluation": {
+    "rules": [
+      {
+        "id": "Q1E-001",
+        "rule": "The purpose of a stability study is to establish, based on testing a minimum of three batches of the drug substance or product, a retest period or shelf life and label storage instructions applicable to all future batches manufactured and packaged under similar circumstances.",
+        "source_section": "Q1E Section 2.1 — General Principles",
+        "source_quote": "The purpose of a stability study is to establish, based on testing a minimum of three batches of the drug substance or product, a retest period or shelf life and label storage instructions applicable to all future batches manufactured and packaged under similar circumstances.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-002",
+        "rule": "In general, certain quantitative chemical attributes (e.g., assay, degradation products, preservative content) for a drug substance or product can be assumed to follow zero-order kinetics during long-term storage.",
+        "source_section": "Q1E Section 2.1 — General Principles",
+        "source_quote": "In general, certain quantitative chemical attributes (e.g., assay, degradation products, preservative content) for a drug substance or product can be assumed to follow zero-order kinetics during long-term storage.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-003",
+        "rule": "An appropriate approach to retest period or shelf life estimation is to analyze a quantitative attribute (e.g., assay, degradation products) by determining the earliest time at which the 95 percent confidence limit for the mean intersects the proposed acceptance criterion. For an attribute known to decrease with time, the lower one-sided 95 percent confidence limit should be compared to the acceptance criterion. For an attribute known to increase with time, the upper one-sided 95 percent confidence limit should be compared to the acceptance criterion. For an attribute that can either increase or decrease, two-sided 95 percent confidence limits should be calculated.",
+        "source_section": "Q1E Section 2.6 — General Statistical Approaches",
+        "source_quote": "An appropriate approach to retest period or shelf life estimation is to analyze a quantitative attribute (e.g., assay, degradation products) by determining the earliest time at which the 95 percent confidence limit for the mean intersects the proposed acceptance criterion. For an attribute known to decrease with time, the lower one-sided 95 percent confidence limit should be compared to the acceptance criterion. For an attribute known to increase with time, the upper one-sided 95 percent confidence limit should be compared to the acceptance criterion. For an attribute that can either increase or decrease, or whose direction of change is not known, two-sided 95 percent confidence limits should be calculated and compared to the upper and lower acceptance criteria.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-004",
+        "rule": "Regression analysis is considered an appropriate approach to evaluating stability data for a quantitative attribute and establishing a retest period or shelf life. The relationship can be represented by a linear or non-linear function on an arithmetic or logarithmic scale.",
+        "source_section": "Q1E Section 2.6 — General Statistical Approaches",
+        "source_quote": "Regression analysis is considered an appropriate approach to evaluating the stability data for a quantitative attribute and establishing a retest period or shelf life. The nature of the relationship between an attribute and time will determine whether data should be transformed for linear regression analysis. The relationship can be represented by a linear or non-linear function on an arithmetic or logarithmic scale.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-005",
+        "rule": "For poolability testing of batches (ANCOVA approach), each test should be conducted using a significance level of 0.25 to compensate for the expected low power of the design due to the relatively limited sample size in a typical formal stability study.",
+        "source_section": "Q1E Appendix B, Section B.2.2.1 — Analysis of Covariance",
+        "source_quote": "Each of these tests should be conducted using a significance level of 0.25 to compensate for the expected low power of the design due to the relatively limited sample size in a typical formal stability study.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-006",
+        "rule": "For multi-factor, full-design stability studies, it is recommended that a significance level of 0.25 be used for batch-related terms, and a significance level of 0.05 be used for non-batch-related terms.",
+        "source_section": "Q1E Appendix B, Section B.3.2.2.1 — Analysis of Covariance (Multi-Factor)",
+        "source_quote": "It is recommended that a significance level of 0.25 be used for batch-related terms, and a significance level of 0.05 be used for non-batch-related terms.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-007",
+        "rule": "Where no significant change occurs at the accelerated condition and the long-term and accelerated data show little or no change over time and little or no variability, the proposed retest period or shelf life can be up to twice, but should not be more than 12 months beyond, the period covered by long-term data.",
+        "source_section": "Q1E Section 2.4.1.1 — Long-term and accelerated data showing little or no change",
+        "source_quote": "Extrapolation of the retest period or shelf life beyond the period covered by long-term data can be proposed. The proposed retest period or shelf life can be up to twice, but should not be more than 12 months beyond, the period covered by long-term data.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-008",
+        "rule": "Where data show change over time and/or variability and are not amenable to statistical analysis, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data (when backed by relevant supporting data).",
+        "source_section": "Q1E Section 2.4.1.2 — Data not amenable to statistical analysis",
+        "source_quote": "Where long-term data are not amenable to statistical analysis, but relevant supporting data are provided, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-009",
+        "rule": "Where data show change and/or variability and are amenable to statistical analysis and a statistical analysis is performed, the proposed retest period or shelf life can be up to twice, but not more than 12 months beyond, the period covered by long-term data, when the proposal is backed by the result of the analysis and relevant supporting data.",
+        "source_section": "Q1E Section 2.4.1.2 — Data amenable to statistical analysis",
+        "source_quote": "However, if a statistical analysis is performed, it can be appropriate to propose a retest period or shelf life of up to twice, but not more than 12 months beyond, the period covered by long-term data, when the proposal is backed by the result of the analysis and relevant supporting data.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-010",
+        "rule": "Where significant change occurs at the accelerated condition but no significant change at the intermediate condition, the proposed retest period or shelf life (when data are amenable to statistical analysis and analysis is performed) can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+        "source_section": "Q1E Section 2.4.2.1 — No significant change at intermediate condition (data amenable to statistical analysis)",
+        "source_quote": "However, if a statistical analysis is performed, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data, when backed by statistical analysis and relevant supporting data.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-011",
+        "rule": "Where significant change occurs at the intermediate condition, the proposed retest period or shelf life should not exceed the period covered by long-term data. In addition, a retest period or shelf life shorter than the period covered by long-term data could be called for.",
+        "source_section": "Q1E Section 2.4.2.2 — Significant change at intermediate condition",
+        "source_quote": "Where significant change occurs at the intermediate condition, the proposed retest period or shelf life should not exceed the period covered by long-term data. In addition, a retest period or shelf life shorter than the period covered by long-term data could be called for.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-012",
+        "rule": "For drug substances or products intended for storage in a refrigerator where long-term and accelerated data show little change over time and little variability, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data (without statistical analysis).",
+        "source_section": "Q1E Section 2.5.1.1 — No significant change at accelerated condition (refrigerated storage)",
+        "source_quote": "If the long-term and accelerated data show little change over time and little variability, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data normally without the support of statistical analysis.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-013",
+        "rule": "For drug substances or products intended for storage in a freezer, the retest period or shelf life should be based on long-term data. In the absence of an accelerated storage condition, testing on a single batch at an elevated temperature (e.g., 5°C ± 3°C or 25°C ± 2°C) for an appropriate time period should be conducted to address the effect of short-term excursions outside the proposed label storage condition.",
+        "source_section": "Q1E Section 2.5.2 — Drug substances or products intended for storage in a freezer",
+        "source_quote": "For drug substances or products intended for storage in a freezer, the retest period or shelf life should be based on long-term data. In the absence of an accelerated storage condition for drug substances or products intended to be stored in a freezer, testing on a single batch at an elevated temperature (e.g., 5°C ± 3°C or 25°C ± 2°C) for an appropriate time period should be conducted to address the effect of short-term excursions outside the proposed label storage condition (e.g., during shipping or handling).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-014",
+        "rule": "For drug substances or products intended for storage below -20°C, the retest period or shelf life should be based on long-term data and should be assessed on a case-by-case basis.",
+        "source_section": "Q1E Section 2.5.3 — Drug substances or products intended for storage below -20°C",
+        "source_quote": "For drug substances or products intended for storage below -20°C, the retest period or shelf life should be based on long-term data and should be assessed on a case-by-case basis.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-015",
+        "rule": "A retest period or shelf life granted on the basis of extrapolation should always be verified by additional long-term stability data as soon as these data become available. Care should be taken to include in the protocol for commitment batches a time point that corresponds to the end of the extrapolated retest period or shelf life.",
+        "source_section": "Q1E Section 2.3 — Extrapolation",
+        "source_quote": "Thus, a retest period or shelf life granted on the basis of extrapolation should always be verified by additional long-term stability data as soon as these data become available. Care should be taken to include in the protocol for commitment batches a time point that corresponds to the end of the extrapolated retest period or shelf life.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-016",
+        "rule": "The decision tree (Appendix A) provides a stepwise approach to stability data evaluation. If significant change occurs at the accelerated condition within 3 months, no extrapolation is appropriate and a shorter retest period or shelf life (with data covering excursions) should result. If significant change occurs at the accelerated condition between 3 and 6 months but not within 3 months, evaluation proceeds based on the intended storage temperature (room temperature vs. refrigerator).",
+        "source_section": "Q1E Appendix A — Decision Tree",
+        "source_quote": "Y = Proposed retest period or shelf life. X = Period covered by long-term data. [Decision tree shows:] Significant change at accelerated condition within 3 months? Yes → No extrapolation; shorter retest period or shelf life and data covering excursions can be called for; statistical analysis if long-term data show variability.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-017",
+        "rule": "The retest period or shelf life proposed should not exceed that predicted for any single attribute. Each attribute should be assessed separately, and an overall assessment should be made of the findings for the purpose of proposing a retest period or shelf life.",
+        "source_section": "Q1E Section 2.1 — General Principles",
+        "source_quote": "Each attribute should be assessed separately, and an overall assessment should be made of the findings for the purpose of proposing a retest period or shelf life. The retest period or shelf life proposed should not exceed that predicted for any single attribute.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q1E-018",
+        "rule": "If significant change occurs between 3 and 6 months' testing at the accelerated storage condition for a refrigerated drug substance or product, the proposed retest period or shelf life should be based on the long-term data. Extrapolation is not considered appropriate.",
+        "source_section": "Q1E Section 2.5.1.2 — Significant change at accelerated condition (refrigerated storage)",
+        "source_quote": "If significant change occurs between 3 and 6 months' testing at the accelerated storage condition, the proposed retest period or shelf life should be based on the long-term data. Extrapolation is not considered appropriate.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  }
+}

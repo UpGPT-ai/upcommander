@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "title": "Resolved Contradictions — Cross-Domain + Skill Contradictions",
+    "generated": "2026-03-23",
+    "source_reports": [
+      "training/verification/cross-domain/contradictions-report.json",
+      "training/verification/contradictions/skill-contradictions.json"
+    ],
+    "total_cross_domain_resolved": 11,
+    "total_skill_resolved": 8,
+    "methodology": "For each contradiction: (1) identified authoritative source, (2) specified correction action to source document, (3) classified residual risk after correction"
+  },
+
+  "cross_domain_resolutions": [
+    {
+      "id": "CONTRA-001",
+      "original_severity": "critical",
+      "topic": "BCS Biowaivers — FDA Position on Class III",
+      "correct_statement": "FDA accepts BCS Class I AND Class III biowaivers. Class III eligibility requires very rapid dissolution (≥85% in 15 min at all three pH values) and no significant excipient effects. Authority: FDA 2021 Guidance 'Biopharmaceutics Classification System-Based Biowaivers' and ICH M9 (2019).",
+      "winning_source": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json (DIV-016)",
+      "losing_source": "output-v2/regulations-crl/jurisdiction-divergences.json (DIV-004)",
+      "correction_action": "Update output-v2/regulations-crl/jurisdiction-divergences.json DIV-004 FDA statement to: 'Class I AND Class III accepted (Class III: very rapid dissolution ≥85% in 15 min, no excipient concern per ICH M9 / FDA 2021 BCS guidance)'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-002",
+      "original_severity": "critical",
+      "topic": "BCS Biowaivers — EMA Position on Class III",
+      "correct_statement": "EMA accepts BCS Class I AND Class III biowaivers. Class III eligibility: very rapid dissolution (≥85% in 15 min), qualitatively and quantitatively similar excipients. Authority: EMA Guideline CPMP/EWP/QWP/1401/98 Rev.1/Corr (2010) and ICH M9 (adopted by EMA).",
+      "winning_source": "output-v2/regulations-crl/jurisdiction-divergences.json (DIV-004)",
+      "losing_source": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json (DIV-016)",
+      "correction_action": "Update output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json DIV-016 EMA statement to: 'BCS biowaiver for Class I AND Class III (Class III: very rapid dissolution ≥85% in 15 min at all pH, Q/Q same excipients per CPMP/EWP/QWP/1401/98 Rev.1 and ICH M9)'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-003",
+      "original_severity": "high",
+      "topic": "EU Data Exclusivity — Nature of +1 Year Extension",
+      "correct_statement": "The EU 8+2+1 formula: 8 years data exclusivity + 2 years market exclusivity + 1 year extension for a SIGNIFICANT NEW THERAPEUTIC INDICATION with significant clinical benefit over existing therapies (Directive 2001/83/EC Article 10(1) ¶4). The pediatric reward is a SEPARATE 6-month SPC extension under Regulation (EC) 1901/2006 — it is NOT the +1 year in the 8+2+1 formula.",
+      "winning_source": "output-v3/eu-law/eu-vs-fda-divergences.json (DIV-006, DIV-008)",
+      "losing_source": "output-v2/regulations-crl/jurisdiction-divergences.json (DIV-021)",
+      "correction_action": "Update output-v2/regulations-crl/jurisdiction-divergences.json DIV-021 to: '+1 year for significant new therapeutic indication (not pediatric extension). Pediatric reward is separate: +6 months SPC extension under Reg. 1901/2006.'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-004",
+      "original_severity": "high",
+      "topic": "Japan Stability Conditions — Divergence Severity",
+      "correct_statement": "Context-dependent: Rate as LOW for Japan-domestic programs (Zone II harmonized with ICH). Rate as MEDIUM for global programs targeting tropical markets (Zone IVb acceptance creates complexity for label claims and comparative dissolution). Both ratings were valid for different scopes; the disagreement arose from different framing.",
+      "winning_source": "Both partially valid — context-dependent resolution adopted",
+      "losing_source": "N/A",
+      "correction_action": "Standardize to: divergence_level: 'low' for Japan-domestic programs; add note 'medium for global programs targeting tropical markets (Zone IVb)'. Apply normalized 4-level scale (low/medium/high/critical) in both output-v2/regulations-crl/jurisdiction-divergences.json (DIV-009) and output-v3/who-regs/japan-vs-fda-ema.json (JP-013).",
+      "status": "RESOLVED",
+      "residual_risk": "low — context annotation required for correct interpretation"
+    },
+    {
+      "id": "CONTRA-005",
+      "original_severity": "high",
+      "topic": "WHO Batch Requirements — Incomplete Scope Claim",
+      "correct_statement": "WHO TRS 1010 Annex 10 allows 2 batches (both at pilot scale) for uncomplicated FPPs containing existing APIs (generics). ICH Q1A requires 3 batches minimum. v2 claims WHO scope but only captures the ICH 3-batch rule.",
+      "winning_source": "output-v3/who-regs/who-requirements.json (who_vs_ich_divergences[2])",
+      "losing_source": "output-v2/q-stability/stability-rules.json (batch_requirements.drug_product) — incomplete extraction",
+      "correction_action": "Add WHO exception to output-v2/q-stability/stability-rules.json batch_requirements.drug_product: 'WHO TRS 1010 exception: 2 batches acceptable for uncomplicated FPPs with existing APIs (generics targeting WHO prequalification); both batches must be at pilot scale.' Alternatively, remove 'WHO TRS 1010 Annex 10' from meta.scope.",
+      "status": "RESOLVED",
+      "residual_risk": "none after annotation"
+    },
+    {
+      "id": "CONTRA-006",
+      "original_severity": "high",
+      "topic": "WHO Minimum Submission Data — Incomplete Scope Claim",
+      "correct_statement": "WHO TRS 1010 Annex 10 allows 6 months minimum stability data at submission for FPPs containing existing APIs (generics). ICH Q1A requires 12 months minimum. v2 universally states 12 months despite claiming WHO scope.",
+      "winning_source": "output-v3/who-regs/who-requirements.json (who_vs_ich_divergences[4])",
+      "losing_source": "output-v2/q-stability/stability-rules.json — incomplete extraction",
+      "correction_action": "Add WHO exception to output-v2/q-stability/stability-rules.json storage_conditions long_term min_duration_months: 'WHO TRS 1010 exception: 6 months minimum acceptable for FPPs with existing APIs (generics); 12 months required for NCEs and ICH submissions.' Alternatively, remove WHO TRS 1010 from meta.scope.",
+      "status": "RESOLVED",
+      "residual_risk": "none after annotation"
+    },
+    {
+      "id": "CONTRA-007",
+      "original_severity": "medium",
+      "topic": "Semi-Permeable Container Water Loss Rate Ratios",
+      "correct_statement": "Correct four-ratio set per WHO TRS 1010 Annex 10 Table 4: (1) 1.5 at 25°C 40%→60%RH, (2) 1.9 at 30°C 35%→65%RH, (3) 2.6 at 30°C 35%→75%RH (Zone IVb), (4) 3.0 at 40°C 25%→75%RH. v2 is missing the 2.6 ratio and appears to have a mis-extracted first entry.",
+      "winning_source": "output-v3/who-regs/who-requirements.json (fpp_semi_permeable_containers.water_loss_rate_ratios)",
+      "losing_source": "output-v2/q-stability/stability-rules.json — partially mis-extracted",
+      "correction_action": "Replace output-v2/q-stability/stability-rules.json water_loss_rate_ratios with corrected four-ratio set: [{alt_rh:60, ref_rh:40, ratio:1.5, conditions:'25C'}, {alt_rh:65, ref_rh:35, ratio:1.9, conditions:'30C'}, {alt_rh:75, ref_rh:35, ratio:2.6, conditions:'30C_ZoneIVb'}, {alt_rh:75, ref_rh:25, ratio:3.0, conditions:'40C'}]",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-008",
+      "original_severity": "medium",
+      "topic": "FDA RSABE Scope — AUC vs Cmax Only",
+      "correct_statement": "FDA allows reference-scaled average bioequivalence (RSABE) for BOTH AUC and Cmax in highly variable drug products (HVDP), when intra-subject CV ≥30%. v2 mentions Cmax only, which is incomplete and misleading (the omission of AUC is significant when contrasting with EMA, which restricts RSABE to Cmax only).",
+      "winning_source": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json (DIV-016)",
+      "losing_source": "output-v2/regulations-crl/jurisdiction-divergences.json (DIV-003) — incomplete",
+      "correction_action": "Update output-v2/regulations-crl/jurisdiction-divergences.json DIV-003 FDA statement to: 'Reference-scaled average BE for BOTH AUC and Cmax when intra-subject CV ≥30%; GMR constraint 80-125%. Note: EMA restricts RSABE to Cmax only.'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-009",
+      "original_severity": "low",
+      "topic": "Inconsistent Severity/Divergence Rating Scales Across Files",
+      "correct_statement": "Three incompatible scales existed: (1) v2 uses 3-level qualitative: aligned/moderate/significant; (2) v3-Japan uses 3-level impact: HIGH/MEDIUM/LOW; (3) v3-EU uses 4-level: critical/high/medium/low. Standardized to 4-level: critical/high/medium/low across all files. Mapping applied: aligned→low, moderate→medium, significant→high; HIGH→high, MEDIUM→medium, LOW→low.",
+      "winning_source": "v3 EU 4-level scale adopted as standard",
+      "losing_source": "v2 qualitative scale and v3-Japan capitalized scale — both superseded",
+      "correction_action": "See severity-normalization-map.json for full field-by-field mapping applied across all rule files.",
+      "status": "RESOLVED",
+      "residual_risk": "none — normalization map is authoritative"
+    },
+    {
+      "id": "CONTRA-010",
+      "original_severity": "low",
+      "topic": "Japan-Specific Content in WHO Requirements File",
+      "correct_statement": "Two entries in output-v3/who-regs/who-requirements.json under 'who_gmp_unique_requirements.key_differences' are Japan/PMDA-specific, not WHO requirements: (1) Japan/EU carcinogenicity dose history at 100x clinical dose (mg/kg); (2) PMDA Accredited Foreign Manufacturer status under PAL Article 13-3. These are correctly placed in japan-specific-requirements.json.",
+      "winning_source": "output-v3/who-regs/japan-specific-requirements.json (correct location)",
+      "losing_source": "output-v3/who-regs/who-requirements.json (misplaced content)",
+      "correction_action": "Remove the two Japan/PMDA entries from output-v3/who-regs/who-requirements.json who_gmp_unique_requirements.key_differences section. Confirm content exists in japan-specific-requirements.json (it does). Add note in WHO file: 'Japan-specific GMP requirements (PAL Article 13-3, PMDA accreditation) are documented in japan-specific-requirements.json.'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "CONTRA-011",
+      "original_severity": "medium",
+      "topic": "Inconsistent eCTD Module Mapping — v3 Files Lack CTD Placement",
+      "correct_statement": "v2 files systematically map rules to eCTD CTD modules (e.g., bioequivalence→M5.3.1, stability→M3.2.S.7/M3.2.P.8, safety pharmacology→M2.6.2/M4.2.1.3). v3 files have no eCTD module assignments. No incorrect v2 assignments were identified — v3 simply lacks this dimension. This is a structural gap, not a factual contradiction.",
+      "winning_source": "output-v2 files (CTD module assignments correct where verifiable)",
+      "losing_source": "N/A — v3 omission, not contradiction",
+      "correction_action": "Tag v3 rules with eCTD module cross-references using v2 as the mapping source. Priority topics (where both v2 and v3 cover the same rule): stability (M3.2.P.8/M3.2.S.7), bioequivalence (M5.3.1), safety pharmacology (M4.2.1.3/M2.6.2), pharmacovigilance (M1.8/M2.5/M4.3). Full augmentation tracked as separate task (HIGH effort).",
+      "status": "ANNOTATED — full augmentation pending",
+      "residual_risk": "medium — v3-trained model will lack CTD placement guidance until augmented"
+    }
+  ],
+
+  "skill_contradiction_resolutions": [
+    {
+      "id": "SKILL-CONTRA-001",
+      "original_severity": "none",
+      "topic": "Accelerated stability extrapolation for biologicals",
+      "skills_involved": ["skill-stability-analysis.md", "skill-biotech-quality.md"],
+      "resolution": "Apparent conflict only. skill-stability-analysis.md covers chemical entities (ICH Q1E extrapolation allowed). skill-biotech-quality.md covers biologicals (Q5C: no extrapolation due to physical sensitivity). Both are correct for their domains. No change required.",
+      "correction_action": "Add domain delineation note to skill-stability-analysis.md introduction: 'Scope: chemical entities. For biologicals, consult skill-biotech-quality.md (Q5C extrapolation restrictions apply).'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-002",
+      "original_severity": "medium",
+      "topic": "BCS Class III biowaivers — EMA position in skill-eu-gmp-analysis.md",
+      "skills_involved": ["skill-regulatory-compliance.md", "skill-eu-gmp-analysis.md", "skill-multi-jurisdiction.md"],
+      "resolution": "skill-eu-gmp-analysis.md Phase 4 Gap #13 is factually wrong: states 'EMA does not accept Class III biowaivers.' EMA guideline CPMP/EWP/QWP/1401/98 Rev.1 explicitly allows BCS Class III biowaivers. skill-multi-jurisdiction.md has the correct statement.",
+      "correction_action": "Update skill-eu-gmp-analysis.md Phase 4 Gap Analysis row #13 to: 'BCS Class III biowaiver attempted — EMA ACCEPTS Class III biowaivers under specific conditions: ≥85% dissolution in 15 min at all three pH values, qualitatively and quantitatively similar excipients (per CPMP/EWP/QWP/1401/98 Rev.1) — Verify dissolution profile and excipient similarity requirements are met before submitting biowaiver request.'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-003",
+      "original_severity": "none",
+      "topic": "hERG assay safety margin — protein binding floor",
+      "skills_involved": ["skill-safety-pharmacology.md", "skill-safety-reporting.md"],
+      "resolution": "Identical requirement in both skills. No contradiction. Consistent with E14/S7B Q&A guidance. No correction required.",
+      "correction_action": "No action required.",
+      "status": "RESOLVED — no change needed",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-004",
+      "original_severity": "low",
+      "topic": "Inconsistent severity/scoring scales across skills",
+      "skills_involved": ["skill-stability-analysis.md", "skill-clinical-design.md", "skill-safety-reporting.md", "skill-biotech-quality.md", "skill-quality-systems.md", "skill-special-populations.md", "skill-eu-regulatory.md", "skill-eu-gmp-analysis.md", "skill-eu-pharmacovigilance.md", "skill-nonclinical-review.md", "skill-safety-pharmacology.md", "skill-multi-jurisdiction.md", "skill-cross-domain.md", "skill-cmc-methods.md", "skill-canada-regulatory.md"],
+      "resolution": "Six different scoring scales found. Normalized to 4-level: critical/high/medium/low for ALL severity/gap/risk ratings. Skills with numeric or qualitative-only scales retain internal logic but map gap/deficiency findings to normalized 4-level output labels. See severity-normalization-map.json for per-skill mapping.",
+      "correction_action": "Apply normalization per severity-normalization-map.json. Skills that output structured gap reports (cross-domain, multi-jurisdiction, nonclinical) must emit normalized labels at the aggregation layer.",
+      "status": "RESOLVED",
+      "residual_risk": "low — some skills use internal numeric scoring for weighted aggregation; normalized labels are output layer only"
+    },
+    {
+      "id": "SKILL-CONTRA-005",
+      "original_severity": "medium",
+      "topic": "BCS Class III biowaiver — factual error in skill-eu-gmp-analysis.md",
+      "skills_involved": ["skill-eu-gmp-analysis.md"],
+      "resolution": "Same underlying factual error as SKILL-CONTRA-002. Resolved by same correction. skill-eu-gmp-analysis.md Phase 4 Gap #13 updated to reflect EMA's acceptance of Class III biowaivers under specific conditions.",
+      "correction_action": "Covered by SKILL-CONTRA-002 correction. No additional action.",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-006",
+      "original_severity": "low",
+      "topic": "Safety pharmacology coverage duplicated across nonclinical and safety-pharmacology skills",
+      "skills_involved": ["skill-nonclinical-review.md", "skill-safety-pharmacology.md"],
+      "resolution": "skill-nonclinical-review.md provides a ~50-line summary of S7A/S7B. skill-safety-pharmacology.md provides ~330-line deep-dive. Both are correct; the issue is lack of cross-referencing and unclear handoff.",
+      "correction_action": "Add to skill-nonclinical-review.md STEP 3 header: 'Summary checklist only. For full S7A/S7B evaluation including hERG best practices, follow-up study triggers, and integrated risk assessment, invoke skill-safety-pharmacology.md.' Reduce nonclinical skill SP section to checklist form.",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-007",
+      "original_severity": "low",
+      "topic": "PSUR/PBRER evaluation duplicated across ICH and EU skills",
+      "skills_involved": ["skill-safety-reporting.md", "skill-eu-pharmacovigilance.md"],
+      "resolution": "Complementary coverage, not contradiction. skill-safety-reporting.md covers PBRER per ICH E2C(R2) structure; skill-eu-pharmacovigilance.md covers EU-specific PSUR requirements (PRAC, regional appendix). Both needed; cross-references missing.",
+      "correction_action": "Add to skill-safety-reporting.md Section 4 footer: 'For EU-specific PSUR submission requirements (PRAC assessment, EU regional appendix per GVP Module VII), see skill-eu-pharmacovigilance.md Section 4.' Add reciprocal note to skill-eu-pharmacovigilance.md Section 4.",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    },
+    {
+      "id": "SKILL-CONTRA-008",
+      "original_severity": "low",
+      "topic": "EU requirements split across three skills with partial overlap",
+      "skills_involved": ["skill-eu-regulatory.md", "skill-eu-gmp-analysis.md", "skill-eu-pharmacovigilance.md"],
+      "resolution": "Overlap in QPPV, RMP, and GMP coverage across three EU skills without delineation or cross-references.",
+      "correction_action": "Add delineation preamble to each skill: (1) skill-eu-regulatory.md: 'Scope: EU legislative framework and pathway selection. For CMC/Module 3 deep dive → skill-eu-gmp-analysis.md. For GVP-based PV system evaluation → skill-eu-pharmacovigilance.md.' (2) skill-eu-gmp-analysis.md: 'Scope: Module 3 CMC review. For pathway strategy → skill-eu-regulatory.md. For PV system → skill-eu-pharmacovigilance.md.' (3) skill-eu-pharmacovigilance.md: 'Scope: GVP-based PV evaluation. For legislative framework → skill-eu-regulatory.md. For CMC → skill-eu-gmp-analysis.md.'",
+      "status": "RESOLVED",
+      "residual_risk": "none"
+    }
+  ],
+
+  "summary": {
+    "cross_domain_contradictions_total": 11,
+    "cross_domain_fully_resolved": 10,
+    "cross_domain_annotated_pending_augmentation": 1,
+    "skill_contradictions_total": 8,
+    "skill_fully_resolved": 8,
+    "critical_factual_errors_fixed": 3,
+    "severity_scale_issues_resolved": 2,
+    "scope_claim_violations_annotated": 2,
+    "structural_gaps_documented": 2,
+    "misplaced_content_corrected": 1,
+    "data_extraction_errors_corrected": 1
+  }
+}

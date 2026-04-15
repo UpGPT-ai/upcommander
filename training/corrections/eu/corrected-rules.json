@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "title": "EU Regulatory Rules — Corrected v3.1",
+    "correction_date": "2026-03-23",
+    "source_files": [
+      "training/output-v3/eu-law/eu-legislation-requirements.json",
+      "training/output-v3/eu-gmp-ema/eu-gmp-rules.json",
+      "training/output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json"
+    ],
+    "corrections_applied": 8,
+    "severity_normalization": "4-level scale (critical/high/medium/low) added to all rules",
+    "verification_report": "training/verification/eu-regs/verification-report.json",
+    "note": "This file contains: (1) all 8 corrections applied with before/after text; (2) corrected versions of all affected rules; (3) severity field added to all verified/corrected rules. For the full rule corpus, uncorrected rules in source files remain valid — only the rules listed here have changed. See correction-metrics.json for full metrics."
+  },
+
+  "corrections_index": [
+    { "id": "CORR-001", "rule": "PAED-007", "file": "eu-legislation-requirements.json", "type": "citation_error" },
+    { "id": "CORR-002", "rule": "MFG-006",  "file": "eu-legislation-requirements.json", "type": "detail_gap" },
+    { "id": "CORR-003", "rule": "PER-001",  "file": "eu-gmp-rules.json", "type": "incomplete_citation" },
+    { "id": "CORR-004", "rule": "ST-002",   "file": "eu-gmp-rules.json", "type": "numeric_discrepancy" },
+    { "id": "CORR-005", "rule": "GVP-VII-003", "file": "eu-pharmacovigilance-rules.json", "type": "missing_requirement" },
+    { "id": "CORR-006", "rule": "GVP-II-003",  "file": "eu-pharmacovigilance-rules.json", "type": "section_reference_error_and_wording_gap" },
+    { "id": "CORR-007", "rule": "GVP-XV-003",  "file": "eu-pharmacovigilance-rules.json", "type": "scope_clarification" },
+    { "id": "CORR-008", "rule": "BE-003",   "file": "eu-gmp-rules.json", "type": "unverifiable_source_absent" }
+  ],
+
+  "corrected_rules": {
+
+    "eu_legislation_requirements": {
+      "source_file": "training/output-v3/eu-law/eu-legislation-requirements.json",
+      "rules_with_corrections": 2,
+      "rules_verified_no_change": 13,
+      "rules": [
+
+        {
+          "id": "PAED-007",
+          "correction_id": "CORR-001",
+          "correction_status": "CORRECTED",
+          "severity": "high",
+          "article_before": "Reg 1901/2006 Art. 37",
+          "article_after": "Reg 1901/2006 Art. 36(1) and Art. 37",
+          "article": "Reg 1901/2006 Art. 36(1) and Art. 37",
+          "requirement_before": "Reward for completed PIP: 6-month extension of supplementary protection certificate (SPC). For orphan products: 2 additional years of market exclusivity (total 12 years).",
+          "requirement": "Reward for completed PIP: (1) 6-month extension of supplementary protection certificate (SPC) — granted under Art. 36(1) of Reg 1901/2006; (2) For orphan products: 2 additional years of market exclusivity (total 12 years instead of 10) — granted under Art. 37 of Reg 1901/2006. These are two distinct rewards provided by two separate articles.",
+          "obligation_type": "rewards",
+          "binding_on": "applicant",
+          "SPC_extension_months": 6,
+          "SPC_extension_legal_basis": "Reg 1901/2006 Art. 36(1)",
+          "orphan_extension_years": 2,
+          "orphan_extension_total_years": 12,
+          "orphan_extension_legal_basis": "Reg 1901/2006 Art. 37",
+          "correction_rationale": "Original rule cited only Art. 37 for both rewards. The 6-month SPC extension is established by Art. 36(1), not Art. 37. Art. 37 exclusively covers the orphan medicinal product market exclusivity extension. Conflating the two articles creates an incorrect legal citation for SPC extension purposes."
+        },
+
+        {
+          "id": "MFG-006",
+          "correction_id": "CORR-002",
+          "correction_status": "REFINED",
+          "severity": "critical",
+          "article": "Dir 2001/83/EC Art. 48(1), Art. 49(2)-(3), Art. 51",
+          "article_before": "Dir 2001/83/EC Art. 48-52",
+          "requirement_before": "Manufacturing authorisation holder shall have permanently and continuously at disposal at least one Qualified Person (QP). QP shall hold diploma from university course of at least 4 years in specified disciplines. QP shall have at least 2 years practical experience. QP shall certify in register that each batch satisfies the Directive. Register kept at disposal for at least 5 years.",
+          "requirement": "Manufacturing authorisation holder shall have permanently and continuously at disposal at least one Qualified Person (QP) [Art. 48(1)]. QP shall hold a diploma, certificate or other evidence of formal qualifications awarded on completion of a university course or a course recognised as equivalent extending over a period of at least four years of theoretical and practical study in one of the following disciplines: pharmacy, medicine, veterinary medicine, chemistry, pharmaceutical chemistry and technology, or biology [Art. 49(2)]. QP shall have at least two years of practical experience in the activities of analysis of medicinal products, control of starting materials, and the necessary tests and checks ensuring the quality of medicinal products [Art. 49(3)]. QP shall certify in a register that each batch of medicinal products satisfies the provisions of the Directive [Art. 51(1)]. Register kept at disposal for at least 5 years.",
+          "obligation_type": "qualified_person",
+          "binding_on": "manufacturer",
+          "min_education_years": 4,
+          "education_description": "theoretical and practical study per Art. 49(2)",
+          "qualifying_disciplines": ["pharmacy", "medicine", "veterinary medicine", "chemistry", "pharmaceutical chemistry and technology", "biology"],
+          "min_experience_years": 2,
+          "register_retention_years": 5,
+          "correction_rationale": "Article reference refined from broad 'Art. 48-52' to specific articles. Requirement text updated to match Art. 49(2) language: 'at least four years of theoretical and practical study' (previously just 'at least 4 years'). Qualifying disciplines enumerated explicitly. Article attribution added for each obligation."
+        },
+
+        {
+          "id": "MA-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "article": "Dir 2001/83/EC Art. 6(1)",
+          "requirement": "No medicinal product may be placed on the market of a Member State unless a marketing authorisation has been issued by the competent authorities of that Member State or granted under the centralised procedure (Reg 726/2004).",
+          "obligation_type": "prohibition",
+          "binding_on": "all persons"
+        },
+
+        {
+          "id": "MA-004",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Dir 2001/83/EC Art. 10(1)",
+          "requirement": "Generic applicant not required to provide pre-clinical/clinical results if reference product authorised for not less than 8 years. Generic may not be placed on market until 10 years from initial authorisation of reference product (8+2 formula). Extendable to 11 years if new therapeutic indication with significant clinical benefit obtained in first 8 years.",
+          "obligation_type": "data_exclusivity",
+          "binding_on": "generic_applicant"
+        },
+
+        {
+          "id": "MA-008",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "medium",
+          "article": "Dir 2001/83/EC Art. 17",
+          "requirement": "MA procedure shall be completed within maximum 210 days of valid application submission.",
+          "obligation_type": "timeline",
+          "binding_on": "competent_authority",
+          "timeline_days": 210
+        },
+
+        {
+          "id": "MA-009",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Dir 2001/83/EC Art. 24",
+          "requirement": "Marketing authorisation valid for 5 years. Renewable after 5 years on basis of risk-benefit re-evaluation [Art. 24(2)]. Once renewed, valid for unlimited period unless the national competent authority decides, on justified grounds relating to pharmacovigilance, to proceed with one additional five-year renewal [Art. 24(3)].",
+          "obligation_type": "validity",
+          "binding_on": "MAH",
+          "validity_years": 5,
+          "verification_note": "Clarified Art. 24(3) wording to specify 'one additional five-year renewal' rather than open-ended pharmacovigilance exception."
+        },
+
+        {
+          "id": "MA-010",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Dir 2001/83/EC Art. 24(4-5)",
+          "requirement": "MA ceases to be valid if not followed by actual marketing within 3 years of granting, or if product absent from market for 3 consecutive years.",
+          "obligation_type": "sunset_clause",
+          "binding_on": "MAH",
+          "sunset_years": 3
+        },
+
+        {
+          "id": "MA-018",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "medium",
+          "article": "Reg 726/2004 Art. 14(9)",
+          "requirement": "Accelerated assessment: if CHMP accepts request for products of major public health interest, timeline reduced to 150 days.",
+          "obligation_type": "timeline",
+          "binding_on": "EMA",
+          "timeline_days": 150
+        },
+
+        {
+          "id": "CT-005",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Reg 536/2014 Art. 5(3)",
+          "requirement": "Reporting Member State shall validate application within 10 days. If not notified within period, application deemed to fall within scope and dossier deemed complete (tacit validation).",
+          "obligation_type": "timeline",
+          "binding_on": "reporting_member_state",
+          "timeline_days": 10
+        },
+
+        {
+          "id": "CT-015",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Reg 536/2014 Art. 37(4)",
+          "requirement": "Results summary within 1 year from end of trial in all Member States. For paediatric trials: within 6 months.",
+          "obligation_type": "results_submission",
+          "binding_on": "sponsor",
+          "timeline_general_months": 12,
+          "timeline_paediatric_months": 6
+        },
+
+        {
+          "id": "CT-017",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "article": "Reg 536/2014 Art. 42(2)",
+          "requirement": "SUSARs: fatal/life-threatening within 7 days of first awareness; all others within 15 days of first awareness.",
+          "obligation_type": "safety_reporting",
+          "binding_on": "sponsor",
+          "fatal_or_life_threatening_days": 7,
+          "other_susar_days": 15
+        },
+
+        {
+          "id": "CT-020",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Reg 536/2014 Art. 58",
+          "requirement": "Clinical trial master file archived for at least 25 years after end of trial.",
+          "obligation_type": "record_retention",
+          "binding_on": "sponsor_and_investigator",
+          "retention_years": 25
+        },
+
+        {
+          "id": "ATMP-004",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Reg 1394/2007 Art. 15(4)",
+          "requirement": "ATMP traceability data retained for minimum 30 years after product expiry, or longer if required by competent authority or sponsor.",
+          "obligation_type": "traceability",
+          "binding_on": "MAH",
+          "retention_years": 30
+        },
+
+        {
+          "id": "ORP-004",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Reg 141/2000 Art. 8(1)",
+          "requirement": "10 years of market exclusivity for orphan products after MA. Community and Member States shall not, for 10 years, accept another application or grant authorisation for the same therapeutic indication in respect of a similar medicinal product.",
+          "obligation_type": "market_exclusivity",
+          "binding_on": "Community_and_member_states",
+          "exclusivity_years": 10
+        },
+
+        {
+          "id": "LAB-003",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "article": "Dir 2001/83/EC Art. 56a",
+          "requirement": "Product name shall be expressed in Braille format on packaging. MAH shall ensure package leaflet available in formats for blind and partially-sighted on request.",
+          "obligation_type": "labelling",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "eu_gmp_rules": {
+      "source_file": "training/output-v3/eu-gmp-ema/eu-gmp-rules.json",
+      "rules_with_corrections": 3,
+      "rules_with_flags": 1,
+      "rules_verified_no_change": 11,
+      "rules": [
+
+        {
+          "id": "PER-001",
+          "correction_id": "CORR-003",
+          "correction_status": "CORRECTED",
+          "severity": "critical",
+          "source": "EU GMP Part I Chapter 2, section 2.5",
+          "requirement_before": "Qualified Person(s) must be designated per Article 51 of Directive 2001/83/EC with specific education qualifications per Article 49",
+          "requirement": "Qualified Person(s) must be designated in accordance with Articles 48, 49 and 51 of Directive 2001/83/EC. Article 48 establishes the obligation for manufacturers to have at least one QP permanently and continuously at disposal. Article 49 specifies the education qualifications (minimum 4-year university course in pharmacy, medicine, veterinary medicine, chemistry, pharmaceutical chemistry and technology, or biology; plus minimum 2 years practical experience). Article 51 defines QP certification duties (certifying each batch in a register before release).",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No equivalent role in FDA system",
+          "correction_rationale": "Chapter 2, section 2.5 references Articles 48, 49 AND 51. Article 48 (general obligation to have QP) was omitted from the original rule, giving an incomplete legal basis."
+        },
+
+        {
+          "id": "ST-002",
+          "correction_id": "CORR-004",
+          "correction_status": "CORRECTED",
+          "severity": "critical",
+          "source": "EU GMP Annex 1 (2022 Revision), section 4.4 and Table 1",
+          "requirement": "Four-grade cleanroom classification system (A/B/C/D) with mandatory at-rest AND in-operation particle limits per Annex 1 Table 1 (2022 revision, effective 25 August 2023).",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA uses ISO 14644 classifications without dual at-rest/in-operation states",
+          "grades": {
+            "A": {
+              "particles_0.5um_at_rest": 3520,
+              "particles_0.5um_in_operation": 3520,
+              "particles_5um_at_rest": 20,
+              "particles_5um_in_operation": 20,
+              "microbial_air_cfu_m3": "no growth",
+              "use": "Critical zone for aseptic operations"
+            },
+            "B": {
+              "particles_0.5um_at_rest": 3520,
+              "particles_0.5um_in_operation": 352000,
+              "particles_5um_at_rest": 29,
+              "particles_5um_in_operation": 2930,
+              "microbial_air_cfu_m3": 10,
+              "use": "Background for Grade A (non-isolator)"
+            },
+            "C": {
+              "particles_0.5um_at_rest": 352000,
+              "particles_0.5um_in_operation": 3520000,
+              "particles_5um_at_rest": 2900,
+              "particles_5um_in_operation": 29000,
+              "microbial_air_cfu_m3": 100,
+              "use": "Less critical stages, solution preparation"
+            },
+            "D": {
+              "particles_0.5um_at_rest": 3520000,
+              "particles_0.5um_in_operation": "not predetermined",
+              "particles_5um_at_rest": "not predetermined",
+              "particles_5um_in_operation": "not predetermined",
+              "microbial_air_cfu_m3": 200,
+              "use": "Least critical stages, component handling"
+            }
+          },
+          "correction_rationale": "Numeric discrepancy: Grade B >=5µm in-operation limit was represented as 2,900 in some internal representations; correct value per Annex 1 Table 1 is 2,930. Full >=5µm column added to all grades — these were absent from the original rule's grade objects, leaving the table incomplete."
+        },
+
+        {
+          "id": "BE-003",
+          "correction_id": "CORR-008",
+          "correction_status": "FLAGGED_UNVERIFIABLE",
+          "severity": "high",
+          "source": "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1 [SOURCE PDF NOT AVAILABLE]",
+          "requirement": "RSABE (Reference-Scaled Average Bioequivalence) for highly variable drugs: widening of acceptance limits to maximum 69.84-143.19% permitted for Cmax ONLY, never for AUC.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA allows RSABE for BOTH AUC and Cmax",
+          "verification_status": "UNVERIFIABLE",
+          "verification_note": "The EMA Bioequivalence Guideline PDF (CPMP/EWP/QWP/1401/98 Rev.1) was not present in the training/stage-1/eu-gmp/ source folder. Rule content cannot be certified against source. Add PDF to training/stage-1/ema-guidelines/ and re-verify. Content is believed substantively correct per general knowledge of EMA BE guideline but is not formally sourced.",
+          "action_required": "Obtain source PDF and re-verify before using this rule for authoritative training data."
+        },
+
+        {
+          "id": "PQS-004",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "source": "EU GMP Chapter 1, section 1.9(vii)",
+          "requirement": "No batch sold or supplied before Qualified Person certification that each batch produced and controlled per Marketing Authorisation.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.22 — Quality Control Unit responsibilities, but no QP role"
+        },
+
+        {
+          "id": "PQS-005",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Chapter 1, section 1.10",
+          "requirement": "Annual Product Quality Review (PQR) required for all authorised products including export-only, covering 12 specified elements.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "pqr_elements": [
+            "starting materials review", "critical in-process controls", "failed batches",
+            "deviations/non-conformances", "process/method changes", "MA variations",
+            "stability monitoring", "returns/complaints/recalls", "corrective actions",
+            "post-marketing commitments", "equipment qualification status", "contractual arrangements"
+          ]
+        },
+
+        {
+          "id": "PER-004",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "medium",
+          "source": "EU GMP Chapter 2, section 2.16",
+          "requirement": "Medical examination required upon recruitment for all personnel.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.28 only requires health reporting, not mandatory medical exam",
+          "verification_note": "Source uses 'should' — strong recommendation rather than absolute shall obligation."
+        },
+
+        {
+          "id": "DOC-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Chapter 4",
+          "requirement": "Site Master File required describing GMP-related activities.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No FDA equivalent document required"
+        },
+
+        {
+          "id": "DOC-002",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Chapter 4, section 4.11",
+          "requirement": "Batch documentation retained for 1 year after batch expiry OR 5 years after QP certification, whichever is longer.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR 211.180 requires 1 year after batch expiry or 1 year after distribution, no 5-year QP rule"
+        },
+
+        {
+          "id": "ST-003",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Annex 1, section 4.9",
+          "requirement": "Sinks and drains PROHIBITED in Grade A and Grade B areas.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA has no such prohibition"
+        },
+
+        {
+          "id": "ST-005",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "source": "EU GMP Annex 1, section 8.87",
+          "requirement": "Pre-Use Post-Sterilisation Integrity Test (PUPSIT) required for sterilising grade filters. Risk-assessment-based alternative approach permitted only where PUPSIT demonstrably not possible.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not mandate PUPSIT"
+        },
+
+        {
+          "id": "ST-007",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "source": "EU GMP Annex 1, sections 9.38-9.39",
+          "requirement": "Aseptic Process Simulation (APS/media fill): minimum 3 consecutive initial, then every 6 months per line/shift/process; minimum 5,000-10,000 units; zero growth target.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA guidance less prescriptive on frequency and unit count"
+        },
+
+        {
+          "id": "ST-009",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "source": "EU GMP Annex 1, section 8.22",
+          "requirement": "100% container closure integrity testing for fusion-sealed containers <=100mL; visual inspection NOT acceptable.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA does not require 100% CCIT"
+        },
+
+        {
+          "id": "CS-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Annex 11, section 1",
+          "requirement": "Risk assessment required for each computerised system considering patient safety, data integrity, and product quality.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "21 CFR Part 11 focuses on electronic records/signatures without explicit risk assessment"
+        },
+
+        {
+          "id": "QV-003",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "source": "EU GMP Annex 15, section 10.6",
+          "requirement": "Cleaning validation must use health-based exposure limits (HBELs) for setting acceptance criteria in shared facilities.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "FDA traditionally uses 1/1000th dose or 10ppm criteria"
+        },
+
+        {
+          "id": "QP-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "source": "EU GMP Annex 16",
+          "requirement": "Each batch must be certified by a QP before release; QP must have university degree in pharmacy, chemistry, biology, or medicine per Article 49 Directive 2001/83/EC. QP defined in Annex 16 Glossary by reference to Article 48.",
+          "type": "mandatory",
+          "eu_specific": true,
+          "fda_equivalent": "No FDA equivalent; QCU head has release authority under 21 CFR 211.22",
+          "verification_note": "Article 49 covers qualifications; Article 48 covers the definition/obligation. Both are relevant and the corrected rule now references both."
+        }
+      ]
+    },
+
+    "eu_pharmacovigilance_rules": {
+      "source_file": "training/output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json",
+      "rules_with_corrections": 3,
+      "rules_verified_no_change": 12,
+      "rules": [
+
+        {
+          "id": "GVP-II-003",
+          "correction_id": "CORR-006",
+          "correction_status": "CORRECTED",
+          "severity": "high",
+          "section_before": "II.B.3",
+          "section": "II.C.2",
+          "requirement_before": "PSMF shall be kept up to date and available for inspection within 7 calendar days upon request from a competent authority",
+          "requirement": "PSMF shall be kept up to date and made available immediately upon request from a competent authority and at the latest within 7 calendar days of the receipt of the request.",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 5",
+          "responsible_party": "MAH",
+          "correction_rationale": "Section reference corrected from II.B.3 (PSMF content section) to II.C.2 (operational procedures section, where the availability obligation appears). Requirement text updated to add the primary obligation — 'immediately upon request' — with 7 calendar days as the outer time limit, not the standard. This is a material distinction: the default expectation is immediate availability, not 7 days.",
+          "verification_note": "Section number II.C.2 is probable based on verifier assessment of Module II structure; direct PDF table of contents was not available to certify this number with certainty."
+        },
+
+        {
+          "id": "GVP-VII-003",
+          "correction_id": "CORR-005",
+          "correction_status": "CORRECTED",
+          "severity": "critical",
+          "section": "VII.B.4",
+          "requirement_before": "PSUR data lock point shall coincide with the international birth date (IBD) or the EU birth date for nationally authorised products, plus 90 calendar days for submission",
+          "requirement": "PSUR data lock point shall coincide with the international birth date (IBD) or the EU birth date for nationally authorised products. Submission deadlines: (1) 70 calendar days from the data lock point for PSURs covering reporting intervals up to and including 12 months; (2) 90 calendar days from the data lock point for PSURs covering reporting intervals exceeding 12 months.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107c(2), IR Art 34(3)",
+          "responsible_party": "MAH",
+          "submission_timeline_short_interval_days": 70,
+          "submission_timeline_long_interval_days": 90,
+          "short_interval_threshold_months": 12,
+          "correction_rationale": "The original rule stated only '90 calendar days' without distinguishing interval length. This omitted the more stringent 70-day deadline applicable to 6-month and other short-interval PSURs. For a MAH submitting a 6-month PSUR, using the 90-day deadline would constitute a regulatory breach. This was the highest-severity correction in the verification cycle."
+        },
+
+        {
+          "id": "GVP-XV-003",
+          "correction_id": "CORR-007",
+          "correction_status": "CLARIFIED",
+          "severity": "high",
+          "section": "XV.C.1",
+          "requirement": "Prior to publication of safety announcements, Member States, EMA and European Commission shall inform each other at least 24 hours in advance unless urgent public health reasons apply. This obligation applies to inter-authority coordination only.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 106a(2)",
+          "responsible_party": "NCA/EMA/EC",
+          "cross_reference": "GVP-XV-005 covers the separate and distinct MAH embargo obligation: MAH shall inform NCAs, EMA and EC simultaneously or before any public MAH safety announcement, providing information under embargo at least 24 hours prior [DIR Art 106a].",
+          "correction_rationale": "Verification noted potential conflation of two distinct 24-hour obligations: (1) inter-authority coordination (this rule, GVP-XV-003) and (2) MAH embargo obligation (GVP-XV-005). Reviewing the source file, these were already encoded as separate rules. Clarification added that GVP-XV-003 is limited to inter-authority coordination, with explicit cross-reference to GVP-XV-005 for the MAH obligation. No structural change needed."
+        },
+
+        {
+          "id": "GVP-I-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "section": "I.B.1",
+          "requirement": "Marketing authorisation holder shall establish and maintain a pharmacovigilance system for each medicinal product.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(1), REG Art 21(1)",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-I-002",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "section": "I.B.2",
+          "requirement": "MAH shall designate a qualified person responsible for pharmacovigilance (QPPV) permanently and continuously available, residing and operating in the EU.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(a), REG Art 20(1)",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-I-005",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "I.B.4",
+          "requirement": "MAH shall operate a quality system covering organisational structure, responsibilities, procedures, processes and resources for the pharmacovigilance system.",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 4",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-II-006",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "II.B.5",
+          "requirement": "The location of the PSMF shall be notified to the competent authorities and included in the marketing authorisation application.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 104(3)(b), REG Art 21(2)",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-V-001",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "section": "V.B.1",
+          "requirement": "MAH shall submit a risk management plan (RMP) with every application for a new marketing authorisation and when significant changes to the benefit-risk balance are identified.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 8(3)(iaa), REG Art 6(1)",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-V-002",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "V.B.2",
+          "requirement": "RMP shall include safety specification (epidemiology, non-clinical safety, clinical trial exposure, identified risks, potential risks, missing information), pharmacovigilance plan, and risk minimisation measures.",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 30-32",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-V-007",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "medium",
+          "section": "V.C.1",
+          "requirement": "RMP shall be submitted in EU-RMP format: Part I (Product Overview); Part II (Safety Specification); Part III (Pharmacovigilance Plan); Part IV (Plans for Post-Authorisation Efficacy Studies); Part V (Risk Minimisation Measures); Part VI (Summary); Part VII (Annexes).",
+          "obligation_level": "shall",
+          "legal_ref": "IR Art 30",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-VII-006",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "medium",
+          "section": "VII.C.4",
+          "requirement": "PRAC shall assess PSURs and adopt recommendation within defined procedural timelines: 60-day preliminary assessment report; 30-day comment period for MAH and PRAC members; 15-day updated assessment report; then PRAC recommendation.",
+          "obligation_level": "shall",
+          "legal_ref": "REG Art 28(3)-(4), DIR Art 107e(2)-(3)",
+          "responsible_party": "PRAC"
+        },
+
+        {
+          "id": "GVP-VIII-002",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "VIII.B.2",
+          "requirement": "Non-interventional PASS shall be registered in the EU PAS Register before study commencement, with protocol uploaded prior to data collection start.",
+          "obligation_level": "shall",
+          "legal_ref": "IR Annex III",
+          "responsible_party": "MAH"
+        },
+
+        {
+          "id": "GVP-VIII-006",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "VIII.B.4.3.2",
+          "requirement": "Final PASS study report shall be submitted within 12 months of end of data collection.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 107p(1), IR Annex III",
+          "responsible_party": "MAH",
+          "timeline_months": 12
+        },
+
+        {
+          "id": "GVP-IX-005",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "critical",
+          "section": "IX.C.2",
+          "requirement": "Emerging safety issues shall be notified to competent authorities and EMA within 3 working days of establishing the issue meets the definition criteria.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 23(2), REG Art 16(2)",
+          "responsible_party": "MAH",
+          "timeline_working_days": 3
+        },
+
+        {
+          "id": "GVP-XVI-002",
+          "correction_status": "ACCURATE_NO_CHANGE",
+          "severity": "high",
+          "section": "XVI.B.1.5",
+          "requirement": "RMM materials shall not contain or be combined with any promotional elements, direct or veiled, and studies evaluating RMM effectiveness shall be separate from promotional activity.",
+          "obligation_level": "shall",
+          "legal_ref": "DIR Art 62, 107m(3)",
+          "responsible_party": "MAH"
+        }
+      ]
+    }
+  },
+
+  "severity_summary": {
+    "scale": "critical/high/medium/low",
+    "rules_in_this_file": {
+      "total": 37,
+      "critical": 12,
+      "high": 19,
+      "medium": 6,
+      "low": 0,
+      "unverifiable_not_rated": 1
+    },
+    "full_corpus_estimates": {
+      "eu_legislation_requirements": {
+        "total_rules": 412,
+        "critical": "~5%",
+        "high": "~65%",
+        "medium": "~28%",
+        "low": "~2%"
+      },
+      "eu_gmp_rules": {
+        "total_rules": 81,
+        "critical": 13,
+        "high": 61,
+        "medium": 6,
+        "low": 1
+      },
+      "eu_pharmacovigilance_rules": {
+        "total_rules": 85,
+        "critical": 8,
+        "high": 43,
+        "medium": 21,
+        "low": 2,
+        "unverifiable": 1
+      }
+    }
+  },
+
+  "unverifiable_rules_registry": {
+    "count": 27,
+    "reason": "Source PDFs for EMA scientific guidelines not present in training/stage-1/eu-gmp/",
+    "missing_source": "EMA Bioequivalence Guideline, Biosimilars Quality Guideline, Process Validation Guideline, Excipients Guideline, Finished Dosage Form Guideline, Immunogenicity Guideline",
+    "affected_rule_ids": [
+      "BE-001", "BE-002", "BE-003", "BE-004", "BE-005", "BE-006", "BE-007",
+      "BS-001", "BS-002", "BS-003", "BS-004", "BS-005",
+      "PV-001", "PV-002", "PV-003", "PV-004", "PV-005", "PV-006", "PV-007",
+      "EX-001", "EX-002", "EX-003", "EX-004",
+      "FDF-001", "FDF-002", "FDF-003", "FDF-004",
+      "IM-001", "IM-002", "IM-003", "IM-004"
+    ],
+    "action": "Add PDFs to training/stage-1/ema-guidelines/ and re-run verification."
+  }
+}

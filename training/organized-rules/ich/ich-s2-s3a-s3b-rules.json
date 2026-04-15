@@ -1,0 +1,708 @@
+{
+  "metadata": {
+    "title": "ICH S2/S3A/S3B Rules Extraction - Full Re-extraction (replaces shallow v4)",
+    "note": "Previous extraction in output-v4/s1-s4-s8-q10-q11-rules.json was shallow: S2=7 rules, S3A=6 rules, S3B=3 rules. This is a complete re-extraction from the full ich-safety-full PDF versions covering all sections of each guideline.",
+    "source_files": [
+      {
+        "guideline": "S2(R1)",
+        "path": "/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training/stage-1/ich-safety-full/S2_Genotoxicity.pdf",
+        "pages": 29
+      },
+      {
+        "guideline": "S3A",
+        "path": "/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training/stage-1/ich-safety-full/S3A_Toxicokinetics.pdf",
+        "pages": 15
+      },
+      {
+        "guideline": "S3B",
+        "path": "/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training/stage-1/ich-safety-full/S3B_Pharmacokinetics_Repeated.pdf",
+        "pages": 4
+      }
+    ],
+    "extraction_date": "2026-03-24",
+    "total_rules": 60
+  },
+  "guidelines": {
+    "S2_R1": {
+      "title": "Guidance on Genotoxicity Testing and Data Interpretation for Pharmaceuticals Intended for Human Use",
+      "document_version": "R1",
+      "document_date": "9 November 2011",
+      "rules": [
+        {
+          "rule_id": "ICH-S2-001",
+          "rule_text": "Registration of pharmaceuticals requires a comprehensive assessment of genotoxic potential using a standard test battery that includes at minimum a bacterial reverse gene mutation test and an assessment of genotoxicity in mammalian cells.",
+          "source_section": "Section 2.1 - Rationale",
+          "source_page": 2,
+          "verbatim_quote": "Registration of pharmaceuticals requires a comprehensive assessment of their genotoxic potential. Extensive reviews have shown that many compounds that are mutagenic in the bacterial reverse mutation (Ames) test are rodent carcinogens. Addition of in vitro mammalian tests increases sensitivity for detection of rodent carcinogens and broadens the spectrum of genetic events detected.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Biologics are excluded from the scope of this guidance. Guidance applies only to products being developed as human pharmaceuticals.",
+          "cross_references": ["ICH M3(R2)", "ICH S2A", "ICH S2B"]
+        },
+        {
+          "rule_id": "ICH-S2-002",
+          "rule_text": "The standard test battery must include a test for gene mutation in bacteria (Ames test), plus genotoxicity assessment in mammalian cells. Two equally valid options exist: Option 1 (bacterial test + in vitro mammalian cytogenetic test + in vivo test) or Option 2 (bacterial test + two in vivo tests in different tissues).",
+          "source_section": "Section 2.2 - Description of the Two Options for the Standard Battery",
+          "source_page": 3,
+          "verbatim_quote": "Option 1: i. A test for gene mutation in bacteria. ii. A cytogenetic test for chromosomal damage (the in vitro metaphase chromosome aberration test or in vitro micronucleus test), or an in vitro mouse lymphoma Tk gene mutation assay. iii. An in vivo test for genotoxicity, generally a test for chromosomal damage using rodent hematopoietic cells, either for micronuclei or for chromosomal aberrations in metaphase cells. Option 2: i. A test for gene mutation in bacteria. ii. An in vivo assessment of genotoxicity with two different tissues, usually an assay for micronuclei using rodent hematopoietic cells and a second in vivo assay. Typically this would be a DNA strand breakage assay in liver, unless otherwise justified.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Under conditions where one or more tests in the standard battery cannot be employed for technical reasons, alternative validated tests can serve as substitutes provided sufficient scientific justification is given.",
+          "cross_references": ["ICH M3(R2)", "OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-003",
+          "rule_text": "For the bacterial mutation assay (Ames test), the maximum dose level recommended is 5000 μg/plate (or 5 μL/plate for liquid test substance) when not limited by solubility or cytotoxicity.",
+          "source_section": "Section 3.2.1 - Selection of Top Dose Level",
+          "source_page": 5,
+          "verbatim_quote": "The maximum dose level recommended is 5000 μg/plate (or 5 μL/plate for liquid test substance) when not limited by solubility or cytotoxicity.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "If cytotoxicity or mutagenicity is noted, irrespective of solubility, the top dose scored should be based on cytotoxicity as described. For bacterial cultures, precipitating doses are scored provided precipitate does not interfere with scoring, toxicity is not limiting, and the top concentration does not exceed 5000 μg/plate.",
+          "cross_references": ["OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-004",
+          "rule_text": "The recommended set of bacterial strains for the Ames test must include strains that detect both base substitution and frameshift mutations: Salmonella typhimurium TA98, TA100, TA1535, either TA1537 or TA97 or TA97a, and either TA102 or Escherichia coli WP2 uvrA or E. coli WP2 uvrA (pKM101).",
+          "source_section": "Section 3.2.2 - Study Design/Test Protocol",
+          "source_page": 5,
+          "verbatim_quote": "The recommended set of bacterial strains (OECD) includes those that detect base substitution and frameshift mutations as follows: Salmonella typhimurium TA98; Salmonella typhimurium TA100; Salmonella typhimurium TA1535; either Salmonella typhimurium TA1537 or TA97 or TA97a; and either Salmonella typhimurium TA102 or Escherichia coli WP2 uvrA or Escherichia coli WP2 uvrA (pKM101).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Either the plate incorporation or the pre-incubation method is considered appropriate for pharmaceuticals.",
+          "cross_references": ["OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-005",
+          "rule_text": "For in vitro mammalian cell assays, the maximum top concentration recommended is 1 mM or 0.5 mg/ml, whichever is lower, when not limited by solubility or cytotoxicity.",
+          "source_section": "Section 3.3.1 - Selection of Top Concentration",
+          "source_page": 6,
+          "verbatim_quote": "The maximum top concentration recommended is 1 mM or 0.5 mg/ml, whichever is lower, when not limited by solubility in solvent or culture medium or by cytotoxicity (Note 8).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "When solubility is limiting, maximum concentration should be the lowest concentration at which minimal precipitate is visible in cultures, provided there is no interference with scoring. For pharmaceuticals with unusually low molecular weight (e.g., less than 200) higher test concentrations should be considered.",
+          "cross_references": ["ICH S2(R1) Note 8"]
+        },
+        {
+          "rule_id": "ICH-S2-006",
+          "rule_text": "For in vitro cytogenetic assays (chromosome aberration and micronucleus), cytotoxicity must not exceed a reduction of about 50% in cell growth. For the Mouse Lymphoma Assay (MLA), the top dose must produce 80-90% cytotoxicity as measured by RTG between 20-10%.",
+          "source_section": "Section 3.3.1 - Selection of Top Concentration / Cytotoxicity",
+          "source_page": 6,
+          "verbatim_quote": "For in vitro cytogenetic assays for metaphase chromosome aberrations or for micronuclei, cytotoxicity should not exceed a reduction of about 50% in cell growth (Notes 9 and 10). For the MLA, at the top dose there should be 80-90% cytotoxicity as measured by an RTG between 20-10% (Note 9).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S2(R1) Note 9", "ICH S2(R1) Note 10"]
+        },
+        {
+          "rule_id": "ICH-S2-007",
+          "rule_text": "For cytogenetic evaluation of chromosomal damage in metaphase cells in vitro, the test protocol must include tests with and without metabolic activation, with appropriate positive and negative controls, and treatment for 3 to 6 hours with sampling approximately 1.5 normal cell cycles from the beginning of treatment.",
+          "source_section": "Section 3.3.2 - Study Design/Test Protocols",
+          "source_page": 6,
+          "verbatim_quote": "For the cytogenetic evaluation of chromosomal damage in metaphase cells in vitro, the test protocol should include the conduct of tests with and without metabolic activation, with appropriate positive and negative controls. Treatment with the test articles should be for 3 to 6 hours with a sampling time approximately 1.5 normal cell cycles from the beginning of the treatment.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "A continuous treatment without metabolic activation up to approximately 1.5 normal cell cycles should be conducted in case of negative or equivocal results for both short treatments. For certain chemicals (e.g., some nucleoside analogues and some nitrosamines) longer treatment, delayed sampling times or recovery periods may be needed.",
+          "cross_references": ["OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-008",
+          "rule_text": "Concurrent positive controls are required for in vitro mammalian cell tests. For in vitro mammalian cell tests, use of positive controls can generally be confined to a positive control with metabolic activation (when it is done concurrently with the non-activated test) to demonstrate the activity of the metabolic activation system and the responsiveness of the test system.",
+          "source_section": "Section 3.3.3 - Positive Controls",
+          "source_page": 7,
+          "verbatim_quote": "Concurrent positive controls are important, but in vitro mammalian cell tests for genetic toxicity are sufficiently standardized that use of positive controls can generally be confined to a positive control with metabolic activation (when it is done concurrently with the non-activated test) to demonstrate the activity of the metabolic activation system and the responsiveness of the test system.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-009",
+          "rule_text": "For in vivo genotoxicity tests, typically three dose levels must be analyzed, with the top dose for short-term studies (1 to 3 administrations) being a minimum limit dose of 2000 mg/kg if tolerated, or a maximum tolerated dose.",
+          "source_section": "Section 4.3 - Dose Selection for In Vivo Assays / Section 4.3.1 - Short-Term Studies",
+          "source_page": 8,
+          "verbatim_quote": "Typically three dose levels are analyzed (Hayashi et al., 2005). For short-term (usually 1 to 3 administrations) studies, the top dose recommended for genotoxicity assays is a limit dose of 2000 mg/kg, if this is tolerated, or a maximum tolerated dose defined (for example for the micronucleus assay (OECD)) as the dose producing signs of toxicity such that higher dose levels, based on the same dosing regimen, would be expected to produce lethality.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Lower doses are generally spaced at approximately two to three fold intervals below the top dose. Selection of a top dose based only on an exposure margin (multiple over clinical exposure) without toxicity is not considered sufficient justification.",
+          "cross_references": ["OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-010",
+          "rule_text": "For multiple administration (follow-up or Option 2 battery) in vivo studies, the top dose is appropriate for genotoxicity evaluation if any one of specific criteria is met: Maximum Feasible Dose (MFD), limit dose of 1000 mg/kg for studies of 14 days or longer, maximal possible exposure demonstrated by plateau/saturation, or top dose is ≥50% of the top dose used for acute administration.",
+          "source_section": "Section 4.3.2 - Multiple Administration Studies",
+          "source_page": 8,
+          "verbatim_quote": "Any one of the criteria listed below is considered sufficient to demonstrate that the top dose in a toxicology study (typically in rats) is appropriate for micronucleus analysis and for other genotoxicity evaluation: i. Maximum Feasible Dose (MFD) based on physico-chemical properties of the drug in the vehicle. ii. Limit dose of 1000 mg/kg for studies of 14 days or longer, if this is tolerated. iii. Maximal possible exposure demonstrated either by reaching a plateau/saturation in exposure or by compound accumulation. iv. Top dose is ≥ 50% of the top dose that would be used for acute administration.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Substantial reduction in exposure to parent drug with time (e.g., ≥50% reduction from initial exposure) can disqualify the study unless a blood sample taken in the first few days is available.",
+          "cross_references": ["ICH M3(R2)", "OECD"]
+        },
+        {
+          "rule_id": "ICH-S2-011",
+          "rule_text": "When toxicological data indicate severe toxicity to the red blood cell lineage (e.g., marked suppression of PCEs or reticulocytes), doses scored for in vivo micronucleus analysis should be spaced not more than about 2 fold below the top cytotoxic dose.",
+          "source_section": "Section 4.3.3 - Testing Compounds that are Toxic for Blood or Bone Marrow",
+          "source_page": 9,
+          "verbatim_quote": "If toxicological data indicate severe toxicity to the red blood cell lineage (e.g., marked suppression of Polychromatic Erythrocytes (PCEs) or reticulocytes), doses scored should be spaced not more than about 2 fold below the top, cytotoxic dose.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Early blood sampling (at 3-4 days) is advisable when there are marked increases in toxicity with increasing treatment time.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-012",
+          "rule_text": "For negative in vivo test results, demonstration of adequate exposure of the target tissue to the test compound is required. When an in vitro genotoxicity test is positive (or not done), in vivo exposure must be demonstrated by measuring cytotoxicity, drug levels in blood/plasma, or direct measurement of drug-related material in target tissue.",
+          "source_section": "Section 4.4 - Demonstration of Target Tissue Exposure for Negative In Vivo Test Results",
+          "source_page": 9,
+          "verbatim_quote": "The value of in vivo results is directly related to the demonstration of adequate exposure of the target tissue to the test compound. This is especially true for negative in vivo test results when in vitro test(s) have shown convincing evidence of genotoxicity, or when no in vitro mammalian cell assay is used. Evidence of adequate exposure could include toxicity in the tissue in question, or toxicokinetic data.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "If in vitro tests do not show genotoxic potential, in vivo (systemic) exposure can be assessed by any of the described methods, or can be assumed from results of standard ADME studies in rodents done for other purposes.",
+          "cross_references": ["ICH S2(R1) Section 4.4.1", "ICH S2(R1) Section 4.4.2"]
+        },
+        {
+          "rule_id": "ICH-S2-013",
+          "rule_text": "When systemic exposure is similar to or lower than expected clinical exposure, alternative strategies must be considered, including use of a different route of administration, a different species with higher exposure, or a different tissue or assay.",
+          "source_section": "Section 4.4.1 - When an In Vitro Genotoxicity Test is Positive (or not done)",
+          "source_page": 10,
+          "verbatim_quote": "If systemic exposure is similar to or lower than expected clinical exposure, alternative strategies might be called for such as: i. Use of a different route of administration; ii. Use of a different species with higher exposure; iii. Use of a different tissue or assay (see Section 2.3.4, 'Limitations to the use of standard in vivo tests'). When adequate exposure cannot be achieved (e.g., with compounds showing very poor target tissue availability) conventional in vivo genotoxicity tests have little value.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "For compounds that are not systemically absorbed, in vitro testing alone may be appropriate to base the evaluation on.",
+          "cross_references": ["ICH S2(R1) Section 2.3.4"]
+        },
+        {
+          "rule_id": "ICH-S2-014",
+          "rule_text": "Sampling times for in vivo micronucleus (MN), chromosomal aberration, and UDS tests must follow OECD (1997) guidance. When micronucleus analysis is integrated into multi-week studies, sampling of blood or bone marrow can be done the day after the final administration.",
+          "source_section": "Section 4.5 - Sampling Times for In Vivo Assays",
+          "source_page": 10,
+          "verbatim_quote": "Selection of the sampling time in the in vivo Micronucleus (MN), chromosomal aberration and UDS test should follow OECD (1997). When micronucleus analysis is integrated into multi-week studies, sampling of blood or bone marrow can be done the day after the final administration.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "For DNA damage/strand break measurements, measurements are usually made a few (e.g., 2-6) hours after the last administration for the multiple daily administration. In the case of single administration, two sampling times should be used: a few hours and 24 hours after the treatment.",
+          "cross_references": ["OECD 1997"]
+        },
+        {
+          "rule_id": "ICH-S2-015",
+          "rule_text": "If sex-specific drugs are to be tested in in vivo genotoxicity tests, the assay can be done in the appropriate sex. For acute tests, both sexes should be considered only if existing toxicity, metabolism or exposure (Cmax or AUC) data indicate a toxicologically meaningful sex difference.",
+          "source_section": "Section 4.7 - Use of Male/Female Rodents in In Vivo Genotoxicity Tests",
+          "source_page": 11,
+          "verbatim_quote": "If sex-specific drugs are to be tested, then the assay can be done in the appropriate sex. In vivo tests with the acute protocol can generally be carried out in only one sex. For acute tests, both sexes should be considered only if any existing toxicity, metabolism or exposure (Cmax or AUC) data indicate a toxicologically meaningful sex difference in the species being used.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "When the genotoxicity test is integrated into a repeat-dose toxicology study in two sexes, samples can be collected from both sexes, but a single sex can be scored if there is no substantial sex difference evident in toxicity/metabolism.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-016",
+          "rule_text": "The route of administration for in vivo genotoxicity tests should generally be the expected clinical route (e.g., oral, intravenous or subcutaneous), but can be modified if appropriate to obtain systemic exposure for topically applied compounds.",
+          "source_section": "Section 4.8 - Route of Administration",
+          "source_page": 11,
+          "verbatim_quote": "The route of administration is generally the expected clinical route, e.g., oral, intravenous or subcutaneous, but can be modified if appropriate in order to obtain systemic exposure, e.g., for topically applied compounds (see Section 2.3.4).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "For compounds where the route does not provide target tissue exposure, evaluation at the site of contact can be warranted.",
+          "cross_references": ["ICH S2(R1) Section 2.3.4"]
+        },
+        {
+          "rule_id": "ICH-S2-017",
+          "rule_text": "For in vivo studies, positive controls are only required periodically (not concurrently with every assay) after a laboratory has established competence in the use of the assay.",
+          "source_section": "Section 4.9 - Use of Positive Controls for In Vivo Studies",
+          "source_page": 11,
+          "verbatim_quote": "For in vivo studies, it is considered sufficient to treat animals with a positive control only periodically, and not concurrently with every assay, after a laboratory has established competence in the use of the assay (Note 16).",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "For the Comet assay, concurrent positive controls are currently considered advisable.",
+          "cross_references": ["ICH S2(R1) Note 16"]
+        },
+        {
+          "rule_id": "ICH-S2-018",
+          "rule_text": "Small increases in apparent genotoxicity that are statistically significant compared with negative/solvent control values but are within the confidence intervals of the appropriate historical control values for the testing facility are not considered biologically meaningful.",
+          "source_section": "Section 5.1 - Assessment of Biological Relevance",
+          "source_page": 11,
+          "verbatim_quote": "Small increases in apparent genotoxicity in vitro or in vivo should first be assessed for reproducibility and biological significance. Examples of results that are not considered biologically meaningful include: i. Small increases that are statistically significant compared with the negative or solvent control values but are within the confidence intervals of the appropriate historical control values for the testing facility. ii. Weak/equivocal responses that are not reproducible.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-019",
+          "rule_text": "In evaluating positive results in vitro, especially for the microbial mutagenicity test, the purity of the test compound should be considered to determine whether the positive result could be attributable to a contaminant.",
+          "source_section": "Section 5.2 - Evaluation of Results Obtained in In Vitro Tests",
+          "source_page": 12,
+          "verbatim_quote": "In evaluating positive results, especially for the microbial mutagenicity test, the purity of the test compound should be considered, to determine whether the positive result could be attributable to a contaminant.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-020",
+          "rule_text": "Positive results in the Ames test are thought to indicate DNA reactivity; therefore extensive follow-up testing to assess in vivo mutagenic and carcinogenic potential is warranted to assess the potential risk for treatment of patients, unless justified by appropriate risk-benefit analysis.",
+          "source_section": "Section 5.2.1 - Evaluation of Positive Results Obtained In Vitro in a Bacterial Mutation Assay",
+          "source_page": 12,
+          "verbatim_quote": "Since positive results in the Ames test are thought to indicate DNA reactivity, extensive follow-up testing to assess the in vivo mutagenic and carcinogenic potential would be warranted to assess the potential risk for treatment of patients, unless justified by appropriate risk-benefit analysis.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Certain cases exist where positive results in bacterial mutation assays might be shown not to indicate genotoxic potential in vivo in humans, for example when bacterial-specific metabolism occurs, such as activation by bacterial nitroreductases.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-021",
+          "rule_text": "Any in vitro positive test result should be evaluated based on an assessment of the weight of evidence considering factors such as whether conditions occur only in vitro (pH, osmolality, precipitates) or whether the effect occurs only at the most toxic concentrations (≥80% reduction in RTG for MLA; ≥50% growth suppression for cytogenetics assays).",
+          "source_section": "Section 5.2.2 - Evaluation of Positive Results Obtained In Vitro in Mammalian Cell Assays",
+          "source_page": 12,
+          "verbatim_quote": "Any in vitro positive test result should be evaluated based on an assessment of the weight of evidence as indicated below. i. The conditions do not occur in vivo (pH; osmolality; precipitates). ii. The effect occurs only at the most toxic concentrations. In the MLA increases at ≥80% reduction in RTG. For in vitro cytogenetics assays when growth is suppressed by ≥50%.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-022",
+          "rule_text": "When there is insufficient weight of evidence to indicate lack of relevance for positive mammalian cell in vitro assay results, recommended follow-up is to provide experimental evidence either by additional in vitro studies OR by carrying out two appropriate in vivo assays in appropriate tissues with demonstrated adequate exposure.",
+          "source_section": "Section 5.4.1.1 - Mechanistic/In Vivo Follow-up",
+          "source_page": 13,
+          "verbatim_quote": "When there is insufficient weight of evidence to indicate lack of relevance, recommended follow-up for positive mammalian cell assays would be to provide experimental evidence, either by additional in vitro studies (i, below) or by carrying out two appropriate in vivo assays (ii, below). In summary, negative results in appropriate in vivo assays, with adequate justification for the endpoints measured and demonstration of exposure (see Section 4.4.1) are considered sufficient to demonstrate absence of significant genotoxic risk.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "If above mechanistic information and weight of evidence supports lack of relevant genotoxicity, only a single in vivo test with appropriate evidence of exposure is called for.",
+          "cross_references": ["ICH S2(R1) Section 4.4.1"]
+        },
+        {
+          "rule_id": "ICH-S2-023",
+          "rule_text": "When positive in vitro results are seen only in the presence of the S9 activation system, it should first be verified that metabolic activation is responsible and not some other difference in conditions; follow-up will generally focus on in vivo studies in liver.",
+          "source_section": "Section 5.4.1.2 - Follow-up to an In Vitro Positive Result That is Dependent upon S9 Activation",
+          "source_page": 14,
+          "verbatim_quote": "When positive results are seen only in the presence of the S9 activation system, it should first be verified that metabolic activation is responsible and not some other difference in conditions (e.g., low or no serum in the S9 mix, compared with ≥10% serum in the non-activated incubations). The follow-up strategy is then aimed at determining the relevance of the results in vitro to conditions in vivo, and will generally focus on in vivo studies in liver (Note 18).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S2(R1) Note 18"]
+        },
+        {
+          "rule_id": "ICH-S2-024",
+          "rule_text": "If there is an increase in micronuclei in vivo, all the toxicological data should be evaluated to determine whether a non-genotoxic effect could be the cause or a contributing factor. If non-specific effects of disturbed erythropoiesis or physiology are suspected, an in vivo assay for chromosome aberrations may be more appropriate.",
+          "source_section": "Section 5.4.2 - Follow-up to a Positive In Vivo Micronucleus Assay",
+          "source_page": 14,
+          "verbatim_quote": "If there is an increase in micronuclei in vivo, all the toxicological data should be evaluated to determine whether a non-genotoxic effect could be the cause or a contributing factor (Note 15). If non-specific effects of disturbed erythropoiesis or physiology (such as hypo/hyperthermia) are suspected, an in vivo assay for chromosome aberrations might be more appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S2(R1) Note 15", "ICH S2(R1) Note 17"]
+        },
+        {
+          "rule_id": "ICH-S2-025",
+          "rule_text": "For compounds with structural alerts for genotoxic activity, negative results in either test battery (Ames or mammalian cell) are usually considered sufficient assurance of a lack of genotoxicity, but modification to standard protocols can be appropriate depending on the chemical nature, known reactivity, and any metabolism data.",
+          "source_section": "Section 2.3.3 - Compounds Bearing Structural Alerts for Genotoxic Activity",
+          "source_page": 4,
+          "verbatim_quote": "Structurally alerting compounds (Note 5) are usually detectable in the standard test battery since the majority of 'structural alerts' are defined in relation to bacterial mutagenicity. A few chemical classes are known to be more easily detected in mammalian cell chromosome damage assays than bacterial mutation assays. Thus negative results in either test battery with a compound that has a structural alert is usually considered sufficient assurance of a lack of genotoxicity. However, for compounds bearing certain specific structural alerts, modification to standard protocols can be appropriate (Note 5).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S2(R1) Note 5"]
+        },
+        {
+          "rule_id": "ICH-S2-026",
+          "rule_text": "For compounds that are highly toxic to bacteria (e.g., some antibiotics), the bacterial reverse mutation (Ames) test should still be carried out, just as cytotoxic compounds are tested in mammalian cells, because mutagenicity can occur at lower, less toxic concentrations. In such cases, any one of the in vitro mammalian cell assays should also be done (Option 1).",
+          "source_section": "Section 2.3.2 - Testing Compounds that are Toxic to Bacteria",
+          "source_page": 4,
+          "verbatim_quote": "In cases where compounds are highly toxic to bacteria (e.g., some antibiotics), the bacterial reverse mutation (Ames) test should still be carried out, just as cytotoxic compounds are tested in mammalian cells, because mutagenicity can occur at lower, less toxic concentrations. In such cases, any one of the in vitro mammalian cell assays should also be done, i.e., Option 1 should be followed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-027",
+          "rule_text": "For compounds for which in vivo tests (typically in bone marrow, blood or liver) do not provide additional useful information (e.g., compounds not systemically absorbed), it may be appropriate to base the genotoxicity evaluation only on in vitro testing.",
+          "source_section": "Section 2.3.4 - Limitations to the Use of In Vivo Tests",
+          "source_page": 4,
+          "verbatim_quote": "There are compounds for which many in vivo tests (typically in bone marrow, blood or liver) do not provide additional useful information. These include compounds for which data on toxicokinetics or pharmacokinetics indicate that they are not systemically absorbed and therefore are not available to the target tissues. Examples of such compounds are some radioimaging agents, aluminum based antacids, some compounds given by inhalation, and some dermally or other topically applied pharmaceuticals. In some cases where a modification of the route of administration does not provide sufficient target tissue exposure, and no suitable genotoxicity assay is available in the most exposed tissue, it might be appropriate to base the evaluation only on in vitro testing.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "In some cases evaluation of genotoxic effects at the site of contact can be warranted.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-028",
+          "rule_text": "Additional genotoxicity testing can be conducted for compounds that were negative in the standard test battery but which show increases in tumors in carcinogenicity bioassay(s) with insufficient evidence to establish a non-genotoxic mechanism, including modified conditions for metabolic activation in vitro or in vivo tests measuring genetic damage in target organs.",
+          "source_section": "Section 5.5 - Follow-up Genotoxicity Testing in Relation to Tumor Findings in a Carcinogenicity Bioassay",
+          "source_page": 14,
+          "verbatim_quote": "Additional genotoxicity testing in appropriate models can be conducted for compounds that were negative in the standard test battery but which have shown increases in tumors in carcinogenicity bioassay(s) with insufficient evidence to establish a non-genotoxic mechanism. To help understand the mode of action, additional testing can include modified conditions for metabolic activation in vitro tests or can include in vivo tests measuring genetic damage in target organs of tumor induction.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-029",
+          "rule_text": "Under both standard battery options, either acute or repeat dose study designs in vivo can be used. In case of repeated administrations, attempts should be made to incorporate the genotoxicity endpoints into toxicity studies if scientifically justified. When more than one endpoint is evaluated in vivo it is preferable that they are incorporated into a single study.",
+          "source_section": "Section 2.2 - Description of the Two Options for the Standard Battery",
+          "source_page": 3,
+          "verbatim_quote": "Under both standard battery options, either acute or repeat dose study designs in vivo can be used. In case of repeated administrations, attempts should be made to incorporate the genotoxicity endpoints into toxicity studies, if scientifically justified. When more than one endpoint is evaluated in vivo it is preferable that they are incorporated into a single study.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S2-030",
+          "rule_text": "The assessment of the genotoxic potential of a compound must take into account the totality of the findings and acknowledge the intrinsic values and limitations of both in vitro and in vivo tests.",
+          "source_section": "Section 5.4.2 - Follow-up to a Positive In Vivo Micronucleus Assay",
+          "source_page": 14,
+          "verbatim_quote": "In conclusion, the assessment of the genotoxic potential of a compound should take into account the totality of the findings and acknowledge the intrinsic values and limitations of both in vitro and in vivo tests.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        }
+      ]
+    },
+    "S3A": {
+      "title": "Note for Guidance on Toxicokinetics: The Assessment of Systemic Exposure in Toxicity Studies",
+      "document_version": "Step 4",
+      "document_date": "27 October 1994",
+      "rules": [
+        {
+          "rule_id": "ICH-S3A-001",
+          "rule_text": "Toxicokinetics must be integrated as an integral part of the non-clinical testing programme to enhance the value of toxicological data and support assessment of risk and safety in humans. No rigid detailed procedures are mandated; scientific judgement should dictate when toxicokinetic data may be useful.",
+          "source_section": "Section 1 - Introduction",
+          "source_page": 1,
+          "verbatim_quote": "Toxicokinetics is thus an integral part of the non-clinical testing programme; it should enhance the value of the toxicological data generated, both in terms of understanding the toxicity tests and in comparison with clinical data as part of the assessment of risk and safety in humans. Due to its integration into toxicity testing and its bridging character between non-clinical and clinical studies, the focus is primarily on the interpretation of toxicity tests and not on characterising the basic pharmacokinetic parameters of the substance studied.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "It may not be necessary for toxicokinetic data to be collected in all studies.",
+          "cross_references": ["ICH S3B"]
+        },
+        {
+          "rule_id": "ICH-S3A-002",
+          "rule_text": "The primary objective of toxicokinetics is to describe the systemic exposure achieved in animals and its relationship to dose level and the time course of the toxicity study. AUC, Cmax and C(time) are the most commonly used parameters for assessing exposure in toxicokinetic studies.",
+          "source_section": "Section 2 - The objectives of toxicokinetics and the parameters which may be determined",
+          "source_page": 2,
+          "verbatim_quote": "The primary objective of toxicokinetics is: to describe the systemic exposure achieved in animals and its relationship to dose level and the time course of the toxicity study. Plasma (or whole blood or serum) AUC, Cmax and C(time) (Note 2) are the most commonly used parameters in assessing exposure in toxicokinetics studies.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "For some compounds it will be more appropriate to calculate exposure based on the (plasma protein) unbound concentration. Other derived parameters such as bioavailability, half-life, fraction of unbound drug and volume of distribution may also be of value.",
+          "cross_references": ["ICH S3A Note 2"]
+        },
+        {
+          "rule_id": "ICH-S3A-003",
+          "rule_text": "Toxicokinetic data may be obtained from all animals on a toxicity study, in representative subgroups, in satellite groups, or in separate studies. For toxicity studies subject to GLP, the concomitant toxicokinetics must also conform to GLP.",
+          "source_section": "Section 3.1 - Introduction / General principles",
+          "source_page": 2,
+          "verbatim_quote": "These data may be obtained from all animals on a toxicity study, in representative subgroups, in satellite groups (see 3.5 and Note 1) or in separate studies. It should be noted that for those toxicity studies whose performance is subject to Good Laboratory Practice (GLP) the concomitant toxicokinetics must also conform to GLP. Toxicokinetic studies retrospectively designed to generate specific sets of data under conditions which closely mimic those of the toxicity studies should also conform to GLP when they are necessary for the evaluation of safety.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Toxicokinetic studies retrospectively designed to generate specific data under mimicking conditions should also conform to GLP when necessary for safety evaluation.",
+          "cross_references": ["ICH S3A Note 1", "ICH S3A Section 3.5"]
+        },
+        {
+          "rule_id": "ICH-S3A-004",
+          "rule_text": "The time points for collecting body fluids in concomitant toxicokinetic studies must be as frequent as necessary but not so frequent as to interfere with normal conduct of the study or cause undue physiological stress to the animals. The number of time points must be justified as adequate to estimate exposure.",
+          "source_section": "Section 3.3 - Justification of time points for sampling",
+          "source_page": 3,
+          "verbatim_quote": "The time points for collecting body fluids in concomitant toxicokinetic studies should be as frequent as is necessary, but not so frequent as to interfere with the normal conduct of the study or to cause undue physiological stress to the animals (Note 4). In each study, the number of time points should be justified on the basis that they are adequate to estimate exposure (see 3.2). The justification should be based on kinetic data gathered from earlier toxicity studies, from pilot or dose range-finding studies, in the same animal model or in other models allowing reliable extrapolation.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A Note 4", "ICH S3A Section 3.2"]
+        },
+        {
+          "rule_id": "ICH-S3A-005",
+          "rule_text": "At the low dose level (preferably a no-toxic-effect dose level), the exposure in animals should ideally equal or just exceed the maximum expected (or known to be attained) in patients. At intermediate dose levels, exposure should represent an appropriate multiple or fraction of the exposure at lower or higher dose levels. At high dose levels, the exposure achieved must be assessed.",
+          "source_section": "Section 3.4 - Contribution to the setting of dose levels / Sections 3.4.1, 3.4.2, 3.4.3",
+          "source_page": 3,
+          "verbatim_quote": "At the low dose, preferably a no-toxic-effect dose level (Note 5), the exposure in the animals of any toxicity study should ideally equal or just exceed the maximum expected (or known to be attained) in patients. Exposure at intermediate dose levels should normally represent an appropriate multiple (or fraction) of the exposure at lower (or higher) dose levels dependent upon the objectives of the toxicity study. The high dose levels in toxicity studies will normally be determined by toxicological considerations. However, the exposure achieved at the dose levels used should be assessed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "It is recognised that the ideal for low dose is not always achievable and that low doses will often need to be determined by considerations of toxicology.",
+          "cross_references": ["ICH S3A Note 5"]
+        },
+        {
+          "rule_id": "ICH-S3A-006",
+          "rule_text": "Where toxicokinetic data indicate that absorption of a compound limits exposure to parent compound and/or metabolite(s), the lowest dose level of the substance producing the maximum exposure should be accepted as the top dose level to be used (when no other dose-limiting constraint applies).",
+          "source_section": "Section 3.4.3 - High dose levels",
+          "source_page": 4,
+          "verbatim_quote": "Where toxicokinetic data indicate that absorption of a compound limits exposure to parent compound and/or metabolite(s) (Note 6), the lowest dose level of the substance producing the maximum exposure should be accepted as the top dose level to be used (when no other dose-limiting constraint applies, Note 7).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "When other dose-limiting constraints (Note 7) apply, volume constraints may limit achievable dose levels for non-toxic compounds.",
+          "cross_references": ["ICH S3A Note 6", "ICH S3A Note 7"]
+        },
+        {
+          "rule_id": "ICH-S3A-007",
+          "rule_text": "Systemic exposure must be estimated in an appropriate number of animals and dose groups to provide a basis for risk assessment. Where both male and female animals are utilised in the main study, it is normal to estimate exposure in animals of both sexes unless some justification can be made for not so doing.",
+          "source_section": "Section 3.5 - Extent of exposure assessment in toxicity studies",
+          "source_page": 4,
+          "verbatim_quote": "In toxicity studies, systemic exposure should be estimated in an appropriate number of animals and dose groups (Note 8) to provide a basis for risk assessment. The number of animals to be used should be the minimum consistent with generating adequate toxicokinetic data. Where both male and female animals are utilised in the main study it is normal to estimate exposure in animals of both sexes unless some justification can be made for not so doing.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Toxicokinetic data are not necessarily required from studies of different duration if the dosing regimen is essentially unchanged.",
+          "cross_references": ["ICH S3A Note 8"]
+        },
+        {
+          "rule_id": "ICH-S3A-008",
+          "rule_text": "Species differences in protein binding, tissue uptake, receptor properties, and metabolic profile should be considered when interpreting toxicokinetic data. For highly protein bound compounds, it may be more appropriate to express exposure as the free (unbound) concentrations.",
+          "source_section": "Section 3.6 - Complicating factors in exposure interpretation",
+          "source_page": 4,
+          "verbatim_quote": "Species differences in protein binding, tissue uptake, receptor properties and metabolic profile should be considered. For example, it may be more appropriate for highly protein bound compounds to have exposure expressed as the free (unbound) concentrations. In addition, the pharmacological activity of metabolites, the toxicology of metabolites and antigenicity of biotechnology products may be complicating factors.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3A-009",
+          "rule_text": "The analytical methods used in toxicokinetic studies must be specific for the entity to be measured and of adequate accuracy and precision. The limit of quantification should be adequate for the measurement of the range of concentrations anticipated in the toxicokinetic data. Plasma, serum or whole blood are normally the matrices of choice.",
+          "source_section": "Section 3.10 - Analytical methods",
+          "source_page": 5,
+          "verbatim_quote": "The analytical methods to be used in toxicokinetic studies should be specific for the entity to be measured and of an adequate accuracy and precision. The limit of quantification should be adequate for the measurement of the range of concentrations anticipated to occur in the generation of the toxicokinetic data. Plasma, serum or whole blood are normally the matrices of choice for toxicokinetic studies.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "If the drug substance is a racemate or other mixture of enantiomers, additional justification should be made for the choice of the analyte.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3A-010",
+          "rule_text": "The analyte and matrix assayed in non-clinical studies should ideally be the same as in clinical studies. If different assay methods are used in non-clinical and clinical studies, they should all be suitably validated.",
+          "source_section": "Section 3.10 - Analytical methods",
+          "source_page": 5,
+          "verbatim_quote": "The analyte and matrix assayed in non-clinical studies should ideally be the same as in clinical studies. If different assay methods are used in non-clinical and clinical studies they should all be suitably validated.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3A-011",
+          "rule_text": "A comprehensive account of the toxicokinetic data generated, together with an evaluation of the results and implications for the interpretation of the toxicology findings, must be given. An outline of the analytical method must be reported or referenced, along with a rationale for the choice of the matrix analysed and the analyte measured.",
+          "source_section": "Section 3.11 - Reporting",
+          "source_page": 5,
+          "verbatim_quote": "A comprehensive account of the toxicokinetic data generated, together with an evaluation of the results and of the implications for the interpretation of the toxicology findings should be given. An outline of the analytical method should be reported or referenced. In addition, a rationale for the choice of the matrix analysed and the analyte measured (see 3.8 and 3.10) should be given.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A Section 3.8", "ICH S3A Section 3.10"]
+        },
+        {
+          "rule_id": "ICH-S3A-012",
+          "rule_text": "Toxicokinetics in repeated-dose toxicity studies should be incorporated appropriately into study design, consisting of exposure profiling or monitoring at appropriate dose levels at the start and towards the end of the treatment period of the first repeat dose study. The first repeat dose study incorporating toxicokinetic data for each species is normally of 14 days duration or longer.",
+          "source_section": "Section 4.3 - Repeated-dose toxicity studies",
+          "source_page": 7,
+          "verbatim_quote": "Toxicokinetics should be incorporated appropriately into the design of the studies. It may consist of exposure profiling or monitoring (Note 1) at appropriate dose levels at the start and towards the end of the treatment period of the first repeat dose study (Note 12). The first repeat dose study incorporating toxicokinetic data for each species is normally of 14 days duration or longer.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Monitoring or profiling may be extended, reduced or modified for specific compounds where problems have arisen in the interpretation of earlier toxicity studies.",
+          "cross_references": ["ICH S3A Note 1", "ICH S3A Note 12"]
+        },
+        {
+          "rule_id": "ICH-S3A-013",
+          "rule_text": "For negative results of in vivo genotoxicity studies, it may be appropriate to have demonstrated systemic exposure in the species used or to have characterised exposure in the indicator tissue.",
+          "source_section": "Section 4.4 - Genotoxicity studies",
+          "source_page": 7,
+          "verbatim_quote": "For negative results of in vivo genotoxicity studies, it may be appropriate to have demonstrated systemic exposure in the species used or to have characterised exposure in the indicator tissue.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S2(R1)"]
+        },
+        {
+          "rule_id": "ICH-S3A-014",
+          "rule_text": "For carcinogenicity (oncogenicity) sighting or dose-ranging studies, appropriate monitoring or profiling should be undertaken to generate toxicokinetic data which may assist in the design of the main studies. Particular attention should be paid to species and strains not included in earlier toxicity studies and to routes or methods of administration being used for the first time.",
+          "source_section": "Section 4.5.1 - Sighting or dose-ranging studies",
+          "source_page": 7,
+          "verbatim_quote": "Appropriate monitoring or profiling of these studies should be undertaken in order to generate toxicokinetic data which may assist in the design of the main studies (see 4.5.2.). Particular attention should be paid to species and strains which have not been included in earlier toxicity studies and to the use of routes or methods of administration which are being used for the first time.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Particular attention should be paid to the establishment of appropriate toxicokinetic data when administration is to be in the diet (Note 13).",
+          "cross_references": ["ICH S3A Note 13", "ICH S1C"]
+        },
+        {
+          "rule_id": "ICH-S3A-015",
+          "rule_text": "In carcinogenicity main studies, it is recommended that reassurance be sought from monitoring that the exposure in the main study is consistent with profiles of kinetics established in free-standing or specific dose-ranging studies. Such monitoring should be appropriate on a few occasions during the study but it is not considered essential to continue beyond six months.",
+          "source_section": "Section 4.5.2 - The main studies",
+          "source_page": 8,
+          "verbatim_quote": "As mentioned in the Introduction to this section, it is recommended that reassurance be sought from monitoring that the exposure in the main study is consistent with profiles of kinetics established in free-standing or specific dose-ranging studies. Such monitoring will be appropriate on a few occasions during the study, but it is not considered essential to continue beyond six months.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3A-016",
+          "rule_text": "It is preferable to have some information on pharmacokinetics before initiating reproduction studies since this may suggest the need to adjust the choice of species, study design and dosing schedules. A satellite group of female animals may be used to collect toxicokinetic data in reproductive toxicity studies.",
+          "source_section": "Section 4.6.1 - Introduction (Reproductive toxicity studies)",
+          "source_page": 8,
+          "verbatim_quote": "It is preferable to have some information on pharmacokinetics before initiating reproduction studies since this may suggest the need to adjust the choice of species, study design and dosing schedules. A satellite group of female animals may be used to collect the toxicokinetic data.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "At the time of initiating reproduction studies, the information need not be sophisticated or derived from pregnant or lactating animals.",
+          "cross_references": ["ICH S5A"]
+        },
+        {
+          "rule_id": "ICH-S3A-017",
+          "rule_text": "Measurement of metabolite concentrations in plasma or other body fluids is especially important when: the administered compound acts as a pro-drug, the compound is metabolised to pharmacologically or toxicologically active metabolites, or the compound is very extensively metabolised and measurement of a major metabolite is the only practical means of estimating exposure.",
+          "source_section": "Section 3.8 - Determination of metabolites",
+          "source_page": 5,
+          "verbatim_quote": "There may be circumstances when measurement of metabolite concentrations in plasma or other body fluids is especially important in the conduct of toxicokinetics (Note 9). When the administered compound acts as a 'pro-drug' and the delivered metabolite is acknowledged to be the primary active entity. When the compound is metabolised to one or more pharmacologically or toxicologically active metabolites which could make a significant contribution to tissue/organ responses. When the administered compound is very extensively metabolised and the measurement of plasma or tissue concentrations of a major metabolite is the only practical means of estimating exposure following administration of the compound in toxicity studies (Note 10).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A Note 9", "ICH S3A Note 10"]
+        },
+        {
+          "rule_id": "ICH-S3A-018",
+          "rule_text": "If a new clinical route of administration results in increased AUC and/or Cmax, or a change in metabolic route, the continuing assurance of safety from animal toxicology and kinetics should be reconsidered. If exposure is not substantially greater or different by the new route, additional non-clinical toxicity studies may focus on local toxicity.",
+          "source_section": "Section 3.7 - Route of administration",
+          "source_page": 5,
+          "verbatim_quote": "If the new route results in increased AUC and/or Cmax, or a change in metabolic route, the continuing assurance of safety from animal toxicology and kinetics should be reconsidered. If exposure is not substantially greater, or different, by the proposed new route compared to that for the existing route(s) then additional non-clinical toxicity studies may focus on local toxicity.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3A-019",
+          "rule_text": "Toxicokinetic monitoring or profiling of toxicity studies should establish what level of exposure has been achieved and may also serve to alert the toxicologist to non-linear, dose-related changes in exposure which may have occurred. Toxicokinetic information may allow better interspecies comparisons than simple dose/body weight or surface area comparisons.",
+          "source_section": "Section 3.2 - Quantification of exposure",
+          "source_page": 3,
+          "verbatim_quote": "Toxicokinetic monitoring or profiling of toxicity studies should establish what level of exposure has been achieved during the course of the study and may also serve to alert the toxicologist to non-linear, dose-related changes in exposure (Note 3) which may have occurred. Toxicokinetic information may allow better interspecies comparisons than simple dose/body weight (or surface area) comparisons.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A Note 3"]
+        },
+        {
+          "rule_id": "ICH-S3A-020",
+          "rule_text": "Toxicokinetics in studies in pregnant and lactating animals should be assessed considering that kinetics will differ in pregnant and non-pregnant animals. Consideration should be given to embryo/foetal transfer and secretion in milk, and to the interpretation of reproductive toxicity tests in species in which placental transfer of the substance cannot be demonstrated.",
+          "source_section": "Section 4.6.3 - Studies in pregnant and lactating animals",
+          "source_page": 8,
+          "verbatim_quote": "The treatment regimen during the exposure period should be selected on the basis of the toxicological findings and on pharmacokinetic and toxicokinetic principles. Consideration should be given to the possibility that the kinetics will differ in pregnant and non-pregnant animals. Consideration should be given to the interpretation of reproductive toxicity tests in species in which placental transfer of the substance cannot be demonstrated.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A Note 14", "ICH S5A"]
+        }
+      ]
+    },
+    "S3B": {
+      "title": "Pharmacokinetics: Guidance for Repeated Dose Tissue Distribution Studies",
+      "document_version": "Step 4",
+      "document_date": "27 October 1994",
+      "rules": [
+        {
+          "rule_id": "ICH-S3B-001",
+          "rule_text": "Single dose tissue distribution studies with sufficient sensitivity and specificity are generally expected to provide an adequate assessment of tissue distribution and potential for accumulation; therefore, repeated dose tissue distribution studies should not be required uniformly for all compounds.",
+          "source_section": "Introduction / Summary",
+          "source_page": 3,
+          "verbatim_quote": "For most compounds, it is expected that single dose tissue distribution studies with sufficient sensitivity and specificity will provide an adequate assessment of tissue distribution and the potential for accumulation. Thus, repeated dose tissue distribution studies should not be required uniformly for all compounds and should only be conducted when appropriate data cannot be derived from other sources.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Repeated dose studies may be appropriate under certain circumstances based on data from single dose studies, toxicity, and toxicokinetic studies.",
+          "cross_references": ["ICH S3A"]
+        },
+        {
+          "rule_id": "ICH-S3B-002",
+          "rule_text": "Repeated dose tissue distribution studies should be considered when single dose tissue distribution studies suggest that the apparent half-life of the test compound (and/or metabolites) in organs or tissues significantly exceeds the apparent half-life of the elimination phase in plasma AND is also more than twice the dosing interval in the toxicity studies.",
+          "source_section": "Circumstances Under Which Repeated Dose Tissue Distribution Studies Should be Considered, Item 1",
+          "source_page": 3,
+          "verbatim_quote": "When single dose tissue distribution studies suggest that the apparent half-life of the test compound (and/or metabolites) in organs or tissues significantly exceeds the apparent half life of the elimination phase in plasma and is also more than twice the dosing interval in the toxicity studies, repeated dose tissue distribution studies may be appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Both conditions must be met: tissue half-life significantly exceeds plasma elimination half-life AND tissue half-life is more than twice the dosing interval.",
+          "cross_references": ["ICH S3A"]
+        },
+        {
+          "rule_id": "ICH-S3B-003",
+          "rule_text": "Repeated dose tissue distribution studies should be considered when steady-state levels of a compound/metabolite in the circulation, determined in repeated dose pharmacokinetic or toxicokinetic studies, are markedly higher than those predicted from single dose kinetic studies.",
+          "source_section": "Circumstances Under Which Repeated Dose Tissue Distribution Studies Should be Considered, Item 2",
+          "source_page": 3,
+          "verbatim_quote": "When steady-state levels of a compound/metabolite in the circulation, determined in repeated dose pharmacokinetic or toxicokinetic studies, are markedly higher than those predicted from single dose kinetic studies, then repeated dose tissue distribution studies should be considered.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A"]
+        },
+        {
+          "rule_id": "ICH-S3B-004",
+          "rule_text": "Repeated dose tissue distribution studies should be considered when histopathological changes critical for safety evaluation of the test substance are observed that would not be predicted from short-term toxicity studies, single dose tissue distribution studies, and pharmacological studies. Those organs or tissues which were the site of the lesions should be the focus of such studies.",
+          "source_section": "Circumstances Under Which Repeated Dose Tissue Distribution Studies Should be Considered, Item 3",
+          "source_page": 3,
+          "verbatim_quote": "When histopathological changes, critical for the safety evaluation of the test substances, are observed that would not be predicted from short term toxicity studies, single dose tissue distribution studies and pharmacological studies, repeated dose tissue distribution studies may aid in the interpretation of these findings. Those organs or tissues which were the site of the lesions should be the focus of such studies.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3B-005",
+          "rule_text": "Repeated dose tissue distribution studies should be considered when the pharmaceutical is being developed for site-specific targeted delivery.",
+          "source_section": "Circumstances Under Which Repeated Dose Tissue Distribution Studies Should be Considered, Item 4",
+          "source_page": 3,
+          "verbatim_quote": "When the pharmaceutical is being developed for site-specific targeted delivery, repeated dose tissue distribution studies may be appropriate.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3B-006",
+          "rule_text": "The objectives of repeated dose tissue distribution studies may be achieved using radiolabelled compounds or alternative methods of sufficient sensitivity and specificity. Dose level(s) and species should be chosen to address the specific problem that led to the consideration of the repeated dose tissue distribution study.",
+          "source_section": "Design and Conduct of Repeated Dose Tissue Distribution Studies",
+          "source_page": 4,
+          "verbatim_quote": "The objectives of these studies may be achieved using radiolabelled compounds or alternative methods of sufficient sensitivity and specificity. Dose level(s) and species should be chosen to address the problem that led to the consideration of the repeated dose tissue distribution study.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3B-007",
+          "rule_text": "One week of dosing is normally considered to be the minimum period for repeated dose tissue distribution studies. A longer duration should be selected when the blood/plasma concentration of the compound and/or its metabolites does not reach steady state. It is normally considered unnecessary to dose for longer than three weeks.",
+          "source_section": "Design and Conduct of Repeated Dose Tissue Distribution Studies",
+          "source_page": 4,
+          "verbatim_quote": "Information from previous pharmacokinetic and toxicokinetic studies should be used in selecting the duration of dosing in repeated dose tissue distribution studies. One week of dosing is normally considered to be a minimum period. A longer duration should be selected when the blood/plasma concentration of the compound and/or its metabolites does not reach steady state. It is normally considered unnecessary to dose for longer than three weeks.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Duration should be guided by prior pharmacokinetic and toxicokinetic study data.",
+          "cross_references": ["ICH S3A"]
+        },
+        {
+          "rule_id": "ICH-S3B-008",
+          "rule_text": "Consideration should be given to measuring unchanged compound and/or metabolites in organs and tissues in which extensive accumulation occurs, or if it is believed that such data may clarify mechanisms of organ toxicity.",
+          "source_section": "Design and Conduct of Repeated Dose Tissue Distribution Studies",
+          "source_page": 4,
+          "verbatim_quote": "Consideration should be given to measuring unchanged compound and/or metabolites in organs and tissues in which extensive accumulation occurs or if it is believed that such data may clarify mechanisms of organ toxicity.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S3B-009",
+          "rule_text": "The design and timing of repeated dose tissue distribution studies should be determined on a case-by-case basis. The studies may be most appropriate for compounds which have an apparently long half life, incomplete elimination, or unanticipated organ toxicity.",
+          "source_section": "Summary",
+          "source_page": 4,
+          "verbatim_quote": "The design and timing of repeated dose tissue distribution studies should be determined on a case-by-case basis. The studies may be most appropriate for compounds which have an apparently long half life, incomplete elimination or unanticipated organ toxicity.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A"]
+        },
+        {
+          "rule_id": "ICH-S3B-010",
+          "rule_text": "Tissue distribution studies are an essential component in the non-clinical kinetics programme and are required to provide information on distribution and accumulation of the compound and/or metabolites, especially in relation to potential sites of action.",
+          "source_section": "Introduction",
+          "source_page": 3,
+          "verbatim_quote": "Tissue distribution studies are essential in providing information on distribution and accumulation of the compound and/or metabolites, especially in relation to potential sites of action; this information may be useful for designing toxicology and pharmacology studies and for interpreting the results of these experiments.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "None stated.",
+          "cross_references": ["ICH S3A"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "title": "Severity Normalization Map — 4-Level Standard",
+    "generated": "2026-03-23",
+    "target_scale": {
+      "levels": ["critical", "high", "medium", "low"],
+      "definitions": {
+        "critical": "Immediate patient safety risk, major regulatory non-compliance, or submission-blocking deficiency. Requires urgent correction. Cannot proceed without resolution.",
+        "high": "Significant regulatory risk, major deficiency, or issue likely to result in CRL/rejection without correction. Must be addressed before submission.",
+        "medium": "Moderate risk or deficiency that weakens the submission or may require additional justification. Should be addressed; may be acceptable with explanation.",
+        "low": "Minor gap, observation, or divergence with limited impact on regulatory outcome. May be noted in submission or accepted without action."
+      },
+      "rationale": "The 4-level scale (critical/high/medium/low) was already used by v3 EU files (eu-gmp-vs-fda-cgmp.json, eu-vs-fda-divergences.json) and skill-eu-regulatory.md and skill-multi-jurisdiction.md. It provides the clearest semantic separation for regulatory risk communication and avoids ambiguity in cross-domain aggregation."
+    }
+  },
+
+  "rule_file_mappings": [
+    {
+      "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+      "original_scale": "3-level qualitative: aligned / moderate / significant",
+      "field": "divergence_level",
+      "mapping": {
+        "aligned": "low",
+        "moderate": "medium",
+        "significant": "high"
+      },
+      "note": "No 'critical' entries existed in this file. If a future entry warrants 'critical', it should be used (e.g., outright refusal of accepted clinical endpoint across all jurisdictions).",
+      "affected_rule_ids": [
+        {"original": "DIV-001 (aligned)", "normalized": "low"},
+        {"original": "DIV-002 (moderate)", "normalized": "medium"},
+        {"original": "DIV-003 (moderate)", "normalized": "medium"},
+        {"original": "DIV-004 (moderate)", "normalized": "medium"},
+        {"original": "DIV-005 (aligned)", "normalized": "low"},
+        {"original": "DIV-006 (significant)", "normalized": "high"},
+        {"original": "DIV-007 (moderate)", "normalized": "medium"},
+        {"original": "DIV-008 (aligned)", "normalized": "low"},
+        {"original": "DIV-009 (moderate→medium or low)", "normalized": "medium [global programs]; low [Japan-domestic programs]"},
+        {"original": "DIV-010 (significant)", "normalized": "high"},
+        {"original": "DIV-011 (aligned)", "normalized": "low"},
+        {"original": "DIV-012 (moderate)", "normalized": "medium"},
+        {"original": "DIV-013 (significant)", "normalized": "high"},
+        {"original": "DIV-014 (aligned)", "normalized": "low"},
+        {"original": "DIV-015 (moderate)", "normalized": "medium"},
+        {"original": "DIV-016 (moderate)", "normalized": "medium"},
+        {"original": "DIV-017 (moderate)", "normalized": "medium"},
+        {"original": "DIV-018 (aligned)", "normalized": "low"},
+        {"original": "DIV-019 (significant)", "normalized": "high"},
+        {"original": "DIV-020 (moderate)", "normalized": "medium"},
+        {"original": "DIV-021 (significant)", "normalized": "high"}
+      ]
+    },
+    {
+      "file": "output-v3/who-regs/japan-vs-fda-ema.json",
+      "original_scale": "3-level impact: HIGH / MEDIUM / LOW (uppercase)",
+      "field": "gap_severity",
+      "mapping": {
+        "HIGH": "high",
+        "MEDIUM": "medium",
+        "LOW": "low"
+      },
+      "note": "Case normalization only. No 'CRITICAL' entries existed. This file did not have a 'critical' tier — for future entries involving Japan-unique requirements with immediate safety implications (e.g., missing GPSP requirement for post-market surveillance drugs), use 'critical'.",
+      "action": "Lowercase all severity values in gap_severity fields. No semantic change."
+    },
+    {
+      "file": "output-v2/q-stability/stability-rules.json",
+      "original_scale": "No formal severity scale — uses significant_change_criteria (SC-1 to SC-6) with pass/fail logic",
+      "field": "significant_change_criteria severity (where referenced)",
+      "mapping": {
+        "note": "The stability rules file uses pass/fail criteria rather than risk severity. When these criteria feed into a deficiency report, map as: failed critical stability criterion → critical; failed primary stability criterion → high; borderline/trending → medium; minor OOS in non-critical parameter → low.",
+        "SC-1": "critical if failed (appearance change indicating degradation)",
+        "SC-2": "critical if failed (pH outside specification)",
+        "SC-3": "high if failed (assay outside 5% of label claim)",
+        "SC-4": "high if failed (degradation product exceeds threshold)",
+        "SC-5": "medium if failed (dissolution outside limit at one timepoint)",
+        "SC-6": "medium if failed (particulate matter above threshold)"
+      },
+      "action": "No in-file changes required. Mapping documented for downstream aggregation tools."
+    },
+    {
+      "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+      "original_scale": "4-level: critical / high / medium / low (already correct)",
+      "field": "gap_severity",
+      "mapping": "ALREADY NORMALIZED — no changes required",
+      "action": "None"
+    },
+    {
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "original_scale": "4-level: critical / high / medium / low (already correct)",
+      "field": "gap_severity",
+      "mapping": "ALREADY NORMALIZED — no changes required",
+      "action": "None"
+    },
+    {
+      "file": "output-v3/eu-law/eu-legislation-requirements.json",
+      "original_scale": "4-level: critical / high / medium / low (already correct per v3 EU convention)",
+      "field": "severity",
+      "mapping": "ALREADY NORMALIZED — no changes required",
+      "action": "None"
+    },
+    {
+      "file": "output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json",
+      "original_scale": "4-level: critical / high / medium / low (already correct per v3 EU convention)",
+      "field": "severity",
+      "mapping": "ALREADY NORMALIZED — no changes required",
+      "action": "None"
+    },
+    {
+      "file": "output-v3/health-canada/health-canada-requirements.json",
+      "original_scale": "3-level qualitative in some sections; no formal scale in others",
+      "field": "gap_severity / importance",
+      "mapping": {
+        "critical_gap": "critical",
+        "high_priority": "high",
+        "canada_specific_flag": "medium",
+        "observation": "low"
+      },
+      "action": "Normalize severity labels in health-canada-requirements.json to 4-level scale. Canada-specific flags (divergences from FDA/EMA without risk implication) default to 'medium'."
+    },
+    {
+      "file": "output-v3/who-regs/who-requirements.json",
+      "original_scale": "No formal severity scale — uses requirement type (mandatory / recommended)",
+      "field": "requirement_type / gap implications",
+      "mapping": {
+        "mandatory (not met)": "critical",
+        "mandatory (partially met)": "high",
+        "recommended (not met)": "medium",
+        "recommended (partially met)": "low"
+      },
+      "action": "WHO requirements file does not emit gap severity directly. When requirements are used in a deficiency report context, map mandatory/recommended status to normalized severity using above table."
+    }
+  ],
+
+  "skill_file_mappings": [
+    {
+      "skill": "skill-stability-analysis.md",
+      "original_scale": "3-level: CRITICAL / MAJOR / MINOR",
+      "mapping": {"CRITICAL": "critical", "MAJOR": "high", "MINOR": "low"},
+      "note": "No 'medium' tier in original. Issues previously rated MAJOR that have moderate impact (e.g., trending OOS not yet exceeded, one failed acceptance criterion with others passing) should be re-evaluated as 'medium'. Strict regulatory compliance failures remain 'high'."
+    },
+    {
+      "skill": "skill-clinical-design.md",
+      "original_scale": "5-level numeric: Critical(0) / Major(1) / Moderate(2) / Minor(3) / Observation(4) with weighted % scoring",
+      "mapping": {"Critical(0)": "critical", "Major(1)": "high", "Moderate(2)": "medium", "Minor(3)": "low", "Observation(4)": "low"},
+      "note": "Internal numeric scoring (0-4) is retained for weighted aggregation. Output labels at report level must use normalized 4-level names. Observation maps to 'low' alongside Minor.",
+      "internal_scoring_retained": true
+    },
+    {
+      "skill": "skill-safety-reporting.md",
+      "original_scale": "3-level: CRITICAL / MAJOR / MINOR",
+      "mapping": {"CRITICAL": "critical", "MAJOR": "high", "MINOR": "low"},
+      "note": "Same as stability-analysis. Introduce 'medium' for borderline cases (e.g., SUSAR reporting timeline borderline, non-fatal SUSAR with ambiguous expectedness classification)."
+    },
+    {
+      "skill": "skill-biotech-quality.md",
+      "original_scale": "2-level: critical / recommended",
+      "mapping": {"critical": "critical", "recommended (not met, safety implications)": "high", "recommended (not met, quality gap)": "medium", "recommended (met with minor deviation)": "low"},
+      "note": "The binary scale is insufficient for regulatory gap communication. Expand to 4-level using the above contextual mapping when generating gap reports."
+    },
+    {
+      "skill": "skill-quality-systems.md",
+      "original_scale": "4-level numeric: Compliant(3) / Partially Compliant(2) / Deficient(1) / Not Addressed(0)",
+      "mapping": {"Not Addressed(0)": "critical", "Deficient(1)": "high", "Partially Compliant(2)": "medium", "Compliant(3)": "low (no gap)"},
+      "note": "Internal numeric scoring retained. Output labels use normalized names. 'Compliant' is not a severity but indicates no gap; label as 'low' only if a minor improvement is noted. Otherwise omit from gap reports."
+    },
+    {
+      "skill": "skill-special-populations.md",
+      "original_scale": "4-level numeric: Compliant(4) / Minor gaps(3) / Significant gaps(2) / Non-compliant(1)",
+      "mapping": {"Non-compliant(1)": "critical", "Significant gaps(2)": "high", "Minor gaps(3)": "medium", "Compliant(4)": "low (no gap)"},
+      "note": "Internal numeric scoring retained. Output labels normalized."
+    },
+    {
+      "skill": "skill-eu-regulatory.md",
+      "original_scale": "4-level: CRITICAL / HIGH / MEDIUM / LOW (already correct, uppercase only)",
+      "mapping": {"CRITICAL": "critical", "HIGH": "high", "MEDIUM": "medium", "LOW": "low"},
+      "action": "Case normalization only. No semantic change."
+    },
+    {
+      "skill": "skill-eu-gmp-analysis.md",
+      "original_scale": "4-level: Critical / Major / Minor / Observation",
+      "mapping": {"Critical": "critical", "Major": "high", "Minor": "low", "Observation": "low"},
+      "note": "Introduce 'medium' for deviations that are less than Major but more than Minor (e.g., procedure exists but lacks key element, not yet a full deficiency). Map existing Minor ratings to 'low'; Observation also to 'low'."
+    },
+    {
+      "skill": "skill-eu-pharmacovigilance.md",
+      "original_scale": "No formal scoring scale defined",
+      "mapping": {
+        "note": "Adopt 4-level standard for all gap assessments going forward. PV-specific mapping: GVP mandatory requirement absent → critical; GVP mandatory requirement incomplete → high; GVP recommended requirement absent → medium; GVP recommended requirement incomplete → low."
+      },
+      "action": "Add formal severity scale to skill header using above mapping."
+    },
+    {
+      "skill": "skill-nonclinical-review.md",
+      "original_scale": "3-level: Critical / Major / Minor (in gap analysis sections)",
+      "mapping": {"Critical": "critical", "Major": "high", "Minor": "low"},
+      "note": "Introduce 'medium' for intermediate cases (e.g., study conducted but with protocol deviation, data available but not in correct format for CTD)."
+    },
+    {
+      "skill": "skill-safety-pharmacology.md",
+      "original_scale": "4-level: LOW / MODERATE / HIGH / CRITICAL (risk classification, inverse order from display convention)",
+      "mapping": {"LOW": "low", "MODERATE": "medium", "HIGH": "high", "CRITICAL": "critical"},
+      "note": "Semantic mapping preserves meaning. The skill uses risk classification (not gap severity) — the same 4 levels apply but represent risk of QT prolongation / cardiovascular liability rather than submission deficiency severity."
+    },
+    {
+      "skill": "skill-multi-jurisdiction.md",
+      "original_scale": "4-level: CRITICAL / HIGH / MEDIUM / LOW (already correct, uppercase only)",
+      "mapping": {"CRITICAL": "critical", "HIGH": "high", "MEDIUM": "medium", "LOW": "low"},
+      "action": "Case normalization only. No semantic change."
+    },
+    {
+      "skill": "skill-cross-domain.md",
+      "original_scale": "No formal scoring scale defined",
+      "mapping": {
+        "note": "Cross-domain synthesis skill aggregates outputs from other skills. Adopt 4-level standard for aggregated gap report. Use highest severity from any constituent skill for the composite rating of a given topic area, unless context warrants downgrade (document rationale)."
+      },
+      "action": "Add formal severity scale to skill header. Aggregation rule: composite severity = max(constituent skill severities) unless overridden with documented rationale."
+    },
+    {
+      "skill": "skill-cmc-methods.md",
+      "original_scale": "No formal scoring scale defined",
+      "mapping": {
+        "note": "CMC analytical methods assessment should use 4-level scale: critical (method unvalidated for key quality attribute), high (validation gap for specification parameter), medium (method validated but documentation incomplete), low (minor documentation gap, does not affect method suitability)."
+      },
+      "action": "Add formal severity scale to skill header using above mapping."
+    },
+    {
+      "skill": "skill-canada-regulatory.md",
+      "original_scale": "3-level: Critical Gaps / High Priority Gaps / Canada-Specific Flags",
+      "mapping": {"Critical Gaps": "critical", "High Priority Gaps": "high", "Canada-Specific Flags": "medium"},
+      "note": "Canada-Specific Flags (divergences from FDA/EMA that are Canada-unique but not deficiencies per se) map to 'medium' as they require attention but are not blocking. Introduce 'low' for observations that are informational only."
+    }
+  ],
+
+  "cross_reference_table": {
+    "description": "Quick lookup — how each pre-normalization term maps to the 4-level standard",
+    "from_any_file_to_normalized": {
+      "aligned": "low",
+      "observation": "low",
+      "minor": "low",
+      "MINOR": "low",
+      "LOW": "low",
+      "low": "low",
+      "moderate": "medium",
+      "partially_compliant": "medium",
+      "MODERATE": "medium",
+      "MEDIUM": "medium",
+      "medium": "medium",
+      "canada_specific_flag": "medium",
+      "recommended_not_met": "medium",
+      "significant": "high",
+      "major": "high",
+      "MAJOR": "high",
+      "HIGH": "high",
+      "high": "high",
+      "deficient": "high",
+      "high_priority": "high",
+      "critical": "critical",
+      "CRITICAL": "critical",
+      "not_addressed": "critical",
+      "non_compliant": "critical"
+    }
+  }
+}

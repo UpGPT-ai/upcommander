@@ -1,0 +1,602 @@
+{
+  "metadata": {
+    "title": "ICH S9/S10 Rules Extraction",
+    "source_files": [
+      "S9_Nonclinical_Oncology.pdf",
+      "S10_Photosafety.pdf"
+    ],
+    "source_directory": "training/stage-1/ich-safety-full/",
+    "extraction_date": "2026-03-24",
+    "total_rules": 52
+  },
+  "guidelines": {
+    "S9": {
+      "title": "Nonclinical Evaluation for Anticancer Pharmaceuticals",
+      "document_version": "Step 4",
+      "document_date": "29 October 2009",
+      "total_rules": 27,
+      "rules": [
+        {
+          "rule_id": "ICH-S9-001",
+          "rule_text": "Nonclinical safety studies supporting anticancer pharmaceutical development must be conducted in accordance with Good Laboratory Practices.",
+          "source_section": "1.4 General Principles",
+          "source_page": 2,
+          "verbatim_quote": "In general, nonclinical safety studies that are used to support the development of a pharmaceutical should be conducted in accordance with Good Laboratory Practices.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "General toxicology studies may allow alternative approaches determined on a case-by-case basis.",
+          "cross_references": ["ICH S6", "ICH M3"]
+        },
+        {
+          "rule_id": "ICH-S9-002",
+          "rule_text": "Prior to Phase I studies, preliminary characterization of the mechanism(s) of action and schedule dependencies as well as anti-tumor activity of the pharmaceutical must have been made.",
+          "source_section": "2.1 Pharmacology",
+          "source_page": 2,
+          "verbatim_quote": "Prior to Phase I studies, preliminary characterization of the mechanism(s) of action and schedule dependencies as well as anti-tumor activity of the pharmaceutical should have been made.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Appropriate models should be selected based on the target and mechanism of action, but the pharmaceutical need not be studied using the same tumor types intended for clinical evaluation.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-003",
+          "rule_text": "An assessment of the pharmaceutical's effect on vital organ functions (cardiovascular, respiratory and central nervous systems) must be available before the initiation of clinical studies.",
+          "source_section": "2.2 Safety Pharmacology",
+          "source_page": 3,
+          "verbatim_quote": "An assessment of the pharmaceutical's effect on vital organ functions (including cardiovascular, respiratory and central nervous systems) should be available before the initiation of clinical studies; such parameters could be included in general toxicology studies.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Detailed clinical observations following dosing and appropriate electrocardiographic measurements in non-rodents are generally considered sufficient. Conducting stand-alone safety pharmacology studies to support studies in patients with advanced cancer is not called for.",
+          "cross_references": ["ICH S7A", "ICH S7B"]
+        },
+        {
+          "rule_id": "ICH-S9-004",
+          "rule_text": "When specific safety concerns have been identified that could put patients at significant additional risks in clinical trials, appropriate safety pharmacology studies described in ICH S7A and/or S7B must be conducted.",
+          "source_section": "2.2 Safety Pharmacology",
+          "source_page": 3,
+          "verbatim_quote": "In cases where specific concerns have been identified that could put patients at significant additional risks in clinical trials, appropriate safety pharmacology studies described in ICH S7A and/or S7B should be considered. In the absence of a specific risk, such studies will not be called for to support clinical trials or for marketing.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In the absence of a specific risk, such studies will not be called for to support clinical trials or for marketing.",
+          "cross_references": ["ICH S7A", "ICH S7B"]
+        },
+        {
+          "rule_id": "ICH-S9-005",
+          "rule_text": "The active pharmaceutical substance used in nonclinical studies must be well characterized and must adequately represent the active substance to be used in the clinical trials.",
+          "source_section": "1.4 General Principles",
+          "source_page": 2,
+          "verbatim_quote": "The active pharmaceutical substance used in nonclinical studies should be well characterized and should adequately represent the active substance to be used in the clinical trials.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The manufacturing process can change during the course of development.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-006",
+          "rule_text": "For small molecules, general toxicology testing must include rodents and non-rodents unless alternative approaches are scientifically justified on a case-by-case basis.",
+          "source_section": "2.4 General Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "For small molecules, the general toxicology testing usually includes rodents and non-rodents. In certain circumstances, determined case-by-case, alternative approaches can be appropriate (e.g., for genotoxic drugs targeting rapidly dividing cells, a repeat-dose toxicity study in one rodent species might be considered sufficient, provided the rodent is a relevant species).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For genotoxic drugs targeting rapidly dividing cells, a repeat-dose toxicity study in one rodent species might be considered sufficient. For biopharmaceuticals, see ICH S6 for the number of species to be studied.",
+          "cross_references": ["ICH S6"]
+        },
+        {
+          "rule_id": "ICH-S9-007",
+          "rule_text": "Assessment of the potential to recover from toxicity must be provided to understand whether serious adverse effects are reversible or irreversible.",
+          "source_section": "2.4 General Toxicology",
+          "source_page": 3,
+          "verbatim_quote": "Assessment of the potential to recover from toxicity should be provided to understand whether serious adverse effects are reversible or irreversible. A study that includes a terminal non-dosing period is called for if there is severe toxicity at approximate clinical exposure and recovery cannot be predicted by scientific assessment.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The demonstration of complete recovery is not considered essential.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-008",
+          "rule_text": "Embryofetal toxicity studies of anticancer pharmaceuticals must be available when the marketing application is submitted, but are not considered essential to support clinical trials intended for the treatment of patients with advanced cancer.",
+          "source_section": "2.5 Reproduction Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "Embryofetal toxicity studies of anticancer pharmaceuticals should be available when the marketing application is submitted, but these studies are not considered essential to support clinical trials intended for the treatment of patients with advanced cancer.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "These studies are also not considered essential for the purpose of marketing applications for pharmaceuticals that are genotoxic and target rapidly dividing cells (e.g., crypt cells, bone marrow) in general toxicity studies or belong to a class that has been well characterized as causing developmental toxicity.",
+          "cross_references": ["ICH S5(R2)", "ICH S6"]
+        },
+        {
+          "rule_id": "ICH-S9-009",
+          "rule_text": "For small molecules, embryofetal toxicity studies must typically be conducted in two species as described by ICH S5(R2).",
+          "source_section": "2.5 Reproduction Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "For small molecules, embryofetal toxicology studies are typically conducted in two species as described by ICH S5(R2). In cases where an embryofetal developmental toxicity study is positive for embryofetal lethality or teratogenicity, a confirmatory study in a second species is usually not warranted.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In cases where an embryofetal developmental toxicity study is positive for embryofetal lethality or teratogenicity, a confirmatory study in a second species is usually not warranted.",
+          "cross_references": ["ICH S5(R2)"]
+        },
+        {
+          "rule_id": "ICH-S9-010",
+          "rule_text": "For biopharmaceuticals, an embryofetal toxicity assessment in one pharmacologically relevant species must be conducted and should usually be sufficient.",
+          "source_section": "2.5 Reproduction Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "For biopharmaceuticals, an assessment in one pharmacologically relevant species should usually be sufficient. This assessment might be done by evaluating the toxicity during the period of organogenesis or study designs as described by ICH S6.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Alternative approaches might be considered appropriate if scientifically justified, including a literature assessment, assessment of placental transfer, the direct or indirect effects of the biopharmaceutical, or other factors.",
+          "cross_references": ["ICH S6"]
+        },
+        {
+          "rule_id": "ICH-S9-011",
+          "rule_text": "A study of fertility and early embryonic development is not warranted to support clinical trials or for marketing of pharmaceuticals intended for treatment of patients with advanced cancer.",
+          "source_section": "2.5 Reproduction Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "A study of fertility and early embryonic development is not warranted to support clinical trials or for marketing of pharmaceuticals intended for the treatment of patients with advanced cancer. Information available from general toxicology studies on the pharmaceutical's effect on reproductive organs should be used as the basis of the assessment of impairment of fertility.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-012",
+          "rule_text": "A pre- and postnatal toxicology study is generally not warranted to support clinical trials or for marketing of pharmaceuticals for the treatment of patients with advanced cancer.",
+          "source_section": "2.5 Reproduction Toxicology",
+          "source_page": 4,
+          "verbatim_quote": "A pre- and postnatal toxicology study is generally not warranted to support clinical trials or for marketing of pharmaceuticals for the treatment of patients with advanced cancer.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-013",
+          "rule_text": "Genotoxicity studies are not considered essential to support clinical trials for therapeutics intended to treat patients with advanced cancer but must be performed to support marketing.",
+          "source_section": "2.6 Genotoxicity",
+          "source_page": 4,
+          "verbatim_quote": "Genotoxicity studies are not considered essential to support clinical trials for therapeutics intended to treat patients with advanced cancer. Genotoxicity studies should be performed to support marketing (see ICH S2).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If the in vitro assays are positive, an in vivo assay might not be warranted. The principles outlined in ICH S6 should be followed for biopharmaceuticals.",
+          "cross_references": ["ICH S2", "ICH S6"]
+        },
+        {
+          "rule_id": "ICH-S9-014",
+          "rule_text": "Carcinogenicity studies are not warranted to support marketing for therapeutics intended to treat patients with advanced cancer.",
+          "source_section": "2.7 Carcinogenicity",
+          "source_page": 5,
+          "verbatim_quote": "Carcinogenicity studies are not warranted to support marketing for therapeutics intended to treat patients with advanced cancer.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The appropriateness of a carcinogenicity assessment for anticancer pharmaceuticals is described in ICH S1A.",
+          "cross_references": ["ICH S1A"]
+        },
+        {
+          "rule_id": "ICH-S9-015",
+          "rule_text": "An initial assessment of phototoxic potential must be conducted prior to Phase I, based on photochemical properties of the drug and information on other members of the class.",
+          "source_section": "2.9 Photosafety testing",
+          "source_page": 5,
+          "verbatim_quote": "An initial assessment of phototoxic potential should be conducted prior to Phase I, based on photochemical properties of the drug and information on other members of the class. If assessment of these data indicates a potential risk, appropriate protective measures should be taken during outpatient trials.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If the photosafety risk cannot be adequately evaluated based on nonclinical data or clinical experience, a photosafety assessment consistent with the principles described in ICH M3 should be provided prior to marketing.",
+          "cross_references": ["ICH S10", "ICH M3"]
+        },
+        {
+          "rule_id": "ICH-S9-016",
+          "rule_text": "The start dose for first administration in humans must be scientifically justified using all available nonclinical data including pharmacokinetics, pharmacodynamics, and toxicity.",
+          "source_section": "3.1 Start Dose for First Administration in Humans",
+          "source_page": 5,
+          "verbatim_quote": "The start dose should be scientifically justified using all available nonclinical data (e.g., pharmacokinetics, pharmacodynamics, toxicity), and its selection based on various approaches (see Note 2).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For biopharmaceuticals with immune agonistic properties, selection of the start dose using a minimally anticipated biologic effect level (MABEL) should be considered.",
+          "cross_references": ["ICH M3"]
+        },
+        {
+          "rule_id": "ICH-S9-017",
+          "rule_text": "For most systemically administered small molecules, interspecies scaling of the animal doses to an equivalent human dose must be based on normalization to body surface area.",
+          "source_section": "3.1 Start Dose for First Administration in Humans",
+          "source_page": 5,
+          "verbatim_quote": "For most systemically administered small molecules, interspecies scaling of the animal doses to an equivalent human dose is usually based on normalization to body surface area. For both small molecules and biopharmaceuticals, interspecies scaling based on body weight, AUC, or other exposure parameters might be appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For both small molecules and biopharmaceuticals, interspecies scaling based on body weight, AUC, or other exposure parameters might be appropriate.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-018",
+          "rule_text": "A common approach for small molecules is to set a start dose at 1/10 the Severely Toxic Dose in 10% of the animals (STD10) in rodents; if a non-rodent is the most appropriate species, 1/6 the Highest Non-Severely Toxic Dose (HNSTD) is considered an appropriate starting dose.",
+          "source_section": "5. Notes, Note 2",
+          "source_page": 9,
+          "verbatim_quote": "A common approach for many small molecules is to set a start dose at 1/10 the Severely Toxic Dose in 10% of the animals (STD 10) in rodents. If the non-rodent is the most appropriate species, then 1/6 the Highest Non-Severely Toxic Dose (HNSTD) is considered an appropriate starting dose. The HNSTD is defined as the highest dose level that does not produce evidence of lethality, life-threatening toxicities or irreversible findings.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Alternative approaches may be used with scientific justification.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-019",
+          "rule_text": "The highest dose or exposure tested in nonclinical studies does not limit the dose-escalation or highest dose investigated in a clinical trial in patients with cancer.",
+          "source_section": "3.2 Dose Escalation and the Highest Dose in a Clinical Trial",
+          "source_page": 5,
+          "verbatim_quote": "In general, the highest dose or exposure tested in the nonclinical studies does not limit the dose-escalation or highest dose investigated in a clinical trial in patients with cancer.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When a steep dose- or exposure-response curve for severe toxicity is observed in nonclinical toxicology studies, or when no preceding marker of severe toxicity is available, smaller than usual dose increments (fractional increments rather than dose doubling) should be considered.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-020",
+          "rule_text": "Results from repeat dose studies of 3 months' duration following the intended clinical schedule must be provided prior to initiating Phase III studies for patients with advanced cancer.",
+          "source_section": "3.4 Duration of Toxicology Studies to Support Continued Clinical Development and Marketing",
+          "source_page": 6,
+          "verbatim_quote": "In support of continued development of an anticancer pharmaceutical for patients with advanced cancer, results from repeat dose studies of 3 months' duration following the intended clinical schedule should be provided prior to initiating Phase III studies.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For most pharmaceuticals intended for the treatment of patients with advanced cancer, nonclinical studies of 3 months duration are considered sufficient to support marketing.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-021",
+          "rule_text": "The nonclinical data to support Phase I and clinical Phase I data would normally be sufficient for moving to Phase II and into second or first line therapy in patients with advanced cancer.",
+          "source_section": "3.4 Duration of Toxicology Studies to Support Continued Clinical Development and Marketing",
+          "source_page": 6,
+          "verbatim_quote": "The nonclinical data to support Phase I and the clinical Phase I data would normally be sufficient for moving to Phase II and into second or first line therapy in patients with advanced cancer.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-022",
+          "rule_text": "Pharmaceuticals planned for use in combination must be well studied individually in toxicology evaluations, and data to support a rationale for the combination must be provided prior to starting the clinical study.",
+          "source_section": "3.5 Combination of Pharmaceuticals",
+          "source_page": 6,
+          "verbatim_quote": "Pharmaceuticals planned for use in combination should be well studied individually in toxicology evaluations. Data to support a rationale for the combination should be provided prior to starting the clinical study.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In general, toxicology studies investigating the safety of combinations of pharmaceuticals intended to treat patients with advanced cancer are not warranted. If the human toxicity profile of the pharmaceuticals has been characterized, a nonclinical study evaluating the combination is not usually warranted.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-023",
+          "rule_text": "Studies in juvenile animals are not usually conducted to support inclusion of pediatric populations for the treatment of cancer; such studies should be considered only when human safety data and previous animal studies are considered insufficient.",
+          "source_section": "3.6 Nonclinical Studies to Support Trials in Pediatric Populations",
+          "source_page": 7,
+          "verbatim_quote": "Studies in juvenile animals are not usually conducted in order to support inclusion of pediatric populations for the treatment of cancer. Conduct of studies in juvenile animals should be considered only when human safety data and previous animal studies are considered insufficient for a safety evaluation in the intended pediatric age group.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The general paradigm is first to define a relatively safe dose in adult populations and then to assess some fraction of that dose in initial pediatric clinical studies.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-024",
+          "rule_text": "For conjugated products, stability of the conjugate in the test species and human plasma must be provided, and a toxicokinetic evaluation must assess both the conjugated and the unconjugated compound after administration of the conjugated material.",
+          "source_section": "4.1 Conjugated Products",
+          "source_page": 7,
+          "verbatim_quote": "Stability of the conjugate in the test species and human plasma should be provided. A toxicokinetic evaluation should assess both the conjugated and the unconjugated compound after administration of the conjugated material.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The safety of the unconjugated material, including the linker used, can have a more limited evaluation.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-025",
+          "rule_text": "For liposomal products, the safety assessment must include a toxicological evaluation of the liposomal product and a limited evaluation of the unencapsulated pharmaceutical and carrier.",
+          "source_section": "4.2 Liposomal Products",
+          "source_page": 7,
+          "verbatim_quote": "The safety assessment should include a toxicological evaluation of the liposomal product and a limited evaluation of the unencapsulated pharmaceutical and carrier (e.g., a single arm in a toxicology study). A toxicokinetic evaluation should be conducted as appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "A complete evaluation of the liposomal product is not warranted if the unencapsulated material has been well characterized.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S9-026",
+          "rule_text": "Exceeding the established limits for impurities identified in ICH Q3A and Q3B guidelines could be appropriate for anticancer pharmaceuticals, and a justification must be provided in the marketing application.",
+          "source_section": "4.4 Evaluation of Impurities",
+          "source_page": 8,
+          "verbatim_quote": "Exceeding the established limits for impurities identified in these ICH guidelines could be appropriate for anticancer pharmaceuticals, and a justification should be provided in the marketing application.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Limits based on increase in lifetime risk of cancer are not appropriate for pharmaceuticals intended to treat patients with advanced cancer. Impurities that are also metabolites present in animal and/or human studies are generally considered qualified.",
+          "cross_references": ["ICH Q3A", "ICH Q3B"]
+        },
+        {
+          "rule_id": "ICH-S9-027",
+          "rule_text": "For nonrodent studies, dose groups must consist of at least 3 animals/sex/group, with an additional 2/sex/group for recovery if appropriate, and both sexes must generally be used or justification provided for specific omissions.",
+          "source_section": "5. Notes, Note 1",
+          "source_page": 9,
+          "verbatim_quote": "For nonrodent studies, dose groups usually consist of at least 3 animals/sex/group, with an additional 2/sex/group for recovery, if appropriate (see Section 2.4). Both sexes should generally be used, or justification should be given for specific omissions.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Justification may be given for specific sex omissions.",
+          "cross_references": []
+        }
+      ]
+    },
+    "S10": {
+      "title": "Photosafety Evaluation of Pharmaceuticals",
+      "document_version": "Step 4",
+      "document_date": "13 November 2013",
+      "total_rules": 25,
+      "rules": [
+        {
+          "rule_id": "ICH-S10-001",
+          "rule_text": "A compound that does not have a Molar Extinction Coefficient (MEC) greater than 1000 L mol-1 cm-1 at any wavelength between 290 and 700 nm is not considered to be sufficiently photoreactive to result in direct phototoxicity, and no photosafety testing is recommended.",
+          "source_section": "2.1 Photochemical Properties",
+          "source_page": 2,
+          "verbatim_quote": "A compound that does not have a Molar Extinction Coefficient (MEC) greater than 1000 L mol-1 cm-1 at any wavelength between 290 and 700 nm (Ref. 3) is not considered to be sufficiently photoreactive to result in direct phototoxicity.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Phototoxicity by indirect mechanisms (e.g., pseudoporphyria or porphyria), although rare, could still occur for compounds with MEC below the threshold.",
+          "cross_references": ["ICH M3(R2)", "ICH S9"]
+        },
+        {
+          "rule_id": "ICH-S10-002",
+          "rule_text": "For a chemical to present a concern for direct phototoxicity, it must absorb light within the range of natural sunlight (290-700 nm), generate a reactive species following absorption of UV-visible light, and distribute sufficiently to light-exposed tissues.",
+          "source_section": "1.4 General Principles",
+          "source_page": 2,
+          "verbatim_quote": "For a chemical to demonstrate phototoxicity and/or photoallergy, the following characteristics are critical: Absorbs light within the range of natural sunlight (290-700 nm); Generates a reactive species following absorption of UV-visible light; Distributes sufficiently to light-exposed tissues (e.g., skin, eye).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If one or more of these conditions is not met, a compound will usually not present a concern for direct phototoxicity. However, increased sensitivity of skin to light can also occur through indirect mechanisms.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-003",
+          "rule_text": "Assessments of photochemical properties must be conducted using high-quality scientific standards with data collection records readily available, or in compliance with Good Laboratory Practices/Good Manufacturing Practices (GLP/GMP) regulations.",
+          "source_section": "2.1 Photochemical Properties",
+          "source_page": 3,
+          "verbatim_quote": "Assessments of photochemical properties should be conducted using high-quality scientific standards with data collection records readily available, or in compliance with Good Laboratory Practices/Good Manufacturing Practices (GLP/GMP) regulations.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-004",
+          "rule_text": "Methanol is the recommended solvent for MEC determination and was used to support the MEC threshold of 1000 L mol-1 cm-1; if significant differences are seen between methanol and pH-adjusted conditions, the MEC threshold cannot be used to obviate further photosafety assessment.",
+          "source_section": "6. Endnotes, Note 3",
+          "source_page": 11,
+          "verbatim_quote": "Methanol is recommended as a preferred solvent and was used to support the MEC threshold of 1000 L mol-1 cm-1 (Ref. 3). ... If significant differences are seen between measurements obtained in methanol versus pH-adjusted conditions, the MEC threshold of 1000 L mol-1 cm-1 cannot be used to obviate further photosafety assessment.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If the chromophore of the molecule appears to be pH-sensitive (e.g., phenolic structure, aromatic amines, carboxylic acids), an additional spectrum obtained under aqueous, pH 7.4-buffered conditions could add valuable information.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-005",
+          "rule_text": "The concentration of a photoreactive chemical in tissue at the time of light exposure must be evaluated as a key pharmacokinetic parameter in determining whether a phototoxic reaction will occur.",
+          "source_section": "2.2 Tissue Distribution/Pharmacokinetics",
+          "source_page": 3,
+          "verbatim_quote": "The concentration of a photoreactive chemical in tissue at the time of light exposure is a very important pharmacokinetic parameter in determining whether a phototoxic reaction will occur.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "On a case-by-case basis it can be possible to justify that further photosafety assessment is not warranted based upon actual or anticipated tissue drug levels in humans, for example a drug with very low systemic exposure or very short plasma half-life.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-006",
+          "rule_text": "For compounds activated by visible light with potent in vivo phototoxicity or known to be phototoxic based on their mechanism of action, such as photodynamic therapy drugs, distribution to internal tissues must be measured and tissue-specific half-lives must be estimated.",
+          "source_section": "2.2 Tissue Distribution/Pharmacokinetics",
+          "source_page": 3,
+          "verbatim_quote": "Consequently, for those compounds activated by visible light with potent in vivo phototoxicity or known to be phototoxic based on their mechanism of action, such as photodynamic therapy drugs, distribution to internal tissues should be measured and tissue-specific half-lives estimated.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Drugs that only absorb UV light or have short tissue elimination half-lives are not likely to present a risk to internal tissues even if they are known to be photoreactive.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-007",
+          "rule_text": "A single-dose tissue distribution study, with animals assessed at multiple timepoints after dosing, will generally provide an adequate assessment of relative tissue to plasma concentration ratios, tissue residence time and the potential for retention and accumulation.",
+          "source_section": "2.2 Tissue Distribution/Pharmacokinetics",
+          "source_page": 3,
+          "verbatim_quote": "A single-dose tissue distribution study, with animals assessed at multiple timepoints after dosing, will generally provide an adequate assessment of relative tissue to plasma concentration ratios, tissue residence time and the potential for retention and accumulation. Assessment time points should be appropriately spaced in such a study to account for the drug half-life.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-008",
+          "rule_text": "Metabolites generally do not warrant separate photosafety assessments, as metabolism does not typically result in chromophores that are substantially different from those in the parent molecule.",
+          "source_section": "2.3 Metabolite Considerations",
+          "source_page": 4,
+          "verbatim_quote": "Metabolites generally do not warrant separate photosafety assessments, as metabolism does not typically result in chromophores that are substantially different from those in the parent molecule.",
+          "severity": "LOW",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-009",
+          "rule_text": "Testing for photogenotoxicity is not recommended as a part of the standard photosafety testing program.",
+          "source_section": "6. Endnotes, Note 2",
+          "source_page": 11,
+          "verbatim_quote": "Testing for photogenotoxicity is not recommended as a part of the standard photosafety testing program.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Some regional guidelines (e.g., CPMP/SWP/398/01) have historically recommended photogenotoxicity testing, but experience has indicated these tests are substantially oversensitive.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-010",
+          "rule_text": "This guideline addresses only phototoxicity and photoallergy effects and does not generally apply to peptides, proteins, antibody drug conjugates, or oligonucleotides.",
+          "source_section": "1.3 Scope of the Guideline",
+          "source_page": 1,
+          "verbatim_quote": "This guideline does not generally apply to peptides, proteins, antibody drug conjugates, or oligonucleotides.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Further, this guideline does not apply to components of marketed products unless there is a new cause for concern for either the API or an excipient (e.g., a reformulation from a tablet to a topical cream).",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-011",
+          "rule_text": "Nonclinical photosafety assays must show high sensitivity resulting in a low frequency of false negatives (i.e., a high negative predictive value) to support the assessment strategies described in the guideline.",
+          "source_section": "3.1 General Considerations",
+          "source_page": 4,
+          "verbatim_quote": "However, to support the assessment strategies described in this document, it is most important that nonclinical photosafety assays show high sensitivity resulting in a low frequency of false negatives (i.e., a high negative predictive value). This is because negative assay results usually do not warrant further photosafety evaluation.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-012",
+          "rule_text": "UVA doses ranging from 5 to 20 J/cm2 must be used in current in vitro and in vivo phototoxicity assays, as these are comparable to doses obtained during prolonged outdoor activities on summer days.",
+          "source_section": "3.1 General Considerations",
+          "source_page": 4,
+          "verbatim_quote": "UVA doses ranging from 5 to 20 J/cm2 are successfully used in current in vitro and in vivo phototoxicity assays. These UVA doses are comparable to those obtained during prolonged outdoor activities on summer days around noon time, in temperate zones, and at sea level.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In nonclinical phototoxicity assays, the amount of UVB should not limit the overall irradiation and might be attenuated (partially filtered) so that relevant UVA doses can be tested without reducing assay sensitivity.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-013",
+          "rule_text": "The 3T3 Neutral Red Uptake Phototoxicity Test (3T3 NRU-PT) is currently considered the most appropriate in vitro screen for soluble compounds, and a negative result in this assay would indicate a very low probability of being phototoxic in humans.",
+          "source_section": "3.3 Phototoxicity Tests Using in vitro Assays",
+          "source_page": 5,
+          "verbatim_quote": "The most widely used in vitro assay for phototoxicity is the 3T3 Neutral Red Uptake Phototoxicity Test (3T3 NRU-PT) for which an Organisation for Economic Co-operation and Development (OECD) guideline (Ref. 6) is available. This is currently considered the most appropriate in vitro screen for soluble compounds.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "A positive result in the 3T3 NRU-PT should not be regarded as indicative of a likely clinical phototoxic risk, but rather a flag for follow-up assessment. The original OECD protocol was not validated for pharmaceuticals specifically.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-014",
+          "rule_text": "For 3T3 NRU-PT testing of pharmaceutical compounds, the maximum test concentration must be reduced from 1000 to 100 μg/mL; compounds without any significant cytotoxicity up to this limit can be considered as being devoid of relevant phototoxicity.",
+          "source_section": "6. Endnotes, Note 4",
+          "source_page": 11,
+          "verbatim_quote": "Following a retrospective review of data for pharmaceuticals, a reduction of the maximum test concentration from 1000 to 100 μg/mL appears justified (Ref. 10). Compounds without any significant cytotoxicity (under irradiation) up to this limit can be considered as being devoid of relevant phototoxicity.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For compounds with a PIF value between 2 and 5, and for which it is not possible to determine an IC50 in the absence of irradiation, it is important to check that the compound is not classified as positive using the MPE calculation, i.e., that the MPE is less than 0.15.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-015",
+          "rule_text": "If an in vivo phototoxicity study is conducted, irradiation of the animals must be conducted at the approximate Tmax, and relevant pharmacokinetic data, if not already available, must be collected as part of the in vivo phototoxicity study.",
+          "source_section": "3.4 Photosafety Tests Using in vivo Assays and Systemic Administration",
+          "source_page": 6,
+          "verbatim_quote": "It is desirable to have some information about the pharmacokinetic profile of the compound before designing the study. This is to ensure that irradiation of the animals is conducted at the approximate Tmax and to assist in the selection of an appropriate study duration in relation to the intended clinical exposure. Relevant pharmacokinetic data, if not already available, should be collected as part of the in vivo phototoxicity study.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-016",
+          "rule_text": "Dose selection for in vivo nonclinical phototoxicity testing of systemic drugs must support a meaningful human risk assessment; a maximum dose level that complies with the recommendations for general toxicity studies in ICH M3(R2) Section 1.5 is considered appropriate.",
+          "source_section": "3.4 Photosafety Tests Using in vivo Assays and Systemic Administration",
+          "source_page": 6,
+          "verbatim_quote": "Dose selection for in vivo nonclinical phototoxicity testing of systemic drugs should support a meaningful human risk assessment. For such studies a maximum dose level that complies with the recommendations for general toxicity studies in ICH M3(R2) Section 1.5 is considered appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If a negative result is obtained at the maximum dose, testing of lower doses is usually not warranted. If a positive result is anticipated, additional dose groups can support a NOAEL-based risk assessment, typically considering Cmax comparisons.",
+          "cross_references": ["ICH M3(R2)"]
+        },
+        {
+          "rule_id": "ICH-S10-017",
+          "rule_text": "If a phototoxicity study is conducted in animals for a systemic drug that absorbs light above 400 nm, phototoxicity of the retina must be assessed using a detailed histopathological evaluation.",
+          "source_section": "3.4 Photosafety Tests Using in vivo Assays and Systemic Administration",
+          "source_page": 7,
+          "verbatim_quote": "If a phototoxicity study is conducted in animals for a systemic drug that absorbs light above 400 nm, phototoxicity of the retina should be assessed using a detailed histopathological evaluation. For compounds that only absorb light below 400 nm, retinal assessment is usually not warranted because such wavelengths do not reach the retina of the adult human eye due to limited penetration of the cornea, lens and vitreous body.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For compounds that only absorb light below 400 nm, retinal assessment is usually not warranted.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-018",
+          "rule_text": "Testing for photoallergy is not recommended for compounds that are administered systemically, as photoallergy reactions in humans following systemic administration are rare and there are no established nonclinical photoallergy assays for systemically administered compounds.",
+          "source_section": "3.4 Photosafety Tests Using in vivo Assays and Systemic Administration",
+          "source_page": 7,
+          "verbatim_quote": "Testing for photoallergy is not recommended for compounds that are administered systemically. Photoallergy reactions in humans following systemic administration are rare and there are no established nonclinical photoallergy assays for systemically administered compounds.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-019",
+          "rule_text": "For dermal drug products, the clinical formulation must be tested in in vivo photosafety assays, and the intended clinical conditions of administration must be used to the extent possible.",
+          "source_section": "3.5 Photosafety Tests Using in vivo Assays and Dermal Administration",
+          "source_page": 7,
+          "verbatim_quote": "For dermal drug products in general, the clinical formulation should be tested. The intended clinical conditions of administration should be used to the extent possible.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Assessment of systemic drug levels is generally not warranted in dermal phototoxicity studies.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-020",
+          "rule_text": "For regulatory purposes, nonclinical photoallergy testing for dermal products is generally not recommended due to lack of formal validation and unknown predictivity for human photoallergy.",
+          "source_section": "3.5 Photosafety Tests Using in vivo Assays and Dermal Administration",
+          "source_page": 7,
+          "verbatim_quote": "While the acute photoirritation observed in these studies is considered relevant to humans, the predictivity of these studies for human photoallergy is unknown. For regulatory purposes, such nonclinical photoallergy testing is generally not recommended.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None specified.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-021",
+          "rule_text": "Characterization of the UV-visible absorption spectrum is recommended as the initial photosafety assessment because it can obviate any further photosafety evaluation; if appropriate, an experimental evaluation of phototoxicity potential must be undertaken before exposure of large numbers of subjects (Phase 3).",
+          "source_section": "5. Assessment Strategies",
+          "source_page": 8,
+          "verbatim_quote": "Characterization of the UV-visible absorption spectrum is recommended as the initial assessment because it can obviate any further photosafety evaluation. ... Then, if appropriate, an experimental evaluation of phototoxicity potential (in vitro or in vivo, or clinical) should be undertaken before exposure of large numbers of subjects (Phase 3).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The strategies are flexible and depending on the particular situation, some portions of the assessment are optional and might not be conducted.",
+          "cross_references": ["ICH M3(R2)"]
+        },
+        {
+          "rule_id": "ICH-S10-022",
+          "rule_text": "If the substance does not have a MEC greater than 1000 L mol-1 cm-1 (between 290 and 700 nm), no photosafety testing is recommended for systemically administered drugs and no direct phototoxicity is anticipated in humans.",
+          "source_section": "5.1.1 Assessment of Phototoxicity Potential",
+          "source_page": 9,
+          "verbatim_quote": "If the substance does not have a MEC greater than 1000 L mol-1 cm-1 (between 290 and 700 nm), no photosafety testing is recommended and no direct phototoxicity is anticipated in humans.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Phototoxicity by indirect mechanisms (e.g., pseudoporphyria or porphyria), although rare, could still occur.",
+          "cross_references": ["ICH M3(R2)"]
+        },
+        {
+          "rule_id": "ICH-S10-023",
+          "rule_text": "In order to reduce the use of animals in accordance with 3R principles, a validated in vitro method must generally be considered before conducting animal testing for phototoxicity evaluation.",
+          "source_section": "5.1.2 Experimental Evaluation of Phototoxicity",
+          "source_page": 9,
+          "verbatim_quote": "In order to reduce the use of animals in accordance with the 3R principles, a validated in vitro method should generally be considered before conducting animal testing (e.g., see Directive 2010/63/EU).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In some situations (e.g., poorly soluble compounds) an initial assessment of phototoxicity in an in vitro assay might not be appropriate.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-024",
+          "rule_text": "A negative result in an appropriately conducted phototoxicity study either in animals or humans supersedes a positive in vitro result, and no further testing is recommended in such cases.",
+          "source_section": "5.1.2 Experimental Evaluation of Phototoxicity",
+          "source_page": 9,
+          "verbatim_quote": "A negative result in an appropriately conducted phototoxicity study either in animals or humans supersedes a positive in vitro result. In such cases no further testing is recommended and no direct phototoxicity is anticipated in humans.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "A positive result in an in vitro phototoxicity test would not be negated by a negative result in a subsequently conducted chemical photoreactivity assay (e.g., a ROS assay).",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-S10-025",
+          "rule_text": "For dermal products where the API or any new excipient has a MEC value greater than 1000 L mol-1 cm-1 at any wavelength between 290 and 700 nm, a photoallergy assessment is generally warranted in addition to phototoxicity testing; this would typically be a clinical assessment conducted during Phase 3.",
+          "source_section": "5.2.2 Experimental Evaluation of Phototoxicity and Photoallergy",
+          "source_page": 10,
+          "verbatim_quote": "For dermal products where the API or any new excipient has a MEC value greater than 1000 L mol-1 cm-1 at any wavelength between 290 and 700 nm, a photoallergy assessment is generally warranted in addition to phototoxicity testing. As the predictivity of nonclinical photoallergy tests is unknown, this would typically be a clinical assessment using the to-be-marketed formulation and conducted during Phase 3.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In the United States, for products applied dermally, a dedicated clinical trial for phototoxicity (photoirritation) on the to-be-marketed formulation can be warranted in support of product approval (Note 5).",
+          "cross_references": []
+        }
+      ]
+    }
+  }
+}

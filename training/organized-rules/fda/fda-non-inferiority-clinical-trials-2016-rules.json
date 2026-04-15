@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "guideline": "Non-Inferiority Clinical Trials to Establish Effectiveness — Guidance for Industry",
+    "issuing_body": "FDA/CDER/CBER",
+    "date": "November 2016",
+    "document_type": "Clinical/Medical Guidance",
+    "source_file": "04-non-inferiority-clinical-trials-2016.pdf",
+    "file_size_kb": 670.5,
+    "pages": 51,
+    "total_rules": 38,
+    "extraction_date": "2026-03-24",
+    "jurisdictions": ["FDA", "US"],
+    "supersedes": [
+      "Non-Inferiority Clinical Trials (draft guidance, 2010)",
+      "Antibacterial Drug Products: Use of Noninferiority Trials to Support Approval (2010)"
+    ],
+    "regulatory_basis": ["21 CFR 314.126", "FDA Modernization Act of 1997"]
+  },
+
+  "rules": [
+    {
+      "rule_id": "FDA-NI-001",
+      "rule_text": "A non-inferiority study design is appropriate when it would not be ethical to use a placebo, no-treatment control, or a very low dose of an active drug because there is an effective treatment that provides an important benefit (e.g., life-saving or preventing irreversible injury) available to patients for the condition to be studied in the trial.",
+      "source_section": "Section III.B — Reasons for Using a Non-Inferiority Design",
+      "source_page": 7,
+      "verbatim_quote": "The usual reason for using an NI active control study design instead of a superiority design is an ethical one. Specifically, this design is chosen when it would not be ethical to use a placebo, or a no-treatment control, or a very low dose of an active drug, because there is an effective treatment that provides an important benefit (e.g., life-saving or preventing irreversible injury) available to patients for the condition to be studied in the trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["Ethical exemptions may permit placebo when standard therapy has toxicity so severe that many patients have refused to receive it"],
+      "cross_references": ["ICH E10"]
+    },
+    {
+      "rule_id": "FDA-NI-002",
+      "rule_text": "The NI study is dependent on knowing that the active control had its expected effect in the NI study (assay sensitivity). Without assay sensitivity, even ruling out a very small difference between control and test drug provides no evidence that the test drug is effective.",
+      "source_section": "Section II — Background",
+      "source_page": 2,
+      "verbatim_quote": "The critical difference between superiority and NI trials is that a properly designed and conducted superiority trial, if successful in showing a difference, is entirely interpretable without further assumptions (other than lack of bias) — that is, the result speaks for itself and requires no extra-study information. In contrast, the NI study is dependent on knowing something that is not measured in the study, namely, that the active control had its expected effect in the NI study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.D", "21 CFR 314.126(a)(2)(iv)"]
+    },
+    {
+      "rule_id": "FDA-NI-003",
+      "rule_text": "The NI margin (M) can be no larger than the presumed entire effect of the active control in the NI study (M1). M1 must be estimated based on past performance of the active control, and its relevance to the current NI trial must be assessed through the constancy assumption and study quality.",
+      "source_section": "Section III.C — The Non-Inferiority Margin",
+      "source_page": 8,
+      "verbatim_quote": "As described above, the NI study seeks to show that the amount by which the test drug (T) is inferior to the active control (C), C-T, is less than some prespecified NI margin (M). M can be no larger than the presumed entire effect of the active control in the NI study, and the margin based on the entire active control effect is generally referred to as M1.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B", "Section IV.C"]
+    },
+    {
+      "rule_id": "FDA-NI-004",
+      "rule_text": "Non-inferiority is demonstrated by showing that the upper bound of the two-sided 95% confidence interval for C-T is less than the prespecified NI margin M. This corresponds to a one-sided Type I error of 0.025.",
+      "source_section": "Section III.C — The Non-Inferiority Margin",
+      "source_page": 8,
+      "verbatim_quote": "This is generally done by ensuring that the upper bound of the 95% two-sided confidence interval for C-T in the NI trial is smaller than M1. Use of this interval corresponds to a one-sided test size (alpha level) of 0.025 in testing the NI hypothesis stated above.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["When only one NI study is planned, a higher confidence interval (e.g., 99%) may be required"],
+      "cross_references": ["Section IV", "ICH E9"]
+    },
+    {
+      "rule_id": "FDA-NI-005",
+      "rule_text": "The NI margin M2 (the clinically acceptable margin) must be chosen to reflect the largest clinically acceptable loss of effect and must never be greater than M1. Choosing M2 as 50% of M1 is usual practice for cardiovascular outcome studies; for antibiotic trials, a 10-15% absolute NI margin (risk difference scale) is commonly chosen.",
+      "source_section": "Section III.C; Section IV.C",
+      "source_page": 9,
+      "verbatim_quote": "It therefore usual in NI studies to choose a smaller margin (M2) that reflects the largest loss of effect that would be clinically acceptable. This can be described as an absolute difference in effect (typical of antibiotic trials) or as a fraction of the risk reduction provided by the control (typical in cardiovascular outcome trials).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["A larger M2 value may be justified clinically if the test drug has some important advantage (e.g., on safety or a secondary endpoint)"],
+      "cross_references": ["Section IV.C.1", "Section IV.D"]
+    },
+    {
+      "rule_id": "FDA-NI-006",
+      "rule_text": "The choice of M1 requires three supporting considerations: (1) historical evidence of sensitivity to drug effects (HESDE), (2) similarity of the current NI trial to historical studies (the constancy assumption), and (3) good study quality ruling out defects that would minimize differences between treatments.",
+      "source_section": "Section III.D — Assay Sensitivity",
+      "source_page": 11,
+      "verbatim_quote": "As explained above, the choice of M1, and the conclusion that a trial has assay sensitivity (i.e., the active control would have had an effect of at least M1), is based on three considerations: 1. Historical evidence of sensitivity to drug effects 2. The similarity of the new NI trial to the historical trials (the constancy assumption) 3. The quality of the new trial (ruling out defects that would tend to minimize differences between treatments)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B"]
+    },
+    {
+      "rule_id": "FDA-NI-007",
+      "rule_text": "HESDE (Historical Evidence of Sensitivity to Drug Effects) requires that prior appropriately designed trials regularly showed the active control to be superior to placebo, with consistent findings. HESDE cannot be determined for many symptomatic treatments (e.g., depression, anxiety, insomnia, angina, symptomatic heart failure, irritable bowel disease, pain) where well-designed studies often fail to distinguish an effective drug from placebo.",
+      "source_section": "Section III.D.1 — Historical Evidence of Sensitivity to Drug Effects",
+      "source_page": 12,
+      "verbatim_quote": "HESDE cannot be determined for many symptomatic treatments (e.g., treatments for depression, anxiety, insomnia, angina, symptomatic heart failure, symptoms of irritable bowel disease, and pain), as even well-designed and conducted studies for such indications often fail to distinguish an effective drug from placebo.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.D", "Section IV.B"]
+    },
+    {
+      "rule_id": "FDA-NI-008",
+      "rule_text": "The constancy assumption requires that the historical studies and the new NI study be as nearly identical as possible in all important respects, including patient population characteristics, important concomitant treatments, definitions and ascertainment of study endpoints, dose of active control, entry criteria, and analytic approaches.",
+      "source_section": "Section III.D.2 — Constancy Assumption",
+      "source_page": 12,
+      "verbatim_quote": "To provide a sound basis for choosing M1, the historical studies and the new NI study should be as nearly identical as possible in all important respects.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["When there has been substantial evolution over time in disease definition and treatment, constancy may not be supported, and NI design may not be justified"],
+      "cross_references": ["Section IV.B.2.c"]
+    },
+    {
+      "rule_id": "FDA-NI-009",
+      "rule_text": "Good study quality is particularly critical in NI trials because poor quality introduces bias toward the alternative hypothesis of non-inferiority. Deficiencies such as imprecise entry criteria, poor compliance, use of concomitant treatments whose effects overlap with the study drugs, inadequate measurement techniques, errors in delivering assigned treatments, high attrition, or poor follow-up may reduce the difference C-T, potentially leading to a false conclusion of non-inferiority.",
+      "source_section": "Section III.D.3 — Good Study Quality",
+      "source_page": 13,
+      "verbatim_quote": "Conducting any poor quality studies should always be avoided, but with NI studies, sloppiness in study design/conduct is particularly problematic, because it introduces bias towards the alternative hypothesis of non-inferiority (see ICH E10; pp. 11-12 and section IV.F for further discussion). Deficiencies such as imprecise or poorly implemented entry criteria, poor compliance, use of concomitant treatments whose effects may overlap with the drugs under study, inadequate measurement techniques, errors in delivering assigned treatments, high attrition, or poor follow-up may reduce the difference C-T observed in the study, potentially leading to a false conclusion of non-inferiority.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["ICH E10", "Section IV.F"]
+    },
+    {
+      "rule_id": "FDA-NI-010",
+      "rule_text": "Intent-to-treat (ITT) analysis, while conservative in superiority trials, is not necessarily conservative in NI trials and can lead to an incorrect finding of non-inferiority. Both ITT and per-protocol analyses should be conducted for NI trials, and they should reach concordant conclusions.",
+      "source_section": "Section III.D.3 — Good Study Quality; Section IV.F",
+      "source_page": 13,
+      "verbatim_quote": "It should also be appreciated that intent-to-treat approaches, which preserve the principle that all patients are analyzed according to the treatment to which they have been randomized even if they do not receive it, although conservative in superiority trials, are not necessarily conservative in an NI study and can lead to an incorrect finding of non-inferiority.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.F", "ICH E10"]
+    },
+    {
+      "rule_id": "FDA-NI-011",
+      "rule_text": "The 95%-95% fixed margin method is the standard approach for NI analysis: the first 95% refers to the CI used to estimate the active control effect from historical studies to define M1, and the second 95% is the CI used to test the NI hypothesis in the current study.",
+      "source_section": "Section III.E — Statistical Inference",
+      "source_page": 14,
+      "verbatim_quote": "A commonly used fixed margin method is generally referred to as the 95%-95% method. The first 95% refers to the confidence interval of the estimated effect of the control based on the historical studies demonstrating the effect, and the second 95% refers to the confidence interval used to test the null hypothesis in the NI study.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["The synthesis method is an acceptable alternative"],
+      "cross_references": ["Section IV.C"]
+    },
+    {
+      "rule_id": "FDA-NI-012",
+      "rule_text": "A successful NI study does not support a conclusion that the drug is 'equivalent' or 'similar' to the active control. An NI study only supports that the test drug is effective (superior to placebo). If equivalence is the intended claim, the margin must be justified in advance and will usually be smaller than M2.",
+      "source_section": "Section III.F — Regulatory Conclusions",
+      "source_page": 15,
+      "verbatim_quote": "As noted before, a successful NI study will usually not be sufficient to support a conclusion that the test drug is equivalent or similar to the active control. The methods discussed in this document, especially with regard to choosing the margin, are not intended to demonstrate equivalence or similarity but only to show that the test drug is effective.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["If the lower bound of the CI for the effect of the test drug relative to the active control were only slightly negative, a judgment that similarity had been shown would be possible"],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-013",
+      "rule_text": "Ordinarily, FDA expects more than one adequate and well-controlled NI study supporting effectiveness unless the FDA Modernization Act of 1997 single-study exception applies. Where there is uncertainty about the magnitude of the historical treatment effect (and thus M1) because of variability or reliance on a single historical study, more than one NI study is usually needed.",
+      "source_section": "Section III.H — Number of Studies Needed",
+      "source_page": 17,
+      "verbatim_quote": "Ordinarily, with exceptions allowed by the FDA Modernization Act of 1997 (the Modernization Act), FDA expects that there will be more than one adequate and well-controlled study supporting effectiveness. The Modernization Act allows one study plus confirmatory evidence to serve as substantial evidence in some cases, and FDA has issued a guidance that discusses when a single study might be sufficient.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["Single NI study with mortality or serious morbidity endpoints may be sufficient if clearly successful and M2 is substantially smaller than M1"],
+      "cross_references": ["Section V.9"]
+    },
+    {
+      "rule_id": "FDA-NI-014",
+      "rule_text": "The active control must be a drug whose effect is well-defined, supported by historical placebo-controlled trials that define the active control effect assumed for the NI trial. The active control does not have to be labeled or approved in the United States for the indication being studied, as long as adequate, reliable, and reproducible data support the chosen NI margin.",
+      "source_section": "Section III.I — Choice of Active Control; Section V.4",
+      "source_page": 18,
+      "verbatim_quote": "The active control must be a drug whose effect is well-defined. The most obvious choice is a single drug for which historical placebo-controlled trials are available to define the active control effect assumed for the NI trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B.2.b"]
+    },
+    {
+      "rule_id": "FDA-NI-015",
+      "rule_text": "The fixed margin method requires that M1 be derived from a conservative estimate of the active control effect: typically the lower bound of the 95% confidence interval from a single placebo-controlled trial or meta-analysis. All relevant studies and all randomized patients should generally be included in determining M1.",
+      "source_section": "Section IV.C.1 — The Fixed Margin Approach",
+      "source_page": 27,
+      "verbatim_quote": "The lower bound of the confidence interval of the estimated active control effect based on past studies is typically selected as M1. Concerns about past variability and constancy may lead to a determination to discount this lower bound in choosing M1 to account for any sources of uncertainty and dissimilarities between the historical data and the NI study to be conducted.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B.2.a", "Section IV.B.2.b"]
+    },
+    {
+      "rule_id": "FDA-NI-016",
+      "rule_text": "When combining data from multiple studies to estimate the active control effect, random-effects meta-analysis should be used to allow for between-study and within-study heterogeneity. If between-study variation is more than expected by chance, it must be taken into account and will result in a more conservative margin.",
+      "source_section": "Section IV.B.2.b — Determining HESDE from Multiple Trials",
+      "source_page": 22,
+      "verbatim_quote": "When combining data from multiple studies to estimate the active control effect, some variation of effect is expected. Random-effects meta-analysis can be used that allow for both between-study and within-study heterogeneity. Both frequentist and Bayesian methods are available that differ in the assumptions about the distribution of the random effects. These methods should be used to explore whether the variation between studies is more than would be expected by chance. If so, the between-study variation should be taken into account and will result in a more conservative margin for the NI study.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B.2"]
+    },
+    {
+      "rule_id": "FDA-NI-017",
+      "rule_text": "When multiple studies of the active control are available, all studies must be considered — dropping a study that does not show an effect, unless there is a very good reason, can overestimate the control drug effect and give a falsely high M1. Properly designed and sized studies showing no treatment effect may preclude conducting NI studies with that control unless valid reasons explain the disparate results.",
+      "source_section": "Section IV.B.2.b — Determining HESDE from Multiple Trials",
+      "source_page": 23,
+      "verbatim_quote": "When multiple studies of the active control are available, it is important to consider all studies and all patients when estimating the average effect. Dropping a study that does not show an effect, unless there is a very good reason, can overestimate the control drug effect and give a falsely high M1.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-018",
+      "rule_text": "For cardiovascular outcome studies, the constancy assumption has generally been based on expected constancy of relative (not absolute) effects. Metrics like hazard ratio or relative risk may be more stable than metrics like absolute risk difference, which are more sensitive to changes in event rates in the population.",
+      "source_section": "Section IV.B.2.c — Metrics",
+      "source_page": 13,
+      "verbatim_quote": "Based on both experience and expectation, the constancy assumption for outcome studies has generally been based on expected constancy of relative and not absolute effects.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["The choice between relative and absolute metrics depends on clinical interpretation, medical context, and previous experience with the behavior of the rates of the outcome"],
+      "cross_references": ["Section IV.B.2.c"]
+    },
+    {
+      "rule_id": "FDA-NI-019",
+      "rule_text": "The NI margin M1 may need to be discounted to account for uncertainties in the constancy assumption. Discounting should be specific, use available data (e.g., consistency of past studies, population subset analyses), and take into account factors reducing the need for conservative estimates (e.g., pharmacologic similarity of test and control drugs). Automatic 'take half' discounting without clinical justification is discouraged.",
+      "source_section": "Section IV.B.2.d — Discounting",
+      "source_page": 26,
+      "verbatim_quote": "Rather than applying 'automatic' discounting in choosing M1, concerns about the active control effect should, to the extent possible: Be specific; Make use of available data (e.g., magnitude of possible differences in effect in different patient populations, consistency of past studies, and consistency within studies across population subsets); Take into account factors that reduce the need for a conservative estimate, such as the pharmacologic similarity of the test and control drugs and pharmacodynamic effects of the new drug.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.C"]
+    },
+    {
+      "rule_id": "FDA-NI-020",
+      "rule_text": "The determination of M2 is based on clinical judgment and is usually calculated as a percentage or fraction of M1. In large cardiovascular studies, M2 as 50% of M1 is usual practice. M2 may never be greater than M1, even when clinical judgment might argue that a larger difference is not clinically important.",
+      "source_section": "Section IV.D — Considerations for Selecting the Clinical Margin (M2)",
+      "source_page": 30,
+      "verbatim_quote": "M2 is the prespecified NI margin that is to be ruled out in an NI study. The determination of M2 is based on clinical judgment and is usually calculated by taking a percentage or fraction of M1. The clinical judgment in determining M2 may take into account the actual disease incidence or prevalence and its impact on the practicality of sample sizes that would have to be accrued for a study.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [
+        "Wider M2 may be chosen when: (1) primary endpoint does not involve irreversible outcome such as death; (2) test product has fewer serious AEs or better tolerability; (3) test product has another advantage over available therapies"
+      ],
+      "cross_references": ["Section III.C.4", "Section IV.C.1"]
+    },
+    {
+      "rule_id": "FDA-NI-021",
+      "rule_text": "Failure to exclude inferiority relative to M1 means there is no assurance of any effect — just as it would be unusual to accept a placebo-controlled study as positive with p > 0.05, it would be unusual to accept an NI study as positive where the upper bound of the 95% CI was greater than M1.",
+      "source_section": "Section IV.D — Considerations for Selecting the Clinical Margin (M2)",
+      "source_page": 30,
+      "verbatim_quote": "Failure to exclude inferiority relative to M1 means there is no assurance of any effect. Just as it would be unusual to accept a placebo-controlled study as positive (i.e., a finding of superiority) with p > 0.05, it would be unusual to accept an NI study as positive (i.e., a finding of non-inferiority) where the upper bound of the 95% confidence interval was > M1.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-022",
+      "rule_text": "For event-driven NI trials, the sample size should be planned to provide adequate statistical power to conclude that the NI margin is ruled out if the test drug is truly non-inferior. Blinded overall event rates should be monitored during the study to adjust the sample size if event rates are unexpectedly low.",
+      "source_section": "Section IV.E — Estimating the Sample Size",
+      "source_page": 30,
+      "verbatim_quote": "It is important to plan the sample size for an NI clinical trial so that the trial will have adequate statistical power to conclude that the NI margin is ruled out if the test drug is truly non-inferior. At the protocol planning stage, using the fixed margin approach, the NI margin (M2) will be specified, and the sample size will be based on the need to rule out that margin.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-023",
+      "rule_text": "Both ITT and per-protocol analyses should be performed for NI trials. The best advice is to emphasize study quality at the planning stage and continuously monitor the trial during conduct and analysis stages. If the NI trial is open-label, attention to quality is all the more important.",
+      "source_section": "Section IV.F — Study Quality and Choice of Analysis Population",
+      "source_page": 31,
+      "verbatim_quote": "The best advice for conducting an NI study is to emphasize study quality at the planning stage and continuously monitor the trial during the conduct and analysis stages to minimize the problems described above. If the NI trial is open label, attention to quality is all the more important because it may be very difficult to prove, after the fact, that enrollment, assessment of endpoints, and other study procedures were conducted in an unbiased way.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.D.3"]
+    },
+    {
+      "rule_id": "FDA-NI-024",
+      "rule_text": "A trial planned to demonstrate non-inferiority may also be used to test for superiority without concern about inflating the Type I error rate (sequential testing). However, an unplanned determination of non-inferiority following failure to show superiority, when the NI margin was not determined until results were known, is not sufficient for demonstrating non-inferiority.",
+      "source_section": "Section IV.G — Testing Non-Inferiority and Superiority in a Single Trial",
+      "source_page": 31,
+      "verbatim_quote": "In general, when there is only one primary endpoint and one dose of the test treatment, a trial that is planned to demonstrate non-inferiority may also be used to test for superiority without concern about inflating the Type I error rate. This sequential testing procedure has the Type I error rates for tests of both non-inferiority and superiority controlled at the 2.5% level.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["ICH E9"]
+    },
+    {
+      "rule_id": "FDA-NI-025",
+      "rule_text": "When multiple endpoints or multiple doses are evaluated in an NI study that also includes a test for superiority, careful planning of the order of hypothesis testing is needed to control Type I error. In general, it would not be appropriate to apply 95% confidence intervals for multiple tests of NI and superiority across multiple endpoints or multiple doses; larger intervals (e.g., 97.5% or higher) may be needed.",
+      "source_section": "Section IV.G — Testing Non-Inferiority and Superiority in a Single Trial",
+      "source_page": 32,
+      "verbatim_quote": "In general, it would not be appropriate to apply 95% confidence intervals for multiple tests of non-inferiority and superiority across multiple endpoints or multiple doses because of the potential to inflate the Type I error rate for the trial; use of larger intervals that reflect adjustment for multiple tests (e.g., 97.5% confidence intervals or higher) may be needed.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-026",
+      "rule_text": "An NI margin can be defined when there are no historical placebo-controlled trials of the active control, but only in situations meeting three criteria: (1) good estimate of historical untreated response rate exists; (2) cure rate of active control is estimable from historical experience including observational studies; and (3) untreated and treated patients are comparable. The untreated and treated response rates must be substantially different.",
+      "source_section": "Section V.1 — FAQ: Can a margin be defined when there are no historical placebo-controlled trials?",
+      "source_page": 32,
+      "verbatim_quote": "The answer is that it can, but only in situations that meet the following three general criteria for assessing the persuasiveness of a historically controlled trial (see ICH E10). First, there should be a good estimate of the historical untreated response rate or outcome without treatment... Second, the cure rate of the active control should be estimated from historical experience... Third, the untreated and treated patients should be comparable.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["When the historical cure rates for the active control and the cure rate in patients who receive no treatment are not known at all from actual studies, it will be difficult or impossible to define an NI margin"],
+      "cross_references": ["ICH E10"]
+    },
+    {
+      "rule_id": "FDA-NI-027",
+      "rule_text": "The M2 margin can have some flexibility if the NI study did not quite rule out the pre-specified M2 margin by a small amount (e.g., ruling out a loss of 52% of M1 rather than 50%). However, allowing the test drug to be inferior to the standard by too large an amount, especially for endpoints of mortality and serious morbidity, would not be acceptable.",
+      "source_section": "Section V.2 — FAQ: Can the margin M2 be flexible?",
+      "source_page": 33,
+      "verbatim_quote": "On the other hand, failing to exclude M2 by a small amount (e.g., ruling out a loss of 52% of M1 rather than a prespecified loss of 50% of M1) may be acceptable, as the small amount would not suggest the absence of an effect of the drug.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["Endpoints of mortality and serious morbidity allow less flexibility"],
+      "cross_references": ["Section III.C", "Section IV"]
+    },
+    {
+      "rule_id": "FDA-NI-028",
+      "rule_text": "More conservative fixed margin method should generally be used to ensure M1 is ruled out. The synthesis method can be used to assess non-inferiority with respect to M2, providing the constancy assumption is carefully justified. Bayesian NI trials require early discussions with FDA.",
+      "source_section": "Section V.2 — FAQ: Can the margin M2 be flexible?; Section V.3",
+      "source_page": 33,
+      "verbatim_quote": "We have also concluded that the more conservative fixed margin method should generally be used in ensuring that M1 is ruled out, but that the synthesis method can be used to assess non-inferiority with respect to M2.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.C"]
+    },
+    {
+      "rule_id": "FDA-NI-029",
+      "rule_text": "If a sponsor is planning to conduct a Bayesian NI trial, early discussions with the Agency (CDER/CBER) are advised. Prior information can be incorporated into a statistical model or Bayesian framework to take into account effects in related indications or on other endpoints.",
+      "source_section": "Section V.3 — FAQ: Can prior information be considered statistically?",
+      "source_page": 33,
+      "verbatim_quote": "Although discussed in the literature and used in other research settings, CDER and CBER have not had much experience to date in evaluating NI trials of new drugs or therapeutic biologics that make use of a Bayesian approach for design and analysis. If a sponsor is planning to conduct a Bayesian NI trial, early discussions with the Agency are advised.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-030",
+      "rule_text": "Covariate adjustments for differences in baseline characteristics between historical and current NI study populations should be specified prospectively in the NI trial protocol. Post-hoc adjustments developed at the time of analyzing the NI trial are not appropriate.",
+      "source_section": "Section V.3 — FAQ: Can prior information be considered statistically?",
+      "source_page": 34,
+      "verbatim_quote": "Such covariates should be identified prior to the NI trial, and the methods for covariate adjustment should be specified prospectively in the NI trial protocol. Applying post-hoc adjustments developed at the time of analyzing the NI trial would not be appropriate.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-031",
+      "rule_text": "It is essential to use the data from all available controlled trials (unless a trial has a significant defect), including trials conducted after marketing, to calculate a reasonable estimate of the actual active control effect for determining the NI margin. If the active control data have been used to define the NI margin for another study of the same indication, the same margin in the new trial is acceptable if the trials are relevant to each other.",
+      "source_section": "Section V.5 — FAQ: Does the NI margin need to be justified even for approved active comparators?",
+      "source_page": 34,
+      "verbatim_quote": "It is therefore essential to use the data from all available controlled trials (unless a trial has a significant defect), including trials conducted after marketing, to calculate a reasonable estimate of the actual control effect.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section IV.B.2.b"]
+    },
+    {
+      "rule_id": "FDA-NI-032",
+      "rule_text": "The endpoint chosen for an NI trial must be clinically meaningful, reliably assessed in the target population, and have a good basis for knowing the effect of the active control. The NI study endpoint need not be the same as the endpoint in historical trials of the active control, provided data on the active control's effect on the NI study endpoint are available.",
+      "source_section": "Section V.6 — FAQ: What factors should be considered when selecting an endpoint for an NI trial?",
+      "source_page": 35,
+      "verbatim_quote": "The endpoints chosen for clinical trials (superiority or non-inferiority) should be clinically meaningful measures of the way patients feel, function, or survive that can be reliably assessed in the target population. In NI studies, the endpoint must be one for which there is a good basis for knowing the effect of the active control.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-NI-033",
+      "rule_text": "An NI study may not be feasible when: (1) the treatment effect of the active comparator is so small that the required sample size would be infeasible; (2) there is large study-to-study variability in the treatment effect (common for symptomatic treatments); (3) no historical evidence is available to determine an NI margin; or (4) medical practice has changed so much that the active control's historical effect is not relevant to the current study.",
+      "source_section": "Section V.7 — FAQ: Circumstances where NI study may not be feasible",
+      "source_page": 35,
+      "verbatim_quote": "There is large study-to-study variability in the treatment effect. In this case, the treatment effect may not be sufficiently reproducible, calling into question the assumption of assay sensitivity. This is often the case for symptomatic treatments (e.g., treatments for depression, anxiety, insomnia, angina, symptomatic heart failure, symptoms of irritable bowel disease, and pain).",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.D.1"]
+    },
+    {
+      "rule_id": "FDA-NI-034",
+      "rule_text": "A single NI study can be sufficient to support effectiveness when: (1) the NI study has mortality or serious morbidity as endpoints; (2) the NI is based on excluding a treatment difference greater than M2 where M2 is substantially smaller than M1; (3) there is supportive information such as results with pharmacologically similar agents, credible biomarker information, and a statistically persuasive result.",
+      "source_section": "Section V.9 — FAQ: When can a single NI study be sufficient?",
+      "source_page": 36,
+      "verbatim_quote": "For all these reasons, most NI studies with mortality or serious morbidity as endpoints, if clearly successful, will be sufficient to demonstrate NI as single studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["Section III.H"]
+    },
+    {
+      "rule_id": "FDA-NI-035",
+      "rule_text": "The synthesis approach to NI analysis may be used as an acceptable alternative to the fixed margin method. It combines the estimate of treatment effect relative to control from the NI trial with the estimate of control effect from historical trials, reflecting variability in both data sources. The synthesis approach can allow for a reduction in sample size or greater power for a given sample size than the fixed margin approach.",
+      "source_section": "Section IV.C.2 — The Synthesis Approach",
+      "source_page": 29,
+      "verbatim_quote": "The use of the synthesis approach can lead to a more efficiently designed study (e.g., by allowing for a reduction in sample size or achieving greater power for a given sample size) than the fixed margin approach, provided the constancy assumption holds.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["The disadvantage of the synthesis approach is that it is not possible to use clinical judgment to choose M2, based on the magnitude of M1, in advance of the NI trial"],
+      "cross_references": ["Section IV.C.1", "Appendix Example 1(B)"]
+    },
+    {
+      "rule_id": "FDA-NI-036",
+      "rule_text": "A superiority finding in a study planned as an NI study can be interpreted without adjustment for multiplicity. Showing superiority to an active control is a very persuasive demonstration of effectiveness of the test drug, because demonstrating superiority to an active drug is much more difficult than demonstrating superiority to placebo.",
+      "source_section": "Section III.H — Number of Studies Needed",
+      "source_page": 18,
+      "verbatim_quote": "In some cases, a study planned as an NI study may show superiority to the active control. Recommendations in International Conference on Harmonisation guidance E9: Statistical Principles for Clinical Trials (ICH E9) and FDA policy have been that this superiority finding arising in an NI study can be interpreted without adjustment for multiplicity. Showing superiority to an active control is a very persuasive demonstration of the effectiveness of the test drug, because demonstrating superiority to an active drug is much more difficult than demonstrating superiority to placebo.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": ["ICH E9"]
+    },
+    {
+      "rule_id": "FDA-NI-037",
+      "rule_text": "For the Community-Acquired Bacterial Pneumonia (CABP) indication where no randomized placebo-controlled trials of active controls are available, use of an NI margin (M2) of approximately 10% on the risk difference scale is a valid approach for evaluating new treatments, representing an effect superior to no treatment and an appropriate clinical margin.",
+      "source_section": "Appendix — Example 4: CABP NI Margin",
+      "source_page": 47,
+      "verbatim_quote": "Use of an NI margin (M2) of approximately 10% is therefore a valid approach for evaluating new treatments of CABP and would clearly represent an effect superior to no treatment as well as, based on clinical judgment, an appropriate clinical margin.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": ["Based on historical observational data; actual margin requires FDA guidance consultation"],
+      "cross_references": ["Section V.1"]
+    },
+    {
+      "rule_id": "FDA-NI-038",
+      "rule_text": "The NI hypothesis test null hypothesis is: C - T >= M (T is inferior to the control by M or more). The alternative hypothesis is: C - T < M (T is inferior to the control by less than M). Non-inferiority is demonstrated when the upper bound of the two-sided confidence interval for C-T is less than M.",
+      "source_section": "Section III.A — The Non-Inferiority Hypothesis",
+      "source_page": 4,
+      "verbatim_quote": "The null and alternative hypotheses correspond to a null hypothesis of inferiority and an alternative hypothesis of non-inferiority, as follows: H0: C – T ≥ M (T is inferior to the control (C) by M or more) Ha: C – T < M (T is inferior to the control (C) by less than M)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["FDA", "US"],
+      "exceptions": [],
+      "cross_references": []
+    }
+  ]
+}

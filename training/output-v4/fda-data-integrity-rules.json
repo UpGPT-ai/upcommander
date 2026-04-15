@@ -1,0 +1,902 @@
+{
+  "metadata": {
+    "title": "FDA Data Integrity and CGMP Compliance Rules",
+    "source": "FDA Guidance for Industry: Data Integrity and Compliance with Drug CGMP Questions and Answers (December 2018)",
+    "source_file": "training/stage-1/fda-guidance/FDA_Data_Integrity_CGMP_2018.pdf",
+    "extraction_date": "2026-03-23",
+    "total_rules": 54
+  },
+  "rules": [
+    {
+      "rule_id": "DI-001",
+      "domain": "alcoa_principles",
+      "rule_text": "All CGMP data must be complete, consistent, and accurate (ALCOA): Attributable, Legible, Contemporaneously recorded, Original or a true copy, and Accurate.",
+      "source_section": "III.1.a - What is 'data integrity'?",
+      "source_page": 4,
+      "source_quote": "Complete, consistent, and accurate data should be attributable, legible, contemporaneously recorded, original or a true copy, and accurate (ALCOA).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.100, 211.160(a), 211.180, 211.188, 211.194",
+      "applies_to": ["manufacturer", "laboratory", "QA", "packaging"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-002",
+      "domain": "alcoa_principles",
+      "rule_text": "Data integrity must be maintained throughout the entire CGMP data life cycle: creation, modification, processing, maintenance, archival, retrieval, transmission, and disposition after the record's retention period ends.",
+      "source_section": "III.1.a - What is 'data integrity'?",
+      "source_page": 4,
+      "source_quote": "Data integrity is critical throughout the CGMP data life cycle, including in the creation, modification, processing, maintenance, archival, retrieval, transmission, and disposition of data after the record's retention period ends.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.180",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-003",
+      "domain": "alcoa_principles",
+      "rule_text": "System design and controls must enable easy detection of errors, omissions, and aberrant results throughout the data's life cycle.",
+      "source_section": "III.1.a - What is 'data integrity'?",
+      "source_page": 4,
+      "source_quote": "System design and controls should enable easy detection of errors, omissions, and aberrant results throughout the data's life cycle.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.110(a)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-004",
+      "domain": "metadata",
+      "rule_text": "Data must be maintained throughout the record's retention period with all associated metadata required to reconstruct the CGMP activity.",
+      "source_section": "III.1.b - What is 'metadata'?",
+      "source_page": 4,
+      "source_quote": "Data should be maintained throughout the record's retention period with all associated metadata required to reconstruct the CGMP activity (e.g., §§ 211.188 and 211.194).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.188, 211.194",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-005",
+      "domain": "metadata",
+      "rule_text": "The relationships between data and their metadata must be preserved in a secure and traceable manner.",
+      "source_section": "III.1.b - What is 'metadata'?",
+      "source_page": 4,
+      "source_quote": "The relationships between data and their metadata should be preserved in a secure and traceable manner.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.188, 211.194",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-006",
+      "domain": "audit_trails",
+      "rule_text": "An audit trail must be a secure, computer-generated, time-stamped electronic record that allows reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record.",
+      "source_section": "III.1.c - What is an 'audit trail'?",
+      "source_page": 4,
+      "source_quote": "For purposes of this guidance, audit trail means a secure, computer-generated, time-stamped electronic record that allows for reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR Part 11.10(e)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-007",
+      "domain": "audit_trails",
+      "rule_text": "For HPLC runs, the audit trail must include the user name, date/time of the run, the integration parameters used, and details of any reprocessing; documentation must include change justification for the reprocessing.",
+      "source_section": "III.1.c - What is an 'audit trail'?",
+      "source_page": 4,
+      "source_quote": "For example, the audit trail for a high performance liquid chromatography (HPLC) run should include the user name, date/time of the run, the integration parameters used, and details of a reprocessing, if any. Documentation should include change justification for the reprocessing.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR Part 11.10(e); 21 CFR §§ 211.68, 211.188, 211.194",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-008",
+      "domain": "audit_trails",
+      "rule_text": "Audit trails must track both data-level events (creation, modification, or deletion of processing parameters and results) and system-level events (attempts to access the system, renaming or deleting files).",
+      "source_section": "III.1.c - What is an 'audit trail'?",
+      "source_page": 5,
+      "source_quote": "Audit trails include those that track creation, modification, or deletion of data (such as processing parameters and results) and those that track actions at the record or system level (such as attempts to access the system or rename or delete a file).",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR Part 11.10(e)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-009",
+      "domain": "record_keeping",
+      "rule_text": "Backup data must be exact and complete, and secure from alteration, inadvertent erasures, or loss; output from the computer must be checked for accuracy.",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "source_quote": "§ 211.68 (requiring that 'backup data are exact and complete' and 'secure from alteration, inadvertent erasures, or loss' and that 'output from the computer … be checked for accuracy').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.68",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-010",
+      "domain": "record_keeping",
+      "rule_text": "Data must be stored to prevent deterioration or loss.",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "source_quote": "§ 212.110(b) (requiring that data be 'stored to prevent deterioration or loss').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 212.110(b)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-011",
+      "domain": "alcoa_principles",
+      "rule_text": "Certain activities must be documented at the time of performance and laboratory controls must be scientifically sound.",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "source_quote": "§§ 211.100 and 211.160 (requiring that certain activities be 'documented at the time of performance' and that laboratory controls be 'scientifically sound').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.100, 211.160",
+      "applies_to": ["manufacturer", "laboratory"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-012",
+      "domain": "original_records",
+      "rule_text": "Records must be retained as original records, true copies, or other accurate reproductions of the original records.",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "source_quote": "§ 211.180 (requiring that records be retained as 'original records,' or 'true copies,' or other 'accurate reproductions of the original records').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.180",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-013",
+      "domain": "record_keeping",
+      "rule_text": "Records must contain complete information, complete data derived from all tests, a complete record of all data, and complete records of all tests performed.",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "source_quote": "§§ 211.188, 211.194, and 212.60(g) (requiring 'complete information,' 'complete data derived from all tests,' 'complete record of all data,' and 'complete records of all tests performed').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.188, 211.194, 212.60(g)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-014",
+      "domain": "record_keeping",
+      "rule_text": "Production and control records must be reviewed and laboratory records must be reviewed for accuracy, completeness, and compliance with established standards.",
+      "source_section": "II. Background",
+      "source_page": 3,
+      "source_quote": "§§ 211.22, 211.192, and 211.194(a) (requiring that production and control records be 'reviewed' and that laboratory records be 'reviewed for accuracy, completeness, and compliance with established standards').",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22, 211.192, 211.194(a)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-015",
+      "domain": "record_keeping",
+      "rule_text": "Records must be checked, verified, or reviewed as applicable under multiple regulatory requirements.",
+      "source_section": "II. Background",
+      "source_page": 3,
+      "source_quote": "§§ 211.182, 211.186(a), 211.188(b)(11), and 211.194(a)(8) (requiring that records be 'checked,' 'verified,' or 'reviewed').",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.182, 211.186(a), 211.188(b)(11), 211.194(a)(8)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-016",
+      "domain": "data_governance",
+      "rule_text": "Management must create a quality culture where employees understand that data integrity is an organizational core value and are encouraged to identify and promptly report data integrity issues.",
+      "source_section": "I. Introduction",
+      "source_page": 2,
+      "source_quote": "It is the role of management with executive responsibility to create a quality culture where employees understand that data integrity is an organizational core value and employees are encouraged to identify and promptly report data integrity issues.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22, 212.70",
+      "applies_to": ["manufacturer", "QA", "management"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-017",
+      "domain": "data_governance",
+      "rule_text": "Firms must implement meaningful and effective strategies to manage data integrity risks based on their process understanding and knowledge management of technologies and business models.",
+      "source_section": "I. Introduction",
+      "source_page": 1,
+      "source_quote": "Firms should implement meaningful and effective strategies to manage their data integrity risks based on their process understanding and knowledge management of technologies and business models.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 210.1, 212.2",
+      "applies_to": ["manufacturer", "QA", "management"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-018",
+      "domain": "result_invalidation",
+      "rule_text": "Invalidating test results to exclude them from quality unit decisions about conformance to a specification requires a valid, documented, scientifically sound justification.",
+      "source_section": "III.2 - When is it permissible to invalidate a CGMP result?",
+      "source_page": 6,
+      "source_quote": "Invalidating test results to exclude them from quality unit decisions about conformance to a specification requires a valid, documented, scientifically sound justification.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.160(b), 211.188, 211.192, 212.71(b)",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-019",
+      "domain": "result_invalidation",
+      "rule_text": "When test results are legitimately invalidated, the full CGMP batch record provided to the quality unit must include the original (invalidated) data along with the investigation report that justifies invalidating the result.",
+      "source_section": "III.2 - When is it permissible to invalidate a CGMP result?",
+      "source_page": 6,
+      "source_quote": "Even if test results are legitimately invalidated on the basis of a scientifically sound investigation, the full CGMP batch record provided to the quality unit would include the original (invalidated) data, along with the investigation report that justifies invalidating the result.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22, 212.70, 211.180",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-020",
+      "domain": "computerized_system_validation",
+      "rule_text": "Every CGMP workflow on a computer system must be validated for its intended use; validation extent must be commensurate with the risk posed by the automated system.",
+      "source_section": "III.3 - Does each CGMP workflow on a computer system need to be validated?",
+      "source_page": 6,
+      "source_quote": "Yes, a CGMP workflow, such as creation of an electronic master production and control record (MPCR), is an intended use of a computer system to be checked through validation (see §§ 211.63, 211.68(b), and 211.110(a)). The extent of validation studies should be commensurate with the risk posed by the automated system.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.63, 211.68(b), 211.110(a)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-021",
+      "domain": "computerized_system_validation",
+      "rule_text": "When the same computer system is used for both CGMP and non-CGMP functions, the potential for non-CGMP functions to affect CGMP operations must be assessed and mitigated appropriately.",
+      "source_section": "III.3 - Does each CGMP workflow on a computer system need to be validated?",
+      "source_page": 6,
+      "source_quote": "When the same system is used to perform both CGMP and non-CGMP functions, the potential for non-CGMP functions to affect CGMP operations should be assessed and mitigated appropriately.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.63, 211.68(b)",
+      "applies_to": ["manufacturer", "laboratory", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-022",
+      "domain": "computerized_system_validation",
+      "rule_text": "Controls that are appropriately designed to validate a system for its intended use must address software, hardware, personnel, and documentation.",
+      "source_section": "III.3 - Does each CGMP workflow on a computer system need to be validated?",
+      "source_page": 7,
+      "source_quote": "Controls that are appropriately designed to validate a system for its intended use address software, hardware, personnel, and documentation.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.63, 211.68(b), 211.110(a)",
+      "applies_to": ["manufacturer", "laboratory", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-023",
+      "domain": "access_controls",
+      "rule_text": "Changes to computerized MPCRs or other CGMP records, or input of laboratory data into computerized records, must be made only by authorized personnel; the ability to alter specifications, process parameters, data, or manufacturing/testing methods must be restricted by technical means where possible.",
+      "source_section": "III.4 - How should access to CGMP computer systems be restricted?",
+      "source_page": 7,
+      "source_quote": "You must exercise appropriate controls to assure that changes to computerized MPCRs or other CGMP records or input of laboratory data into computerized records can be made only by authorized personnel (§ 211.68(b)). FDA recommends that you restrict the ability to alter specifications, process parameters, data, or manufacturing or testing methods by technical means where possible (e.g., by limiting permissions to change settings or data).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.68(b); 21 CFR Part 11.10(d)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-024",
+      "domain": "access_controls",
+      "rule_text": "The system administrator role, including any rights to alter files and settings, must be assigned to personnel independent from those responsible for the record content.",
+      "source_section": "III.4 - How should access to CGMP computer systems be restricted?",
+      "source_page": 7,
+      "source_quote": "The system administrator role, including any rights to alter files and settings, should be assigned to personnel independent from those responsible for the record content.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR § 211.68(b); 21 CFR Part 11.10(d)",
+      "applies_to": ["manufacturer", "laboratory", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-025",
+      "domain": "access_controls",
+      "rule_text": "Manufacturers must establish and implement a method for documenting authorized personnel's access privileges for each CGMP computer system in use (e.g., by maintaining a list of authorized individuals).",
+      "source_section": "III.4 - How should access to CGMP computer systems be restricted?",
+      "source_page": 7,
+      "source_quote": "To assist in controlling access, it is important that manufacturers establish and implement a method for documenting authorized personnel's access privileges for each CGMP computer system in use (e.g., by maintaining a list of authorized individuals) (see § 211.68(b)).",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR § 211.68(b); 21 CFR Part 11.10(d)",
+      "applies_to": ["manufacturer", "laboratory", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-026",
+      "domain": "access_controls",
+      "rule_text": "Shared login accounts for CGMP computer systems are prohibited because they prevent attribution of actions to a specific individual; each user must have a unique individual login.",
+      "source_section": "III.5 - Why is FDA concerned with the use of shared login accounts for computer systems?",
+      "source_page": 7,
+      "source_quote": "When login credentials are shared, a unique individual cannot be identified through the login and the system would not conform to the CGMP requirements in parts 211 and 212. FDA requires that system controls, including documentation controls, be designed in accordance with CGMP to assure product quality (e.g., §§ 211.100 and 212.50).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68(b), 211.188(b)(11), 211.194(a)(7), 211.194(a)(8), 212.50(c)(10); 21 CFR Part 11.10(d)",
+      "applies_to": ["manufacturer", "laboratory", "QA", "IT"],
+      "exceptions": "Shared read-only accounts that do not allow modification of data or settings are acceptable for viewing data, but not for actions requiring individual attribution (e.g., second-person review)."
+    },
+    {
+      "rule_id": "DI-027",
+      "domain": "document_controls",
+      "rule_text": "Document controls must be in place to assure product quality; blank forms (e.g., electronic worksheets, laboratory notebooks, MPCRs) must be controlled by the quality unit or another document control method.",
+      "source_section": "III.6 - How should blank forms be controlled?",
+      "source_page": 7,
+      "source_quote": "There must be document controls in place to assure product quality (see §§ 211.100, 211.160(a), 211.186, 212.20(d), and 212.60(g)). For example, bound paginated notebooks, stamped for official use by a document control group, provide good document control because they allow easy detection of unofficial notebooks as well as any gaps in notebook pages. If used, blank forms (e.g., electronic worksheets, laboratory notebooks, and MPCRs) should be controlled by the quality unit or by another document control method.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.100, 211.160(a), 211.186, 212.20(d), 212.60(g)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-028",
+      "domain": "document_controls",
+      "rule_text": "Numbered sets of blank forms may be issued and must be reconciled upon completion of all issued forms; incomplete or erroneous forms must be kept as part of the permanent record along with written justification for their replacement.",
+      "source_section": "III.6 - How should blank forms be controlled?",
+      "source_page": 7,
+      "source_quote": "As appropriate, numbered sets of blank forms may be issued and should be reconciled upon completion of all issued forms. Incomplete or erroneous forms should be kept as part of the permanent record along with written justification for their replacement.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.192, 211.194, 212.50(a), 212.70(f)(1)(vi)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-029",
+      "domain": "document_controls",
+      "rule_text": "All data required to recreate a CGMP activity must be maintained as part of the complete record.",
+      "source_section": "III.6 - How should blank forms be controlled?",
+      "source_page": 8,
+      "source_quote": "All data required to recreate a CGMP activity should be maintained as part of the complete record.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 212.70(f)(1)(vi)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-030",
+      "domain": "audit_trails",
+      "rule_text": "Personnel responsible for record review under CGMP must review the audit trails that capture changes to data associated with the record as they review the rest of the record.",
+      "source_section": "III.7 - Who should review audit trails?",
+      "source_page": 8,
+      "source_quote": "Personnel responsible for record review under CGMP should review the audit trails that capture changes to data associated with the record as they review the rest of the record (e.g., §§ 211.22(a), 211.101(c) and (d), 211.103, 211.182, 211.186(a), 211.192, 211.194(a)(8), and 212.20(d)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22(a), 211.101(c), 211.103, 211.182, 211.186(a), 211.192, 211.194(a)(8), 212.20(d)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-031",
+      "domain": "audit_trails",
+      "rule_text": "All production and control records, which include audit trails, must be reviewed and approved by the quality unit.",
+      "source_section": "III.7 - Who should review audit trails?",
+      "source_page": 8,
+      "source_quote": "For example, all production and control records, which includes audit trails, must be reviewed and approved by the quality unit (§ 211.192).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.192",
+      "applies_to": ["manufacturer", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-032",
+      "domain": "audit_trails",
+      "rule_text": "When CGMP regulations specify a data review frequency, audit trails must be reviewed at that same frequency (e.g., after each significant step in manufacture, processing, packing, or holding per § 211.188(b), and before batch release per § 211.22).",
+      "source_section": "III.8 - How often should audit trails be reviewed?",
+      "source_page": 8,
+      "source_quote": "If the review frequency for the data is specified in CGMP regulations, adhere to that frequency for the audit trail review. For example, § 211.188(b) requires review after each significant step in manufacture, processing, packing, or holding, and § 211.22 requires data review before batch release. In these cases, you would apply the same review frequency for the audit trail.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22, 211.188(b)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-033",
+      "domain": "audit_trails",
+      "rule_text": "When CGMP regulations do not specify audit trail review frequency, the frequency must be determined using a risk assessment that evaluates data criticality, control mechanisms, and impact on product quality.",
+      "source_section": "III.8 - How often should audit trails be reviewed?",
+      "source_page": 8,
+      "source_quote": "If the review frequency for the data is not specified in CGMP regulations, you should determine the review frequency for the audit trail using knowledge of your processes and risk assessment tools. The risk assessment should include evaluation of data criticality, control mechanisms, and impact on product quality.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.188",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-034",
+      "domain": "original_records",
+      "rule_text": "Electronic copies used as true copies of paper or electronic records must preserve the content and meaning of the original record, including all metadata required to reconstruct the CGMP activity and the static or dynamic nature of the original records.",
+      "source_section": "III.9 - Can electronic copies be used as accurate reproductions of paper or electronic records?",
+      "source_page": 8,
+      "source_quote": "Yes. Electronic copies can be used as true copies of paper or electronic records, provided the copies preserve the content and meaning of the original record, which includes all metadata required to reconstruct the CGMP activity and the static or dynamic nature of the original records.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.180(d), 212.110",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-035",
+      "domain": "original_records",
+      "rule_text": "True copies of dynamic electronic records may be maintained in the original format or in a format that allows content and meaning to be preserved, provided a suitable reader and copying equipment (software and hardware, including media readers) are readily available.",
+      "source_section": "III.9 - Can electronic copies be used as accurate reproductions of paper or electronic records?",
+      "source_page": 9,
+      "source_quote": "True copies of dynamic electronic records may be made and maintained in the format of the original records or in a format that allows for the content and meaning of the original records to be preserved if a suitable reader and copying equipment (e.g., software and hardware, including media readers) are readily available (§§ 211.180(d) and 212.110).",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.180(d), 212.110",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-036",
+      "domain": "original_records",
+      "rule_text": "For stand-alone computerized laboratory instruments generating dynamic electronic records (e.g., FT-IR), retaining only a paper printout or static record is NOT acceptable — the dynamic electronic original record or a true copy thereof must be retained.",
+      "source_section": "III.10 - Is it acceptable to retain paper printouts or static records instead of original electronic records?",
+      "source_page": 9,
+      "source_quote": "However, electronic records from certain types of laboratory instruments—whether stand-alone or networked—are dynamic, and a printout or a static record does not preserve the dynamic record format that is part of the complete original record. For example, the spectral file created by FT-IR (Fourier transform infrared spectroscopy) is dynamic and can be reprocessed. However, a static record or printout is fixed and would not satisfy CGMP requirements to retain original records or true copies (§ 211.180(d)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.180(d)",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": "A paper printout or static record may satisfy retention requirements only if it IS the original record (e.g., created by pH meters or balances during data acquisition)."
+    },
+    {
+      "rule_id": "DI-037",
+      "domain": "original_records",
+      "rule_text": "Original laboratory records, including paper and electronic records, must be subject to second-person review to ensure all test results and associated information are appropriately reported.",
+      "source_section": "III.10 - Is it acceptable to retain paper printouts or static records instead of original electronic records?",
+      "source_page": 9,
+      "source_quote": "You must ensure that original laboratory records, including paper and electronic records, are subject to second-person review (§ 211.194(a)(8)) to make certain that all test results and associated information are appropriately reported.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR § 211.194(a)(8)",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-038",
+      "domain": "electronic_signatures",
+      "rule_text": "Electronic signatures with appropriate controls may be used instead of handwritten signatures in any CGMP required record, provided the signature is securely linked to the associated record.",
+      "source_section": "III.11 - Can electronic signatures be used instead of handwritten signatures for master production and control records?",
+      "source_page": 9,
+      "source_quote": "Yes, electronic signatures with the appropriate controls can be used instead of handwritten signatures or initials in any CGMP required record. Although § 211.186(a) specifies a 'full signature, handwritten,' an electronic signature with the appropriate controls to securely link the signature with the associated record fulfills this requirement (21 CFR 11.2(a)).",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR § 211.186(a); 21 CFR Part 11.2(a)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-039",
+      "domain": "electronic_signatures",
+      "rule_text": "Firms using electronic signatures must document the controls used to ensure they are able to identify the specific person who signed the records electronically.",
+      "source_section": "III.11 - Can electronic signatures be used instead of handwritten signatures for master production and control records?",
+      "source_page": 10,
+      "source_quote": "Firms using electronic signatures should document the controls used to ensure that they are able to identify the specific person who signed the records electronically.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR Part 11.50, 11.70",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-040",
+      "domain": "record_creation",
+      "rule_text": "When data are generated to satisfy a CGMP requirement, all data become a CGMP record and must be documented or saved at the time of performance.",
+      "source_section": "III.12 - When does electronic data become a CGMP record?",
+      "source_page": 10,
+      "source_quote": "When generated to satisfy a CGMP requirement, all data become a CGMP record. You must document, or save, the data at the time of performance to create a record in compliance with CGMP requirements, including, but not limited to, §§ 211.100(b) and 211.160(a).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.100(b), 211.160(a)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-041",
+      "domain": "record_creation",
+      "rule_text": "Processes must be designed so that data required to be created and maintained cannot be modified without a record of the modification; chromatographic data must be saved to durable media upon completion of each step or injection.",
+      "source_section": "III.12 - When does electronic data become a CGMP record?",
+      "source_page": 10,
+      "source_quote": "FDA expects processes to be designed so that data required to be created and maintained cannot be modified without a record of the modification. For example, chromatographic data should be saved to durable media upon completion of each step or injection (e.g., peak integration or processing steps; finished, incomplete, or aborted injections) instead of at the end of an injection set, and changes to the chromatographic data or injection sequence should be documented in an audit trail.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.100(b), 211.160(a), 211.188, 211.194",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-042",
+      "domain": "record_creation",
+      "rule_text": "Aborted or incomplete chromatographic injections must be captured in audit trails and must be investigated and justified.",
+      "source_section": "III.12 - When does electronic data become a CGMP record?",
+      "source_page": 10,
+      "source_quote": "Aborted or incomplete injections should be captured in audit trails and should be investigated and justified.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.192, 211.194",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-043",
+      "domain": "record_creation",
+      "rule_text": "It is not acceptable to record data on pieces of paper that will be discarded after the data are transcribed to a permanent laboratory notebook.",
+      "source_section": "III.12 - When does electronic data become a CGMP record?",
+      "source_page": 10,
+      "source_quote": "It is not acceptable to record data on pieces of paper that will be discarded after the data are transcribed to a permanent laboratory notebook (see §§ 211.100(b), 211.160(a), and 211.180(d)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.100(b), 211.160(a), 211.180(d)",
+      "applies_to": ["laboratory"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-044",
+      "domain": "record_creation",
+      "rule_text": "It is not acceptable to store electronic records in a manner that allows for manipulation without creating a permanent record.",
+      "source_section": "III.12 - When does electronic data become a CGMP record?",
+      "source_page": 10,
+      "source_quote": "Similarly, it is not acceptable to store electronic records in a manner that allows for manipulation without creating a permanent record.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68, 211.100(b), 211.160(a), 211.180(d)",
+      "applies_to": ["laboratory", "IT"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-045",
+      "domain": "testing_integrity",
+      "rule_text": "Testing into compliance — sampling and testing with the goal of achieving a specific result or to overcome an unacceptable result — is prohibited.",
+      "source_section": "III.13 - Why has FDA cited use of actual samples during 'system suitability' or test, prep, or equilibration runs in warning letters?",
+      "source_page": 11,
+      "source_quote": "FDA prohibits sampling and testing with the goal of achieving a specific result or to overcome an unacceptable result (e.g., testing different samples until the desired passing result is obtained). This practice, also referred to as testing into compliance, is not consistent with CGMP.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.160, 211.165, 211.188, 211.192",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-046",
+      "domain": "testing_integrity",
+      "rule_text": "Using an actual sample in test, prep, or equilibration runs as a means of disguising testing into compliance is a violative practice.",
+      "source_section": "III.13 - Why has FDA cited use of actual samples during 'system suitability' or test, prep, or equilibration runs in warning letters?",
+      "source_page": 11,
+      "source_quote": "FDA considers it a violative practice to use an actual sample in test, prep, or equilibration runs as a means of disguising testing into compliance.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.160, 211.165, 212.60",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-047",
+      "domain": "testing_integrity",
+      "rule_text": "System suitability tests must be performed according to established written procedures, which must include the identity of the preparation to be injected and the rationale for its selection, and the approved application or applicable compendial monograph.",
+      "source_section": "III.13 - Why has FDA cited use of actual samples during 'system suitability' or test, prep, or equilibration runs in warning letters?",
+      "source_page": 11,
+      "source_quote": "System suitability tests should be performed according to the firm's established written procedures—which should include the identity of the preparation to be injected and the rationale for its selection—and the approved application or applicable compendial monograph (§§ 211.160 and 212.60).",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.160, 212.60",
+      "applies_to": ["laboratory"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-048",
+      "domain": "testing_integrity",
+      "rule_text": "All data — including obvious errors and failing, passing, and suspect data — must be in the CGMP records that are retained and subject to review and oversight; transparency is required.",
+      "source_section": "III.13 - Why has FDA cited use of actual samples during 'system suitability' or test, prep, or equilibration runs in warning letters?",
+      "source_page": 11,
+      "source_quote": "Transparency is necessary. All data—including obvious errors and failing, passing, and suspect data—must be in the CGMP records that are retained and subject to review and oversight.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.68(b), 211.188, 211.194",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-049",
+      "domain": "chromatography",
+      "rule_text": "Saving only the final results from reprocessed laboratory chromatography is not acceptable; all results from each reprocessing must be retained for review.",
+      "source_section": "III.14 - Is it acceptable to only save the final results from reprocessed laboratory chromatography?",
+      "source_page": 11,
+      "source_quote": "No. Analytical methods should be accurate and precise. For most lab analyses, reprocessing data should not be regularly needed. If chromatography is reprocessed, written procedures must be established and followed and each result retained for review (see §§ 211.160, 211.165(c), 211.194(a)(4), and 212.60(a)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.160, 211.165(c), 211.194(a)(4), 212.60(a)",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-050",
+      "domain": "chromatography",
+      "rule_text": "Complete laboratory records must include not just final results but also notebooks, worksheets, graphs, charts, spectra, and other types of data from laboratory instruments.",
+      "source_section": "III.14 - Is it acceptable to only save the final results from reprocessed laboratory chromatography?",
+      "source_page": 12,
+      "source_quote": "FDA requires complete data in laboratory records, which includes but is not limited to notebooks, worksheets, graphs, charts, spectra, and other types of data from laboratory instruments (§§ 211.194(a) and 212.60(g)(3)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.194(a), 212.60(g)(3)",
+      "applies_to": ["laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-051",
+      "domain": "quality_investigation",
+      "rule_text": "Suspected or known falsification or alteration of records required under parts 210, 211, and 212 must be fully investigated under the CGMP quality system to determine the effect on patient safety, product quality, and data reliability; to determine the root cause; and to ensure corrective actions are taken.",
+      "source_section": "III.15 - Can an internal tip regarding potential data falsification be handled informally outside of the documented CGMP quality system?",
+      "source_page": 12,
+      "source_quote": "No. Regardless of intent or how or from whom the information was received, suspected or known falsification or alteration of records required under parts 210, 211, and 212 must be fully investigated under the CGMP quality system to determine the effect of the event on patient safety, product quality, and data reliability; to determine the root cause; and to ensure the necessary corrective actions are taken (see §§ 211.22(a), 211.125(c), 211.192, 211.198, 211.204, and 212.100).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22(a), 211.125(c), 211.192, 211.198, 211.204, 212.100",
+      "applies_to": ["manufacturer", "laboratory", "QA", "management"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-052",
+      "domain": "training",
+      "rule_text": "Personnel must be trained in preventing and detecting data integrity issues as part of the routine CGMP training program.",
+      "source_section": "III.16 - Should personnel be trained in preventing and detecting data integrity issues as part of a routine CGMP training program?",
+      "source_page": 12,
+      "source_quote": "Yes. Training personnel to prevent and detect data integrity issues is consistent with the personnel requirements under §§ 211.25 and 212.10, which state that personnel must have the education, training, and experience, or any combination thereof, to perform their assigned duties.",
+      "severity": "MAJOR",
+      "regulatory_reference": "21 CFR §§ 211.25, 212.10",
+      "applies_to": ["manufacturer", "laboratory", "QA", "management"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-053",
+      "domain": "fda_inspection",
+      "rule_text": "All records required under CGMP, including those generated and maintained on computerized systems and electronic communications that support CGMP activities, are subject to FDA inspection and must be made available for authorized inspection, review, and copying.",
+      "source_section": "III.17 - Is FDA allowed to look at electronic records?",
+      "source_page": 12,
+      "source_quote": "Yes. All records required under CGMP are subject to FDA inspection. This applies to records generated and maintained on computerized systems, including electronic communications that support CGMP activities. For example, an email to authorize batch release is a CGMP record that FDA may review. You must allow authorized inspection, review, and copying of records, which includes copying of electronic data (§§ 211.180(c) and 212.110(a) and (b)).",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.180(c), 212.110(a), 212.110(b)",
+      "applies_to": ["manufacturer", "laboratory", "QA"],
+      "exceptions": null
+    },
+    {
+      "rule_id": "DI-054",
+      "domain": "remediation",
+      "rule_text": "When data integrity problems occur, firms must investigate to determine the problem's scope and root causes, conduct a scientifically sound risk assessment of potential effects (including impact on submissions to FDA), and implement a global corrective action plan that addresses the root causes.",
+      "source_section": "III.18 - How does FDA recommend data integrity problems be addressed?",
+      "source_page": 12,
+      "source_quote": "FDA encourages you to demonstrate that you have effectively remediated your problems by investigating to determine the problem's scope and root causes, conducting a scientifically sound risk assessment of its potential effects (including impact on data used to support submissions to FDA), and implementing a management strategy, including a global corrective action plan that addresses the root causes.",
+      "severity": "CRITICAL",
+      "regulatory_reference": "21 CFR §§ 211.22(a), 211.192, 211.198",
+      "applies_to": ["manufacturer", "laboratory", "QA", "management"],
+      "exceptions": null
+    }
+  ],
+  "key_definitions": [
+    {
+      "term": "Data Integrity",
+      "definition": "The completeness, consistency, and accuracy of data. Complete, consistent, and accurate data should be attributable, legible, contemporaneously recorded, original or a true copy, and accurate (ALCOA).",
+      "source_section": "III.1.a",
+      "source_page": 4,
+      "regulatory_reference": "21 CFR §§ 211.68, 211.100, 211.160, 211.180, 211.188, 211.194"
+    },
+    {
+      "term": "Metadata",
+      "definition": "The contextual information required to understand data. Metadata is structured information that describes, explains, or otherwise makes it easier to retrieve, use, or manage data. Examples include a date/time stamp, user ID, instrument ID, material status data, material identification number, and audit trails.",
+      "source_section": "III.1.b",
+      "source_page": 4,
+      "regulatory_reference": "21 CFR §§ 211.188, 211.194"
+    },
+    {
+      "term": "Audit Trail",
+      "definition": "A secure, computer-generated, time-stamped electronic record that allows for reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record.",
+      "source_section": "III.1.c",
+      "source_page": 4,
+      "regulatory_reference": "21 CFR Part 11.10(e)"
+    },
+    {
+      "term": "Static Record Format",
+      "definition": "A fixed-data record such as a paper record or an electronic image, which does not allow interaction between the user and the record content.",
+      "source_section": "III.1.d",
+      "source_page": 5,
+      "regulatory_reference": null
+    },
+    {
+      "term": "Dynamic Record Format",
+      "definition": "A record format that allows interaction between the user and the record. For example, a dynamic chromatographic record may allow the user to change the baseline and reprocess chromatographic data, or modify formulas in a spreadsheet used to compute test results.",
+      "source_section": "III.1.d",
+      "source_page": 5,
+      "regulatory_reference": null
+    },
+    {
+      "term": "Backup (per § 211.68(b))",
+      "definition": "A true copy of the original record that is maintained securely throughout the record retention period. Backup data must be exact, complete, and secure from alteration, inadvertent erasures, or loss. The backup file should contain the data (which includes associated metadata) and should be in the original format or in a format compatible with the original format. Temporary backup copies (e.g., in case of a computer crash) would NOT satisfy this requirement.",
+      "source_section": "III.1.e",
+      "source_page": 5,
+      "regulatory_reference": "21 CFR §§ 211.68(b), 211.180"
+    },
+    {
+      "term": "Computer or Related Systems",
+      "definition": "Can refer to computer hardware, software, peripheral devices, networks, cloud infrastructure, personnel, and associated documents (e.g., user manuals and standard operating procedures). Defined by ANSI as people, machines, and methods organized to accomplish a set of specific functions.",
+      "source_section": "III.1.f",
+      "source_page": 5,
+      "regulatory_reference": "21 CFR § 211.68"
+    },
+    {
+      "term": "Testing Into Compliance",
+      "definition": "The practice of sampling and testing with the goal of achieving a specific result or to overcome an unacceptable result (e.g., testing different samples until the desired passing result is obtained). This practice is prohibited by FDA as inconsistent with CGMP.",
+      "source_section": "III.13",
+      "source_page": 11,
+      "regulatory_reference": "21 CFR §§ 211.160, 211.165, 211.188, 211.192"
+    },
+    {
+      "term": "ALCOA",
+      "definition": "Acronym describing core data integrity attributes: Attributable (to a specific individual), Legible, Contemporaneously recorded (at the time of performance), Original or a true copy, and Accurate.",
+      "source_section": "III.1.a",
+      "source_page": 4,
+      "regulatory_reference": "21 CFR §§ 211.101(d), 211.122, 211.186, 211.188(b)(11), 212.50(c)(10)"
+    }
+  ],
+  "fda_qa_pairs": [
+    {
+      "qa_id": "QA-001",
+      "question": "What is data integrity?",
+      "answer": "Data integrity refers to the completeness, consistency, and accuracy of data. Complete, consistent, and accurate data should be attributable, legible, contemporaneously recorded, original or a true copy, and accurate (ALCOA). It is critical throughout the entire CGMP data life cycle.",
+      "source_section": "III.1.a",
+      "source_page": 4,
+      "linked_rules": ["DI-001", "DI-002", "DI-003"]
+    },
+    {
+      "qa_id": "QA-002",
+      "question": "What is metadata?",
+      "answer": "Metadata is the contextual information required to understand data — it is data about data. Examples include date/time stamps, user IDs, instrument IDs, material status data, and audit trails. Data must be maintained with all associated metadata required to reconstruct the CGMP activity.",
+      "source_section": "III.1.b",
+      "source_page": 4,
+      "linked_rules": ["DI-004", "DI-005"]
+    },
+    {
+      "qa_id": "QA-003",
+      "question": "What is an audit trail?",
+      "answer": "An audit trail is a secure, computer-generated, time-stamped electronic record that allows reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record. It tracks both data-level events (e.g., processing parameters, results) and system-level events (e.g., access attempts, file renaming or deletion).",
+      "source_section": "III.1.c",
+      "source_page": 4,
+      "linked_rules": ["DI-006", "DI-007", "DI-008"]
+    },
+    {
+      "qa_id": "QA-004",
+      "question": "How does FDA use the terms 'static' and 'dynamic' as they relate to record formats?",
+      "answer": "'Static' indicates a fixed-data record such as a paper record or an electronic image. 'Dynamic' means the record format allows interaction between the user and the record (e.g., reprocessing chromatographic peaks, modifying spreadsheet formulas). Dynamic records generally cannot be adequately replaced by static printouts for CGMP retention purposes.",
+      "source_section": "III.1.d",
+      "source_page": 5,
+      "linked_rules": ["DI-036"]
+    },
+    {
+      "qa_id": "QA-005",
+      "question": "How does FDA use the term 'backup' in § 211.68(b)?",
+      "answer": "Backup means a true copy of the original record maintained securely throughout the record retention period. Backup data must be exact, complete, and secure from alteration, inadvertent erasures, or loss. It must contain the data (including associated metadata) in the original format or a compatible format. Temporary backup copies (e.g., from computer crashes) do not satisfy this requirement.",
+      "source_section": "III.1.e",
+      "source_page": 5,
+      "linked_rules": ["DI-009"]
+    },
+    {
+      "qa_id": "QA-006",
+      "question": "When is it permissible to invalidate a CGMP result and exclude it from the determination of batch conformance?",
+      "answer": "Only when there is a valid, documented, scientifically sound justification. The original (invalidated) data must remain in the full CGMP batch record provided to the quality unit, along with the investigation report justifying invalidation. The same requirements apply to paper and electronic systems.",
+      "source_section": "III.2",
+      "source_page": 6,
+      "linked_rules": ["DI-018", "DI-019"]
+    },
+    {
+      "qa_id": "QA-007",
+      "question": "Does each CGMP workflow on a computer system need to be validated?",
+      "answer": "Yes. Every CGMP workflow is an intended use of a computer system and must be checked through validation. The extent of validation must be commensurate with the risk posed by the automated system. Qualifying the platform alone (e.g., the MES hardware/software) is insufficient — the specific workflow must also be validated.",
+      "source_section": "III.3",
+      "source_page": 6,
+      "linked_rules": ["DI-020", "DI-021", "DI-022"]
+    },
+    {
+      "qa_id": "QA-008",
+      "question": "How should access to CGMP computer systems be restricted?",
+      "answer": "Changes to CGMP records can only be made by authorized personnel. The ability to alter specifications, process parameters, data, or methods should be restricted by technical means. The system administrator role must be assigned to personnel independent from those responsible for record content. A documented list of authorized individuals must be maintained for each CGMP computer system.",
+      "source_section": "III.4",
+      "source_page": 7,
+      "linked_rules": ["DI-023", "DI-024", "DI-025"]
+    },
+    {
+      "qa_id": "QA-009",
+      "question": "Why is FDA concerned with the use of shared login accounts for computer systems?",
+      "answer": "Shared login credentials prevent attribution of actions to a specific individual, which violates CGMP requirements in parts 211 and 212. Each user must have a unique individual login. Shared read-only accounts that cannot modify data are acceptable for viewing only, but not for any action requiring individual attribution.",
+      "source_section": "III.5",
+      "source_page": 7,
+      "linked_rules": ["DI-026"]
+    },
+    {
+      "qa_id": "QA-010",
+      "question": "How should blank forms be controlled?",
+      "answer": "Blank forms must be controlled by the quality unit or another document control method. Numbered sets may be issued and reconciled upon completion. Incomplete or erroneous forms must be kept as part of the permanent record with written justification for replacement. All data required to recreate a CGMP activity must be maintained as part of the complete record.",
+      "source_section": "III.6",
+      "source_page": 7,
+      "linked_rules": ["DI-027", "DI-028", "DI-029"]
+    },
+    {
+      "qa_id": "QA-011",
+      "question": "Who should review audit trails?",
+      "answer": "Personnel responsible for record review under CGMP must review the audit trails associated with the record as they review the rest of the record. All production and control records, including audit trails, must be reviewed and approved by the quality unit.",
+      "source_section": "III.7",
+      "source_page": 8,
+      "linked_rules": ["DI-030", "DI-031"]
+    },
+    {
+      "qa_id": "QA-012",
+      "question": "How often should audit trails be reviewed?",
+      "answer": "When CGMP regulations specify a data review frequency, audit trails must be reviewed at the same frequency (e.g., after each significant manufacturing step per § 211.188(b); before batch release per § 211.22). When regulations do not specify, the frequency must be determined by a risk assessment evaluating data criticality, control mechanisms, and impact on product quality.",
+      "source_section": "III.8",
+      "source_page": 8,
+      "linked_rules": ["DI-032", "DI-033"]
+    },
+    {
+      "qa_id": "QA-013",
+      "question": "Can electronic copies be used as accurate reproductions of paper or electronic records?",
+      "answer": "Yes, provided the copies preserve the content and meaning of the original record, including all metadata required to reconstruct the CGMP activity and the static or dynamic nature of the original records. True copies of dynamic records must be in the original format or a format that preserves content and meaning with readily available reading/copying equipment.",
+      "source_section": "III.9",
+      "source_page": 8,
+      "linked_rules": ["DI-034", "DI-035"]
+    },
+    {
+      "qa_id": "QA-014",
+      "question": "Is it acceptable to retain paper printouts or static records instead of original electronic records from stand-alone computerized laboratory instruments, such as an FT-IR instrument?",
+      "answer": "No, for instruments generating dynamic electronic records. A static printout does not preserve the dynamic record format and would not satisfy CGMP requirements. The original electronic record (or a true copy thereof) must be retained. However, if a paper printout is itself the original record (e.g., from a pH meter or balance), it may satisfy retention requirements.",
+      "source_section": "III.10",
+      "source_page": 9,
+      "linked_rules": ["DI-036", "DI-037"]
+    },
+    {
+      "qa_id": "QA-015",
+      "question": "Can electronic signatures be used instead of handwritten signatures for master production and control records?",
+      "answer": "Yes. Electronic signatures with appropriate controls can be used in any CGMP required record. The signature must be securely linked to the associated record. Firms must document the controls used to identify the specific person who signed electronically. Part 11 establishes criteria for electronic signatures to be legally binding equivalents of handwritten signatures.",
+      "source_section": "III.11",
+      "source_page": 9,
+      "linked_rules": ["DI-038", "DI-039"]
+    },
+    {
+      "qa_id": "QA-016",
+      "question": "When does electronic data become a CGMP record?",
+      "answer": "When generated to satisfy a CGMP requirement. It must be documented or saved at the time of performance. Processes must be designed so that data cannot be modified without a record of the modification. Chromatographic data must be saved to durable media upon completion of each step or injection, not just at the end of an injection set. Recording data on scratch paper that will be discarded is not acceptable.",
+      "source_section": "III.12",
+      "source_page": 10,
+      "linked_rules": ["DI-040", "DI-041", "DI-042", "DI-043", "DI-044"]
+    },
+    {
+      "qa_id": "QA-017",
+      "question": "Why has FDA cited use of actual samples during 'system suitability' or test, prep, or equilibration runs in warning letters?",
+      "answer": "Using actual samples in test, prep, or equilibration runs is a violative practice when used as a means of testing into compliance. System suitability must use standard preparations, not actual samples. All data (passing, failing, suspect, errors) must be in CGMP records subject to review. An investigation with documented, scientifically sound justification is required to invalidate data and exclude it from batch conformance determination.",
+      "source_section": "III.13",
+      "source_page": 11,
+      "linked_rules": ["DI-045", "DI-046", "DI-047", "DI-048"]
+    },
+    {
+      "qa_id": "QA-018",
+      "question": "Is it acceptable to only save the final results from reprocessed laboratory chromatography?",
+      "answer": "No. If chromatography is reprocessed, written procedures must be established and followed and each result must be retained for review. Complete laboratory records must include not just final results but also notebooks, worksheets, graphs, charts, spectra, and other types of data from laboratory instruments.",
+      "source_section": "III.14",
+      "source_page": 11,
+      "linked_rules": ["DI-049", "DI-050"]
+    },
+    {
+      "qa_id": "QA-019",
+      "question": "Can an internal tip or information regarding a quality issue, such as potential data falsification, be handled informally outside of the documented CGMP quality system?",
+      "answer": "No. Regardless of intent or source of the information, suspected or known falsification or alteration must be fully investigated under the CGMP quality system to determine effects on patient safety, product quality, and data reliability; to determine root cause; and to ensure corrective actions are taken.",
+      "source_section": "III.15",
+      "source_page": 12,
+      "linked_rules": ["DI-051"]
+    },
+    {
+      "qa_id": "QA-020",
+      "question": "Should personnel be trained in preventing and detecting data integrity issues as part of a routine CGMP training program?",
+      "answer": "Yes. Training in data integrity prevention and detection is required as part of routine CGMP training. Personnel must have the education, training, and experience to perform their assigned duties, which includes understanding and upholding data integrity requirements.",
+      "source_section": "III.16",
+      "source_page": 12,
+      "linked_rules": ["DI-052"]
+    },
+    {
+      "qa_id": "QA-021",
+      "question": "Is FDA allowed to look at electronic records?",
+      "answer": "Yes. All CGMP records — including those on computerized systems and electronic communications (e.g., emails authorizing batch release) — are subject to FDA inspection. Firms must allow authorized inspection, review, and copying of records, including copying of electronic data.",
+      "source_section": "III.17",
+      "source_page": 12,
+      "linked_rules": ["DI-053"]
+    },
+    {
+      "qa_id": "QA-022",
+      "question": "How does FDA recommend data integrity problems be addressed?",
+      "answer": "By investigating to determine scope and root causes, conducting a scientifically sound risk assessment of effects (including on regulatory submissions), and implementing a global corrective action plan. This may include retaining a third-party auditor, removing individuals responsible for lapses, improving quality oversight, enhancing computer systems, and creating mechanisms to prevent recurrence (e.g., anonymous reporting systems, data governance officials).",
+      "source_section": "III.18",
+      "source_page": 12,
+      "linked_rules": ["DI-054"]
+    }
+  ]
+}

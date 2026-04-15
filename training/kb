@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# kb — Pharma Regulatory Knowledge Base Query CLI
+# Usage: kb "what is the ICSR 15-day reporting rule"
+#        kb "TDI threshold CYP" --top 3
+#        kb "QTc 10ms TQT" --severity critical
+#        kb --stats
+#
+# Shortcut: install to ~/bin/kb (already done if you ran setup)
+
+SCRIPT_DIR="/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training"
+QUERY_SCRIPT="$SCRIPT_DIR/query-rag.py"
+
+if [[ "$1" == "--stats" || "$1" == "stats" ]]; then
+  META="$SCRIPT_DIR/rag-index/meta.json"
+  if [[ -f "$META" ]]; then
+    python3 -c "
+import json
+with open('$META') as f: m = json.load(f)
+print(f'KB Index Stats')
+print(f'  Rules: {m[\"total_rules\"]:,}')
+print(f'  Vocabulary: {m[\"vocabulary_size\"]:,} terms')
+print(f'  Avg doc length: {m[\"avg_doc_length_tokens\"]} tokens')
+print(f'  Index size: {m[\"index_size_mb\"]} MB')
+print(f'  Built: {m[\"built_at\"]}')
+"
+  else
+    echo "Index not built. Run: python3 $SCRIPT_DIR/build-rag-index.py"
+  fi
+  exit 0
+fi
+
+if [[ -z "$1" ]]; then
+  # Interactive mode
+  python3 "$QUERY_SCRIPT"
+else
+  python3 "$QUERY_SCRIPT" "$@"
+fi

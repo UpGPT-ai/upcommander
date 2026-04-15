@@ -1,0 +1,452 @@
+{
+  "meta": {
+    "title": "ICH Q10/Q11/M11 — Pharmaceutical Quality System, Drug Substance Development, Clinical Protocol",
+    "extraction_date": "2026-03-23",
+    "total_rules": 57,
+    "sources": [
+      {
+        "code": "Q10",
+        "title": "Pharmaceutical Quality System",
+        "version": "Step 4",
+        "date": "4 June 2008",
+        "document_type": "ICH Harmonised Tripartite Guideline"
+      },
+      {
+        "code": "Q11",
+        "title": "Development and Manufacture of Drug Substances (Chemical Entities and Biotechnological/Biological Entities)",
+        "version": "Step 4",
+        "date": "1 May 2012",
+        "document_type": "ICH Harmonised Tripartite Guideline"
+      },
+      {
+        "code": "Q11 Q&As",
+        "title": "ICH Q11 Guideline: Development and Manufacture of Drug Substances — Questions and Answers",
+        "version": "Step 4",
+        "date": "23 August 2017",
+        "document_type": "ICH Implementation Working Group Q&A Document"
+      },
+      {
+        "code": "M11",
+        "title": "Clinical Electronic Structured Harmonised Protocol (CeSHarP)",
+        "version": "Final Version (Step 4)",
+        "date": "19 November 2025",
+        "document_type": "ICH Harmonised Guideline"
+      }
+    ]
+  },
+  "q10_pharmaceutical_quality_system": {
+    "rules": [
+      {
+        "id": "Q10-001",
+        "rule": "The pharmaceutical quality system must encompass all product lifecycle stages including Pharmaceutical Development, Technology Transfer, Commercial Manufacturing, and Product Discontinuation.",
+        "source_section": "Q10 Section 1.2 — Scope",
+        "source_quote": "This guideline applies to the systems supporting the development and manufacture of pharmaceutical drug substances (i.e., API) and drug products, including biotechnology and biological products, throughout the product lifecycle.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-002",
+        "rule": "Implementation of the Q10 model must achieve three main objectives: (1) Achieve Product Realisation, (2) Establish and Maintain a State of Control, and (3) Facilitate Continual Improvement.",
+        "source_section": "Q10 Section 1.5 — ICH Q10 Objectives",
+        "source_quote": "Implementation of the Q10 model should result in achievement of three main objectives which complement or enhance regional GMP requirements.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-003",
+        "rule": "Product and process knowledge must be managed from development through the commercial life of the product up to and including product discontinuation, using a systematic approach to acquiring, analysing, storing and disseminating information.",
+        "source_section": "Q10 Section 1.6.1 — Knowledge Management",
+        "source_quote": "Product and process knowledge should be managed from development through the commercial life of the product up to and including product discontinuation. For example, development activities using scientific approaches provide knowledge for product and process understanding. Knowledge management is a systematic approach to acquiring, analysing, storing and disseminating information related to products, manufacturing processes and components.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-004",
+        "rule": "A Quality Manual or equivalent documentation approach must be established and must contain: (a) the quality policy, (b) the scope of the pharmaceutical quality system, (c) identification of pharmaceutical quality system processes with sequences, linkages and interdependencies, and (d) management responsibilities.",
+        "source_section": "Q10 Section 1.8 — Quality Manual",
+        "source_quote": "A Quality Manual or equivalent documentation approach should be established and should contain the description of the pharmaceutical quality system. The description should include: (a) The quality policy (see Section 2); (b) The scope of the pharmaceutical quality system; (c) Identification of the pharmaceutical quality system processes, as well as their sequences, linkages and interdependencies. Process maps and flow charts can be useful tools to facilitate depicting pharmaceutical quality system processes in a visual manner; (d) Management responsibilities within the pharmaceutical quality system (see Section 2).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-005",
+        "rule": "Senior management has the ultimate responsibility to ensure an effective pharmaceutical quality system is in place to achieve quality objectives, and that roles, responsibilities, and authorities are defined, communicated and implemented throughout the company.",
+        "source_section": "Q10 Section 2.1 — Management Commitment",
+        "source_quote": "Senior management has the ultimate responsibility to ensure an effective pharmaceutical quality system is in place to achieve the quality objectives, and that roles, responsibilities, and authorities are defined, communicated and implemented throughout the company.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-006",
+        "rule": "Management must: (1) participate in design, implementation, monitoring and maintenance of an effective pharmaceutical quality system; (2) demonstrate strong and visible support; (3) ensure timely and effective communication and escalation for quality issues; (4) define roles, responsibilities, and authorities; (5) conduct management reviews; (6) advocate continual improvement; and (7) commit appropriate resources.",
+        "source_section": "Q10 Section 2.1(b) — Management Commitment",
+        "source_quote": "Management should: (1) Participate in the design, implementation, monitoring and maintenance of an effective pharmaceutical quality system; (2) Demonstrate strong and visible support for the pharmaceutical quality system and ensure its implementation throughout their organisation; (3) Ensure a timely and effective communication and escalation process exists to raise quality issues to the appropriate levels of management; (4) Define individual and collective roles, responsibilities, authorities and inter-relationships of all organisational units related to the pharmaceutical quality system; (5) Conduct management reviews of process performance and product quality and of the pharmaceutical quality system; (6) Advocate continual improvement; (7) Commit appropriate resources.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-007",
+        "rule": "The quality policy must include an expectation to comply with applicable regulatory requirements and must facilitate continual improvement of the pharmaceutical quality system. It must be communicated to and understood by personnel at all levels and reviewed periodically for continuing effectiveness.",
+        "source_section": "Q10 Section 2.2 — Quality Policy",
+        "source_quote": "The quality policy should include an expectation to comply with applicable regulatory requirements and should facilitate continual improvement of the pharmaceutical quality system. The quality policy should be communicated to and understood by personnel at all levels in the company. The quality policy should be reviewed periodically for continuing effectiveness.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-008",
+        "rule": "Performance indicators that measure progress against quality objectives must be established, monitored, communicated regularly, and acted upon appropriately.",
+        "source_section": "Q10 Section 2.3(e) — Quality Planning",
+        "source_quote": "Performance indicators that measure progress against quality objectives should be established, monitored, communicated regularly and acted upon as appropriate as described in Section 4.1 of this document.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-009",
+        "rule": "The pharmaceutical quality system must extend to the control and review of any outsourced activities and quality of purchased materials. The pharmaceutical company is ultimately responsible to ensure processes are in place. Responsibilities must be defined in a written agreement between contract giver and contract acceptor.",
+        "source_section": "Q10 Section 2.7 — Management of Outsourced Activities and Purchased Materials",
+        "source_quote": "The pharmaceutical quality system, including the management responsibilities described in this section, extends to the control and review of any outsourced activities and quality of purchased materials. The pharmaceutical company is ultimately responsible to ensure processes are in place to assure the control of outsourced activities and quality of purchased materials. These processes should incorporate quality risk management... (b) Defining the responsibilities and communication processes for quality-related activities of the involved parties. For outsourced activities, this should be included in a written agreement between the contract giver and contract acceptor.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-010",
+        "rule": "The pharmaceutical quality system must include four mandatory elements: (1) Process Performance and Product Quality Monitoring System, (2) Corrective Action and Preventive Action (CAPA) System, (3) Change Management System, and (4) Management Review of Process Performance and Product Quality.",
+        "source_section": "Q10 Section 3.2 — Pharmaceutical Quality System Elements",
+        "source_quote": "These four elements are: Process performance and product quality monitoring system; Corrective action and preventive action (CAPA) system; Change management system; Management review of process performance and product quality.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-011",
+        "rule": "The process performance and product quality monitoring system must use quality risk management to establish the control strategy including parameters and attributes for drug substance and drug product materials and components, facility and equipment operating conditions, in-process controls, finished product specifications, and associated monitoring frequency.",
+        "source_section": "Q10 Section 3.2.1 — Process Performance and Product Quality Monitoring System",
+        "source_quote": "Pharmaceutical companies should plan and execute a system for the monitoring of process performance and product quality to ensure a state of control is maintained... The process performance and product quality monitoring system should: (a) Use quality risk management to establish the control strategy. This can include parameters and attributes related to drug substance and drug product materials and components, facility and equipment operating conditions, in-process controls, finished product specifications, and the associated methods and frequency of monitoring and control.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-012",
+        "rule": "The CAPA system must employ a structured approach to investigation with the objective of determining root cause. The level of effort, formality, and documentation of the investigation must be commensurate with the level of risk, in line with ICH Q9.",
+        "source_section": "Q10 Section 3.2.2 — Corrective Action and Preventive Action (CAPA) System",
+        "source_quote": "The pharmaceutical company should have a system for implementing corrective actions and preventive actions resulting from the investigation of complaints, product rejections, non-conformances, recalls, deviations, audits, regulatory inspections and findings, and trends from process performance and product quality monitoring. A structured approach to the investigation process should be used with the objective of determining the root cause. The level of effort, formality, and documentation of the investigation should be commensurate with the level of risk, in line with ICH Q9.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-013",
+        "rule": "The change management system must: (a) utilise quality risk management to evaluate proposed changes with effort commensurate with level of risk; (b) evaluate proposed changes relative to the marketing authorisation including design space; (c) involve expert teams from relevant areas (Pharmaceutical Development, Manufacturing, Quality, Regulatory Affairs, Medical); and (d) confirm after implementation that change objectives were achieved with no deleterious impact on product quality.",
+        "source_section": "Q10 Section 3.2.3 — Change Management System",
+        "source_quote": "The change management system should include the following, as appropriate for the stage of the lifecycle: (a) Quality risk management should be utilised to evaluate proposed changes. The level of effort and formality of the evaluation should be commensurate with the level of risk; (b) Proposed changes should be evaluated relative to the marketing authorisation, including design space, where established... (c) Proposed changes should be evaluated by expert teams contributing the appropriate expertise and knowledge from relevant areas (e.g., Pharmaceutical Development, Manufacturing, Quality, Regulatory Affairs and Medical)... (d) After implementation, an evaluation of the change should be undertaken to confirm the change objectives were achieved and that there was no deleterious impact on product quality.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-014",
+        "rule": "Working within the design space is not considered a change from a regulatory filing perspective; however, from a pharmaceutical quality system standpoint, all changes must be evaluated by a company's change management system.",
+        "source_section": "Q10 Section 3.2.3 — Change Management System",
+        "source_quote": "As stated in ICH Q8, working within the design space is not considered a change (from a regulatory filing perspective). However, from a pharmaceutical quality system standpoint, all changes should be evaluated by a company's change management system.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-015",
+        "rule": "Management review of process performance and product quality must provide assurance that process performance and product quality are managed over the lifecycle and must include a timely and effective communication and escalation process to raise quality issues to senior management.",
+        "source_section": "Q10 Section 3.2.4 — Management Review of Process Performance and Product Quality",
+        "source_quote": "Management review should provide assurance that process performance and product quality are managed over the lifecycle. Depending on the size and complexity of the company, management review can be a series of reviews at various levels of management and should include a timely and effective communication and escalation process to raise appropriate quality issues to senior levels of management for review.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-016",
+        "rule": "The management review system must include: (1) results of regulatory inspections, findings, audits, and commitments; (2) periodic quality reviews including measures of customer satisfaction such as complaints and recalls, conclusions of process performance and product quality monitoring, and effectiveness of process and product changes including those from CAPA; and (3) follow-up actions from previous management reviews.",
+        "source_section": "Q10 Section 3.2.4(a) — Management Review of Process Performance and Product Quality",
+        "source_quote": "The management review system should include: (1) The results of regulatory inspections and findings, audits and other assessments, and commitments made to regulatory authorities; (2) Periodic quality reviews, that can include: (i) Measures of customer satisfaction such as product quality complaints and recalls; (ii) Conclusions of process performance and product quality monitoring; (iii) The effectiveness of process and product changes including those arising from corrective action and preventive actions. (3) Any follow-up actions from previous management reviews.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q10-017",
+        "rule": "Management must have a formal process for reviewing the pharmaceutical quality system on a periodic basis, including measurement of achievement of pharmaceutical quality system objectives and assessment of performance indicators covering: complaint/deviation/CAPA/change management processes, feedback on outsourced activities, self-assessment including risk assessments and audits, and external assessments such as regulatory inspections.",
+        "source_section": "Q10 Section 4.1 — Management Review of the Pharmaceutical Quality System",
+        "source_quote": "Management should have a formal process for reviewing the pharmaceutical quality system on a periodic basis. The review should include: (a) Measurement of achievement of pharmaceutical quality system objectives; (b) Assessment of performance indicators that can be used to monitor the effectiveness of processes within the pharmaceutical quality system, such as: (1) Complaint, deviation, CAPA and change management processes; (2) Feedback on outsourced activities; (3) Self-assessment processes including risk assessments, trending, and audits; (4) External assessments such as regulatory inspections and findings and customer audits.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q11_drug_substance_development": {
+    "rules": [
+      {
+        "id": "Q11-001",
+        "rule": "Drug substance manufacturing process development information must be provided in Module 3 of the Common Technical Document (CTD) Sections 3.2.S.2.2 through 3.2.S.2.6 (ICH M4Q). The guideline applies to drug substances as defined in the Scope sections of ICH Q6A and Q6B.",
+        "source_section": "Q11 Section 1 — Introduction; Section 2 — Scope",
+        "source_quote": "This guideline describes approaches to developing and understanding the manufacturing process of the drug substance, and also provides guidance on what information should be provided in Module 3 of the Common Technical Document (CTD) Sections 3.2.S.2.2 – 3.2.S.2.6 (ICH M4Q)... This guideline is applicable to drug substances as defined in the Scope sections of ICH Guidelines Q6A and Q6B.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-002",
+        "rule": "The goal of manufacturing process development for the drug substance is to establish a commercial manufacturing process capable of consistently producing drug substance of the intended quality. Manufacturing process development must include, at a minimum: (1) identifying potential CQAs, (2) defining an appropriate manufacturing process, and (3) defining a control strategy.",
+        "source_section": "Q11 Section 3.1 — General Principles; Section 3.1.3 — Approaches to Development",
+        "source_quote": "The goal of manufacturing process development for the drug substance is to establish a commercial manufacturing process capable of consistently producing drug substance of the intended quality... Manufacturing process development should include, at a minimum, the following elements: Identifying potential CQAs associated with the drug substance so that those characteristics having an impact on drug product quality can be studied and controlled; Defining an appropriate manufacturing process; Defining a control strategy to ensure process performance and drug substance quality.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-003",
+        "rule": "An applicant can choose either a traditional approach or an enhanced approach to drug substance development, or a combination of both. Traditional and enhanced approaches are not mutually exclusive.",
+        "source_section": "Q11 Section 1 — Introduction; Section 3.1.3 — Approaches to Development",
+        "source_quote": "Traditional and enhanced approaches are not mutually exclusive. A company can use either a traditional approach or an enhanced approach to drug substance development, or a combination of both.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-004",
+        "rule": "A CQA is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality. Drug substance CQAs typically include properties that affect identity, purity, biological activity and stability.",
+        "source_section": "Q11 Section 3.1.4 — Drug Substance Critical Quality Attributes",
+        "source_quote": "A CQA is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality. Potential drug substance CQAs are used to guide process development. The list of potential CQAs can be modified as drug substance knowledge and process understanding increase. Drug substance CQAs typically include those properties or characteristics that affect identity, purity, biological activity and stability.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-005",
+        "rule": "For chemical entities, impurities as CQAs can include organic impurities (including potentially mutagenic impurities), inorganic impurities (e.g., metal residues), and residual solvents (see ICH Q3A and Q3C). For biotechnological/biological products, process-related impurities include cell substrate-derived impurities (e.g., Host Cell Proteins and DNA), cell culture-derived impurities, and downstream-derived impurities.",
+        "source_section": "Q11 Section 3.1.4 — Drug Substance Critical Quality Attributes",
+        "source_quote": "For chemical entities, impurities can include organic impurities (including potentially mutagenic impurities), inorganic impurities e.g., metal residues, and residual solvents (see ICH Q3A and Q3C). For biotechnological/biological products, impurities may be process-related or product-related (see ICH Q6B). Process-related impurities include: cell substrate-derived impurities (e.g., Host Cell Proteins (HCP) and DNA); cell culture-derived impurities (e.g., media components); and downstream-derived impurities (e.g., column leachables).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-006",
+        "rule": "Design space is the multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process.",
+        "source_section": "Q11 Section 3.1.6 — Design Space",
+        "source_quote": "Design space is the multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process. Design space is proposed by the applicant and is subject to regulatory assessment and approval (ICH Q8).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-007",
+        "rule": "A design space might be determined per unit operation (e.g., reaction, crystallisation, distillation, purification), or a combination of selected unit operations. Unit operations included should be selected based on their impact on CQAs. A design space that spans multiple unit operations can provide more operational flexibility.",
+        "source_section": "Q11 Section 3.1.6 — Design Space",
+        "source_quote": "A design space might be determined per unit operation (e.g., reaction, crystallisation, distillation, purification), or a combination of selected unit operations. The unit operations included in such a design space should generally be selected based on their impact on CQAs and do not necessarily need to be sequential. The linkages between process steps should be evaluated so that, for example, the cumulative generation and removal of impurities is controlled. A design space that spans multiple unit operations can provide more operational flexibility.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-008",
+        "rule": "The manufacturing process development section in the CTD submission must begin with an overall process development summary including: list of drug substance CQAs; brief description of the stages of process evolution and control strategy changes; brief description of material attributes and process parameters identified as impacting drug substance CQAs; and brief description of the development of any design spaces.",
+        "source_section": "Q11 Section 3.2.1 — Overall Process Development Summary",
+        "source_quote": "It is recommended that the manufacturing process development section begin with a narrative summary that describes important milestones in the development of the process and explains how they are linked to assuring that the intended quality of the drug substance is achieved. The following should be included in the summary: List of drug substance CQAs; Brief description of the stages in the evolution of the manufacturing process and relevant changes to the control strategy; Brief description of the material attributes and process parameters identified as impacting drug substance CQAs; Brief description of the development of any design spaces.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-009",
+        "rule": "The description of the manufacturing process must be provided in the form of a flow diagram and sequential procedural narrative. In-process controls for each step or stage must be indicated. Scaling factors must be included for manufacturing steps intended to span multiple operational scales.",
+        "source_section": "Q11 Section 4 — Description of Manufacturing Process and Process Controls",
+        "source_quote": "The description of the manufacturing process should be provided in the form of a flow diagram and sequential procedural narrative. The in-process controls for each step or stage of the process should be indicated in the description. Scaling factors should be included for manufacturing steps intended to span multiple operational scales when the process step is scale dependent.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-010",
+        "rule": "For selection of starting materials for synthetic drug substances, a starting material must: (1) have defined chemical properties and structure; (2) be incorporated as a significant structural fragment into the structure of the drug substance; and (3) manufacturing steps that impact the impurity profile of the drug substance should normally be included in the manufacturing process described in Section 3.2.S.2.2.",
+        "source_section": "Q11 Section 5.1.1 — Selection of Starting Materials for Synthetic Drug Substances",
+        "source_quote": "A starting material should be a substance of defined chemical properties and structure. Non-isolated intermediates are usually not considered appropriate starting materials; A starting material is incorporated as a significant structural fragment into the structure of the drug substance. 'Significant structural fragment' in this context is intended to distinguish starting materials from reagents, solvents, or other raw materials... Manufacturing steps that impact the impurity profile of the drug substance should normally be included in the manufacturing process described in Section 3.2.S.2.2 of the application.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-011",
+        "rule": "For synthetic drug substances, GMP provisions described in ICH Q7 apply to each branch beginning with the first use of a starting material. Performing manufacturing steps under GMP together with an appropriate control strategy provides assurance of quality of the drug substance.",
+        "source_section": "Q11 Section 5.1.1 — Selection of Starting Materials for Synthetic Drug Substances",
+        "source_quote": "Each branch of a convergent drug substance manufacturing process begins with one or more starting materials. The Good Manufacturing Practice (GMP) provisions described in ICH Q7 apply to each branch beginning with the first use of a starting material. Performing manufacturing steps under GMP together with an appropriate control strategy provides assurance of quality of the drug substance.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-012",
+        "rule": "For biotechnological/biological drug substances, cell banks are the starting point for manufacture. Guidance is contained in ICH Q5A, Q5B, and Q5D. Applicants should identify all proposed starting materials or source materials and provide appropriate specifications.",
+        "source_section": "Q11 Section 5.1.3 — Selection of Source and Starting Materials for Biotechnological/Biological Drug Substances; Section 5.2",
+        "source_quote": "Cell banks are the starting point for manufacture of biotechnological drug substances and some biological drug substances. In some regions, these are referred to as source materials; in others, starting materials. Guidance is contained in ICH Q5A, Q5B, and Q5D. Applicants should identify all proposed starting materials or source materials and provide appropriate specifications.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-013",
+        "rule": "A control strategy is a planned set of controls, derived from current product and process understanding, that assures process performance and product quality (ICH Q10). Every drug substance manufacturing process, whether developed through a traditional or an enhanced approach, has an associated control strategy. A control strategy can include, but is not limited to: controls on material attributes; controls implicit in the design of the manufacturing process; in-process controls; and controls on drug substance (e.g., release testing).",
+        "source_section": "Q11 Section 6.1 — Control Strategy General Principles",
+        "source_quote": "A control strategy is a planned set of controls, derived from current product and process understanding, that assures process performance and product quality (ICH Q10). Every drug substance manufacturing process, whether developed through a traditional or an enhanced approach (or some combination thereof), has an associated control strategy. A control strategy can include, but is not limited to, the following: Controls on material attributes (including raw materials, starting materials, intermediates, reagents, primary packaging materials for the drug substance, etc.); Controls implicit in the design of the manufacturing process (e.g., sequence of purification steps [biotechnological/biological drug substances], or order of addition of reagents [chemical entities]); In-process controls (including in-process tests and process parameters); Controls on drug substance (e.g., release testing).",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-014",
+        "rule": "A control strategy must ensure that each drug substance CQA is within the appropriate range, limit, or distribution to assure drug substance quality. The drug substance specification is one part of a total control strategy and not all CQAs need to be included in the drug substance specification. CQAs can be: (1) included on the specification and confirmed through release testing; (2) included on the specification and confirmed through upstream controls (e.g., RTRT); or (3) not included on the specification but ensured through upstream controls.",
+        "source_section": "Q11 Section 6.1.2 — Considerations in Developing a Control Strategy",
+        "source_quote": "A control strategy should ensure that each drug substance CQA is within the appropriate range, limit, or distribution to assure drug substance quality. The drug substance specification is one part of a total control strategy and not all CQAs need to be included in the drug substance specification. CQAs can be (1) included on the specification and confirmed through testing of the finished drug substance, or (2) included on the specification and confirmed through upstream controls (e.g., as in Real Time Release Testing [RTRT]), or (3) not included on the specification but ensured through upstream controls.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-015",
+        "rule": "Process validation is the documented evidence that the process, operated within established parameters, can perform effectively and reproducibly to produce a drug substance or intermediate meeting its predetermined specifications and quality attributes (ICH Q7). The drug substance manufacturing process must be validated before commercial distribution.",
+        "source_section": "Q11 Section 7.1 — Process Validation/Evaluation General Principles",
+        "source_quote": "Process validation is the documented evidence that the process, operated within established parameters, can perform effectively and reproducibly to produce a drug substance or intermediate meeting its predetermined specifications and quality attributes (ICH Q7)... The drug substance manufacturing process should be validated before commercial distribution of resulting drug product.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-016",
+        "rule": "Process validation generally includes the collection of data on an appropriate number of production batches (see ICH Q7, Section 12.5). The number of batches can depend on several factors including but not limited to: (1) the complexity of the process being validated; (2) the level of process variability; and (3) the amount of experimental data and/or process knowledge available on the specific process.",
+        "source_section": "Q11 Section 7.1 — Process Validation/Evaluation General Principles",
+        "source_quote": "Generally, process validation includes the collection of data on an appropriate number of production batches (see ICH Q7, Section 12.5). The number of batches can depend on several factors including but not limited to: (1) the complexity of the process being validated; (2) the level of process variability; and (3) the amount of experimental data and/or process knowledge available on the specific process.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-017",
+        "rule": "The quality system elements and management responsibilities described in ICH Q10 are intended to encourage science-based and risk-based approaches at each lifecycle stage, thereby promoting continual improvement. Any proposed change to the manufacturing process must be evaluated for the impact on the quality of drug substance and, when appropriate, drug product.",
+        "source_section": "Q11 Section 9 — Lifecycle Management",
+        "source_quote": "The quality system elements and management responsibilities described in ICH Q10 are intended to encourage the use of science-based and risk-based approaches at each lifecycle stage, thereby promoting continual improvement across the entire product lifecycle... Any proposed change to the manufacturing process should be evaluated for the impact on the quality of drug substance and, when appropriate, drug product. This evaluation should be based on scientific understanding of the manufacturing process and should determine appropriate testing to analyse the impact of the proposed change.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11-018",
+        "rule": "All changes to the manufacturing process must be subject to internal change management processes as part of the quality system (ICH Q7 and ICH Q10). This includes movements within the design space, which do not require approval by regional regulatory authorities.",
+        "source_section": "Q11 Section 9 — Lifecycle Management",
+        "source_quote": "All changes should be subject to internal change management processes as part of the quality system (ICH Q7 and ICH Q10). This includes movements within the design space, which do not require approval by regional regulatory authorities. Changes to information filed and approved in a dossier should be reported to regulatory authorities in accordance with regional regulations and guidelines.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "q11_qas": {
+    "rules": [
+      {
+        "id": "Q11QA-001",
+        "rule": "Applicants must consider all of the ICH Q11 general principles in the selection and justification of proposed starting materials, together with the clarifications in the Q&A document, rather than choosing just a few of the general principles. If a proposed starting material does not meet all of the general principles, a rationale must be provided explaining why it is considered appropriate.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.1",
+        "source_quote": "Applicants should consider all of the ICH Q11 general principles in the selection and justification of proposed starting materials, together with the clarifications in this Q&A document, rather than choosing just a few of the general principles and using them to justify starting material selection. If a proposed starting material does not meet all of the general principles, a rationale should be provided explaining why the starting material is considered appropriate.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-002",
+        "rule": "A 'starting material' as described in ICH Q11 is the same as an 'API starting material' as described in ICH Q7. ICH Q11 sets the applicability of ICH Q7 as beginning with the starting material. When a chemical, including one that is also an API, is proposed to be a starting material, all ICH Q11 general principles still need to be considered.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.2",
+        "source_quote": "Yes. ICH Q11 states that the GMP provisions described in ICH Q7 apply to each branch of the drug substance manufacturing process beginning with the first use of a 'starting material'. ICH Q7 states that appropriate GMP (as defined in that guideline) should be applied to the manufacturing steps immediately after 'API starting materials' are entered into the process (see ICH Q7 Q&A 1.1). Because ICH Q11 sets the applicability of ICH Q7 as beginning with the 'starting material', and ICH Q7 sets the applicability of ICH Q7 as beginning with the 'API starting material', these two terms are intended to refer to the same material.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-003",
+        "rule": "The ICH Q11 general principles for selection of starting materials apply to the selection of starting materials for both linear and convergent syntheses. The ICH Q11 general principles must be applied independently to each branch of a convergent synthesis, unless the point of convergence of the branches occurs upstream of an appropriate starting material.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.3",
+        "source_quote": "Yes. The ICH Q11 general principles apply to the selection of starting materials for linear or convergent syntheses. The ICH Q11 general principles should be applied independently to each branch of a convergent synthesis, unless the point of convergence of the branches occurs upstream of an appropriate starting material.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-004",
+        "rule": "The 'significant structural fragment' principle is intended to distinguish starting materials from reagents, catalysts, solvents, or other raw materials. It is not intended to dictate the selection of a very early or very late intermediate as the starting material. Starting materials justified solely on the basis that they are a 'significant structural fragment' will probably not be accepted by regulatory authorities.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.5",
+        "source_quote": "The selection principle about 'significant structural fragment' has frequently been misinterpreted as meaning that the proposed starting material should be structurally similar to the drug substance. However, as stated in ICH Q11, this general principle is intended to help distinguish starting materials from reagents, catalysts, solvents, or other raw materials... Starting materials justified solely on the basis that they are a 'significant structural fragment' probably will not be accepted by regulatory authorities, as the other general principles for the appropriate selection of a proposed starting material should also be considered.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-005",
+        "rule": "A commercially available chemical is one that is sold as a commodity in a pre-existing, non-pharmaceutical market in addition to its proposed use as starting material. The availability of a chemical from multiple suppliers alone should not be the sole basis for designation as commercially available. Chemicals produced by custom syntheses specifically for pharmaceutical manufacture are not considered commercially available.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.6",
+        "source_quote": "ICH Q11 states that 'a commercially available chemical is usually one that is sold as a commodity in a pre-existing, non-pharmaceutical market in addition to its proposed use as starting material'. A definition of 'custom synthesised chemical' was not provided in ICH Q11, but a custom synthesised chemical is generally understood to be one that is made specifically to a drug substance manufacturer's requirement... The availability of a chemical from multiple suppliers should not be the sole basis for the designation of a chemical as a commercially available starting material.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-006",
+        "rule": "For non-mutagenic related substances, the ICH Q3A identification threshold identifies the level above which a related substance is considered to have an impact on the impurity profile of the drug substance. For mutagenic impurities, the 30% threshold of the ICH M7 acceptable limit serves to identify the level above which a mutagenic impurity impacts the impurity profile.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.7",
+        "source_quote": "For non-mutagenic related substances, the ICH Q3A identification threshold serves to identify the level above which a related substance is considered to have an impact on the impurity profile of the drug substance. A related substance with an acceptance criterion above the ICH Q3A identification threshold is considered to impact the drug substance impurity profile. For mutagenic impurities, the 30% threshold of the ICH M7 acceptable limit serves to identify the level above which a mutagenic impurity is considered to have an impact on the impurity profile of the drug substance.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-007",
+        "rule": "Applicants must provide and justify a specification (which includes a list of tests, references to analytical procedures, and appropriate acceptance criteria) for all proposed starting materials as part of the drug substance control strategy. The specification must include tests for identity and purity and, where applicable, acceptance criteria for assay, specified, unspecified and total impurities, residual solvents, reagents, elemental impurities and mutagenic impurities.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.12",
+        "source_quote": "Applicants should provide and justify a specification (which includes a list of tests, references to analytical procedures, and appropriate acceptance criteria) for all proposed starting materials as part of the drug substance control strategy. The specification of a starting material should include tests for identity and purity (e.g., controls on impurities) and, where applicable, could include acceptance criteria for assay, specified, unspecified and total impurities, residual solvents, reagents, elemental impurities and mutagenic impurities.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-008",
+        "rule": "For starting materials that are not commercially available chemicals, information on how the proposed starting material is made (e.g., a flow chart of the starting material manufacturing process, showing all reagents, catalysts and solvents used) must be provided to help justify the controls applied. Information about the actual and potential impurities in the proposed starting material must be provided.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.13",
+        "source_quote": "Information on how the proposed starting material is made (e.g., a flow chart of the starting material manufacturing process, showing all reagents, catalysts and solvents used) should be provided to help justify the controls applied to the starting material. Information about the actual and potential impurities in the proposed starting material should be provided.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-009",
+        "rule": "Changes upstream of the defined starting material must be managed under the applicant's Pharmaceutical Quality System (PQS), which should address residual risks to the drug substance quality. ICH Q10 Section 2.7 (Management of Outsourced Activities and Purchased Materials) extends to starting material lifecycle management. Post-approval changes to information on the starting material must be reported to regulatory authorities in accordance with regional regulations.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.15 and 5.16",
+        "source_quote": "Yes. In addition to what is submitted in the application, changes upstream of the defined starting material should be managed under the applicant's Pharmaceutical Quality System (PQS), which should address residual risks to the drug substance quality... Post-approval changes to information on the starting material should be reported to regulatory authorities in accordance with regional regulations and guidelines.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-010",
+        "rule": "ICH Q11 recommends the inclusion of 'multiple chemical transformation steps' in Section 3.2.S.2.2 in order to reduce the risk of contamination and support the effective implementation of the control strategy throughout the product lifecycle. When there would be a small number of steps, there is an increased risk of contamination that needs to be addressed in the starting material justification.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.11",
+        "source_quote": "Although ICH Q11 does not specify how many steps should be performed under GMP, ICH Q11 recommends the inclusion of 'multiple chemical transformation steps' in Section 3.2.S.2.2 in order to reduce the risk of contamination and support the effective implementation of the control strategy throughout the product lifecycle. When there would be a small number of steps, there is an increased risk of contamination that needs to be addressed by the applicant in their starting material justification, and will often be best mitigated by including one or more additional steps in Section 3.2.S.2.2.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-011",
+        "rule": "The applicant must first evaluate which chemical transformation steps in the manufacturing process impact the impurity profile of the drug substance. These steps should normally be included in Section 3.2.S.2.2. Next, the applicant should examine the steps immediately upstream of those steps that impact the impurity profile.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.11",
+        "source_quote": "The applicant should first evaluate which chemical transformation steps in the manufacturing process impact the impurity profile of the drug substance. These steps should normally be included in Section 3.2.S.2.2 (see Q&As 5.7, 5.8 and 5.9). Next, the applicant should examine the steps immediately upstream of those steps that impact the impurity profile of the drug substance. These steps should normally also be included in Section 3.2.S.2.2 if: They need to be carefully controlled (e.g., within narrow parameter ranges) to prevent generation of impurities that would otherwise impact the impurity profile of the drug substance. They include a unit operation that has been added to the manufacturing process to control specific impurities that would otherwise impact the impurity profile of the drug substance.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "Q11QA-012",
+        "rule": "The ICH Q11 general principles for selection of starting materials apply to processes where multiple chemical transformations are run without isolation of intermediates. Non-isolated intermediates are generally not considered appropriate starting materials. The general principles also apply to sequential chemical transformations run continuously.",
+        "source_section": "Q11 Q&As Section 5 — Q&A 5.4",
+        "source_quote": "Yes. The ICH Q11 general principles apply to processes where multiple chemical transformations are run without isolation of intermediates. In the absence of such isolations (e.g., crystallization, precipitations), design of the manufacturing process (e.g., kinetics) and/or unit operations (e.g., extraction, distillation, the use of scavenging agents) should be in place to adequately control and/or purge impurities and be described in the application. The ICH Q11 general principles also apply to sequential chemical transformations run continuously. Non-isolated intermediates are generally not considered appropriate starting materials.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "m11_clinical_protocol_format": {
+    "rules": [
+      {
+        "id": "M11-001",
+        "rule": "ICH M11 establishes a Clinical Electronic Structured Harmonised Protocol (CeSHarP) framework consisting of two separate associated documents: (1) the ICH M11 Clinical Electronic Structured Harmonised Protocol Template and (2) the Technical Specification. Both are acceptable to all regulatory authorities of the ICH regions.",
+        "source_section": "M11 Section 1.2 — Purpose",
+        "source_quote": "The purpose of this guideline is to describe the general protocol design principles and approach used to develop the separate associated documents, the ICH M11 Clinical Electronic Structured Harmonised Protocol Template [Template] and the Technical Specification that are acceptable to all regulatory authorities of the ICH regions. The Template presents the format and structure of the protocol, including table of contents, common headers, and instructions for content. The Technical Specification presents the data elements and technical attributes (e.g., definition, conformance, cardinality) that enable the interoperable electronic exchange of protocol content.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-002",
+        "rule": "The M11 Template and Technical Specification are applicable to interventional clinical trials of medicinal products across all phases and therapeutic areas of clinical research. Interventional trials may include human pharmacology, exploratory, confirmatory, and postapproval studies. The term 'trial intervention' refers to any therapeutic, prophylactic, or diagnostic agent including pharmaceuticals, biologics, vaccines, drug-device combination products, and when applicable, cell or gene therapy products.",
+        "source_section": "M11 Section 1.3 — Scope",
+        "source_quote": "The Template and Technical Specification documents supported by this guideline are intended to assist stakeholders (those who use and exchange protocol information, including sponsors, investigators, investigator site staff, trial participants, institutional review boards/ethics committees, and regulators) in the development, amendment, review, conduct, and closeout of a clinical trial. The Template and Technical Specification are applicable to interventional clinical trials of medicinal products across all phases and therapeutic areas of clinical research.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-003",
+        "rule": "The M11 Template design is based on five general principles that must underpin a harmonised standard protocol: (1) Build common core content representing core information for any medicinal product clinical trial; (2) Serve the needs of stakeholders with uniform table of contents, common section headers and terminologies; (3) Define content for electronic exchange; (4) Design for content re-use; and (5) Maintain flexibility with both universal and optional text.",
+        "source_section": "M11 Section 2.1 — Clinical Electronic Structured Harmonised Protocol - Template",
+        "source_quote": "The Template was designed based on general principles that support a harmonised standard protocol to facilitate consistency and efficiency in the development, amendment, review, conduct and closeout of a clinical trial and the exchange of protocol information. Specifically, the principles include: Build common core content - The Template design represents a core set of information for a clinical trial of any medicinal product(s). Serve the needs of stakeholders - The Template structure and content provide a framework for stakeholders to develop, review, and use protocols that consistently and unambiguously include a uniform table of contents, common section headers and content, as well as common terminologies. Define content for electronic exchange - The protocol content can be electronically exchanged among parties, including sponsors and regulators, using current (e.g., electronic common technical document) and future technologies. Design for content re-use - The protocol is a rich source of information that can be re-used as a part of the clinical trial management and review process, for publishing on clinical trial registries to promote clinical trial transparency, or for standardised clinical trial data capture. Maintain flexibility - The Template provides both universal and optional text to maintain flexibility. Higher-level heading structure is retained, while many lower-level sections can be added, removed, or modified as needed.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-004",
+        "rule": "The M11 Technical Specification is based on design principles that promote structured common core content, define content specifications for electronic exchange, focus on relevant content use and reuse, enable development of a data model and an open, non-proprietary exchange message standard, and maintain flexibility for technical innovation and region-specific use.",
+        "source_section": "M11 Section 2.2 — Clinical Electronic Structured Harmonised Protocol - Technical Specification",
+        "source_quote": "The Technical Specification is based on the following design principles: Promote structured common core content; Define content specifications for electronic exchange; Focus on relevant content use and reuse; Enable development of a data model and an open, non-proprietary exchange message standard; Maintain flexibility for technical innovation and region-specific use.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-005",
+        "rule": "The M11 Template must be organised in a Main Body/Appendix framework. The Template must place the most vital information for execution (e.g., Synopsis, Schema, Schedule of Activities) near the front. Content in the Appendix carries equal weight and rigor as the content in the Main Body. Unnecessary repetition must be eliminated wherever possible.",
+        "source_section": "M11 Section 3 — Template Conventions and Design",
+        "source_quote": "The Template is designed with the most vital information for execution (e.g., Synopsis, Schema, Schedule of Activities) near the front. The Template is organised in a Main Body/Appendix framework, with reference details in the Appendix. Content in the Appendix carries equal weight and rigor as the content in the Main Body. Unnecessary repetition is eliminated wherever possible.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-006",
+        "rule": "The M11 guideline, Template, and Technical Specification establish common instructions for placement of content, as reflected in other prevailing guidelines, as well as the technical attributes for interoperable electronic exchange. They do not supersede or negate other guidelines that establish requirements for protocol content, nor provide instruction on the development of a well-designed trial.",
+        "source_section": "M11 Section 1.3 — Scope",
+        "source_quote": "Neither this guideline nor the Template or Technical Specification are intended to specify processes related to development and maintenance of a protocol. They do not supersede or negate other guidelines that establish requirements for protocol content. They neither provide instruction on the development of a well-designed trial nor do they characterise a well-crafted final protocol. Rather, the M11 Guideline, Template, and Technical Specification establish common instructions for placement of content, as reflected in other prevailing guidelines, as well as the technical attributes for interoperable electronic exchange of that content.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-007",
+        "rule": "Use of the M11 Template and Technical Specification must ensure that protocols are provided in a harmonised data exchange format acceptable to the regulatory authorities. The Template and Technical Specification have been developed with built-in flexibility and are versioned documents. As protocol requirements evolve and technology advances, they may be revised, subject to a change control process.",
+        "source_section": "M11 Section 1.2 — Purpose",
+        "source_quote": "Use of this Template and Technical Specification should ensure that protocols are provided in a harmonised data exchange format acceptable to the regulatory authorities. The Template and Technical Specification have been developed with built-in flexibility and are versioned documents. As protocol requirements evolve and technology advances, they may be revised, subject to a change control process.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-008",
+        "rule": "Use of the M11 protocol template aids the sponsor or sponsor-investigator in the development of a protocol that is complete, unambiguous, well organised, and aligned with quality by design principles, as set forth in other ICH guidelines. By conveying information consistently and in the same location across protocols, the template provides value to sponsors, investigators, investigator site staff, trial participants, institutional review boards/ethics committees, and regulators.",
+        "source_section": "M11 Section 1.1 — Background",
+        "source_quote": "Use of the protocol template aids the sponsor or sponsor-investigator in the development of a protocol that is complete, unambiguous, well organised, and aligned with quality by design principles, as set forth in other ICH guidelines. By conveying information consistently and in the same location across protocols, a protocol template is intended to provide value to parties that include sponsors, investigators, investigator site staff, trial participants, institutional review boards/ethics committees, and regulators.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-009",
+        "rule": "The M11 Technical Specification includes detailed descriptions of the structured content components (e.g., specific data fields and blocks of text-based content), along with other defining attributes and business rules as established in the Template. It enables an open, nonproprietary interoperable standard for electronic exchange of protocol content, aiding the review and execution of protocols.",
+        "source_section": "M11 Section 2.2 — Clinical Electronic Structured Harmonised Protocol - Technical Specification; Section 1.1 Background",
+        "source_quote": "The Technical Specification includes detailed descriptions of the structured content components (e.g., specific data fields and blocks of text-based content), along with other defining attributes and business rules as established in the Template... A technical specification presenting the business requirements and common structured protocol content components will enable an open, nonproprietary interoperable standard for electronic exchange, aiding the review and execution of protocols.",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "id": "M11-010",
+        "rule": "The M11 Template must be used in conjunction with other ICH guidelines relevant to the conduct of clinical trials. Variability in format and core content among sponsors contributes to inefficiencies and difficulties in searching, reviewing, and assessing protocols. The harmonised template is intended to address these inefficiencies.",
+        "source_section": "M11 Section 2.1 — Clinical Electronic Structured Harmonised Protocol - Template; Section 1.1 Background",
+        "source_quote": "The Template should be used in conjunction with other ICH guidelines relevant to the conduct of clinical trials... Variability in format and core content among sponsors contributes to inefficiencies and difficulties in searching, reviewing, and assessing protocols.",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  }
+}

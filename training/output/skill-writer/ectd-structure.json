@@ -1,0 +1,691 @@
+{
+  "meta": {
+    "specification": "eCTD v3.2.2",
+    "source": "ICH M2 EWG, July 2008",
+    "dtd_version": "3.2",
+    "namespace": "http://www.ich.org/ectd"
+  },
+  "file_naming_rules": {
+    "allowed_characters": "a-z (lowercase), 0-9, hyphen (-)",
+    "max_filename_length": 64,
+    "max_path_length": 230,
+    "extension": "single extension only (e.g., .pdf not .backup.pdf)",
+    "case": "lowercase only",
+    "no_spaces": true,
+    "no_special_characters": true
+  },
+  "submission_structure": {
+    "root": "ctd-{dossier-number}/",
+    "description": "Top-level dossier folder using applicant/regulator assigned number",
+    "sequences": {
+      "pattern": "{NNNN}/",
+      "initial": "0000",
+      "subsequent": "0001, 0002, ..., 9999",
+      "description": "Each submission sequence is a 4-digit zero-padded number"
+    },
+    "sequence_contents": {
+      "index.xml": {
+        "required": true,
+        "description": "XML backbone referencing all files in this sequence"
+      },
+      "index-md5.txt": {
+        "required": true,
+        "description": "MD5 checksum of index.xml file"
+      },
+      "m1/": { "required": "regional", "description": "Module 1 - Regional Administrative Information" },
+      "m2/": { "required": false, "description": "Module 2 - Common Technical Document Summaries" },
+      "m3/": { "required": false, "description": "Module 3 - Quality" },
+      "m4/": { "required": false, "description": "Module 4 - Nonclinical Study Reports" },
+      "m5/": { "required": false, "description": "Module 5 - Clinical Study Reports" },
+      "util/": { "required": true, "description": "Utility folder for DTDs and stylesheets" }
+    }
+  },
+  "utility_directory": {
+    "util/": {
+      "dtd/": {
+        "ich-ectd-3-2.dtd": { "required": true, "description": "ICH eCTD DTD" },
+        "regional DTDs": { "required": "per region", "description": "e.g., us-regional.dtd, eu-regional.dtd" }
+      },
+      "style/": {
+        "ectd-2-0.xsl": { "required": true, "description": "ICH eCTD stylesheet" },
+        "regional stylesheets": { "required": "per region", "description": "e.g., us-regional.xsl" }
+      }
+    }
+  },
+  "modules": {
+    "m1-administrative-information-and-prescribing-information": {
+      "ctd_section": "1",
+      "xml_element": "m1-administrative-information-and-prescribing-information",
+      "directory": "m1/",
+      "required": "regional",
+      "regional": true,
+      "description": "Region-specific administrative and prescribing information",
+      "notes": "Structure defined by each regional authority (US, EU, JP, etc.)",
+      "children": "Defined by regional DTDs - varies by region",
+      "regional_directories": {
+        "us": "m1/us/",
+        "eu": "m1/eu/",
+        "jp": "m1/jp/",
+        "xx": "m1/{iso-3166-1-alpha-2}/"
+      },
+      "content_model": "(leaf*)"
+    },
+    "m2-common-technical-document-summaries": {
+      "ctd_section": "2",
+      "xml_element": "m2-common-technical-document-summaries",
+      "directory": "m2/",
+      "required": false,
+      "content_model": "(leaf*, m2-2-introduction?, m2-3-quality-overall-summary?, m2-4-nonclinical-overview?, m2-5-clinical-overview?, m2-6-nonclinical-written-and-tabulated-summaries?, m2-7-clinical-summary?)",
+      "children": {
+        "m2-2-introduction": {
+          "ctd_section": "2.2",
+          "xml_element": "m2-2-introduction",
+          "directory": "m2/22-intro/",
+          "required": false,
+          "content_model": "((leaf | node-extension)*)"
+        },
+        "m2-3-quality-overall-summary": {
+          "ctd_section": "2.3",
+          "xml_element": "m2-3-quality-overall-summary",
+          "directory": "m2/23-qos/",
+          "required": false,
+          "content_model": "(leaf*, m2-3-introduction?, m2-3-s-drug-substance*, m2-3-p-drug-product*, m2-3-a-appendices?, m2-3-r-regional-information?)",
+          "children": {
+            "m2-3-introduction": {
+              "ctd_section": "2.3.I",
+              "xml_element": "m2-3-introduction",
+              "directory": "m2/23-qos/",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-3-s-drug-substance": {
+              "ctd_section": "2.3.S",
+              "xml_element": "m2-3-s-drug-substance",
+              "directory": "m2/23-qos/",
+              "content_model": "((leaf | node-extension)*)",
+              "attributes": {
+                "substance": { "type": "CDATA", "required": true },
+                "manufacturer": { "type": "CDATA", "required": true }
+              }
+            },
+            "m2-3-p-drug-product": {
+              "ctd_section": "2.3.P",
+              "xml_element": "m2-3-p-drug-product",
+              "directory": "m2/23-qos/",
+              "content_model": "((leaf | node-extension)*)",
+              "attributes": {
+                "product-name": { "type": "CDATA", "required": false },
+                "dosageform": { "type": "CDATA", "required": false },
+                "manufacturer": { "type": "CDATA", "required": false }
+              }
+            },
+            "m2-3-a-appendices": {
+              "ctd_section": "2.3.A",
+              "xml_element": "m2-3-a-appendices",
+              "directory": "m2/23-qos/",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-3-r-regional-information": {
+              "ctd_section": "2.3.R",
+              "xml_element": "m2-3-r-regional-information",
+              "directory": "m2/23-qos/",
+              "content_model": "((leaf | node-extension)*)"
+            }
+          }
+        },
+        "m2-4-nonclinical-overview": {
+          "ctd_section": "2.4",
+          "xml_element": "m2-4-nonclinical-overview",
+          "directory": "m2/24-nonclin-over/",
+          "required": false,
+          "content_model": "((leaf | node-extension)*)"
+        },
+        "m2-5-clinical-overview": {
+          "ctd_section": "2.5",
+          "xml_element": "m2-5-clinical-overview",
+          "directory": "m2/25-clin-over/",
+          "required": false,
+          "content_model": "((leaf | node-extension)*)"
+        },
+        "m2-6-nonclinical-written-and-tabulated-summaries": {
+          "ctd_section": "2.6",
+          "xml_element": "m2-6-nonclinical-written-and-tabulated-summaries",
+          "directory": "m2/26-nonclin-sum/",
+          "required": false,
+          "content_model": "(leaf*, m2-6-1-introduction?, m2-6-2-pharmacology-written-summary?, m2-6-3-pharmacology-tabulated-summary?, m2-6-4-pharmacokinetics-written-summary?, m2-6-5-pharmacokinetics-tabulated-summary?, m2-6-6-toxicology-written-summary?, m2-6-7-toxicology-tabulated-summary?)",
+          "children": {
+            "m2-6-1-introduction": {
+              "ctd_section": "2.6.1",
+              "xml_element": "m2-6-1-introduction",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-2-pharmacology-written-summary": {
+              "ctd_section": "2.6.2",
+              "xml_element": "m2-6-2-pharmacology-written-summary",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-3-pharmacology-tabulated-summary": {
+              "ctd_section": "2.6.3",
+              "xml_element": "m2-6-3-pharmacology-tabulated-summary",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-4-pharmacokinetics-written-summary": {
+              "ctd_section": "2.6.4",
+              "xml_element": "m2-6-4-pharmacokinetics-written-summary",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-5-pharmacokinetics-tabulated-summary": {
+              "ctd_section": "2.6.5",
+              "xml_element": "m2-6-5-pharmacokinetics-tabulated-summary",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-6-toxicology-written-summary": {
+              "ctd_section": "2.6.6",
+              "xml_element": "m2-6-6-toxicology-written-summary",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-6-7-toxicology-tabulated-summary": {
+              "ctd_section": "2.6.7",
+              "xml_element": "m2-6-7-toxicology-tabulated-summary",
+              "content_model": "((leaf | node-extension)*)"
+            }
+          }
+        },
+        "m2-7-clinical-summary": {
+          "ctd_section": "2.7",
+          "xml_element": "m2-7-clinical-summary",
+          "directory": "m2/27-clin-sum/",
+          "required": false,
+          "content_model": "(leaf*, m2-7-1-summary-of-biopharmaceutic-studies-and-associated-analytical-methods?, m2-7-2-summary-of-clinical-pharmacology-studies?, m2-7-3-summary-of-clinical-efficacy*, m2-7-4-summary-of-clinical-safety?, m2-7-5-literature-references?, m2-7-6-synopses-of-individual-studies?)",
+          "children": {
+            "m2-7-1-summary-of-biopharmaceutic-studies-and-associated-analytical-methods": {
+              "ctd_section": "2.7.1",
+              "xml_element": "m2-7-1-summary-of-biopharmaceutic-studies-and-associated-analytical-methods",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-7-2-summary-of-clinical-pharmacology-studies": {
+              "ctd_section": "2.7.2",
+              "xml_element": "m2-7-2-summary-of-clinical-pharmacology-studies",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-7-3-summary-of-clinical-efficacy": {
+              "ctd_section": "2.7.3",
+              "xml_element": "m2-7-3-summary-of-clinical-efficacy",
+              "content_model": "((leaf | node-extension)*)",
+              "attributes": {
+                "indication": { "type": "CDATA", "required": true }
+              },
+              "notes": "Repeatable per indication"
+            },
+            "m2-7-4-summary-of-clinical-safety": {
+              "ctd_section": "2.7.4",
+              "xml_element": "m2-7-4-summary-of-clinical-safety",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-7-5-literature-references": {
+              "ctd_section": "2.7.5",
+              "xml_element": "m2-7-5-literature-references",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m2-7-6-synopses-of-individual-studies": {
+              "ctd_section": "2.7.6",
+              "xml_element": "m2-7-6-synopses-of-individual-studies",
+              "content_model": "((leaf | node-extension)*)"
+            }
+          }
+        }
+      }
+    },
+    "m3-quality": {
+      "ctd_section": "3",
+      "xml_element": "m3-quality",
+      "directory": "m3/",
+      "required": false,
+      "content_model": "(leaf*, m3-2-body-of-data?, m3-3-literature-references?)",
+      "children": {
+        "m3-2-body-of-data": {
+          "ctd_section": "3.2",
+          "xml_element": "m3-2-body-of-data",
+          "directory": "m3/32-body-data/",
+          "content_model": "(leaf*, m3-2-s-drug-substance*, m3-2-p-drug-product*, m3-2-a-appendices?, m3-2-r-regional-information?)",
+          "children": {
+            "m3-2-s-drug-substance": {
+              "ctd_section": "3.2.S",
+              "xml_element": "m3-2-s-drug-substance",
+              "directory": "m3/32-body-data/32s-drug-sub/",
+              "attributes": {
+                "substance": { "type": "CDATA", "required": true },
+                "manufacturer": { "type": "CDATA", "required": true }
+              },
+              "content_model": "(leaf*, m3-2-s-1-general-information?, m3-2-s-2-manufacture?, m3-2-s-3-characterisation?, m3-2-s-4-control-of-drug-substance?, m3-2-s-5-reference-standards-or-materials?, m3-2-s-6-container-closure-system?, m3-2-s-7-stability?)",
+              "children": {
+                "m3-2-s-1-general-information": {
+                  "ctd_section": "3.2.S.1",
+                  "xml_element": "m3-2-s-1-general-information",
+                  "content_model": "(leaf*, m3-2-s-1-1-nomenclature?, m3-2-s-1-2-structure?, m3-2-s-1-3-general-properties?)",
+                  "children": {
+                    "m3-2-s-1-1-nomenclature": { "ctd_section": "3.2.S.1.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-1-2-structure": { "ctd_section": "3.2.S.1.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-1-3-general-properties": { "ctd_section": "3.2.S.1.3", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-s-2-manufacture": {
+                  "ctd_section": "3.2.S.2",
+                  "xml_element": "m3-2-s-2-manufacture",
+                  "content_model": "(leaf*, m3-2-s-2-1-manufacturer?, m3-2-s-2-2-description-of-manufacturing-process-and-process-controls?, m3-2-s-2-3-control-of-materials?, m3-2-s-2-4-controls-of-critical-steps-and-intermediates?, m3-2-s-2-5-process-validation-and-or-evaluation?, m3-2-s-2-6-manufacturing-process-development?)",
+                  "children": {
+                    "m3-2-s-2-1-manufacturer": { "ctd_section": "3.2.S.2.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-2-2-description-of-manufacturing-process-and-process-controls": { "ctd_section": "3.2.S.2.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-2-3-control-of-materials": { "ctd_section": "3.2.S.2.3", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-2-4-controls-of-critical-steps-and-intermediates": { "ctd_section": "3.2.S.2.4", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-2-5-process-validation-and-or-evaluation": { "ctd_section": "3.2.S.2.5", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-2-6-manufacturing-process-development": { "ctd_section": "3.2.S.2.6", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-s-3-characterisation": {
+                  "ctd_section": "3.2.S.3",
+                  "xml_element": "m3-2-s-3-characterisation",
+                  "content_model": "(leaf*, m3-2-s-3-1-elucidation-of-structure-and-other-characteristics?, m3-2-s-3-2-impurities?)",
+                  "children": {
+                    "m3-2-s-3-1-elucidation-of-structure-and-other-characteristics": { "ctd_section": "3.2.S.3.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-3-2-impurities": { "ctd_section": "3.2.S.3.2", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-s-4-control-of-drug-substance": {
+                  "ctd_section": "3.2.S.4",
+                  "xml_element": "m3-2-s-4-control-of-drug-substance",
+                  "content_model": "(leaf*, m3-2-s-4-1-specification?, m3-2-s-4-2-analytical-procedures?, m3-2-s-4-3-validation-of-analytical-procedures?, m3-2-s-4-4-batch-analyses?, m3-2-s-4-5-justification-of-specification?)",
+                  "children": {
+                    "m3-2-s-4-1-specification": { "ctd_section": "3.2.S.4.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-4-2-analytical-procedures": { "ctd_section": "3.2.S.4.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-4-3-validation-of-analytical-procedures": { "ctd_section": "3.2.S.4.3", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-4-4-batch-analyses": { "ctd_section": "3.2.S.4.4", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-4-5-justification-of-specification": { "ctd_section": "3.2.S.4.5", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-s-5-reference-standards-or-materials": { "ctd_section": "3.2.S.5", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-s-6-container-closure-system": { "ctd_section": "3.2.S.6", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-s-7-stability": {
+                  "ctd_section": "3.2.S.7",
+                  "xml_element": "m3-2-s-7-stability",
+                  "content_model": "(leaf*, m3-2-s-7-1-stability-summary-and-conclusions?, m3-2-s-7-2-post-approval-stability-protocol-and-stability-commitment?, m3-2-s-7-3-stability-data?)",
+                  "children": {
+                    "m3-2-s-7-1-stability-summary-and-conclusions": { "ctd_section": "3.2.S.7.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-7-2-post-approval-stability-protocol-and-stability-commitment": { "ctd_section": "3.2.S.7.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-s-7-3-stability-data": { "ctd_section": "3.2.S.7.3", "content_model": "((leaf | node-extension)*)" }
+                  }
+                }
+              }
+            },
+            "m3-2-p-drug-product": {
+              "ctd_section": "3.2.P",
+              "xml_element": "m3-2-p-drug-product",
+              "directory": "m3/32-body-data/32p-drug-prod/",
+              "attributes": {
+                "product-name": { "type": "CDATA", "required": false },
+                "dosageform": { "type": "CDATA", "required": false },
+                "manufacturer": { "type": "CDATA", "required": false }
+              },
+              "content_model": "(leaf*, m3-2-p-1-description-and-composition-of-the-drug-product?, m3-2-p-2-pharmaceutical-development?, m3-2-p-3-manufacture?, m3-2-p-4-control-of-excipients*, m3-2-p-5-control-of-drug-product?, m3-2-p-6-reference-standards-or-materials?, m3-2-p-7-container-closure-system?, m3-2-p-8-stability?)",
+              "children": {
+                "m3-2-p-1-description-and-composition-of-the-drug-product": { "ctd_section": "3.2.P.1", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-p-2-pharmaceutical-development": { "ctd_section": "3.2.P.2", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-p-3-manufacture": {
+                  "ctd_section": "3.2.P.3",
+                  "content_model": "(leaf*, m3-2-p-3-1-manufacturers?, m3-2-p-3-2-batch-formula?, m3-2-p-3-3-description-of-manufacturing-process-and-process-controls?, m3-2-p-3-4-controls-of-critical-steps-and-intermediates?, m3-2-p-3-5-process-validation-and-or-evaluation?)",
+                  "children": {
+                    "m3-2-p-3-1-manufacturers": { "ctd_section": "3.2.P.3.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-3-2-batch-formula": { "ctd_section": "3.2.P.3.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-3-3-description-of-manufacturing-process-and-process-controls": { "ctd_section": "3.2.P.3.3", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-3-4-controls-of-critical-steps-and-intermediates": { "ctd_section": "3.2.P.3.4", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-3-5-process-validation-and-or-evaluation": { "ctd_section": "3.2.P.3.5", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-p-4-control-of-excipients": {
+                  "ctd_section": "3.2.P.4",
+                  "attributes": { "excipient": { "type": "CDATA", "required": false } },
+                  "content_model": "(leaf*, m3-2-p-4-1-specifications?, m3-2-p-4-2-analytical-procedures?, m3-2-p-4-3-validation-of-analytical-procedures?, m3-2-p-4-4-justification-of-specifications?, m3-2-p-4-5-excipients-of-human-or-animal-origin?, m3-2-p-4-6-novel-excipients?)",
+                  "children": {
+                    "m3-2-p-4-1-specifications": { "ctd_section": "3.2.P.4.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-4-2-analytical-procedures": { "ctd_section": "3.2.P.4.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-4-3-validation-of-analytical-procedures": { "ctd_section": "3.2.P.4.3", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-4-4-justification-of-specifications": { "ctd_section": "3.2.P.4.4", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-4-5-excipients-of-human-or-animal-origin": { "ctd_section": "3.2.P.4.5", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-4-6-novel-excipients": { "ctd_section": "3.2.P.4.6", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-p-5-control-of-drug-product": {
+                  "ctd_section": "3.2.P.5",
+                  "content_model": "(leaf*, m3-2-p-5-1-specifications?, m3-2-p-5-2-analytical-procedures?, m3-2-p-5-3-validation-of-analytical-procedures?, m3-2-p-5-4-batch-analyses?, m3-2-p-5-5-characterisation-of-impurities?, m3-2-p-5-6-justification-of-specifications?)",
+                  "children": {
+                    "m3-2-p-5-1-specifications": { "ctd_section": "3.2.P.5.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-5-2-analytical-procedures": { "ctd_section": "3.2.P.5.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-5-3-validation-of-analytical-procedures": { "ctd_section": "3.2.P.5.3", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-5-4-batch-analyses": { "ctd_section": "3.2.P.5.4", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-5-5-characterisation-of-impurities": { "ctd_section": "3.2.P.5.5", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-5-6-justification-of-specifications": { "ctd_section": "3.2.P.5.6", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m3-2-p-6-reference-standards-or-materials": { "ctd_section": "3.2.P.6", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-p-7-container-closure-system": { "ctd_section": "3.2.P.7", "content_model": "((leaf | node-extension)*)" },
+                "m3-2-p-8-stability": {
+                  "ctd_section": "3.2.P.8",
+                  "content_model": "(leaf*, m3-2-p-8-1-stability-summary-and-conclusion?, m3-2-p-8-2-post-approval-stability-protocol-and-stability-commitment?, m3-2-p-8-3-stability-data?)",
+                  "children": {
+                    "m3-2-p-8-1-stability-summary-and-conclusion": { "ctd_section": "3.2.P.8.1", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-8-2-post-approval-stability-protocol-and-stability-commitment": { "ctd_section": "3.2.P.8.2", "content_model": "((leaf | node-extension)*)" },
+                    "m3-2-p-8-3-stability-data": { "ctd_section": "3.2.P.8.3", "content_model": "((leaf | node-extension)*)" }
+                  }
+                }
+              }
+            },
+            "m3-2-a-appendices": {
+              "ctd_section": "3.2.A",
+              "xml_element": "m3-2-a-appendices",
+              "directory": "m3/32-body-data/32a-app/",
+              "content_model": "(leaf*, m3-2-a-1-facilities-and-equipment*, m3-2-a-2-adventitious-agents-safety-evaluation*, m3-2-a-3-excipients?)",
+              "children": {
+                "m3-2-a-1-facilities-and-equipment": {
+                  "ctd_section": "3.2.A.1",
+                  "content_model": "((leaf | node-extension)*)",
+                  "attributes": {
+                    "manufacturer": { "type": "CDATA", "required": false },
+                    "substance": { "type": "CDATA", "required": false },
+                    "dosageform": { "type": "CDATA", "required": false },
+                    "product-name": { "type": "CDATA", "required": false }
+                  }
+                },
+                "m3-2-a-2-adventitious-agents-safety-evaluation": {
+                  "ctd_section": "3.2.A.2",
+                  "content_model": "((leaf | node-extension)*)",
+                  "attributes": {
+                    "manufacturer": { "type": "CDATA", "required": false },
+                    "substance": { "type": "CDATA", "required": false },
+                    "dosageform": { "type": "CDATA", "required": false },
+                    "product-name": { "type": "CDATA", "required": false }
+                  }
+                },
+                "m3-2-a-3-excipients": { "ctd_section": "3.2.A.3", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m3-2-r-regional-information": {
+              "ctd_section": "3.2.R",
+              "xml_element": "m3-2-r-regional-information",
+              "directory": "m3/32-body-data/32r-reg-info/",
+              "content_model": "((leaf | node-extension)*)"
+            }
+          }
+        },
+        "m3-3-literature-references": {
+          "ctd_section": "3.3",
+          "xml_element": "m3-3-literature-references",
+          "directory": "m3/33-lit-ref/",
+          "content_model": "((leaf | node-extension)*)"
+        }
+      }
+    },
+    "m4-nonclinical-study-reports": {
+      "ctd_section": "4",
+      "xml_element": "m4-nonclinical-study-reports",
+      "directory": "m4/",
+      "required": false,
+      "content_model": "(leaf*, m4-2-study-reports?, m4-3-literature-references?)",
+      "children": {
+        "m4-2-study-reports": {
+          "ctd_section": "4.2",
+          "xml_element": "m4-2-study-reports",
+          "directory": "m4/42-stud-rep/",
+          "content_model": "(leaf*, m4-2-1-pharmacology?, m4-2-2-pharmacokinetics?, m4-2-3-toxicology?)",
+          "children": {
+            "m4-2-1-pharmacology": {
+              "ctd_section": "4.2.1",
+              "xml_element": "m4-2-1-pharmacology",
+              "directory": "m4/42-stud-rep/421-pharm/",
+              "content_model": "(leaf*, m4-2-1-1-primary-pharmacodynamics?, m4-2-1-2-secondary-pharmacodynamics?, m4-2-1-3-safety-pharmacology?, m4-2-1-4-pharmacodynamic-drug-interactions?)",
+              "children": {
+                "m4-2-1-1-primary-pharmacodynamics": { "ctd_section": "4.2.1.1", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-1-2-secondary-pharmacodynamics": { "ctd_section": "4.2.1.2", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-1-3-safety-pharmacology": { "ctd_section": "4.2.1.3", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-1-4-pharmacodynamic-drug-interactions": { "ctd_section": "4.2.1.4", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m4-2-2-pharmacokinetics": {
+              "ctd_section": "4.2.2",
+              "xml_element": "m4-2-2-pharmacokinetics",
+              "directory": "m4/42-stud-rep/422-pk/",
+              "content_model": "(leaf*, m4-2-2-1-analytical-methods-and-validation-reports?, m4-2-2-2-absorption?, m4-2-2-3-distribution?, m4-2-2-4-metabolism?, m4-2-2-5-excretion?, m4-2-2-6-pharmacokinetic-drug-interactions?, m4-2-2-7-other-pharmacokinetic-studies?)",
+              "children": {
+                "m4-2-2-1-analytical-methods-and-validation-reports": { "ctd_section": "4.2.2.1", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-2-absorption": { "ctd_section": "4.2.2.2", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-3-distribution": { "ctd_section": "4.2.2.3", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-4-metabolism": { "ctd_section": "4.2.2.4", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-5-excretion": { "ctd_section": "4.2.2.5", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-6-pharmacokinetic-drug-interactions": { "ctd_section": "4.2.2.6", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-2-7-other-pharmacokinetic-studies": { "ctd_section": "4.2.2.7", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m4-2-3-toxicology": {
+              "ctd_section": "4.2.3",
+              "xml_element": "m4-2-3-toxicology",
+              "directory": "m4/42-stud-rep/423-tox/",
+              "content_model": "(leaf*, m4-2-3-1-single-dose-toxicity?, m4-2-3-2-repeat-dose-toxicity?, m4-2-3-3-genotoxicity?, m4-2-3-4-carcinogenicity?, m4-2-3-5-reproductive-and-developmental-toxicity?, m4-2-3-6-local-tolerance?, m4-2-3-7-other-toxicity-studies?)",
+              "children": {
+                "m4-2-3-1-single-dose-toxicity": { "ctd_section": "4.2.3.1", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-3-2-repeat-dose-toxicity": { "ctd_section": "4.2.3.2", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-3-3-genotoxicity": {
+                  "ctd_section": "4.2.3.3",
+                  "content_model": "(leaf*, m4-2-3-3-1-in-vitro?, m4-2-3-3-2-in-vivo?)",
+                  "children": {
+                    "m4-2-3-3-1-in-vitro": { "ctd_section": "4.2.3.3.1", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-3-2-in-vivo": { "ctd_section": "4.2.3.3.2", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m4-2-3-4-carcinogenicity": {
+                  "ctd_section": "4.2.3.4",
+                  "content_model": "(leaf*, m4-2-3-4-1-long-term-studies?, m4-2-3-4-2-short-or-medium-term-studies?, m4-2-3-4-3-other-studies?)",
+                  "children": {
+                    "m4-2-3-4-1-long-term-studies": { "ctd_section": "4.2.3.4.1", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-4-2-short-or-medium-term-studies": { "ctd_section": "4.2.3.4.2", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-4-3-other-studies": { "ctd_section": "4.2.3.4.3", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m4-2-3-5-reproductive-and-developmental-toxicity": {
+                  "ctd_section": "4.2.3.5",
+                  "content_model": "(leaf*, m4-2-3-5-1-fertility-and-early-embryonic-development?, m4-2-3-5-2-embryo-fetal-development?, m4-2-3-5-3-prenatal-and-postnatal-development-including-maternal-function?, m4-2-3-5-4-studies-in-which-the-offspring-juvenile-animals-are-dosed-and-or-further-evaluated?)",
+                  "children": {
+                    "m4-2-3-5-1-fertility-and-early-embryonic-development": { "ctd_section": "4.2.3.5.1", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-5-2-embryo-fetal-development": { "ctd_section": "4.2.3.5.2", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-5-3-prenatal-and-postnatal-development-including-maternal-function": { "ctd_section": "4.2.3.5.3", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-5-4-studies-in-which-the-offspring-juvenile-animals-are-dosed-and-or-further-evaluated": { "ctd_section": "4.2.3.5.4", "content_model": "((leaf | node-extension)*)" }
+                  }
+                },
+                "m4-2-3-6-local-tolerance": { "ctd_section": "4.2.3.6", "content_model": "((leaf | node-extension)*)" },
+                "m4-2-3-7-other-toxicity-studies": {
+                  "ctd_section": "4.2.3.7",
+                  "content_model": "(leaf*, m4-2-3-7-1-antigenicity?, m4-2-3-7-2-immunotoxicity?, m4-2-3-7-3-mechanistic-studies?, m4-2-3-7-4-dependence?, m4-2-3-7-5-metabolites?, m4-2-3-7-6-impurities?, m4-2-3-7-7-other?)",
+                  "children": {
+                    "m4-2-3-7-1-antigenicity": { "ctd_section": "4.2.3.7.1", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-2-immunotoxicity": { "ctd_section": "4.2.3.7.2", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-3-mechanistic-studies": { "ctd_section": "4.2.3.7.3", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-4-dependence": { "ctd_section": "4.2.3.7.4", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-5-metabolites": { "ctd_section": "4.2.3.7.5", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-6-impurities": { "ctd_section": "4.2.3.7.6", "content_model": "((leaf | node-extension)*)" },
+                    "m4-2-3-7-7-other": { "ctd_section": "4.2.3.7.7", "content_model": "((leaf | node-extension)*)" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m4-3-literature-references": {
+          "ctd_section": "4.3",
+          "xml_element": "m4-3-literature-references",
+          "directory": "m4/43-lit-ref/",
+          "content_model": "((leaf | node-extension)*)"
+        }
+      }
+    },
+    "m5-clinical-study-reports": {
+      "ctd_section": "5",
+      "xml_element": "m5-clinical-study-reports",
+      "directory": "m5/",
+      "required": false,
+      "content_model": "(leaf*, m5-2-tabular-listing-of-all-clinical-studies?, m5-3-clinical-study-reports?, m5-4-literature-references?)",
+      "children": {
+        "m5-2-tabular-listing-of-all-clinical-studies": {
+          "ctd_section": "5.2",
+          "xml_element": "m5-2-tabular-listing-of-all-clinical-studies",
+          "directory": "m5/52-tab-list/",
+          "content_model": "((leaf | node-extension)*)"
+        },
+        "m5-3-clinical-study-reports": {
+          "ctd_section": "5.3",
+          "xml_element": "m5-3-clinical-study-reports",
+          "directory": "m5/53-clin-stud-rep/",
+          "content_model": "(leaf*, m5-3-1-reports-of-biopharmaceutic-studies?, m5-3-2-reports-of-studies-pertinent-to-pharmacokinetics-using-human-biomaterials?, m5-3-3-reports-of-human-pharmacokinetics-pk-studies?, m5-3-4-reports-of-human-pharmacodynamics-pd-studies?, m5-3-5-reports-of-efficacy-and-safety-studies*, m5-3-6-reports-of-postmarketing-experience?, m5-3-7-case-report-forms-and-individual-patient-listings?)",
+          "children": {
+            "m5-3-1-reports-of-biopharmaceutic-studies": {
+              "ctd_section": "5.3.1",
+              "directory": "m5/53-clin-stud-rep/531-biopharm/",
+              "content_model": "(leaf*, m5-3-1-1-bioavailability-study-reports?, m5-3-1-2-comparative-ba-and-bioequivalence-study-reports?, m5-3-1-3-in-vitro-in-vivo-correlation-study-reports?, m5-3-1-4-reports-of-bioanalytical-and-analytical-methods-for-human-studies?)",
+              "children": {
+                "m5-3-1-1-bioavailability-study-reports": { "ctd_section": "5.3.1.1", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-1-2-comparative-ba-and-bioequivalence-study-reports": { "ctd_section": "5.3.1.2", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-1-3-in-vitro-in-vivo-correlation-study-reports": { "ctd_section": "5.3.1.3", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-1-4-reports-of-bioanalytical-and-analytical-methods-for-human-studies": { "ctd_section": "5.3.1.4", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m5-3-2-reports-of-studies-pertinent-to-pharmacokinetics-using-human-biomaterials": {
+              "ctd_section": "5.3.2",
+              "directory": "m5/53-clin-stud-rep/532-pk-human-biomat/",
+              "content_model": "(leaf*, m5-3-2-1-plasma-protein-binding-study-reports?, m5-3-2-2-reports-of-hepatic-metabolism-and-drug-interaction-studies?, m5-3-2-3-reports-of-studies-using-other-human-biomaterials?)",
+              "children": {
+                "m5-3-2-1-plasma-protein-binding-study-reports": { "ctd_section": "5.3.2.1", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-2-2-reports-of-hepatic-metabolism-and-drug-interaction-studies": { "ctd_section": "5.3.2.2", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-2-3-reports-of-studies-using-other-human-biomaterials": { "ctd_section": "5.3.2.3", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m5-3-3-reports-of-human-pharmacokinetics-pk-studies": {
+              "ctd_section": "5.3.3",
+              "directory": "m5/53-clin-stud-rep/533-human-pk/",
+              "content_model": "(leaf*, m5-3-3-1-healthy-subject-pk-and-initial-tolerability-study-reports?, m5-3-3-2-patient-pk-and-initial-tolerability-study-reports?, m5-3-3-3-intrinsic-factor-pk-study-reports?, m5-3-3-4-extrinsic-factor-pk-study-reports?, m5-3-3-5-population-pk-study-reports?)",
+              "children": {
+                "m5-3-3-1-healthy-subject-pk-and-initial-tolerability-study-reports": { "ctd_section": "5.3.3.1", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-3-2-patient-pk-and-initial-tolerability-study-reports": { "ctd_section": "5.3.3.2", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-3-3-intrinsic-factor-pk-study-reports": { "ctd_section": "5.3.3.3", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-3-4-extrinsic-factor-pk-study-reports": { "ctd_section": "5.3.3.4", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-3-5-population-pk-study-reports": { "ctd_section": "5.3.3.5", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m5-3-4-reports-of-human-pharmacodynamics-pd-studies": {
+              "ctd_section": "5.3.4",
+              "directory": "m5/53-clin-stud-rep/534-human-pd/",
+              "content_model": "(leaf*, m5-3-4-1-healthy-subject-pd-and-pk-pd-study-reports?, m5-3-4-2-patient-pd-and-pk-pd-study-reports?)",
+              "children": {
+                "m5-3-4-1-healthy-subject-pd-and-pk-pd-study-reports": { "ctd_section": "5.3.4.1", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-4-2-patient-pd-and-pk-pd-study-reports": { "ctd_section": "5.3.4.2", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m5-3-5-reports-of-efficacy-and-safety-studies": {
+              "ctd_section": "5.3.5",
+              "directory": "m5/53-clin-stud-rep/535-rep-eff-safety/",
+              "attributes": {
+                "indication": { "type": "CDATA", "required": true }
+              },
+              "notes": "Repeatable per indication",
+              "content_model": "(leaf*, m5-3-5-1-study-reports-of-controlled-clinical-studies-pertinent-to-the-claimed-indication?, m5-3-5-2-study-reports-of-uncontrolled-clinical-studies?, m5-3-5-3-reports-of-analyses-of-data-from-more-than-one-study?, m5-3-5-4-other-study-reports?)",
+              "children": {
+                "m5-3-5-1-study-reports-of-controlled-clinical-studies-pertinent-to-the-claimed-indication": { "ctd_section": "5.3.5.1", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-5-2-study-reports-of-uncontrolled-clinical-studies": { "ctd_section": "5.3.5.2", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-5-3-reports-of-analyses-of-data-from-more-than-one-study": { "ctd_section": "5.3.5.3", "content_model": "((leaf | node-extension)*)" },
+                "m5-3-5-4-other-study-reports": { "ctd_section": "5.3.5.4", "content_model": "((leaf | node-extension)*)" }
+              }
+            },
+            "m5-3-6-reports-of-postmarketing-experience": {
+              "ctd_section": "5.3.6",
+              "directory": "m5/53-clin-stud-rep/536-postmarket/",
+              "content_model": "((leaf | node-extension)*)"
+            },
+            "m5-3-7-case-report-forms-and-individual-patient-listings": {
+              "ctd_section": "5.3.7",
+              "directory": "m5/53-clin-stud-rep/537-crf-ipl/",
+              "content_model": "((leaf | node-extension)*)"
+            }
+          }
+        },
+        "m5-4-literature-references": {
+          "ctd_section": "5.4",
+          "xml_element": "m5-4-literature-references",
+          "directory": "m5/54-lit-ref/",
+          "content_model": "((leaf | node-extension)*)"
+        }
+      }
+    }
+  },
+  "leaf_element": {
+    "description": "A leaf element references a single file in the submission",
+    "content_model": "(title, link-text?)",
+    "attributes": {
+      "ID": { "type": "ID", "required": true, "description": "Unique identifier for this leaf in the XML instance. Starts with alphabetic char or underscore." },
+      "operation": { "type": "enum", "values": ["new", "append", "replace", "delete"], "required": true },
+      "checksum": { "type": "CDATA", "required": true, "description": "MD5 hash of the referenced file" },
+      "checksum-type": { "type": "CDATA", "required": true, "description": "Always 'md5'" },
+      "xlink:href": { "type": "CDATA", "required": false, "description": "Relative path to the content file" },
+      "xlink:type": { "type": "CDATA", "fixed": "simple" },
+      "modified-file": { "type": "CDATA", "required": false, "description": "Points to leaf being modified: ../NNNN/index.xml#leafID" },
+      "application-version": { "type": "CDATA", "required": false, "description": "File format version, e.g., 'PDF 1.4'" },
+      "version": { "type": "CDATA", "required": false, "description": "Submitter's internal version number" },
+      "xml:lang": { "type": "CDATA", "required": false, "description": "ISO-639 language code" },
+      "keywords": { "type": "CDATA", "required": false },
+      "font-library": { "type": "CDATA", "required": false, "description": "Reserved for future use" },
+      "xlink:role": { "type": "CDATA", "required": false, "description": "Reserved for future use" },
+      "xlink:show": { "type": "enum", "values": ["new", "replace", "embed", "other", "none"], "required": false },
+      "xlink:actuate": { "type": "enum", "values": ["onLoad", "onRequest", "other", "none"], "required": false },
+      "xmlns:xlink": { "type": "CDATA", "fixed": "http://www.w3.org/1999/xlink" }
+    }
+  },
+  "node_extension": {
+    "description": "Allows extending the eCTD DTD hierarchy at the lowest defined level",
+    "content_model": "(title, (leaf | node-extension)+)",
+    "attributes": {
+      "ID": { "type": "ID", "required": false },
+      "xml:lang": { "type": "CDATA", "required": false }
+    },
+    "rules": [
+      "Only extend at the lowest level of defined table-of-contents elements",
+      "Title element is inherited from parent",
+      "Use is discouraged and should be unavoidable",
+      "Consult regional guidance before using"
+    ]
+  },
+  "accepted_file_formats": {
+    "documents": {
+      "pdf": { "preferred": true, "version": "1.4", "max_size_mb": 100, "notes": "Optimized for fast web view, no security/passwords" },
+      "rtf": { "preferred": false },
+      "xml": { "preferred": false, "notes": "For structured data only" }
+    },
+    "images": {
+      "jpeg": { "preferred": true },
+      "png": { "preferred": true },
+      "svg": { "preferred": false, "notes": "Discuss with regulatory authority" },
+      "gif": { "preferred": false }
+    },
+    "data": {
+      "xls": { "preferred": false },
+      "xpt": { "preferred": false, "notes": "SAS transport format" }
+    }
+  },
+  "pdf_requirements": {
+    "version": "1.4",
+    "fonts": "Embed all non-standard fonts (Times New Roman, Arial, Courier are standard)",
+    "font_size": "12pt minimum for narrative, 9-10pt acceptable for tables",
+    "color": "Black recommended, blue for hyperlinks",
+    "margins": "2.5cm left minimum for portrait",
+    "page_size": "A4 (210x297mm) or Letter (8.5x11 inches)",
+    "bookmarks": "Required for documents with table of contents, max 4 levels deep",
+    "hyperlinks": "Relative paths only, use blue text or thin rectangles",
+    "page_numbering": "Arabic numerals starting at 1, consecutive throughout",
+    "security": "No password protection, no security restrictions",
+    "scanning_dpi": "300 for documents, 600 for photographs and non-Western characters",
+    "compression": "Zip/Flate for color/grayscale, CCITT Group 4 for B&W"
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Physiologically Based Pharmacokinetic Analyses — Format and Content",
+    "source_file": "training/stage-1/fda-guidance-v2/17-pbpk-analyses-2018.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "August 2018",
+    "document_version": "August 2018",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-PBPK-001",
+      "rule_text": "PBPK analyses submitted to FDA to support applications (IND, NDA, BLA, ANDA) must include the following six sections: (A) Executive Summary; (B) Introduction; (C) Materials and Methods; (D) Results; (E) Discussion; and (F) Appendices.",
+      "source_section": "Section I – Introduction",
+      "source_page": 1,
+      "verbatim_quote": "To enable efficient and consistent review, the FDA recommends including the following six sections in a PBPK study report: (A) Executive Summary; (B) Introduction; (C) Materials and Methods; (D) Results; (E) Discussion; and (F) Appendices.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-002",
+      "rule_text": "The decision to accept results from PBPK analyses in lieu of clinical pharmacokinetic data is made on a case-by-case basis, considering the intended uses, as well as the quality, relevance, and reliability of the PBPK results.",
+      "source_section": "Section I – Introduction",
+      "source_page": 1,
+      "verbatim_quote": "The decision to accept results from PBPK analyses in lieu of clinical pharmacokinetic (PK) data is made on a case-by-case basis, considering the intended uses, as well as the quality, relevance, and reliability of the results from the PBPK analyses.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-003",
+      "rule_text": "The PBPK Executive Summary must include: the objectives and rationale for the PBPK analyses, a succinct overview of model development and simulation scenarios, and a summary of key conclusions; it must clearly convey how the analyses address a specific scientific question in a clinical setting in support of a regulatory decision.",
+      "source_section": "Section III.A – Executive Summary",
+      "source_page": 2,
+      "verbatim_quote": "The executive summary should include the objectives and rationale for conducting the PBPK analyses, provide a succinct overview of model development and simulation scenarios, and summarize the key conclusions of the report. This section should clearly convey how the analyses address a specific scientific question in a clinical setting in support of a regulatory decision.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-004",
+      "rule_text": "The PBPK Introduction section must provide, if available: (1) a high-level synopsis of the drug's physicochemical, PK, and PD properties; (2) known exposure-response relationships for efficacy and safety; (3) a brief PBPK-related regulatory history including prior interactions with FDA and other regulatory agencies; (4) cross-references to PBPK study reports previously submitted to FDA.",
+      "source_section": "Section III.B – Introduction",
+      "source_page": 2,
+      "verbatim_quote": "This section should provide the following components, if available: (1) a high-level synopsis of the drug's physicochemical, PK, and PD properties; (2) the exposure-response relationships for the efficacy and safety of the drug to the extent that they are known; (3) a brief PBPK-related regulatory history (i.e., prior interactions with the FDA and other regulatory agencies) to provide context for the PBPK analyses; (4) cross-referencing to PBPK study reports previously submitted to the FDA for different intended uses at different stages of the development of the same drug substance or the same drug product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-005",
+      "rule_text": "The Materials and Methods section must include sufficient information to allow FDA reviewers to duplicate and evaluate the submitted modeling and simulation results and to conduct supplemental analyses when necessary.",
+      "source_section": "Section III.C – Materials and Methods",
+      "source_page": 2,
+      "verbatim_quote": "This section should include sufficient information to allow FDA reviewers to duplicate and evaluate the submitted modeling and simulation results and to conduct supplemental analyses when necessary.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-006",
+      "rule_text": "The Overview of Modeling Strategy must detail modeling procedures (model development, model verification/modification, and model application), outlined in a stepwise manner using a workflow, decision-tree, table, or other representation, with appropriate references to data and studies used in each step.",
+      "source_section": "Section III.C.1 – Overview of Modeling Strategy",
+      "source_page": 2,
+      "verbatim_quote": "This section should detail the modeling procedures, including model development, model verification/modification, and model application. The procedures should be outlined in a stepwise manner using a workflow, decision-tree, table, or other representation. The sponsor should appropriately reference the data and studies used in each step of the modeling process.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-007",
+      "rule_text": "All system-specific and drug-specific modeling parameters, and their sources, must be clearly specified and justified (e.g., with references); when multiple sources exist for a parameter, the selection must be described.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "All system-specific and drug-specific components, as well as the sources of parameter values, should be clearly specified and justified (e.g., appropriate references). If there are several sources of one parameter, the selection should be described.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-008",
+      "rule_text": "When a parameter value has been estimated, the data source and estimation method must be described or appropriately referenced; the use of clinical PK data to optimize model parameters must be described and justified.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "If a parameter value has been estimated, the data source and estimation method should be described or appropriately referenced. The use of clinical PK data to optimize model parameters should be described and justified.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-009",
+      "rule_text": "Key model assumptions that may impact the model application — including biological/pharmacological rationales, patient/disease-related assumptions, or mathematical representations — must be clearly stated.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "Key model assumptions that may impact the model application, including biological and/or pharmacological rationales, patient/disease-related assumptions, or mathematical representations of the biological system, should be clearly stated.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-010",
+      "rule_text": "Drug-dependent parameters for the investigational drug, including names, values, units, sources, prediction algorithms, and assumptions, must be summarized in table format.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "For example, drug-dependent parameters for the investigational drug of interest, including names, values, units, and sources of the parameters, prediction algorithms, and assumptions should be summarized in table format.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-011",
+      "rule_text": "Procedures for assessing uncertainty (e.g., using sensitivity analysis) of the PBPK model parameters must be provided.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "Procedures for assessing uncertainty (e.g., using sensitivity analysis) of the PBPK model parameters should be provided.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-012",
+      "rule_text": "When library drug and system models within a specific software platform are used, the sponsor must justify the use of these models and clearly identify and justify any modifications made to the library models.",
+      "source_section": "Section III.C.2 – Modeling Parameters",
+      "source_page": 3,
+      "verbatim_quote": "When library drug and system models (e.g., a virtual population) within a specific software platform are used, the sponsor should justify the use of these models and clearly identify and justify modifications made to the library models.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-013",
+      "rule_text": "The Simulation Design section must specify for model development, verification, and application: route/dose/formulation, time of administration, fasting/fed conditions, dosing regimen, duration of simulated trials, virtual population demographics, number of simulation studies per scenario, number of virtual subjects per trial, and settings for differential equation integrators.",
+      "source_section": "Section III.C.3 – Simulation Design",
+      "source_page": 3,
+      "verbatim_quote": "The description of simulation conditions should include the following information for the model development, verification, and application: Route, dose, formulation of the drug product (either substrate or modulator), time of administration, and fasting or fed conditions; Dosing regimen of the drug product; Duration of the simulated trials; Demographics of the virtual population and distribution of demographic information; Number of simulation studies for a specific scenario (simulated trials); Number of virtual subjects in each simulated trial; Settings for differential equation integrators, when applicable",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-014",
+      "rule_text": "Electronic files related to modeling software and simulations must be submitted along with the PBPK study report; file types must comply with the Specifications for File Format Types Using eCTD Specifications.",
+      "source_section": "Section III.C.4 – Electronic Files and Other Documentation",
+      "source_page": 4,
+      "verbatim_quote": "Electronic files related to modeling software and simulations should be submitted along with the PBPK study report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If necessary, consult the FDA regarding the feasibility of submitting certain types of electronic files.",
+      "cross_references": ["Specifications for File Format Types Using eCTD Specifications", "Technical Rejection Criteria for Study Data"]
+    },
+    {
+      "rule_id": "FDA-PBPK-015",
+      "rule_text": "Cross-references to other parts of the PBPK report and other parts of the application must be provided with hyperlinks or module locations within the IND, NDA, BLA, or ANDA submission.",
+      "source_section": "Section III.C.4 – Electronic Files and Other Documentation",
+      "source_page": 4,
+      "verbatim_quote": "Cross-references to other parts of the report and other parts of the application should be provided with hyperlinks or locations of the modules of an IND, NDA, BLA, or ANDA submission, if applicable.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-016",
+      "rule_text": "Sponsors anticipating PBPK modeling in their drug development program should communicate early with FDA, given the complexity of PBPK models; FDA does not recommend the use of any particular software for PBPK modeling.",
+      "source_section": "Section III.C.5 – Software",
+      "source_page": 4,
+      "verbatim_quote": "The FDA does not recommend the use of any particular software for PBPK modeling. As PBPK models are highly complex in nature, sponsors anticipating the application of PBPK modeling in their drug development program should communicate early with the FDA.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-017",
+      "rule_text": "The software section of the PBPK submission must include: (1) name and version of the software; (2) schematic view of model structure and mathematical equations; (3) parameterization of system information and sources of parameter values; and (4) user's manual.",
+      "source_section": "Section III.C.5 – Software",
+      "source_page": 4,
+      "verbatim_quote": "The following information should be included in the submission to facilitate a timely review: Name and version of the software; Schematic view of the model structure and mathematical equations (or relevant references) based on established theoretical or biological knowledge; Parameterization of system information and sources of parameter values, such as databases used to describe the population variability and correlation between parameters; User's manual (i.e., instructions on how to run the code)",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-018",
+      "rule_text": "The sponsor must provide sufficient documentation regarding any changes made by the software vendor to the version of the software over the period of PBPK model development and describe how these changes may impact the performance of the submitted model.",
+      "source_section": "Section III.C.5 – Software (footnote 4)",
+      "source_page": 4,
+      "verbatim_quote": "The sponsor should provide sufficient documentation regarding any changes made by the software vendor to the version of the software over the period of PBPK model development and describe how these changes may impact the performance of the submitted model.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-019",
+      "rule_text": "The Results section must demonstrate that the PBPK model is appropriate for the intended uses and describe the results of model application; descriptive statistics or other appropriate analyses on model-generated simulations must be presented and, when applicable, compared to observed data.",
+      "source_section": "Section III.D – Results",
+      "source_page": 5,
+      "verbatim_quote": "The sponsor should both demonstrate that the PBPK model is appropriate for the intended uses and describe the results of model application. Descriptive statistics or other appropriate analysis on the results of model-generated simulations should be presented, and when applicable, compared to observed data.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-020",
+      "rule_text": "The Model Verification and Modification section must provide sufficient information to clearly demonstrate that the proposed PBPK model is appropriate for the modeling purpose for the particular drug product and study population, and is robust enough to respond to perturbations in uncertain parameters.",
+      "source_section": "Section III.D.1 – Model Verification and Modification",
+      "source_page": 5,
+      "verbatim_quote": "This section of the report should provide sufficient information to clearly demonstrate that the proposed PBPK model is appropriate for the modeling purpose or question asked for the particular drug product and study population and is robust enough to respond to perturbations in uncertain parameters.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-021",
+      "rule_text": "The sponsor must clearly present results from methods used to verify the model, confirm model results, and conduct sensitivity analyses; both drug and system model verification procedures must be included and discussed.",
+      "source_section": "Section III.D.1 – Model Verification and Modification",
+      "source_page": 5,
+      "verbatim_quote": "To allow the FDA to evaluate the robustness of the models, the sponsor should clearly present results from the methods used to verify the model, confirm model results, and conduct sensitivity analyses. The sponsor should include and discuss the procedures used for model verification (both the drug and system models).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-022",
+      "rule_text": "Results of sensitivity analyses for uncertain parameters must be discussed in the context of the simulation conditions and potential clinical relevance.",
+      "source_section": "Section III.D.1 – Model Verification and Modification",
+      "source_page": 5,
+      "verbatim_quote": "Results of sensitivity analyses for uncertain parameters should be discussed in the context of the simulation conditions and potential clinical relevance.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-023",
+      "rule_text": "When model parameters are refined during model verification, such modifications must be described and justified; if assumptions cannot be confirmed during modification, further verification to predict clinical scenarios not previously evaluated must also be submitted.",
+      "source_section": "Section III.D.1 – Model Verification and Modification",
+      "source_page": 5,
+      "verbatim_quote": "Such modifications are important aspects of model refinement and should be described and justified. If the assumptions of the model parameters cannot be confirmed during modification, further verification to predict clinical scenarios that were not previously evaluated should also be submitted.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-024",
+      "rule_text": "The Discussion section must explain how the PBPK modeling and simulation analyses adequately address the proposed scientific, regulatory, or clinical questions; the basis for any requests to waive clinical studies must be discussed and well substantiated.",
+      "source_section": "Section III.E – Discussion",
+      "source_page": 5,
+      "verbatim_quote": "In this section, the sponsor should discuss how the PBPK modeling and simulation analyses adequately address the proposed scientific, regulatory, or clinical questions. The basis for any requests to waive the conduct of clinical studies should be discussed and well substantiated.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-025",
+      "rule_text": "When PBPK simulations are used to support specific dosing recommendations for future clinical trials or prescription drug labeling, the proposed dosing recommendations must be discussed and justified within the totality of evidence, including known exposure-response relationships and the level of confidence in the PBPK model for its intended uses.",
+      "source_section": "Section III.E – Discussion",
+      "source_page": 5,
+      "verbatim_quote": "If simulations are used to support specific dosing recommendations to be tested in future clinical trials or to be incorporated in prescription drug labeling, the proposed dosing recommendations should be discussed and justified within the totality of evidence, including the context of known exposure-response relationships and the level of confidence in the PBPK model for its intended uses.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["FDA Guidance: Clinical Pharmacology Section of Labeling for Human Prescription Drug and Biological Products — Format and Content"]
+    },
+    {
+      "rule_id": "FDA-PBPK-026",
+      "rule_text": "The sponsor must note the limitations of its modeling approach in the Discussion section and assess the potential impact of these limitations on the PBPK study results and interpretation.",
+      "source_section": "Section III.E – Discussion",
+      "source_page": 6,
+      "verbatim_quote": "The sponsor should also note the limitations of its modeling approach in this section of the report and assess the potential impact of these limitations on the PBPK study results and interpretation.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-027",
+      "rule_text": "The Appendices section of a PBPK study report must include: (1) List of Tables; (2) List of Figures; (3) Table of Acronyms and Abbreviations; and (4) References.",
+      "source_section": "Section III.F – Appendices",
+      "source_page": 6,
+      "verbatim_quote": "The following information should be included in the appendices. 1. List of Tables... 2. List of Figures... 3. Table of Acronyms and Abbreviations... 4. References",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-028",
+      "rule_text": "A PBPK analysis uses models and simulations that combine physiology, population, and drug characteristics to mechanistically describe the PK and/or pharmacodynamic behaviors of a drug; PBPK model predictions can be used throughout a drug's life cycle to support decisions on clinical pharmacology studies and dosing recommendations in product labeling.",
+      "source_section": "Section II – Background",
+      "source_page": 1,
+      "verbatim_quote": "A PBPK analysis uses models and simulations that combine physiology, population, and drug characteristics to mechanistically describe the PK and/or pharmacodynamic (PD) behaviors of a drug. Throughout a drug's life cycle, PBPK model predictions can be used to support decisions on whether, when, and how to conduct certain clinical pharmacology studies, and to support dosing recommendations in product labeling.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-029",
+      "rule_text": "PBPK analyses may be submitted to support applications including, but not limited to, INDs, NDAs, BLAs, and ANDAs.",
+      "source_section": "Section I – Introduction",
+      "source_page": 1,
+      "verbatim_quote": "This guidance outlines the recommended format and content for a sponsor or applicant to submit physiologically based pharmacokinetic (PBPK) analyses to the FDA to support applications including, but not limited to, investigational new drug applications (INDs), new drug applications (NDAs), biologics license applications (BLAs), or abbreviated new drug applications (ANDAs).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-PBPK-030",
+      "rule_text": "Supporting information submitted with the PBPK electronic files may include clinical PK or PK/PD data used in PBPK analyses, scientific publications, or an orientation document for submitted simulation data and model files.",
+      "source_section": "Section III.C.4 – Electronic Files and Other Documentation",
+      "source_page": 4,
+      "verbatim_quote": "Supporting information such as clinical PK or PK/PD data used in PBPK analyses, a scientific publication, or an orientation document for submitted simulation data and model files can also be included.",
+      "severity": "LOW",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    }
+  ]
+}

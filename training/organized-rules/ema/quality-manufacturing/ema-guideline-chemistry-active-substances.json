@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "title": "Guideline on the chemistry of active substances",
+    "source_file": "guideline-chemistry-active-substances.pdf",
+    "source_directory": "training/stage-1/ema-guidelines-v2",
+    "document_date": "2026-02-16",
+    "document_version": "EMA/CHMP/QWP/49484/2026",
+    "document_type": "Finalized Guideline (replaces EMA/454576/2016, in effect 1 September 2026)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 22
+  },
+  "rules": [
+    {
+      "rule_id": "EMA-CAS-001",
+      "rule_text": "The active substance dossier section 3.2.S.1.1 must include nomenclature information covering: International Nonproprietary Name (INN), compendial name (e.g., European Pharmacopoeia), National Approved Names, company/laboratory code, IUPAC systematic chemical name, other names, and the Chemical Abstracts Service (CAS) registry number.",
+      "source_section": "Section 4.1.1. Nomenclature 3.2.S.1.1",
+      "source_page": 4,
+      "verbatim_quote": "Information on the nomenclature of the active substance should be provided, if relevant: International Nonproprietary Name (INN); Compendial (e.g. European Pharmacopoeia) name; National Approved Names, for example: BAN, DCF, DCIT, JAN, USAN; Company or laboratory code; Systematic Chemical Name(s) (IUPAC nomenclature); Other Names (e.g. proprietary); Other non-proprietary name(s); Chemical Abstracts Service (CAS) registry number (RN).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH CTD format"]
+    },
+    {
+      "rule_id": "EMA-CAS-002",
+      "rule_text": "The structural formula of the active substance including relative and absolute stereochemistry, molecular formula, and relative molecular mass must be provided in section 3.2.S.1.2. The structural formula must display the stereochemistry of the active substance.",
+      "source_section": "Section 4.1.2. Structure 3.2.S.1.2",
+      "source_page": 4,
+      "verbatim_quote": "The structural formula, including relative and absolute stereochemistry, the molecular formula and the relative molecular mass should be provided. Along with the stoichiometric formula and relative molecular mass (Mr), the structural formula should display the stereochemistry of the active substance (indicated conventionally).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026"]
+    },
+    {
+      "rule_id": "EMA-CAS-003",
+      "rule_text": "Section 3.2.S.1.3 must include physico-chemical properties affecting pharmacological efficacy and toxicological safety, including solubilities, pKa, polymorphism, isomerism, logP, permeability, hygroscopicity, and other relevant properties.",
+      "source_section": "Section 4.1.3. General Properties 3.2.S.1.3",
+      "source_page": 4,
+      "verbatim_quote": "A list of physicochemical and other relevant properties of the active substance should be provided, in particular physico-chemical properties that affect pharmacological efficacy and toxicological safety such as solubilities, acid dissociation constant (pKa), polymorphism, isomerism, partition coefficient (logP), permeability, hygroscopicity and any other relevant properties.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026"]
+    },
+    {
+      "rule_id": "EMA-CAS-004",
+      "rule_text": "The manufacturing process description (3.2.S.2.2) must include: (1) a schematic representation of the synthetic process covering all steps with chemical structures, molecular formulae, and molecular weights of starting materials, intermediates, and the active substance; (2) a sequential procedural narrative identifying all materials with quantities and molar equivalents; (3) identification of critical steps, critical process parameters, and ranges for process parameters; and (4) yield or yield ranges for each stage.",
+      "source_section": "Section 4.2.2. Description of Manufacturing Process and Process Controls 3.2.S.2.2",
+      "source_page": 5,
+      "verbatim_quote": "A sequential procedural narrative of the manufacturing process should be submitted. All used materials (starting materials, solvents, reagents, depletion agents, recovered materials, catalysts, processing aids, gases and materials used for quenching or work-up) and their quantities (or ranges) should be clearly disclosed. The narrative should describe each step in the manufacturing process including any additional physical treatments, such as micronisation, and identify critical steps, critical process parameters, process controls employed, and ranges for process parameters.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "If enhanced approach (ICH Q11/Q13) is used, sections 3.2.S.2.2–3.2.S.2.6 should be organised according to ICH Q11 and Q13.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q11", "ICH Q7"]
+    },
+    {
+      "rule_id": "EMA-CAS-005",
+      "rule_text": "Any reprocessing of the active substance must be conducted in line with ICH Q7 or EU GMP Part II. If reprocessing is used for a majority of batches, it must be included as part of the standard manufacturing process. Cases where occasional reprocessing is carried out must be clearly described and justified in the dossier with criteria for when reprocessing can be performed.",
+      "source_section": "Section 4.2.2. Description of Manufacturing Process and Process Controls — Reprocessing",
+      "source_page": 6,
+      "verbatim_quote": "Any reprocessing should be conducted in line with ICH Q7 (Ref 9) or EU GMP Part II (Ref 10). If reprocessing is used for a majority of batches, such reprocessing should be included as part of the standard manufacturing process. The cases where occasional reprocessing is carried out should be clearly described in the dossier and justified.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q7", "EU GMP Part II"]
+    },
+    {
+      "rule_id": "EMA-CAS-006",
+      "rule_text": "Recovered solvents, reactants, intermediates, or active substance may be reused only in the same process and preferably in the same step. Their use must be avoided in the final manufacturing step unless otherwise justified. The impact of recovered materials on impurities — particularly mutagenic impurities and nitrosamines — must be assessed.",
+      "source_section": "Section 4.2.2. Description of Manufacturing Process — Recovery of Materials and Solvents",
+      "source_page": 6,
+      "verbatim_quote": "It is recommended that recovered materials are used only in the same process and preferably in the same step, and their use should be avoided in the final manufacturing step (e.g., chemical transformation / precipitation / washing), unless otherwise justified. The impact of the use of recovered materials should form part of the overall risk assessment, and include, in particular, a discussion regarding impurities (with a focus on potential impurities of concern, e.g. mutagenic impurities).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Use in final manufacturing step acceptable if justified.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q7"]
+    },
+    {
+      "rule_id": "EMA-CAS-007",
+      "rule_text": "The applicant must propose and justify which substance is considered as the active substance starting material (SM). Non-isolated compounds are not considered appropriate starting materials. Multiple chemical transformation steps should separate the starting material from the final active substance. A flow chart of the synthetic process prior to introduction of the starting material must be provided.",
+      "source_section": "Section 4.2.3. Control of Materials — Active Substance (AS) Starting Material(s)",
+      "source_page": 6,
+      "verbatim_quote": "The marketing authorisation applicant should propose and justify which substance should be considered as the AS starting material (SM), e.g. incorporated as a significant structural fragment into the structure of the active substance. Non-isolated compounds are not considered appropriate to be selected as starting materials. Typically, multiple chemical transformation steps should separate the starting material from the final active substance. Information, in the form of a flow chart, indicating the synthetic process prior to the introduction of the starting material (including details of reagents, solvents and catalysts used), is necessary to evaluate the suitability of the proposed starting material and its specifications.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q11"]
+    },
+    {
+      "rule_id": "EMA-CAS-008",
+      "rule_text": "For all materials of animal or human origin used in manufacture: source, processing, characterisation, and control must be provided, including viral safety and TSE safety data in the relevant part of the dossier. A contaminant/impurity profile must be established and submitted. Relevant viral safety and/or TSE data must be provided if any material of animal or human origin is used during the starting material manufacturing process.",
+      "source_section": "Section 4.2.3. Control of Materials — Starting materials of animal or human origin",
+      "source_page": 7,
+      "verbatim_quote": "Information on the source, processing, characterisation and control of all materials of animal or human origin must be provided, including viral and/or TSE safety data in the relevant part of the dossier. Relevant viral safety and/or TSE data must be provided if any material of animal or human origin is used during the starting material manufacturing process (e.g. arising from fermentation, enzymes, amino acids, etc.).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026"]
+    },
+    {
+      "rule_id": "EMA-CAS-009",
+      "rule_text": "The risk of formation and carry-over of nitrosamines and/or their precursors (nitrosating agents, secondary or tertiary amines) during the starting material synthesis must be evaluated. If a risk is identified, adequate control strategies must be established or alternative starting material sources using a different manufacturing process must be explored.",
+      "source_section": "Section 4.2.3. Control of Materials — Active Substance (AS) Starting Material(s)",
+      "source_page": 7,
+      "verbatim_quote": "Risk of formation and carry-over of nitrosamines and/or their precursors during the starting materials synthesis should be evaluated (e.g., use of nitrosating agents, secondary or tertiary amines, etc.). If a risk is identified, adequate control strategies (in the specification of the starting material or further downstream in the active substance process) should be established, or other starting material sources using a different manufacturing process may be explored.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "EMA/409815/2020"]
+    },
+    {
+      "rule_id": "EMA-CAS-010",
+      "rule_text": "Possible contamination of solvents, reagents, and catalysts with nitrosating agents (e.g., NaNO2) or amines that could cause nitrosamine formation must be considered. Adequate acceptance criteria must be defined and justified for materials where this risk exists.",
+      "source_section": "Section 4.2.3. Control of Materials — Solvents, Reagents and other materials",
+      "source_page": 8,
+      "verbatim_quote": "Possible contamination of raw materials (e.g., reagents, catalysts and solvents including water / disinfected water, processing aids) with nitrosating agents (e.g. NaNO2) or amines, which may be carried over from steps used to prepare them, should be considered, as the presence of those contaminants could cause nitrosamine formation in the active substance process. Adequate acceptance criteria should be defined and justified, where needed.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "EMA/409815/2020"]
+    },
+    {
+      "rule_id": "EMA-CAS-011",
+      "rule_text": "Tests and acceptance criteria at critical steps (3.2.S.2.4) must be described and justified based on relevant experimental data. Critical steps are those where process conditions, test requirements or other parameters must be controlled within predetermined limits to ensure the active substance meets its specification.",
+      "source_section": "Section 4.2.4. Control of Critical Steps and Intermediates 3.2.S.2.4",
+      "source_page": 9,
+      "verbatim_quote": "Tests and acceptance criteria performed at critical steps identified in 3.2.S.2.2 of the manufacturing process should be described and justified based on relevant experimental data. A critical step is defined as one where the process conditions, test requirements or other relevant parameters must be controlled within predetermined limits to ensure that the active substance meets its specification.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q11"]
+    },
+    {
+      "rule_id": "EMA-CAS-012",
+      "rule_text": "The active substance manufacturing process must be validated before commercial distribution. Process validation data and/or evaluation studies for aseptic processing and sterilisation must be provided per ICH Q8, Q9, Q10, and ICH Q7.",
+      "source_section": "Section 4.2.5. Process Validation and/or Evaluation 3.2.S.2.5",
+      "source_page": 10,
+      "verbatim_quote": "Even if no process validation data is provided in the application, the active substance manufacturing process must be validated before commercial distribution. Process validation data and/or evaluation studies for aseptic processing and sterilisation should be provided.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "Validation data may not need to be provided in the application, but must be completed before commercial distribution.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q7", "ICH Q8", "ICH Q9", "ICH Q10"]
+    },
+    {
+      "rule_id": "EMA-CAS-013",
+      "rule_text": "Efforts to minimise nitrosamine formation in the active substance manufacturing process must be guided by the nitrosamine Q&A document (EMA/409815/2020). If the use of nitrosating agents is unavoidable, combination with nitrosatable compounds under conditions amenable to nitrosamine formation must be mitigated. If nitrosamine formation potential is unavoidable, a control strategy at an appropriate control point must be implemented and justified.",
+      "source_section": "Section 4.2.6. Manufacturing Process Development 3.2.S.2.6",
+      "source_page": 10,
+      "verbatim_quote": "In particular, efforts to minimise the risk of nitrosamine formation in the process should be guided by the Q&A document (Ref 12), in which the risk factors are listed, together with the measures for risk mitigation and principles of control strategies. If the use of nitrosating agents is unavoidable within the synthetic process, then combination with nitrosatable compounds under conditions amenable to nitrosamine formation should be mitigated. If potential for formation of nitrosamines is unavoidable, a control strategy at an appropriate control point should be implemented and justified based on adequate process knowledge using a suitable analytical procedure where needed.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "EMA/409815/2020"]
+    },
+    {
+      "rule_id": "EMA-CAS-014",
+      "rule_text": "For new chemical entities, unequivocal proof of chemical structure, configuration, and potential isomerism must be provided in section 3.2.S.3.1. Evidence of structure must include spectral analyses (IR, NMR, mass spectra, UV) with interpretation and discussion. The evidence must be related to the actual material to be used in the marketed product.",
+      "source_section": "Section 4.3.1. Elucidation of Structure and other Characteristics 3.2.S.3.1",
+      "source_page": 11,
+      "verbatim_quote": "A scientific discussion of the chemistry of the active substance should be provided, including unequivocal proof of structure, configuration and potential isomerism. It is important that the evidence of structure should be related to the actual material to be used in the marketed product, especially for highly complex molecular structures.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "For pharmacopoeial active substances, not all items may be necessary if identity can be verified by comparison to an official standard.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026"]
+    },
+    {
+      "rule_id": "EMA-CAS-015",
+      "rule_text": "Information on all impurities and their carry-over must be provided in section 3.2.S.3.2, including related substances, residual solvents, elemental impurities, and reagent-derived impurities. If a mutagenic impurity is liable to be present, compliance with ICH M7 and the cohort of concern requirements must be demonstrated. For nitrosamine impurities, the LOQ of the analytical method must be at or sufficiently below the toxicologically required limit.",
+      "source_section": "Section 4.3.2. Impurities 3.2.S.3.2",
+      "source_page": 13,
+      "verbatim_quote": "If a mutagenic impurity is liable to be present in the substance, then the control strategy should be demonstrated to be in compliance with control options outlined in ICH M7 and the related Q&A, and the risk of presence of compounds of the 'cohort of concern' (according to ICH M7) or other potent toxins should also be discussed. Regarding nitrosamine impurities, reference is made to the identified risk factors. For nitrosamines, the LOQ should be minimum at or sufficiently below the toxicologically required limit.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH M7", "EMA/409815/2020", "ICH Q3A"]
+    },
+    {
+      "rule_id": "EMA-CAS-016",
+      "rule_text": "The active substance specification (3.2.S.4.1) must include as minimum required tests: description, identification, impurities, and assay/potency. Additional tests are required depending on the nature or use of the active substance (e.g., polymorphic form, enantiomeric purity, particle size, microbiological purity, bacterial endotoxins).",
+      "source_section": "Section 4.4.1. Specification 3.2.S.4.1",
+      "source_page": 13,
+      "verbatim_quote": "The following tests should be performed as a minimum required and appropriate acceptance criteria applied: Description; Identification; Impurities; Assay and/or potency. Additional tests may be required depending on the nature of the active substance or its subsequent use (e.g. polymorphic form, enantiomeric purity, particle size, microbiological purity, bacterial endotoxins, etc.).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q6A", "Ph. Eur."]
+    },
+    {
+      "rule_id": "EMA-CAS-017",
+      "rule_text": "Analytical procedures (3.2.S.4.2) must be described in sufficient detail to be repeatable by an Official Medicines Control Laboratory. Analytical validation data per ICH Q2 must be provided (3.2.S.4.3). For nitrosamines, additional validation requirements per the nitrosamine Q&A apply.",
+      "source_section": "Section 4.4.2–4.4.3. Analytical Procedures and Validation 3.2.S.4.2–3.2.S.4.3",
+      "source_page": 14,
+      "verbatim_quote": "Details of the analytical procedures used for testing the active substance should be provided. They should be described in such a way that they can be repeated by an Official Medicines Control Laboratory. Validation of analytical tests concerning the active substance should be performed according to the requirements of the current Guidelines. For nitrosamines, additional requirements are stated in the nitrosamine Q&A.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Methods from official Ph. Eur. monographs do not require revalidation if demonstrated suitable.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q2", "EMA/409815/2020"]
+    },
+    {
+      "rule_id": "EMA-CAS-018",
+      "rule_text": "Batch analyses (3.2.S.4.4) must include results from at least three recent consecutive batches from each manufacturing site, manufactured at not less than 10% of maximum production scale according to the proposed process, demonstrating that routine production material falls within specification limits. Results must include date of manufacture, batch size and number, place of manufacture, and results of analytical determinations.",
+      "source_section": "Section 4.4.4. Batch Analyses 3.2.S.4.4",
+      "source_page": 14,
+      "verbatim_quote": "Data illustrating the actual results obtained from routine quality control of the active substance. Results from at least three recent consecutive batches from each manufacturing site, manufactured according to the proposed process at not less than 10% of maximum production scale at the time of the submission should be provided. These results should demonstrate that routine production material falls within the specification limits set.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026"]
+    },
+    {
+      "rule_id": "EMA-CAS-019",
+      "rule_text": "Specification justification (3.2.S.4.5) must meet the requirements of the European Pharmacopoeia general monograph 'Substances for Pharmaceutical Use'. If compounds of the 'cohort of concern' or potent toxins are present, appropriate control must be described. For existing active substances not covered by Ph. Eur., impurity limits above ICH Q3A thresholds require safety qualification data or published literature justification.",
+      "source_section": "Section 4.4.5. Justification of Specification 3.2.S.4.5",
+      "source_page": 15,
+      "verbatim_quote": "The requirements of the general monograph of the European Pharmacopoeia Substances for Pharmaceutical Use (2034) should be met, where applicable. If a risk of presence of compounds of the 'cohort of concern' (according to ICH M7) or other potent toxins has been identified, then appropriate control of these impurities should also be discussed.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q3A", "ICH M7", "Ph. Eur. 2034"]
+    },
+    {
+      "rule_id": "EMA-CAS-020",
+      "rule_text": "For active substance stability studies (3.2.S.7.1), compliance with specification limits must be verified during stability studies including for 'cohort of concern' compounds or other highly potent toxins which may potentially form or increase during storage.",
+      "source_section": "Section 4.7.1. Stability Summary and Conclusions 3.2.S.7.1",
+      "source_page": 16,
+      "verbatim_quote": "For stability-indicating parameters, compliance with the established specification limits should be verified during stability studies and this should include any 'cohort of concern' compounds or other highly potent toxins which may potentially form or increase during storage.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q1A", "ICH M7"]
+    },
+    {
+      "rule_id": "EMA-CAS-021",
+      "rule_text": "A post-approval stability protocol and stability commitment (3.2.S.7.2) must be provided if data for production scale batches covering the full proposed re-test period or expiry date is not available at the time of submission.",
+      "source_section": "Section 4.7.2. Post-approval Stability Protocol and Stability Commitment 3.2.S.7.2",
+      "source_page": 16,
+      "verbatim_quote": "A post-approval stability protocol and stability commitment should be provided if data for production scale batches covering the full proposed re-test period or expiry date is not available.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q1A", "ICH Q1B"]
+    },
+    {
+      "rule_id": "EMA-CAS-022",
+      "rule_text": "For alternative synthesis processes, if differences in impurity profiles are encountered compared to the primary process, the impurity differences must be analysed with validated methods and shown to be toxicologically acceptable.",
+      "source_section": "Section 4.2.2. Description of Manufacturing Process — Alternative processes",
+      "source_page": 5,
+      "verbatim_quote": "Regarding new active substances, if differences in impurity profiles are encountered, they should be analysed with validated methods and shown to be toxicologically acceptable.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/QWP/49484/2026", "ICH Q3A"]
+    }
+  ]
+}

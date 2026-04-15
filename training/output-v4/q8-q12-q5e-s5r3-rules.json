@@ -1,0 +1,1189 @@
+{
+  "meta": {
+    "title": "ICH Q8(R2) + Q12 + Q5E + S5(R3) Training Rules",
+    "guidelines": ["Q8(R2)", "Q12", "Q5E", "S5(R3)"],
+    "extraction_date": "2026-03-23",
+    "total_rules": 100,
+    "extractor": "Claude Sonnet 4.6",
+    "source_documents": [
+      "Q8(R2) Guideline.pdf — Pharmaceutical Development (Step 4, August 2009)",
+      "Q12_Guideline_Step4_2019_1119.pdf — Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management (Step 4, November 2019)",
+      "Q5E_Comparability_Biotech.pdf — Comparability of Biotechnological/Biological Products Subject to Changes in Their Manufacturing Process (Step 4, November 2004)",
+      "S5-R3_Step4_Guideline_2020_0218_1.pdf — Detection of Reproductive and Developmental Toxicity for Human Pharmaceuticals (Step 4, February 2020)"
+    ]
+  },
+
+  "q8_r2_pharma_development": {
+    "section_description": "Rules extracted from ICH Q8(R2) Pharmaceutical Development guideline covering QTPP, CQAs, design space, control strategy, and QbD approaches",
+    "rules": [
+      {
+        "rule_id": "Q8-001",
+        "rule_text": "Quality cannot be tested into products; quality should be built in by design. The aim of pharmaceutical development is to design a quality product and its manufacturing process to consistently deliver the intended performance of the product.",
+        "source_section": "Part I, Section 2 — Pharmaceutical Development",
+        "source_page": 1,
+        "source_quote": "It is important to recognize that quality cannot be tested into products; i.e., quality should be built in by design.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["QbD", "quality-by-design", "fundamental-principle"]
+      },
+      {
+        "rule_id": "Q8-002",
+        "rule_text": "Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post-approval change process.",
+        "source_section": "Part I, Section 2 — Pharmaceutical Development",
+        "source_page": 2,
+        "source_quote": "Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["design-space", "post-approval-change", "regulatory-flexibility"]
+      },
+      {
+        "rule_id": "Q8-003",
+        "rule_text": "Design space is proposed by the applicant and is subject to regulatory assessment and approval. The degree of regulatory flexibility is predicated on the level of relevant scientific knowledge provided.",
+        "source_section": "Part I, Section 2 — Pharmaceutical Development",
+        "source_page": 2,
+        "source_quote": "Design space is proposed by the applicant and is subject to regulatory assessment and approval.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["design-space", "regulatory-approval", "applicant-responsibility"]
+      },
+      {
+        "rule_id": "Q8-004",
+        "rule_text": "Enhanced pharmaceutical development studies may facilitate: risk-based regulatory decisions (reviews and inspections); manufacturing process improvements within the approved design space without further regulatory review; reduction of post-approval submissions; and real-time quality control leading to a reduction of end-product release testing.",
+        "source_section": "Part I, Section 2 — Pharmaceutical Development",
+        "source_page": 2,
+        "source_quote": "manufacturing process improvements, within the approved design space described in the dossier, without further regulatory review; reduction of post-approval submissions; real-time quality control, leading to a reduction of end-product release testing.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["enhanced-approach", "regulatory-flexibility", "real-time-release"]
+      },
+      {
+        "rule_id": "Q8-005",
+        "rule_text": "At a minimum, those aspects of drug substances, excipients, container closure systems, and manufacturing processes that are critical to product quality should be determined and control strategies justified. Critical formulation attributes and process parameters are generally identified through an assessment of the extent to which their variation can have impact on the quality of the drug product.",
+        "source_section": "Part I, Section 2 — Pharmaceutical Development",
+        "source_page": 2,
+        "source_quote": "At a minimum, those aspects of drug substances, excipients, container closure systems, and manufacturing processes that are critical to product quality should be determined and control strategies justified.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["minimum-requirement", "CQA", "control-strategy"]
+      },
+      {
+        "rule_id": "Q8-006",
+        "rule_text": "The physicochemical and biological properties of the drug substance that can influence the performance of the drug product and its manufacturability should be identified and discussed. Examples include solubility, water content, particle size, crystal properties, biological activity, and permeability.",
+        "source_section": "Part I, Section 2.1.1 — Drug Substance",
+        "source_page": 3,
+        "source_quote": "The physicochemical and biological properties of the drug substance that can influence the performance of the drug product and its manufacturability, or were specifically designed into the drug substance (e.g., solid state properties), should be identified and discussed.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["drug-substance", "physicochemical-properties", "CQA"]
+      },
+      {
+        "rule_id": "Q8-007",
+        "rule_text": "The compatibility of the drug substance with excipients listed in 3.2.P.1 should be evaluated. For products that contain more than one drug substance, the compatibility of the drug substances with each other should also be evaluated.",
+        "source_section": "Part I, Section 2.1.1 — Drug Substance",
+        "source_page": 3,
+        "source_quote": "The compatibility of the drug substance with excipients listed in 3.2.P.1 should be evaluated.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["drug-substance", "excipient-compatibility", "formulation"]
+      },
+      {
+        "rule_id": "Q8-008",
+        "rule_text": "Use of an overage of a drug substance to compensate for degradation during manufacture or a product's shelf life, or to extend shelf life, is discouraged. Any overages should be justified considering the safety and efficacy of the product.",
+        "source_section": "Part I, Section 2.2.2 — Overages",
+        "source_page": 4,
+        "source_quote": "In general, use of an overage of a drug substance to compensate for degradation during manufacture or a product's shelf life, or to extend shelf life, is discouraged.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["overages", "drug-substance", "formulation-justification"]
+      },
+      {
+        "rule_id": "Q8-009",
+        "rule_text": "The manufacturing process development programme or process improvement programme should identify any critical process parameters that should be monitored or controlled (e.g., granulation end point) to ensure that the product is of the desired quality.",
+        "source_section": "Part I, Section 2.3 — Manufacturing Process Development",
+        "source_page": 5,
+        "source_quote": "The manufacturing process development programme or process improvement programme should identify any critical process parameters that should be monitored or controlled (e.g., granulation end point) to ensure that the product is of the desired quality.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["CPP", "manufacturing-process", "process-development"]
+      },
+      {
+        "rule_id": "Q8-010",
+        "rule_text": "For sterile products, an appropriate method of sterilization for the drug product and primary packaging material should be chosen and the choice justified.",
+        "source_section": "Part I, Section 2.3 — Manufacturing Process Development",
+        "source_page": 5,
+        "source_quote": "For those products intended to be sterile an appropriate method of sterilization for the drug product and primary packaging material should be chosen and the choice justified.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["sterile-products", "sterilization", "manufacturing"]
+      },
+      {
+        "rule_id": "Q8-011",
+        "rule_text": "The choice of primary packaging materials should be justified considering choice of materials, protection from moisture and light, compatibility of materials of construction with the dosage form (including sorption to container and leaching), and safety of materials of construction.",
+        "source_section": "Part I, Section 2.4 — Container Closure System",
+        "source_page": 6,
+        "source_quote": "The choice of primary packaging materials should consider, e.g., choice of materials, protection from moisture and light, compatibility of the materials of construction with the dosage form (including sorption to container and leaching), and safety of materials of construction.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["container-closure", "packaging", "compatibility"]
+      },
+      {
+        "rule_id": "Q8-012",
+        "rule_text": "The lowest specified concentration of antimicrobial preservative should be demonstrated to be effective in controlling micro-organisms by using an antimicrobial preservative effectiveness test. The concentration should be justified in terms of efficacy and safety.",
+        "source_section": "Part I, Section 2.5 — Microbiological Attributes",
+        "source_page": 6,
+        "source_quote": "The lowest specified concentration of antimicrobial preservative should be demonstrated to be effective in controlling micro-organisms by using an antimicrobial preservative effectiveness test.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["preservative", "microbiological", "antimicrobial"]
+      },
+      {
+        "rule_id": "Q8-013",
+        "rule_text": "Design Space is defined as: The multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change.",
+        "source_section": "Part I, Section 3 — Glossary",
+        "source_page": 7,
+        "source_quote": "The multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["design-space", "definition", "glossary"]
+      },
+      {
+        "rule_id": "Q8-014",
+        "rule_text": "Process Analytical Technology (PAT) is defined as: A system for designing, analyzing, and controlling manufacturing through timely measurements (i.e., during processing) of critical quality and performance attributes of raw and in-process materials and processes with the goal of ensuring final product quality.",
+        "source_section": "Part I, Section 3 — Glossary",
+        "source_page": 7,
+        "source_quote": "A system for designing, analyzing, and controlling manufacturing through timely measurements (i.e., during processing) of critical quality and performance attributes of raw and in-process materials and processes with the goal of ensuring final product quality.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "tags": ["PAT", "definition", "real-time-control"]
+      },
+      {
+        "rule_id": "Q8-015",
+        "rule_text": "Pharmaceutical development should include, at a minimum: defining the QTPP; identifying potential CQAs; determining CQAs of drug substance and excipients; selecting an appropriate manufacturing process; and defining a control strategy.",
+        "source_section": "Part II (Annex), Section 1 — Introduction",
+        "source_page": 10,
+        "source_quote": "Pharmaceutical development should include, at a minimum, the following elements: Defining the quality target product profile (QTPP)...Identifying potential critical quality attributes (CQAs)...Selecting an appropriate manufacturing process; Defining a control strategy.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["QTPP", "CQA", "minimum-elements", "QbD"]
+      },
+      {
+        "rule_id": "Q8-016",
+        "rule_text": "An enhanced, quality by design approach to product development would additionally include: systematic evaluation of the formulation and manufacturing process; identification of material attributes and process parameters that can have an effect on product CQAs; determining functional relationships that link material attributes and process parameters to product CQAs; and using enhanced product and process understanding to establish a control strategy including potential design space(s) and/or real-time release testing.",
+        "source_section": "Part II (Annex), Section 1 — Introduction",
+        "source_page": 10,
+        "source_quote": "An enhanced, quality by design approach to product development would additionally include the following elements: A systematic evaluation, understanding and refining of the formulation and manufacturing process...Using the enhanced product and process understanding in combination with quality risk management to establish an appropriate control strategy which can, for example, include a proposal for a design space(s) and/or real-time release testing.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["QbD", "enhanced-approach", "design-space", "real-time-release"]
+      },
+      {
+        "rule_id": "Q8-017",
+        "rule_text": "The Quality Target Product Profile (QTPP) forms the basis of design for development of the product. Considerations for the QTPP include: intended use in clinical setting; route of administration; dosage form; delivery systems; dosage strength(s); container closure system; therapeutic moiety release or delivery attributes; and drug product quality criteria (e.g., sterility, purity, stability, drug release).",
+        "source_section": "Part II (Annex), Section 2.1 — Quality Target Product Profile",
+        "source_page": 10,
+        "source_quote": "The quality target product profile forms the basis of design for the development of the product. Considerations for the quality target product profile could include: Intended use in clinical setting, route of administration, dosage form, delivery systems; Dosage strength(s); Container closure system.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["QTPP", "definition", "product-design"]
+      },
+      {
+        "rule_id": "Q8-018",
+        "rule_text": "A CQA is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality. CQAs are generally associated with the drug substance, excipients, intermediates (in-process materials) and drug product.",
+        "source_section": "Part II (Annex), Section 2.2 — Critical Quality Attributes",
+        "source_page": 11,
+        "source_quote": "A CQA is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality. CQAs are generally associated with the drug substance, excipients, intermediates (in-process materials) and drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["CQA", "definition", "quality-attributes"]
+      },
+      {
+        "rule_id": "Q8-019",
+        "rule_text": "Potential drug product CQAs derived from the QTPP and/or prior knowledge are used to guide product and process development. Relevant CQAs can be identified by an iterative process of quality risk management and experimentation that assesses the extent to which their variation can have an impact on the quality of the drug product.",
+        "source_section": "Part II (Annex), Section 2.2 — Critical Quality Attributes",
+        "source_page": 11,
+        "source_quote": "Relevant CQAs can be identified by an iterative process of quality risk management and experimentation that assesses the extent to which their variation can have an impact on the quality of the drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["CQA", "risk-assessment", "iterative-process"]
+      },
+      {
+        "rule_id": "Q8-020",
+        "rule_text": "Risk assessment is a valuable science-based process used in quality risk management (see ICH Q9) that can aid in identifying which material attributes and process parameters potentially have an effect on product CQAs. Risk assessment is typically performed early in the pharmaceutical development process and is repeated as more information becomes available.",
+        "source_section": "Part II (Annex), Section 2.3 — Risk Assessment",
+        "source_page": 11,
+        "source_quote": "Risk assessment is a valuable science-based process used in quality risk management (see ICH Q9) that can aid in identifying which material attributes and process parameters potentially have an effect on product CQAs. Risk assessment is typically performed early in the pharmaceutical development process and is repeated as more information becomes available and greater knowledge is obtained.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["risk-assessment", "Q9", "material-attributes", "CPP"]
+      },
+      {
+        "rule_id": "Q8-021",
+        "rule_text": "A combination of proven acceptable ranges does not constitute a design space. However, proven acceptable ranges based on univariate experimentation can provide useful knowledge about the process.",
+        "source_section": "Part II (Annex), Section 2.4.5 — Design Space Versus Proven Acceptable Ranges",
+        "source_page": 13,
+        "source_quote": "A combination of proven acceptable ranges does not constitute a design space. However, proven acceptable ranges based on univariate experimentation can provide useful knowledge about the process.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["design-space", "proven-acceptable-ranges", "PAR"]
+      },
+      {
+        "rule_id": "Q8-022",
+        "rule_text": "Determining the edge of failure or demonstrating failure modes are not essential parts of establishing a design space, though it can be helpful to determine the edge of failure for process parameters or material attributes.",
+        "source_section": "Part II (Annex), Section 2.4.6 — Design Space and Edge of Failure",
+        "source_page": 13,
+        "source_quote": "determining the edge of failure or demonstrating failure modes are not essential parts of establishing a design space.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "tags": ["design-space", "edge-of-failure", "robustness"]
+      },
+      {
+        "rule_id": "Q8-023",
+        "rule_text": "A control strategy is designed to ensure that a product of required quality will be produced consistently. The control strategy should include, at a minimum, control of the critical process parameters and material attributes.",
+        "source_section": "Part II (Annex), Section 2.5 — Control Strategy",
+        "source_page": 13,
+        "source_quote": "A control strategy is designed to ensure that a product of required quality will be produced consistently...should include, at a minimum, control of the critical process parameters and material attributes.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["control-strategy", "CPP", "minimum-requirement"]
+      },
+      {
+        "rule_id": "Q8-024",
+        "rule_text": "Enhanced understanding of product performance can justify real-time release testing as an alternative to end-product testing. Real-time release testing can replace end product testing, but does not replace the review and quality control steps called for under GMP to release the batch.",
+        "source_section": "Part II (Annex), Section 2.5 — Control Strategy",
+        "source_page": 13,
+        "source_quote": "Real time release testing can replace end product testing, but does not replace the review and quality control steps called for under GMP to release the batch.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["real-time-release", "RTRT", "GMP", "end-product-testing"]
+      },
+      {
+        "rule_id": "Q8-025",
+        "rule_text": "A control strategy can include: control of input material attributes; product specification(s); controls for unit operations that have an impact on downstream processing or product quality; in-process or real-time release testing in lieu of end-product testing; and a monitoring program for verifying multivariate prediction models.",
+        "source_section": "Part II (Annex), Section 2.5 — Control Strategy",
+        "source_page": 14,
+        "source_quote": "A control strategy can include, but is not limited to, the following: Control of input material attributes...Product specification(s)...In-process or real-time release testing in lieu of end-product testing (e.g. measurement and control of CQAs during processing).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["control-strategy", "elements", "in-process-testing"]
+      },
+      {
+        "rule_id": "Q8-026",
+        "rule_text": "A Critical Process Parameter (CPP) is defined as a process parameter whose variability has an impact on a critical quality attribute and therefore should be monitored or controlled to ensure the process produces the desired quality.",
+        "source_section": "Part II (Annex), Section 4 — Glossary",
+        "source_page": 16,
+        "source_quote": "A process parameter whose variability has an impact on a critical quality attribute and therefore should be monitored or controlled to ensure the process produces the desired quality.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["CPP", "definition", "glossary"]
+      },
+      {
+        "rule_id": "Q8-027",
+        "rule_text": "Quality by Design (QbD) is defined as a systematic approach to development that begins with predefined objectives and emphasizes product and process understanding and process control, based on sound science and quality risk management.",
+        "source_section": "Part II (Annex), Section 4 — Glossary",
+        "source_page": 16,
+        "source_quote": "A systematic approach to development that begins with predefined objectives and emphasizes product and process understanding and process control, based on sound science and quality risk management.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["QbD", "definition", "glossary"]
+      },
+      {
+        "rule_id": "Q8-028",
+        "rule_text": "The QTPP is defined as a prospective summary of the quality characteristics of a drug product that ideally will be achieved to ensure the desired quality, taking into account safety and efficacy of the drug product.",
+        "source_section": "Part II (Annex), Section 4 — Glossary",
+        "source_page": 16,
+        "source_quote": "A prospective summary of the quality characteristics of a drug product that ideally will be achieved to ensure the desired quality, taking into account safety and efficacy of the drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["QTPP", "definition", "glossary"]
+      },
+      {
+        "rule_id": "Q8-029",
+        "rule_text": "When describing a design space for applicability to multiple operational scales, the design space should be described in terms of relevant scale-independent parameters. Scaling factors can be included if the design space is intended to span multiple operational scales.",
+        "source_section": "Part II (Annex), Section 2.4.4 — Relationship of Design Space to Scale and Equipment",
+        "source_page": 12,
+        "source_quote": "If the applicant proposes the design space to be applicable to multiple operational scales, the design space should be described in terms of relevant scale-independent parameters.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["design-space", "scale", "scale-independent"]
+      },
+      {
+        "rule_id": "Q8-030",
+        "rule_text": "The design space can be described in terms of ranges of material attributes and process parameters, or through more complex mathematical relationships. It is possible to describe a design space as a time-dependent function or as a combination of variables such as components of a multivariate model.",
+        "source_section": "Part II (Annex), Section 2.4.2 — Describing a Design Space in a Submission",
+        "source_page": 12,
+        "source_quote": "A design space can be described in terms of ranges of material attributes and process parameters, or through more complex mathematical relationships. It is possible to describe a design space as a time dependent function (e.g., temperature and pressure cycle of a lyophilisation cycle), or as a combination of variables such as components of a multivariate model.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["design-space", "multivariate", "mathematical-model"]
+      }
+    ]
+  },
+
+  "q12_lifecycle": {
+    "section_description": "Rules extracted from ICH Q12 guideline covering Established Conditions (ECs), PACMP, PLCM Document, categorisation of post-approval CMC changes, and lifecycle management tools",
+    "rules": [
+      {
+        "rule_id": "Q12-001",
+        "rule_text": "ECs (Established Conditions) are legally binding information considered necessary to assure product quality. As a consequence, any change to ECs necessitates a submission to the regulatory authority.",
+        "source_section": "Section 3.2.1 — ECs Definition",
+        "source_page": 10,
+        "source_quote": "ECs are legally binding information considered necessary to assure product quality. As a consequence, any change to ECs necessitates a submission to the regulatory authority.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EC", "established-conditions", "definition", "regulatory-submission"]
+      },
+      {
+        "rule_id": "Q12-002",
+        "rule_text": "All regulatory dossiers contain a combination of ECs and supportive information. Supportive information is not considered to be ECs but is provided to share with regulators the development and manufacturing information at an appropriate level of detail.",
+        "source_section": "Section 3.2.2 — ECs in a Regulatory Dossier",
+        "source_page": 10,
+        "source_quote": "All regulatory dossiers contain a combination of ECs and supportive information. Supportive information is not considered to be ECs but is provided to share with regulators the development and manufacturing information at an appropriate level of detail.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EC", "supportive-information", "dossier"]
+      },
+      {
+        "rule_id": "Q12-003",
+        "rule_text": "Unless otherwise specified by regulatory requirement, identifying ECs for a given product is not mandatory. ECs should not be confused with CMC regulatory commitments (e.g., stability, post-approval CMC commitments).",
+        "source_section": "Section 3.2.2 — ECs in a Regulatory Dossier",
+        "source_page": 11,
+        "source_quote": "Unless otherwise specified by regulatory requirement identifying ECs for a given product is not mandatory.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "regulatory-commitment", "mandatory-vs-optional"]
+      },
+      {
+        "rule_id": "Q12-004",
+        "rule_text": "Process parameters that need to be controlled to ensure that a product of required quality will be produced should be considered ECs. These ECs are identified through an initial risk assessment and application of knowledge gained from executed studies, prior knowledge, and a criticality assessment that determines the level of impact that a process parameter could have on product quality.",
+        "source_section": "Section 3.2.3.1 — Identification of ECs for the Manufacturing Processes",
+        "source_page": 11,
+        "source_quote": "Process parameters that need to be controlled to ensure that a product of required quality will be produced should be considered ECs. These ECs are identified through an initial risk assessment and application of knowledge gained from executed studies, prior knowledge, and a criticality assessment that determines the level of impact that a process parameter could have on product quality.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EC", "CPP", "risk-assessment", "criticality"]
+      },
+      {
+        "rule_id": "Q12-005",
+        "rule_text": "CPPs and other process parameters where an impact on product quality cannot be reasonably excluded should be identified as ECs. Once ECs are identified, an updated assessment of the potential risk to product quality associated with changing the EC informs the reporting category for the EC.",
+        "source_section": "Section 3.2.3.1 — Identification of ECs for the Manufacturing Processes",
+        "source_page": 11,
+        "source_quote": "CPPs and other process parameters where an impact on product quality cannot be reasonably excluded should be identified as ECs.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EC", "CPP", "reporting-category", "risk"]
+      },
+      {
+        "rule_id": "Q12-006",
+        "rule_text": "The decision tree for identifying ECs and reporting categories for process parameters is step-wise: first determine if the parameter needs to be controlled to ensure product quality (CPP or PP where impact cannot be excluded) — if Yes, it is an EC; then assess the potential risk to product quality if changed — if High risk, Prior Approval; if Moderate/Low risk, Notification; if not an EC, Not Reported.",
+        "source_section": "Section 3.2.3.1 — Figure 1: Decision Tree for Identification of ECs",
+        "source_page": 12,
+        "source_quote": "Does the parameter need to be controlled to ensure product quality (i.e., CPP or PP where impact on quality cannot be reasonably excluded)? Yes — It is an EC...Considering the output of the criticality assessment and the control strategy, what is the potential risk to product quality if the parameter is changed? High — Prior Approval; Moderate/Low — Notification. No — It is not an EC — Not Reported.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EC", "decision-tree", "reporting-category", "prior-approval", "notification"]
+      },
+      {
+        "rule_id": "Q12-007",
+        "rule_text": "Three approaches can be used to identify ECs for manufacturing processes: (1) parameter-based minimal approach with limited process understanding includes large number of inputs; (2) parameter-based enhanced approach with increased understanding leads to ECs focused on most important parameters; (3) performance-based approach where ECs are primarily focused on control of process outputs rather than inputs.",
+        "source_section": "Section 3.2.3.1 — Identification of ECs for the Manufacturing Processes",
+        "source_page": 12,
+        "source_quote": "A minimal approach, with a limited understanding of the relationship between inputs and resulting quality attributes, will include a large number of inputs...An enhanced approach with increased understanding...a performance-based approach, ECs could be primarily focused on control of process outputs (e.g., attributes, measurements, responses) rather than process inputs.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "identification-approaches", "parameter-based", "performance-based"]
+      },
+      {
+        "rule_id": "Q12-008",
+        "rule_text": "ECs related to analytical procedures should include elements which assure performance of the procedure. With more limited development studies, ECs may be more extensive with fixed and/or tight conditions. Enhanced understanding can lead to a wider operating window with ECs focused on method performance criteria.",
+        "source_section": "Section 3.2.3.2 — Identification of ECs for Analytical Procedures",
+        "source_page": 13,
+        "source_quote": "ECs related to analytical procedures should include elements which assure performance of the procedure...When more limited development studies have been conducted this may result in a narrow operating window to ensure method performance. In such cases ECs may be more extensive with fixed and/or tight conditions.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "analytical-procedures", "method-performance"]
+      },
+      {
+        "rule_id": "Q12-009",
+        "rule_text": "Options for revision of approved ECs include: submission of an appropriate post-approval regulatory submission describing and justifying the proposed revision; submission of a PACMP describing a revision to ECs or reporting categories; and use of an approved post-approval regulatory commitment.",
+        "source_section": "Section 3.2.4 — Revision of ECs",
+        "source_page": 14,
+        "source_quote": "Options available for the MAH to change approved ECs, and to revise the associated reporting category for approved ECs include: Submission of an appropriate post-approval regulatory submission...Submission of a PACMP...Use of an approved post-approval regulatory commitment.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "revision", "PACMP", "post-approval"]
+      },
+      {
+        "rule_id": "Q12-010",
+        "rule_text": "The management of all changes to, and maintenance of, the approved marketing authorisation is the responsibility of the MAH. The approval of ECs and subsequent changes to ECs is the responsibility of the regulatory authorities.",
+        "source_section": "Section 3.3 — Roles and Responsibilities",
+        "source_page": 14,
+        "source_quote": "The management of all changes to, and maintenance of, the approved marketing authorisation is the responsibility of the MAH...The approval of ECs and subsequent changes to ECs is the responsibility of the regulatory authorities.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["MAH", "regulatory-authority", "responsibility", "EC"]
+      },
+      {
+        "rule_id": "Q12-011",
+        "rule_text": "A PACMP is a regulatory tool that provides predictability and transparency in terms of the requirements and studies needed to implement a change, as the approved protocol provides an agreement between the MAH and the regulatory authority. The PACMP requires approval by the regulatory authority.",
+        "source_section": "Section 4.1 — Definition of a PACMP",
+        "source_page": 15,
+        "source_quote": "A PACMP is a regulatory tool that provides predictability and transparency in terms of the requirements and studies needed to implement a change as the approved protocol provides an agreement between the MAH and the regulatory authority...The PACMP requires approval by the regulatory authority.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PACMP", "definition", "regulatory-agreement"]
+      },
+      {
+        "rule_id": "Q12-012",
+        "rule_text": "A PACMP describes the CMC change an MAH intends to implement during the commercial phase of a product lifecycle, how the change would be prepared and verified, and the suggested reporting category in line with regional regulations (i.e., lower reporting category and/or shortened review period compared to similar change procedure without an approved PACMP).",
+        "source_section": "Section 4.1 — Definition of a PACMP",
+        "source_page": 15,
+        "source_quote": "A protocol describes the CMC change an MAH intends to implement during the commercial phase of a product lifecycle, how the change would be prepared and verified, including assessment of the impact of the proposed change, and the suggested reporting category in line with regional regulations and guidance, i.e., a lower reporting category and/or shortened review period as compared to similar change procedure without an approved PACMP.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PACMP", "reporting-category", "lower-category", "lifecycle"]
+      },
+      {
+        "rule_id": "Q12-013",
+        "rule_text": "A CMC change that would require supportive efficacy, safety (clinical or non-clinical), or human PK/PD data to evaluate the effect of the change (e.g., certain formulation changes, clinical or non-clinical studies to evaluate new impurities) is not suitable for inclusion in a PACMP.",
+        "source_section": "Section 4.2 — Application of a PACMP",
+        "source_page": 16,
+        "source_quote": "A CMC change that would require supportive efficacy, safety (clinical or non-clinical), or human PK/PD data to evaluate the effect of the change (e.g., certain formulation changes, clinical or non-clinical studies to evaluate new impurities, assessment of immunogenicity/antigenicity) is not suitable for inclusion in a PACMP.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PACMP", "exclusion-criteria", "PK/PD", "safety-data"]
+      },
+      {
+        "rule_id": "Q12-014",
+        "rule_text": "No change outlined in a PACMP should introduce any additional risks to patient safety, product quality or efficacy. Significant changes not anticipated in PACMP step 1 (e.g., change of order of unit operations) cannot be implemented as part of step 2 and should be the subject of a regulatory submission.",
+        "source_section": "Section 4.2 — Application of a PACMP",
+        "source_page": 16,
+        "source_quote": "No change outlined in a PACMP should introduce any additional risks to patient safety, product quality or efficacy. Significant changes to the manufacturing process or controls that were not anticipated in the PACMP step 1 (e.g., change of order of unit operations) cannot be implemented as part of step 2.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PACMP", "patient-safety", "unanticipated-changes"]
+      },
+      {
+        "rule_id": "Q12-015",
+        "rule_text": "A PACMP typically includes: a detailed description of proposed changes with rationale; a list of specific tests and studies based on initial risk assessment; discussion of control strategy changes; any conditions to be met such as process qualification steps; supportive prior knowledge data; and the proposed reporting category for step 2.",
+        "source_section": "Section 4.3 — Elements of a PACMP",
+        "source_page": 16,
+        "source_quote": "A PACMP would typically include the following, e.g.: A detailed description of the proposed change(s), including a rationale...Based on an initial risk assessment, a list of specific tests and studies to be performed...Discussion regarding the suitability of the approved control strategy or any changes needed...Proposed reporting category for step 2 of the PACMP.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PACMP", "elements", "required-content"]
+      },
+      {
+        "rule_id": "Q12-016",
+        "rule_text": "A modification to an already approved PACMP, such as replacement or revision of a test, study or acceptance criterion, should provide the same or greater capability to assess the effect of the proposed change on product quality and would normally involve a notification type of communication with the regulatory authority.",
+        "source_section": "Section 4.4 — Modification to an Approved PACMP",
+        "source_page": 17,
+        "source_quote": "A modification to an already approved PACMP, such as replacement or revision of a test, study or acceptance criterion, should provide the same or greater capability to assess the effect of the proposed change on the product quality and would normally involve a notification type of communication with the regulatory authority.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PACMP", "modification", "notification"]
+      },
+      {
+        "rule_id": "Q12-017",
+        "rule_text": "The PLCM document outlines the specific plan for product lifecycle management including the ECs, reporting categories for changes to ECs, PACMPs (if used) and any post-approval CMC commitments. It serves as a central repository in the MAA for ECs and reporting categories.",
+        "source_section": "Section 5 — Product Lifecycle Management (PLCM) Document",
+        "source_page": 18,
+        "source_quote": "The PLCM document outlines the specific plan for product lifecycle management that includes the ECs, reporting categories for changes to ECs, PACMPs (if used) and any post-approval CMC commitments.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PLCM", "lifecycle-management", "central-repository"]
+      },
+      {
+        "rule_id": "Q12-018",
+        "rule_text": "The PLCM document is submitted in the original MAA or in a supplement/variation for marketed products when defining ECs. An updated PLCM document should be included in post-approval submissions for CMC changes, capturing changes in ECs and other associated elements.",
+        "source_section": "Sections 5.2 and 5.3 — Submitting and Maintenance of the PLCM Document",
+        "source_page": 18,
+        "source_quote": "The PLCM document is submitted in the original MAA or in a supplement/variation for marketed products when defining ECs (Chapter 3)...An updated PLCM document should be included in post-approval submissions for CMC changes.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PLCM", "submission", "MAA", "post-approval"]
+      },
+      {
+        "rule_id": "Q12-019",
+        "rule_text": "Prior approval means certain changes are considered to have sufficient risk to require regulatory authority review and approval prior to implementation. Notification means certain moderate- to low-risk changes do not require prior approval and are communicated as a formal notification within a defined period before or after implementation.",
+        "source_section": "Section 2 — Categorisation of Post-Approval CMC Changes",
+        "source_page": 9,
+        "source_quote": "Prior approval: Certain changes are considered to have sufficient risk to require regulatory authority review and approval prior to implementation...Notification: Certain moderate- to low-risk changes are judged to not require prior approval and generally require less information to support the change.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["prior-approval", "notification", "reporting-category", "risk-based"]
+      },
+      {
+        "rule_id": "Q12-020",
+        "rule_text": "Changes that are not required to be reported to regulators are only managed and documented within the PQS, but may be verified during routine or other inspection. A well-characterised, risk-based categorisation of regulatory communication requirements is important to the efficient use of industry and regulatory resources.",
+        "source_section": "Section 2 — Categorisation of Post-Approval CMC Changes",
+        "source_page": 9,
+        "source_quote": "In addition, the changes that are not required to be reported to regulators are only managed and documented within the PQS, but may be verified during routine or other inspection.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PQS", "unreported-changes", "GMP", "inspection"]
+      },
+      {
+        "rule_id": "Q12-021",
+        "rule_text": "An effective PQS as described in ICH Q10 and in compliance with regional GMP requirements, enabled by knowledge management and management review, is necessary across the entire supply chain and product lifecycle to support use of the tools described in this guideline.",
+        "source_section": "Section 6.1 — PQS General Considerations",
+        "source_page": 19,
+        "source_quote": "An effective PQS as described in ICH Q10 and in compliance with regional GMP requirements where the application is filed, is necessary across the entire supply chain and product lifecycle to support use of the tools described in this guideline.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PQS", "Q10", "GMP", "prerequisite"]
+      },
+      {
+        "rule_id": "Q12-022",
+        "rule_text": "Changes to ECs should be communicated in a timely fashion between the MAH and the regulators, and between the MAH and the manufacturing chain. A critical failure in a PQS anywhere in the supply chain may impact the ability to use the tools in this guideline; therefore, the company should communicate such failures to affected regulatory authorities.",
+        "source_section": "Section 6.2 — Change Management Across the Supply Chain and Product Lifecycle",
+        "source_page": 20,
+        "source_quote": "Changes to ECs should be communicated in a timely fashion between the MAH and the regulators, and between the MAH and the manufacturing chain (and vice versa)...A critical failure in a PQS anywhere in the supply chain may impact the ability to use the tools in this guideline; therefore, the company should communicate such failures to affected regulatory authorities.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "communication", "supply-chain", "PQS-failure"]
+      },
+      {
+        "rule_id": "Q12-023",
+        "rule_text": "The PACMP may be submitted with the original MAA or subsequently as a standalone submission and can be proposed independent of any prior identification of ECs. The PACMP can address one or more changes for a single product, or may address one or more changes to be applied to multiple products.",
+        "source_section": "Section 4.1 — Definition of a PACMP",
+        "source_page": 15,
+        "source_quote": "The PACMP may be submitted with the original MAA or subsequently as a standalone submission and can be proposed independent of any prior identification of ECs. The PACMP can address one or more changes for a single product, or may address one or more changes to be applied to multiple products.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PACMP", "submission-timing", "multiple-products"]
+      },
+      {
+        "rule_id": "Q12-024",
+        "rule_text": "The criticality assessment for EC identification should account for severity of harm and whether the ranges studied sufficiently account for the expected variability in the EC. The assessment of potential risk is derived from risk management activities as described in ICH Q9.",
+        "source_section": "Section 3.2.3.1 — Identification of ECs for the Manufacturing Processes",
+        "source_page": 11,
+        "source_quote": "The criticality assessment should account for severity of harm and whether the ranges studied sufficiently account for the expected variability in the EC. The assessment of potential risk is derived from risk management activities as described in ICH Q9.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["EC", "criticality-assessment", "Q9", "severity"]
+      },
+      {
+        "rule_id": "Q12-025",
+        "rule_text": "For a broader PACMP covering multiple products, the risk of the proposed change(s) should be similar across products, and the same risk mitigation strategy should be applicable across all impacted products and/or sites.",
+        "source_section": "Section 4.5 — Types of PACMPs",
+        "source_page": 17,
+        "source_quote": "The risk of the proposed change(s) should be similar across products; additional considerations should be taken into account depending on the approach...the same risk mitigation strategy should be applicable across all impacted products and/or sites.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["PACMP", "broader-protocol", "multiple-products", "risk-mitigation"]
+      }
+    ]
+  },
+
+  "q5e_comparability": {
+    "section_description": "Rules extracted from ICH Q5E covering the comparability exercise framework for biotechnological/biological products subject to manufacturing process changes",
+    "rules": [
+      {
+        "rule_id": "Q5E-001",
+        "rule_text": "The goal of the comparability exercise is to ensure the quality, safety and efficacy of drug product produced by a changed manufacturing process, through collection and evaluation of the relevant data to determine whether there might be any adverse impact on the drug product due to the manufacturing process changes.",
+        "source_section": "Section 1.4 — General Principles",
+        "source_page": 2,
+        "source_quote": "The goal of the comparability exercise is to ensure the quality, safety and efficacy of drug product produced by a changed manufacturing process, through collection and evaluation of the relevant data to determine whether there might be any adverse impact on the drug product due to the manufacturing process changes.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["comparability", "goal", "quality-safety-efficacy"]
+      },
+      {
+        "rule_id": "Q5E-002",
+        "rule_text": "The demonstration of comparability does not necessarily mean that the quality attributes of the pre-change and post-change product are identical, but that they are highly similar and that the existing knowledge is sufficiently predictive to ensure that any differences in quality attributes have no adverse impact upon safety or efficacy of the drug product.",
+        "source_section": "Section 1.4 — General Principles",
+        "source_page": 2,
+        "source_quote": "The demonstration of comparability does not necessarily mean that the quality attributes of the pre-change and post-change product are identical, but that they are highly similar and that the existing knowledge is sufficiently predictive to ensure that any differences in quality attributes have no adverse impact upon safety or efficacy of the drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["comparability", "highly-similar", "not-identical", "definition"]
+      },
+      {
+        "rule_id": "Q5E-003",
+        "rule_text": "A determination of comparability can be based on a combination of analytical testing, biological assays, and in some cases, nonclinical and clinical data. If a manufacturer can provide assurance of comparability through analytical studies alone, nonclinical or clinical studies with the post-change product are not warranted.",
+        "source_section": "Section 1.4 — General Principles",
+        "source_page": 2,
+        "source_quote": "A determination of comparability can be based on a combination of analytical testing, biological assays, and, in some cases, nonclinical and clinical data. If a manufacturer can provide assurance of comparability through analytical studies alone, nonclinical or clinical studies with the post-change product are not warranted.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["comparability", "analytical-testing", "nonclinical-trigger", "clinical-trigger"]
+      },
+      {
+        "rule_id": "Q5E-004",
+        "rule_text": "Following evaluation of quality attributes, if differences have been identified in the comparison and a possible adverse impact on safety and efficacy profiles cannot be excluded, the generation and analysis of additional data on quality attributes are unlikely to assist. The manufacturer should consider performing nonclinical and/or clinical studies.",
+        "source_section": "Section 1.4 — General Principles (Outcomes)",
+        "source_page": 3,
+        "source_quote": "Although the pre- and post-change product appear highly similar, some differences have been identified in the comparison of quality attributes and a possible adverse impact on safety and efficacy profiles cannot be excluded. In such situations, the generation and analysis of additional data on quality attributes are unlikely to assist in determining whether pre- and post-change product are comparable. The manufacturer should consider performing nonclinical and/or clinical studies.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["comparability", "nonclinical-trigger", "clinical-trigger", "not-comparable"]
+      },
+      {
+        "rule_id": "Q5E-005",
+        "rule_text": "The comparability exercise should evaluate the product at multiple stages of manufacture. Even though all process changes occurred in the manufacture of the drug substance, it might be appropriate to collect data on both the drug substance and the drug product to support the determination of comparability.",
+        "source_section": "Section 2.1 — Considerations for the Comparability Exercise",
+        "source_page": 3,
+        "source_quote": "The product should be evaluated at the process step most adequate to detect a change in the quality attributes. This may entail evaluating the product at multiple stages of manufacture. For example, even though all process changes occurred in the manufacture of the drug substance...it might be appropriate to collect data on both the drug substance and the drug product to support the determination of comparability.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["comparability", "multi-stage", "drug-substance", "drug-product"]
+      },
+      {
+        "rule_id": "Q5E-006",
+        "rule_text": "The extent of studies necessary to demonstrate comparability will depend on: the production step where the changes are introduced; the potential impact on purity, physicochemical and biological properties; the availability of suitable analytical techniques to detect modifications; and the relationship between quality attributes and safety and efficacy.",
+        "source_section": "Section 2.1 — Considerations for the Comparability Exercise",
+        "source_page": 4,
+        "source_quote": "The extent of the studies necessary to demonstrate comparability will depend on: The production step where the changes are introduced; The potential impact of the changes on the purity as well as on the physicochemical and biological properties of the product...The availability of suitable analytical techniques to detect potential product modifications...The relationship between quality attributes and safety and efficacy, based on overall nonclinical and clinical experience.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["comparability", "extent-of-studies", "risk-factors"]
+      },
+      {
+        "rule_id": "Q5E-007",
+        "rule_text": "The battery of tests for the comparability exercise should be carefully selected and optimised to maximise the potential for detecting relevant differences in the quality attributes. To address the full range of physicochemical or biological activities, it may be appropriate to apply more than one analytical procedure to evaluate the same quality attribute.",
+        "source_section": "Section 2.2.1 — Analytical Techniques",
+        "source_page": 4,
+        "source_quote": "The battery of tests for the comparability exercise should be carefully selected and optimised to maximise the potential for detecting relevant differences in the quality attributes of the product that might result from the proposed manufacturing process change.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["analytical-techniques", "comparability", "test-selection", "sensitivity"]
+      },
+      {
+        "rule_id": "Q5E-008",
+        "rule_text": "Methods used to measure quality attributes for batch release should be validated in accordance with ICH guidelines (ICH Q2A, Q2B, Q5C, Q6B), as appropriate. Characterisation study assays do not necessarily require validated assays but should be scientifically sound and provide reliable results.",
+        "source_section": "Section 2.2.1 — Analytical Techniques",
+        "source_page": 5,
+        "source_quote": "The measurement of quality attributes in characterisation studies does not necessarily entail the use of validated assays but the assays should be scientifically sound and provide results that are reliable. Those methods used to measure quality attributes for batch release should be validated in accordance with ICH guidelines (ICH Q2A, Q2B, Q5C, Q6B), as appropriate.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["analytical-validation", "batch-release", "Q2A", "Q2B", "characterisation"]
+      },
+      {
+        "rule_id": "Q5E-009",
+        "rule_text": "Characterisation of a biotechnological/biological product includes the determination of physicochemical properties, biological activity, immunochemical properties (if any), purity, impurities, contaminants, and quantity. Following a manufacturing process change, a complete or limited (but rationalised) repetition of characterisation activity is generally warranted.",
+        "source_section": "Section 2.2.2 — Characterisation",
+        "source_page": 5,
+        "source_quote": "Characterisation of a biotechnological/biological product by appropriate techniques, as described in ICH Q6B, includes the determination of physicochemical properties, biological activity, immunochemical properties (if any), purity, impurities, contaminants, and quantity.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["characterisation", "Q6B", "biological-activity", "purity", "impurities"]
+      },
+      {
+        "rule_id": "Q5E-010",
+        "rule_text": "Following a manufacturing process change, manufacturers should attempt to determine that higher order structure (secondary, tertiary, and quaternary structure) is maintained in the product. If appropriate higher order structural information cannot be obtained, a relevant biological activity assay could indicate a correct conformational structure.",
+        "source_section": "Section 2.2.2 — Physicochemical Properties",
+        "source_page": 6,
+        "source_quote": "Following a manufacturing process change, manufacturers should attempt to determine that higher order structure (secondary, tertiary, and quaternary structure) is maintained in the product. If the appropriate higher order structural information cannot be obtained, a relevant biological activity assay (see biological activity below) could indicate a correct conformational structure.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["higher-order-structure", "physicochemical", "biological-activity-surrogate"]
+      },
+      {
+        "rule_id": "Q5E-011",
+        "rule_text": "When changes are made to a product with multiple biological activities, manufacturers should consider performing a set of relevant functional assays designed to evaluate the range of activities. Where one or more of the multiple activities are not sufficiently correlated with clinical safety or efficacy, the manufacturer should justify that nonclinical or clinical activity is not compromised.",
+        "source_section": "Section 2.2.2 — Biological Activity",
+        "source_page": 6,
+        "source_quote": "When changes are made to a product with multiple biological activities, manufacturers should consider performing a set of relevant functional assays designed to evaluate the range of activities...Where one or more of the multiple activities are not sufficiently correlated with clinical safety or efficacy or if the mechanism of action is not understood, the manufacturer should justify that nonclinical or clinical activity is not compromised in the post-change product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["biological-activity", "functional-assays", "multiple-activities", "MOA"]
+      },
+      {
+        "rule_id": "Q5E-012",
+        "rule_text": "Contaminants should be strictly avoided and/or suitably controlled with appropriate in-process acceptance criteria or action limits for drug substance or drug product. New contaminants should be evaluated to assess their potential impact on the quality, safety and efficacy of the product.",
+        "source_section": "Section 2.2.2 — Purity, Impurities, and Contaminants",
+        "source_page": 7,
+        "source_quote": "Contaminants should be strictly avoided and/or suitably controlled with appropriate in-process acceptance criteria or action limits for drug substance or drug product. New contaminants should be evaluated to assess their potential impact on the quality, safety and efficacy of the product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["contaminants", "impurities", "in-process-controls", "new-impurities"]
+      },
+      {
+        "rule_id": "Q5E-013",
+        "rule_text": "Specifications alone are generally not considered adequate to assess the impact of manufacturing process changes since they are chosen to confirm the routine quality rather than to fully characterise it. Results within established acceptance criteria, but outside historical manufacturing control trends, might suggest product differences that warrant additional study.",
+        "source_section": "Section 2.2.3 — Specifications",
+        "source_page": 7,
+        "source_quote": "The tests and analytical procedures chosen to define drug substance or drug product specifications alone are generally not considered adequate to assess the impact of manufacturing process changes since they are chosen to confirm the routine quality of the product rather than to fully characterise it.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["specifications", "comparability", "limitations", "historical-trend"]
+      },
+      {
+        "rule_id": "Q5E-014",
+        "rule_text": "For stability assessment after process changes, real-time/real temperature stability studies should be initiated. Accelerated and stress stability studies are useful tools to establish degradation profiles and provide a further direct comparison of pre-change and post-change product.",
+        "source_section": "Section 2.2.4 — Stability",
+        "source_page": 8,
+        "source_quote": "Therefore, real-time/real temperature stability studies on the product potentially affected by the change should be initiated, as appropriate...Accelerated and stress stability studies are often useful tools to establish degradation profiles and provide a further direct comparison of pre-change and post-change product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["stability", "real-time-stability", "accelerated-stability", "comparability"]
+      },
+      {
+        "rule_id": "Q5E-015",
+        "rule_text": "ICH Q5C and Q1A(R) should be consulted to determine the conditions for stability studies that provide relevant data to be compared before and after a change.",
+        "source_section": "Section 2.2.4 — Stability",
+        "source_page": 8,
+        "source_quote": "ICH Q5C and Q1A(R) should be consulted to determine the conditions for stability studies that provide relevant data to be compared before and after a change.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "tags": ["stability", "Q5C", "Q1A", "conditions"]
+      },
+      {
+        "rule_id": "Q5E-016",
+        "rule_text": "The manufacturer should confirm that the process controls in the modified process provide at least similar or more effective control of the product quality, compared to those of the original process. In-process controls, including critical control points and in-process testing, should ensure that the post-change process is well controlled.",
+        "source_section": "Section 2.3 — Manufacturing Process Considerations",
+        "source_page": 8,
+        "source_quote": "The manufacturer should confirm that the process controls in the modified process provide at least similar or more effective control of the product quality, compared to those of the original process.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["process-controls", "post-change", "control-equivalence"]
+      },
+      {
+        "rule_id": "Q5E-017",
+        "rule_text": "For approved products, an appropriate number of post-change batches should be analysed to demonstrate consistent performance of the process. Commercial-scale batch data are generally indicated to support process changes for approved products.",
+        "source_section": "Section 2.3 — Manufacturing Process Considerations",
+        "source_page": 9,
+        "source_quote": "For approved products, an appropriate number of post-change batches should be analysed to demonstrate consistent performance of the process. To support process changes for approved products, data from commercial-scale batches are generally indicated.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["post-change-batches", "commercial-scale", "process-consistency"]
+      },
+      {
+        "rule_id": "Q5E-018",
+        "rule_text": "During product development, multiple process changes may occur. Comparability exercises are generally performed to demonstrate that nonclinical and clinical data generated with pre-change product are applicable to post-change product in order to facilitate further development and ultimately support the marketing authorisation.",
+        "source_section": "Section 2.4 — Demonstration of Comparability during Development",
+        "source_page": 9,
+        "source_quote": "Comparability exercises are generally performed to demonstrate that nonclinical and clinical data generated with pre-change product are applicable to post-change product in order to facilitate further development and, ultimately, to support the marketing authorisation.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["development-comparability", "nonclinical-bridging", "clinical-bridging"]
+      },
+      {
+        "rule_id": "Q5E-019",
+        "rule_text": "If differences are observed in the purity and impurity profiles of the post-change product relative to the pre-change product, the differences should be evaluated to assess their potential impact on safety and efficacy. Where the change results in the appearance of new impurities, the new impurities should be identified and characterised when possible.",
+        "source_section": "Section 2.2.2 — Purity, Impurities, and Contaminants",
+        "source_page": 7,
+        "source_quote": "If differences are observed in the purity and impurity profiles of the post-change product relative to the pre-change product, the differences should be evaluated to assess their potential impact on safety and efficacy. Where the change results in the appearance of new impurities, the new impurities should be identified and characterised when possible.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["new-impurities", "purity-profile", "safety-evaluation"]
+      },
+      {
+        "rule_id": "Q5E-020",
+        "rule_text": "The scope of Q5E applies to proteins and polypeptides, their derivatives, and products of which they are components (e.g., conjugates), produced from recombinant or non-recombinant cell-culture expression systems, where manufacturing process changes are made by a single manufacturer who can directly compare pre-change and post-change product.",
+        "source_section": "Section 1.3 — Scope",
+        "source_page": 2,
+        "source_quote": "The principles adopted and explained in this document apply to: Proteins and polypeptides, their derivatives, and products of which they are components, e.g., conjugates. These proteins and polypeptides are produced from recombinant or non-recombinant cell-culture expression systems...Products where manufacturing process changes are made by a single manufacturer...who can directly compare results from the analysis of pre-change and post-change product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["scope", "proteins", "biologics", "single-manufacturer"]
+      },
+      {
+        "rule_id": "Q5E-021",
+        "rule_text": "Widening of acceptance criteria is generally not considered appropriate unless justified. In some cases, additional tests and acceptance criteria on the relative amount of specific new impurities might be appropriate if the impurity profile is different following the manufacturing process change.",
+        "source_section": "Section 2.2.3 — Specifications",
+        "source_page": 7,
+        "source_quote": "However, a widening of the acceptance criteria is generally not considered appropriate unless justified. In some cases, additional tests and acceptance criteria on the relative amount of specific new impurities might be appropriate if the impurity profile is different following the manufacturing process changes.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["specifications", "acceptance-criteria", "widening", "new-impurities"]
+      },
+      {
+        "rule_id": "Q5E-022",
+        "rule_text": "When no relevant species can be identified because the biopharmaceutical does not interact with the orthologous target in any species relevant to reproductive toxicity testing, in vivo reproductive toxicity testing is not meaningful. The approach used for risk assessment, or rationale for not conducting studies, should be justified.",
+        "source_section": "Section 2.4 — Demonstration of Comparability during Development",
+        "source_page": 9,
+        "source_quote": "Comparability studies conducted for products in development are influenced by factors such as the stage of product development, the availability of validated analytical procedures, and the extent of product and process knowledge, which are limited at times due to the available experience that the manufacturer has with the process.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["development", "comparability-factors", "stage-dependent"]
+      },
+      {
+        "rule_id": "Q5E-023",
+        "rule_text": "The manufacturer should prepare a description of the change that summarises the pre-change and the post-change manufacturing process and that clearly highlights modifications of the process and changes in controls in a side-by-side format.",
+        "source_section": "Section 2.3 — Manufacturing Process Considerations",
+        "source_page": 9,
+        "source_quote": "the manufacturer should prepare a description of the change that summarises the pre-change and the post-change manufacturing process and that clearly highlights modifications of the process and changes in controls in a side-by-side format.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "tags": ["documentation", "side-by-side", "process-description"]
+      },
+      {
+        "rule_id": "Q5E-024",
+        "rule_text": "When immunochemical properties are part of the characterisation (e.g., for antibodies or antibody-based products), the manufacturer should confirm that post-change product is comparable in terms of the specific immunochemical properties.",
+        "source_section": "Section 2.2.2 — Immunochemical Properties",
+        "source_page": 6,
+        "source_quote": "When immunochemical properties are part of the characterisation (e.g., for antibodies or antibody-based products), the manufacturer should confirm that post-change product is comparable in terms of the specific properties.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["immunochemical", "antibodies", "characterisation"]
+      },
+      {
+        "rule_id": "Q5E-025",
+        "rule_text": "Manufacturers should also consider the adequacy of the in-process controls including critical control points and in-process testing. In-process controls for the post-change process should be confirmed, modified, or created, as appropriate, to maintain the quality of the product.",
+        "source_section": "Section 2.1 — Considerations for the Comparability Exercise",
+        "source_page": 4,
+        "source_quote": "Adequacy of the in-process controls including critical control points and in-process testing: In-process controls for the post-change process should be confirmed, modified, or created, as appropriate, to maintain the quality of the product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["in-process-controls", "critical-control-points", "post-change"]
+      }
+    ]
+  },
+
+  "s5_r3_reproductive_tox": {
+    "section_description": "Rules extracted from ICH S5(R3) covering DART study design, species selection, dose selection, FEED/EFD/PPND study strategies, risk assessment principles, and biopharmaceutical-specific considerations",
+    "rules": [
+      {
+        "rule_id": "S5R3-001",
+        "rule_text": "The aim of DART studies is to reveal any effect of the pharmaceutical on mammalian reproduction relevant for human risk assessment. The set of studies conducted should encompass observations through one complete life cycle (from conception in one generation through conception in the following generation) and permit detection of immediate and latent adverse effects.",
+        "source_section": "Section 1.1 — Aim of Studies",
+        "source_page": 7,
+        "source_quote": "The aim of DART studies is to reveal any effect of the pharmaceutical on mammalian reproduction relevant for human risk assessment. As appropriate, the set of studies conducted should encompass observations through one complete life cycle (i.e., from conception in one generation through conception in the following generation), and permit detection of immediate and latent adverse effects.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["DART", "aim", "lifecycle", "reproductive-toxicity"]
+      },
+      {
+        "rule_id": "S5R3-002",
+        "rule_text": "For most pharmaceuticals, the 3-study design will usually be appropriate: (1) fertility and early embryonic development study (FEED — stages A and B), (2) embryo-fetal development studies in two species (EFD — stages C and D), and (3) a pre- and postnatal development study (PPND — stages C through F).",
+        "source_section": "Section 3 — General Considerations on Reproductive Toxicity Assessment",
+        "source_page": 8,
+        "source_quote": "To support clinical development, these stages have typically been evaluated using three in vivo study types: 1) a fertility and early embryonic development study (FEED - stages A and B), 2) embryo-fetal development studies in two species (EFD - stages C and D), and 3) a pre- and a postnatal development study (PPND – stages C through F).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["3-study-design", "FEED", "EFD", "PPND", "standard-battery"]
+      },
+      {
+        "rule_id": "S5R3-003",
+        "rule_text": "DART studies should, in general, be conducted according to Good Laboratory Practice (GLP) regulations, as they will contribute to the risk assessment. However, if a relevant DART risk is identified in a non-GLP study, repetition of the study to confirm the finding(s) under GLP conditions is not necessarily warranted.",
+        "source_section": "Section 3 — General Considerations on Reproductive Toxicity Assessment",
+        "source_page": 9,
+        "source_quote": "DART studies should, in general, be conducted according to Good Laboratory Practice (GLP) regulations, as they will contribute to the risk assessment. However, if a relevant DART risk is identified in a non-GLP study, repetition of the study to confirm the finding(s) under GLP conditions is not necessarily warranted.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["GLP", "DART", "study-conduct", "non-GLP"]
+      },
+      {
+        "rule_id": "S5R3-004",
+        "rule_text": "The intended patient population or therapeutic indication can influence the extent of DART testing. Studies evaluating all stages of reproduction and development are not warranted if the disease indicates that DART will have minimal impact on the risk of the pharmaceutical in the target population (e.g., exclusively post-menopausal female patient population, pediatric or juvenile pre-pubescent population).",
+        "source_section": "Section 3.1 — Target Patient Population/Therapeutic Indication Considerations",
+        "source_page": 9,
+        "source_quote": "The intended patient population or therapeutic indication can influence the extent of DART testing. Studies evaluating all stages of reproduction and development are not warranted if the disease indicates that DART will have minimal impact on the risk of the pharmaceutical in the target population.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["patient-population", "DART-scope", "post-menopausal", "pediatric"]
+      },
+      {
+        "rule_id": "S5R3-005",
+        "rule_text": "Before designing a testing strategy, it should be determined if the intended pharmacologic effects of a pharmaceutical are known to be incompatible with fertility, normal EFD, or assessment of particular endpoints. If the intended pharmacologic effects are incompatible with the study endpoints, testing for a particular reproductive endpoint is not warranted, with justification.",
+        "source_section": "Section 3.2 — Pharmacology Considerations",
+        "source_page": 9,
+        "source_quote": "Before designing a testing strategy, it should be determined if the intended pharmacologic effects of a pharmaceutical are known to be incompatible with fertility, normal EFD, or assessment of particular endpoints...If the intended pharmacologic effects are incompatible with the study endpoints, testing for a particular reproductive endpoint is not warranted, with justification.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["pharmacology", "MOA", "endpoint-waiver", "justification"]
+      },
+      {
+        "rule_id": "S5R3-006",
+        "rule_text": "The FEED study aims to test for adverse effects resulting from treatment initiated prior to mating of males and/or females and continued through mating and implantation. The FEED study design for male rodents includes 2 to 4 weeks of treatment prior to cohabitation allowing detection of effects on spermatogenesis and epididymal transport.",
+        "source_section": "Section 4.1 — Strategy to Address Fertility and Early Embryonic Development (FEED)",
+        "source_page": 10,
+        "source_quote": "The aim of the FEED study is to test for adverse effects resulting from treatment initiated prior to mating of males and/or females and continued through mating and implantation...The FEED study design for male rodents that includes 2 to 4 weeks of treatment prior to cohabitation allows for the detection of effects on spermatogenesis and epididymal transport.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["FEED", "male-fertility", "spermatogenesis", "2-4-weeks"]
+      },
+      {
+        "rule_id": "S5R3-007",
+        "rule_text": "When data from repeated-dose studies suggest toxicity to the testis, it can be appropriate to extend the duration of pre-cohabitation treatment to 10 weeks; this permits assessment of effects on the full spermatogenic cycle as well as epididymal transport.",
+        "source_section": "Section 4.1 — Strategy to Address Fertility and Early Embryonic Development (FEED)",
+        "source_page": 11,
+        "source_quote": "When data from repeated-dose studies suggest toxicity to the testis, it can be appropriate to extend the duration of pre-cohabitation treatment to 10 weeks; this permits assessment of effects on the full spermatogenic cycle as well as epididymal transport.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["FEED", "male-fertility", "testicular-toxicity", "10-weeks", "spermatogenic-cycle"]
+      },
+      {
+        "rule_id": "S5R3-008",
+        "rule_text": "Such studies are typically performed in rodents. A mating phase is expected in most cases when a FEED study is warranted. If adverse effects on fertility are not anticipated, both sexes can be treated and cohabited together in the same study.",
+        "source_section": "Section 4.1 — Strategy to Address Fertility and Early Embryonic Development (FEED)",
+        "source_page": 11,
+        "source_quote": "Such studies are typically performed in rodents...If no adverse effects on fertility are anticipated, both sexes can be treated and cohabited together in the same study.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["FEED", "rodent", "species", "both-sexes"]
+      },
+      {
+        "rule_id": "S5R3-009",
+        "rule_text": "For biopharmaceuticals: if the biopharmaceutical is pharmacologically active in rodents or rabbits, a FEED study in one of these species is recommended. If NHPs are the only pharmacologically relevant species, histopathological examinations of the reproductive tissues from repeated-dose toxicity studies of at least three months duration can serve as a substitute for fertility assessments.",
+        "source_section": "Section 4.1.1 — Considerations for Biopharmaceuticals",
+        "source_page": 11,
+        "source_quote": "If the biopharmaceutical is pharmacologically active in rodents or rabbits, a FEED study in one of these species is recommended...if NHPs are the only pharmacologically relevant species (as for many monoclonal antibodies, see ICH S6), histopathological examinations of the reproductive tissues from the repeated-dose toxicity studies of at least three months duration can serve as a substitute for the fertility assessments.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["biopharmaceuticals", "FEED", "NHP", "histopathology", "3-months"]
+      },
+      {
+        "rule_id": "S5R3-010",
+        "rule_text": "The aim of EFD studies is to detect adverse effects on the pregnant female and development of the embryo and fetus following treatment (Stage C) during organogenesis. For most small molecules, effects on EFD are typically evaluated in two species (i.e., rodent and non-rodent, typically rabbit). At least one test species should exhibit the desired pharmacodynamic response.",
+        "source_section": "Section 4.2 — Strategies to Address Embryo-Fetal Development (EFD)",
+        "source_page": 12,
+        "source_quote": "The aim of the EFD studies is to detect adverse effects on the pregnant female and development of the embryo and fetus following treatment (Stage C) of the pregnant female during organogenesis...For most small molecules, effects on EFD are typically evaluated in two species (i.e., rodent and non-rodent (typically rabbit)). At least one of the test species should exhibit the desired pharmacodynamic response.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["EFD", "two-species", "rodent", "rabbit", "organogenesis"]
+      },
+      {
+        "rule_id": "S5R3-011",
+        "rule_text": "Clearly positive results for the induction of malformations or embryo-fetal lethality (MEFL) in a single species at exposures similar to that at the projected clinical exposure at the MRHD can be sufficient for risk assessment.",
+        "source_section": "Section 4.2 — Strategies to Address Embryo-Fetal Development (EFD)",
+        "source_page": 12,
+        "source_quote": "Clearly positive results for the induction of malformations or embryo-fetal lethality (MEFL), in a single species, at exposures similar to that at the projected clinical exposure at the maximum recommended human dose (MRHD) can be sufficient for risk assessment.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["MEFL", "EFD", "single-species-sufficient", "MRHD"]
+      },
+      {
+        "rule_id": "S5R3-012",
+        "rule_text": "For biopharmaceuticals on EFD: The effect should typically be assessed in two species (one rodent and one non-rodent) if both are pharmacologically relevant. However, the rodent is often not pharmacologically relevant, in which case EFD assessment in a single pharmacologically relevant non-rodent species can be conducted. In cases where the NHP is the only relevant species, an enhanced pre- and postnatal development (ePPND) study can be conducted instead of an EFD study.",
+        "source_section": "Section 4.2.1 — Considerations for Biopharmaceuticals",
+        "source_page": 12,
+        "source_quote": "The effect of biopharmaceuticals on EFD should typically be assessed in two species (one rodent and one non-rodent) if both are pharmacologically relevant. However, the rodent is often not pharmacologically relevant, in which case EFD assessment in a single pharmacologically relevant non-rodent species can be conducted. In cases where the NHP is the only relevant species, an enhanced pre-and postnatal development (ePPND) study can be conducted instead of an EFD study.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["biopharmaceuticals", "EFD", "NHP-only", "ePPND", "single-species"]
+      },
+      {
+        "rule_id": "S5R3-013",
+        "rule_text": "The aim of the PPND study is to detect adverse effects following exposure of the maternal animal from implantation through weaning to evaluate effects on the pregnant or lactating female and development of the offspring. Development of the offspring is monitored through sexual maturity (Stages C to F). The rodent is usually used to assess PPND.",
+        "source_section": "Section 4.3 — Strategy to Address Effects on Pre- and Postnatal Development (PPND)",
+        "source_page": 13,
+        "source_quote": "The aim of the PPND study is to detect adverse effects following exposure of the maternal animal from implantation through weaning to evaluate effects on the pregnant or lactating female and development of the offspring. Since manifestations of effects induced during this period can be delayed, development of the offspring is monitored through sexual maturity (i.e., Stages C to F). The rodent is usually used to assess PPND.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["PPND", "rodent", "implantation-to-weaning", "offspring"]
+      },
+      {
+        "rule_id": "S5R3-014",
+        "rule_text": "The rat is generally appropriate for DART testing and is the most often used rodent species for reasons of practicality, general knowledge of pharmacology in this species, the extensive toxicology data usually available, and the large amount of historical background data. The rabbit has proven to be useful in identifying human teratogens not detected in rodents.",
+        "source_section": "Section 5.1.1 — Selection of Species for DART Testing",
+        "source_page": 14,
+        "source_quote": "The rat is generally appropriate for DART testing and is the most often used rodent species for reasons of practicality, general knowledge of pharmacology in this species, the extensive toxicology data usually available for interpretation of nonclinical observations and the large amount of historical background data...The rabbit has proven to be useful in identifying human teratogens that have not been detected in rodents.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["rat", "rabbit", "species-selection", "DART", "preferred-species"]
+      },
+      {
+        "rule_id": "S5R3-015",
+        "rule_text": "NHPs should be considered a non-routine test species. They are most typically used for evaluating effects on embryo-fetal development and early postnatal development for biopharmaceuticals that are only pharmacologically active in primates, as described in ICH S6.",
+        "source_section": "Section 5.2 — Non-routine Test Species",
+        "source_page": 15,
+        "source_quote": "NHPs should be considered a non-routine test species. They are most typically used for evaluating effects on embryo-fetal development and early postnatal development for biopharmaceuticals that are only pharmacologically active in primates, as described in ICH S6.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["NHP", "non-routine", "biopharmaceuticals", "primates"]
+      },
+      {
+        "rule_id": "S5R3-016",
+        "rule_text": "For DART dose selection, doses providing an exposure in pregnant animals greater than 25-fold the exposure at the MRHD are generally considered appropriate as the maximum dose for DART studies. The 25-fold exposure margin should be established in a GLP-compliant dose range finding/pEFD or definitive study.",
+        "source_section": "Section 6.1.3 — Exposure Margin Based Endpoint",
+        "source_page": 17,
+        "source_quote": "Doses providing an exposure in pregnant animals > 25-fold the exposure at the MRHD are generally considered appropriate as the maximum dose for DART studies (Note 2). The 25-fold exposure margin should be established in a GLP-compliant dose range finding/pEFD or definitive study.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["dose-selection", "25-fold", "exposure-margin", "MRHD", "GLP"]
+      },
+      {
+        "rule_id": "S5R3-017",
+        "rule_text": "A limit dose of 1 g/kg/day can generally be applied when other dose selection factors have not been attained with lower dose levels. The low dose should generally provide a low multiple (e.g., 1 to 5-fold) of the human exposure at the MRHD.",
+        "source_section": "Sections 6.1.5 and 6.1.6 — Limit Dose and Lower Dose Selection",
+        "source_page": 17,
+        "source_quote": "A limit dose of 1 g/kg/day can generally be applied when other dose selection factors have not been attained with lower dose levels...The low dose should generally provide a low multiple (e.g., 1 to 5-fold) of the human exposure at the MRHD.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["limit-dose", "1g-kg", "low-dose", "MRHD-multiple"]
+      },
+      {
+        "rule_id": "S5R3-018",
+        "rule_text": "For biopharmaceuticals dose selection: Generally, the dose should provide the maximum intended pharmacological effect in the preclinical species or provide an approximately 10-fold exposure multiple over the maximum exposure to be achieved in the clinic, whichever is higher. ICH S6 should be consulted with regard to dose adjustment for differences in target binding affinity.",
+        "source_section": "Section 6.1.3.1 — Exposure-based Approach for Biopharmaceuticals",
+        "source_page": 17,
+        "source_quote": "Generally, the dose should provide the maximum intended pharmacological effect in the preclinical species or provide an approximately 10-fold exposure multiple over the maximum exposure to be achieved in the clinic, whichever is higher.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["biopharmaceuticals", "dose-selection", "10-fold", "pharmacological-effect"]
+      },
+      {
+        "rule_id": "S5R3-019",
+        "rule_text": "It is generally desirable to establish a NOAEL for DART. The selection of lower dose levels should take into account exposure, pharmacology, and toxicity, such that the dose-response of findings can be established when appropriate.",
+        "source_section": "Section 6.1.6 — Selection of Lower Dose Levels",
+        "source_page": 18,
+        "source_quote": "It is generally desirable to establish a no observed adverse effect level (NOAEL) for DART. The selection of lower dose levels should take into account exposure, pharmacology, and toxicity, such that the dose-response of findings can be established when appropriate.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["NOAEL", "dose-response", "DART", "lower-doses"]
+      },
+      {
+        "rule_id": "S5R3-020",
+        "rule_text": "In general, the route of administration should be the clinical route. When multiple routes of administration are being evaluated in humans, a single route in the test species can be adequate provided that sufficient systemic exposure is achieved compared to that of all clinical routes and that there is adequate coverage for the metabolites.",
+        "source_section": "Section 6.2 — Route",
+        "source_page": 18,
+        "source_quote": "In general, the route of administration should be the clinical route...When multiple routes of administration are being evaluated in humans, a single route in the test species can be adequate provided that sufficient systemic exposure is achieved compared to that of all clinical routes and that there is adequate coverage for the metabolites.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["route-of-administration", "clinical-route", "systemic-exposure"]
+      },
+      {
+        "rule_id": "S5R3-021",
+        "rule_text": "Combination study designs in rodents can reduce animal use while still assessing all reproductive stages. A common combination study design is a combined Fertility and EFD study (stages A through D) with a separate PPND study (stages C through F). In such combination studies, the number of mating pairs per group should be at least 16.",
+        "source_section": "Section 7 — Possible Combination Study Designs in Rodents",
+        "source_page": 19,
+        "source_quote": "A common combination study design is a combined Fertility and EFD study (stages A through D) with a separate PPND study (stages C through F)...the number of mating pairs per group should be at least 16.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["combination-study", "animal-reduction", "FEED-EFD", "16-pairs"]
+      },
+      {
+        "rule_id": "S5R3-022",
+        "rule_text": "Cesarean, fetal and postnatal data summary statistics should be calculated using the litter as the unit of analysis. Many of the datasets from DART studies do not follow a normal distribution, necessitating the use of non-parametric statistical methods.",
+        "source_section": "Section 8.2 — Statistics",
+        "source_page": 20,
+        "source_quote": "Cesarean, fetal and postnatal data summary statistics should be calculated using the litter as the unit of analysis. Statistical testing to assess the significance of differences between the treated and control groups is expected in definitive studies. Many of the datasets from DART studies do not follow a normal distribution, necessitating the use of non-parametric statistical methods.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["statistics", "litter-unit", "non-parametric", "DART"]
+      },
+      {
+        "rule_id": "S5R3-023",
+        "rule_text": "For risk assessment, there is increased concern when the NOAEL occurs at exposures less than 10-fold the human exposure at the MRHD; above this threshold (effects limited to more than 25-fold human exposure at the MRHD), concern is reduced. These are important benchmarks for evaluating the human relevance of animal DART findings.",
+        "source_section": "Section 9 — Principles of Risk Assessment",
+        "source_page": 21,
+        "source_quote": "In general, there is increased concern when the NOAEL occurs at exposures less than 10-fold the human exposure at the MRHD; above this threshold, concern is reduced. Effects that are limited to occurrence at more than 25-fold the human exposure at the MRHD are usually of minor concern for the clinical use of the pharmaceutical.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["risk-assessment", "NOAEL", "10-fold-concern", "25-fold-minor-concern", "MRHD"]
+      },
+      {
+        "rule_id": "S5R3-024",
+        "rule_text": "It should not be assumed that developmental toxicity is secondary to maternal toxicity, unless such a relationship is demonstrated de novo, or relevant published literature can be cited. Embryo-fetal toxicity observed in the presence of maternal toxicity should be considered carefully to determine the likelihood that the finding is relevant for humans.",
+        "source_section": "Section 9 — Principles of Risk Assessment",
+        "source_page": 21,
+        "source_quote": "It should not be assumed that developmental toxicity is secondary to maternal toxicity, unless such a relationship is demonstrated de novo, or relevant published literature can be cited.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["maternal-toxicity", "developmental-toxicity", "causation", "risk-assessment"]
+      },
+      {
+        "rule_id": "S5R3-025",
+        "rule_text": "Reversibility of effects alters the risk assessment: effects on male and female fertility that are reversible after cessation of treatment are of less concern. Conversely, critical irreversible developmental endpoints, such as death or malformation, are of increased concern. Transient findings (e.g., skeletal variations such as wavy ribs in rodents) are of less concern when they occur in isolation.",
+        "source_section": "Section 9 — Principles of Risk Assessment",
+        "source_page": 21,
+        "source_quote": "Understanding the potential for reversibility will alter the risk assessment. Effects on male and female fertility that are reversible after cessation of treatment are of less concern. Conversely, critical irreversible developmental endpoints, such as death or malformation, are of increased concern.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["reversibility", "malformation", "risk-assessment", "wavy-ribs", "skeletal-variations"]
+      },
+      {
+        "rule_id": "S5R3-026",
+        "rule_text": "A Malformation is defined as a permanent structural deviation that generally is incompatible with or severely detrimental to normal development or survival. A Variation is a structural change that does not impact viability, development, or function (e.g., delays in ossification), which can be reversible, and are found in the normal population under investigation.",
+        "source_section": "Section 11 — Glossary",
+        "source_page": 23,
+        "source_quote": "Malformation: Permanent structural deviation that generally is incompatible with or severely detrimental to normal development or survival. Variation: Structural change that does not impact viability, development, or function (e.g., delays in ossification) which can be reversible, and are found in the normal population under investigation.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["malformation", "variation", "definition", "glossary"]
+      },
+      {
+        "rule_id": "S5R3-027",
+        "rule_text": "The FEED study design in female rodents allows for the detection of effects on the estrous cycle, tubal transport, implantation, and development of preimplantation stages of the embryo. When estrous/menstrual cycles are evaluated, it is important to obtain baseline cycle data (over 2 or 3 cycles minimum) to distinguish between treatment-related effects and inter/intra animal variability.",
+        "source_section": "Section 4.1 — Strategy to Address Fertility and Early Embryonic Development (FEED)",
+        "source_page": 11,
+        "source_quote": "The FEED study design in female rodents (see Annex 1) allows for the detection of effects on the estrous cycle, tubal transport, implantation, and development of preimplantation stages of the embryo. When estrous/menstrual cycles are evaluated, it is important to obtain baseline cycle data (over 2 or 3 cycles minimum) to distinguish between treatment-related effects and inter/intra animal variability.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["FEED", "female-fertility", "estrous-cycle", "baseline-cycles", "2-3-cycles"]
+      },
+      {
+        "rule_id": "S5R3-028",
+        "rule_text": "When there is no relevant pharmacologically active species for a biopharmaceutical (does not interact with the orthologous target), use of surrogate molecules or transgenic models can be considered as described in ICH S6. If there are no relevant species, genetically modified animals or surrogates available, in vivo reproductive toxicity testing is not meaningful.",
+        "source_section": "Section 4.2.1 — Considerations for Biopharmaceuticals",
+        "source_page": 12,
+        "source_quote": "When no relevant species can be identified because the biopharmaceutical does not interact with the orthologous target in any species relevant to reproductive toxicity testing, use of surrogate molecules or transgenic models can be considered, as described in ICH S6...If there are no relevant species, genetically modified animals or surrogates available, in vivo reproductive toxicity testing is not meaningful.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "tags": ["biopharmaceuticals", "no-relevant-species", "surrogate-molecule", "S6", "waiver"]
+      },
+      {
+        "rule_id": "S5R3-029",
+        "rule_text": "S5(R3) expands on ICH M3 by allowing two additional options to support inclusion of WOCBP prior to Phase 3 clinical trials: (1) qualified alternative assays which predict MEFL in one species combined with a pEFD in a second species; or (2) additional endpoints incorporated into at least one GLP pEFD study with increased group size and skeletal examinations, combined with a pEFD in a 2nd species to allow unlimited WOCBP through Phase 2.",
+        "source_section": "Section 4.2.3 — Potential Approaches to Defer Definitive In Vivo Testing",
+        "source_page": 13,
+        "source_quote": "this guideline expands on ICH M3 by allowing two additional options to support inclusion of WOCBP prior to Phase 3 clinical trials: 1) Qualified alternative assays which predict the outcome in one species...can be combined with a pEFD from a second species to enable the limited inclusion of WOCBP (up to 150 WOCBP for up to 3 months). 2) Additional endpoints incorporated into at least one GLP pEFD study...combined with a pEFD in a 2nd species allows all regions to include an unlimited number of WOCBP in clinical trials through Phase 2.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["WOCBP", "pEFD", "alternative-assays", "Phase-2", "Phase-3", "M3"]
+      },
+      {
+        "rule_id": "S5R3-030",
+        "rule_text": "A pEFD (Preliminary EFD) toxicity study is defined as an embryo-fetal developmental toxicity study that includes exposure over the period of organogenesis, has adequate dose levels, uses a minimum of 6 pregnant animals per group, and includes assessments of fetal survival, fetal weight, and external and soft tissue alterations.",
+        "source_section": "Section 11 — Glossary",
+        "source_page": 23,
+        "source_quote": "Preliminary EFD (pEFD) toxicity study: An embryo-fetal developmental toxicity study that includes exposure over the period of organogenesis, has adequate dose levels, uses a minimum of 6 pregnant animals per group, and includes assessments of fetal survival, fetal weight, and external and soft tissue alterations (see ICH M3).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["pEFD", "definition", "minimum-6-animals", "organogenesis"]
+      },
+      {
+        "rule_id": "S5R3-031",
+        "rule_text": "Biological plausibility in DART risk assessment is assessed by comparison of pharmacologic mechanism of action with the known role of the target in reproduction or development. A finding that can be interpreted as a consequence of pharmacology suggests that it will be of concern for humans, strengthened by evidence that the finding is dose-related.",
+        "source_section": "Section 9 — Principles of Risk Assessment",
+        "source_page": 21,
+        "source_quote": "Biological plausibility is assessed by comparison of pharmacologic mechanism of action with the known role of the target in reproduction or development. A finding that can be interpreted as a consequence of pharmacology suggests that it will be of concern for humans. This relationship is further strengthened by evidence that the finding is dose-related, whether characterized as increasing incidence or severity.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["biological-plausibility", "MOA", "dose-response", "risk-assessment"]
+      },
+      {
+        "rule_id": "S5R3-032",
+        "rule_text": "Consistency of findings reported among studies, or between species, can strengthen the concern for an adverse effect — i.e., cross-study concordance and cross-species concordance are important factors in weight-of-evidence risk assessment for DART.",
+        "source_section": "Section 9 — Principles of Risk Assessment",
+        "source_page": 21,
+        "source_quote": "Also, consistency of findings reported among studies, or between species can strengthen the concern for an adverse effect. Increased fetal lethality seen in a rodent EFD study that is consistent with decreased live litter sizes in the PPND study is an example of cross-study concordance. Observations of increased post implantation loss in rats and rabbits is an example of cross-species concordance.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["cross-species", "cross-study", "concordance", "weight-of-evidence"]
+      },
+      {
+        "rule_id": "S5R3-033",
+        "rule_text": "The testes and epididymides should be sampled and processed using methods which preserve the tissue architecture of the seminiferous epithelium. A detailed qualitative microscopic evaluation with awareness of the spermatogenic cycle is a sensitive means to detect effects on spermatogenesis.",
+        "source_section": "Section 10 — Endnote 1",
+        "source_page": 22,
+        "source_quote": "the testes and epididymides should be sampled and processed using methods which preserve the tissue architecture of the seminiferous epithelium. A detailed qualitative microscopic evaluation with awareness of the spermatogenic cycle is a sensitive means to detect effects on spermatogenesis.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["testicular-histopathology", "spermatogenic-cycle", "seminiferous-epithelium"]
+      },
+      {
+        "rule_id": "S5R3-034",
+        "rule_text": "The scientific rationale supporting the 25-fold exposure margin for DART dose selection is based on analysis of 22 known human teratogens: MEFL was observed at LOAEL exposures less than 6-fold the MRHD in at least one species. NOAEL exposures in at least one species were less than 4-fold the MRHD for all detected human teratogens.",
+        "source_section": "Section 10 — Endnote 2",
+        "source_page": 22,
+        "source_quote": "An analysis of 22 known human or presumed human teratogens showed that if MEFL was observed, exposure at the lowest observed adverse effect level (LOAEL) in at least one species was < 6-fold the exposure at the MRHD...exposure at the NOAEL in at least one species was < 4-fold the exposure at the MRHD.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["25-fold-rationale", "teratogens", "LOAEL", "NOAEL", "historical-analysis"]
+      },
+      {
+        "rule_id": "S5R3-035",
+        "rule_text": "The scope of S5(R3) applies to all pharmaceuticals, including biopharmaceuticals, vaccines (and their novel constitutive ingredients) for infectious diseases, and novel excipients. This guideline does not apply to cellular therapies, gene therapies and tissue-engineered products.",
+        "source_section": "Section 2 — Scope of the Guideline",
+        "source_page": 8,
+        "source_quote": "This guideline applies to all pharmaceuticals, including biopharmaceuticals, vaccines (and their novel constitutive ingredients) for infectious diseases, and novel excipients that are part of the final pharmaceutical product...This guideline does not apply to cellular therapies, gene therapies and tissue-engineered products.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "tags": ["scope", "biopharmaceuticals", "vaccines", "exclusions", "cell-gene-therapy"]
+      }
+    ]
+  }
+}

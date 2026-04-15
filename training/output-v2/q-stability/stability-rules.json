@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "title": "ICH Q1 Stability Requirements — Consolidated Extraction",
+    "scope": "ICH Q1A(R2), Q1B, Q1C, Q1D, Q1E, Q1F (withdrawn), WHO TRS 1010 Annex 10, ICH Q1 2025 Step 2 Draft",
+    "generated": "2026-03-22",
+    "version": "2.0",
+    "note": "Machine-readable rules for automated stability data evaluation in CTD Module 3.2.P.8 and 3.2.S.7"
+  },
+
+  "guidelines": {
+    "Q1A_R2": {
+      "title": "Stability Testing of New Drug Substances and Products",
+      "version": "Step 4, 6 February 2003",
+      "ich_code": "Q1A(R2)",
+      "scope": "New molecular entities and associated drug products; excludes abbreviated/abridged applications, clinical trial applications, biotechnological/biological products (see Q5C), and new dosage forms of approved actives (see Q1C)"
+    },
+    "Q1B": {
+      "title": "Stability Testing: Photostability Testing of New Drug Substances and Products",
+      "version": "Step 4, 6 November 1996",
+      "ich_code": "Q1B",
+      "scope": "Annex to Q1A; photostability of new molecular entities and drug products"
+    },
+    "Q1C": {
+      "title": "Stability Testing for New Dosage Forms",
+      "version": "Step 4, 6 November 1996",
+      "ich_code": "Q1C",
+      "scope": "New dosage forms of already-approved active substances by the same applicant"
+    },
+    "Q1D": {
+      "title": "Bracketing and Matrixing Designs for Stability Testing of New Drug Substances and Products",
+      "version": "Step 4, 7 February 2002",
+      "ich_code": "Q1D",
+      "scope": "Reduced stability study designs for drug products with multiple strengths, container sizes, or fills"
+    },
+    "Q1E": {
+      "title": "Evaluation for Stability Data",
+      "version": "Step 4, 6 February 2003",
+      "ich_code": "Q1E",
+      "scope": "Statistical evaluation of stability data, extrapolation rules, shelf life estimation"
+    },
+    "Q1F_withdrawn": {
+      "title": "Stability Data Package for Registration in Climatic Zones III and IV",
+      "version": "Withdrawn (ICH Steering Committee)",
+      "ich_code": "Q1F",
+      "scope": "Withdrawn due to divergence in Zone IV requirements; replaced by WHO TRS 1010 Annex 10 and regional guidelines",
+      "replacement": "WHO Technical Report Series No. 1010, Annex 10 (2018)"
+    },
+    "Q1_2025_draft": {
+      "title": "ICH Q1 Stability Studies for Drug Substances and Drug Products",
+      "version": "Step 2 Draft, 11 April 2025",
+      "ich_code": "Q1 (consolidated revision)",
+      "scope": "Consolidates Q1A(R2), Q1B, Q1C, Q1D, Q1E, and Q5C into a single guideline; adds ATMPs, enhanced modelling, in-use stability, holding times, short-term storage",
+      "status": "Step 2 public comment; Step 4 target late 2026/2027"
+    }
+  },
+
+  "storage_conditions": {
+    "drug_substance": {
+      "general_case": {
+        "long_term": [
+          {
+            "option": "A",
+            "temperature_c": "25 +/- 2",
+            "humidity_rh_pct": "60 +/- 5",
+            "zones": ["I", "II"],
+            "min_duration_months": 12,
+            "note": "If this option is selected, intermediate testing at 30C/65%RH is required when significant change occurs at accelerated"
+          },
+          {
+            "option": "B",
+            "temperature_c": "30 +/- 2",
+            "humidity_rh_pct": "65 +/- 5",
+            "zones": ["IVa"],
+            "min_duration_months": 12,
+            "note": "No intermediate condition when this is the long-term condition"
+          },
+          {
+            "option": "C",
+            "temperature_c": "30 +/- 2",
+            "humidity_rh_pct": "75 +/- 5",
+            "zones": ["IVb"],
+            "min_duration_months": 12,
+            "note": "WHO-specified for hot/very humid climates; no intermediate condition"
+          }
+        ],
+        "intermediate": {
+          "temperature_c": "30 +/- 2",
+          "humidity_rh_pct": "65 +/- 5",
+          "min_duration_months": 6,
+          "trigger": "Required when long-term is 25C/60%RH AND significant change occurs at accelerated within 6 months",
+          "note": "Not applicable when long-term is 30C/65%RH or 30C/75%RH"
+        },
+        "accelerated": {
+          "temperature_c": "40 +/- 2",
+          "humidity_rh_pct": "75 +/- 5",
+          "min_duration_months": 6
+        }
+      },
+      "refrigerated": {
+        "long_term": {
+          "temperature_c": "5 +/- 3",
+          "humidity_rh_pct": null,
+          "min_duration_months": 12
+        },
+        "accelerated": {
+          "temperature_c": "25 +/- 2",
+          "humidity_rh_pct": "60 +/- 5",
+          "min_duration_months": 6
+        }
+      },
+      "freezer": {
+        "long_term": {
+          "temperature_c": "-20 +/- 5",
+          "humidity_rh_pct": null,
+          "min_duration_months": 12
+        },
+        "accelerated": null,
+        "excursion_testing": "Single batch at 5C +/- 3C or 25C +/- 2C to address short-term excursions"
+      },
+      "below_minus_20": {
+        "approach": "Case-by-case",
+        "long_term": "At proposed storage temperature",
+        "accelerated": null
+      }
+    },
+    "drug_product": {
+      "general_case": {
+        "long_term": [
+          {
+            "option": "A",
+            "temperature_c": "25 +/- 2",
+            "humidity_rh_pct": "60 +/- 5",
+            "zones": ["I", "II"],
+            "min_duration_months": 12
+          },
+          {
+            "option": "B",
+            "temperature_c": "30 +/- 2",
+            "humidity_rh_pct": "65 +/- 5",
+            "zones": ["IVa"],
+            "min_duration_months": 12
+          },
+          {
+            "option": "C",
+            "temperature_c": "30 +/- 2",
+            "humidity_rh_pct": "75 +/- 5",
+            "zones": ["IVb"],
+            "min_duration_months": 12
+          }
+        ],
+        "intermediate": {
+          "temperature_c": "30 +/- 2",
+          "humidity_rh_pct": "65 +/- 5",
+          "min_duration_months": 6,
+          "trigger": "Required when long-term is 25C/60%RH AND significant change at accelerated within 6 months"
+        },
+        "accelerated": {
+          "temperature_c": "40 +/- 2",
+          "humidity_rh_pct": "75 +/- 5",
+          "min_duration_months": 6
+        }
+      },
+      "impermeable_containers": {
+        "note": "Humidity not a concern; stability studies at any controlled or ambient humidity",
+        "examples": "Glass ampoules, aluminum tubes, sealed aluminum cans"
+      },
+      "semi_permeable_containers": {
+        "long_term": [
+          {
+            "option": "A",
+            "temperature_c": "25 +/- 2",
+            "humidity_rh_pct": "40 +/- 5",
+            "min_duration_months": 12
+          },
+          {
+            "option": "B",
+            "temperature_c": "30 +/- 2",
+            "humidity_rh_pct": "35 +/- 5",
+            "min_duration_months": 12
+          }
+        ],
+        "intermediate": {
+          "temperature_c": "30 +/- 2",
+          "humidity_rh_pct": "35 +/- 5",
+          "min_duration_months": 6
+        },
+        "accelerated": {
+          "temperature_c": "40 +/- 2",
+          "humidity_rh_pct": "NMT 25",
+          "min_duration_months": 6
+        },
+        "significant_change_water_loss": "5% loss in water from initial value after equivalent of 3 months at 40C/NMT 25% RH",
+        "small_containers": "For containers 1 mL or less or unit-dose: 5% water loss acceptable if justified",
+        "water_loss_rate_ratios": [
+          {"alternative_rh": "60%", "reference_rh": "25%", "ratio": 1.9},
+          {"alternative_rh": "60%", "reference_rh": "40%", "ratio": 1.5},
+          {"alternative_rh": "65%", "reference_rh": "35%", "ratio": 1.9},
+          {"alternative_rh": "75%", "reference_rh": "25%", "ratio": 3.0}
+        ]
+      },
+      "refrigerated": {
+        "long_term": {
+          "temperature_c": "5 +/- 3",
+          "humidity_rh_pct": null,
+          "min_duration_months": 12
+        },
+        "accelerated": {
+          "temperature_c": "25 +/- 2",
+          "humidity_rh_pct": "60 +/- 5",
+          "min_duration_months": 6
+        }
+      },
+      "freezer": {
+        "long_term": {
+          "temperature_c": "-20 +/- 5",
+          "humidity_rh_pct": null,
+          "min_duration_months": 12
+        },
+        "accelerated": null,
+        "excursion_testing": "Single batch at 5C +/- 3C or 25C +/- 2C"
+      },
+      "below_minus_20": {
+        "approach": "Case-by-case"
+      }
+    }
+  },
+
+  "climatic_zones": {
+    "zone_I": {
+      "description": "Temperate",
+      "long_term_condition": "21C / 45% RH",
+      "note": "WHO-defined; ICH regions use Zone II conditions"
+    },
+    "zone_II": {
+      "description": "Subtropical / Mediterranean",
+      "long_term_condition": "25C / 60% RH",
+      "regions": ["EU", "USA", "Canada", "Japan"]
+    },
+    "zone_III": {
+      "description": "Hot and dry",
+      "long_term_condition": "30C / 35% RH"
+    },
+    "zone_IVa": {
+      "description": "Hot and humid",
+      "long_term_condition": "30C / 65% RH"
+    },
+    "zone_IVb": {
+      "description": "Hot and very humid",
+      "long_term_condition": "30C / 75% RH",
+      "note": "Adopted by ASEAN, Brazil, and others after Q1F withdrawal"
+    }
+  },
+
+  "testing_time_points": {
+    "long_term": {
+      "shelf_life_gt_12_months": {
+        "first_year": "Every 3 months (0, 3, 6, 9, 12)",
+        "second_year": "Every 6 months (18, 24)",
+        "thereafter": "Annually (36, 48, ...)"
+      },
+      "shelf_life_lte_12_months": {
+        "first_3_months": "Monthly (0, 1, 2, 3)",
+        "thereafter": "Every 3 months through proposed shelf life"
+      }
+    },
+    "accelerated": {
+      "duration_months": 6,
+      "minimum_time_points": 3,
+      "example": [0, 3, 6],
+      "note": "If results likely to approach significant change, add 4th time point or additional samples at final"
+    },
+    "intermediate": {
+      "duration_months": 12,
+      "minimum_time_points": 4,
+      "example": [0, 6, 9, 12]
+    }
+  },
+
+  "batch_requirements": {
+    "drug_substance": {
+      "minimum_batches": 3,
+      "scale": "Minimum pilot scale",
+      "synthetic_route": "Same as production scale",
+      "container_closure": "Same as or simulating proposed storage/distribution packaging"
+    },
+    "drug_product": {
+      "minimum_batches": 3,
+      "scale": "At least 2 of 3 at pilot scale; 3rd can be smaller if justified",
+      "formulation": "Same formulation and container closure as proposed for marketing",
+      "drug_substance_batches": "Use different drug substance batches where possible",
+      "each_strength_and_size": "Each individual strength and container size tested unless bracketing/matrixing applied"
+    }
+  },
+
+  "significant_change_criteria": {
+    "drug_substance": {
+      "definition": "Failure to meet its specification"
+    },
+    "drug_product": {
+      "criteria": [
+        {
+          "id": "SC-1",
+          "attribute": "Assay",
+          "threshold": "5% change from initial value",
+          "note": "Or failure to meet acceptance criteria for potency when using biological/immunological procedures"
+        },
+        {
+          "id": "SC-2",
+          "attribute": "Degradation products",
+          "threshold": "Any degradation product exceeding its acceptance criterion"
+        },
+        {
+          "id": "SC-3",
+          "attribute": "Appearance / physical attributes / functionality",
+          "threshold": "Failure to meet acceptance criteria",
+          "examples": "Color, phase separation, resuspendibility, caking, hardness, dose delivery per actuation",
+          "exceptions": "Softening of suppositories and melting of creams may be expected under accelerated conditions"
+        },
+        {
+          "id": "SC-4",
+          "attribute": "pH",
+          "threshold": "Failure to meet acceptance criterion (as appropriate for dosage form)"
+        },
+        {
+          "id": "SC-5",
+          "attribute": "Dissolution",
+          "threshold": "Failure to meet acceptance criteria for 12 dosage units"
+        },
+        {
+          "id": "SC-6",
+          "attribute": "Water loss (semi-permeable containers)",
+          "threshold": "5% loss from initial value after equivalent of 3 months at 40C/NMT 25% RH"
+        }
+      ],
+      "accelerated_exceptions_not_significant_change": [
+        "Softening of suppository designed to melt at 37C if melting point clearly demonstrated",
+        "Dissolution failure for gelatin capsule or gel-coated tablet if unequivocally attributed to cross-linking"
+      ],
+      "accelerated_is_significant_change": [
+        "Phase separation of a semi-solid dosage form"
+      ]
+    }
+  },
+
+  "extrapolation_rules": {
+    "room_temperature": {
+      "scenario_A": {
+        "condition": "No significant change at accelerated; little/no change AND little/no variability in long-term + accelerated",
+        "without_stats": "Y = up to 2X, max X + 12 months",
+        "with_stats": "Statistical analysis normally unnecessary"
+      },
+      "scenario_B_no_stats": {
+        "condition": "No significant change at accelerated; change/variability present; no statistical analysis",
+        "limit": "Y = up to 1.5X, max X + 6 months"
+      },
+      "scenario_B_with_stats": {
+        "condition": "No significant change at accelerated; change/variability present; statistical analysis performed",
+        "limit": "Y = up to 2X, max X + 12 months"
+      },
+      "scenario_E_no_stats": {
+        "condition": "Significant change at accelerated; NO significant change at intermediate; no stats",
+        "limit": "Y = up to X + 3 months",
+        "requires": "Supporting data"
+      },
+      "scenario_E_with_stats": {
+        "condition": "Significant change at accelerated; NO significant change at intermediate; stats performed",
+        "limit": "Y = up to 1.5X, max X + 6 months"
+      },
+      "scenario_D": {
+        "condition": "Significant change at accelerated AND intermediate",
+        "limit": "No extrapolation; shorter shelf life may be called for"
+      }
+    },
+    "refrigerated": {
+      "no_sig_change_little_variability": "Y = up to 1.5X, max X + 6 months",
+      "no_sig_change_with_variability_no_stats": "Y = up to X + 3 months",
+      "no_sig_change_with_variability_with_stats": "Y = up to 1.5X, max X + 6 months",
+      "sig_change_3_to_6_months": "No extrapolation; based on long-term data only",
+      "sig_change_within_3_months": "No extrapolation; shorter shelf life may apply"
+    },
+    "freezer": {
+      "approach": "Based on long-term data only; test at elevated temp for excursions"
+    },
+    "below_minus_20": {
+      "approach": "Based on long-term data only; case-by-case"
+    },
+    "biologicals_2025_draft": {
+      "limit": "1.5x available long-term data, maximum 12 months beyond",
+      "conditions": "Only for well-characterised frozen biological DS with 95% confidence limit statistical analysis showing no significant/meaningful change",
+      "requires": "Risk-based justification including knowledge of molecule, degradation profile, container/closure"
+    },
+    "general_rule": "Extrapolated shelf life must always be verified by additional long-term data as soon as available"
+  },
+
+  "statistical_evaluation": {
+    "shelf_life_estimation": {
+      "method": "95% one-sided confidence limit for the mean regression curve intersecting acceptance criterion",
+      "for_decrease": "Lower one-sided 95% CL vs lower acceptance criterion",
+      "for_increase": "Upper one-sided 95% CL vs upper acceptance criterion",
+      "for_unknown_direction": "Two-sided 95% CL vs upper and lower acceptance criteria",
+      "regression_models": ["Linear", "Quadratic", "Cubic"],
+      "scales": ["Arithmetic", "Logarithmic"]
+    },
+    "batch_poolability": {
+      "method": "Analysis of Covariance (ANCOVA)",
+      "step_1": "Test equality of slopes among batches at significance level 0.25",
+      "step_1_reject": "Do NOT pool; estimate shelf life per batch using individual slopes/intercepts and pooled MSE; use SHORTEST estimate",
+      "step_2": "If slopes not significantly different, test equality of intercepts at significance level 0.25",
+      "step_2_reject": "Combine with common slope but individual intercepts; use SHORTEST estimate",
+      "step_3": "If neither slopes nor intercepts significantly different: fully pool all data for single shelf life estimate",
+      "significance_level_batch_terms": 0.25,
+      "significance_level_non_batch_terms": 0.05,
+      "minimum_batches": 3,
+      "note": "p > 0.25 means reject the hypothesis that batches differ (i.e., batches are similar enough to pool)"
+    },
+    "multi_factor_ancova": {
+      "applies_to": "Matrixing/bracketing designs with multiple factors",
+      "significance_batch": 0.25,
+      "significance_non_batch": 0.05,
+      "order": "Test slope terms before intercept terms",
+      "higher_order_interactions": "Can be excluded if justified as negligible"
+    },
+    "enhanced_modelling_2025_draft": {
+      "kinetic_models": "Empirical fit of stability data to kinetic functions",
+      "thermo_kinetic_models": "Modified Arrhenius equation and derivatives",
+      "mechanistic_models": "Based on understanding of degradation pathways",
+      "bayesian_statistics": "Incorporating prior knowledge from analogous molecules",
+      "ai_ml": "Recognized as emerging tools; same validation principles apply",
+      "no_upper_limit": "No upper limit on shelf life prediction using enhanced models if risk-based and scientifically justified",
+      "framework_elements": [
+        "Purpose",
+        "Description",
+        "Variables",
+        "Statistical tools",
+        "Sample size",
+        "Model fitting",
+        "Prior knowledge justification",
+        "Model evaluation/robustness",
+        "Uncertainty quantitation",
+        "Validation/verification",
+        "Lifecycle considerations and risk management"
+      ]
+    }
+  },
+
+  "photostability": {
+    "source": "ICH Q1B",
+    "light_sources": {
+      "option_1": {
+        "description": "Single source producing output similar to D65/ID65 emission standard (ISO 10977:1993)",
+        "examples": ["Artificial daylight fluorescent lamp", "Xenon lamp", "Metal halide lamp"],
+        "filter": "If significant radiation below 320 nm, use appropriate filter to eliminate"
+      },
+      "option_2": {
+        "description": "Two separate sources used together on same sample",
+        "source_1": "Cool white fluorescent lamp (ISO 10977:1993)",
+        "source_2": "Near-UV fluorescent lamp, 320-400 nm, peak 350-370 nm"
+      },
+      "option_3_2025_draft": {
+        "description": "Ambient/mild >400 nm, fluorescent or LED",
+        "note": "New in 2025 draft for forced degradation"
+      }
+    },
+    "exposure_requirements": {
+      "visible_light": {
+        "minimum": "1.2 million lux hours",
+        "type": "Overall illumination"
+      },
+      "near_uv_energy": {
+        "minimum": "200 Wh/m2",
+        "type": "Integrated near-ultraviolet energy"
+      }
+    },
+    "forced_degradation_2025_draft": {
+      "visible": "43,000 - 260,000 lux hours (>400 nm)",
+      "uv": "0.3 - 3 Wh/m2 (350-400 nm)",
+      "duration": "1 - 7 days"
+    },
+    "sample_presentation": {
+      "solids": "Glass or plastic dish, thickness typically NMT 3 mm, transparent cover if needed",
+      "liquids": "Chemically inert and transparent containers",
+      "tablets_capsules": "Spread in single layer",
+      "composite_size": "Approximately 20 tablets or capsules for analysis"
+    },
+    "dark_controls": {
+      "required": true,
+      "method": "Wrapped in aluminum foil, placed alongside exposed sample",
+      "analysis": "Must be performed concomitantly with exposed sample"
+    },
+    "testing_approach": {
+      "drug_substance": {
+        "forced_degradation": "Part of stress testing; conditions at applicant's discretion; single batch",
+        "confirmatory": "Standardized conditions (1.2M lux hours, 200 Wh/m2); single batch; up to 2 additional if equivocal"
+      },
+      "drug_product": {
+        "sequential_testing": [
+          "Step 1: Test directly exposed product (outside packaging)",
+          "Step 2: If unacceptable, test in immediate pack",
+          "Step 3: If still unacceptable, test in marketing pack",
+          "Step 4: If still unacceptable, redesign package or reformulate"
+        ],
+        "batches": "At least one primary batch; up to 2 additional if equivocal"
+      }
+    },
+    "actinometry": {
+      "solution": "2% w/v aqueous quinine monohydrochloride dihydrate",
+      "option_1": {
+        "container": "20 mL colorless ampoule with 10 mL solution",
+        "minimum_absorbance_change": "Delta-A >= 0.9 at 400 nm, 1 cm path"
+      },
+      "option_2": {
+        "container": "1 cm quartz cell",
+        "minimum_absorbance_change": "Delta-A >= 0.5 at 400 nm, 1 cm path"
+      }
+    },
+    "acceptance_criteria": "Not prescriptive; 'acceptable change' defined and justified by applicant within ICH Q1A/Q3A/Q3B specifications"
+  },
+
+  "new_dosage_forms_Q1C": {
+    "definition": "Different pharmaceutical product type containing same active substance as an existing approved product, by the same applicant",
+    "categories": [
+      "Different administration route (e.g., oral to parenteral)",
+      "New functionality/delivery system (e.g., IR tablet to MR tablet)",
+      "Different dosage form same route (e.g., capsule to tablet, solution to suspension)"
+    ],
+    "reduced_data_at_submission": {
+      "accelerated": "6 months",
+      "long_term": "6 months from ongoing studies",
+      "justification": "Required; based on existing stability knowledge of active substance"
+    },
+    "protocol": "Same as Q1A in principle; same conditions, parameters, design"
+  },
+
+  "bracketing_Q1D": {
+    "definition": "Testing only extremes of design factors (strength, container size, fill) at all time points; intermediates assumed represented by extremes",
+    "acceptable_when": [
+      "Multiple strengths of identical or closely related formulations",
+      "Same container closure system with either container size OR fill varying (not both)",
+      "Comparable stability profiles among strengths demonstrated"
+    ],
+    "not_acceptable_when": [
+      "Different excipients among strengths",
+      "Both container size AND fill vary simultaneously",
+      "Cannot demonstrate selected items are true extremes",
+      "Drug substances (generally not applicable)"
+    ],
+    "if_extremes_differ": "Intermediates assigned shelf life of least stable extreme"
+  },
+
+  "matrixing_Q1D": {
+    "definition": "Testing a selected subset of total possible samples at each time point; different subsets at different time points",
+    "rules": [
+      "Each storage condition treated separately",
+      "NOT performed across test attributes",
+      "Design should be balanced across factor combinations",
+      "All combinations tested at initial and final time points",
+      "Minimum 3 time points including initial through first 12 months per combination",
+      "Accelerated/intermediate: minimum 3 time points per combination"
+    ],
+    "acceptable_when": [
+      "Supporting data indicate predictable stability",
+      "Small variability in supporting data",
+      "Identical or closely related formulations"
+    ],
+    "not_acceptable_when": [
+      "Large variability in supporting data",
+      "Drug substances (limited utility)"
+    ],
+    "reductions": {
+      "one_half_reduction": "Actual reduction ~15/48 time points (initial, 12-month, and final fully tested)",
+      "one_third_reduction": "Actual reduction ~10/48 time points"
+    }
+  },
+
+  "stress_testing": {
+    "drug_substance": {
+      "batches": 1,
+      "temperature": "10C increments above accelerated (e.g., 50C, 60C)",
+      "humidity": "75% RH or greater where appropriate",
+      "other": ["Oxidation", "Photolysis (per Q1B)", "Hydrolysis across wide pH range"],
+      "note": "Degradation products from stress not formed under accelerated/long-term need not be further examined"
+    }
+  },
+
+  "labeling_requirements": {
+    "storage_statement": "Required per national/regional requirements",
+    "prohibited_terms": ["ambient conditions", "room temperature"],
+    "drug_substance": "Display retest date on container label",
+    "drug_product": "Display expiration date on container label",
+    "hot_humid_climates": "Additional 'Protect from moisture' statement when long-term is 30C/65%RH or higher"
+  },
+
+  "stability_commitment": {
+    "when_required": "When long-term data at submission do not cover proposed retest period/shelf life",
+    "scope": "Continue long-term studies through proposed period + accelerated through 6 months on 3 production batches",
+    "ongoing_post_approval": "At least 1 production batch DS and 1 per strength DP per year through end of retest/shelf life"
+  },
+
+  "in_use_stability_2025_draft": {
+    "scope": "Multi-dose products, reconstituted/diluted products, drug-device combinations",
+    "batches": "Minimum 2 batches; at least 1 chosen toward end of shelf life",
+    "testing": "Includes microbiological testing (PET/AET)",
+    "acceptance_criteria": "Product must meet shelf life specifications during in-use period"
+  },
+
+  "holding_times_2025_draft": {
+    "scope": "Processing and holding times for intermediates",
+    "submission_thresholds": {
+      "solid_dosage_forms": "> 30 days triggers submission-level data",
+      "non_solid_or_sterile": "> 24 hours triggers submission-level data"
+    },
+    "below_threshold": "Managed within PQS"
+  },
+
+  "short_term_storage_2025_draft": {
+    "definition": "Labelled short-term storage condition different from long-term (e.g., refrigerated product at room temperature temporarily)",
+    "batches": "Minimum 2",
+    "requirement": "Product must remain within shelf life specifications",
+    "re_evaluation": "Not needed unless stability-impacting change occurs"
+  },
+
+  "advanced_therapies_2025_draft": {
+    "scope": "Somatic cell therapy, gene therapies, tissue-engineered products",
+    "CQAs": ["Cell viability", "Viral particle numbers", "Transduction efficiency", "Gene expression", "Structural integrity"],
+    "shelf_life": "Generally based on real-time data; accelerated not predictive for ATMPs",
+    "min_data_at_submission": "6 months",
+    "additional": "Cell bank and viral bank stability; starting materials stability"
+  },
+
+  "container_orientation_2025_draft": {
+    "liquids_semi_solids_suspensions": "Both inverted (horizontal) AND upright (vertical) unless worst-case justified",
+    "when_interactions_possible": "Both orientations required"
+  },
+
+  "post_approval_changes_2025_draft": {
+    "no_stability_impact": "No new data needed",
+    "potential_impact": "Risk assessment +/- stability study",
+    "demonstrated_impact": "Re-establish retest/shelf life",
+    "shelf_life_extension": "Minimum 3 production or primary batches with acceptable stability data"
+  }
+}

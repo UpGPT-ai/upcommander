@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "title": "Guideline on clinical investigation of medicinal products in the treatment or prevention of diabetes mellitus",
+    "source_file": "guideline-clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-revision-2_en.pdf",
+    "source_directory": "training/stage-1/ema-guidelines-v2",
+    "document_date": "2023-06-22",
+    "document_version": "CPMP/EWP/1080/00 Rev.2",
+    "document_type": "Finalized Guideline (replaces CPMP/EWP/1080/00 Rev. 1; in effect 1 January 2024)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 22
+  },
+  "rules": [
+    {
+      "rule_id": "EMA-DM-001",
+      "rule_text": "HbA1c is the primary endpoint for confirmatory clinical trials in type 2 diabetes; a well-validated assay must be used (reference methods recommended by scientific bodies for international standardisation of HbA1c measurement); centralised analyses are strongly recommended, at least for therapeutic confirmatory studies.",
+      "source_section": "Section 4.2.2.1. Haemoglobin A1c",
+      "source_page": 7,
+      "verbatim_quote": "Glycated haemoglobin (HbA1c) is the most widely accepted measure of overall, long-term blood glucose control in patients with diabetes. A well-validated assay for HbA1c should be used, i.e. reference methods recommended by scientific bodies involved in the international standardisation of HbA1c measurement. Centralised analyses are strongly recommended, at least for therapeutic confirmatory studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Plasma glucose parameters may be used as primary endpoints in short-term studies under 8 weeks where HbA1c is less suitable.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "ICH E9(R1)"]
+    },
+    {
+      "rule_id": "EMA-DM-002",
+      "rule_text": "Estimands must be pre-specified prospectively for all confirmatory studies; strategies for handling intercurrent events (treatment discontinuation, rescue medication, additional medications) must be defined and must inform trial design, data collection, and choice of analysis method.",
+      "source_section": "Section 4.2.1. Efficacy criteria/Treatment goals",
+      "source_page": 6,
+      "verbatim_quote": "It is important to be precise with respect to the trial objectives. In particular, intercurrent events will occur which may either preclude observations of the variable of interest or affect its interpretation. Specification of strategies to address these intercurrent events to precisely define a treatment effect of interest should then, in turn, inform trial design, data collection and choice of analysis method.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "ICH E9(R1) EMA/CHMP/ICH/436221/2017"]
+    },
+    {
+      "rule_id": "EMA-DM-003",
+      "rule_text": "For the treatment-policy estimand strategy, data obtained after discontinuation of randomised treatment are of principal interest and appropriate missing data imputation methods must be applied when such data are missing.",
+      "source_section": "Section 4.2.2.1 — Treatment discontinuation",
+      "source_page": 7,
+      "verbatim_quote": "The analytical approach, including the handling of missing data, should be aligned to the agreed target of estimation. Data obtained after discontinuation of treatment are of principle interest to be used for the treatment-policy strategy. In case data are missing after treatment discontinuation, appropriate missing data imputation methods would have to be applied.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "EMA/CPMP/EWP/1776/99 Rev.1"]
+    },
+    {
+      "rule_id": "EMA-DM-004",
+      "rule_text": "The confirmatory programme for type 2 diabetes (non-insulin) must include: (1) superiority over placebo in at least one monotherapy study ≥3 months; (2) superiority over placebo when added to established background therapies; and (3) non-inferiority to an established active comparator representing standard of care in at least one active-controlled study submitted with the MAA.",
+      "source_section": "Section 4.3.4. Confirmatory studies — 4.3.4.1. General design elements",
+      "source_page": 10,
+      "verbatim_quote": "The therapeutic confirmatory trials should aim at demonstrating: Superiority of the new agent over placebo in at least one monotherapy study of no less than 3 months duration... Superiority of the new agent over placebo when added to background therapies, which represents established therapies in the studied population... Non-inferiority of the new agent to an established active comparator. At least one active-controlled study is recommended to be submitted with the marketing authorisation application.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-005",
+      "rule_text": "When pre-defining a non-inferiority margin for HbA1c in diabetes trials, a margin of 0.3% (3 mmol/mol) is generally considered acceptable; any margin must be justified by balancing potential inferiority against other documented clinical advantages.",
+      "source_section": "Section 4.3.4.1. General design elements",
+      "source_page": 10,
+      "verbatim_quote": "A margin of 0.3% (3 mmol/mol) is generally considered acceptable. If non-inferiority cannot convincingly be demonstrated, it is necessary to balance the degree of the observed or potential inferiority against other clinical advantages documented in the development program regarding e.g., safety, tolerability, compliance, and/or improvement in cardiovascular risk profile or risk of long-term complications.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Smaller margins may be needed depending on the clinical context.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-006",
+      "rule_text": "At least one confirmatory trial must demonstrate maintenance of effect over at least 12 months; the primary endpoint should be HbA1c.",
+      "source_section": "Section 4.3.4.1. General design elements",
+      "source_page": 10,
+      "verbatim_quote": "Confirmatory studies (except for placebo controlled monotherapy studies) are typically 6 months in duration but at least one trial, preferably active-controlled, should demonstrate maintenance of effect over at least 12 months.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Placebo-controlled monotherapy studies may be of shorter duration.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-007",
+      "rule_text": "For a monotherapy indication, placebo-controlled comparison is always required regardless of whether the MAA is for monotherapy or add-on; placebo-controlled monotherapy studies of more than 3 months should be reserved for patients at an early stage of disease; placebo for more than 6 months is generally not recommended.",
+      "source_section": "Section 4.3.4.2. Requirements for monotherapy indication",
+      "source_page": 10,
+      "verbatim_quote": "Comparison of the test agent to placebo in the monotherapy setting is always required to evaluate the genuine glucose lowering effect and safety profile of the new agent. Placebo-controlled monotherapy studies of more than three months in duration should be reserved for patients at an early stage of the disease. Use of placebo for more than 6 months is generally not recommended.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Use of strict glycaemic rescue criteria may allow inclusion of patients with high baseline HbA1c in studies >3 months.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-008",
+      "rule_text": "New medicinal products for the treatment of diabetes must show a neutral or beneficial effect on cardiovascular risk parameters; the drug development programme must adequately characterise the cardiovascular safety profile per the CHMP Reflection Paper (EMA/CHMP/50549/2015).",
+      "source_section": "Section 4.5.3. Cardiovascular safety",
+      "source_page": 14,
+      "verbatim_quote": "It is expected that the drug development program, containing all relevant clinical and non-clinical data, adequately characterizes the cardiovascular safety profile enabling an evaluation of the cardiovascular safety in the marketing authorization application. A new medicinal product for the treatment of diabetes should preferably show a neutral or beneficial effect on factors associated with cardiovascular risk.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "EMA/CHMP/50549/2015"]
+    },
+    {
+      "rule_id": "EMA-DM-009",
+      "rule_text": "Hypoglycaemia definitions must be standardised using the International Hypoglycaemia Study Group classification across all protocols within the development programme; a detailed analysis of hypoglycaemic episodes stratified by age group (≤65, 65-74, 75-84, 85+ years), timing relative to drug exposure, diurnal distribution, and per-episode characteristics must be provided.",
+      "source_section": "Section 4.5.2. Hypoglycaemia and Section 8.2",
+      "source_page": 13,
+      "verbatim_quote": "A standardised definition of severe and less severe episodes of hypoglycaemia should be used as defined by Learned Societies. A detailed analysis of hypoglycaemic episodes noted in clinical trials should be provided (e.g., analysis stratified by age: ≤ 65 years, 65-74; 75-84 and 85+ years, timing of the episodes in relation to drug exposure, diurnal distribution, and for each episode: time of onset, time after last drug administration, time after meal, severity, duration, outcome of hypoglycaemia, dose of treatment).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "International Hypoglycaemia Study Group (Diabetes Care 2017)"]
+    },
+    {
+      "rule_id": "EMA-DM-010",
+      "rule_text": "If the new agent is a protein, immunogenicity (anti-drug antibody incidence and titres over time) must be assessed and compared to that observed with established reference products; reference must be made to the EMA guideline on immunogenicity assessment of therapeutic proteins.",
+      "source_section": "Section 4.5.4. Immunogenicity",
+      "source_page": 14,
+      "verbatim_quote": "If the new agent is a protein, development of anti-drug antibodies should be addressed including antibody incidence and titres over time. Regarding general aspects on immunogenicity assessment, reference is made to the 'Guideline on immunogenicity assessment of therapeutic proteins' (EMEA/CHMP/BMWP/14327/2006/Rev.1).",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Applies specifically to protein-based medicinal products.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "EMEA/CHMP/BMWP/14327/2006/Rev.1"]
+    },
+    {
+      "rule_id": "EMA-DM-011",
+      "rule_text": "Elderly patients (65-74, 75-84, and 85+ years) must be adequately represented in confirmatory studies for diabetes products; PK data in the elderly must be provided; special attention must be paid to hypoglycaemia risk and optimal dose titration in this population.",
+      "source_section": "Section 4.4.1. Elderly",
+      "source_page": 12,
+      "verbatim_quote": "Data should be presented for various older age groups (65-74; 75-84 and 85+ years) to assess the consistency of the treatment effect and safety profile of these patients with the non-geriatric patient population. Depending on the data, specific efficacy and safety trials in this population may be needed. Safety of the tested product, especially occurrence of hypoglycaemia, is a matter of concern in the elderly and very elderly.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "ICH E7"]
+    },
+    {
+      "rule_id": "EMA-DM-012",
+      "rule_text": "For type 2 diabetes products seeking a paediatric indication, separate paediatric trials are generally required; trials in children/adolescents should be performed in patients aged 10 to 18 years; a total of at least 12 months of exposure is expected before granting a paediatric marketing authorisation; paediatric PK studies must be included in all types of patients for whom treatment is intended.",
+      "source_section": "Section 4.4.2. Children and adolescents",
+      "source_page": 12,
+      "verbatim_quote": "It is in general recommended that separate paediatric trials evaluating efficacy and safety should be carried out. Completion of an extension phase to provide a total of at least 12 months of exposure is expected before granting a marketing authorization in children unless it can be justified why this is not needed. Currently it is recommended that trials are performed in patients aged 10 to 18 years old.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Extrapolation of efficacy data in young adults to adolescents and/or younger children may be possible to a limited extent if appropriately justified and pre-specified.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "ICH E11(R1)"]
+    },
+    {
+      "rule_id": "EMA-DM-013",
+      "rule_text": "For insulin preparations, clinical studies in the paediatric population are normally required since type 1 diabetes predominantly develops in children; paediatric patients must be stratified by age group (<1 year, 1 to <6 years, 6 to <12 years, 12 to <18 years); immunogenicity (anti-insulin antibodies) must be evaluated for at least 1 year.",
+      "source_section": "Section 5.5.2. Children and Section 5.6.5. Children",
+      "source_page": 17,
+      "verbatim_quote": "Since type 1 diabetes predominantly develops in children, adolescents and younger adults, clinical studies for insulin preparations are normally required in the paediatric population, unless otherwise justified. Paediatric patients should be stratified by age group: < 1 year, 1 to < 6y, 6 to < 12y, 12 to < 18y. Immunogenicity (anti-insulin response) is increased in children compared to adults and should always be evaluated, preferably for a duration of one year including antibody incidence and antibody titres.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "If efficacy and safety of a novel insulin is demonstrated in adults with type 2 diabetes and in children with type 1 diabetes, additional data in paediatric patients with type 2 diabetes may not be needed.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "ICH E11(R1)"]
+    },
+    {
+      "rule_id": "EMA-DM-014",
+      "rule_text": "For insulin pharmacodynamic studies, the glucose clamp technique is the preferred method to assess the time-action profile of insulins.",
+      "source_section": "Section 5.4.2. Pharmacodynamics",
+      "source_page": 16,
+      "verbatim_quote": "Pharmacodynamic data in insulin-sensitive patients with type 1 diabetes are of primary importance for the comparison of insulin preparations, including their use in mixtures. The glucose clamp technique is the preferred method to assess the time-action profile of insulins.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-015",
+      "rule_text": "For novel insulin analogues, long-term (at least 12-month) efficacy and safety data are essential; differences in PK/PD parameters alone cannot be used to claim superiority over a comparator unless they translate into improved HbA1c or other statistically significant and clinically relevant benefits.",
+      "source_section": "Section 5.1. Specific considerations",
+      "source_page": 14,
+      "verbatim_quote": "For novel insulins (e.g., insulin analogues), long-term (at least 12-month) efficacy and safety data are essential. Differences in parameters of PK/PD activity cannot be used to claim superiority over a comparator unless the differences translate into improved HbA1c or other statistically significant and clinically relevant benefits.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "For premixed combinations of insulins already individually licensed, shorter (≥3 months) controlled trials are generally appropriate.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-016",
+      "rule_text": "For high-strength insulins (above 100 units/ml EU standard) and fixed-combination insulin products, the high-strength or fixed-combination insulin product should preferably be manufactured in pre-filled pens only; the pen must automatically adjust for strength and the dose counter must display the number of insulin units without requiring dose conversion when switching from standard strength.",
+      "source_section": "Section 5.6.4. High strength and fixed combination insulin products",
+      "source_page": 18,
+      "verbatim_quote": "The high strength insulin or the fixed combination insulin product should preferably be manufactured in pre-filled pens only. The pre-filled pen should automatically adjust for strength and no dose conversion or re-calculation should be required when switching between standard strength (100 units/ml) and higher strength or fixed combination insulin products within the same product range.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2", "EMA/686009/2014"]
+    },
+    {
+      "rule_id": "EMA-DM-017",
+      "rule_text": "For non-insulin products treating type 1 diabetes (as adjunct to insulin), phase III studies must be placebo-controlled; the preferred primary endpoint is change in HbA1c from baseline after approximately 26 weeks of double-blind treatment; a 6-month extension phase is required to demonstrate durability; it must be demonstrated that HbA1c decrease does not come at the cost of unacceptably increased hypoglycaemia risk.",
+      "source_section": "Section 6. Non-insulin medicinal products for the treatment of type 1 diabetes",
+      "source_page": 19,
+      "verbatim_quote": "In order to confirm such benefits, phase III studies should be placebo controlled and an initial run-in phase with the aim to optimize the insulin treatment is recommended. The preferred primary superiority endpoint should be the change in HbA1c from baseline after approximately 26 weeks of double-blind treatment. To show durability of the effect, a 6 month extension phase is required. It is also necessary to demonstrate that HbA1c decrease does not come at the cost of unacceptably increased hypoglycaemia risk.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Alternatively, if NI of HbA1c vs. placebo on top of titrated insulin is the primary endpoint, incidence and/or rate of hypoglycaemia should be a co-primary endpoint.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-018",
+      "rule_text": "For clinical studies aiming at preservation of beta-cell function in patients with type 1 diabetes, the design must be randomised, double-blind, placebo-controlled with co-primary endpoints comprising: (1) change from baseline in C-peptide (e.g. C-peptide AUC) following physiological stimulus, and (2) HbA1c plus frequency of hypoglycaemic episodes, particularly severe events.",
+      "source_section": "Section 7.2. Preservation of beta-cell function in patients with type 1 diabetes mellitus",
+      "source_page": 20,
+      "verbatim_quote": "Clinical studies aiming at preservation of beta cell function in patients with a diagnosis of type 1 diabetes (stage 3) should be randomized, double-blind and placebo-controlled and should include patients with a documented residual beta cell function. The primary outcome should preferably consist of co-primary endpoints including: 1. the change from baseline in C-peptide (e.g. C-peptide AUC) or, if appropriately justified, the percentage of patients with C-peptide increases above a clinically meaningful threshold following a physiological stimulus (e.g. liquid mixed meal) under standardized conditions, and 2. HbA1c, frequency of hypoglycaemic episodes, particularly severe events.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-019",
+      "rule_text": "For delay in onset or prevention of type 2 diabetes mellitus, confirmatory studies must be randomised, double-blind, and placebo-controlled; cumulative diabetes incidence or time to diagnosis of diabetes are the appropriate primary endpoints; a washout phase of at least 3 months is required prior to efficacy evaluation if glucose-lowering agents were previously used; lifestyle interventions (diet and exercise) must be reinforced in all subjects throughout the study.",
+      "source_section": "Section 7.3. Delay in onset/prevention of type 2 diabetes mellitus",
+      "source_page": 21,
+      "verbatim_quote": "Trials should be randomized, double-blind and placebo-controlled. In addition, appropriate lifestyle interventions (i.e., diet and exercise) should be reinforced in all subjects throughout the study. Cumulative diabetes incidence or time to diagnosis of diabetes according to established diagnostic criteria are considered appropriate primary endpoints. If glucose-lowering agents are investigated, a wash-out phase of appropriate duration (e.g., at least 3 months) is needed prior to the efficacy evaluation to exclude a masking effect on diabetes.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-020",
+      "rule_text": "For type 2 diabetes prevention claims, the safety profile of the preventive pharmacological measure must be particularly benign given that not all subjects at risk will eventually develop the disease; the clinical relevance of any observed effect must be balanced against the risks, and cardiovascular risk factors must be monitored throughout prevention studies.",
+      "source_section": "Section 7.3. Delay in onset/prevention of type 2 diabetes mellitus",
+      "source_page": 22,
+      "verbatim_quote": "Not all subjects at risk for developing type 2 diabetes will eventually develop the disease. These subjects would receive treatment without a chance of benefit. Therefore, the safety profile of the preventive measure needs to be rather benign to be acceptable. The clinical relevance of any observed effect should be discussed and carefully balanced against the risks of the intervention. Cardiovascular risk factors such as blood pressure and serum lipids should also be monitored.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-021",
+      "rule_text": "For insulin studies in insulin-sensitive type 1 patients, at least 7-point capillary blood glucose profiles (before and after each meal, at bedtime and potentially during the night) are necessary in addition to HbA1c; CGM is preferred and often provides more meaningful results.",
+      "source_section": "Section 5.3.1. Efficacy criteria/Treatment goals/Methods to assess efficacy",
+      "source_page": 15,
+      "verbatim_quote": "In addition to the evaluation of the overall blood glucose control by HbA1c, at least 7-point capillary-blood glucose profiles (before and after each meal, at bedtime and potentially during the night) are necessary, particularly in type 1 diabetic patients. CGM often provides more meaningful results and is preferred if possible.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Applies particularly to type 1 diabetic patients; applicable to type 2 in some contexts.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    },
+    {
+      "rule_id": "EMA-DM-022",
+      "rule_text": "Liver function must receive special attention in diabetes drug development; elevated liver enzyme activities should be carefully followed up to distinguish drug-induced effects from spontaneous fluctuations observed in diabetes; safety data from the monotherapy setting are important to isolate genuine safety signals from pharmacodynamic interaction effects in add-on studies.",
+      "source_section": "Section 4.5.1. General considerations",
+      "source_page": 13,
+      "verbatim_quote": "Regarding liver function, special attention should be paid to elevated activities of liver enzymes, which are observed more frequently in type 2 diabetes. Follow-up should be careful in order to differentiate drug-induced effects on liver function from the spontaneous fluctuations of liver enzyme activities observed in diabetes. Add-on studies alone do not allow for a definitive assessment of the genuine safety profile of a new compound. Safety data for the test agent in the monotherapy setting are important.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["CPMP/EWP/1080/00 Rev.2"]
+    }
+  ]
+}

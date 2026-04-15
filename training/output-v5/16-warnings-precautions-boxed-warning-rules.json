@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "title": "Format and Content of a REMS Document",
+    "source_file": "training/stage-1/fda-guidance-v2/16-warnings-precautions-boxed-warning.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "January 2023",
+    "document_version": "January 2023",
+    "extraction_date": "2026-03-24",
+    "total_rules": 28,
+    "note": "File name '16-warnings-precautions-boxed-warning.pdf' does not match document content. Actual document is 'Format and Content of a REMS Document' (January 2023, CDER/CBER). Rules extracted from actual content."
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-WARNBOX-001",
+      "rule_text": "A REMS is a required risk management strategy that FDA may require to ensure that the benefits of a drug outweigh its risks; it can include one or more REMS elements as determined necessary by FDA.",
+      "source_section": "Section II.A – FDA's REMS Authority",
+      "source_page": 2,
+      "verbatim_quote": "A REMS is a required risk management strategy that can include one or more REMS elements, which could include a Medication Guide, a patient package insert, a communication plan and/or certain packaging and safe disposal technologies for drugs that pose a serious risk of abuse or overdose.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 U.S.C. 355-1 (Section 505-1 FD&C Act)"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-002",
+      "rule_text": "FDA may require Elements to Assure Safe Use (ETASU) as part of a REMS when the drug has been shown to be effective but is associated with a specific serious risk and can be approved only if, or would be withdrawn unless, such elements are required.",
+      "source_section": "Section II.A – FDA's REMS Authority",
+      "source_page": 2,
+      "verbatim_quote": "ETASU may be required if the drug has been shown to be effective, but is associated with a specific serious risk and can be approved only if, or would be withdrawn unless, such elements are required as part of a strategy to mitigate a specific serious risk(s) listed in the labeling of the drug.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "ETASU may be required for drug products initially approved without ETASU when other elements are not sufficient to mitigate a serious risk.",
+      "cross_references": ["Section 505-1(f) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-003",
+      "rule_text": "ETASU may include any combination of: healthcare provider prescriber training/certification; pharmacy/practitioner/setting dispenser certification; restricted healthcare settings for dispensing; evidence or documentation of safe use conditions (e.g., lab test results); patient monitoring; and patient registry enrollment.",
+      "source_section": "Section II.A – FDA's REMS Authority",
+      "source_page": 2,
+      "verbatim_quote": "Health care providers who prescribe the drug have particular training or experience, or are specially certified; Pharmacies, practitioners, or health care settings that dispense the drug are specially certified; The drug be dispensed to patients only in certain health care settings, such as hospitals; The drug be dispensed to patients with evidence or other documentation of safe use conditions, such as laboratory test results; Each patient using the drug be subject to monitoring; Each patient using the drug be enrolled in a registry",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1(f)(3) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-004",
+      "rule_text": "All REMS must include one or more goals. If the REMS has ETASU, the REMS must include one or more goals to mitigate a specific serious risk listed in the labeling of the drug.",
+      "source_section": "Section II.A – FDA's REMS Authority",
+      "source_page": 3,
+      "verbatim_quote": "All REMS should include one or more goals. If the REMS has ETASU, the REMS must include one or more goals to mitigate a specific serious risk listed in the labeling of the drug and for which the ETASU are required.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1(f)(3) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-005",
+      "rule_text": "REMS for NDAs and BLAs must generally include a timetable for submission of assessments, with assessments required at 18 months, 3 years after initial REMS approval, and at the 7th year, or at another frequency specified in the REMS.",
+      "source_section": "Section II.A – FDA's REMS Authority",
+      "source_page": 3,
+      "verbatim_quote": "REMS generally must include a timetable for submission of assessments of the REMS. The timetable for submission of assessments of the REMS must include an assessment by the dates that are 18 months and 3 years after the REMS is initially approved, and an assessment in the 7th year after the REMS is approved, or at another frequency specified in the REMS.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "ANDAs are not subject to the requirement for a timetable for submission of assessments (section 505-1(i)), but FDA can require any application holder, including ANDA applicants, to submit REMS assessments under section 505-1(g)(2)(C).",
+      "cross_references": ["Section 505-1(d) FD&C Act", "Section 505-1(g)(2) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-006",
+      "rule_text": "A REMS document must establish the goals and requirements of the REMS as they relate to the required REMS elements, organized into the standardized sections specified by FDA.",
+      "source_section": "Section III – Format and Content of a REMS Document",
+      "source_page": 4,
+      "verbatim_quote": "A REMS document establishes the goals and requirements of the REMS as they relate to the required REMS elements.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1 FD&C Act (21 U.S.C. 355-1)"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-007",
+      "rule_text": "FDA recommends applicants use standardized language from the REMS Document Technical Conformance Guide whenever possible; if alternative language is proposed, applicants must provide an explanation for their proposed language.",
+      "source_section": "Section III – Format and Content of a REMS Document",
+      "source_page": 4,
+      "verbatim_quote": "FDA recommends that applicants use the standardized language whenever possible to help ensure consistency and facilitate efficient review of the REMS document. If alternative language is proposed, FDA recommends that applicants provide an explanation for their proposed language.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-008",
+      "rule_text": "The REMS document's Administrative Information section must include: application number(s), application holder's name, date of initial REMS approval, date of most recent revision or modification, and the risk(s) addressed by the REMS.",
+      "source_section": "Section III.A – Administrative Information",
+      "source_page": 4,
+      "verbatim_quote": "The Administrative Information section should include relevant administrative information such as the application number(s), application holder's name, the date that the REMS was initially approved, the date of the most recent revision or modification of the REMS, and the risk(s) addressed by the REMS.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-009",
+      "rule_text": "The REMS Goals section must describe the overall, safety-related health outcome(s) the REMS is designed to achieve, plus one or more specific, measurable objectives that, if achieved, indicate the REMS is meeting its goals.",
+      "source_section": "Section III.B – REMS Goals",
+      "source_page": 4,
+      "verbatim_quote": "The REMS Goals section should describe the overall, safety-related health outcome(s) that the REMS is designed to achieve. Because risk mitigation goals cannot always be measured directly, it is important to also include one or more specific, measurable objectives that, if achieved, indicate that the REMS is meeting its goals.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-010",
+      "rule_text": "The REMS Requirements section must establish requirements for both REMS participants and the applicant(s) and must be divided into REMS Participant Requirements and REMS Applicant Requirements subsections.",
+      "source_section": "Section III.C – REMS Requirements",
+      "source_page": 4,
+      "verbatim_quote": "The REMS Requirements section should establish the requirements of the REMS for both the REMS participant(s) and the applicant(s).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-011",
+      "rule_text": "REMS Participant Requirements are the activities REMS participants must undertake in REMS with ETASU; if there are no such requirements, the REMS Participant Requirements section must NOT be included in the REMS document.",
+      "source_section": "Section III.C.1 – REMS Participant Requirements",
+      "source_page": 5,
+      "verbatim_quote": "The REMS Participant Requirements are the activities that REMS participants must undertake in REMS with ETASU. If there are no requirements for REMS participants to carry out, the REMS Participant Requirements section should not be included in a REMS document.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-012",
+      "rule_text": "REMS Participant Requirements must be presented as a series of tables in the REMS document, with a separate table for each type of participant, specifying: who (participant), what (requirement), when (timing category), and with what REMS material.",
+      "source_section": "Section III.C.1 – REMS Participant Requirements",
+      "source_page": 5,
+      "verbatim_quote": "In the REMS document, REMS Participant Requirements should be presented as a series of tables. There should be a separate table for each type of participant and each table should be formatted as follows: [REMS Participant], [Timing Category], [REMS Requirement] using [REMS material]",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-013",
+      "rule_text": "The Timing Category in REMS Participant Requirements refers to when the participant must carry out the requirement (e.g., before a patient initiates treatment, during treatment, or after treatment discontinuation) and is generally associated with a clinical activity or an administrative activity.",
+      "source_section": "Section III.C.1 – REMS Participant Requirements",
+      "source_page": 5,
+      "verbatim_quote": "The timing category refers to when the participant must carry out the requirement (e.g., before a patient initiates treatment, during treatment, or after treatment discontinuation), and generally is associated with either a clinical activity (e.g., initiating treatment or discontinuing treatment), or an administrative activity (e.g., becoming certified to prescribe).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-014",
+      "rule_text": "REMS materials (e.g., enrollment forms, educational materials) must be included as hyperlinks in the REMS document within the requirement text directing readers to the material, and a comprehensive list must also appear in the REMS Materials section.",
+      "source_section": "Section III.C.1 – REMS Participant Requirements",
+      "source_page": 6,
+      "verbatim_quote": "Materials, such as enrollment forms and educational materials, refer to the specific documents that participants need to use to comply with a requirement. They should be included as a hyperlink in the REMS document within the requirement text that directs readers to the material.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-015",
+      "rule_text": "REMS Applicant Requirements must address five categories as applicable: (1) develop and provide REMS training; (2) develop and provide packaging and disposal systems; (3) develop and disseminate REMS communications; (4) support REMS operations; and (5) ensure participants' compliance with the REMS.",
+      "source_section": "Section III.C.2 – REMS Applicant Requirements",
+      "source_page": 6,
+      "verbatim_quote": "The REMS Applicant Requirements are generally the requirements for applicants to: (1) develop and provide REMS training; (2) develop and provide packaging and disposal systems; (3) develop and disseminate REMS communications; (4) support REMS operations; and (5) ensure participants' compliance with the REMS.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-016",
+      "rule_text": "REMS training requirements must specify how training is being provided (e.g., website, mailing, in-person) and whether training is provided by a continuing education provider; and must include a knowledge assessment for healthcare providers.",
+      "source_section": "Section III.C.2 – REMS Applicant Requirements",
+      "source_page": 6,
+      "verbatim_quote": "Requirements related to training can include the requirement for the applicant to develop REMS training materials, to provide training to health care providers, and to develop a knowledge assessment for health care providers to complete as part of the training. The REMS training requirements should include information about how the training is being provided (e.g., website, mailing, in-person) and whether the training is being provided by a continuing education provider.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-017",
+      "rule_text": "Packaging and disposal requirements may be included in a REMS when they might mitigate a serious adverse event occurring from abuse or overdose; these can include unit-dose packaging or dispensing a disposal system to render the drug nonretrievable.",
+      "source_section": "Section III.C.2 – REMS Applicant Requirements",
+      "source_page": 7,
+      "verbatim_quote": "The packaging and disposal requirements can be required if they might mitigate a serious adverse event occurring from abuse or overdose.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1(e)(4) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-018",
+      "rule_text": "REMS communication requirements must specify: the target audience, the type of materials to be disseminated, how dissemination will occur, the timing of dissemination(s), and whether any follow-up is required.",
+      "source_section": "Section III.C.2 – REMS Applicant Requirements",
+      "source_page": 7,
+      "verbatim_quote": "The following information should be included: the target audience, the type of materials to be disseminated, how the materials will be disseminated, the timing of the dissemination(s) and whether there is any follow-up required.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-019",
+      "rule_text": "REMS compliance requirements must include monitoring and evaluating REMS participants' compliance and addressing noncompliance; when prescriber training is required, the applicant must ensure prescribers comply with that requirement (e.g., through audits).",
+      "source_section": "Section III.C.2 – REMS Applicant Requirements",
+      "source_page": 7,
+      "verbatim_quote": "Requirements related to compliance with the REMS can include requirements for the applicant to monitor and evaluate REMS participants' compliance with the REMS and address any noncompliance to ensure the REMS requirements are being met. For example, if a REMS includes a requirement for prescribers of a drug to complete training, the applicant is required to ensure that prescribers comply with the requirement to complete the training.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-020",
+      "rule_text": "The REMS Assessment Timetable section must describe the timetable for submission of REMS assessments by the applicant; REMS are generally required to include this timetable and applicants must submit assessments at the specified intervals.",
+      "source_section": "Section III.D – REMS Assessment Timetable",
+      "source_page": 7,
+      "verbatim_quote": "The REMS Assessment Timetable section of the REMS document should describe the timetable for submission of assessments of the REMS by the applicant. REMS are generally required to include a timetable for submission of assessments, and applicants are required to submit assessments of the REMS at the specified intervals.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1(d) FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-021",
+      "rule_text": "The REMS Materials section must provide a comprehensive list of all materials required for the REMS (e.g., enrollment forms, educational materials, counseling tools, monitoring forms, patient-provider agreements), organized by REMS participant and type of material.",
+      "source_section": "Section III.E – REMS Materials",
+      "source_page": 7,
+      "verbatim_quote": "The REMS Materials section should provide a comprehensive list of all the materials that are required for the REMS (e.g., enrollment forms, educational materials, counseling tools, monitoring forms, and patient-provider agreements). The list should be organized by the REMS participant(s) to which the materials apply and the type of REMS material.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-022",
+      "rule_text": "The Statutory Elements section must provide a list of the REMS elements, as outlined in section 505-1 of the FD&C Act, that FDA has determined are necessary to ensure that the benefits of the drug outweigh its risks, organized by the order the element appears in the FD&C Act.",
+      "source_section": "Section III.F – Statutory Elements",
+      "source_page": 7,
+      "verbatim_quote": "The Statutory Elements section should provide a list of the elements, as outlined in section 505-1 of the FD&C Act, that FDA has determined are necessary to ensure that the benefits of the drug outweigh its risks. The list is organized by the order the element appears in the FD&C Act.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["Section 505-1 FD&C Act"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-023",
+      "rule_text": "Proposed REMS submissions must include two parts: (1) the REMS (REMS document and REMS materials) and (2) the REMS supporting document.",
+      "source_section": "Section IV.A – Proposed REMS Submissions",
+      "source_page": 8,
+      "verbatim_quote": "Proposed REMS submissions should include two parts: the REMS (REMS document and REMS materials) and the REMS supporting document.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-024",
+      "rule_text": "REMS materials must be appended to the REMS document, with the exception of the prescribing information and Medication Guide; foreign-language versions of REMS materials are not considered part of the approved REMS and are not reviewed by FDA.",
+      "source_section": "Section IV.A – Proposed REMS Submissions",
+      "source_page": 8,
+      "verbatim_quote": "With the exception of the prescribing information and Medication Guide, the REMS materials should be appended to the REMS document. Foreign-language versions of REMS materials are not considered part of the approved REMS, and are not reviewed by FDA.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Prescribing information and Medication Guide are excluded from the appending requirement.",
+      "cross_references": ["21 CFR 201.15(c)"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-025",
+      "rule_text": "All supplemental applications that include a new proposed REMS must be submitted as prior approval supplements; a proposed REMS submitted postapproval and not associated with an existing supplemental application must be submitted as a new supplemental application.",
+      "source_section": "Section IV.B – Submission Type",
+      "source_page": 8,
+      "verbatim_quote": "All supplemental applications that include a new proposed REMS should be submitted as prior approval supplements. A proposed REMS submitted after product approval and not associated with an existing supplemental application should be submitted as a new supplemental application.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.70", "21 CFR 314.97", "21 CFR 601.12"]
+    },
+    {
+      "rule_id": "FDA-WARNBOX-026",
+      "rule_text": "The first page of a proposed REMS submission must prominently identify the submission as 'PROPOSED REMS' in bold capital letters at the top of the page, combined with any other applicable content identification.",
+      "source_section": "Section IV.C – Submission Identification",
+      "source_page": 9,
+      "verbatim_quote": "The first page of a proposed REMS submission should prominently identify the submission as PROPOSED REMS in bold capital letters at the top of the page. This wording on the first page of the submission should be combined with any other applicable content identification.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-027",
+      "rule_text": "Subsequent submissions related to an already-submitted proposed REMS must prominently identify the submission with 'PROPOSED REMS for NDA #, ANDA #, BLA # -AMENDMENT' in bold capital letters at the top of the letter.",
+      "source_section": "Section IV.C – Submission Identification",
+      "source_page": 9,
+      "verbatim_quote": "On the first page of subsequent submissions related to an already-submitted proposed REMS, prominently identify the submission by including this wording in bold capital letters at the top of the letter: PROPOSED REMS for NDA ######, ANDA ######, BLA ###### -AMENDMENT",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-WARNBOX-028",
+      "rule_text": "All approved REMS documents and their approved REMS materials are posted on FDA's website; REMS supporting documents are not made available on FDA's website.",
+      "source_section": "Section IV.D – Posting REMS Documents on the FDA Website",
+      "source_page": 10,
+      "verbatim_quote": "All approved REMS documents and their approved REMS materials are posted on FDA's website. REMS supporting documents are not made available on FDA's website.",
+      "severity": "LOW",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    }
+  ]
+}

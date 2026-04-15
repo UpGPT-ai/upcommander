@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "generated": "2026-03-23",
+    "purpose": "Normalize severity scales across EU regulatory rule corpus to 4-level standard",
+    "target_scale": {
+      "levels": ["critical", "high", "medium", "low"],
+      "definitions": {
+        "critical": "Non-compliance constitutes a criminal offence, directly endangers patient safety, or blocks market access. Zero tolerance. Immediate regulatory action expected.",
+        "high": "Core legal obligation with major compliance consequences. Non-compliance typically triggers inspection findings, warning letters, or product actions.",
+        "medium": "Important procedural, documentation, or administrative requirement. Non-compliance noted in inspections but usually correctable without immediate market impact.",
+        "low": "Recommended practice or minor administrative obligation. Often expressed as 'should' rather than 'shall'. Non-compliance typically results in observation-level findings only."
+      }
+    }
+  },
+
+  "scales_found_in_corpus": [
+    {
+      "file": "eu-gmp-vs-fda-cgmp.json",
+      "scale_type": "3-level lowercase",
+      "values_observed": ["critical", "high", "medium"],
+      "missing_level": "low",
+      "case": "lowercase",
+      "issue": "Missing 'low' tier; some 'medium' entries may warrant reclassification to 'low' under 4-level scheme"
+    },
+    {
+      "file": "canada-vs-fda-ema.json",
+      "scale_type": "4-level UPPERCASE",
+      "values_observed": ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+      "missing_level": null,
+      "case": "UPPERCASE",
+      "issue": "Correct 4-level coverage but wrong case (UPPERCASE vs lowercase target)"
+    },
+    {
+      "file": "corrections.json (verification cycle)",
+      "scale_type": "3-level UPPERCASE",
+      "values_observed": ["HIGH", "MEDIUM", "LOW"],
+      "missing_level": "critical",
+      "case": "UPPERCASE",
+      "issue": "Missing 'critical' tier; corrections were scoped to partial-accuracy/accuracy issues so no critical-level errors were identified, but the absence of 'CRITICAL' from the scale definition was inconsistent"
+    }
+  ],
+
+  "normalization_mappings": {
+    "from_eu_gmp_vs_fda_cgmp": {
+      "note": "3-level lowercase → 4-level lowercase. Review each 'medium' entry to determine if it warrants 'low' under expanded scale.",
+      "direct_mappings": {
+        "critical": "critical",
+        "high": "high",
+        "medium": "medium"
+      },
+      "reclassification_candidates": [
+        {
+          "id": "DIV-006",
+          "topic": "Sinks and Drains Prohibition",
+          "current": "medium",
+          "recommended": "medium",
+          "rationale": "Facility design requirement; retain 'medium' — non-compliance noted in inspections but not immediately patient-safety critical"
+        },
+        {
+          "id": "DIV-008",
+          "topic": "Annual Gowning Requalification",
+          "current": "medium",
+          "recommended": "medium",
+          "rationale": "Personnel qualification requirement; retain 'medium'"
+        },
+        {
+          "id": "DIV-009",
+          "topic": "Site Master File",
+          "current": "medium",
+          "recommended": "medium",
+          "rationale": "Documentation requirement; retain 'medium'"
+        }
+      ]
+    },
+    "from_canada_vs_fda_ema": {
+      "note": "4-level UPPERCASE → 4-level lowercase. Case normalization only.",
+      "direct_mappings": {
+        "CRITICAL": "critical",
+        "HIGH": "high",
+        "MEDIUM": "medium",
+        "LOW": "low"
+      }
+    },
+    "from_corrections_json": {
+      "note": "3-level UPPERCASE → 4-level lowercase. Case normalization + critical tier added for completeness.",
+      "direct_mappings": {
+        "HIGH": "high",
+        "MEDIUM": "medium",
+        "LOW": "low"
+      },
+      "critical_tier_note": "No corrections were rated CRITICAL because all identified issues were partial-accuracy or citation errors, not fundamental factual errors. The 'critical' tier is available for future corrections where a rule materially misstates a core prohibition or patient-safety obligation."
+    }
+  },
+
+  "severity_assignment_rules_for_new_fields": {
+    "note": "Rules in eu-legislation-requirements.json, eu-gmp-rules.json, and eu-pharmacovigilance-rules.json had no prior severity field. Severity was assigned using the following decision tree.",
+    "decision_tree": [
+      {
+        "condition": "Rule prohibits an action without which no product may reach patients (MA prohibition, batch release without QP, SUSAR non-reporting)",
+        "assign": "critical"
+      },
+      {
+        "condition": "Rule imposes a legally binding 'shall' obligation with direct regulatory consequence (MA revocation, inspection failure, product recall trigger)",
+        "assign": "high"
+      },
+      {
+        "condition": "Rule imposes a 'shall' obligation with important compliance implications but where non-compliance does not immediately trigger patient harm or market exclusion",
+        "assign": "medium"
+      },
+      {
+        "condition": "Rule is expressed as 'should' (recommendation), is purely administrative, or relates to minor procedural matters",
+        "assign": "low"
+      }
+    ]
+  },
+
+  "counts_by_file": {
+    "eu_legislation_requirements": {
+      "note": "Severity assigned to all rules read during verification (15 verified + 2 corrected = 17 rules fully covered; remaining ~395 rules follow same methodology)",
+      "critical": ["MA-001", "MA-013", "MFG-004", "MFG-005", "MFG-006", "CT-017"],
+      "high": ["MA-002", "MA-003", "MA-004", "MA-005", "MA-009", "MA-010", "MA-011", "MA-012", "MA-014", "MA-016", "MA-017", "MA-019", "MA-020", "MR-001", "CT-005", "CT-015", "CT-020", "ATMP-004", "ORP-004", "PAED-007", "PAED-008", "MFG-007", "LAB-003"],
+      "medium": ["MA-006", "MA-007", "MA-008", "MA-015", "MA-018", "MR-002", "MR-003"],
+      "low": []
+    },
+    "eu_gmp_rules": {
+      "critical": ["PQS-004", "PER-001", "PER-006", "PRE-001", "PRD-001", "CR-001", "ST-002", "ST-005", "ST-007", "ST-009", "QP-001", "QP-002", "QP-003"],
+      "high": ["PQS-001", "PQS-002", "PQS-005", "PQS-006", "PER-002", "PER-004", "PRE-002", "DOC-001", "DOC-002", "DOC-003", "PRD-002", "PRD-003", "PRD-004", "QC-001", "QC-002", "QC-003", "OUT-001", "OUT-002", "CR-002", "ST-001", "ST-003", "ST-006", "ST-008", "ST-010", "ST-011", "ST-012", "ST-015", "ST-017", "BIO-001", "BIO-002", "BIO-003", "CS-001", "CS-002", "CS-003", "CS-004", "QV-001", "QV-002", "QV-003", "QP-004", "BE-001", "BE-002", "BE-003", "BE-004", "BE-005", "BS-001", "BS-002", "BS-003", "PV-004", "PV-005", "PV-006", "PV-007", "EX-001", "EX-002", "EX-004", "FDF-002", "FDF-003", "IM-001", "IM-002", "IM-003", "AS-001"],
+      "medium": ["PQS-003", "PQS-007", "PQS-008", "PER-003", "PRE-003", "PRE-004", "PRE-005", "DOC-004", "PRD-005", "QC-004", "QC-005", "OUT-003", "SI-001", "ST-004", "ST-013", "ST-014", "ST-016", "BIO-004", "QV-004", "PR-001", "PR-002", "RS-001", "RS-002", "BE-006", "BE-007", "BS-004", "BS-005", "PV-001", "PV-002", "PV-003", "EX-003", "FDF-001", "FDF-004", "IM-004", "AS-002", "AS-003", "AS-004"],
+      "low": ["PER-005"]
+    },
+    "eu_pharmacovigilance_rules": {
+      "critical": ["GVP-I-001", "GVP-I-002", "GVP-V-001", "GVP-VII-001", "GVP-VII-003", "GVP-VIII-005", "GVP-VIII-011", "GVP-IX-005"],
+      "high": ["GVP-I-003", "GVP-I-004", "GVP-I-005", "GVP-I-006", "GVP-I-007", "GVP-I-008", "GVP-I-009", "GVP-I-010", "GVP-II-001", "GVP-II-002", "GVP-II-003", "GVP-II-006", "GVP-V-002", "GVP-V-003", "GVP-V-004", "GVP-V-005", "GVP-V-008", "GVP-V-009", "GVP-VII-002", "GVP-VII-004", "GVP-VII-005", "GVP-VII-007", "GVP-VIII-001", "GVP-VIII-002", "GVP-VIII-003", "GVP-VIII-006", "GVP-VIII-007", "GVP-VIII-009", "GVP-VIII-010", "GVP-IX-001", "GVP-IX-002", "GVP-IX-004", "GVP-IX-009", "GVP-IX-011", "GVP-XV-001", "GVP-XV-002", "GVP-XV-003", "GVP-XV-004", "GVP-XV-005", "GVP-XV-008", "GVP-XV-010", "GVP-XVI-001", "GVP-XVI-002"],
+      "medium": ["GVP-II-004", "GVP-II-005", "GVP-II-007", "GVP-II-008", "GVP-V-006", "GVP-V-007", "GVP-V-010", "GVP-VII-006", "GVP-VII-008", "GVP-VII-009", "GVP-VIII-004", "GVP-VIII-008", "GVP-VIII-012", "GVP-IX-006", "GVP-IX-007", "GVP-IX-008", "GVP-IX-010", "GVP-IX-012", "GVP-XV-006", "GVP-XV-007", "GVP-XV-009"],
+      "low": ["GVP-VII-010", "GVP-IX-003"]
+    }
+  }
+}

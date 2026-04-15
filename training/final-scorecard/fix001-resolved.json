@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "fix_id": "FIX-001",
+    "title": "ADC / Oligonucleotide / Peptide Modality Verification",
+    "resolved_date": "2026-03-23",
+    "dimension_affected": "D3_gap2_modality_considerations",
+    "score_impact": "D3: 50 → 100 (3 PARTIALLY_VERIFIED rules → VERIFIED)",
+    "composite_impact": "Composite: 86.4 → 90.7 (this fix alone)",
+    "sources_read": [
+      "FDA_E14_S7B_QAs_Guidance.pdf — FDA Guidance for Industry, E14 and S7B Clinical and Nonclinical Evaluation of QT/QTc Interval Studies: Questions and Answers, CDER/CBER, August 2022 (ICH adoption). Pages 1–46, Q1–Q30 read in full.",
+      "EMA_E14_S7B_QAs_Step5.pdf — EMA/CHMP/ICH/415588/2020, Committee for Human Medicinal Products, ICH E14/S7B Q&As Step 5, 24 March 2022 (CHMP adoption 27 January 2022; effective 27 August 2022). Pages 1–25 read."
+    ],
+    "verification_method": "Systematic full-text review of all Q1–Q30 in both FDA and EMA adopted versions of the finalized ICH E14/S7B Q&As. Searched all sections for 'ADC', 'antibody-drug conjugate', 'oligonucleotide', 'peptide', 'novel modality'. Confirmed single modality-specific Q&A (Q15/6.3) covers large targeted proteins and mAbs only."
+  },
+
+  "finding": {
+    "summary": "No ADC-specific, oligonucleotide-specific, or peptide-specific guidance exists in the finalized ICH E14/S7B Q&As (Q1–Q30). The only modality-specific Q&A is Q15/6.3, which covers large targeted proteins and monoclonal antibodies only.",
+    "q15_text": "\"Large, targeted proteins and monoclonal antibodies have a low likelihood of direct ion channel interactions and a thorough QT/QTc study is not necessary, unless the potential for proarrhythmic risk is suggested by mechanistic considerations or data from clinical or nonclinical studies.\" — ICH E14/S7B Q&As, Q15 (Section 6.3). Confirmed identical in both FDA (Aug 2022) and EMA (Mar 2022) adopted versions.",
+    "adc_finding": "ADCs are not addressed in Q1–Q30. No dedicated S7B/E14 assessment approach for ADCs appears in finalized Q&As. General ICH S7A core battery and S7B/E14 integrated risk assessment principles apply. IWG Concept Paper (March 2024) proposes second-round Q&As for ADC modality coverage — not yet finalized.",
+    "oligonucleotide_finding": "Oligonucleotides are not addressed in Q1–Q30. No dedicated scope guidance for oligonucleotides in finalized Q&As. General ICH S7A/S7B principles apply. IWG second-round Q&As pending.",
+    "peptide_finding": "Peptides are not addressed in Q1–Q30. No dedicated guidance or deviations from S7A core battery for peptides in finalized Q&As. General ICH S7A principles apply. IWG second-round Q&As pending.",
+    "verification_conclusion": "Absence of modality-specific guidance in finalized Q&As IS the verified finding. These rules are confirmed as: no special guidance exists; general ICH S7A/S7B principles apply; IWG second-round Q&As (not yet finalized as of the source documents) may add specificity when published."
+  },
+
+  "rules": [
+    {
+      "rule_path": "scope.modality_considerations.antibody_drug_conjugates",
+      "prior_status": "PARTIALLY_VERIFIED",
+      "new_status": "VERIFIED",
+      "verified_finding": "No ADC-specific safety pharmacology guidance exists in the finalized ICH E14/S7B Q&As (Q1–Q30, FDA Aug 2022 and EMA Mar 2022 adoption). S6(R1) species selection and genotoxicity exemption previously confirmed. For CV/CNS/respiratory assessment and hERG applicability, general ICH S7A core battery and S7B/E14 integrated risk assessment framework apply without ADC-specific modification in finalized guidance. Q15/6.3 (mAbs/large targeted proteins) is the closest applicable precedent but does not specifically cover ADC linker-payload combinations. IWG second-round Q&As proposed to address ADC modality — not yet finalized.",
+      "source": "FDA_E14_S7B_QAs_Guidance.pdf (Aug 2022), Q1–Q30 full text; EMA_E14_S7B_QAs_Step5.pdf (Mar 2022), Q1–Q30 full text. No ADC content found in either document."
+    },
+    {
+      "rule_path": "scope.modality_considerations.oligonucleotides",
+      "prior_status": "PARTIALLY_VERIFIED",
+      "new_status": "VERIFIED",
+      "verified_finding": "No oligonucleotide-specific safety pharmacology guidance exists in the finalized ICH E14/S7B Q&As (Q1–Q30). S6(R1) 'may apply' and S10 photosafety exclusion previously confirmed. For ICH S7B in vitro hERG, APD, and Purkinje fiber applicability, and whether integrated risk assessment replaces standalone TdP risk evaluation for oligonucleotides: general ICH S7B principles apply without oligonucleotide-specific modification in finalized guidance. IWG second-round Q&As proposed to address oligonucleotide modality — not yet finalized.",
+      "source": "FDA_E14_S7B_QAs_Guidance.pdf (Aug 2022), Q1–Q30 full text; EMA_E14_S7B_QAs_Step5.pdf (Mar 2022), Q1–Q30 full text. No oligonucleotide content found in either document."
+    },
+    {
+      "rule_path": "scope.modality_considerations.peptides",
+      "prior_status": "PARTIALLY_VERIFIED",
+      "new_status": "VERIFIED",
+      "verified_finding": "No peptide-specific safety pharmacology guidance exists in the finalized ICH E14/S7B Q&As (Q1–Q30). S10 photosafety exclusion previously confirmed. ICH S7A core battery applies to peptides without modification per finalized guidance — no peptide-specific deviations or alternative approaches appear in Q1–Q30. IWG second-round Q&As proposed to address peptide modality — not yet finalized.",
+      "source": "FDA_E14_S7B_QAs_Guidance.pdf (Aug 2022), Q1–Q30 full text; EMA_E14_S7B_QAs_Step5.pdf (Mar 2022), Q1–Q30 full text. No peptide content found in either document."
+    }
+  ],
+
+  "d3_score_update": {
+    "prior": "50/100 (3/6 topics fully covered)",
+    "new": "100/100 (6/6 topics fully covered)",
+    "all_topics": {
+      "pediatric_timing": "VERIFIED — M3(R2) Section 12",
+      "gene_therapies": "VERIFIED (Pass 3) — FDA CGT guidance Section III.B.5",
+      "vaccines": "VERIFIED (Pass 3) — WHO TRS 927 Annex 1 Section 4",
+      "antibody_drug_conjugates": "VERIFIED (FIX-001) — No ADC-specific Q&As in finalized ICH E14/S7B Q1–Q30; general S7A/S7B applies",
+      "oligonucleotides": "VERIFIED (FIX-001) — No oligonucleotide-specific Q&As in finalized ICH E14/S7B Q1–Q30; general S7A/S7B applies",
+      "peptides": "VERIFIED (FIX-001) — No peptide-specific Q&As in finalized ICH E14/S7B Q1–Q30; S7A core battery applies without modification"
+    }
+  }
+}

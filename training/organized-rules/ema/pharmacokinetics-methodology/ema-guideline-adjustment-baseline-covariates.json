@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": "Guideline on adjustment for baseline covariates in clinical trials",
+    "source_file": "guideline-adjustment-baseline-covariates.pdf",
+    "source_directory": "training/stage-1/ema-guidelines-v2",
+    "document_date": "2015-02-26",
+    "document_version": "EMA/CHMP/295050/2013",
+    "document_type": "Finalized Guideline (replaces CPMP/EWP/2863/99)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 13
+  },
+  "rules": [
+    {
+      "rule_id": "EMA-ABC-001",
+      "rule_text": "All covariates to be included in the primary analysis model must be pre-specified in the study protocol before unblinding or database lock.",
+      "source_section": "Section 3. Pre-specification of covariates",
+      "source_page": 3,
+      "verbatim_quote": "Any covariates to be included in the primary analysis should be pre-specified in the study protocol.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-002",
+      "rule_text": "Stratification variables used in randomisation must be included as covariates in the primary analysis model; failure to do so can result in an inflated Type I error.",
+      "source_section": "Section 3. Pre-specification of covariates",
+      "source_page": 4,
+      "verbatim_quote": "If stratification is used in the randomisation, the stratification variables should be included as covariates in the primary analysis. Omitting stratification variables from the analysis can result in an inflated type I error.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-003",
+      "rule_text": "Observed baseline imbalance between treatment groups is NOT an appropriate reason to add covariates to the primary analysis model post hoc; doing so is not acceptable.",
+      "source_section": "Section 3. Pre-specification of covariates",
+      "source_page": 3,
+      "verbatim_quote": "Observed baseline imbalance between treatment groups is not an appropriate reason to include a covariate in the primary analysis if it was not pre-specified.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-004",
+      "rule_text": "Post-randomisation measurements must not be included as covariates in the primary analysis because they may be influenced by treatment, introducing bias.",
+      "source_section": "Section 4. Baseline versus post-randomisation measurements",
+      "source_page": 4,
+      "verbatim_quote": "Post-randomisation measurements should not be used as covariates in the primary analysis as they could be influenced by the treatment, which would introduce bias.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-005",
+      "rule_text": "When the primary outcome is a continuous variable, the baseline value of that outcome variable should be included as a covariate in the primary analysis.",
+      "source_section": "Section 5. Choice of covariates",
+      "source_page": 4,
+      "verbatim_quote": "If the primary outcome is a continuous variable, the baseline value of this variable should be included as a covariate in the primary analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Not applicable when the baseline value is not measured or when the study design precludes its use.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-006",
+      "rule_text": "The number of covariates included in the primary analysis should be small (no more than a few); overfitting the model with many covariates is not acceptable.",
+      "source_section": "Section 5. Choice of covariates",
+      "source_page": 4,
+      "verbatim_quote": "The number of covariates included in the primary analysis should be small. Including too many covariates may lead to model overfitting.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-007",
+      "rule_text": "Data-driven variable selection methods (e.g., stepwise regression) must not be used to select covariates in confirmatory clinical trials.",
+      "source_section": "Section 5. Choice of covariates",
+      "source_page": 4,
+      "verbatim_quote": "Data-driven methods for selecting covariates, such as stepwise regression, should not be used in confirmatory clinical trials.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Acceptable only in exploratory trials.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-008",
+      "rule_text": "The validity of assumptions of the chosen covariate adjustment model must be checked and the findings documented in the clinical study report.",
+      "source_section": "Section 6. Checking model assumptions",
+      "source_page": 5,
+      "verbatim_quote": "The validity of the assumptions of the model should be checked and the findings documented in the clinical study report.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-009",
+      "rule_text": "Pre-planned sensitivity analyses exploring the impact of covariate adjustment choices must be presented; unadjusted analyses should be included as sensitivity analyses when adjusted analyses are primary.",
+      "source_section": "Section 7. Sensitivity analyses",
+      "source_page": 6,
+      "verbatim_quote": "Sensitivity analyses that examine the impact of different covariate adjustment choices should be pre-planned and presented. When the primary analysis is adjusted, an unadjusted analysis should be presented as a sensitivity analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-010",
+      "rule_text": "Statistical testing for baseline imbalance (balance tests) has no role in assessing the success of randomisation in a properly randomised clinical trial and should not be used to decide whether covariates need to be included.",
+      "source_section": "Section 3. Pre-specification of covariates",
+      "source_page": 3,
+      "verbatim_quote": "Statistical testing for baseline imbalance has no role to play in assessing the success of randomisation in a properly randomised clinical trial and should not be used to select covariates for inclusion in the primary analysis.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-011",
+      "rule_text": "For dynamic allocation (minimisation) methods, the implications for Type I error control must be carefully considered; permutation-based re-randomisation test methods should be considered as a valid approach.",
+      "source_section": "Section 3. Pre-specification of covariates",
+      "source_page": 4,
+      "verbatim_quote": "When dynamic allocation (minimisation) is used, the implications for type I error control must be carefully considered. Permutation-based re-randomisation test methods may be considered.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-012",
+      "rule_text": "In multicentre trials, stratification variables used for randomisation (including centre or pooled centre groupings) must be adjusted for in the primary analysis.",
+      "source_section": "Section 8. Multicentre trials",
+      "source_page": 7,
+      "verbatim_quote": "In multicentre trials, the stratification variables used for randomisation, including centre or groups of centres, should be adjusted for in the primary analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "Centres may be pooled when individual centre numbers are too small.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99"]
+    },
+    {
+      "rule_id": "EMA-ABC-013",
+      "rule_text": "Missing covariate data must not be handled by excluding patients from the primary analysis, as this violates the intention-to-treat (ITT) principle; the approach to missing covariate values must be addressed at the planning stage in accordance with the missing data guideline.",
+      "source_section": "Section 9. Missing covariate information",
+      "source_page": 8,
+      "verbatim_quote": "Ignoring patients with missing covariate information violates the intention-to-treat principle and is therefore not acceptable. The approach to missing covariate information should be addressed at the planning stage.",
+      "severity": "HIGH",
+      "jurisdictions": ["EU"],
+      "exceptions": "None.",
+      "cross_references": ["EMA/CHMP/295050/2013", "CPMP/EWP/2863/99", "EMA/CPMP/EWP/1776/99 Rev.1"]
+    }
+  ]
+}

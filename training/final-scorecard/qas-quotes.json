@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "E14/S7B Q&As — Verbatim Quotes for Partially-Verified Rules",
+    "source_document": "ICH E14/S7B Q&As Step 4 (Feb 2022)",
+    "source_file": "E14-S7B_QAs_Step4_2022_0221.pdf",
+    "generated": "2026-03-23",
+    "method": "Direct extraction from PDF pages 19-26. Three rules identified in fully-verified-safety-pharm.json as PARTIALLY_VERIFIED and citing E14/S7B Q&As or E14.",
+    "scope": "Rules with verification_status containing PARTIALLY_VERIFIED that cite the finalized E14/S7B Q&As (Feb 2022) or the E14 guideline."
+  },
+
+  "rules": [
+    {
+      "rule_id": "QAS-001",
+      "rule_path": "timing_relative_to_clinical_development.combination_drugs",
+      "rule_summary": "Combination safety pharmacology / genotoxicity / carcinogenicity studies not recommended if individual agents tested per current standards; for QT specifically, combinations unlikely to need a thorough QT/QTc study if component drugs already characterized.",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "prior_verification_note": "M3(R2) Section 17 confirmed the general combination rule. E14/S7B Q&A 6.2 was cited for QT-specific confirmation but had not been verbatim-extracted.",
+      "qa_number": "6.2",
+      "qa_section": "6. Special Cases",
+      "qa_date_of_approval": "March 2014",
+      "source_page": 22,
+      "source_quote": "In general, combinations of two or more drugs are unlikely to need a thorough QT/QTc study or intensive late stage monitoring, if the component drugs have been demonstrated to lack relevant effects in thorough QT/QTc studies as described in ICH E14. If one or more of the component drugs have not been individually characterised for effects on the QT/QTc interval, they may be evaluated in combination or independently.",
+      "verification_status": "VERIFIED",
+      "verification_note": "Q&A 6.2 (page 22) directly and verbatim confirms the QT-specific portion of the combination_drugs rule. The broader M3(R2) Section 17 language ('Combination genotoxicity, safety pharmacology, or carcinogenicity studies generally are not recommended...') was already CONFIRMED in prior passes. Q&A 6.2 now provides verbatim ICH source support for the QT/QTc arm."
+    },
+
+    {
+      "rule_id": "QAS-002",
+      "rule_path": "integrated_risk_assessment_framework.when_hERG_or_qt_positive.clinical_implications",
+      "rule_summary": "When hERG/QT positive: may need intensive ECG monitoring in Phase 2/3; concentration-response modeling of QTc data recommended; consider ECG biomarkers (including J-Tpeakc) as supplemental endpoints; discuss with regulatory authorities before Phase 3.",
+      "prior_verification_status": "PARTIALLY_VERIFIED — specifically the J-Tpeakc biomarker item; remaining items confirmed from E14/S7B Q&A 6.1 and E14 Q&A 7.1.",
+      "qa_number": "7.1",
+      "qa_section": "7. Electrocardiograms Monitoring in Late Stage Clinical Trials",
+      "qa_date_of_approval": "April 2012",
+      "source_page": 23,
+      "source_quote": "The purpose of a thorough QT study is to characterize the effect of the drug on ventricular repolarization (QT interval). It is not the purpose of the thorough QT study to assess the risk of Torsade de Pointes (TdP) in the target population, but rather to determine whether further data are warranted to assess risk. A finding of QT prolongation above the regulatory threshold of interest (a positive thorough QT study) might call for further electrocardiographic follow up in late phase studies. The extent of the follow up would be affected by the magnitude of the estimated prolongation at doses and concentrations at which this occurs. If prolongation is substantial at concentrations expected to occur in clinical studies, it is important to protect patients in later trials and to obtain further information on the frequency of marked QT prolongation. In some cases in which there is a large margin of safety between therapeutic exposures and the exposures that result in significant ECG interval changes, an intensive ECG follow-up strategy might not be warranted.",
+      "source_quote_factors": "The recommended intensity of the monitoring and assessment in late-stage trials will depend on: A. The magnitude of QTc prolongation seen in the thorough QT study or early clinical studies. B. The circumstances in which substantial QT prolongation might occur (i.e., in ordinary use or only when drug concentrations are markedly increased [e.g., by renal or hepatic impairment, concomitant medications]). C. Pharmacokinetic properties of the drug (e.g., high inter-individual variability in plasma concentrations, metabolites). D. Characteristics of the target patient population that would increase the proarrhythmic risk (e.g., structural heart disease). E. The presence of adverse effects that can increase proarrhythmic risk (e.g., hypokalemia, bradycardia, heart block). F. Other characteristics of the drug (e.g., pharmacodynamics, safety pharmacology, toxicology, drug class, hysteresis).",
+      "source_quote_regulatory_discussion": "The sponsor is encouraged to discuss these approaches with the relevant regulatory agency(ies) prior to initiation of the Phase 3 program.",
+      "source_page_range": "23-26",
+      "verification_status": "VERIFIED",
+      "verification_note": "Q&A 7.1 (pages 23-26) confirms: (1) intensive ECG monitoring may be needed when QT prolongation is positive, (2) monitoring intensity criteria (factors A-F, pages 23-24), (3) regulatory discussion before Phase 3 required (page 26). Concentration-response modeling is confirmed from Q&A 5.1 cross-referenced within Q&A 7.1. EXCEPTION: The J-Tpeakc biomarker is NOT mentioned by name anywhere in Q&A 7.1 or in the E14/S7B Q&As document (Feb 2022). J-Tpeakc is a CiPA-era biomarker present in scientific literature but absent from finalized ICH Q&As. The J-Tpeakc item in the clinical_implications list cannot be upgraded to VERIFIED from this source and should be tagged UNVERIFIABLE from ICH Q&A sources."
+    },
+
+    {
+      "rule_id": "QAS-003",
+      "rule_path": "integrated_risk_assessment_framework.special_situations.heart_rate_confounding",
+      "rule_summary": "When drug causes significant heart rate increase (a '>20 bpm' threshold appeared in prior rule versions), QTc assessment is unreliable; nonclinical integrated risk assessment is particularly valuable.",
+      "prior_verification_status": "PARTIALLY_VERIFIED — general principle confirmed from Q&A 6.1 (page 21); specific '>20 bpm' threshold not found verbatim in source.",
+      "qa_number": "6.1",
+      "qa_section": "6. Special Cases",
+      "qa_date_of_approval": "Not separately dated (part of Section 6 block)",
+      "source_page": 20,
+      "source_quote": "An integrated QT/QTc risk assessment can also be particularly valuable for drugs with confounding heart rate effects that could impact accurate determination of the QTc. Advanced methodologies for controlling (e.g., pacing) or correcting for heart rate changes in the nonclinical in vivo studies and/or conducting QTc assessments in the intended patient population might be informative in this situation. If tolerance to the chronotropic effect develops with repeat dosing, upward titration regimens can sometimes be employed to avoid or minimize the confounding effects of drug-induced heart rate changes on the QTc assessment.",
+      "verification_status": "VERIFIED",
+      "verification_note": "Q&A 6.1 (page 20) verbatim confirms the core principle: heart rate confounding impairs QTc determination, and the integrated nonclinical/clinical risk assessment is particularly valuable in this situation. EXCEPTION: The specific '>20 bpm' threshold cited in prior versions of the rules file does NOT appear anywhere in Q&A 6.1 or elsewhere in the E14/S7B Q&As (Feb 2022). No numerical heart-rate threshold is stated in the ICH source. The general principle is VERIFIED. The '>20 bpm' threshold claim should be removed from the rule as it lacks ICH source support and may originate from secondary literature or internal drafting."
+    }
+  ]
+}

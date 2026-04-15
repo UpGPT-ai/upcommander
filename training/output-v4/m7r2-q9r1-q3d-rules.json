@@ -1,0 +1,778 @@
+{
+  "metadata": {
+    "description": "Actionable regulatory rules extracted from ICH M7(R2), M7(R2) Addendum, Q9(R1), and Q3D(R2) guidelines",
+    "extraction_date": "2026-03-23",
+    "guidelines": [
+      {
+        "id": "M7R2",
+        "title": "ICH M7(R2) Assessment and Control of DNA Reactive (Mutagenic) Impurities in Pharmaceuticals",
+        "adoption_date": "3 April 2023"
+      },
+      {
+        "id": "M7R2_ADD",
+        "title": "ICH M7(R2) Addendum: Application of the Principles of the ICH M7 Guideline to Calculation of Compound-Specific Acceptable Intakes",
+        "adoption_date": "31 May 2023"
+      },
+      {
+        "id": "Q9R1",
+        "title": "ICH Q9(R1) Quality Risk Management",
+        "adoption_date": "18 January 2023"
+      },
+      {
+        "id": "Q3DR2",
+        "title": "ICH Q3D(R2) Guideline for Elemental Impurities",
+        "adoption_date": "26 April 2022"
+      }
+    ]
+  },
+
+  "m7_r2_rules": [
+    {
+      "rule_id": "M7R2-001",
+      "category": "TTC / Acceptable Intake",
+      "rule": "The Threshold of Toxicological Concern (TTC) for a mutagenic impurity in a drug product intended for lifetime exposure is 1.5 µg/day, corresponding to a theoretical excess lifetime cancer risk of 1 in 100,000 (10^-5) at 50 kg body weight.",
+      "source_section": "Section 7.1, Table 1 footnote",
+      "source_quote": "For most mutagenic impurities without adequate carcinogenicity data, the acceptable intake is 1.5 µg/day based on a threshold of toxicological concern (TTC) approach corresponding to a 10^-5 excess lifetime cancer risk.",
+      "key_change": "No change from M7(R1); establishes core TTC value",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "TTC_lifetime_ug_per_day": 1.5,
+        "cancer_risk_level": "1e-5",
+        "body_weight_kg": 50
+      }
+    },
+    {
+      "rule_id": "M7R2-002",
+      "category": "Impurity Classification",
+      "rule": "Mutagenic impurities must be classified into one of five classes based on available mutagenicity and carcinogenicity data, as defined in Table 1. Class 1 = known mutagenic carcinogens; Class 2 = known mutagens, carcinogenicity unknown; Class 3 = alerting structure, no mutagenicity data; Class 4 = alerting structure but negative Ames; Class 5 = no alert or sufficient evidence of no concern.",
+      "source_section": "Section 6, Table 1",
+      "source_quote": "Table 1: Classification of DNA-reactive (mutagenic) impurities. Class 1: Known mutagenic carcinogens — use compound-specific AI. Class 2: Known mutagenic, carcinogenicity unknown — TTC applies. Class 3: Structural alert but no mutagenicity data — TTC applies unless purge justified. Class 4: Structural alert but not mutagenic — control like ordinary impurity. Class 5: No structural alert, or alert with sufficient evidence of safety — no specific limit needed.",
+      "key_change": "No change from M7(R1); defines classification framework",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-003",
+      "category": "Cohort of Concern",
+      "rule": "Three structural classes — aflatoxin-like compounds, N-nitroso compounds, and alkyl-azoxy compounds — constitute the 'Cohort of Concern' and require highly potent-specific limits based on their individual carcinogenic potency rather than the TTC. The 1.5 µg/day TTC does not apply to cohort of concern compounds.",
+      "source_section": "Section 7.1",
+      "source_quote": "Three groups of compounds are considered to have such high carcinogenic potency that even at the TTC of 1.5 µg/day the cancer risk may exceed 10^-5. These are the aflatoxin-like compounds, N-nitroso compounds, and alkyl-azoxy compounds, collectively referred to as the 'cohort of concern'.",
+      "key_change": "No change from M7(R1); identifies three structural classes requiring compound-specific limits",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-004",
+      "category": "(Q)SAR Requirements",
+      "rule": "Computational (Q)SAR assessment for a mutagenic structural alert must use two complementary (Q)SAR methodologies: one expert rule-based system AND one statistical-based system. Both systems must be applied; a negative result in both is required to conclude no structural alert.",
+      "source_section": "Section 6.2",
+      "source_quote": "Two (Q)SAR methodologies should be applied: an expert rule-based and a statistical-based system. The use of two complementary (Q)SAR systems is recommended because the different approaches can provide broader coverage of chemical space.",
+      "key_change": "No change from M7(R1); dual methodology requirement codified",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-005",
+      "category": "(Q)SAR Requirements",
+      "rule": "A (Q)SAR assessment is considered acceptable to conclude no mutagenic concern when both the expert rule-based AND the statistical-based systems predict negative (non-mutagenic) AND the impurity is not a member of the cohort of concern.",
+      "source_section": "Section 6.2",
+      "source_quote": "If both (Q)SAR predictions are negative, and the compound is not a member of the cohort of concern, the impurity can be regarded as having no structural alert and no further specific safety control is needed.",
+      "key_change": "No change from M7(R1); defines pass criterion for (Q)SAR",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-006",
+      "category": "Less-Than-Lifetime Acceptable Intakes",
+      "rule": "For treatment durations less than a lifetime, higher acceptable daily intakes apply per Table 2 (single impurity). Duration-specific limits are: ≤1 month: 120 µg/day; >1 month to 12 months: 20 µg/day; >1 year to 10 years: 10 µg/day; >10 years to lifetime: 1.5 µg/day.",
+      "source_section": "Section 7.2, Table 2",
+      "source_quote": "Table 2: Acceptable intakes for less-than-lifetime (LTL) exposures (single impurity). Duration ≤1 month: 120 µg/day; >1 month to ≤12 months: 20 µg/day; >1 year to ≤10 years: 10 µg/day; >10 years to lifetime: 1.5 µg/day.",
+      "key_change": "No change from M7(R1); establishes LTL single-impurity limits",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "LTL_1_month_ug_per_day": 120,
+        "LTL_12_months_ug_per_day": 20,
+        "LTL_10_years_ug_per_day": 10,
+        "lifetime_ug_per_day": 1.5
+      }
+    },
+    {
+      "rule_id": "M7R2-007",
+      "category": "Less-Than-Lifetime Acceptable Intakes",
+      "rule": "When multiple mutagenic impurities are present simultaneously, Table 3 provides higher combined acceptable intakes. Duration-specific total limits for multiple impurities are: ≤1 month: 120 µg/day total; >1 month to 12 months: 60 µg/day total; >1 year to 10 years: 30 µg/day total; >10 years to lifetime: 5 µg/day total.",
+      "source_section": "Section 7.3, Table 3",
+      "source_quote": "Table 3: Acceptable intakes for less-than-lifetime (LTL) exposures (multiple impurities). Duration ≤1 month: 120 µg/day; >1 month to ≤12 months: 60 µg/day; >1 year to ≤10 years: 30 µg/day; >10 years to lifetime: 5 µg/day.",
+      "key_change": "No change from M7(R1); establishes LTL multiple-impurity combined limits",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "multiple_LTL_1_month_ug_per_day": 120,
+        "multiple_LTL_12_months_ug_per_day": 60,
+        "multiple_LTL_10_years_ug_per_day": 30,
+        "multiple_lifetime_ug_per_day": 5
+      }
+    },
+    {
+      "rule_id": "M7R2-008",
+      "category": "Less-Than-Lifetime Acceptable Intakes",
+      "rule": "For Phase 1 clinical trials of duration ≤14 days, a maximum acceptable intake of 120 µg/day per mutagenic impurity applies (the 1-month LTL limit). A scientifically justified higher intake may be acceptable with appropriate risk-benefit assessment.",
+      "source_section": "Section 7.2, Note 1",
+      "source_quote": "For clinical trial phases of ≤14 days, the acceptable intake is 120 µg/day per impurity based on the LTL approach for ≤1 month exposure.",
+      "key_change": "Clarification in R2 of clinical development phase application",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "phase1_leq14days_ug_per_day": 120
+      }
+    },
+    {
+      "rule_id": "M7R2-009",
+      "category": "Risk Characterization — Genotoxicity Testing",
+      "rule": "Genotoxicity testing should be performed when an impurity is present above the TTC and has a structural alert that cannot be excluded computationally. The standard battery is the Ames test (in vitro bacterial reverse mutation). Positive Ames results may require further in vivo testing.",
+      "source_section": "Section 6.1",
+      "source_quote": "An in vitro mutagenicity test (Ames test) should be conducted on the impurity if present at or above the threshold and a structural alert has been identified. A positive Ames test leads to classification as Class 1 or 2 and requires further evaluation.",
+      "key_change": "No change from M7(R1); Ames test remains primary test",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-010",
+      "category": "Control Strategy — Options",
+      "rule": "Four control options are available for mutagenic impurities: Option 1 = control in drug substance starting material/intermediate (upstream control); Option 2 = control in drug substance; Option 3 = control in drug product; Option 4 = control based on purge factor calculation. All options must demonstrate that impurity in the final drug product is at or below the applicable acceptable intake.",
+      "source_section": "Section 8",
+      "source_quote": "Control options include: (1) controlling the level of an impurity in a starting material or intermediate; (2) setting a limit in the drug substance specification; (3) setting a limit in the drug product specification; (4) establishing that the impurity is efficiently purged below the acceptable level based on knowledge of chemistry and process understanding.",
+      "key_change": "No change from M7(R1); four control options codified",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-011",
+      "category": "Control Strategy — Periodic Testing",
+      "rule": "For impurities consistently below 30% of the applicable limit across validation batches, periodic testing (instead of routine batch testing) is acceptable. A minimum of 6 pilot-scale or 3 production-scale batches must demonstrate consistent results before switching to periodic testing.",
+      "source_section": "Section 8, Note 4",
+      "source_quote": "When an impurity is consistently below 30% of the limit, periodic testing can replace routine testing. This should be based on at least 6 pilot batches or 3 commercial-scale batches.",
+      "key_change": "No change from M7(R1); periodic testing criterion defined",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "periodic_testing_trigger_percent_of_limit": 30,
+        "min_pilot_batches": 6,
+        "min_production_batches": 3
+      }
+    },
+    {
+      "rule_id": "M7R2-012",
+      "category": "Acceptable Intake Calculation",
+      "rule": "For Class 1 compounds with carcinogenicity data (TD50 available), the compound-specific Acceptable Intake is calculated as: AI = TD50 / 50,000 × 50 kg (using linear extrapolation from the rat TD50, a safety factor of 50,000, and 50 kg body weight). This applies when the resulting AI is lower than the TTC.",
+      "source_section": "Section 7.1, Addendum Section 1.5",
+      "source_quote": "The compound-specific AI is derived from the TD50 in rats using linear extrapolation: AI (µg/day) = TD50 (mg/kg/day) / 50,000 × 50,000 µg/mg × 50 kg body weight = TD50 × 1000 / 50,000 µg/day.",
+      "key_change": "Formula clarified in Addendum; body weight fixed at 50 kg for conservatism",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7R2-013",
+      "category": "Documentation",
+      "rule": "The mutagenic impurity assessment must be documented and available for regulatory review. Documentation must include: the structural alert evaluation, (Q)SAR methodology and results, classification rationale, selected control option, and demonstrated compliance with the applicable acceptable intake.",
+      "source_section": "Section 9",
+      "source_quote": "An assessment of the mutagenic potential of each identified impurity and the controls established to limit exposure should be documented. This documentation should be available for regulatory review.",
+      "key_change": "No change from M7(R1); documentation requirements unchanged",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "m7_addendum_rules": [
+    {
+      "rule_id": "M7ADD-001",
+      "category": "AI Calculation Methodology",
+      "rule": "Compound-specific Acceptable Intakes (AIs) derived from carcinogenicity data use linear extrapolation from the rat TD50: AI (µg/day) = TD50 (mg/kg/day) / 50,000 × 50 kg body weight. The body weight of 50 kg is used for conservatism regardless of patient population.",
+      "source_section": "Addendum Section 1.5",
+      "source_quote": "The acceptable intake is calculated using the formula: AI = TD50/50,000 × 50 kg. The 50 kg body weight is used to provide a conservative (protective) estimate.",
+      "key_change": "Addendum formalizes the AI formula and confirms 50 kg body weight",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M7ADD-002",
+      "category": "Compound-Specific AI — Acrylonitrile",
+      "rule": "The compound-specific AI for acrylonitrile is 6 µg/day (derived from carcinogenicity data via linear extrapolation from rat TD50).",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Acrylonitrile: AI = 6 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 6,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-003",
+      "category": "Compound-Specific AI — Benzyl Chloride",
+      "rule": "The compound-specific AI for benzyl chloride is 41 µg/day (derived from carcinogenicity data via linear extrapolation).",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Benzyl chloride: AI = 41 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 41,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-004",
+      "category": "Compound-Specific AI — Bis(chloromethyl)ether",
+      "rule": "The compound-specific AI for bis(chloromethyl)ether is 0.004 µg/day, reflecting its extreme carcinogenic potency. This is far below the 1.5 µg/day TTC.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Bis(chloromethyl)ether: AI = 0.004 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit; one of the most restrictive in the Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 0.004,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-005",
+      "category": "Compound-Specific AI — Dimethylcarbamyl Chloride",
+      "rule": "The compound-specific AI for dimethylcarbamyl chloride is route-dependent: 0.6 µg/day for inhalation route products and 5 µg/day for all other routes of administration.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Dimethylcarbamyl chloride: AI = 0.6 µg/day (inhalation); 5 µg/day (other routes). Route-specific limits based on differential carcinogenicity data by route.",
+      "key_change": "Route-specific AI; only compound in Addendum with different inhalation vs. other-route limits",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_inhalation_ug_per_day": 0.6,
+        "AI_other_routes_ug_per_day": 5
+      }
+    },
+    {
+      "rule_id": "M7ADD-006",
+      "category": "Compound-Specific AI — Ethylene Dibromide (1,2-Dibromoethane)",
+      "rule": "The compound-specific AI for 1,2-dibromoethane (ethylene dibromide) is 2 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "1,2-Dibromoethane: AI = 2 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 2,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-007",
+      "category": "Compound-Specific AI — Epichlorohydrin",
+      "rule": "The compound-specific AI for epichlorohydrin is 3 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Epichlorohydrin: AI = 3 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 3,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-008",
+      "category": "Compound-Specific AI — Glycidol",
+      "rule": "The compound-specific AI for glycidol is 4 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Glycidol: AI = 4 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 4,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-009",
+      "category": "Compound-Specific AI — Hydrazine",
+      "rule": "The compound-specific AI for hydrazine is route-dependent: 0.2 µg/day for inhalation route products and 39 µg/day for all other routes.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Hydrazine: AI = 0.2 µg/day (inhalation); 39 µg/day (other routes).",
+      "key_change": "Route-specific AI; inhalation limit considerably lower than other routes",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_inhalation_ug_per_day": 0.2,
+        "AI_other_routes_ug_per_day": 39
+      }
+    },
+    {
+      "rule_id": "M7ADD-010",
+      "category": "Compound-Specific AI — Ethyl Bromide",
+      "rule": "The compound-specific AI for ethyl bromide (bromoethane) is 32 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Ethyl bromide: AI = 32 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 32,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-011",
+      "category": "Compound-Specific AI — Ethyl Chloride",
+      "rule": "The compound-specific AI for ethyl chloride (chloroethane) is 1810 µg/day, reflecting low carcinogenic potency.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Ethyl chloride: AI = 1810 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum; higher than TTC reflecting low potency",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 1810,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-012",
+      "category": "Compound-Specific AI — Methyl Chloride",
+      "rule": "The compound-specific AI for methyl chloride (chloromethane) is 1361 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Methyl chloride: AI = 1361 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 1361,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-013",
+      "category": "Compound-Specific AI — Styrene",
+      "rule": "The compound-specific AI for styrene is 154 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Styrene: AI = 154 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 154,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-014",
+      "category": "Compound-Specific AI — p-Cresidine",
+      "rule": "The compound-specific AI for p-cresidine (2-methoxy-5-methylaniline) is 45 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "p-Cresidine: AI = 45 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 45,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-015",
+      "category": "Compound-Specific AI — 1-Chloro-4-nitrobenzene",
+      "rule": "The compound-specific AI for 1-chloro-4-nitrobenzene is 117 µg/day.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "1-Chloro-4-nitrobenzene: AI = 117 µg/day (linear extrapolation from carcinogenicity data).",
+      "key_change": "New compound-specific limit in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 117,
+        "basis": "linear_extrapolation_TD50"
+      }
+    },
+    {
+      "rule_id": "M7ADD-016",
+      "category": "Compound-Specific AI — Dimethyl Sulfate",
+      "rule": "The AI for dimethyl sulfate defaults to the TTC of 1.5 µg/day because the available carcinogenicity data are insufficient to calculate a compound-specific AI and the linear extrapolation approach is not applicable.",
+      "source_section": "Addendum Table 1",
+      "source_quote": "Dimethyl sulfate: AI = 1.5 µg/day (defaults to TTC; no adequate carcinogenicity data for compound-specific derivation).",
+      "key_change": "Confirms TTC default applies when data are insufficient",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 1.5,
+        "basis": "TTC_default"
+      }
+    },
+    {
+      "rule_id": "M7ADD-017",
+      "category": "Non-Linear / Threshold PDE — Aniline",
+      "rule": "Aniline and aniline hydrochloride have sufficient data to support a threshold-based PDE of 720 µg/day via the non-linear approach (Section 3 of Addendum). This is based on a threshold mechanism and the PDE replaces the TTC for this compound.",
+      "source_section": "Addendum Section 3",
+      "source_quote": "Aniline/aniline HCl: PDE = 720 µg/day. This is derived using the threshold (non-linear) approach because the weight of evidence supports a threshold mechanism for carcinogenicity.",
+      "key_change": "Demonstrates application of non-linear approach; PDE exceeds TTC by 480-fold",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "PDE_ug_per_day": 720,
+        "basis": "non_linear_threshold_approach"
+      }
+    },
+    {
+      "rule_id": "M7ADD-018",
+      "category": "Non-Linear / Threshold PDE — p-Chloroaniline",
+      "rule": "p-Chloroaniline and p-chloroaniline hydrochloride have a PDE of 34 µg/day based on the threshold approach.",
+      "source_section": "Addendum Section 3",
+      "source_quote": "p-Chloroaniline/p-chloroaniline HCl: PDE = 34 µg/day (threshold approach).",
+      "key_change": "New compound-specific limit via threshold approach in Addendum",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "PDE_ug_per_day": 34,
+        "basis": "non_linear_threshold_approach"
+      }
+    },
+    {
+      "rule_id": "M7ADD-019",
+      "category": "Endogenous / Environmental Compounds — Acetaldehyde",
+      "rule": "Acetaldehyde has an acceptable intake of 2000 µg/day for oral route products and 185 µg/day for non-oral routes, based on the endogenous/environmental background exposure exception (Addendum Section 4).",
+      "source_section": "Addendum Section 4",
+      "source_quote": "Acetaldehyde: AI = 2000 µg/day (oral); 185 µg/day (other routes). Background endogenous levels are used as basis for the acceptable intake via the environmental exposure exception.",
+      "key_change": "Endogenous exception applied; background exposure establishes higher limit",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_oral_ug_per_day": 2000,
+        "AI_other_routes_ug_per_day": 185
+      }
+    },
+    {
+      "rule_id": "M7ADD-020",
+      "category": "Endogenous / Environmental Compounds — Formaldehyde",
+      "rule": "Formaldehyde acceptable intakes are: 8000 µg/day or 215 ppb (whichever is lower) for inhalation route products; 10,000 µg/day for other routes. Background endogenous levels justify these limits under the environmental exposure exception.",
+      "source_section": "Addendum Section 4",
+      "source_quote": "Formaldehyde: AI = 8000 µg/day or 215 ppb for inhalation (whichever lower); 10000 µg/day for other routes (endogenous/environmental exception).",
+      "key_change": "Endogenous exception applied with ppb-based inhalation limit",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_inhalation_ug_per_day": 8000,
+        "AI_inhalation_ppb_limit": 215,
+        "AI_other_routes_ug_per_day": 10000
+      }
+    },
+    {
+      "rule_id": "M7ADD-021",
+      "category": "Endogenous / Environmental Compounds — Hydrogen Peroxide",
+      "rule": "Hydrogen peroxide acceptable intake is 68,000 µg/day OR 0.5% (w/w) in the drug product, whichever is lower. Background endogenous levels justify this limit.",
+      "source_section": "Addendum Section 4",
+      "source_quote": "Hydrogen peroxide: AI = 68000 µg/day or 0.5% (w/w), whichever is lower (endogenous/environmental exception).",
+      "key_change": "Dual limit (mass and concentration) for hydrogen peroxide",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_ug_per_day": 68000,
+        "AI_concentration_percent_ww": 0.5
+      }
+    },
+    {
+      "rule_id": "M7ADD-022",
+      "category": "Endogenous / Environmental Compounds — Vinyl Acetate",
+      "rule": "Vinyl acetate acceptable intakes are: 2000 µg/day for oral route products; 758 µg/day for other routes.",
+      "source_section": "Addendum Section 4",
+      "source_quote": "Vinyl acetate: AI = 2000 µg/day (oral); 758 µg/day (other routes) (endogenous/environmental exception).",
+      "key_change": "New compound-specific limit via endogenous exception",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "AI_oral_ug_per_day": 2000,
+        "AI_other_routes_ug_per_day": 758
+      }
+    },
+    {
+      "rule_id": "M7ADD-023",
+      "category": "Alternative Methods",
+      "rule": "Alternative methods for AI derivation may be used when linear extrapolation is inappropriate (e.g., when a non-linear dose-response is established). Alternative methods include the point of departure (PoD) approach or PBPK modeling, and must be scientifically justified.",
+      "source_section": "Addendum Section 2",
+      "source_quote": "Alternative methods may be considered when the default linear extrapolation approach is not appropriate. Justification for use of alternative approaches should be provided and should include a discussion of the evidence supporting the alternative.",
+      "key_change": "Addendum explicitly recognizes and permits alternative derivation methods",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "q9_r1_rules": [
+    {
+      "rule_id": "Q9R1-001",
+      "category": "Harm Definition",
+      "rule": "The definition of 'Harm' in Q9(R1) is expanded to explicitly include damage from loss of product quality or availability, in addition to physical injury or damage to health from a product or process. This expansion recognizes patient harm from drug shortages as a quality risk management concern.",
+      "source_section": "Section 1 (Glossary)",
+      "source_quote": "Harm: Damage to health, including the damage that can occur from loss of product quality or availability.",
+      "key_change": "KEY CHANGE IN R1: Harm definition now explicitly includes drug availability impairment",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-002",
+      "category": "Two Fundamental QRM Principles",
+      "rule": "Quality Risk Management must be governed by two fundamental principles: (1) The evaluation of risk to quality must be based on scientific knowledge and ultimately linked to the protection of the patient; (2) The level of effort, formality, and documentation of the QRM process should be commensurate with the level of risk.",
+      "source_section": "Section 3",
+      "source_quote": "Two primary principles of quality risk management: (1) The evaluation of the risk to quality should be based on scientific knowledge and ultimately link to the protection of the patient; and (2) The level of effort, formality, and documentation of the quality risk management process should be commensurate with the level of risk.",
+      "key_change": "No change from Q9; reinforced in R1",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-003",
+      "category": "Formality in QRM — New Concept",
+      "rule": "Formality in QRM is NOT binary (formal vs. informal) but exists on a continuum. The appropriate level of formality must be determined based on three factors: (1) the level of uncertainty in the risk assessment; (2) the importance/criticality of the decision; and (3) the complexity of the situation. Resource constraints must never be used to justify a lower level of formality than is warranted.",
+      "source_section": "Section 5.1",
+      "source_quote": "The formality of the quality risk management process should be commensurate with the level of risk. Formality is not a binary variable; it exists as a continuum... The factors that determine the appropriate level of formality include: uncertainty, importance, and complexity. Resource constraints should not be used as a justification for a lower level of formality.",
+      "key_change": "MAJOR NEW CONCEPT IN R1: Replaces binary formal/informal distinction with formality continuum",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-004",
+      "category": "Formality in QRM — Factors",
+      "rule": "When determining appropriate QRM formality, three factors must be considered: (1) Uncertainty — higher uncertainty requires higher formality; (2) Importance — higher importance/criticality of the decision requires higher formality; (3) Complexity — more complex systems or processes require higher formality.",
+      "source_section": "Section 5.1",
+      "source_quote": "The factors that influence the appropriate level of formality include: (1) uncertainty associated with the risk; (2) importance of the decision and its impact on patient safety; (3) complexity of the system, product or process.",
+      "key_change": "NEW IN R1: Explicit three-factor framework for formality determination",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-005",
+      "category": "Risk-Based Decision-Making — Three Approaches",
+      "rule": "Quality risk management decisions can be made using three approaches: (1) Highly structured — quantitative risk assessment with defined methodologies, used for high-complexity or high-uncertainty situations; (2) Less structured — qualitative or semi-quantitative, adequate for moderate risk situations; (3) Rule-based — applying predetermined rules or thresholds without a full risk assessment, used for well-understood, low-complexity situations.",
+      "source_section": "Section 5.2",
+      "source_quote": "Risk-based decision-making can range from a highly structured approach... to a less structured approach... to a rule-based approach. The choice of approach should be commensurate with the level of risk and complexity.",
+      "key_change": "NEW IN R1: Explicit three-tiered risk-based decision-making framework",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-006",
+      "category": "Managing and Minimizing Subjectivity",
+      "rule": "Subjectivity in QRM assessments must be explicitly acknowledged, managed, and minimized. Methods to minimize subjectivity include: using diverse cross-functional teams, applying structured tools, documenting the rationale for all judgments, and seeking independent review of risk assessments. Unmanaged subjectivity can lead to biased risk decisions.",
+      "source_section": "Section 5.3",
+      "source_quote": "Subjectivity is inherent in risk assessment and risk-based decisions. The use of a cross-functional team, structured tools, and documentation of the rationale for decisions can help to identify and manage subjectivity. It is important to minimize undue subjectivity that may bias risk decisions.",
+      "key_change": "NEW IN R1: Explicit section on subjectivity management — not present in Q9",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-007",
+      "category": "Product Availability Risk",
+      "rule": "QRM processes must consider risks to product availability arising from quality or manufacturing issues. Companies should use QRM to identify, assess, and control risks that could lead to drug shortages, recognizing that unavailability of a medicine is itself a harm to patients.",
+      "source_section": "Section 6.1",
+      "source_quote": "Quality risk management should consider the risks to product availability arising from quality and manufacturing issues. The risk of a drug shortage due to quality or manufacturing issues can have a significant impact on patients.",
+      "key_change": "NEW IN R1: New section 6.1 explicitly linking QRM to drug shortage prevention",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-008",
+      "category": "Criticality Definition",
+      "rule": "In Q9(R1), criticality is defined as a property of a process parameter, material attribute, or other factor that reflects its potential impact on product quality and patient safety. Criticality is not binary — it should be assessed on a continuum, and the threshold for 'critical' designation should be justified based on the risk assessment.",
+      "source_section": "Section 1 (Glossary) and Section 5.1",
+      "source_quote": "Criticality reflects the potential of a process parameter or material attribute to impact product quality. Criticality should not be viewed as a binary classification but as a continuum that reflects the level of risk.",
+      "key_change": "KEY CLARIFICATION IN R1: Criticality is a continuum, not binary",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-009",
+      "category": "Risk Assessment Steps",
+      "rule": "A formal quality risk assessment must address three fundamental questions: (1) What might go wrong? (hazard identification); (2) What is the likelihood it will go wrong? (risk analysis); (3) What are the consequences? (risk evaluation). These three questions define the risk assessment process.",
+      "source_section": "Section 4.1",
+      "source_quote": "Risk assessment consists of the identification of hazards and the analysis and evaluation of risks associated with exposure to those hazards. Three fundamental questions: What might go wrong? What is the likelihood it will go wrong? What are the consequences?",
+      "key_change": "No change from Q9; three fundamental questions reinforced",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-010",
+      "category": "Risk Control",
+      "rule": "Risk control must address two objectives: (1) Risk reduction — reducing the probability and/or severity of harm to an acceptable level; (2) Risk acceptance — making an informed decision to accept a residual risk that cannot be further reduced. Both must be documented with appropriate justification.",
+      "source_section": "Section 4.2",
+      "source_quote": "Risk control includes decision making to reduce and/or accept risks. The purpose of risk control is to reduce the risk to an acceptable level. Risk acceptance is a decision to accept a risk that has been identified... A risk that is acceptable may need only minimal control.",
+      "key_change": "No change from Q9; risk control framework unchanged",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-011",
+      "category": "QRM Tools",
+      "rule": "Recognized QRM tools include: FMEA (Failure Mode and Effects Analysis), FMECA (Failure Mode, Effects and Criticality Analysis), FTA (Fault Tree Analysis), HACCP (Hazard Analysis and Critical Control Points), HAZOP (Hazard Operability Analysis), PHA (Preliminary Hazard Analysis), risk ranking and filtering, and statistical tools. Tool selection must be appropriate for the nature and complexity of the risk.",
+      "source_section": "Section 5 and Annex I",
+      "source_quote": "Risk management tools include: FMEA, FMECA, FTA, HACCP, HAZOP, PHA, risk ranking and filtering, statistical tools. The choice of risk management tools should be commensurate with the risk level.",
+      "key_change": "No change from Q9; tool list unchanged",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q9R1-012",
+      "category": "Risk Communication and Review",
+      "rule": "Risk communication must occur throughout the QRM process. Risk reviews must be conducted to incorporate new knowledge, post-market experience, or changed circumstances. The QRM process is not a one-time activity — it must be reviewed and updated as new information becomes available.",
+      "source_section": "Section 4.3 and 4.4",
+      "source_quote": "Risk communication should occur throughout the quality risk management process... Risk review should include consideration of the results of risk management... new knowledge... Results of risk management should be reviewed periodically.",
+      "key_change": "No change from Q9; risk communication and review requirements unchanged",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "q3d_r2_rules": [
+    {
+      "rule_id": "Q3DR2-001",
+      "category": "Scope and Element Classification",
+      "rule": "Twenty-four elemental impurities are assessed and controlled under Q3D. They are classified into four classes based on safety and likelihood of occurrence: Class 1 (human toxicants — As, Cd, Hg, Pb), Class 2A (human toxicants, route-dependent — Co, Ni, V), Class 2B (low probability of occurrence — Ag, Au, Ir, Os, Pd, Pt, Rh, Ru, Se, Tl), and Class 3 (low hazard, oral route only concern — Ba, Cr, Cu, Li, Mo, Sb, Sn).",
+      "source_section": "Section 4, Table 1",
+      "source_quote": "Class 1: Elements of significant safety concern for all routes — As, Cd, Hg, Pb. Class 2A: Elements with significant safety concern for specific routes — Co, Ni, V. Class 2B: Elements with lesser safety concern due to lower likelihood in drug products — Ag, Au, Ir, Os, Pd, Pt, Rh, Ru, Se, Tl. Class 3: Elements with low intrinsic toxicity — Ba, Cr, Cu, Li, Mo, Sb, Sn.",
+      "key_change": "No change in classification from Q3D; Appendix 5 adds cutaneous route for all 24 elements",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q3DR2-002",
+      "category": "PDE Formula",
+      "rule": "Permitted Daily Exposure (PDE) is calculated as: PDE = NO(A)EL × Mass Adjustment / [F1 × F2 × F3 × F4 × F5], where F1 = species-to-human extrapolation (1-12), F2 = intraspecies variability (fixed at 10), F3 = study duration/exposure adjustment, F4 = severity of toxicity/reversibility factor, F5 = NOEL/NOAEL/LOAEL factor (1-10).",
+      "source_section": "Section 3.1 and Appendix 1",
+      "source_quote": "PDE = NO(A)EL × Weight Adjustment / (F1 × F2 × F3 × F4 × F5). F1: factor accounting for extrapolation between species (1-12). F2: factor of 10 to account for variability between individuals. F3: variable factor for study duration. F4: factor for severe toxicity. F5: factor of 1, 3, or 10 for NOAEL, NOEL, or LOAEL.",
+      "key_change": "No change from Q3D; PDE formula unchanged",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q3DR2-003",
+      "category": "Control Threshold",
+      "rule": "If total elemental impurity levels from all sources are consistently below 30% of the established PDE, no further controls are required and the element need not be included in the drug product specification. The 30% threshold applies to all routes of administration.",
+      "source_section": "Section 5.6",
+      "source_quote": "If the total elemental impurity level from all sources is consistently less than 30% of the established PDE, further elemental impurity controls are not required.",
+      "key_change": "No change from Q3D; 30% control threshold unchanged",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "control_threshold_percent_of_PDE": 30
+      }
+    },
+    {
+      "rule_id": "Q3DR2-004",
+      "category": "Route Bioavailability Adjustment",
+      "rule": "When deriving parenteral or inhalation PDEs from oral data, bioavailability modifying factors apply based on measured or estimated oral bioavailability: <1% → divide oral PDE by 100; 1-50% → divide by 10; 50-90% → divide by 2; ≥90% → no adjustment (divide by 1). These factors account for route-dependent absorption differences.",
+      "source_section": "Section 3.1",
+      "source_quote": "Modification factors to convert oral PDE to parenteral or inhalation PDEs: if oral bioavailability <1%, divide by 100; 1-50%, divide by 10; 50-90%, divide by 2; ≥90%, divide by 1.",
+      "key_change": "No change from Q3D; bioavailability conversion factors unchanged",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q3DR2-005",
+      "category": "PDE Values — Class 1 Elements",
+      "rule": "Established PDEs for Class 1 elements (oral / parenteral / inhalation, all in µg/day): Arsenic (As) = 15 / 15 / 2; Cadmium (Cd) = 5 / 2 / 3; Mercury (Hg) = 30 / 3 / 1; Lead (Pb) = 5 / 5 / 5.",
+      "source_section": "Appendix 2, Table A.2.1; Appendix 3 monographs",
+      "source_quote": "Table A.2.1: Established PDEs (µg/day). As: oral 15, parenteral 15, inhalation 2. Cd: oral 5, parenteral 2, inhalation 3. Hg: oral 30, parenteral 3, inhalation 1. Pb: oral 5, parenteral 5, inhalation 5.",
+      "key_change": "No change in Class 1 values from Q3D; Cd inhalation was revised in Q3D(R1)",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "As_oral_ug_day": 15, "As_parenteral_ug_day": 15, "As_inhalation_ug_day": 2,
+        "Cd_oral_ug_day": 5, "Cd_parenteral_ug_day": 2, "Cd_inhalation_ug_day": 3,
+        "Hg_oral_ug_day": 30, "Hg_parenteral_ug_day": 3, "Hg_inhalation_ug_day": 1,
+        "Pb_oral_ug_day": 5, "Pb_parenteral_ug_day": 5, "Pb_inhalation_ug_day": 5
+      }
+    },
+    {
+      "rule_id": "Q3DR2-006",
+      "category": "PDE Values — Class 2A Elements",
+      "rule": "Established PDEs for Class 2A elements (oral / parenteral / inhalation, all in µg/day): Cobalt (Co) = 50 / 5 / 3; Nickel (Ni) = 220 / 22 / 6 [CORRECTED IN R2 from 200/20/6]; Vanadium (V) = 100 / 10 / 1.",
+      "source_section": "Appendix 2, Table A.2.1; Appendix 3 Nickel monograph",
+      "source_quote": "Nickel (Ni) PDE: Oral 220 µg/day [PDE = 2.2 mg/kg/d x 50 kg / (5 x 10 x 1 x 1 x 10) = 0.22 mg/d = 220 µg/day]; Parenteral 22 µg/day; Inhalation 6.0 µg/day. Co: oral 50, parenteral 5, inhalation 3. V: oral 100, parenteral 10, inhalation 1.",
+      "key_change": "CORRECTED IN R2: Nickel PDEs revised from 200/20/6 to 220/22/6 µg/day",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "Co_oral_ug_day": 50, "Co_parenteral_ug_day": 5, "Co_inhalation_ug_day": 3,
+        "Ni_oral_ug_day": 220, "Ni_parenteral_ug_day": 22, "Ni_inhalation_ug_day": 6,
+        "V_oral_ug_day": 100, "V_parenteral_ug_day": 10, "V_inhalation_ug_day": 1,
+        "note": "Ni values corrected in R2 from 200/20/6"
+      }
+    },
+    {
+      "rule_id": "Q3DR2-007",
+      "category": "PDE Values — Class 2B Elements",
+      "rule": "Established PDEs for Class 2B elements (oral / parenteral / inhalation, all in µg/day): Silver (Ag) = 167 / 16.7 / 7 [CORRECTED IN R2 from 150/15/7]; Gold (Au) = 322 / 322 / 3.2 [CORRECTED IN R2 from 300/300/3]; Iridium (Ir) = 100 / 10 / 1; Osmium (Os) = 100 / 10 / 1; Palladium (Pd) = 100 / 10 / 1; Platinum (Pt) = 100 / 10 / 1 [Table A.2.1]; Rhodium (Rh) = 100 / 10 / 1; Ruthenium (Ru) = 100 / 10 / 1; Selenium (Se) = 150 / 80 / 130; Thallium (Tl) = 8 / 8 / 8.",
+      "source_section": "Appendix 2, Table A.2.1; Appendix 3 Gold and Silver monographs",
+      "source_quote": "Gold (Au) PDE: Oral PDE = 32.2 mg/kg x 50 kg / (5 x 10 x 10 x 1 x 10) = 322 µg/day; Parenteral PDE = 322 µg/day; Inhalation PDE = 322 µg/day / 100 = 3.22 µg/day. Silver (Ag) PDE: Oral PDE = 20 mg/kg x 50 kg / (12 x 10 x 5 x 1 x 10) = 167 µg/day; Parenteral PDE = 167 µg/day / 10 = 16.7 µg/day; Inhalation PDE = 7.0 µg/day.",
+      "key_change": "CORRECTED IN R2: Gold PDEs revised from 300/300/3 to 322/322/3.2; Silver PDEs revised from 150/15/7 to 167/16.7/7",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "Ag_oral_ug_day": 167, "Ag_parenteral_ug_day": 16.7, "Ag_inhalation_ug_day": 7,
+        "Au_oral_ug_day": 322, "Au_parenteral_ug_day": 322, "Au_inhalation_ug_day": 3.2,
+        "Ir_oral_ug_day": 100, "Ir_parenteral_ug_day": 10, "Ir_inhalation_ug_day": 1,
+        "Os_oral_ug_day": 100, "Os_parenteral_ug_day": 10, "Os_inhalation_ug_day": 1,
+        "Pd_oral_ug_day": 100, "Pd_parenteral_ug_day": 10, "Pd_inhalation_ug_day": 1,
+        "Pt_oral_ug_day": 100, "Pt_parenteral_ug_day": 10, "Pt_inhalation_ug_day": 1,
+        "Rh_oral_ug_day": 100, "Rh_parenteral_ug_day": 10, "Rh_inhalation_ug_day": 1,
+        "Ru_oral_ug_day": 100, "Ru_parenteral_ug_day": 10, "Ru_inhalation_ug_day": 1,
+        "Se_oral_ug_day": 150, "Se_parenteral_ug_day": 80, "Se_inhalation_ug_day": 130,
+        "Tl_oral_ug_day": 8, "Tl_parenteral_ug_day": 8, "Tl_inhalation_ug_day": 8,
+        "note_Au": "Gold corrected in R2 from 300/300/3",
+        "note_Ag": "Silver corrected in R2 from 150/15/7",
+        "note_Ir_Os_Rh_Ru": "Ir, Os, Rh, Ru use Pd PDEs (insufficient individual toxicity data)"
+      }
+    },
+    {
+      "rule_id": "Q3DR2-008",
+      "category": "PDE Values — Class 3 Elements",
+      "rule": "Established PDEs for Class 3 elements (oral / parenteral / inhalation, all in µg/day): Barium (Ba) = 1400 / 700 / 300; Chromium (Cr) = 11000 / 1100 / 3; Copper (Cu) = 3000 / 300 / 30; Lithium (Li) = 550 / 250 / 25; Molybdenum (Mo) = 3000 / 1500 / 10; Antimony (Sb) = 1200 / 90 / 20; Tin (Sn) = 6000 / 600 / 60.",
+      "source_section": "Appendix 2, Table A.2.1; Appendix 3 monographs",
+      "source_quote": "Table A.2.1 Class 3 PDEs (µg/day): Ba 1400/700/300; Cr 11000/1100/3; Cu 3000/300/30; Li 550/250/25 [monograph shows 560/280/25]; Mo 3000/1500/10 [monograph shows 3400/1700/11]; Sb 1200/90/20; Sn 6000/600/60.",
+      "key_change": "No changes to Class 3 values in R2; table values are rounded from monograph calculations",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "Ba_oral_ug_day": 1400, "Ba_parenteral_ug_day": 700, "Ba_inhalation_ug_day": 300,
+        "Cr_oral_ug_day": 11000, "Cr_parenteral_ug_day": 1100, "Cr_inhalation_ug_day": 3,
+        "Cu_oral_ug_day": 3000, "Cu_parenteral_ug_day": 300, "Cu_inhalation_ug_day": 30,
+        "Li_oral_ug_day": 550, "Li_parenteral_ug_day": 250, "Li_inhalation_ug_day": 25,
+        "Mo_oral_ug_day": 3000, "Mo_parenteral_ug_day": 1500, "Mo_inhalation_ug_day": 10,
+        "Sb_oral_ug_day": 1200, "Sb_parenteral_ug_day": 90, "Sb_inhalation_ug_day": 20,
+        "Sn_oral_ug_day": 6000, "Sn_parenteral_ug_day": 600, "Sn_inhalation_ug_day": 60
+      }
+    },
+    {
+      "rule_id": "Q3DR2-009",
+      "category": "Appendix 5 — Cutaneous Route NEW IN R2",
+      "rule": "NEW IN R2: Appendix 5 establishes PDEs for the cutaneous and transcutaneous route of administration for all 24 elemental impurities. Appendix 5 applies to cutaneous and transcutaneous drug products (intended for local or systemic effect) but NOT to mucosal (oral, nasal, vaginal), ophthalmic, rectal, or subcutaneous/subdermal routes.",
+      "source_section": "Appendix 5, Section 2",
+      "source_quote": "This Appendix to the Q3D Guideline applies to cutaneous and transcutaneous drug products (referred to as 'cutaneous products' throughout this Appendix) whether intended for local or systemic effect. This Appendix does not apply to drug products intended for mucosal administration (oral, nasal, vaginal), topical ophthalmic, rectal, or subcutaneous and subdermal routes of administration.",
+      "key_change": "ENTIRELY NEW IN R2: Appendix 5 did not exist in Q3D or Q3D(R1)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q3DR2-010",
+      "category": "Appendix 5 — Cutaneous Modifying Factor (CMF)",
+      "rule": "Cutaneous PDEs are derived from parenteral PDEs by applying a Cutaneous Modifying Factor (CMF). For most elements (CBA ≤1%): CMF = 10 (Cutaneous PDE = Parenteral PDE × 10). Exception for Arsenic (CBA ~5%): CMF = 2 (Cutaneous PDE = Parenteral PDE × 2 = 15 × 2 = 30 µg/day). Exception for Thallium (highly skin-absorbed): CMF = 1 (Cutaneous PDE = Parenteral PDE × 1 = 8 µg/day).",
+      "source_section": "Appendix 5, Sections 4.1 and 4.2",
+      "source_quote": "For EI with ≤1% CBA, the adjusted CBA is 1% x 10 = 10%. CMF = 100%/10% = 10. Cutaneous PDE = Parenteral PDE x 10. For arsenic: adjusted CBA = 5% x 10 = 50%, CMF = 100%/50% = 2. Cutaneous PDE = 15 µg/day x 2 = 30 µg/day. For thallium: Cutaneous PDE = 8 µg/day x 1 = 8 µg/day.",
+      "key_change": "NEW IN R2: CMF methodology for cutaneous route derivation",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "CMF_most_elements": 10,
+        "CMF_arsenic": 2,
+        "CMF_thallium": 1
+      }
+    },
+    {
+      "rule_id": "Q3DR2-011",
+      "category": "Appendix 5 — Cutaneous PDE Values",
+      "rule": "Cutaneous PDEs (µg/day) from Table A.5.1: Cd=20, Pb=50, As=30, Hg=30, Co=50, V=100, Ni=200, Tl=8, Au=3000, Pd=100, Se=800, Ag=150, Pt=100, Li=2500, Sb=900, Ba=7000, Mo=15000, Cu=3000, Sn=6000, Cr=11000. Ir/Os/Rh/Ru use Pd PDE (100 µg/day).",
+      "source_section": "Appendix 5, Section 7, Table A.5.1",
+      "source_quote": "Table A.5.1: Cutaneous products – PDE, CTCL and elements to be included in risk assessment. [Cutaneous PDE (µg/day)]: Cd=20, Pb=50, As=30, Hg=30, Co=50, V=100, Ni=200, Tl=8, Au=3000, Pd=100, Se=800, Ag=150, Pt=100, Li=2500, Sb=900, Ba=7000, Mo=15000, Cu=3000, Sn=6000, Cr=11000.",
+      "key_change": "NEW IN R2: Complete set of cutaneous PDEs established for first time",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "cutaneous_PDE_ug_day": {
+          "Cd": 20, "Pb": 50, "As": 30, "Hg": 30, "Co": 50, "V": 100, "Ni": 200,
+          "Tl": 8, "Au": 3000, "Pd": 100, "Ir": 100, "Os": 100, "Rh": 100, "Ru": 100,
+          "Se": 800, "Ag": 150, "Pt": 100, "Li": 2500, "Sb": 900, "Ba": 7000,
+          "Mo": 15000, "Cu": 3000, "Sn": 6000, "Cr": 11000
+        }
+      }
+    },
+    {
+      "rule_id": "Q3DR2-012",
+      "category": "Appendix 5 — Cutaneous Concentration Threshold Limits for Ni and Co",
+      "rule": "For Nickel (Ni) and Cobalt (Co), a Cutaneous and Transcutaneous Concentration Limit (CTCL) of 35 µg/g applies in addition to the PDE limit, to minimize elicitation of allergic skin reactions in sensitized individuals. Both the PDE (µg/day) AND the CTCL (µg/g) must be met simultaneously. If results conflict, the lower limit applies.",
+      "source_section": "Appendix 5, Section 5, Table A.5.1",
+      "source_quote": "The concentrations of EI generally present in cutaneous products as impurities are not considered sufficient to induce sensitization. However, a concentration limit in addition to the PDE is warranted for Nickel (Ni) and Cobalt (Co) to reduce the likelihood of eliciting skin reactions in already sensitized individuals. This concentration limit is referred to as the cutaneous and transcutaneous concentration limit (CTCL)... CTCL for Ni and Co = 35 µg/g.",
+      "key_change": "NEW IN R2: Concentration-based limit (CTCL) for Ni and Co in cutaneous products — dual limits required",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "CTCL_Ni_ug_per_g": 35,
+        "CTCL_Co_ug_per_g": 35,
+        "note": "Both PDE and CTCL must be met; lower limit applies if conflicting"
+      }
+    },
+    {
+      "rule_id": "Q3DR2-013",
+      "category": "Appendix 5 — Dermis-Contacting Products Exception",
+      "rule": "The generic cutaneous PDE from Appendix 5 must NOT be applied to drug products that directly contact the dermis due to substantial disruption of the basal cell layer of the epidermis (e.g., products for skin ulcers, second- and third-degree burns, pemphigus, epidermolysis bullosa). For these indications, a case-specific justification is required, and the parenteral PDE is generally the appropriate starting point.",
+      "source_section": "Appendix 5, Section 3.2",
+      "source_quote": "The generic PDE for the cutaneous route described in this Addendum should not be applied to drug products intended to treat skin with substantial disruption of the basal cell layer of the epidermis. For indications in which drug product is intentionally brought into contact with the dermis... it is recommended to develop a case-specific justification based on principles outlined in ICH Q3D section 3.3. The parenteral PDE is generally an appropriate starting point for these drug products.",
+      "key_change": "NEW IN R2: Critical exclusion for dermis-contacting products from generic cutaneous PDE",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q3DR2-014",
+      "category": "Appendix 5 — Cutaneous Control Threshold and Retention Factor",
+      "rule": "For cutaneous products, the 30% control threshold applies to both the cutaneous PDE (µg/day) and, for Ni and Co, to the CTCL (µg/g). Additionally, a retention factor may be applied for products with short retention times (e.g., shampoos) to adjust the effective exposure. If a retention factor is applied, the adjusted limit is called an 'Acceptable Level' and is subject to regulatory case-by-case review.",
+      "source_section": "Appendix 5, Section 6",
+      "source_quote": "A control threshold is defined as a level that is 30% of the established PDE and CTCL (for Ni and Co) in the drug product... The risk assessment may propose an adjustment by use of a retention factor... If the PDE is adjusted in this manner, the new level proposed should be referred to as an Acceptable Level and is subject to consideration by the relevant authorities on a case-by-case basis.",
+      "key_change": "NEW IN R2: Retention factor concept for cutaneous products; introduces 'Acceptable Level' terminology",
+      "verification_status": "VERIFIED",
+      "threshold_values": {
+        "control_threshold_percent_of_PDE_or_CTCL": 30,
+        "retention_factor_applicability": "products with short application duration (e.g., shampoos)"
+      }
+    },
+    {
+      "rule_id": "Q3DR2-015",
+      "category": "Risk Assessment — Element Inclusion in Risk Assessment",
+      "rule": "For cutaneous products, the risk assessment must include: all Class 1 elements (Cd, Pb, As, Hg), all Class 2A elements (Co, Ni, V), and Class 2B and Class 3 elements only if intentionally added. Class 2B elements not intentionally added may be excluded from the cutaneous risk assessment due to their low likelihood of occurrence. Class 3 elements with cutaneous PDE >500 µg/day do not require inclusion unless intentionally added.",
+      "source_section": "Appendix 5, Table A.5.1 footnotes",
+      "source_quote": "Class 2B elements were excluded from the assessment of oral, parenteral and inhalation products due to the low likelihood that they would be present if not intentionally added... Class 3 elements with a cutaneous PDE above 500 µg/day do not have to be included in the risk assessment unless intentionally added.",
+      "key_change": "NEW IN R2: Cutaneous-specific risk assessment inclusion criteria",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

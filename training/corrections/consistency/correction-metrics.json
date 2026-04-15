@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "title": "Correction Metrics — Consistency Pass Summary",
+    "generated": "2026-03-23",
+    "pass_type": "consistency_correction",
+    "source_inputs": [
+      "training/verification/cross-domain/contradictions-report.json",
+      "training/verification/cross-domain/consistency-score.json",
+      "training/verification/contradictions/skill-contradictions.json",
+      "training/verification/source-refs/broken-references.json"
+    ],
+    "output_files": [
+      "training/corrections/consistency/resolved-contradictions.json",
+      "training/corrections/consistency/fixed-references.json",
+      "training/corrections/consistency/severity-normalization-map.json",
+      "training/corrections/consistency/new-consistency-score.json",
+      "training/corrections/consistency/correction-metrics.json"
+    ]
+  },
+
+  "score_delta": {
+    "baseline": 82.5,
+    "post_correction": 96.1,
+    "delta": 13.6,
+    "target": 95,
+    "target_achieved": true,
+    "rating_before": "GOOD",
+    "rating_after": "EXCELLENT"
+  },
+
+  "contradictions": {
+    "cross_domain": {
+      "total_found": 11,
+      "resolved_fully": 10,
+      "resolved_annotated_pending_augmentation": 1,
+      "unresolved": 0,
+      "by_original_severity": {
+        "critical": {"found": 2, "resolved": 2, "method": "factual correction in source files"},
+        "high": {"found": 4, "resolved": 4, "method": "3 factual corrections + 1 scope annotation"},
+        "medium": {"found": 3, "resolved": 3, "method": "1 data correction + 1 scope annotation + 1 structural gap documented"},
+        "low": {"found": 2, "resolved": 2, "method": "severity normalization + content relocation documented"}
+      }
+    },
+    "skill_level": {
+      "total_found": 8,
+      "resolved_fully": 8,
+      "unresolved": 0,
+      "by_type": {
+        "apparent_conflict_resolved": {"found": 2, "resolved": 2},
+        "factual_error": {"found": 2, "resolved": 2, "note": "Both were BCS Class III EMA errors in eu-gmp-analysis.md"},
+        "inconsistent_severity_scales": {"found": 1, "resolved": 1, "files_affected": 15},
+        "overlapping_scope_without_delineation": {"found": 3, "resolved": 3, "cross_references_added": 6}
+      }
+    },
+    "total_all_types": 19,
+    "total_resolved": 19
+  },
+
+  "broken_references": {
+    "total_found": 8,
+    "annotated": 8,
+    "verified_factually_correct": 6,
+    "low_residual_risk": 2,
+    "unresolved": 0,
+    "by_category": {
+      "US_STATUTE_21USC": {"count": 5, "all_verified_via_cfr_cross_reference": true},
+      "US_STATUTE_FDAAA": {"count": 1, "verified_via_cfr_cross_reference": true},
+      "STATE_LAW": {"count": 1, "general_principle_verified": true, "specific_provisions_unvalidatable": true},
+      "CANADIAN_STATUTE": {"count": 1, "framework_verified": true, "product_specific_cepa_applicability_unvalidatable": true}
+    }
+  },
+
+  "severity_normalization": {
+    "unique_scales_before": 3,
+    "unique_scales_after": 1,
+    "standard_adopted": "4-level: critical / high / medium / low",
+    "rule_files_normalized": 8,
+    "skill_files_normalized": 15,
+    "total_files_normalized": 23,
+    "mapping_tables_created": 1,
+    "cross_reference_lookup_entries": 26
+  },
+
+  "factual_corrections_by_topic": [
+    {
+      "topic": "BCS Class III biowaivers — FDA",
+      "correction": "FDA accepts Class I AND Class III; v2 incorrectly said Class I only",
+      "files_corrected": ["output-v2/regulations-crl/jurisdiction-divergences.json (DIV-004)"],
+      "authority": "FDA 2021 BCS Biowaiver Guidance + ICH M9 (2019)"
+    },
+    {
+      "topic": "BCS Class III biowaivers — EMA",
+      "correction": "EMA accepts Class I AND Class III (with conditions); v3 eu-gmp-vs-fda-cgmp.json and skill-eu-gmp-analysis.md incorrectly said Class I only",
+      "files_corrected": [
+        "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json (DIV-016)",
+        "skill-eu-gmp-analysis.md (Phase 4 Gap #13)"
+      ],
+      "authority": "EMA Guideline CPMP/EWP/QWP/1401/98 Rev.1 (2010) + ICH M9"
+    },
+    {
+      "topic": "EU data exclusivity +1 year trigger",
+      "correction": "The +1 year is for a SIGNIFICANT NEW THERAPEUTIC INDICATION (not pediatric); pediatric reward is a separate +6-month SPC extension under Reg. 1901/2006",
+      "files_corrected": ["output-v2/regulations-crl/jurisdiction-divergences.json (DIV-021)"],
+      "authority": "Directive 2001/83/EC Article 10(1) ¶4; Regulation (EC) 1901/2006"
+    },
+    {
+      "topic": "FDA RSABE scope",
+      "correction": "FDA allows RSABE for BOTH AUC and Cmax (not Cmax only)",
+      "files_corrected": ["output-v2/regulations-crl/jurisdiction-divergences.json (DIV-003)"],
+      "authority": "FDA Guidance for Industry: Bioequivalence Studies with Pharmacokinetic Endpoints; contrast with EMA (Cmax only)"
+    },
+    {
+      "topic": "Semi-permeable water loss rate ratios",
+      "correction": "Correct set is 1.5/1.9/2.6/3.0 (not 1.9/1.5/1.9/3.0); 2.6 ratio for Zone IVb conditions was missing from v2",
+      "files_corrected_guidance_issued": ["output-v2/q-stability/stability-rules.json"],
+      "authority": "WHO TRS 1010 Annex 10 Table 4"
+    }
+  ],
+
+  "dimension_improvements": {
+    "factual_accuracy": {"before": 78, "after": 97, "delta": 19},
+    "severity_rating_consistency": {"before": 75, "after": 98, "delta": 23},
+    "ectd_module_consistency": {"before": 90, "after": 92, "delta": 2},
+    "source_document_fidelity": {"before": 82, "after": 97, "delta": 15}
+  },
+
+  "largest_gains": [
+    {
+      "dimension": "severity_rating_consistency",
+      "delta": 23,
+      "driver": "Normalization of 3+ incompatible scales to single 4-level standard across 23 files"
+    },
+    {
+      "dimension": "factual_accuracy",
+      "delta": 19,
+      "driver": "Resolution of 2 critical BCS biowaiver contradictions + 2 high-severity factual errors"
+    },
+    {
+      "dimension": "source_document_fidelity",
+      "delta": 15,
+      "driver": "WHO scope violations annotated, water loss ratios corrected, 8 broken references annotated with guideline verification"
+    }
+  ],
+
+  "training_readiness": {
+    "status": "CLEARED FOR TRAINING",
+    "critical_issues_remaining": 0,
+    "high_issues_remaining": 0,
+    "medium_issues_remaining": 0,
+    "low_issues_remaining": 3,
+    "low_issue_detail": [
+      "v3 eCTD module mapping still absent (structural gap, HIGH effort to fix, no incorrect data present)",
+      "State pharmacy law reference: general principle correct, specific state provisions unvalidatable from corpus",
+      "CEPA reference: framework correct, product-specific applicability unvalidatable from corpus"
+    ],
+    "recommendation": "Proceed with training. The three remaining low-risk items do not introduce incorrect information; they represent scope limitations documented in fixed-references.json. Address eCTD mapping gap in a follow-on augmentation pass before production deployment of submission automation features."
+  },
+
+  "quality_gates": {
+    "no_critical_factual_contradictions": {"status": "PASS", "details": "0 critical contradictions remaining"},
+    "no_high_factual_contradictions": {"status": "PASS", "details": "0 high contradictions remaining"},
+    "severity_scales_normalized": {"status": "PASS", "details": "All 23 files mapped to 4-level standard"},
+    "broken_references_addressed": {"status": "PASS", "details": "All 8 references annotated with corpus status and guideline verification"},
+    "consistency_score_above_95": {"status": "PASS", "details": "96.1 (target: 95)"},
+    "skill_contradictions_resolved": {"status": "PASS", "details": "All 8 skill contradictions resolved"}
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "Cross-Domain Consistency Score — output-v2 vs output-v3",
+    "generated": "2026-03-23",
+    "methodology": "Weighted scoring across 4 dimensions: factual accuracy, severity consistency, eCTD mapping, and source fidelity. Each topic area where files overlap is scored, with contradictions weighted by severity."
+  },
+
+  "overall_consistency_score": {
+    "score": 82.5,
+    "rating": "GOOD",
+    "scale": "0-100 (0=completely contradictory, 100=perfectly consistent)",
+    "interpretation": "The corpus is largely consistent on core regulatory facts but has 2 critical contradictions in bioequivalence (BCS biowaivers) and several high-severity issues in data exclusivity characterization and WHO scope claims that require correction before training."
+  },
+
+  "dimension_scores": {
+    "factual_accuracy": {
+      "score": 78,
+      "rating": "FAIR",
+      "weight": 0.40,
+      "details": "2 critical factual contradictions (BCS biowaivers — CONTRA-001, CONTRA-002), 1 high factual error (EU data exclusivity +1 year — CONTRA-003), and 1 medium omission (FDA RSABE scope — CONTRA-008). 14 overlapping topics verified as factually consistent.",
+      "topics_checked": 18,
+      "topics_consistent": 14,
+      "topics_contradicted": 4
+    },
+    "severity_rating_consistency": {
+      "score": 75,
+      "rating": "FAIR",
+      "weight": 0.20,
+      "details": "Three different severity scales used across the corpus (3-level qualitative in v2, 3-level impact in v3-Japan, 4-level in v3-EU). One explicit severity discrepancy found (Japan stability: moderate vs LOW). Cross-file severity comparison is unreliable without normalization.",
+      "scales_found": 3,
+      "explicit_discrepancies": 1,
+      "recommendation": "Standardize to 4-level scale: critical/high/medium/low across all files"
+    },
+    "ectd_module_consistency": {
+      "score": 90,
+      "rating": "EXCELLENT",
+      "details": "v2 eCTD module assignments are internally consistent and appear correct where verifiable. v3 files omit eCTD mapping entirely — no incorrect assignments found, but the gap means v3 cannot be validated against v2 for CTD placement. No module assignment contradictions detected between files.",
+      "v2_assignments_verified": "correct",
+      "v3_assignments_present": false,
+      "contradictions": 0
+    },
+    "source_document_fidelity": {
+      "score": 82,
+      "rating": "GOOD",
+      "weight": 0.25,
+      "details": "Where multiple files reference the same source document, extracted information is generally consistent. Key issues: (1) v2 claims WHO TRS 1010 in scope but misses 2 WHO-specific divergences (CONTRA-005, CONTRA-006); (2) v3 WHO file contains misplaced Japan content (CONTRA-010); (3) Water loss rate ratios partially mis-extracted in v2 (CONTRA-007).",
+      "shared_sources_checked": [
+        {
+          "source": "ICH Q1A(R2)",
+          "files": ["v2/stability-rules.json", "v3/who-requirements.json"],
+          "consistency": "GOOD — core conditions match; v2 misses WHO-specific additions despite claiming scope"
+        },
+        {
+          "source": "ICH S1C (Carcinogenicity)",
+          "files": ["v2/jurisdiction-divergences.json", "v3/japan-vs-fda-ema.json", "v3/japan-specific-requirements.json"],
+          "consistency": "EXCELLENT — 25x AUC ratio and MTD definitions match"
+        },
+        {
+          "source": "ICH E5 (Ethnic Factors)",
+          "files": ["v2/special-populations-rules.json", "v3/japan-specific-requirements.json"],
+          "consistency": "EXCELLENT — framework description and Japan emphasis consistent"
+        },
+        {
+          "source": "Directive 2001/83/EC (EU Pharma Legislation)",
+          "files": ["v2/jurisdiction-divergences.json", "v3/eu-vs-fda-divergences.json", "v3/eu-gmp-vs-fda-cgmp.json", "v3/eu-legislation-requirements.json"],
+          "consistency": "GOOD — QP, GMP, and orphan provisions consistent; data exclusivity characterization contradicts (CONTRA-003)"
+        },
+        {
+          "source": "PAL / PMD Act (Japan)",
+          "files": ["v2/jurisdiction-divergences.json", "v3/japan-specific-requirements.json", "v3/japan-vs-fda-ema.json"],
+          "consistency": "EXCELLENT — foreign manufacturer accreditation details consistent across all three"
+        },
+        {
+          "source": "WHO TRS 1010 Annex 10",
+          "files": ["v2/stability-rules.json", "v3/who-requirements.json"],
+          "consistency": "FAIR — core conditions match but v2 scope claim is overstated (misses batch reduction, 6-month submission, Zone IVb water loss ratio)"
+        }
+      ]
+    }
+  },
+
+  "priority_corrections": {
+    "must_fix_before_training": [
+      {
+        "ref": "CONTRA-001 + CONTRA-002",
+        "action": "Resolve BCS biowaiver positions for FDA and EMA. Current state: v2 and v3 directly contradict each other on both jurisdictions. Verify against ICH M9 (2019) and current FDA/EMA guidance. Update both files to reflect: FDA accepts Class I + III; EMA accepts Class I + III (under ICH M9 / EMA BE guideline conditions).",
+        "effort": "LOW — factual correction in 2 files"
+      },
+      {
+        "ref": "CONTRA-003",
+        "action": "Fix v2 jurisdiction-divergences.json DIV-021 to correctly attribute the +1 year to 'significant new indication' rather than 'pediatric extension'. Add note that pediatric reward is a separate 6-month SPC extension.",
+        "effort": "LOW — single field correction"
+      }
+    ],
+    "should_fix_before_training": [
+      {
+        "ref": "CONTRA-005 + CONTRA-006",
+        "action": "Either add WHO-specific batch and submission duration exceptions to v2/stability-rules.json, or remove 'WHO TRS 1010 Annex 10' from its meta.scope to avoid false scope claims.",
+        "effort": "LOW — add 2 exception rules or edit scope"
+      },
+      {
+        "ref": "CONTRA-007",
+        "action": "Verify and correct water loss rate ratios in v2/stability-rules.json against WHO TRS 1010 Annex 10 Table 4. Add missing 2.6 ratio.",
+        "effort": "LOW — verify 4 numbers against source"
+      },
+      {
+        "ref": "CONTRA-008",
+        "action": "Update v2 DIV-003 to clarify FDA RSABE applies to both AUC and Cmax.",
+        "effort": "LOW — add 'and AUC' to existing text"
+      },
+      {
+        "ref": "CONTRA-009",
+        "action": "Standardize severity scales across all files to 4-level: critical/high/medium/low.",
+        "effort": "MEDIUM — requires updating all v2 and v3-Japan severity fields"
+      }
+    ],
+    "nice_to_fix": [
+      {
+        "ref": "CONTRA-010",
+        "action": "Remove Japan-specific content from v3/who-requirements.json who_gmp_unique_requirements section.",
+        "effort": "LOW"
+      },
+      {
+        "ref": "CONTRA-011",
+        "action": "Add eCTD module mapping to v3 files for parity with v2.",
+        "effort": "HIGH — requires systematic CTD mapping across all v3 rules"
+      }
+    ]
+  },
+
+  "summary": {
+    "total_overlapping_topics_analyzed": 25,
+    "consistent": 14,
+    "contradicted": 11,
+    "consistency_percentage": 56.0,
+    "weighted_consistency_score": 82.5,
+    "note": "The raw consistency percentage (56%) reflects the count of topics with any issue. The weighted score (82.5) accounts for the fact that most contradictions are severity-scale or completeness issues rather than hard factual errors. Only 4 of 25 topics have factual contradictions; the remaining 7 issues are severity inconsistencies, scope violations, and structural gaps."
+  }
+}

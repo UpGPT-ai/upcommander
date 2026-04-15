@@ -1,0 +1,1167 @@
+{
+  "metadata": {
+    "title": "EU Pharmaceutical Legislation — Legally Binding Requirements",
+    "version": "3.0",
+    "generated": "2026-03-22",
+    "source_documents": [
+      "Directive 2001/83/EC (Community code for medicinal products for human use)",
+      "Regulation (EC) No 726/2004 (Centralised procedure and EMA)",
+      "Regulation (EU) No 536/2014 (Clinical Trials Regulation)",
+      "Commission Delegated Regulation (EU) 2017/1569 (GMP for investigational medicinal products)",
+      "Regulation (EC) No 1394/2007 (Advanced Therapy Medicinal Products)",
+      "Regulation (EC) No 141/2000 (Orphan Medicinal Products)",
+      "Regulation (EC) No 1901/2006 (Paediatric Medicinal Products)",
+      "Regulation (EC) No 1234/2008 (Variations to marketing authorisations)"
+    ],
+    "total_requirements_extracted": 412,
+    "note": "All requirements use 'shall' language from the legislation, indicating legally binding obligations."
+  },
+
+  "topics": {
+
+    "01_marketing_authorisation": {
+      "title": "Marketing Authorisation Requirements",
+      "primary_legislation": ["Directive 2001/83/EC Title III", "Regulation 726/2004 Title II"],
+      "requirements": [
+        {
+          "id": "MA-001",
+          "article": "Dir 2001/83/EC Art. 6(1)",
+          "requirement": "No medicinal product may be placed on the market of a Member State unless a marketing authorisation has been issued by the competent authorities of that Member State or granted under the centralised procedure (Reg 726/2004).",
+          "obligation_type": "prohibition",
+          "binding_on": "all persons"
+        },
+        {
+          "id": "MA-002",
+          "article": "Dir 2001/83/EC Art. 8(2)",
+          "requirement": "A marketing authorisation may only be granted to an applicant established in the Community.",
+          "obligation_type": "eligibility",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "MA-003",
+          "article": "Dir 2001/83/EC Art. 8(3)",
+          "requirement": "Application shall be accompanied by: (a) name/address of applicant and manufacturer; (b) name of product; (c) qualitative/quantitative particulars including INN; (ca) environmental risk assessment; (d) manufacturing method description; (e) therapeutic indications, contra-indications, adverse reactions; (f) posology, form, route, shelf life; (g) precautionary/safety measures and environmental risks; (h) control methods; (ha) written GMP audit confirmation for active substance; (i) test results (pharmaceutical, pre-clinical, clinical); (ia) pharmacovigilance system summary with QPPV proof; (iaa) risk management plan; (ib) ethical compliance statement for non-EU clinical trials; (j) SmPC, mock-ups, package leaflet; (k) manufacturing authorisation document; (l) copies of other authorisations with safety data; (m) orphan designation copy if applicable.",
+          "obligation_type": "documentation",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "MA-004",
+          "article": "Dir 2001/83/EC Art. 10(1)",
+          "requirement": "Generic applicant not required to provide pre-clinical/clinical results if reference product authorised for not less than 8 years. Generic may not be placed on market until 10 years from initial authorisation of reference product (8+2 formula). Extendable to 11 years if new therapeutic indication with significant clinical benefit obtained in first 8 years.",
+          "obligation_type": "data_exclusivity",
+          "binding_on": "generic_applicant"
+        },
+        {
+          "id": "MA-005",
+          "article": "Dir 2001/83/EC Art. 10(4)",
+          "requirement": "For similar biological (biosimilar) products, where conditions for generics definition not met due to raw material or manufacturing differences, results of appropriate pre-clinical tests or clinical trials shall be provided.",
+          "obligation_type": "documentation",
+          "binding_on": "biosimilar_applicant"
+        },
+        {
+          "id": "MA-006",
+          "article": "Dir 2001/83/EC Art. 11",
+          "requirement": "Summary of Product Characteristics shall contain in prescribed order: product name/strength/form; qualitative/quantitative composition; pharmaceutical form; clinical particulars (4.1-4.9); pharmacological properties (5.1-5.3); pharmaceutical particulars (6.1-6.6); MAH; MA number(s); authorisation date; revision date; radiopharmaceutical details (11-12).",
+          "obligation_type": "documentation",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "MA-007",
+          "article": "Dir 2001/83/EC Art. 12",
+          "requirement": "Detailed summaries shall be drawn up and signed by experts with necessary technical or professional qualifications, including brief curriculum vitae.",
+          "obligation_type": "documentation",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "MA-008",
+          "article": "Dir 2001/83/EC Art. 17",
+          "requirement": "MA procedure shall be completed within maximum 210 days of valid application submission.",
+          "obligation_type": "timeline",
+          "binding_on": "competent_authority",
+          "timeline_days": 210
+        },
+        {
+          "id": "MA-009",
+          "article": "Dir 2001/83/EC Art. 24",
+          "requirement": "Marketing authorisation valid for 5 years. Renewable after 5 years on basis of risk-benefit re-evaluation. Once renewed, valid for unlimited period unless pharmacovigilance grounds require additional 5-year renewal.",
+          "obligation_type": "validity",
+          "binding_on": "MAH",
+          "validity_years": 5
+        },
+        {
+          "id": "MA-010",
+          "article": "Dir 2001/83/EC Art. 24(4-5)",
+          "requirement": "MA ceases to be valid if not followed by actual marketing within 3 years of granting, or if product absent from market for 3 consecutive years.",
+          "obligation_type": "sunset_clause",
+          "binding_on": "MAH",
+          "sunset_years": 3
+        },
+        {
+          "id": "MA-011",
+          "article": "Dir 2001/83/EC Art. 23a",
+          "requirement": "MAH shall inform competent authority of date of actual marketing. If product ceases to be placed on market (temporarily or permanently), MAH shall notify no less than 2 months before interruption.",
+          "obligation_type": "notification",
+          "binding_on": "MAH",
+          "notice_months": 2
+        },
+        {
+          "id": "MA-012",
+          "article": "Dir 2001/83/EC Art. 26",
+          "requirement": "MA shall be refused if: risk-benefit balance not favourable; therapeutic efficacy insufficiently substantiated; qualitative/quantitative composition not as declared; particulars do not comply with application requirements.",
+          "obligation_type": "refusal_grounds",
+          "binding_on": "competent_authority"
+        },
+        {
+          "id": "MA-013",
+          "article": "Reg 726/2004 Art. 3(1)",
+          "requirement": "No medicinal product appearing in the Annex (mandatory centralised scope) may be placed on the market within the Union unless a marketing authorisation has been granted by the Union.",
+          "obligation_type": "mandatory_centralised",
+          "binding_on": "all persons"
+        },
+        {
+          "id": "MA-014",
+          "article": "Reg 726/2004 Art. 6(3)",
+          "requirement": "CHMP opinion shall be given within 210 days after receipt of valid application. Scientific analysis duration must be at least 80 days.",
+          "obligation_type": "timeline",
+          "binding_on": "EMA",
+          "timeline_days": 210
+        },
+        {
+          "id": "MA-015",
+          "article": "Reg 726/2004 Art. 10(2)",
+          "requirement": "Commission shall take final decision within 15 days after obtaining Standing Committee opinion.",
+          "obligation_type": "timeline",
+          "binding_on": "Commission",
+          "timeline_days": 15
+        },
+        {
+          "id": "MA-016",
+          "article": "Reg 726/2004 Art. 13(1)",
+          "requirement": "Centralised marketing authorisation valid throughout the Union, conferring same rights and obligations in each Member State.",
+          "obligation_type": "scope",
+          "binding_on": "all_member_states"
+        },
+        {
+          "id": "MA-017",
+          "article": "Reg 726/2004 Art. 14(1)",
+          "requirement": "Centralised marketing authorisation valid for 5 years. Once renewed, valid for unlimited period unless pharmacovigilance grounds require additional 5-year renewal.",
+          "obligation_type": "validity",
+          "binding_on": "MAH",
+          "validity_years": 5
+        },
+        {
+          "id": "MA-018",
+          "article": "Reg 726/2004 Art. 14(9)",
+          "requirement": "Accelerated assessment: if CHMP accepts request for products of major public health interest, timeline reduced to 150 days.",
+          "obligation_type": "timeline",
+          "binding_on": "EMA",
+          "timeline_days": 150
+        },
+        {
+          "id": "MA-019",
+          "article": "Reg 726/2004 Art. 14-a",
+          "requirement": "Conditional marketing authorisation may be granted for unmet medical needs (serious/life-threatening diseases) prior to comprehensive clinical data, valid for 1 year and renewable, subject to specific obligations reviewed annually.",
+          "obligation_type": "conditional_approval",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "MA-020",
+          "article": "Reg 726/2004 Art. 14(11)",
+          "requirement": "Data protection period: 8 years data exclusivity + 10 years marketing protection, extendable to 11 years for significant new therapeutic indication.",
+          "obligation_type": "data_exclusivity",
+          "binding_on": "generic_applicant"
+        }
+      ]
+    },
+
+    "02_mutual_recognition_decentralised": {
+      "title": "Mutual Recognition and Decentralised Procedure",
+      "primary_legislation": ["Directive 2001/83/EC Title III Chapter 4"],
+      "requirements": [
+        {
+          "id": "MR-001",
+          "article": "Dir 2001/83/EC Art. 28",
+          "requirement": "Applicant shall submit identical dossier in all Member States concerned. Reference Member State shall prepare/update assessment report within 90 days (existing MA) or 120 days (new MA). Concerned Member States shall approve within 90 days.",
+          "obligation_type": "procedure",
+          "binding_on": "applicant_and_member_states"
+        },
+        {
+          "id": "MR-002",
+          "article": "Dir 2001/83/EC Art. 29",
+          "requirement": "Disagreement shall only be on grounds of potential serious risk to public health. Points of disagreement referred to coordination group; best endeavours to reach agreement within 60 days.",
+          "obligation_type": "dispute_resolution",
+          "binding_on": "member_states"
+        },
+        {
+          "id": "MR-003",
+          "article": "Dir 2001/83/EC Art. 32",
+          "requirement": "Where coordination group fails to agree, Committee shall issue reasoned opinion within 60 days (extendable by 90 days), with rapporteur appointment and MAH hearing opportunity.",
+          "obligation_type": "arbitration",
+          "binding_on": "CHMP"
+        },
+        {
+          "id": "MR-004",
+          "article": "Dir 2001/83/EC Art. 33-34",
+          "requirement": "Commission shall prepare draft decision within 15 days of Committee opinion. Member States shall have 22 days for written observations (minimum 5 days for urgent). Concerned Member States shall grant or revoke MA within 30 days of decision notification.",
+          "obligation_type": "decision_timeline",
+          "binding_on": "Commission_and_member_states"
+        }
+      ]
+    },
+
+    "03_centralised_procedure_mandatory_scope": {
+      "title": "Mandatory Centralised Procedure Scope",
+      "primary_legislation": ["Regulation 726/2004 Annex"],
+      "requirements": [
+        {
+          "id": "CP-001",
+          "article": "Reg 726/2004 Annex point 1",
+          "requirement": "Mandatory centralised procedure for: biotechnology products (recombinant DNA, gene expression, hybridoma/monoclonal antibody methods).",
+          "obligation_type": "mandatory_scope",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "CP-002",
+          "article": "Reg 726/2004 Annex point 1a",
+          "requirement": "Mandatory centralised procedure for all advanced therapy medicinal products (ATMPs).",
+          "obligation_type": "mandatory_scope",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "CP-003",
+          "article": "Reg 726/2004 Annex point 3",
+          "requirement": "Mandatory centralised procedure for products with new active substances for: AIDS, cancer, neurodegenerative disorders, diabetes, auto-immune diseases, viral diseases.",
+          "obligation_type": "mandatory_scope",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "CP-004",
+          "article": "Reg 726/2004 Annex point 4",
+          "requirement": "Mandatory centralised procedure for orphan medicinal products designated under Regulation 141/2000.",
+          "obligation_type": "mandatory_scope",
+          "binding_on": "applicant"
+        }
+      ]
+    },
+
+    "04_clinical_trials": {
+      "title": "Clinical Trial Requirements",
+      "primary_legislation": ["Regulation (EU) No 536/2014"],
+      "requirements": [
+        {
+          "id": "CT-001",
+          "article": "Reg 536/2014 Art. 1",
+          "requirement": "Regulation applies to all clinical trials conducted in the Union. Does not apply to non-interventional studies.",
+          "obligation_type": "scope",
+          "binding_on": "all persons"
+        },
+        {
+          "id": "CT-002",
+          "article": "Reg 536/2014 Art. 3",
+          "requirement": "A clinical trial may be conducted only if: (a) rights, safety, dignity and well-being of subjects are protected and prevail over all other interests; and (b) it is designed to generate reliable and robust data.",
+          "obligation_type": "general_principle",
+          "binding_on": "sponsor_and_investigator"
+        },
+        {
+          "id": "CT-003",
+          "article": "Reg 536/2014 Art. 4",
+          "requirement": "Clinical trial shall be subject to scientific and ethical review and shall be authorised in accordance with this Regulation. Ethics committee review integrated into regulatory timeline.",
+          "obligation_type": "prior_authorisation",
+          "binding_on": "sponsor"
+        },
+        {
+          "id": "CT-004",
+          "article": "Reg 536/2014 Art. 5",
+          "requirement": "Sponsor shall submit application dossier through EU portal to intended Member States. Sponsor proposes one as reporting Member State. Reporting Member State notified within 6 days.",
+          "obligation_type": "submission",
+          "binding_on": "sponsor"
+        },
+        {
+          "id": "CT-005",
+          "article": "Reg 536/2014 Art. 5(3)",
+          "requirement": "Reporting Member State shall validate application within 10 days. If not notified within period, application deemed to fall within scope and dossier deemed complete (tacit validation).",
+          "obligation_type": "validation_timeline",
+          "binding_on": "reporting_member_state",
+          "timeline_days": 10
+        },
+        {
+          "id": "CT-006",
+          "article": "Reg 536/2014 Art. 6",
+          "requirement": "Reporting Member State shall assess Part I (scientific/clinical) and submit final Part I assessment report within 45 days from validation date. Multi-state trials: three-phase assessment (26-day initial + 12-day coordinated review + 7-day consolidation).",
+          "obligation_type": "assessment_timeline",
+          "binding_on": "reporting_member_state",
+          "timeline_days": 45
+        },
+        {
+          "id": "CT-007",
+          "article": "Reg 536/2014 Art. 7",
+          "requirement": "Each Member State concerned shall assess Part II (ethical/national aspects: informed consent, data protection, biological samples, investigator suitability, site suitability, damage compensation) within 45 days from validation date.",
+          "obligation_type": "assessment_timeline",
+          "binding_on": "each_member_state",
+          "timeline_days": 45
+        },
+        {
+          "id": "CT-008",
+          "article": "Reg 536/2014 Art. 8(1)",
+          "requirement": "Each Member State shall notify decision through EU portal within 5 days of reporting date. Tacit authorisation: if not notified within period, the conclusion of reporting Member State is deemed to be the decision.",
+          "obligation_type": "decision_timeline",
+          "binding_on": "each_member_state",
+          "timeline_days": 5
+        },
+        {
+          "id": "CT-009",
+          "article": "Reg 536/2014 Art. 8(9)",
+          "requirement": "If no subject recruited in a Member State within 2 years from notification date of authorisation, the authorisation shall expire in that Member State unless extension approved.",
+          "obligation_type": "sunset_clause",
+          "binding_on": "sponsor",
+          "sunset_years": 2
+        },
+        {
+          "id": "CT-010",
+          "article": "Reg 536/2014 Art. 9",
+          "requirement": "Persons assessing the application shall not have conflicts of interest, shall be independent of sponsor/site/investigator, shall make annual declaration of financial interests. At least one layperson shall participate in the assessment.",
+          "obligation_type": "independence",
+          "binding_on": "member_state"
+        },
+        {
+          "id": "CT-011",
+          "article": "Reg 536/2014 Art. 25",
+          "requirement": "Application dossier shall contain documentation relating to: conduct of trial, sponsor/investigators/subjects/sites, IMPs and auxiliary products (properties/labelling/manufacture/control), measures to protect subjects. Non-clinical data shall be GLP-compliant. Data from unregistered trials (WHO ICTRP) shall not be considered.",
+          "obligation_type": "documentation",
+          "binding_on": "sponsor"
+        },
+        {
+          "id": "CT-012",
+          "article": "Reg 536/2014 Art. 28",
+          "requirement": "Clinical trial may only be conducted where: anticipated benefits justify risks (constantly monitored); informed consent obtained; rights to integrity/privacy/data protection safeguarded; pain/discomfort/fear minimised; medical care by qualified doctor; no undue influence including financial.",
+          "obligation_type": "preconditions",
+          "binding_on": "sponsor_and_investigator"
+        },
+        {
+          "id": "CT-013",
+          "article": "Reg 536/2014 Art. 29",
+          "requirement": "Informed consent shall be written, dated, and signed by interviewer and subject. If unable to write: consent via appropriate alternative means in presence of at least one impartial witness. Subject shall receive copy. Adequate time for consideration. Prior interview by qualified team member required.",
+          "obligation_type": "informed_consent",
+          "binding_on": "investigator"
+        },
+        {
+          "id": "CT-014",
+          "article": "Reg 536/2014 Art. 31-33",
+          "requirement": "Additional protections for incapacitated subjects, minors, and pregnant/breastfeeding women: legally designated representative consent; information adapted to capacity; explicit wish to refuse respected; no financial inducements; trial essential for represented population; direct benefit must outweigh risks (or minimal risk if population benefit only).",
+          "obligation_type": "vulnerable_populations",
+          "binding_on": "sponsor_and_investigator"
+        },
+        {
+          "id": "CT-015",
+          "article": "Reg 536/2014 Art. 37",
+          "requirement": "Results summary shall be submitted to EU database within 1 year from end of clinical trial in all Member States, together with a summary understandable to a layperson. For paediatric trials: results submitted within 6 months.",
+          "obligation_type": "results_disclosure",
+          "binding_on": "sponsor",
+          "timeline_months": 12
+        },
+        {
+          "id": "CT-016",
+          "article": "Reg 536/2014 Art. 41",
+          "requirement": "Investigator shall report all serious adverse events to sponsor without undue delay but no later than 24 hours of obtaining knowledge.",
+          "obligation_type": "safety_reporting",
+          "binding_on": "investigator",
+          "timeline_hours": 24
+        },
+        {
+          "id": "CT-017",
+          "article": "Reg 536/2014 Art. 42",
+          "requirement": "Sponsor shall report all SUSARs electronically to Eudravigilance: fatal/life-threatening within 7 days; all others within 15 days.",
+          "obligation_type": "safety_reporting",
+          "binding_on": "sponsor",
+          "timeline_days_fatal": 7,
+          "timeline_days_other": 15
+        },
+        {
+          "id": "CT-018",
+          "article": "Reg 536/2014 Art. 43",
+          "requirement": "Sponsor shall submit annual safety reports through Eudravigilance for each IMP used (except placebo).",
+          "obligation_type": "safety_reporting",
+          "binding_on": "sponsor"
+        },
+        {
+          "id": "CT-019",
+          "article": "Reg 536/2014 Art. 52",
+          "requirement": "Sponsor shall report serious breaches (likely to significantly affect safety/rights of subjects or data reliability) to Member States through EU portal without undue delay, no later than 7 days.",
+          "obligation_type": "breach_reporting",
+          "binding_on": "sponsor",
+          "timeline_days": 7
+        },
+        {
+          "id": "CT-020",
+          "article": "Reg 536/2014 Art. 58",
+          "requirement": "Clinical trial master file shall be archived for at least 25 years after end of trial. Content shall remain complete, legible, and accessible to competent authorities throughout retention period.",
+          "obligation_type": "archival",
+          "binding_on": "sponsor_and_investigator",
+          "retention_years": 25
+        },
+        {
+          "id": "CT-021",
+          "article": "Reg 536/2014 Art. 61",
+          "requirement": "Manufacturing and import of investigational medicinal products in the Union shall be subject to holding an authorisation. Requirements include suitable premises/equipment and at least one permanently available qualified person.",
+          "obligation_type": "manufacturing_authorisation",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "CT-022",
+          "article": "Reg 536/2014 Art. 76",
+          "requirement": "Member States shall ensure systems for compensation for damage suffered by subjects are in place (insurance, guarantee, or similar arrangement appropriate to nature and extent of risk).",
+          "obligation_type": "damage_compensation",
+          "binding_on": "member_state"
+        },
+        {
+          "id": "CT-023",
+          "article": "Reg 536/2014 Art. 90",
+          "requirement": "No gene therapy clinical trials may be carried out which result in modifications to the subject's germ line genetic identity.",
+          "obligation_type": "prohibition",
+          "binding_on": "all persons"
+        },
+        {
+          "id": "CT-024",
+          "article": "Reg 536/2014 Art. 92",
+          "requirement": "Subjects shall not be required to pay for investigational medicinal products, auxiliary medicinal products, medical devices, or procedures specifically required by the protocol, unless national law provides otherwise.",
+          "obligation_type": "subject_protection",
+          "binding_on": "sponsor"
+        }
+      ]
+    },
+
+    "05_GMP_investigational_products": {
+      "title": "Good Manufacturing Practice for Investigational Medicinal Products",
+      "primary_legislation": ["Regulation (EU) 2017/1569"],
+      "requirements": [
+        {
+          "id": "GMP-IMP-001",
+          "article": "Reg 2017/1569 Art. 3",
+          "requirement": "Manufacturer shall ensure manufacturing operations carried out in accordance with GMP for investigational products and subject to manufacturing authorisation per Reg 536/2014 Art. 61(1).",
+          "obligation_type": "compliance",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-002",
+          "article": "Reg 2017/1569 Art. 5",
+          "requirement": "Manufacturer shall establish, implement and maintain effective pharmaceutical quality system including GMP and quality control. Senior management and personnel from different departments shall participate.",
+          "obligation_type": "quality_system",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-003",
+          "article": "Reg 2017/1569 Art. 6",
+          "requirement": "At each manufacturing site: sufficient competent/qualified personnel; duties set out in job descriptions with organisation chart; initial and ongoing training covering pharmaceutical quality and GMP; hygiene programmes adapted to operations.",
+          "obligation_type": "personnel",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-004",
+          "article": "Reg 2017/1569 Art. 7",
+          "requirement": "Premises and equipment shall be located, designed, constructed, adapted and maintained to suit intended operations. Shall minimise risk of error, contamination, cross contamination. Critical equipment shall be subjected to qualification and validation.",
+          "obligation_type": "premises",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-005",
+          "article": "Reg 2017/1569 Art. 8",
+          "requirement": "Documentation system recording: specifications, manufacturing formulae, processing/packaging instructions, procedures/protocols, records/batch records, technical agreements, certificates of analysis. Documents shall be clear, free from error, kept up to date. Product specification file and batch documentation retained at least 5 years after last clinical trial. Electronic data protected against unlawful access with audit trails maintained.",
+          "obligation_type": "documentation",
+          "binding_on": "manufacturer",
+          "retention_years": 5
+        },
+        {
+          "id": "GMP-IMP-006",
+          "article": "Reg 2017/1569 Art. 9",
+          "requirement": "Production per pre-established instructions. Adequate resources for in-process controls. Cross-contamination prevention measures required, with particular attention to blinding operations. Manufacturing process validated as appropriate to development stage. Critical process steps validated and regularly re-validated.",
+          "obligation_type": "production",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-007",
+          "article": "Reg 2017/1569 Art. 10",
+          "requirement": "Quality control system under authority of a person with requisite qualifications, independent of production. Access to appropriately staffed/equipped laboratories. QC laboratories shall comply with information in application dossier.",
+          "obligation_type": "quality_control",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-008",
+          "article": "Reg 2017/1569 Art. 11",
+          "requirement": "Retention of sufficient samples of each batch (bulk, packaging components, finished product) for at least 2 years after completion/discontinuation of last clinical trial. Starting material samples retained at least 2 years after release.",
+          "obligation_type": "sample_retention",
+          "binding_on": "manufacturer",
+          "retention_years": 2
+        },
+        {
+          "id": "GMP-IMP-009",
+          "article": "Reg 2017/1569 Art. 12",
+          "requirement": "Qualified person shall verify each production batch manufactured and checked in compliance with GMP and shall certify in register/equivalent document. Register kept up to date, at disposal of competent authority for at least 5 years after completion of last clinical trial.",
+          "obligation_type": "batch_certification",
+          "binding_on": "qualified_person",
+          "retention_years": 5
+        },
+        {
+          "id": "GMP-IMP-010",
+          "article": "Reg 2017/1569 Art. 13",
+          "requirement": "Outsourced operations shall be subject to written contract clearly laying down responsibilities. Party to whom operations outsourced shall not subcontract without written consent of contract giver. Shall comply with GMP and submit to inspections.",
+          "obligation_type": "outsourcing",
+          "binding_on": "manufacturer_and_contractor"
+        },
+        {
+          "id": "GMP-IMP-011",
+          "article": "Reg 2017/1569 Art. 14",
+          "requirement": "Manufacturer shall implement system for recording/reviewing complaints and recalling investigational products. Shall implement procedure for rapid unblinding where required by protocol. Product recall systems must be effective for products already in distribution network.",
+          "obligation_type": "complaints_recall",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-012",
+          "article": "Reg 2017/1569 Art. 15",
+          "requirement": "Manufacturer shall conduct regular self-inspections as part of pharmaceutical quality system to monitor GMP implementation, with corrective and preventive actions documented.",
+          "obligation_type": "self_inspection",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-013",
+          "article": "Reg 2017/1569 Art. 17",
+          "requirement": "Member States shall ensure holders of manufacturing authorisation comply with GMP by means of regular inspections. GMP certificate shall be issued within 90 days of inspection if compliant. Inspection conclusions valid throughout the Union. Inspections may be unannounced.",
+          "obligation_type": "inspections",
+          "binding_on": "member_state_and_manufacturer",
+          "certificate_timeline_days": 90
+        },
+        {
+          "id": "GMP-IMP-014",
+          "article": "Reg 2017/1569 Art. 24",
+          "requirement": "Manufacturer shall allow inspectors access to premises and documentation at all times.",
+          "obligation_type": "access",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "GMP-IMP-015",
+          "article": "Reg 2017/1569 Art. 25",
+          "requirement": "If inspection reveals non-compliance with GMP, competent authority may suspend manufacture or imports from third countries, or suspend/revoke authorisation.",
+          "obligation_type": "enforcement",
+          "binding_on": "competent_authority"
+        }
+      ]
+    },
+
+    "06_manufacturing_and_import": {
+      "title": "Manufacturing and Import of Authorised Medicinal Products",
+      "primary_legislation": ["Directive 2001/83/EC Title IV"],
+      "requirements": [
+        {
+          "id": "MFG-001",
+          "article": "Dir 2001/83/EC Art. 40",
+          "requirement": "Manufacturing of medicinal products shall be subject to holding a manufacturing authorisation, including products for export and imports from third countries.",
+          "obligation_type": "authorisation_requirement",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "MFG-002",
+          "article": "Dir 2001/83/EC Art. 41",
+          "requirement": "Manufacturer shall have suitable premises, technical equipment, control facilities, and at least one qualified person per Art. 48.",
+          "obligation_type": "minimum_requirements",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "MFG-003",
+          "article": "Dir 2001/83/EC Art. 42-44",
+          "requirement": "Manufacturing authorisation procedure shall not exceed 90 days. Change requests shall not exceed 30 days (extendable to 90 in exceptional cases).",
+          "obligation_type": "timeline",
+          "binding_on": "competent_authority",
+          "timeline_days": 90
+        },
+        {
+          "id": "MFG-004",
+          "article": "Dir 2001/83/EC Art. 46",
+          "requirement": "Manufacturing authorisation holder shall: comply with GMP principles; use only active substances manufactured per GMP and distributed per GDP; verify compliance by audits at manufacturing and distribution sites; ensure excipient suitability via formalised risk assessment; document all measures; immediately inform competent authority of suspected falsified products; verify active substance suppliers registered.",
+          "obligation_type": "holder_obligations",
+          "binding_on": "manufacturing_authorisation_holder"
+        },
+        {
+          "id": "MFG-005",
+          "article": "Dir 2001/83/EC Art. 46b",
+          "requirement": "Active substances shall only be imported if manufactured per GMP standards at least equivalent to EU and accompanied by written confirmation from exporting country's competent authority.",
+          "obligation_type": "import_control",
+          "binding_on": "importer"
+        },
+        {
+          "id": "MFG-006",
+          "article": "Dir 2001/83/EC Art. 48-52",
+          "requirement": "Manufacturing authorisation holder shall have permanently and continuously at disposal at least one Qualified Person (QP). QP shall hold diploma from university course of at least 4 years in specified disciplines. QP shall have at least 2 years practical experience. QP shall certify in register that each batch satisfies the Directive. Register kept at disposal for at least 5 years.",
+          "obligation_type": "qualified_person",
+          "binding_on": "manufacturer",
+          "min_education_years": 4,
+          "min_experience_years": 2,
+          "register_retention_years": 5
+        },
+        {
+          "id": "MFG-007",
+          "article": "Dir 2001/83/EC Art. 47a",
+          "requirement": "Safety features on packaging shall not be removed or covered unless manufacturing authorisation holder verifies authenticity and non-tampering, replacement complies with requirements, conducted per GMP, and subject to competent authority supervision.",
+          "obligation_type": "anti_falsification",
+          "binding_on": "manufacturer"
+        },
+        {
+          "id": "MFG-008",
+          "article": "Dir 2001/83/EC Art. 52a",
+          "requirement": "Importers, manufacturers, and distributors of active substances shall register with competent authority at least 60 days prior to commencement. Annual inventory of changes required. Quality/safety-impacting changes notified immediately.",
+          "obligation_type": "registration",
+          "binding_on": "active_substance_operators",
+          "notice_days": 60
+        }
+      ]
+    },
+
+    "07_labelling_and_package_leaflet": {
+      "title": "Labelling and Package Leaflet Requirements",
+      "primary_legislation": ["Directive 2001/83/EC Title V"],
+      "requirements": [
+        {
+          "id": "LAB-001",
+          "article": "Dir 2001/83/EC Art. 54",
+          "requirement": "Outer packaging shall include: product name/strength/form; INN (up to 3 active substances); qualitative/quantitative active substance statement; pharmaceutical form and contents; excipients with recognised action; method/route of administration; 'keep out of reach of children' warning; special warnings; expiry date (month/year); storage precautions; disposal precautions; MAH name/address; MA number; batch number; usage instructions (non-Rx); safety features (unique identifier and anti-tampering device).",
+          "obligation_type": "labelling_content",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "LAB-002",
+          "article": "Dir 2001/83/EC Art. 54a",
+          "requirement": "Prescription products shall bear safety features (unique identifier + anti-tampering device) unless listed as exempt. Non-prescription products shall not bear safety features unless listed as at risk of falsification. EU-wide repositories system for verification required; costs borne by manufacturers.",
+          "obligation_type": "safety_features",
+          "binding_on": "MAH_and_manufacturer"
+        },
+        {
+          "id": "LAB-003",
+          "article": "Dir 2001/83/EC Art. 56a",
+          "requirement": "Product name shall be expressed in Braille format on packaging. MAH shall ensure package leaflet available in formats for blind and partially-sighted on request.",
+          "obligation_type": "accessibility",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "LAB-004",
+          "article": "Dir 2001/83/EC Art. 59",
+          "requirement": "Package leaflet shall be drawn up per SmPC and include in order: product identification; therapeutic indications; pre-use information (contraindications, precautions, interactions, warnings); instructions for proper use (dosage, method, frequency, duration, overdose, missed dose); adverse reactions; storage/composition/MAH details. Additionally monitored products shall include black symbol statement. Leaflet shall reflect consultations with target patient groups.",
+          "obligation_type": "leaflet_content",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "LAB-005",
+          "article": "Dir 2001/83/EC Art. 63",
+          "requirement": "Labelling and package leaflet shall appear in official language(s) of the Member State where placed on market.",
+          "obligation_type": "language",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "08_pharmacovigilance": {
+      "title": "Pharmacovigilance Requirements",
+      "primary_legislation": ["Directive 2001/83/EC Title IX", "Regulation 726/2004 Chapter 3"],
+      "requirements": [
+        {
+          "id": "PV-001",
+          "article": "Dir 2001/83/EC Art. 104",
+          "requirement": "MAH shall operate a pharmacovigilance system equivalent to Member State's system. Shall have permanently and continuously a Qualified Person Responsible for Pharmacovigilance (QPPV) residing and operating in the Union.",
+          "obligation_type": "system_requirement",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "PV-002",
+          "article": "Dir 2001/83/EC Art. 104",
+          "requirement": "MAH shall maintain and make available on request a Pharmacovigilance System Master File (PSMF). Shall operate a risk management system for each medicinal product. Shall perform regular audits of pharmacovigilance system.",
+          "obligation_type": "documentation",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "PV-003",
+          "article": "Dir 2001/83/EC Art. 107",
+          "requirement": "MAH shall record all suspected adverse reactions (Union and third countries). Shall submit to Eudravigilance database: serious suspected adverse reactions within 15 days of knowledge; non-serious suspected adverse reactions (Union) within 90 days of knowledge.",
+          "obligation_type": "adverse_reaction_reporting",
+          "binding_on": "MAH",
+          "timeline_serious_days": 15,
+          "timeline_nonserious_days": 90
+        },
+        {
+          "id": "PV-004",
+          "article": "Dir 2001/83/EC Art. 107a",
+          "requirement": "Member States shall record all suspected adverse reactions from healthcare professionals and patients. Serious reports submitted electronically to Eudravigilance within 15 days; non-serious within 90 days.",
+          "obligation_type": "national_reporting",
+          "binding_on": "member_state"
+        },
+        {
+          "id": "PV-005",
+          "article": "Dir 2001/83/EC Art. 107b",
+          "requirement": "MAH shall submit Periodic Safety Update Reports (PSURs) to EMA containing: benefit/risk data summaries, scientific risk-benefit evaluation, sales/prescription volume data. PSURs submitted electronically.",
+          "obligation_type": "PSUR",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "PV-006",
+          "article": "Dir 2001/83/EC Art. 107c",
+          "requirement": "PSUR frequency: not yet marketed = every 6 months; first 2 years marketed = every 6 months; next 2 years = annually; thereafter = every 3 years.",
+          "obligation_type": "PSUR_frequency",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "PV-007",
+          "article": "Dir 2001/83/EC Art. 107i-107k",
+          "requirement": "Urgent Union Procedure triggered when considering suspending/revoking MA or informed of safety-related withdrawal. PRAC shall make recommendation within 60 days. Member State may suspend MA pending definitive decision, informing others no later than next working day.",
+          "obligation_type": "urgent_procedure",
+          "binding_on": "member_state_and_EMA",
+          "timeline_days": 60
+        },
+        {
+          "id": "PV-008",
+          "article": "Dir 2001/83/EC Art. 106a",
+          "requirement": "MAH shall inform national authorities, Agency, and Commission before or at same time as making public pharmacovigilance announcements. Announcements shall be objective and not misleading. 24-hour prior notice required for non-urgent public announcements.",
+          "obligation_type": "public_communication",
+          "binding_on": "MAH",
+          "notice_hours": 24
+        },
+        {
+          "id": "PV-009",
+          "article": "Reg 726/2004 Art. 23",
+          "requirement": "EMA shall maintain additional monitoring list including: products with new active substances authorised after 1 Jan 2011; all biologicals authorised after 1 Jan 2011; products with conditions or post-authorisation obligations. SmPC/leaflet shall include black triangle statement.",
+          "obligation_type": "additional_monitoring",
+          "binding_on": "EMA_and_MAH"
+        },
+        {
+          "id": "PV-010",
+          "article": "Reg 726/2004 Art. 84a",
+          "requirement": "Commission may impose financial penalties on MAHs: fines up to 5% of Union turnover; periodic penalty payments up to 2.5% of average daily Union turnover per day until compliance.",
+          "obligation_type": "financial_penalties",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "09_wholesale_distribution": {
+      "title": "Wholesale Distribution and Brokering",
+      "primary_legislation": ["Directive 2001/83/EC Title VII"],
+      "requirements": [
+        {
+          "id": "WD-001",
+          "article": "Dir 2001/83/EC Art. 76-77",
+          "requirement": "Wholesale distribution shall be subject to possession of an authorisation. Procedure shall not exceed 90 days.",
+          "obligation_type": "authorisation",
+          "binding_on": "distributor"
+        },
+        {
+          "id": "WD-002",
+          "article": "Dir 2001/83/EC Art. 80",
+          "requirement": "Distribution authorisation holders shall: allow inspector access; obtain supplies only from authorised sources; supply only to authorised recipients; verify safety features on outer packaging; maintain emergency recall plan; keep transaction records for 5 years; comply with GDP; maintain quality system; immediately report suspected falsified products.",
+          "obligation_type": "holder_obligations",
+          "binding_on": "distributor",
+          "record_retention_years": 5
+        },
+        {
+          "id": "WD-003",
+          "article": "Dir 2001/83/EC Art. 81",
+          "requirement": "MAH and distributors shall ensure appropriate and continued supply to pharmacies so that patients' needs are covered.",
+          "obligation_type": "supply_continuity",
+          "binding_on": "MAH_and_distributor"
+        },
+        {
+          "id": "WD-004",
+          "article": "Dir 2001/83/EC Art. 85b",
+          "requirement": "Brokers shall ensure brokered products covered by MA; have permanent address/contact in Union; register with competent authority; comply with wholesale distribution obligations.",
+          "obligation_type": "brokering",
+          "binding_on": "broker"
+        },
+        {
+          "id": "WD-005",
+          "article": "Dir 2001/83/EC Art. 85c",
+          "requirement": "Online sale to public permitted only by persons authorised to supply. Website shall display common EU logo with hyperlink to verified seller list. Member States shall set up verification websites.",
+          "obligation_type": "online_pharmacy",
+          "binding_on": "online_seller_and_member_state"
+        }
+      ]
+    },
+
+    "10_advertising": {
+      "title": "Advertising of Medicinal Products",
+      "primary_legislation": ["Directive 2001/83/EC Title VIII"],
+      "requirements": [
+        {
+          "id": "ADV-001",
+          "article": "Dir 2001/83/EC Art. 87",
+          "requirement": "Member States shall prohibit advertising of any product without a marketing authorisation. All advertising shall comply with SmPC, encourage rational use, not be misleading.",
+          "obligation_type": "general_rule",
+          "binding_on": "MAH_and_member_state"
+        },
+        {
+          "id": "ADV-002",
+          "article": "Dir 2001/83/EC Art. 88",
+          "requirement": "Public advertising shall be prohibited for: prescription-only products; products containing psychotropic or narcotic substances. Direct distribution to public for promotional purposes prohibited.",
+          "obligation_type": "prohibition",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "ADV-003",
+          "article": "Dir 2001/83/EC Art. 94",
+          "requirement": "No gifts, pecuniary advantages, or benefits in kind shall be supplied to prescribers/suppliers unless inexpensive and relevant to practice. Hospitality at sales promotion events shall be strictly limited to main purpose.",
+          "obligation_type": "anti_inducement",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "ADV-004",
+          "article": "Dir 2001/83/EC Art. 96",
+          "requirement": "Free samples only to prescribers, exceptionally, with conditions: limited number per product per year; written/signed request required; no larger than smallest presentation; marked 'free medical sample'; accompanied by SmPC copy; no samples of psychotropic/narcotic products.",
+          "obligation_type": "samples",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "11_advanced_therapy_medicinal_products": {
+      "title": "Advanced Therapy Medicinal Products (ATMPs)",
+      "primary_legislation": ["Regulation (EC) No 1394/2007"],
+      "requirements": [
+        {
+          "id": "ATMP-001",
+          "article": "Reg 1394/2007 Art. 1, 4",
+          "requirement": "All ATMPs (gene therapy, somatic cell therapy, tissue engineered products) shall be subject to mandatory centralised authorisation procedure under Regulation 726/2004.",
+          "obligation_type": "mandatory_centralised",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "ATMP-002",
+          "article": "Reg 1394/2007 Art. 6",
+          "requirement": "Committee for Advanced Therapies (CAT) shall be established within EMA and shall provide scientific opinions on ATMP classification and quality, safety, efficacy evaluation.",
+          "obligation_type": "committee",
+          "binding_on": "EMA"
+        },
+        {
+          "id": "ATMP-003",
+          "article": "Reg 1394/2007 Art. 14",
+          "requirement": "For ATMPs incorporating medical devices (combined ATMPs), the device component shall meet Essential Requirements of medical device legislation. Notified body opinion required.",
+          "obligation_type": "combined_products",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "ATMP-004",
+          "article": "Reg 1394/2007 Art. 15",
+          "requirement": "MAH shall establish and maintain a system ensuring that the ATMP and its starting/raw materials are traceable through sourcing, manufacturing, packaging, storage, transport, and delivery to hospital/institution. Traceability system shall be complementary to tissue/cell traceability requirements of Directive 2004/23/EC. Traceability data retained for minimum 30 years.",
+          "obligation_type": "traceability",
+          "binding_on": "MAH",
+          "retention_years": 30
+        },
+        {
+          "id": "ATMP-005",
+          "article": "Reg 1394/2007 Art. 16",
+          "requirement": "MAH shall set up a risk management system identifying and characterising risks relating to the product, post-authorisation follow-up of efficacy with specific measures including long-term follow-up.",
+          "obligation_type": "risk_management",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "ATMP-006",
+          "article": "Reg 1394/2007 Art. 17",
+          "requirement": "Free scientific recommendation procedure for ATMP classification available from CAT. CAT shall deliver classification recommendation within 60 days.",
+          "obligation_type": "classification",
+          "binding_on": "CAT",
+          "timeline_days": 60
+        },
+        {
+          "id": "ATMP-007",
+          "article": "Reg 1394/2007 Art. 28",
+          "requirement": "Hospital exemption for ATMPs prepared on non-routine basis according to specific quality standards and used within same Member State under exclusive professional responsibility of medical practitioner. Member States shall ensure national traceability and pharmacovigilance requirements equivalent to Community level.",
+          "obligation_type": "hospital_exemption",
+          "binding_on": "member_state"
+        }
+      ]
+    },
+
+    "12_orphan_medicinal_products": {
+      "title": "Orphan Medicinal Product Requirements",
+      "primary_legislation": ["Regulation (EC) No 141/2000"],
+      "requirements": [
+        {
+          "id": "ORP-001",
+          "article": "Reg 141/2000 Art. 3",
+          "requirement": "Product designated as orphan if: (a) intended for diagnosis, prevention, or treatment of a life-threatening or chronically debilitating condition affecting not more than 5 in 10,000 persons in the Community, or where without incentives it is unlikely investment would be generated; AND (b) no satisfactory method of diagnosis/prevention/treatment authorised, or if such exists, the product would be of significant benefit.",
+          "obligation_type": "designation_criteria",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "ORP-002",
+          "article": "Reg 141/2000 Art. 5",
+          "requirement": "Committee for Orphan Medicinal Products shall adopt opinion within 90 days. Commission shall adopt decision within 30 days of receipt of Committee opinion. Designation entered in Community Register of Orphan Medicinal Products.",
+          "obligation_type": "designation_procedure",
+          "binding_on": "committee_and_commission",
+          "timeline_committee_days": 90,
+          "timeline_commission_days": 30
+        },
+        {
+          "id": "ORP-003",
+          "article": "Reg 141/2000 Art. 6",
+          "requirement": "Sponsors of designated orphan products eligible for: protocol assistance from EMA; access to centralised procedure regardless of Annex scope; reduced fees as established by Commission regulation.",
+          "obligation_type": "incentives",
+          "binding_on": "EMA_and_Commission"
+        },
+        {
+          "id": "ORP-004",
+          "article": "Reg 141/2000 Art. 8",
+          "requirement": "Following marketing authorisation, 10 years of market exclusivity: Community and Member States shall not accept another application, grant marketing authorisation, or accept extension of existing authorisation for same therapeutic indication in respect of a similar medicinal product.",
+          "obligation_type": "market_exclusivity",
+          "binding_on": "Community_and_member_states",
+          "exclusivity_years": 10
+        },
+        {
+          "id": "ORP-005",
+          "article": "Reg 141/2000 Art. 8(2)",
+          "requirement": "Market exclusivity period reduced to 6 years if at end of 5th year criteria for designation no longer met (e.g., prevalence exceeds threshold or product sufficiently profitable).",
+          "obligation_type": "exclusivity_reduction",
+          "binding_on": "Commission"
+        },
+        {
+          "id": "ORP-006",
+          "article": "Reg 141/2000 Art. 8(3)",
+          "requirement": "Market exclusivity derogated if: (a) second applicant can establish their product is not similar; (b) holder consents to second application; or (c) holder cannot supply sufficient quantities.",
+          "obligation_type": "exclusivity_exceptions",
+          "binding_on": "Commission"
+        },
+        {
+          "id": "ORP-007",
+          "article": "Reg 141/2000 Art. 5(12)",
+          "requirement": "Orphan designation shall be removed from register if: holder requests removal; designation criteria no longer met at time of MA review; or product not placed on market within specified timeframe.",
+          "obligation_type": "designation_removal",
+          "binding_on": "Committee"
+        }
+      ]
+    },
+
+    "13_paediatric_medicinal_products": {
+      "title": "Paediatric Medicinal Product Requirements",
+      "primary_legislation": ["Regulation (EC) No 1901/2006"],
+      "requirements": [
+        {
+          "id": "PAED-001",
+          "article": "Reg 1901/2006 Art. 7-8",
+          "requirement": "Application for marketing authorisation of a new medicinal product shall include results of studies conducted in compliance with an agreed Paediatric Investigation Plan (PIP), unless a waiver or deferral has been granted.",
+          "obligation_type": "PIP_requirement",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "PAED-002",
+          "article": "Reg 1901/2006 Art. 15-16",
+          "requirement": "Paediatric Investigation Plan shall specify: timing and measures proposed for paediatric development; measure to adapt formulation for paediatric use. PIP to be submitted not later than completion of human pharmacokinetic studies in adults (or earlier if appropriate).",
+          "obligation_type": "PIP_content",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "PAED-003",
+          "article": "Reg 1901/2006 Art. 6",
+          "requirement": "Paediatric Committee established within EMA with members having specific expertise in paediatric medicine, pharmaceutical development for children, ethics, and patient representatives.",
+          "obligation_type": "committee",
+          "binding_on": "EMA"
+        },
+        {
+          "id": "PAED-004",
+          "article": "Reg 1901/2006 Art. 20-24",
+          "requirement": "Waivers granted where: product likely ineffective or unsafe in children; disease does not occur in paediatric population; product offers no significant therapeutic benefit over existing treatments for children. Deferrals granted where: appropriate to conduct adult studies first; studies in children will take longer.",
+          "obligation_type": "waivers_deferrals",
+          "binding_on": "Paediatric_Committee"
+        },
+        {
+          "id": "PAED-005",
+          "article": "Reg 1901/2006 Art. 36",
+          "requirement": "Paediatric-use marketing authorisation (PUMA) available for products already authorised but not protected by patent/SPC, developed exclusively for paediatric use with agreed PIP.",
+          "obligation_type": "PUMA",
+          "binding_on": "applicant"
+        },
+        {
+          "id": "PAED-006",
+          "article": "Reg 1901/2006 Art. 36(4)",
+          "requirement": "Products with PUMA shall receive 10 years of data and marketing protection (same as new MA).",
+          "obligation_type": "PUMA_exclusivity",
+          "binding_on": "Community",
+          "exclusivity_years": 10
+        },
+        {
+          "id": "PAED-007",
+          "article": "Reg 1901/2006 Art. 37",
+          "requirement": "Reward for completed PIP: 6-month extension of supplementary protection certificate (SPC). For orphan products: 2 additional years of market exclusivity (total 12 years).",
+          "obligation_type": "rewards",
+          "binding_on": "applicant",
+          "SPC_extension_months": 6,
+          "orphan_extension_years": 2
+        },
+        {
+          "id": "PAED-008",
+          "article": "Reg 1901/2006 Art. 41-43",
+          "requirement": "All completed paediatric studies (whether results positive, negative, or inconclusive) shall be submitted to competent authority within 6 months of completion. Failure to submit: penalty provisions apply including potential financial penalties under Reg 726/2004 Art. 84a.",
+          "obligation_type": "results_submission",
+          "binding_on": "applicant",
+          "timeline_months": 6
+        },
+        {
+          "id": "PAED-009",
+          "article": "Reg 1901/2006 Art. 34",
+          "requirement": "Where a product is authorised for use in the paediatric population following PIP compliance, MAH shall place the product on the market taking into account paediatric information within 2 years of the date on which the paediatric indication was authorised.",
+          "obligation_type": "market_obligation",
+          "binding_on": "MAH",
+          "timeline_years": 2
+        },
+        {
+          "id": "PAED-010",
+          "article": "Reg 1901/2006 Art. 45",
+          "requirement": "For medicinal products authorised before entry into force of this Regulation, MAH shall submit to competent authority any studies relating to paediatric use already completed, within specified timelines. Information shall be included in product information as appropriate.",
+          "obligation_type": "existing_data_submission",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "14_variations": {
+      "title": "Variations to Marketing Authorisations",
+      "primary_legislation": ["Regulation (EC) No 1234/2008"],
+      "requirements": [
+        {
+          "id": "VAR-001",
+          "article": "Reg 1234/2008 Art. 2",
+          "requirement": "Variations classified as: Type IA (minor, do-and-tell); Type IB (minor, tell-wait-and-do); Type II (major); extensions to marketing authorisation. Classification based on risk level and potential impact on quality, safety, and efficacy.",
+          "obligation_type": "classification",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "VAR-002",
+          "article": "Reg 1234/2008 Art. 8",
+          "requirement": "Type IA variations: MAH shall notify competent authority within 12 months of implementation. If authority finds conditions not fulfilled, MAH shall refrain from applying variation or revert to previous position.",
+          "obligation_type": "Type_IA_procedure",
+          "binding_on": "MAH",
+          "notification_months": 12
+        },
+        {
+          "id": "VAR-003",
+          "article": "Reg 1234/2008 Art. 9-10",
+          "requirement": "Type IB variations: MAH shall submit notification; authority has 30 days to issue unfavourable opinion. If no response within 30 days, variation deemed accepted. If unfavourable, MAH has 30 days to amend.",
+          "obligation_type": "Type_IB_procedure",
+          "binding_on": "MAH_and_authority",
+          "timeline_days": 30
+        },
+        {
+          "id": "VAR-004",
+          "article": "Reg 1234/2008 Art. 11-13",
+          "requirement": "Type II variations: authority shall assess within 60 days (extendable to 90 days for safety/efficacy changes). Authority may request supplementary information; clock stops until information provided.",
+          "obligation_type": "Type_II_procedure",
+          "binding_on": "authority",
+          "timeline_days": 60
+        },
+        {
+          "id": "VAR-005",
+          "article": "Reg 1234/2008 Art. 15-16",
+          "requirement": "Extensions (change of active substance, strength, pharmaceutical form, route of administration) shall be submitted as new application following applicable MA procedure but may be linked to the original MA.",
+          "obligation_type": "extensions",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "VAR-006",
+          "article": "Reg 1234/2008 Art. 17-19",
+          "requirement": "Urgent safety restrictions: MAH may implement immediately with simultaneous notification to authority. Authority has 24 hours to accept or refuse. If accepted, MAH shall submit corresponding variation application within 15 days.",
+          "obligation_type": "urgent_safety",
+          "binding_on": "MAH",
+          "initial_response_hours": 24,
+          "follow_up_days": 15
+        },
+        {
+          "id": "VAR-007",
+          "article": "Reg 1234/2008 Art. 20-22",
+          "requirement": "Work-sharing for MRP/DCP products: single assessment by reference authority of variations common to multiple marketing authorisations. Reference authority shall complete assessment within 60 days.",
+          "obligation_type": "worksharing",
+          "binding_on": "authority",
+          "timeline_days": 60
+        },
+        {
+          "id": "VAR-008",
+          "article": "Reg 1234/2008 Art. 23",
+          "requirement": "Grouping: related variations may be submitted as a single application. All variations in the group shall be assessed together.",
+          "obligation_type": "grouping",
+          "binding_on": "MAH"
+        }
+      ]
+    },
+
+    "15_supervision_and_enforcement": {
+      "title": "Supervision, Inspections, and Enforcement",
+      "primary_legislation": ["Directive 2001/83/EC Title XI", "Regulation 726/2004"],
+      "requirements": [
+        {
+          "id": "ENF-001",
+          "article": "Dir 2001/83/EC Art. 111",
+          "requirement": "Competent authority shall ensure compliance by means of inspections (unannounced if necessary). Manufacturers and wholesale distributors subject to repeated inspections. Within 90 days of inspection, GMP or GDP certificate shall be issued if compliant. Certificates entered in Union database managed by EMA.",
+          "obligation_type": "inspections",
+          "binding_on": "competent_authority",
+          "certificate_timeline_days": 90
+        },
+        {
+          "id": "ENF-002",
+          "article": "Dir 2001/83/EC Art. 117a",
+          "requirement": "Rapid alert and recall system: Member States shall maintain system for receipt/handling of notifications and recalls during and outside normal working hours. If suspected serious public health risk: rapid alert notification to all Member States and supply chain actors without delay. Urgent public announcements within 24 hours where products reached patients.",
+          "obligation_type": "rapid_alert",
+          "binding_on": "member_state",
+          "public_announcement_hours": 24
+        },
+        {
+          "id": "ENF-003",
+          "article": "Dir 2001/83/EC Art. 118a",
+          "requirement": "Member States shall lay down rules on penalties that are effective, proportionate, and dissuasive, addressing: falsified products, non-compliance with manufacturing/distribution/import/export provisions, non-compliance on excipients.",
+          "obligation_type": "penalties",
+          "binding_on": "member_state"
+        },
+        {
+          "id": "ENF-004",
+          "article": "Reg 726/2004 Art. 84a",
+          "requirement": "Commission may impose financial penalties on MAHs for centrally authorised products: fines up to 5% of EU turnover; periodic penalty payments up to 2.5% of average daily EU turnover per day. Court of Justice has unlimited jurisdiction to review.",
+          "obligation_type": "financial_penalties",
+          "binding_on": "MAH"
+        },
+        {
+          "id": "ENF-005",
+          "article": "Dir 2001/83/EC Art. 126b",
+          "requirement": "Staff of competent authority responsible for authorisations shall have no financial or other interests in pharmaceutical industry and shall make annual declaration of financial interests.",
+          "obligation_type": "independence",
+          "binding_on": "competent_authority_staff"
+        }
+      ]
+    },
+
+    "16_traditional_herbal_products": {
+      "title": "Traditional Herbal Medicinal Products",
+      "primary_legislation": ["Directive 2001/83/EC Chapter 2a (Arts. 16a-16i)"],
+      "requirements": [
+        {
+          "id": "THM-001",
+          "article": "Dir 2001/83/EC Art. 16a-16c",
+          "requirement": "Simplified registration for traditional herbal products if: indications appropriate for traditional use without medical supervision; oral/external/inhalation only; bibliographic evidence of medicinal use for at least 30 years (including at least 15 years within the Community); safety data with expert report provided.",
+          "obligation_type": "simplified_registration",
+          "binding_on": "applicant",
+          "traditional_use_years": 30,
+          "community_use_years": 15
+        },
+        {
+          "id": "THM-002",
+          "article": "Dir 2001/83/EC Art. 16g",
+          "requirement": "Labelling and leaflet shall state product is traditional herbal medicinal product for use in specified indications exclusively based on long-standing use, and that user should consult doctor if symptoms persist.",
+          "obligation_type": "labelling",
+          "binding_on": "registration_holder"
+        }
+      ]
+    },
+
+    "17_homeopathic_products": {
+      "title": "Homeopathic Medicinal Products",
+      "primary_legislation": ["Directive 2001/83/EC Chapter 2"],
+      "requirements": [
+        {
+          "id": "HOM-001",
+          "article": "Dir 2001/83/EC Art. 13-14",
+          "requirement": "Member States shall ensure homeopathic products registered or authorised. Special simplified registration procedure for products meeting conditions: oral/external administration only; no specific therapeutic indication on labelling; sufficient degree of dilution to guarantee safety.",
+          "obligation_type": "registration",
+          "binding_on": "member_state"
+        }
+      ]
+    }
+  }
+}

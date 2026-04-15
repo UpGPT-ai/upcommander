@@ -1,0 +1,2057 @@
+{
+  "metadata": {
+    "source_documents": [
+      "ICH M4 - Organisation of the Common Technical Document (M4_CTD_Organization.pdf)",
+      "ICH M4Q(R1) - Quality (M4Q_Quality_CMC.pdf)",
+      "ICH M4S(R2) - Safety (M4S_Safety_Nonclinical.pdf)",
+      "ICH M4E(R2) - Efficacy (M4E_Efficacy_Clinical.pdf)"
+    ],
+    "ectd_versions_referenced": ["v3.2.2", "v4.0"],
+    "extraction_date": "2026-03-22",
+    "notes": "Module 1 is region-specific and not part of the ICH harmonised CTD. Its structure varies by regulatory authority."
+  },
+  "format_requirements": {
+    "general": {
+      "paper_size": "A4 or 8.5 x 11 inches",
+      "font": "Times New Roman, 12 point (minimum)",
+      "margins": "Sufficient for readability",
+      "page_numbering": "Sequential within each section/volume",
+      "orientation": "Portrait preferred; landscape for wide tables",
+      "pagination": "Each Module 2-5 section starts on a new page",
+      "table_of_contents": "Required for each module, generated per module"
+    },
+    "citations": {
+      "format": "ICMJE (Vancouver) style",
+      "numbering": "Sequential as they appear in text"
+    },
+    "tables_and_figures": {
+      "placement": "Embedded in text where they aid readability; lengthy tables in appendix",
+      "numbering": "Sequential within each section"
+    },
+    "species_ordering": [
+      "Mouse", "Rat", "Hamster", "Other Rodent",
+      "Rabbit", "Dog", "Non-human Primate", "Other Non-rodent", "Non-mammals"
+    ],
+    "route_ordering": [
+      "Intended clinical route (first)",
+      "Oral", "Intravenous", "Intramuscular", "Intraperitoneal",
+      "Subcutaneous", "Inhalation", "Topical", "Other"
+    ],
+    "ectd_v4_keywords": {
+      "substance": "Identifies the drug substance (INN or code name)",
+      "manufacturer": "Identifies the manufacturer of drug substance or drug product",
+      "product": "Identifies the drug product",
+      "dosage_form": "Identifies the dosage form",
+      "excipient": "Optional; identifies excipient for 3.2.P.4 and 3.2.A.3 granularity",
+      "descriptor": "Optional; used for stability data (3.2.S.7.3, 3.2.P.8.3) differentiation",
+      "container": "Optional; generates separate 3.2.P.7 sections per container closure system",
+      "facility": "Optional; generates separate 2.3.A.1 / 3.2.A.1 sections per facility",
+      "component": "Optional; generates separate 2.3.A.2 / 3.2.A.2 sections per drug substance component"
+    }
+  },
+  "modules": {
+    "module_1": {
+      "title": "Regional Administrative Information",
+      "description": "Not part of the harmonised CTD. Content and format are defined by each regional regulatory authority (e.g., FDA, EMA, PMDA).",
+      "harmonised": false,
+      "sections": {
+        "1.0": {
+          "title": "Cover Letter",
+          "description": "Region-specific cover letter"
+        },
+        "1.1": {
+          "title": "Comprehensive Table of Contents",
+          "description": "Complete TOC for all modules of the application"
+        },
+        "1.2": {
+          "title": "Application Form(s)",
+          "description": "Region-specific application forms"
+        },
+        "1.3": {
+          "title": "Product Information",
+          "subsections": {
+            "1.3.1": { "title": "Prescribing Information / SmPC" },
+            "1.3.2": { "title": "Patient Information / Package Leaflet" },
+            "1.3.3": { "title": "Labelling" },
+            "1.3.4": { "title": "Sample Labels (if applicable)" }
+          }
+        },
+        "1.4": {
+          "title": "Information on Experts / Certifications",
+          "description": "CVs, declarations, certifications"
+        },
+        "1.5": {
+          "title": "Region-Specific Requirements",
+          "description": "Varies by authority"
+        }
+      },
+      "cross_references": [],
+      "data_elements": [],
+      "notes": "Structure varies by region. US FDA, EU EMA, Japan PMDA each define their own Module 1 content."
+    },
+    "module_2": {
+      "title": "Common Technical Document Summaries",
+      "description": "High-level summaries and overviews of Modules 3, 4, and 5 data. This is the core review document for regulatory assessors.",
+      "harmonised": true,
+      "sections": {
+        "2.1": {
+          "title": "CTD Table of Contents",
+          "description": "Complete table of contents for Modules 2-5",
+          "data_elements": ["Full section listing with page references for Modules 2-5"]
+        },
+        "2.2": {
+          "title": "CTD Introduction",
+          "description": "Brief introduction including pharmacological class, mode of action, proposed clinical use. General introductory information about the drug.",
+          "data_elements": [
+            "Pharmacological class of the drug",
+            "Mode of action",
+            "Proposed indication(s) and clinical use",
+            "General introduction"
+          ]
+        },
+        "2.3": {
+          "title": "Quality Overall Summary (QOS)",
+          "description": "Summary of Module 3 quality data. Should present the applicant's conclusions with cross-references to detailed data in Module 3.",
+          "subsections": {
+            "2.3.S": {
+              "title": "Drug Substance",
+              "subsections": {
+                "2.3.S.1": {
+                  "title": "General Information",
+                  "data_elements": [
+                    "Nomenclature (INN, chemical name, code)",
+                    "Structure (structural formula, molecular formula, molecular weight)",
+                    "General properties (physical/chemical, chirality)"
+                  ]
+                },
+                "2.3.S.2": {
+                  "title": "Manufacture",
+                  "data_elements": [
+                    "Manufacturer name and address",
+                    "Description of manufacturing process and process controls",
+                    "Controls of materials",
+                    "Controls of critical steps and intermediates",
+                    "Process validation and/or evaluation"
+                  ]
+                },
+                "2.3.S.3": {
+                  "title": "Characterisation",
+                  "data_elements": [
+                    "Elucidation of structure and other characteristics",
+                    "Impurities"
+                  ]
+                },
+                "2.3.S.4": {
+                  "title": "Control of Drug Substance",
+                  "data_elements": [
+                    "Specification",
+                    "Analytical procedures",
+                    "Validation of analytical procedures",
+                    "Batch analyses",
+                    "Justification of specification"
+                  ]
+                },
+                "2.3.S.5": {
+                  "title": "Reference Standards or Materials",
+                  "data_elements": [
+                    "Primary reference standard characterisation",
+                    "Secondary reference standards"
+                  ]
+                },
+                "2.3.S.6": {
+                  "title": "Container Closure System",
+                  "data_elements": [
+                    "Description of container closure system",
+                    "Suitability justification"
+                  ]
+                },
+                "2.3.S.7": {
+                  "title": "Stability",
+                  "data_elements": [
+                    "Stability summary and conclusions",
+                    "Post-approval stability protocol and stability commitment",
+                    "Stability data (tables/figures)"
+                  ]
+                }
+              }
+            },
+            "2.3.P": {
+              "title": "Drug Product",
+              "subsections": {
+                "2.3.P.1": {
+                  "title": "Description and Composition of the Drug Product",
+                  "data_elements": [
+                    "Description of dosage form",
+                    "Composition (all components, function, quality standard)",
+                    "Type of container and closure"
+                  ]
+                },
+                "2.3.P.2": {
+                  "title": "Pharmaceutical Development",
+                  "data_elements": [
+                    "Components of the drug product (drug substance, excipients, compatibility)",
+                    "Drug product formulation development",
+                    "Manufacturing process development",
+                    "Container closure system",
+                    "Microbiological attributes",
+                    "Compatibility (reconstitution diluents, dosage devices, etc.)"
+                  ]
+                },
+                "2.3.P.3": {
+                  "title": "Manufacture",
+                  "data_elements": [
+                    "Manufacturer(s) name, address, responsibility",
+                    "Batch formula",
+                    "Description of manufacturing process and process controls",
+                    "Controls of critical steps and intermediates",
+                    "Process validation and/or evaluation"
+                  ]
+                },
+                "2.3.P.4": {
+                  "title": "Control of Excipients",
+                  "data_elements": [
+                    "Specifications (compendial and in-house)",
+                    "Analytical procedures",
+                    "Excipients of human or animal origin",
+                    "Novel excipients"
+                  ]
+                },
+                "2.3.P.5": {
+                  "title": "Control of Drug Product",
+                  "data_elements": [
+                    "Specification",
+                    "Analytical procedures",
+                    "Validation of analytical procedures",
+                    "Batch analyses",
+                    "Characterisation of impurities",
+                    "Justification of specification"
+                  ]
+                },
+                "2.3.P.6": {
+                  "title": "Reference Standards or Materials",
+                  "data_elements": [
+                    "Reference standards used for drug product testing"
+                  ]
+                },
+                "2.3.P.7": {
+                  "title": "Container Closure System",
+                  "data_elements": [
+                    "Description of container closure system(s)",
+                    "Suitability, protection, compatibility, safety, performance"
+                  ]
+                },
+                "2.3.P.8": {
+                  "title": "Stability",
+                  "data_elements": [
+                    "Stability summary and conclusion",
+                    "Post-approval stability protocol and stability commitment",
+                    "Stability data (tables/figures)"
+                  ]
+                }
+              }
+            },
+            "2.3.A": {
+              "title": "Appendices",
+              "subsections": {
+                "2.3.A.1": {
+                  "title": "Facilities and Equipment",
+                  "data_elements": ["Facility information (optional keyword-based granularity in eCTD v4)"]
+                },
+                "2.3.A.2": {
+                  "title": "Adventitious Agents Safety Evaluation",
+                  "data_elements": [
+                    "TSE risk assessment",
+                    "Viral safety data (for biological products)"
+                  ]
+                },
+                "2.3.A.3": {
+                  "title": "Excipients",
+                  "data_elements": [
+                    "Novel excipient detail (if applicable)",
+                    "Non-compendial excipient information"
+                  ]
+                }
+              }
+            },
+            "2.3.R": {
+              "title": "Regional Information",
+              "data_elements": ["Region-specific quality information"]
+            }
+          },
+          "cross_references": [
+            {
+              "from": "2.3.S (all subsections)",
+              "to": "3.2.S (corresponding subsections)",
+              "type": "mandatory",
+              "description": "Each QOS Drug Substance subsection must reference the corresponding Module 3 body of data section"
+            },
+            {
+              "from": "2.3.P (all subsections)",
+              "to": "3.2.P (corresponding subsections)",
+              "type": "mandatory",
+              "description": "Each QOS Drug Product subsection must reference the corresponding Module 3 body of data section"
+            },
+            {
+              "from": "2.3.A (all subsections)",
+              "to": "3.2.A (corresponding subsections)",
+              "type": "mandatory",
+              "description": "Each QOS Appendix subsection must reference the corresponding Module 3 appendix"
+            },
+            {
+              "from": "2.3 (Introduction)",
+              "to": "Module 3 control strategy summaries",
+              "type": "recommended",
+              "description": "QOS introduction should state where Module 3 control strategy summaries are located"
+            }
+          ],
+          "ich_guidelines_referenced": ["Q1A", "Q1B", "Q2", "Q3A", "Q3B", "Q3C", "Q3D", "Q5A", "Q5B", "Q5C", "Q5D", "Q6A", "Q6B", "Q8", "Q9", "Q10", "Q11", "Q12"]
+        },
+        "2.4": {
+          "title": "Nonclinical Overview",
+          "description": "Integrated assessment of nonclinical evaluation of the drug. Interpretive narrative, not a summary of study results.",
+          "data_elements": [
+            "Nonclinical testing strategy overview",
+            "Pharmacology overview (primary, secondary, safety pharmacology)",
+            "Pharmacokinetics overview (absorption, distribution, metabolism, excretion)",
+            "Toxicology overview (single-dose, repeat-dose, genotoxicity, carcinogenicity, reproductive toxicity)",
+            "Integrated overview and conclusions",
+            "List of literature references"
+          ],
+          "content_sequence": [
+            "Overview of nonclinical testing strategy",
+            "Pharmacology",
+            "Pharmacokinetics",
+            "Toxicology",
+            "Integrated overview and conclusions",
+            "List of literature references"
+          ],
+          "cross_references": [
+            {
+              "from": "2.4",
+              "to": "2.6 (Nonclinical Written and Tabulated Summaries)",
+              "type": "mandatory",
+              "description": "Overview should reference written/tabulated summaries for detailed data"
+            },
+            {
+              "from": "2.4",
+              "to": "Module 4 (Nonclinical Study Reports)",
+              "type": "mandatory",
+              "description": "Must reference detailed study reports"
+            },
+            {
+              "from": "2.4 (Toxicology - impurities)",
+              "to": "2.3 / Module 3 (Quality data)",
+              "type": "conditional",
+              "description": "When discussing impurity qualification, must cross-reference quality documentation"
+            }
+          ]
+        },
+        "2.5": {
+          "title": "Clinical Overview",
+          "description": "Critical analysis of the clinical data. Provides a clinical perspective on the benefits and risks of the product.",
+          "subsections": {
+            "2.5.1": {
+              "title": "Product Development Rationale",
+              "data_elements": [
+                "Pharmacological class",
+                "Proposed indication(s) and patient population",
+                "Regulatory history and context",
+                "General approach to clinical development",
+                "Compliance with GCP"
+              ]
+            },
+            "2.5.2": {
+              "title": "Overview of Biopharmaceutics",
+              "data_elements": [
+                "Formulation development summary",
+                "Bioavailability data overview",
+                "In vitro dissolution data",
+                "Comparative BA of clinical and marketed formulations",
+                "Inter/intrasubject variability"
+              ]
+            },
+            "2.5.3": {
+              "title": "Overview of Clinical Pharmacology",
+              "data_elements": [
+                "Pharmacokinetics overview",
+                "Pharmacodynamics overview",
+                "PK/PD relationships",
+                "Immunogenicity overview (if applicable)"
+              ]
+            },
+            "2.5.4": {
+              "title": "Overview of Efficacy",
+              "data_elements": [
+                "Study design and endpoints",
+                "Patient populations studied",
+                "Efficacy results summary across indications",
+                "Dose-response analysis",
+                "Subgroup analyses summary"
+              ]
+            },
+            "2.5.5": {
+              "title": "Overview of Safety",
+              "data_elements": [
+                "Extent of exposure",
+                "Adverse events overview",
+                "Deaths and serious adverse events",
+                "Drug interactions overview",
+                "Use in special populations (pregnancy, paediatric, geriatric, renal/hepatic impairment)",
+                "Overdose data",
+                "Drug abuse potential",
+                "Withdrawal and rebound effects",
+                "Nonclinical safety correlation"
+              ]
+            },
+            "2.5.6": {
+              "title": "Benefits and Risks Conclusions",
+              "subsections": {
+                "2.5.6.1": {
+                  "title": "Context for Assessment of Benefits and Risks",
+                  "subsections": {
+                    "2.5.6.1.1": {
+                      "title": "Disease or Condition Being Treated",
+                      "data_elements": ["Severity, natural history, morbidity, mortality"]
+                    },
+                    "2.5.6.1.2": {
+                      "title": "Current Treatment Options",
+                      "data_elements": ["Available therapies and their limitations"]
+                    }
+                  }
+                },
+                "2.5.6.2": {
+                  "title": "Summary of Benefits",
+                  "data_elements": ["Key efficacy results supporting benefit claim"]
+                },
+                "2.5.6.3": {
+                  "title": "Summary of Risks",
+                  "data_elements": ["Key safety findings, risk characterisation"]
+                },
+                "2.5.6.4": {
+                  "title": "Risk Management",
+                  "data_elements": ["Risk mitigation strategies, REMS if applicable"]
+                },
+                "2.5.6.5": {
+                  "title": "Conclusions",
+                  "data_elements": ["Overall benefit-risk assessment and conclusion"]
+                }
+              }
+            },
+            "2.5.7": {
+              "title": "Literature References",
+              "data_elements": ["All references cited in the Clinical Overview"]
+            }
+          },
+          "cross_references": [
+            {
+              "from": "2.5",
+              "to": "2.7 (Clinical Summary)",
+              "type": "mandatory",
+              "description": "Overview must reference Clinical Summary for detailed factual data"
+            },
+            {
+              "from": "2.5",
+              "to": "Module 5 (Clinical Study Reports)",
+              "type": "mandatory",
+              "description": "Must reference individual study reports for source data"
+            },
+            {
+              "from": "2.5.5",
+              "to": "2.4 / Module 4 (Nonclinical data)",
+              "type": "conditional",
+              "description": "Safety overview should reference nonclinical safety findings where relevant"
+            },
+            {
+              "from": "2.5.5",
+              "to": "2.3 / Module 3 (Quality data)",
+              "type": "conditional",
+              "description": "Safety overview may reference quality data (impurities, formulation) where relevant"
+            }
+          ]
+        },
+        "2.6": {
+          "title": "Nonclinical Written and Tabulated Summaries",
+          "description": "Detailed factual summaries with tabulated data for all nonclinical studies. Includes both written narrative summaries and standardised tabulated summaries.",
+          "subsections": {
+            "2.6.1": {
+              "title": "Introduction",
+              "data_elements": [
+                "Brief description of the drug substance (name, pharmacological class, structural formula)",
+                "Overview of nonclinical testing strategy"
+              ]
+            },
+            "2.6.2": {
+              "title": "Pharmacology Written Summary",
+              "subsections": {
+                "2.6.2.1": {
+                  "title": "Brief Summary",
+                  "data_elements": ["Concise overall summary of pharmacology findings"]
+                },
+                "2.6.2.2": {
+                  "title": "Primary Pharmacodynamics",
+                  "data_elements": ["In vitro and in vivo studies on target pharmacology, mechanism of action"]
+                },
+                "2.6.2.3": {
+                  "title": "Secondary Pharmacodynamics",
+                  "data_elements": ["Activity at other than the primary target"]
+                },
+                "2.6.2.4": {
+                  "title": "Safety Pharmacology",
+                  "data_elements": [
+                    "Cardiovascular (hERG, QT, telemetry)",
+                    "CNS",
+                    "Respiratory",
+                    "Other organ systems"
+                  ]
+                },
+                "2.6.2.5": {
+                  "title": "Pharmacodynamic Drug Interactions",
+                  "data_elements": ["PD interaction studies"]
+                },
+                "2.6.2.6": {
+                  "title": "Discussion and Conclusions",
+                  "data_elements": ["Interpretation of pharmacology data"]
+                },
+                "2.6.2.7": {
+                  "title": "Tables and Figures",
+                  "data_elements": ["Supporting tables and figures"]
+                }
+              }
+            },
+            "2.6.3": {
+              "title": "Pharmacology Tabulated Summary",
+              "data_elements": [
+                "Tabulated summary template with columns: Type of Study, Test System, Method of Administration, Testing Facility, Study Number, Location (Vol/Section)"
+              ],
+              "subsections": {
+                "2.6.3.1": { "title": "Pharmacology: Overview" },
+                "2.6.3.2": { "title": "Primary Pharmacodynamics (tabulated summary optional)" },
+                "2.6.3.3": { "title": "Secondary Pharmacodynamics (tabulated summary optional)" },
+                "2.6.3.4": { "title": "Safety Pharmacology" },
+                "2.6.3.5": { "title": "Pharmacodynamic Drug Interactions (tabulated summary optional)" }
+              }
+            },
+            "2.6.4": {
+              "title": "Pharmacokinetics Written Summary",
+              "subsections": {
+                "2.6.4.1": {
+                  "title": "Brief Summary",
+                  "data_elements": ["Concise overall PK summary"]
+                },
+                "2.6.4.2": {
+                  "title": "Methods of Analysis",
+                  "data_elements": ["Analytical methods for PK studies"]
+                },
+                "2.6.4.3": {
+                  "title": "Absorption",
+                  "data_elements": ["Single-dose PK, repeated-dose PK, bioavailability"]
+                },
+                "2.6.4.4": {
+                  "title": "Distribution",
+                  "data_elements": ["Tissue distribution, protein binding, placental transfer, blood-brain barrier"]
+                },
+                "2.6.4.5": {
+                  "title": "Metabolism",
+                  "data_elements": ["In vivo and in vitro metabolism, metabolic pathways, enzyme identification"]
+                },
+                "2.6.4.6": {
+                  "title": "Excretion",
+                  "data_elements": ["Routes and rate of excretion, mass balance"]
+                },
+                "2.6.4.7": {
+                  "title": "Pharmacokinetic Drug Interactions",
+                  "data_elements": ["PK drug interaction studies"]
+                },
+                "2.6.4.8": {
+                  "title": "Other Pharmacokinetic Studies",
+                  "data_elements": ["Any other PK studies"]
+                },
+                "2.6.4.9": {
+                  "title": "Discussion and Conclusions",
+                  "data_elements": ["Interpretation of PK data, species comparison, human prediction"]
+                },
+                "2.6.4.10": {
+                  "title": "Tables and Figures",
+                  "data_elements": ["Supporting tables and figures"]
+                }
+              }
+            },
+            "2.6.5": {
+              "title": "Pharmacokinetics Tabulated Summary",
+              "data_elements": [
+                "Standardised tabulated templates per study type"
+              ],
+              "subsections": {
+                "2.6.5.1": { "title": "Pharmacokinetics: Overview" },
+                "2.6.5.2": { "title": "Analytical Methods and Validation Reports (tabulated summary optional)" },
+                "2.6.5.3": {
+                  "title": "Pharmacokinetics: Absorption after a Single Dose",
+                  "data_elements": ["Species, Gender, Feeding condition, Vehicle, Route, Dose, Sample type, Analyte, Assay, PK parameters"]
+                },
+                "2.6.5.4": { "title": "Pharmacokinetics: Absorption after Repeated Doses" },
+                "2.6.5.5": {
+                  "title": "Pharmacokinetics: Organ Distribution",
+                  "data_elements": ["Species, Dose, Radionuclide, Specific Activity, Sampling time, Tissue concentrations, t1/2"]
+                },
+                "2.6.5.6": {
+                  "title": "Pharmacokinetics: Plasma Protein Binding",
+                  "data_elements": ["Study system, Target entity, Method, Species, Conc. tested, % Bound"]
+                },
+                "2.6.5.7": {
+                  "title": "Pharmacokinetics: Study in Pregnant or Nursing Animals",
+                  "data_elements": ["Placental transfer data, Excretion into milk data"]
+                },
+                "2.6.5.8": { "title": "Pharmacokinetics: Other Distribution Study" },
+                "2.6.5.9": {
+                  "title": "Pharmacokinetics: Metabolism In Vivo",
+                  "data_elements": ["Species, Sample (Plasma/Urine/Bile/Feces), % of Compound (Parent, M1, M2...)"]
+                },
+                "2.6.5.10": { "title": "Pharmacokinetics: Metabolism In Vitro" },
+                "2.6.5.11": { "title": "Pharmacokinetics: Possible Metabolic Pathways" },
+                "2.6.5.12": { "title": "Pharmacokinetics: Induction/Inhibition of Drug-Metabolizing Enzymes" },
+                "2.6.5.13": { "title": "Pharmacokinetics: Excretion" },
+                "2.6.5.14": { "title": "Pharmacokinetics: Excretion into Bile" },
+                "2.6.5.15": { "title": "Pharmacokinetics: Drug-Drug Interactions" },
+                "2.6.5.16": { "title": "Pharmacokinetics: Other" }
+              }
+            },
+            "2.6.6": {
+              "title": "Toxicology Written Summary",
+              "subsections": {
+                "2.6.6.1": {
+                  "title": "Brief Summary",
+                  "data_elements": ["Concise summary of toxicology findings"]
+                },
+                "2.6.6.2": {
+                  "title": "Single-Dose Toxicity",
+                  "data_elements": ["LD50/approximate lethal dose, target organs, reversibility"]
+                },
+                "2.6.6.3": {
+                  "title": "Repeat-Dose Toxicity",
+                  "data_elements": ["NOAEL, target organs, dose-response, reversibility, exposure margins"]
+                },
+                "2.6.6.4": {
+                  "title": "Genotoxicity",
+                  "data_elements": ["In vitro and in vivo genotoxicity study results"]
+                },
+                "2.6.6.5": {
+                  "title": "Carcinogenicity",
+                  "data_elements": ["Long-term carcinogenicity studies, statistical analyses, mechanism of tumorigenesis"]
+                },
+                "2.6.6.6": {
+                  "title": "Reproductive and Developmental Toxicity",
+                  "data_elements": [
+                    "Fertility and early embryonic development",
+                    "Embryo-fetal development",
+                    "Pre- and postnatal development",
+                    "Juvenile animal studies"
+                  ]
+                },
+                "2.6.6.7": {
+                  "title": "Local Tolerance",
+                  "data_elements": ["Local tolerance studies at site of administration"]
+                },
+                "2.6.6.8": {
+                  "title": "Other Toxicity Studies",
+                  "data_elements": [
+                    "Antigenicity/immunotoxicity",
+                    "Dependence",
+                    "Metabolite studies",
+                    "Impurity studies",
+                    "Phototoxicity",
+                    "Other studies"
+                  ]
+                },
+                "2.6.6.9": {
+                  "title": "Discussion and Conclusions",
+                  "data_elements": ["Integrated toxicology assessment"]
+                },
+                "2.6.6.10": {
+                  "title": "Tables and Figures",
+                  "data_elements": ["Supporting tables and figures"]
+                }
+              }
+            },
+            "2.6.7": {
+              "title": "Toxicology Tabulated Summary",
+              "subsections": {
+                "2.6.7.1": { "title": "Toxicology: Overview" },
+                "2.6.7.2": { "title": "Toxicokinetics: Overview of Toxicokinetics Studies" },
+                "2.6.7.3": { "title": "Toxicokinetics: Overview of Toxicokinetics Data" },
+                "2.6.7.4": { "title": "Toxicology: Drug Substance" },
+                "2.6.7.5": { "title": "Single-Dose Toxicity" },
+                "2.6.7.6": { "title": "Repeat-Dose Toxicity: Non-Pivotal Studies" },
+                "2.6.7.7": { "title": "Repeat-Dose Toxicity: Pivotal Studies" },
+                "2.6.7.8": { "title": "Genotoxicity: In Vitro" },
+                "2.6.7.9": { "title": "Genotoxicity: In Vivo" },
+                "2.6.7.10": { "title": "Carcinogenicity" },
+                "2.6.7.11": { "title": "Reproductive and Developmental Toxicity: Non-Pivotal Studies" },
+                "2.6.7.12": { "title": "Reproductive and Developmental Toxicity - Fertility and Early Embryonic Development to Implantation (Pivotal)" },
+                "2.6.7.13": { "title": "Reproductive and Developmental Toxicity - Effects on Embryo-Fetal Development (Pivotal)" },
+                "2.6.7.14": { "title": "Reproductive and Developmental Toxicity - Effects on Pre- and Postnatal Development, Including Maternal Function (Pivotal)" },
+                "2.6.7.15": { "title": "Studies in Juvenile Animals" },
+                "2.6.7.16": { "title": "Local Tolerance" },
+                "2.6.7.17": { "title": "Other Toxicity Studies" }
+              }
+            }
+          },
+          "cross_references": [
+            {
+              "from": "2.6 (all written summaries)",
+              "to": "Module 4 (corresponding study reports)",
+              "type": "mandatory",
+              "description": "Written summaries must reference individual study reports in Module 4"
+            },
+            {
+              "from": "2.6 (Toxicology - impurity qualification)",
+              "to": "2.3 / Module 3 (Quality data - impurity profiles)",
+              "type": "conditional",
+              "description": "When discussing impurity qualification in toxicology, must cross-reference quality documentation"
+            },
+            {
+              "from": "2.6 (tabulated summaries)",
+              "to": "Module 4 study reports",
+              "type": "mandatory",
+              "description": "Each tabulated summary row must include Location in CTD (Vol/Section) pointing to the full report"
+            }
+          ]
+        },
+        "2.7": {
+          "title": "Clinical Summary",
+          "description": "Detailed factual summaries of all clinical data. Bridge between the Clinical Overview (2.5) and the individual study reports (Module 5).",
+          "subsections": {
+            "2.7.1": {
+              "title": "Summary of Biopharmaceutic Studies and Associated Analytical Methods",
+              "subsections": {
+                "2.7.1.1": {
+                  "title": "Background and Overview",
+                  "data_elements": [
+                    "Analytical methods for measuring drug concentrations in biological fluids",
+                    "Bioanalytical method validation summary"
+                  ]
+                },
+                "2.7.1.2": {
+                  "title": "Summary of Results of Individual Studies",
+                  "data_elements": ["Individual biopharmaceutic study results"]
+                },
+                "2.7.1.3": {
+                  "title": "Comparison and Analyses of Results Across Studies",
+                  "data_elements": [
+                    "Cross-study comparison of bioavailability data",
+                    "In vitro dissolution comparison",
+                    "Formulation-to-formulation comparisons"
+                  ]
+                },
+                "2.7.1.4": {
+                  "title": "Appendix",
+                  "data_elements": ["Tabular formats for BA and dissolution studies (Tables 2.7.1.1, 2.7.1.2)"]
+                }
+              }
+            },
+            "2.7.2": {
+              "title": "Summary of Clinical Pharmacology Studies",
+              "subsections": {
+                "2.7.2.1": {
+                  "title": "Background and Overview",
+                  "data_elements": [
+                    "Overview of clinical pharmacology program",
+                    "Human biomaterial studies overview",
+                    "Clinical PK and PD studies overview",
+                    "Study design and data analysis approach"
+                  ]
+                },
+                "2.7.2.2": {
+                  "title": "Summary of Results of Individual Studies",
+                  "data_elements": [
+                    "Individual clinical pharmacology study results (tabular)",
+                    "Dose-response/concentration-response summaries",
+                    "Narrative descriptions of critical studies"
+                  ]
+                },
+                "2.7.2.3": {
+                  "title": "Comparison and Analyses of Results Across Studies",
+                  "data_elements": [
+                    "In vitro drug metabolism and drug-drug interaction results",
+                    "Human PK parameters and sources of variability",
+                    "Single vs repeated-dose PK comparison",
+                    "Population PK analyses",
+                    "Dose-response/concentration-response relationships",
+                    "PK/PD database inconsistencies",
+                    "Foreign data extrapolation studies (ICH E5)"
+                  ]
+                },
+                "2.7.2.4": {
+                  "title": "Special Studies",
+                  "data_elements": [
+                    "Immunogenicity data",
+                    "Clinical microbiology data (for antimicrobials)",
+                    "Other special study types"
+                  ]
+                },
+                "2.7.2.5": {
+                  "title": "Appendix",
+                  "data_elements": [
+                    "Table 2.7.2.1 (tabular format for drug-drug interaction studies)",
+                    "Tables for metabolism, population PK studies"
+                  ]
+                }
+              }
+            },
+            "2.7.3": {
+              "title": "Summary of Clinical Efficacy",
+              "description": "Separate section per indication. When multiple indications, label as 2.7.3 pneumonia, 2.7.3 URI, etc.",
+              "subsections": {
+                "2.7.3.1": {
+                  "title": "Background and Overview of Clinical Efficacy",
+                  "data_elements": [
+                    "Program of controlled studies",
+                    "Study designs (dose-response, comparative, long-term)",
+                    "Critical design features (randomisation, blinding, endpoints, duration)"
+                  ]
+                },
+                "2.7.3.2": {
+                  "title": "Summary of Results of Individual Studies",
+                  "data_elements": [
+                    "Tabular listing of all efficacy studies (see 2.7.3.6 Appendix)",
+                    "Brief narrative descriptions of important studies (ICH E3 synopsis format)",
+                    "Bridging studies (ICH E5)"
+                  ]
+                },
+                "2.7.3.3": {
+                  "title": "Comparison and Analyses of Results Across Studies",
+                  "subsections": {
+                    "2.7.3.3.1": {
+                      "title": "Study Populations",
+                      "data_elements": [
+                        "Disease characteristics, severity, duration, prior treatment",
+                        "Inclusion/exclusion criteria",
+                        "Baseline characteristics across studies",
+                        "Patient withdrawals (number, timing, reasons)"
+                      ]
+                    },
+                    "2.7.3.3.2": {
+                      "title": "Comparison of Efficacy Results of All Studies",
+                      "data_elements": [
+                        "All efficacy results compared including negative/inconclusive studies",
+                        "Pre-specified primary endpoints focus",
+                        "Confidence intervals",
+                        "Placebo vs active control comparisons",
+                        "Equivalence/non-inferiority analyses",
+                        "Meta-analysis (if performed, per ICH E9)"
+                      ]
+                    },
+                    "2.7.3.3.3": {
+                      "title": "Comparison of Results in Sub-populations",
+                      "data_elements": [
+                        "Efficacy in age, sex, race subgroups",
+                        "Efficacy in disease severity subgroups",
+                        "Apparent variations in treatment effect"
+                      ]
+                    }
+                  }
+                },
+                "2.7.3.4": {
+                  "title": "Analysis of Clinical Information Relevant to Dosing Recommendations",
+                  "data_elements": [
+                    "Dose-response/blood level-response relationships",
+                    "Starting and maximal dose support",
+                    "Dose titration approach",
+                    "Individualisation of dosage",
+                    "Dose modifications for subgroups (paediatric, geriatric, renal/hepatic)",
+                    "Cross-reference to 2.7.2 PK data"
+                  ]
+                },
+                "2.7.3.5": {
+                  "title": "Persistence of Efficacy and/or Tolerance Effects",
+                  "data_elements": [
+                    "Long-term efficacy data",
+                    "Evidence of tolerance (loss of therapeutic effect over time)",
+                    "Dose-time relationship for efficacy"
+                  ]
+                },
+                "2.7.3.6": {
+                  "title": "Appendix",
+                  "data_elements": [
+                    "Table 2.7.3.1 (Description of Clinical Efficacy and Safety Studies)",
+                    "Table 2.7.3.2 (Results of Efficacy Studies)"
+                  ]
+                }
+              }
+            },
+            "2.7.4": {
+              "title": "Summary of Clinical Safety",
+              "description": "Integrated summary of safety data from all clinical studies.",
+              "subsections": {
+                "2.7.4.1": {
+                  "title": "Exposure to the Drug",
+                  "subsections": {
+                    "2.7.4.1.1": {
+                      "title": "Overall Safety Evaluation Plan and Narratives of Safety Studies",
+                      "data_elements": [
+                        "Safety evaluation plan description",
+                        "Tabular listing of all safety studies (see 2.7.4.7 Appendix)",
+                        "Narrative descriptions of safety studies"
+                      ]
+                    },
+                    "2.7.4.1.2": {
+                      "title": "Overall Extent of Exposure",
+                      "data_elements": [
+                        "Numbers of subjects by study type, dose, route, duration",
+                        "Exposure table (Table 2.7.4.1)",
+                        "Dose levels and duration categories"
+                      ]
+                    },
+                    "2.7.4.1.3": {
+                      "title": "Demographic and Other Characteristics of Study Population",
+                      "data_elements": [
+                        "Demographics table (Table 2.7.4.2)",
+                        "Age, sex, race distribution",
+                        "Special characteristics (severity, hospitalisation, renal function, concomitant illness/medications, geography)"
+                      ]
+                    }
+                  }
+                },
+                "2.7.4.2": {
+                  "title": "Adverse Events",
+                  "subsections": {
+                    "2.7.4.2.1": {
+                      "title": "Analysis of Adverse Events",
+                      "data_elements": [
+                        "Frequency of adverse events",
+                        "MedDRA preferred term coding (ICH M1)",
+                        "Treatment-emergent events",
+                        "Discontinuation rates due to AEs"
+                      ],
+                      "subsections": {
+                        "2.7.4.2.1.1": {
+                          "title": "Common Adverse Events",
+                          "data_elements": [
+                            "Incidence tables (Table 2.7.4.3, 2.7.4.4)",
+                            "Dose-response relationships",
+                            "Drug-related factors (dosage, regimen, duration, demographics, concomitant medications, drug concentration)"
+                          ]
+                        },
+                        "2.7.4.2.1.2": {
+                          "title": "Deaths",
+                          "data_elements": [
+                            "Listing of all deaths (Table 2.7.4.6)",
+                            "Pattern analysis between study arms",
+                            "Cause-specific mortality analysis"
+                          ]
+                        },
+                        "2.7.4.2.1.3": {
+                          "title": "Other Serious Adverse Events",
+                          "data_elements": [
+                            "Serious adverse events per ICH E2A definition",
+                            "Major laboratory abnormalities, vital sign abnormalities",
+                            "Frequency over time analysis"
+                          ]
+                        },
+                        "2.7.4.2.1.4": {
+                          "title": "Other Significant Adverse Events",
+                          "data_elements": [
+                            "Events leading to dose reduction or discontinuation",
+                            "Marked laboratory abnormalities"
+                          ]
+                        },
+                        "2.7.4.2.1.5": {
+                          "title": "Analysis of Adverse Events by Organ System or Syndrome",
+                          "data_elements": [
+                            "AEs organised by organ system (subsections 2.7.4.2.1.5.1, 2.7.4.2.1.5.2, etc.)",
+                            "Syndrome-based groupings where appropriate"
+                          ]
+                        }
+                      }
+                    },
+                    "2.7.4.2.2": {
+                      "title": "Narratives",
+                      "data_elements": [
+                        "Individual narratives of deaths, SAEs, significant AEs",
+                        "Cross-reference to ICH E3 individual study reports"
+                      ]
+                    }
+                  }
+                },
+                "2.7.4.3": {
+                  "title": "Clinical Laboratory Evaluations",
+                  "data_elements": [
+                    "Central tendency (mean, median) of lab values",
+                    "Range and outlier analysis",
+                    "Individual clinically important abnormalities",
+                    "Shift tables (ICH E3)",
+                    "Standard international units"
+                  ]
+                },
+                "2.7.4.4": {
+                  "title": "Vital Signs, Physical Findings, and Other Observations Related to Safety",
+                  "data_elements": [
+                    "Vital signs (HR, BP, temperature, respiratory rate)",
+                    "Weight changes",
+                    "ECG findings (QT prolongation studies)",
+                    "Other physical examination findings"
+                  ]
+                },
+                "2.7.4.5": {
+                  "title": "Safety in Special Groups and Situations",
+                  "subsections": {
+                    "2.7.4.5.1": {
+                      "title": "Intrinsic Factors",
+                      "data_elements": [
+                        "Age, sex, height, weight, lean body mass",
+                        "Genetic polymorphism",
+                        "Body composition, organ dysfunction",
+                        "Paediatric safety",
+                        "Renal/hepatic impairment"
+                      ]
+                    },
+                    "2.7.4.5.2": {
+                      "title": "Extrinsic Factors",
+                      "data_elements": [
+                        "Medical environment",
+                        "Tobacco, alcohol, food habits",
+                        "Cross-reference to 2.7.4.5.3 for drug interactions"
+                      ]
+                    },
+                    "2.7.4.5.3": {
+                      "title": "Drug Interactions",
+                      "data_elements": [
+                        "Drug-drug and drug-food interaction safety data",
+                        "Cross-reference to 2.7.2 for PK interaction data"
+                      ]
+                    },
+                    "2.7.4.5.4": {
+                      "title": "Use in Pregnancy and Lactation",
+                      "data_elements": ["Safety during pregnancy and breastfeeding"]
+                    },
+                    "2.7.4.5.5": {
+                      "title": "Overdose",
+                      "data_elements": [
+                        "Signs/symptoms of overdose",
+                        "Treatment measures and antidotes",
+                        "Dialysis efficacy"
+                      ]
+                    },
+                    "2.7.4.5.6": {
+                      "title": "Drug Abuse",
+                      "data_elements": [
+                        "Dependence potential in animals and humans",
+                        "Cross-reference to nonclinical summary"
+                      ]
+                    },
+                    "2.7.4.5.7": {
+                      "title": "Withdrawal and Rebound",
+                      "data_elements": [
+                        "Withdrawal effects",
+                        "Rebound phenomena after discontinuation"
+                      ]
+                    },
+                    "2.7.4.5.8": {
+                      "title": "Effects on Ability to Drive or Operate Machinery or Impairment of Mental Ability",
+                      "data_elements": [
+                        "Impairment of senses, co-ordination",
+                        "Drowsiness, mental ability effects"
+                      ]
+                    }
+                  }
+                },
+                "2.7.4.6": {
+                  "title": "Post-marketing Data",
+                  "data_elements": [
+                    "Post-marketing exposure estimates (by indication, dosage, route, duration, geography)",
+                    "Serious adverse events from post-marketing",
+                    "Periodic safety update reports",
+                    "Subgroup findings"
+                  ]
+                },
+                "2.7.4.7": {
+                  "title": "Appendix",
+                  "data_elements": [
+                    "Table 2.7.4.1 (Drug Exposure by Mean Daily Dose and Duration)",
+                    "Table 2.7.4.2 (Demographic Profile of Patients in Controlled Trials)",
+                    "Table 2.7.4.3 (Incidence of Adverse Events in Pooled Placebo and Active Controlled Trials)",
+                    "Table 2.7.4.4 (Incidence of Adverse Events in the Largest Trials)",
+                    "Table 2.7.4.5 (Patient Withdrawals by Study: Controlled Trials)",
+                    "Table 2.7.4.6 (Listing of Deaths)"
+                  ]
+                }
+              }
+            },
+            "2.7.5": {
+              "title": "Literature References",
+              "data_elements": [
+                "All references cited in the Clinical Summary",
+                "Indication of which references are available in Module 5, Section 5.4"
+              ]
+            },
+            "2.7.6": {
+              "title": "Synopses of Individual Studies",
+              "data_elements": [
+                "Listing of Clinical Studies table",
+                "Individual study synopses (ICH E3 format, 3-10 pages each)",
+                "Same sequence as study reports in Module 5"
+              ]
+            }
+          },
+          "cross_references": [
+            {
+              "from": "2.7 (all subsections)",
+              "to": "Module 5 (corresponding study reports)",
+              "type": "mandatory",
+              "description": "All clinical summary subsections must reference individual study reports in Module 5"
+            },
+            {
+              "from": "2.7.3.3",
+              "to": "2.7.2 (Clinical Pharmacology)",
+              "type": "mandatory",
+              "description": "Efficacy comparison must cross-reference PK/PD evidence from Section 2.7.2"
+            },
+            {
+              "from": "2.7.4.5.6 (Drug Abuse)",
+              "to": "2.6 (Nonclinical Summary)",
+              "type": "mandatory",
+              "description": "Drug abuse section must cross-reference nonclinical dependence studies"
+            },
+            {
+              "from": "2.7.4.5.3 (Drug Interactions)",
+              "to": "2.7.2 (Clinical Pharmacology)",
+              "type": "mandatory",
+              "description": "Safety drug interaction section must cross-reference PK interaction data in 2.7.2"
+            },
+            {
+              "from": "2.7.6 (Synopses)",
+              "to": "Module 5 study reports",
+              "type": "mandatory",
+              "description": "Synopses must be organised in same sequence as Module 5 reports"
+            }
+          ]
+        }
+      }
+    },
+    "module_3": {
+      "title": "Quality",
+      "description": "Body of data for drug substance and drug product quality (CMC). Contains the detailed data that supports the Quality Overall Summary (2.3).",
+      "harmonised": true,
+      "sections": {
+        "3.1": {
+          "title": "Module 3 Table of Contents",
+          "data_elements": ["Table of contents for all Module 3 sections"]
+        },
+        "3.2": {
+          "title": "Body of Data",
+          "subsections": {
+            "3.2.S": {
+              "title": "Drug Substance",
+              "note": "Repeat for each drug substance. In eCTD v4, the 'substance' keyword differentiates multiple drug substances.",
+              "subsections": {
+                "3.2.S.1": {
+                  "title": "General Information",
+                  "subsections": {
+                    "3.2.S.1.1": {
+                      "title": "Nomenclature",
+                      "data_elements": ["INN", "Compendial name", "Chemical name(s)", "Company/lab code", "Other names (CAS number, etc.)"]
+                    },
+                    "3.2.S.1.2": {
+                      "title": "Structure",
+                      "data_elements": ["Structural formula", "Molecular formula", "Relative molecular mass", "Stereochemistry"]
+                    },
+                    "3.2.S.1.3": {
+                      "title": "General Properties",
+                      "data_elements": [
+                        "Physical form/appearance",
+                        "Colour",
+                        "Solubility profile",
+                        "Particle size",
+                        "Polymorphism",
+                        "pKa, pH",
+                        "Melting/boiling point",
+                        "Optical rotation",
+                        "Hygroscopicity",
+                        "Other relevant physicochemical properties"
+                      ]
+                    }
+                  }
+                },
+                "3.2.S.2": {
+                  "title": "Manufacture",
+                  "subsections": {
+                    "3.2.S.2.1": {
+                      "title": "Manufacturer(s)",
+                      "data_elements": ["Name, address, responsibility of each manufacturer, including contractors"]
+                    },
+                    "3.2.S.2.2": {
+                      "title": "Description of Manufacturing Process and Process Controls",
+                      "data_elements": [
+                        "Flow diagram",
+                        "Sequential procedural narrative",
+                        "Process controls at critical steps",
+                        "Equipment description"
+                      ]
+                    },
+                    "3.2.S.2.3": {
+                      "title": "Control of Materials",
+                      "data_elements": ["Starting materials", "Reagents", "Solvents", "Catalysts", "Specifications"]
+                    },
+                    "3.2.S.2.4": {
+                      "title": "Controls of Critical Steps and Intermediates",
+                      "data_elements": ["Critical process parameters", "Intermediate specifications", "In-process tests"]
+                    },
+                    "3.2.S.2.5": {
+                      "title": "Process Validation and/or Evaluation",
+                      "data_elements": ["Validation studies", "Evaluation data for critical steps"]
+                    },
+                    "3.2.S.2.6": {
+                      "title": "Manufacturing Process Development",
+                      "data_elements": ["Process changes during development", "Comparability data"]
+                    }
+                  }
+                },
+                "3.2.S.3": {
+                  "title": "Characterisation",
+                  "subsections": {
+                    "3.2.S.3.1": {
+                      "title": "Elucidation of Structure and other Characteristics",
+                      "data_elements": [
+                        "Spectral data (NMR, MS, IR, UV)",
+                        "X-ray crystallography (if applicable)",
+                        "Biological activity (for biotechs)",
+                        "Physicochemical properties"
+                      ]
+                    },
+                    "3.2.S.3.2": {
+                      "title": "Impurities",
+                      "data_elements": [
+                        "Process-related impurities",
+                        "Degradation products",
+                        "Residual solvents",
+                        "Elemental impurities",
+                        "Impurity characterisation data"
+                      ]
+                    }
+                  }
+                },
+                "3.2.S.4": {
+                  "title": "Control of Drug Substance",
+                  "subsections": {
+                    "3.2.S.4.1": {
+                      "title": "Specification",
+                      "data_elements": ["Release and shelf-life specifications", "Test list", "Acceptance criteria"]
+                    },
+                    "3.2.S.4.2": {
+                      "title": "Analytical Procedures",
+                      "data_elements": ["Detailed analytical methods"]
+                    },
+                    "3.2.S.4.3": {
+                      "title": "Validation of Analytical Procedures",
+                      "data_elements": ["Validation reports per ICH Q2"]
+                    },
+                    "3.2.S.4.4": {
+                      "title": "Batch Analyses",
+                      "data_elements": ["Batch results (description, batch size, date, site)", "Certificate of Analysis"]
+                    },
+                    "3.2.S.4.5": {
+                      "title": "Justification of Specification",
+                      "data_elements": ["Scientific rationale for each test and acceptance criterion"]
+                    }
+                  }
+                },
+                "3.2.S.5": {
+                  "title": "Reference Standards or Materials",
+                  "data_elements": ["Source, characterisation, purity of reference standards"]
+                },
+                "3.2.S.6": {
+                  "title": "Container Closure System",
+                  "data_elements": ["Description of packaging", "Specifications", "Suitability studies"]
+                },
+                "3.2.S.7": {
+                  "title": "Stability",
+                  "subsections": {
+                    "3.2.S.7.1": {
+                      "title": "Stability Summary and Conclusions",
+                      "data_elements": ["Summary of stability studies", "Proposed retest period/shelf life"]
+                    },
+                    "3.2.S.7.2": {
+                      "title": "Post-Approval Stability Protocol and Stability Commitment",
+                      "data_elements": ["Ongoing stability protocol"]
+                    },
+                    "3.2.S.7.3": {
+                      "title": "Stability Data",
+                      "data_elements": [
+                        "Long-term stability data (ICH Q1A conditions)",
+                        "Accelerated stability data",
+                        "Stress testing data (ICH Q1B photostability)",
+                        "Tabulated results and graphs"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "3.2.P": {
+              "title": "Drug Product",
+              "note": "Repeat for each drug product/dosage form. In eCTD v4, 'product' and 'dosage_form' keywords differentiate.",
+              "subsections": {
+                "3.2.P.1": {
+                  "title": "Description and Composition of the Drug Product",
+                  "data_elements": [
+                    "Dosage form description",
+                    "Composition table (all components, function, quality standard per ICH M4Q)",
+                    "Type of container and closure"
+                  ]
+                },
+                "3.2.P.2": {
+                  "title": "Pharmaceutical Development",
+                  "subsections": {
+                    "3.2.P.2.1": {
+                      "title": "Components of the Drug Product",
+                      "subsections": {
+                        "3.2.P.2.1.1": {
+                          "title": "Drug Substance",
+                          "data_elements": ["Compatibility with excipients", "Physicochemical properties relevant to formulation"]
+                        },
+                        "3.2.P.2.1.2": {
+                          "title": "Excipients",
+                          "data_elements": ["Choice and function of excipients", "Compatibility data"]
+                        }
+                      }
+                    },
+                    "3.2.P.2.2": {
+                      "title": "Drug Product",
+                      "subsections": {
+                        "3.2.P.2.2.1": {
+                          "title": "Formulation Development",
+                          "data_elements": ["Formulation history", "Prototype testing", "Clinical formulation vs marketed formulation"]
+                        },
+                        "3.2.P.2.2.2": {
+                          "title": "Overages",
+                          "data_elements": ["Justification for any overages"]
+                        },
+                        "3.2.P.2.2.3": {
+                          "title": "Physicochemical and Biological Properties",
+                          "data_elements": ["Relevant product properties (pH, dissolution, particle size, etc.)"]
+                        }
+                      }
+                    },
+                    "3.2.P.2.3": {
+                      "title": "Manufacturing Process Development",
+                      "data_elements": ["Process evolution", "Scale-up studies", "Process parameter optimisation"]
+                    },
+                    "3.2.P.2.4": {
+                      "title": "Container Closure System",
+                      "data_elements": ["Selection rationale", "Interaction studies"]
+                    },
+                    "3.2.P.2.5": {
+                      "title": "Microbiological Attributes",
+                      "data_elements": ["Preservative effectiveness", "Microbial limits justification"]
+                    },
+                    "3.2.P.2.6": {
+                      "title": "Compatibility",
+                      "data_elements": ["Compatibility with reconstitution diluents, devices, etc."]
+                    }
+                  }
+                },
+                "3.2.P.3": {
+                  "title": "Manufacture",
+                  "subsections": {
+                    "3.2.P.3.1": {
+                      "title": "Manufacturer(s)",
+                      "data_elements": ["Name, address, responsibility"]
+                    },
+                    "3.2.P.3.2": {
+                      "title": "Batch Formula",
+                      "data_elements": ["Batch formula for representative batch size"]
+                    },
+                    "3.2.P.3.3": {
+                      "title": "Description of Manufacturing Process and Process Controls",
+                      "data_elements": ["Flow diagram", "Process narrative", "Equipment"]
+                    },
+                    "3.2.P.3.4": {
+                      "title": "Controls of Critical Steps and Intermediates",
+                      "data_elements": ["In-process controls and tests"]
+                    },
+                    "3.2.P.3.5": {
+                      "title": "Process Validation and/or Evaluation",
+                      "data_elements": ["Validation protocol and data"]
+                    }
+                  }
+                },
+                "3.2.P.4": {
+                  "title": "Control of Excipients",
+                  "note": "Granularity options: single 3.2.P.4 section, or multiple using 'excipient' keyword in eCTD v4.",
+                  "subsections": {
+                    "3.2.P.4.1": {
+                      "title": "Specifications",
+                      "data_elements": ["Compendial or in-house specifications"]
+                    },
+                    "3.2.P.4.2": {
+                      "title": "Analytical Procedures",
+                      "data_elements": ["Test methods for non-compendial excipients"]
+                    },
+                    "3.2.P.4.3": {
+                      "title": "Validation of Analytical Procedures",
+                      "data_elements": ["Validation reports"]
+                    },
+                    "3.2.P.4.4": {
+                      "title": "Justification of Specifications",
+                      "data_elements": ["Rationale for non-compendial or additional tests"]
+                    },
+                    "3.2.P.4.5": {
+                      "title": "Excipients of Human or Animal Origin",
+                      "data_elements": ["Source, TSE/viral safety information"]
+                    },
+                    "3.2.P.4.6": {
+                      "title": "Novel Excipients",
+                      "data_elements": ["Full supporting data package for novel excipients"]
+                    }
+                  }
+                },
+                "3.2.P.5": {
+                  "title": "Control of Drug Product",
+                  "subsections": {
+                    "3.2.P.5.1": {
+                      "title": "Specification(s)",
+                      "data_elements": ["Release and shelf-life specifications"]
+                    },
+                    "3.2.P.5.2": {
+                      "title": "Analytical Procedures",
+                      "data_elements": ["Detailed analytical methods"]
+                    },
+                    "3.2.P.5.3": {
+                      "title": "Validation of Analytical Procedures",
+                      "data_elements": ["Validation reports"]
+                    },
+                    "3.2.P.5.4": {
+                      "title": "Batch Analyses",
+                      "data_elements": ["Batch results", "Certificate of Analysis"]
+                    },
+                    "3.2.P.5.5": {
+                      "title": "Characterisation of Impurities",
+                      "data_elements": ["Impurity identification and characterisation"]
+                    },
+                    "3.2.P.5.6": {
+                      "title": "Justification of Specification(s)",
+                      "data_elements": ["Scientific rationale"]
+                    }
+                  }
+                },
+                "3.2.P.6": {
+                  "title": "Reference Standards or Materials",
+                  "data_elements": ["Reference standards for drug product testing"]
+                },
+                "3.2.P.7": {
+                  "title": "Container Closure System",
+                  "note": "Optional 'container' keyword in eCTD v4 for multiple container closure systems.",
+                  "data_elements": [
+                    "Description and specifications",
+                    "Suitability, protection, compatibility, safety, performance studies"
+                  ]
+                },
+                "3.2.P.8": {
+                  "title": "Stability",
+                  "subsections": {
+                    "3.2.P.8.1": {
+                      "title": "Stability Summary and Conclusion",
+                      "data_elements": ["Summary and proposed shelf life"]
+                    },
+                    "3.2.P.8.2": {
+                      "title": "Post-Approval Stability Protocol and Stability Commitment",
+                      "data_elements": ["Ongoing stability protocol"]
+                    },
+                    "3.2.P.8.3": {
+                      "title": "Stability Data",
+                      "data_elements": [
+                        "Long-term, accelerated, and stress stability data",
+                        "In-use stability",
+                        "Photostability per ICH Q1B"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "3.2.A": {
+              "title": "Appendices",
+              "subsections": {
+                "3.2.A.1": {
+                  "title": "Facilities and Equipment",
+                  "note": "Optional 'facility' keyword in eCTD v4 for site-level granularity.",
+                  "data_elements": ["Manufacturing facility description", "Equipment details"]
+                },
+                "3.2.A.2": {
+                  "title": "Adventitious Agents Safety Evaluation",
+                  "note": "Optional 'component' keyword in eCTD v4 for multi-substance products.",
+                  "data_elements": [
+                    "TSE risk assessment",
+                    "Viral safety evaluation (for biologics: virus clearance, testing)"
+                  ]
+                },
+                "3.2.A.3": {
+                  "title": "Excipients",
+                  "data_elements": ["Detailed data for novel excipients or non-compendial excipients"]
+                }
+              }
+            },
+            "3.2.R": {
+              "title": "Regional Information",
+              "data_elements": ["Region-specific quality information as required by local authority"]
+            }
+          }
+        },
+        "3.3": {
+          "title": "Literature References",
+          "data_elements": ["References cited in Module 3"]
+        }
+      },
+      "cross_references": [
+        {
+          "from": "3.2.S (all subsections)",
+          "to": "2.3.S (corresponding QOS subsections)",
+          "type": "mandatory",
+          "description": "Module 3 drug substance data supports QOS in Module 2"
+        },
+        {
+          "from": "3.2.P (all subsections)",
+          "to": "2.3.P (corresponding QOS subsections)",
+          "type": "mandatory",
+          "description": "Module 3 drug product data supports QOS in Module 2"
+        },
+        {
+          "from": "3.2.S.3.2 (Impurities)",
+          "to": "2.6 / Module 4 (nonclinical qualification studies)",
+          "type": "conditional",
+          "description": "Impurity characterisation data must be connected to nonclinical qualification studies when required by ICH Q3A/Q3B"
+        }
+      ],
+      "ich_guidelines_referenced": [
+        "Q1A(R2) - Stability Testing",
+        "Q1B - Photostability Testing",
+        "Q2(R1) - Validation of Analytical Procedures",
+        "Q3A(R2) - Impurities in New Drug Substances",
+        "Q3B(R2) - Impurities in New Drug Products",
+        "Q3C(R8) - Residual Solvents",
+        "Q3D(R2) - Elemental Impurities",
+        "Q5A(R2) - Viral Safety for Biotechs",
+        "Q5B - Analysis of Expression Construct",
+        "Q5C - Stability of Biotechs",
+        "Q5D - Cell Substrates",
+        "Q6A - Specifications for Chemical Substances",
+        "Q6B - Specifications for Biological Substances",
+        "Q8(R2) - Pharmaceutical Development",
+        "Q9(R1) - Quality Risk Management",
+        "Q10 - Pharmaceutical Quality System",
+        "Q11 - Development and Manufacture of Drug Substances",
+        "Q12 - Lifecycle Management"
+      ]
+    },
+    "module_4": {
+      "title": "Nonclinical Study Reports",
+      "description": "Full study reports for all nonclinical (animal/in-vitro) studies. Organised by discipline (pharmacology, pharmacokinetics, toxicology).",
+      "harmonised": true,
+      "sections": {
+        "4.1": {
+          "title": "Module 4 Table of Contents",
+          "data_elements": ["Table of contents for all Module 4 sections"]
+        },
+        "4.2": {
+          "title": "Study Reports",
+          "subsections": {
+            "4.2.1": {
+              "title": "Pharmacology",
+              "subsections": {
+                "4.2.1.1": {
+                  "title": "Primary Pharmacodynamics",
+                  "data_elements": ["Full study reports of primary pharmacology studies"]
+                },
+                "4.2.1.2": {
+                  "title": "Secondary Pharmacodynamics",
+                  "data_elements": ["Full study reports of secondary pharmacology studies"]
+                },
+                "4.2.1.3": {
+                  "title": "Safety Pharmacology",
+                  "data_elements": [
+                    "Cardiovascular studies (hERG, telemetry, QT)",
+                    "CNS studies",
+                    "Respiratory studies",
+                    "Other organ system studies"
+                  ]
+                },
+                "4.2.1.4": {
+                  "title": "Pharmacodynamic Drug Interactions",
+                  "data_elements": ["PD interaction study reports"]
+                }
+              }
+            },
+            "4.2.2": {
+              "title": "Pharmacokinetics",
+              "subsections": {
+                "4.2.2.1": {
+                  "title": "Analytical Methods and Validation Reports",
+                  "data_elements": ["Bioanalytical method validation reports"]
+                },
+                "4.2.2.2": {
+                  "title": "Absorption",
+                  "data_elements": ["PK study reports (single-dose, repeat-dose, bioavailability)"]
+                },
+                "4.2.2.3": {
+                  "title": "Distribution",
+                  "data_elements": ["Tissue distribution, protein binding, blood cell partitioning studies"]
+                },
+                "4.2.2.4": {
+                  "title": "Metabolism",
+                  "data_elements": ["In vivo and in vitro metabolism study reports"]
+                },
+                "4.2.2.5": {
+                  "title": "Excretion",
+                  "data_elements": ["Mass balance, excretion route studies"]
+                },
+                "4.2.2.6": {
+                  "title": "Pharmacokinetic Drug Interactions",
+                  "data_elements": ["PK drug interaction study reports"]
+                },
+                "4.2.2.7": {
+                  "title": "Other Pharmacokinetic Studies",
+                  "data_elements": ["Any other PK study reports"]
+                }
+              }
+            },
+            "4.2.3": {
+              "title": "Toxicology",
+              "subsections": {
+                "4.2.3.1": {
+                  "title": "Single-Dose Toxicity",
+                  "data_elements": ["Single-dose toxicity study reports, ordered by species then route"]
+                },
+                "4.2.3.2": {
+                  "title": "Repeat-Dose Toxicity",
+                  "data_elements": ["Repeat-dose toxicity study reports, ordered by species then duration"]
+                },
+                "4.2.3.3": {
+                  "title": "Genotoxicity",
+                  "subsections": {
+                    "4.2.3.3.1": {
+                      "title": "In Vitro",
+                      "data_elements": ["Ames test, chromosome aberration, gene mutation studies"]
+                    },
+                    "4.2.3.3.2": {
+                      "title": "In Vivo",
+                      "data_elements": ["Micronucleus, comet assay, other in vivo genotoxicity studies"]
+                    }
+                  }
+                },
+                "4.2.3.4": {
+                  "title": "Carcinogenicity",
+                  "subsections": {
+                    "4.2.3.4.1": {
+                      "title": "Long-term Studies",
+                      "data_elements": ["2-year carcinogenicity study reports"]
+                    },
+                    "4.2.3.4.2": {
+                      "title": "Short- or Medium-term Studies",
+                      "data_elements": ["Alternative carcinogenicity models (transgenic, neonatal)"]
+                    },
+                    "4.2.3.4.3": {
+                      "title": "Other Studies",
+                      "data_elements": ["Mechanistic studies, tumour characterisation"]
+                    }
+                  }
+                },
+                "4.2.3.5": {
+                  "title": "Reproductive and Developmental Toxicity",
+                  "subsections": {
+                    "4.2.3.5.1": {
+                      "title": "Fertility and Early Embryonic Development",
+                      "data_elements": ["Segment I study reports (ICH S5)"]
+                    },
+                    "4.2.3.5.2": {
+                      "title": "Embryo-Fetal Development",
+                      "data_elements": ["Segment II study reports, ordered by species"]
+                    },
+                    "4.2.3.5.3": {
+                      "title": "Prenatal and Postnatal Development, Including Maternal Function",
+                      "data_elements": ["Segment III study reports"]
+                    },
+                    "4.2.3.5.4": {
+                      "title": "Studies in which the Offspring (Juvenile Animals) Are Dosed and/or Further Evaluated",
+                      "data_elements": ["Juvenile animal toxicity study reports"]
+                    }
+                  }
+                },
+                "4.2.3.6": {
+                  "title": "Local Tolerance",
+                  "data_elements": ["Local tolerance study reports"]
+                },
+                "4.2.3.7": {
+                  "title": "Other Toxicity Studies",
+                  "subsections": {
+                    "4.2.3.7.1": {
+                      "title": "Antigenicity",
+                      "data_elements": ["Antigenicity/immunotoxicity study reports"]
+                    },
+                    "4.2.3.7.2": {
+                      "title": "Immunotoxicity",
+                      "data_elements": ["Immunotoxicity study reports"]
+                    },
+                    "4.2.3.7.3": {
+                      "title": "Mechanistic Studies",
+                      "data_elements": ["Mechanistic toxicology studies"]
+                    },
+                    "4.2.3.7.4": {
+                      "title": "Dependence",
+                      "data_elements": ["Dependence liability studies"]
+                    },
+                    "4.2.3.7.5": {
+                      "title": "Metabolites",
+                      "data_elements": ["Metabolite toxicity studies"]
+                    },
+                    "4.2.3.7.6": {
+                      "title": "Impurities",
+                      "data_elements": ["Impurity qualification studies (per ICH Q3A/Q3B thresholds)"]
+                    },
+                    "4.2.3.7.7": {
+                      "title": "Other",
+                      "data_elements": ["Phototoxicity, combination toxicity, or other studies"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "4.3": {
+          "title": "Literature References",
+          "data_elements": ["References cited in Module 4"]
+        }
+      },
+      "cross_references": [
+        {
+          "from": "Module 4 (all study reports)",
+          "to": "2.4 (Nonclinical Overview)",
+          "type": "mandatory",
+          "description": "Study reports provide source data for the Nonclinical Overview"
+        },
+        {
+          "from": "Module 4 (all study reports)",
+          "to": "2.6 (Nonclinical Written and Tabulated Summaries)",
+          "type": "mandatory",
+          "description": "Study reports provide source data for the Written and Tabulated Summaries"
+        },
+        {
+          "from": "4.2.3.7.6 (Impurity studies)",
+          "to": "3.2.S.3.2 / 3.2.P.5.5 (Quality impurity data)",
+          "type": "conditional",
+          "description": "Impurity qualification studies must be cross-referenced with quality impurity characterisation"
+        }
+      ],
+      "study_ordering_rules": {
+        "within_each_section": "Order by species (standard ordering), then by route (intended route first, then standard route ordering), then by duration (shortest to longest)",
+        "species_order": ["Mouse", "Rat", "Hamster", "Other Rodent", "Rabbit", "Dog", "Non-human Primate", "Other Non-rodent", "Non-mammals"],
+        "route_order": ["Intended clinical route", "Oral", "IV", "IM", "IP", "SC", "Inhalation", "Topical", "Other"]
+      },
+      "ich_guidelines_referenced": [
+        "S1A - Carcinogenicity Testing Need",
+        "S1B(R1) - Carcinogenicity Study Design",
+        "S1C(R2) - Dose Selection for Carcinogenicity",
+        "S2(R1) - Genotoxicity Testing",
+        "S3A - Toxicokinetics",
+        "S4 - Duration of Chronic Toxicity Studies",
+        "S5(R3) - Reproductive and Developmental Toxicology",
+        "S6(R1) - Biotechnology Products Safety",
+        "S7A - Safety Pharmacology Core Battery",
+        "S7B - Nonclinical Evaluation of QT Prolongation",
+        "S8 - Immunotoxicity Studies",
+        "S9 - Nonclinical Evaluation for Anticancer Pharmaceuticals",
+        "S10 - Photosafety Evaluation",
+        "S11 - Nonclinical Paediatric Safety",
+        "M3(R2) - Nonclinical Safety Studies Timing"
+      ]
+    },
+    "module_5": {
+      "title": "Clinical Study Reports",
+      "description": "Full clinical study reports (ICH E3 format) and related information. Contains all clinical data that supports the Clinical Overview (2.5) and Clinical Summary (2.7).",
+      "harmonised": true,
+      "sections": {
+        "5.1": {
+          "title": "Module 5 Table of Contents",
+          "data_elements": ["Table of contents for all Module 5 sections, including Listing of Clinical Studies table"]
+        },
+        "5.2": {
+          "title": "Tabular Listing of All Clinical Studies",
+          "data_elements": [
+            "Study number",
+            "Study design",
+            "Study objective",
+            "Dosing regimen",
+            "Number of subjects (enrolled, completed)",
+            "Study status",
+            "Type of report (full, abbreviated, synopsis only)",
+            "Location in CTD"
+          ]
+        },
+        "5.3": {
+          "title": "Clinical Study Reports",
+          "subsections": {
+            "5.3.1": {
+              "title": "Reports of Biopharmaceutic Studies",
+              "subsections": {
+                "5.3.1.1": {
+                  "title": "Bioavailability (BA) Study Reports",
+                  "data_elements": ["Full BA study reports per ICH E3"]
+                },
+                "5.3.1.2": {
+                  "title": "Comparative BA and Bioequivalence (BE) Study Reports",
+                  "data_elements": ["Comparative BA/BE study reports"]
+                },
+                "5.3.1.3": {
+                  "title": "In Vitro - In Vivo Correlation Study Reports",
+                  "data_elements": ["IVIVC study reports"]
+                },
+                "5.3.1.4": {
+                  "title": "Reports of Bioanalytical and Analytical Methods for Human Studies",
+                  "data_elements": ["Bioanalytical method validation reports for clinical samples"]
+                }
+              }
+            },
+            "5.3.2": {
+              "title": "Reports of Studies Pertinent to Pharmacokinetics Using Human Biomaterials",
+              "subsections": {
+                "5.3.2.1": {
+                  "title": "Plasma Protein Binding Study Reports",
+                  "data_elements": ["Human plasma protein binding studies"]
+                },
+                "5.3.2.2": {
+                  "title": "Reports of Hepatic Metabolism and Drug Interaction Studies",
+                  "data_elements": ["In vitro metabolism, CYP identification, inhibition/induction studies"]
+                },
+                "5.3.2.3": {
+                  "title": "Reports of Studies Using Other Human Biomaterials",
+                  "data_elements": ["Other in vitro human biomaterial studies (transporter, permeability, etc.)"]
+                }
+              }
+            },
+            "5.3.3": {
+              "title": "Reports of Human Pharmacokinetic (PK) Studies",
+              "subsections": {
+                "5.3.3.1": {
+                  "title": "Healthy Subject PK and Initial Tolerability Study Reports",
+                  "data_elements": ["Phase I PK studies in healthy volunteers"]
+                },
+                "5.3.3.2": {
+                  "title": "Patient PK and Initial Tolerability Study Reports",
+                  "data_elements": ["PK studies in target patient population"]
+                },
+                "5.3.3.3": {
+                  "title": "Intrinsic Factor PK Study Reports",
+                  "data_elements": ["Renal impairment, hepatic impairment, age, sex, race, genetic polymorphism PK studies"]
+                },
+                "5.3.3.4": {
+                  "title": "Extrinsic Factor PK Study Reports",
+                  "data_elements": ["Drug-drug interaction, food effect, other extrinsic factor PK studies"]
+                },
+                "5.3.3.5": {
+                  "title": "Population PK Study Reports",
+                  "data_elements": ["Population PK analysis reports"]
+                }
+              }
+            },
+            "5.3.4": {
+              "title": "Reports of Human Pharmacodynamic (PD) Studies",
+              "subsections": {
+                "5.3.4.1": {
+                  "title": "Healthy Subject PD and PK/PD Study Reports",
+                  "data_elements": ["PD and PK/PD studies in healthy volunteers"]
+                },
+                "5.3.4.2": {
+                  "title": "Patient PD and PK/PD Study Reports",
+                  "data_elements": ["PD and PK/PD studies in patients"]
+                }
+              }
+            },
+            "5.3.5": {
+              "title": "Reports of Efficacy and Safety Studies",
+              "subsections": {
+                "5.3.5.1": {
+                  "title": "Study Reports of Controlled Clinical Studies Pertinent to the Claimed Indication",
+                  "data_elements": ["Pivotal and supportive controlled efficacy study reports (ICH E3 format)"]
+                },
+                "5.3.5.2": {
+                  "title": "Study Reports of Uncontrolled Clinical Studies",
+                  "data_elements": ["Open-label, uncontrolled study reports"]
+                },
+                "5.3.5.3": {
+                  "title": "Reports of Analyses of Data from More than One Study",
+                  "data_elements": [
+                    "Integrated efficacy analyses",
+                    "Integrated safety analyses (ISS)",
+                    "Meta-analyses",
+                    "Cross-study comparison reports"
+                  ]
+                },
+                "5.3.5.4": {
+                  "title": "Other Study Reports",
+                  "data_elements": ["Other clinical studies (e.g., withdrawal studies, dose-response, concentration-response)"]
+                }
+              }
+            },
+            "5.3.6": {
+              "title": "Reports of Post-Marketing Experience",
+              "data_elements": ["Periodic safety update reports", "Post-marketing surveillance data"]
+            },
+            "5.3.7": {
+              "title": "Case Report Forms and Individual Patient Listings",
+              "data_elements": [
+                "CRFs for deaths, serious AEs, AEs leading to withdrawal",
+                "Individual patient data listings as needed"
+              ],
+              "note": "When to include is defined by ICH E3 and regional requirements"
+            }
+          }
+        },
+        "5.4": {
+          "title": "Literature References",
+          "data_elements": ["Copies of all important references cited in Modules 2.5, 2.7, and Module 5"]
+        }
+      },
+      "cross_references": [
+        {
+          "from": "Module 5 (all study reports)",
+          "to": "2.5 (Clinical Overview)",
+          "type": "mandatory",
+          "description": "Study reports provide source data for the Clinical Overview"
+        },
+        {
+          "from": "Module 5 (all study reports)",
+          "to": "2.7 (Clinical Summary)",
+          "type": "mandatory",
+          "description": "Study reports provide source data for the Clinical Summary. 2.7.6 synopses must match Module 5 sequence."
+        },
+        {
+          "from": "5.3.5.3 (multi-study analyses)",
+          "to": "2.7.3.3 / 2.7.4 (efficacy/safety summaries)",
+          "type": "mandatory",
+          "description": "Integrated analyses referenced in the clinical summaries should be placed here"
+        },
+        {
+          "from": "5.4 (Literature References)",
+          "to": "2.5.7 / 2.7.5 (reference lists)",
+          "type": "mandatory",
+          "description": "Full copies of cited references should be available in 5.4; reference lists in 2.5 and 2.7 should indicate which are in 5.4"
+        }
+      ],
+      "study_report_format": {
+        "standard": "ICH E3 - Structure and Content of Clinical Study Reports",
+        "synopsis_length": "3-10 pages per study",
+        "report_types": ["Full technical report (ICH E3)", "Abbreviated report", "Synopsis only"]
+      },
+      "ich_guidelines_referenced": [
+        "E1 - Population Exposure for Chronic Conditions",
+        "E2A - Clinical Safety Data Management",
+        "E2B(R3) - Individual Case Safety Reports",
+        "E3 - Structure and Content of Clinical Study Reports",
+        "E4 - Dose-Response Information",
+        "E5(R1) - Ethnic Factors",
+        "E6(R3) - Good Clinical Practice",
+        "E7 - Geriatrics",
+        "E8(R1) - General Considerations for Clinical Studies",
+        "E9(R1) - Statistical Principles",
+        "E10 - Choice of Control Group",
+        "E11(R1) - Paediatric Populations",
+        "E14 - QT/QTc Interval Prolongation",
+        "E17 - Multi-Regional Clinical Trials"
+      ]
+    }
+  },
+  "global_cross_reference_map": {
+    "description": "Summary of all mandatory cross-reference relationships between modules",
+    "relationships": [
+      {
+        "source": "Module 2.3 (QOS)",
+        "target": "Module 3 (Quality Body of Data)",
+        "direction": "bidirectional",
+        "description": "QOS summarises Module 3; each 2.3.X section references corresponding 3.2.X section"
+      },
+      {
+        "source": "Module 2.4 (Nonclinical Overview)",
+        "target": "Module 2.6 (Nonclinical Summaries)",
+        "direction": "2.4 -> 2.6",
+        "description": "Overview references detailed written and tabulated summaries"
+      },
+      {
+        "source": "Module 2.4 (Nonclinical Overview)",
+        "target": "Module 4 (Nonclinical Study Reports)",
+        "direction": "2.4 -> 4",
+        "description": "Overview references individual study reports"
+      },
+      {
+        "source": "Module 2.6 (Nonclinical Summaries)",
+        "target": "Module 4 (Nonclinical Study Reports)",
+        "direction": "2.6 -> 4",
+        "description": "Written and tabulated summaries reference individual study reports with Location in CTD"
+      },
+      {
+        "source": "Module 2.5 (Clinical Overview)",
+        "target": "Module 2.7 (Clinical Summary)",
+        "direction": "2.5 -> 2.7",
+        "description": "Overview references detailed clinical summaries"
+      },
+      {
+        "source": "Module 2.5 (Clinical Overview)",
+        "target": "Module 5 (Clinical Study Reports)",
+        "direction": "2.5 -> 5",
+        "description": "Overview references individual study reports"
+      },
+      {
+        "source": "Module 2.7 (Clinical Summary)",
+        "target": "Module 5 (Clinical Study Reports)",
+        "direction": "2.7 -> 5",
+        "description": "Clinical summaries reference individual study reports"
+      },
+      {
+        "source": "Module 2.5.5 (Safety Overview)",
+        "target": "Module 2.4 / Module 4 (Nonclinical data)",
+        "direction": "2.5 -> 2.4/4",
+        "description": "Clinical safety overview may reference nonclinical findings"
+      },
+      {
+        "source": "Module 2.5.5 (Safety Overview)",
+        "target": "Module 2.3 / Module 3 (Quality data)",
+        "direction": "2.5 -> 2.3/3",
+        "description": "Clinical safety overview may reference quality/impurity data"
+      },
+      {
+        "source": "Module 2.6 (Toxicology - impurity qualification)",
+        "target": "Module 2.3 / Module 3 (Quality - impurity characterisation)",
+        "direction": "2.6 <-> 3",
+        "description": "Impurity qualification in nonclinical must cross-reference quality impurity profiles"
+      },
+      {
+        "source": "Module 2.7.4.5.6 (Drug Abuse)",
+        "target": "Module 2.6 (Nonclinical dependence studies)",
+        "direction": "2.7 -> 2.6",
+        "description": "Clinical drug abuse section must reference nonclinical dependence data"
+      },
+      {
+        "source": "Module 2.7.4.5.3 (Drug Interactions - Safety)",
+        "target": "Module 2.7.2 (Clinical Pharmacology)",
+        "direction": "2.7.4 -> 2.7.2",
+        "description": "Safety interaction data references PK interaction studies"
+      },
+      {
+        "source": "Module 2.7.3.3 (Efficacy Comparison)",
+        "target": "Module 2.7.2 (Clinical Pharmacology - dosing evidence)",
+        "direction": "2.7.3 -> 2.7.2",
+        "description": "Efficacy comparison must cross-reference PK/PD evidence"
+      },
+      {
+        "source": "Module 2.7.6 (Synopses)",
+        "target": "Module 5 (Study Reports)",
+        "direction": "2.7.6 -> 5",
+        "description": "Synopses must match the sequence of study reports in Module 5"
+      },
+      {
+        "source": "Module 5.4 (Literature References)",
+        "target": "Module 2.5.7 / 2.7.5 (Reference Lists)",
+        "direction": "bidirectional",
+        "description": "Full copies of cited literature in 5.4; reference lists indicate availability"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+Stage 1 Training — Timing Report
+==================================
+
+Start time (epoch):  1774228239
+End time (epoch):    1774229613
+Elapsed (seconds):   1374
+Elapsed (readable):  22 minutes 54 seconds
+
+Worker Completion Order:
+  1. CRL Analyst        — first output at check 2 (~4 min)
+  2. Skill Writer       — first output at check 3 (~6 min)
+  3. Module Structure   — first output at check 4 (~8 min)
+  4. Clinical Specialist — first output at check 4 (~8 min)
+  5. CMC Specialist     — first output at check 8 (~17 min) [slowest]
+
+Monitoring checks performed: 8 (every 2 minutes)
+All 5 workers confirmed complete at check 8.
+Synthesis written at elapsed ~23 min.

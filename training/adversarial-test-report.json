@@ -1,0 +1,1434 @@
+{
+  "meta": {
+    "test_date": "2026-03-23",
+    "test_version": "1.0",
+    "kb_file": "master-knowledge-base.json",
+    "kb_total_rules": 3883,
+    "kb_verified_rules": 1440,
+    "total_questions": 100,
+    "correct": 83,
+    "wrong": 3,
+    "missing": 12,
+    "contradictory": 2,
+    "accuracy_pct": 83.0,
+    "methodology": "Each question was designed from authoritative regulatory text (ICH guidelines, FDA/EMA/PMDA guidance), then matched against KB rules. Scoring: CORRECT = KB contains accurate answer; WRONG = KB states incorrect information; MISSING = topic not covered; CONTRADICTORY = KB contains conflicting rules on same topic.",
+    "summary": "The KB scores 83% accuracy on 100 adversarial questions across 6 categories. 3 factual errors, 12 gaps, and 2 contradictions were found in the core test. Extended analysis (34 additional probes) uncovered 5 more errors and 4 more contradictions, bringing total defects to 8 errors + 7 contradictions + 14 gaps across all probes. CRITICAL: Q3D rules are mislabeled as M7(R2); E9 Type I error labels are reversed; E14 TQT threshold wording is inconsistent. KEY GAPS: Q3A/Q3B impurity thresholds missing; E14/S7B IRA framework absent; E9(R1) five ICE strategies not enumerated; E1 duration-stratified exposure missing; WHO coverage minimal (4 rules). The KB is strong on core ICH guideline content but needs corrections before training use.",
+    "extended_analysis": {
+      "additional_probes": 34,
+      "additional_wrong": 4,
+      "additional_missing": 4,
+      "additional_contradictory": 4,
+      "additional_correct": 22,
+      "total_defects_all_probes": 29
+    }
+  },
+  "questions": [
+    {
+      "id": "A-001",
+      "category": "A",
+      "question": "What is the 90% confidence interval acceptance range for bioequivalence (AUC and Cmax) per ICH M13A?",
+      "expected_answer": "80.00-125.00% for the geometric mean ratio of AUC and Cmax (log-transformed data).",
+      "kb_answer": "90% CI for AUC(0-t) and Cmax must fall within 80.00-125.00% (multiple rules confirm this).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01426",
+        "KB-01739",
+        "KB-03041"
+      ],
+      "notes": "Well covered across multiple source files with verbatim quotes. Consistent across rules."
+    },
+    {
+      "id": "A-002",
+      "category": "A",
+      "question": "What is the TDI (time-dependent inhibition) threshold ratio per ICH M12 for excluding clinical DDI risk?",
+      "expected_answer": "(kobs + kdeg)/kdeg < 1.25",
+      "kb_answer": "(kobs + kdeg)/kdeg < 1.25, where kobs = (kinact x 5 x Cmax,u) / (KI,u + 5 x Cmax,u)",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00980"
+      ],
+      "notes": "Correct formula and threshold. Full equation provided with source quote."
+    },
+    {
+      "id": "A-003",
+      "category": "A",
+      "question": "What is the Threshold of Toxicological Concern (TTC) for mutagenic impurities per ICH M7?",
+      "expected_answer": "1.5 micrograms/day for lifetime exposure, based on 10^-5 excess cancer risk.",
+      "kb_answer": "1.5 micrograms/day TTC for a lifetime of treatment, corresponding to 10^-5 excess lifetime cancer risk at 50 kg body weight.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03243"
+      ],
+      "notes": "Accurately stated with source quote from M7."
+    },
+    {
+      "id": "A-004",
+      "category": "A",
+      "question": "What is the limit dose for carcinogenicity studies per ICH S1C(R2)?",
+      "expected_answer": "1500 mg/kg/day when the maximum clinical dose does not exceed 500 mg/day.",
+      "kb_answer": "1500 mg/kg/day when the maximum clinical dose does not exceed 500 mg/man/day.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02569",
+        "KB-03782",
+        "KB-03835"
+      ],
+      "notes": "Multiple rules confirm. The condition about 500 mg/day human dose is correctly stated."
+    },
+    {
+      "id": "A-005",
+      "category": "A",
+      "question": "How many batches of drug substance are required for formal stability studies per ICH Q1A(R2)?",
+      "expected_answer": "At least 3 primary batches, two at pilot scale minimum, third can be smaller if justified.",
+      "kb_answer": "Data from formal stability studies should be provided on at least three primary batches of the drug substance. Two of the three batches should be at least pilot scale. The third batch can be smaller if justified.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02817"
+      ],
+      "notes": "Accurately reflects Q1A(R2) Section 2.1.2."
+    },
+    {
+      "id": "A-006",
+      "category": "A",
+      "question": "What is the dissolution criterion for BCS Class III biowaiver per ICH M9?",
+      "expected_answer": "Very rapid dissolution: >=85% dissolved in <=15 minutes for both test and reference products in all media.",
+      "kb_answer": "Both test and reference products must display VERY RAPID dissolution (>=85% dissolved in <=15 minutes) under ALL defined conditions.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02156"
+      ],
+      "notes": "Correct. Properly distinguishes Class III (very rapid only) from Class I (rapid also acceptable)."
+    },
+    {
+      "id": "A-007",
+      "category": "A",
+      "question": "What is the BCS Class I dissolution criterion for biowaiver per ICH M9?",
+      "expected_answer": "Very rapid (>=85% in <=15 min) OR rapid (>=85% in <=30 min) with similar profiles (f2 >=50).",
+      "kb_answer": "Both test and reference products must display either VERY RAPID dissolution (>=85% dissolved in <=15 minutes) OR RAPID dissolution (>=85% dissolved in <=30 minutes) AND similar dissolution profiles (f2 >=50 or other approved comparison).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02153"
+      ],
+      "notes": "Correctly captures the dual pathway for Class I."
+    },
+    {
+      "id": "A-008",
+      "category": "A",
+      "question": "What is the overall clinical safety database size requirement per ICH E1?",
+      "expected_answer": "Approximately 1500 patients at time of initial approval.",
+      "kb_answer": "The overall clinical safety database at the time of initial approval should contain approximately 1500 patients.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00202"
+      ],
+      "notes": "Correct. Also correctly notes reduced threshold for rare diseases."
+    },
+    {
+      "id": "A-009",
+      "category": "A",
+      "question": "What is the regulatory threshold of concern for QTc prolongation in a TQT study per ICH E14?",
+      "expected_answer": "10 ms. A negative TQT study requires the upper bound of the one-sided 95% CI for the largest time-matched mean QTcF effect to be less than 10 ms.",
+      "kb_answer": "The regulatory threshold of concern is 10 ms. Upper bound of one-sided 95% CI must not exceed 10 ms.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02851",
+        "KB-02852"
+      ],
+      "notes": "Correct. Both the threshold and the statistical criterion are accurately stated."
+    },
+    {
+      "id": "A-010",
+      "category": "A",
+      "question": "What are the categorical QTc thresholds for ECG outlier analysis per ICH E14?",
+      "expected_answer": "Absolute: >450 ms, >480 ms, >500 ms. Change from baseline: >30 ms, >60 ms.",
+      "kb_answer": "Absolute thresholds: QTc > 450 ms, > 480 ms, > 500 ms. Change from baseline: > 30 ms, > 60 ms.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02160"
+      ],
+      "notes": "Correct and complete."
+    },
+    {
+      "id": "A-011",
+      "category": "A",
+      "question": "What is the significance level for confirmatory clinical trials per ICH E9?",
+      "expected_answer": "Type I error should not exceed 5% (two-sided) or 2.5% (one-sided).",
+      "kb_answer": "The probability of a type I error should not exceed 5% (one-sided) or 2.5% (two-sided).",
+      "status": "WRONG",
+      "rule_ids": [
+        "KB-00366"
+      ],
+      "notes": "CRITICAL ERROR: The KB source_quote correctly states '5% (one-sided) or 2.5% (two-sided)' but this is INVERTED from the actual ICH E9 text. The actual E9 states: 'A two-sided test at 5% significance level' is standard. The source_quote text reads 'should not exceed 5% (one-sided) or 2.5% (two-sided)' which is the OPPOSITE of the correct convention. The standard is 5% two-sided = 2.5% one-sided. The source_quote appears to have swapped the labels. However, the underlying meaning (alpha=0.025 one-sided, 0.05 two-sided) is correct -- the parenthetical labels are reversed."
+    },
+    {
+      "id": "A-012",
+      "category": "A",
+      "question": "What statistical power is generally recommended for clinical trials per ICH E9?",
+      "expected_answer": "At least 80%, with 90% being appropriate in many trials.",
+      "kb_answer": "Power should generally be at least 80%. In many trials, it may be appropriate to aim for 90%.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00367"
+      ],
+      "notes": "Accurately reflects E9 Section 3.5."
+    },
+    {
+      "id": "A-013",
+      "category": "A",
+      "question": "What are the less-than-lifetime (LTL) acceptable daily intake limits for a single mutagenic impurity per ICH M7 Table 2?",
+      "expected_answer": "<=1 month: 120 ug/day; >1-12 months: 20 ug/day; >1-10 years: 10 ug/day; >10 years-lifetime: 1.5 ug/day.",
+      "kb_answer": "Duration <=1 month: 120 ug/day; >1 month to 12 months: 20 ug/day; >1 year to 10 years: 10 ug/day; >10 years to lifetime: 1.5 ug/day.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03248"
+      ],
+      "notes": "Correct. All four tiers match M7 Table 2."
+    },
+    {
+      "id": "A-014",
+      "category": "A",
+      "question": "What are the total daily intake limits for multiple mutagenic impurities per ICH M7 Table 3?",
+      "expected_answer": "<=1 month: 120 ug/day total; >1-12 months: 60 ug/day; >1-10 years: 30 ug/day; >10 years-lifetime: 5 ug/day.",
+      "kb_answer": "Duration <=1 month: 120 ug/day total; >1 month to 12 months: 60 ug/day total; >1 year to 10 years: 30 ug/day total; >10 years to lifetime: 5 ug/day total.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03249"
+      ],
+      "notes": "Correct. Table 3 values properly distinguished from Table 2 single-impurity limits."
+    },
+    {
+      "id": "A-015",
+      "category": "A",
+      "question": "What are the four Class 1 elemental impurities per ICH Q3D(R2) and their oral PDEs?",
+      "expected_answer": "As (15 ug/day), Cd (5 ug/day), Hg (30 ug/day), Pb (5 ug/day).",
+      "kb_answer": "As=15, Cd=5, Hg=30, Pb=5 (all oral, ug/day).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03258",
+        "KB-03262"
+      ],
+      "notes": "PDE values are correct, BUT see error note: these Q3D rules are attributed to guideline 'ICH M7(R2)' which is wrong -- they should be 'ICH Q3D(R2)'. Flagged as separate error."
+    },
+    {
+      "id": "A-016",
+      "category": "A",
+      "question": "What is the control threshold for elemental impurities per Q3D -- below what percentage of PDE are further controls not required?",
+      "expected_answer": "30% of the established PDE.",
+      "kb_answer": "If total elemental impurity levels from all sources are consistently below 30% of the established PDE, no further controls are required.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03260"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "A-017",
+      "category": "A",
+      "question": "What is the Framingham QT correction formula as stated in E14?",
+      "expected_answer": "QTc = QT + 0.154(1-RR). This is a linear regression-based correction.",
+      "kb_answer": "QTc = QT + 0.154(1-RR).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02156"
+      ],
+      "notes": "Correct formula stated with source quote."
+    },
+    {
+      "id": "A-018",
+      "category": "A",
+      "question": "What is the f2 similarity factor threshold for dissolution profile comparison?",
+      "expected_answer": "f2 >= 50 indicates similarity. When both products dissolve >=85% in 15 min, f2 is unnecessary.",
+      "kb_answer": "f2 factor of 50 or greater. When both products dissolve 85% or more in 15 minutes, no mathematical similarity test needed.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01077"
+      ],
+      "notes": "Correct. Both the threshold and the waiver condition are accurately stated."
+    },
+    {
+      "id": "A-019",
+      "category": "A",
+      "question": "What is the CYP inhibitor classification (strong/moderate/weak) per ICH M12?",
+      "expected_answer": "Strong: AUC increase >=5-fold; Moderate: >=2 to <5-fold; Weak: >=1.25 to <2-fold.",
+      "kb_answer": "Strong: increases AUC >=5-fold; Moderate: increases AUC >=2- to <5-fold; Weak: increases AUC >=1.25- to <2-fold.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02937"
+      ],
+      "notes": "Correct classification with proper fold-change boundaries."
+    },
+    {
+      "id": "A-020",
+      "category": "A",
+      "question": "How many high-dose selection criteria exist for carcinogenicity studies per ICH S1C(R2)?",
+      "expected_answer": "Six criteria: (1) MTD, (2) 25-fold AUC ratio, (3) saturation of absorption, (4) pharmacodynamic endpoints, (5) maximum feasible dose, (6) limit dose 1500 mg/kg/day.",
+      "kb_answer": "Six criteria: (1) MTD; (2) 25-fold AUC ratio; (3) saturation of absorption; (4) pharmacodynamic endpoints; (5) maximum feasible dose; (6) limit dose of 1500 mg/kg/day.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03835"
+      ],
+      "notes": "All six criteria correctly enumerated."
+    },
+    {
+      "id": "A-021",
+      "category": "A",
+      "question": "What is the BE study a priori power requirement per ICH M13A?",
+      "expected_answer": "At least 80% power to show equivalence within 0.80-1.25 acceptance range.",
+      "kb_answer": "BE study should be designed with sufficient subjects to have a priori power of at least 80% to show equivalence within a prespecified acceptance range of 0.80-1.25.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01057"
+      ],
+      "notes": "Correct. Also correctly notes that a posteriori power is not relevant."
+    },
+    {
+      "id": "A-022",
+      "category": "A",
+      "question": "What are the ICH Q3D Class 2A elements?",
+      "expected_answer": "Cobalt (Co), Nickel (Ni), Vanadium (V) \u2014 route-dependent toxicity.",
+      "kb_answer": "Class 2A (human toxicants, route-dependent): Co, Ni, V.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03258"
+      ],
+      "notes": "Correct enumeration of Class 2A elements."
+    },
+    {
+      "id": "A-023",
+      "category": "A",
+      "question": "What is the number of geriatric patients generally required per ICH E7?",
+      "expected_answer": "At least 100 geriatric patients, though more are typically needed for meaningful analysis.",
+      "kb_answer": "The minimum of 100 geriatric patients represents a floor; in most cases more patients will be needed.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00310"
+      ],
+      "notes": "Correct. Properly indicates 100 is a minimum floor."
+    },
+    {
+      "id": "A-024",
+      "category": "A",
+      "question": "What is the ICH Q3D oral PDE for Lead (Pb)?",
+      "expected_answer": "5 ug/day oral, 5 ug/day parenteral, 5 ug/day inhalation.",
+      "kb_answer": "Pb: oral 5, parenteral 5, inhalation 5 (all ug/day).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03262"
+      ],
+      "notes": "Correct PDE values for all routes."
+    },
+    {
+      "id": "A-025",
+      "category": "A",
+      "question": "What are the ICH Q3A(R2) reporting, identification, and qualification thresholds for drug substance impurities for a maximum daily dose of <=2 g/day?",
+      "expected_answer": "Reporting: 0.05%; Identification: 0.10% or 1.0 mg/day (whichever is lower); Qualification: 0.15% or 1.0 mg/day (whichever is lower).",
+      "kb_answer": "Not found in KB.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "CRITICAL GAP: ICH Q3A(R2) and Q3B(R2) numeric thresholds (reporting, identification, qualification) are not present in the KB. These are among the most frequently cited numbers in CMC regulatory affairs. The KB has general references to impurity thresholds but lacks the specific Q3A/Q3B tables."
+    },
+    {
+      "id": "B-001",
+      "category": "B",
+      "question": "What is the timeline for reporting fatal/life-threatening SUSARs during clinical trials per ICH E2A?",
+      "expected_answer": "7 calendar days for initial report, with follow-up within 8 additional days (total 15 days).",
+      "kb_answer": "Fatal or life-threatening SUSARs: 7 calendar days. Follow-up: 8 additional calendar days (day 15 total).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01920",
+        "KB-01921"
+      ],
+      "notes": "Correct with verbatim quotes from E2A."
+    },
+    {
+      "id": "B-002",
+      "category": "B",
+      "question": "What is the timeline for reporting non-fatal/non-life-threatening SUSARs during clinical trials per ICH E2A?",
+      "expected_answer": "15 calendar days from first knowledge.",
+      "kb_answer": "All other unexpected serious ADRs: 15 calendar days after first knowledge.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01922"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "B-003",
+      "category": "B",
+      "question": "Does the EU Clinical Trials Regulation (EU 536/2014) require SUSAR reporting to EudraVigilance or to individual member state NCAs?",
+      "expected_answer": "To EudraVigilance (electronic). Fatal/LT within 7 days, all others within 15 days.",
+      "kb_answer": "Sponsor shall report all SUSARs electronically to Eudravigilance: fatal/life-threatening within 7 days; all others within 15 days.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01678"
+      ],
+      "notes": "Correct. Properly identifies EudraVigilance as the EU reporting destination."
+    },
+    {
+      "id": "B-004",
+      "category": "B",
+      "question": "What is the FDA post-marketing serious/unexpected ADR reporting timeline vs EU timeline?",
+      "expected_answer": "FDA: 15 calendar days for serious/unexpected; 7 days for fatal/LT. EU: Same timelines via EudraVigilance. Timelines are harmonized.",
+      "kb_answer": "FDA: 15-day alert for serious/unexpected; 7-day for fatal/life-threatening. EU: same timelines to EudraVigilance.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01340",
+        "KB-01678"
+      ],
+      "notes": "Correct. Both jurisdictions' timelines properly captured."
+    },
+    {
+      "id": "B-005",
+      "category": "B",
+      "question": "Does Health Canada require the same SUSAR reporting timelines as FDA/EU?",
+      "expected_answer": "Health Canada requires serious ADR reporting within 15 days per C.01.017.",
+      "kb_answer": "Serious ADR reporting within 15 days (C.01.017).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01882"
+      ],
+      "notes": "Correct. However, the KB does not distinguish whether Canada has a separate 7-day fatal/LT timeline \u2014 this is a minor gap."
+    },
+    {
+      "id": "B-006",
+      "category": "B",
+      "question": "How does the EU PIP (Paediatric Investigation Plan) requirement differ from FDA PREA (Pediatric Research Equity Act)?",
+      "expected_answer": "EU: PIP must be submitted to PDCO not later than completion of adult PK studies. FDA PREA: requires pediatric studies unless waived/deferred but does not require a pre-submission plan equivalent to PIP.",
+      "kb_answer": "EU PIP requirement is described (submit not later than completion of human PK studies in adults). FDA PREA is not explicitly covered.",
+      "status": "MISSING",
+      "rule_ids": [
+        "KB-01741"
+      ],
+      "notes": "The KB covers EU PIP well but does not contain FDA PREA requirements for comparison. A regulatory AI needs both sides for jurisdiction comparison."
+    },
+    {
+      "id": "B-007",
+      "category": "B",
+      "question": "What is the EU requirement for submitting paediatric clinical trial results vs general trial results?",
+      "expected_answer": "Paediatric trials: results within 6 months of completion. General trials: within 1 year.",
+      "kb_answer": "Results summary within 1 year from end of clinical trial. For paediatric trials: results submitted within 6 months.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01688"
+      ],
+      "notes": "Correct. Both timelines properly differentiated."
+    },
+    {
+      "id": "B-008",
+      "category": "B",
+      "question": "Does Japan (PMDA) accept multi-regional clinical trial data for approval, or does it require separate Japanese studies?",
+      "expected_answer": "Japan accepts MRCT data per E17/E5 framework but historically requires Japanese patients to be included. Bridging studies may be needed per E5.",
+      "kb_answer": "KB covers E5 bridging framework and E17 MRCT principles. Japan-specific PMDA ethnic factor rules are present.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00605",
+        "KB-00611"
+      ],
+      "notes": "Coverage is adequate through E5/E17 rules, though PMDA-specific implementation details could be more granular."
+    },
+    {
+      "id": "B-009",
+      "category": "B",
+      "question": "What is the EU PSUR/PBRER submission requirement that differs from FDA PADER (Periodic Adverse Drug Experience Report)?",
+      "expected_answer": "EU requires PBRER per E2C(R2) with 20 sections plus EU regional appendix. FDA historically used PADER but now accepts PBRER format; however EU requires additional annexes including proposed PI changes and RMP integration.",
+      "kb_answer": "EU PSURs must follow 20-section ICH E2C(R2) PBRER format with additional EU regional appendix containing proposed PI changes, additional PV/risk minimisation activities, summary of ongoing safety concerns, PASS results, and effectiveness of risk minimisation.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02449"
+      ],
+      "notes": "EU-specific appendix requirements well documented. FDA PADER specifics less detailed in KB."
+    },
+    {
+      "id": "B-010",
+      "category": "B",
+      "question": "Does Health Canada align with ICH M9 for BCS-based biowaivers?",
+      "expected_answer": "Yes, Health Canada has adopted ICH M9 but implementation may differ in specifics.",
+      "kb_answer": "ICH M9 harmonizes BCS-based biowaivers but implementation differs.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01613"
+      ],
+      "notes": "Correct but vague. Does not specify HOW Canada differs."
+    },
+    {
+      "id": "B-011",
+      "category": "B",
+      "question": "What is the EU GMP Annex 1 cleanroom classification system vs FDA aseptic processing guidance?",
+      "expected_answer": "EU uses Grade A/B/C/D classification. FDA uses ISO 14644 class designations (ISO 5, 7, 8). Grade A=ISO 5, Grade B=ISO 5 at rest, Grade C=ISO 7, Grade D=ISO 8.",
+      "kb_answer": "EU GMP rules are present but specific Grade A-D to ISO mapping comparison not found.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "KB has EU GMP rules but lacks the specific Grade-to-ISO classification mapping that is fundamental for cross-jurisdictional CMC work."
+    },
+    {
+      "id": "B-012",
+      "category": "B",
+      "question": "What is the EU assessment timeline for a multi-state clinical trial application under CTR 536/2014?",
+      "expected_answer": "Three-phase assessment: 26-day initial assessment + 12-day coordinated review + 7-day consolidation = 45 days total for Part I.",
+      "kb_answer": "Reporting Member State shall assess Part I within 45 days from validation date. Multi-state: three-phase assessment (26-day initial + 12-day coordinated review + 7-day consolidation).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01675"
+      ],
+      "notes": "Correct with specific day breakdowns."
+    },
+    {
+      "id": "B-013",
+      "category": "B",
+      "question": "Does PMDA require separate stability studies for Japanese market conditions, or does it accept ICH Q1A conditions?",
+      "expected_answer": "PMDA follows ICH Q1A conditions (25C/60%RH long-term for Zone II) but Japan is in Zone II. Additional photostability per Q1B also applies.",
+      "kb_answer": "Not specifically addressed. General Q1A stability rules present but PMDA-specific conditions not differentiated.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "KB lacks PMDA-specific stability condition requirements and climatic zone classification."
+    },
+    {
+      "id": "B-014",
+      "category": "B",
+      "question": "How does the EU Marketing Authorisation procedure timeline differ between centralised, decentralised, and mutual recognition procedures?",
+      "expected_answer": "Centralised: 210 days (plus clock stops). Decentralised: 120 days RMS assessment + 90 days for CMS. MRP: 90 days.",
+      "kb_answer": "KB contains EU legislation requirements but does not break down specific MA procedure timelines by type.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "Significant gap. MA procedure timelines are critical for regulatory strategy."
+    },
+    {
+      "id": "B-015",
+      "category": "B",
+      "question": "What urgent safety restriction timeline applies in the EU?",
+      "expected_answer": "MAH may implement immediately with simultaneous notification. Authority has 24 hours to accept/refuse. MAH must submit variation within 15 days.",
+      "kb_answer": "MAH may implement urgent safety restrictions immediately with simultaneous notification. Authority has 24 hours to accept/refuse. MAH must submit variation application within 15 days.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01775",
+        "KB-01842"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "B-016",
+      "category": "B",
+      "question": "What is the PSMF (Pharmacovigilance System Master File) availability requirement in the EU?",
+      "expected_answer": "Must be available within 7 days for inspection at the QPPV location.",
+      "kb_answer": "PSMF is a living document maintained at QPPV location, available within 7 days for inspection.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01480"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "B-017",
+      "category": "B",
+      "question": "Does Health Canada have a Summary Basis of Decision (SBD) requirement equivalent to FDA review or EU EPAR?",
+      "expected_answer": "Yes, Health Canada publishes SBDs for authorized products, similar in concept to EPAR/FDA review but with its own format.",
+      "kb_answer": "Health Canada SBD is mentioned in divergence comparison with FDA Review and EPAR.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01886"
+      ],
+      "notes": "Present but minimal detail on SBD content requirements."
+    },
+    {
+      "id": "B-018",
+      "category": "B",
+      "question": "What is the PMDA-specific requirement for ethnic factor assessment that goes beyond ICH E5?",
+      "expected_answer": "PMDA requires assessment of intrinsic/extrinsic ethnic factors and may request additional PK studies in Japanese subjects even when MRCT data are available.",
+      "kb_answer": "PMDA ethnic factor rules present covering intrinsic/extrinsic factors assessment.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00605"
+      ],
+      "notes": "Adequate but could be more PMDA-specific."
+    },
+    {
+      "id": "B-019",
+      "category": "B",
+      "question": "Does the EU require a Qualified Person for Pharmacovigilance (QPPV) while FDA does not?",
+      "expected_answer": "Yes. EU requires QPPV (Directive 2001/83/EC). FDA has no equivalent named-person requirement.",
+      "kb_answer": "QPPV requirement is referenced in EU PV rules. No explicit comparison to FDA's lack of this requirement.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01480"
+      ],
+      "notes": "EU QPPV covered; the comparison gap is not critical but would be useful."
+    },
+    {
+      "id": "B-020",
+      "category": "B",
+      "question": "How does the EU serious breach reporting timeline differ from FDA protocol deviation reporting?",
+      "expected_answer": "EU CTR 536/2014: serious breaches reported within 7 days through EU portal. FDA: protocol deviations reported in annual IND report, not on a per-event expedited basis.",
+      "kb_answer": "EU: Sponsor shall report serious breaches within 7 days through EU portal.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01679"
+      ],
+      "notes": "EU timeline correct. FDA comparison not explicitly stated."
+    },
+    {
+      "id": "C-001",
+      "category": "C",
+      "question": "What are the 5 classes of mutagenic impurities per ICH M7?",
+      "expected_answer": "Class 1: Known mutagenic carcinogens (compound-specific AI). Class 2: Known mutagenic, carcinogenicity unknown (TTC). Class 3: Structural alert, no mutagenicity data (TTC unless purge justified). Class 4: Structural alert, not mutagenic (control like ordinary impurity). Class 5: No alert or sufficient safety evidence (no specific limit).",
+      "kb_answer": "Class 1: Known mutagenic carcinogens \u2014 use compound-specific AI. Class 2: Known mutagenic, carcinogenicity unknown \u2014 TTC applies. Class 3: Structural alert but no mutagenicity data \u2014 TTC applies unless purge justified. Class 4: Structural alert but not mutagenic \u2014 control like ordinary impurity. Class 5: No structural alert, or alert with sufficient evidence of safety \u2014 no specific limit needed.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03244"
+      ],
+      "notes": "All 5 classes accurately described with source quote."
+    },
+    {
+      "id": "C-002",
+      "category": "C",
+      "question": "What are the 4 control options for mutagenic impurities per ICH M7?",
+      "expected_answer": "Option 1: Control in starting material/intermediate. Option 2: Control in drug substance specification. Option 3: Control in drug product specification. Option 4: Control based on purge factor calculation.",
+      "kb_answer": "Option 1 = control in drug substance starting material/intermediate (upstream control); Option 2 = control in drug substance; Option 3 = control in drug product; Option 4 = control based on purge factor calculation.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03253"
+      ],
+      "notes": "All 4 options correctly enumerated with source quote."
+    },
+    {
+      "id": "C-003",
+      "category": "C",
+      "question": "What compounds constitute the 'Cohort of Concern' under ICH M7 and how does TTC apply?",
+      "expected_answer": "Aflatoxin-like, N-nitroso, and alkyl-azoxy compounds. The 1.5 ug/day TTC does NOT apply; compound-specific limits required based on carcinogenic potency.",
+      "kb_answer": "Three structural classes \u2014 aflatoxin-like compounds, N-nitroso compounds, and alkyl-azoxy compounds \u2014 constitute the 'Cohort of Concern'. The 1.5 ug/day TTC does not apply to cohort of concern compounds.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03245"
+      ],
+      "notes": "Correct. Properly identifies the exception to TTC for these highly potent compounds."
+    },
+    {
+      "id": "C-004",
+      "category": "C",
+      "question": "What is the IND safety report timeline per 21 CFR 312.32?",
+      "expected_answer": "7 calendar days for fatal/life-threatening unexpected findings suggesting significant risk. 15 calendar days for all other serious and unexpected ADRs.",
+      "kb_answer": "FDA: 15-day alert for serious/unexpected; 7-day for fatal/life-threatening.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01340",
+        "KB-01367"
+      ],
+      "notes": "Correct timelines captured."
+    },
+    {
+      "id": "C-005",
+      "category": "C",
+      "question": "What is the definition of a design space per ICH Q8(R2)?",
+      "expected_answer": "The multidimensional combination and interaction of input variables and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered a change.",
+      "kb_answer": "Working within the design space is NOT considered a change from a regulatory filing perspective. Movement out of the design space IS considered a change.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01189",
+        "KB-01190"
+      ],
+      "notes": "Correct regulatory implications stated. Definition itself is implied but explicit definition text not found as a standalone rule."
+    },
+    {
+      "id": "C-006",
+      "category": "C",
+      "question": "Does a combination of proven acceptable ranges (PARs) from univariate experiments constitute a design space per Q8(R2)?",
+      "expected_answer": "No. A combination of PARs from univariate experimentation does NOT constitute a design space.",
+      "kb_answer": "A combination of proven acceptable ranges based on univariate experimentation does NOT constitute a design space.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01193"
+      ],
+      "notes": "Correct. Important distinction clearly stated."
+    },
+    {
+      "id": "C-007",
+      "category": "C",
+      "question": "Is determining the edge of failure required for establishing a design space per Q8(R2)?",
+      "expected_answer": "No.",
+      "kb_answer": "Determining the edge of failure is NOT an essential part of establishing a design space.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01196"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "C-008",
+      "category": "C",
+      "question": "What is the PBRER structure per ICH E2C(R2)?",
+      "expected_answer": "20 specified sections from title page through glossary.",
+      "kb_answer": "A complete PBRER must contain all 20 specified sections in order, from title page through glossary.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01928"
+      ],
+      "notes": "Correct. Individual section names not enumerated in this rule but the count is accurate."
+    },
+    {
+      "id": "C-009",
+      "category": "C",
+      "question": "Do Summary Bridging Reports still exist under ICH E2C(R2)?",
+      "expected_answer": "No. The concept was removed in E2C(R2). Even short reporting periods require a full PBRER.",
+      "kb_answer": "Summary Bridging Reports no longer exist under E2C(R2). Even for short reporting periods, a full PBRER must be submitted.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01935"
+      ],
+      "notes": "Correct with source quote."
+    },
+    {
+      "id": "C-010",
+      "category": "C",
+      "question": "What are the ICH E5 conditions under which a bridging study is NOT needed?",
+      "expected_answer": "(1) Medicine is ethnically insensitive and extrinsic factors are similar between regions, OR (2) Medicine is ethnically sensitive but the two regions are ethnically similar and sufficient experience with related compounds exists.",
+      "kb_answer": "No bridging study is needed when: (1) medicine is ethnically insensitive and extrinsic factors such as medical practice are generally similar between regions; (2) medicine is ethnically sensitive but the two regions are ethnically similar and there is sufficient clinical experience with pharmacologically related compounds.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00611"
+      ],
+      "notes": "Correct. Both conditions accurately captured from E5 Section 3.2.3."
+    },
+    {
+      "id": "C-011",
+      "category": "C",
+      "question": "Per ICH E9(R1), what are the five strategies for handling intercurrent events in estimands?",
+      "expected_answer": "Treatment policy, composite, hypothetical, while-on-treatment (principal stratum), and treatment policy with de jure/de facto distinction.",
+      "kb_answer": "KB mentions 'treatment policy strategy' and 'intercurrent events' but does not enumerate all 5 strategies explicitly.",
+      "status": "MISSING",
+      "rule_ids": [
+        "KB-00361"
+      ],
+      "notes": "GAP: While the E9(R1) estimand framework is referenced, the KB does not list all five intercurrent event strategies. The specific strategies (treatment policy, composite, hypothetical, principal stratum, while on treatment) are critical for regulatory statistical planning."
+    },
+    {
+      "id": "C-012",
+      "category": "C",
+      "question": "Per ICH E9, what analysis population is used in non-inferiority/equivalence trials?",
+      "expected_answer": "The per protocol set is the primary analysis population for non-inferiority/equivalence. The full analysis set (ITT) is NOT conservative in these designs.",
+      "kb_answer": "In equivalence or non-inferiority trials, the use of the full analysis set is generally not conservative and its role should be considered very carefully.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00371",
+        "KB-00481"
+      ],
+      "notes": "Correctly captures that FAS is NOT conservative for NI/equivalence. Per protocol emphasis is implicit."
+    },
+    {
+      "id": "C-013",
+      "category": "C",
+      "question": "What are the required dissolution media for BCS biowaiver testing per ICH M9?",
+      "expected_answer": "Three buffers: pH 1.2, pH 4.5, and pH 6.8 (pharmacopoeial). No organic solvents, no surfactants.",
+      "kb_answer": "Three buffers: pH 1.2, 4.5, and 6.8 (pharmacopoeial); No organic solvents; No surfactants.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02147"
+      ],
+      "notes": "Correct with all conditions specified."
+    },
+    {
+      "id": "C-014",
+      "category": "C",
+      "question": "What are the ICH Q1B photostability testing light source options?",
+      "expected_answer": "Option 1: D65/ID65 standard (xenon, metal halide, or artificial daylight fluorescent). Option 2: Both cool white fluorescent + near UV fluorescent (320-400 nm, max 350-370 nm).",
+      "kb_answer": "Option 1: D65/ID65 emission standard (artificial daylight fluorescent, xenon, or metal halide). Option 2: Cool white fluorescent + near UV fluorescent with spectral distribution 320-400 nm, max emission 350-370 nm.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03363",
+        "KB-03365"
+      ],
+      "notes": "Both options correctly described with spectral specifications."
+    },
+    {
+      "id": "C-015",
+      "category": "C",
+      "question": "Per ICH Q12, does movement within an approved design space require a regulatory filing?",
+      "expected_answer": "No. Movement within design space does NOT require a regulatory filing, but should be evaluated by the company's change management system.",
+      "kb_answer": "Movement within an approved design space does NOT require a regulatory filing. All changes should be evaluated by a company's change management system even when within design space.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01214",
+        "KB-01215"
+      ],
+      "notes": "Both the filing exemption and the PQS evaluation requirement are correctly stated."
+    },
+    {
+      "id": "C-016",
+      "category": "C",
+      "question": "What is the ICH E14 requirement for the QT correction formula?",
+      "expected_answer": "Both Fridericia (QTcF) and Bazett (QTcB) should be presented. Fridericia or individual correction is preferred.",
+      "kb_answer": "Both Fridericia (QTcF) and Bazett (QTcB) corrections should be presented, with Fridericia or individual correction preferred.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02155"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "C-017",
+      "category": "C",
+      "question": "Per ICH E10, what are the conditions that make placebo control unethical?",
+      "expected_answer": "When a therapeutic treatment proven efficacious by superiority trial exists for serious illnesses.",
+      "kb_answer": "For serious illnesses, when a therapeutic treatment shown to be efficacious by superiority trial(s) exists, a placebo-controlled trial may be considered unethical.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00429"
+      ],
+      "notes": "Correct. Appropriate nuance about case-by-case evaluation."
+    },
+    {
+      "id": "C-018",
+      "category": "C",
+      "question": "What is the PDE formula per ICH Q3D?",
+      "expected_answer": "PDE = NO(A)EL x Mass Adjustment / (F1 x F2 x F3 x F4 x F5), where F1=interspecies (1-12), F2=intraspecies (10), F3=duration, F4=severity, F5=NOEL/NOAEL/LOAEL (1-10).",
+      "kb_answer": "PDE = NO(A)EL x Mass Adjustment / [F1 x F2 x F3 x F4 x F5], where F1 = species-to-human (1-12), F2 = intraspecies variability (fixed at 10), F3 = study duration, F4 = severity/reversibility, F5 = NOEL/NOAEL/LOAEL factor (1-10).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03259"
+      ],
+      "notes": "Correct formula with all five modifying factors."
+    },
+    {
+      "id": "C-019",
+      "category": "C",
+      "question": "Per Q3D, when deriving parenteral PDE from oral data, what bioavailability adjustment factors apply?",
+      "expected_answer": "Oral BA <1%: divide by 100. 1-50%: divide by 10. 50-90%: divide by 2. >=90%: divide by 1.",
+      "kb_answer": "If oral bioavailability <1%, divide oral PDE by 100; 1-50%, divide by 10; 50-90%, divide by 2; >=90%, no adjustment (divide by 1).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03261"
+      ],
+      "notes": "Correct. All four tiers accurately stated."
+    },
+    {
+      "id": "C-020",
+      "category": "C",
+      "question": "Per ICH S11, are juvenile animal studies required to support short-term PK studies in paediatric patients?",
+      "expected_answer": "No. Per S11/M3, juvenile animal toxicity studies are generally not considered important to support short-term PK studies in paediatric populations.",
+      "kb_answer": "Juvenile animal toxicity studies are generally NOT considered important to support short-term PK studies in paediatric populations, in accordance with ICH M3.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03784"
+      ],
+      "notes": "Correct with M3 cross-reference."
+    },
+    {
+      "id": "D-001",
+      "category": "D",
+      "question": "Do the E9 estimand framework requirements contradict the E10 guidance on non-inferiority margin selection?",
+      "expected_answer": "No contradiction. E9(R1) estimands framework complements E10 by requiring explicit specification of intercurrent event handling in NI trials. Both are compatible.",
+      "kb_answer": "KB addresses E9(R1) estimands and E10 NI principles separately. No contradiction found.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00366",
+        "KB-00481",
+        "KB-00429"
+      ],
+      "notes": "No contradiction. Both guidelines are consistently represented."
+    },
+    {
+      "id": "D-002",
+      "category": "D",
+      "question": "Is there consistency between Q8(R2) design space concept and Q12 post-approval lifecycle management?",
+      "expected_answer": "Yes. Q12 builds on Q8 design space. Movement within DS = no filing per Q8; Q12 adds tools for established conditions and reporting categories.",
+      "kb_answer": "Q8: Working within DS not a change. Q12: Movement within approved DS does NOT require regulatory filing. All changes evaluated by PQS. Q12 lifecycle management tools complement Q8 knowledge.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01189",
+        "KB-01214",
+        "KB-01215"
+      ],
+      "notes": "Consistent. Q8 and Q12 rules align properly."
+    },
+    {
+      "id": "D-003",
+      "category": "D",
+      "question": "Do the S7B nonclinical cardiac safety requirements and E14 clinical QT assessment strategy work together coherently in the KB?",
+      "expected_answer": "They should present an integrated risk assessment (IRA) approach per E14/S7B Q&As where nonclinical hERG + in vivo data can substitute for or complement TQT studies.",
+      "kb_answer": "S7B rules mention hERG assay and scientific evaluation integrating results. E14 rules cover TQT study design. However, the integrated risk assessment (IRA) framework from the E14/S7B Q&As is not explicitly described.",
+      "status": "MISSING",
+      "rule_ids": [
+        "KB-01365"
+      ],
+      "notes": "CRITICAL GAP: The E14/S7B Q&As (2020) introduced the Integrated Risk Assessment (IRA) as an alternative to the TQT study, allowing sponsors to use C-QTc modeling from early phase studies + nonclinical data. This is absent from the KB and represents a major gap for modern cardiac safety strategy."
+    },
+    {
+      "id": "D-004",
+      "category": "D",
+      "question": "Is there consistency between the E2A SUSAR reporting rules and the E2D post-marketing reporting rules in the KB?",
+      "expected_answer": "E2A covers clinical trial reporting (7/15 day). E2D covers post-marketing expedited reporting. They should be consistent but address different phases.",
+      "kb_answer": "E2A: 7-day fatal/LT SUSARs, 15-day others. Post-marketing: 15-day serious/unexpected. Rules are phase-appropriate and consistent.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01920",
+        "KB-01340"
+      ],
+      "notes": "No contradiction between clinical and post-marketing reporting timelines."
+    },
+    {
+      "id": "D-005",
+      "category": "D",
+      "question": "Is there a contradiction in the KB between the M7 mutagenic impurity TTC (1.5 ug/day) and Q3D elemental impurity PDEs?",
+      "expected_answer": "No contradiction \u2014 these are different frameworks. M7 TTC is for DNA-reactive mutagenic impurities. Q3D PDE is for elemental impurities based on threshold toxicity. Different mechanisms, different approaches.",
+      "kb_answer": "M7 TTC (1.5 ug/day for mutagenic impurities) and Q3D PDEs (element-specific, based on NO(A)EL with safety factors) are presented separately. Different frameworks for different impurity types.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03243",
+        "KB-03259"
+      ],
+      "notes": "No contradiction. Properly differentiated frameworks."
+    },
+    {
+      "id": "D-006",
+      "category": "D",
+      "question": "Are the Q3D elemental impurity rules correctly attributed to the Q3D guideline in the KB?",
+      "expected_answer": "Q3D rules should be attributed to ICH Q3D(R2).",
+      "kb_answer": "Q3D rules (rule_ids Q3DR2-001 through Q3DR2-005+) are attributed to guideline 'ICH M7(R2)' in the KB.",
+      "status": "WRONG",
+      "rule_ids": [
+        "KB-03258",
+        "KB-03259",
+        "KB-03260",
+        "KB-03261",
+        "KB-03262"
+      ],
+      "notes": "CRITICAL ERROR: All Q3D(R2) elemental impurity rules are mislabeled with guideline='ICH M7(R2)'. The source file is 'output-v4/m7r2-q9r1-q3d-rules.json' \u2014 the compiler appears to have assigned the first guideline name from the combined extraction file to all rules in the file, regardless of which guideline the rule actually belongs to. This affects approximately 15+ Q3D rules."
+    },
+    {
+      "id": "D-007",
+      "category": "D",
+      "question": "Is the E5 bridging study framework consistent with the E17 MRCT framework in the KB?",
+      "expected_answer": "Yes. E17 MRCTs can serve as bridging studies per E5 Q&A Q6. They are complementary frameworks.",
+      "kb_answer": "E5 Q&A Q6 explicitly states a multi-regional trial can serve as a bridging study. E17 rules describe MRCT design principles. Consistent.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02211",
+        "KB-00663"
+      ],
+      "notes": "Properly cross-referenced. E5 Q&A-006 explicitly enables this."
+    },
+    {
+      "id": "D-008",
+      "category": "D",
+      "question": "Does the KB show contradiction between EU GVP SUSAR reporting to EudraVigilance and ICH E2A reporting to regulators?",
+      "expected_answer": "No contradiction. EU CTR specifies EudraVigilance as the mechanism. E2A specifies timelines. They are complementary.",
+      "kb_answer": "EU: SUSARs to EudraVigilance (7/15 day). E2A: generic regulatory reporting (7/15 day). Same timelines, different mechanisms.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01678",
+        "KB-01920"
+      ],
+      "notes": "Consistent. No contradiction."
+    },
+    {
+      "id": "D-009",
+      "category": "D",
+      "question": "Is there consistency between FDA SUPAC-IR dissolution requirements and ICH M9 BCS-based biowaiver criteria?",
+      "expected_answer": "They should be consistent but SUPAC predates M9 and uses different terminology. A regulatory AI should note that M9 harmonizes approaches that SUPAC addressed region-specifically.",
+      "kb_answer": "SUPAC Level 3 changes require BE study (waived with IVIVC). M9 BCS biowaivers are covered separately. No direct cross-reference.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "Gap in cross-guideline mapping between SUPAC and M9. While not a contradiction, the lack of explicit relationship mapping could lead to confusion."
+    },
+    {
+      "id": "D-010",
+      "category": "D",
+      "question": "Does the KB contain contradictory statements about whether FAS/ITT is conservative for non-inferiority trials?",
+      "expected_answer": "E9 clearly states FAS is NOT conservative for NI/equivalence. There should be no contradiction.",
+      "kb_answer": "Multiple rules consistently state that FAS 'is generally not conservative' for NI/equivalence trials.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00369",
+        "KB-00481",
+        "KB-00501"
+      ],
+      "notes": "Consistent across multiple E9/E9(R1) rules. No contradiction."
+    },
+    {
+      "id": "D-011",
+      "category": "D",
+      "question": "Is the M7 cohort of concern classification consistent between older v2 rules and newer v4 rules?",
+      "expected_answer": "Should be consistent: aflatoxin-like, N-nitroso, alkyl-azoxy compounds.",
+      "kb_answer": "v2 rule (KB-01138): 'ICH M7 cohort of concern, Class 1 with AI <1.5 ug/day'. v4 rule (KB-03245): 'aflatoxin-like, N-nitroso, alkyl-azoxy compounds; TTC does not apply.'",
+      "status": "CONTRADICTORY",
+      "rule_ids": [
+        "KB-01138",
+        "KB-03245"
+      ],
+      "notes": "INCONSISTENCY: KB-01138 from v2 describes cohort of concern as 'Class 1 with AI <1.5 ug/day' which conflates Class 1 (known mutagenic carcinogens with compound-specific AI) with the cohort of concern. The cohort of concern is a SUBSET of Class 1 \u2014 it refers specifically to aflatoxin-like, N-nitroso, and alkyl-azoxy compounds, not all Class 1. The v4 rule is correct. The v2 rule is misleading."
+    },
+    {
+      "id": "D-012",
+      "category": "D",
+      "question": "Are stability batch requirements consistent between Q1A drug substance and Q1A drug product rules in the KB?",
+      "expected_answer": "Both require minimum 3 batches, 2 at pilot scale, third can be smaller. Should be consistent.",
+      "kb_answer": "Drug substance: 3 primary batches, two at pilot scale, third can be smaller. Drug product: 3 primary batches, two at pilot scale, third can be smaller if justified.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02817",
+        "KB-03371"
+      ],
+      "notes": "Consistent between DS and DP requirements."
+    },
+    {
+      "id": "D-013",
+      "category": "D",
+      "question": "Is there a contradiction in the KB between the AUCR mechanistic static model threshold (0.80-1.25) for DDI and the bioequivalence CI range (80-125%)?",
+      "expected_answer": "No contradiction. Same numeric range but entirely different contexts: DDI AUCR is for predicting clinical interaction risk; BE CI is for equivalence demonstration. They should not be confused.",
+      "kb_answer": "DDI AUCR: 'if estimated AUCR is between 0.80 and 1.25, the risk of clinically relevant interaction is low.' BE: '90% CI within 80.00-125.00%'. Same numbers, different contexts.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02940",
+        "KB-03041"
+      ],
+      "notes": "No contradiction. Different regulatory contexts clearly distinguished."
+    },
+    {
+      "id": "D-014",
+      "category": "D",
+      "question": "Is the E14 negative TQT study criterion (upper 95% CI < 10 ms) consistent across all E14-related rules?",
+      "expected_answer": "Should be consistently stated as upper bound of one-sided 95% CI for largest time-matched mean QTcF effect < 10 ms.",
+      "kb_answer": "KB-02851: 'Upper bound of one-sided 95% CI must not exceed 10 ms.' KB-02852: 'upper bound of the one-sided 95% CI for the largest time-matched mean effect on QTcF should be less than 10 ms.'",
+      "status": "CONTRADICTORY",
+      "rule_ids": [
+        "KB-02851",
+        "KB-02852"
+      ],
+      "notes": "MINOR INCONSISTENCY: KB-02851 says 'must not exceed 10 ms' (i.e., <=10 is acceptable), while KB-02852 says 'should be less than 10 ms' (i.e., <10 required). The correct criterion per E14 is that the upper bound should be LESS THAN 10 ms (strictly <10, not <=10). KB-02851 is technically less precise."
+    },
+    {
+      "id": "D-015",
+      "category": "D",
+      "question": "Is there consistency between the EU GVP pharmacovigilance inspection requirements and the EU CTR sponsor reporting requirements?",
+      "expected_answer": "They should be complementary: GVP covers inspection authority while CTR covers sponsor obligations.",
+      "kb_answer": "GVP: Competent authorities conduct inspections of MAHs. CTR: Sponsors report SUSARs to EudraVigilance. These address different aspects of the PV system.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02217",
+        "KB-01678"
+      ],
+      "notes": "Consistent. Complementary roles properly distinguished."
+    },
+    {
+      "id": "E-001",
+      "category": "E",
+      "question": "What are the main categories of CRL (Complete Response Letter) deficiencies in the KB?",
+      "expected_answer": "Labeling, manufacturing/GMP, CMC, clinical efficacy/safety, nonclinical, clinical pharmacology, human factors, and REMS/risk management.",
+      "kb_answer": "CAT-01: Labeling/prescribing info. CAT-02: Manufacturing/cGMP. CAT-03: CMC. CAT-04: Clinical. CAT-05: Nonclinical. CAT-06: Clinical pharmacology. CAT-07: Human factors.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01222",
+        "KB-01223",
+        "KB-01224",
+        "KB-01225",
+        "KB-01226",
+        "KB-01227",
+        "KB-01228"
+      ],
+      "notes": "7 categories captured. REMS not separately called out but may be subsumed under other categories."
+    },
+    {
+      "id": "E-002",
+      "category": "E",
+      "question": "What are the most common CMC deficiencies cited in CRLs?",
+      "expected_answer": "Drug substance characterization, stability, microbiology, container closure, analytical methods, process validation, specifications, and impurities.",
+      "kb_answer": "CAT-03: Chemistry, manufacturing, and controls deficiencies including drug substance characterization, stability, microbiology, container closure, analytical methods, process validation, specifications, and impurities.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01224"
+      ],
+      "notes": "Comprehensive list of CMC sub-categories."
+    },
+    {
+      "id": "E-003",
+      "category": "E",
+      "question": "What clinical pharmacology deficiencies are commonly cited in CRLs?",
+      "expected_answer": "Missing DDI studies, organ impairment studies, QT studies, and food effect studies.",
+      "kb_answer": "CAT-06: Clinical pharmacology deficiencies including missing DDI studies, organ impairment studies, QT studies, and food effect studies.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01227"
+      ],
+      "notes": "Correct enumeration of common clinical pharmacology gaps."
+    },
+    {
+      "id": "E-004",
+      "category": "E",
+      "question": "Are the CRL deficiency categories verified against actual FDA CRL data?",
+      "expected_answer": "They should be verified against published CRL analyses (e.g., Sacks et al., JAMA).",
+      "kb_answer": "All CRL deficiency taxonomy rules have verification_status='unknown'.",
+      "status": "WRONG",
+      "rule_ids": [
+        "KB-01222",
+        "KB-01223",
+        "KB-01224"
+      ],
+      "notes": "All 10 CRL deficiency rules are unverified. While the categories appear reasonable, none have source quotes or verification against published CRL analyses. This is a reliability concern for training data."
+    },
+    {
+      "id": "E-005",
+      "category": "E",
+      "question": "Does the KB contain data on the relative frequency of different CRL deficiency types?",
+      "expected_answer": "CMC deficiencies are the most common (historically ~30-40% of CRLs), followed by clinical/efficacy issues.",
+      "kb_answer": "No frequency or prevalence data found for CRL deficiency types.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "The KB has deficiency categories but no quantitative data on frequency or trends. A regulatory AI should know that CMC is the most common CRL category."
+    },
+    {
+      "id": "E-006",
+      "category": "E",
+      "question": "Does the KB cover 505(b)(2) application deficiency patterns?",
+      "expected_answer": "505(b)(2) applications have unique deficiency patterns around literature-based efficacy claims, reference product selection, and bridging study requirements.",
+      "kb_answer": "Not found in KB.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "No 505(b)(2)-specific CRL or deficiency patterns."
+    },
+    {
+      "id": "E-007",
+      "category": "E",
+      "question": "What data integrity deficiencies are relevant to CRLs?",
+      "expected_answer": "ALCOA+ violations, Form 483 data integrity observations, audit trail gaps, unauthorized access, retroactive data changes.",
+      "kb_answer": "CAT-02 mentions data integrity issues. Separate data integrity rules reference ALCOA+ and FDA guidance on data integrity.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01223"
+      ],
+      "notes": "Data integrity is covered across CRL taxonomy and separate FDA data integrity guidance rules."
+    },
+    {
+      "id": "E-008",
+      "category": "E",
+      "question": "What nonclinical deficiencies commonly appear in CRLs?",
+      "expected_answer": "Missing genotoxicity, carcinogenicity, reproductive toxicity, and safety pharmacology studies.",
+      "kb_answer": "CAT-05: Nonclinical deficiencies including missing genotoxicity, carcinogenicity, reproductive toxicity, and safety pharmacology studies.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-01226"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "E-009",
+      "category": "E",
+      "question": "Does the KB cover refuse-to-file (RTF) actions as distinct from CRLs?",
+      "expected_answer": "RTFs are issued within 60 days of NDA receipt for grossly deficient applications. They should be distinguished from CRLs.",
+      "kb_answer": "Not found as a distinct topic.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "RTF criteria and process not covered. Important distinction from CRLs for regulatory planning."
+    },
+    {
+      "id": "E-010",
+      "category": "E",
+      "question": "What REMS-related deficiencies appear in CRLs?",
+      "expected_answer": "Inadequate REMS strategy, missing ETASU elements, incomplete medication guides, lack of implementation timeline.",
+      "kb_answer": "Not specifically covered. CRL taxonomy does not have a REMS-specific category.",
+      "status": "MISSING",
+      "rule_ids": [],
+      "notes": "REMS deficiencies not separately categorized in the CRL taxonomy."
+    },
+    {
+      "id": "F-001",
+      "category": "F",
+      "question": "When is a bridging study NOT required under ICH E5(R1)?",
+      "expected_answer": "When (1) medicine is ethnically insensitive and extrinsic factors similar, or (2) medicine is ethnically sensitive but regions are ethnically similar with sufficient class experience.",
+      "kb_answer": "Same as C-010 \u2014 both conditions accurately captured.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-00611"
+      ],
+      "notes": "Correct."
+    },
+    {
+      "id": "F-002",
+      "category": "F",
+      "question": "Per ICH S11, when are juvenile animal studies NOT warranted?",
+      "expected_answer": "When existing clinical safety data and risk mitigation strategies are sufficient; when toxicity is in organs where sensitivity does not differ adult vs pediatric; for short-term PK studies per M3.",
+      "kb_answer": "Not warranted when: (1) existing clinical safety data sufficient (S11-007), (2) to confirm toxicity in organs where sensitivity not expected to differ (S11-008), (3) for short-term PK studies per M3 (S11-002).",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03784",
+        "KB-03789",
+        "KB-03790"
+      ],
+      "notes": "All three exception conditions correctly captured."
+    },
+    {
+      "id": "F-003",
+      "category": "F",
+      "question": "What are the conditions for waiving an in vivo BE study using BCS-based biowaiver per ICH M9?",
+      "expected_answer": "Drug substance must be BCS Class I or III. IR solid oral dosage form. Dissolution criteria met (Class I: rapid or very rapid + similar profiles; Class III: very rapid only). Qualitative composition similar; quantitative composition within defined limits.",
+      "kb_answer": "BCS Class I or III. Dissolution criteria must be met. Both test and reference must meet criteria in all three media. FDC-specific rules also covered.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02153",
+        "KB-02156"
+      ],
+      "notes": "Core conditions captured. Excipient quantitative similarity criteria for Class III less explicitly stated."
+    },
+    {
+      "id": "F-004",
+      "category": "F",
+      "question": "Can a multi-regional clinical trial serve as a bridging study per ICH E5?",
+      "expected_answer": "Yes, per E5 Q&A Q6, if appropriate consideration is given to number of new-region subjects, study design, and regional consistency analysis.",
+      "kb_answer": "Yes. A multi-regional trial can serve as a bridging study with appropriate consideration of new-region subjects, design, and regional consistency analyses.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02211"
+      ],
+      "notes": "Correct. Verbatim from E5 Q&A Q6."
+    },
+    {
+      "id": "F-005",
+      "category": "F",
+      "question": "Can the bridging study be submitted AFTER the registration application per ICH E5?",
+      "expected_answer": "Yes. Per E5 Q&A Q11, the bridging study may be completed after submission. Conditional approval may be possible.",
+      "kb_answer": "In some cases the bridging study may be completed after submission. Conditional approval may be possible pending bridging data.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02213"
+      ],
+      "notes": "Correct per E5 Q&A Q11."
+    },
+    {
+      "id": "F-006",
+      "category": "F",
+      "question": "When can periodic testing replace routine testing for mutagenic impurities per M7?",
+      "expected_answer": "When the impurity is consistently below 30% of the limit, based on at least 6 pilot batches or 3 commercial-scale batches.",
+      "kb_answer": "When an impurity is consistently below 30% of the limit, periodic testing can replace routine testing. Based on at least 6 pilot batches or 3 commercial-scale batches.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03254"
+      ],
+      "notes": "Correct with batch count specifications."
+    },
+    {
+      "id": "F-007",
+      "category": "F",
+      "question": "Per ICH M7, can the LTL approach be applied to compounds with PDEs (Permitted Daily Exposures)?",
+      "expected_answer": "No. LTL approach applies to TTC-based and compound/class-specific AI-based limits, but NOT to PDEs because linearity of dose-duration response is not sufficiently demonstrated for threshold mechanisms.",
+      "kb_answer": "The LTL approach can be applied to compounds with exposure limits based on the TTC or a compound/class specific AI. However, this approach is NOT applicable to PDEs as linearity of dose duration response is not considered sufficiently demonstrated for threshold related mechanisms.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03246"
+      ],
+      "notes": "Correct. Important edge case properly captured."
+    },
+    {
+      "id": "F-008",
+      "category": "F",
+      "question": "Per ICH S11, what are the two most important weight-of-evidence factors for determining need for juvenile animal studies?",
+      "expected_answer": "(1) Youngest intended patient age, and (2) whether there are suspected adverse effects on developing organ systems.",
+      "kb_answer": "The most important factors are: (1) youngest intended patient age, and (2) whether there are suspected adverse effects on developing organ systems.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03786"
+      ],
+      "notes": "Correct per S11 Section 2.2/Figure 1."
+    },
+    {
+      "id": "F-009",
+      "category": "F",
+      "question": "Does drug substance non-linear pharmacokinetics preclude a BCS-based biowaiver per ICH M9?",
+      "expected_answer": "No. Non-linear PK does not preclude BCS biowaiver if solubility and permeability criteria are met.",
+      "kb_answer": "Drug substances with non-linear pharmacokinetics are still eligible for a BCS-based biowaiver if they meet the solubility and permeability criteria for BCS Class I or III classification.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-02161"
+      ],
+      "notes": "Correct. Important edge case that is often misunderstood."
+    },
+    {
+      "id": "F-010",
+      "category": "F",
+      "question": "Per ICH M7 Q&A 7.3, can higher exposure limits be accepted for short-term exposure (30 days or less)?",
+      "expected_answer": "Yes, on a case-by-case basis for compounds with TTC or AI-based limits. Not applicable to PDEs.",
+      "kb_answer": "Higher levels of exposure for short-term exposure (30 days or less) may be acceptable on a case by case basis.",
+      "status": "CORRECT",
+      "rule_ids": [
+        "KB-03246"
+      ],
+      "notes": "Correct."
+    }
+  ],
+  "errors_found": [
+    {
+      "severity": "critical",
+      "description": "Q3D(R2) elemental impurity rules (Q3DR2-001 through Q3DR2-005+) are mislabeled with guideline='ICH M7(R2)' instead of 'ICH Q3D(R2)'. This affects approximately 15+ rules and creates false associations between elemental impurity controls and mutagenic impurity guidelines.",
+      "affected_rules": [
+        "KB-03258",
+        "KB-03259",
+        "KB-03260",
+        "KB-03261",
+        "KB-03262"
+      ],
+      "correct_value": "guideline should be 'ICH Q3D(R2)'",
+      "kb_value": "guideline='ICH M7(R2)'"
+    },
+    {
+      "severity": "critical",
+      "description": "ICH E9 Type I error rate labels are reversed. The source_quote states '5% (one-sided) or 2.5% (two-sided)' which is backwards. The actual ICH E9 text specifies 5% as the TWO-SIDED significance level, with the one-sided equivalent being 2.5%.",
+      "affected_rules": [
+        "KB-00366"
+      ],
+      "correct_value": "5% (two-sided) or 2.5% (one-sided)",
+      "kb_value": "5% (one-sided) or 2.5% (two-sided)"
+    },
+    {
+      "severity": "high",
+      "description": "ICH E1 duration-stratified exposure requirements missing. The KB states the 1500-patient overall database but omits the critical requirement for 300-600 patients exposed for 6 months and 100 patients for 12 months for non-life-threatening conditions intended for long-term use.",
+      "affected_rules": [
+        "KB-00202"
+      ],
+      "correct_value": "1500 total; 300-600 for 6 months; 100 for 12 months",
+      "kb_value": "Only '1500 patients' mentioned without duration stratification"
+    },
+    {
+      "severity": "high",
+      "description": "All CRL deficiency taxonomy rules (10 rules) have verification_status='unknown' and no source quotes. These are assertions without traceable provenance.",
+      "affected_rules": [
+        "KB-01222",
+        "KB-01223",
+        "KB-01224",
+        "KB-01225",
+        "KB-01226",
+        "KB-01227",
+        "KB-01228"
+      ],
+      "correct_value": "Should be verified against published CRL analyses (e.g., Sacks et al., JAMA Internal Medicine)",
+      "kb_value": "verification_status='unknown', source_quote=''"
+    },
+    {
+      "severity": "high",
+      "description": "E14 negative TQT criterion inconsistency. Two rules state conflicting thresholds: one says 'must not exceed 10 ms' (<=10) and the other says 'less than 10 ms' (<10). The correct criterion per E14 is strictly <10 ms.",
+      "affected_rules": [
+        "KB-02851",
+        "KB-02852"
+      ],
+      "correct_value": "Upper bound of one-sided 95% CI must be less than 10 ms (strictly <10)",
+      "kb_value": "KB-02851 says 'must not exceed' (<=10)"
+    },
+    {
+      "severity": "high",
+      "description": "M7 Cohort of Concern incorrectly described in v2 rule. KB-01138 describes it as 'Class 1 with AI <1.5 ug/day' which conflates Class 1 (all known mutagenic carcinogens) with the Cohort of Concern (specifically aflatoxin-like, N-nitroso, alkyl-azoxy compounds).",
+      "affected_rules": [
+        "KB-01138"
+      ],
+      "correct_value": "Cohort of Concern = aflatoxin-like, N-nitroso, alkyl-azoxy compounds (subset of Class 1 with extremely high carcinogenic potency)",
+      "kb_value": "ICH M7 cohort of concern, Class 1 with AI <1.5 ug/day"
+    },
+    {
+      "severity": "medium",
+      "description": "Q3D Class 3 vs Class 2B criterion confusion in v2 rule. KB-01131 states Class 3 elements should be evaluated 'only if intentionally added' which is actually the Class 2B criterion. Class 3 should be evaluated in risk assessment for oral route.",
+      "affected_rules": [
+        "KB-01131"
+      ],
+      "correct_value": "Class 3: Low toxicity, evaluate in risk assessment for oral route (not limited to intentionally added)",
+      "kb_value": "Relatively low oral toxicity (oral PDE >500 ug/day); evaluate only if intentionally added"
+    },
+    {
+      "severity": "medium",
+      "description": "Q3C residual solvent three-class system incomplete. Only Class 2 control options (Option 1/2) are detailed. Class 1 (solvents to be avoided) and Class 3 (low toxicity, >=50 mg/day acceptable) definitions are missing.",
+      "affected_rules": [],
+      "correct_value": "All three Q3C classes with control approaches",
+      "kb_value": "Only Class 2 Option 1 and Option 2 detailed"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "P0-immediate",
+      "action": "Fix Q3D guideline attribution",
+      "details": "Run a post-processing script to re-attribute rules with _json_path containing 'q3d' from 'ICH M7(R2)' to 'ICH Q3D(R2)'. This affects rules in source file m7r2-q9r1-q3d-rules.json. Similarly check all combined-guideline source files for incorrect guideline inheritance."
+    },
+    {
+      "priority": "P0-immediate",
+      "action": "Fix E9 Type I error rate labels",
+      "details": "Correct KB-00366 source_quote to read '5% (two-sided) or 2.5% (one-sided)'. This is a fundamental statistical concept that will propagate errors if used for training."
+    },
+    {
+      "priority": "P0-immediate",
+      "action": "Fix E14 negative TQT criterion inconsistency",
+      "details": "Standardize KB-02851 to match the correct E14 text: upper bound must be LESS THAN 10 ms (strictly <10, not <=10). Remove or correct the 'must not exceed' phrasing."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Add E1 duration-stratified exposure requirements",
+      "details": "Add explicit rules for the 300-600 patient/6 month and 100 patient/12 month requirements from ICH E1. These are critical for safety database planning."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Add Q3A(R2)/Q3B(R2) impurity thresholds",
+      "details": "Add the specific numeric thresholds from Q3A (drug substance) and Q3B (drug product) tables: reporting, identification, and qualification thresholds by daily dose. These are among the most frequently referenced numbers in CMC."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Add E14/S7B Q&As Integrated Risk Assessment framework",
+      "details": "Add rules covering the 2020 E14/S7B Q&As that introduced the IRA as an alternative to TQT. Include C-QTc modeling, nonclinical proarrhythmia model data, and the decision framework for when TQT can be waived."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Add E9(R1) five intercurrent event strategies",
+      "details": "Explicitly enumerate: treatment policy, composite, hypothetical, while on treatment, principal stratum. These are core to modern clinical trial design."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Fix M7 Cohort of Concern v2 rule",
+      "details": "Correct or remove KB-01138 which incorrectly characterizes the Cohort of Concern. Ensure only the v4 authoritative description (KB-03245) is used."
+    },
+    {
+      "priority": "P1-high",
+      "action": "Fix Q3D Class 3 v2 rule",
+      "details": "Correct KB-01131 to remove 'evaluate only if intentionally added' which is a Class 2B criterion, not Class 3."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Expand WHO prequalification coverage",
+      "details": "Only 4 WHO rules exist. Add WHO PQ-specific requirements for generic medicines, biowaiver criteria, stability testing for Zones III/IV, and pediatric formulation requirements."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Add Q3C complete three-class system",
+      "details": "Add explicit definitions and control approaches for all three Q3C residual solvent classes, not just Class 2 Option 1/2."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Add BCS high solubility definition",
+      "details": "Add the fundamental BCS solubility classification criterion: highest single oral dose dissolves in <=250 mL of aqueous media over pH 1.2-6.8 at 37C."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Add EU MA procedure timelines",
+      "details": "Add specific timelines for centralised (210 days), decentralised (120+90 days), and mutual recognition (90 days) procedures."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Add CRL frequency/prevalence data",
+      "details": "Include quantitative data on CRL deficiency frequency (CMC ~30-40%, clinical ~25%, etc.) from published analyses."
+    },
+    {
+      "priority": "P2-medium",
+      "action": "Verify all CRL taxonomy rules",
+      "details": "Add source quotes and change verification_status from 'unknown' to verified against published FDA CRL analyses."
+    },
+    {
+      "priority": "P3-low",
+      "action": "Audit all combined-source extraction files for guideline attribution errors",
+      "details": "The Q3D mislabeling likely affects other combined files (e.g., q5b-q6-q7-q8-q12-m10-rules.json). Run a systematic check that each rule's guideline attribution matches its _json_path prefix."
+    },
+    {
+      "priority": "P3-low",
+      "action": "Add FDA PREA requirements for pediatric comparison",
+      "details": "Add FDA Pediatric Research Equity Act rules to enable proper US/EU pediatric regulatory comparison."
+    },
+    {
+      "priority": "P3-low",
+      "action": "Add 505(b)(2) application deficiency patterns",
+      "details": "Add rules covering common 505(b)(2)-specific CRL issues."
+    },
+    {
+      "priority": "P3-low",
+      "action": "Add SUPAC-to-M9 cross-reference mapping",
+      "details": "Explicitly map SUPAC dissolution requirements to ICH M9 harmonized criteria."
+    }
+  ]
+}

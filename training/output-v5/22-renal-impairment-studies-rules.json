@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Pharmacokinetics in Patients with Impaired Renal Function – Study Design, Data Analysis, and Impact on Dosing",
+    "source_file": "training/stage-1/fda-guidance-v2/22-renal-impairment-studies.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "March 2024",
+    "document_version": "Final Guidance",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-RENIMP-001",
+      "rule_text": "The effect of impaired renal function on a drug's PK must be characterized early in drug development so that patients with impaired renal function can be included and appropriately dosed in late-phase clinical studies.",
+      "source_section": "Section III. Considerations for Renal Impairment Studies",
+      "source_page": 2,
+      "verbatim_quote": "the FDA recommends that the effect of impaired renal function on a drug's PK be characterized early in drug development so that patients with impaired renal function can be included (and appropriately dosed) in the late-phase clinical studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Exceptions where impaired renal function is not likely to alter PK to a clinically significant degree are described in section III.B.",
+      "cross_references": ["21 CFR 312"]
+    },
+    {
+      "rule_id": "FDA-RENIMP-002",
+      "rule_text": "A dedicated renal impairment study is recommended when impaired renal function is likely to alter the PK of the drug or its active metabolites because they are substantially eliminated by the kidneys, defined as a fraction of systemically available drug or active metabolite eliminated unchanged in the urine of 0.3 or greater.",
+      "source_section": "Section III.A.1 Drugs Excreted Primarily by the Kidneys",
+      "source_page": 3,
+      "verbatim_quote": "A dedicated renal impairment study (described in section IV.B. Full Pharmacokinetic Study Design) is recommended when impaired renal function is likely to alter the PK of the drug or its active metabolites because they are substantially eliminated by the kidneys. A drug is considered to be substantially eliminated by the kidneys when the fraction of systemically available drug or active metabolite that is eliminated unchanged in the urine is 0.3 or greater.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-003",
+      "rule_text": "For drugs predominantly eliminated via the hepatic route, a reduced pharmacokinetic study design should be considered to rule out an impact of severe renal impairment on drug PK.",
+      "source_section": "Section III.A.2 Drugs Excreted Primarily by Other Routes",
+      "source_page": 3,
+      "verbatim_quote": "An impact of severe renal impairment on the PK of drugs predominantly eliminated via the hepatic route cannot always be excluded. In such situations, a reduced pharmacokinetic study design (described in section IV.C. Reduced Pharmacokinetic Study Design) should be considered.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-004",
+      "rule_text": "Pharmacokinetic studies in participants with impaired renal function are recommended for therapeutic proteins and peptides with a molecular weight less than 69 kDa, unless the fraction of systemically available drug or active metabolite eliminated unchanged in the urine is less than 0.3.",
+      "source_section": "Section III.A.3 Certain Therapeutic Proteins and Peptides",
+      "source_page": 4,
+      "verbatim_quote": "pharmacokinetic studies in participants with impaired renal function are recommended for therapeutic proteins and peptides with a molecular weight less than 69 kDa, unless the fraction of systemically available drug or active metabolite that is eliminated unchanged in the urine is less than 0.3.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If the fraction of systemically available drug or active metabolite eliminated unchanged in the urine is less than 0.3, the study may not be required.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-005",
+      "rule_text": "To evaluate the impact of dialysis on the PK of a drug, sponsors should conduct studies in patients undergoing intermittent hemodialysis (IHD), as it is the most common dialysis modality used in the United States.",
+      "source_section": "Section III.A.4 Evaluating the Influence of Renal Replacement Therapies",
+      "source_page": 4,
+      "verbatim_quote": "Intermittent hemodialysis (IHD) is currently the most common dialysis modality used in patients being treated with renal replacement therapy in the United States. Therefore, to evaluate the impact of dialysis on the PK of a drug, we recommend that sponsors conduct these studies in patients undergoing IHD.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Study may not be needed if the drug has a molecular weight that makes it unlikely to be cleared by the renal replacement modality, or if it exhibits high plasma protein binding unaffected by renal impairment.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-006",
+      "rule_text": "A dedicated renal impairment study is not warranted for gaseous or volatile drugs primarily eliminated through the lungs, drugs intended only for single administration, therapeutic proteins with a molecular weight greater than 69 kDa, or locally acting drugs with limited or no systemic exposure.",
+      "source_section": "Section III.B. Circumstances Where a Dedicated Study May Not Be Warranted",
+      "source_page": 5,
+      "verbatim_quote": "The following are examples where the PK are not expected to be markedly different between patients with normal or impaired renal function. In such cases, a dedicated study may not be warranted. Gaseous or volatile drugs and active metabolites that are primarily eliminated through the lungs. Drugs intended only for single administration. Therapeutic proteins with a molecular weight greater than 69 kDa. Locally acting drugs with limited or no systemic exposure.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-007",
+      "rule_text": "Renal function in pharmacokinetic studies should be assessed using eGFR expressed in mL/minute (not referenced to BSA of 1.73 m2) because renal clearance of a drug is proportional to the individual's GFR expressed as mL/minute.",
+      "source_section": "Section IV.A. Determination of Renal Function",
+      "source_page": 6,
+      "verbatim_quote": "renal clearance of a drug is proportional to the individual's GFR (expressed as mL/minute). Hence, when providing a recommended dosage in adult patients with renal impairment, use the eGFR expressed as mL/minute rather than the eGFR referenced to a BSA value of 1.73 m2.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-008",
+      "rule_text": "Use of eGFR to determine renal function in PK studies is recommended over eCLcr due to the widespread availability and incorporation of eGFR into current clinical practice; however, measured GFR, measured CLcr, or any contemporary widely accepted and clinically applicable estimating equation is considered reasonable.",
+      "source_section": "Section IV.A. Determination of Renal Function",
+      "source_page": 7,
+      "verbatim_quote": "Because of the widespread availability and incorporation of eGFR into current clinical practice, use of eGFR to determine renal function in PK studies is recommended over eCLcr.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-009",
+      "rule_text": "The full pharmacokinetic study must enroll participants whose renal function ranges from normal (eGFR ≥90 mL/minute) through mild (60<90), moderate (30<60), and severe impairment or kidney failure not receiving dialysis (<30 mL/minute).",
+      "source_section": "Section IV.B.1 Study Participants / Table 1",
+      "source_page": 7,
+      "verbatim_quote": "To adequately characterize the impact of impaired renal function on the PK of a drug, the renal function of study participants should range from normal function to severe impairment or kidney failure not on dialysis. The classification of renal function described in Table 1 can be used to enroll participants into the dedicated renal impairment study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Participants with acute changes in renal function should not be included.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-010",
+      "rule_text": "Participants with impaired renal function should have stable renal function; patients with acute changes in renal function should not be included in dedicated renal impairment studies.",
+      "source_section": "Section IV.B.1 Study Participants",
+      "source_page": 8,
+      "verbatim_quote": "Participants with impaired renal function should have stable renal function (i.e., patients with acute changes in renal function should not be included in the studies discussed in this section).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-011",
+      "rule_text": "Participants taking drugs that are likely to impact drug metabolism or excretion should be excluded from renal impairment studies.",
+      "source_section": "Section IV.B.1 Study Participants",
+      "source_page": 8,
+      "verbatim_quote": "Participants taking drugs that are likely to impact drug metabolism or excretion should be excluded from renal impairment studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-012",
+      "rule_text": "The number of participants enrolled in each renal function group should be sufficient to ensure a precise estimation of the relevant pharmacokinetic parameters, with justification provided for the sample size selected.",
+      "source_section": "Section IV.B.2 Sample Size",
+      "source_page": 8,
+      "verbatim_quote": "The number of participants enrolled in each renal function group should be sufficient to ensure a precise estimation of the relevant pharmacokinetic parameters. Justification should be provided for the sample size selected.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-013",
+      "rule_text": "A single-dose study is usually sufficient to accurately describe the PK of a drug and its active metabolites; in rare cases such as time-dependent PK, a multiple-dose study preferably dosed to steady-state should be considered.",
+      "source_section": "Section IV.B.3 Drug Administration",
+      "source_page": 9,
+      "verbatim_quote": "A single-dose study is usually sufficient to accurately describe the PK of the drug and its active metabolites, especially when the drug and active metabolites exhibit dose-proportional and time-independent PK at the concentrations anticipated in the patients to be studied. In rare cases, for example, when the drug shows time-dependent PK, a multiple-dose study, preferably dosed to steady-state, should be considered.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-014",
+      "rule_text": "Plasma or whole blood should be collected and analyzed for the parent drug and any active metabolites; collection of urine samples should be considered when the drug is primarily renally cleared.",
+      "source_section": "Section IV.B.4 Sample Collection and Analysis",
+      "source_page": 9,
+      "verbatim_quote": "Plasma or whole blood should be collected and analyzed for the parent drug and any active metabolites. Collection of urine samples should be considered when the drug is primarily renally cleared.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-015",
+      "rule_text": "Plasma protein binding should be measured in renal impairment studies, with unbound drug concentrations measured for each plasma sample only if the binding is concentration-dependent or affected by metabolites or other time-varying factors; otherwise, the unbound fraction should be determined using a limited number of samples.",
+      "source_section": "Section IV.B.4 Sample Collection and Analysis",
+      "source_page": 9,
+      "verbatim_quote": "Plasma protein binding is often altered in patients with impaired renal function. For systemically circulating active drugs and metabolites, the unbound concentrations generally determine the rate and extent of delivery to the sites of action. Measurement of unbound drug concentrations is recommended for each plasma sample only if the binding is concentration-dependent or is affected by metabolites or other time-varying factors.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "For drugs and metabolites with a low extent of plasma protein binding (less than 90 percent), changes in PK resulting from alterations in protein binding due to impaired renal function are generally expected to be small.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-016",
+      "rule_text": "For the reduced pharmacokinetic study design, participants with severe renal impairment or kidney failure not on dialysis can be considered to represent the worst-case scenario; if this reduced study shows a clinically relevant effect, the sponsor should then characterize all levels of impairment.",
+      "source_section": "Section IV.C. Reduced Pharmacokinetic Study Design",
+      "source_page": 9,
+      "verbatim_quote": "The intent of a reduced pharmacokinetic study design is to represent a worst-case scenario, i.e., one that shows the greatest impact that impaired renal function could have on the PK of the drug. Prior submissions to the Agency and literature reports suggest that for such a study, participants with severe renal impairment or kidney failure not on dialysis (see Table 1) can be considered to represent the worst-case scenario.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If no difference in PK is observed between participants with severe renal impairment or kidney failure not on dialysis compared to normal renal function, then no further study is recommended.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-017",
+      "rule_text": "When using population PK from phase 2 and 3 studies to characterize the impact of renal function, the study design should include sufficient numbers of participants over a wide range of renal function, accurate records of dosing and sample collection times, adequate numbers of samples per participant, unbound drug concentrations when appropriate, and active metabolite levels where applicable.",
+      "source_section": "Section IV.D. Characterizing the Impact of Renal Function in Phase 2 and Phase 3 Studies",
+      "source_page": 10,
+      "verbatim_quote": "To allow for the successful use of a popPK approach or exposure-response analysis, the study design should retain some of the critical components of the dedicated renal impairment studies described in the previous section on full study designs (section IV.B. Full Pharmacokinetic Study Design). The following are important considerations: Sufficient numbers of participants over a wide range of renal function. Accurate records of dosing and sample collection times. Adequate numbers of samples per participant. Unbound drug concentrations when appropriate. Active metabolite levels, where applicable, in addition to levels of the parent drug.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If patients with severe renal impairment were not enrolled in sufficient numbers, a reduced pharmacokinetic design study may be needed.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-018",
+      "rule_text": "For IHD studies, it is critical to include both on- and off-dialysis periods; each participant should receive a single dose on two occasions — once prior to a dialysis session and once on an off-dialysis day.",
+      "source_section": "Section IV.E.1 Intermittent Renal Replacement Therapies",
+      "source_page": 11,
+      "verbatim_quote": "It is critical for the IHD study to include both on- and off-dialysis periods. Each participant should receive a single dose on two occasions, once with the dose administered prior to a dialysis session, with dialysis typically commencing just before the anticipated time to maximum concentration (Tmax) following administration of the drug. On the second occasion, the drug should be administered in such a way that it reflects the exposures expected during an off-dialysis day.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-019",
+      "rule_text": "Because most dialysis centers in the United States currently use high-flux dialyzers during IHD, pharmacokinetic studies should be conducted in patients being treated with high-flux IHD, and the blood flow, dialysate flow, ultrafiltration clearance, and make/model of the dialyzer must be recorded.",
+      "source_section": "Section IV.E.1 Intermittent Renal Replacement Therapies",
+      "source_page": 11,
+      "verbatim_quote": "Because most dialysis centers in the United States currently use high-flux dialyzers during IHD, pharmacokinetic studies should be conducted in patients being treated with high-flux IHD. It is important to record the blood flow (QB), dialysate flow (QD), ultrafiltration clearance (QUF), and the make and model of the dialyzer used in the study to interpret study results and extrapolate to other dialysis conditions.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-020",
+      "rule_text": "For CRRT studies, simultaneous pre-filter, post-filter, and effluent samples must be collected for drug and active metabolites, along with additional time-matching data measuring CRRT therapy intensity; sponsors are strongly encouraged to seek FDA's input early in the process of designing such studies.",
+      "source_section": "Section IV.E.2 Continuous Renal Replacement Therapies",
+      "source_page": 12,
+      "verbatim_quote": "In addition to collecting simultaneous pre-filter, post-filter, and effluent samples for drug and active metabolites, additional time-matching data measuring CRRT therapy intensity (e.g., blood flow rate, replacement fluid flow rate, ultrafiltration rate, dialysis flow rate) should be captured to determine extracorporeal clearance (CLEC). Sponsors are strongly encouraged to seek FDA's input early in the process of designing such studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-021",
+      "rule_text": "For IHD, to determine dialysis clearance, blood samples should be collected pre-dialysis and at appropriate intervals during the dialysis period; the entire dialysate should be collected, its volume recorded, and a sample retained to determine drug concentrations.",
+      "source_section": "Section IV.E.3.a IHD",
+      "source_page": 12,
+      "verbatim_quote": "To determine the clearance during dialysis, blood samples should be collected pre-dialysis and at appropriate intervals during the dialysis period. The entire dialysate should be collected, its volume recorded, and a sample retained to determine drug concentrations.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-022",
+      "rule_text": "Pharmacodynamic assessments should be included in renal impairment studies whenever appropriate and feasible, particularly in situations where impaired renal function can result in pharmacodynamic changes independent of pharmacokinetic changes; the pharmacodynamic endpoints should be discussed with the relevant review division.",
+      "source_section": "Section IV.F. Considerations for Pharmacodynamic Assessments",
+      "source_page": 13,
+      "verbatim_quote": "Whenever appropriate and feasible, pharmacodynamic assessments should be included in renal impairment studies. Such assessments are important in situations where impaired renal function can result in pharmacodynamic changes that are independent of pharmacokinetic changes (e.g., oral anticoagulants). In such situations, the pharmacokinetic and pharmacodynamic data could be critical to determine the appropriate recommended dosage in patients with impaired renal function. The selection of the pharmacodynamic endpoints should be discussed with the relevant review division.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-023",
+      "rule_text": "Plasma concentration data and, where available, urinary excretion data should be analyzed to estimate PK parameters including AUC, Cmax, fraction unbound, apparent clearance, renal clearance, apparent nonrenal clearance, apparent volume of distribution, and effective and terminal half-life.",
+      "source_section": "Section V.A. Estimating Pharmacokinetic Parameters",
+      "source_page": 13,
+      "verbatim_quote": "Plasma concentration data and, where available, urinary excretion data should be analyzed to estimate pharmacokinetic parameters of the drug and its active metabolites. The pharmacokinetic parameters of interest include the area under the plasma concentration-time curve (AUC), peak concentration (Cmax), fraction unbound (fu), apparent clearance (CL/F), renal clearance (CLR), apparent nonrenal clearance (CLNR/F), apparent volume of distribution (V/F), and effective and terminal half-life (t1/2), where applicable.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-024",
+      "rule_text": "FDA recommends a regression approach to model the relationship between renal function and PK parameters, treating both as continuous variables, because it allows identification of thresholds more meaningful for derivation of dosage adjustments; the potential for confounding due to baseline covariate differences must be evaluated.",
+      "source_section": "Section V.B. Modeling the Relationship Between Renal Function and Pharmacokinetic Parameters",
+      "source_page": 14,
+      "verbatim_quote": "The FDA recommends a regression approach in which estimated individualized renal function and the pharmacokinetic parameters are treated as continuous variables. This method is usually preferred to an analysis in which estimated renal function is treated as a categorical variable corresponding to the normal, mild, moderate, and severe renal impairment as well as kidney failure not on dialysis groups (see Table 1), because it allows the identification of thresholds that could be more meaningful for derivation of dosage adjustments.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-025",
+      "rule_text": "Dosage recommendations in patients with impaired renal function should be determined based on the overall understanding of the relationship between renal function, drug exposure, and the exposure-response relationships (efficacy and safety); dosage recommendations should be based on exposure-matching to a reference group with an acceptable benefit-risk profile.",
+      "source_section": "Section V.C. Developing Dosage Recommendations in Patients with Impaired Renal Function",
+      "source_page": 14,
+      "verbatim_quote": "Dosage recommendations in patients with impaired renal function should be determined based on the overall understanding of the relationship between renal function, drug exposure, and the exposure-response relationships (efficacy and safety). For drugs with a wide therapeutic range, changes in the drug's PK based on renal function might not always result in a different recommended dosage in patients with impaired renal function. When there is a need for a different dosage recommendation for patients with impaired renal function, these dosage recommendations should be based on exposure-matching to a reference group with an acceptable benefit-risk profile for the drug.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "For drugs with a wide therapeutic range, PK changes may not require a different dosage recommendation.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-026",
+      "rule_text": "Dosage recommendations in patients receiving renal replacement therapy should be determined based on the overall understanding of the relationship between extracorporeal clearance (CLEC), drug exposure, and exposure-response relationships; in CRRT, dosing recommendations should be based on the intensity of the CRRT regimen.",
+      "source_section": "Section V.C. Developing Dosage Recommendations in Patients with Impaired Renal Function",
+      "source_page": 15,
+      "verbatim_quote": "Dosage recommendations in patients receiving renal replacement therapy should be determined based on the overall understanding of the relationship between extracorporeal clearance (CLEC), drug exposure, and exposure-response relationships. CLEC should be calculated based on the specific modality being evaluated. In CRRT, dosing recommendations should be based on the intensity of the CRRT regimen, as CLEC is known to be influenced by the prescribed blood, dialysis, and ultrafiltration flow rates.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-027",
+      "rule_text": "The sponsor should use data from modeling and simulation to determine the level of renal function for which a different dosage is recommended; it is not always necessary to rely on pre-specified categories of impaired renal function as shown in Table 1.",
+      "source_section": "Section V.C. Developing Dosage Recommendations in Patients with Impaired Renal Function",
+      "source_page": 14,
+      "verbatim_quote": "The sponsor should use the data from modeling and simulation to determine the level of renal function for which a different dosage is recommended. It is not always necessary to rely on pre-specified categories of impaired renal function as shown in Table 1.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-028",
+      "rule_text": "The Prescribing Information must include a summary of essential information for the safe and effective use of the drug in patients with impaired renal function, including PK/PD in patients with impaired renal function, information on renal elimination of the drug and relevant active metabolites, clinical effects of PK or PD changes, and recommendations to prevent, mitigate, monitor for, or manage risks.",
+      "source_section": "Section VI. Labeling Recommendations",
+      "source_page": 15,
+      "verbatim_quote": "The Prescribing Information should include a summary of essential information needed for the safe and effective use of the drug in patients with impaired renal function, as appropriate, and should include the following, as appropriate: PK and PD in patients with impaired renal function, including those receiving dialysis. Information on renal elimination of the drug and relevant active metabolites. Clinical effects of pharmacokinetic or pharmacodynamic changes in patients with impaired renal function. Recommendations to prevent, mitigate, monitor for, or manage risks in patients with impaired renal function (e.g., different dosage or monitoring recommendations).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": ["21 CFR 201.57"]
+    },
+    {
+      "rule_id": "FDA-RENIMP-029",
+      "rule_text": "If a sponsor believes that patients with impaired renal function should be excluded from late-phase clinical studies, they should include a rationale for this exclusion in the protocol and discuss this exclusion with the FDA.",
+      "source_section": "Section III. Considerations for Renal Impairment Studies",
+      "source_page": 3,
+      "verbatim_quote": "If a sponsor believes that such patients should be excluded from these studies, they should include a rationale for this exclusion in the protocol and discuss this exclusion with the FDA.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-RENIMP-030",
+      "rule_text": "It is important to evaluate the impact of different contemporary estimating equations of renal function on drug dosing recommendations when dosage recommendations can significantly differ depending on the estimating equation used, and the reasons underlying any discrepant results must be understood.",
+      "source_section": "Section V.C. Developing Dosage Recommendations in Patients with Impaired Renal Function",
+      "source_page": 14,
+      "verbatim_quote": "In some situations, dosage recommendations in patients with impaired renal function can significantly differ if different estimating equations of renal function are used. Hence, as a good practice, it is important to evaluate the impact of different contemporary estimating equations of renal function on drug dosing recommendations. In such situations, it is important to understand the reasons underlying the discrepant results.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "null",
+      "cross_references": []
+    }
+  ]
+}

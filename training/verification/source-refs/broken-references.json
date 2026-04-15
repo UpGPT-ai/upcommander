@@ -1,0 +1,104 @@
+{
+  "total_broken_references": 8,
+  "broken_references": [
+    {
+      "rule_id": "CAT-04-G",
+      "source_ref": "FDAAA Section 505-1",
+      "section_ref": null,
+      "field": "cfr_violated",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json",
+      "category": "US_STATUTE_FDAAA",
+      "explanation": "FDA Amendments Act / FDA Reauthorization Act \u2014 US legislative act not in stage-1"
+    },
+    {
+      "rule_id": "DIV-007",
+      "source_ref": "21 USC \u00a7360cc (Orphan Drug Act)",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "US_STATUTE_21USC",
+      "explanation": "US Code statute \u2014 outside stage-1 scope (stage-1 contains 21 CFR regulations, not 21 USC statutes)"
+    },
+    {
+      "rule_id": "DIV-031",
+      "source_ref": "21 USC \u00a7355-1",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "US_STATUTE_21USC",
+      "explanation": "US Code statute \u2014 outside stage-1 scope (stage-1 contains 21 CFR regulations, not 21 USC statutes)"
+    },
+    {
+      "rule_id": "DIV-041",
+      "source_ref": "State pharmacy laws",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "STATE_LAW",
+      "explanation": "State-level pharmacy laws \u2014 outside federal regulatory scope of stage-1"
+    },
+    {
+      "rule_id": "DIV-048",
+      "source_ref": "21 USC \u00a7360bb",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "US_STATUTE_21USC",
+      "explanation": "US Code statute \u2014 outside stage-1 scope (stage-1 contains 21 CFR regulations, not 21 USC statutes)"
+    },
+    {
+      "rule_id": "DIV-058",
+      "source_ref": "21 USC \u00a7356(c); FDORA \u00a73210",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "US_STATUTE_21USC",
+      "explanation": "US Code statute \u2014 outside stage-1 scope (stage-1 contains 21 CFR regulations, not 21 USC statutes)"
+    },
+    {
+      "rule_id": "DIV-065",
+      "source_ref": "21 USC \u00a7356c",
+      "section_ref": null,
+      "field": "fda_legal_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "category": "US_STATUTE_21USC",
+      "explanation": "US Code statute \u2014 outside stage-1 scope (stage-1 contains 21 CFR regulations, not 21 USC statutes)"
+    },
+    {
+      "rule_id": "environmental_assessment",
+      "source_ref": "Canadian Environmental Protection Act and CEPA notification requirements",
+      "section_ref": null,
+      "field": "regulatory_basis",
+      "status": "FILE_NOT_FOUND",
+      "matched_file": null,
+      "file": "output-v3/health-canada/health-canada-requirements.json",
+      "category": "CANADIAN_STATUTE",
+      "explanation": "Canadian Environmental Protection Act \u2014 external Canadian statute not in stage-1"
+    }
+  ],
+  "summary": {
+    "total_broken": 8,
+    "all_external_statutes": true,
+    "categories": {
+      "US_STATUTE_21USC": 5,
+      "US_STATUTE_FDAAA": 1,
+      "STATE_LAW": 1,
+      "CANADIAN_STATUTE": 1
+    },
+    "recommendation": "These references are valid citations to real laws but the source texts are not in the stage-1 corpus. Consider adding 21 USC Title 21 and CEPA texts to stage-1 if statute-level tracing is needed."
+  }
+}

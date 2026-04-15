@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "False and Incorrect Divergence Claims",
+    "verification_date": "2026-03-23",
+    "description": "Divergence claims that were verified as FALSE — the claimed difference between jurisdictions does not actually exist, is reversed, or is outdated. These MUST be corrected before the training data is used, as they would give clients incorrect advice about multi-jurisdiction submissions.",
+    "total_false_divergences": 3,
+    "severity_distribution": {
+      "CRITICAL": 2,
+      "HIGH": 1
+    }
+  },
+
+  "false_divergences": [
+    {
+      "id": "FALSE-001",
+      "severity": "CRITICAL",
+      "source_file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+      "divergence_id": "DIV-004",
+      "domain": "Bioequivalence",
+      "topic": "BCS-based biowaivers",
+      "claimed_divergence": {
+        "fda": "Class I only (high solubility + high permeability + rapid dissolution); Class III more restrictive",
+        "ema": "Class I AND Class III accepted (high solubility + very rapid dissolution + similar excipients for Class III)",
+        "pmda": "Class I accepted; Class III under case-by-case evaluation"
+      },
+      "why_false": "This claim reflects PRE-2019 regulatory positions. ICH M9 'Biopharmaceutics Classification System-Based Biowaivers' was adopted as a Step 4 guideline in November 2019 and harmonized BCS biowaiver eligibility across ALL three ICH regions (FDA, EMA, PMDA). FDA formally adopted ICH M9 via its May 2021 guidance. ALL three jurisdictions now accept both Class I and Class III biowaivers.",
+      "verification_source": "ICH M9 Step 4 guideline (Nov 2019), Section 2: 'BCS-based biowaivers are applicable to drug products where the drug substance(s) exhibit high solubility and, either high permeability (BCS Class I) or low permeability (BCS Class III).'",
+      "actual_regulatory_position": {
+        "fda": "BCS Class I and Class III biowaivers accepted per ICH M9 (adopted May 2021). Class III requires very rapid dissolution (>=85% in <=15 min) and qualitatively same/quantitatively very similar excipients.",
+        "ema": "BCS Class I and Class III biowaivers accepted. EMA accepted Class III even before M9 via 2010 Bioequivalence guideline Appendix III Section II.",
+        "pmda": "BCS Class I and Class III biowaivers accepted per ICH M9.",
+        "remaining_divergence": "Minor differences exist in the stringency of excipient similarity requirements for Class III and the specific dissolution criteria (very rapid vs rapid), but all three jurisdictions accept the same BCS classes."
+      },
+      "client_risk": "HIGH — A client reading this divergence would incorrectly believe they need to conduct in vivo BE studies for BCS Class III drugs targeting the US market when an EMA biowaiver already exists. This would waste approximately $500K-$2M per unnecessary study and delay market entry by 6-12 months.",
+      "corrective_action": "Rewrite DIV-004 to reflect post-ICH M9 harmonized position. The divergence should focus on the remaining differences (excipient similarity criteria, dissolution speed thresholds) rather than which BCS classes are eligible."
+    },
+
+    {
+      "id": "FALSE-002",
+      "severity": "CRITICAL",
+      "source_file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+      "divergence_id": "DIV-016",
+      "domain": "Bioequivalence",
+      "topic": "Reference Product and RSABE / BCS Biowaivers",
+      "claimed_divergence": {
+        "eu_requirement": "EMA BE Guideline: RSABE widening (up to 69.84-143.19%) for Cmax ONLY in highly variable drugs (CV>30%). BCS biowaiver only for Class I.",
+        "fda_requirement": "FDA: RSABE allowed for BOTH AUC and Cmax in highly variable drugs. BCS biowaiver for Class I AND Class III."
+      },
+      "why_false": "TWO errors in this single divergence: (1) BCS BIOWAIVERS: Claims 'EU = Class I only; FDA = Class I AND III.' This is the OPPOSITE of what the v2 file claims, and BOTH are wrong. Post-ICH M9, all three jurisdictions accept Class I AND Class III. (2) RSABE SCOPE: Claims 'FDA RSABE allowed for BOTH AUC and Cmax.' This is INCORRECT. FDA applies RSABE primarily to Cmax only. AUC remains at standard 80.00-125.00% acceptance criteria regardless of variability, matching the EMA position. The EMA Bioequivalence Guideline Section 4.1.10 explicitly states: 'The possibility to widen the acceptance criteria based on high intra-subject variability does not apply to AUC where the acceptance range should remain at 80.00 - 125.00% regardless of variability.'",
+      "verification_source": "EMA Bioequivalence Guideline Section 4.1.10 (AUC not scaled); ICH M9 Sections 2-3 (both Class I and III accepted); FDA RSABE guidance (Cmax only)",
+      "actual_regulatory_position": {
+        "eu_requirement": "EMA: BCS biowaiver for Class I AND Class III. RSABE widening up to 69.84-143.19% for Cmax ONLY. AUC always 80-125%.",
+        "fda_requirement": "FDA: BCS biowaiver for Class I AND Class III (per ICH M9). RSABE for Cmax with GMR constraint 80-125%. AUC always 80-125%.",
+        "actual_divergence": "The real EU-FDA divergence in bioequivalence is: (a) different RSABE scaling formulas and GMR constraints, (b) different reference product requirements (EU-authorized vs US-licensed RLD), (c) minor differences in excipient similarity criteria for BCS Class III biowaivers."
+      },
+      "client_risk": "CRITICAL — Contains two errors that would mislead clients: (1) incorrectly telling them EU doesn't accept Class III biowaivers, and (2) incorrectly telling them FDA allows RSABE for AUC, which could lead to inadequate study designs for US submissions.",
+      "corrective_action": "Complete rewrite of DIV-016. Split into separate divergences for BE reference product, RSABE methodology, and BCS biowaivers. Correct both the BCS and RSABE positions."
+    },
+
+    {
+      "id": "FALSE-003",
+      "severity": "HIGH",
+      "source_file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+      "divergence_id": "DIV-016 (RSABE component only)",
+      "domain": "Bioequivalence",
+      "topic": "RSABE applicability to AUC",
+      "claimed_divergence": {
+        "fda_requirement": "RSABE allowed for BOTH AUC and Cmax in highly variable drugs"
+      },
+      "why_false": "FDA does NOT allow RSABE for AUC in the general highly variable drug context. FDA Reference-Scaled Average Bioequivalence (RSABE) approach applies to Cmax only. The AUC acceptance criteria remain at the standard 80.00-125.00% range regardless of within-subject variability. This is the SAME position as EMA. The claimed divergence (FDA allows RSABE for AUC, EMA does not) does not exist.",
+      "verification_source": "EMA Bioequivalence Guideline Section 4.1.10: 'The possibility to widen the acceptance criteria based on high intra-subject variability does not apply to AUC where the acceptance range should remain at 80.00 - 125.00% regardless of variability.' FDA RSABE guidance consistently applies scaling to Cmax, not AUC.",
+      "actual_regulatory_position": {
+        "fda": "RSABE for Cmax only when within-subject CV >= 30%. AUC: standard 80-125%. GMR point estimate constrained to 80-125%.",
+        "ema": "Scaled average BE for Cmax only when within-subject CV >= 30%. Widened to 69.84-143.19% max. AUC: standard 80-125%.",
+        "actual_divergence": "Both FDA and EMA apply scaling to Cmax only. The real divergence is in the specific scaling formula used and the maximum widening limits (FDA uses reference-scaled with GMR constraint; EMA uses a different scaling approach with explicit 69.84-143.19% bounds)."
+      },
+      "client_risk": "HIGH — A client designing a bioequivalence study for a highly variable drug targeting both US and EU markets might incorrectly believe they can use wider AUC acceptance criteria for the US submission. This could lead to an undersized study that passes the incorrect wider AUC criteria but fails the actual 80-125% standard.",
+      "corrective_action": "Remove the claim that FDA allows RSABE for AUC. Describe the actual divergence: different Cmax scaling formulas and maximum widening bounds between FDA and EMA."
+    }
+  ],
+
+  "summary": {
+    "all_false_divergences_are_in_bioequivalence_domain": true,
+    "root_cause": "The BCS biowaiver errors stem from not incorporating ICH M9 (Nov 2019) harmonization. The RSABE error appears to be a factual mistake about FDA policy scope. Both indicate the bioequivalence section needs a thorough update against current guidances.",
+    "recommended_priority": "Fix these BEFORE any other corrections. BCS biowaiver and RSABE are among the most commonly consulted divergences for generic drug development programs. Incorrect information here directly affects multi-million dollar study design decisions.",
+    "files_requiring_correction": [
+      {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "divergence": "DIV-004",
+        "action": "Rewrite BCS biowaiver section to reflect ICH M9 harmonization"
+      },
+      {
+        "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "divergence": "DIV-016",
+        "action": "Complete rewrite — fix both BCS positions (reversed) and remove false RSABE-for-AUC claim"
+      }
+    ]
+  }
+}

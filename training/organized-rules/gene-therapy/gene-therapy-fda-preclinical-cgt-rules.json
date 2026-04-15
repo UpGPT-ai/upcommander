@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "title": "Preclinical Assessment of Investigational Cellular and Gene Therapy Products",
+    "source_file": "Preclinical_Assessment_Cell_Gene_Therapy.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "November 2013",
+    "document_version": "November 2013 (supersedes March 1998 guidance section VIII)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 22,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CGT-PRE-001",
+      "rule_text": "Prior to administration of an investigational CGT product in a clinical trial, the sponsor must provide adequate information about the pharmacological and toxicological studies on the basis of which the sponsor has concluded that it is reasonably safe to conduct the proposed clinical investigations, as required by 21 CFR 312.23(a)(8).",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "verbatim_quote": "Section 312.23(a)(8) states that, prior to administration of an investigational pharmaceutical agent in a clinical trial, the sponsor must provide '[a]dequate information about the pharmacological and toxicological studies…on the basis of which the sponsor has concluded that it is reasonably safe to conduct the proposed clinical investigations.'",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-002",
+      "rule_text": "The preclinical program for each investigational CGT product must address the following 7 objectives: (1) establish biological plausibility; (2) identify biologically active dose levels; (3) select potential starting dose, escalation schedule, and dosing regimen for clinical trials; (4) establish feasibility and reasonable safety of the proposed clinical ROA; (5) support patient eligibility criteria; (6) identify physiologic parameters that can guide clinical monitoring; (7) identify potential public health risks to caregivers, family members, and intimate contacts.",
+      "source_section": "III.A Preclinical Program Objectives",
+      "source_page": 4,
+      "verbatim_quote": "The overall objectives for a sufficient preclinical program for a CGT product include, as applicable: 1. Establishment of biological plausibility. 2. Identification of biologically active dose levels. 3. Selection of potential starting dose level, dose-escalation schedule, and dosing regimen for clinical trials. 4. Establishment of feasibility and reasonable safety of the investigational product's proposed clinical route of administration (ROA). 5. Support of patient eligibility criteria. 6. Identification of physiologic parameters that can guide clinical monitoring. 7. Identification of potential public health risks (e.g., to the general public, caregivers, family members, close contacts (for example co-workers), and intimate contacts).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applicable as appropriate to each specific product.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-003",
+      "rule_text": "When possible, the investigational CGT product intended for clinical administration should be used in the definitive preclinical studies. Similarities and differences between preclinical and clinical lots must be highlighted and discussed in the IND submission.",
+      "source_section": "III.B.1 Investigational CGT Products Used in Preclinical Studies",
+      "source_page": 4,
+      "verbatim_quote": "When possible, the investigational CGT product that will be administered to the patient population should be used in the definitive preclinical studies… Similarities and differences between product lots intended for preclinical use and lots intended for clinical use should be highlighted and discussed in the IND submission.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "For species-specific products where clinical product is not active in animals (e.g., human transgenes), testing of an analogous product may be a suitable alternative.",
+      "cross_references": ["FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-004",
+      "rule_text": "The animal species selected for preclinical studies must demonstrate a biological response to the investigational CGT product similar to that expected in humans. A summary of the relevancy assessment for each animal species used must be submitted as part of the preclinical section of the IND.",
+      "source_section": "III.B.2 Animal Species Selection",
+      "source_page": 5,
+      "verbatim_quote": "The animal species selected for assessment of bioactivity and safety should demonstrate a biological response to the investigational CGT product similar to that expected in humans in order to generate data to guide clinical trial design… We recommend that sponsors conduct a detailed assessment of the relevancy of each animal species used in support of each potential clinical trial. A summary of this assessment should be submitted as part of the preclinical section of the IND.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "'Non-standard' test species (e.g., transgenics, knockouts, large animals) may be acceptable with adequate justification.",
+      "cross_references": ["21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-005",
+      "rule_text": "The IND submission must include information supporting the usefulness of the selected animal model(s) that takes into account: (i) similarities and differences in pathophysiology between the animal model and humans; (ii) the effect of disease/injury status on pharmacology/toxicology of the CGT product; and (iii) detrimental effects of the product on existing disease/injury status.",
+      "source_section": "III.B.3.b Information supporting the choice of animal model(s)",
+      "source_page": 7,
+      "verbatim_quote": "The IND submission should include information supporting the usefulness/ability of the selected animal model(s) to mimic the target disease population and to permit assessment of the safety of the investigational CGT product that takes into account each of the following: i. The similarities and differences between the pathophysiology of the disease/injury animal model and the pathophysiology of the disease/injury of humans. ii. The effect of the disease/injury status of the animal on the pharmacology/toxicology of the investigational CGT product… iii. Detrimental effects of the administered product on existing disease/injury status…",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["FDA-CGT-PRE-004"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-006",
+      "rule_text": "Preclinical toxicology study designs must mimic the proposed clinical trial design as closely as possible, and must include: (i) adequate numbers of animals per sex appropriately randomized; (ii) appropriate control groups; (iii) multiple dose levels bracketing the proposed clinical dose range; (iv) a dosing schedule reflecting the intended clinical regimen; (v) a ROA mimicking the intended clinical route; (vi) multiple sacrifice time points to capture acute, chronic, and delayed-onset toxicities; (vii) standard safety endpoints including mortality, clinical observations, body weights, physical examinations, clinical pathology (serum chemistry, hematology, coagulation, urinalysis), organ weights, gross pathology, and histopathology.",
+      "source_section": "III.B.5.b Secondary considerations for toxicology study design",
+      "source_page": 10,
+      "verbatim_quote": "The overall design of the toxicology studies should mimic the proposed clinical trial design as closely as possible. Preclinical toxicology study designs should include the following, as applicable: i. Adequate numbers of animals per sex that are appropriately randomized to each group. … ii. Appropriate control groups. … iii. Multiple dose levels of the investigational CGT product, which should bracket the proposed clinical dose range, if feasible. … iv. A dosing schedule that reflects the intended clinical dosing regimen, to the extent possible. v. A ROA that mimics the intended clinical route as closely as possible. … vi. Multiple sacrifice time points to capture potential acute, chronic, and/or delayed-onset toxicities… vii. Safety endpoints that capture potential toxicities. Standard parameters monitored include mortality…clinical pathology (serum chemistry, hematology, coagulation, urinalysis), organ weights, gross pathology, and histopathology.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Highest dose may be restricted by animal size, tissue volume, ROA, or manufacturing capacity — justification with supporting data required.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-007",
+      "rule_text": "All preclinical toxicology studies must be conducted in compliance with 21 CFR Part 58 (GLP). If a study cannot fully comply with GLP, a brief statement of the reason for noncompliance must be submitted in the final study report per 21 CFR 312.23(a)(8)(iii), including identification of areas of deviation and whether the deviation(s) impacted study outcome.",
+      "source_section": "III.B.7 Good Laboratory Practice (GLP)",
+      "source_page": 12,
+      "verbatim_quote": "'For each nonclinical laboratory study subject to the [GLP] regulations under part 58, a statement that the study was conducted in compliance with [GLP] in part 58, or, if the study was not conducted in compliance with those regulations, a brief statement of the reason for the noncompliance,' must be submitted in the final study report (21 CFR 312.23(a)(8)(iii)). This explanation should include the areas of deviation and whether the deviation(s) impacted study outcome.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Some CGT toxicology studies may not fully comply because they require disease/injury animal models or specialized endpoints unavailable at GLP facilities; noncompliance must be documented.",
+      "cross_references": ["21 CFR Part 58", "21 CFR 312.23(a)(8)(iii)"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-008",
+      "rule_text": "Preclinical studies that incorporate safety parameters must be conducted using a prospectively designed study protocol. A summary of all deviations from the prospectively designed protocol and their potential impact on study integrity and outcome must be provided in the preclinical study report.",
+      "source_section": "III.B.7 Good Laboratory Practice (GLP)",
+      "source_page": 13,
+      "verbatim_quote": "Preclinical studies that incorporate safety parameters in the study design should be conducted using a prospectively designed study protocol. Results derived from these studies should be of sufficient quality and integrity to support the proposed clinical trial. A summary of all deviations from the prospectively designed study protocol and their potential impact on study integrity and outcome should be provided in the preclinical study report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["FDA-CGT-PRE-007"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-009",
+      "rule_text": "The delivery device system used in the definitive preclinical studies must be identical to the planned clinical product delivery device if possible. The IND submission must state whether a device master file (MAF) has been submitted to CDRH for the delivery device; if a MAF exists, the IND must include a letter of authorization from the MAF holder granting FDA permission to cross-reference the MAF.",
+      "source_section": "III.B.6 Product Delivery Considerations",
+      "source_page": 11,
+      "verbatim_quote": "The delivery device system used in the definitive preclinical studies should be identical to the planned clinical product delivery device, if possible. … The IND submission should state whether a device master file (MAF) has been submitted to the Center for Devices and Radiological Health (CDRH) for the delivery device. If a MAF exists, the IND submission should include a letter of authorization from the MAF holder granting permission for FDA to cross-reference specific information in the MAF.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If identical device cannot be used, justification for the substitute delivery system must be provided.",
+      "cross_references": ["21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-010",
+      "rule_text": "A complete study report must be submitted for each in vitro and in vivo preclinical study intended to demonstrate the safety of an investigational CGT product, per 21 CFR 312.23(a)(8). Each complete study report must include: (a) a prospectively designed protocol and all protocol amendments; (b) a detailed description of the study design; (c) complete data sets for all parameters, including individual animal data; (d) analysis and interpretation of results.",
+      "source_section": "III.B.10 Preclinical Study Reports",
+      "source_page": 14,
+      "verbatim_quote": "A report must be submitted for each in vitro and in vivo preclinical study intended to demonstrate the safety of an investigational CGT product (21 CFR 312.23(a)(8)). … Each complete study report should include, but is not limited to: a) a prospectively designed protocol and listing of all protocol amendments; b) a detailed description of the study design … c) complete data sets for all parameters evaluated, including individual animal data and tabulated/summary data; and d) analysis and interpretation of the results obtained.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Complete reports for pharmacology/POC studies are not required, but sufficient information from these studies must be provided for independent interpretation.",
+      "cross_references": ["21 CFR 312.23(a)(8)"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-011",
+      "rule_text": "Sponsors are recommended to communicate early with OCTGT Pharmacology/Toxicology staff. A pre-pre-IND interaction (non-binding, informal scientific and regulatory discussion) is available to address CBER expectations for a specific product and indication before preparing definitive preclinical protocols.",
+      "source_section": "III.B.11 Communication with OCTGT Pharmacology/Toxicology Staff",
+      "source_page": 15,
+      "verbatim_quote": "We recommend communication with OCTGT Pharmacology/Toxicology staff early in the investigational CGT product development program. … Such advice can be obtained initially through a pre-pre-IND interaction, which is a non-binding, informal, targeted scientific and regulatory discussion between reviewers from the Pharmacology/Toxicology Branch, other applicable reviewers, and the sponsor at an early stage of product development.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Nonbinding recommendation.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-012",
+      "rule_text": "The fate of the investigational CT product following administration in animals must be assessed, including: (1) cell survival/engraftment; (2) distribution to target and non-target sites; (3) differentiation and integration; (4) tumorigenicity. If long-term cell survival/engraftment is necessary for CT product effectiveness, animals must be followed for a sufficient interval to allow comprehensive evaluation of in vivo cell survival, anatomic engraftment, and biologic activity.",
+      "source_section": "IV.D CT Product Fate Post-Administration",
+      "source_page": 18,
+      "verbatim_quote": "Determination of the fate of the investigational CT product following administration in animals is an important contribution to characterizing the product activity and safety profile. … If long-term cell survival/engraftment is necessary to achieve effectiveness of the CT product, the animals should be followed for an interval sufficient to allow for comprehensive evaluation of in vivo cell survival, anatomic engraftment, and biologic activity.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Extent of required assessment depends on product biology.",
+      "cross_references": ["FDA-CGT-PRE-006"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-013",
+      "rule_text": "For CT products, the potential for tumorigenicity, dysplasia, or hyperplasia must be considered and addressed for each investigational CT product based on its specific biologic properties. Tumorigenicity studies must use the intended clinical product, not analogous animal cells, and animal studies must demonstrate in vivo cell survival for a sufficient duration to allow potential tumor formation.",
+      "source_section": "IV.D.4 Tumorigenicity",
+      "source_page": 20,
+      "verbatim_quote": "The potential for tumorigenicity, dysplasia, or hyperplasia to occur should be considered and addressed as appropriate for the specific biologic properties of each investigational CT product. … Studies conducted in animals to assess tumorigenicity should use the intended clinical product, not analogous animal cells. … it is important that animal studies designed to assess this endpoint for CT products show in vivo survival of the cells for a sufficient length of time to allow for potential tumor formation.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Factors influencing assessment include differentiation status, extent of cell manipulation, expressed transgene, and target patient population.",
+      "cross_references": ["FDA-CGT-PRE-012"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-014",
+      "rule_text": "For CT products with implantable scaffolds, the scaffold construct used in preclinical studies must be identical in composition to the intended clinical scaffold, and must be adequately characterized for composition, degradation profile, biomechanical performance, and biocompatibility. A complete biocompatibility test report (methods, results) must be included in the regulatory submission.",
+      "source_section": "IV.E.2-3 Scaffolds / Biocompatibility",
+      "source_page": 21,
+      "verbatim_quote": "Any scaffold construct (synthetic or non-synthetic polymers) used should be identical in composition to the intended clinical scaffold. The scaffold should be adequately characterized for composition, degradation profile, biomechanical performance, and biocompatibility… A complete test report describing the tests performed, the specific methods utilized, and the results should be included in the regulatory submission.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-003"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-015",
+      "rule_text": "For CT products with implantable scaffolds, the same cell seeding procedure and seeding density as proposed for clinical use must be used for the CT product administered to animals in preclinical studies.",
+      "source_section": "IV.E.4 Cell Seeding",
+      "source_page": 22,
+      "verbatim_quote": "The same cell seeding procedure/seeding density as proposed clinically should be used for the CT product administered to the animals.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-003", "FDA-CGT-PRE-014"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-016",
+      "rule_text": "For GT products, the preclinical safety program must address the following safety concerns as applicable: (a) toxicities due to formulation components; (b) toxicities due to the ROA; (c) aberrant localization to non-target cells/tissues; (d) level and persistence of vector and expressed transgene; (e) level of viral replication in non-target tissues; (f) immune activation or suppression; (g) immune response directed against the vector; (h) phenotype/activation state of target cells; (i) potential for insertional mutagenesis or oncogenicity; (j) potential for germline transmission; (k) potential horizontal transmission/shedding.",
+      "source_section": "V.C.1 Overall Safety Considerations",
+      "source_page": 24,
+      "verbatim_quote": "Although assessment of the safety of the in vivo administered vector depends on the biological properties of each vector type, concerns that should be addressed include: a. Toxicities due to the components of the final formulation… b. Toxicities due to the ROA used. c. Aberrant localization to non-target cells/tissues. d. Level and persistence of vector and expressed transgene. e. Level of viral replication in non-target cells/tissues. f. Immune activation or suppression. g. Immune response directed against the vector. h. Phenotype/activation state of target cell(s). i. Potential for insertional mutagenesis or oncogenicity. j. Potential for germline transmission. k. Potential horizontal transmission of replication competent vectors from the patient to family members and health care providers (i.e., shedding).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "The specific concerns applicable depend on the biological properties of each vector type.",
+      "cross_references": ["FDA-CGT-PRE-006", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-017",
+      "rule_text": "For GT products, vector-specific preclinical safety concerns must be addressed according to vector type: AAV — potential for random integration into host DNA causing insertional mutagenesis; retrovirus/lentivirus — RCR/RCL production, insertional mutagenesis/oncogene activation, germline integration, altered host gene expression; HSV — CNS tropism and latency/reactivation potential; replication-competent oncolytic vectors — viral infection in normal cells and increased spread in immune-suppressed patients.",
+      "source_section": "V.C.2 Vector-Specific Considerations",
+      "source_page": 25,
+      "verbatim_quote": "ii. Adeno-Associated Virus (AAV) - 1) although AAV remains episomal in the transduced cell, the potential for random integration into host DNA, resulting in insertional mutagenesis and any subsequent adverse biological effects exists, and 2) potential immune response to the capsid proteins. iii. Retrovirus and Lentivirus - 1) production of a replication-competent retrovirus/lentivirus (RCR/RCL) during manufacturing, 2) potential for insertional mutagenesis, resulting in oncogene activation, 3) potential for germline integration, and 4) potential for altered expression of host genes. v. Herpes Simplex Virus (HSV) - tropism to the central nervous system and the potential for latency and reactivation.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Specific concerns depend on vector type and clinical context.",
+      "cross_references": ["FDA-CGT-PRE-016", "FDA-GT-RCR-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-018",
+      "rule_text": "For GT products, when an expressed transgene has unknown toxicity potential or a known/suspected potential to induce toxicity if aberrantly expressed, assessment of the in vivo transgene expression profile is recommended. Quantitation should use methods such as quantitative RT-PCR to determine: threshold expression levels associated with beneficial or deleterious effects; and correlation of expression kinetics with desired activity or undesired toxicity profiles.",
+      "source_section": "V.C.3 Transgene Considerations",
+      "source_page": 27,
+      "verbatim_quote": "assessment of the in vivo transgene expression profile is recommended for: vectors expressing a new transgene(s) with an unknown potential to induce toxicity; or vectors expressing a transgene with a known or suspected potential to induce toxicity if aberrantly expressed in non-target tissues. Quantitation of transgene expression using methods such as a quantitative Reverse Transcriptase PCR (RT-PCR) assay can help determine: the threshold level of expression associated with beneficial or deleterious effects for specific tissues/organ systems; and correlation of the kinetics of transgene expression with desired activity or undesired toxicity profiles.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-016"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-019",
+      "rule_text": "For GT products, characterization of vector biodistribution following in vivo administration is an important component of the preclinical development program. Biodistribution studies must be considered prior to administration in humans for: (a) new vector classes; (b) established vectors with significant backbone changes; (c) established vectors with significant formulation changes; (d) established vectors with significant ROA changes; (e) established vectors with significant dosing schedule/dose level changes. Justification must be provided if biodistribution studies are not conducted prior to early-phase clinical trials.",
+      "source_section": "V.C.5 Biodistribution Considerations",
+      "source_page": 27,
+      "verbatim_quote": "The characterization of the vector biodistribution profile following in vivo administration is an important component of the preclinical development program for GT products. … Prior to administration in humans, biodistribution studies should be considered for: a. Investigational GT products that belong to a new vector class. b. Established vectors with significant changes in the vector backbone. c. Established vectors with a significant formulation change. d. Established vectors with a significant change in the ROA. e. Established vectors with a significant change in the dosing schedule and/or the vector dose levels. Justification should be provided if biodistribution studies are not conducted prior to initiation of early-phase clinical trials.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Justification required if not conducted; not always required for established vectors with no significant changes.",
+      "cross_references": ["FDA-GT-LTFU-007", "FDA-CGT-PRE-016"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-020",
+      "rule_text": "GT product biodistribution tissue/biological fluid analysis must be conducted at the molecular level using a quantitative PCR (Q-PCR) assay to determine the number of vector copies per microgram of genomic DNA at specified time points post-vector administration. The presence of a vector sequence in tissues/biological fluids may trigger further analysis to determine transgene expression levels.",
+      "source_section": "V.C.5 Biodistribution Considerations",
+      "source_page": 28,
+      "verbatim_quote": "Tissue/biological fluid analysis should be conducted at the molecular level, using a quantitative PCR (Q-PCR) assay to determine the number of vector copies per microgram of genomic DNA at specified time points post-vector administration. … the presence of a vector sequence in tissues/biological fluids may trigger further analysis to determine the transgene expression levels.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Additional tissues beyond the standard panel may be needed depending on ROA and biology of the investigational GT product.",
+      "cross_references": ["FDA-CGT-PRE-019", "FDA-GT-LTFU-007"]
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-021",
+      "rule_text": "For investigational therapeutic vaccines (non-prophylactic), preclinical study designs must include parameters to evaluate immunological specificity, immune activity, and potential for immune toxicity. Immune activity testing must include characterization of the humoral and cellular response profile with correlation of data with pharmacological and/or toxicological findings. Study designs must include sample collection over time from the same animal to characterize onset, persistence, and extent of the systemic immune response.",
+      "source_section": "VI.C Study Designs (Therapeutic Vaccines)",
+      "source_page": 29,
+      "verbatim_quote": "parameters to evaluate immunological specificity, immune activity, and the potential for immune toxicity should be included. Immune activity testing should include characterization of the humoral and cellular response profile, with correlation of resulting data with pharmacological and/or toxicological findings. To characterize the onset, persistence, and extent of the systemic humoral and cellular immune response to the vaccine, study designs should include the collection of samples over time from the same animal.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to therapeutic vaccines reviewed by OCTGT. Prophylactic/infectious disease vaccines are outside scope.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-CGT-PRE-022",
+      "rule_text": "Reproductive/developmental toxicity preclinical studies may need to be conducted depending on product type and target patient population; in general, such studies should be conducted prior to Phase 3 clinical trials.",
+      "source_section": "III.B.9 Product Development for Later-Phase Clinical Trials",
+      "source_page": 14,
+      "verbatim_quote": "In addition, the potential for reproductive/developmental toxicity may need to be addressed, depending on product type or target patient population. In general, such studies should be conducted prior to Phase 3 clinical trials.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Timing and requirement depends on product type and patient population; carcinogenicity/tumorigenicity studies typically occur during early development due to biological attributes of CGT products.",
+      "cross_references": ["FDA-CGT-PRE-006"]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "title": "Considerations for the Design, Development, and Analytical Procedures for Early-Phase Clinical Trials of Cellular and Gene Therapy Products",
+    "source_file": "Early_Phase_Clinical_Trials_Cell_Gene_Therapy.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "June 2015",
+    "document_version": "June 2015",
+    "extraction_date": "2026-03-24",
+    "total_rules": 22,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CGT-EP-001",
+      "rule_text": "For most CGT clinical trials, the benefit-risk profile is NOT acceptable to expose healthy volunteers; enrollment should be limited to patients with the disease or condition being studied.",
+      "source_section": "III. Study Population",
+      "source_page": 8,
+      "verbatim_quote": "For most CGT trials, the benefit-risk profile is not acceptable for healthy volunteers.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Rare exceptions may exist where safety profile and product mechanism support healthy volunteer exposure.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "21 CFR Part 50"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-002",
+      "rule_text": "The choice of study population (e.g., severely affected patients versus less severely affected) must be scientifically justified in the IND submission.",
+      "source_section": "III. Study Population",
+      "source_page": 10,
+      "verbatim_quote": "Severely affected subjects should not be the automatic choice; population choice must be justified in IND.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-003",
+      "rule_text": "Pediatric CGT trials that present more than a minor increase over minimal risk must meet the requirements of 21 CFR 50.52; the IRB must find the risk justified by anticipated benefit, and adequate provisions for assent and parental permission per 21 CFR 50.55 must be made; the IND must provide adequate information for FDA to assess risks per 21 CFR 312.23(a)(10)(iii) and 312.23(a)(11).",
+      "source_section": "III. Study Population",
+      "source_page": 11,
+      "verbatim_quote": "Pediatric CGT trials usually present more than minor increase over minimal risk → must meet 21 CFR 50.52; IRB must find risk justified by anticipated benefit; adequate provisions for assent and parent permission (21 CFR 50.52 and 50.55); IND must provide adequate information for FDA to assess risks per 21 CFR 312.23(a)(10)(iii) and 312.23(a)(11).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "If risk presents only minimal risk or minor increase over minimal risk, lower standards may apply.",
+      "cross_references": ["21 CFR 50.52", "21 CFR 50.55", "21 CFR 312.23(a)(10)(iii)", "21 CFR 312.23(a)(11)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-004",
+      "rule_text": "Dose exploration, including identification of the maximum tolerated dose (MTD), is generally recommended for early-phase CGT trials even when substantial toxicity is not expected.",
+      "source_section": "III. Dose Selection",
+      "source_page": 7,
+      "verbatim_quote": "Dose exploration including identification of MTD is generally recommended even when toxicity not expected to be substantial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-005",
+      "rule_text": "Most first-in-human CGT trials use a single administration or one-time dosing regimen; the protocol must justify any repeat dosing schedule.",
+      "source_section": "IV. Dosing Regimen",
+      "source_page": 15,
+      "verbatim_quote": "Most first-in-human CGT trials use a single administration or one-time dosing regimen.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Repeat dosing is allowed but requires protocol justification.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-006",
+      "rule_text": "Staggered treatment is required when there is no previous human experience with the product; the staggering interval must be sufficiently long to monitor for acute and subacute adverse events before treating the next subject.",
+      "source_section": "IV. Dosing Regimen",
+      "source_page": 15,
+      "verbatim_quote": "Staggered treatment required when no previous human experience with product; staggering interval must be long enough to monitor for acute and subacute AEs.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "May be modified if prior human experience with the same or closely related product exists.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-007",
+      "rule_text": "For invasive or complex product administration procedures, the trial protocol must specify minimum operator training and experience requirements; written standard operating procedures (SOPs) are recommended.",
+      "source_section": "IV. Administration",
+      "source_page": 16,
+      "verbatim_quote": "For invasive complex administration: trial must specify minimum operator training/experience requirements; written SOPs recommended.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-008",
+      "rule_text": "For patient-specific CGT products: (1) the protocol must not commit a subject to high-risk preparatory procedures (e.g., lymphodepletion) until the product is confirmed available; (2) the protocol must specify whether re-treatment will be attempted if the product fails; and (3) the failure-to-treat rate is an important endpoint that must be captured.",
+      "source_section": "IV. Patient-Specific Products",
+      "source_page": 17,
+      "verbatim_quote": "For patient-specific products: protocol must not commit subject to high-risk preparatory procedures until product is known available; protocol must specify whether re-treatment will be attempted; failure-to-treat rate is important endpoint.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to patient-specific (autologous) CGT products requiring manufacturing prior to administration.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-009",
+      "rule_text": "Safety monitoring must capture ALL adverse events, including those that may be attributable to known toxic concomitant therapies when the CGT product is used as an add-on; a Data Monitoring Committee (DMC) may be required if the trial presents substantial risks.",
+      "source_section": "IV. Safety Monitoring",
+      "source_page": 18,
+      "verbatim_quote": "Safety monitoring: capture ALL adverse events even when CGT product is add-on to known toxic therapies; DMC may be needed if trial presents substantial risks.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-010",
+      "rule_text": "If immunogenicity is a concern (e.g., with viral capsids or allogeneic cellular products), each subject's immune response must be evaluated for both cellular and humoral immune responses; if adequate assays are not yet available, baseline and post-treatment blood and/or plasma must be cryopreserved for later evaluation.",
+      "source_section": "IV. Safety Monitoring — Immunogenicity",
+      "source_page": 19,
+      "verbatim_quote": "If immunogenicity is a concern (e.g., with viral capsids or allogeneic cellular products), then each subject's immune response to the product should be evaluated. This evaluation may include monitoring for evidence of both cellular and humoral immune responses. If adequate assays are not yet available, baseline and post-treatment blood and/or plasma, as appropriate, should be cryopreserved for later evaluation, once assays have been developed.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.32", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-011",
+      "rule_text": "Attempts must be made to determine the duration of persistence of the CGT product and its activity; persistence may be assessed by detecting cells, vector, or virus in biological fluids or tissues; activity may be assessed by physiologic effects such as gene expression or biomarker changes.",
+      "source_section": "IV. Safety Monitoring — Persistence",
+      "source_page": 19,
+      "verbatim_quote": "Attempts should be made to determine the duration of persistence of the product and its activity. Product persistence is assessed by looking for evidence of the presence of cells, vector, or virus in biological fluids or tissues. Activity might be assessed by looking for physiologic effects, such as gene expression or changes in biomarkers.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Tissue biopsy from the administration site may substitute if relevant tissue is obtainable during routine subject management.",
+      "cross_references": ["21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-012",
+      "rule_text": "For CT products, the potential for migration from the target site, ectopic tissue formation, or other abnormal cell activity must be evaluated through procedures appropriate to the nature of the concern (e.g., imaging studies for ectopic tissue, cardiac rhythm monitoring for arrhythmogenic foci).",
+      "source_section": "IV. Safety Monitoring — CT Products",
+      "source_page": 19,
+      "verbatim_quote": "For CT products, if applicable, the potential for migration from the target site, ectopic tissue formation, or other abnormal cell activity should be addressed by performing evaluations appropriate to the nature of the concern (e.g., imaging studies for potential ectopic tissue, or cardiac rhythm monitoring for potential arrhythmogenic foci in cardiac disease).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies when migration or ectopic tissue formation is a plausible concern based on product type and route of administration.",
+      "cross_references": ["21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-013",
+      "rule_text": "For GT products, the potential for viral shedding must be addressed early in product development; shedding assessment must be incorporated into the clinical monitoring program.",
+      "source_section": "IV. Safety Monitoring — GT Products",
+      "source_page": 19,
+      "verbatim_quote": "For GT products, the potential for viral shedding should be addressed early in product development.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-EP-011", "21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-014",
+      "rule_text": "For GT products that integrate into the genome, monitoring for clonal outgrowths must be performed when technically feasible; this typically applies when hematopoietic stem cells are transduced with an integrating vector, using peripheral blood mononuclear cells (PBMCs) to detect predominant clone outgrowth.",
+      "source_section": "IV. Safety Monitoring — GT Integrating Vectors",
+      "source_page": 19,
+      "verbatim_quote": "For GT products that integrate into the genome, monitoring for clonal outgrowths should be performed when technically feasible. Typically, this type of monitoring is done when hematopoietic stem cells are transduced with an integrating vector. Vector integration sites in patient peripheral blood mononuclear cells (PMBCs) can be monitored for outgrowth of a predominant clone.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Limited to situations where it is technically feasible.",
+      "cross_references": ["FDA-GT-RCR-010", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-015",
+      "rule_text": "CGT products may affect linear growth and maturation of developing organ systems in children; monitoring and assessment of effects on reproductive, immunologic, neurologic, skeletal, and psychological systems must be considered critical elements in the design of pediatric clinical trials.",
+      "source_section": "IV. Safety Monitoring — Pediatric",
+      "source_page": 20,
+      "verbatim_quote": "CGT products may affect linear growth and maturation of developing organ systems in children. The systems that are most likely to be affected may vary by product, but concerns include potential reproductive, immunologic, neurologic, skeletal, or psychological effects. Therefore, monitoring and assessment of effects on these systems may be critical elements in the design of pediatric clinical trials.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to pediatric CGT trials; scope of monitoring depends on product type.",
+      "cross_references": ["FDA-CGT-EP-003", "21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-016",
+      "rule_text": "For most CGT products, a year or more of follow-up is appropriate for each subject in early-phase trials; the appropriate duration depends on preclinical study results, experience with related products, knowledge of the disease process, and other scientific information.",
+      "source_section": "IV.F.3 Duration of Follow-up",
+      "source_page": 20,
+      "verbatim_quote": "For most CGT products, a year or more of follow-up is appropriate for each subject in early-phase trials.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Products with indefinite duration of activity may require longer monitoring. If failure to administer occurs, protocol must specify follow-up time needed for preparatory or harvesting procedures performed.",
+      "cross_references": ["FDA-GT-LTFU-001", "21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-017",
+      "rule_text": "For GT products for which the vector is integrating, or if the vector has latency (e.g., herpes simplex virus), sponsors must follow subjects for 15 years to identify any late safety issues.",
+      "source_section": "IV.F.3 Duration of Follow-up",
+      "source_page": 20,
+      "verbatim_quote": "As stated in that guidance, if the product is a GT for which the vector is integrating, or if the vector has latency, such as herpes simplex virus, then sponsors should follow subjects for 15 years to identify any late safety issues.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to integrating vectors or vectors with latency; other product types may have different follow-up requirements.",
+      "cross_references": ["FDA-GT-LTFU-001", "FDA-GT-RCR-010"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-018",
+      "rule_text": "When long-term follow-up is necessary for an acceptable balance of risks and benefits, it must be included as an integral part of the CGT trial protocol rather than designed as a separate study; if a separate protocol is used for long-term monitoring, subjects must be consented for all long-term monitoring prior to participation in the initial CGT trial.",
+      "source_section": "IV.F.3 Duration of Follow-up",
+      "source_page": 21,
+      "verbatim_quote": "When there is a separate protocol for long-term monitoring, subjects should be consented for all long-term monitoring prior to participation in the initial CGT trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-EP-016", "FDA-CGT-EP-017", "21 CFR 50.25"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-019",
+      "rule_text": "Long-term monitoring for CGT products focuses on subject survival and serious adverse events that are hematologic, immunologic, neurologic, or oncologic in nature.",
+      "source_section": "IV.F.3 Duration of Follow-up",
+      "source_page": 21,
+      "verbatim_quote": "In general, long-term monitoring for CGT products focuses on subject survival and on serious adverse events that are hematologic, immunologic, neurologic, or oncologic.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Long-term monitoring does not need to be as detailed as initial-phase safety monitoring; telephone follow-up may be sufficient in some circumstances.",
+      "cross_references": ["FDA-CGT-EP-016", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-020",
+      "rule_text": "For pediatric CGT trials, long-term monitoring must be designed to characterize the effects of the CGT intervention on growth and development; clinical follow-up data over an extended period may be critical when interventions are tested in infants and young children.",
+      "source_section": "IV.F.3 Duration of Follow-up",
+      "source_page": 21,
+      "verbatim_quote": "In the pediatric population, long-term monitoring following the administration of CGT products may need to characterize the effects of the intervention on growth and development... monitoring the long-term safety and duration of effects may be more challenging in pediatric studies than in adult studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to pediatric studies; adult studies may have simpler long-term monitoring designs.",
+      "cross_references": ["FDA-CGT-EP-015", "FDA-CGT-EP-018"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-021",
+      "rule_text": "Most early-phase CGT trials must include study stopping rules specifying the number or frequency of serious adverse events or deaths that will result in temporary suspension of enrollment and dosing pending safety assessment; stopping rules do not permanently terminate a trial but allow risks to be reassessed and mitigated.",
+      "source_section": "IV.F.4 Study Stopping Rules",
+      "source_page": 21,
+      "verbatim_quote": "Because there can be considerable uncertainty about the frequency or severity of adverse reactions in trials of CGT products, most early-phase trials of these products should include study stopping rules. The purpose of these rules is to control the number of subjects put at risk, in the event that early experience uncovers important safety problems.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Stopping rules do not necessarily terminate a trial; well-designed rules allow assessment and resumption after risk mitigation.",
+      "cross_references": ["21 CFR 312.56(d)", "FDA-CGT-EP-006"]
+    },
+    {
+      "rule_id": "FDA-CGT-EP-022",
+      "rule_text": "The IND submission for an early-phase CGT trial must include a summary of previous human experience known to the applicant with the investigational product, along with detailed information relevant to the safety of the proposed investigation or to the investigator's rationale, per 21 CFR 312.23(a)(9).",
+      "source_section": "VI. Guidance on Submitting an IND",
+      "source_page": 23,
+      "verbatim_quote": "The IND submission for an early-phase trial must include a summary of previous human experience known to the applicant with the investigational product, along with detailed information about such experience that is relevant to the safety of the proposed investigation or to the investigator's rationale (21 CFR 312.23(a)(9)).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(9)"]
+    }
+  ]
+}

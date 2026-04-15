@@ -1,0 +1,42 @@
+[
+  {
+    "rule_id": "GT-SAFETY-PHARM-FDA-001",
+    "requirement": "The FDA guidance does not require standalone safety pharmacology studies for investigational cellular and gene therapy (CGT) products. Safety pharmacology assessment is incorporated within the comprehensive toxicology study design. Section III.B.5 (Toxicology Studies) requires that the safety assessment be 'sufficiently comprehensive to permit identification, characterization, and quantification of potential local and systemic toxicities.' Functional safety parameters — including behavioral testing, neurological exams, ophthalmic exams, and cardiac assessments — are listed as 'additional parameters specific to either the investigational CGT product used and/or specific to the intended patient population' (Section III.B.5.b.viii). The data collected should include both morphological and functional assessment, whenever possible.",
+    "source_document": "Preclinical_Assessment_Cell_Gene_Therapy.pdf",
+    "source_document_full_title": "FDA Guidance for Industry: Preclinical Assessment of Investigational Cellular and Gene Therapy Products, November 2013",
+    "source_section": "Section III.B.5 — Toxicology Studies (Secondary considerations for toxicology study design, item viii)",
+    "ectd_module": null,
+    "severity": "RECOMMENDED",
+    "verification_status": "VERIFIED — no standalone safety pharmacology section exists; safety pharmacology endpoints embedded in toxicology study design requirements"
+  },
+  {
+    "rule_id": "VAC-SAFETY-PHARM-WHO-001",
+    "requirement": "The WHO guidelines on nonclinical evaluation of vaccines (WHO Technical Report Series No. 927, Annex 1, 2005) do not include a dedicated safety pharmacology section. There is no distinct safety pharmacology requirement for vaccines. Nonclinical safety is addressed through Section 4 (Toxicity assessment): Section 4.1 (Basic toxicity assessment) specifies that toxicity studies must identify potential toxic effects on target organs, assess dose, route(s) of exposure, duration, frequency, and potential reversibility. Section 4.1.4 (Parameters monitored) requires studies to address systemic toxicity and effects on the immune system. Safety pharmacology as a standalone concept (cardiovascular, respiratory, CNS effects per ICH S7A) is not referenced or required for vaccines under this guideline.",
+    "source_document": "WHO_Nonclinical_Evaluation_Vaccines_Annex1.pdf",
+    "source_document_full_title": "WHO Guidelines on Nonclinical Evaluation of Vaccines, WHO Technical Report Series No. 927, Annex 1, 2005",
+    "source_section": "Section 4 — Toxicity assessment; Section 4.1 — Basic toxicity assessment; Section 4.1.4 — Parameters monitored",
+    "ectd_module": null,
+    "severity": "INFORMATIONAL",
+    "verification_status": "VERIFIED — confirmed no safety pharmacology section exists in this document; safety addressed through Section 4 toxicity assessment framework only"
+  },
+  {
+    "rule_id": "CTD-M4-SAFETY-PHARM-PLACEMENT-001",
+    "requirement": "Per ICH M4S(R2), safety pharmacology study reports are placed in the eCTD at Module 4, section 4.2.1.3 (Safety Pharmacology). This falls under section 4.2 Study Reports > 4.2.1 Pharmacology > 4.2.1.3 Safety Pharmacology. The full Module 4 Pharmacology hierarchy is: 4.2.1.1 Primary Pharmacodynamics, 4.2.1.2 Secondary Pharmacodynamics, 4.2.1.3 Safety Pharmacology, 4.2.1.4 Pharmacodynamic Drug Interactions. The corresponding summary is located in Module 2, section 2.6.2.4 (Safety Pharmacology within the Pharmacology Written Summary) and tabulated in section 2.6.3.4 (Safety Pharmacology tabulated summary).",
+    "source_document": "M4S_R2_Guideline.pdf",
+    "source_document_full_title": "ICH M4S(R2) — The Common Technical Document for the Registration of Pharmaceuticals for Human Use: Safety — Nonclinical Overview and Nonclinical Summaries of Module 2, Organisation of Module 4, Step 4, 20 December 2002",
+    "source_section": "Module 4: Nonclinical Study Reports — Section 4.2 Study Reports (document page 12)",
+    "ectd_module": "4.2.1.3",
+    "severity": "REQUIRED",
+    "verification_status": "VERIFIED — section 4.2.1.3 Safety Pharmacology confirmed directly from Module 4 study reports organisation table on document page 12"
+  },
+  {
+    "rule_id": "S9-ANTICANCER-SAFETY-PHARM-001",
+    "requirement": "Per ICH S9 Section 2.2 (Safety Pharmacology): An assessment of the pharmaceutical's effect on vital organ functions (cardiovascular, respiratory, and central nervous systems) should be available before the initiation of clinical studies; such parameters could be included in general toxicology studies. Detailed clinical observations following dosing and appropriate electrocardiographic measurements in non-rodents are generally considered sufficient. Conducting stand-alone safety pharmacology studies to support studies in patients with advanced cancer is NOT called for. In cases where specific concerns have been identified that could put patients at significant additional risks in clinical trials, appropriate safety pharmacology studies described in ICH S7A and/or S7B should be considered. In the absence of a specific risk, such studies will not be called for to support clinical trials or for marketing.",
+    "source_document": "S9_Guideline.pdf",
+    "source_document_full_title": "ICH S9 — Nonclinical Evaluation for Anticancer Pharmaceuticals, Step 4, 29 October 2009",
+    "source_section": "Section 2.2 — Safety Pharmacology",
+    "ectd_module": null,
+    "severity": "CONDITIONAL",
+    "verification_status": "VERIFIED — full text of Section 2.2 confirmed; key principle is integration into general toxicology studies rather than standalone studies, with standalone required only when specific risk concerns are identified"
+  }
+]

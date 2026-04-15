@@ -1,0 +1,301 @@
+# output-v5 Deduplication Log
+# Generated: 2026-03-24
+
+## Re-extracted (shallow in v4 → full extraction in v5)
+- S2(R1): v4/s1-s4-s8-q10-q11-rules.json had 7 rules (SHALLOW < 10). Re-extracted to ich-s2-s3a-s3b-rules.json with 30 rules.
+- S3A: v4/s1-s4-s8-q10-q11-rules.json had 6 rules (SHALLOW < 10). Re-extracted to ich-s2-s3a-s3b-rules.json with 20 rules.
+- S3B: v4/s1-s4-s8-q10-q11-rules.json had 3 rules (SHALLOW < 10). Re-extracted to ich-s2-s3a-s3b-rules.json with 10 rules.
+
+## Skipped (superseded by newer extraction already in v4/v5)
+- pmda-bioequivalence-generic-products.pdf: FILE MISLABELED — actual content is MHLW DDI Guideline (2019) + FAM Accreditation (pp. 40+). DDI content already in v4/ema-pmda-rules.json (25 PMDA-DDI/FAM rules, 2019 version). SKIP.
+- pmda-ethnic-factors-ich-e5.pdf: FILE MISLABELED — actual content is PMDA FAM Accreditation document (7 pages). Already covered in v4/ema-pmda-rules.json. SKIP.
+- pmda-bioanalytical-method-validation.pdf: FILE MISLABELED — actual content is PMDA BMV Guideline 2013. SUPERSEDED by ICH M10 (2022) already in v4/q5b-q6-q7-q8-q12-m10-rules.json. SKIP per protocol (older version).
+- pmda-bmv-ligand-binding-assay.pdf: PMDA LBA BMV Guideline 2014 (PFSB/ELD Notification No. 0711-1). SUPERSEDED by ICH M10 (2022) already in v4/q5b-q6-q7-q8-q12-m10-rules.json. M10 covers LBAs comprehensively and is the current standard. SKIP per protocol (older version superseded by newer extraction).
+- pmda-bmv-ich-m10.pdf: FILE MISLABELED — filename implies ICH M10; actual content is MHLW Administrative Notice (September 13, 2013) transmitting PMDA BMV Guideline 2013 (Appendix 1) + Q&A (Appendix 2). DUPLICATE of pmda-bioanalytical-method-validation.pdf (same 2013 BMV). Both superseded by ICH M10 (2022) in v4. SKIP.
+
+## Not skipped (no prior coverage in v2/v3/v4)
+- E2B(R3): No prior extraction found. Extracted 27 rules to ich-e2b-e2e-e2f-rules.json.
+- E2E: No prior extraction found. Extracted 18 rules to ich-e2b-e2e-e2f-rules.json.
+- E2F: No prior extraction found. Extracted 23 rules to ich-e2b-e2e-e2f-rules.json.
+- E12: No prior extraction found. Extracted 20 rules to ich-e12-e22-rules.json.
+- E22: No prior extraction found. Extracted 38 rules to ich-e12-e22-rules.json. STATUS: DRAFT (Step 2, 2025-11-19).
+- Q13: No prior extraction found. Extracted 30 rules to ich-q13-q14-rules.json.
+- Q14: No prior extraction found. Extracted 30 rules to ich-q13-q14-rules.json.
+- S9: No prior extraction found. Extracted 27 rules to ich-s9-s10-rules.json.
+- S10: No prior extraction found. Extracted 25 rules to ich-s9-s10-rules.json.
+- 39-analytical-procedures-validation: No prior extraction found. Extracted 35 rules to 39-analytical-procedures-validation-rules.json.
+- 40-exposure-response-relationships: No prior extraction found. Extracted 36 rules to 40-exposure-response-relationships-rules.json.
+
+## Deduplication notes (positions 39-40)
+- fda-labeling-be-rules.json (v4): 55 PLR rules, no source_file metadata — version comparison impossible; extracted PLR guidance PDFs fresh to output-v5
+- m13a-bioequivalence-rules.json (v4): covers ICH M13A; FDA BA/BE NDA guidance is a distinct source document
+- All other v4 files cover ICH/EMA guidelines, not FDA-specific guidance documents in fda-guidance-v2/
+- v4 e1-e9r1 files cover ICH E9R1 estimand framework — distinct from FDA exposure-response relationships guidance (April 2003)
+- No v4 files cite fda-guidance-v2 source documents for analytical procedures validation or exposure-response relationships
+
+## Corpus quality issues — files 23-72 (worker batch A–Q, extracted 2026-03-24)
+
+### Zero-content files (no regulatory rules extractable)
+- 20-hepatic-impairment-studies-2020.pdf: MISLABELED — actual content is a 10-slide 2017 FDA Workshop conference presentation by Carl Peck (UCSF/NDA Partners) on Bayesian approaches in generic drug development. Purely academic discussion; no regulatory requirements. 0 rules extracted.
+- 23-hepatic-impairment-studies.pdf: MISLABELED — actual content is a conference presentation "Challenges in Maintaining Competition in Small Generic Drug Markets II" (Berndt & Conti, FDA Public Workshop, October 2017). Off-topic economic analysis; no regulatory requirements. 0 rules extracted. NOTE: The correct FDA hepatic impairment PK guidance is needed to replace this file.
+- 34-real-world-evidence.pdf: MISLABELED — actual content is a 2-page Chinese-language "Project ASIATICA" webpage from FDA Oncology Center of Excellence (cancer equity for AA & NHPI communities). Non-regulatory content in foreign language. 0 rules extracted. NOTE: The correct FDA RWE guidance (21st Century Cures Act Section 3022 framework, 2017/2021 editions) is needed.
+
+### Pervasive filename/content mismatch pattern (files 23-72)
+All 50 PDFs in positions 23-72 were processed. A large proportion contain documents that do not match their filenames. Rules were extracted from actual document content; metadata `note` fields document each mismatch. Key mismatches observed:
+- 15-physician-labeling-rule-format.pdf → FDA PRO guidance (December 2009)
+- 18-changes-approved-nda-anda.pdf → FDA Influenza drug development guidance (April 2011)
+- 24-rems-assessment-2019.pdf → GLDH biomarker qualification submission (PSTC, May 2018)
+- 25-suicidal-ideation-assessment.pdf → FDA PRO guidance (December 2009)
+- 25-suicidal-ideation-behavior-2012.pdf → Influenza A (H1N1) 2009 monovalent vaccine USPI
+- 27-scientific-considerations-biosimilarity.pdf → correctly matched (April 2015 biosimilarity guidance)
+- 28-quality-considerations-biosimilarity.pdf → 510(k) SE decision-making guidance (CDRH, July 2014)
+- 29-clinical-pharmacology-biosimilar.pdf → FDA CTP TPL memo for tobacco product SE0004606-SE0004610
+- 33-master-protocols.pdf → ICH Q9(R1) Quality Risk Management (May 2023)
+- 33-physician-labeling-rule.pdf → FDA PRO guidance (December 2009)
+- 35-enrichment-strategies.pdf → BLA 125471 statistical review for ORALAIR sublingual immunotherapy
+- 37-safety-reporting-inds.pdf → FDA DMC guidance (March 2006)
+- 38-dissolution-testing-ir-products.pdf → CDRH webinar transcript on voluntary consensus standards (October 2018)
+
+### Deduplication notes (positions 23-72)
+- All 50 FDA guidance PDFs in positions 23-72 are distinct source documents from any ICH/EMA guidelines in v4
+- fda-labeling-be-rules.json (v4): 55 PLR rules with no source_file metadata — version comparison impossible; PLR-related PDFs extracted fresh to output-v5
+- m13a-bioequivalence-rules.json (v4): covers ICH M13A; FDA BA/BE NDA guidance is a distinct source document; extracted fresh
+- All other v4 files cover ICH/EMA guidelines — no direct duplication with fda-guidance-v2 content
+- No files in positions 23-72 were skipped for being older than v4 extractions
+
+## Skipped (fda-guidance-v2 batch — mislabeled or duplicate)
+- 01-bioanalytical-method-validation-2018.pdf: DUPLICATE — exact copy of 01-bioanalytical-method-validation.pdf (same 385.6KB, May 2018 content). Rules already in fda-bioanalytical-method-validation-2018-rules.json (42 rules).
+- 02-clinical-drug-interaction-cyp-transporter.pdf: MISLABELED — actual content is 1-page "Statistical Software Clarifying Statement" (FDA, May 6, 2015), 26KB. Not DDI guidance. No rules extractable.
+- 03-in-vitro-drug-interaction-studies.pdf: DUPLICATE — FDA adoption wrapper for ICH M12 Drug Interaction Studies (August 2024). Same content as output-v4/m12-ddi-rules.json (78 rules, ICH M12 Step 4, May 2024). No new content.
+- 04-refuse-to-file.pdf: MISLABELED — actual content is FDA CDER MAPP 5015.7 Rev. 1 "Environmental Assessments and Claims of Categorical Exclusion" (effective 10/10/17, recertified 11/23/2022), 9 pages. Internal FDA procedural MAPP, not sponsor-facing RTF guidance. No rules extractable.
+- 06-rems-guidance.pdf: MISLABELED — actual content is US Prescribing Information (USPI) for "Influenza A (H1N1) 2009 Monovalent Vaccine Live, Intranasal" (MedImmune, LLC; ID09H0101, 22 pages, 2009). Product label, not REMS guidance for industry. No REMS design rules extractable.
+- 07-drug-induced-liver-injury.pdf: DUPLICATE — exact copy of 06-drug-induced-liver-injury-2009.pdf (same 205.8KB, identical title page "Drug-Induced Liver Injury: Premarketing Clinical Evaluation", July 2009). Rules already extracted to fda-drug-induced-liver-injury-2009-rules.json (38 rules). SKIP.
+- 07-scientific-considerations-biosimilarity-2015.pdf: DUPLICATE — same document as 27-scientific-considerations-biosimilarity.pdf already extracted to output-v5/27-scientific-considerations-biosimilarity-rules.json (38 rules, April 2015 "Scientific Considerations in Demonstrating Biosimilarity to a Reference Product"). SKIP.
+- 08-assessment-abuse-potential.pdf: MISLABELED — actual content is FDA Staff Manual Guide SMG 1410.35 "Issuance of Notices Relating to Proposals and Orders for Debarment and Denial of an Application to Terminate Debarment" (effective May 6, 2013, 2 pages). Internal FDA delegation of authority document. No sponsor-facing drug abuse potential rules extractable. SKIP.
+- 08-quality-considerations-biosimilarity-2015.pdf: MISLABELED — actual content is "The 510(k) Program: Evaluating Substantial Equivalence in Premarket Notifications [510(k)]" (CDRH/CBER, July 28, 2014, supersedes K86-3). Medical device guidance already extracted to output-v5/28-quality-considerations-biosimilarity-rules.json (30 rules). SKIP.
+- 09-clinical-evidence-effectiveness.pdf: DUPLICATE — same document as 05-clinical-evidence-effectiveness-1998.pdf ("Providing Clinical Evidence of Effectiveness for Human Drug and Biological Products", May 1998, Clinical 6, 129.2KB). Already extracted this session to fda-clinical-evidence-effectiveness-1998-rules.json (35 rules). SKIP.
+- 10-clinical-trial-endpoints-cancer.pdf: DUPLICATE — same document as 30-clinical-trial-endpoints-cancer-2018.pdf (December 2018, FDA Oncology Center of Excellence, CDER/CBER). Rules already in 30-clinical-trial-endpoints-cancer-2018-rules.json (35 rules). SKIP.
+- 10-refuse-to-file-2017.pdf: MISLABELED — actual content is a veterinary medicated feed product label: "Monensin and Bacitracin Zinc Medicated Broiler Chicken Feed" (Type C Medicated Feed). No sponsor-facing RTF guidance rules extractable. SKIP.
+- 11-expedited-programs.pdf: DUPLICATE — identical to 09-expedited-programs-serious-conditions-2014.pdf (same 494.1KB, May 2014, CDER/CBER, same cover page, TOC, and content: "Expedited Programs for Serious Conditions – Drugs and Biologics"). Rules already extracted to fda-expedited-programs-serious-conditions-2014-rules.json (45 rules). SKIP.
+- 12-non-inferiority-clinical-trials.pdf: DUPLICATE — same document as 04-non-inferiority-clinical-trials-2016.pdf (same 670.5KB, November 2016, CDER/CBER, "Non-Inferiority Clinical Trials to Establish Effectiveness — Guidance for Industry"). Rules already in fda-non-inferiority-clinical-trials-2016-rules.json (38 rules). SKIP.
+- 13-adaptive-designs-clinical-trials.pdf: DUPLICATE — same document as 26-adaptive-designs-clinical-trials-2019.pdf (November 2019, CDER/CBER, 306.4KB, "Adaptive Designs for Clinical Trials of Drugs and Biologics — Guidance for Industry"). Rules already in 26-adaptive-designs-clinical-trials-2019-rules.json (35 rules). SKIP.
+- 13-premarketing-risk-assessment-2005.pdf: ALREADY EXTRACTED this session under same filename to 13-premarketing-risk-assessment-2005-rules.json (March 2005, Clinical Medical, 38 rules). SKIP.
+- 14-multiple-endpoints-clinical-trials.pdf: ALREADY EXTRACTED this session under same filename to 14-multiple-endpoints-clinical-trials-rules.json (October 2022, Biostatistics, 30 rules). SKIP.
+- 15-physician-labeling-rule-format.pdf: MISLABELED — actual content is "Patient-Reported Outcome Measures: Use in Medical Product Development to Support Labeling Claims" (FDA, December 2009, CDER/CBER/CDRH). PRO guidance already extracted to output-v5/25-suicidal-ideation-assessment-rules.json (this same PRO document was mislabeled in position 25 too). SKIP.
+- 15-benefit-risk-assessment-2023.pdf: ALREADY EXTRACTED this session under same filename to 15-benefit-risk-assessment-2023-rules.json. SKIP.
+
+## Skipped (pmda-guidelines-v2 / ema-guidelines-v2 batch — output-v5 run, 2026-03-24)
+- pmda-conditional-early-approval.pdf: Already extracted in output-v5/pmda-sakigake-cea-pathways.json (combined with pmda-sakigake-designation.pdf; document date 2017-12-01; 18 rules covering CEA system, SUD reprocessing, Emergency Approval, SAKIGAKE). Same version; non-shallow extraction. SKIP.
+- pmda-ectd-v4-implementation-guide.pdf: Already extracted in output-v5/pmda-ectd-japan-submission-rules.json (combined with pmda-ectd-submission-formats.pdf; document version v1.6.0, date 2025-03-10; 30 rules). Same version; non-shallow extraction. SKIP.
+- guideline-clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-revision-2_en.pdf: Already extracted in output-v5/ema-guideline-diabetes-investigation.json (version CPMP/EWP/1080/00 Rev.2, date 2023-06-22; 22 rules). Same version; non-shallow extraction. SKIP.
+- pmda-anticancer-clinical-evaluation.pdf: FILE MISLABELED — actual content is ICH S9 Q&As Step 4 (12 June 2018). Already extracted in output-v5/pmda-ich-s9-qas.json (20 rules). Same version; non-shallow extraction. SKIP.
+- pmda-clinical-pharmacokinetics.pdf: FILE MISLABELED — actual content is MHLW PBPK Analysis Reports Guideline (PSEHB/PED Notification No. 1221-1, 2020-12-21). Already extracted in output-v5/pmda-pbpk-analysis-reports.json (15 rules). Same version; non-shallow extraction. SKIP.
+- pmda-drug-interaction-studies.pdf: FILE MISLABELED — actual content is MHLW Guidance on Appropriate Medication for Elderly Patients (general) (HPB/GAD/MSPO Notification No. 0529-1, 2018-05-29). Already extracted in output-v5/pmda-elderly-polypharmacy.json (20 rules). Same version; non-shallow extraction. SKIP.
+
+## Remaining unprocessed files check (2026-03-24)
+- 05-benefit-risk-assessment.pdf (fda-guidance-v2/): DUPLICATE — exact same file size (407,918 bytes) as 15-benefit-risk-assessment-2023.pdf which was successfully extracted to fda-benefit-risk-assessment-2023-rules.json and 15-benefit-risk-assessment-2023-rules.json (combined 50 rules, FDA 2023 Benefit-Risk Assessment framework). Pre-existing file in directory; identical content to the new download. SKIP.
+- 11-supac-ir-1995.pdf (fda-guidance-v2/): EXTRACTED — rules successfully extracted to fda-supac-ir-1995-rules.json (38 rules, FDA SUPAC-IR 1995 guidance for immediate release solid oral dosage forms post-approval changes). Not a skip; fully processed.
+- Human_Gene_Therapy_Rare_Diseases.pdf (gap-fill/gene-therapy-fda/): EXTRACTED — gene-therapy-fda-rare-diseases-rules.json exists and is COMPLETE with 24 rules covering CMC, clinical trial design, expedited pathways, and post-marketing requirements for rare disease gene therapy programs (FDA January 2020). Verified complete extraction.
+
+## Final batch extractions (ema-guidelines-v2, 2026-03-24)
+- guideline-environmental-risk-assessment.pdf: ALREADY EXTRACTED — ema-era-guideline-rules.json (30 rules, EMEA/CHMP/SWP/4447/00 Rev. 1-Corr., 2024-02-15). Confirmed by metadata check. SKIP (not a new extraction).
+- guideline-evaluation-drugs-treatment-gastro-oesophageal-reflux-disease_en.pdf: EXTRACTED — ema-gord-guideline-rules.json (35 rules, EMA/CHMP/EWP/342691/2009, 2011-03-17, effective 2011-10-01). Covers disease classification, endoscopic diagnosis, patient selection, symptom endpoints, trial design, comparators, paediatric requirements, and safety for GORD drug development.
+- guideline-evaluation-medicinal-products-treatment-irritable-bowel-syndrome-revision-1_en.pdf: EXTRACTED — ema-ibs-guideline-rules.json (35 rules, CPMP/EWP/785/97 Rev. 1 / EMA/CHMP/60337/2013, 2014-09-25, effective 2015-04-01). Covers Rome III patient selection, diagnostic exclusion workup, concomitant medication, trial design, IBS-D/IBS-C/IBS-M responder endpoints, special populations (children, elderly, gender), geographic requirements, and long-term safety.
+- guideline-immunogenicity-mabs.pdf: EXTRACTED — ema-immunogenicity-mabs-rules.json (28 rules, EMA/CHMP/BMWP/86289/2010, 2012-05-24, effective 2012-12-01). Addendum to EMEA/CHMP/BMWP/14327/2006. Covers mAb-specific assay format requirements, drug interference management, confirmatory assays, neutralising antibody assessment, risk identification (structure/glycosylation/MOA/clinical factors), risk assessment (multidisciplinary approach), risk monitoring/mitigation lifecycle, and MAA integrated summary requirements.
+
+## WHO vaccine batch extractions (vaccines-who, 2026-03-24)
+- WHO_DNA_Vaccines_TRS1028_Annex2.pdf: No prior coverage in v2/v3/v4. Full extraction to vaccine-who-dna-trs1028-annex2.json (36 rules). WHO TRS 1028, 2021. Covers quality (Part A), nonclinical (Part B), clinical (Part C), NRA guidance (Part D) for plasmid DNA vaccines.
+- WHO_GMP_Biological_Products_Annex2.pdf: No prior coverage in v2/v3/v4. Full extraction to vaccine-who-gmp-biological-products-trs999.json (38 rules). WHO TRS 999, 2016. Covers GMP for all biological products for human use.
+
+## Skipped (stage-1 batch, 2026-03-24 — dedup confirmation)
+- 05-benefit-risk-assessment.pdf (fda-guidance-v2/) → requested output: fda-benefit-risk-assessment-rules.json: ALREADY DOCUMENTED as SKIP above (line ~96). Confirmed: same PDF (407,918 bytes) as 15-benefit-risk-assessment-2023.pdf. Existing extractions fda-benefit-risk-assessment-2023-rules.json (32 rules) and 15-benefit-risk-assessment-2023-rules.json (30 rules) together provide 50+ rules from this document; neither is shallow. Per dedup protocol (same version, non-shallow), SKIP. No new output file created.
+
+## WHO vaccine batch extractions (vaccines-who gap-fill, resumed 2026-03-24)
+- WHO_mRNA_Vaccines_TRS1039_Annex3.pdf: No prior coverage in v2/v3/v4. Full extraction to vaccine-who-mrna-trs1039-annex3.json (45 rules). WHO TRS 1039, 2022. Covers quality requirements (sections 6.2–6.12), nonclinical evaluation (section 7), and clinical evaluation (section 8) for mRNA vaccines.
+- WHO_Nonclinical_Evaluation_Vaccines_Annex1.pdf: No prior coverage in v2/v3/v4. Full extraction to vaccine-who-nonclinical-evaluation-annex1.json (48 rules). WHO/BS/03.1969, February 2003. Covers characterization, immunogenicity, toxicity assessment, special considerations for adjuvants/excipients/routes, and specific vaccine type requirements.
+- WHO_Prequalification_Procedure_Vaccines_TRS978_Annex6.pdf: No prior coverage in v2/v3/v4. Full extraction to vaccine-who-prequalification-trs978-annex6.json (50 rules). WHO TRS 978, 2013. Covers the complete WHO prequalification procedure, streamlined and fast-track procedures, post-prequalification obligations, reassessment, and compliance monitoring.
+- 11-supac-ir-1995.pdf (fda-guidance-v2/): CONFIRMED ALREADY EXTRACTED (from prior session) — fda-supac-ir-1995-rules.json (38 rules). Assigned in this batch; confirmed not a skip but a fully completed prior extraction. No new output created.
+
+## ALL ASSIGNED FILES COMPLETE — 2026-03-24
+Total new rules extracted this session (assigned batch):
+- ema-gord-guideline-rules.json: 35 rules
+- ema-ibs-guideline-rules.json: 35 rules
+- ema-immunogenicity-mabs-rules.json: 28 rules
+- vaccine-who-mrna-trs1039-annex3.json: 45 rules
+- vaccine-who-nonclinical-evaluation-annex1.json: 48 rules
+- vaccine-who-prequalification-trs978-annex6.json: 50 rules
+Total: 241 new rules across 6 documents
+SKIPPED: pmda-anticancer-rules.json — source file pmda-anticancer-clinical-evaluation.pdf already fully extracted in output-v5 as pmda-ich-s9-qas.json (20 rules, same version: ICH S9 Q&As Step 4 dated 2018-06-12, complete 19-page document). Not shallow. Skipped per deduplication protocol.
+SKIPPED: pmda-clinical-pk-rules.json — source file pmda-clinical-pharmacokinetics.pdf already fully extracted in output-v5 as pmda-pbpk-analysis-reports.json (15 rules, same version: PSEHB/PED Notification No. 1221-1 dated 2020-12-21, complete 12-page document). Not shallow. Skipped per deduplication protocol.
+SKIPPED: pmda-conditional-approval-rules.json — source file pmda-conditional-early-approval.pdf already fully extracted in output-v5 as pmda-sakigake-cea-pathways.json (18 rules combined across two source files, same version: MHLW/PMDA Regulatory Update presentation dated 2017-12-01, pages 1-35 complete). Not shallow. Skipped per deduplication protocol.
+SKIPPED: pmda-ddi-rules.json — source file pmda-drug-interaction-studies.pdf already fully extracted in output-v5 as pmda-elderly-polypharmacy.json (20 rules, same version: MHLW Guidance on Appropriate Medication for Elderly Patients HPB/GAD/MSPO Notification No. 0529-1 dated 2018-05-29, 20 pages of body text reviewed). Not shallow. Skipped per deduplication protocol.
+SKIPPED: pmda-ectd-v4-rules.json — source file pmda-ectd-v4-implementation-guide.pdf already fully extracted in output-v5 as pmda-ectd-japan-submission-rules.json (30 rules, same version: ICH eCTD v4.0 Implementation Guide in Japan v1.6.0 dated 2025-03-10, pages 1-83 complete). Not shallow. Skipped per deduplication protocol.
+
+## Skipped (ema-guidelines-v2 batch, 2026-03-25 — dedup confirmation)
+- guideline-clinical-evaluation-medicinal-products-used-weight-management_en.pdf: Already extracted in output-v5/ema-guideline-weight-management-final.json (20 rules, EMA/CHMP/311805/2014, 2016-06-23). Same version; non-shallow. SKIP.
+- guideline-development-new-medicinal-products-treatment-crohns-disease-revision-2_en.pdf: Already extracted in output-v5/ema-crohns-disease-rev2-rules.json (25 rules, CPMP/EWP/2284/99 Rev. 2, 2018-06-28). Same version; non-shallow. SKIP.
+- guideline-development-new-medicinal-products-treatment-ulcerative-colitis-revision-1_en.pdf: Already extracted in output-v5/ema-ulcerative-colitis-rev1-rules.json (26 rules, CHMP/EWP/18463/2006 Rev.1, 2018-06-28). Same version; non-shallow. SKIP.
+- guideline-environmental-risk-assessment.pdf: Already extracted in output-v5/ema-era-guideline-rules.json (30 rules, EMEA/CHMP/SWP/4447/00 Rev. 1-Corr., 2024-02-15). Same version; non-shallow (30 rules). SKIP.
+- guideline-evaluation-drugs-treatment-gastro-oesophageal-reflux-disease_en.pdf: Already extracted in output-v5/ema-gord-guideline-rules.json (35 rules, EMA/CHMP/EWP/342691/2009, 2011-03-17). Same version; non-shallow (35 rules). SKIP.
+- guideline-evaluation-medicinal-products-treatment-chronic-constipation-including-opioid-induced-constipation-and-bowel-cleansing_en.pdf: Already extracted in output-v5/ema-constipation-opioid-bowel-cleansing-rules.json (47 rules, EMA/CHMP/336243/2013, 2015-06-25). Same version; non-shallow (47 rules). SKIP.
+
+## Skipped (ICH gap-fill worker batch, 2026-03-25 — dedup confirmation)
+- ICH Q13 (Continuous Manufacturing): Already extracted in output-v5/ich-q13-q14-rules.json (30 rules, Q13 Step 4, 2022-11-16). Source PDF: ICH_Q13_Step4_Guideline_2022_1116.pdf. Same version; non-shallow (30 rules). SKIP.
+- ICH Q14 (Analytical Procedure Development): Already extracted in output-v5/ich-q13-q14-rules.json (30 rules, Q14, 2023-11-30 with error correction 2025). Source PDF: ICH_Q14_Guideline_2023_1130_ErrorCorrection_2025.pdf. Same version; non-shallow (30 rules). SKIP.
+- ICH E2B(R3) (Electronic Transmission of ICSRs): Already extracted in output-v5/ich-e2b-e2e-e2f-rules.json (27 rules, E2B(R3) v5.03, Step 3, 2025-07-18). Source PDF: ICH_E2B(R3)_EWG_IWG_ICSR_Implementation_Guide_(QA integration)_Step3_2025_0718_Assembly_Approved_0.pdf. Same version; non-shallow (27 rules). SKIP.
+- ICH E22 (Clinical Pharmacology Studies, DRAFT): Already extracted in output-v5/ich-e12-e22-rules.json (38 rules, E22 Step 2 Draft, 2025-11-19). Source PDF: ICH_E22_Step2_draftGuideline_Assembly_Endorsed_FINAL_2025_1119.pdf. Same version; non-shallow (38 rules); DRAFT status correctly flagged in existing extraction. SKIP.
+- ICH S2(R1) (Genotoxicity): Already extracted in output-v5/ich-s2-s3a-s3b-rules.json (30 rules, S2(R1)). Source PDF: S2(R1) Guideline.pdf. Same version; non-shallow (30 rules). SKIP.
+- ICH S9 (Nonclinical for Oncology): Already extracted in output-v5/ich-s9-s10-rules.json (27 rules, S9). Source PDF: S9_Guideline.pdf. Same version; non-shallow (27 rules). SKIP.
+- ICH S10 (Photosafety): Already extracted in output-v5/ich-s9-s10-rules.json (25 rules, S10). Source PDF: S10_Guideline.pdf. Same version; non-shallow (25 rules). SKIP.
+
+## PMDA guidelines-v2 batch 2 (worker assignment, 2026-03-25)
+
+### Skipped (already fully extracted in output-v5)
+- pmda-clinical-pharmacokinetics.pdf: FILE MISLABELED — actual content is MHLW PBPK Analysis Reports Guideline (PSEHB/PED Notification No. 1221-1, 2020-12-21). Already extracted in output-v5/pmda-pbpk-analysis-reports.json (15 rules). Same version; non-shallow. SKIP.
+- pmda-conditional-early-approval.pdf: FILE MISLABELED — actual content is PMDA Regulatory Update presentation (2017-12-01). Already extracted in output-v5/pmda-sakigake-cea-pathways.json (18 rules). Same version; non-shallow. SKIP.
+- pmda-drug-interaction-studies.pdf: FILE MISLABELED — actual content is MHLW Guidance on Appropriate Medication for Elderly Patients (HPB/GAD/MSPO Notification No. 0529-1, 2018-05-29). Already extracted in output-v5/pmda-elderly-polypharmacy.json (20 rules). Same version; non-shallow. SKIP.
+- pmda-ectd-v4-implementation-guide.pdf: Already extracted in output-v5/pmda-ectd-japan-submission-rules.json (30 rules, v1.6.0, 2025-03-10). Same version; non-shallow. SKIP.
+
+### Extracted fresh (new content not previously covered)
+- pmda-ethnic-factors-ich-e5.pdf: FILE MISLABELED — actual content is PMDA "Application for Accreditation of Foreign Manufacturers" procedural guide (7 pages, updated through PSEHB/PED Notification No. 0428-4, 2021-04-28). No prior coverage found. Extracted 14 rules to pmda-foreign-manufacturer-accreditation-rules.json.
+
+### Session totals (2026-03-25 PMDA batch 2)
+- New rules extracted: 14 (1 document)
+- Documents skipped: 4 (all previously extracted in output-v5)
+[2026-03-25] SKIPPED: pmda-anticancer-clinical-evaluation.pdf — Already extracted as pmda-ich-s9-qas.json in output-v5 (20 rules, same source file)
+[2026-03-25] SKIPPED: pmda-bmv-ich-m10.pdf — Duplicate of pmda-bioanalytical-method-validation.pdf (same document: "Guideline on Bioanalytical Method Validation in Pharmaceutical Development", Sept 13, 2013). Already extracted as pmda-bioanalytical-method-validation-rules.json.
+
+## Skipped (ema-guidelines-v3 batch, 2026-03-25)
+[2026-03-25] SKIPPED: overview-comments-received-draft-paediatric-addendum-guidelines-clinical-investigation-medicinal-products-treatment-and-prophylaxis-venous-thromboembolic-disease-emachmp7634382017_en.pdf — "Overview of comments received" document (EMA/CHMP/20512/2023, 26 January 2023). Stakeholder feedback compilation from 7 organizations (ESC/AEPC, ISTH, EAHP, LEO Pharma, BMS, Pfizer, PRA Health Sciences) with EMA outcome responses. No extractable regulatory rules — comments-received documents do not contain regulatory requirements.
+[2026-03-25] SKIPPED: overview-comments-received-guideline-clinical-investigation-medicinal-products-treatment-peripheral-arterial-occlusive-disease-lower-extremities_en.pdf — "Overview of comments received" document (EMA/372496/2025, 28 November 2025). Stakeholder feedback compilation from Novo Nordisk A/S (7 specific comments on PAOD guideline EMA/CHMP/EMA/CHMP/464798/2024 Rev. 2) with EMA outcome responses. 2 pages total. No extractable regulatory rules.
+[2026-03-25] SKIPPED: draft-guideline-clinical-investigation-new-medicinal-products-treatment-acute-coronary-syndrome-first-version_en.pdf — DRAFT version (EMA/CHMP/207892/2015, 1 April 2016) of ACS guideline. SUPERSEDED by adopted final version (EMA/CHMP/760125/2016, adopted 20 July 2017, effective 1 March 2018) which exists in the same source directory as guideline-clinical-investigation-new-medicinal-products-treatment-acute-coronary-syndrome-first-version_en.pdf. Per dedup protocol, SKIP older draft when final version exists.
+SKIPPED: addendum-guideline-evaluation-medicinal-products-indicated-treatment-bacterial-infections_en.pdf (EMA/CHMP/351889/2013, Oct 2013) — REPLACED by CPMP/EWP/558/95 Rev 3 (May 2022), already extracted as ema-bacterial-infections-rules.json
+
+## Skipped concept papers (ema-guidelines-v3 paediatric/concept batch, 2026-03-25)
+[2026-03-25] SKIPPED: concept-paper-need-revision-paediatric-addendum-guideline-clinical-investigation-medicinal-products-treatment-pulmonary-arterial-hypertension_en.pdf — Concept paper (EMA/CHMP/264860/2023, 22 June 2023) describing the need for revision of the PAH paediatric addendum (EMA/CHMP/213972/2010). Contains rationale, problem statement, and proposed topics for future guideline revision only. No extractable regulatory rules — concept papers describe the NEED for a guideline, not requirements themselves.
+[2026-03-25] SKIPPED: concept-paper-need-develop-reflection-paper-development-medicinal-products-prevent-and-treat-acute-kidney-injury_en.pdf — Concept paper (EMA/CHMP/481820/2018 Corr.*, 28 June 2018) describing the need to develop a reflection paper on AKI drug development. Contains introduction, problem statement, scope outline, and proposed discussion topics only. No extractable regulatory rules.
+[2026-03-25] SKIPPED: concept-paper-need-revision-points-consider-clinical-investigation-new-medicinal-products-treatment-acute-coronary-syndrome-first-version_en.pdf — Concept paper (EMA/CHMP/559636/2014, 25 September 2014) describing the need for revision of CHMP PtC on ACS (CPMP/EWP/570/98 and CPMP/EWP/967/01). Contains rationale for merging STEMI/NSTEMI guidelines and proposed discussion points only. No extractable regulatory rules. NOTE: The actual revised ACS guideline (EMA/CHMP/760125/2016, adopted July 2017) exists in the same directory and should be extracted separately.
+
+## EMA guidelines-v3 assigned batch — ICH dedup + reflection papers (2026-03-25)
+
+### Skipped (dedup — same ICH harmonized text already extracted)
+- ich-e-12-principles-clinical-evaluation-new-antihypertensive-drugs-step-5_en.pdf: EMA Step 5 adopted version (CPMP/ICH/541/00, June 2000). Same ICH harmonized text already extracted in output-v5/ich-e12-e22-rules.json (38 E12 rules from E12_Guideline.pdf, dated 2000-03-02). No EU-specific annotations beyond the EMEA cover page. SKIP.
+- ich-e-14-clinical-evaluation-qtqts-interval-prolongation-and-proarrhythmic-potential-non-antiarrhythmic-drugs-step-5_en.pdf: EMA Step 5 adopted version (CHMP/ICH/2/04, November 2005). Same ICH harmonized text already deeply extracted in output-v4/e3-e4-e7-e14-e17-rules.json (E14 rules within 103-rule set, 100% confidence). No EU-specific annotations beyond the EMEA cover page. SKIP.
+
+### Extracted fresh (new content not previously covered)
+- reflection-paper-investigation-assessment-cardiovascular-safety-anticancer-medicinal-products_en.pdf: No prior coverage. DRAFT reflection paper (EMA/8699/2026, 19 January 2026, consultation closes 31 July 2026). Joint CVSWP/ONCWP. Extracted 25 rules to ema-cv-safety-anticancer-reflection-rules.json. Severity: mostly MEDIUM (non-binding reflection paper).
+- reflection-paper-regulatory-requirements-development-medicinal-products-acute-kidney-injury-aki_en.pdf: No prior coverage. Final adopted reflection paper (EMA/CHMP/536854/2023, 14 December 2023). Extracted 22 rules to ema-aki-reflection-paper-rules.json. Severity: mostly MEDIUM (non-binding reflection paper).
+
+### Session totals (2026-03-25, ema-guidelines-v3 assigned batch)
+- New rules extracted: 47 (2 reflection papers)
+- Documents skipped: 2 (ICH E12 and E14 EMA Step 5 — same harmonized text already in v4/v5)
+
+### Session: 2026-03-25, ema-guidelines-v4 assigned batch (6 documents)
+
+**Document 1: reflection-paper-regulatory-requirements-development-medicinal-products-non-alcoholic-steatohepatitis-nash_en.pdf**
+- SKIPPED: Already extracted as ema-nash-reflection-paper-rules.json (52 rules, extracted 2026-03-24). Same version (EMA/CHMP/111529/2024). Not SHALLOW (52 rules). No re-extraction needed.
+
+**Document 2: reflection-paper-regulatory-requirements-development-medicinal-products-primary-biliary-cholangitis-pbc-primary-sclerosing-cholangitis-psc_en.pdf**
+- SKIPPED: Already extracted as ema-pbc-psc-reflection-paper-rules.json (58 rules, extracted 2026-03-24). Same version (EMA/CHMP/299976/2018 / EMA/541203/2023). Not SHALLOW (58 rules). No re-extraction needed.
+
+**Document 3: concept-paper-need-guideline-clinical-development-thrombopoetin-receptor-agonists-treatment-chronic-immune-idiopathic-thrombocytopenic-purpura_en.pdf**
+- SKIPPED: Concept paper only (3 pages, EMA/CHMP/EWP/203111/2010, 20 May 2010). Contains problem statement and recommendation to draft a future guideline. No extractable regulatory rules.
+
+**Document 4: concept-paper-need-guideline-clinical-investigation-medicinal-products-treatment-chronic-constipation_en.pdf**
+- SKIPPED: Already extracted as ema-concept-paper-chronic-constipation.json (9 rules, extracted previously). Same document version.
+
+**Document 5: concept-paper-need-revision-guideline-medical-products-used-weight-control-revision-1_en.pdf**
+- SKIPPED: Already extracted as ema-concept-paper-weight-control-revision.json (7 rules, extracted previously). Same document version.
+
+**Document 6: concept-paper-revision-guidelines-clinical-investigation-and-core-smpc-recombinant-and-human-plasma-derived-factor-viii-products-ema-chmp-bpwp-144533-2009-rev-1-ema-chmp-bpwp-1619-1999-rev-2_en.pdf**
+- SKIPPED: Concept paper only (4 pages, EMA/CHMP/BPWP/383118/2016, 21 July 2016). Contains problem statement and recommendation to revise existing Factor VIII guidelines. No extractable regulatory rules.
+
+### Session totals (2026-03-25, ema-guidelines-v4 assigned batch)
+- New rules extracted: 0
+- Documents skipped: 6 (2 reflection papers already extracted with substantial rule counts; 2 concept papers already extracted; 2 concept papers with no extractable rules)
+
+---
+
+## E6 GCP Batch (2026-03-25, ema-guidelines-v4 — ICH E6 documents)
+
+**Document 1: ICH_E6(R3)_Step4_FinalGuideline_2025_0106.pdf**
+- SKIPPED: Same version already extracted in output-v4/m11-e6r3-clinical-ops-rules.json (93 rules, source: "ICH E6(R3) — Good Clinical Practice, Step 4, January 2025 with October 2025 Error Corrections"). Not newer than existing extraction.
+
+**Document 2: ich-e6-r3-guideline-good-clinical-practice-gcp-step-5_en.pdf**
+- SKIPPED: EMA CHMP Step 5 adoption (EMA/CHMP/ICH/135/1995, 23 January 2025, effective 23 July 2025) of the same ICH E6(R3) Step 4 Final. Same substantive content as Document 1; the Step 5 wrapper adds no additional regulatory rules. Already covered by 93 rules in output-v4/m11-e6r3-clinical-ops-rules.json.
+
+**Document 3: ich-e6-r1-guideline-good-clinical-practice-revision-1_en.pdf**
+- SKIPPED: ICH E6(R1) — SUPERSEDED by E6(R2) and E6(R3). The latest E6(R3) rules already in v4.
+
+**Document 4: ich-guideline-good-clinical-practice-e6r2-step-5-revision-2_en.pdf**
+- SKIPPED: ICH E6(R2) Step 5 — SUPERSEDED by E6(R3). Already covered by 93 rules in output-v4/m11-e6r3-clinical-ops-rules.json.
+
+**Document 5: ich-guideline-good-clinical-practice-e6r2-4-step-2b-revision-1_en.pdf**
+- SKIPPED: ICH E6(R2) Step 2b draft — SUPERSEDED by final E6(R2) and subsequently by E6(R3). Draft; final version exists.
+
+**Document 6: draft-ich-e6-r3-guideline-good-clinical-practice-gcp-step-2b_en.pdf**
+- SKIPPED: ICH E6(R3) Step 2b draft — SUPERSEDED by Step 4 Final (January 2025). Draft; final version exists and is already extracted.
+
+**Document 7: draft-ich-e6r3-guideline-good-clinical-practice-annex-2-step-2b_en.pdf**
+- SKIPPED: ICH E6(R3) Annex 2 Step 2b draft. Annex 2 is not yet finalised (expected later in 2025 per EMA timeline). Draft content may change; not suitable for rule extraction until Step 4 Final is issued.
+
+**Document 8: draft-ich-guideline-e6-good-clinical-practice-revision-2_en.pdf**
+- SKIPPED: Draft of ICH E6(R2) — SUPERSEDED by final E6(R2) and subsequently by E6(R3). Draft; final version exists.
+
+**Document 9: ICH E6 Good clinical practice - Scientific guideline _ European Medicines Agency (EMA).pdf**
+- SKIPPED: EMA website overview/landing page for ICH E6 GCP. Contains timeline, summary, and links — no extractable regulatory rules.
+
+**Document 10: overview-comments-ich-e6-r3-guideline_en.pdf**
+- SKIPPED: Overview of public consultation comments on E6(R3). No regulatory rules — contains stakeholder feedback only.
+
+**Document 11: ich-e-3-structure-and-content-clinical-study-reports-step-5_en.pdf**
+- SKIPPED: ICH E3 already extracted in output-v4/e3-e4-e7-e17-e6r3-rules.json with 15 rules (above 10-rule shallow threshold). Same version; not newer.
+
+### Session totals (2026-03-25, ema-guidelines-v4 — E6 GCP batch)
+- New rules extracted: 0
+- Documents skipped: 11 (1 already extracted at 93 rules; 1 EMA Step 5 of same content; 3 superseded older versions; 3 drafts where final exists; 1 website overview page; 1 comments overview; 1 E3 already extracted at 15 rules)
+
+## ema-guidelines-v4 Worker (2026-03-25) — Documents 1-8
+
+- overview-comments-received-guideline-clinical-evaluation-medicinal-products-used-weight-control-revision-1_en.pdf: SKIPPED — "Overview of comments received" document (stakeholder feedback compilation). No extractable regulatory rules per swarm protocol. Note: previously extracted as ema-weight-control-comments-rules.json (13 rules) but should have been skipped.
+- overview-comments-received-guideline-evaluation-medicinal-products-treatment-chronic-constipation-including-opioid-induced-constipation-and-bowel-cleansing_en.pdf: SKIPPED — "Overview of comments received" document. No extractable rules. Note: previously extracted as ema-constipation-comments-rules.json (16 rules) but should have been skipped.
+- overview-comments-received-ich-e6r3-guideline-good-clinical-practice-annex-2-step-2b_en.pdf: SKIPPED — "Overview of comments received" document. No extractable rules.
+- overview-comments-received-reflection-paper-regulatory-requirements-development-medicinal-products-chronic-non-infectious-liver-diseases-pbc-psc-nashema-chmp-299976-2018_en.pdf: SKIPPED — "Overview of comments received" document. No extractable rules. Note: previously extracted as ema-liver-diseases-comments-rules.json (30 rules) but should have been skipped.
+- draft-guideline-clinical-evaluation-medicinal-products-used-weight-control-revision-1_en.pdf: SKIPPED — Draft guideline; final version exists and already extracted as ema-guideline-weight-management-final.json (20 rules). Draft also previously extracted as ema-draft-guideline-weight-control.json (25 rules).
+- draft-guideline-evaluation-medicinal-products-treatment-chronic-constipation_en.pdf: SKIPPED — Draft guideline; final version exists and already extracted as ema-constipation-opioid-bowel-cleansing-rules.json (47 rules). Draft also previously extracted as ema-draft-guideline-chronic-constipation.json (28 rules).
+- draft-guideline-clinical-investigation-recombinant-and-human-plasma-derived-factor-viii-products-revision-2_en.pdf: SKIPPED — Draft guideline; final version (guideline-clinical-investigation-recombinant-and-human-plasma-derived-factor-viii-products-revision-2_en.pdf) exists in same source folder (ema-guidelines-v4/).
+
+## ema-guidelines-v4 batch (stage-1) — Worker extraction session 2026-03-25
+## 10 SKIPPED (already extracted in output-v5), 2 NEW extractions
+
+- guideline-clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-revision-2_en.pdf: SKIPPED — Already extracted as ema-guideline-diabetes-investigation.json (22 rules).
+- guideline-development-new-medicinal-products-treatment-crohns-disease-revision-2_en.pdf: SKIPPED — Already extracted as ema-crohns-disease-rev2-rules.json (25 rules).
+- guideline-development-new-medicinal-products-treatment-ulcerative-colitis-revision-1_en.pdf: SKIPPED — Already extracted as ema-ulcerative-colitis-rev1-rules.json (26 rules).
+- guideline-evaluation-drugs-treatment-gastro-oesophageal-reflux-disease_en.pdf: SKIPPED — Already extracted as ema-gord-guideline-rules.json (35 rules).
+- guideline-evaluation-medicinal-products-treatment-chronic-constipation-including-opioid-induced-constipation-and-bowel-cleansing_en.pdf: SKIPPED — Already extracted as ema-constipation-opioid-bowel-cleansing-rules.json (47 rules).
+- guideline-evaluation-medicinal-products-treatment-irritable-bowel-syndrome-revision-1_en.pdf: SKIPPED — Already extracted as ema-ibs-guideline-rules.json (35 rules).
+- guideline-clinical-evaluation-medicinal-products-used-weight-management_en.pdf: SKIPPED — Already extracted as ema-guideline-weight-management-final.json (20 rules).
+- guideline-non-clinical-and-clinical-development-medicinal-products-treatment-nausea-and-vomiting-associated-cancer-chemotherapy_en.pdf: SKIPPED — Already extracted as ema-nausea-vomiting-chemotherapy-rules.json (42 rules).
+- guideline-non-clinical-development-fixed-combinations-medicinal-products_en.pdf: SKIPPED — Already extracted as ema-fixed-combinations-nonclinical-rules.json (30 rules).
+- points-consider-wording-helicobacter-pylori-eradication-therapy-selected-spc-sections_en.pdf: SKIPPED — Already extracted as ema-helicobacter-pylori-spc-rules.json (22 rules).
+- guideline-clinical-development-medicinal-products-intended-treatment-chronic-primary-immune-thrombocytopenia_en.pdf: NEW — No prior coverage. Extracted 35 rules to ema-chronic-primary-itp-rules.json.
+- points-consider-concerning-endpoints-clinical-studies-haematopoietic-growth-factors-mobilisation-autologous-stem-cells_en.pdf: NEW — No prior coverage. Extracted 25 rules to ema-hgf-stem-cell-mobilisation-rules.json.
+
+### Session: 2026-03-25, health-canada-v2 assigned batch (2 documents)
+
+**Document 1: ctdcta_ctddec-eng.pdf (Health Canada CTA Guidance)**
+- NEW — Extracted. Existing output-v3/health-canada/health-canada-requirements.json is a framework document (704 lines, no rule_id entries, different format). This PDF is the detailed Guidance Document for Clinical Trial Sponsors: Clinical Trial Applications (revised 2016/03/17). Contains Canada-specific procedural rules for CTA filing, CTD format, amendments, notifications, ADR reporting, labelling, and record retention. Extracted 45 rules to health-canada-cta-guidance-rules.json.
+
+**Document 2: ICH_E14-S7B_TrainingMaterial_2022_0407.pdf (ICH E14/S7B Training Material)**
+- SKIPPED — This is a training slide presentation (March 2022, 90+ slides) summarizing the E14/S7B Q&As. E14 and S7B are already at 100% D1 verified (see output-v4/e3-e4-e7-e14-e17-rules.json, output-v4/gap-fix-adversarial-s7b-e14-q12-gmp.json, final-scorecard/s7b-quotes.json). The training material restates the Q&A content with visual diagrams and examples but contains no unique regulatory requirements beyond the harmonized guidelines. No new rules extracted.
+
+### Session totals (2026-03-25, health-canada-v2 batch)
+- New rules extracted: 45 (1 document: HC CTA guidance)
+- Documents skipped: 1 (ICH E14/S7B training slides — duplicative of already-verified E14/S7B rules)
+
+## Stage-1 EMA Guidelines v4 — Worker Session (2026-03-25)
+- smpc_guideline_rev2_en_0.pdf: SKIPPED — already extracted as ema-smpc-rules.json (90 rules, version EMA/813125/2012 rev. 8)
+- status-emea-scientific-guidelines-...pdf: SKIPPED — already extracted as ema-status-guidelines-framework-rules.json (10 rules, version EMEA/42371/2008)
+- guideline-clinical-evaluation-weight-control-children_en.pdf: SKIPPED — already extracted as ema-guideline-weight-control-children-addendum.json (16 rules, version EMEA/CHMP/EWP/517497/2007)
+- CELEX_32006R1901_EN_TXT.pdf: EXTRACTED — eu-regulation-1901-2006-paediatric-rules.json (45 rules)
+- Directive - 2001_83 - EN - EUR-Lex.pdf: EXTRACTED — eu-directive-2001-83-ec-rules.json (55 rules)

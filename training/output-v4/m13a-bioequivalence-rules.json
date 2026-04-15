@@ -1,0 +1,1225 @@
+{
+  "meta": {
+    "guideline": "ICH M13A — Bioequivalence for Immediate-Release Solid Oral Dosage Forms",
+    "step": "Step 4",
+    "date": "23 July 2024",
+    "total_rules": 72,
+    "extraction_date": "2026-03-23",
+    "source_documents": [
+      "ICH_M13A_Step4_Final_Guideline_2024_0723.pdf",
+      "ICH_M13A_Step4_QAs_2024_0723.pdf"
+    ],
+    "series_context": {
+      "M13A": "Study design and data analysis for IR solid dosage forms (this document)",
+      "M13B": "Biowaiver considerations for additional strengths not investigated in BE studies",
+      "M13C": "Highly variable drugs, NTI drugs, complex BE study design and data analysis"
+    }
+  },
+
+  "definitions": {
+    "bioequivalence": {
+      "term": "Bioequivalence",
+      "definition": "Two drug products containing the same drug(s) are considered bioequivalent if their relative bioavailability (BA) (rate and extent of drug absorption) after administration in the same molar dose lies within acceptable predefined limits. These limits are set to ensure comparable in vivo performance, i.e., similarity in terms of safety and efficacy.",
+      "source_section": "1.2.1"
+    },
+    "comparator_product": {
+      "term": "Comparator Product",
+      "definition": "An investigational or marketed product, i.e., active control, or placebo, used as a reference in a clinical trial. In the context of this guideline, a comparator product is the drug product accepted by regulatory agencies that an applicant can use to compare against the test product in conducting a BE study.",
+      "source_section": "5 (Glossary)"
+    },
+    "spare_subject": {
+      "term": "Spare Subject",
+      "definition": "A study subject that is included in the drug administration and sample collection regimens of a study but, as per study protocol, whose data will only be included in the PK and statistical analyses if the number of subjects with evaluable data for primary statistical analysis drops below a pre-specified number due to subject dropouts and/or withdrawals. Use of spare subjects is NOT acceptable.",
+      "source_section": "5 (Glossary)"
+    },
+    "immediate_release": {
+      "term": "Immediate-Release",
+      "definition": "Allows the drug to dissolve in the GI contents, with no intention of delaying or prolonging the dissolution or absorption of the drug.",
+      "source_section": "5 (Glossary)"
+    },
+    "AUC": {
+      "term": "AUC",
+      "definition": "Area under the concentration vs. time curve",
+      "source_section": "5 (Glossary)"
+    },
+    "AUC_0_inf": {
+      "term": "AUC(0-inf)",
+      "definition": "Area under the concentration vs. time curve extrapolated to infinity",
+      "source_section": "5 (Glossary)"
+    },
+    "AUC_0_t": {
+      "term": "AUC(0-t)",
+      "definition": "Area under the concentration vs. time curve from time zero to the time of last quantifiable concentration",
+      "source_section": "5 (Glossary)"
+    },
+    "AUC_0_tauSS": {
+      "term": "AUC(0-tauSS)",
+      "definition": "Area under the concentration vs. time curve for one dosing interval at steady-state",
+      "source_section": "5 (Glossary)"
+    },
+    "AUC_0_72h": {
+      "term": "AUC(0-72h)",
+      "definition": "Area under the concentration vs. time curve from time 0 to 72 hours",
+      "source_section": "5 (Glossary)"
+    },
+    "Cmax": {
+      "term": "Cmax",
+      "definition": "Maximum concentration observed after dosing",
+      "source_section": "5 (Glossary)"
+    },
+    "CmaxSS": {
+      "term": "CmaxSS",
+      "definition": "Maximum concentration observed during dosing interval at steady-state",
+      "source_section": "5 (Glossary)"
+    },
+    "CminSS": {
+      "term": "CminSS",
+      "definition": "Minimum concentration observed during dosing interval at steady-state",
+      "source_section": "5 (Glossary)"
+    },
+    "CavSS": {
+      "term": "CavSS",
+      "definition": "Average concentration observed during dosing interval at steady-state (AUC0-tau/tau)",
+      "source_section": "5 (Glossary)"
+    },
+    "Ctau": {
+      "term": "Ctau",
+      "definition": "Concentration observed at end of dosing interval",
+      "source_section": "5 (Glossary)"
+    },
+    "CtauSS": {
+      "term": "CtauSS",
+      "definition": "Concentration observed at end of dosing interval at steady-state",
+      "source_section": "5 (Glossary)"
+    },
+    "pAUC": {
+      "term": "pAUC",
+      "definition": "Area under the concentration vs. time curve between two specific time points",
+      "source_section": "5 (Glossary)"
+    },
+    "kel": {
+      "term": "kel",
+      "definition": "The apparent terminal elimination rate constant",
+      "source_section": "5 (Glossary)"
+    },
+    "t_half": {
+      "term": "t1/2",
+      "definition": "The apparent terminal elimination half-life",
+      "source_section": "5 (Glossary)"
+    },
+    "tmax": {
+      "term": "tmax",
+      "definition": "Time to maximum observed concentration",
+      "source_section": "5 (Glossary)"
+    },
+    "tau": {
+      "term": "Tau",
+      "definition": "Dosing Interval",
+      "source_section": "5 (Glossary)"
+    },
+    "fluctuation": {
+      "term": "Fluctuation",
+      "definition": "Calculated as [(CmaxSS - CminSS) / CavSS]",
+      "source_section": "5 (Glossary)"
+    },
+    "swing": {
+      "term": "Swing",
+      "definition": "Calculated as [(CmaxSS - CminSS) / CminSS]",
+      "source_section": "5 (Glossary)"
+    },
+    "ODT": {
+      "term": "Orally Disintegrating Tablet",
+      "definition": "A solid dosage form which is designed to disintegrate and dissolve rapidly on contact with saliva when placed on the tongue or in the oral cavity, thus eliminating the need to chew the tablet, swallow an intact tablet, or take the tablet with water.",
+      "source_section": "5 (Glossary)"
+    },
+    "chewable_tablet": {
+      "term": "Chewable Tablets",
+      "definition": "An oral dosage form designed to facilitate chewing and swallowing by the patient rather than swallowing a whole tablet. They must be chewed or crushed before swallowing.",
+      "source_section": "5 (Glossary)"
+    },
+    "enantiomers": {
+      "term": "Enantiomers",
+      "definition": "Compounds with the same molecular formula that differ in the spatial arrangement of atoms within the molecule and are nonsuperimposable mirror images.",
+      "source_section": "5 (Glossary)"
+    },
+    "racemate": {
+      "term": "Racemate",
+      "definition": "A composite (solid, liquid, gaseous, or in solution) of equimolar quantities of two enantiomeric species. It is devoid of optical activity.",
+      "source_section": "5 (Glossary)"
+    },
+    "endogenous_compounds": {
+      "term": "Endogenous Compounds",
+      "definition": "Compounds already present in the body either because the body produces them or because they are present in a normal diet.",
+      "source_section": "5 (Glossary)"
+    }
+  },
+
+  "rules": [
+    {
+      "rule_id": "M13A-001",
+      "category": "data_integrity",
+      "rule": "BE studies must be conducted according to GCP principles. All data generated must be attributable, legible, contemporaneously documented, original (or certified copy), accurate, complete, and traceable.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "1.2.2",
+      "source_quote": "BE studies should be conducted according to the principles and recommendations in ICH E6, Good Clinical Practice. In conducting BE studies, sponsors, study investigators, and service providers, e.g., contract research organisations or laboratories, should ensure that the data generated are attributable, legible, contemporaneously documented, original (or a certified copy), accurate, complete, and traceable. The ultimate responsibility for the quality and integrity of the study data submitted to a regulatory authority lies with the applicant.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-002",
+      "category": "subject_selection",
+      "rule": "Study subjects should be healthy unless the drug carries safety concerns making this unethical. Studies in healthy subjects are adequate in most instances to detect performance differences between formulations.",
+      "conditions": "All BE studies; use patient population only if adverse effects make healthy subjects unacceptable",
+      "threshold_values": "N/A",
+      "source_section": "2.1.1",
+      "source_quote": "The subject population for BE studies should be selected with the aim of permitting detection of differences in the in vivo release characteristics between pharmaceutical products. To reduce variability not related to differences between drug products, the studies should normally be performed in healthy subjects unless the drug carries safety concerns that make this approach unethical.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-003",
+      "category": "subject_selection",
+      "rule": "Study subjects should be at least 18 years of age and preferably have a BMI between 18.5 and 30.0 kg/m².",
+      "conditions": "All BE studies",
+      "threshold_values": "Age: ≥18 years; BMI: preferably 18.5–30.0 kg/m²",
+      "source_section": "2.1.1",
+      "source_quote": "Subjects should be at least 18 years of age and preferably have a Body Mass Index between 18.5 and 30.0 kg/m².",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-004",
+      "category": "subject_selection",
+      "rule": "If a drug product is intended for use in both sexes, the inclusion of male and female subjects in the study should be considered.",
+      "conditions": "Drug products intended for both sexes",
+      "threshold_values": "N/A",
+      "source_section": "2.1.1",
+      "source_quote": "If a drug product is intended for use in both sexes, the inclusion of male and female subjects in the study should be considered.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-005",
+      "category": "subject_selection",
+      "rule": "Female subjects that are pregnant or lactating should not be included. Male contraception (barrier methods or abstinence) is recommended if drugs have any embryo-fetal toxicity and pose transferability issues to female partners of reproductive potential.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.1.1",
+      "source_quote": "The risk to female subjects of reproductive potential should be considered, and female subjects that are pregnant or lactating should not be included. Male contraception (barrier methods or abstinence) is recommended if drugs have any embryo-fetal toxicity and pose transferability issues to female partners of reproductive potential.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-006",
+      "category": "subject_selection",
+      "rule": "Subjects should preferably be non-smokers and without a history of alcohol or drug abuse. Phenotyping and/or genotyping of subjects may be considered for safety or PK reasons.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.1.1",
+      "source_quote": "Subjects should preferably be non-smokers and without a history of alcohol or drug abuse. Phenotyping and/or genotyping of subjects may be considered for safety or PK reasons.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-007",
+      "category": "study_design",
+      "rule": "A randomised, single-dose, crossover study design is recommended when comparing test and comparator formulations.",
+      "conditions": "Standard BE studies; single-dose crossover is the default preferred design",
+      "threshold_values": "N/A",
+      "source_section": "2.1.2",
+      "source_quote": "A randomised, single-dose, crossover study design is recommended when comparing test and comparator formulations, as single-dose studies provide the most sensitive conditions to detect differences in the rate and extent of absorption.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-008",
+      "category": "study_design",
+      "rule": "Treatment periods in crossover designs must be separated by a sufficiently long washout period of at least 5 elimination half-lives.",
+      "conditions": "Crossover BE studies",
+      "threshold_values": "Washout: ≥5 elimination half-lives",
+      "source_section": "2.1.2",
+      "source_quote": "Treatment periods should be separated by a sufficiently long washout period, e.g., at least 5 elimination half-lives (see Section 2.2.3.3).",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-009",
+      "category": "study_design",
+      "rule": "In general, the highest to-be-marketed strength should be used in a BE study.",
+      "conditions": "Applications with multiple strengths",
+      "threshold_values": "N/A",
+      "source_section": "2.1.2",
+      "source_quote": "In general, the highest to-be-marketed strength should be used in a BE study (see Section 2.1.6).",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-010",
+      "category": "study_design",
+      "rule": "If the highest strength cannot be administered to healthy subjects for safety/tolerability reasons, a single-dose study in healthy subjects using a lower strength may be acceptable, or a single-dose study conducted in patients using the highest proposed strength could be considered.",
+      "conditions": "When highest strength is not safe/tolerable for healthy subjects",
+      "threshold_values": "N/A",
+      "source_section": "2.1.2",
+      "source_quote": "If the highest strength of a drug product cannot be administered to healthy subjects for safety and/or tolerability reasons, a single-dose study in healthy subjects using a lower strength may be acceptable. Alternatively, a single-dose study conducted in patients using the highest proposed strength could be considered.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-011",
+      "category": "study_design",
+      "rule": "A multiple-dose study may be conducted in patients if a single-dose study cannot be conducted in either healthy subjects (safety/tolerability) or in patients (ethical reasons). Steady-state must be verified by comparing at least three pre-dose concentrations sequentially until Ctau is stable.",
+      "conditions": "When single-dose study is not feasible in healthy subjects or patients",
+      "threshold_values": "Steady-state verification: ≥3 pre-dose concentrations for each formulation must be stable",
+      "source_section": "2.1.2",
+      "source_quote": "A multiple-dose study may be conducted in patients if a single-dose study cannot be conducted in either healthy subjects for safety and/or tolerability reasons or in patients for ethical reasons. For a multiple-dose study, the study protocol should include an appropriate number of dosage administrations to reach steady-state, which could be justified using an appropriate sampling scheme, i.e., concentrations at the end of the dosing interval should be sampled sequentially until Ctau is stable. In general, whether steady-state has been achieved is assessed by comparing at least three pre-dose concentrations for each formulation.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-012",
+      "category": "study_design",
+      "rule": "For drugs with long elimination half-lives, a randomised parallel design may be employed when a crossover design is impractical due to the need for a prolonged washout period.",
+      "conditions": "Long half-life drugs where crossover is impractical",
+      "threshold_values": "N/A",
+      "source_section": "2.1.2",
+      "source_quote": "For drugs with long elimination half-lives, a randomised parallel design may be employed when a crossover design is impractical due to the need for a prolonged washout period.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-013",
+      "category": "sample_size",
+      "rule": "The number of subjects with evaluable data for primary statistical analysis in a pivotal BE study should not be less than 12 for a crossover design, or less than 12 per treatment group for a parallel design.",
+      "conditions": "All pivotal BE studies",
+      "threshold_values": "Minimum evaluable subjects: 12 (crossover) or 12 per treatment group (parallel)",
+      "source_section": "2.1.3",
+      "source_quote": "The number of subjects with evaluable data for primary statistical analysis in a pivotal BE study should not be less than 12 for a crossover design or less than 12 per treatment group for a parallel design.",
+      "jurisdiction_note": "Universal ICH requirement; confirmed in Q&A 2.1",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-014",
+      "category": "sample_size",
+      "rule": "The use of spare subjects is not acceptable.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.1.3",
+      "source_quote": "The use of spare subjects (as defined in the Glossary) is not acceptable.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-015",
+      "category": "sample_size",
+      "rule": "Additional cohort(s) of subjects may be added to the study if the number of evaluable subjects falls below the calculated sample size, but this must be specified in the study protocol and done prior to any results of the bioanalysis being known.",
+      "conditions": "When evaluable subject numbers drop below calculated sample size",
+      "threshold_values": "N/A",
+      "source_section": "2.1.3",
+      "source_quote": "Additional cohort(s) of subjects may be added to the study, e.g., if the number of evaluable subjects falls below the calculated sample size, however, this should be specified in the study protocol and done prior to any results of the bioanalysis being known.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-016",
+      "category": "sample_size",
+      "rule": "BE study should be designed with sufficient subjects to have a priori power of at least 80% to show equivalence for BE parameters within a prespecified acceptance range of 0.80–1.25.",
+      "conditions": "All pivotal BE studies",
+      "threshold_values": "Power: ≥80% a priori; acceptance range: 0.80–1.25",
+      "source_section": "Q&A 2.1",
+      "source_quote": "In general, the BE study should be designed with sufficient subjects to have a priori power of at least 80% to show equivalence for the BE parameters within a prespecified acceptance range, i.e., 0.80 - 1.25. It should be noted a posteriori power is not relevant.",
+      "jurisdiction_note": "Clarified in Q&A 2.1 (July 2024)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-017",
+      "category": "comparator_product",
+      "rule": "The selection of the batch of comparator product used in the BE study should be based on assayed content. It is advisable to investigate more than one batch of the comparator product.",
+      "conditions": "Selection of comparator batch for BE study",
+      "threshold_values": "N/A",
+      "source_section": "2.1.4",
+      "source_quote": "The selection of the batch of the comparator product used in the BE study should be based on assayed content. It is advisable to investigate more than one batch of the comparator product when selecting the batch of comparator product for use in the BE study.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-018",
+      "category": "test_product",
+      "rule": "For pivotal BE studies, the test product for tablets and capsules should originate from a batch of at least 1/10 of production scale or 100,000 units, whichever is greater. If a production batch is smaller than 100,000 units, a full production batch is required.",
+      "conditions": "Pivotal BE studies; tablets and capsules",
+      "threshold_values": "Batch size: ≥1/10 production scale OR ≥100,000 units (whichever is greater); full batch if production batch <100,000 units",
+      "source_section": "2.1.4",
+      "source_quote": "The production of batches used should provide a high level of assurance that the product and process will be feasible on a commercial scale. For example, for tablets and capsules, the test product should usually originate from a batch of at least 1/10 of production scale or 100,000 units, whichever is greater, unless otherwise justified. In the case of a production batch smaller than 100,000 units, a full production batch is required.",
+      "jurisdiction_note": "Universal ICH requirement. Q&A 2.2 clarifies other dosage forms should also correspond to at least 10% of production scale batch",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-019",
+      "category": "test_product",
+      "rule": "The assayed content of the batch used as test product should not differ by more than 5% from that of the batch used as comparator product, unless otherwise justified.",
+      "conditions": "Pivotal BE studies",
+      "threshold_values": "Potency difference: ≤5% between test and comparator batches",
+      "source_section": "2.1.4",
+      "source_quote": "Unless otherwise justified (see Section 2.2.2.3), the assayed content of the batch used as test product should not differ by more than 5% from that of the batch used as comparator product.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-020",
+      "category": "fed_fasted",
+      "rule": "For the majority of IR solid dosage forms, BE may be demonstrated in a single study conducted under fasting conditions. Fasting studies typically provide greater discrimination between PK profiles of two drug products than fed studies.",
+      "conditions": "Non-high-risk products; products labelled for fasting or without food restriction",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "For orally administered IR solid dosage forms, single-dose BE studies conducted under fasting conditions typically provide greater discrimination between the PK profiles of two drug products than studies conducted under fed conditions. Therefore, for the majority of these drug products, BE may be demonstrated in a single study conducted under fasting conditions.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-021",
+      "category": "fed_fasted",
+      "rule": "For non-high-risk products labelled to be taken only with food due to PK reasons, a single BE study under fed conditions is recommended.",
+      "conditions": "Non-high-risk products labelled for administration only with food (PK reasons)",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "For a drug product that is labelled to be taken only with food due to PK reasons, i.e., enhancing absorption or reducing variability, a single BE study conducted under fed conditions is recommended to demonstrate BE.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-022",
+      "category": "fed_fasted",
+      "rule": "For non-high-risk products labelled to be taken only with food for tolerability reasons (non-PK), a single BE study conducted under either fasting or fed conditions is acceptable.",
+      "conditions": "Non-high-risk products labelled for food only due to tolerability (non-PK reasons)",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "For a drug product that is labelled to be taken only with food due to tolerability reasons, e.g., stomach irritation or other non-PK reasons, a single BE study conducted under either fasting or fed conditions is acceptable to demonstrate BE.",
+      "jurisdiction_note": "Universal ICH requirement; clarified in Q&A 2.3",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-023",
+      "category": "fed_fasted",
+      "rule": "For high-risk products, BE studies should be conducted under both fasting and fed conditions, irrespective of the drug product labelling with regard to food intake, if safety permits.",
+      "conditions": "High-risk products (low solubility drug substances with complex formulation/manufacturing methods such as solid dispersions, microemulsions, lipid-based formulations, nanotechnologies)",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "For these high-risk products, BE studies should be conducted under both fasting and fed conditions, irrespective of the drug product labelling with regard to food intake, if safety permits.",
+      "jurisdiction_note": "Universal ICH requirement; elaborated in Q&As 2.4, 2.5",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-024",
+      "category": "fed_fasted",
+      "rule": "When BE is required under both fasting and fed conditions, it is acceptable to conduct either two separate two-way crossover BE studies or one four-way crossover BE study.",
+      "conditions": "High-risk products or situations requiring both fasting and fed BE",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "In cases where BE is recommended in both fasting and fed conditions, it is acceptable to conduct either two separate two-way crossover BE studies or one four-way crossover BE study.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-025",
+      "category": "standardisation",
+      "rule": "For fasting studies, subjects must fast for at least 8 hours before drug administration. Water is allowed as desired except for 1 hour before and 1 hour after drug administration.",
+      "conditions": "All fasting BE studies",
+      "threshold_values": "Fasting period: ≥8 hours pre-dose; water restricted 1 hour before and 1 hour after dosing",
+      "source_section": "2.1.5",
+      "source_quote": "For studies conducted under fasting conditions, subjects should be fasted for at least 8 hours before drug administration. Subjects should be allowed water as desired, except for 1 hour before and 1 hour after drug administration.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-026",
+      "category": "standardisation",
+      "rule": "The dose must be administered with water of the same temperature and volume, in the range of 150 to 250 millilitres (ml).",
+      "conditions": "All BE studies",
+      "threshold_values": "Water volume: 150–250 ml",
+      "source_section": "2.1.5",
+      "source_quote": "The dose should be administered with water of the same temperature and volume, in the range of 150 to 250 millilitres (ml).",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-027",
+      "category": "standardisation",
+      "rule": "In single-dose studies and on PK sampling days in multiple-dose studies, no food should be allowed for at least 4 hours post-dose on each day of drug administration.",
+      "conditions": "Single-dose and multiple-dose fasting BE studies",
+      "threshold_values": "Post-dose fasting: ≥4 hours",
+      "source_section": "2.1.5",
+      "source_quote": "In single-dose studies and on the PK sampling days in multiple-dose studies, no food should be allowed for at least 4 hours post-dose on each day of drug administration.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-028",
+      "category": "fed_study_meal",
+      "rule": "For fed BE studies, subjects must start the meal 30 minutes before administration of the drug product and completely consume the meal within 30 minutes.",
+      "conditions": "All fed BE studies",
+      "threshold_values": "Meal start: 30 minutes pre-dose; meal consumption: within 30 minutes",
+      "source_section": "2.1.5",
+      "source_quote": "For a BE study conducted under fed conditions, it is recommended that subjects start the meal 30 minutes before administration of the drug product and completely consume the meal within 30 minutes.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-029",
+      "category": "fed_study_meal",
+      "rule": "For high-risk products requiring both fasting and fed BE, the fed BE study must employ a high-fat (approximately 50% of total caloric content) and high-calorie (approximately 900 to 1000 kcal) meal. The meal should derive approximately 150, 250, and 500–600 kcal from protein, carbohydrate, and fat respectively.",
+      "conditions": "High-risk products when both fasting and fed BE studies are conducted",
+      "threshold_values": "Meal: ~900–1000 kcal total; ~50% calories from fat; ~500–600 kcal from fat; ~250 kcal from carbohydrate; ~150 kcal from protein",
+      "source_section": "2.1.5",
+      "source_quote": "If BE studies are conducted under both fasting and fed conditions, i.e., for high-risk products, the BE study conducted under fed conditions should employ a meal that has the potential to cause the greatest effect on GI physiology. The meal should be a high-fat (approximately 50% of total caloric content of the meal) and high-calorie (approximately 900 to 1000 kcal) meal, which should derive approximately 150, 250, and 500-600 kcal from protein, carbohydrate, and fat, respectively.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-030",
+      "category": "fed_study_meal",
+      "rule": "For non-high-risk products where only one fed BE study is needed, either a high-fat, high-calorie meal or a low-fat, low-calorie meal (e.g., approximately 500 kcal with approximately 25% calories from fat) may be administered.",
+      "conditions": "Non-high-risk products requiring a single fed BE study",
+      "threshold_values": "Option A: high-fat, high-calorie meal; Option B: ~500 kcal with ~25% calories from fat",
+      "source_section": "2.1.5",
+      "source_quote": "If, however, only one BE study conducted under fed conditions is needed for a non-high-risk product, either a high-fat, high-calorie meal or a low-fat, low-calorie meal, e.g., a meal of approximately 500 kcal with approximately 25% of calories from fat, may be administered.",
+      "jurisdiction_note": "Universal ICH requirement; clarified in Q&A 2.6",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-031",
+      "category": "standardisation",
+      "rule": "Subjects must abstain from foods and drinks that interact with circulatory, GI transporter, GI enzymatic, hepatic, or renal function (e.g., alcoholic or caffeinated drinks, grapefruit juice) during a suitable period before and during the study.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "In all situations, subjects should abstain from foods and drinks that are known to interact with circulatory, GI transporter, GI enzymatic, hepatic, or renal function, e.g., alcoholic or caffeinated drinks, or certain fruit juices such as grapefruit juice, during a suitable period before and during the study.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-032",
+      "category": "standardisation",
+      "rule": "Posture and physical activity must be standardised, since drug absorption can be impacted by GI transit times and regional blood flows.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.1.5",
+      "source_quote": "Further, since drug absorption can be impacted by GI transit times and regional blood flows, posture and physical activity need to be standardised.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-033",
+      "category": "dose_strength_selection",
+      "rule": "PK can be considered dose proportional if the difference in dose-adjusted mean Cmax and AUC is no more than 25% when comparing the range of strengths proposed.",
+      "conditions": "Assessing dose proportionality for strength selection decisions",
+      "threshold_values": "Dose proportionality threshold: ≤25% difference in dose-adjusted mean Cmax and AUC across proposed strength range",
+      "source_section": "2.1.6",
+      "source_quote": "In general, PK can be considered dose proportional if the difference in dose-adjusted mean Cmax and AUC is no more than 25% when comparing the range of strengths proposed.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-034",
+      "category": "dose_strength_selection",
+      "rule": "In cases of documented greater than proportional increases in AUC and/or Cmax with increasing dose, the BE study should, in general, be conducted at the highest strength.",
+      "conditions": "Supra-proportional PK across the proposed strength range",
+      "threshold_values": "N/A",
+      "source_section": "2.1.6",
+      "source_quote": "In cases of documented greater than proportional increases in AUC and/or Cmax with increasing dose over the range of strengths proposed, the BE study should, in general, be conducted at the highest strength.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-035",
+      "category": "dose_strength_selection",
+      "rule": "In cases of documented less than proportional increases in AUC and/or Cmax due to saturation of absorption, BE should be established with the lowest strength. If due to limited drug solubility, BE studies should be conducted with both the lowest and highest strengths. If the reason is unknown, BE studies should be conducted with both the lowest and highest strengths.",
+      "conditions": "Sub-proportional PK across proposed strength range",
+      "threshold_values": "N/A",
+      "source_section": "2.1.6",
+      "source_quote": "In cases of documented less than proportional increases in AUC and/or Cmax with increasing dose over the range of strengths proposed, BE should be established with the lowest strength if this is due to saturation of absorption. If the less than proportional increase in AUC and/or Cmax with increasing dose is due to limited drug solubility, BE studies should be conducted with both the lowest and highest strengths. If the reason for less than dose proportionality is unknown, BE studies should be conducted with both the lowest and highest strengths.",
+      "jurisdiction_note": "Universal ICH requirement; clarified in Q&A 2.8",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-036",
+      "category": "dose_strength_selection",
+      "rule": "If a high-risk drug product has sub-proportional PK, a fasting and fed BE study at the highest strength and a fasting BE study at the lowest strength are needed.",
+      "conditions": "High-risk products with sub-proportional PK",
+      "threshold_values": "N/A",
+      "source_section": "2.1.6",
+      "source_quote": "If the drug product is high-risk (see Section 2.1.5), in general, a fasting and fed BE study at the highest strength and a fasting BE study at the lowest strength are needed.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-037",
+      "category": "moieties_measured",
+      "rule": "Demonstration of BE should be based on the analysis of the parent drug. For prodrugs where parent levels are too low to allow reliable bioanalytical measurement, it is acceptable to demonstrate BE based on a primary metabolite (first-step metabolite).",
+      "conditions": "All BE studies; prodrug exception applies when parent drug measurement is not feasible",
+      "threshold_values": "N/A",
+      "source_section": "2.1.7.1",
+      "source_quote": "Demonstration of BE should be based on the analysis of the parent drug because the concentration-time profile of the parent drug is usually considered more sensitive to detect a difference between formulations than metabolite data. This also applies to prodrugs. However, some prodrugs are rapidly eliminated resulting in difficulties in demonstrating BE based on parent drug data, as the parent drug levels are too low to allow reliable bioanalytical measurement. In this situation, it is acceptable to demonstrate BE based on a primary metabolite, i.e., a first-step metabolite of the parent drug, without measurement of the parent compound.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-038",
+      "category": "moieties_measured",
+      "rule": "The primary active metabolite should also be considered for BE assessment in rare cases where the parent drug alone may not be sufficient, specifically for drugs that have metabolites formed through gut wall or gut lumen metabolism that contribute to efficacy or safety.",
+      "conditions": "Drugs with metabolites formed through gut wall or gut lumen metabolism contributing to efficacy or safety",
+      "threshold_values": "N/A",
+      "source_section": "2.1.7.1",
+      "source_quote": "In rare cases, demonstration of BE based on the parent drug alone may not be sufficient and the primary active metabolite should also be considered, e.g., drugs that have metabolites formed through gut wall or gut lumen metabolism that contribute to efficacy or safety.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-039",
+      "category": "moieties_measured",
+      "rule": "A stereoselective assay measuring individual enantiomers in BE studies should be employed when all three conditions are met: (a) the enantiomers exhibit different pharmacodynamic properties, (b) different PK properties, AND (c) the AUC ratio of enantiomers is modified by a difference in the rate of absorption.",
+      "conditions": "Racemates where all three conditions are simultaneously met",
+      "threshold_values": "N/A",
+      "source_section": "2.1.7.2",
+      "source_quote": "However, a stereoselective assay measuring individual enantiomers in BE studies should be employed when it is known that all of the following conditions have been met: a) the enantiomers exhibit different pharmacodynamic properties, b) the enantiomers exhibit different PK properties, and c) the exposure (AUC) ratio of enantiomers is modified by a difference in the rate of absorption.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-040",
+      "category": "sampling_schedule",
+      "rule": "The sampling schedule must cover the concentration-time curve including a pre-dose sample, samples in the absorption phase, frequent samples around the expected tmax, and sufficient samples to ensure AUC(0-t) covers at least 80% of AUC(0-inf). The sampling period should generally be at least three times the terminal elimination half-life.",
+      "conditions": "All single-dose BE studies",
+      "threshold_values": "AUC(0-t) must cover ≥80% of AUC(0-inf); sampling period ≥3× terminal elimination half-life",
+      "source_section": "2.1.8",
+      "source_quote": "The sampling schedule in a BE study should cover the concentration-time curve, including a pre-dose sample, samples in the absorption phase, frequent samples around the expected time to maximum observed concentration (tmax) and sufficient samples to ensure a reliable estimate of the extent of exposure, which is achieved when AUC(0-t) covers at least 80% of AUC(0-inf). The sampling period should generally be at least three times the terminal elimination half-life of the drug, unless a suitable truncated AUC, i.e., AUC(0-72h), is used.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-041",
+      "category": "sampling_schedule",
+      "rule": "At least three or more data points in the terminal log-linear phase of the concentration-time curve should be used to estimate kel, to reduce inaccuracies in the estimates of kel.",
+      "conditions": "All BE studies",
+      "threshold_values": "Minimum data points for kel estimation: ≥3 points in terminal log-linear phase",
+      "source_section": "2.1.8",
+      "source_quote": "There may be considerable inaccuracies in the estimates of kel if the constant is estimated from linear regression based on a small number of data points. To reduce these inaccuracies, it is recommended that three or more data points in the terminal log-linear phase of the concentration-time curve be used to estimate kel.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-042",
+      "category": "sampling_schedule",
+      "rule": "In multiple-dose studies, the pre-dose sample should be taken within 5 minutes of dosing, and the last sample is recommended to be taken within 10 minutes of the nominal time for the dosage interval to ensure accurate determination of AUC(0-tauSS).",
+      "conditions": "Multiple-dose (steady-state) BE studies",
+      "threshold_values": "Pre-dose sample: within 5 minutes of dosing; last sample: within 10 minutes of nominal end of dosing interval",
+      "source_section": "2.1.8",
+      "source_quote": "In multiple-dose studies, the pre-dose sample should be taken immediately before dosing, i.e., within 5 minutes of dosing, and the last sample is recommended to be taken within 10 minutes of the nominal time for the dosage interval to ensure an accurate determination of AUC(0-tauSS).",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-043",
+      "category": "sampling_schedule",
+      "rule": "For long half-life drugs (≥24 hours), AUC(0-72h) may be used in place of AUC(0-t) for comparison of the extent of absorption.",
+      "conditions": "IR drug products with elimination half-life ≥24 hours",
+      "threshold_values": "Long half-life threshold: ≥24 hours; truncation at 72 hours",
+      "source_section": "2.1.8.2",
+      "source_quote": "Truncating AUC for orally administered IR drug products known to exhibit longer elimination half-lives, i.e., 24 hours or longer, mitigates the clinical challenge of prolonged sampling and follow-up. For such drug products, AUC(0-72h) may be used in place of AUC(0-t) for comparison of the extent of absorption. Seventy-two hours is adequate to ensure completion of GI transit of the drug product and absorption of the drug substance.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-044",
+      "category": "data_analysis",
+      "rule": "All criteria for study subject inclusion into, and exclusion from, the BE analysis population must be clearly defined in the study protocol. Exclusions must be documented prior to bioanalytical analysis.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.1",
+      "source_quote": "It is imperative that all criteria for study subject inclusion into, and exclusion from, the BE analysis population be clearly defined in the study protocol. Any exclusions from the BE analysis population, e.g., subjects that are withdrawn from the study, have protocol violations, or experience GI disturbances potentially affecting absorption, should be documented prior to bioanalytical analysis.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-045",
+      "category": "data_analysis",
+      "rule": "A subject is considered to have very low concentrations if the AUC for that period is less than 5% of the geometric mean AUC of the drug product in question. Data exclusion on this basis is accepted only in exceptional cases, in general with no more than 1 subject in each study.",
+      "conditions": "Situations where subject non-compliance is suspected (very low exposure)",
+      "threshold_values": "Threshold for very low exposure: AUC < 5% of geometric mean AUC; max subjects excluded for this reason: generally ≤1 per study",
+      "source_section": "2.2.1.1",
+      "source_quote": "A subject is considered to have very low concentrations if the AUC for that period is less than 5% of the geometric mean AUC of the drug product in question, which should be calculated without inclusion of data from the subject... The exclusion of data for this reason will only be accepted in exceptional cases, in general with no more than 1 subject in each study, and may bring the reliability of dose administration into question.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-046",
+      "category": "data_analysis",
+      "rule": "Bioanalytical method must comply with ICH M10 (Bioanalytical Method Validation and Study Sample Analysis). Concentrations below LLOQ must be treated as zero in PK parameter calculations. Values below LLOQ are to be omitted from the calculation of kel and t1/2.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.2.1 and 2.2.2.2",
+      "source_quote": "Drug concentrations in study samples should be measured in accordance with ICH M10, Bioanalytical Method Validation and Study Sample Analysis... Any concentration reported as below the lower limit of quantification (LLOQ) should be treated as zero in PK parameter calculations. Values below the LLOQ are to be omitted from the calculation of kel and t1/2.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-047",
+      "category": "pk_parameters",
+      "rule": "For single-dose studies, primary PK parameters for BE analysis are AUC(0-t), Cmax, and where applicable, early exposure parameters. If AUC(0-t)/AUC(0-inf) is less than 80% in more than 20% of observations, validity of the study may need to be discussed.",
+      "conditions": "Single-dose BE studies",
+      "threshold_values": "AUC(0-t) coverage threshold: ≥80% of AUC(0-inf); if <80% in >20% of observations, study validity may be questioned",
+      "source_section": "2.2.2.2",
+      "source_quote": "For single-dose studies, the following PK parameters should be tabulated for each subject-formulation combination: 1) primary parameters for BE analysis: AUC(0-t), Cmax, and, where applicable, early exposure parameters (see Section 2.1.8.3), and 2) additional parameters for analysis to assess the acceptability of the bioequivalence study: AUC(0-inf), AUC(0-t)/AUC(0-inf), tmax, kel, and t1/2. For single-dose studies, AUC(0-t) should cover at least 80% of AUC(0-inf). If the AUC(0-t)/AUC(0-inf) percentage is less than 80% in more than 20% of the observations, then the validity of the study may need to be discussed in the submission.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-048",
+      "category": "pk_parameters",
+      "rule": "For multiple-dose (steady-state) studies, primary PK parameters for analysis are CmaxSS and AUC(0-tauSS); additional parameters include CtauSS, CminSS, CavSS, degree of fluctuation, swing, and tmax.",
+      "conditions": "Multiple-dose (steady-state) BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.2.2",
+      "source_quote": "For steady-state studies, the following PK parameters should be tabulated: 1) primary parameters for analysis: CmaxSS and AUC(0-tauSS), and 2) additional parameters for analysis: CtauSS, CminSS, CavSS, degree of fluctuation, swing, and tmax.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-049",
+      "category": "potency_correction",
+      "rule": "Test product batch and comparator product batch potencies should not differ by more than 5%. Potency correction may be accepted with supporting justification in exceptional cases; if used, analysis must be provided for both uncorrected and potency-corrected data, and applicable BE standards must be met on potency-corrected data.",
+      "conditions": "When batches with >5% potency difference are used",
+      "threshold_values": "Potency difference threshold for correction: >5%; BE criteria must be met on potency-corrected data",
+      "source_section": "2.2.2.3",
+      "source_quote": "The results from the potency assay of the test and comparator products should be submitted, and the test product batch and the comparator product batch potencies should not differ by more than 5%. In exceptional cases where a comparator product batch with a measured drug content within 5% of a test product batch cannot be obtained, a potency correction may be accepted with supporting justification... If the potency correction is justifiable, the applicable BE standards should be met on potency-corrected data.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-050",
+      "category": "statistical_analysis",
+      "rule": "The assessment of BE is based on 90% confidence intervals for the geometric mean ratios (test/comparator) for the primary PK parameters. This method is equivalent to two one-sided t-tests with the null hypotheses of bioinequivalence at the 5% significance level. PK data must be log-transformed prior to analysis.",
+      "conditions": "All pivotal BE studies",
+      "threshold_values": "Confidence interval: 90% CI; significance level: 5% (two one-sided t-tests)",
+      "source_section": "2.2.3.1",
+      "source_quote": "The assessment of BE is based on 90% confidence intervals for the geometric mean ratios (test/comparator) for the primary PK parameters under consideration. This method is equivalent to two one-sided t-tests with the null hypotheses of bioinequivalence at the 5% significance level. The PK data should be transformed prior to analysis using a logarithmic transformation.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-051",
+      "category": "statistical_analysis",
+      "rule": "The statistical model to be used must be pre-specified in the study protocol. Post hoc and data-driven adjustments are not acceptable for the primary statistical analysis. The model should take into account sources of variation that can be reasonably assumed to affect the response variable.",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.3.1",
+      "source_quote": "The model to be used for the statistical analysis should be pre-specified in the study protocol. The statistical analysis should take into account sources of variation that can be reasonably assumed to have an effect on the response variable. Post hoc and data-driven adjustments are not acceptable for the primary statistical analysis.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-052",
+      "category": "statistical_analysis",
+      "rule": "A study will not be considered acceptable if there are fewer than 12 subjects with evaluable data for primary statistical analysis for a crossover design, or for each treatment arm for a parallel design.",
+      "conditions": "All pivotal BE studies",
+      "threshold_values": "Minimum evaluable subjects: 12 (crossover) or 12 per arm (parallel)",
+      "source_section": "2.2.3.1",
+      "source_quote": "A study will not be considered acceptable if there are fewer than 12 subjects with evaluable data for primary statistical analysis for a crossover design or for each treatment arm for a parallel design.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-053",
+      "category": "statistical_analysis",
+      "rule": "Crossover design studies should be analysed using an appropriate parametric method (e.g., GLM or mixed model). The primary statistical analyses should include all data for all subjects who provide evaluable data for both the test and comparator products.",
+      "conditions": "Randomised, non-replicate crossover design studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.3.2",
+      "source_quote": "Randomised, non-replicate, crossover design studies should be analysed using an appropriate parametric method, e.g., general linear model (GLM) or mixed model... The primary statistical analyses should include all data for all subjects who provide evaluable data for both the test and comparator products.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-054",
+      "category": "carry_over",
+      "rule": "A test for carry-over is not considered relevant and no decisions regarding the analysis should be made based solely on such a test. In single-dose crossover studies, if pre-dose concentration is greater than 5% of Cmax for that subject in that period, the primary statistical analysis should be performed excluding data from that period.",
+      "conditions": "Crossover BE studies",
+      "threshold_values": "Carry-over threshold: pre-dose concentration >5% of Cmax for the subject in that period requires exclusion of that period's data",
+      "source_section": "2.2.3.3",
+      "source_quote": "A test for carry-over is not considered relevant and no decisions regarding the analysis, e.g., analysis of the first period only, should be made based on such a test... In single-dose studies, if there are subjects for whom the pre-dose concentration is greater than 5% of the Cmax value for the subject in that period, then the primary statistical analysis should be performed excluding the data from that period, which may result in the exclusion of the subject as discussed in Section 2.2.3.2.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-055",
+      "category": "acceptance_criteria",
+      "rule": "The 90% confidence interval for the geometric mean ratio of the primary PK parameters (Cmax and AUC) must lie within 80.00–125.00% to establish bioequivalence.",
+      "conditions": "All standard BE studies",
+      "threshold_values": "90% CI bounds: 80.00–125.00%",
+      "source_section": "2.2.4",
+      "source_quote": "The 90% confidence interval for the geometric mean ratio of these PK parameters used to establish BE should lie within a range of 80.00 - 125.00%.",
+      "jurisdiction_note": "Universal ICH requirement; confirmed in Q&A 2.1 context (0.80–1.25 acceptance range)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-056",
+      "category": "acceptance_criteria",
+      "rule": "For the majority of drug products, the PK parameters to demonstrate BE include Cmax and AUC(0-t) in single-dose studies and CmaxSS and AUC(0-tauSS) in multiple-dose studies. For long half-life drugs, AUC(0-72h) may be used as AUC(0-t).",
+      "conditions": "All BE studies",
+      "threshold_values": "N/A",
+      "source_section": "2.2.4",
+      "source_quote": "For the majority of drug products, the PK parameters to demonstrate BE include Cmax and AUC(0-t) in single-dose studies and CmaxSS and AUC(0-tauSS) in multiple-dose studies. For drugs with a long elimination half-life, AUC(0-72h) may be used as AUC(0-t) (see Section 2.1.8.2).",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-057",
+      "category": "multiple_comparators",
+      "rule": "In studies with multiple comparator products, multiplicity correction (alpha adjustment) is not needed because comparator products are considered independent and region-specific. Decisions will be made independently about a test product relative to a single comparator product within a single jurisdiction.",
+      "conditions": "Studies with multiple comparator products from different jurisdictions in a single trial",
+      "threshold_values": "N/A",
+      "source_section": "2.2.5.1",
+      "source_quote": "In studies with multiple comparator products, multiplicity correction, i.e., alpha adjustment, is not needed because comparator products are considered independent and region-specific. Decisions will be made independently about a test product relative to a single comparator product within a single jurisdiction.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-058",
+      "category": "multiple_test_products",
+      "rule": "When the objective is to achieve BE for ALL test formulations vs. comparator, no alpha adjustment is needed. When the objective is to show BE for ANY of the test formulations, multiplicity (alpha) adjustment may be needed.",
+      "conditions": "Studies with multiple test products",
+      "threshold_values": "N/A",
+      "source_section": "2.2.5.2",
+      "source_quote": "a) If the objective is to achieve BE for all test formulations vs. the comparator product, no alpha adjustment is needed. b) If the objective is to show BE for any of the test formulations, multiplicity (alpha) adjustment may be needed.",
+      "jurisdiction_note": "Universal ICH requirement; clarified further in Q&A 2.11",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-059",
+      "category": "endogenous_compounds",
+      "rule": "For endogenous compounds, baseline concentrations must be measured and subtracted from post-dose concentrations. The method for baseline correction must be pre-specified and justified in the study protocol. Multiple baseline samples must be measured from each subject before administration.",
+      "conditions": "BE studies of drugs that are identical to endogenous compounds",
+      "threshold_values": "N/A",
+      "source_section": "3.1",
+      "source_quote": "Therefore, in most cases, it is important to measure the baseline endogenous concentrations in biological matrices, e.g., blood, plasma, or urine, and subtract these concentrations from the total concentrations measured from each subject after the drug product is administered... The exact method for baseline correction should be pre-specified and justified in the study protocol. Multiple baseline endogenous concentrations should be measured from each subject in the time period before administration of the study drug.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-060",
+      "category": "endogenous_compounds",
+      "rule": "If baseline correction results in a negative concentration value, the value should be set to zero.",
+      "conditions": "BE studies with baseline correction for endogenous compounds",
+      "threshold_values": "N/A",
+      "source_section": "3.1",
+      "source_quote": "If a baseline correction results in a negative concentration value, the value should be set to zero.",
+      "jurisdiction_note": "Universal ICH requirement; rationale confirmed in Q&A 3.1",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-061",
+      "category": "endogenous_compounds",
+      "rule": "PK and statistical analyses should be performed on both baseline uncorrected and baseline corrected data. In general, determination of BE should be based on the baseline corrected data.",
+      "conditions": "BE studies with baseline correction",
+      "threshold_values": "N/A",
+      "source_section": "3.1",
+      "source_quote": "PK and statistical analyses should be performed on both baseline uncorrected and baseline corrected data. In general, determination of BE should be based on the baseline corrected data.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-062",
+      "category": "dosage_form_odt",
+      "rule": "ODTs should be administered in BE studies according to the comparator product labelling with regard to intake of water. If the comparator labelling states the ODT can be taken with or without water, both test and comparator products should be administered WITHOUT water (more discriminating scenario).",
+      "conditions": "BE studies for orally disintegrating tablets (ODTs)",
+      "threshold_values": "N/A",
+      "source_section": "3.2.1",
+      "source_quote": "Orally disintegrating tablets (ODTs) should be administered in BE studies according to the comparator product labelling with regard to intake of water. If the comparator product labelling states that the ODT can be taken with or without water, the test and comparator products should be administered in the BE study without water, as this is considered to be the more discriminating scenario. BE of the test and comparator ODT products taken with water can then be inferred.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-063",
+      "category": "dosage_form_odt",
+      "rule": "In studies evaluating ODTs without water, it is recommended to wet the mouth by swallowing a small amount of water (e.g., 20 ml) directly before applying the ODT on the tongue. No fluid intake is allowed earlier than 1 hour after administration.",
+      "conditions": "BE studies of ODTs administered without water",
+      "threshold_values": "Pre-dose mouth wetting: ~20 ml water; fluid restriction: no fluid for at least 1 hour post-dose",
+      "source_section": "3.2.1",
+      "source_quote": "In studies evaluating ODTs without water, it is recommended to wet the mouth by swallowing a small amount of water, e.g., 20 ml, directly before applying the ODT on the tongue. It is recommended not to allow fluid intake earlier than 1 hour after administration.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-064",
+      "category": "dosage_form_odt",
+      "rule": "For new intended label use where the ODT can be taken with AND without water, a 3-arm BE study is recommended to demonstrate BE of the ODT administered with and without water compared to the comparator product administered as per its labelling.",
+      "conditions": "New ODT products with intended label use stating can be taken with and without water",
+      "threshold_values": "N/A",
+      "source_section": "3.2.1",
+      "source_quote": "If the new intended label use/instructions state that the ODT can be taken with and without water, a 3-arm BE study is recommended to demonstrate BE of the ODT administered with and without water compared to the comparator product administered as per its labelling.",
+      "jurisdiction_note": "Universal ICH requirement; clarified in Q&A 2.11",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-065",
+      "category": "dosage_form_chewable",
+      "rule": "Chewable tablets should be administered in BE studies according to the comparator product labelling with regard to intake of water. If the comparator labelling states they can be taken with or without water, both products should be administered WITHOUT water (more discriminating scenario).",
+      "conditions": "BE studies for chewable tablets",
+      "threshold_values": "N/A",
+      "source_section": "3.2.2",
+      "source_quote": "Chewable tablets should be administered in BE studies according to the comparator product labelling with regard to intake of water. If the comparator product labelling states that the chewable tablets can be taken with or without water, the test and comparator products should be administered in the BE study without water, as this is considered to be the more discriminating scenario.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-066",
+      "category": "dosage_form_oral_suspension",
+      "rule": "For tablets, granules, and powders labelled as only intended to be dispersed in a liquid before administration as an oral suspension, BE studies should be conducted according to the comparator product labelling.",
+      "conditions": "Products labelled for dispersal in liquid before administration",
+      "threshold_values": "N/A",
+      "source_section": "3.2.3",
+      "source_quote": "For tablets, granules, and powders labelled as being only intended to be dispersed in a liquid before administration as an oral suspension, BE studies should be conducted according to the comparator product labelling.",
+      "jurisdiction_note": "Universal ICH requirement; principles of M13A apply to oral suspensions per Q&A 3.3",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-067",
+      "category": "fixed_dose_combination",
+      "rule": "For fixed-dose combination (FDC) products, BE must be demonstrated for all components (drugs) in the FDC product. Failure to demonstrate BE for one component results in failure to demonstrate BE for the proposed FDC product as a whole.",
+      "conditions": "Fixed-dose combination products",
+      "threshold_values": "N/A",
+      "source_section": "3.3",
+      "source_quote": "BE should be demonstrated for all components (drugs) in the fixed-dose combination product according to the principles described in this guideline. Failure to demonstrate BE for one component of the fixed-dose combination results in failure to demonstrate BE for the proposed fixed-dose combination product as a whole.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-068",
+      "category": "ph_dependency",
+      "rule": "An additional BE assessment with concomitant treatment of a pH-modifying drug product is generally necessary when ALL three criteria are met: (a) drug substance has pH-dependent solubility in pH range 1.2–6.8; (b) the drug product is expected to be taken with acid reducing agents or used in patients with achlorhydria; AND (c) there are qualitative or quantitative differences in pH modifying excipients, significant differences in manufacturing process affecting drug absorption due to gastric pH, or differences in the salt/polymorphic form with different pH-dependent solubility.",
+      "conditions": "When all three pH-dependency trigger criteria are simultaneously met",
+      "threshold_values": "pH range for solubility assessment: 1.2–6.8",
+      "source_section": "3.4",
+      "source_quote": "Therefore, in certain situations, an additional BE assessment with concomitant treatment of a pH-modifying drug product would generally be necessary if all of the following criteria are met: a) The drug products under comparison contain a drug substance with pH-dependent solubility in the pH range of 1.2 - 6.8. b) The drug product is expected to be taken with acid reducing agents, e.g., proton pump inhibitors, or is going to be used in certain populations, e.g., patients with achlorhydria. c) There are qualitative or quantitative differences in the pH modifying excipient(s), significant differences in manufacturing process that may affect drug absorption due to gastric pH differences, or differences in the salt or polymorphic form that possess a different pH-dependent solubility.",
+      "jurisdiction_note": "Universal ICH requirement; PPI pre-treatment design described in Q&A 3.6",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-069",
+      "category": "ph_dependency",
+      "rule": "For pH-dependency studies with high-risk products, a fasting BE study with concomitant pH-modifying treatment is necessary in addition to fasting and fed BE studies. For products labelled to be taken only with food, the pH-modifying study should be conducted under fed conditions.",
+      "conditions": "High-risk products with pH-dependent solubility meeting pH-dependency criteria",
+      "threshold_values": "N/A",
+      "source_section": "3.4",
+      "source_quote": "If the drug product is high-risk (see Section 2.1.5), in general a fasting BE study with concomitant treatment of pH-modifying drug product would be necessary in addition to fasting and fed BE studies. However, for drug products labelled to be taken only with food, the study with concomitant treatment of a pH-modifying drug product should be conducted under fed conditions.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-070",
+      "category": "ph_dependency",
+      "rule": "For pH-dependency studies, subjects should be pre-treated with a PPI for several days (e.g., 4 to 5 days) to reach pharmacodynamic steady-state before administering the test or comparator products.",
+      "conditions": "Additional BE study with concomitant acid reducing agent (pH-modifying study)",
+      "threshold_values": "PPI pre-treatment duration: e.g., 4 to 5 days to reach PD steady-state",
+      "source_section": "Q&A 3.6",
+      "source_quote": "Subjects should be pre-treated with a proton pump inhibitor (PPI) for several days, e.g., 4 to 5 days to reach pharmacodynamic steady-state before administering the test or comparator products.",
+      "jurisdiction_note": "Clarified in Q&A 3.6 (July 2024)",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-071",
+      "category": "documentation",
+      "rule": "Certificates of analysis (CoAs) of test and comparator batches should be generated within 6 months prior to the start of period 1 of the study. The BE study report must comply with ICH E3 (Structure and Content of Clinical Study Reports).",
+      "conditions": "All BE studies",
+      "threshold_values": "CoA freshness: generated within 6 months prior to study start (period 1)",
+      "source_section": "4",
+      "source_quote": "Certificates of analysis (CoA(s)), or equivalent documents, of test and comparator batches used in the study should be included in an appendix to the study report. It is recommended that the CoA(s) be generated within 6 months prior to the start of period 1 of the study... The report of the BE study should include the complete documentation of its protocol, conduct, and evaluation. It should be written in accordance with ICH E3, Structure and Content of Clinical Study Reports.",
+      "jurisdiction_note": "Universal ICH requirement",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M13A-072",
+      "category": "documentation",
+      "rule": "Module 2.7.1 of the CTD should list all relevant BE studies conducted regardless of the study outcome. Full study reports should be provided for the BE study(ies) upon which the applicant relies for approval. Inconsistent BE outcomes across pivotal studies require discussion and justification; it is not acceptable to pool studies that all fail to demonstrate BE without a study that passes.",
+      "conditions": "All regulatory submissions with BE data",
+      "threshold_values": "N/A",
+      "source_section": "4 and Q&A 4.1",
+      "source_quote": "Module 2.7.1 of the CTD should list all relevant BE studies conducted regardless of the study outcome. Full study reports should be provided for the BE study(ies) upon which the applicant relies for approval... It is not acceptable, however, to pool studies which fail to demonstrate BE without a study that passes.",
+      "jurisdiction_note": "Universal ICH requirement; elaborated in Q&A 4.1",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "acceptance_criteria": {
+    "standard_criteria": {
+      "parameters": ["Cmax", "AUC(0-t)"],
+      "parameters_multiple_dose": ["CmaxSS", "AUC(0-tauSS)"],
+      "parameter_long_half_life": "AUC(0-72h) substitutes AUC(0-t) when half-life ≥24 hours",
+      "confidence_interval": "90%",
+      "lower_bound": "80.00%",
+      "upper_bound": "125.00%",
+      "statistical_method": "Two one-sided t-tests (TOST) at 5% significance level",
+      "data_transformation": "Logarithmic transformation prior to analysis",
+      "source_section": "2.2.4",
+      "source_quote": "The 90% confidence interval for the geometric mean ratio of these PK parameters used to establish BE should lie within a range of 80.00 - 125.00%."
+    },
+    "early_exposure": {
+      "description": "For drugs where early onset of action is clinically relevant, an additional PK parameter such as pAUC or tmax may be applied",
+      "parameters": ["pAUC", "tmax"],
+      "source_section": "2.1.8.3",
+      "note": "pAUC is typically evaluated from time of drug administration until a predetermined time point related to a clinically relevant pharmacodynamic measure"
+    },
+    "note_on_nti_and_hvdp": "NTI drug tighter limits and HVDP scaled average BE are deferred to ICH M13C and are not specified numerically in M13A"
+  },
+
+  "waiver_conditions": {
+    "bcs_biowaiver": {
+      "description": "BCS-based biowaiver for certain orally administered IR solid dosage forms is described in ICH M9 (Biopharmaceutics Classification System-Based Biowaivers), not in M13A. M13A references ICH M9 for this purpose.",
+      "source_section": "1.2.1",
+      "source_quote": "The Biopharmaceutics Classification System (BCS)-based biowaiver may be used to waive in vivo BE studies for certain orally administered solid dosage forms as delineated in ICH M9, Biopharmaceutics Classification System-Based Biowaivers."
+    },
+    "additional_strength_waiver": {
+      "description": "Biowaiver for additional strengths not investigated in BE studies will be described in ICH M13B",
+      "source_section": "1.3",
+      "source_quote": "The second guideline in the series, M13B, will describe biowaiver considerations for additional strengths not investigated in BE studies."
+    },
+    "dose_proportionality_lower_strength_waiver": {
+      "description": "Selection of a lower strength may be accepted if the highest strength cannot be administered to healthy subjects for safety/tolerability reasons AND dose proportional PK has been documented over the range of strengths based on Cmax and AUC",
+      "conditions": "Safety/tolerability limitations AND documented dose proportional PK (≤25% difference in dose-adjusted mean Cmax and AUC)",
+      "source_section": "2.1.6",
+      "source_quote": "Selection of a lower strength may also be accepted if the highest strength cannot be administered to healthy subjects for safety and/or tolerability reasons and dose proportional PK, based on maximal concentration (Cmax) and area under the concentration vs. time curve (AUC), has been documented over the range of strengths."
+    }
+  },
+
+  "special_cases": {
+    "high_risk_products": {
+      "definition": "Products where drug substance characteristics in combination with the complexity of the formulation design or manufacturing process lead to increased likelihood that in vivo performance will be impacted differently by varying GI conditions between fasted and fed states",
+      "examples": "Low solubility drug substances (BCS low solubility criterion per ICH M9) with complex formulation/manufacturing methods: solid dispersions, microemulsions, co-processed drug substances, lipid-based formulations, nanotechnologies",
+      "requirements": [
+        "BE studies under both fasting AND fed conditions (irrespective of labelling), if safety permits",
+        "Fed study must use high-fat, high-calorie meal (~900–1000 kcal, ~50% calories from fat)",
+        "If sub-proportional PK also applies: fasting + fed at highest strength PLUS fasting at lowest strength"
+      ],
+      "source_section": "2.1.5"
+    },
+    "long_half_life_drugs": {
+      "definition": "Orally administered IR drug products with elimination half-life ≥24 hours",
+      "special_handling": "AUC(0-72h) may be used in place of AUC(0-t) as primary BE parameter for extent of absorption. When AUC is truncated at 72h, the following are NOT required: AUC(0-inf), AUC(0-t)/AUC(0-inf), kel, and t1/2",
+      "source_section": "2.1.8.2",
+      "source_quote": "If the AUC is truncated at 72 hours for long half-life drugs, the primary AUC parameter for analysis is AUC(0-72h) and the following additional parameters are not required: AUC(0-inf), AUC(0-t)/AUC(0-inf), kel, and t1/2."
+    },
+    "endogenous_compounds": {
+      "definition": "Drugs identical to endogenous compounds already present in the body",
+      "special_handling": [
+        "Baseline endogenous concentrations must be measured and subtracted",
+        "Baseline correction method must be pre-specified in protocol",
+        "Analyses performed on both uncorrected and corrected data",
+        "BE determination based on baseline-corrected data",
+        "Negative values after baseline correction set to zero",
+        "May enrol subjects with low/no endogenous production to avoid need for baseline correction",
+        "Consider restricting/standardising dietary intake if endogenous concentrations influenced by diet"
+      ],
+      "source_section": "3.1"
+    },
+    "prodrugs": {
+      "definition": "Drug products where the administered compound is converted to the active drug substance in vivo",
+      "special_handling": "Use parent drug if measurable; use primary metabolite (first-step metabolite) if parent levels too low for reliable bioanalytical measurement. Also consider primary active metabolite for drugs with gut wall/lumen metabolism contributing to efficacy or safety",
+      "source_section": "2.1.7.1"
+    },
+    "racemates": {
+      "definition": "Drug products containing equimolar quantities of two enantiomers",
+      "special_handling": "Achiral bioanalytical assay measuring racemate is generally acceptable. Stereoselective assay required only when all three conditions are simultaneously met: (a) different PD properties, (b) different PK properties, AND (c) AUC ratio modified by difference in rate of absorption",
+      "source_section": "2.1.7.2"
+    },
+    "first_point_cmax": {
+      "description": "When Cmax occurs at the first post-dose sampling time point, the robustness of the study results must be discussed, including additional analysis with data from affected subjects removed",
+      "source_section": "2.1.8.1",
+      "source_quote": "For subjects where Cmax occurs at the first post-dose sampling time, the actual Cmax may have been missed as it could have occurred at an earlier time point. When this occurs, the robustness of the study results in relation to the potential missed Cmax should be discussed."
+    },
+    "parallel_design": {
+      "description": "Used for long half-life drugs where crossover is impractical. Demographic characteristics or relevant covariates known to affect PK should be balanced across groups. Stratification in randomisation is recommended.",
+      "source_section": "2.1.2 and 2.2.3.4"
+    },
+    "multi_group_design": {
+      "description": "When sample size or logistics require groups of subjects, the statistical model must account for the multi-group nature using terms for group, sequence, sequence × group, subject within sequence × group, period within group, and formulation. Group × treatment interaction term should NOT be included in primary model.",
+      "source_section": "2.2.3.5"
+    },
+    "ph_dependency": {
+      "description": "Additional BE study with concomitant pH-modifying drug product required when all three trigger criteria met (pH-dependent solubility 1.2–6.8, acid reducing agent co-administration, formulation/salt/process differences)",
+      "ppi_pre_treatment": "4 to 5 days PPI pre-treatment to reach pharmacodynamic steady-state (Q&A 3.6)",
+      "source_section": "3.4"
+    },
+    "inconsistent_study_outcomes": {
+      "description": "When multiple pivotal BE studies give inconsistent results (some pass, some fail), the totality of evidence must be considered. It is not acceptable to pool studies that all fail without a passing study.",
+      "source_section": "Q&A 4.1",
+      "source_quote": "It is not acceptable, however, to pool studies which fail to demonstrate BE without a study that passes."
+    },
+    "data_removal_acceptable_reasons": {
+      "description": "Protocol deviations that may justify removal from statistical analysis (per Q&A 2.9)",
+      "examples": [
+        "Subject does not complete the pre-dose meal in a fed study",
+        "Subject completes a study period but has insufficient number of samples for accurate estimation of primary PK parameters",
+        "Subject experiences emesis within 2 times the expected median tmax",
+        "Subject experiences adverse event changing GI motility within 2 times the expected median tmax (e.g., diarrhea)",
+        "Subject does not complete the study due to AEs, non-compliance, or withdrawal of consent"
+      ],
+      "source_section": "Q&A 2.9"
+    }
+  },
+
+  "jurisdiction_differences": {
+    "general_note": "ICH M13A is an ICH consensus guideline intended to harmonise requirements across ICH regions (FDA, EMA, PMDA, Health Canada, and others). Regional legal requirements for comparator product acceptance are explicitly outside the scope of M13A.",
+    "comparator_product_acceptance": {
+      "note": "Acceptance of comparator products across regulatory jurisdictions is governed by local laws rather than scientific guidelines. M13A does not address cross-regional comparator product acceptance.",
+      "source_section": "1.3",
+      "source_quote": "Acceptance of comparator products across regulatory jurisdictions could reduce the burden of multiple clinical trials demonstrating BE against local comparator products but, in many regions, this is governed by local laws rather than scientific guidelines. Therefore, the acceptance of comparator products across regions is not in the scope of M13A."
+    },
+    "multiple_comparators_jurisdictions": {
+      "note": "Studies can include multiple region-specific comparator products in one single higher-order crossover trial. BE determination is made independently by each jurisdiction using their own region-specific comparator.",
+      "source_section": "2.2.5.1"
+    },
+    "meal_type_for_non_high_risk": {
+      "note": "M13A permits either high-fat or low-fat meal for non-high-risk single fed study, offering more flexibility than some prior regional guidance that mandated high-fat meals",
+      "source_section": "2.1.5 and Q&A 2.6"
+    },
+    "batch_size_other_dosage_forms": {
+      "note": "For dosage forms other than tablets/capsules, applicants should align with regional quality guidelines. The principle of at least 10% of production scale applies.",
+      "source_section": "Q&A 2.2"
+    }
+  },
+
+  "qa_clarifications": [
+    {
+      "qa_id": "QA-2.1",
+      "date": "July 2024",
+      "question": "Why are a minimum of 12 subjects required for a pivotal BE study?",
+      "key_answer": "Minimum of 12 evaluable subjects is established regulatory practice. BE study should be designed with a priori power of at least 80% to show equivalence within 0.80–1.25. A posteriori power is not relevant.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.2",
+      "date": "July 2024",
+      "question": "What is the minimum production batch size for dosage forms other than tablets or capsules?",
+      "key_answer": "For other dosage forms, production batch should correspond to at least 10% of production scale batch, but other batch sizes may be considered based on manufacturing considerations. Applicants should align with regional quality guidelines.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.3",
+      "date": "July 2024",
+      "question": "For non-high-risk product labelled with food only due to tolerability reasons, why is either fasting or fed acceptable?",
+      "key_answer": "For tolerability-only food labelling, state of administration (fasting or fed) not expected to influence PK comparability. Fasting provides better discrimination. If tolerability is such that fasting poses safety risk, fed study can be conducted.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.4",
+      "date": "July 2024",
+      "question": "Why are fasting and fed studies recommended for high-risk products?",
+      "key_answer": "High-risk products with low solubility and complex formulation/manufacturing may have differential interaction with GI conditions. A difference not observed under either fasting or fed alone could be detected when both are assessed. Wide variability in real-world GI conditions means neither fasting nor fed alone can adequately assess performance.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.5",
+      "date": "July 2024",
+      "question": "Why must high-risk products be studied under both conditions even if comparator labelling recommends only one?",
+      "key_answer": "Substantial variability in GI conditions following different meals means it is not possible to assess the potential differences in performance of a high-risk product under fasting or fed conditions alone. Risk is best minimized by assessing relative performance over a range of GI conditions.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.6",
+      "date": "July 2024",
+      "question": "Why can either low-fat or high-fat meal be used when only one fed BE study is recommended for a non-high-risk product?",
+      "key_answer": "For non-high-risk products, state of administration not expected to influence PK comparability. A moderate meal better reflects patient real-world consumption. M13A does not preclude use of high-fat meal but recognises a single meal cannot represent all dietary situations.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.7",
+      "date": "July 2024",
+      "question": "What is meant by non-complex formulations that still have special characteristics modulating food effect?",
+      "key_answer": "Sometimes unwanted food effects are observed and formulations modified (e.g., micronising + surfactant). If test product is not based on same formulation/manufacturing processes as comparator, a food effect cannot be excluded even without complex formulation. Fasting alone is insufficient in this case.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.8",
+      "date": "July 2024",
+      "question": "Should highest or lower strength be administered in patients when less-than-proportional PK is due to solubility/unknown reasons?",
+      "key_answer": "If highest strength cannot be given to healthy subjects for safety reasons, conduct study with highest strength in patients. Using an intermediate strength in healthy subjects is not recommended when nonproportionality necessitates BE at non-proportional portion of dose range. Lowest strength study can be in healthy subjects if acceptable safety.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.9",
+      "date": "July 2024",
+      "question": "When is it appropriate to remove data from statistical analysis?",
+      "key_answer": "Data should be removed per pre-specified protocol violations: high pre-dose concentrations (Section 2.2.3.3), very low exposure in exceptional cases (Section 2.2.1.1), or specific protocol deviations. In 2-way crossover, if data from one period excluded, subject should not be included in statistical analysis.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.10",
+      "date": "July 2024",
+      "question": "How can group-by-treatment interactions be limited?",
+      "key_answer": "To minimize group effects: start all groups at same clinic within a few weeks, follow same protocol for all groups, randomly assign subjects to groups and treatment arms at outset, assign equal sample size to each group.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-2.11",
+      "date": "July 2024",
+      "question": "When is multiplicity correction recommended for multiple test products?",
+      "key_answer": "If objective is to demonstrate BE for at least one pair-wise comparison (not necessarily all), type I error inflation is acknowledged and multiplicity correction (e.g., Bonferroni) is needed. Hierarchical testing is also acceptable. If all test products must pass (all-or-nothing), no alpha adjustment needed. Consult regulatory agency.",
+      "source_section": "Q&A Section 2"
+    },
+    {
+      "qa_id": "QA-3.1",
+      "date": "July 2024",
+      "question": "Why should negative concentration values after baseline correction be set to zero?",
+      "key_answer": "Physiological implausibility and analytical variability of negative drug concentrations are the rationale. Negative concentrations do not have meaningful biological interpretation and may be due to insufficient separation between endogenous concentrations and treatment-induced concentrations.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.2",
+      "date": "July 2024",
+      "question": "Is there a defined threshold where no baseline correction is required?",
+      "key_answer": "No defined threshold exists. If there are no quantifiable concentrations of the endogenous compound, no baseline correction is needed. Decision should balance methodological accuracy and practical study design. Baseline correction may increase PK parameter variability.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.3",
+      "date": "July 2024",
+      "question": "Does M13A apply to BE studies for oral suspensions?",
+      "key_answer": "Oral suspension is not a dosage form covered under M13A (which focuses on oral solid dosage forms). However, the same principles in M13A for oral solid dosage forms can be used for an oral suspension to establish BE.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.4",
+      "date": "July 2024",
+      "question": "What dose should be administered in a BE study where both test and comparator are oral suspensions?",
+      "key_answer": "Follow Section 2.1.6 principles. If only one strength exists, follow recommended dosing. If oral suspension is only dosage form, use recommended dose. If another dosage form also marketed for same indication, select dose by Section 2.1.6 principles (proportional PK: highest strength; less-than-proportional due to saturation: lowest; less-than-proportional due to solubility or unknown: both highest and lowest).",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.5",
+      "date": "July 2024",
+      "question": "What strength and dose for BE study when both test and comparator are oral suspensions with more than one strength?",
+      "key_answer": "Adhere to Section 2.1.6 of M13A and consider whether oral suspensions are the only dosage form. For dose proportional PK with multiple concentrations, administer highest strength. For non-proportional PK, apply scenarios from Q&A 3.4. Biowaiver for additional strengths may be requested if criteria are fulfilled.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.6",
+      "date": "July 2024",
+      "question": "Clinical study design example for additional BE study with concomitant pH-modifying drug product?",
+      "key_answer": "Pre-treat with PPI for 4–5 days to reach pharmacodynamic steady-state. Selected PPI should have minimal effect on PK via other mechanisms. PPI dose should provide near-maximum effect on gastric acid suppression. Examples: palbociclib, different salt forms of prasugrel. Alternative acid-reducing agents may be considered if no suitable PPI.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-3.7",
+      "date": "July 2024",
+      "question": "Why are fed BE and clinical PPI DDI studies not adequate to address risk of bioinequivalence at elevated gastric pH?",
+      "key_answer": "Fed conditions involve multiple ongoing GI processes that could underestimate impact of sustained increase in gastric pH. Clinical DDI studies show whether comparator product performs differently under elevated pH but do not provide information on likelihood of difference in performance BETWEEN test and comparator. Absence of ARA effect on comparator may be due to deliberate formulation design not reproduced in test product.",
+      "source_section": "Q&A Section 3"
+    },
+    {
+      "qa_id": "QA-4.1",
+      "date": "July 2024",
+      "question": "What action when BE studies with same formulation under same conditions result in different BE outcomes?",
+      "key_answer": "All relevant BE studies regardless of outcome should be provided. If inconsistent conclusions, totality of evidence should be considered. Applicant should discuss and justify BE claim. Combined analysis of all studies may be considered as sensitivity analysis. Cannot pool studies all failing BE without a passing study. Pooling not justifiable if differences in sampling times, fasting/fed conditions, or method of administration.",
+      "source_section": "Q&A Section 4"
+    }
+  ]
+}

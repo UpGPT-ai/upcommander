@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "title": "Clinical Considerations for Therapeutic Cancer Vaccines",
+    "source_file": "fda-therapeutic-cancer-vaccines.pdf",
+    "source_directory": "training/stage-1/fda-cber/",
+    "document_date": "2011-10-01",
+    "document_version": "FDA/CBER October 2011",
+    "effective_date": "2011-10-01",
+    "extraction_date": "2026-03-24",
+    "total_rules": 15,
+    "notes": "No prior extraction found in output-v2, v3, or v4. Finalizes draft guidance of September 2009. Prepared by Office of Cellular, Tissue and Gene Therapies, CBER. Full extraction performed. Regulated under 21 CFR Part 312 (IND) and PHS Act (BLA, 21 CFR Parts 601, 314 Subpart H). Does not apply to adoptive immunotherapeutic products (T cell or NK cell products)."
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CBER-CV-001",
+      "rule_text": "Sponsors who wish to submit an IND for a therapeutic cancer vaccine must conduct investigational studies under 21 CFR Part 312; clinical trials must be designed to determine optimal dose and dosing schedule (early phase) and to demonstrate efficacy and safety in a defined population (late phase); results from late phase trials may support a subsequent biologics license application (BLA).",
+      "source_section": "Section I - Introduction",
+      "source_page": 1,
+      "verbatim_quote": "This guidance provides sponsors who wish to submit an Investigational New Drug application (IND) for a therapeutic cancer vaccine with recommendations on critical clinical considerations for investigational studies of these products... This guidance provides recommendations for the design of clinical trials for cancer vaccines conducted under an IND (Title 21 Code of Federal Regulations (21 CFR) Part 312) to support a subsequent biologics license application (BLA) for marketing approval.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Does not apply to vaccines for preventative infectious disease indications, products intended to induce non-specific immune responses, products intended to prevent cancer in individuals without prior history of that cancer, or adoptive immunotherapeutic products",
+      "cross_references": ["21 CFR Part 312", "21 CFR Part 601", "PHS Act Section 351"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-002",
+      "rule_text": "Patient population selection for cancer vaccine trials must carefully weigh the advantages and disadvantages of testing in patients with metastatic disease versus those with no evidence of residual disease or minimal burden of disease; the time to development of an anti-tumor immune response for cancer vaccines generally requires 2-3 months; clinical development may require more patients and time when testing in patients with no evidence of residual disease.",
+      "source_section": "Section III.A.1.a - Patient Population / Disease Setting",
+      "source_page": 3,
+      "verbatim_quote": "In contrast, the time to development of an anti-tumor immune response needed for activity/effectiveness of a cancer vaccine generally requires 2-3 months... Consequently, developers of cancer vaccines need to weigh the advantages and disadvantages of testing these agents in patients with metastatic diseases versus patients with no evidence of residual disease or minimal burden of disease.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-003",
+      "rule_text": "In selecting the patient population for cancer vaccine testing in early phase trials, careful consideration must be given to tumor heterogeneity; testing heterogeneous patient populations is unlikely to provide interpretable evidence of efficacy for licensure purposes; for autologous vaccines using patient materials, heterogeneous tumor types make trial result interpretation especially challenging.",
+      "source_section": "Section III.A.1.b - Patient Population Tumor Heterogeneity",
+      "source_page": 4,
+      "verbatim_quote": "Although it may be acceptable to test heterogeneous patient populations with a common antigen in early phase trials, this approach is unlikely to provide interpretable evidence of efficacy for the purposes of licensure... Thus, in selecting the patient population for cancer vaccine testing in early phase trials, careful consideration should be given to the heterogeneity of the patient population.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Testing heterogeneous populations with a common antigen may be acceptable in early phase trials",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-004",
+      "rule_text": "When the cancer vaccine mechanism involves a specific antigen or therapeutic target, a companion diagnostic assay to measure target antigen expression in tumor tissues must be co-developed; sponsors must request meetings with both CBER and CDRH early in development, ideally before IND or IDE submission, to obtain recommendations tailored to the specific product/assay pair.",
+      "source_section": "Section III.A.1.c - Co-development of Cancer Vaccines and Tests for Targeted Antigen",
+      "source_page": 4,
+      "verbatim_quote": "When the proposed mechanism of action involves a specific antigen or other therapeutic target, consideration also should be given to developing an assay or mechanism to measure the target antigen expression in tumor tissues of individual patients... sponsors developing cancer vaccines who are considering including the use of an assay in the labeling of the cancer vaccine, or sponsors of such assays who are planning to develop the assay for use with a specific cancer vaccine should request a meeting with both the relevant product review office (CBER) and the relevant device review division (CDRH). Discussions begun early in the development process, ideally before submission of an IND and/or Investigational Device Exemption (IDE), may help ensure that product development provides data that establish the safety and effectiveness of the therapeutic product and assay pair.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 312", "21 CFR Part 812 (IDE)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-005",
+      "rule_text": "Immune monitoring must be incorporated into cancer vaccine trials; at least two immunological assays should be used in early phase trials to monitor the proposed immunologically-mediated anti-tumor response; assay parameters including conditions, sensitivity, specificity, in vitro amplification step, positive and negative controls, cutoff values, and statistical methods must be clearly described in the clinical protocol prior to initiation of clinical trials.",
+      "source_section": "Section III.A.2 - Monitoring the Immune Response",
+      "source_page": 5,
+      "verbatim_quote": "A clinically effective anti-tumor response involves a multi-component process; therefore, multiple monitoring assays may be needed to identify and measure the components of the immune responses... If possible, at least two immunological assays should be used in an attempt to monitor the proposed immunologically-mediated anti-tumor response... The assay parameters, such as assay conditions, sensitivity and specificity of the assay, any in vitro amplification step involved, positive and negative controls, cutoff values for determining the positive and negative test results from patients' specimens, and the statistical analytical methods to be used for the test results, should be clearly described in the clinical protocol prior to the initiation of the clinical trials.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If specific antigen has not been identified, T cell or antibody responses to whole tumor cells or lysates in vitro or in vivo by DTH testing may be used as alternatives",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-006",
+      "rule_text": "For cancer vaccine formulations containing adjuvants, the potential toxicity of the adjuvant alone and of the vaccine-adjuvant combination must be assessed in preclinical studies prior to clinical administration; general requirements for inclusion of adjuvants in licensed biological products under 21 CFR 610.15 require submission of evidence that adding the adjuvant does not adversely affect the safety or potency of the product per 21 CFR 610.15(a); when products with independent clinical activity are used as adjuvants, study design and control groups must be discussed with FDA.",
+      "source_section": "Section III.A.4 - Adjuvants Used to Stimulate Immune Response",
+      "source_page": 6,
+      "verbatim_quote": "Prior to clinical administration of the vaccine-adjuvant combination, the potential toxicity of the adjuvant alone, and of the investigational clinical vaccine-adjuvant combination, should be assessed in preclinical studies as appropriate. The design of these preclinical studies should mimic the planned clinical immunization regimen and route of administration. General requirements for inclusion of such adjuvants in licensed biological products are described in 21 CFR 610.15. These requirements include submission of evidence that adding the proposed adjuvant to a product does not adversely affect the safety or potency of the product (21 CFR 610.15(a)).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Study design requirements for products with independent clinical activity used as adjuvants will be considered on a case-by-case basis",
+      "cross_references": ["21 CFR 610.15", "21 CFR 610.15(a)", "21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-007",
+      "rule_text": "Clinical protocols for cancer vaccine trials must define conditions under which continued vaccination despite evidence of disease progression is permitted; the informed consent document must describe any reasonably foreseeable risks including the possibility of disease progression or recurrence per 21 CFR 50.25(a)(2); criteria for continued vaccination should include no dose-limiting toxicity, no deterioration of performance status, and no imminent serious complications.",
+      "source_section": "Section III.A.6 - Disease Progression/Recurrence After Initial Administration",
+      "source_page": 7,
+      "verbatim_quote": "One potential approach to this situation would be for the study protocol to clearly define the extent and location of clinical disease progression for which continued vaccination will be continued... The informed consent document provided to subjects must describe any reasonably foreseeable risks or discomforts to the subject (21 CFR 50.25(a)(2)) (e.g., the possibility of disease progression or recurrence) and other alternative treatment options.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Asymptomatic clinical progression not likely to result in life-threatening complications may not be sufficient reason for discontinuation",
+      "cross_references": ["21 CFR 50.25(a)(2)", "21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-008",
+      "rule_text": "Justification must be provided for the use of concomitant therapy (chemotherapy, biotherapy, radiotherapy, laser therapy) in cancer vaccine trials, including mode of action, dose and schedule of the concomitant therapy, and potential for negative or positive interactions with the vaccine; when standard therapies are available, the timing and sequencing relative to cancer vaccine administration must be carefully considered; when concomitant therapy may constitute a combination product per 21 CFR 3.2(e), implications must be discussed with FDA during early product development.",
+      "source_section": "Section III.A.7 - Concomitant and Subsequent Therapies",
+      "source_page": 8,
+      "verbatim_quote": "Justification should be provided for the use of concomitant therapy (e.g., chemotherapy, biotherapy, radiotherapy, laser therapy), including the mode of action, dose and schedule of the concomitant therapy, and potential for negative or positive interactions of the concomitant therapy with the vaccine... In certain instances, the use of other therapies may constitute a combination product (21 CFR 3.2(e)). The implications of development of a potential combination product should be discussed with FDA during the early stages of product development.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 3.2(e)", "21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-009",
+      "rule_text": "The starting dose, dose escalation scheme, and dosing schedule for initial cancer vaccine clinical trials must be supported by data from preclinical studies and/or prior human experience; sponsors must submit justification with supporting scientific data for the extrapolation modality used to determine the proposed clinical starting dose, dose escalation scheme, and dosing schedule; there is no predefined conversion factor to extrapolate from animals to humans for cancer vaccines due to species-specific variation in immune response.",
+      "source_section": "Section III.B.1 - Starting Dose and Dosing Schedule",
+      "source_page": 9,
+      "verbatim_quote": "The selection of the starting dose and the subsequent dose escalation scheme, as well as the dosing schedule, for initial clinical trials of a cancer vaccine should be supported by data generated from the preclinical studies and/or prior human experience... In general, due to the predicted mechanism(s) of action of these vaccine products, as well as species-specific variation in immune response activity, there is no predefined conversion factor to enable extrapolation from a safe dose in animals to a potentially safe starting dose in humans. The sponsor should submit justification, with supporting scientific data, for the extrapolation modality used to determine the proposed clinical starting dose, dose escalation scheme, and dosing schedule.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If the vaccine belongs to a class previously administered to humans with existing safety and activity data, additional preclinical studies may not be needed provided comprehensive information is included in the IND",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-010",
+      "rule_text": "Cancer vaccine dose escalation designs must be carefully considered; the traditional '3 + 3 design' may not be the most suitable approach for cancer vaccines since an MTD may not be identified; alternative dose-escalation approaches such as accelerated titration or continuous reassessment may be used; irrespective of which approach is chosen, the study protocol must clearly define DLTs, 'off-treatment' criteria, and study stopping rules to ensure subject safety.",
+      "source_section": "Section III.B.3 - Dose Escalation",
+      "source_page": 10,
+      "verbatim_quote": "Many cancer vaccine trials have used the \"3 + 3 design,\" and the results show that, except in very rare situations, an MTD for a cancer vaccine may not be identified... Therefore, this \"3 + 3 design\" may not be the most suitable approach to gathering information from early phase trials of cancer vaccines, and alternative trial designs should be considered... Irrespective of which dose-escalation approach is chosen, the study protocol should clearly define DLTs, the subject \"off-treatment\" criteria, and the study stopping rules that will ensure subject safety.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Standard dose-escalation approach may be indicated when cancer vaccines are tested in combination with other therapeutic agents/devices or administered through invasive procedures",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-011",
+      "rule_text": "Early phase cancer vaccine clinical trial design must provide proof-of-concept (POC) data, optimize dose and dosing schedule, and provide a detailed understanding of activity relative to current available therapies before transitioning to randomized late phase trials; due to their mechanism of action, single-arm studies of cancer vaccines may not provide reliable anti-tumor activity data to guide subsequent product development, though such studies may better characterize immunologic effects.",
+      "source_section": "Section III.B.4 - Single-Arm versus Randomized Phase 2 Trials",
+      "source_page": 11,
+      "verbatim_quote": "FDA recommends that IND sponsors take care to design early phase clinical trials that provide POC data, optimize the dose and dosing schedule, and provide a detailed understanding of the activity of the new agent relative to therapies currently available for the purported indication... Therefore, due to their mechanism of action, single-arm studies of cancer vaccines may not provide reliable anti-tumor activity data to guide subsequent product development, although such studies may better characterize and estimate immunologic effects.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Single-arm studies can be useful to characterize and estimate immunologic effects",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-012",
+      "rule_text": "Late phase cancer vaccine clinical trial design must consider the safety data from early phase clinical trials; a product must have an adequate safety profile before moving to phase 3; sponsors must discuss safety issues with CBER at end-of-phase 2 meetings; autoimmune phenomena must be monitored during trial progress and long-term follow-up; the choice of a clinically meaningful endpoint must be justified and should include important clinical outcomes such as survival.",
+      "source_section": "Section III.C.1-2 - Safety Profile and Endpoints",
+      "source_page": 12,
+      "verbatim_quote": "Late phase clinical trial design should consider the safety data from early phase clinical trials. It is important that a product have an adequate safety profile before moving forward to phase 3 clinical trials. Sponsors are encouraged to discuss safety issues with CBER at meetings such as end-of-phase 2 meetings (Ref. 3). If safety issues are identified in the early phase clinical trials, these issues need to be evaluated carefully during phase 3 clinical trials, including appropriate subject monitoring. For example, for cancer vaccines, autoimmune phenomena may represent a potentially debilitating side effect that will need monitoring during the progress of the trial and in long-term follow-up.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 312", "21 CFR Part 601"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-013",
+      "rule_text": "FDA recommends use of a superiority trial design to demonstrate a cancer vaccine's treatment effect on a chosen endpoint; cancer vaccine trials must have appropriate controls, either an active comparator or placebo; blinding of subjects, investigators, and evaluators is recommended to decrease bias; the study must document the nature and duration of subsequent therapies and pre-specify appropriate sensitivity analyses to account for imbalances.",
+      "source_section": "Section III.C.3-4 - Statistical Issues and Control Issues",
+      "source_page": 12,
+      "verbatim_quote": "The overall clinical effect of a cancer vaccine should be evaluated in the context of the currently available therapeutic options. FDA recommends use of a superiority trial design to demonstrate a cancer vaccine's treatment effect on a chosen endpoint... To avoid the biases that can be introduced in the conduct of the trial and which confound the analyses of the trial results, cancer vaccine trials should have appropriate controls, either an active comparator or placebo.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Non-inferiority trial design may be considered in limited situations where effect size of available therapy is well established; adaptive trial designs will be considered on a case-by-case basis",
+      "cross_references": ["21 CFR Part 312", "21 CFR Part 601"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-014",
+      "rule_text": "Late phase cancer vaccine trial designs must account for the delayed vaccine effect; due to delayed immunological mechanisms, tumors may show early progression followed by subsequent response; if time-to-event endpoints are used, trial design must include increased sample size to compensate for the delay, careful assessment of trial maturity for primary analysis, and consideration of possible violation of the proportional hazards assumption for statistical methods.",
+      "source_section": "Section III.C.5 - Delayed Vaccine Effect",
+      "source_page": 13,
+      "verbatim_quote": "As a consequence of their immunological mechanisms of action, cancer vaccines may require considerable time after administration to induce immunity. Therefore, tumors in subjects treated with cancer vaccines may show early progression followed by subsequent response. This potential phenomenon should be considered in the design of later phase clinical trials, particularly if nonclinical data or early phase clinical trials suggest that the phenomenon exists and time-to-event endpoints are used. Due to delayed effect of the vaccine, the endpoint curves may show no effect for the initial portion of the study... This delay in the effect may lead to an average effect that is smaller than expected and thus may require both an increase in sample size to compensate for the delay and a careful assessment of trial maturity for the primary analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 312"]
+    },
+    {
+      "rule_id": "FDA-CBER-CV-015",
+      "rule_text": "FDA's accelerated approval regulations in 21 CFR Part 601 Subpart E apply to cancer vaccine biological products that have been studied for safety and effectiveness in treating serious or life-threatening illnesses and provide meaningful therapeutic benefit over existing treatments; FDA may grant approval on the basis of a surrogate endpoint that is reasonably likely to predict clinical benefit (21 CFR 601.41); for autologous cancer vaccine trials, the vaccine manufacturing process must be optimized before late phase trials to increase the proportion of randomized subjects who receive the vaccine.",
+      "source_section": "Section III.C.6-7 - Autologous Vaccines and Accelerated Approval",
+      "source_page": 14,
+      "verbatim_quote": "FDA's accelerated approval regulations in 21 CFR Part 314, Subpart H (for drugs) and 21 CFR Part 601, Subpart E (for biologics) apply to new drug and biological products that (1) have been studied for their safety and effectiveness in treating serious or life-threatening illnesses, and (2) provide meaningful therapeutic benefit to patients over existing treatments... FDA may grant approval on the basis of adequate and well controlled clinical trials establishing that the drug or biological product has an effect on a surrogate endpoint that is reasonably likely, based on epidemiologic, therapeutic, pathophysiologic, or other evidence, to predict clinical benefit (21 CFR 314.510 and 601.41). Therefore, consideration should be given to optimization of the vaccine manufacturing process before the late phase clinical trials are initiated, to increase the proportion of the randomized subjects who receive the vaccine.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 601 Subpart E", "21 CFR 601.41", "21 CFR Part 314 Subpart H", "21 CFR 314.510"]
+    }
+  ]
+}

@@ -1,0 +1,890 @@
+{
+  "metadata": {
+    "extraction_date": "2026-03-23",
+    "source_guidelines": ["S2","S3A","S3B","S1A","S1C(R2)","S4","S8","Q10","Q11","Q5E","Q1E","Q1B"],
+    "total_rules": 87
+  },
+  "rules": [
+
+    {
+      "rule_id": "S2-001",
+      "domain": "Genotoxicity",
+      "rule_text": "The standard test battery for genotoxicity comprises two options. Option 1: (a) a test for gene mutation in bacteria (Ames test); (b) an in vitro test with cytogenetic evaluation of chromosomal damage using mammalian cells or an in vitro mouse lymphoma L5178Y TK+/- assay; (c) an in vivo test for chromosomal damage using rodent haematopoietic cells. Option 2: (a) a test for gene mutation in bacteria; (b) an in vivo test for chromosomal damage using two tissues.",
+      "source_section": "Section 2 - Standard Test Battery",
+      "source_page": "3",
+      "source_quote": "Option 1: (a) A test for gene mutation in bacteria; (b) An in vitro test with cytogenetic evaluation of chromosomal damage with mammalian cells or an in vitro mouse lymphoma L5178Y tk+/- assay; (c) An in vivo test for chromosomal damage using rodent haematopoietic cells.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Adequately justified alternative approaches may be acceptable."
+    },
+    {
+      "rule_id": "S2-002",
+      "domain": "Genotoxicity",
+      "rule_text": "The top concentration for in vitro mammalian cell genotoxicity tests should be 1 mM or 0.5 mg/mL (whichever is lower) for soluble, non-cytotoxic test articles.",
+      "source_section": "Section 2 - Top Concentration",
+      "source_page": "5",
+      "source_quote": "The top concentration for in vitro tests with mammalian cells should be 1 mM or 0.5 mg/mL (whichever produces the lower concentration).",
+      "severity": "MAJOR",
+      "thresholds": {"top_concentration_mM": 1, "top_concentration_mg_mL": 0.5},
+      "exceptions": "For poorly soluble test articles, the top concentration may be the limit of solubility."
+    },
+    {
+      "rule_id": "S2-003",
+      "domain": "Genotoxicity",
+      "rule_text": "For in vitro cytogenetics tests, cytotoxicity should not exceed 50% reduction in cell growth/confluency. For the mouse lymphoma assay (MLA), relative total growth (RTG) reduction should not exceed 80%, and for the MLA colony size measure, relative suspension growth reduction should not exceed 20%.",
+      "source_section": "Section 2 - Cytotoxicity Limits",
+      "source_page": "5",
+      "source_quote": "Cytotoxicity should not exceed approximately 50% for the in vitro cytogenetics assay... For MLA, a relative total growth (RTG) of 20% is recommended as the minimum RTG.",
+      "severity": "MAJOR",
+      "thresholds": {"cytogenetics_cytotoxicity_max_pct": 50, "MLA_RTG_min_pct": 20, "MLA_relative_suspension_growth_min_pct": 20},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S2-004",
+      "domain": "Genotoxicity",
+      "rule_text": "Metabolic activation (S9 fraction from Aroclor 1254- or phenobarbital/beta-naphthoflavone-induced rodent liver) must be used in all in vitro mammalian cell genotoxicity tests. Testing both with and without S9 activation is required.",
+      "source_section": "Section 2 - Metabolic Activation",
+      "source_page": "5",
+      "source_quote": "In vitro tests should be performed both in the presence and absence of an appropriate exogenous metabolic activation system.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "For compounds known not to require metabolic activation, in vitro tests without S9 may be sufficient with justification."
+    },
+    {
+      "rule_id": "S2-005",
+      "domain": "Genotoxicity",
+      "rule_text": "All genotoxicity studies intended to support a marketing application must be conducted in compliance with GLP.",
+      "source_section": "Section 3 - GLP",
+      "source_page": "9",
+      "source_quote": "Studies conducted to support a registration application should be performed in compliance with GLP.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Published literature data may be acceptable when GLP studies are not available, but GLP studies are preferred."
+    },
+    {
+      "rule_id": "S2-006",
+      "domain": "Genotoxicity",
+      "rule_text": "When a positive result is obtained in a standard battery test, follow-up testing is required to determine the mechanism and relevance to humans. Additional in vivo testing or mechanistic studies may be needed.",
+      "source_section": "Section 4 - Follow-Up Testing",
+      "source_page": "11",
+      "source_quote": "If a positive result is obtained in a standard battery test, additional testing should be performed.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "If the positive finding can be demonstrated to be of no relevance to humans, additional testing may not be required."
+    },
+    {
+      "rule_id": "S2-007",
+      "domain": "Genotoxicity",
+      "rule_text": "For in vivo tests, the route of administration should be the clinical route of administration or a route that achieves adequate systemic exposure. Exposure must be verified.",
+      "source_section": "Section 2 - In Vivo Testing",
+      "source_page": "7",
+      "source_quote": "The route of administration for in vivo studies should be the same as the intended clinical route of administration or one that provides systemic exposure.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "Alternative routes may be used if adequate systemic exposure is demonstrated."
+    },
+
+    {
+      "rule_id": "S3A-001",
+      "domain": "Toxicokinetics",
+      "rule_text": "Toxicokinetic studies conducted to support a marketing application must be conducted in compliance with GLP when they are performed as concomitant studies within a toxicology study.",
+      "source_section": "Section 3 - GLP",
+      "source_page": "5",
+      "source_quote": "TK studies conducted as integral components of nonclinical safety studies should comply with GLP.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Exploratory/mechanistic TK studies not intended for regulatory submission do not require GLP."
+    },
+    {
+      "rule_id": "S3A-002",
+      "domain": "Toxicokinetics",
+      "rule_text": "AUC and Cmax are the primary toxicokinetic parameters for assessing systemic exposure. C(time) (concentration at specific time points) may also be used when AUC cannot be derived. All three are acceptable exposure metrics.",
+      "source_section": "Section 2 - TK Parameters",
+      "source_page": "3",
+      "source_quote": "The area under the concentration-time curve (AUC) and the maximum observed plasma concentration (Cmax) are generally the most appropriate measures of systemic exposure.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "For highly protein-bound compounds, free fraction measurements may supplement total exposure metrics."
+    },
+    {
+      "rule_id": "S3A-003",
+      "domain": "Toxicokinetics",
+      "rule_text": "The low dose in the toxicokinetic study should equal or exceed the maximum clinical exposure (AUC or Cmax), to allow comparison with human exposure at therapeutic doses.",
+      "source_section": "Section 2 - Dose Selection",
+      "source_page": "4",
+      "source_quote": "The lowest dose in a toxicity study should, where practicable, be a dose where the AUC and/or Cmax is similar to that observed in humans at the anticipated maximum therapeutic dose.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "When this is not practicable, justification should be provided."
+    },
+    {
+      "rule_id": "S3A-004",
+      "domain": "Toxicokinetics",
+      "rule_text": "Both sexes should be included in toxicokinetic studies unless differences in toxicity between sexes are not anticipated or unless only one sex is relevant clinically.",
+      "source_section": "Section 2 - Sex Differences",
+      "source_page": "4",
+      "source_quote": "Both sexes should normally be included in TK assessments unless toxicity or pharmacokinetics are known not to differ between sexes.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "If adequate justification is provided, single-sex TK assessment may be acceptable."
+    },
+    {
+      "rule_id": "S3A-005",
+      "domain": "Toxicokinetics",
+      "rule_text": "For the first repeated-dose TK study, the duration must be at least 14 days. Subsequent repeat-dose toxicity studies may rely on concomitant TK data from earlier studies.",
+      "source_section": "Section 2 - Repeat-Dose TK Timing",
+      "source_page": "5",
+      "source_quote": "The first repeat-dose TK study should include systemic exposure measurements and should be of at least 14 days duration.",
+      "severity": "MAJOR",
+      "thresholds": {"minimum_duration_days": 14},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S3A-006",
+      "domain": "Toxicokinetics",
+      "rule_text": "Satellite groups may be used for TK assessment to avoid the confounding effect of serial blood sampling on the main toxicology group. Where satellites are used, they should have the same number of animals per sex as the main study groups.",
+      "source_section": "Section 2 - Satellite Groups",
+      "source_page": "4",
+      "source_quote": "Animals specifically allocated for TK measurements (satellite animals) may be used to avoid excessive blood sampling from main study animals.",
+      "severity": "MINOR",
+      "thresholds": null,
+      "exceptions": "Serial sampling from main study animals is acceptable if sampling frequency does not affect the toxicology endpoints."
+    },
+
+    {
+      "rule_id": "S3B-001",
+      "domain": "Tissue Distribution",
+      "rule_text": "Repeated-dose tissue distribution studies are required when any one of four conditions is met: (1) basic pharmacokinetic data suggest extensive tissue distribution; (2) the half-life is substantially longer in tissues than in blood/plasma; (3) unexpected toxicity findings are not explained by plasma levels; or (4) the route of administration is topical or inhalation.",
+      "source_section": "Section 2 - Triggers",
+      "source_page": "2",
+      "source_quote": "Repeated dose tissue distribution studies may be necessary when: the half-life of radioactivity in tissues is substantially longer than that of plasma; unexpected toxicity findings are not explained by plasma/blood kinetics.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "If single-dose distribution data already demonstrate relevant tissue binding or accumulation, repeat-dose studies may not be required."
+    },
+    {
+      "rule_id": "S3B-002",
+      "domain": "Tissue Distribution",
+      "rule_text": "Repeated-dose tissue distribution studies must include a minimum dosing period of 1 week. Maximum dosing period is approximately 3 weeks.",
+      "source_section": "Section 2 - Study Duration",
+      "source_page": "2",
+      "source_quote": "The repeated-dose tissue distribution studies should cover a minimum dosing period of 1 week and generally a maximum of 3 weeks.",
+      "severity": "MAJOR",
+      "thresholds": {"minimum_dosing_weeks": 1, "maximum_dosing_weeks": 3},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S3B-003",
+      "domain": "Tissue Distribution",
+      "rule_text": "Radiolabelled compounds are the preferred methodology for tissue distribution studies. Alternatively, unlabelled compound with validated analytical methods or immunohistochemical methods are acceptable.",
+      "source_section": "Section 2 - Methods",
+      "source_page": "2",
+      "source_quote": "Generally, radiolabelled compound is used in tissue distribution studies... Where this approach is not practicable, alternative analytical methods should be validated.",
+      "severity": "MINOR",
+      "thresholds": null,
+      "exceptions": "Non-radiolabelled approaches acceptable with validation."
+    },
+
+    {
+      "rule_id": "S1A-001",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "Carcinogenicity studies are required for any drug substance intended for continuous use for 6 months or more.",
+      "source_section": "Section 2 - Duration Trigger",
+      "source_page": "2",
+      "source_quote": "Carcinogenicity studies are generally required for drugs that will be used continuously for 6 months or more in the treatment of chronic or recurrent conditions.",
+      "severity": "CRITICAL",
+      "thresholds": {"duration_threshold_months": 6},
+      "exceptions": "Drugs used infrequently (not continuous) for 6 months may not require carcinogenicity studies unless other factors indicate concern."
+    },
+    {
+      "rule_id": "S1A-002",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "Carcinogenicity studies are required for drugs used intermittently to treat chronic or recurrent conditions (e.g., anxiety, depression, allergic rhinitis).",
+      "source_section": "Section 2 - Intermittent Use",
+      "source_page": "2",
+      "source_quote": "Drugs used frequently in an intermittent manner in the treatment of chronic or recurrent conditions... are candidates for carcinogenicity studies.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "S1A-003",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "Four 'cause for concern' criteria that mandate carcinogenicity studies regardless of duration: (1) previous evidence of carcinogenic potential in the product class with possible relevance to humans; (2) structure-activity relationships suggesting carcinogenic risk; (3) evidence of preneoplastic lesions in repeated-dose toxicity studies; (4) long-term tissue retention leading to local tissue reactions.",
+      "source_section": "Section 2 - Cause for Concern",
+      "source_page": "3",
+      "source_quote": "Carcinogenicity studies should also be performed if there is concern about their carcinogenic potential from: (1) previous demonstration of carcinogenic potential... (2) Structure-activity relationship suggesting carcinogenic risk; (3) Evidence of preneoplastic lesions in repeated dose toxicity studies; (4) Long-term tissue retention of parent compound or metabolite(s) resulting in local tissue reactions or other pathophysiological responses.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "S1A-004",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "Carcinogenicity studies are NOT required for drugs intended to treat patients whose life expectancy is less than 2-3 years.",
+      "source_section": "Section 2 - Life Expectancy Exemption",
+      "source_page": "4",
+      "source_quote": "For drugs intended to treat patients where life expectancy is less than 2-3 years... carcinogenicity studies may not be needed.",
+      "severity": "MAJOR",
+      "thresholds": {"life_expectancy_exemption_years": "less_than_2_to_3"},
+      "exceptions": "If significant life extension is anticipated, standard requirement may apply."
+    },
+    {
+      "rule_id": "S1A-005",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "Endogenous replacement therapies administered at physiological levels do not require carcinogenicity studies.",
+      "source_section": "Section 2 - Endogenous Substances",
+      "source_page": "4",
+      "source_quote": "For endogenous substances, including those administered as replacement therapy at physiological levels, carcinogenicity studies are generally not required.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "Supraphysiological doses require the same considerations as other pharmaceuticals."
+    },
+    {
+      "rule_id": "S1A-006",
+      "domain": "Carcinogenicity - Need",
+      "rule_text": "For topically applied drugs, the carcinogenicity testing route should match the clinical route. Systemic exposure from topical application must be assessed to determine whether oral or systemic carcinogenicity studies are warranted.",
+      "source_section": "Section 2 - Route Considerations",
+      "source_page": "5",
+      "source_quote": "For drugs applied topically, carcinogenicity studies should use the clinical route of administration. If significant systemic absorption occurs, an additional systemic route study may be warranted.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "S1C-001",
+      "domain": "Carcinogenicity - High Dose",
+      "rule_text": "The maximum tolerated dose (MTD) is defined as the dose producing a decrement in body weight gain of no more than 10% relative to controls and causing no mortality or clinical signs indicating life-threatening toxicity.",
+      "source_section": "Section 2 - MTD Definition",
+      "source_page": "3",
+      "source_quote": "The MTD is defined as the dose that produces a decrement in body weight gain of no more than 10% and causes no mortality or clinical signs indicative of a life-threatening toxicity.",
+      "severity": "MAJOR",
+      "thresholds": {"body_weight_gain_decrement_max_pct": 10},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S1C-002",
+      "domain": "Carcinogenicity - High Dose",
+      "rule_text": "Six criteria for high dose selection in carcinogenicity studies: (1) MTD; (2) 25-fold AUC ratio (maximum multiple of human AUC); (3) saturation of absorption; (4) pharmacodynamic endpoints; (5) maximum feasible dose (for low-toxicity compounds); (6) limit dose of 1500 mg/kg/day when human dose is 500 mg/day or less.",
+      "source_section": "Section 2 - Dose Selection Criteria",
+      "source_page": "4",
+      "source_quote": "The following endpoints can be used singly or in combination to select the high dose for rodent carcinogenicity studies: (1) Maximum tolerated dose; (2) Pharmacokinetic endpoint based on exposure multiples up to 25-fold the human exposure; (3) Saturation of absorption; (4) A pharmacodynamic endpoint; (5) Maximum feasible dose; (6) Limit dose of 1500 mg/kg/day.",
+      "severity": "CRITICAL",
+      "thresholds": {"AUC_multiple_max": 25, "limit_dose_mg_kg_day": 1500, "human_dose_threshold_for_limit_dose_mg_day": 500},
+      "exceptions": "When none of the six criteria are limiting, the highest practicable dose should be used."
+    },
+    {
+      "rule_id": "S1C-003",
+      "domain": "Carcinogenicity - High Dose",
+      "rule_text": "A 90-day dose-range-finding study is required before initiating a rodent carcinogenicity study to determine the MTD and appropriate dose levels.",
+      "source_section": "Section 2 - Dose-Range Finding",
+      "source_page": "5",
+      "source_quote": "Dose-range finding studies of approximately 90 days are recommended prior to initiation of carcinogenicity studies.",
+      "severity": "MAJOR",
+      "thresholds": {"dose_ranging_duration_days": 90},
+      "exceptions": "Data from existing repeated-dose toxicity studies may substitute if adequate."
+    },
+    {
+      "rule_id": "S1C-004",
+      "domain": "Carcinogenicity - High Dose",
+      "rule_text": "Both sexes must be included in the dose-range finding studies for carcinogenicity, and the 25-fold AUC ratio applies to the more sensitive sex.",
+      "source_section": "Section 2 - Sex Requirements",
+      "source_page": "5",
+      "source_quote": "Both sexes should be included in the dose range finding studies.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "S4-001",
+      "domain": "Chronic Toxicity Duration",
+      "rule_text": "The maximum recommended duration for chronic toxicity studies is 6 months in rodents and 9 months in non-rodents (dogs or non-human primates).",
+      "source_section": "Section 2 - Study Duration",
+      "source_page": "2",
+      "source_quote": "The maximum recommended duration for chronic toxicity studies in rodents is 6 months. In non-rodent species the maximum recommended duration is 9 months.",
+      "severity": "CRITICAL",
+      "thresholds": {"rodent_max_months": 6, "non_rodent_max_months": 9},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S4-002",
+      "domain": "Chronic Toxicity Duration",
+      "rule_text": "Studies of 12 months duration in non-rodents are not considered necessary and are not recommended by the ICH.",
+      "source_section": "Section 2 - 12 Month Studies",
+      "source_page": "2",
+      "source_quote": "Studies of longer than 9 months in non-rodent species... are not considered necessary.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "In specific cases, regional requirements may differ."
+    },
+    {
+      "rule_id": "S4-003",
+      "domain": "Chronic Toxicity Duration",
+      "rule_text": "For drugs intended for short clinical use (e.g., less than 3 months), chronic toxicity studies shorter than 9 months in non-rodents may be sufficient.",
+      "source_section": "Section 2 - Shorter Studies",
+      "source_page": "3",
+      "source_quote": "For drugs intended for short duration of clinical use, non-rodent toxicity studies of less than 9 months may be acceptable.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "S8-001",
+      "domain": "Immunotoxicity",
+      "rule_text": "All new pharmaceuticals must be evaluated for their potential to cause immunotoxicity as an integral component of the standard nonclinical safety evaluation.",
+      "source_section": "Section 1 - Scope",
+      "source_page": "2",
+      "source_quote": "All new pharmaceuticals should be evaluated for their potential to cause immunotoxicity.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "ICH S8 does NOT apply to biotechnology-derived pharmaceuticals, which are addressed by ICH S6."
+    },
+    {
+      "rule_id": "S8-002",
+      "domain": "Immunotoxicity",
+      "rule_text": "Immunotoxicity assessment uses a weight-of-evidence (WoE) approach, integrating findings from six factor categories: (1) structural alerts or SAR; (2) dispositions of drug/metabolites in immune tissues; (3) findings from standard repeat-dose studies; (4) pharmacological properties; (5) findings in clinical studies; (6) patient population and clinical use.",
+      "source_section": "Section 2 - WoE Approach",
+      "source_page": "4",
+      "source_quote": "The decision to conduct additional immunotoxicity testing should be based on a weight-of-evidence (WoE) review... factors to be considered include: structural alerts or SAR; drug disposition in immune tissues; findings from standard toxicity studies; pharmacological activity; findings from clinical studies; patient population and clinical use.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "S8-003",
+      "domain": "Immunotoxicity",
+      "rule_text": "Additional immunotoxicity studies should generally be completed before Phase III clinical trials.",
+      "source_section": "Section 2 - Timing",
+      "source_page": "5",
+      "source_quote": "Additional immunotoxicity studies should generally be completed before initiation of Phase III clinical studies.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "In some cases, studies may be deferred to after Phase III based on risk-benefit assessment."
+    },
+    {
+      "rule_id": "S8-004",
+      "domain": "Immunotoxicity",
+      "rule_text": "The T-cell Dependent Antibody Response (TDAR) assay is the recommended functional test for immunosuppression evaluation. The SRBC or KLH challenge model in rodents is preferred.",
+      "source_section": "Section 3 - TDAR",
+      "source_page": "7",
+      "source_quote": "The TDAR assay (e.g., anti-SRBC or anti-KLH IgM/IgG response) is recommended as a functional measure of immunosuppression.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "Alternative validated assays may be acceptable with scientific justification."
+    },
+    {
+      "rule_id": "S8-005",
+      "domain": "Immunotoxicity",
+      "rule_text": "A 28-day rodent study is the standard design for immunotoxicity testing. The high dose should be above the NOAEL from repeated-dose studies but should not induce overt toxicity or non-specific stress that would confound immunotoxicity findings.",
+      "source_section": "Section 3 - Study Design",
+      "source_page": "8",
+      "source_quote": "A 28-day rodent study is the standard design for immunotoxicity evaluation. The high dose should exceed the NOAEL but should not induce non-specific stress responses.",
+      "severity": "MAJOR",
+      "thresholds": {"standard_duration_days": 28},
+      "exceptions": null
+    },
+    {
+      "rule_id": "S8-006",
+      "domain": "Immunotoxicity",
+      "rule_text": "Immunotoxicity studies must comply with GLP requirements.",
+      "source_section": "Section 3 - GLP",
+      "source_page": "9",
+      "source_quote": "Immunotoxicity studies intended to support a marketing application should be conducted in accordance with GLP.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "Q10-001",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "The Pharmaceutical Quality System (PQS) must achieve three objectives: (1) product realisation - achieving product quality appropriate for patients and regulatory requirements; (2) state of control - establishing and maintaining a state of control; (3) continual improvement - facilitating continual improvement of process performance and product quality.",
+      "source_section": "Section 3 - PQS Objectives",
+      "source_page": "3",
+      "source_quote": "The pharmaceutical quality system for the manufacture of pharmaceutical products should ensure: (1) Product realisation is achieved; (2) A state of control is established and maintained; (3) Continual improvement is facilitated.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-002",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "A Quality Manual must be established and maintained documenting the quality management system, including quality policy, objectives, and key PQS elements.",
+      "source_section": "Section 3.1 - Quality Manual",
+      "source_page": "4",
+      "source_quote": "The company should establish and maintain a Quality Manual, or equivalent documentation, which describes the Quality Management System.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-003",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "Senior management bears ultimate responsibility for the pharmaceutical quality system and must define, communicate, and enforce a quality policy throughout the organisation.",
+      "source_section": "Section 3.2 - Management Responsibility",
+      "source_page": "5",
+      "source_quote": "Senior management has the ultimate responsibility for the pharmaceutical quality system... Senior management should define and communicate a quality policy.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-004",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "The quality policy must be communicated to all levels within the organisation and reviewed periodically for continued suitability.",
+      "source_section": "Section 3.2 - Quality Policy",
+      "source_page": "5",
+      "source_quote": "The quality policy should be communicated and understood by all appropriate levels of the company and should be reviewed for continued suitability.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-005",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "A CAPA (Corrective Action and Preventive Action) system must be implemented. CAPA must include root cause analysis, risk assessment, effectiveness monitoring, and communication of findings.",
+      "source_section": "Section 3.2.4 - CAPA",
+      "source_page": "7",
+      "source_quote": "The company should have a system for CAPA including investigation of root causes, risk assessment of the potential impact, and implementation of actions to address the root causes and prevent recurrence.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-006",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "A change management system must be in place with a systematic process for proposing, evaluating, approving, implementing and reviewing changes.",
+      "source_section": "Section 3.2.5 - Change Management",
+      "source_page": "8",
+      "source_quote": "A formal change management system should be in place to evaluate, approve, and implement changes that might affect product quality.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-007",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "For outsourced activities, the company remains ultimately responsible for ensuring GMP compliance. A written quality agreement must be in place between the contract giver and contract acceptor.",
+      "source_section": "Section 3.2.6 - Outsourcing",
+      "source_page": "9",
+      "source_quote": "When activities are outsourced, the company retains ultimate responsibility for compliance with GMP. Written agreements should be in place covering all aspects of the outsourced activities.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-008",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "Management must conduct periodic reviews of the PQS. Performance indicators must be established and monitored to assess system effectiveness.",
+      "source_section": "Section 4.1 - Management Review",
+      "source_page": "10",
+      "source_quote": "Senior management should perform periodic reviews of the pharmaceutical quality system... Performance indicators should be identified and used to monitor the effectiveness of processes within the pharmaceutical quality system.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q10-009",
+      "domain": "Pharmaceutical Quality System",
+      "rule_text": "The four PQS elements are: (1) process performance and product quality monitoring system; (2) CAPA system; (3) change management system; (4) management review of process performance and product quality.",
+      "source_section": "Section 3 - PQS Elements",
+      "source_page": "6",
+      "source_quote": "The four main elements of the pharmaceutical quality system include: (1) Process performance and product quality monitoring system; (2) CAPA system; (3) Change management system; (4) Management review of process performance and product quality.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "Q11-001",
+      "domain": "Drug Substance Development",
+      "rule_text": "A Critical Quality Attribute (CQA) is defined as a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality.",
+      "source_section": "Section 2 - CQA Definition",
+      "source_page": "3",
+      "source_quote": "A Critical Quality Attribute (CQA) is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-002",
+      "domain": "Drug Substance Development",
+      "rule_text": "Manufacturing process development must include at a minimum: (1) identification of CQAs; (2) definition of the manufacturing process to produce drug substance meeting CQAs; (3) definition of a control strategy.",
+      "source_section": "Section 3 - Process Development Minimum",
+      "source_page": "4",
+      "source_quote": "At a minimum, the manufacturing process development section should include: identification of the CQAs of the drug substance; definition of the manufacturing process... and the associated control strategy.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-003",
+      "domain": "Drug Substance Development",
+      "rule_text": "A starting material must have defined chemical properties and structure. Non-isolated intermediates are not appropriate starting materials.",
+      "source_section": "Section 5 - Starting Materials",
+      "source_page": "6",
+      "source_quote": "A starting material is incorporated as a significant structural fragment into the structure of the drug substance... Non-isolated intermediates are not considered appropriate starting materials.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Well-characterized commercially available reagents with acceptable quality may be considered starting materials."
+    },
+    {
+      "rule_id": "Q11-004",
+      "domain": "Drug Substance Development",
+      "rule_text": "GMP provisions apply from the point of first use of the designated starting material in the manufacturing process.",
+      "source_section": "Section 5 - GMP Application",
+      "source_page": "7",
+      "source_quote": "GMP provisions are applicable from the point of introduction of the starting material into the manufacturing process.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-005",
+      "domain": "Drug Substance Development",
+      "rule_text": "A design space is the multidimensional combination and interaction of input variables (material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered a change; movement out of the design space initiates a post-approval change process.",
+      "source_section": "Section 6 - Design Space",
+      "source_page": "9",
+      "source_quote": "Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-006",
+      "domain": "Drug Substance Development",
+      "rule_text": "The manufacturing process must be described as both a flow diagram and a sequential written narrative to define all synthesis steps, reagents, solvents, and process conditions.",
+      "source_section": "Section 4 - Process Description",
+      "source_page": "5",
+      "source_quote": "The manufacturing process description should include a flow diagram of the synthesis... and a sequential narrative description of the synthesis steps.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-007",
+      "domain": "Drug Substance Development",
+      "rule_text": "Impurities (organic, inorganic, residual solvents, elemental impurities) are an important CQA class. The control strategy must address how impurities originating from starting materials and process steps are controlled.",
+      "source_section": "Section 3 - Impurities as CQA",
+      "source_page": "4",
+      "source_quote": "Impurities... are important CQAs for the drug substance.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q11-008",
+      "domain": "Drug Substance Development",
+      "rule_text": "The drug substance manufacturing process should be validated before commercial distribution. For biotechnological/biological drug substances, process validation data must be included in the marketing application.",
+      "source_section": "Section 7 - Process Validation",
+      "source_page": "12",
+      "source_quote": "The drug substance manufacturing process should be validated before commercial distribution of the drug product. For biotechnological processes or for aseptic processing... data provided in support of process validation is included as part of the marketing application.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "For non-sterile chemical entity processes, results of process validation studies are not normally included in the dossier."
+    },
+    {
+      "rule_id": "Q11-009",
+      "domain": "Drug Substance Development",
+      "rule_text": "All proposed changes to the manufacturing process should be evaluated for their impact on drug substance quality using the internal change management process (ICH Q7 and Q10). Changes within the design space do not require prior regulatory approval.",
+      "source_section": "Section 9 - Lifecycle Management",
+      "source_page": "14",
+      "source_quote": "All changes should be subject to internal change management processes as part of the quality system (ICH Q7 and ICH Q10). This includes movements within the design space, which do not require approval by regional regulatory authorities.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "Q5E-001",
+      "domain": "Comparability - Biotech",
+      "rule_text": "When manufacturing process changes are made to biotechnological/biological products, a comparability exercise must be conducted to evaluate relevant quality attributes of the product to determine whether modifications adversely impact safety and efficacy.",
+      "source_section": "Section 1.2 - Background",
+      "source_page": "1",
+      "source_quote": "When changes are made to the manufacturing process, the manufacturer generally evaluates the relevant quality attributes of the product to demonstrate that modifications did not occur that would adversely impact the safety and efficacy of the drug product.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Changes introduced before nonclinical studies during development may not require comparability exercises if all subsequent studies use post-change product."
+    },
+    {
+      "rule_id": "Q5E-002",
+      "domain": "Comparability - Biotech",
+      "rule_text": "Demonstration of comparability does not require identical pre- and post-change product quality attributes, but that they are highly similar and that existing knowledge is sufficiently predictive to ensure no adverse impact on safety or efficacy.",
+      "source_section": "Section 1.4 - General Principles",
+      "source_page": "2",
+      "source_quote": "The demonstration of comparability does not necessarily mean that the quality attributes of the pre-change and post-change product are identical, but that they are highly similar and that the existing knowledge is sufficiently predictive to ensure that any differences in quality attributes have no adverse impact upon safety or efficacy.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q5E-003",
+      "domain": "Comparability - Biotech",
+      "rule_text": "The battery of analytical tests for the comparability exercise must be carefully selected to maximise detection of relevant quality attribute differences. Methods used for batch release must be validated per ICH Q2A, Q2B, Q5C, Q6B.",
+      "source_section": "Section 2.2.1 - Analytical Techniques",
+      "source_page": "4",
+      "source_quote": "The battery of tests for the comparability exercise should be carefully selected and optimised to maximise the potential for detecting relevant differences... Those methods used to measure quality attributes for batch release should be validated in accordance with ICH guidelines (ICH Q2A, Q2B, Q5C, Q6B).",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": "Methods used in characterisation studies need not be validated but should be scientifically sound and reliable."
+    },
+    {
+      "rule_id": "Q5E-004",
+      "domain": "Comparability - Biotech",
+      "rule_text": "Stability studies (including real-time/real temperature) must be initiated on the post-change product for any change with potential to alter protein structure or purity/impurity profiles.",
+      "source_section": "Section 2.2.4 - Stability",
+      "source_page": "7",
+      "source_quote": "Any change with the potential to alter protein structure or purity and impurity profiles should be evaluated for its impact on stability... Therefore, real-time/real temperature stability studies on the product potentially affected by the change should be initiated, as appropriate.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q5E-005",
+      "domain": "Comparability - Biotech",
+      "rule_text": "Contaminants in post-change product must be strictly controlled. New contaminants must be evaluated for their potential impact on quality, safety, and efficacy. Appropriate in-process acceptance criteria or action limits must be established.",
+      "source_section": "Section 2.2.2 - Contaminants",
+      "source_page": "6",
+      "source_quote": "Contaminants should be strictly avoided and/or suitably controlled with appropriate in-process acceptance criteria or action limits... New contaminants should be evaluated to assess their potential impact on the quality, safety and efficacy of the product.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q5E-006",
+      "domain": "Comparability - Biotech",
+      "rule_text": "Specifications alone are not adequate to assess the impact of manufacturing changes; a comprehensive characterisation exercise is required including physicochemical properties, biological activity, immunochemical properties, purity/impurities, and contaminants.",
+      "source_section": "Section 2.2.3 - Specifications",
+      "source_page": "7",
+      "source_quote": "The tests and analytical procedures chosen to define drug substance or drug product specifications alone are generally not considered adequate to assess the impact of manufacturing process changes since they are chosen to confirm the routine quality of the product rather than to fully characterise it.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q5E-007",
+      "domain": "Comparability - Biotech",
+      "rule_text": "For approved products, an appropriate number of post-change batches must be analysed to demonstrate consistent process performance after a manufacturing change.",
+      "source_section": "Section 2.3 - Manufacturing Process Considerations",
+      "source_page": "9",
+      "source_quote": "For approved products, an appropriate number of post-change batches should be analysed to demonstrate consistent performance of the process.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q5E-008",
+      "domain": "Comparability - Biotech",
+      "rule_text": "When quality data are insufficient to establish comparability, additional nonclinical or clinical studies may be required. The extent and nature of such studies is determined on a case-by-case basis.",
+      "source_section": "Section 2.5 - Nonclinical and Clinical Considerations",
+      "source_page": "10",
+      "source_quote": "Additional evidence from nonclinical or clinical studies is considered appropriate when quality data are insufficient to establish comparability. The extent and nature of nonclinical and clinical studies will be determined on a case-by-case basis.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "Q1E-001",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "Stability studies must be based on a minimum of three batches of the drug substance or product. The retest period or shelf life should be applicable to all future batches manufactured and packaged under similar circumstances.",
+      "source_section": "Section 2.1 - General Principles",
+      "source_page": "1",
+      "source_quote": "The purpose of a stability study is to establish, based on testing a minimum of three batches of the drug substance or product, a retest period or shelf life and label storage instructions applicable to all future batches.",
+      "severity": "CRITICAL",
+      "thresholds": {"minimum_batches": 3},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-002",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "When long-term and accelerated stability data show little or no change and little or no variability, the proposed retest period or shelf life can be up to twice the period covered by long-term data, but should not be more than 12 months beyond the long-term data period (room temperature products).",
+      "source_section": "Section 2.4.1.1 - No Change, Low Variability",
+      "source_page": "4",
+      "source_quote": "The proposed retest period or shelf life can be up to twice, but should not be more than 12 months beyond, the period covered by long-term data.",
+      "severity": "MAJOR",
+      "thresholds": {"extrapolation_max_multiple": 2, "extrapolation_max_months_beyond_data": 12},
+      "exceptions": "Applies only when no significant change is observed at accelerated conditions."
+    },
+    {
+      "rule_id": "Q1E-003",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "When long-term data show change over time and/or variability but are not amenable to statistical analysis, the proposed retest period or shelf life can be up to 1.5 times but should not be more than 6 months beyond the long-term data period, backed by supporting data.",
+      "source_section": "Section 2.4.1.2 - Data Not Amenable to Statistical Analysis",
+      "source_page": "4",
+      "source_quote": "Where long-term data are not amenable to statistical analysis, but relevant supporting data are provided, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+      "severity": "MAJOR",
+      "thresholds": {"extrapolation_max_multiple": 1.5, "extrapolation_max_months_beyond_data": 6},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-004",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "When significant change occurs at the intermediate condition, the proposed retest period or shelf life should not exceed the period covered by long-term data.",
+      "source_section": "Section 2.4.2.2 - Significant Change at Intermediate Condition",
+      "source_page": "5",
+      "source_quote": "Where significant change occurs at the intermediate condition, the proposed retest period or shelf life should not exceed the period covered by long-term data.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "A retest period or shelf life shorter than the period covered by long-term data could be called for."
+    },
+    {
+      "rule_id": "Q1E-005",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "For drug substances or products stored in a freezer, the retest period or shelf life must be based exclusively on long-term data. Extrapolation is not appropriate.",
+      "source_section": "Section 2.5.2 - Freezer Storage",
+      "source_page": "6",
+      "source_quote": "For drug substances or products intended for storage in a freezer, the retest period or shelf life should be based on long-term data.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-006",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "For drug substances or products stored below -20°C, the retest period or shelf life must be based on long-term data and assessed case-by-case.",
+      "source_section": "Section 2.5.3 - Below -20°C Storage",
+      "source_page": "7",
+      "source_quote": "For drug substances or products intended for storage below -20°C, the retest period or shelf life should be based on long-term data and should be assessed on a case-by-case basis.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-007",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "Poolability testing for batch data should use a significance level of 0.25 (not 0.05) for batch-related terms in the ANCOVA, to compensate for the expected low statistical power in typical formal stability studies.",
+      "source_section": "Section B.2.2.1 - Analysis of Covariance",
+      "source_page": "10",
+      "source_quote": "Each of these tests should be conducted using a significance level of 0.25 to compensate for the expected low power of the design due to the relatively limited sample size in a typical formal stability study.",
+      "severity": "MAJOR",
+      "thresholds": {"poolability_significance_level": 0.25},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-008",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "The recommended statistical approach for shelf life estimation is linear regression (or appropriate transformation) using the earliest time point at which the 95% confidence limit for the mean intersects the proposed acceptance criterion.",
+      "source_section": "Section 2.6 - Statistical Approaches",
+      "source_page": "7",
+      "source_quote": "An appropriate approach to retest period or shelf life estimation is to analyze a quantitative attribute by determining the earliest time at which the 95 percent confidence limit for the mean intersects the proposed acceptance criterion.",
+      "severity": "MAJOR",
+      "thresholds": {"confidence_level_pct": 95},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1E-009",
+      "domain": "Stability Data Evaluation",
+      "rule_text": "A retest period or shelf life granted on the basis of extrapolation must always be verified by additional long-term stability data as soon as those data become available.",
+      "source_section": "Section 2.3 - Extrapolation",
+      "source_page": "3",
+      "source_quote": "Thus, a retest period or shelf life granted on the basis of extrapolation should always be verified by additional long-term stability data as soon as these data become available.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+
+    {
+      "rule_id": "Q1B-001",
+      "domain": "Photostability",
+      "rule_text": "The intrinsic photostability characteristics of new drug substances and products must be evaluated to demonstrate that light exposure does not result in unacceptable change.",
+      "source_section": "Section 1.A - Preamble",
+      "source_page": "1",
+      "source_quote": "The intrinsic photostability characteristics of new drug substances and products should be evaluated to demonstrate that, as appropriate, light exposure does not result in unacceptable change.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Does not cover photostability of drugs after administration."
+    },
+    {
+      "rule_id": "Q1B-002",
+      "domain": "Photostability",
+      "rule_text": "A systematic approach to photostability testing must cover: (i) tests on drug substance; (ii) tests on exposed drug product outside of the immediate pack; and if necessary (iii) tests on drug product in the immediate pack; and if still necessary (iv) tests on drug product in the marketing pack.",
+      "source_section": "Section 1.A - Preamble",
+      "source_page": "1",
+      "source_quote": "A systematic approach to photostability testing is recommended covering, as appropriate, studies such as: i) Tests on the drug substance; ii) Tests on the exposed drug product outside of the immediate pack; and if necessary; iii) Tests on the drug product in the immediate pack; and if necessary; iv) Tests on the drug product in the marketing pack.",
+      "severity": "CRITICAL",
+      "thresholds": null,
+      "exceptions": "Sequential testing approach - proceed to next stage only if unacceptable change is observed."
+    },
+    {
+      "rule_id": "Q1B-003",
+      "domain": "Photostability",
+      "rule_text": "Two light source options are acceptable. Option 1: a single D65/ID65 equivalent source (artificial daylight fluorescent, xenon, or metal halide). Option 2: combination of cool white fluorescent lamp (per ISO 10977:1993) AND a near UV fluorescent lamp (320-400 nm, max emission 350-370 nm).",
+      "source_section": "Section 1.B - Light Sources",
+      "source_page": "2",
+      "source_quote": "Option 1: Any light source that is designed to produce an output similar to the D65/ID65 emission standard... Option 2: For option 2 the same sample should be exposed to both the cool white fluorescent and near ultraviolet lamp.",
+      "severity": "MAJOR",
+      "thresholds": {"near_UV_range_nm": "320-400", "near_UV_max_emission_nm": "350-370"},
+      "exceptions": "Alternative approaches may be used if scientifically sound and justified."
+    },
+    {
+      "rule_id": "Q1B-004",
+      "domain": "Photostability",
+      "rule_text": "For confirmatory studies, samples must be exposed to a total illumination of not less than 1.2 million lux hours AND an integrated near ultraviolet energy of not less than 200 watt hours per square metre.",
+      "source_section": "Section 1.C - Procedure",
+      "source_page": "2",
+      "source_quote": "For confirmatory studies, samples should be exposed to light providing an overall illumination of not less than 1.2 million lux hours and an integrated near ultraviolet energy of not less than 200 watt hours/square meter.",
+      "severity": "CRITICAL",
+      "thresholds": {"min_illumination_lux_hours": 1200000, "min_near_UV_Wh_per_m2": 200},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1B-005",
+      "domain": "Photostability",
+      "rule_text": "For drug substance photostability testing, normally only one batch is tested during development. Photostability characteristics must be confirmed on a single batch selected per the Parent Guideline (Q1A). If confirmatory study results are equivocal, testing of up to two additional batches is required.",
+      "source_section": "Section 2 - Drug Substance",
+      "source_page": "4",
+      "source_quote": "Normally, only one batch of drug substance is tested during the development phase, and then the photostability characteristics should be confirmed on a single batch... If the results of the confirmatory study are equivocal, testing of up to two additional batches should be conducted.",
+      "severity": "MAJOR",
+      "thresholds": {"standard_batches": 1, "max_additional_batches_if_equivocal": 2},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1B-006",
+      "domain": "Photostability",
+      "rule_text": "Solid drug substance samples for photostability testing should be spread to a thickness of not more than 3 millimetres. Drug substance liquids must be exposed in chemically inert and transparent containers.",
+      "source_section": "Section 2.A - Presentation of Samples",
+      "source_page": "4",
+      "source_quote": "Solid drug substances should be spread across the container to give a thickness of typically not more than 3 millimeters. Drug substances that are liquids should be exposed in chemically inert and transparent containers.",
+      "severity": "MAJOR",
+      "thresholds": {"solid_sample_max_thickness_mm": 3},
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1B-007",
+      "domain": "Photostability",
+      "rule_text": "Drug product photostability testing proceeds sequentially: exposed product, then immediate pack, then marketing pack. Testing progresses until results demonstrate adequate protection from light. If immediate pack is completely impenetrable to light (e.g., aluminium tubes or cans), testing need only be conducted on directly exposed product.",
+      "source_section": "Section 3 - Drug Product",
+      "source_page": "5",
+      "source_quote": "For some products where it has been demonstrated that the immediate pack is completely impenetrable to light, such as aluminium tubes or cans, testing should normally only be conducted on directly exposed drug product.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1B-008",
+      "domain": "Photostability",
+      "rule_text": "Analytical procedures used in photostability testing must be suitably validated and capable of detecting photolytic degradants. The extent of drug product testing is established by assessing whether acceptable change has occurred per the Decision Flow Chart for Photostability Testing of Drug Products.",
+      "source_section": "Section 3.B - Analysis of Samples",
+      "source_page": "6",
+      "source_quote": "The analytical procedures used should be suitably validated... The extent of drug product testing should be established by assessing whether or not acceptable change has occurred at the end of the light exposure testing as described in the Decision Flow Chart for Photostability Testing of Drug Products.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "Q1B-009",
+      "domain": "Photostability",
+      "rule_text": "Drug substance photostability testing consists of two parts: forced degradation testing (for method development and degradation pathway elucidation) and confirmatory testing (to establish photostability characteristics under standardised conditions for packaging and labeling decisions).",
+      "source_section": "Section 2 - Drug Substance Testing Parts",
+      "source_page": "4",
+      "source_quote": "For drug substances, photostability testing should consist of two parts: forced degradation testing and confirmatory testing.",
+      "severity": "MAJOR",
+      "thresholds": null,
+      "exceptions": null
+    }
+  ]
+}

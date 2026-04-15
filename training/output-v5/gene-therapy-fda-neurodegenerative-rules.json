@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "title": "Human Gene Therapy for Neurodegenerative Diseases",
+    "source_file": "Human_Gene_Therapy_Neurodegenerative.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "October 2022",
+    "document_version": "October 2022 (finalizes January 2021 draft)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 28,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-ND-001",
+      "rule_text": "GT products for neurodegenerative diseases must be designed to reduce unintended immune responses, reduce the possibility of becoming latent, and must not contain foreign genes that do not directly contribute to the biological function of the investigational product (e.g., reporter genes).",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that all GT products for neurodegenerative diseases be designed to reduce unintended immune responses, reduce the possibility of becoming latent, and not contain foreign genes that do not directly contribute to the biological function of the investigational product (e.g., reporter genes).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-CMC-001", "21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-002",
+      "rule_text": "Qualified assays for evaluation of empty viral particles (where applicable), product-related variants (mutations in the viral genome, transgene, etc.), and non-recombinant viral particles (e.g., replication-competent viruses, wild-type viruses) must be established early in the product development cycle for GT viral vector-based products used to treat neurodegenerative conditions.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that qualified assays for evaluation of empty particles (where applicable), product-related variants (mutations in the viral genome, transgene, etc.), and non-recombinant viral particles (e.g., replication-competent viruses, wild-type viruses) be established early in the product development cycle.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-CMC-001", "FDA-GT-RCR-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-003",
+      "rule_text": "Residual host cell protein levels in GT products for neurodegenerative diseases must be as low as can be reasonably achieved based on manufacturing experience.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that the residual host cell protein levels be as low as can be reasonably achieved based on manufacturing experience.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-004",
+      "rule_text": "For GT products administered by the intrathecal route, endotoxin levels must be kept to less than 0.2 EU/kg body weight/hour.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "The endotoxin levels should be kept to less than 0.2EU/kg body weight/hour when the drug product is administered by the intrathecal route.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to intrathecal route of administration.",
+      "cross_references": ["21 CFR 610.13", "FDA-GT-RD-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-005",
+      "rule_text": "Sponsors must carefully consider characteristics of the cell lines used in the manufacture of viral vectors for neurodegenerative GT products that may impact safety (such as presence of tumorigenic sequences) and must limit residual host cell-DNA levels and DNA size.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that sponsors carefully consider characteristics of the cell lines used in the manufacture of viral vectors that may impact the safety of the final product (such as presence of tumorigenic sequences) and limit residual host cell-DNA levels and DNA size.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-006",
+      "rule_text": "Plasmids used to generate recombinant viral vectors must meet acceptable limits for purity; if manufactured in a multi-product facility, they must be tested for the presence of other contaminating plasmids that may have been co-purified, or a risk assessment must be conducted to provide assurance of freedom from contaminating plasmids.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 3,
+      "verbatim_quote": "Plasmids used to generate recombinant viral vectors should meet acceptable limits for purity, and manufacturing controls should be in place to avoid cross-contamination of plasmids. If the plasmids are manufactured in a multi-product manufacturing facility, they should be tested for the presence of other contaminating plasmids that may have been co-purified. Alternatively, a risk assessment may be conducted to provide assurance of freedom from other contaminating plasmids that may have been co-purified.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Risk assessment may substitute for testing in multi-product facilities.",
+      "cross_references": ["FDA-GT-CMC-001", "FDA-SCT-1998-012"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-007",
+      "rule_text": "Drug product identity must be established prior to the initiation of any nonclinical studies designed to evaluate the product's suitability for use in a clinical investigation under an IND.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 4,
+      "verbatim_quote": "Drug product identity should be established prior to the initiation of any nonclinical studies designed to evaluate the product's suitability for use in a clinical investigation under an IND.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 610.14", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-008",
+      "rule_text": "A potency test that measures relevant biological activities must be qualified (i.e., accuracy, precision, sensitivity, specificity) prior to conducting clinical trials intended to provide substantial evidence of effectiveness to support a marketing application; the potency test must be validated prior to submitting a BLA under section 351 of the PHS Act and 21 CFR 601.2.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 4,
+      "verbatim_quote": "We recommend that a potency test (Ref. 6) that measures relevant biological activities be qualified for suitability (i.e., accuracy, precision, sensitivity, specificity) prior to conducting clinical trials intended to provide substantial evidence of effectiveness to support a marketing application. The potency test should be validated prior to submitting a biologics license application (BLA) under section 351 of the PHS Act and 21 CFR 601.2.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Earlier-phase studies may use surrogate or matrix approaches to potency.",
+      "cross_references": ["21 CFR 601.2", "21 CFR 610.10", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-009",
+      "rule_text": "GT product strength (a critical quality attribute) must be evaluated with an assay qualified as suitable (i.e., accurate, precise, sensitive, and specific) prior to initiating clinical studies.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 4,
+      "verbatim_quote": "GT product strength should be evaluated with an assay qualified as suitable (i.e., accurate, precise, sensitive, and specific) prior to initiating clinical studies (Ref. 1).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-010",
+      "rule_text": "Manufacturing process changes must be evaluated by risk analysis (prospective, side-by-side pre- and post-change analysis); if necessary, a comparability study must be conducted; comparability protocols and manufacturing changes must be discussed with FDA prior to implementation; data from comparability studies must be submitted as an IND amendment per 21 CFR 312.31(a)(1) for FDA review prior to implementing the change for investigational use.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 4,
+      "verbatim_quote": "Sponsors should evaluate the effect of manufacturing process changes on the product's CQAs. Sponsors should be prepared to conduct a risk analysis and, if necessary, a comparability study... sponsors should submit the data from the comparability studies as an amendment to the IND (21 CFR 312.31(a)(1)) for FDA review prior to implementing the change for investigational use in clinical studies.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.31(a)(1)", "ICH Q5E", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-011",
+      "rule_text": "When a device is used to deliver a GT product for neurodegenerative diseases, compatibility of the product with the delivery device (e.g., no loss of strength or potency, no increase in impurities) must be demonstrated prior to initiating Phase 1 safety studies (21 CFR 312.23(a)(10)(iv) and 21 CFR 312.23(a)(11)); compatibility studies must be carried out with the final formulated investigational product under conditions representative of clinical use.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 5,
+      "verbatim_quote": "When a device is used to deliver the investigational product, compatibility of the product with the delivery device (e.g., no loss of strength or potency, no increase in impurities, etc. of the investigational product after passing through the delivery device) should be demonstrated prior to initiating Phase 1 safety studies (21 CFR 312.23(a)(10)(iv) and 21 CFR 312.23(a)(11)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(10)(iv)", "21 CFR 312.23(a)(11)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-012",
+      "rule_text": "If a delivery device for a neurodegenerative GT product falls outside the cleared or approved indications for use, or has not been cleared or approved by FDA for any indication, early discussion with FDA is required to determine the additional information needed to inform FDA's safety evaluation of the delivery device for the proposed clinical study.",
+      "source_section": "II. Considerations for Chemistry, Manufacturing and Controls (CMC)",
+      "source_page": 5,
+      "verbatim_quote": "If use of a delivery device falls outside the cleared or approved indications for use or if the delivery device has not been cleared or approved by the FDA for any indication, we recommend early discussion with FDA (see section VI of this document) to determine the additional information that may be needed to inform FDA's safety evaluation of the delivery device when used with the investigational product for the proposed clinical study.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Does not apply to devices used within their cleared/approved indications.",
+      "cross_references": ["21 CFR 312.23(a)(10)(iv)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-013",
+      "rule_text": "The preclinical program for a neurodegenerative GT product must include studies designed to: (1) identify a biologically active dose range; (2) recommend an initial clinical dose level, dose-escalation schedule, and dosing regimen; (3) establish rationale for and reasonable safety of the proposed clinical route of administration; (4) support patient eligibility criteria; and (5) identify potential toxicities and physiologic parameters to guide clinical monitoring.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 5,
+      "verbatim_quote": "The overall objectives of a preclinical program for a GT product include: 1) identification of a biologically active dose range; 2) recommendations for an initial clinical dose level, dose-escalation schedule, and dosing regimen; 3) establishment of the rationale for, and reasonable safety of, the proposed clinical route of administration (ROA); 4) support of patient eligibility criteria; and 5) identification of potential toxicities and physiologic parameters that help guide clinical monitoring for a particular investigational product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-001"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-014",
+      "rule_text": "For a pediatric first-in-human GT trial that is associated with more than a minor increase over minimal risk, the preclinical program must include studies designed to demonstrate a prospect of direct benefit to individual subjects per 21 CFR 50.52.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 5,
+      "verbatim_quote": "In addition, to justify conducting a pediatric first-in-human clinical trial that is associated with more than a minor increase over minimal risk, the preclinical program should include studies designed to demonstrate a prospect of direct benefit (21 CFR 50.52) of the investigational GT product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies only to pediatric first-in-human trials with more than minor increase over minimal risk.",
+      "cross_references": ["21 CFR 50.52", "21 CFR Part 50 Subpart D"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-015",
+      "rule_text": "Biodistribution studies must be conducted to assess distribution, persistence, and clearance of the vector and possibly the expressed transgene product, from the site of administration to target and non-target tissues, including applicable biofluids (e.g., blood and cerebrospinal fluid (CSF)), as feasible.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 6,
+      "verbatim_quote": "Biodistribution studies should be conducted to assess the distribution, persistence, and clearance of the vector and possibly the expressed transgene product, from the site of administration to target and non-target tissues, including applicable biofluids (e.g., blood and cerebrospinal fluid (CSF)), as feasible.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-012"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-016",
+      "rule_text": "Toxicology studies for neurodegenerative GT products must incorporate elements of the planned clinical trial (dose range, ROA, dosing schedule, and evaluation endpoints) and must be sufficiently comprehensive to permit identification, characterization, and quantification of potential local and systemic toxicities, their onset and resolution, and the effect of dose level; for significant abnormal findings or lesions, frequency, severity, potential cause, and possible clinical significance must be determined.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 6,
+      "verbatim_quote": "Study designs should incorporate elements of the planned clinical trial (e.g., dose range, ROA, dosing schedule, and evaluation endpoints), to the extent feasible. Study designs should be sufficiently comprehensive to permit identification, characterization, and quantification of potential local and systemic toxicities, their onset (i.e., acute or delayed) and potential mitigation and/or resolution, and the effect of dose level on these findings... for any significant abnormal findings or lesions, sponsors should determine the frequency, severity, potential cause, and possible clinical significance.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(8)", "FDA-CGT-PRE-004"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-017",
+      "rule_text": "Due to anatomical differences between rodent and human central and peripheral nervous systems, animals with larger brains or spinal columns (e.g., pigs or nonhuman primates) should be used for neurodegenerative GT preclinical programs as they may provide additional safety information, facilitate dose extrapolation, and allow evaluation of surgical dosing procedures and delivery device systems intended for clinical use.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 6,
+      "verbatim_quote": "Due to differences in anatomy in rodents as compared to the central and peripheral nervous systems in humans, animals with larger brains or spinal columns, such as pigs or nonhuman primates, may provide additional safety information and facilitate dose extrapolation. Inclusion of larger animals may also allow for the evaluation of the surgical dosing procedures and delivery device systems intended for clinical use.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Scientific justification must be provided for the selection of animal models.",
+      "cross_references": ["FDA-CGT-PRE-002", "FDA-GT-ND-013"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-018",
+      "rule_text": "Functional endpoints for POC studies in neurodegenerative disease models that require neurobehavioral testing must include adequate training of personnel, inclusion of appropriate controls, masked assessment of study endpoints, and use of well-defined scoring systems to avoid potential bias.",
+      "source_section": "III. Considerations for Preclinical Studies",
+      "source_page": 7,
+      "verbatim_quote": "Functional endpoints for POC studies in models of neurodegenerative disease often require neurobehavioral testing to demonstrate activity following administration of the investigational GT product. Adequate training of personnel, inclusion of appropriate controls, masked assessment of study endpoints, and use of well-defined scoring systems are recommended to avoid potential bias in these studies.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-PRE-003"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-019",
+      "rule_text": "All subjects in trials of GT products for neurodegenerative diseases must receive best standard of care; no patient should be denied effective therapies in order to be randomized to a placebo-only arm; for studies involving placebo, FDA recommends add-on designs in which an effective treatment is given to all subjects, with subjects then randomized to receive added GT product or added placebo.",
+      "source_section": "IV.A. Study Design",
+      "source_page": 8,
+      "verbatim_quote": "All subjects in trials of GT products for neurodegenerative diseases should receive the best standard of care, and no patient should be denied effective therapies in order to be randomized to a placebo-only arm... FDA recommends add-on designs, in which a treatment previously shown to be effective for the neurodegenerative condition is given to all subjects participating in the trial, with subjects then randomized to receive the added GT product or added placebo.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-020",
+      "rule_text": "FDA generally recommends randomized, concurrent-controlled (e.g., placebo, sham-procedure), double-blind clinical trials for neurodegenerative GT products, even for first-in-human studies; randomized designs may not be needed only when disease course is well-characterized, highly predictable, can be objectively measured and verified, and the treatment effect is large and not expected without treatment.",
+      "source_section": "IV.A. Study Design",
+      "source_page": 8,
+      "verbatim_quote": "With the provisions above in mind, whenever possible FDA generally recommends that sponsors conduct randomized, concurrent-controlled (e.g., placebo, sham-procedure), double-blind clinical trials, even for first-in-human studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Randomized studies potentially may not be needed when disease course is well-characterized, highly predictable, and can be objectively measured and verified (e.g., temporally predictable mortality), and the clinically meaningful treatment effect is large.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "ICH E10"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-021",
+      "rule_text": "For sham procedure concurrent controls in neurodegenerative GT trials, the sham procedure must be as minimally invasive as possible while still maintaining blinding of appropriate parties (e.g., evaluators, study patients, and families).",
+      "source_section": "IV.A. Study Design",
+      "source_page": 9,
+      "verbatim_quote": "For trials using a sham procedure as the concurrent control, FDA recommends the sham procedure be as minimally invasive as possible while still maintaining blinding of appropriate parties (e.g., evaluators, study patients, and families).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-ND-020"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-022",
+      "rule_text": "For GT trials in neurodegenerative diseases caused by genetic mutation, genetic diagnosis is essential for identifying potential trial participants; presence of the genetic mutation must be confirmed prior to enrollment; if a reliable genetic diagnostic test is not readily available, a companion diagnostic may need to be developed.",
+      "source_section": "IV.B. Study Population",
+      "source_page": 9,
+      "verbatim_quote": "For clinical trials of GT products for treatment of a neurodegenerative disorder due to mutation(s) in a gene, genetic diagnosis is essential for identifying potential clinical trial participants; presence of the genetic mutation should be confirmed prior to enrollment. If a reliable genetic diagnostic test is not readily available, a companion diagnostic may need to be developed to appropriately select subjects for the study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to mutation-based neurodegenerative disease GT trials; may not apply to age-related or other etiologies.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "FDA-GT-RD-013"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-023",
+      "rule_text": "When a companion diagnostic is needed to appropriately select subjects for a GT product study, the sponsor must coordinate submission of the companion diagnostic marketing application with submission of the BLA for the GT product to support contemporaneous marketing authorizations.",
+      "source_section": "IV.B. Study Population",
+      "source_page": 9,
+      "verbatim_quote": "If an in vitro companion diagnostic is needed to appropriately select subjects for a study (and later for treatment, once the GT product is approved), the sponsor should coordinate submission of the marketing application for the companion diagnostic with submission of the BLA for the GT product, to support contemporaneous marketing authorizations.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-ND-022", "21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-024",
+      "rule_text": "For neurodegenerative GT products that affect both adults and children, the first-in-human trial should be initiated in adult subjects whenever feasible; preliminary safety and tolerability data (and in some situations, preliminary or substantial evidence of effectiveness) in adult subjects must be obtained prior to beginning studies in pediatric subjects.",
+      "source_section": "IV.B. Study Population",
+      "source_page": 10,
+      "verbatim_quote": "Whenever feasible, the first-in-human trial should be initiated in adult subjects who are able to understand the risks, and to provide informed consent. Sponsors should obtain preliminary safety and tolerability data (and in some situations, data to support preliminary effectiveness or substantial evidence of effectiveness) in adult subjects prior to beginning studies in pediatric subjects.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "When no prior human safety or efficacy data are available, sponsors must provide rationale for why adult studies are not feasible or ethical before conducting pediatric first-in-human trials.",
+      "cross_references": ["21 CFR Part 50 Subpart D", "21 CFR 50.52"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-025",
+      "rule_text": "For invasive surgical CNS delivery of a GT product (e.g., intracranial delivery), a staged approach must be used: initiate the early-phase study with unilateral administration in a reasonable number of subjects; only if no significant safety concerns related to product administration arise may the study proceed to bilateral administration.",
+      "source_section": "IV.C. Dose Selection",
+      "source_page": 11,
+      "verbatim_quote": "In such cases, FDA recommends that the sponsor use a staged approach: initiating the early-phase study with unilateral administration in a reasonable number of subjects, and if no significant safety concerns related to product administration arise, then proceeding to bilateral administration of the GT product in the early-phase study.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically when invasive surgical procedures are necessary for product administration.",
+      "cross_references": ["21 CFR 312.23(a)(6)"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-026",
+      "rule_text": "To ensure consistency across study sites, sponsors must include in the study protocol a detailed description of both the product delivery procedure and the devices used for delivery of neurodegenerative GT products.",
+      "source_section": "IV.C. Dose Selection",
+      "source_page": 11,
+      "verbatim_quote": "To ensure consistency across study sites, sponsors should include in the study protocol a detailed description of both the product delivery procedure and the devices used for delivery.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(6)", "FDA-GT-ND-011"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-027",
+      "rule_text": "Safety monitoring for neurodegenerative GT clinical trials must include immunoassays measuring cellular and humoral immune responses to both the vector and the transgene-encoded protein; use of immunosuppressants must be justified based on available clinical data and subjects must be closely monitored and treated as necessary to minimize risk of complications.",
+      "source_section": "IV.D. Safety Considerations",
+      "source_page": 11,
+      "verbatim_quote": "To monitor for systemic immune reactions, sponsors should perform immunoassays measuring cellular and humoral immune responses to both the vector and the transgene-encoded protein... Sponsors should provide justification for the immunosuppressant regimen, based on available clinical data for the investigational product or related products. Because immunosuppressant drugs may cause adverse events, subjects should be closely monitored and treated, as necessary, to minimize the risk of complications.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.32", "FDA-GT-RD-021", "FDA-GT-RD-022"]
+    },
+    {
+      "rule_id": "FDA-GT-ND-028",
+      "rule_text": "For marketing applications with efficacy claims for neurodegenerative GT products, primary efficacy endpoints must be either clinically meaningful endpoints that directly measure a clinical benefit, or surrogate endpoints reasonably likely to predict a clinical benefit; a clinically meaningful endpoint is generally required for traditional approval, while validated surrogate endpoints may support accelerated approval.",
+      "source_section": "IV.E. Study Endpoints",
+      "source_page": 12,
+      "verbatim_quote": "In trials intended to provide evidence of effectiveness to support a marketing application, primary efficacy endpoints should be either clinically meaningful endpoints that directly measure a clinical benefit, or surrogate endpoints that are reasonably likely to predict a clinical benefit... an effect on a clinically meaningful endpoint generally would be used to support a marketing application under the traditional approval pathway.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Surrogate endpoints may support accelerated approval when GT directly targets a well-understood, well-documented monogenic change causing serious neurodegenerative disorder.",
+      "cross_references": ["21 CFR 314.500", "21 CFR 601.40", "FD&C Act 506(c)"]
+    }
+  ]
+}

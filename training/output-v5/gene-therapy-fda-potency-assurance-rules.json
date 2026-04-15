@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "title": "Potency Assurance for Cellular and Gene Therapy Products",
+    "source_file": "Potency_Assurance_Cell_Gene_Therapy.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "December 2023",
+    "document_version": "Draft Guidance for Industry (December 2023) — supersedes January 2011 guidance on finalization",
+    "extraction_date": "2026-03-24",
+    "total_rules": 28,
+    "replaces": "None in output-v2/v3/v4 — first extraction",
+    "notes": "PDF copy is 24 pages (document body pages 1-22). ToC indicates body runs to page 24 (Sections V.C.3 Qualification and Validation, V.C.4 Assay Changes and Transfers, V.D Acceptance Criteria appear truncated in this PDF copy). Status: DRAFT — not yet finalized or for implementation."
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CGT-POT-001",
+      "rule_text": "A biologics license application (BLA) for a CGT product must contain data demonstrating that the product is safe, pure, and potent, and the continued safety, purity, and potency of the product must be assured.",
+      "source_section": "III.A. Licensed CGT Products",
+      "source_page": 3,
+      "verbatim_quote": "To obtain a biologics license, a biologics license application (BLA) must contain data demonstrating that the product is safe, pure, and potent, and the continued safety, purity, and potency of the product must be assured.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["42 U.S.C. 262(a)(2)(C)(i)", "21 CFR 601.2(a)", "21 CFR 601.2(d)", "21 CFR 601.20(c)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-002",
+      "rule_text": "Each lot of a licensed CGT product must be tested for potency, and potency assays must be performed on a sample that is taken after completing all manufacturing steps that may affect potency.",
+      "source_section": "III.A. Licensed CGT Products",
+      "source_page": 3,
+      "verbatim_quote": "Each lot of product must be tested for potency, and potency assays must be performed on a sample that is taken after completing all manufacturing steps that may affect potency.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "CBER may permit an alternative approach only if the sponsor demonstrates the alternative will provide potency assurance equal to or greater than that provided by following 21 CFR 610.1 and 21 CFR 610.10.",
+      "cross_references": ["21 CFR 610.1", "21 CFR 610.10"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-003",
+      "rule_text": "Before introducing a change to the manufacturing or testing of an approved biologic, the sponsor must assess the effects of the change and must demonstrate that the change does not adversely affect the potency of the product as it may relate to the safety or effectiveness of the product.",
+      "source_section": "III.A. Licensed CGT Products",
+      "source_page": 3,
+      "verbatim_quote": "Before introducing a change to the manufacturing or testing of an approved biologic, you must assess the effects of the change, and you must demonstrate that the change does not adversely affect the potency of the product as it may relate to the safety or effectiveness of the product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 601.12(a)(2)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-004",
+      "rule_text": "Sponsors must describe their potency assurance strategy in the IND; the IND must contain sufficient CMC information to assure proper identification, quality, purity, and strength of the investigational CGT drug; the degree of potency assurance must be appropriate for the phase of investigation and must progressively increase during clinical development.",
+      "source_section": "III.B. Investigational CGT Products",
+      "source_page": 3,
+      "verbatim_quote": "You should describe your strategy for potency assurance in your investigational new drug application (IND). Your IND must contain sufficient chemistry, manufacturing and control information to assure the proper identification, quality, purity and strength of the investigational drug, although the amount of information needed will vary depending on the phase of the investigation... the degree of potency assurance for a product should be appropriate for the phase of clinical investigations and should progressively increase during the course of clinical development.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)(i)", "21 CFR 312.23(a)(7)(ii)-(iii)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-005",
+      "rule_text": "FDA may place a CGT product investigation on clinical hold if the potency of the product to be administered is not adequately assured, or if information in the IND is not adequate to assure the potency of the product to be administered in the study; if an IND for a Phase 2 or 3 investigation does not provide adequate potency assurance, the investigation may be placed on clinical hold as clearly deficient in design.",
+      "source_section": "III.B. Investigational CGT Products",
+      "source_page": 4,
+      "verbatim_quote": "FDA may place a study on clinical hold on such grounds if the potency of the product to be administered in an investigation is not adequately assured, or the information in the IND is not adequate to assure the potency of the product to be administered in the study... if an IND does not provide adequate assurance of product potency, a phase 2 or 3 investigation that is intended to provide substantial evidence of effectiveness for a marketing application may be considered clearly deficient in design to meet its stated objectives and placed on clinical hold.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.42(b)(1)(i)", "21 CFR 312.42(b)(1)(iv)", "21 CFR 312.42(b)(2)(i)", "21 CFR 312.42(b)(2)(ii)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-006",
+      "rule_text": "The IND must contain sufficient stability data to support the stability of the drug substance (DS) and drug product (DP) during planned clinical investigations; stability studies must include assessments of potency.",
+      "source_section": "III.B. Investigational CGT Products",
+      "source_page": 4,
+      "verbatim_quote": "During all phases of clinical investigation, your IND must contain sufficient data to support the stability of the drug substance (DS) and drug product (DP) during planned clinical investigations. Stability studies should include assessments of potency.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)(ii)", "21 CFR 312.23(a)(7)(iv)(a)-(b)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-007",
+      "rule_text": "The facilities and methods used for manufacturing CGT products must comply with current good manufacturing practice (CGMP); manufacturing processes must be designed and qualified to assure potency and uniformity of the product from lot to lot.",
+      "source_section": "III.C. Current Good Manufacturing Practice",
+      "source_page": 5,
+      "verbatim_quote": "The facilities and methods used for manufacturing CGT products must comply with current good manufacturing practice (CGMP)... The manufacturing process should be designed and qualified to assure potency of the product and uniformity of the product from lot to lot.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Most Phase 1 investigational drugs are exempt from the requirement to comply with 21 CFR Part 211.",
+      "cross_references": ["21 U.S.C. 351(a)(2)(B)", "21 CFR 210.2(c)", "21 CFR Part 211"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-008",
+      "rule_text": "Materials used in CGT manufacturing must meet suitable specifications before being used; containers, closures, and product-contact equipment must be evaluated for potential adverse effects on product potency.",
+      "source_section": "III.C. Current Good Manufacturing Practice",
+      "source_page": 5,
+      "verbatim_quote": "The materials used for manufacturing may affect the product's potency. Materials should meet suitable specifications before being used in the manufacturing process... Containers, closures, and product-contact equipment should be evaluated for potential adverse effects on product potency.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR Part 211"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-009",
+      "rule_text": "Potency assays used for lot release of CGT products must be verified to be suitable for their intended purpose — able to measure potency with sufficient specificity, accuracy, and/or precision over the reportable range of the assay; performance characteristics must be established under actual conditions of use and documented during assay qualification and validation.",
+      "source_section": "III.C. Current Good Manufacturing Practice",
+      "source_page": 5,
+      "verbatim_quote": "Potency assays used for lot release should be verified to be suitable for their intended purpose (able to measure potency with sufficient specificity, accuracy and/or precision over the reportable range of the assay). Potency assay performance characteristics should be established under actual conditions of use and documented during assay qualification and validation.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 211.165(e)", "FDA-CGT-POT-002"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-010",
+      "rule_text": "Phase-appropriate assays and acceptance criteria for potency must be established for CGT products; lots that fail to meet potency acceptance criteria must be rejected.",
+      "source_section": "III.C. Current Good Manufacturing Practice",
+      "source_page": 5,
+      "verbatim_quote": "Phase-appropriate assays and acceptance criteria for potency should be established, and lots that fail to meet acceptance criteria should be rejected.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 610.1", "21 CFR 610.10"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-011",
+      "rule_text": "A potency assurance strategy must include: (1) a Quality Target Product Profile (QTPP) summarizing potency-related characteristics; (2) identification of potency-related Critical Quality Attributes (CQAs); (3) identification and control of Critical Process Parameters (CPPs) that affect potency-related CQAs within predetermined limits; (4) ongoing risk assessment throughout the product lifecycle.",
+      "source_section": "IV.A. Quality Risk Management and Assurance of Potency",
+      "source_page": 6,
+      "verbatim_quote": "Quality target product profile (QTPP). A QTPP should include a summary of the potency-related characteristics of the product... Critical quality attribute (CQA). Potency-related CQAs are attributes of the product that are important for achieving the intended therapeutic effect. You should identify the potency-related CQAs of your product to the extent needed to establish a phase-appropriate control strategy... Critical process parameter (CPP). CPPs are manufacturing process parameters that can influence CQAs. You should identify CPPs that may affect potency-related CQAs, and you should monitor or control these CPPs within appropriate pre-determined limits.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH Q9(R1)", "ICH Q8(R2)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-012",
+      "rule_text": "Potency-related CQAs must have a clear relationship to the product's mechanism of action (MOA), supported by prior knowledge, product characterization studies, nonclinical studies, or clinical studies; a statistical relationship alone cannot establish a mechanistic relationship between an attribute and potency — additional experiments may be required.",
+      "source_section": "IV.C. Gaining Product and Process Understanding",
+      "source_page": 8,
+      "verbatim_quote": "Potency-related CQAs should ideally have a clear relationship to the product's MOA, and this relationship should be supported by prior knowledge (such as peer-reviewed literature), product characterization studies, nonclinical studies, or clinical studies... a statistical relationship alone cannot establish a mechanistic relationship between an attribute and potency. If needed, you should perform additional experiments or studies with the product to determine whether there is a mechanistic relationship between a candidate potency-related attribute and potency.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-POT-011"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-013",
+      "rule_text": "Risk assessments for CGT potency must include not only factors that may affect potency at the time of lot release, but also factors that may affect potency after lot release, such as the container closure, delivery devices, conditions for drug storage, shipping or handling, and conditions for thawing or preparing the drug for administration.",
+      "source_section": "IV.D. Risk Assessment",
+      "source_page": 9,
+      "verbatim_quote": "Your risk assessment should include not only factors that may affect potency at the time of lot release, but also factors that may affect potency after lot release, such as the container closure, delivery devices, conditions for drug storage, shipping or handling, and conditions for thawing or preparing the drug for administration.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH Q9(R1)", "FDA-CGT-POT-011"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-014",
+      "rule_text": "For lot release of licensed CGT products, potency release assays must be performed using a sample collected after completion of all manufacturing steps that may affect potency; for cryopreserved products, if cryopreservation poses a high risk to potency, the potency assay must be performed on a sample taken after cryopreservation.",
+      "source_section": "IV.F. Control Strategy",
+      "source_page": 11,
+      "verbatim_quote": "For potency testing of licensed products, potency release assays must be performed using a sample collected after completion of all manufacturing steps that may affect potency. For example, if cryopreservation of a cellular product poses a high risk to the product's potency, then this risk should be mitigated by performing the potency assay on a sample taken after cryopreservation.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "For products not amenable to destructive sampling, potency release testing may be conducted on an additional unit manufactured in parallel as a representative sample.",
+      "cross_references": ["21 CFR 610.1", "21 CFR 610.10", "FDA-CGT-POT-002"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-015",
+      "rule_text": "For CGT products with an extremely short shelf life (insufficient time to complete a potency bioassay before lot release), physicochemical assays may be used for lot release testing; however, one or more potency bioassays must be initiated immediately after manufacturing the DP and evaluated when results become available post-release.",
+      "source_section": "IV.F. Control Strategy",
+      "source_page": 11,
+      "verbatim_quote": "For products that have an extremely short shelf life with insufficient time to complete a potency bioassay before lot release, it should be possible to perform lot release testing for potency using physicochemical assays. In such cases, we recommend that you also initiate one or more potency bioassays immediately after manufacturing the DP and evaluate the results when they become available post-release.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies only when shelf life is insufficient to complete bioassay before release; post-release bioassays required in all cases.",
+      "cross_references": ["FDA-CGT-POT-002", "FDA-CGT-POT-014"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-016",
+      "rule_text": "Before beginning clinical investigations, the IND Module 3 of the initial IND submission must include: (1) the product's MOA and QTPP, a list of initial CQAs, and how potency-related CQAs were identified; (2) description and justification of the potency assurance strategy, including risk assessments and explanation of how process design and control strategy reduce risks; (3) general plans for additional product characterization, potency assay development, and strengthening the potency assurance strategy.",
+      "source_section": "IV.G. Progressive Implementation of a Potency Assurance Strategy",
+      "source_page": 12,
+      "verbatim_quote": "you should include the following information about your potency assurance strategy in Module 3 of the Common Technical Document (CTD) of your initial IND submission... Your product's MOA and QTPP, a list of your product's initial CQAs, and an explanation of how potency-related CQAs were identified... A description and justification of your potency assurance strategy, including risk assessments for potency-related CQAs and an explanation of how your process design and control strategy reduce risks to these CQAs.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)(i)", "FDA-CGT-POT-004"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-017",
+      "rule_text": "Before submitting a BLA for a CGT product, all assays used for lot release and in-process testing must be validated; sponsors must describe the potency assays and reference materials that will be used for the licensed product, and must justify the impact of any differences from the potency assays and reference materials used during the clinical investigations that provided the primary evidence of effectiveness.",
+      "source_section": "IV.G. Progressive Implementation of a Potency Assurance Strategy",
+      "source_page": 13,
+      "verbatim_quote": "Before submitting a BLA, you should use all available product quality data and clinical data to reassess and refine your potency assurance strategy. Assays used for lot release and in-process testing must be validated. You should describe the potency assays and reference materials that will be used for the licensed product, and you should explain and justify the impact of any differences from the potency assays and reference materials that were used during the clinical investigations that provide the primary evidence of effectiveness.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 211.165(e)", "21 CFR 211.194(a)(2)", "21 CFR 601.2(d)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-018",
+      "rule_text": "For CGT products in rapid clinical development programs, sponsors must thoroughly characterize the product and manufacturing process early to establish a well-controlled manufacturing process; sponsors must develop, qualify, and implement potency assays before the initiation of clinical investigations.",
+      "source_section": "IV.G. Progressive Implementation of a Potency Assurance Strategy",
+      "source_page": 13,
+      "verbatim_quote": "If you anticipate a compressed development timeline, we recommend that you thoroughly characterize the product and manufacturing process to help you rapidly establish a well-controlled manufacturing process that consistently yields a potent product. We also recommend that you develop, qualify, and implement potency assays before the initiation of clinical investigations.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-POT-004", "FDA-CGT-POT-016"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-019",
+      "rule_text": "One or more potency assays are required for lot release of licensed biologics; for most CGT products, lot release testing should include at least one bioassay that measures a biological activity related to the intended therapeutic effect.",
+      "source_section": "V.A. Uses of Potency Assays",
+      "source_page": 16,
+      "verbatim_quote": "One or more potency assays are required for lot release of licensed biologics. Lot release testing for most CGT products should include at least one bioassay that measures a biological activity related to the intended therapeutic effect of the product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "For products with extremely short shelf life where bioassay cannot be completed before release, physicochemical assays may be used (see FDA-CGT-POT-015).",
+      "cross_references": ["21 CFR 610.10", "FDA-CGT-POT-002"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-020",
+      "rule_text": "Stability studies for CGT products must include assays that quantitate stability-indicating potency-related CQAs; stability acceptance criteria for potency must still reflect the range of potency needed to mediate the intended therapeutic effect, even if they differ from lot release acceptance criteria.",
+      "source_section": "V.A. Uses of Potency Assays",
+      "source_page": 16,
+      "verbatim_quote": "Stability studies should include assays that quantitate these stability-indicating CQAs, and you should evaluate potency data from product stored at the relevant long-term condition when establishing a shelf life for your product... stability acceptance criteria for potency should still reflect the range of potency that is needed to mediate the intended therapeutic effect.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Stability acceptance criteria may differ from lot release acceptance criteria when justified.",
+      "cross_references": ["FDA-CGT-POT-002", "FDA-CGT-POT-006"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-021",
+      "rule_text": "In-use studies and delivery device compatibility studies must be conducted to evaluate whether a CGT product's potency will remain acceptable during preparation and administration through delivery devices; these studies must encompass the entire range of delivery devices or conditions, including anticipated worst-case conditions.",
+      "source_section": "V.A. Uses of Potency Assays",
+      "source_page": 16,
+      "verbatim_quote": "You should perform studies to evaluate whether your product's potency will remain acceptable during preparation of the product and during administration through delivery devices. If you anticipate a variety of delivery devices or in-use conditions, these studies should encompass or bracket the entire range of delivery devices or conditions, including the anticipated worst-case conditions.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-POT-013"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-022",
+      "rule_text": "Because CGT products usually have multiple potency-related CQAs that cannot be adequately controlled without release testing, the potency assurance strategy must typically include multiple release assays, each quantitating a potency-related CQA that is at risk; some biological activities can only be effectively measured with a bioassay — if so, the strategy must include at least one bioassay.",
+      "source_section": "V.B. Assay Selection and Design",
+      "source_page": 17,
+      "verbatim_quote": "Because CGT products usually have multiple potency-related CQAs that cannot be controlled adequately without release testing, your potency assurance strategy should typically include multiple release assays, each of which quantitates a potency-related CQA that is at risk... some potency-related CQAs that are related to a CGT product's biological activity can only be measured effectively with a bioassay, and if so we recommend that your potency assurance strategy include at least one bioassay.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-POT-019", "21 CFR 210.3(b)(7)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-023",
+      "rule_text": "For CGT products subject to 21 CFR Part 211 that consist of multiple active ingredients, there must be lot release testing to assess the strength of each active ingredient in the drug product, requiring measurement of the concentration or potency of each active ingredient.",
+      "source_section": "V.B. Assay Selection and Design",
+      "source_page": 17,
+      "verbatim_quote": "For products that are subject to the requirements of 21 CFR part 211, there must be lot release testing to assess the strength of each active ingredient in the DP, which requires measuring the concentration or potency of each of the active ingredients.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "One bioassay may be sufficient if it assesses potency of all active ingredients together; additional physicochemical assays required for individual ingredient concentrations.",
+      "cross_references": ["21 CFR 210.3(b)(7)", "21 CFR 210.3(b)(16)", "21 CFR 211.165(a)"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-024",
+      "rule_text": "Potency assays for CGT products must be precise; if bioassay precision cannot be sufficiently improved by changing the assay design, the sponsor must reduce standard uncertainty of measurement by routinely performing multiple independent assay runs for each sample and reporting the mean value; the number of runs must be pre-specified in the assay protocol.",
+      "source_section": "V.B.1. Desirable Characteristics of Potency Assays",
+      "source_page": 18,
+      "verbatim_quote": "If assay precision cannot be sufficiently improved by changing the design of the assay, then we recommend that you reduce the standard uncertainty of the measurement by routinely performing multiple independent assay runs for each sample and reporting the mean value. The number of runs should be pre-specified in the assay protocol.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-CGT-POT-009"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-025",
+      "rule_text": "Potency assay specificity must be demonstrated by testing non-potent product samples; specificity must also be demonstrated by showing lack of interference from relevant product-related impurities and sample matrices.",
+      "source_section": "V.B.1. Desirable Characteristics of Potency Assays",
+      "source_page": 18,
+      "verbatim_quote": "Specificity should be demonstrated by testing non-potent product samples during assay qualification... specificity should also be demonstrated by showing lack of interference from relevant product-related impurities and sample matrices.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "When feasible, specificity should be evaluated using a very similar product (or an altered version) that does not possess the potency-related attribute detected by the assay.",
+      "cross_references": ["FDA-CGT-POT-009"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-026",
+      "rule_text": "For a viral gene therapy vector intended for direct administration, release testing must include a potency assay that quantitates transgene mRNA or protein in transduced cells; sponsors must also comprehensively evaluate risks to potency-related CQAs of the vector particles and risks to the vector's nucleic acids (structural integrity, ability to deliver nucleic acids to cells; length, sequence, or activity of nucleic acids).",
+      "source_section": "V.B.2. Approaches to Potency Assay Selection and Design",
+      "source_page": 20,
+      "verbatim_quote": "Even at the earliest stage of product development, release testing for a gene therapy vector that expresses a transgene should generally include a potency assay that quantitates transgene mRNA or protein in transduced cells... you should also comprehensively evaluate risks to the potency-related CQAs of the vector particles and risks to the vector's nucleic acids. For example, risks to the vector particles might compromise their structural integrity or ability to deliver nucleic acids to cells. Risks to the nucleic acids might compromise their length, sequence, or activity.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies to vectors expressing a transgene; approach may differ for vectors with other mechanisms.",
+      "cross_references": ["FDA-CGT-POT-019", "FDA-CGT-POT-022"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-027",
+      "rule_text": "For vector-transduced patient-specific cellular CGT products, the potency assurance strategy must include not only a potency assay and quantitative acceptance criterion for DP lot release, but also a bioassay and quantitative acceptance criterion for release of each vector lot used in manufacturing cellular DP.",
+      "source_section": "V.B.2. Approaches to Potency Assay Selection and Design",
+      "source_page": 21,
+      "verbatim_quote": "Therefore, your strategy for assuring potency of the cellular DP should include not only a potency assay and quantitative acceptance criterion for DP lot release, but also a bioassay and quantitative acceptance criterion for release of each vector lot.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to patient-specific (autologous) vector-transduced cellular products manufactured on demand.",
+      "cross_references": ["FDA-CGT-POT-019", "FDA-CGT-POT-022"]
+    },
+    {
+      "rule_id": "FDA-CGT-POT-028",
+      "rule_text": "Potency assay protocols for CGT products must include pre-defined acceptance criteria for sample suitability and system suitability; sample and system suitability criteria must be designed to detect when the assay fails to perform properly; an assay run must be invalidated if suitability criteria are not met; control chart analysis of control sample data must be used to detect adverse trends in potency assay performance over time.",
+      "source_section": "V.C.1. Suitability",
+      "source_page": 22,
+      "verbatim_quote": "Potency assay protocols should include pre-defined acceptance criteria for sample suitability and system suitability. Sample and system suitability criteria should be established based on risk assessment of the assay, and these suitability criteria should be designed to detect when the assay fails to perform properly. An assay run should be invalidated if suitability criteria are not met... we recommend that you use control chart analysis of control sample data to detect any adverse trends in potency assay performance over time.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["ICH Q14", "FDA-CGT-POT-009"]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "generated": "2026-03-22",
+    "generator": "Claude Opus 4.6",
+    "purpose": "Corrections for inaccurate or partially accurate rules identified during ICH safety verification"
+  },
+
+  "corrections": [
+    {
+      "id": "CORR-001",
+      "severity": "CRITICAL",
+      "file": "training/output-v2/s-toxicology/nonclinical-requirements.json",
+      "rule_id": "S2-01",
+      "field": "timing",
+      "current_value": "Complete standard battery before initial clinical trials (Phase I)",
+      "corrected_value": "Gene mutation assay (Ames) sufficient before Phase I single-dose trials. Complete standard battery before initiation of Phase II trials.",
+      "source": "ICH M3(R2) Section 9: 'An assay for gene mutation is generally considered sufficient to support all single dose clinical development trials. To support multiple dose clinical development trials, an additional assessment capable of detecting chromosomal damage in a mammalian system(s) should be completed. A complete battery of tests for genotoxicity should be completed before initiation of Phase II trials.'",
+      "impact": "Could cause unnecessary delays in Phase I clinical development if sponsors believe full genotoxicity battery must be complete before FIH"
+    },
+    {
+      "id": "CORR-002",
+      "severity": "MINOR",
+      "file": "training/output-v2/s-toxicology/nonclinical-requirements.json",
+      "rule_id": "S1A-03",
+      "field": "timing",
+      "current_value": "Before Phase III",
+      "corrected_value": "Before marketing approval (timing for chronic tox to assess early tumorigenic effects); the Phase III timing applies to chronic toxicity studies generally per M3(R2), not specifically to genotoxic compound chronic tox evaluation per S1A",
+      "source": "ICH S1A Section 4.3 does not specify Phase III timing for chronic tox evaluation of genotoxic compounds. The timing is inferred from M3(R2) general chronic tox timelines but the S1A context is different (waiving carcinogenicity, not scheduling chronic tox).",
+      "impact": "Low -- the timing is conservative and wouldn't cause safety issues, but misattributes a timing requirement"
+    },
+    {
+      "id": "CORR-003",
+      "severity": "LOW",
+      "file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay.best_practices",
+      "field": "structural_attribution",
+      "current_value": "Best practices listed directly under S7B-specific requirements without clear indication they come from 2022 Q&As rather than original S7B (2005)",
+      "corrected_value": "Add explicit annotation that temperature (35-37 C), stimulation frequency (0.2-1 Hz), protein binding 1% floor rule, and safety margin calculation formula derive from E14/S7B Q&As (2022), not the original S7B guideline (2005). The original S7B does not specify these parameters at this level of detail.",
+      "source": "ICH S7B (2005) vs E14/S7B Q&As (2022) comparison",
+      "impact": "Could mislead users about regulatory expectations under original S7B if operating in jurisdictions that haven't adopted the 2022 Q&As"
+    },
+    {
+      "id": "CORR-004",
+      "severity": "LOW",
+      "file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay.safety_margin_calculation",
+      "field": "structural_attribution",
+      "current_value": "Safety margin formula presented under S7B requirements",
+      "corrected_value": "Clearly label this calculation framework as originating from E14/S7B Q&A 2 (2022), not the original S7B. Consider a 'source_document' field to distinguish original S7B requirements from Q&A elaborations.",
+      "source": "E14/S7B Q&As (Feb 2022)",
+      "impact": "Same as CORR-003 -- source provenance clarity"
+    },
+    {
+      "id": "CORR-005",
+      "severity": "LOW",
+      "file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "scope.modality_considerations.monoclonal_antibodies",
+      "field": "source_attribution",
+      "current_value": "Presented under general scope section without clear source attribution to E14 Q6.3 vs S7B vs S6(R1)",
+      "corrected_value": "The TQT waiver for mAbs derives from E14 Q6.3 and the reduced safety pharmacology from S6(R1), not from S7B. Add source_document field: 'E14 Q6.3 + S6(R1)'",
+      "source": "E14 Q&A 6.3; ICH S6(R1) Section on safety pharmacology for biotech products",
+      "impact": "Minimal -- content is correct, but source traceability matters for regulatory reference"
+    },
+    {
+      "id": "CORR-006",
+      "severity": "LOW",
+      "file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches",
+      "field": "content",
+      "current_value": "hiPSC cardiomyocytes and in silico models listed under S7B requirements with proarrhythmia model criteria (context of use, validation, etc.)",
+      "corrected_value": "These novel approaches come from the E14/S7B Q&As (2022) and IWG concept papers (2018, 2024), not the original S7B guideline. The original S7B (Section 3.1.4) only mentions simulated pathological conditions and encourages development of proarrhythmia models. It does not describe hiPSC-CMs or in silico approaches.",
+      "source": "S7B Section 3.1.4 vs E14/S7B Q&As and IWG Concept Papers",
+      "impact": "Could mislead about what constitutes the baseline S7B requirement vs. newer regulatory developments"
+    }
+  ],
+
+  "summary": {
+    "total_corrections": 6,
+    "critical": 1,
+    "minor": 1,
+    "low": 4,
+    "files_requiring_updates": [
+      {
+        "file": "training/output-v2/s-toxicology/nonclinical-requirements.json",
+        "corrections_needed": 2,
+        "highest_severity": "CRITICAL"
+      },
+      {
+        "file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+        "corrections_needed": 4,
+        "highest_severity": "LOW"
+      }
+    ],
+    "recommendation": "Apply CORR-001 immediately -- it is the only correction with potential to cause regulatory harm (unnecessary delays to Phase I). All other corrections improve source traceability and provenance clarity but do not affect the substantive accuracy of the rules."
+  }
+}

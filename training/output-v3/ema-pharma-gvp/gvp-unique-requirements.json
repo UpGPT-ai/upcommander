@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "source": "EMA GVP Modules I, II, V, VII, VIII, IX, XV, XVI",
+    "extracted_date": "2026-03-22",
+    "purpose": "Requirements unique to EU pharmacovigilance with no FDA parallel at this level of prescriptive detail",
+    "comparison_basis": "Compared against FDA 21 CFR Parts 312/314/600, FDA Guidance documents, REMS requirements, MedWatch, FAERS, and FDA safety communication practices"
+  },
+  "uniquely_eu_requirements": [
+    {
+      "id": "EU-UNIQUE-001",
+      "category": "Pharmacovigilance System Governance",
+      "gvp_module": "Module I",
+      "requirement": "Mandatory Qualified Person for Pharmacovigilance (QPPV) residing in the EU with continuous availability and sufficient authority over the PV system",
+      "why_no_fda_parallel": "FDA has no equivalent required named individual. US requires a safety reporting contact but not a qualified person with mandated qualifications, EU residency, and authority over the entire PV system. The QPPV role has specific legal personal liability.",
+      "legal_ref": "DIR Art 104(3)(a), REG Art 20(1)"
+    },
+    {
+      "id": "EU-UNIQUE-002",
+      "category": "Pharmacovigilance System Documentation",
+      "gvp_module": "Module II",
+      "requirement": "Pharmacovigilance System Master File (PSMF) — a living document describing the entire PV system, maintained at QPPV location, available within 7 days for inspection, with logbook of changes and performance indicators",
+      "why_no_fda_parallel": "FDA has no equivalent master file requirement. US companies must maintain records but there is no prescribed format, structure, or mandated central document describing the entire pharmacovigilance system. The PSMF concept (with logbook, performance KPIs, annex structure) is entirely EU.",
+      "legal_ref": "DIR Art 104(3)(b), IR Art 2-9"
+    },
+    {
+      "id": "EU-UNIQUE-003",
+      "category": "Risk Management",
+      "gvp_module": "Module V",
+      "requirement": "EU Risk Management Plan (RMP) required for every new marketing authorisation with prescribed 7-part structure including safety specification, pharmacovigilance plan, and risk minimisation measures — updated throughout product lifecycle",
+      "why_no_fda_parallel": "FDA REMS is only required for specific high-risk products, not universally. The EU RMP is mandatory for ALL new MAs with a prescribed modular format (Parts I-VII). FDA has no equivalent to the safety specification concept (identified risks, potential risks, missing information categorisation).",
+      "legal_ref": "DIR Art 8(3)(iaa), REG Art 6(1), IR Art 30-32"
+    },
+    {
+      "id": "EU-UNIQUE-004",
+      "category": "Periodic Safety Reporting",
+      "gvp_module": "Module VII",
+      "requirement": "EU-wide PSUR single assessment procedure — harmonised submission dates via EURD list, mandatory PRAC assessment with binding regulatory outcomes, EU regional appendix with proposed SmPC changes",
+      "why_no_fda_parallel": "FDA eliminated PSUR/PBRER requirements for most products (only NDA products with specific conditions still submit PBRERs). The EU EURD list harmonising submission dates across all MAHs for the same substance, the mandatory PRAC single assessment leading to binding EC decisions, and the EU regional appendix requiring proposed product information changes have no FDA equivalent.",
+      "legal_ref": "DIR Art 107b-107l, REG Art 28(2)-(4)"
+    },
+    {
+      "id": "EU-UNIQUE-005",
+      "category": "Post-Authorisation Studies",
+      "gvp_module": "Module VIII",
+      "requirement": "Structured PASS framework with 3 study categories, mandatory EU PAS Register registration, PRAC protocol endorsement within 60 days for imposed studies, 12-month final report deadline, and prohibition on promotional use of study conduct",
+      "why_no_fda_parallel": "FDA PMR/PMC system is less prescriptive — no public register equivalent to EU PAS Register, no mandatory protocol endorsement process by an advisory committee, no structured study category system. The explicit prohibition on PASS promoting the product (with specific compensation limits for HCPs) is uniquely EU.",
+      "legal_ref": "DIR Art 107m-107p, IR Annex III"
+    },
+    {
+      "id": "EU-UNIQUE-006",
+      "category": "Signal Management",
+      "gvp_module": "Module IX",
+      "requirement": "Mandatory continuous EudraVigilance monitoring by MAHs with structured signal management process (detection → validation → confirmation → analysis → assessment) overseen by PRAC, with defined timelines and EPITT tracking",
+      "why_no_fda_parallel": "FDA monitors FAERS internally but does not mandate that sponsors continuously monitor the FDA adverse event database. The structured EU process with Lead Member State assignments for signal detection, PRAC confirmation within 30 days, and EPITT tracking system has no FDA equivalent. MAH obligation to monitor EudraVigilance data became mandatory from Feb 2018.",
+      "legal_ref": "IR Art 18-22, DIR Art 107h"
+    },
+    {
+      "id": "EU-UNIQUE-007",
+      "category": "Signal Management",
+      "gvp_module": "Module IX",
+      "requirement": "Emerging safety issues — MAH shall notify competent authorities and EMA within 3 working days via dedicated email (P-PV-emerging-safety-issue@ema.europa.eu) with description, sources, planned actions and timelines",
+      "why_no_fda_parallel": "FDA 15-day alert reports cover individual serious/unexpected cases. The EU 'emerging safety issue' concept is broader — it covers aggregate signals, study findings, and non-EU regulatory actions that may impact benefit-risk. The 3-working-day notification with structured content requirements is uniquely EU.",
+      "legal_ref": "DIR Art 23(2), REG Art 16(2)"
+    },
+    {
+      "id": "EU-UNIQUE-008",
+      "category": "Safety Communication",
+      "gvp_module": "Module XV",
+      "requirement": "Direct Healthcare Professional Communication (DHPC) — structured EU-wide coordinated safety communication requiring PRAC/NCA agreement on content and communication plan (GVP Annex II template), 24-hour advance notification to regulatory network, translation into all relevant EU languages, and dissemination effectiveness reporting",
+      "why_no_fda_parallel": "FDA Dear Healthcare Provider letters exist but have no prescribed template, no mandatory PRAC-equivalent committee review, no 24-hour advance notification requirement to other regulators, no mandatory translation, and no formal communication plan template. The EU DHPC coordination across 27+ Member States is uniquely complex.",
+      "legal_ref": "DIR Art 106a, GVP Annex II"
+    },
+    {
+      "id": "EU-UNIQUE-009",
+      "category": "Safety Communication",
+      "gvp_module": "Module XV",
+      "requirement": "EU Early Notification System (ENS) — safety announcements about products authorised in multiple Member States must be coordinated through the ENS with 24-hour embargo, lines-to-take documents, and common messaging across the network",
+      "why_no_fda_parallel": "FDA operates as a single national agency with no multi-state coordination requirement. The ENS system for coordinating safety communications across 27+ independent national competent authorities, with embargo periods, lines-to-take, and timetable coordination has no equivalent in the US system.",
+      "legal_ref": "DIR Art 106a(2)-(3)"
+    },
+    {
+      "id": "EU-UNIQUE-010",
+      "category": "Risk Minimisation",
+      "gvp_module": "Module XVI",
+      "requirement": "Structured RMM framework with routine tools (SmPC, PL, labelling, pack size, legal status) and additional tools categorised as educational/safety advice tools (patient guides, HCP checklists, risk awareness forms, patient cards, patient diaries) and risk minimisation control tools (HCP qualification, facility accreditation, traceability, documented information exchange, patient certificates)",
+      "why_no_fda_parallel": "FDA REMS elements (medication guide, communication plan, ETASU) are simpler and less granular. The EU system has a structured taxonomy of routine vs additional RMM tools with specific guidance on each tool type. The EU concept of 'risk minimisation control programmes' combining multiple control tools is more detailed than REMS ETASU. The mandatory non-promotional nature requirements (no logos larger than heading font, product name used rarely) are uniquely prescriptive.",
+      "legal_ref": "DIR Art 21a, 104(2), REG Art 9(4)(ca)"
+    },
+    {
+      "id": "EU-UNIQUE-011",
+      "category": "Risk Minimisation",
+      "gvp_module": "Module XVI",
+      "requirement": "RMM effectiveness evaluation framework — mandatory evaluation with defined outcomes (dissemination/coverage, knowledge/attitudes, behavioural outcomes, health outcomes), initial evaluation within 12-24 months, overall within 4 years, with results included in PSURs",
+      "why_no_fda_parallel": "FDA REMS assessments exist but lack the structured outcome framework (dissemination → knowledge → behaviour → health outcomes along an implementation pathway). The EU prescribes specific study objectives, timelines, and integration with PSUR reporting. The concept of evaluating unintended outcomes (switching, spill-over, non-treatment, lack of adherence) is uniquely detailed.",
+      "legal_ref": "DIR Art 104(3)(c)-(d), REG Art 56(1)(aa)"
+    },
+    {
+      "id": "EU-UNIQUE-012",
+      "category": "Risk Minimisation",
+      "gvp_module": "Module XVI",
+      "requirement": "RMM materials must be submitted for national competent authority approval in each Member State, with national tailoring allowed. User-testing of materials with patients/HCPs is encouraged/required. Materials must include competent authority approval statement with version number and date.",
+      "why_no_fda_parallel": "FDA REMS materials are approved centrally by FDA. The EU requires NCA approval in each Member State separately, with national tailoring permitted. The mandatory inclusion of competent authority approval stamps, version control in the format '<month> <year>' on materials, and encouragement of user-testing using implementation science methods are uniquely EU.",
+      "legal_ref": "GVP Module XVI Addendum I, XVI.C.3.1"
+    },
+    {
+      "id": "EU-UNIQUE-013",
+      "category": "Regulatory Network Coordination",
+      "gvp_module": "Modules VII, IX, XV",
+      "requirement": "PRAC (Pharmacovigilance Risk Assessment Committee) — a standing EU committee that assesses all PSURs, signals, RMPs, PASS protocols, and safety referrals with published recommendations that feed into binding CHMP opinions or CMDh positions",
+      "why_no_fda_parallel": "FDA has no equivalent standing pharmacovigilance committee. FDA advisory committees are ad hoc. The PRAC system with rapporteurs, published timetables, structured procedures for signal confirmation (30 days), PSUR assessment (60+30+15 day cycle), and binding regulatory outcomes through CHMP/CMDh is entirely EU.",
+      "legal_ref": "REG Art 56(1)(aa), DIR Art 107e-107g"
+    },
+    {
+      "id": "EU-UNIQUE-014",
+      "category": "Database & Transparency",
+      "gvp_module": "Modules VIII, IX",
+      "requirement": "EudraVigilance mandatory access and monitoring — MAHs shall monitor EudraVigilance (with ICSR Level 2B/3 access), register PASS in EU PAS Register, and the Agency shall publish PRAC recommendations, signal lists, and PSUR assessment reports on the European medicines web-portal",
+      "why_no_fda_parallel": "FAERS is publicly searchable but FDA does not mandate sponsor monitoring of FAERS. EU PAS Register has no FDA equivalent. The level of transparency (published PRAC recommendations in all EU languages, published cumulative signal lists, published PSUR assessment reports) far exceeds FDA's transparency practices.",
+      "legal_ref": "IR Art 18, 22(3), DIR Art 107l, REG Art 26"
+    },
+    {
+      "id": "EU-UNIQUE-015",
+      "category": "Cross-border Coordination",
+      "gvp_module": "Modules VII, IX, XV, XVI",
+      "requirement": "Lead Member State concept for signal management worksharing — one MS leads EudraVigilance monitoring, signal detection and confirmation for nationally authorised products containing the same active substance across multiple Member States",
+      "why_no_fda_parallel": "The entire concept of worksharing signal management responsibilities across sovereign national regulators has no parallel in the single-agency FDA system. The CMDh coordination, co-leader appointments, and worksharing agreements are uniquely EU structures.",
+      "legal_ref": "IR Art 22(1)-(3)"
+    },
+    {
+      "id": "EU-UNIQUE-016",
+      "category": "Additional Monitoring",
+      "gvp_module": "Module IX",
+      "requirement": "Products on the additional monitoring list (indicated by inverted black triangle ▼ in product information) require more frequent EudraVigilance monitoring and enhanced signal detection",
+      "why_no_fda_parallel": "FDA has no equivalent 'additional monitoring list' with a mandatory symbol in product labelling. The black triangle system signaling enhanced monitoring to HCPs and patients is uniquely EU.",
+      "legal_ref": "REG Art 23, DIR Art 23(1)"
+    },
+    {
+      "id": "EU-UNIQUE-017",
+      "category": "Stakeholder Engagement",
+      "gvp_module": "Module XVI",
+      "requirement": "Patient and healthcare professional engagement in RMM development is formally required — input on tool selection, user-testing of materials, dissemination planning, and effectiveness evaluation, with all engagement activities kept separate from promotional activities and GDPR-compliant",
+      "why_no_fda_parallel": "FDA REMS does not formally require patient/HCP engagement in the design and testing of risk minimisation materials. The EU's structured approach using implementation science methods (focus groups, scenario-based testing) for RMM material development is uniquely prescriptive.",
+      "legal_ref": "XVI.B.1.4, XVI.B.4.1.2"
+    },
+    {
+      "id": "EU-UNIQUE-018",
+      "category": "PSUR/RMP Integration",
+      "gvp_module": "Module VII",
+      "requirement": "Common modules between PSUR and RMP — specific sections of the PSUR (Actions taken, Exposure, Safety concerns, Risk characterisation, RMM effectiveness) are designed to be interchangeable with corresponding RMP sections",
+      "why_no_fda_parallel": "FDA does not have a formal modular interchangeability framework between periodic safety reports and risk management documents. The EU's Table VII.1 mapping PSUR sections to RMP sections for efficiency is unique.",
+      "legal_ref": "VII.C.4.3.1, Table VII.1"
+    }
+  ],
+  "summary_statistics": {
+    "total_unique_requirements": 18,
+    "by_category": {
+      "pharmacovigilance_system_governance": 1,
+      "pharmacovigilance_system_documentation": 1,
+      "risk_management": 1,
+      "periodic_safety_reporting": 1,
+      "post_authorisation_studies": 1,
+      "signal_management": 3,
+      "safety_communication": 2,
+      "risk_minimisation": 3,
+      "regulatory_network_coordination": 1,
+      "database_and_transparency": 1,
+      "cross_border_coordination": 1,
+      "additional_monitoring": 1,
+      "stakeholder_engagement": 1,
+      "psur_rmp_integration": 1
+    },
+    "key_differentiators": [
+      "QPPV with personal liability — no FDA equivalent role",
+      "PSMF as a living system document — no FDA equivalent",
+      "RMP mandatory for all new MAs — FDA REMS only for high-risk products",
+      "PSUR single assessment with binding outcomes — FDA largely eliminated PSURs",
+      "PRAC as standing committee — FDA uses ad hoc advisory committees",
+      "EudraVigilance mandatory MAH monitoring — FDA does not mandate FAERS monitoring",
+      "DHPC with 24hr embargo and network coordination — FDA Dear HCP letters are simpler",
+      "Lead Member State worksharing — impossible in single-agency FDA system",
+      "Structured RMM taxonomy with effectiveness framework — more detailed than REMS",
+      "EU PAS Register — no FDA equivalent public study register for safety studies"
+    ]
+  }
+}

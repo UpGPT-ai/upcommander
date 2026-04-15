@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "date": "2026-03-22",
+    "evaluator": "Claude Opus 4.6",
+    "sources_evaluated": {
+      "output_v2_skills": 11,
+      "output_v3_skills": 5,
+      "synthesis_documents": 2,
+      "total_files_reviewed": 18
+    },
+    "total_extracted_rules": 2994,
+    "rating_scale": {
+      "COVERED": "Topic has dedicated section(s) with detailed rules, checklists, and thresholds",
+      "PARTIALLY_COVERED": "Topic is referenced or addressed indirectly but lacks dedicated comprehensive treatment",
+      "NOT_COVERED": "Topic is absent or mentioned only in passing without actionable rules"
+    }
+  },
+  "coverage": {
+    "quality_cmc": {
+      "stability": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-stability/skill-stability-analysis.md",
+          "output-v3/who-regs/skill-multi-jurisdiction.md"
+        ],
+        "details": "Comprehensive coverage of ICH Q1A-E plus 2025 draft. Storage conditions for all 5 climatic zones, extrapolation decision trees (5 scenarios), significant change criteria, photostability (Q1B), bracketing/matrixing (Q1D), statistical analysis (Q1E), WHO Zone IVb, ATMP-specific, biologicals, advanced kinetic modeling."
+      },
+      "impurities": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md"
+        ],
+        "details": "All 5 impurity frameworks covered: Q3A (organic DS), Q3B (degradation DP), Q3C (residual solvents with Class 1/2/3), Q3D (elemental impurities with PDE tables), Q3E (extractables/leachables with TTC/QT thresholds). Dose-dependent reporting/identification/qualification thresholds codified. M7 mutagenic impurities covered in cross-domain skill."
+      },
+      "specifications": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md"
+        ],
+        "details": "Q6A chemical substance specifications (universal tests, 8 decision trees), Q6B biotech product specifications (potency, purity, process-related impurities, product-related impurities). Both release and shelf-life specifications covered."
+      },
+      "analytical_validation": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md"
+        ],
+        "details": "Full Q2(R2)/Q14 analytical procedure lifecycle: ATP development, validation characteristics matrix (specificity, repeatability, intermediate precision, accuracy, range, DL, QL), minimum requirements, reportable ranges per method type, verification/trend monitoring, revalidation triggers."
+      },
+      "process_validation": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-systems/skill-quality-systems.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md"
+        ],
+        "details": "Q8-Q13 process validation framework including design space, PAR, RTRT. EU GMP Annex 15 qualification/validation. Standard vs non-standard process distinction. Minimum 3 production-scale batches. Continuous manufacturing validation per Q13. Cleaning validation with HBEL-based limits."
+      },
+      "container_closure": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md",
+          "output-v2/q-stability/skill-stability-analysis.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md"
+        ],
+        "details": "Q3E extractables/leachables with AET calculation, safety concern thresholds (TTC, QT, local toxicity). Semi-permeable container stability testing. Ph.Eur. 3.1/3.2 series. EU Annex 1 100% CCIT for fusion-sealed <=100mL. Compatibility, sorption, leaching."
+      },
+      "drug_substance_characterization": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md",
+          "output-v2/q-systems/skill-quality-systems.md"
+        ],
+        "details": "Q11 drug substance development including starting material selection (6 principles), impurity formation/fate/purge, physicochemical/biological properties. Q6A/Q6B specification-setting. Polymorphism, chirality, particle size decision trees."
+      },
+      "drug_product_formulation": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-systems/skill-quality-systems.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md"
+        ],
+        "details": "Q8(R2) pharmaceutical development: QTPP, CQA identification, excipient selection/compatibility, formulation strategy, overages justification. Enhanced (QbD) vs traditional approaches. Dissolution development. Novel excipient requirements (EU)."
+      },
+      "manufacturing_process": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-systems/skill-quality-systems.md",
+          "output-v2/q-cmc-methods/skill-cmc-methods.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md"
+        ],
+        "details": "Q7 GMP for APIs (quality system, documentation, production, laboratory, validation, facilities). Q13 continuous manufacturing (RTD, material traceability, diversion, state-of-control, startup/shutdown). EU GMP Annex 1 sterile manufacturing (CCS, PUPSIT, cleanroom grades)."
+      },
+      "control_strategy": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-systems/skill-quality-systems.md"
+        ],
+        "details": "Dedicated Section 4 in quality systems skill: input material controls, process design, in-process controls, RTRT, CQA-linked justification, variability management, batch release requirements. Design space vs PAR distinction."
+      },
+      "comparability": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-biotech/skill-biotech-quality.md"
+        ],
+        "details": "Q5E comparability exercise: 23 rules (CP-001 to CP-023). Covers exercise design, 5 quality dimension comparison, specification impact, stability bridging, process revalidation, viral safety retesting, drift monitoring, decision tree for nonclinical/clinical bridging. Biosimilar comparability also covered in EU GMP skill."
+      }
+    },
+    "clinical": {
+      "trial_design": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md"
+        ],
+        "details": "583 rules from E1, E3, E4, E7, E8(R1), E9/E9(R1), E10, E20. Study objectives, hypotheses, type classification, target population, control group selection (7 types with criteria), randomization, blinding, CSR structure."
+      },
+      "endpoints": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md"
+        ],
+        "details": "Phase 3 of clinical design skill: primary endpoints (clinical meaning, measurement properties, timing, composite criteria), secondary endpoints (hierarchy, PROs with MCID), safety endpoints (exposure-adjusted rates, dose/duration-response)."
+      },
+      "statistical_methods": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md"
+        ],
+        "details": "E9/E9(R1) comprehensive: estimands framework (5 attributes, 5 intercurrent event strategies), sample size justification, multiplicity control (hierarchical, gatekeeping, graphical), interim analyses (alpha spending, DMC), power thresholds, significance levels."
+      },
+      "safety_reporting": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-safety-pharma/skill-safety-reporting.md"
+        ],
+        "details": "823 lines covering E2A-E2F, E14, E19-E23. ICSR minimum validity (4 elements), E2B(R3) XML data elements, null flavor usage, PBRER (20 sections), DSUR (20 sections with 12-field line listings), expedited reporting timelines, MedDRA coding requirements."
+      },
+      "pharmacovigilance": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-safety-pharma/skill-safety-reporting.md",
+          "output-v3/ema-pharma-gvp/skill-eu-pharmacovigilance.md"
+        ],
+        "details": "ICH E2E pharmacovigilance planning (safety specification 4 modules, PV plan, action plans). EU GVP Modules I, II, V, VII, VIII, IX, XV, XVI: QPPV, PSMF, RMP structure, PSUR/EU appendix, PASS protocols, signal management, DHPC, risk minimisation measures with effectiveness evaluation."
+      },
+      "dose_response": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md"
+        ],
+        "details": "E4 dose-response: minimum 3 dose levels, 5 design types (parallel, crossover, forced/optional/placebo-controlled titration), exposure-response analysis, food effects, drug interaction effects, organ impairment effects, elderly-specific dose-response."
+      },
+      "special_populations_pediatric": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-special-pops/skill-special-populations.md"
+        ],
+        "details": "E11(R1) and E11A: extrapolation concept/plan, 5 age subsets (preterm neonates through adolescents), 3-tier similarity assessment, M&S/Bayesian methods, age-appropriate formulation, sparse sampling, pediatric-specific safety endpoints, long-term follow-up, regulatory plans (PIP/PSP)."
+      },
+      "special_populations_elderly": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md",
+          "output-v2/e-special-pops/skill-special-populations.md"
+        ],
+        "details": "E7: minimum 100 patients aged >=65, no arbitrary upper age limit, PK assessment for age-related changes (renal, hepatic, protein binding), drug interactions in polypharmacy context, efficacy/safety subgroup analysis, dose recommendations. Fragile elderly (>75) addressed in E12 antihypertensive section."
+      },
+      "special_populations_pregnant": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-safety-pharma/skill-safety-reporting.md",
+          "output-v3/eu-law/skill-eu-regulatory.md"
+        ],
+        "details": "E21 pregnancy/breastfeeding safety: WoE framework for inclusion, DART study evaluation, close monitoring, infant follow-up, breastmilk transfer, trimester-specific consent. EU CTR Art. 33 specific protections for pregnant/breastfeeding in clinical trials. Reproductive toxicity nonclinical coverage in S5(R3)."
+      },
+      "ethnic_factors": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-special-pops/skill-special-populations.md",
+          "output-v3/who-regs/skill-multi-jurisdiction.md"
+        ],
+        "details": "E5(R1): intrinsic/extrinsic factor classification, drug sensitivity Class A/B/C, CCDP evaluation, bridging study design, CYP polymorphism assessment. Japan-specific bridging requirements extensively covered in v3 synthesis and multi-jurisdiction skill."
+      },
+      "adaptive_designs": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-clinical-design/skill-clinical-design.md"
+        ],
+        "details": "E20: 39 rules. Adaptation classification (6 types: sample size re-estimation, treatment arm selection, population enrichment, endpoint modification, randomization ratio, seamless Phase 2/3). Type I error control, bias-adjusted estimation, operational integrity, simulation requirements, regulatory interaction."
+      },
+      "biomarkers": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/e-special-pops/skill-special-populations.md"
+        ],
+        "details": "E15 pharmacogenomic biomarker definitions (PGx/PGt distinction, coding categories). E16 biomarker qualification (context of use, 5-section CTD-aligned format, analytical performance, simultaneous multi-agency submission). E18 genomic sampling and data management."
+      }
+    },
+    "nonclinical": {
+      "toxicology_acute": {
+        "status": "PARTIALLY_COVERED",
+        "confidence": 0.7,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Acute toxicity is not addressed as a standalone study category. Per modern ICH M3(R2), single-dose toxicity studies are de-emphasized in favor of dose-escalation and repeat-dose studies. The nonclinical review framework covers general toxicology but does not include explicit acute toxicity study design criteria or checklists. Limit doses for acute studies (2000 mg/kg) are referenced only in genotoxicity context."
+      },
+      "toxicology_chronic": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Step 2: 6-month rodent + 9-month non-rodent for standard chronic. Biologics max 6 months (S6(R1)). Cancer drugs max 3 months (S9). Species selection, study design quality, recovery groups, route matching, high dose selection, TK integration."
+      },
+      "toxicology_reproductive": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Step 6: S5(R3) FEED (fertility, 16/sex, 4 groups), EFD (embryo-fetal, 2 species, full fetal evaluation), PPND (pre/postnatal, F1 behavioral/reproductive assessment). Exposure margin interpretation (<10-fold = concern, 10-25 = moderate, >25 = minor). Cancer drug and biologic exemptions."
+      },
+      "toxicology_carcinogenicity": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Step 5: S1A need assessment (>=6 month continuous use trigger), S1B(R1) WoE assessment (6 factors), rasH2-Tg 6-month mouse alternative, S1C(R2) dose selection (6 high-dose criteria, 90-day dose-ranging). Cancer drug and biologic exemptions codified."
+      },
+      "toxicology_genetic": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Step 4: S2(R1) standard battery (Option 1: Ames + in vitro mammalian + in vivo MN; Option 2: Ames + two-tissue in vivo). All 5 Ames strains, top concentration limits, positive result follow-up (WoE, two-in-vivo-tissue). Biologic exemptions. Cancer drug modifications."
+      },
+      "safety_pharmacology": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/s-pharmacology/skill-safety-pharmacology.md",
+          "output-v2/s-toxicology/skill-nonclinical-review.md"
+        ],
+        "details": "Dedicated 332-line skill: S7A core battery (CNS, CV, respiratory), S7B cardiac safety (hERG, in vivo QT, follow-up studies), E14/S7B integrated proarrhythmic risk assessment (5 criteria for low TdP risk), supplemental studies, modality-specific packages, timing alignment with clinical development. Decision trees for TQT waiver and follow-up study triggers."
+      },
+      "pk_adme": {
+        "status": "PARTIALLY_COVERED",
+        "confidence": 0.6,
+        "primary_sources": [
+          "output-v2/s-toxicology/skill-nonclinical-review.md",
+          "output-v2/s-pharmacology/skill-safety-pharmacology.md"
+        ],
+        "details": "Toxicokinetics (S3A) covered within general toxicology: AUC, Cmax, sampling timepoints, exposure margins, microsampling. Metabolite assessment addressed in safety pharmacology (disproportionate metabolites, >10% threshold). However, standalone nonclinical PK/ADME studies (absorption, distribution, metabolism, excretion as per S3B) lack a dedicated evaluation framework. Biodistribution for gene therapy (S12) is well-covered. Clinical PK is addressed through E4/E7 but nonclinical ADME characterization studies are not systematically treated."
+      }
+    },
+    "regulatory": {
+      "ectd_structure": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/regulations-crl/skill-regulatory-compliance.md",
+          "output-v2/m-multidisciplinary/skill-cross-domain.md"
+        ],
+        "details": "Module 1-5 structural completeness checks. eCTD v4.0 format per 21 CFR 314.50/601.14. M8 eCTD lifecycle management rules. Cross-module consistency verification. EU-specific Module 1 variations. Japan CTD-JP Module 1."
+      },
+      "nda_requirements": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/regulations-crl/skill-regulatory-compliance.md"
+        ],
+        "details": "Complete 21 CFR mapping (Parts 1, 11, 50, 54, 56, 58, 200, 201, 207, 210/211, 312, 314, 320, 600). NDA-specific: adequate/well-controlled study criteria (314.126), safety update (314.50(d)(5)(vi)(b)), post-approval supplement categories (314.70). CRL deficiency taxonomy from 419 CRLs."
+      },
+      "bla_requirements": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-biotech/skill-biotech-quality.md",
+          "output-v2/regulations-crl/skill-regulatory-compliance.md"
+        ],
+        "details": "BLA quality section analysis (Q5A-E, 147 rules). BLA vs NDA CRL frequency comparison (60.2% vs 35% facility deficiency). 21 CFR Part 600 series mapped. Biologic product deviation reporting. Manufacturing discontinuance notice. BLA-specific Module 3 requirements."
+      },
+      "maa_requirements": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v3/eu-law/skill-eu-regulatory.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md"
+        ],
+        "details": "412 structured legal requirements from 8 EU legislative instruments. Application dossier per Art. 8(3). Centralised/MRP/DCP pathway determination. SmPC format. Environmental risk assessment. PIP requirement. RMP mandatory for all new MAs. QP batch release. Variations classification (Reg 1234/2008)."
+      },
+      "jnda_requirements": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/regulations-crl/skill-regulatory-compliance.md",
+          "output-v3/who-regs/skill-multi-jurisdiction.md"
+        ],
+        "details": "Foreign manufacturer accreditation (PAL Art. 13-3, 5-year renewal, 5-month timeline). Bridging study requirement (E5). Japanese patient enrollment. Re-examination system (8yr NCE, 10yr orphan). CTD-JP Module 1. Japanese MAH requirement. DDI transporter panel. CYP2C19 PM emphasis."
+      },
+      "labeling": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/regulations-crl/skill-regulatory-compliance.md",
+          "output-v3/health-canada/skill-canada-regulatory.md",
+          "output-v3/eu-law/skill-eu-regulatory.md"
+        ],
+        "details": "FDA PI 17-section format (21 CFR 201.56/201.57). EU SmPC 12-section QRD template with Braille. Canada PM 3-part bilingual format with ~70 XML validation rules. Japan Tenpu Bunsho format. WHO label prohibitions. CRL analysis showing labeling as #1 deficiency at 92.7%. Four incompatible format systems mapped."
+      },
+      "post_approval_changes": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-systems/skill-quality-systems.md",
+          "output-v2/regulations-crl/skill-regulatory-compliance.md",
+          "output-v3/eu-law/skill-eu-regulatory.md"
+        ],
+        "details": "Q12 lifecycle management: Established Conditions, reporting categories (PA/CBE-30/Annual Report mapped for FDA), PACMP, PLCM. EU variations classification (Type IA/IB/II/extension, Reg 1234/2008). Q14 analytical procedure changes. Urgent safety restrictions. Japan manufacturer change notification."
+      },
+      "gmp": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v2/q-cmc-methods/skill-cmc-methods.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md",
+          "output-v2/q-systems/skill-quality-systems.md"
+        ],
+        "details": "Q7 API GMP (quality system, documentation, production, laboratory, validation, facilities, biotech-specific). Q10 pharmaceutical quality system. EU GMP Annex 1 (2022 sterile, 16-element CCS), Annex 2 (biologics), Annex 15 (qualification/validation). 21 CFR 210/211. EU-specific HBEL cleaning validation, QP certification, PQR requirements."
+      }
+    },
+    "cross_jurisdiction": {
+      "fda_vs_ema_divergences": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v3/eu-law/skill-eu-regulatory.md",
+          "output-v3/eu-gmp-ema/skill-eu-gmp-analysis.md",
+          "output-v3/ema-pharma-gvp/skill-eu-pharmacovigilance.md"
+        ],
+        "details": "68 mapped EU-FDA divergences across 15 categories in eu-vs-fda-divergences.json. EU regulatory skill has 15+ critical divergence flags (DTC advertising, QP batch release, RMP mandatory, data exclusivity 8+2+1, PIP timing, trial archival 25yr, trial insurance, non-serious ADR reporting, PSUR system, Braille, safety features, supply continuity, environmental risk, package leaflet testing). EU GMP skill maps 20 FDA-to-EU gaps. EU PV skill compares 10 PV system differences."
+      },
+      "fda_vs_pmda_divergences": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v3/who-regs/skill-multi-jurisdiction.md",
+          "output-v2/regulations-crl/skill-regulatory-compliance.md",
+          "output-v3/STAGE1V3_SYNTHESIS.md"
+        ],
+        "details": "17 mapped Japan-specific divergences with severity ratings. Key areas: bridging study requirement (Japan only), foreign manufacturer accreditation (5-month, Japan only), re-examination system, broader DDI transporter panel (OCT1, MRP2, MRP4, BSEP), CYP2C19 PM emphasis, Japanese MAH requirement, Kampo/crude drug monographs, patent non-linkage (Japan) vs linkage (US)."
+      },
+      "ema_vs_pmda_divergences": {
+        "status": "COVERED",
+        "confidence": 0.85,
+        "primary_sources": [
+          "output-v3/STAGE1V3_SYNTHESIS.md",
+          "output-v3/who-regs/skill-multi-jurisdiction.md"
+        ],
+        "details": "Cross-cutting divergence table in v3 synthesis covers EMA vs PMDA differences: QP batch certification (EU only), QPPV with personal liability (EU only), Annex 1 sterile manufacturing (EU only), bridging requirement (Japan only), manufacturer accreditation (Japan only), re-examination system (Japan only), patent non-linkage (both EU and Japan vs US/Canada). PV system architecture comparison shows EU stands alone with PSMF/PRAC/EudraVigilance."
+      },
+      "canada_differences": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v3/health-canada/skill-canada-regulatory.md"
+        ],
+        "details": "Comprehensive 200-line skill: NDS/ANDS/SNDS submission types, PM Version 7 (3-part bilingual XML format, ~70 validation rules), CRP requirement (must be Canadian-marketed), CS-BE (Canada-only document), Establishment Licence, CTA requirements (PSEAT-CTA, bilingual consent, provincial QI licensing), 17 Canada-specific rejection reasons, FDA-to-Canada and EMA-to-Canada conversion checklists, patent linkage via PM(NOC), SGBA Plus, brand name confusion assessment."
+      },
+      "who_requirements": {
+        "status": "COVERED",
+        "confidence": 1.0,
+        "primary_sources": [
+          "output-v3/who-regs/skill-multi-jurisdiction.md",
+          "output-v2/q-stability/skill-stability-analysis.md",
+          "output-v3/STAGE1V3_SYNTHESIS.md"
+        ],
+        "details": "WHO prequalification programme scope, Zone IVb stability (30C/75%RH), 2-batch allowance for generics, semi-permeable container low-RH protocol, label prohibitions ('ambient conditions'/'room temperature'), ongoing stability requirements, climatic zone coverage (all zones I-IVb), ICH Q1F withdrawal context, Zone II-to-IV extrapolation. WHO TRS 1010 Annex 10 and TRS 986 Annex 2 referenced."
+      }
+    }
+  },
+  "summary": {
+    "total_topics": 36,
+    "covered": 34,
+    "partially_covered": 2,
+    "not_covered": 0,
+    "coverage_percentage": 94.4,
+    "partially_covered_topics": [
+      "nonclinical.toxicology_acute",
+      "nonclinical.pk_adme"
+    ]
+  }
+}

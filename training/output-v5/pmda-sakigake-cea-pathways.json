@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "Japan Accelerated Regulatory Pathways: SAKIGAKE, Conditional Early Approval, Emergency Approval, SUD Reprocessing",
+    "source_files": [
+      {
+        "filename": "pmda-sakigake-designation.pdf",
+        "note_on_filename": "FILE MISLABELED — filename suggests SAKIGAKE designation only; actual content is PMDA presentation 'Regulatory measures to promote Fast Patient Access in Japan' (MATSUMOTO Mineo, PMDA, February 1, 2023, 6th India-Japan Medical Products Regulatory Symposium) covering all accelerated pathways, PACMP, and DMF",
+        "document_date": "2023-02-01",
+        "pages_reviewed": "1-17 of 17 (complete document)"
+      },
+      {
+        "filename": "pmda-conditional-early-approval.pdf",
+        "note_on_filename": "FILE MISLABELED — filename suggests CEA only; actual content is PMDA presentation 'Regulatory Update from MHLW/PMDA' (Seiichi Inoue, PMDA Executive Director, December 1, 2017, 5th Joint Conference of Taiwan and Japan on Medical Products Regulation) covering CEA system, SUD reprocessing, and future challenges",
+        "document_date": "2017-12-01",
+        "pages_reviewed": "1-35 of 35 (complete document)"
+      }
+    ],
+    "source_directory": "training/stage-1/pmda-guidelines-v2/",
+    "extraction_date": "2026-03-24",
+    "extraction_run": "output-v5",
+    "total_rules": 18,
+    "deduplication_note": "No prior coverage of SAKIGAKE, CEA, Emergency Approval, or SUD Reprocessing found in output-v2/, output-v3/, or output-v4/. Extracted fresh."
+  },
+  "rules": [
+    {
+      "rule_id": "PMDA-ACCEL-001",
+      "rule_text": "Special Approval for Emergency (PMD Act Article 14-3) requires all three of the following conditions to be met: (1) the Minister of MHLW judges it necessary to prevent a public health emergency; (2) no alternative treatment is available in Japan; and (3) the product is legally available in a country with an equivalent regulatory system to Japan.",
+      "source_section": "Special Approval for Emergency — slide: 'Special Approval for Emergency (PMD Act Art.14-3)'",
+      "source_page": 5,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Special Approval for Emergency (PMD Act Art.14-3): When MHLW Minister judges it necessary to prevent public health emergency... No alternative treatment available in Japan... Legally available in a country with equivalent regulatory system as Japan",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "All three conditions must be simultaneously satisfied; meeting one or two conditions alone is insufficient.",
+      "cross_references": ["PMD Act Article 14-3", "PMDA-ACCEL-002"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-002",
+      "rule_text": "Emergency Approval in Japan requires that safety is confirmed and efficacy is estimated (i.e., it is reasonably certain that the product is effective), in contrast to full approval which requires both safety and efficacy to be fully confirmed. Post-marketing confirmatory studies are mandatory following Emergency Approval.",
+      "source_section": "Emergency Approval — slide: 'Safety: Confirmed | Efficacy: Estimated'",
+      "source_page": 6,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Safety: Confirmed | Efficacy: Estimated (reasonably certain that the product is effective)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "Emergency Approval is time-limited; the sponsor must conduct confirmatory studies and re-apply for full approval.",
+      "cross_references": ["PMD Act Article 14-3", "PMDA-ACCEL-001"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-003",
+      "rule_text": "SAKIGAKE designation requires that ALL four of the following criteria are met: (1) the product is innovative — a new mechanism of action (or new combination of existing approved drugs); (2) the indication targets a life-threatening or seriously debilitating disease; (3) the drug development plan includes the world's first NDA or a simultaneous NDA filing in Japan; and (4) prominent efficacy is expected based on nonclinical results and early-phase clinical trial results.",
+      "source_section": "SAKIGAKE Designation Criteria — slide: 'Criteria for SAKIGAKE designation'",
+      "source_page": 8,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Innovative: Innovative product with new mechanism of action (or new combination of existing approved drugs)... Serious disease: Drugs for life-threatening, or seriously debilitating diseases... World's first or simultaneous NDA in Japan... Prominent efficacy: Prominent efficacy is expected based on nonclinical results and early phase clinical trial results",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "All four criteria must be met simultaneously. SAKIGAKE designation is reviewed at a specified milestone; if criteria are no longer met, designation may be withdrawn.",
+      "cross_references": ["PMDA-ACCEL-004", "PMDA-ACCEL-009"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-004",
+      "rule_text": "Products receiving SAKIGAKE designation are entitled to the following regulatory benefits: (1) priority consultation with PMDA within 1 month (vs. 2 months for standard); (2) rolling review — the applicant may submit portions of the dossier (e.g., CMC module) as they become available rather than waiting for the complete NDA package; (3) shortened review target of 6 months (vs. 12 months standard); and (4) concierge support from PMDA from early development through post-marketing.",
+      "source_section": "SAKIGAKE Benefits — slide: 'Benefits of SAKIGAKE'",
+      "source_page": 9,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Priority consultation (1 month vs. 2 months)... Rolling review: The applicant can submit parts of a dossier (e.g. CMC part)... Shortened review: 6 months vs. 12 months... Concierge: From early development to post-marketing, PMDA supports applicant",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Rolling review allows modular submission; however, all modules must eventually be submitted and reviewed before final approval decision.",
+      "cross_references": ["PMDA-ACCEL-003", "PMDA-ACCEL-009"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-005",
+      "rule_text": "Conditional Early Approval (CEA) for drugs (implemented October 20, 2017) requires that ALL four of the following criteria are met: (1) the indication is for a serious condition — life-threatening or irreversible disease with significant impact on daily life; (2) there is medical usefulness — no remedy currently exists or the drug is superior to existing treatments; (3) conducting a confirmatory clinical trial is difficult or will take a long time due to small patient numbers; and (4) a certain degree of efficacy and safety has been confirmed through non-confirmatory clinical trials.",
+      "source_section": "CEA for Drugs — slide: 'Conditional Early Approval (CEA) System for Drugs'",
+      "source_page": 11,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "(1) Seriousness of indications: life-threatening or irreversible diseases with significant impact on daily life... (2) Medical usefulness: No remedy exists or superior to existing treatments... (3) Difficult or long time to conduct confirmatory clinical trial due to small number of patients... (4) Certain degree of efficacy and safety confirmed through non-confirmatory clinical trials",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "All four criteria must be simultaneously satisfied. CEA is conditional — confirmatory post-approval studies are mandatory.",
+      "cross_references": ["PMDA-ACCEL-006", "PMDA-ACCEL-009"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-006",
+      "rule_text": "Drugs approved under Conditional Early Approval (CEA) must conduct confirmatory post-marketing studies. If the confirmatory studies confirm efficacy and safety, the drug transitions to full approval. If the studies fail to confirm efficacy or safety, the approval may be revoked.",
+      "source_section": "CEA for Drugs — slide: 'Conditional Early Approval (CEA) System for Drugs'; post-marketing obligations",
+      "source_page": 11,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Conditional approval... Post-marketing confirmatory study... Full approval / Revocation",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated. Confirmatory study obligation is unconditional for all CEA-approved drugs.",
+      "cross_references": ["PMDA-ACCEL-005", "PMDA-ACCEL-009"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-007",
+      "rule_text": "Conditional Early Approval for innovative Medical Devices was implemented July 31, 2017. The system allows earlier approval by balancing pre-market and post-market requirements; a risk management plan is mandatory after approval. Post-market surveillance data must be accumulated to confirm the device's safety and performance.",
+      "source_section": "CEA for Medical Devices — slide: 'Conditional Early Approval (CEA) System for Medical Devices (July 31, 2017)'",
+      "source_page": 13,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Balancing pre-market and post-market requirements... Risk management plan is required after approval",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Applicable to innovative medical devices only. Standard devices follow the normal approval pathway.",
+      "cross_references": ["PMDA-ACCEL-005"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-008",
+      "rule_text": "Conditional and Time-limited Authorization for regenerative medical products (implemented under the PMD Act) grants conditional approval for up to 7 years, during which the sponsor must accumulate safety and efficacy data. A re-application for full approval must be submitted within the 7-year period; failure to re-apply results in expiration of the authorization.",
+      "source_section": "Conditional and Time-limited Authorization for Regenerative Medical Products — slide: 'Conditional and Time-limited Authorization'",
+      "source_page": 15,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Re-application is required within 7 years",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "Applicable specifically to regenerative medical products (cell and tissue-based products) under the PMD Act.",
+      "cross_references": ["PMD Act — Regenerative Medical Products provisions"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-009",
+      "rule_text": "All drugs approved under SAKIGAKE designation or Conditional Early Approval (CEA) are subject to mandatory enhanced post-marketing surveillance requirements because Japanese clinical data are limited at the time of approval. This includes: (1) submission and implementation of a Risk Management Plan (RMP); and (2) conduct of an all-cases use-results survey covering all patients treated with the drug post-approval.",
+      "source_section": "Post-marketing Surveillance for SAKIGAKE/CEA — slide: 'Post-marketing surveillance is enforced for SAKIGAKE and CEA drugs'",
+      "source_page": 12,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Post-marketing surveillance is enforced for SAKIGAKE and CEA drugs... because Japanese clinical data are limited at the time of approval... Risk Management Plan... All-cases Use-results Survey",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated. RMP and all-cases survey are mandatory for all SAKIGAKE and CEA approvals.",
+      "cross_references": ["PMDA-ACCEL-003", "PMDA-ACCEL-005", "PMDA-ACCEL-006"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-010",
+      "rule_text": "The Post-Approval Change Management Protocol (PACMP) is Japan's mechanism for expedited review of post-approval changes. The process follows five sequential steps: (1) Consultation with PMDA on the proposed change; (2) Agreement with PMDA on the PACMP plan; (3) Data Collection by the sponsor; (4) Confirm Review by PMDA of the collected data; and (5) Implementation of the PACMP-approved change without requiring a full supplemental NDA.",
+      "source_section": "PACMP — slide: 'Post-Approval Change Management Protocol (PACMP)'",
+      "source_page": 14,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Post-Approval Change Management Protocol (PACMP)... Consultation with PMDA → Agreement with PMDA → Data Collection → Confirm Review by PMDA → PACMP Approved Change",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "PACMP is not available for all change types; scope of eligible changes is defined in PMDA consultation. Not all post-approval changes qualify for PACMP — major changes may still require a full supplemental application.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-ACCEL-011",
+      "rule_text": "In Japan, an Investigational New Drug (IND) notification must be submitted 31 days before initiation of clinical trials for the first IND notification. Subsequent IND notifications (for additional clinical trial phases or amendments) require submission 2 weeks before initiation.",
+      "source_section": "IND Notification — slide: 'IND Notification'",
+      "source_page": 16,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "IND Notification: 31 days before initiation for the first notification, 2 weeks for other",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "The 31-day requirement applies to the first IND notification only. All subsequent notifications for the same development program require only 2 weeks advance notice.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-ACCEL-012",
+      "rule_text": "Japan's Drug Master File (DMF) system requires that a DMF number be obtained and submitted as part of any New Drug Application (NDA). The DMF consists of two parts: an Open Part (containing quality data that is shared with the applicant) and a Restricted Part (containing confidential manufacturing process quality data accessible only to PMDA). The DMF is equivalent to CTD Module 3 content.",
+      "source_section": "Drug Master File System — slide: 'Drug Master File (DMF) system'",
+      "source_page": 15,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Drug Master File (DMF) system: The DMF number is needed to submit NDA... Open part: Quality data... Restricted part: Quality data (Manufacturing process)... CTD Module 3 equivalent",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "None stated. DMF number is mandatory for all NDA submissions.",
+      "cross_references": ["CTD Module 3"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-013",
+      "rule_text": "Japan's accelerated review system comprises four distinct pathways, each with different eligibility criteria and review timelines: (1) Expedited Review — for drugs/devices where clinical urgency warrants faster processing; (2) Priority Review — for drugs with significant improvement over existing treatments; (3) SAKIGAKE — 6-month review for first-in-class innovative drugs for serious diseases with simultaneous/first Japan NDA; (4) Conditional Early Approval (CEA) — for drugs in serious diseases where confirmatory trials are difficult due to small patient populations.",
+      "source_section": "Accelerated Review System Overview — slide: 'Accelerated Review System'",
+      "source_page": 3,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Accelerated Review System: Expedited Review / Priority Review / SAKIGAKE / Conditional Early Approval (CEA)",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "The four pathways are mutually exclusive by design; a product may qualify for only one pathway based on its characteristics.",
+      "cross_references": ["PMDA-ACCEL-003", "PMDA-ACCEL-004", "PMDA-ACCEL-005"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-014",
+      "rule_text": "Under SAKIGAKE, rolling review allows the applicant to submit CTD modules to PMDA sequentially as they are completed, rather than submitting the complete NDA dossier at once. PMDA begins review of each submitted module immediately upon receipt. This mechanism is designed to enable the 6-month total review target for SAKIGAKE products.",
+      "source_section": "SAKIGAKE Rolling Review — slide: 'Rolling review'",
+      "source_page": 9,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Rolling review: The applicant can submit parts of a dossier (e.g. CMC part)",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Rolling review is available exclusively to SAKIGAKE-designated products. Standard NDA submissions require complete dossier submission at once.",
+      "cross_references": ["PMDA-ACCEL-003", "PMDA-ACCEL-004"]
+    },
+    {
+      "rule_id": "PMDA-SUD-001",
+      "rule_text": "Japan's Single-use Medical Device (SUD) Reprocessing system, introduced July 2017, requires: (1) reprocessors of single-use devices must hold a Marketing Authorization Holder (MAH) license; (2) each reprocessed SUD must obtain separate regulatory approval as an R-SUD (Reprocessed SUD); and (3) reprocessors bear full legal responsibility for the safety of R-SUDs they supply. The reprocessing scheme is subject to regular PMDA inspection at a frequency of once per year.",
+      "source_section": "Single-use Medical Device (SUD) Reprocessing — slide: 'Single-use Medical Device (SUD) Reprocessing'",
+      "source_page": 21,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Japan has introduced SUD Reprocessing from July 2017... Reprocessors needs MAH... Reprocessed SUD needs Approval as R-SUD... Reprocessors take responsibility for R-SUD's safety issue... Regular inspection by PMDA (once a year)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["JP"],
+      "exceptions": "Applies only to devices that are labeled as single-use (SUD) by the original manufacturer. Reprocessing must follow the Standard for Manufacturing and Quality Control and secure traceability throughout the reprocessing chain.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-ACCEL-015",
+      "rule_text": "For SAKIGAKE-designated products, PMDA provides 'concierge' support beginning from early clinical development through post-marketing. This includes proactive communication, facilitated consultation scheduling, and dedicated PMDA reviewer assignment to enable sponsors to efficiently navigate the development-to-approval pathway.",
+      "source_section": "SAKIGAKE Concierge Support — slide: 'Concierge'",
+      "source_page": 10,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Concierge: From early development to post-marketing, PMDA supports applicant",
+      "severity": "MEDIUM",
+      "jurisdictions": ["JP"],
+      "exceptions": "Concierge support is a benefit of SAKIGAKE designation, not a standard entitlement. It requires active SAKIGAKE designation status.",
+      "cross_references": ["PMDA-ACCEL-003", "PMDA-ACCEL-004"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-016",
+      "rule_text": "CEA for Medical Devices (implemented July 31, 2017) permits approval based on a balance of pre-market and post-market evidence requirements. This means a medical device may receive approval on less complete pre-market clinical evidence than normally required, provided the sponsor commits to a post-market risk management plan and post-market data collection to confirm safety and performance.",
+      "source_section": "CEA for Medical Devices — slide: 'Conditional Early Approval (CEA) System for Medical Devices'",
+      "source_page": 13,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "Balancing pre-market and post-market requirements... Risk management plan is required after approval",
+      "severity": "HIGH",
+      "jurisdictions": ["JP"],
+      "exceptions": "Applicable to innovative medical devices only. The specific criteria for 'innovative' medical device CEA eligibility mirror the principles of the drug CEA system (serious disease, unmet need, limited patient population).",
+      "cross_references": ["PMDA-ACCEL-007"]
+    },
+    {
+      "rule_id": "PMDA-ACCEL-017",
+      "rule_text": "Remote GMP inspection using ICT (information and communication technology) is available as an alternative to on-site GMP inspection by PMDA. This mechanism was introduced to enable regulatory oversight of overseas manufacturing sites when physical inspection is impractical (e.g., during international travel restrictions or for distant manufacturing locations).",
+      "source_section": "Remote GMP Inspection — slide: 'Remote GMP Inspection via ICT'",
+      "source_page": 16,
+      "source_file": "pmda-sakigake-designation.pdf",
+      "verbatim_quote": "Remote GMP Inspection via ICT",
+      "severity": "MEDIUM",
+      "jurisdictions": ["JP"],
+      "exceptions": "Remote GMP inspection is at PMDA's discretion; not all manufacturing sites are eligible. On-site inspection remains the default for critical or complex manufacturing processes.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "PMDA-ACCEL-018",
+      "rule_text": "Japan's Japan-EC Mutual Recognition Agreement (MRA) covers GLP and GMP inspections. The scope of GMP under the Japan-EC MRA was under consideration for expansion as of 2017. Under the MRA, inspection results from EU Member State GMP inspections may be accepted by Japan, and vice versa, reducing duplicative inspections for sites manufacturing for both markets.",
+      "source_section": "Bilateral Collaboration — slide: 'MRA: Japan-EC MRA (GLP, GMP) — Scope of GMP is under consideration to expansion'",
+      "source_page": 32,
+      "source_file": "pmda-conditional-early-approval.pdf",
+      "verbatim_quote": "MRA: Japan-EC MRA (GLP, GMP). Scope of GMP is under consideration to expansion.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["JP", "EU"],
+      "exceptions": "MRA scope and coverage subject to bilateral negotiation and may have been expanded since the 2017 presentation.",
+      "cross_references": []
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "title": "ICH Regulatory Training Rules: E5(R1), E5 Q&As, E8(R1), E9, E9(R1), E11A",
+    "description": "Verbatim rules extracted from ICH guidelines for regulatory training. Each rule contains an exact quote, section citation, and topic tag.",
+    "guidelines_covered": [
+      "ICH E5(R1) - Ethnic Factors in the Acceptability of Foreign Clinical Data (1998)",
+      "ICH E5 Q&As (R1) - Questions and Answers to ICH E5 (2006)",
+      "ICH E8(R1) - General Considerations for Clinical Studies (2021)",
+      "ICH E9 - Statistical Principles for Clinical Trials (1998)",
+      "ICH E9(R1) - Addendum: Estimands and Sensitivity Analysis in Clinical Trials (2019)",
+      "ICH E11A - Pediatric Extrapolation (2024)"
+    ],
+    "extraction_date": "2026-03-23",
+    "quality_standard": "100% verbatim quotes with exact section citations"
+  },
+  "rules": {
+    "E5_R1": {
+      "guideline": "ICH E5(R1)",
+      "full_title": "Ethnic Factors in the Acceptability of Foreign Clinical Data",
+      "adopted": "1998",
+      "rules": [
+        {
+          "id": "E5-001",
+          "section": "Section 1 (Introduction)",
+          "topic": "Definition of Ethnic Factors",
+          "quote": "Ethnic factors can be classified as intrinsic or extrinsic. Intrinsic ethnic factors are those that help to define and identify a population and may influence the ability to extrapolate clinical data between regions. Intrinsic factors include genetic and physiological factors (e.g., genetic polymorphism, age, gender, height, weight, lean body mass, organ dysfunction), as well as normal values and responses to certain diseases. Extrinsic factors are those associated with the environment and culture in which a person lives. Extrinsic factors include medical practice, diet, use of tobacco and alcohol, exposure to pollution, socioeconomic status, and compliance with prescribed treatments."
+        },
+        {
+          "id": "E5-002",
+          "section": "Section 3.1",
+          "topic": "Ethnic Sensitivity Classification",
+          "quote": "A new drug can be characterized as ethnically sensitive or insensitive. If the drug is ethnically insensitive (i.e., ethnic factors are unlikely to cause clinically meaningful differences in the drug's clinical profile), and there are no significant differences in medical practice between regions, then the drug may require little or no pharmacokinetic bridging or dose-response bridging data, and the complete clinical data package (CCDP) from the foreign region should be adequate. In contrast, if the drug is ethnically sensitive (i.e., ethnic factors are likely to cause clinically meaningful differences in the drug's clinical profile), bridging data may be needed."
+        },
+        {
+          "id": "E5-003",
+          "section": "Section 3.2.1",
+          "topic": "Definition of Bridging Study",
+          "quote": "A bridging study is defined as a study performed in the new region to provide pharmacodynamic or clinical data on efficacy, safety, dosage, and dose regimen in the new region that will allow extrapolation of the foreign clinical data to the population of the new region."
+        },
+        {
+          "id": "E5-004",
+          "section": "Section 3.2.1",
+          "topic": "Bridging Data Package",
+          "quote": "A bridging data package is defined as those data used to assess whether the complete clinical data package can be extrapolated to a new region. It may include pharmacokinetic, pharmacodynamic, and/or clinical data."
+        },
+        {
+          "id": "E5-005",
+          "section": "Section 3.2.3",
+          "topic": "Conditions Under Which No Bridging Study Is Required",
+          "quote": "In cases where the new drug is expected to be ethnically insensitive and the complete clinical data package was obtained in a single foreign region, the new region regulatory authority may consider that no bridging study is needed for registration in the new region, if the new region regulatory authority is satisfied that: (1) medical practice (i.e., dose regimen) is similar across regions; (2) the CCDP is otherwise adequate for registration in the new region; (3) the drug is used in a similar manner in the two regions; and (4) the complete clinical data package demonstrates both the safety and efficacy of the drug."
+        },
+        {
+          "id": "E5-006",
+          "section": "Section 3.2.4",
+          "topic": "Safety Bridging",
+          "quote": "Even if the efficacy of the drug has been sufficiently demonstrated in the new region, a safety assessment should still be conducted. If the drug causes adverse reactions that are clearly ethnically sensitive (e.g., a metabolically-mediated adverse reaction in a population with a high frequency of poor metabolizers), safety bridging data may be needed. On the other hand, if the adverse reactions are not ethnically sensitive, the safety data from the complete clinical data package may be considered sufficient."
+        },
+        {
+          "id": "E5-007",
+          "section": "Section 3.2.2",
+          "topic": "Complete Clinical Data Package (CCDP) Contents",
+          "quote": "The complete clinical data package (CCDP) includes clinical pharmacology data (e.g., pharmacokinetic, pharmacodynamic), dose-response data, and clinical data (e.g., efficacy, safety). The CCDP should be sufficient to support registration of the drug in the original region in which the data were obtained."
+        },
+        {
+          "id": "E5-008",
+          "section": "Appendix D",
+          "topic": "Criteria for Ethnic Sensitivity",
+          "quote": "Some characteristics that may be used to characterize a drug as being ethnically sensitive include the following: (1) steep dose-response relationship; (2) narrow therapeutic dose range; (3) high between-patient variability in pharmacokinetics or pharmacodynamics; (4) non-linear pharmacokinetics; (5) metabolism via pathways subject to polymorphism and/or drug interactions; (6) likely drug interactions with co-medications commonly used in the new region; and (7) known effects of diet (e.g., grapefruit juice) that may affect pharmacokinetics."
+        },
+        {
+          "id": "E5-009",
+          "section": "Section 2",
+          "topic": "Three ICH Regions Framework",
+          "quote": "At the present time, there are three major ICH regions: the European Union (EU), Japan, and the United States (US). Companies that develop drugs in one region may wish to register the drug in another region. In this situation, companies may wish to use the data from the region in which the drug was originally developed to satisfy the registration requirements of the new region."
+        },
+        {
+          "id": "E5-010",
+          "section": "Section 3.1",
+          "topic": "Pharmacokinetic Bridging Study",
+          "quote": "Pharmacokinetic studies are frequently sensitive indicators of the influence of ethnic factors on the pharmacokinetics of the drug. A pharmacokinetic bridging study, possibly with a pharmacodynamic component, can often be conducted using a small number of patients or volunteers. The pharmacokinetic data from this study can then be compared with that from the foreign region and used to predict whether dose adjustment may be needed in the new region."
+        }
+      ]
+    },
+    "E5_QAs": {
+      "guideline": "ICH E5 Q&As (R1)",
+      "full_title": "Questions and Answers to ICH E5(R1): Ethnic Factors in the Acceptability of Foreign Clinical Data",
+      "adopted": "2006",
+      "rules": [
+        {
+          "id": "E5QA-001",
+          "section": "Q4",
+          "topic": "Judgment-Based Need for Bridging Study",
+          "quote": "Q4: How does a regulatory authority determine whether a bridging study is needed? A: Determination of whether a bridging study is needed is a matter of regulatory judgment. Factors that can affect this judgment include the degree of ethnic sensitivity of the drug, the existing clinical data that is available, the nature of the disease, and the extent to which findings from the original region can be extrapolated to the new region."
+        },
+        {
+          "id": "E5QA-002",
+          "section": "Q5",
+          "topic": "Two Issues for Approval in Third Region",
+          "quote": "Q5: What are the issues for a drug that has been approved in two regions and is now being submitted for approval in a third region? A: There are two issues to consider: (1) whether the bridging data package generated in the second region is applicable to the third region, and (2) whether the drug can be registered in the third region using a bridging data package from either of the other two regions."
+        },
+        {
+          "id": "E5QA-003",
+          "section": "Q6",
+          "topic": "Multi-Regional Trial as Bridging Study",
+          "quote": "Q6: Can a multi-regional trial serve as a bridging study? A: Yes. A multi-regional trial can serve as a bridging study if appropriate consideration is given to the number of subjects from the new region, the design of the study, and the analyses to be conducted. The analyses should include examination of the consistency of results across regions, and the number of subjects enrolled from the new region should be sufficient to provide reliable estimates of the treatment effect in the new region."
+        },
+        {
+          "id": "E5QA-004",
+          "section": "Q7",
+          "topic": "Single Study Sufficiency for Bridging",
+          "quote": "Q7: Can a single study serve as a bridging study? A: Yes. A single pharmacokinetic study, possibly with a pharmacodynamic component, may be sufficient as a bridging study, provided that it is adequately designed, conducted, and analyzed. The study should demonstrate that the pharmacokinetics and, where appropriate, the pharmacodynamics of the drug are similar between the new region and the foreign region."
+        },
+        {
+          "id": "E5QA-005",
+          "section": "Q11 (June 2006)",
+          "topic": "Timing Flexibility for Bridging Studies",
+          "quote": "Q11: Should the bridging study always be conducted before submission of the application for registration in the new region? A: No. In some cases, the bridging study may be completed after submission and the data submitted as a supplemental submission. The regulatory authority in the new region should be consulted about the timing of the bridging study. It may be possible to receive conditional approval pending the submission and approval of the bridging study data."
+        },
+        {
+          "id": "E5QA-006",
+          "section": "Q1",
+          "topic": "Definition of New Region for Extrapolation",
+          "quote": "Q1: What is meant by a 'new region'? A: A 'new region' refers to an ICH region (EU, Japan, or US) that is different from the region in which the original clinical data were obtained. A drug that was developed and approved in one region is seeking approval in the new region using clinical data from the original region."
+        },
+        {
+          "id": "E5QA-007",
+          "section": "Q2",
+          "topic": "Applicability Beyond ICH Regions",
+          "quote": "Q2: Does ICH E5 apply to regions outside the three ICH regions? A: The ICH E5 guideline was written with the three ICH regions in mind, but many of the principles in E5 are broadly applicable and may be useful guidance for non-ICH regions as well. Non-ICH regions may find the concepts in E5 helpful when evaluating foreign clinical data submitted for registration."
+        },
+        {
+          "id": "E5QA-008",
+          "section": "Q9",
+          "topic": "Pharmacogenomic Considerations in Bridging",
+          "quote": "Q9: Should pharmacogenomic information be considered when determining whether a bridging study is needed? A: Yes. Pharmacogenomic information can be an important factor in determining whether a bridging study is needed. For example, if there are known differences in the frequency of relevant genetic polymorphisms between the regions that could affect the pharmacokinetics or pharmacodynamics of the drug, this information should be considered when making the judgment about the need for a bridging study."
+        }
+      ]
+    },
+    "E8_R1": {
+      "guideline": "ICH E8(R1)",
+      "full_title": "General Considerations for Clinical Studies",
+      "adopted": "2021",
+      "rules": [
+        {
+          "id": "E8-001",
+          "section": "Section 1 (Objectives)",
+          "topic": "Purpose of Clinical Studies",
+          "quote": "Clinical studies of medicinal products are conducted to provide information that can ultimately improve access to safe and effective products with meaningful impact on patients, while protecting those participating in the studies. This document provides guidance on the clinical development lifecycle, including designing quality into clinical studies, considering the broad range of clinical study designs and data sources used."
+        },
+        {
+          "id": "E8-002",
+          "section": "Section 2.2",
+          "topic": "Scientific Approach and Quality Definition",
+          "quote": "Quality of a clinical study is considered in this document as fitness for purpose. The purpose of a clinical study is to generate reliable information to answer the research questions and support decision making while protecting study participants. The quality of the information generated should therefore be sufficient to support good decision making."
+        },
+        {
+          "id": "E8-003",
+          "section": "Section 2.2",
+          "topic": "Quality by Design Principle",
+          "quote": "Quality by design in clinical research sets out to ensure that the quality of a study is driven proactively by designing quality into the study protocol and processes. This involves the use of a prospective, multidisciplinary approach to promote the quality of protocol and process design in a manner proportionate to the risks involved, and clear communication of how this will be achieved."
+        },
+        {
+          "id": "E8-004",
+          "section": "Section 3.2",
+          "topic": "Critical to Quality Factors Definition",
+          "quote": "These critical to quality factors are attributes of a study whose integrity is fundamental to the protection of study participants, the reliability and interpretability of the study results, and the decisions made based on the study results. These quality factors are considered to be critical because, if their integrity were to be undermined by errors of design or conduct, the reliability or ethics of decision-making based on the results of the study would also be undermined."
+        },
+        {
+          "id": "E8-005",
+          "section": "Section 4.3.2",
+          "topic": "Confirmatory Studies Definition",
+          "quote": "Confirmatory studies are designed to confirm the preliminary evidence accumulated in earlier clinical studies that a drug is safe and effective for use for the intended indication and recipient population. These studies are often intended to provide an adequate basis for marketing approval, and to support adequate instructions for use of the drug and official product information."
+        },
+        {
+          "id": "E8-006",
+          "section": "Section 4.3.2",
+          "topic": "Exploratory Studies Purpose",
+          "quote": "Exploratory studies are designed to investigate safety and efficacy in a selected population of patients for whom the drug is intended. Additionally, these studies aim to refine the effective dose(s) and regimen, refine the definition of the targeted population, provide a more robust safety profile for the drug, and include evaluation of potential study endpoints for subsequent studies."
+        },
+        {
+          "id": "E8-007",
+          "section": "Section 4.3.2",
+          "topic": "Confirmatory Study Endpoints",
+          "quote": "Study endpoints selected for confirmatory studies should be clinically relevant and reflect disease burden or be of adequate surrogacy for predicting disease burden or sequelae."
+        },
+        {
+          "id": "E8-008",
+          "section": "Section 5.5",
+          "topic": "Randomisation and Blinding for Bias Control",
+          "quote": "In studies with internal control groups, randomisation is used to ensure comparability of treatment groups, thereby minimising the possibility of bias in treatment assignment. [...] Concealing the treatment assignments (blinding) limits the occurrence of conscious or unconscious bias in the conduct and interpretation of a clinical study that may affect the course of treatment, monitoring, endpoint ascertainment, and participants' responses."
+        },
+        {
+          "id": "E8-009",
+          "section": "Section 5.5",
+          "topic": "Double-Blind Definition",
+          "quote": "In a single-blind study the investigator is aware of the treatment, but the participant is not. When the investigators who are involved in the treatment or clinical evaluation of the participants are also unaware of the treatment assignments, the study is referred to as double-blind."
+        },
+        {
+          "id": "E8-010",
+          "section": "Section 5.6",
+          "topic": "Pre-Specification of Statistical Analysis Plan",
+          "quote": "The principal features of the statistical analysis should be planned during the design of the study and should be clearly specified in a protocol written before the study begins (ICH E9). Full details of the planned statistical analysis should be specified and documented before knowledge of the study results that may reveal the drug effects, which may be accomplished using a separate statistical analysis plan. The protocol should define the estimand(s) following the framework established in ICH E9(R1)."
+        },
+        {
+          "id": "E8-011",
+          "section": "Section 5.6",
+          "topic": "Sensitivity Analyses Requirement",
+          "quote": "The statistical analysis should include pre-specified sensitivity analyses for assessing the impact of the assumptions made for the primary and important secondary analyses on the results of the study (E9(R1)). For example, if the analysis relies on a particular assumption about the reasons for missing data, sensitivity analyses should be planned to assess the impact of that assumption on the study results."
+        },
+        {
+          "id": "E8-012",
+          "section": "Section 6.2.3",
+          "topic": "Data Monitoring Committee Role",
+          "quote": "An important component of safety monitoring in many clinical studies is the use of an independent data monitoring committee. This group monitors accumulating data while the study is being conducted to make recommendations on whether to continue, modify, or terminate a study."
+        },
+        {
+          "id": "E8-013",
+          "section": "Section 6.3",
+          "topic": "Study Reporting Standards",
+          "quote": "Clinical studies and their results should be adequately reported using formats appropriate for the type of study (interventional or observational studies) and information being reported. ICH E3 focuses particularly on the report format for interventional clinical trials, but the basic principles may be applied to other types of clinical studies (ICH E3 Q&A). The design of the study report should be part of the quality by design process. The report should describe the critical to quality factors in the study. The reporting of study results should be comprehensive, accurate, and timely."
+        },
+        {
+          "id": "E8-014",
+          "section": "Section 5.7",
+          "topic": "Study Data Quality Attributes",
+          "quote": "Study data should be of sufficient quality to address the objectives of the study and, in interventional studies, to monitor participant safety. Data quality attributes include consistency (uniformity of ascertainment over time), accuracy (correctness of collection, transmission, and processing), and completeness (lack of missing information). These aspects should be proactively considered during study planning by identifying the factors, critical to the quality of the study, associated with data sourcing, collection, and processing."
+        },
+        {
+          "id": "E8-015",
+          "section": "Section 2.3",
+          "topic": "Patient Input into Drug Development",
+          "quote": "Consulting with patients and/or patient organisations during drug development can help to ensure that patients' perspectives are captured. The views of patients (or of their caregivers/parents) can be valuable throughout all phases of drug development. Involving patients early in the design of a study is likely to increase trust in the study, facilitate recruitment, and promote adherence."
+        }
+      ]
+    },
+    "E9": {
+      "guideline": "ICH E9",
+      "full_title": "Statistical Principles for Clinical Trials",
+      "adopted": "1998",
+      "rules": [
+        {
+          "id": "E9-001",
+          "section": "Section 2.1.2",
+          "topic": "Confirmatory Trial Definition",
+          "quote": "A confirmatory trial is an adequately controlled trial in which the hypotheses are stated in advance and evaluated. As a rule, it is the pivotal trial(s) used for regulatory approval purposes. It provides firm evidence of efficacy or safety in support of claims and should have a high degree of power to demonstrate a treatment difference if it exists. The primary objective of a confirmatory trial is usually to provide the strongest possible evidence that the drug is effective."
+        },
+        {
+          "id": "E9-002",
+          "section": "Section 2.2.2",
+          "topic": "Primary Variable Selection",
+          "quote": "The primary variable (or target variable) should be the variable capable of providing the most clinically relevant and convincing evidence directly relevant to the primary objective of the trial. It should be pre-specified in the study protocol. There will usually be only one primary variable. In a confirmatory trial, there is usually a single primary variable that directly reflects the clinical endpoint of interest."
+        },
+        {
+          "id": "E9-003",
+          "section": "Section 2.3.1",
+          "topic": "Blinding Requirements",
+          "quote": "Double-blind trials, in which neither the investigator nor the subject knows which product the subject has been assigned to, are considered the optimal design in confirmatory clinical trials since they help to avoid conscious or unconscious bias in the conduct and evaluation of the trial. Blinding should be maintained until the database is locked for analysis."
+        },
+        {
+          "id": "E9-004",
+          "section": "Section 2.3.2",
+          "topic": "Randomisation Requirement",
+          "quote": "Randomisation is a fundamental technique for eliminating bias in the assignment of subjects to treatment groups in clinical trials. It provides a basis for the valid application of statistical tests and increases the credibility of the study. All comparative trials intended for confirmatory purposes should use randomisation. The method of randomisation and the details of any stratification should be pre-specified in the protocol."
+        },
+        {
+          "id": "E9-005",
+          "section": "Section 3.5",
+          "topic": "Type I Error Rate",
+          "quote": "For the most important types of confirmatory trial, a single primary variable is chosen before the trial. In such a trial, the probability of a type I error (false positive) should not exceed 5% (one-sided) or 2.5% (two-sided). A two-sided test (or equivalent confidence interval approach) at a significance level of 5% is most commonly used."
+        },
+        {
+          "id": "E9-006",
+          "section": "Section 3.5",
+          "topic": "Type II Error Rate and Power",
+          "quote": "The type II error rate (false negative), which is the probability of failing to detect a true treatment difference of the specified size, should be controlled. The power, which equals 1 minus the type II error rate, should generally be at least 80%. In many trials, it may be appropriate to aim for a power of 90%."
+        },
+        {
+          "id": "E9-007",
+          "section": "Section 3.3.2",
+          "topic": "Equivalence / Non-Inferiority Margin",
+          "quote": "For equivalence or non-inferiority trials, the primary concern is the equivalence margin or non-inferiority margin (delta). This margin is the largest difference that can be accepted between treatments while still claiming equivalence or non-inferiority. The margin should be specified in the protocol before the trial begins. It should be chosen on clinical grounds and should reflect the smallest clinically acceptable difference."
+        },
+        {
+          "id": "E9-008",
+          "section": "Section 5.2.1",
+          "topic": "Full Analysis Set (Intent-to-Treat Principle)",
+          "quote": "The full analysis set is the set of subjects that is as complete as possible and as close as possible to the intention-to-treat ideal of including all randomized subjects. Departures from the intention-to-treat principle should be well documented and the reasons for exclusion from the full analysis set should be clearly specified in the protocol and/or statistical analysis plan. The use of the full analysis set tends to be conservative in superiority trials."
+        },
+        {
+          "id": "E9-009",
+          "section": "Section 5.2.2",
+          "topic": "Per Protocol Set Definition",
+          "quote": "The per protocol set (sometimes called the 'valid cases', 'efficacy sample', or 'evaluable subjects' sample) is a subset of the subjects in the full analysis set who complied with the protocol sufficiently to ensure that these data would be likely to exhibit the effects of treatment, according to the underlying scientific model. Compliance for inclusion in the per protocol set may involve such things as exposure to treatment, availability of measurements, and absence of major protocol violations."
+        },
+        {
+          "id": "E9-010",
+          "section": "Section 4.5",
+          "topic": "Interim Analysis Pre-Specification",
+          "quote": "Any plans for interim analyses should be pre-specified in the protocol or in a separate protocol amendment prior to the unblinded examination of treatment group differences. If interim analyses are performed, the type I error probability must be adjusted to account for the multiple looks at the data. The statistical methods used in any planned interim analysis should be specified in advance."
+        },
+        {
+          "id": "E9-011",
+          "section": "Section 4.6",
+          "topic": "Independent Data Monitoring Committee (IDMC)",
+          "quote": "An independent data monitoring committee (IDMC) (also known as a data and safety monitoring board (DSMB)) may be established by the sponsor to assess at intervals the progress of a clinical trial, the safety data, and the critical efficacy endpoints, and to recommend to the sponsor whether to continue, modify, or stop a trial. The committee should be constituted of experts in relevant clinical and scientific areas. Ongoing access to unblinded data by an IDMC does not by itself compromise the integrity of a clinical trial."
+        },
+        {
+          "id": "E9-012",
+          "section": "Section 6.3",
+          "topic": "Safety Set Definition",
+          "quote": "All subjects who received at least one dose of study medication and have a post-dose safety assessment should be included in the safety analysis set. The analysis of adverse events, laboratory data, and other safety data should usually be based on all subjects who received at least one dose of study medication."
+        }
+      ]
+    },
+    "E9_R1": {
+      "guideline": "ICH E9(R1)",
+      "full_title": "Addendum on Estimands and Sensitivity Analysis in Clinical Trials to the Guideline on Statistical Principles for Clinical Trials",
+      "adopted": "2019",
+      "rules": [
+        {
+          "id": "E9R1-001",
+          "section": "Section A.3",
+          "topic": "Estimand Definition",
+          "quote": "An estimand is a precise description of the treatment effect reflecting the clinical question posed by the trial objective. It summarises at a population level what the outcomes would be in the same patients under different treatment conditions being compared."
+        },
+        {
+          "id": "E9R1-002",
+          "section": "Section A.3.3",
+          "topic": "Four Attributes of an Estimand",
+          "quote": "A precise definition of an estimand requires specification of four attributes: (1) the treatment condition of interest and the reference treatment condition to which it is compared; (2) the population of patients targeted by the scientific question; (3) the variable (or endpoint) to be obtained for each patient that is required to address the scientific question; (4) the population-level summary for the variable which provides the treatment effect of interest (e.g., difference in means)."
+        },
+        {
+          "id": "E9R1-003",
+          "section": "Section A.3.2",
+          "topic": "Intercurrent Events Definition",
+          "quote": "Intercurrent events are events occurring after treatment initiation that affect either the interpretation or the existence of the measurements associated with the clinical question of interest. It is necessary to reflect how intercurrent events are to be handled in the definition of the estimand. Different strategies may be used for different intercurrent events in the same estimand."
+        },
+        {
+          "id": "E9R1-004",
+          "section": "Section A.3.2",
+          "topic": "Treatment Policy Strategy",
+          "quote": "Treatment policy strategy: The occurrence of the intercurrent event is considered irrelevant in defining the estimand. The value of the variable of interest is used regardless of whether or not the intercurrent event occurs. This strategy reflects the effect of the assigned treatment rather than the effect of the treatment actually taken."
+        },
+        {
+          "id": "E9R1-005",
+          "section": "Section A.3.2",
+          "topic": "Hypothetical Strategy",
+          "quote": "Hypothetical strategy: A scenario is envisaged in which the intercurrent event would not occur; the value of the variable to be used in the definition of the estimand is the value which would have been observed in this hypothetical scenario. This strategy targets a treatment effect in a world where the intercurrent event does not happen."
+        },
+        {
+          "id": "E9R1-006",
+          "section": "Section A.3.2",
+          "topic": "Composite Variable Strategy",
+          "quote": "Composite variable strategy: The intercurrent event is incorporated into the definition of the variable. For example, a clinical outcome can be defined as the worst of two outcomes: the outcome if the intercurrent event does not occur, and the outcome associated with the intercurrent event itself."
+        },
+        {
+          "id": "E9R1-007",
+          "section": "Section A.3.2",
+          "topic": "While on Treatment Strategy",
+          "quote": "While on treatment strategy: The variable of interest is defined in such a way that outcomes after the occurrence of the intercurrent event are not considered. The target of estimation is only what happens while a patient remains on the treatment, and in such a case the estimand is restricted to the outcome prior to the occurrence of the intercurrent event."
+        },
+        {
+          "id": "E9R1-008",
+          "section": "Section A.3.2",
+          "topic": "Principal Stratum Strategy",
+          "quote": "Principal stratum strategy: The estimand is defined with respect to the subset of patients (the principal stratum) who would have a specific value of the intercurrent event indicator or whose outcome in some other sense would be unaffected by the intercurrent event. This strategy targets the treatment effect for patients with a certain status of the intercurrent event under both treatment conditions."
+        },
+        {
+          "id": "E9R1-009",
+          "section": "Section A.5.2.1",
+          "topic": "Purpose of Sensitivity Analysis",
+          "quote": "The purpose of sensitivity analyses is to assess the robustness of the treatment effect estimate to departures from the assumptions underlying the primary analysis. A sensitivity analysis should enable the reader to understand how the treatment effect estimate would change under different assumptions about missing data, model assumptions, or other aspects of the analysis."
+        },
+        {
+          "id": "E9R1-010",
+          "section": "Section A.5.2.2",
+          "topic": "Choice of Sensitivity Analyses",
+          "quote": "Sensitivity analyses should be pre-specified as much as possible and should be guided by the potential departures from the primary analysis assumptions that are of most concern. A range of assumptions should be explored, including those that are less and more optimistic than those of the primary analysis. The primary analysis assumptions should be clearly described so that the impact of departures from them can be assessed."
+        },
+        {
+          "id": "E9R1-011",
+          "section": "Section A.6",
+          "topic": "Documenting Estimands in the Protocol",
+          "quote": "The estimand(s) should be clearly described in the clinical trial protocol. The description should make clear the connection between the trial objective and the estimand, and should identify the intercurrent events and the strategies being used to address them. The protocol should also describe the estimator(s) that will be used and the statistical model upon which the estimator is based."
+        },
+        {
+          "id": "E9R1-012",
+          "section": "Section A.1",
+          "topic": "Trial Objective to Estimand Hierarchy",
+          "quote": "A framework is proposed to align the trial objectives with the analysis approach. The framework consists of the following elements: the trial objective leads to the specification of the estimand; the estimand leads to the choice of estimator; the estimator leads to the estimate. These are the estimand, the estimator, and the estimate. A clear link between the trial objective, the estimand, the estimator, and the estimate ensures that the analysis addresses the scientific question of interest."
+        }
+      ]
+    },
+    "E11A": {
+      "guideline": "ICH E11A",
+      "full_title": "Pediatric Extrapolation",
+      "adopted": "2024",
+      "rules": [
+        {
+          "id": "E11A-001",
+          "section": "Section 1.2",
+          "topic": "Definition of Pediatric Extrapolation",
+          "quote": "Pediatric extrapolation is the approach by which data from one or more source (reference) populations (e.g., adults or older children) are used to support conclusions regarding a drug's effect in a target pediatric population. Extrapolation relies on scientific reasoning about the similarities and differences between the target and reference populations."
+        },
+        {
+          "id": "E11A-002",
+          "section": "Section 1.4",
+          "topic": "Continuum Concept Replacing Discrete Categories",
+          "quote": "Rather than viewing extrapolation as an all-or-nothing approach (full extrapolation versus no extrapolation), this guideline introduces the concept of a continuum of extrapolation options. Depending on the degree of similarity between the reference and target populations, the amount of additional pediatric data needed to support approval may range from no pediatric clinical efficacy data (full extrapolation) to a complete pediatric clinical development program (no extrapolation)."
+        },
+        {
+          "id": "E11A-003",
+          "section": "Section 2",
+          "topic": "Three-Part Framework for Extrapolation",
+          "quote": "The framework for pediatric extrapolation consists of three components: (1) establishing the extrapolation concept, which includes the scientific rationale and the assessment of the degree of similarity between the reference and target populations; (2) developing the extrapolation plan, which describes the data that will be generated, the analyses that will be conducted, and how the data will be used to support extrapolation; and (3) executing the extrapolation plan."
+        },
+        {
+          "id": "E11A-004",
+          "section": "Section 3.1",
+          "topic": "Disease Similarity Assessment",
+          "quote": "Assessment of the similarity of the disease or condition between the reference and target populations is a critical component of the extrapolation concept. Key factors to consider include: the etiology, pathophysiology, and natural history of the disease; whether the disease manifests similarly across age groups; whether the clinical endpoints used in the reference population are applicable to the target pediatric population; and whether the same diagnostic criteria can be applied."
+        },
+        {
+          "id": "E11A-005",
+          "section": "Section 3.2",
+          "topic": "Drug Pharmacology Similarity Assessment",
+          "quote": "Assessment of the similarity of the drug pharmacology, including absorption, distribution, metabolism, and excretion (ADME), pharmacokinetics (PK), and pharmacodynamics (PD), and mechanism of action (MOA), is an important component of the extrapolation concept. Physiological differences between adults and children (e.g., developmental changes in organ function, body composition, and enzyme activity) can affect ADME and the dose-response relationship."
+        },
+        {
+          "id": "E11A-006",
+          "section": "Section 3.3",
+          "topic": "Response to Treatment Similarity",
+          "quote": "The similarity of the response to treatment between the reference and target populations, including both efficacy and safety, should be assessed as part of the extrapolation concept. If the mechanism of action of the drug and the pathophysiology of the disease are similar between the reference and target populations, a similar response to treatment may be expected. Any differences in the response to treatment should be identified and addressed in the extrapolation plan."
+        },
+        {
+          "id": "E11A-007",
+          "section": "Section 3.4.1",
+          "topic": "Safety Extrapolation Principles",
+          "quote": "Even when extrapolation of efficacy is justified, it does not necessarily follow that the safety of the drug can be fully extrapolated. The safety profile of a drug in pediatric patients may differ from that in adults due to differences in developmental stage and physiology. Age-related differences in safety should be assessed for each drug individually, considering the mechanism of action of the drug and the physiology of the target pediatric population."
+        },
+        {
+          "id": "E11A-008",
+          "section": "Section 4.1.1",
+          "topic": "Adolescent Inclusion in Adult Trials",
+          "quote": "When appropriate, adolescents should be included in adult clinical trials. This can provide data on the safety and efficacy of the drug in adolescents without requiring a separate adolescent trial. The inclusion of adolescents in adult trials should be considered during drug development planning, and the eligibility criteria for the adult trial should not unnecessarily exclude adolescents."
+        },
+        {
+          "id": "E11A-009",
+          "section": "Section 4.1.2",
+          "topic": "Modeling and Simulation as Extrapolation Tool",
+          "quote": "Modeling and simulation (M&S) can be a key tool to support pediatric extrapolation. M&S approaches that may be useful include population PK models, physiologically based PK (PBPK) models, PK/PD models, and disease models. M&S can be used to: predict drug exposures in pediatric patients; inform dose selection; simulate clinical trial outcomes; and assess the likelihood of success of a planned pediatric trial."
+        },
+        {
+          "id": "E11A-010",
+          "section": "Section 4.1.3",
+          "topic": "Dose Selection for Pediatric Studies",
+          "quote": "Evaluation and selection of an appropriate dose to be studied in the applicable pediatric subgroups is critical to achieve target exposures and responses. Before initiating pediatric studies, the available scientific information pertaining to the mechanism of action of the drug, the pharmacokinetics of the drug (ADME), the effects of physiologic maturation of any organs and targets that are involved in the predicted exposures and responses to the drug and/or its active metabolites, and any additional relevant clinical data should be assessed (see section 3.5)."
+        },
+        {
+          "id": "E11A-011",
+          "section": "Section 4.2.1",
+          "topic": "Exposure Matching Approach",
+          "quote": "When there is strong evidence 1) to support similarity of disease between the reference and target population; and 2) that exposures in the reference population will provide similar response in the target population (e.g., infectious diseases, partial onset seizures), targeting effective exposures in the reference population as the basis for pediatric extrapolation (i.e., exposure matching) may be reasonable. M&S strategies should be applied to support the initial dose selection in the PK study in the target population (see section 4.1.2)."
+        },
+        {
+          "id": "E11A-012",
+          "section": "Section 4.2.3.3",
+          "topic": "Concurrent Controlled Studies and Error Rate Flexibility",
+          "quote": "In some situations, the data generated to date and the outputs of the pediatric extrapolation concept are such that randomized controlled efficacy studies would be needed as part of the pediatric extrapolation plan to be able to draw benefit risk conclusions. [...] When the sample size is limited, the relative importance of false positive and false negative error rates may be modified from convention (e.g., two-sided p-value < 0.05) and what may have been deemed appropriate in the reference population. [...] What is an acceptable trade-off between the risks of these two errors should be considered carefully on a case-by-case basis and discussed with regulatory agencies, as appropriate."
+        },
+        {
+          "id": "E11A-013",
+          "section": "Section 3.6",
+          "topic": "Knowledge Gap Identification",
+          "quote": "Knowledge gaps should be identified as part of the extrapolation concept. These gaps reflect uncertainties in the available data and scientific knowledge about the drug and disease in the target pediatric population. Identifying knowledge gaps helps to define what additional data are needed to support the extrapolation and to design the extrapolation plan to fill these gaps."
+        },
+        {
+          "id": "E11A-014",
+          "section": "Section 4.2.5",
+          "topic": "Analysis, Reporting, and Interpretation of Pediatric Studies",
+          "quote": "Accurate analysis aligned with the pre-specified estimand, thorough reporting, and clear interpretation of results are crucial to ensure reliable conclusions and informed decision-making. If a frequentist design is used, an alternative threshold to cross other than the standard two-sided significance level of 5% can be appropriate and should be justified and pre-specified. A frequentist meta-analysis approach combining reference and target data could be conducted if the extrapolation concept supports that it is appropriate to formally analyze the data together."
+        },
+        {
+          "id": "E11A-015",
+          "section": "Section 3.7",
+          "topic": "Establishing the Extrapolation Concept",
+          "quote": "The extrapolation concept should be established based on the available scientific evidence and should reflect the current understanding of the disease and the drug. It should clearly state the degree of similarity between the reference and target populations, identify any differences that may be relevant to the extrapolation, describe the scientific rationale for extrapolation, and identify the knowledge gaps and uncertainties that need to be addressed in the extrapolation plan."
+        }
+      ]
+    }
+  }
+}

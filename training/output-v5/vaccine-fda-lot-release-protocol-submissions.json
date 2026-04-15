@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "title": "Providing Lot Release Protocol Submissions to the Center for Biologics Evaluation and Research (CBER) in Electronic Format — Guidance for Industry",
+    "source_file": "Lot_Release_Protocol_Submissions.pdf",
+    "source_directory": "training/stage-1/gap-fill/vaccines-fda/",
+    "document_date": "February 2019",
+    "document_version": "Final Guidance (supersedes November 2007 version)",
+    "issuing_authority": "FDA/CBER",
+    "extraction_date": "2026-03-24",
+    "total_rules": 18
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-LRP-001",
+      "rule_text": "CBER may require manufacturers of licensed biological products to submit for CBER review and confirmatory testing: (a) samples of any lot of any licensed product, and (b) the protocols showing results of applicable tests, when deemed necessary for the safety, purity, or potency of the product (21 CFR 610.2(a)).",
+      "source_section": "II. Background",
+      "source_page": 2,
+      "verbatim_quote": "In accordance with 21 CFR 610.2(a), CBER may require you to submit for CBER review and confirmatory testing samples of any lot of any licensed product, together with the protocols showing results of applicable tests when deemed necessary for the safety, purity, or potency of the product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "In December 1995 (60 FR 63048), FDA announced it no longer requires routine lot-by-lot release for well-characterized therapeutic recombinant DNA-derived and monoclonal antibody biotechnology products subject to licensure (21 CFR 601.2(c)).",
+      "cross_references": ["21 CFR 610.2(a)", "21 CFR 601.2(c)"]
+    },
+    {
+      "rule_id": "FDA-LRP-002",
+      "rule_text": "Lot release protocols must be submitted to CBER consistent with lot release requirements applicable to the product and in an electronic format that is readily accessible.",
+      "source_section": "III. Discussion",
+      "source_page": 2,
+      "verbatim_quote": "Submission of your lot release protocol submissions, consistent with lot release requirements applicable to your product, in an electronic format that is readily accessible will facilitate our review of your submission.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Paper submissions are accepted when manufacturers cannot submit electronically, though FDA discourages paper format.",
+      "cross_references": ["21 CFR 610.2(a)", "21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-003",
+      "rule_text": "Electronic lot release protocols must be submitted as full-text searchable PDF files; static scans of paper protocols are not acceptable. Security options and password protection must not be used.",
+      "source_section": "III.A. Format for Electronic Lot Release Protocol Submissions",
+      "source_page": 3,
+      "verbatim_quote": "The PDF version should be full-text searchable and not simply a static scan of the entire paper protocol. We recommend that you do not use the security option and passwords for the submission, as these could make it difficult for us to access your data.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "The signed e-LRP Signature Letter portion of the PDF file does not need to be text searchable.",
+      "cross_references": ["21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-004",
+      "rule_text": "The electronic lot release protocol PDF file must be placed in an electronic folder named with the 6-digit Submission Tracking Number (STN); for allergenic products using a second-level STN, the primary and secondary level numbers separated by an underscore must be used as the folder name.",
+      "source_section": "III.A. Format for Electronic Lot Release Protocol Submissions",
+      "source_page": 3,
+      "verbatim_quote": "The lot release protocol PDF file should be placed in an electronic folder, and the folder name should be the 6-digit submission tracking number (STN). For allergenic products that use the second level STN to identify the product, you should use the primary and secondary level numbers, separated by an underscore, as the folder name.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11", "21 CFR 11.2(b)(2)"]
+    },
+    {
+      "rule_id": "FDA-LRP-005",
+      "rule_text": "The electronic Lot Release Protocol (e-LRP) Signature Letter must be included as the first page of the lot release protocol PDF file; the authorized official named on the first page of the protocol must be the same person who signs the e-LRP Signature Letter.",
+      "source_section": "III.A.2. Electronic Lot Release Protocol Signature Letter",
+      "source_page": 4,
+      "verbatim_quote": "The e-LRP Signature Letter should be included as the first page of the lot release protocol PDF file. The authorized official noted on the first page of the electronic lot release protocol should be the same person who signs the e-LRP Signature Letter.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11", "21 CFR 11.100"]
+    },
+    {
+      "rule_id": "FDA-LRP-006",
+      "rule_text": "Each electronic lot release protocol PDF file must be assigned a unique filename using alphanumeric characters only (no special characters); the naming convention is: 4-digit year + 4-digit sequential lot number + '.P0' for original protocol or '.PC#' for corrected protocols.",
+      "source_section": "III.A.3. Naming the Electronic Lot Release Protocol File",
+      "source_page": 4,
+      "verbatim_quote": "The e-LRP, in PDF, must be assigned a unique filename for each product lot. The filename is composed of alphanumeric characters. You should not use any special characters in the filename. The first four numbers represent the year of the submission (e.g., 2018). The next four numbers represent the sequential lot submitted for that year (e.g., 0001, 0002, 0003, etc.)... .P0 (zero) specifies an original protocol, and .PC specifies a corrected protocol.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-007",
+      "rule_text": "A corrected lot release protocol is a submission to correct minor clerical or transcription errors or to clarify lot release information in response to FDA questions; corrected protocols must be designated '.PC' followed by a sequential correction number (.PC1, .PC2, etc.).",
+      "source_section": "III.A.3. Naming the Electronic Lot Release Protocol File",
+      "source_page": 4,
+      "verbatim_quote": "A corrected lot release protocol is a submission to correct minor clerical or transcription errors or to clarify lot release information in response to questions by FDA. For submissions under a corrected lot release protocol, designate each corrected protocol using '.PC,' followed by the correction number (i.e., .PC1 represents the first corrected protocol, .PC2 represents the second corrected protocol, etc.).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 610.2(a)"]
+    },
+    {
+      "rule_id": "FDA-LRP-008",
+      "rule_text": "The preferred method for submitting electronic lot release protocols is through FDA's Electronic Submissions Gateway (ESG); manufacturers who cannot use the ESG may submit via CD-ROM as an alternative.",
+      "source_section": "III.B. Electronic Lot Release Protocol Submissions Through FDA's Electronic Submissions Gateway",
+      "source_page": 4,
+      "verbatim_quote": "Currently, our preferred method of transmitting lot release protocols is through FDA's ESG... If manufacturers are not able to provide these submissions to us using the ESG, manufacturers may use other means to submit their lot release protocols to the agency, such as mailing a compact disc read-only memory (CD-ROM).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "CD-ROM and paper submissions are accepted alternatives when ESG cannot be used.",
+      "cross_references": ["21 CFR 11.2(b)(2)", "21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-009",
+      "rule_text": "To use the ESG for lot release protocol submissions, manufacturers must submit a Letter of Non-Repudiation Agreement to comply with 21 CFR 11.100 for electronically signed submissions.",
+      "source_section": "III.B.1.b. Submit a Letter of Non-Repudiation Agreement",
+      "source_page": 5,
+      "verbatim_quote": "The non-repudiation agreement allows FDA to receive electronically signed submissions in compliance with 21 CFR 11.100.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 11.100", "21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-010",
+      "rule_text": "A digital certificate is required for ESG submission; the digital certificate binds the submitter's identity to a pair of electronic keys (public and private) used to encrypt and sign documents.",
+      "source_section": "III.B.1.c. Obtain a Digital Certificate",
+      "source_page": 6,
+      "verbatim_quote": "Digital certificates ensure private and secure submission of electronic documents. The digital certificate binds together the owner's name and a pair of electronic keys (a public key and a private key) that can be used to encrypt and sign documents.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11", "21 CFR 11.100"]
+    },
+    {
+      "rule_id": "FDA-LRP-011",
+      "rule_text": "To obtain an ESG production account, manufacturers must first successfully submit a test lot release protocol through the ESG formatted per section III.A. of this guidance, and then notify CBER's Product Release Branch; only after confirmation from CBER may production submissions be sent.",
+      "source_section": "III.B.2.b-d. Send a Test Submission / ESG Notification / Feedback",
+      "source_page": 6,
+      "verbatim_quote": "To receive an ESG production account, which permits manufacturers to submit lot release protocols through the ESG, manufacturers should first successfully submit a lot release protocol test submission that is formatted as described in section III.A. of this guidance... Manufacturers should send an email message to CBER's Product Release Branch at CBERLotRelease@fda.hhs.gov after sending the test submission to ensure that the Branch has received it.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-012",
+      "rule_text": "When submitting lot release protocols on CD-ROM, the CD-ROM and its case must be labeled with: (a) manufacturer name; (b) submission date (DD-MMM-YYYY format); (c) STN, license number, and type of lot ('FC' for final container, 'B' for bulk, 'C' for concentrated); (d) electronic lot release protocol filename(s); and (e) lot number(s).",
+      "source_section": "III.C.1. Labeling the CD-ROM",
+      "source_page": 8,
+      "verbatim_quote": "You should label your CD-ROM and CD-ROM case to identify your submission with the following information: a. Manufacturer name; b. Date of submission in the format of DD-MMM-YYYY...; c. STN, license number, and type of lot ('FC' for final container, 'B' for bulk, 'C' for Concentrated); d. Electronic lot release protocol filename(s); and e. Lot number(s).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 610.2(a)"]
+    },
+    {
+      "rule_id": "FDA-LRP-013",
+      "rule_text": "CD-ROMs must be packaged carefully using bubble-type protective material or stiff backing in mailing envelopes to ensure they arrive in usable condition; paper-padded envelopes alone are not adequate protection.",
+      "source_section": "III.C.2. Packaging and Shipping",
+      "source_page": 8,
+      "verbatim_quote": "CD-ROMs should be packaged carefully to ensure that they arrive in a usable condition. CD-ROM cases are less vulnerable when shipped in envelopes with bubble-type protective material or stiff backing. Mailing envelopes padded with paper material, only, typically do not provide adequate protection for shipping CD-ROMs.",
+      "severity": "LOW",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 610.2(a)"]
+    },
+    {
+      "rule_id": "FDA-LRP-014",
+      "rule_text": "When submitting lot samples to FDA while release testing is still ongoing, manufacturers must include a Concurrent Testing Letter along with the samples.",
+      "source_section": "III.E. Shipping Samples to FDA When Using the ESG to Submit the Associated Lot Release Protocols",
+      "source_page": 9,
+      "verbatim_quote": "If you submit lot samples while release testing is ongoing, you should include a concurrent testing letter along with your samples.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 610.2(a)", "21 CFR 600.2(c)"]
+    },
+    {
+      "rule_id": "FDA-LRP-015",
+      "rule_text": "The lot release protocol must include a 'reason for submission' section on the first page, and the appropriate box for the reason for submission must be marked.",
+      "source_section": "Appendix 3: Checklist Prior to Submitting an Electronic Lot Release Protocol",
+      "source_page": 12,
+      "verbatim_quote": "Confirm that the 'reason for submission' section is on the first page of the electronic lot release protocol and on the e-LRP Signature Letter. Confirm that the appropriate box for the 'reason for submission' is marked.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR 610.2(a)"]
+    },
+    {
+      "rule_id": "FDA-LRP-016",
+      "rule_text": "The entire electronic lot release protocol file must be text-searchable (except the signed e-LRP Signature Letter portion) and must be virus-free.",
+      "source_section": "Appendix 3: Checklist Prior to Submitting an Electronic Lot Release Protocol",
+      "source_page": 12,
+      "verbatim_quote": "Confirm that your entire electronic lot release protocol is text-searchable. Confirm that your electronic lot release protocol file is virus-free.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "The signed e-LRP Signature Letter portion does not need to be text-searchable.",
+      "cross_references": ["21 CFR Part 11"]
+    },
+    {
+      "rule_id": "FDA-LRP-017",
+      "rule_text": "A lot release protocol table of contents with functional bookmarks or hypertext links must be used to facilitate navigation, particularly for larger protocols; the standard protocol content includes: STN/license number/type of lot, lot number, proper product name, firm name and address, reason for submission, test result pass statement, signature block, and test results (potency, specific activity, pH, moisture, total protein, solubility, sterility, purity, LAL/pyrogen, laser densitometer scan).",
+      "source_section": "III.A.1. Hypertext Links and Bookmarks / Appendix 1",
+      "source_page": 3,
+      "verbatim_quote": "We recommend that you use functional bookmarks or a hypertext linked Table of Contents to facilitate navigating the protocol, especially for larger ones.",
+      "severity": "LOW",
+      "jurisdictions": ["US"],
+      "exceptions": "Required for larger protocols; recommended for all.",
+      "cross_references": ["21 CFR 610.2(a)"]
+    },
+    {
+      "rule_id": "FDA-LRP-018",
+      "rule_text": "A secure email account must be established with FDA to facilitate encrypted communication about electronic lot release protocols; CBER-generated email regulatory communications will only be sent via secure email.",
+      "source_section": "III. Discussion",
+      "source_page": 3,
+      "verbatim_quote": "A secure email account should be established with FDA to protect proprietary and confidential information and to facilitate communication. A secure email address allows for encrypted exchange between the manufacturer and the agency, for example, about your electronic lot release protocol. CBER-generated email regulatory communication will only be sent via secure email.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "None noted.",
+      "cross_references": ["21 CFR Part 11"]
+    }
+  ]
+}

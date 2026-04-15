@@ -1,0 +1,20 @@
+{
+  "exported_at": "2026-03-23T22:30:00Z",
+  "source_rules": 3890,
+  "total_qa_pairs": 6500,
+  "train_pairs": 5850,
+  "validation_pairs": 650,
+  "validation_fraction": 0.1,
+  "qa_type_breakdown": {
+    "verbatim_quote": 2324,
+    "direct_recall": 3639,
+    "threshold_recall": 202,
+    "divergence": 335
+  },
+  "avg_question_chars": 93,
+  "avg_answer_chars": 345,
+  "output_files": {
+    "train": "training/finetune-dataset.jsonl",
+    "validation": "training/finetune-validation.jsonl"
+  }
+}

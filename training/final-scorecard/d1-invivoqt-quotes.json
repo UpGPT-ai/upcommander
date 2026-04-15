@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "D1 Final Sub-Pass — In Vivo QT Best Practice Verbatim Quotes (E14/S7B Q&As Q3.1–Q3.5)",
+    "date": "2026-03-23",
+    "source_document": "ICH E14/S7B Q&As — Questions & Answers on the ICH E14 and S7B Guidelines (Step 4, 21 February 2022)",
+    "source_file": "training/stage-1/ich-complete/E14-S7B_QAs_Step4_2022_0221.pdf",
+    "pages_read": "39-46",
+    "section_covered": "Section 3: Best Practice Considerations for the In Vivo QT Studies (Q3.1–Q3.5); Section 4: Principles for Proarrhythmia Models (Q4.1–Q4.2)",
+    "purpose": "Verbatim quote extraction for PV-08 through PV-19 minor items related to in vivo QT study design, species selection, exposure, HR correction, sensitivity, and reporting"
+  },
+
+  "q3_invivo_qt_best_practices": {
+
+    "Q3_1_species_selection_and_study_design": {
+      "question": "What are best practice considerations for species selection and general design of the (standard) in vivo QT study?",
+      "source_page": 39,
+      "source_quote_primary": "The most appropriate species should be selected and justified (ICH S7B, Section 3.1.3). It is preferable to use the same animal species in the safety pharmacology and non-rodent toxicity studies to facilitate understanding of the possible relationship between adverse cardiovascular pharmacodynamic effects and structural effects on the heart, and to obtain complementary information on systemic exposure level (toxicokinetics).",
+      "source_quote_secondary": "While it is customary to use conscious freely moving telemeterized animals for the in vivo QT studies, the choice of alternative model approaches (e.g., anesthetized or paced animals) might be justified in certain circumstances to achieve adequate exposures or to overcome specific compound-related challenges (e.g., changes in heart rate, tolerability, or bioavailability limitations in conscious animals).",
+      "rules_verified": [
+        {
+          "rule_path": "core_battery.cardiovascular_system.s7b_specific_requirements.in_vivo_qt_assay.species_selection",
+          "rule_text": "Species selection for in vivo QT: most appropriate species selected and justified; prefer same species as non-rodent toxicology studies; telemeterized conscious animals customary; anesthetized/paced alternative justified for specific challenges",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q3.1 (p.39) directly states the species preference for toxicology alignment and the justification requirement. Telemeterized conscious animal standard plus alternative approach acceptability are verbatim confirmed."
+        }
+      ]
+    },
+
+    "Q3_2_exposure_assessment": {
+      "question": "What should be considered for exposure assessment during the in vivo QT study?",
+      "source_page": 39,
+      "source_quote_primary": "The ICH S7B guideline states that drug exposures should include and exceed anticipated therapeutic concentrations. If the in vivo QT data are to be used as part of an integrated risk assessment for situations described in ICH E14 Q&As 5.1 & 6.1, the exposure should cover the anticipated high clinical exposure scenario (see S7B Q&A 1.1). An assessment of exposure in the same animals used for the pharmacodynamic assessment is encouraged. Sampling should take place at relevant timepoints and in a manner that limits interference with the pharmacodynamic effects. This could be done by sampling complete pharmacokinetic profiles in the same animals on a separate day after an adequate washout or different animals. At least one pharmacokinetic sample should be obtained during the pharmacodynamic assessment day to demonstrate consistency with the full pharmacokinetic profiles.",
+      "source_quote_secondary": "In certain cases, the analysis of QTc interval together with adequate pharmacokinetic sampling makes it possible to perform dedicated exposure-response modeling similar to concentration-QT analysis for clinical QT studies. This can be helpful when the study should be powered to detect an effect similar to dedicated QT studies in humans (e.g., when using in vivo QT data as part of an integrated nonclinical and clinical risk assessment as described in ICH E14 Q&A 6.1).",
+      "rules_verified": [
+        {
+          "rule_path": "core_battery.cardiovascular_system.s7b_specific_requirements.in_vivo_qt_assay.exposure_requirements",
+          "rule_text": "Exposure must include and exceed anticipated therapeutic concentrations; high clinical exposure scenario required for IRA use; at least one PK sample on PD assessment day; exposure-response modeling analogous to clinical concentration-QT analysis can be applied",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q3.2 (p.39) provides the complete verbatim basis: exceed therapeutic concentrations, same-animal PK encouraged, minimum one PK sample on PD day, exposure-response modeling as optional enhancement. Prior source was S7B §3.1.3 alone; Q3.2 adds the IRA-specific exposure requirement and PK sampling protocol."
+        }
+      ]
+    },
+
+    "Q3_3_hr_correction_method": {
+      "question": "What information is needed to support the choice of heart rate correction method in an in vivo QT assay?",
+      "source_page": 40,
+      "source_quote": "Optimally, the sponsor should demonstrate the independence of QTc to RR intervals observed in the study through QTc versus RR plots accompanied by additional information (e.g., number of matched QTc-RR pairs, correlation metric, 95% confidence intervals, p-values). QT-RR interval relationship is also important. Justification of correction factors used for QT measures should be provided when test drugs affect heart rate. In certain cases, individual QT correction based on QT-RR relationship is a preferred method as it is more accurate and sensitive than the general methods such as Bazett, Fridericia, or Van de Water when the test drugs affect heart rate. The main reason for not using correction formulae based on historical data is the fixed rate correction coefficients. Non-rodent species show species-specific and individual differences in their QT-RR relationships.",
+      "rules_verified": [
+        {
+          "rule_path": "integrated_risk_assessment_framework.in_vivo_qt_study_design.hr_correction",
+          "rule_text": "When test drugs affect heart rate: individual QT correction based on QT-RR relationship is preferred over Bazett/Fridericia/Van de Water; QTc vs RR plots with correlation metrics required; justification for correction method must be provided",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q3.3 (p.40) provides verbatim confirmation that individual QT-RR correction is preferred when drugs affect HR, and names the fallback methods (Bazett, Fridericia, Van de Water) explicitly. The reason for preference (fixed rate correction coefficients don't handle species-specific QT-RR variation) is also now verbatim-sourced. Prior S7B §3.1.3 confirmation was correct but lacked this specificity."
+        }
+      ]
+    },
+
+    "Q3_4_assay_sensitivity": {
+      "question": "How should the sensitivity of the assay be evaluated?",
+      "source_page": 41,
+      "source_quote_primary": "The test system used for an in vivo QT assay should provide a robust response. Assay sensitivity of relevant functional endpoints should be evaluated and reported to enable data interpretation (in supporting initiating first-in-human studies and/or an integrated nonclinical and clinical integrated risk assessment to be applied under the scenarios in ICH E14 Q&As 5.1 or 6.1) and contextualization.",
+      "source_quote_ira_use": "If study results are to be used to support an integrated nonclinical and clinical risk assessment described in ICH E14 Q&A 6.1, then the study should have sensitivity to detect a QTc prolongation effect of a magnitude similar to dedicated clinical QT studies, taking into consideration inter-species differences in the normal range of values for the QTc interval. The overall sensitivity of the nonclinical assay in comparison to clinical QT studies depends on both the electrocardiographic assessment and the exposure achieved in the in vivo assay relative to high clinical exposure.",
+      "source_quote_example": "Hypothetical Example: The minimal detectable difference might be 5 milliseconds if drug exposure in the animal study only covers the high clinical exposure but might be higher if a larger multiple of high clinical exposure is achieved (e.g., 10 milliseconds if 3X high clinical exposure is achieved; or a higher QTc threshold if an even larger multiple is achieved).",
+      "rules_verified": [
+        {
+          "rule_path": "core_battery.cardiovascular_system.s7b_specific_requirements.in_vivo_qt_assay.sensitivity_requirements",
+          "rule_text": "In vivo QT assay must provide robust response; sensitivity evaluated and reported; for IRA use (E14 Q&A 6.1), must detect QTc prolongation similar to clinical QT studies; sensitivity depends on ECG assessment quality and exposure multiple relative to high clinical exposure; 5 ms minimal detectable difference example at 1X clinical exposure",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q3.4 (pp.41-42) provides the complete sensitivity framework: general robustness requirement, IRA-specific clinical-grade sensitivity standard, and the 5 ms/10 ms/higher hypothetical example keyed to exposure multiples. Prior confirmation of this rule was described as partial (referenced IWG Concept Paper). Q3.4 is now the authoritative finalized ICH source."
+        }
+      ]
+    },
+
+    "Q3_5_reporting_conventions": {
+      "question": "What are the recommended conventions for presenting the pharmacodynamic and pharmacokinetic results of an in vivo QT assay?",
+      "source_page": 42,
+      "source_quote_pd": "Pharmacodynamic Content: Summary tables and figures showing absolute mean values, mean percent change from baseline, confidence intervals, and p-values for changes from baseline and vehicle control should be included. If study results are being used to support ICH E14 Q&A 6.1, then data from positive controls should be included or appended. If historical positive controls are used, then the variance of the present data should be consistent with that seen historically, which can be demonstrated by reporting minimal detectable differences with by time analysis. A statement should be provided that the data for the new drug and the historical data were collected according to the same protocol and statistical analysis plan.",
+      "source_quote_pk": "Pharmacokinetic Content: Tabulations of summary statistics for Cmax, AUC, and Tmax for the parent drug and metabolites along with plasma concentration vs. time plots (if sufficient samples have been collected to support their calculation) should be provided.",
+      "source_quote_individual": "Individual animal data should be provided.",
+      "rules_verified": [
+        {
+          "rule_path": "reporting_requirements.in_vivo_qt_study_reports",
+          "rule_text": "In vivo QT study reports must include: (PD) absolute mean values + percent change from baseline + CIs + p-values vs baseline and vehicle; positive control data for IRA use; (PK) Cmax/AUC/Tmax tabulations + plasma concentration-time plots; individual animal data",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q3.5 (p.42) provides the complete reporting structure verbatim. Three content categories (PD content, positive control, PK content) and the individual animal data requirement are all directly stated. These reporting requirements extend and supplement the general reporting rules verified from S7A §2.11 (study reconstruction, justification) with in vivo QT-specific reporting standards."
+        }
+      ]
+    }
+  },
+
+  "q4_proarrhythmia_models": {
+
+    "Q4_1_6_principles": {
+      "question": "General principles for proarrhythmia risk prediction models to be used in integrated risk assessment",
+      "source_page": 43,
+      "source_quote_intro": "The following general principles should be applied to all proarrhythmia risk prediction models intended to be used as part of an integrated risk assessment for regulatory purposes.",
+      "six_principles_verbatim": {
+        "principle_1": "A defined endpoint consistent with the context of use of the model.",
+        "principle_2": "A fully disclosed algorithm to translate experimental measurements (model input) to proarrhythmia risk (model output), allowing independent reproduction of the model development process using the associated training and validation datasets to evaluate the model performance.",
+        "principle_3": "A defined domain of applicability/scope and limitations of the model. This includes the experimental protocols to generate model input (experimental data capturing pharmacological effects of drug), and the compounds tested should have the same arrhythmic mechanisms covered by the model.",
+        "principle_4": "A prespecified analysis plan and criteria to assess model predictivity. The analysis plan should include methods to separate the training and validation steps. In the training step, a series of reference compounds is used to adjust the model. In the validation step, another series of reference compounds is used to evaluate the performance of the pre-specified model. The reference compounds used for the training and validation steps should not overlap.",
+        "principle_5": "A mechanistic interpretation of the model, which describes the relationship between the model inputs and mechanism for the arrhythmia.",
+        "principle_6": "The uncertainty in the model inputs should be captured and propagated to the model predictions. The experimental variability associated with model input should be quantified using appropriate statistical methods and then translated into probabilities of the predicted risk."
+      },
+      "rules_verified": [
+        {
+          "rule_path": "integrated_risk_assessment_framework.proarrhythmia_model_qualification.six_principles",
+          "rule_text": "Six principles for proarrhythmia risk prediction models: (1) defined endpoint; (2) fully disclosed reproducible algorithm; (3) defined domain/scope/limitations; (4) prespecified analysis plan with separate training/validation compound sets; (5) mechanistic interpretation; (6) uncertainty quantified and propagated to predictions",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q4.1 (pp.43-44) provides all 6 principles verbatim. These correspond directly to D5 (proarrhythmia criteria) which was already scored at 100%. Confirming the 6 principles are fully sourced here for completeness. This is additional verbatim anchoring for rules already counted as VERIFIED."
+        }
+      ]
+    },
+
+    "Q4_2_regulatory_submission": {
+      "question": "How can a sponsor use a model for regulatory submission and what are the limitations?",
+      "source_page": 45,
+      "source_quote_primary": "Sponsors can use results from a qualified proarrhythmia model as one component in the totality of evidence approach to risk assessment under the context of use for which the model was developed and qualified.",
+      "source_quote_appendix": "If a proarrhythmia model is included in a regulatory submission, proof of qualification of the model under the guidance of the general principles in this Q&A should be provided in an appendix to the study report.",
+      "source_quote_ira": "...proarrhythmia risk prediction model as part of an integrated risk assessment that incorporates all relevant nonclinical and clinical information.",
+      "rules_verified": [
+        {
+          "rule_path": "integrated_risk_assessment_framework.proarrhythmia_model_qualification.regulatory_use",
+          "rule_text": "Qualified proarrhythmia models used as one component in totality of evidence; proof of qualification required in appendix to study report; model must be used within its qualified context of use as part of an IRA incorporating all nonclinical and clinical information",
+          "verification_status": "VERIFIED",
+          "upgrade_note": "Q4.2 (pp.45-46) provides verbatim confirmation of: (1) one-component-in-totality role; (2) appendix qualification proof requirement; (3) IRA integration requirement. D5 was already at 100% (these are rules already VERIFIED); this provides additional verbatim anchoring."
+        }
+      ]
+    }
+  },
+
+  "net_impact_assessment": {
+    "note": "Q3.1 through Q3.5 provide verbatim quotes for in vivo QT best practice rules. Q4.1 and Q4.2 re-confirm already-VERIFIED D5 proarrhythmia rules with additional verbatim anchoring. The Q3 rules (species selection, exposure, HR correction, sensitivity, reporting) represent the primary new verifications from this pass.",
+    "q3_rules_newly_verified": 5,
+    "q4_rules_re_anchored": 2,
+    "d1_impact": "The Q3 rules (in vivo QT best practice sub-rules) were previously confirmed in substance from S7B §§3.1-3.2 but without verbatim quote extraction. This pass provides the verbatim anchoring. Net: approximately 5 additional rules upgraded from PARTIALLY_VERIFIED to VERIFIED.",
+    "remaining_after_this_pass": "~7 minor items remain — these are sub-items within S7B §§3.1.1-3.1.2 (hERG ion channel sub-rules) and any IRA sub-items not covered by Q3-Q4. S7B §§3.1.1-3.1.2 read required to close completely.",
+    "d1_score_estimate": {
+      "prior": 90.2,
+      "new_estimate": 94.0,
+      "calculation": "Approx 124/132 if 5 additional rules closed (119+5=124; 124/132=93.9%)",
+      "note": "Exact count requires cross-referencing with base file rule tracking. This is an estimate pending final count update."
+    }
+  }
+}

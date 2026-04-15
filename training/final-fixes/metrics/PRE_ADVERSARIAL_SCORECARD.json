@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-23 13:29:37",
+  "status": "pre_adversarial_checkpoint",
+  "target_scores": {
+    "factual_accuracy": 100,
+    "severity_consistency": 100,
+    "ectd_module_consistency": 100,
+    "source_fidelity": 100,
+    "safety_pharmacology": 100
+  },
+  "minimum_threshold": 98,
+  "scores": {
+    "factual_accuracy": "100",
+    "severity_consistency": "100",
+    "ectd_module_consistency": "15",
+    "source_fidelity": "100",
+    "safety_pharmacology": "200"
+  },
+  "flags": [
+
+  ],
+  "adversarial_ready": false,
+  "workers_completed": ["accuracy", "ectd-mapping", "safety-pharm"]
+}

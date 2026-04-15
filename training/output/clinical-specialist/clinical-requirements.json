@@ -1,0 +1,742 @@
+{
+  "metadata": {
+    "generated": "2026-03-22",
+    "sources": [
+      "ICH E1 - Population Exposure (1994)",
+      "ICH E2A - Clinical Safety Data Management: Pharmacovigilance (1994)",
+      "ICH E5(R1) - Ethnic Factors in Acceptability of Foreign Clinical Data (1998)",
+      "ICH E6(R2) - Good Clinical Practice (2016)",
+      "ICH E9 - Statistical Principles for Clinical Trials (1998)",
+      "ICH S7A - Safety Pharmacology Studies (2000)",
+      "ICH S7B - Nonclinical Evaluation of QT Prolongation (2005)",
+      "FDA Guidance - Clinical Trial Endpoints for Cancer Drugs (2018)",
+      "FDA Guidance - Adaptive Designs for Clinical Trials (2019)",
+      "FDA Guidance - Immunogenicity Assessment for Therapeutic Proteins (2014)",
+      "21 CFR 201.56/201.57 - Physician Labeling Rule (regulatory knowledge)"
+    ],
+    "version": "1.0.0"
+  },
+
+  "clinical_trial_design_requirements": {
+    "by_phase": {
+      "preclinical": {
+        "safety_pharmacology": {
+          "core_battery_required_before_fih": true,
+          "systems": {
+            "cns": {
+              "assessments": ["motor_activity", "behavioral_changes", "coordination", "sensory_motor_reflex_responses", "body_temperature"],
+              "methods": ["functional_observation_battery", "modified_irwins_test"]
+            },
+            "cardiovascular": {
+              "assessments": ["blood_pressure", "heart_rate", "ecg"],
+              "additional": "in_vivo_in_vitro_ex_vivo_evaluations_for_repolarization_and_conductance_abnormalities"
+            },
+            "respiratory": {
+              "assessments": ["respiratory_rate", "tidal_volume", "hemoglobin_oxygen_saturation"],
+              "note": "clinical_observation_alone_is_NOT_adequate"
+            }
+          },
+          "glp_required": true,
+          "source": "ICH S7A"
+        },
+        "cardiac_safety": {
+          "herg_assay": {
+            "required": true,
+            "method": "voltage_clamp_electrophysiology",
+            "binding_assays_NOT_sufficient": true,
+            "concentration_range": "span_and_exceed_anticipated_maximal_therapeutic_plasma_concentration",
+            "positive_controls": "required_in_every_study",
+            "glp_required": true,
+            "inappropriate_species": ["adult_rat", "adult_mouse"],
+            "appropriate_species": ["rabbit", "ferret", "guinea_pig", "dog", "swine", "human_tissue"]
+          },
+          "in_vivo_qt_study": {
+            "required": true,
+            "primary_endpoint": "QT_interval",
+            "additional_parameters": ["blood_pressure", "heart_rate", "PR_interval", "QRS_duration", "arrhythmias"],
+            "appropriate_species": ["dog", "monkey", "swine", "rabbit", "ferret", "guinea_pig"],
+            "inappropriate_species": ["adult_rat", "adult_mouse"],
+            "heart_rate_correction": "Bazett_or_Fridericia_or_individual_QT_RR_relationship",
+            "glp_required": true
+          },
+          "integrated_risk_assessment": {
+            "required": true,
+            "factors": [
+              "assay_sensitivity_and_specificity",
+              "potency_relative_to_reference_compounds",
+              "safety_margins_vs_therapeutic_exposure",
+              "metabolite_contributions",
+              "species_differences_in_metabolism"
+            ],
+            "timing": "prior_to_first_in_human"
+          },
+          "source": "ICH S7B"
+        }
+      },
+
+      "phase_1": {
+        "description": "First-in-human, dose escalation, PK/PD characterization",
+        "design_requirements": {
+          "gcp_compliance": "mandatory_per_ICH_E6_R2",
+          "irb_iec_approval": "required_before_any_subject_enrolled",
+          "informed_consent": "required_from_every_subject",
+          "safety_pharmacology_core_battery": "must_be_completed_before_fih",
+          "cardiac_risk_assessment": "S7B_studies_should_be_completed_prior_to_fih"
+        },
+        "ethnic_factor_considerations": {
+          "early_pk_characterization": "recommended_across_major_racial_groups",
+          "intrinsic_factors_to_assess": ["genetic_polymorphism_of_drug_metabolism", "body_weight", "organ_function"],
+          "source": "ICH E5"
+        },
+        "adaptive_designs_applicable": [
+          "dose_escalation_crm",
+          "bayesian_adaptive_dose_finding"
+        ],
+        "immunogenicity_for_biologics": {
+          "baseline_ada_sampling": "required_before_first_dose",
+          "risk_assessment": "should_begin_at_earliest_stage",
+          "staggered_dosing": "appropriate_for_first_in_human",
+          "source": "FDA Immunogenicity"
+        }
+      },
+
+      "phase_2": {
+        "description": "Dose-ranging, preliminary efficacy, safety signal detection",
+        "design_options": {
+          "parallel_group": "most_common",
+          "crossover": "appropriate_for_chronic_stable_disease_with_reversible_drug_effects",
+          "factorial": "efficient_for_evaluating_two_treatments_simultaneously",
+          "adaptive": {
+            "applicable_types": [
+              "adaptive_dose_ranging",
+              "sample_size_re_estimation",
+              "adaptive_enrichment",
+              "seamless_phase_2_3"
+            ],
+            "prespecification_required": true,
+            "source": "FDA Adaptive Designs"
+          }
+        },
+        "endpoint_selection": {
+          "cancer_trials": {
+            "orr": "direct_measure_of_antitumor_activity_evaluable_in_single_arm_studies",
+            "pfs": "preferred_over_ttp_because_includes_deaths",
+            "discuss_with_fda": "at_end_of_phase_2_meeting"
+          },
+          "source": "FDA Clinical Trial Endpoints"
+        },
+        "statistical_requirements": {
+          "sample_size_calculation": "required_in_protocol",
+          "primary_variable": "must_be_identified",
+          "analysis_plan": "should_be_described_in_protocol",
+          "source": "ICH E9"
+        }
+      },
+
+      "phase_3": {
+        "description": "Confirmatory efficacy and safety, pivotal trials for registration",
+        "population_exposure_requirements": {
+          "total_patients_exposed": 1500,
+          "patients_treated_6_months": "300_to_600",
+          "patients_treated_12_months": 100,
+          "applies_to": "long_term_treatment_of_non_life_threatening_conditions",
+          "japan_exception": "500_to_1500_due_to_postmarketing_surveillance",
+          "detectable_ade_incidence_short_term": "approximately_1_percent",
+          "rare_events_not_characterized_preapproval": "less_than_1_in_1000",
+          "source": "ICH E1"
+        },
+        "design_requirements": {
+          "randomized_controlled": "standard_for_confirmatory_trials",
+          "multicentre": {
+            "reasons": ["efficiency_in_accrual", "generalizability"],
+            "statistical_model": "must_account_for_centre_effects",
+            "treatment_by_centre_interaction": "should_be_explored_not_routinely_included"
+          },
+          "superiority_trials": {
+            "primary_analysis": "full_analysis_set_ITT",
+            "secondary_analysis": "per_protocol_set"
+          },
+          "equivalence_non_inferiority_trials": {
+            "equivalence_margin": "must_be_prespecified_smaller_than_known_superiority_effect",
+            "both_fas_and_pp": "both_important_ideally_both_support_conclusion",
+            "non_significant_test_is_NOT_equivalence": true,
+            "active_comparator": "must_have_well_established_efficacy"
+          },
+          "source": "ICH E9"
+        },
+        "adaptive_designs": {
+          "group_sequential": {
+            "description": "most_widely_used_adaptive_design",
+            "expected_sample_size_reduction": "approximately_15_percent",
+            "stopping_for_efficacy": "reserved_for_compelling_ethical_reasons",
+            "stopping_for_futility": {
+              "binding": "trial_must_stop_if_boundary_crossed",
+              "nonbinding": "guidelines_may_not_be_followed_no_type_I_error_impact"
+            }
+          },
+          "sample_size_re_estimation": {
+            "blinded": "generally_no_type_I_error_inflation",
+            "unblinded": "requires_special_methods_to_preserve_type_I_error"
+          },
+          "adaptive_enrichment": "can_restrict_to_subpopulation_at_interim",
+          "platform_trials": "multiple_treatments_vs_common_control",
+          "prespecification": "MANDATORY_all_details_before_trial_initiation",
+          "source": "FDA Adaptive Designs"
+        },
+        "endpoint_requirements_cancer": {
+          "overall_survival": {
+            "status": "most_reliable_preferred_endpoint",
+            "requires": "randomized_controlled_study",
+            "single_arm": "NOT_adequate"
+          },
+          "progression_free_survival": {
+            "can_serve_as": ["surrogate_for_accelerated_approval", "surrogate_for_traditional_approval", "clinical_benefit"],
+            "requires": "randomized_controlled_study",
+            "independent_review": "recommended_when_blinding_compromised"
+          },
+          "objective_response_rate": {
+            "can_serve_as": ["accelerated_approval_surrogate", "traditional_approval_surrogate"],
+            "single_arm_acceptable": true,
+            "independent_review": "recommended",
+            "stable_disease_NOT_component": true
+          },
+          "disease_free_survival": {
+            "setting": "adjuvant",
+            "can_serve_as": ["clinical_benefit", "surrogate_accelerated", "surrogate_traditional"]
+          },
+          "patient_reported_outcomes": {
+            "status": "clinical_benefit_not_surrogate",
+            "requires_randomization": true,
+            "blinding_critical": true,
+            "validated_instruments_needed": true
+          },
+          "source": "FDA Clinical Trial Endpoints"
+        },
+        "immunogenicity_for_biologics": {
+          "duration_of_data_collection": "one_year_or_more_for_chronic_products",
+          "neutralizing_antibody_testing": "required",
+          "sampling": {
+            "baseline": "required_before_first_dose",
+            "post_baseline": "more_frequent_early_less_frequent_later",
+            "event_driven": "triggered_by_suspected_immunologic_adverse_events",
+            "trough_samples": "drawn_prior_to_dosing"
+          },
+          "serum_banking": "always_advisable",
+          "source": "FDA Immunogenicity"
+        }
+      },
+
+      "phase_4_postmarketing": {
+        "description": "Post-approval safety surveillance and confirmatory studies",
+        "accelerated_approval_requirements": {
+          "condition": "must_conduct_confirmatory_studies_to_verify_clinical_benefit",
+          "failure_consequence": "fda_may_withdraw_approval",
+          "source": "FDA Clinical Trial Endpoints"
+        },
+        "immunogenicity_monitoring": {
+          "postmarketing_surveillance": "important_for_rare_immunologic_events",
+          "rare_risks_not_detected_preapproval": true,
+          "source": "FDA Immunogenicity"
+        }
+      }
+    }
+  },
+
+  "safety_reporting_requirements": {
+    "definitions": {
+      "adverse_event": "any_untoward_medical_occurrence_in_patient_administered_pharmaceutical_not_necessarily_causal",
+      "adverse_drug_reaction_preapproval": "all_noxious_unintended_responses_related_to_any_dose_where_causal_relationship_is_reasonable_possibility",
+      "serious_adverse_event_criteria": [
+        "results_in_death",
+        "is_life_threatening",
+        "requires_inpatient_hospitalization_or_prolongation",
+        "results_in_persistent_or_significant_disability",
+        "is_congenital_anomaly_birth_defect"
+      ],
+      "important_medical_events": "may_jeopardize_patient_or_require_intervention_to_prevent_serious_outcome",
+      "unexpected_adr": "nature_or_severity_not_consistent_with_investigators_brochure",
+      "serious_vs_severe": "serious_is_outcome_based_for_regulatory_reporting_severe_is_intensity_based",
+      "source": "ICH E2A"
+    },
+
+    "expedited_reporting": {
+      "what_requires_expedited_reporting": "all_ADRs_that_are_both_SERIOUS_and_UNEXPECTED",
+      "fatal_or_life_threatening": {
+        "timeline": "7_calendar_days_from_first_knowledge",
+        "followup": "complete_report_within_8_additional_days_total_15",
+        "method": "telephone_fax_or_writing"
+      },
+      "all_other_serious_unexpected": {
+        "timeline": "15_calendar_days_from_first_knowledge"
+      },
+      "minimum_criteria_for_initial_report": [
+        "identifiable_patient",
+        "suspect_medicinal_product",
+        "identifiable_reporting_source",
+        "event_or_outcome_identified_as_serious_and_unexpected"
+      ],
+      "NOT_requiring_expedited_reporting": [
+        "serious_but_expected_reactions",
+        "serious_events_not_considered_related_to_study_product",
+        "non_serious_adverse_reactions"
+      ],
+      "source": "ICH E2A"
+    },
+
+    "other_rapid_communications": [
+      "expected_serious_ADR_with_clinically_important_increase_in_rate",
+      "significant_hazard_to_patient_population_eg_lack_of_efficacy_in_life_threatening_disease",
+      "major_safety_finding_from_newly_completed_animal_study"
+    ],
+
+    "investigator_responsibilities": {
+      "all_saes": "report_immediately_to_sponsor_except_protocol_specified_exemptions",
+      "immediate_reports": "followed_by_detailed_written_reports",
+      "subject_identification": "unique_code_numbers_only_no_names",
+      "deaths": "supply_additional_requested_information_including_autopsy_reports",
+      "critical_lab_abnormalities": "report_per_protocol_specified_timelines",
+      "source": "ICH E6 Section 4.11"
+    },
+
+    "sponsor_responsibilities": {
+      "ongoing_safety_evaluation": "continuous_responsibility",
+      "expedited_reporting_to_all_parties": "investigators_IRBs_IECs_regulatory_authorities",
+      "compliance_with": "ICH_E2A_and_applicable_regulatory_requirements",
+      "periodic_safety_updates": "as_required_by_regulatory_authorities",
+      "source": "ICH E6 Section 5.16-5.17"
+    },
+
+    "blinded_trial_handling": {
+      "recommendation": "break_blind_only_for_specific_patient_with_reportable_serious_ADR",
+      "biometrics_personnel": "maintain_blind",
+      "exception": "when_fatal_or_serious_outcome_is_primary_efficacy_endpoint_discuss_with_regulators",
+      "source": "ICH E2A"
+    },
+
+    "report_format": {
+      "standard": "CIOMS_I_form",
+      "data_elements": {
+        "patient": ["initials", "identifiers", "gender", "age_dob", "weight", "height"],
+        "suspected_product": ["brand_name", "INN", "batch_number", "indication", "dosage_form_strength", "daily_dose_regimen", "route", "start_stop_dates"],
+        "other_treatments": "same_detail_as_suspected_product",
+        "reaction_details": ["description", "body_site", "severity", "seriousness_criteria", "diagnosis", "dates", "dechallenge_rechallenge", "outcome", "autopsy_findings"],
+        "reporter": ["name", "address", "telephone", "profession"],
+        "administrative": ["source_type", "date_received", "country", "report_type", "regulatory_codes", "sponsor_case_id"]
+      },
+      "source": "ICH E2A"
+    },
+
+    "immunogenicity_safety_monitoring": {
+      "clinical_consequences_categories": [
+        {
+          "type": "anaphylaxis",
+          "diagnosis_criteria": "Sampson_2006_three_clinical_criteria_capturing_95_percent_of_cases",
+          "labs": ["serum_histamine", "serum_tryptase", "complement_components", "product_specific_IgE"]
+        },
+        {
+          "type": "cytokine_release_syndrome",
+          "panel": ["IL_2", "IL_6", "IFN_gamma", "TNF_alpha", "CRP", "IL_10"],
+          "clinical_signs": ["fever", "erythema", "hypotension"]
+        },
+        {
+          "type": "infusion_reactions",
+          "note": "categorization_without_detail_is_NOT_recommended_use_descriptive_terminology"
+        },
+        {
+          "type": "serum_sickness_immune_complex_disease",
+          "signs": ["delayed_fever", "rash", "arthralgia", "myalgia", "hematuria", "proteinuria", "serositis"],
+          "labs": "circulating_immune_complexes_and_complement_activation"
+        },
+        {
+          "type": "cross_reactivity_to_endogenous_proteins",
+          "severity": "can_be_catastrophic_eg_pure_red_cell_aplasia_from_anti_erythropoietin",
+          "special_populations": ["women_of_childbearing_potential", "pediatric"]
+        }
+      ],
+      "source": "FDA Immunogenicity"
+    }
+  },
+
+  "statistical_analysis_requirements": {
+    "prespecification": {
+      "protocol_must_contain": [
+        "hypotheses_to_be_tested",
+        "treatment_effects_to_be_estimated",
+        "statistical_methods_for_primary_and_secondary_variables",
+        "underlying_statistical_model",
+        "sample_size_calculation_with_assumptions",
+        "analysis_populations_defined",
+        "handling_of_missing_data",
+        "multiplicity_adjustment_plan"
+      ],
+      "statistical_analysis_plan": {
+        "timing": "finalized_before_breaking_blind",
+        "relationship": "technical_elaboration_of_protocol",
+        "formal_record": "when_finalized_and_when_blind_broken"
+      },
+      "only_confirmatory": "results_from_prespecified_analyses_only",
+      "source": "ICH E9"
+    },
+
+    "sample_size": {
+      "required_specifications": [
+        "primary_variable",
+        "test_statistic",
+        "null_hypothesis",
+        "alternative_hypothesis_with_effect_size",
+        "type_I_error_rate",
+        "type_II_error_rate",
+        "approach_to_withdrawals_and_violations"
+      ],
+      "type_I_error": "conventionally_5_percent_or_less",
+      "type_II_error": "conventionally_10_to_20_percent_ie_power_80_to_90",
+      "basis_of_estimates": "published_data_or_earlier_trials",
+      "sensitivity_analysis": "investigate_sensitivity_to_deviations_provide_range",
+      "equivalence_trials": "based_on_confidence_interval_within_equivalence_margins",
+      "source": "ICH E9"
+    },
+
+    "analysis_populations": {
+      "full_analysis_set_itt": {
+        "definition": "all_randomized_subjects_with_minimal_justified_exclusions",
+        "acceptable_exclusions": [
+          "failure_to_satisfy_major_entry_criteria",
+          "failure_to_take_at_least_one_dose",
+          "lack_of_any_data_post_randomization"
+        ],
+        "role_superiority": "primary_analysis_conservative_strategy",
+        "role_equivalence": "NOT_conservative_use_carefully"
+      },
+      "per_protocol_set": {
+        "definition": "subset_of_FAS_compliant_with_protocol",
+        "criteria": ["minimum_exposure_completed", "primary_variable_available", "no_major_protocol_violations"],
+        "role_superiority": "secondary_analysis",
+        "role_equivalence": "important_ideally_concordant_with_FAS"
+      },
+      "safety_analysis_set": {
+        "definition": "all_subjects_who_received_at_least_one_dose",
+        "requirements": "comprehensive_collection_of_safety_data"
+      },
+      "both_fas_and_pp": "should_be_conducted_in_confirmatory_trials",
+      "source": "ICH E9"
+    },
+
+    "multiplicity_adjustments": {
+      "sources_of_multiplicity": [
+        "multiple_primary_variables",
+        "multiple_treatment_comparisons",
+        "repeated_evaluation_over_time",
+        "interim_analyses"
+      ],
+      "preferred_reduction_methods": [
+        "single_key_primary_variable",
+        "critical_treatment_contrast",
+        "summary_measure_eg_AUC",
+        "composite_variable"
+      ],
+      "when_required": "remaining_multiplicity_after_reduction_must_be_addressed_in_protocol",
+      "source": "ICH E9"
+    },
+
+    "missing_data": {
+      "principle": "every_effort_to_fulfill_protocol_data_collection",
+      "methods_must_be": "predefined_in_protocol",
+      "sensitivity_analysis": "required_especially_when_substantial_missing_data",
+      "imputation_techniques": "range_from_LOCF_to_complex_mathematical_models",
+      "assumptions": "must_be_clearly_explained",
+      "robustness": "must_be_demonstrated",
+      "continued_collection": "measurements_at_loss_to_followup_are_valuable",
+      "source": "ICH E9"
+    },
+
+    "interim_analysis": {
+      "planning": "must_be_carefully_planned_in_advance_described_in_protocol",
+      "group_sequential_methods": ["OBrien_Fleming", "Pocock", "Lan_DeMets_alpha_spending"],
+      "stopping_guidelines": "must_be_clearly_described_with_properties",
+      "confidentiality": "completely_confidential_process_staff_remain_blind",
+      "unplanned_interim": "should_be_avoided_may_flaw_results",
+      "idmc_role": "may_review_or_conduct_interim_analysis",
+      "type_I_error_control": "overall_probability_must_always_be_controlled",
+      "source": "ICH E9"
+    },
+
+    "subgroup_analysis": {
+      "pre_trial": "identify_covariates_and_factors_expected_to_influence_primary_variable",
+      "stratification_factors": "should_be_accounted_for_in_analysis",
+      "baseline_covariates": "special_attention_to_centre_effects_and_baseline_measurements",
+      "post_randomization_covariates": "NOT_advisable_to_adjust_for_these",
+      "exploratory_nature": "most_subgroup_analyses_are_exploratory_interpret_cautiously",
+      "efficacy_claims_from_subgroup_only": "unlikely_to_be_accepted",
+      "source": "ICH E9"
+    },
+
+    "adaptive_design_statistics": {
+      "type_I_error_control": {
+        "requirement": "must_address_possibility_of_inflation",
+        "one_sided_level": "typically_0.025",
+        "methods": {
+          "group_sequential": "well_established_boundary_methods",
+          "unblinded_ssr": "combining_test_statistics_or_p_values_across_stages",
+          "adaptive_enrichment": "multiplicity_from_stages_AND_populations",
+          "bayesian": "simulations_often_critical"
+        },
+        "simulation_requirements": {
+          "null_scenarios": "series_covering_plausible_parameter_range",
+          "iterations": "100000_per_scenario_recommended",
+          "different_random_seeds": "for_different_scenarios"
+        }
+      },
+      "treatment_effect_estimation": {
+        "bias": "adaptive_designs_can_introduce_bias_in_estimates",
+        "adjustment_methods": "should_be_prospectively_planned",
+        "confidence_intervals": "may_not_have_correct_coverage"
+      },
+      "source": "FDA Adaptive Designs"
+    },
+
+    "equivalence_and_non_inferiority": {
+      "equivalence_margin": "must_be_prespecified_smaller_than_known_superiority_margin",
+      "confidence_interval_approach": "equivalence_inferred_when_entire_CI_within_margins",
+      "non_significant_test": "NOT_equivalent_to_concluding_equivalence",
+      "design_quality": "critical_because_flaws_bias_TOWARD_equivalence",
+      "minimize": ["entry_criteria_violations", "non_compliance", "withdrawals", "losses_to_followup", "missing_data"],
+      "source": "ICH E9"
+    }
+  },
+
+  "labeling_requirements": {
+    "note": "Labeling_for_Human_Drugs_PDF_contained_FDA_Warning_Letters_manual_not_labeling_guidance_Requirements_below_from_21_CFR_201.56_201.57",
+    "structure": {
+      "highlights_of_prescribing_information": {
+        "sections": [
+          "boxed_warning_if_applicable",
+          "indications_and_usage",
+          "dosage_and_administration",
+          "dosage_forms_and_strengths",
+          "contraindications",
+          "warnings_and_precautions",
+          "adverse_reactions",
+          "drug_interactions",
+          "use_in_specific_populations"
+        ],
+        "purpose": "concise_summary_of_most_important_information"
+      },
+      "full_prescribing_information": {
+        "sections": {
+          "1_indications_and_usage": {
+            "data_support": "adequate_well_controlled_clinical_trials_demonstrating_efficacy"
+          },
+          "2_dosage_and_administration": {
+            "data_support": "PK_PD_dose_response_clinical_trial_data"
+          },
+          "3_dosage_forms_and_strengths": {
+            "data_support": "manufacturing_and_formulation_data"
+          },
+          "4_contraindications": {
+            "data_support": "clinical_trial_safety_data_postmarketing_experience_known_hypersensitivity"
+          },
+          "5_warnings_and_precautions": {
+            "data_support": "clinical_trial_safety_data_animal_studies_pharmacologic_class_effects_postmarketing_data",
+            "includes": "clinically_significant_adverse_reactions_not_in_boxed_warning"
+          },
+          "6_adverse_reactions": {
+            "data_support": "controlled_clinical_trials_and_postmarketing_experience",
+            "subsections": {
+              "6.1_clinical_trials_experience": "incidence_rates_from_adequate_well_controlled_trials",
+              "6.2_postmarketing_experience": "adverse_reactions_identified_during_postapproval_use"
+            },
+            "requirements": [
+              "list_adverse_reactions_by_body_system",
+              "include_incidence_rates_from_controlled_trials",
+              "most_common_adverse_reactions_table"
+            ]
+          },
+          "7_drug_interactions": {
+            "data_support": "PK_drug_interaction_studies_in_vitro_studies_clinical_observations",
+            "includes": ["CYP_interactions", "transporter_interactions", "food_interactions"]
+          },
+          "8_use_in_specific_populations": {
+            "subsections": {
+              "8.1_pregnancy": "animal_reproduction_studies_human_data_if_available",
+              "8.2_lactation": "human_milk_data_animal_lactation_data",
+              "8.3_females_and_males_reproductive_potential": "contraception_infertility_data",
+              "8.4_pediatric_use": "pediatric_clinical_trial_data_or_lack_thereof",
+              "8.5_geriatric_use": "clinical_trial_data_in_patients_65_and_older",
+              "8.6_hepatic_impairment": "PK_studies_in_hepatic_impairment",
+              "8.7_renal_impairment": "PK_studies_in_renal_impairment"
+            }
+          },
+          "10_overdosage": {
+            "data_support": "clinical_experience_animal_toxicology"
+          },
+          "11_description": {
+            "data_support": "chemistry_manufacturing_controls"
+          },
+          "12_clinical_pharmacology": {
+            "subsections": {
+              "12.1_mechanism_of_action": "nonclinical_and_clinical_pharmacology",
+              "12.2_pharmacodynamics": "PD_studies_QTc_data",
+              "12.3_pharmacokinetics": "PK_studies_ADME_special_populations_drug_interactions"
+            }
+          },
+          "13_nonclinical_toxicology": {
+            "subsections": {
+              "13.1_carcinogenesis_mutagenesis_impairment_of_fertility": "2_year_animal_carcinogenicity_genotoxicity_fertility_studies",
+              "13.2_animal_toxicology": "relevant_animal_findings"
+            }
+          },
+          "14_clinical_studies": {
+            "data_support": "pivotal_efficacy_trials",
+            "requirements": [
+              "study_design_description",
+              "patient_population",
+              "primary_efficacy_endpoints",
+              "results_with_statistical_analysis",
+              "subgroup_analyses_if_relevant"
+            ],
+            "adaptive_design_note": "must_include_design_adjusted_treatment_effect_estimates_or_disclose_bias_extent"
+          },
+          "16_how_supplied_storage_handling": {
+            "data_support": "stability_data_packaging_information"
+          },
+          "17_patient_counseling_information": {
+            "data_support": "safety_information_requiring_patient_communication"
+          }
+        }
+      }
+    },
+    "boxed_warning": {
+      "criteria": [
+        "adverse_reaction_so_serious_relative_to_benefit_that_essential_to_consider_in_prescribing",
+        "serious_adverse_reaction_that_can_be_prevented_or_reduced_by_appropriate_use",
+        "fda_approved_drug_for_indication_with_serious_safety_concern_for_off_label_use"
+      ],
+      "data_support": "most_serious_hazards_from_clinical_trials_or_postmarketing_safety_data"
+    }
+  },
+
+  "ethnic_factor_considerations": {
+    "framework": {
+      "two_step_assessment": {
+        "step_1_completeness": "clinical_data_package_meets_new_regions_regulatory_requirements",
+        "step_2_extrapolability": "foreign_clinical_data_can_be_extrapolated_to_new_region"
+      },
+      "decision_flowchart_scenarios": [
+        {"q1_complete": true, "q2_extrapolable": true, "action": "no_further_study_needed"},
+        {"q1_complete": true, "q2_extrapolable": false, "action": "bridging_study_needed"},
+        {"q1_complete": false, "q2_extrapolable": true, "action": "additional_studies_for_regulatory_compliance"},
+        {"q1_complete": false, "q2_extrapolable": false, "action": "both_bridging_and_additional_studies"}
+      ],
+      "source": "ICH E5"
+    },
+
+    "intrinsic_factors": {
+      "definition": "genetic_and_physiologic_factors_defining_subpopulation",
+      "examples": ["race", "genetic_polymorphism", "gender", "age", "height", "weight", "body_composition", "organ_function", "ADME_characteristics", "receptor_sensitivity"]
+    },
+    "extrinsic_factors": {
+      "definition": "environment_and_culture_factors",
+      "examples": ["climate", "pollution", "socioeconomic_factors", "medical_practice", "disease_definition", "therapeutic_approach", "drug_compliance", "food_habits", "smoking_alcohol", "regulatory_practice"]
+    },
+
+    "bridging_studies": {
+      "definition": "study_in_new_region_providing_PK_PD_clinical_data_to_extrapolate_foreign_data",
+      "tiers": {
+        "no_bridging_needed": "ethnically_insensitive_drug_AND_similar_extrinsic_factors",
+        "pharmacologic_endpoint_study": "ethnically_sensitive_but_dissimilar_regions_with_familiar_drug_class",
+        "controlled_clinical_trial": "doubts_about_dose_OR_little_experience_with_foreign_trials_OR_different_medical_practice"
+      },
+      "single_study_usually_sufficient": true,
+      "safety_bridging": "may_need_300_patients_to_detect_1_percent_adverse_events"
+    },
+
+    "sensitivity_classification": {
+      "less_sensitive": ["linear_PK", "flat_PD_curve", "wide_therapeutic_range", "minimal_metabolism", "high_bioavailability", "low_protein_binding"],
+      "more_sensitive": ["nonlinear_PK", "steep_PD_curve", "narrow_therapeutic_range", "highly_metabolized_single_pathway", "genetic_polymorphism_enzymes", "prodrug", "low_bioavailability", "high_co_medication_use"]
+    },
+
+    "global_development_strategy": {
+      "early_characterization": "PK_PD_dose_response_across_major_racial_groups_in_early_phases",
+      "populations": "Asian_Black_Caucasian_relevant_to_ICH_regions",
+      "all_studies": "conducted_per_ICH_guidelines",
+      "pk_methods": "formal_PK_studies_or_population_PK_from_clinical_trials",
+      "early_assessment_recommended": true
+    }
+  },
+
+  "gcp_compliance_requirements": {
+    "foundational_principles": [
+      "conduct_per_Declaration_of_Helsinki_GCP_and_regulatory_requirements",
+      "risks_must_be_justified_by_anticipated_benefits",
+      "rights_safety_wellbeing_of_subjects_prevail_over_science_and_society",
+      "adequate_nonclinical_clinical_data_must_support_proposed_trial",
+      "scientifically_sound_clear_detailed_protocol",
+      "prior_IRB_IEC_approval_required",
+      "medical_care_by_qualified_physician_dentist",
+      "qualified_personnel_for_all_tasks",
+      "freely_given_informed_consent",
+      "accurate_recording_handling_storage_of_data",
+      "confidentiality_of_subject_records",
+      "GMP_compliant_investigational_products",
+      "quality_management_systems_for_every_aspect"
+    ],
+
+    "irb_iec": {
+      "minimum_composition": "5_members_including_nonscientific_and_independent_members",
+      "approval_before_enrollment": "mandatory",
+      "continuing_review": "at_least_annually",
+      "records_retention": "at_least_3_years_after_trial_completion"
+    },
+
+    "informed_consent": {
+      "20_required_elements": true,
+      "language": "non_technical_understandable",
+      "signed_and_dated": "by_subject_and_person_conducting_discussion",
+      "updated": "when_important_new_information_available",
+      "no_coercion": true,
+      "no_waiver_of_legal_rights": true,
+      "ample_time": "to_inquire_and_decide"
+    },
+
+    "investigator": {
+      "qualified_by_education_training_experience": true,
+      "familiar_with_investigational_product": true,
+      "adequate_resources": true,
+      "supervise_delegates": true,
+      "comply_with_protocol": true,
+      "maintain_ALCOA_source_data": true,
+      "report_saes_immediately": true,
+      "retain_documents_minimum_2_years": true
+    },
+
+    "sponsor": {
+      "quality_management": {
+        "risk_based_approach": true,
+        "steps": ["critical_process_identification", "risk_identification", "risk_evaluation", "risk_control", "risk_communication", "risk_review", "risk_reporting"],
+        "quality_tolerance_limits": "predefined"
+      },
+      "monitoring": {
+        "purpose": ["protect_subjects", "verify_data_accuracy", "verify_compliance"],
+        "approaches": ["on_site", "centralized", "combination"],
+        "risk_based_strategy": "documented_in_monitoring_plan",
+        "centralized_monitoring": "can_detect_data_manipulation_missing_data_outliers_protocol_deviations"
+      },
+      "data_integrity": {
+        "electronic_systems": "validated_risk_based",
+        "audit_trail": "no_deletion_documented_changes",
+        "security": "prevent_unauthorized_access",
+        "backup": "adequate",
+        "ALCOA_principles": true
+      },
+      "auditing": "independent_of_monitoring_QC"
+    },
+
+    "essential_documents": {
+      "phases": ["before_clinical_phase", "during_clinical_conduct", "after_completion_termination"],
+      "retention": "minimum_2_years_after_last_marketing_approval_or_discontinuation",
+      "trial_master_file": "at_both_investigator_and_sponsor_sites"
+    },
+
+    "source": "ICH E6(R2)"
+  }
+}

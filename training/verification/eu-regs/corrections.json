@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "generated": "2026-03-23",
+    "source_verification": "verification-report.json",
+    "total_corrections": 8,
+    "severity_levels": {
+      "HIGH": "Material error that could cause incorrect regulatory decisions",
+      "MEDIUM": "Missing detail or citation error that could mislead but doesn't change core requirement",
+      "LOW": "Minor wording/numeric discrepancy with no practical impact"
+    }
+  },
+
+  "corrections": [
+    {
+      "correction_id": "CORR-001",
+      "rule_id": "PAED-007",
+      "file": "eu-legislation-requirements.json",
+      "severity": "MEDIUM",
+      "issue": "Citation error: 6-month SPC extension attributed to Art. 37 of Reg 1901/2006",
+      "current_text": "article field cites only 'Reg 1901/2006 Art. 37' for both the SPC extension and orphan exclusivity extension",
+      "correct_citation": "SPC extension is in Art. 36(1) of Reg 1901/2006. Orphan exclusivity extension (10→12 years) is in Art. 37.",
+      "recommended_fix": "Split into two sub-rules or update article field to 'Reg 1901/2006 Art. 36(1) and Art. 37' with clear attribution of which reward comes from which article."
+    },
+    {
+      "correction_id": "CORR-002",
+      "rule_id": "MFG-006",
+      "file": "eu-legislation-requirements.json",
+      "severity": "MEDIUM",
+      "issue": "Missing the 4-year minimum university course duration from Art. 49(2)",
+      "current_text": "States QP must hold diploma in specified disciplines with 2 years practical experience",
+      "correct_text": "QP must hold diploma from a university course extending over at least 4 years of theoretical and practical study in specified disciplines, plus at least 2 years practical experience (Art. 49(2)-(3) of Dir 2001/83/EC).",
+      "recommended_fix": "Add 'min_education_years: 4' field (already present in rule) and ensure the requirement text explicitly states 'at least four years of theoretical and practical study' per Art. 49(2)."
+    },
+    {
+      "correction_id": "CORR-003",
+      "rule_id": "PER-001",
+      "file": "eu-gmp-rules.json",
+      "severity": "LOW",
+      "issue": "Incomplete article citation: references only Art. 51 but source cites Arts. 48, 49, and 51",
+      "current_text": "'Qualified Person(s) must be designated per Article 51 of Directive 2001/83/EC with specific education qualifications per Article 49'",
+      "correct_text": "Should reference Articles 48, 49, and 51 of Directive 2001/83/EC as stated in Chapter 2, section 2.5.",
+      "recommended_fix": "Update requirement text to cite all three articles: Art. 48 (obligation to have QP), Art. 49 (qualifications), Art. 51 (certification duties)."
+    },
+    {
+      "correction_id": "CORR-004",
+      "rule_id": "ST-002",
+      "file": "eu-gmp-rules.json",
+      "severity": "LOW",
+      "issue": "Minor numeric discrepancy in Grade B >=5um in-operation particle limit",
+      "current_text": "Extracted value appears as 2,900 in some representations",
+      "correct_text": "Source Table 1 specifies 2,930 particles/m3 for Grade B >=5um in-operation",
+      "recommended_fix": "Verify and correct the Grade B >=5um in-operation limit to 2,930 per Annex 1 Table 1. Also verify Grade A microbial limits against Table 6."
+    },
+    {
+      "correction_id": "CORR-005",
+      "rule_id": "GVP-VII-003",
+      "file": "eu-pharmacovigilance-rules.json",
+      "severity": "HIGH",
+      "issue": "Missing the 70-day PSUR submission timeline for intervals up to 12 months",
+      "current_text": "States '90 calendar days for submission' without qualification",
+      "correct_text": "Source specifies two distinct timelines: 70 calendar days for PSURs covering intervals up to 12 months; 90 calendar days for PSURs covering intervals exceeding 12 months.",
+      "recommended_fix": "Update rule to include both timelines: 'PSUR data lock point shall coincide with IBD or EU birth date. Submission deadline: 70 calendar days for reporting intervals <=12 months; 90 calendar days for intervals >12 months.' This distinction is material for compliance tracking."
+    },
+    {
+      "correction_id": "CORR-006",
+      "rule_id": "GVP-II-003",
+      "file": "eu-pharmacovigilance-rules.json",
+      "severity": "LOW",
+      "issue": "Section reference may be incorrect (cited as II.B.3, may be II.C.2)",
+      "current_text": "Section field says 'II.B.3'",
+      "correct_text": "The 7-day availability requirement appears in the operational procedures section (likely II.C.2), not in II.B.3 which covers PSMF content. Also, source emphasizes 'immediately upon request' with 7 days as the outer limit.",
+      "recommended_fix": "Verify section reference against Module II PDF table of contents. Update to correct section number. Consider adding that the obligation is 'immediately upon request and at the latest within 7 calendar days.'"
+    },
+    {
+      "correction_id": "CORR-007",
+      "rule_id": "GVP-XV-003",
+      "file": "eu-pharmacovigilance-rules.json",
+      "severity": "MEDIUM",
+      "issue": "Conflates two distinct 24-hour notification obligations with different subjects",
+      "current_text": "Single rule covering 24-hour advance notice",
+      "correct_text": "Two separate obligations exist: (1) Inter-authority coordination: Member States, Agency, and EC shall inform each other at least 24 hours in advance (DIR Art 106a(2)); (2) MAH embargo: MAH shall provide information to authorities at least 24 hours before any public safety announcement (DIR Art 106a, Section XV.C.1.3).",
+      "recommended_fix": "Consider splitting into two rules (GVP-XV-003a and GVP-XV-003b) or adding a note clarifying the two distinct obligations and their different binding parties."
+    },
+    {
+      "correction_id": "CORR-008",
+      "rule_id": "BE-003",
+      "file": "eu-gmp-rules.json",
+      "severity": "MEDIUM",
+      "issue": "Rule is UNVERIFIABLE — source PDF not available in the provided PDF set",
+      "current_text": "RSABE for highly variable drugs: widening to max 69.84-143.19% permitted for Cmax ONLY, never for AUC",
+      "correct_text": "Cannot verify. The EMA Bioequivalence Guideline (CPMP/EWP/QWP/1401/98 Rev.1) PDF is not included in the eu-gmp source folder.",
+      "recommended_fix": "Obtain the EMA Bioequivalence Guideline PDF and add it to the source document set. Then re-verify this rule and the other EMA guideline rules (BE-001 through BE-007, BS-001 through BS-005, PV-001 through PV-007, EX-001 through EX-004, FDF-001 through FDF-004, IM-001 through IM-004). These EMA scientific guidelines are separate from GMP and should ideally be in their own source folder."
+    }
+  ],
+
+  "missing_source_documents": {
+    "note": "The following EMA scientific guidelines are cited in eu-gmp-rules.json but their source PDFs are not available in the provided folders. Rules referencing these documents could not be verified.",
+    "documents": [
+      "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1",
+      "EMA Biosimilars Quality Guideline EMA/CHMP/BWP/247713/2012",
+      "EMA Process Validation Guideline EMA/CHMP/CVMP/QWP/BWP/70278/2012-Rev1",
+      "EMA Excipients Guideline EMEA/CHMP/QWP/396951/2006",
+      "EMA Finished Dosage Form Guideline EMA/362427/2017",
+      "EMA Immunogenicity Guideline EMEA/CHMP/BMWP/14327/2006 Rev1"
+    ],
+    "affected_rule_ids": [
+      "BE-001 through BE-007",
+      "BS-001 through BS-005",
+      "PV-001 through PV-007",
+      "EX-001 through EX-004",
+      "FDF-001 through FDF-004",
+      "IM-001 through IM-004"
+    ],
+    "recommendation": "Create a dedicated source folder (e.g., training/stage-1/ema-guidelines/) and populate with these EMA scientific guideline PDFs for complete verification coverage."
+  }
+}

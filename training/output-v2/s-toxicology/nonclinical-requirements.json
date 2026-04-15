@@ -1,0 +1,1231 @@
+{
+  "metadata": {
+    "title": "ICH S-Series Nonclinical Study Requirements",
+    "description": "Comprehensive extraction of all nonclinical study requirements from ICH S1-S13 guidelines",
+    "source_guidelines": [
+      "S1A", "S1B", "S1B(R1)", "S1C(R2)",
+      "S2(R1)",
+      "S3A", "S3A Q&As", "S3B",
+      "S4",
+      "S5(R3)",
+      "S6(R1)",
+      "S7A", "S7B",
+      "S8",
+      "S9", "S9 Q&As",
+      "S10",
+      "S11",
+      "S12",
+      "S13 (concept paper)"
+    ],
+    "extraction_date": "2026-03-22",
+    "version": "2.0"
+  },
+  "guidelines": {
+    "S1A": {
+      "title": "Need for Carcinogenicity Studies of Pharmaceuticals",
+      "year": 1995,
+      "scope": "All pharmaceuticals; determines when carcinogenicity studies are required",
+      "requirements": [
+        {
+          "id": "S1A-01",
+          "study_type": "Long-term carcinogenicity bioassay",
+          "trigger": "Continuous clinical use >= 6 months, or frequent intermittent use for chronic/recurrent conditions",
+          "species": "Rodent (rat default, mouse for second study)",
+          "duration": "2 years (lifetime)",
+          "endpoints": ["Tumor incidence", "Tumor latency", "Survival", "Histopathology", "Body weight", "Clinical pathology"],
+          "timing": "Completed before marketing approval application; NOT needed before large-scale clinical trials unless special concern",
+          "special_conditions": [
+            "Life-threatening diseases with no alternative: can be post-approval",
+            "Drugs used 3 months also expected to be used 6 months"
+          ]
+        },
+        {
+          "id": "S1A-02",
+          "study_type": "Carcinogenicity study (cause-for-concern trigger)",
+          "trigger": "Any of: carcinogenic potential in product class, SAR suggesting risk, preneoplastic lesions in repeat-dose tox, long-term tissue retention",
+          "species": "Rodent",
+          "duration": "2 years",
+          "endpoints": ["Tumor incidence", "Tumor latency", "Survival", "Histopathology"],
+          "timing": "Before marketing approval",
+          "special_conditions": ["Required regardless of clinical duration"]
+        },
+        {
+          "id": "S1A-03",
+          "study_type": "Chronic toxicity study (genotoxic compounds)",
+          "trigger": "Unequivocally genotoxic compounds intended for chronic use",
+          "species": "Standard toxicology species",
+          "duration": "Up to 1 year",
+          "endpoints": ["Early tumorigenic effects"],
+          "timing": "Before Phase III",
+          "special_conditions": ["Long-term carcinogenicity studies NOT needed for trans-species carcinogens"]
+        },
+        {
+          "id": "S1A-04",
+          "study_type": "Photocarcinogenicity study",
+          "trigger": "Concern for photocarcinogenic potential with dermal application",
+          "species": "Mouse (generally)",
+          "duration": "Study-dependent",
+          "endpoints": ["Skin tumor development"],
+          "timing": "When concern exists",
+          "special_conditions": []
+        }
+      ],
+      "exemptions": [
+        "Infrequent or short-duration use (anaesthetics, radiolabeled imaging agents)",
+        "Patient life expectancy < 2-3 years",
+        "Oncolytic agents for advanced systemic disease",
+        "Endogenous peptides/proteins at physiological replacement levels (unless cause for concern)",
+        "Ocular route (unless cause for concern or significant systemic exposure)"
+      ]
+    },
+    "S1B_and_S1BR1": {
+      "title": "Testing for Carcinogenicity of Pharmaceuticals (Original + R1 Addendum)",
+      "year_original": 1997,
+      "year_addendum": 2022,
+      "scope": "All pharmaceuticals requiring carcinogenicity testing per S1A (excludes biotech per S6(R1))",
+      "requirements": [
+        {
+          "id": "S1B-01",
+          "study_type": "Long-term rodent carcinogenicity study",
+          "species": "Rat (default; in absence of clear evidence favoring another species)",
+          "duration": "2 years",
+          "dose_groups": "3 dose levels + control",
+          "sex": "Both males and females",
+          "endpoints": ["Tumor incidence", "Tumor latency", "Survival", "Complete histopathology"],
+          "timing": "Before marketing approval",
+          "special_conditions": ["Species selection based on pharmacology, repeat-dose tox, metabolism, TK, route"]
+        },
+        {
+          "id": "S1B-02",
+          "study_type": "Additional in vivo carcinogenicity study (short/medium-term transgenic model)",
+          "species": "rasH2-Tg mouse (CByB6F1-Tg(HRAS)2Jic hemizygous)",
+          "duration": "6 months",
+          "dose_groups": "3 dose levels + control; high dose at 50-fold plasma AUC ratio (rodent:human)",
+          "endpoints": ["Tumor incidence", "Survival", "Histopathology"],
+          "timing": "Before marketing approval",
+          "special_conditions": [
+            "Prioritized per 3R principles over 2-year mouse study",
+            "Wild-type rasH2-Wt littermates for dose range-finding"
+          ]
+        },
+        {
+          "id": "S1B-03",
+          "study_type": "Second long-term carcinogenicity study (alternative to transgenic model)",
+          "species": "Mouse (typically, if rat used for first study)",
+          "duration": "2 years",
+          "dose_groups": "3 dose levels + control",
+          "endpoints": ["Tumor incidence", "Tumor latency", "Survival", "Complete histopathology"],
+          "timing": "Before marketing approval",
+          "special_conditions": ["Alternative to S1B-02"]
+        },
+        {
+          "id": "S1BR1-01",
+          "study_type": "Weight of Evidence (WoE) assessment",
+          "species": "N/A (data integration exercise)",
+          "duration": "N/A",
+          "endpoints": [
+            "Target biology data",
+            "Secondary pharmacology screens",
+            "Histopathology from repeat-dose tox (emphasis on 6-month rat)",
+            "Evidence for hormonal perturbation",
+            "Genetic toxicology data (per S2(R1))",
+            "Evidence of immune modulation (per S8)"
+          ],
+          "timing": "Before deciding on 2-year rat study; regulatory consultation recommended",
+          "special_conditions": [
+            "Three outcomes: LIKELY carcinogenic (no rat study), UNLIKELY (no rat study, mouse still recommended), UNCERTAIN (standard S1B approach)",
+            "Mouse study remains recommended even when WoE waives rat study"
+          ],
+          "woe_factors_favoring_waiver": [
+            "Well-characterized target biology not associated with cancer pathways",
+            "No off-target concerns from secondary pharmacology",
+            "No hyperplastic/atypical cellular changes in chronic tox",
+            "No endocrine perturbation or adequately explained",
+            "Negative genotoxic potential per S2(R1)",
+            "No evidence of immune modulation"
+          ]
+        }
+      ],
+      "prerequisite_data": [
+        "Genetic toxicology results (per S2A/S2B)",
+        "Clinical dosage regimen (per S1A)",
+        "Pharmacodynamics in animals and humans (per S1C)",
+        "Repeat-dose toxicology in any species including nonrodents",
+        "Immunosuppressant, hormonal, or other risk-factor activity data"
+      ]
+    },
+    "S1CR2": {
+      "title": "Dose Selection for Carcinogenicity Studies",
+      "year": 2008,
+      "scope": "Dose selection criteria for all carcinogenicity studies",
+      "requirements": [
+        {
+          "id": "S1C-01",
+          "study_type": "Dose-ranging study",
+          "species": "Same strains/species as carcinogenicity bioassay",
+          "duration": "90 days minimum",
+          "sex": "Both males and females",
+          "endpoints": [
+            "General toxicity profile",
+            "Dose-limiting toxicity characterization",
+            "Preneoplastic lesions",
+            "Tissue-specific proliferative effects",
+            "Endocrine homeostasis disturbances",
+            "Metabolite profile changes",
+            "Metabolizing enzyme activity alterations"
+          ],
+          "timing": "Before carcinogenicity study design"
+        }
+      ],
+      "high_dose_criteria": [
+        {
+          "criterion": "MTD (Maximum Tolerated Dose)",
+          "definition": "Dose predicted to produce minimum toxic effect over carcinogenicity study; no more than 10% body weight gain decrease vs controls"
+        },
+        {
+          "criterion": "25-fold AUC ratio",
+          "definition": "Dose producing rodent plasma AUC 25x human AUC at MRHD; applies to ALL pharmaceuticals including those with positive genotox signals"
+        },
+        {
+          "criterion": "50-fold AUC ratio",
+          "definition": "For rasH2-Tg mouse studies specifically"
+        },
+        {
+          "criterion": "Dose-limiting pharmacodynamic effects",
+          "definition": "PD response precluding further dose escalation (e.g., hypotension, clotting inhibition)"
+        },
+        {
+          "criterion": "Saturation of absorption",
+          "definition": "Dose where systemic availability plateaus"
+        },
+        {
+          "criterion": "Maximum feasible dose",
+          "definition": "5% of diet for dietary administration"
+        },
+        {
+          "criterion": "Limit dose",
+          "definition": "1500 mg/kg/day when human dose <= 500 mg/day and rodent exposure >= 10x human"
+        }
+      ]
+    },
+    "S2R1": {
+      "title": "Guidance on Genotoxicity Testing and Data Interpretation",
+      "year": 2011,
+      "scope": "New small molecule drug substances only; excludes biologics",
+      "requirements": [
+        {
+          "id": "S2-01",
+          "study_type": "Standard Test Battery Option 1 (2 in vitro + 1 in vivo)",
+          "tests": [
+            {
+              "test": "Bacterial reverse mutation assay (Ames test)",
+              "species": "S. typhimurium TA98, TA100, TA1535, plus TA1537/TA97/TA97a, plus TA102 or E. coli WP2 uvrA or WP2 uvrA(pKM101)",
+              "endpoints": ["Revertant colony counts (base substitution + frameshift mutations)"],
+              "conditions": "With and without S9 metabolic activation; max 5000 microg/plate",
+              "positive_controls": "Concurrent, strain-specific known mutagens"
+            },
+            {
+              "test": "In vitro mammalian cell assay (one of three)",
+              "options": [
+                "Metaphase chromosome aberration assay",
+                "In vitro micronucleus assay",
+                "Mouse lymphoma Tk gene mutation assay (MLA)"
+              ],
+              "species": "Mammalian cell lines (CHO, CHL, TK6, L5178Y)",
+              "endpoints": ["Chromosomal aberrations / micronuclei / Tk mutant frequency + colony sizing"],
+              "conditions": "Top concentration: 1 mM or 0.5 mg/ml (whichever lower); cytotoxicity limit ~50% reduction; with and without S9"
+            },
+            {
+              "test": "In vivo micronucleus assay",
+              "species": "Rats or mice (bone marrow or peripheral blood)",
+              "endpoints": ["Micronucleated polychromatic erythrocytes / reticulocytes", "Ratio of immature to total erythrocytes"],
+              "dose_levels": "3 dose levels; limit dose 2000 mg/kg (acute) or 1000 mg/kg (14+ days)"
+            }
+          ],
+          "timing": "Complete standard battery before initial clinical trials (Phase I)"
+        },
+        {
+          "id": "S2-02",
+          "study_type": "Standard Test Battery Option 2 (1 in vitro + 2 in vivo tissues)",
+          "tests": [
+            {
+              "test": "Bacterial reverse mutation assay (Ames test)",
+              "details": "Same as Option 1"
+            },
+            {
+              "test": "In vivo assessment with two tissues",
+              "species": "Rats or mice",
+              "tissue_1": "Micronuclei in hematopoietic cells (bone marrow or blood)",
+              "tissue_2": "DNA strand breakage in liver (Comet assay preferred)",
+              "conditions": "Preferred when short-lived reactive metabolites generated in liver"
+            }
+          ],
+          "timing": "Complete before initial clinical trials"
+        },
+        {
+          "id": "S2-03",
+          "study_type": "In vivo Comet assay (follow-up / Option 2 component)",
+          "species": "Rats or mice",
+          "tissue": "Liver (preferred); applicable to many tissues",
+          "endpoints": ["DNA strand breaks via single cell gel electrophoresis"],
+          "sampling_times": "Single dose: few hours + 24 hours post-treatment; multiple dose: 2-6 hours after last dose",
+          "timing": "As part of battery or follow-up"
+        },
+        {
+          "id": "S2-04",
+          "study_type": "In vivo transgenic rodent mutation assay (follow-up)",
+          "species": "Transgenic mice (Big Blue, MutaMouse, gpt delta)",
+          "endpoints": ["Mutation frequency in transgenes (lacZ, lacI, cII, gpt)"],
+          "duration": "28 days treatment + expression period",
+          "timing": "Follow-up for positive findings or target organ assessment"
+        }
+      ],
+      "exposure_demonstration": {
+        "required_when": "In vitro test positive or not done and in vivo test negative",
+        "evidence_options": [
+          "Cytotoxicity measures (change in PCE ratio, reduced mitotic index, liver toxicity by histopath/biochem)",
+          "Drug measurement in blood/plasma or target tissue",
+          "Autoradiographic assessment of tissue exposure"
+        ]
+      },
+      "follow_up_strategies": {
+        "positive_in_vitro_ames_negative": "Weight-of-evidence assessment; may need additional in vitro mechanistic studies OR two in vivo assays in appropriate tissues",
+        "positive_ames": "Extensive in vivo follow-up warranted; risk-benefit analysis for patients",
+        "positive_in_vivo_MN": "Evaluate non-genotoxic factors (disturbed erythropoiesis); centromere staining to distinguish breakage vs loss",
+        "positive_result_S9_dependent": "Verify metabolic activation responsible; follow-up in vivo in liver"
+      }
+    },
+    "S3A": {
+      "title": "Toxicokinetics: Assessment of Systemic Exposure in Toxicity Studies",
+      "year": 1994,
+      "scope": "TK measurements integrated into all nonclinical toxicity studies",
+      "requirements": [
+        {
+          "id": "S3A-01",
+          "study_type": "Concomitant toxicokinetics (integrated into toxicity studies)",
+          "species": "All species used in toxicity studies",
+          "parameters": ["AUC (0-t, 0-infinity)", "Cmax", "C(time)", "tmax"],
+          "matrix": "Plasma, serum, or whole blood (primary); urine/tissue where appropriate",
+          "analyte": "Parent compound and/or metabolite(s)",
+          "sampling_approaches": {
+            "monitor": "1-3 samples per interval (estimate C(time) or Cmax)",
+            "profile": "4-8 samples per interval (estimate Cmax, C(time), AUC)"
+          },
+          "timing": "Throughout nonclinical program; first repeat-dose TK normally 14+ days"
+        },
+        {
+          "id": "S3A-02",
+          "study_type": "TK in repeat-dose toxicity studies",
+          "approach": "Profiling or monitoring at start AND end of treatment period",
+          "dose_levels": {
+            "low_dose_NOAEL": "Exposure should equal or just exceed maximum expected clinical exposure",
+            "intermediate": "Appropriate multiple/fraction of low or high",
+            "high_dose": "Determined by toxicological considerations"
+          },
+          "timing": "Before and concurrent with FIH studies"
+        },
+        {
+          "id": "S3A-03",
+          "study_type": "TK in carcinogenicity studies",
+          "approach": "Monitoring on a few occasions; not considered essential beyond 6 months",
+          "purpose": "Confirm exposure consistent with dose-ranging study profiles",
+          "timing": "During carcinogenicity study conduct"
+        },
+        {
+          "id": "S3A-04",
+          "study_type": "TK in reproductive toxicity studies",
+          "approach": "PK information preferable before initiating repro studies; consider pregnant vs non-pregnant kinetics",
+          "endpoints": ["Dam/embryo/fetal/newborn exposure at specified days", "Milk secretion assessment"],
+          "timing": "Before/during reproductive tox program"
+        }
+      ],
+      "microsampling": {
+        "source": "S3A Q&As (2017)",
+        "definition": "Collection of <= 50 microliters blood",
+        "benefit": "Can eliminate TK satellite groups; allows direct correlation of safety and exposure data",
+        "applicable_studies": "Any toxicology study (single-dose, repeat-dose, carcinogenicity, juvenile, reproductive)",
+        "validation": "Method must assess LLOQ, accuracy, precision, matrix effects, stability; comparability assessment between methods may be needed"
+      }
+    },
+    "S3B": {
+      "title": "Pharmacokinetics: Guidance for Repeated Dose Tissue Distribution Studies",
+      "year": 1994,
+      "scope": "Tissue distribution studies; determines when repeated dose studies are needed",
+      "requirements": [
+        {
+          "id": "S3B-01",
+          "study_type": "Single-dose tissue distribution study",
+          "requirement_level": "Standard requirement as part of nonclinical program",
+          "purpose": "Distribution and accumulation information relative to potential sites of action",
+          "timing": "Pre-clinical"
+        },
+        {
+          "id": "S3B-02",
+          "study_type": "Repeated dose tissue distribution study",
+          "requirement_level": "NOT routinely required; only when triggered",
+          "triggers": [
+            "Tissue half-life significantly exceeds plasma half-life AND > 2x dosing interval",
+            "Steady-state levels markedly higher than predicted from single-dose kinetics",
+            "Unexpected histopathological changes not predicted from other studies",
+            "Site-specific targeted delivery"
+          ],
+          "method": "Radiolabeled compounds or alternatives with sufficient sensitivity",
+          "duration": "Minimum 1 week; extended if steady state not reached; normally not beyond 3 weeks",
+          "endpoints": ["Unchanged compound AND metabolites in organs/tissues with extensive accumulation"],
+          "timing": "Case-by-case"
+        }
+      ]
+    },
+    "S4": {
+      "title": "Duration of Chronic Toxicity Testing in Animals",
+      "year": 1998,
+      "scope": "All medicinal products except biotechnology-derived (covered by S6)",
+      "requirements": [
+        {
+          "id": "S4-01",
+          "study_type": "Chronic toxicity study -- rodent",
+          "species": "Rodent (typically rat)",
+          "duration": "6 months",
+          "timing": "Supports marketing authorization",
+          "special_conditions": ["12-month studies usually not necessary"]
+        },
+        {
+          "id": "S4-02",
+          "study_type": "Chronic toxicity study -- non-rodent",
+          "species": "Non-rodent (typically dog or NHP)",
+          "duration": "9 months",
+          "timing": "Supports marketing authorization",
+          "special_conditions": ["12-month studies usually not necessary; EU accepts 6-month non-rodent"]
+        }
+      ]
+    },
+    "S5R3": {
+      "title": "Detection of Reproductive and Developmental Toxicity",
+      "year": 2020,
+      "scope": "All pharmaceuticals, biopharmaceuticals, vaccines; excludes cellular/gene therapies, tissue-engineered products",
+      "requirements": [
+        {
+          "id": "S5-01",
+          "study_type": "Fertility and Early Embryonic Development (FEED)",
+          "species": "Rodent (rat preferred); biopharmaceuticals may use rodent/rabbit if pharmacologically active; NHP histopath of repro tissues from 3-month repeat-dose tox can substitute",
+          "group_size": "At least 16 per sex",
+          "dose_groups": 4,
+          "administration_period": {
+            "males": "2+ weeks prior to cohabitation through confirmation of mating",
+            "females": "2+ weeks prior to cohabitation through implantation (GD6)"
+          },
+          "endpoints": [
+            "Estrous cycle evaluation (daily, 2 weeks before cohabitation)",
+            "Testis/epididymis histology (males)",
+            "Ovary/uterus preservation (females)",
+            "Cesarean section mid-gestation (GD13-15): corpora lutea, implantation sites, live/dead embryos"
+          ],
+          "timing": "Before Phase 3 (large-scale trials including WOCBP); male fertility can be deferred to pre-NDA if no repro organ toxicity in repeat-dose",
+          "special_conditions": [
+            "If testicular toxicity in repeat-dose: extend male pre-cohabitation to 10 weeks (full spermatogenic cycle)",
+            "Both sexes treated together if no fertility effects anticipated"
+          ]
+        },
+        {
+          "id": "S5-02",
+          "study_type": "Embryo-Fetal Development (EFD) -- definitive",
+          "species": {
+            "small_molecules": "Two species: rodent (rat) AND non-rodent (rabbit)",
+            "biopharmaceuticals": "One or two species if pharmacologically relevant; NHP ePPND can substitute",
+            "vaccines": "Single species (rabbits, rats, or mice) sufficient",
+            "advanced_cancer_S9": "Single relevant species sufficient"
+          },
+          "group_size": "At least 16 pregnant females per group",
+          "dose_groups": "4 (including 1 control); NHP: at least 2 (including 1 control)",
+          "administration_period": {
+            "rat_mouse": "GD6/7 - 17",
+            "rabbit": "GD6/7 - 19",
+            "NHP": "GD20 to at least GD50"
+          },
+          "cesarean_section": {
+            "rat": "GD20/21",
+            "mouse": "GD17/18",
+            "rabbit": "GD28/29",
+            "NHP": "GD100"
+          },
+          "endpoints": [
+            "Macroscopic examination",
+            "Corpora lutea count",
+            "Implant sites",
+            "Live/dead conceptuses",
+            "Early/late resorptions",
+            "Placenta evaluation",
+            "Fetal body weight and sex",
+            "Fetal external evaluations",
+            "Fetal soft tissue evaluations",
+            "Fetal skeletal evaluations",
+            "Toxicokinetics"
+          ],
+          "timing": "Two-species EFD data needed before WOCBP in large Phase 3 trials",
+          "GLP": true
+        },
+        {
+          "id": "S5-03",
+          "study_type": "Preliminary EFD (pEFD)",
+          "species": "Rodent or rabbit",
+          "group_size": "Minimum 6 pregnant females per group",
+          "dose_groups": 4,
+          "GLP": "Optional (required if used to defer definitive EFD)",
+          "endpoints": ["Fetal survival", "Fetal weight", "External fetal abnormalities", "Soft tissue abnormalities"],
+          "purpose": "Can support limited inclusion of up to 150 WOCBP for up to 3 months before definitive EFD"
+        },
+        {
+          "id": "S5-04",
+          "study_type": "Pre- and Postnatal Development (PPND)",
+          "species": "Rat (usually); NHP uses ePPND instead",
+          "group_size": "At least 16 litters",
+          "dose_groups": 4,
+          "administration_period": "GD6/7 through weaning (PND 20)",
+          "f0_endpoints": [
+            "Clinical observations/mortality (daily)",
+            "Body weight (2x/week)",
+            "Food consumption (weekly until mid-lactation)",
+            "Parturition observations",
+            "Necropsy PND21: uterine implantation sites"
+          ],
+          "f1_preweaning_endpoints": [
+            "Survival (daily from PND0)",
+            "Body weight/sex (PND0/1, then 2x/week)",
+            "Physical development (eye opening, pinna unfolding, surface righting, auditory startle, air righting)"
+          ],
+          "f1_postweaning_endpoints": [
+            "Sexual maturation (vaginal opening, preputial separation)",
+            "Sensory function tests",
+            "Motor activity",
+            "Learning and memory (complex learning, locomotor activity, startle with prepulse inhibition)",
+            "Reproductive performance (at 10+ weeks, 1M:1F, not siblings)"
+          ],
+          "timing": "Before marketing authorization (NDA/MAA submission)"
+        },
+        {
+          "id": "S5-05",
+          "study_type": "Enhanced Pre- and Postnatal Development (ePPND) -- NHP only",
+          "species": "Cynomolgus monkey",
+          "group_size": "Approximately 16 pregnant females",
+          "dose_groups": "At least 2 (including 1 control)",
+          "administration_period": "Confirmation of pregnancy (GD20) to parturition",
+          "f1_endpoints": [
+            "Clinical observations/mortality (daily from PND0)",
+            "Body weights (weekly)",
+            "Morphometry/physical assessment (regular intervals)",
+            "Neurobehavioural test battery (at least 1 interval in first 2 weeks)",
+            "Grip strength (PND28)",
+            "Mother-infant interaction",
+            "External evaluation (regular intervals)",
+            "Skeletal evaluation (PND28+)",
+            "Visceral evaluation (necropsy)",
+            "Necropsy at minimum 1 month"
+          ],
+          "timing": "Can substitute for separate EFD + PPND in NHP; report at marketing application",
+          "GLP": true
+        }
+      ],
+      "dose_selection": {
+        "high_dose_toxicity_based": "Minimal parental toxicity",
+        "high_dose_exposure_based": ">= 25-fold AUC or Cmax at MRHD",
+        "biopharmaceuticals": "Maximum pharmacological effect OR ~10-fold exposure multiple (whichever higher)",
+        "limit_dose": "1 g/kg/day",
+        "low_dose": "1-5 fold multiple of human exposure at MRHD"
+      },
+      "risk_assessment_thresholds": {
+        "increased_concern": "NOAEL at exposures < 10-fold human exposure at MRHD",
+        "reduced_concern": "NOAEL at exposures > 10-fold",
+        "minor_concern": "Effects limited to > 25-fold human exposure",
+        "known_teratogens_NOAEL": "< 4-fold exposure at MRHD in at least one species",
+        "known_teratogens_LOAEL": "< 6-fold in at least one species"
+      }
+    },
+    "S6R1": {
+      "title": "Preclinical Safety Evaluation of Biotechnology-Derived Pharmaceuticals",
+      "year_original": 1997,
+      "year_addendum": 2011,
+      "scope": "Biotechnology-derived pharmaceuticals (proteins, peptides, mAbs, ADCs); only in pharmacologically relevant species",
+      "requirements": [
+        {
+          "id": "S6-01",
+          "study_type": "Species relevance assessment",
+          "methods": ["Immunochemical assays", "Functional tests", "Receptor occupancy/affinity", "Tissue cross-reactivity (IHC)", "Target sequence homology"],
+          "timing": "Before any in vivo toxicology",
+          "special_conditions": [
+            "Two relevant species for short-term (up to 1 month); one sufficient for longer if comparable tox",
+            "Studies in non-relevant species are misleading and discouraged",
+            "When no relevant species: use transgenic animals expressing human receptor"
+          ]
+        },
+        {
+          "id": "S6-02",
+          "study_type": "Repeat-dose toxicity",
+          "species": "Relevant species only; two for short-term, one for long-term if comparable",
+          "duration": {
+            "short_term_use_up_to_7_days": "2 weeks adequate for clinical studies and marketing",
+            "general": "1-3 months typical",
+            "chronic_indications": "6 months maximum (longer has not provided useful info)"
+          },
+          "high_dose": "Higher of: max intended pharmacological effect OR ~10-fold exposure multiple over max clinical exposure",
+          "endpoints": ["Standard tox", "TK", "NOAEL", "Reversibility assessment"],
+          "recovery_period": "Generally included; complete recovery not essential",
+          "timing": "Before and throughout clinical development"
+        },
+        {
+          "id": "S6-03",
+          "study_type": "Immunogenicity (ADA) assessment",
+          "species": "All tox species",
+          "endpoints": ["ADA titer", "Responding animal count", "Neutralizing vs non-neutralizing", "Correlation with PK/PD/tox changes", "Complement activation", "Immune complex formation"],
+          "timing": "During all repeat-dose studies",
+          "special_conditions": [
+            "ADA in animals NOT predictive of human immunogenicity",
+            "ADA alone should NOT be sole criterion for early study termination"
+          ]
+        },
+        {
+          "id": "S6-04",
+          "study_type": "Fertility assessment (NHP indirect)",
+          "species": "NHP (when only relevant species)",
+          "method": "Reproductive tract evaluation in 3+ month repeat-dose tox using sexually mature NHPs",
+          "endpoints": ["Organ weights", "Histopathology of reproductive tract", "Menstrual cyclicity", "Sperm count/morphology/motility"],
+          "timing": "Per M3(R2)",
+          "special_conditions": ["Mating studies not practical for NHP"]
+        },
+        {
+          "id": "S6-05",
+          "study_type": "ePPND (NHP; replaces separate EFD + PPND)",
+          "species": "NHP",
+          "duration": "GD20 to birth",
+          "endpoints": ["Pregnancy outcome", "Offspring viability/malformations", "Postnatal development"],
+          "timing": "During Phase III with report at marketing; or interim report before Phase III if pregnancy cannot be prevented"
+        },
+        {
+          "id": "S6-06",
+          "study_type": "Genotoxicity",
+          "requirement": "NOT applicable to biotechnology-derived pharmaceuticals; NOT needed",
+          "exception": "Cause for concern (e.g., organic linker in conjugated product / ADC)"
+        },
+        {
+          "id": "S6-07",
+          "study_type": "Carcinogenicity",
+          "approach": "Weight-of-evidence preferred; standard 2-year rodent bioassays generally inappropriate",
+          "endpoints": ["Receptor expression in malignant/normal cells", "Growth stimulation", "Proliferation indices in chronic tox"],
+          "special_conditions": ["If WoE does not suggest risk: no additional testing; single rodent study may be considered if biologically active and non-immunogenic in rodents"]
+        },
+        {
+          "id": "S6-08",
+          "study_type": "Safety pharmacology",
+          "approach": "Can be incorporated into tox/PD studies for highly specific receptor-targeting products; more extensive evaluation for novel class",
+          "endpoints": ["Cardiovascular", "Respiratory", "Renal", "CNS"],
+          "timing": "Before FIH"
+        }
+      ]
+    },
+    "S7A": {
+      "title": "Safety Pharmacology Studies for Human Pharmaceuticals",
+      "year": 2000,
+      "scope": "New chemical entities; biotechnology products if warranted",
+      "requirements": [
+        {
+          "id": "S7A-01",
+          "study_type": "Core Battery -- CNS",
+          "species": "Rodent (typically rat/mouse); unanesthetized preferred",
+          "duration": "Generally single dose",
+          "endpoints": ["Motor activity", "Behavioral changes", "Coordination", "Sensory/motor reflex responses", "Body temperature"],
+          "methods": ["Functional Observation Battery (FOB)", "Modified Irwin's test"],
+          "timing": "Before FIH",
+          "GLP": true
+        },
+        {
+          "id": "S7A-02",
+          "study_type": "Core Battery -- Cardiovascular",
+          "species": "Conscious or anesthetized animals (typically dog or NHP; may include rodent)",
+          "duration": "Generally single dose",
+          "endpoints": ["Blood pressure", "Heart rate", "ECG", "Repolarization/conductance"],
+          "timing": "Before FIH",
+          "GLP": true
+        },
+        {
+          "id": "S7A-03",
+          "study_type": "Core Battery -- Respiratory",
+          "species": "Appropriate species (typically rodent); conscious plethysmography",
+          "duration": "Generally single dose",
+          "endpoints": ["Respiratory rate", "Tidal volume", "Hemoglobin oxygen saturation"],
+          "timing": "Before FIH",
+          "GLP": true,
+          "special_conditions": ["Clinical observation alone NOT adequate; quantitative methods required"]
+        },
+        {
+          "id": "S7A-04",
+          "study_type": "Follow-up studies",
+          "trigger": "Concerns from core battery, tox studies, clinical trials, or literature",
+          "endpoints": {
+            "CNS": ["Behavioral pharmacology", "Learning/memory", "Ligand binding", "Neurochemistry", "Electrophysiology"],
+            "CV": ["Cardiac output", "Ventricular contractility", "Vascular resistance"],
+            "Respiratory": ["Airway resistance", "Compliance", "Pulmonary arterial pressure", "Blood gases/pH"]
+          },
+          "timing": "During clinical development or before approval"
+        },
+        {
+          "id": "S7A-05",
+          "study_type": "Supplemental safety pharmacology",
+          "trigger": "Cause for concern or pharmacological properties warrant",
+          "systems": {
+            "renal_urinary": ["Urinary volume", "Specific gravity", "Osmolality", "pH", "Electrolytes", "BUN", "Creatinine"],
+            "autonomic_nervous": ["Receptor binding", "Agonist/antagonist responses", "Baroreflex", "HR variability"],
+            "gastrointestinal": ["Gastric secretion", "GI injury", "Transit time", "Gastric pH"],
+            "other": ["Dependency potential", "Skeletal muscle function", "Immune function", "Endocrine functions"]
+          },
+          "timing": "Before approval"
+        }
+      ],
+      "exemptions": [
+        "Locally applied agents with well-characterized pharmacology and low systemic exposure",
+        "Cytotoxic agents for end-stage cancer (per S9)",
+        "Biotech products with highly specific receptor targeting (endpoints in tox/PD studies suffice)",
+        "New salt form with similar PK/PD"
+      ]
+    },
+    "S7B": {
+      "title": "Nonclinical Evaluation of Delayed Ventricular Repolarization (QT Prolongation)",
+      "year": 2005,
+      "scope": "New chemical entities; biotechnology products when appropriate",
+      "requirements": [
+        {
+          "id": "S7B-01",
+          "study_type": "In vitro IKr (hERG) assay",
+          "test_system": "hERG-transfected cell lines or native cardiac myocytes (NOT rat/mouse)",
+          "duration": "Acute (sufficient for steady-state)",
+          "endpoints": ["IKr current inhibition", "IC50 determination", "Concentration-response relationship"],
+          "timing": "Before FIH",
+          "GLP": true,
+          "special_conditions": [
+            "Positive control required in every study",
+            "Concentrations spanning and exceeding max therapeutic plasma concentration",
+            "Competition binding NOT a substitute for voltage clamp",
+            "Adult rat/mouse NOT appropriate (Ito-dominant repolarization)"
+          ]
+        },
+        {
+          "id": "S7B-02",
+          "study_type": "In vivo QT assay",
+          "species": "Dog, monkey, swine, rabbit, ferret, guinea pig (NOT rat/mouse)",
+          "duration": "Generally single dose; can combine with S7A CV core battery",
+          "endpoints": ["QT interval", "QTc (Bazett/Fridericia/individual)", "Heart rate", "Blood pressure", "PR interval", "QRS duration", "Arrhythmias"],
+          "timing": "Before FIH",
+          "GLP": true,
+          "special_conditions": [
+            "Telemetry in unrestrained conscious animals preferred",
+            "TK monitoring recommended",
+            "HR correction formula choice must be justified"
+          ]
+        },
+        {
+          "id": "S7B-03",
+          "study_type": "Follow-up/mechanistic repolarization studies",
+          "trigger": "Inconsistencies among nonclinical studies or with clinical findings",
+          "endpoints": ["Action potential parameters in isolated cardiac preparations", "Effects on other ion channels", "Proarrhythmic indices"],
+          "timing": "During clinical development"
+        },
+        {
+          "id": "S7B-04",
+          "study_type": "Integrated risk assessment",
+          "description": "Scientific evaluation integrating all S7B results with PD, PK, tox, clinical data",
+          "timing": "Before FIH and updated throughout development; included in IB and Nonclinical Overview"
+        }
+      ]
+    },
+    "S8": {
+      "title": "Immunotoxicity Studies for Human Pharmaceuticals",
+      "year": 2005,
+      "scope": "New chemical entities (small molecules) only; excludes biologics (S6), allergenicity, drug-specific autoimmunity",
+      "requirements": [
+        {
+          "id": "S8-01",
+          "study_type": "Tier 1 -- Standard Toxicity Study immunotox screening",
+          "species": "Rodent and non-rodent (per M3)",
+          "duration": "As per standard repeat-dose tox program",
+          "endpoints": {
+            "hematology": "Total and absolute differential leukocyte counts",
+            "clinical_chemistry": "Globulin levels, A/G ratios",
+            "gross_pathology": "All lymphoid organs/tissues",
+            "organ_weights": "Thymus, spleen (lymph nodes optional)",
+            "histology": "Thymus, spleen, draining lymph node, at least one additional lymph node, bone marrow (if warranted), Peyer's patch (oral), BALT (inhalation), NALT (inhalation/nasal)"
+          },
+          "timing": "Part of standard toxicology package",
+          "concern_signals": [
+            "Leukocyte count changes",
+            "Immune organ weight/histology alterations",
+            "Unexplained serum globulin changes",
+            "Increased infections",
+            "Increased tumor occurrence"
+          ]
+        },
+        {
+          "id": "S8-02",
+          "study_type": "Tier 2 -- T-Cell Dependent Antibody Response (TDAR)",
+          "trigger": "Weight-of-evidence review identifies cause for concern",
+          "species": "Rodents preferred; NHP adaptations described",
+          "antigens": "SRBC or KLH",
+          "duration": "28 days consecutive daily dosing",
+          "endpoints": ["Antibody by ELISA/immunoassay (concentration or titer)", "Antibody-forming cell response"],
+          "timing": "Before Phase III; earlier if target population is immunocompromised",
+          "GLP": true
+        },
+        {
+          "id": "S8-03",
+          "study_type": "Tier 2 -- Immunophenotyping",
+          "trigger": "WoE-based cause for concern",
+          "species": "Rodent or non-rodent",
+          "endpoints": ["Absolute numbers and percentages of lymphocyte subsets (flow cytometry or IHC)"],
+          "timing": "Before Phase III; can be added to standard repeat-dose studies"
+        },
+        {
+          "id": "S8-04",
+          "study_type": "Tier 2 -- NK Cell Activity",
+          "trigger": "Immunophenotyping shows NK changes, increased viral infections, or other concern",
+          "species": "Rodent (ex vivo from spleen or blood)",
+          "endpoints": ["Cytotoxicity against labeled target cells at multiple E:T ratios"],
+          "timing": "Before Phase III"
+        },
+        {
+          "id": "S8-05",
+          "study_type": "Tier 2 -- Host Resistance Studies",
+          "trigger": "Cause for concern from WoE",
+          "species": "Mice or rats",
+          "endpoints": ["Infectivity/tumor burden vs controls"],
+          "pathogens": ["Listeria", "Streptococcus", "Candida", "Influenza", "CMV", "Plasmodium", "Trichinella"],
+          "tumor_models": ["B16F10 melanoma", "PYB6 sarcoma"],
+          "timing": "Before Phase III"
+        },
+        {
+          "id": "S8-06",
+          "study_type": "Tier 2 -- Macrophage/Neutrophil Function",
+          "endpoints": ["Phagocytosis", "Oxidative burst", "Chemotaxis", "Cytolytic activity"],
+          "timing": "Before Phase III when triggered"
+        },
+        {
+          "id": "S8-07",
+          "study_type": "Tier 2 -- Cell-Mediated Immunity (DTH)",
+          "species": "Mice and rats (monkey DTH poorly reproducible)",
+          "endpoints": ["Delayed-type hypersensitivity response", "Cytotoxic T cell response"],
+          "timing": "Before Phase III when triggered"
+        }
+      ],
+      "woe_trigger_factors": [
+        "STS findings suggesting immunotoxicity",
+        "Pharmacological properties of drug",
+        "Intended patient population (immunocompromised)",
+        "Structural similarity to known immunomodulators",
+        "Drug disposition (retention in immune system cells)",
+        "Clinical signs of immunotoxicity"
+      ]
+    },
+    "S9": {
+      "title": "Nonclinical Evaluation for Anticancer Pharmaceuticals",
+      "year": 2009,
+      "scope": "Pharmaceuticals for serious/life-threatening malignancies (advanced cancer); small molecules and biopharmaceuticals",
+      "key_principle": "Reduced/modified nonclinical programs vs standard M3 requirements",
+      "requirements": [
+        {
+          "id": "S9-01",
+          "study_type": "Repeat-dose toxicology (Phase I support)",
+          "species": {
+            "small_molecules": "Usually rodent + non-rodent; single rodent may suffice for genotoxic drugs targeting rapidly dividing cells",
+            "biopharmaceuticals": "Per S6 for species number"
+          },
+          "duration": "Approximates clinical schedule (see schedule table); NOT required to match clinical treatment duration",
+          "design": "Non-rodent: min 3/sex/group + 2/sex recovery",
+          "start_dose": {
+            "small_molecules": "1/10 STD10 (rodent) or 1/6 HNSTD (non-rodent if more sensitive)",
+            "biopharmaceuticals_immune_agonists": "MABEL approach",
+            "scaling": "Body surface area (small molecules) or body weight/AUC (biologics)"
+          },
+          "timing": "Before Phase I"
+        },
+        {
+          "id": "S9-02",
+          "study_type": "Repeat-dose toxicology (Phase III/marketing support)",
+          "species": "Same as above",
+          "duration": "3 months MAXIMUM for advanced cancer (no 6-month or 9-month required)",
+          "timing": "Before Phase III"
+        },
+        {
+          "id": "S9-03",
+          "study_type": "Safety pharmacology",
+          "approach": "Incorporated into general tox studies; stand-alone S7A/S7B NOT called for",
+          "endpoints": "Detailed clinical observations + ECG in non-rodents generally sufficient",
+          "timing": "Before Phase I"
+        },
+        {
+          "id": "S9-04",
+          "study_type": "EFD (reproductive toxicity)",
+          "requirement": "NOT required for clinical trials in advanced cancer; available at marketing application",
+          "species": "Single relevant species may suffice; if positive in one, second species NOT warranted",
+          "exception": "Not essential for marketing of genotoxic drugs targeting rapidly dividing cells or well-characterized teratogenic class",
+          "special_conditions": [
+            "Positive dose-range-finding study (even non-GLP) in one species sufficient for marketing",
+            "When NHP is only relevant species: WoE assessment preferred over default NHP EFD"
+          ]
+        },
+        {
+          "id": "S9-05",
+          "study_type": "Fertility study",
+          "requirement": "NOT warranted for clinical trials or marketing in advanced cancer",
+          "alternative": "Reproductive organ evaluation in general tox studies sufficient"
+        },
+        {
+          "id": "S9-06",
+          "study_type": "Pre/postnatal development",
+          "requirement": "Generally NOT warranted for clinical trials or marketing in advanced cancer"
+        },
+        {
+          "id": "S9-07",
+          "study_type": "Genotoxicity",
+          "requirement_clinical_trials": "NOT essential for clinical trials in advanced cancer",
+          "requirement_marketing": "Should be performed per S2 for marketing",
+          "special": "Positive Ames: in vivo genotox NOT warranted. Negative Ames + positive in vitro chromosome: in vivo should be considered"
+        },
+        {
+          "id": "S9-08",
+          "study_type": "Carcinogenicity",
+          "requirement": "NOT warranted for advanced cancer therapeutics",
+          "exception": "Adjuvant setting with high cure rate: likely needed before marketing"
+        }
+      ],
+      "nonclinical_treatment_schedule_table": [
+        {"clinical_schedule": "Once every 3-4 weeks", "nonclinical": "Single dose"},
+        {"clinical_schedule": "Daily x 5 days every 3 weeks", "nonclinical": "Daily x 5 days"},
+        {"clinical_schedule": "Daily x 5-7 days, alternating weeks", "nonclinical": "Daily x 5-7 days, alternating weeks (2 cycles)"},
+        {"clinical_schedule": "Once weekly x 3, 1 week off", "nonclinical": "Once weekly x 3"},
+        {"clinical_schedule": "2-3x/week", "nonclinical": "2-3x/week x 4 weeks"},
+        {"clinical_schedule": "Daily", "nonclinical": "Daily x 4 weeks"},
+        {"clinical_schedule": "Weekly", "nonclinical": "Once weekly x 4-5 doses"}
+      ],
+      "ADC_specific": {
+        "whole_ADC": "Tested in at least one species",
+        "mAb_alone": "Generally NOT warranted",
+        "payload_linker": "Nature of payload determines additional studies",
+        "TK": "Measure ADC level, payload level, estimate free antibody",
+        "plasma_stability": "In vitro data in human and tox species before FIH",
+        "FIH_dosing": "Minimum 2 doses; interval once every 3-4 weeks",
+        "starting_dose": "1/10 STD10 (rodent) or 1/6 HNSTD (non-rodent) for ADC by BSA"
+      }
+    },
+    "S10": {
+      "title": "Photosafety Evaluation of Pharmaceuticals",
+      "year": 2013,
+      "scope": "New APIs, new excipients for dermal formulations; excludes peptides/proteins/mAbs/ADCs/oligonucleotides",
+      "requirements": [
+        {
+          "id": "S10-01",
+          "study_type": "UV-Visible absorption spectrum",
+          "test_system": "Chemical assay (UV-vis spectrophotometry)",
+          "wavelength_range": "290-700 nm",
+          "threshold": "MEC 1000 L/mol/cm",
+          "decision_rules": {
+            "MEC_below_1000": "NOT photoreactive; no further testing needed",
+            "MEC_at_or_above_1000": "Potentially photoreactive; proceed to further evaluation"
+          },
+          "timing": "Before outpatient clinical studies"
+        },
+        {
+          "id": "S10-02",
+          "study_type": "Reactive Oxygen Species (ROS) assay (optional)",
+          "test_system": "Chemical assay",
+          "test_concentration": "200 micromolar",
+          "decision_rules": {
+            "negative": "Very low probability of phototoxicity; can support no further testing",
+            "positive": "Flag for follow-up only (does not confirm phototoxicity)"
+          },
+          "special_conditions": ["Negative ROS cannot negate positive in vitro phototoxicity test"]
+        },
+        {
+          "id": "S10-03",
+          "study_type": "3T3 Neutral Red Uptake Phototoxicity Test (3T3 NRU-PT)",
+          "test_system": "BALB/c 3T3 mouse fibroblast cells",
+          "irradiation": "Simulated sunlight; UVA 5-20 J/cm2; UVB attenuated",
+          "max_concentration": "100 microg/mL",
+          "endpoints": ["Photo Irritation Factor (PIF)", "Mean Photo Effect (MPE)"],
+          "decision_rules": {
+            "PIF_lt_2_or_MPE_lt_0.10": "Not phototoxic; no further testing",
+            "PIF_2_to_5_or_MPE_0.10_to_0.15": "Questionable; generally no further evaluation for systemic drugs",
+            "PIF_gt_5_or_MPE_gt_0.15": "Positive; proceed to in vivo or clinical assessment"
+          },
+          "sensitivity": "93%",
+          "timing": "Before Phase 3"
+        },
+        {
+          "id": "S10-04",
+          "study_type": "In vivo phototoxicity test (systemic)",
+          "species": "Guinea pig, mouse, or rat",
+          "endpoints": ["Erythema", "Edema", "Histopathology", "NOAEL determination"],
+          "irradiation_timing": "At approximately Tmax",
+          "timing": "Before Phase 3",
+          "special_conditions": [
+            "Negative in vivo supersedes positive in vitro",
+            "Pigmented skin for APIs binding melanin",
+            "Retinal histopath for drugs absorbing above 400 nm"
+          ]
+        },
+        {
+          "id": "S10-05",
+          "study_type": "Tissue distribution for photosafety",
+          "species": "Rodent (typically)",
+          "endpoints": ["Skin and eye tissue-to-plasma ratios", "Tissue residence time", "Accumulation potential"],
+          "purpose": "Low levels in light-exposed tissues or short half-life can support no further photosafety testing"
+        },
+        {
+          "id": "S10-06",
+          "study_type": "Photoallergy assessment (dermal products only)",
+          "requirement": "Clinical assessment in Phase 3 for dermal products with MEC > 1000",
+          "special_conditions": [
+            "Nonclinical photoallergy NOT recommended",
+            "NOT recommended for systemic drugs"
+          ]
+        }
+      ],
+      "evidence_hierarchy": "Clinical (negative) > In vivo (negative) > In vitro 3T3 (negative)",
+      "tests_not_recommended": ["Photogenotoxicity", "Photocarcinogenicity", "Nonclinical photoallergy for systemic drugs"]
+    },
+    "S11": {
+      "title": "Nonclinical Safety Testing in Support of Development of Paediatric Pharmaceuticals",
+      "year": 2020,
+      "scope": "Small molecules and biotechnology-derived pharmaceuticals for paediatric use; excludes tissue-engineered, gene/cellular therapies, vaccines",
+      "requirements": [
+        {
+          "id": "S11-01",
+          "study_type": "Weight of Evidence (WoE) assessment for JAS need",
+          "timing": "Before any paediatric clinical trial",
+          "factors_favoring_JAS": [
+            "Youngest patient: neonates (<1 month)",
+            "Effects on developing organ systems suspected",
+            "No existing nonclinical/clinical data",
+            "Pharmacological target involved in organ development",
+            "Low selectivity/specificity",
+            "Chronic clinical use"
+          ],
+          "factors_against_JAS": [
+            "Adolescent population (>=12 years)",
+            "No developing organ system concern",
+            "Paediatric clinical data already available",
+            "No target role in development",
+            "High selectivity",
+            "Acute use"
+          ]
+        },
+        {
+          "id": "S11-02",
+          "study_type": "Dose Range-Finding (DRF) study in juvenile animals",
+          "species": "Same species planned for definitive JAS (preferably rodent)",
+          "duration": "Short",
+          "endpoints": ["Tolerability", "Exposure (TK)", "Mortality"],
+          "GLP": "Not necessarily required",
+          "timing": "Before definitive JAS"
+        },
+        {
+          "id": "S11-03",
+          "study_type": "Definitive Juvenile Animal Study (JAS)",
+          "species": "Single species generally sufficient (rat preferred); two species for paediatric-first/only development",
+          "dose_groups": "Minimum 3 + control",
+          "GLP": true,
+          "age_at_initiation": {
+            "rat_neonate": "PND 1-10",
+            "rat_weaning": "PND 10-21",
+            "rat_child": "PND 21-35",
+            "rat_puberty_adolescent": "PND 42-63+",
+            "rat_adult": "PND 70+"
+          },
+          "core_endpoints": [
+            "Mortality and clinical observations",
+            "Growth (body weight + long bone length at necropsy)",
+            "Food consumption (postweaning)",
+            "Sexual development (vaginal opening, balanopreputial separation)",
+            "Clinical pathology (chemistry + hematology)",
+            "Anatomic pathology (gross, organ weights, microscopic: bone/marrow, brain, heart, kidney, liver, lung, ovary, testis with spermatogenic evaluation, GI)",
+            "Toxicokinetics (near beginning and end of dosing)"
+          ],
+          "additional_triggered_endpoints": {
+            "growth": ["Crown-rump length", "Body length", "Serial X-ray (non-rodents)"],
+            "bone": ["Densitometry", "Serum/urinary bone biomarkers", "Histomorphometry"],
+            "CNS": ["Locomotor activity", "Acoustic startle", "Coordination", "Learning/memory", "Expanded neurohistopathology"],
+            "reproductive": ["Expanded histopathology", "Estrous cyclicity", "Sperm analysis/testicular IHC"],
+            "immune": ["TDAR (after PND 45 in rat)", "Lymphocyte subsets", "Immunoglobulin quantification"],
+            "ophthalmologic": ["Ophthalmoscopy", "Palpebral reflex"]
+          },
+          "dosing_period": "Covers critical/active periods of growth/development for target organ of concern; NOT directly tied to clinical treatment duration",
+          "post_treatment": "Generally recommended for reversibility/delayed onset; full reversibility not required",
+          "timing": "Before paediatric clinical trial if WoE warrants"
+        }
+      ]
+    },
+    "S12": {
+      "title": "Nonclinical Biodistribution Considerations for Gene Therapy Products",
+      "year": 2023,
+      "scope": "GT products mediating effect by expression of transferred genetic materials (purified nucleic acids, modified microorganisms, ex vivo modified cells, genome editing, oncolytic viruses); excludes prophylactic vaccines, chemically synthesized oligonucleotides",
+      "requirements": [
+        {
+          "id": "S12-01",
+          "study_type": "Biodistribution (BD) study",
+          "species": "Biologically relevant species/model supporting transfer and expression",
+          "group_size": {
+            "rodent": "Minimum 5 per sex/group/time point",
+            "non_rodent": "Minimum 3 per sex/group/time point"
+          },
+          "route": "Intended clinical ROA",
+          "dose": "Highest dose = expected max toxicology dose; must equal or exceed anticipated max clinical dose",
+          "mandatory_tissue_panel": [
+            "Injection site(s)", "Gonads", "Adrenal gland", "Brain",
+            "Spinal cord (cervical, thoracic, lumbar)", "Liver", "Kidney",
+            "Lung", "Heart", "Spleen", "Blood"
+          ],
+          "expandable_tissues": [
+            "Peripheral nerves", "Dorsal root ganglia", "CSF", "Vitreous fluid",
+            "Draining lymph nodes", "Bone marrow", "Eyes", "Optic nerve"
+          ],
+          "assay_methods": {
+            "primary": "Quantitative nucleic acid amplification (qPCR, digital PCR) -- vector genome DNA/RNA per cell equivalent",
+            "expression_product": "ELISA, IHC, Western blot, ISH, flow cytometry, in vivo/ex vivo imaging (risk-based)"
+          },
+          "time_points": "Multiple: peak, steady-state, clearance; replication-competent vectors: also second peak from replication + clearance",
+          "timing": "Must be completed BEFORE first-in-human clinical trial",
+          "GLP": "Stand-alone non-GLP acceptable; if part of GLP tox study, in-life/sample collection must be GLP"
+        },
+        {
+          "id": "S12-02",
+          "study_type": "Gonadal tissue BD assessment",
+          "requirement": "BD of GT product in gonads must be evaluated for both sexes",
+          "follow_up_if_persistent": "Additional studies to determine GT product levels in germ cells (oocytes, sperm) vs non-germline cells",
+          "purpose": "Inform risk of inadvertent germline modification"
+        },
+        {
+          "id": "S12-03",
+          "study_type": "Additional BD studies (triggered)",
+          "triggers": [
+            "Change in ROA",
+            "Significant dose increase exceeding max nonclinical dose",
+            "Dosing regimen changes",
+            "New indication including both sexes",
+            "Vector structure/serotype change",
+            "Manufacturing changes affecting formulation"
+          ]
+        }
+      ],
+      "leveraging_existing_data": [
+        "Same GT product for different indication may suffice (considering dose, regimen, ROA, promoter)",
+        "Same vector with different transgene can support waiver (with justification)"
+      ]
+    },
+    "S13": {
+      "title": "Non-Clinical Safety Evaluation of Oligonucleotide-Based Therapeutics (CONCEPT PAPER)",
+      "year": 2024,
+      "status": "Concept paper only; guideline not yet written; target Step 4: November 2027",
+      "scope": "ASOs, siRNAs, miRNA mimics, saRNAs, aptamers, decoys, tRNA, CpG-motif ONTs; excludes guide RNA, vaccines, coding mRNA",
+      "planned_study_areas": [
+        "PK/distribution studies (ONT-specific tissue distribution, interspecies scaling)",
+        "TK studies",
+        "Secondary/safety pharmacology",
+        "General toxicity (species selection, dosing regimen, high dose setting, duration)",
+        "Genotoxicity (ONT-specific)",
+        "Carcinogenicity (ONT-specific)",
+        "Reproductive toxicity (ONT-specific)",
+        "Immunotoxicity (immunostimulatory + adaptive immune response)",
+        "Photosafety",
+        "Juvenile toxicity",
+        "Metabolite/impurity characterization"
+      ],
+      "ont_specific_issues": [
+        "On-target exaggerated pharmacology: surrogates for on-target effects",
+        "Off-target effects: in silico/in vitro for hybridization-dependent off-targets",
+        "Species-specific effects translation",
+        "Interspecies scaling with ROA considerations",
+        "Leveraging precedented chemical modification data"
+      ]
+    }
+  },
+  "timing_matrix": {
+    "description": "Summary of when each study type is required relative to clinical development phases",
+    "before_FIH": [
+      {"study": "Genotoxicity standard battery", "guideline": "S2(R1)", "notes": "Complete battery (Option 1 or 2)"},
+      {"study": "Safety pharmacology core battery (CNS, CV, respiratory)", "guideline": "S7A", "notes": "For non-cancer indications"},
+      {"study": "In vitro IKr (hERG) assay", "guideline": "S7B", "notes": "For non-cancer indications"},
+      {"study": "In vivo QT assay", "guideline": "S7B", "notes": "For non-cancer indications"},
+      {"study": "Integrated QT risk assessment", "guideline": "S7B", "notes": ""},
+      {"study": "Repeat-dose toxicity (duration per clinical plan)", "guideline": "M3/S4/S6/S9", "notes": "Schedule mirrors clinical dosing"},
+      {"study": "Toxicokinetics", "guideline": "S3A", "notes": "Integrated into repeat-dose studies"},
+      {"study": "Single-dose tissue distribution", "guideline": "S3B", "notes": "Standard program component"},
+      {"study": "UV-Vis absorption spectrum", "guideline": "S10", "notes": "Before outpatient studies"},
+      {"study": "Gene therapy biodistribution", "guideline": "S12", "notes": "Must be complete before FIH"},
+      {"study": "Anticancer repeat-dose tox", "guideline": "S9", "notes": "Duration per schedule table; single rodent may suffice for genotoxic drugs"}
+    ],
+    "before_phase_3": [
+      {"study": "FEED (fertility)", "guideline": "S5(R3)", "notes": "Before large-scale trials with WOCBP"},
+      {"study": "EFD (two species)", "guideline": "S5(R3)", "notes": "Before WOCBP in Phase 3; pEFD can defer"},
+      {"study": "Immunotoxicity Tier 2 (TDAR, immunophenotyping, etc.)", "guideline": "S8", "notes": "If WoE triggers concern"},
+      {"study": "In vitro phototoxicity (3T3 NRU-PT)", "guideline": "S10", "notes": "If MEC >= 1000"},
+      {"study": "In vivo phototoxicity", "guideline": "S10", "notes": "If in vitro positive"},
+      {"study": "3-month repeat-dose tox for anticancer", "guideline": "S9", "notes": "Maximum duration for advanced cancer"},
+      {"study": "JAS (if WoE warrants)", "guideline": "S11", "notes": "Before paediatric clinical trial"}
+    ],
+    "before_marketing_NDA_MAA": [
+      {"study": "Carcinogenicity studies (2-year rat and/or transgenic mouse)", "guideline": "S1A/S1B/S1B(R1)", "notes": "Unless WoE waiver per S1B(R1); post-approval for life-threatening diseases"},
+      {"study": "PPND", "guideline": "S5(R3)", "notes": ""},
+      {"study": "ePPND (NHP biopharmaceuticals)", "guideline": "S6(R1)/S5(R3)", "notes": "Report at marketing application"},
+      {"study": "Chronic toxicity (6-month rodent, 9-month non-rodent)", "guideline": "S4", "notes": "Not needed for biotech (S6: 6 months max) or cancer (S9: 3 months max)"},
+      {"study": "Supplemental safety pharmacology", "guideline": "S7A", "notes": "Unless not warranted"},
+      {"study": "Genotoxicity (for anticancer)", "guideline": "S9/S2(R1)", "notes": "Not needed for clinical trials but required for marketing"},
+      {"study": "EFD (for anticancer)", "guideline": "S9/S5(R3)", "notes": "Not needed for clinical trials; available at marketing unless genotoxic/well-characterized class"},
+      {"study": "Photosafety assessment complete", "guideline": "S10", "notes": ""},
+      {"study": "Photoallergy clinical assessment (dermal products)", "guideline": "S10", "notes": ""}
+    ],
+    "not_required_for_advanced_cancer_S9": [
+      "Carcinogenicity studies",
+      "Dedicated fertility studies",
+      "Pre/postnatal development studies",
+      "6-month or 9-month chronic toxicity (3-month max)",
+      "Standalone safety pharmacology (S7A/S7B)",
+      "Genotoxicity for clinical trials (required for marketing only)",
+      "Abuse liability studies",
+      "Combination toxicology (if individual profiles characterized)"
+    ],
+    "not_required_for_biotech_S6R1": [
+      "Standard genotoxicity battery (unless ADC with organic linker)",
+      "Standard 2-year carcinogenicity bioassays (WoE approach instead)",
+      "Chronic tox beyond 6 months",
+      "Guinea pig anaphylaxis tests"
+    ]
+  },
+  "species_requirements_summary": {
+    "rodent_rat_default": [
+      "Repeat-dose chronic toxicity (6 months) -- S4",
+      "Long-term carcinogenicity (2 years) -- S1B",
+      "Dose-ranging for carcinogenicity (90 days) -- S1C(R2)",
+      "FEED (fertility) -- S5(R3)",
+      "EFD (one of two species) -- S5(R3)",
+      "PPND -- S5(R3)",
+      "Genotoxicity in vivo (micronucleus, Comet) -- S2(R1)",
+      "Safety pharmacology CNS + respiratory -- S7A",
+      "JAS (preferred species) -- S11"
+    ],
+    "rodent_mouse": [
+      "Second carcinogenicity study (2-year or rasH2-Tg 6-month) -- S1B",
+      "Photocarcinogenicity -- S1A",
+      "Genotoxicity in vivo (alternative to rat) -- S2(R1)"
+    ],
+    "non_rodent_dog_or_NHP": [
+      "Repeat-dose chronic toxicity (9 months) -- S4",
+      "Safety pharmacology CV core battery -- S7A",
+      "In vivo QT assay -- S7B",
+      "EFD second species (typically rabbit) -- S5(R3)"
+    ],
+    "NHP_specific": [
+      "ePPND (when NHP is only relevant species) -- S6(R1)/S5(R3)",
+      "Indirect fertility assessment (3+ month repeat-dose) -- S6(R1)",
+      "Species relevance for biotech products -- S6(R1)"
+    ],
+    "not_appropriate": {
+      "adult_rat_mouse_for_QT": "S7B -- primary repolarization current is Ito, not IKr",
+      "non_relevant_species_for_biotech": "S6(R1) -- misleading results"
+    }
+  }
+}

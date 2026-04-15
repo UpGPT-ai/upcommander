@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "title": "Long Term Follow-Up After Administration of Human Gene Therapy Products",
+    "source_file": "Long_Term_Follow_Up_Gene_Therapy.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "January 2020",
+    "document_version": "Final (supersedes November 2006 guidance)",
+    "issuing_authority": "FDA Center for Biologics Evaluation and Research (CBER)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 28
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-LTFU-001",
+      "rule_text": "All clinical protocols proposing administration of a GT product that utilizes genome-editing technology must include Long Term Follow-Up (LTFU) observations.",
+      "source_section": "IV.A. Framework to Assess Potential Delayed Risks of Gene Therapy Products",
+      "source_page": 6,
+      "verbatim_quote": "If the answer is \"yes,\" all your clinical protocols proposing administration of the GT product should include LTFU observations for appropriate human subject protections (see section V. for recommendations on how to perform clinical LTFU observations).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None for genome-editing products",
+      "cross_references": ["21 CFR 312.42(b)(1)(i)", "21 CFR 312.42(b)(2)(i)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-002",
+      "rule_text": "If FDA concludes that LTFU observations are necessary to mitigate long term risks and the study lacks LTFU observations, FDA may place the study on clinical hold.",
+      "source_section": "IV.A. Framework to Assess Potential Delayed Risks",
+      "source_page": 8,
+      "verbatim_quote": "if based upon our review of your submission or other additional information, we conclude that LTFU observations for delayed adverse events are necessary to mitigate long term risks, and that without LTFU observations, the study presents an unreasonable and significant risk to study subjects, we may place your study on clinical hold (21 CFR 312.42(b)(1)(i) and 312.42(b)(2)(i)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.42(b)(1)(i)", "21 CFR 312.42(b)(2)(i)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-003",
+      "rule_text": "Preclinical biodistribution data supporting assessment of delayed risks must be submitted in the IND along with other preclinical data.",
+      "source_section": "IV.A. Framework to Assess Potential Delayed Risks",
+      "source_page": 5,
+      "verbatim_quote": "Primary data and information relevant to the assessment of the risk of delayed events should be submitted in your IND along with other preclinical data (see 21 CFR 312.23(a)(8), 312.23(a)(10)(iv), and 312.23(a)(11)).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.23(a)(8)", "21 CFR 312.23(a)(10)(iv)", "21 CFR 312.23(a)(11)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-004",
+      "rule_text": "Preclinical biodistribution studies must use a quantitative PCR (qPCR) assay with a demonstrated limit of quantitation of ≤50 copies/μg genomic DNA, detectable at 95% confidence. DNA samples must be run in triplicate for each tissue.",
+      "source_section": "IV.B. Considerations for Preclinical Study Design",
+      "source_page": 10,
+      "verbatim_quote": "i. The assay should have a demonstrated limit of quantitation of ≤50 copies/μg genomic DNA, so that your assay can detect this limit with 95% confidence. ii. The DNA samples should be run in triplicate for each tissue.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-005",
+      "rule_text": "Biodistribution studies must sample at minimum: blood, injection site(s), gonads, brain, liver, kidneys, lung, heart, and spleen. Additional tissues should be considered based on vector type, tropism, and route of administration.",
+      "source_section": "IV.B.2. Tissue Collection and Analysis",
+      "source_page": 10,
+      "verbatim_quote": "Sample and analyze the following panel of tissues, at a minimum: blood, injection site(s), gonads, brain, liver, kidneys, lung, heart, and spleen. Consider other tissues for evaluation, depending on the product, vector type and tropism, and transgene(s), as well as the route of administration (e.g., draining lymph nodes and contralateral sites for subcutaneous/intramuscular injection, bone marrow, eyes, etc.).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Additional tissues required based on product characteristics",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-006",
+      "rule_text": "Biodistribution studies must use at least 5 animals per sex per group per sacrifice time point for rodents, and between 3-5 animals per sex per group per sacrifice time point for non-rodents.",
+      "source_section": "IV.B.1. Animal Study Design",
+      "source_page": 10,
+      "verbatim_quote": "c. Use at least 5 animals per sex per group per sacrifice time point for rodents, and between 3-5 animals per sex per group per sacrifice time point for non-rodents.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-007",
+      "rule_text": "All study subjects who receive the GT product must be enrolled in the LTFU protocol after signing an informed consent document, when LTFU observations are warranted.",
+      "source_section": "V.B. Clinical Trial Populations for Long Term Follow-up Observations",
+      "source_page": 16,
+      "verbatim_quote": "When a GT product is deemed to pose a risk for delayed adverse events (based on the recommendations/discussions provided under sections III and IV of this document) and a decision to perform LTFU observations is made, all study subjects who receive the GT product are expected to be enrolled in the LTFU protocol (as discussed in Section V.C of this guidance) after signing an informed consent document.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None when LTFU is required",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-008",
+      "rule_text": "LTFU duration for integrating vectors (gammaretroviral, lentiviral vectors, and transposon elements) must be 15 years.",
+      "source_section": "V.C. Duration of Long Term Follow-up Observations",
+      "source_page": 16,
+      "verbatim_quote": "Fifteen years for integrating vectors such as gammaretroviral and lentiviral vectors and transposon elements.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Duration may be modified by submitting an amendment to IND with supporting clinical and laboratory data",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-009",
+      "rule_text": "LTFU duration for herpes virus vectors (or oncolytics) capable of establishing latency must be up to 15 years. LTFU duration for microbial vectors known to establish persistent infection must be up to 15 years.",
+      "source_section": "V.C. Duration of Long Term Follow-up Observations",
+      "source_page": 16,
+      "verbatim_quote": "Up to fifteen years for herpes virus vectors (or oncolytics) that are capable of establishing latency. Up to fifteen years for microbial vectors that are known to establish persistent infection.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Risk-based approach may modify duration based on available data",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-010",
+      "rule_text": "LTFU duration for genome editing products must be up to 15 years. LTFU duration for AAV vectors must be up to 5 years.",
+      "source_section": "V.C. Duration of Long Term Follow-up Observations",
+      "source_page": 17,
+      "verbatim_quote": "Up to fifteen years for genome editing products. Up to five years for AAV vectors.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Risk-based modification possible with IND amendment and FDA concurrence",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-011",
+      "rule_text": "Investigators are required to prepare and maintain adequate and accurate case histories that record all observations and other data pertinent to the investigation on each subject administered the investigational drug.",
+      "source_section": "V.D. Elements of Long Term Follow-up Observations",
+      "source_page": 17,
+      "verbatim_quote": "The investigator is required to prepare and maintain adequate and accurate case histories that record all observations and other data pertinent to the investigation on each subject administered the investigational drug or employed as a control in the investigation (see 21 CFR 312.62(b)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.62(b)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-012",
+      "rule_text": "LTFU protocol must monitor for specific delayed adverse events including: new malignancy, new or exacerbated neurologic disorder, new or exacerbated rheumatologic or other autoimmune disorder, new hematologic disorder, and new incidence of infection (potentially product-related).",
+      "source_section": "V.D. Elements of Long Term Follow-up Observations",
+      "source_page": 18,
+      "verbatim_quote": "Establish a method for investigators to record the emergence of new clinical conditions, such as: New malignancy(ies); New incidence or exacerbation of a pre-existing neurologic disorder; New incidence or exacerbation of a prior rheumatologic or other autoimmune disorder; New incidence of a hematologic disorder. New incidence of infection (potentially product-related).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-013",
+      "rule_text": "During subsequent LTFU period, investigators must contact subjects at a minimum of once a year. During the first five years, scheduled physical examinations by a healthcare provider once a year are recommended.",
+      "source_section": "V.D.5. Scheduled Physical Examinations",
+      "source_page": 21,
+      "verbatim_quote": "Contact subjects at a minimum of once a year... We recommend that LTFU observations include scheduled physical examinations performed by a HCP once a year during the first five years (or until the completion of LTFU if the LTFU is less than five years)...",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "More frequent monitoring may be needed if product-related delayed adverse events occur",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-014",
+      "rule_text": "During LTFU observations, study subjects must be tested at least annually for persistent vector sequences until they become undetectable.",
+      "source_section": "V.D.6. GT Product Persistence",
+      "source_page": 21,
+      "verbatim_quote": "During LTFU observations, we recommend that you test study subjects at least annually for persistent vector sequences until they become undetectable.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "More frequent testing may be necessary for specific products",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-015",
+      "rule_text": "Sponsors must follow applicable reporting requirements under 21 CFR 312.32 for adverse events associated with the investigational product during LTFU. Sponsors must notify FDA and each participating investigator of any serious and unexpected suspected adverse reaction.",
+      "source_section": "V.D.2. IND Safety Reports",
+      "source_page": 19,
+      "verbatim_quote": "You must follow applicable reporting requirements outlined in 21 CFR 312.32 for adverse events associated with the use of the investigational product. As the LTFU observations proceed, you must notify FDA and each participating investigator of any serious and unexpected suspected adverse reaction (21 CFR 312.32(c)(1)(i)), and findings from other studies (21 CFR 312.32(c)(1)(ii)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.32(c)(1)(i)", "21 CFR 312.32(c)(1)(ii)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-016",
+      "rule_text": "Sponsors must promptly investigate all safety information received. If the relationship of an adverse event to the GT product is uncertain, additional investigations may be needed. Sponsors must revise their informed consent document and Investigator's Brochure to include newly identified risks and inform all clinical investigators.",
+      "source_section": "V.D.2. IND Safety Reports",
+      "source_page": 20,
+      "verbatim_quote": "You must promptly investigate all safety information you receive (21 CFR 312.32(d)(1))... You must also revise your informed consent document and Investigator Brochure to include the new adverse event(s) that may be associated with the product or study procedures (21 CFR Part 50, 21 CFR 312.55(b)). You must inform all clinical investigators of the newly identified risk (21 CFR 312.32(c)(1)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.32(d)(1)", "21 CFR 312.55(b)", "21 CFR Part 50"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-017",
+      "rule_text": "While the IND is in effect and LTFU observations are ongoing, sponsors must file an annual report per 21 CFR 312.33. The annual report must contain an independent LTFU section.",
+      "source_section": "V.D.3. Annual Reports to the IND",
+      "source_page": 20,
+      "verbatim_quote": "While the IND is in effect and LTFU observations are ongoing, you must file an annual report (21 CFR 312.33). It is recommended that the annual report contain an independent section with a subtitle for Long Term Follow-Up.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Sponsors may submit a DSUR in lieu of annual report with LTFU section",
+      "cross_references": ["21 CFR 312.33", "21 CFR 312.33(b)(1)", "21 CFR 312.33(b)(2)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-018",
+      "rule_text": "If evidence of oligoclonality or monoclonality is observed during integrating vector LTFU, this essential information must be submitted in an information amendment to the IND within 30 days of receiving the report. If no evidence of oligoclonality or monoclonality is observed, report a summary of all integration site analyses in the annual report.",
+      "source_section": "V.F.2. Data Reporting",
+      "source_page": 24,
+      "verbatim_quote": "if evidence of oligoclonality or monoclonality is observed, you must submit this essential information in an information amendment to the IND (21 CFR 312.31(a)). We recommend that you submit this amendment within 30 days of receiving the report of such an observation.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.31(a)", "21 CFR 312.33(b)(5)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-019",
+      "rule_text": "For subjects exposed to integrating vectors (gammaretroviral, lentiviral), vector sequences must be tested at intervals of no greater than six months for the first five years and then no greater than yearly for the next ten years, or until no vector sequences are detectable.",
+      "source_section": "V.F.1.c. Data Collection",
+      "source_page": 23,
+      "verbatim_quote": "We recommend that you test for vector sequences by PCR in subject surrogate samples obtained at intervals of no greater than six months for the first five years and then no greater than yearly for the next ten years, or until such time that no vector sequences are detectable in the surrogate sample.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Less frequent testing may be appropriate if no vector sequences are detectable",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-020",
+      "rule_text": "For integrating vectors, analysis to determine the site of vector integration must be performed if analysis of surrogate cells suggests a predominant clone or monoclonality. If a predominant integration site is detected, another clonality analysis must be performed within no more than three months later.",
+      "source_section": "V.F.1.d. Data Collection",
+      "source_page": 23,
+      "verbatim_quote": "We recommend that you perform an analysis to determine the site of vector integration if the analysis of a subject's surrogate cells suggests a predominant clone (e.g., oligoclonal pattern of vector insertions) or monoclonality. In addition, if you detect a predominant integration site, test for persistence by performing another analysis for clonality no more than three months later.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-021",
+      "rule_text": "When the nucleotide sequence adjacent to the site of vector integration is determined, sponsors must compare the identified integration site with known human sequences in the human genome database and other databases that document oncogenes.",
+      "source_section": "V.F.1.e. Data Collection",
+      "source_page": 23,
+      "verbatim_quote": "When the nucleotide sequence adjacent to the site of the vector integration has been determined, we recommend that you compare the identified integration site sequence with known human sequences in the human genome database and other databases that document oncogenes to determine whether the identified sequences are known to be associated with any human cancers.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-022",
+      "rule_text": "For retroviral vector clinical trials, informed consent documents must include current, complete and accurate disclosure of the development of leukemias in previous clinical trials where such adverse events were reported.",
+      "source_section": "V.F.3. Informed Consent in Trials Involving Retroviral Vectors",
+      "source_page": 24,
+      "verbatim_quote": "In accordance with 21 CFR 50.25(a)(2), for all clinical trials in which subjects are exposed to retroviral vectors, the informed consent documents must include current, complete and accurate disclosure of the development of leukemias in the clinical trials where such adverse events were reported.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 50.25(a)(2)", "21 CFR 50.20"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-023",
+      "rule_text": "Each subject in a clinical investigation must be provided with a description of any reasonably foreseeable risks from participating in the investigation. The informed consent document must explain the purpose and duration of LTFU observations.",
+      "source_section": "V.E. Informed Consent in Trials Involving LTFU Observations",
+      "source_page": 21,
+      "verbatim_quote": "Each subject in a clinical investigation must be provided with a description of any reasonably foreseeable risks from participating in the investigation (21 CFR 50.25(a)(2)). The informed consent document must describe, among other things, the purposes of the research, the expected duration of the subject's participation and the procedures to be followed (21 CFR 50.25(a)(1)). Accordingly, the informed consent document must explain the purpose and duration of LTFU observations.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 50.25(a)(1)", "21 CFR 50.25(a)(2)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-024",
+      "rule_text": "Informed consent documents must be updated to describe any adverse reactions associated with the product from the trial or other human or animal studies. Informed consent documents for trials storing blood or tissue samples must convey this information.",
+      "source_section": "V.E. Informed Consent",
+      "source_page": 22,
+      "verbatim_quote": "When appropriate, the informed consent document must be updated to describe any adverse reactions that may be associated with the product from your trial or other human or animal (preclinical) studies (21 CFR 50.25(b)(5)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 50.25(b)(5)", "21 CFR 50.25(a)(1)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-025",
+      "rule_text": "Sponsors must ensure that investigators submit informed consent documents for Institutional Review Board review and approval.",
+      "source_section": "V.E. Informed Consent",
+      "source_page": 22,
+      "verbatim_quote": "Sponsors must ensure that investigators submit the informed consent documents for Institutional Review Board review and approval (21 CFR 312.53(c)(1)(vi)(d)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 312.53(c)(1)(vi)(d)"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-026",
+      "rule_text": "For genome editing products, sponsors must propose a specific monitoring plan for delayed adverse events based on off-target activities identified in preclinical studies. The plan must address adverse events from the specific organ system targeted by the genome editing.",
+      "source_section": "V.G. Special Considerations Regarding Product Involving Genome Editing",
+      "source_page": 26,
+      "verbatim_quote": "1. Propose a specific plan to monitor for delayed adverse events based on the off-target activities noted in your preclinical studies (e.g., in vivo, in vitro and in silico analysis such as INDEL, (insertion and deletion of bases in a genome))... 2. Propose a monitoring plan regarding the adverse events from the specific organ system that the genome editing targets, that may include history and physical examination, general and specific laboratory tests, and imaging studies.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Alternative monitoring may be proposed if direct monitoring is not ethical or feasible",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-027",
+      "rule_text": "At the time of BLA submission, sponsors must submit a Pharmacovigilance Plan (PVP) for GT products that present long term risks to subjects. LTFU data collected post-licensure should be submitted in BLA annual reports.",
+      "source_section": "VI. General Considerations for Post-Marketing Monitoring Plans",
+      "source_page": 26,
+      "verbatim_quote": "we recommend that at the time of your BLA submission you submit a Pharmacovigilance Plan (PVP) as described in the FDA Guidance for Industry; E2E Pharmacovigilance Planning (Ref. 34)... LTFU data collected post-licensure should be submitted in the BLA annual report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None",
+      "cross_references": ["21 CFR 600.80", "E2E Pharmacovigilance Planning"]
+    },
+    {
+      "rule_id": "FDA-GT-LTFU-028",
+      "rule_text": "Integration site analysis for integrating vectors should be performed when at least 1% of cells in the surrogate sample are positive for vector sequences by PCR. The method chosen must provide information about assay sensitivity, specificity, and reproducibility.",
+      "source_section": "V.F.1.b. Data Collection",
+      "source_page": 23,
+      "verbatim_quote": "We recommend that you perform an analysis to assess the pattern of vector integration sites if at least 1% cells in the surrogate sample are positive for vector sequences by PCR... The choice of method to assess the pattern of vector integration sites should be based upon data with appropriate positive and negative controls... Studies should be performed to provide information about the assay sensitivity, specificity, and reproducibility.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Alternative trigger for analysis may be based on evaluation of assay sensitivity for detecting clonality",
+      "cross_references": []
+    }
+  ]
+}

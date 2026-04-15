@@ -1,0 +1,247 @@
+{
+  "verification_date": "2026-03-23",
+  "files_analyzed": 16,
+  "json_rule_files_analyzed": 13,
+
+  "contradictions": [
+    {
+      "id": "CONTRA-001",
+      "severity": "NONE",
+      "type": "apparent_conflict_resolved",
+      "skills_involved": [
+        "skill-stability-analysis.md",
+        "skill-biotech-quality.md"
+      ],
+      "topic": "Accelerated stability data extrapolation for biologicals",
+      "skill_1_instruction": "Q1E extrapolation tables allow shelf life extension based on accelerated data results (Phase 3, Section 3.2)",
+      "skill_2_instruction": "Q5C states accelerated data NOT relied upon for extrapolation for biologicals due to physical sensitivity (BS-015 context; Phase 4)",
+      "resolution": "Not a true contradiction. skill-stability-analysis.md covers chemical entities; skill-biotech-quality.md covers biologicals. Both are correct for their respective product types. The 2025 draft section (7.7) in stability skill also notes biologicals extrapolation is limited to 1.5x data.",
+      "risk": "LOW — Only a problem if a user applies the stability skill to a biological without also consulting the biotech quality skill"
+    },
+    {
+      "id": "CONTRA-002",
+      "severity": "NONE",
+      "type": "apparent_conflict_resolved",
+      "skills_involved": [
+        "skill-regulatory-compliance.md",
+        "skill-eu-gmp-analysis.md",
+        "skill-multi-jurisdiction.md"
+      ],
+      "topic": "BCS Class III biowaivers",
+      "skill_1_instruction": "skill-regulatory-compliance.md Level 3 FDA: 'BCS biowaiver: Class I only (Class III requires in vivo BE)'",
+      "skill_2_instruction": "skill-eu-gmp-analysis.md Phase 4 Gap #13: 'EMA does not accept Class III biowaivers'",
+      "skill_3_instruction": "skill-multi-jurisdiction.md: 'FDA BCS Class III: No (restricted); EMA: Yes (with conditions)'",
+      "resolution": "skill-eu-gmp-analysis.md Gap #13 says 'EMA does not accept Class III biowaivers' but skill-multi-jurisdiction.md says EMA DOES accept them with conditions. The eu-gmp skill has the WRONG statement. EMA guideline CPMP/EWP/QWP/1401/98 Rev.1 explicitly allows BCS Class III biowaivers under specific dissolution conditions.",
+      "risk": "MEDIUM — skill-eu-gmp-analysis.md Gap #13 would give incorrect guidance. The statement should read 'EMA accepts BCS Class III biowaivers (with conditions)' not 'does not accept'"
+    },
+    {
+      "id": "CONTRA-003",
+      "severity": "NONE",
+      "type": "apparent_conflict_resolved",
+      "skills_involved": [
+        "skill-safety-pharmacology.md",
+        "skill-safety-reporting.md"
+      ],
+      "topic": "hERG assay safety margin calculation",
+      "skill_1_instruction": "skill-safety-pharmacology.md Step 3A: 'If protein binding <1% experimentally, use 1% as floor'",
+      "skill_2_instruction": "skill-safety-reporting.md Section 7.4: 'Unbound fraction floor of 1% applied if measured < 1%'",
+      "resolution": "Identical requirement stated in both skills. No contradiction — consistent E14/S7B Q&A guidance.",
+      "risk": "NONE"
+    },
+    {
+      "id": "CONTRA-004",
+      "severity": "LOW",
+      "type": "inconsistent_severity_scales",
+      "skills_involved": [
+        "skill-stability-analysis.md",
+        "skill-clinical-design.md",
+        "skill-safety-reporting.md",
+        "skill-biotech-quality.md",
+        "skill-quality-systems.md",
+        "skill-special-populations.md"
+      ],
+      "topic": "Severity/scoring scales are inconsistent across skills",
+      "detail": {
+        "skill-stability-analysis.md": "3-level: CRITICAL / MAJOR / MINOR",
+        "skill-clinical-design.md": "5-level: Critical(0) / Major(1) / Moderate(2) / Minor(3) / Observation(4) with weighted % scoring",
+        "skill-safety-reporting.md": "3-level: CRITICAL / MAJOR / MINOR",
+        "skill-biotech-quality.md": "2-level: critical / recommended",
+        "skill-quality-systems.md": "4-level: Compliant(3) / Partially Compliant(2) / Deficient(1) / Not Addressed(0)",
+        "skill-special-populations.md": "4-level: Compliant(4) / Minor gaps(3) / Significant gaps(2) / Non-compliant(1)",
+        "skill-eu-regulatory.md": "4-level: CRITICAL / HIGH / MEDIUM / LOW",
+        "skill-eu-gmp-analysis.md": "4-level: Critical / Major / Minor / Observation",
+        "skill-eu-pharmacovigilance.md": "No formal scoring scale defined",
+        "skill-nonclinical-review.md": "3-level: Critical / Major / Minor (in gap analysis)",
+        "skill-safety-pharmacology.md": "4-level: LOW / MODERATE / HIGH / CRITICAL (risk classification)",
+        "skill-multi-jurisdiction.md": "4-level: CRITICAL / HIGH / MEDIUM / LOW",
+        "skill-cross-domain.md": "No formal scoring scale defined",
+        "skill-cmc-methods.md": "No formal scoring scale defined",
+        "skill-canada-regulatory.md": "3-level: Critical Gaps / High Priority Gaps / Canada-Specific Flags"
+      },
+      "resolution": "These are different skills assessing different things, so some variation is expected. However, when a cross-domain review aggregates findings from multiple skills, inconsistent scales create confusion.",
+      "risk": "LOW — Problematic only when combining outputs from multiple skills into a unified report"
+    },
+    {
+      "id": "CONTRA-005",
+      "severity": "MEDIUM",
+      "type": "factual_error",
+      "skills_involved": [
+        "skill-eu-gmp-analysis.md"
+      ],
+      "topic": "BCS Class III biowaiver statement is incorrect",
+      "detail": "Phase 4 Gap Analysis table, row #13 states: 'BCS Class III biowaiver attempted — EMA does not accept Class III biowaivers — Conduct BE study'. This is factually wrong. EMA guideline CPMP/EWP/QWP/1401/98 Rev.1 (2010) explicitly allows BCS Class III biowaivers when the product dissolves very rapidly (>=85% in 15 min) at all three pH values and excipients are qualitatively and quantitatively the same. The same-skill regulatory-compliance.md correctly identifies this as an FDA-vs-EMA divergence. The multi-jurisdiction skill also correctly states EMA accepts Class III.",
+      "remediation": "Change row #13 to: 'BCS Class III biowaiver attempted — EMA accepts Class III biowaivers under specific conditions (very rapid dissolution, Q/Q same excipients) per CPMP/EWP/QWP/1401/98 Rev.1 — Verify dissolution and excipient similarity requirements met'"
+    },
+    {
+      "id": "CONTRA-006",
+      "severity": "LOW",
+      "type": "overlapping_scope_without_delineation",
+      "skills_involved": [
+        "skill-nonclinical-review.md",
+        "skill-safety-pharmacology.md"
+      ],
+      "topic": "Safety pharmacology coverage duplicated",
+      "detail": "skill-nonclinical-review.md STEP 3 covers S7A/S7B core battery and QT assessment in ~50 lines. skill-safety-pharmacology.md covers the same material in ~330 lines with much greater depth (hERG best practices, follow-up study triggers, integrated risk assessment framework, timing alignment). Neither skill references the other or explains when to use which.",
+      "remediation": "Add a cross-reference in skill-nonclinical-review.md STEP 3: 'For detailed S7A/S7B evaluation, invoke skill-safety-pharmacology.md' and reduce the nonclinical skill's SP section to a summary checklist with clear handoff."
+    },
+    {
+      "id": "CONTRA-007",
+      "severity": "LOW",
+      "type": "overlapping_scope_without_delineation",
+      "skills_involved": [
+        "skill-safety-reporting.md",
+        "skill-eu-pharmacovigilance.md"
+      ],
+      "topic": "PSUR/PBRER evaluation duplicated across ICH and EU-specific skills",
+      "detail": "skill-safety-reporting.md Section 4 covers PBRER evaluation per ICH E2C(R2) with 20 structural sections and detailed signal/benefit-risk assessment. skill-eu-pharmacovigilance.md Section 4 covers PSUR per GVP Module VII with EU regional appendix requirements. Both cover the same document type but from different regulatory perspectives. No cross-reference between them.",
+      "remediation": "Add cross-references. skill-safety-reporting.md should note: 'For EU-specific PSUR requirements (PRAC assessment, EU regional appendix), see skill-eu-pharmacovigilance.md Section 4.' skill-eu-pharmacovigilance.md should note: 'For ICH E2C(R2) structural requirements of the PSUR/PBRER, see skill-safety-reporting.md Section 4.'"
+    },
+    {
+      "id": "CONTRA-008",
+      "severity": "LOW",
+      "type": "overlapping_scope_without_delineation",
+      "skills_involved": [
+        "skill-eu-regulatory.md",
+        "skill-eu-gmp-analysis.md",
+        "skill-eu-pharmacovigilance.md"
+      ],
+      "topic": "EU requirements split across three skills with partial overlap",
+      "detail": "All three v3 EU skills cover overlapping EU topics: (1) QPPV requirement appears in both skill-eu-regulatory.md (Step 5) and skill-eu-pharmacovigilance.md (Section 1). (2) RMP requirement appears in skill-eu-regulatory.md (Step 2) and skill-eu-pharmacovigilance.md (Section 3). (3) Manufacturing/GMP appears in skill-eu-regulatory.md (Step 4) and skill-eu-gmp-analysis.md (all phases). None reference each other.",
+      "remediation": "Add a delineation note to each: eu-regulatory = legislative framework and pathway selection; eu-gmp-analysis = Module 3 CMC deep dive; eu-pharmacovigilance = GVP-based PV system evaluation. Add cross-references where topics overlap."
+    }
+  ],
+
+  "rule_id_verification": {
+    "summary": "6 of 13 JSON rule files have zero rule IDs. 3 files have inflated metadata counts that do not match actual rule counts.",
+    "files_with_ids": [
+      {
+        "file": "biotech-quality-rules.json",
+        "claimed_count": 147,
+        "actual_count": 136,
+        "discrepancy": "Metadata overcounts by 11; SKILL.md correctly states 136 via domain breakdown",
+        "id_format": "VS-001, EC-001, BS-001, CS-001, CP-001",
+        "coverage": "COMPLETE — all ranges sequential with no gaps"
+      },
+      {
+        "file": "clinical-design-rules.json",
+        "claimed_count": 583,
+        "actual_count": 583,
+        "discrepancy": "NONE",
+        "id_format": "E8-005, E9-004, E10-001, etc.",
+        "coverage": "COMPLETE",
+        "note": "SKILL.md uses E9-R1-001 format; JSON uses E9R1-001 (cosmetic mismatch only)"
+      },
+      {
+        "file": "multidisciplinary-rules.json",
+        "claimed_count": 249,
+        "actual_count": 249,
+        "discrepancy": "NONE",
+        "id_format": "M7-001, M9-001, ECTD-001, etc.",
+        "coverage": "COMPLETE"
+      },
+      {
+        "file": "special-populations-rules.json",
+        "claimed_count": 412,
+        "actual_count": 132,
+        "discrepancy": "CRITICAL — metadata total_rules=412 but only 132 rule objects exist. The 412 appears to come from obligation_summary counts being mistaken for rule counts.",
+        "id_format": "E5-001, E6-001, E11-001, etc.",
+        "coverage": "All existing ranges are complete; the shortfall is in total count, not in gaps"
+      },
+      {
+        "file": "nonclinical-requirements.json",
+        "claimed_count": null,
+        "actual_count": 70,
+        "discrepancy": "N/A — SKILL.md does not claim a count",
+        "id_format": "S1A-01, S2-01, S3A-01, etc.",
+        "coverage": "COMPLETE — best-implemented v2 file"
+      },
+      {
+        "file": "eu-legislation-requirements.json",
+        "claimed_count": 412,
+        "actual_count": 139,
+        "discrepancy": "CRITICAL — metadata claims 412 but only 139 requirement objects exist (~66% shortfall)",
+        "id_format": "MA-001, CT-001, GMP-001, etc.",
+        "coverage": "All existing ranges complete; total count inflated"
+      },
+      {
+        "file": "eu-gmp-rules.json",
+        "claimed_count": null,
+        "actual_count": 112,
+        "discrepancy": "N/A",
+        "id_format": "PQS-001, ST-001, etc.",
+        "coverage": "Good coverage across 23 sections"
+      },
+      {
+        "file": "eu-pharmacovigilance-rules.json",
+        "claimed_count": null,
+        "actual_count": 84,
+        "discrepancy": "N/A",
+        "id_format": "GVP-I-001, GVP-II-001, etc.",
+        "coverage": "Good but missing GVP Modules III, IV, VI, X-XIV"
+      },
+      {
+        "file": "jurisdiction-divergences.json",
+        "claimed_count": null,
+        "actual_count": 21,
+        "discrepancy": "N/A",
+        "id_format": "DIV-001 sequential",
+        "coverage": "COMPLETE"
+      },
+      {
+        "file": "stability-rules.json",
+        "claimed_count": null,
+        "actual_count": 6,
+        "discrepancy": "Only significant_change_criteria section has IDs (SC-1 to SC-6); ~95% of file content has no IDs",
+        "id_format": "SC-1 to SC-6",
+        "coverage": "MINIMAL"
+      }
+    ],
+    "files_with_zero_ids": [
+      "analytical-impurity-rules.json",
+      "safety-pharmacology-rules.json",
+      "safety-reporting-rules.json",
+      "health-canada-requirements.json",
+      "who-requirements.json",
+      "japan-specific-requirements.json"
+    ],
+    "regulatory_requirements_json_note": "US FDA section has zero IDs; EMA and PMDA sections have 22 IDs total"
+  },
+
+  "gaps_topics_in_json_not_in_skill": [
+    {
+      "file": "eu-pharmacovigilance-rules.json",
+      "json_has": "gvp-unique-requirements.json exists as a separate file with EU-unique PV requirements",
+      "skill_coverage": "skill-eu-pharmacovigilance.md does not reference gvp-unique-requirements.json"
+    },
+    {
+      "file": "nonclinical-requirements.json",
+      "json_has": "S13 (Oligonucleotides) requirements with IDs",
+      "skill_coverage": "skill-nonclinical-review.md mentions S13 in STEP 1 table but has no detailed evaluation checklist for ONTs (noted as 'when finalized')"
+    },
+    {
+      "file": "multidisciplinary-rules.json",
+      "json_has": "M13C (HVD/NTI BE) rules",
+      "skill_coverage": "skill-cross-domain.md mentions M13C only briefly (1 rule noted) but does not provide detailed evaluation guidance for HVD/NTI scenarios"
+    }
+  ]
+}

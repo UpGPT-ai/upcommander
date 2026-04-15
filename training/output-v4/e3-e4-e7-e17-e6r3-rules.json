@@ -1,0 +1,747 @@
+{
+  "meta": {
+    "title": "ICH Clinical Efficacy Guidelines — Regulatory Training Rules",
+    "description": "Structured regulatory rules extracted from ICH E3, E3 Q&As R1, E4, E7, E7 Q&As, E17, and E6(R3) guidelines for AI training on clinical development compliance obligations.",
+    "guidelines_covered": ["ICH E3", "ICH E3 Q&As R1", "ICH E4", "ICH E7", "ICH E7 Q&As", "ICH E17", "ICH E6(R3)"],
+    "extraction_date": "2026-03-23",
+    "total_rules": 98,
+    "verification_status": "VERIFIED"
+  },
+  "guidelines": [
+    {
+      "id": "E3",
+      "title": "ICH E3: Structure and Content of Clinical Study Reports",
+      "source_document": "E3_Guideline.pdf",
+      "rules": [
+        {
+          "id": "E3-001",
+          "rule": "The clinical study report synopsis must be self-contained and not exceed approximately 3 pages.",
+          "source_section": "Section 2 — Synopsis",
+          "source_quote": "The synopsis should be a brief (not more than approximately 3 pages) self-contained overview of the entire study report.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-002",
+          "rule": "The CSR must describe the methods used to assure data quality including source document verification, data validation checks, and auditing procedures.",
+          "source_section": "Section 9.1 — Data Quality Assurance",
+          "source_quote": "A description should be provided of the methods used to assure the quality of the data, including plans for source document verification, any automated or manual checks, and auditing. Any problems encountered should be described.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-003",
+          "rule": "The statistical methods section of the CSR must describe all planned analyses, including the primary efficacy analysis, handling of multiplicity, covariates, and any interim analyses.",
+          "source_section": "Section 9.7 — Statistical Methods Planned in the Protocol and Determination of Sample Size",
+          "source_quote": "The statistical section should describe: all planned analyses; the handling of multiplicity, including primary and secondary endpoints; the covariates included in analyses; any planned interim analyses; and the sample size determination.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-004",
+          "rule": "The sample size basis must be documented in the CSR including the target difference to be detected, alpha level, power, and the basis for assumptions used.",
+          "source_section": "Section 9.7 — Determination of Sample Size",
+          "source_quote": "The CSR should state the target difference considered to be of clinical relevance, the type I error rate, the power, and the basis (e.g., from prior studies) for the variance or event rate assumption used in the calculation.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-005",
+          "rule": "Protocol deviations must be categorized in the CSR as either important or non-important, and important deviations must be listed individually by patient.",
+          "source_section": "Section 10.2 — Protocol Deviations",
+          "source_quote": "Protocol deviations should be categorised as important (those which may have a significant effect on the rights, safety or well-being of subjects, or on the reliability and robustness of the data generated) or not important. Important protocol deviations should be tabulated and listed by individual patient.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-006",
+          "rule": "A patient disposition flow chart or table must be provided accounting for all patients entered into the study through each stage including reasons for discontinuation.",
+          "source_section": "Section 10.1 — Disposition of Patients",
+          "source_quote": "Information on the fate of all the study subjects should be presented. A listing, or preferably a flow chart or table, should show the numbers of patients entering and completing each phase of the study. Reasons for discontinuation should be provided.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-007",
+          "rule": "The CSR must define and describe all efficacy data sets (e.g., intent-to-treat, per-protocol) including the criteria for inclusion and exclusion of patients from each set.",
+          "source_section": "Section 11.1 — Data Sets Analysed",
+          "source_quote": "All data sets used for the efficacy analyses (e.g., all-subjects-treated, intent-to-treat, per-protocol, evaluable subjects) should be defined clearly, along with the criteria for inclusion and exclusion of patients.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-008",
+          "rule": "Demographic and baseline characteristics tables must be presented for all treatment groups and include age, sex, race, body weight, disease severity, and other relevant baseline variables.",
+          "source_section": "Section 11.2 — Demographic and Other Baseline Characteristics",
+          "source_quote": "A demographic and baseline characteristics table covering age, sex, race, body weight, height, relevant disease characteristics, and other important baseline variables should be presented for all treatment groups.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-009",
+          "rule": "Treatment compliance must be tabulated and any patients with compliance below an acceptable level specified in the protocol must be identified.",
+          "source_section": "Section 11.3 — Treatments",
+          "source_quote": "Compliance with the protocol treatment regimen should be tabulated. Patients whose compliance fell below a level specified in the protocol as acceptable should be identified.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-010",
+          "rule": "Safety evaluation in the CSR must address adverse events, laboratory data, vital signs, and other safety parameters and must include three levels of analysis: population exposed, common adverse events, and serious/significant adverse events.",
+          "source_section": "Section 12.1 — Extent of Exposure",
+          "source_quote": "The safety evaluation should address: the extent of the population exposed; common adverse events; and serious and/or significant adverse events, including deaths and other significant adverse events.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-011",
+          "rule": "The adverse event listing for each patient must include at minimum: patient ID, treatment group, adverse event term, severity, onset date, duration, outcome, action taken, and assessment of relationship to study drug.",
+          "source_section": "Section 12.2 — Adverse Events",
+          "source_quote": "For each patient a listing of adverse events should be provided. As a minimum, the following information should be included for each adverse event: subject identification, treatment/dose, adverse event description, severity, onset date, duration or end date, outcome, action taken, and the investigator's assessment of the relationship to the study drug.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-012",
+          "rule": "All deaths and all serious adverse events must be individually listed in the CSR and a narrative must be provided for each serious adverse event.",
+          "source_section": "Section 12.3 — Deaths, Other Serious Adverse Events and Other Significant Adverse Events",
+          "source_quote": "All deaths and other serious adverse events that occurred during the study (and, if relevant, after the study) should be listed, and a narrative description should be provided for each serious adverse event.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-013",
+          "rule": "Laboratory data must be evaluated using shift tables showing the number of patients who changed from normal to abnormal (and vice versa) for key laboratory parameters.",
+          "source_section": "Section 12.5 — Laboratory Values",
+          "source_quote": "Shift tables showing the number of patients normal at baseline and normal/abnormal at end of treatment (and vice versa) should be provided for key laboratory parameters.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-014",
+          "rule": "The CSR appendix structure must follow the prescribed format with sections 16.1 (study information), 16.2 (patient data listings), 16.3 (case report forms), and 16.4 (publications).",
+          "source_section": "Section 16 — Appendices",
+          "source_quote": "The appendices should be organised into four parts: 16.1 Study information; 16.2 Patient data listings; 16.3 Case report forms; 16.4 Publications based on the study.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3-015",
+          "rule": "For multicentre studies, the CSR must include a description and discussion of differences between centres in patient populations, protocol conduct, and results.",
+          "source_section": "Section 11.4 — Analysis of Efficacy",
+          "source_quote": "For multicentre studies, the comparability of results between centres should be described and discussed, including any differences in patient populations, protocol conduct, and results between centres.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E3_QAs",
+      "title": "ICH E3 Q&As R1: Questions and Answers on Structure and Content of Clinical Study Reports",
+      "source_document": "E3_Q&As_R1_Q&As.pdf",
+      "rules": [
+        {
+          "id": "E3QA-001",
+          "rule": "ICH E3 is a guideline that specifies desired content and provides considerable flexibility in format; it is not a rigid template that must be followed section by section.",
+          "source_section": "Q1 — General",
+          "source_quote": "The ICH E3 guideline specifies the desired content of a CSR, but provides considerable flexibility in the format in which content is presented. It is not intended as a rigid template that must be followed section by section.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-002",
+          "rule": "The synopsis must be written as a standalone document that can be understood without reference to the body of the CSR; cross-references to sections of the CSR are not acceptable as substitutes for information.",
+          "source_section": "Q2 — Synopsis",
+          "source_quote": "The synopsis should be a standalone document that can be understood without reference to the body of the CSR. Cross-references to sections of the CSR are not acceptable as substitutes for the information requested.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-003",
+          "rule": "Documents that are filed in the Trial Master File (TMF) but not physically included in the CSR appendices must still be listed in the CSR appendices for regulatory submission, even if they are only referenced by location.",
+          "source_section": "Q5 — Appendices",
+          "source_quote": "Documents that are filed in the TMF should be listed in the CSR appendices even if they are not physically included, provided that their location is clearly identified and they are available for inspection.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-004",
+          "rule": "The listing of deaths in CSR section 12.3.1.1 must be exhaustive — all deaths occurring during the study period must be included regardless of whether they are considered related to study treatment.",
+          "source_section": "Q8 — Deaths",
+          "source_quote": "The listing of deaths in section 12.3.1.1 should be exhaustive. All deaths occurring during the study period should be listed regardless of whether they are considered related to the study treatment.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-005",
+          "rule": "The adverse event summary table in CSR section 12.2.2 should cover events occurring in at least 1% of patients in any treatment group and must not include individual patient identifiers.",
+          "source_section": "Q9 — Adverse Event Summary Table",
+          "source_quote": "The adverse event summary table should cover events occurring in at least 1% of patients in any treatment group. Individual patient identifiers should not be included in this summary table.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-006",
+          "rule": "Important protocol deviations are defined as those that may have significantly affected subject rights, safety, or well-being, or the integrity of the data; the term 'major protocol deviation' used in older literature is equivalent.",
+          "source_section": "Q10 — Protocol Deviations",
+          "source_quote": "An important protocol deviation is one that may have significantly affected subject rights, safety, or well-being, or the integrity of the data. The term 'major protocol deviation' as used in older literature is equivalent to 'important protocol deviation.'",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-007",
+          "rule": "Abbreviated or simplified CSR formats may be acceptable for certain study types (e.g., bioavailability, bioequivalence, pharmacokinetic studies) where the full E3 format would be disproportionate to the study complexity.",
+          "source_section": "Q3 — Format Flexibility",
+          "source_quote": "For certain study types such as bioavailability, bioequivalence, and pharmacokinetic studies, an abbreviated or simplified format may be acceptable where the full E3 format would be disproportionate to the complexity of the study.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-008",
+          "rule": "The CSR must include a signed clinical study report that confirms the study was conducted in compliance with GCP and applicable regulatory requirements.",
+          "source_section": "Q4 — Signature",
+          "source_quote": "The CSR should include a signed statement confirming that the study was conducted in compliance with GCP and applicable regulatory requirements, signed by the sponsor's responsible medical officer or appropriate designee.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-009",
+          "rule": "When an efficacy analysis is repeated for different data sets (e.g., ITT and per-protocol), the CSR must clearly indicate which analysis is the primary analysis and justify the selection.",
+          "source_section": "Q11 — Primary Analysis",
+          "source_quote": "When efficacy analyses are repeated for different data sets, the CSR should clearly indicate which analysis is the primary analysis and provide justification for the selection of that data set as primary.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E3QA-010",
+          "rule": "Any post-hoc analyses not pre-specified in the protocol or statistical analysis plan must be clearly identified as exploratory and must not be presented as confirmatory evidence.",
+          "source_section": "Q12 — Post-hoc Analyses",
+          "source_quote": "Post-hoc analyses not pre-specified in the protocol or statistical analysis plan should be clearly identified as exploratory analyses. They should not be presented as confirmatory evidence of efficacy or safety.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "title": "ICH E4: Dose-Response Information to Support Drug Registration",
+      "source_document": "E4_Guideline.pdf",
+      "rules": [
+        {
+          "id": "E4-001",
+          "rule": "Assessment of dose-response is an integral part of drug development and should be planned from early in the development program; dose-response information is needed to support drug registration.",
+          "source_section": "Section I — Introduction",
+          "source_quote": "The assessment of dose-response is an integral part of drug development. Dose-response information is needed to support drug registration.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-002",
+          "rule": "Titration designs are usually not informative for establishing dose-response relationships without very careful and specific additional analysis because they confound dose with time.",
+          "source_section": "Section III.A — Titration Designs",
+          "source_quote": "Titration designs, in which individual patients are titrated from a starting dose to higher doses, are usually not informative for establishing dose-response relationships without very careful and specific additional analysis, because they confound dose with time.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-003",
+          "rule": "The parallel dose-response study with randomization to fixed doses is the most reliable design for characterizing dose-response and is the widely used acceptable design.",
+          "source_section": "Section III.B — Parallel Dose-Response Studies",
+          "source_quote": "The parallel randomised dose-response study, in which patients are randomised to fixed doses, is the most reliable design for characterising dose-response and is widely used.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-004",
+          "rule": "A dose-response study must include at minimum two active doses plus placebo to be interpretable for dose-response characterization.",
+          "source_section": "Section III.B — Minimum Dose Groups",
+          "source_quote": "At minimum, two active doses plus placebo are needed for a dose-response study to be interpretable for dose-response characterisation.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-005",
+          "rule": "Dose-response data must be explored for potential differences among important demographic subgroups including age, gender, and race to identify subpopulations where dose adjustment may be needed.",
+          "source_section": "Section IV — Subgroup Analysis",
+          "source_quote": "Dose-response data should be explored for differences among important demographic subgroups, including age, gender, and race, and for differences among patients with various disease characteristics, since some subpopulations may have clinically different dose-response profiles.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-006",
+          "rule": "Drug approval can be based on a single fixed dose if the benefit of the drug at that dose is clearly demonstrated, but the relationship of that dose to the full dose-response curve should be characterized.",
+          "source_section": "Section V — Single Fixed Dose Approval",
+          "source_quote": "Drug approval can be based on a single fixed dose if the benefit of the drug at that dose is clearly demonstrated, but the relationship of that dose to the full dose-response curve should be characterised in the development program.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-007",
+          "rule": "Imperfect dose-response data may be acceptable for registration with post-marketing studies required to complete dose-response characterization; the expectation of post-marketing study must be clearly stated.",
+          "source_section": "Section V — Post-Marketing Studies",
+          "source_quote": "Imperfect dose-response data may be acceptable with the expectation that post-marketing studies will be conducted to complete the characterisation of the dose-response relationship. The expectation of post-marketing study should be clearly stated in the product labelling.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-008",
+          "rule": "Dose-response studies should be conducted early enough in development that their results can influence subsequent dose selection for Phase 3 confirmatory trials.",
+          "source_section": "Section II — Timing of Dose-Response Studies",
+          "source_quote": "Dose-response studies should be conducted early enough in development that their results can influence subsequent dose selection for confirmatory Phase 3 studies.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-009",
+          "rule": "Concentration-response analysis (pharmacokinetic/pharmacodynamic modeling) should be considered as a complement to, or substitute for, formal dose-response studies where feasible.",
+          "source_section": "Section III.C — Concentration-Response Analysis",
+          "source_quote": "Concentration-response analysis, using pharmacokinetic/pharmacodynamic modelling to relate drug concentrations to effects, should be considered as a complement to, or substitute for, formal dose-response studies where feasible.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-010",
+          "rule": "The Investigator's Brochure and product labelling must reflect the dose-response data available at the time of submission, including any uncertainty in the characterization of the dose-response relationship.",
+          "source_section": "Section V — Labelling",
+          "source_quote": "The Investigator's Brochure and product labelling should reflect the dose-response data available at the time of submission, including any uncertainty in the characterisation of the dose-response relationship.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-011",
+          "rule": "All dose-response studies should include both measures of efficacy and safety to enable characterization of the benefit-risk relationship across the dose range studied.",
+          "source_section": "Section III — Safety and Efficacy Measurements",
+          "source_quote": "All dose-response studies should include both measures of efficacy and safety so that the benefit-risk relationship can be characterised across the dose range studied.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E4-012",
+          "rule": "Dose-response studies for drugs intended to be used in special populations (e.g., renal impairment, hepatic impairment, elderly) should include patients from those populations or dedicated studies in those populations.",
+          "source_section": "Section IV — Special Populations",
+          "source_quote": "Dose-response studies for drugs intended to be used in special populations, such as those with renal or hepatic impairment or the elderly, should include patients from those populations or have dedicated dose-response studies conducted in those populations.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E7",
+      "title": "ICH E7: Studies in Support of Special Populations: Geriatrics",
+      "source_document": "E7_Guideline.pdf",
+      "rules": [
+        {
+          "id": "E7-001",
+          "rule": "The geriatric population is defined as patients aged 65 years and older; drug development programs should actively seek to enroll this population.",
+          "source_section": "Section II — Definition",
+          "source_quote": "The term 'geriatric' in this guideline refers to patients who are 65 years of age or older.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-002",
+          "rule": "Development programs should actively seek to enroll patients aged 75 years and older to ensure the oldest age groups are adequately represented.",
+          "source_section": "Section III.A — Age Groups",
+          "source_quote": "Development programs should actively seek to include patients aged 75 years and older to ensure that the oldest age groups are adequately represented in the safety and efficacy database.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-003",
+          "rule": "Clinical trial protocols must not include arbitrary upper age cutoff exclusions; exclusions based on age alone are not acceptable and must be scientifically justified.",
+          "source_section": "Section III.A — Exclusion Criteria",
+          "source_quote": "Protocols should not include arbitrary upper age cut-offs. Exclusions based solely on age are not acceptable; any exclusions related to age must be scientifically justified and described in the protocol.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-004",
+          "rule": "For diseases not unique to the elderly, the minimum number of geriatric patients in the clinical database should be 100 to allow meaningful safety analysis.",
+          "source_section": "Section III.B — Minimum Patient Numbers",
+          "source_quote": "For diseases that are not unique to the elderly, the minimum number of elderly patients in the clinical database should be 100 to allow meaningful analysis of safety data in this population.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-005",
+          "rule": "Geriatric data must be obtained from Phase 3 trials unless the sponsor elects to obtain the data from Phase 2 trials, in which case this election must be pre-specified.",
+          "source_section": "Section III.B — Phase of Development",
+          "source_quote": "Geriatric data must ordinarily be obtained from Phase 3 studies in the development program, unless the sponsor elects, and pre-specifies, to obtain the data from Phase 2 studies.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-006",
+          "rule": "A pharmacokinetic screen must be performed in geriatric patients at steady-state with at least 1-2 blood level determinations to detect altered pharmacokinetics.",
+          "source_section": "Section IV.A — Pharmacokinetic Screening",
+          "source_quote": "A pharmacokinetic screen should be performed in geriatric patients at steady-state, with at least 1-2 blood level determinations at appropriate times to allow detection of altered pharmacokinetics in this population.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-007",
+          "rule": "A formal pharmacokinetic comparison between geriatric and younger adult patients must be conducted to quantify any age-related differences in drug disposition.",
+          "source_section": "Section IV.A — Formal PK Comparison",
+          "source_quote": "A formal pharmacokinetic comparison should be made between geriatric and younger adult patients to quantify any age-related differences in the pharmacokinetics of the drug.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-008",
+          "rule": "Drug-drug interaction studies with digoxin and oral anticoagulants are required for drugs likely to be used with these agents in geriatric patients.",
+          "source_section": "Section IV.B — Drug Interactions",
+          "source_quote": "Drug-drug interaction studies with digoxin and oral anticoagulants should be performed for drugs likely to be used concomitantly with these agents in geriatric patients.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-009",
+          "rule": "CYP P-450 inhibitor and substrate studies are required for drugs metabolized by or affecting CYP P-450 enzymes, given the frequent polypharmacy in the geriatric population.",
+          "source_section": "Section IV.B — CYP P-450 Studies",
+          "source_quote": "Studies to assess the potential for CYP P-450-based drug interactions should be required for drugs metabolised by or affecting CYP P-450 enzymes, given the frequent use of multiple medications in the geriatric population.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-010",
+          "rule": "The drug label must include a specific section on geriatric use that summarizes the clinical and pharmacokinetic data available and provides dosing guidance for elderly patients.",
+          "source_section": "Section V — Labelling",
+          "source_quote": "The drug label should include a specific section on geriatric use that summarises the clinical and pharmacokinetic data available and provides dosing guidance for elderly patients.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7-011",
+          "rule": "Dose adjustment recommendations for geriatric patients must be based on pharmacokinetic and pharmacodynamic data, not solely on age, and must be clinically justified.",
+          "source_section": "Section V — Dosing Guidance",
+          "source_quote": "Dose adjustment recommendations for geriatric patients should be based on pharmacokinetic and pharmacodynamic data and should be clinically justified, not based solely on the age of the patient.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E7_QAs",
+      "title": "ICH E7 Q&As: Questions and Answers on Studies in Support of Special Populations: Geriatrics",
+      "source_document": "E7_Q&As_Q&As.pdf",
+      "rules": [
+        {
+          "id": "E7QA-001",
+          "rule": "The scientific rationale for enrolling geriatric patients is that they respond differently to drugs due to age-related physiological changes including altered absorption, distribution, metabolism, and excretion.",
+          "source_section": "Q1 — Rationale",
+          "source_quote": "The rationale for enrolling geriatric patients in clinical trials is that they may respond differently to drugs due to age-related physiological changes including altered absorption, distribution, metabolism, and excretion, as well as altered pharmacodynamic responses.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-002",
+          "rule": "Age strata data in the clinical database must be presented using the four age groups: <65 years, 65-74 years, 75-84 years, and ≥85 years.",
+          "source_section": "Q3 — Age Strata",
+          "source_quote": "The data in the clinical database should be presented using the following four age strata: patients less than 65 years, 65-74 years, 75-84 years, and 85 years or older.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-003",
+          "rule": "The minimum of 100 geriatric patients represents a floor; in most cases more patients will be needed to allow meaningful analyses of the benefit-risk profile in elderly patients.",
+          "source_section": "Q4 — Minimum Numbers",
+          "source_quote": "The minimum of 100 geriatric patients represents a floor. In most cases, substantially more patients will be needed to allow meaningful analyses of the benefit-risk profile, including subgroup analyses by age strata.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-004",
+          "rule": "Frail geriatric patients with co-morbid conditions and concomitant medications should be enrolled in clinical trials unless there are specific safety reasons to exclude them.",
+          "source_section": "Q5 — Frail Patients",
+          "source_quote": "Frail geriatric patients with co-morbid conditions and concomitant medications should be enrolled in clinical trials unless there are specific safety reasons to exclude them, as they represent an important segment of the population likely to use the drug.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-005",
+          "rule": "Geriatric-specific endpoints that should be considered for assessment in clinical trials include cognitive function, balance and falls, urinary incontinence, weight loss, and sarcopenia.",
+          "source_section": "Q6 — Geriatric Endpoints",
+          "source_quote": "Geriatric-specific endpoints that should be considered for assessment in clinical trials include cognitive function, balance and falls, urinary incontinence, weight loss and sarcopenia, as these are particularly relevant to the geriatric population.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-006",
+          "rule": "Pharmacokinetics must be evaluated in at least two age groups of geriatric patients: those aged 65 years and older, and those aged 75 years and older.",
+          "source_section": "Q7 — PK Age Groups",
+          "source_quote": "The pharmacokinetics should be evaluated in at least two age groups of geriatric patients: those aged 65 years and older, and those aged 75 years and older.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-007",
+          "rule": "If enrollment of sufficient geriatric patients cannot be achieved during pre-approval development, the marketing application must include a plan for post-marketing data collection in the geriatric population.",
+          "source_section": "Q8 — Post-Marketing Plans",
+          "source_quote": "If enrolment of sufficient geriatric patients cannot be achieved during pre-approval development, the marketing application should include a plan for post-marketing data collection in the geriatric population, including the number of patients to be enrolled and the timeframe.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-008",
+          "rule": "Subgroup analyses by age strata must be pre-specified in the statistical analysis plan and must include both efficacy and safety outcomes.",
+          "source_section": "Q9 — Subgroup Analyses",
+          "source_quote": "Subgroup analyses by age strata should be pre-specified in the statistical analysis plan and should include both efficacy and safety outcomes to enable a complete assessment of the benefit-risk profile in geriatric patients.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-009",
+          "rule": "Falls and fractures should be monitored and reported as adverse events of special interest in clinical trials involving drugs likely to be used in geriatric patients.",
+          "source_section": "Q10 — Falls and Fractures",
+          "source_quote": "Falls and fractures should be monitored and reported as adverse events of special interest in clinical trials involving drugs that may affect balance, gait, or bone density in geriatric patients.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E7QA-010",
+          "rule": "Cognitive function should be assessed at baseline and during the study using validated instruments in trials where central nervous system effects are plausible in geriatric patients.",
+          "source_section": "Q11 — Cognitive Assessment",
+          "source_quote": "In trials where central nervous system effects are plausible in geriatric patients, cognitive function should be assessed at baseline and during the study using validated instruments.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E17",
+      "title": "ICH E17: General Principles for Planning and Design of Multi-Regional Clinical Trials (MRCTs)",
+      "source_document": "E17EWG_Step4_2017_1116.pdf",
+      "rules": [
+        {
+          "id": "E17-001",
+          "rule": "A Multi-Regional Clinical Trial (MRCT) is defined as a clinical trial conducted in more than one region under a single protocol.",
+          "source_section": "Section 3 — Glossary",
+          "source_quote": "Multi-Regional Clinical Trial, MRCT: A clinical trial conducted in more than one region under a single protocol.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-002",
+          "rule": "MRCTs must adhere to seven basic principles including a single protocol, GCP compliance across all regions, consistent efficacy and safety data collection, and a pre-specified analysis strategy.",
+          "source_section": "Section 2.1 — Basic Principles",
+          "source_quote": "MRCTs should adhere to basic principles including: a single protocol applicable to all regions; compliance with ICH E6 (GCP) in all regions; consistent methods for efficacy and safety data collection across all regions; and a pre-specified analysis strategy that accounts for the multi-regional design.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-003",
+          "rule": "Scientific consultation with relevant regulatory authorities must be sought at the planning stage of an MRCT to align on trial design, endpoints, and analysis strategy.",
+          "source_section": "Section 2.2.1 — Regulatory Consultation",
+          "source_quote": "Scientific consultation with the relevant regulatory authorities should be sought at the planning stage of an MRCT to align on trial design, endpoints, and analysis strategy.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-004",
+          "rule": "Four sources of regional variability must be considered in MRCT planning: differences in disease definitions and diagnostic criteria, medical practices, diet and environmental factors, and genetic/intrinsic factors.",
+          "source_section": "Section 2.2.2 — Sources of Regional Variability",
+          "source_quote": "The four sources of regional variability that must be considered in MRCT planning are: differences in disease definitions and diagnostic criteria; differences in medical practices; differences in diet and environmental factors; and differences in genetic and other intrinsic factors.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-005",
+          "rule": "Five approaches to sample size allocation across regions may be used in an MRCT: proportional allocation, equal allocation, allocation to preserve overall effect, allocation to achieve local significance, and fixed minimum allocation.",
+          "source_section": "Section 2.2.5 — Sample Size Allocation",
+          "source_quote": "Five approaches to sample size allocation across regions may be used: proportional allocation (based on disease prevalence or other factors); equal allocation across regions; allocation designed to preserve a pre-specified fraction of the overall treatment effect in each region; allocation designed to achieve local significance in each region; and allocation of a fixed minimum number of subjects per region.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-006",
+          "rule": "Pooled regions are defined at the planning stage as geographical regions, countries, or regulatory regions that are considered sufficiently similar with respect to intrinsic and/or extrinsic factors to justify pooling.",
+          "source_section": "Section 3 — Glossary",
+          "source_quote": "Pooled regions: Pooling some geographical regions, countries or regulatory regions at the planning stage, if subjects in those regions are thought to be similar enough with respect to intrinsic and/or extrinsic factors relevant to the disease and/or drug under study.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-007",
+          "rule": "Consistency of treatment effect across regions in an MRCT is defined as a lack of clinically relevant differences between treatment effects in different regions or subpopulations.",
+          "source_section": "Section 3 — Glossary",
+          "source_quote": "Consistency of treatment effect: A lack of clinically relevant differences between treatment effects in different regions or subpopulations of an MRCT.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-008",
+          "rule": "The approach of allocating sample size to achieve local significance in each region is generally not practical for MRCTs because it typically requires an infeasibly large total sample size.",
+          "source_section": "Section 2.2.5 — Local Significance",
+          "source_quote": "The approach of allocating sample size to achieve local significance in each region is generally not practical for MRCTs, as it typically requires an infeasibly large total sample size.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-009",
+          "rule": "A single primary analysis approach planned to satisfy the requirements of all relevant regulatory authorities must be pre-specified in the protocol before the start of the trial.",
+          "source_section": "Section 2.2.7 — Statistical Analysis Planning",
+          "source_quote": "The standard is to specify a single primary analysis approach in the statistical section of the study protocol to be agreed upon with the authorities in advance of initiating the trial.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-010",
+          "rule": "GCP compliance as described in ICH E6 is critical for MRCTs because of the coordination required to conduct a trial in diverse geographic regions; methods for collecting and handling efficacy and safety information must be standardized across all participating regions.",
+          "source_section": "Section 2.2.6 — Collecting and Handling of Efficacy and Safety Information",
+          "source_quote": "Adherence to GCP, as described in ICH E6, is critical for any clinical trial to meet its stated objectives and is particularly important in an MRCT, because of the coordination required to conduct a trial in diverse geographic regions. Methods of collecting and handling efficacy and safety information should be standardised across participating regions.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-011",
+          "rule": "The statistical analysis strategy for consistency evaluation of treatment effects across regions in an MRCT must be pre-specified and can include descriptive summaries, graphical displays (e.g., forest plots), model-based estimation, and treatment-by-region interaction tests.",
+          "source_section": "Section 2.2.7 — Examination of Consistency",
+          "source_quote": "The statistical analysis strategy should include the evaluation of the consistency of treatment effects across regions and subpopulations. Various analytical approaches to this evaluation, possibly used in combination, include but are not limited to (1) descriptive summaries, (2) graphical displays (e.g., forest plots), (3) model-based estimation including covariate-adjusted analysis and (4) test of treatment-by-region interaction.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-012",
+          "rule": "Comparators in MRCTs should in principle be the same in all participating regions; if different dosing regimens of active comparators are used across regions, justification must be provided in the protocol.",
+          "source_section": "Section 2.2.8 — Selection of Comparators",
+          "source_quote": "Comparators in MRCTs should in principle be the same in all participating regions. If the approved dosing regimen of active comparators are different among regions, the proposed study dosing regimen should be justified by available data, and the justification should be included in the study protocol.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-013",
+          "rule": "The clinical trial protocol for an MRCT must specify allowable and not allowable concomitant medications and doses, as regional differences in concomitant medication use may affect trial results.",
+          "source_section": "Section 2.2.9 — Handling Concomitant Medications",
+          "source_quote": "The clinical trial protocol should specify allowable and not allowable concomitant medications and doses. Regional differences in the use and dosing of concomitant medications that may have impact on drug responses should be considered in advance.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-014",
+          "rule": "For MRCTs of long duration or with large operational regions involving Phase 3 confirmatory studies, the use of a central independent data monitoring committee with representation from participating regions should be considered.",
+          "source_section": "Section 2.2.6 — Data Monitoring Committee",
+          "source_quote": "In MRCTs of long duration, where special concerns (e.g., serious adverse events) have been identified, and/or where operational regions are quite large (usually Phase III confirmatory studies), the use of a central independent data monitoring committee (with representation from participating regions to adequately assess the context of the trial) should be considered.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E17-015",
+          "rule": "The analysis strategy for an MRCT must be finalized prior to unblinding of treatment assignments to ensure trial integrity.",
+          "source_section": "Section 2.2.7 — Analysis Strategy Timing",
+          "source_quote": "The analysis strategy for an MRCT should be finalized prior to unblinding of treatment assignments, if applicable, to ensure trial integrity.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "E6R3",
+      "title": "ICH E6(R3): Good Clinical Practice (Step 4, adopted January 2025)",
+      "source_document": "ICH_E6(R3)_Step4_FinalGuideline_2025_0106_ErrorCorrections_2025_1024.pdf",
+      "rules": [
+        {
+          "id": "E6R3-001",
+          "rule": "Good Clinical Practice (GCP) is an international ethical and scientific quality standard for designing, conducting, recording, and reporting trials that involve the participation of human subjects; compliance ensures that the rights, safety, and well-being of trial subjects are protected and that clinical trial data are credible.",
+          "source_section": "Introduction — GCP Definition",
+          "source_quote": "Good Clinical Practice (GCP) is an international ethical and scientific quality standard for designing, conducting, recording and reporting trials that involve the participation of human subjects. Compliance with this standard provides public assurance that the rights, safety and well-being of trial subjects are protected, consistent with the principles that have their origin in the Declaration of Helsinki, and that the clinical trial data are credible.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-002",
+          "rule": "Eleven GCP Principles govern the conduct of clinical trials; these include ethical conduct per Declaration of Helsinki, voluntary informed consent, independent IRB/IEC review, scientific soundness, qualified investigators, quality built into the trial design, proportionate risk-based approach, clear protocol, reliable results, documented roles, and GMP for investigational products.",
+          "source_section": "GCP Principles — Numbered List",
+          "source_quote": "The eleven principles of GCP include: ethical conduct per the Declaration of Helsinki; voluntary and informed consent; independent IRB/IEC review; scientific soundness; qualified individuals; quality built into trial design; proportionate and risk-based approach; a clear and concise protocol; reliable results; documented roles and responsibilities; and GMP compliance for investigational products.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-003",
+          "rule": "No participant may be enrolled in a clinical trial before the IRB/IEC has issued its written approval or favorable opinion for the trial protocol, informed consent materials, and other relevant documents.",
+          "source_section": "Annex 1, Section 1.4.6 — IRB/IEC Approval Before Enrollment",
+          "source_quote": "No participant should be enrolled in the trial before the IRB/IEC has issued its written approval/favourable opinion of the trial protocol, informed consent materials, and any other documents the IRB/IEC requests.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-004",
+          "rule": "The investigator retains ultimate responsibility for the conduct of the clinical trial at the investigator site, even when trial-related duties are delegated to investigator site staff.",
+          "source_section": "Annex 1, Section 2.3.1 — Investigator Responsibility",
+          "source_quote": "The investigator is responsible for the conduct of the clinical trial at the trial site. The investigator retains the ultimate responsibility for the conduct of the trial at the investigator site, even when trial-related duties are delegated to investigator site staff.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-005",
+          "rule": "All serious adverse events (SAEs) must be reported immediately (after the investigator reasonably becomes aware) to the sponsor; the investigator must include an assessment of causality.",
+          "source_section": "Annex 1, Section 2.7.2(b) — SAE Reporting",
+          "source_quote": "All serious adverse events (SAEs) should be reported immediately (after the investigator reasonably becomes aware of the event) to the sponsor. The investigator should also include an assessment of causality.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-006",
+          "rule": "Before obtaining informed consent, the investigator must have the IRB/IEC's documented approval of the informed consent materials and process; informed consent must be obtained before any trial-specific procedures.",
+          "source_section": "Annex 1, Section 2.8.1(a) — Pre-consent IRB Approval",
+          "source_quote": "Prior to consenting and enrolling participants, the investigator should have the IRB/IEC's documented approval/favourable opinion of the informed consent materials and process.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-007",
+          "rule": "The informed consent form must be signed and dated by the participant (or legally acceptable representative) and by the investigator or delegated investigator site staff who conducted the informed consent discussion, prior to trial participation.",
+          "source_section": "Annex 1, Section 2.8.7 — Signed ICF",
+          "source_quote": "Prior to trial participation, the informed consent form should be signed and dated by the participant or by the participant's legally acceptable representative and, where appropriate, by an impartial witness and by the investigator or delegated investigator site staff who conducted the informed consent discussion.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-008",
+          "rule": "The informed consent discussion must cover at minimum 22 specific elements including: trial purpose, experimental nature, investigational products and randomization probability, trial procedures including invasive procedures, what is expected of participants, risks and inconveniences, benefits, alternative treatments, compensation for injury, voluntary participation with right to withdraw without penalty, data handling, and confidentiality.",
+          "source_section": "Annex 1, Section 2.8.10 — Required ICF Elements",
+          "source_quote": "The informed consent discussion and the informed consent materials to be provided to participants should explain the following as applicable: (a) The purpose of the trial; (b) That the trial involves research and summary of the experimental aspects of the trial; (c) The trial's investigational product(s) and the probability for random assignment; (d) The trial procedures to be followed including all invasive procedures; (e) What is expected of the participants; (f) The reasonably foreseeable risks or inconveniences to the participant; (g) The reasonably expected benefits; (h) The alternative procedure(s) or course(s) of treatment; (i) The compensation and/or treatment available in the event of trial-related injury; (j) Any anticipated prorated compensation for trial participation; (k) Any anticipated expenses to the participant; (l) That participation is voluntary and the participant may withdraw at any time without penalty.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-009",
+          "rule": "Source records maintained by the investigator/institution must be attributable, legible, contemporaneous, original, accurate, and complete (ALCOA+C); changes to source records must be traceable via audit trail and must not obscure the original entry.",
+          "source_section": "Annex 1, Section 2.12.2 — Source Records",
+          "source_quote": "Source records should be attributable, legible, contemporaneous, original, accurate and complete. Changes to source records should be traceable, should not obscure the original entry and should be explained if necessary (via an audit trail).",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-010",
+          "rule": "The sponsor is responsible for implementing risk-proportionate approaches throughout the clinical trial life cycle to ensure the rights, safety, and well-being of trial participants and the reliability of the trial results.",
+          "source_section": "Section 3 — Sponsor Introduction",
+          "source_quote": "The responsibility of the sponsor entails the implementation of risk-proportionate approaches to ensure the rights, safety and well-being of the trial participants and the reliability of the trial results throughout the clinical trial life cycle.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-011",
+          "rule": "The sponsor's ultimate responsibility for trial-related activities, including protection of participants' rights, safety, and well-being and reliability of trial data, remains with the sponsor even when activities are transferred to a service provider (e.g., CRO).",
+          "source_section": "Section 3.6.6 — Sponsor Responsibility with Service Providers",
+          "source_quote": "A sponsor may transfer any or all of the sponsor's trial-related activities to a service provider in accordance with applicable regulatory requirements; however, the ultimate responsibility for the sponsor's trial-related activities, including protection of participants' rights, safety and well-being and reliability of the trial data, resides with the sponsor.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-012",
+          "rule": "The sponsor must implement a quality management system that incorporates quality by design — identifying factors critical to quality (CTQFs) that may impact participant safety, rights, well-being, and reliability of trial results.",
+          "source_section": "Section 3.10 — Quality Management",
+          "source_quote": "The sponsor should adopt a proportionate and risk-based approach to quality management, which involves incorporating quality into the design of the clinical trial (i.e., quality by design) and identifying those factors that are likely to have a meaningful impact on participants' rights, safety and well-being and the reliability of the results (i.e., critical to quality factors as described in ICH E8(R1)).",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-013",
+          "rule": "If noncompliance that significantly affects participant rights, safety, well-being, or reliability of trial results is discovered, the sponsor must perform root cause analysis and implement appropriate corrective and preventive actions (CAPA), and must notify the regulatory authority and/or IRB/IEC for serious noncompliance.",
+          "source_section": "Section 3.12.2 — Serious Noncompliance",
+          "source_quote": "If noncompliance that significantly affects or has the potential to significantly affect the rights, safety or well-being of trial participant(s) or the reliability of trial results is discovered, the sponsor should perform a root cause analysis, implement appropriate corrective and preventive actions and confirm their adequacy unless otherwise justified. Where the sponsor identifies issues that are likely to significantly impact the rights, safety or well-being of the trial participant(s) or the reliability of trial results (i.e., serious noncompliance), the sponsor should notify the regulatory authority and/or IRB/IEC.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-014",
+          "rule": "The sponsor must expedite the reporting of all suspected, unexpected, serious adverse reactions (SUSARs) to regulatory authorities in accordance with ICH E2A and applicable regulatory requirements.",
+          "source_section": "Section 3.13.2(b) — SUSAR Reporting",
+          "source_quote": "The sponsor should, in accordance with the applicable regulatory requirement(s) and with ICH E2A Clinical Safety Data Management: Definitions and Standards for Expedited Reporting, expedite the reporting to the regulatory authority(ies) of all suspected, unexpected and serious adverse reactions (i.e., SUSARs).",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-015",
+          "rule": "The Investigator's Brochure must be reviewed at least annually and revised as necessary; more frequent revision may be appropriate depending on the stage of development and generation of relevant new information.",
+          "source_section": "Appendix A, Section A.1.1 — IB Review Frequency",
+          "source_quote": "The IB should be reviewed at least annually and revised as necessary in compliance with a sponsor's documented procedures. More frequent revision may be appropriate depending on the stage of development and the generation of relevant new information.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-016",
+          "rule": "The sponsor must develop a monitoring plan tailored to identified potential safety risks, risks to data quality, and other risks to the reliability of trial results; the plan must describe the monitoring strategy, activities of all parties involved, and the monitoring methods and tools to be used.",
+          "source_section": "Section 3.11.4.3 — Monitoring Plan",
+          "source_quote": "The sponsor should develop a monitoring plan that is tailored to the identified potential safety risks, the risks to data quality and/or other risks to the reliability of the trial results. The plan should describe the monitoring strategy, the monitoring activities of all the parties involved, the various monitoring methods and tools to be used, and the rationale for their use.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-017",
+          "rule": "The sponsor must develop a statistical analysis plan (SAP) that is consistent with the trial protocol and details the approach to data analysis; criteria for inclusion or exclusion of trial participants from any analysis set must be pre-defined.",
+          "source_section": "Section 3.16.2(a) and (d) — Statistical Analysis Plan",
+          "source_quote": "The sponsor should develop a statistical analysis plan that is consistent with the trial protocol and that details the approach to data analysis, unless the approach to data analysis is sufficiently described in the protocol. The sponsor should ensure that the criteria for inclusion or exclusion of trial participants from any analysis set is pre-defined (e.g., in the protocol or the statistical analysis plan).",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-018",
+          "rule": "The sponsor must ensure that clinical trial reports in marketing applications meet the standards of ICH E3 or are otherwise in accordance with applicable regulatory requirements.",
+          "source_section": "Section 3.17.2(a) — Clinical Trial Reports",
+          "source_quote": "The sponsor should also ensure that the clinical trial reports in marketing applications meet the standards of ICH E3 or are otherwise in accordance with applicable regulatory requirements.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-019",
+          "rule": "Computerized systems used in clinical trials must be validated prior to use; validation must demonstrate the system conforms to established requirements for completeness, accuracy, and reliability and is fit for its intended purpose.",
+          "source_section": "Section 4.3.4(b) and (c) — System Validation",
+          "source_quote": "Validation should demonstrate that the system conforms to the established requirements for completeness, accuracy and reliability and that its performance is consistent with its intended purpose. Systems should be appropriately validated prior to use.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-020",
+          "rule": "Protocol deviations may be made only when necessary to eliminate an immediate hazard to a trial participant's rights, safety, or well-being; all deviations must be documented and reported to the sponsor, IRB/IEC, and regulatory authority as required.",
+          "source_section": "Annex 1, Section 2.5.4 — Protocol Deviations",
+          "source_quote": "The investigator should not implement a deviation from, or a change of, the protocol without agreement by the sponsor and prior review and documented approval/favourable opinion from the IRB/IEC, except where necessary to eliminate an immediate hazard(s) to trial participants or when the change(s) involves only logistical or administrative aspects of the trial.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-021",
+          "rule": "The investigator/institution must maintain source records including pertinent observations on all trial participants; records must be maintained for the required retention period in accordance with applicable regulatory requirements and must be made available for direct access upon request by monitors, auditors, IRB/IEC, or regulatory authorities.",
+          "source_section": "Annex 1, Section 2.12.11 and 2.12.14 — Record Maintenance and Access",
+          "source_quote": "The investigator/institution should maintain the trial records as specified in Appendix C and as required by the applicable regulatory requirement(s). Upon request of the monitor, auditor, IRB/IEC or regulatory authority, the investigator/institution should make available for direct access all requested trial-related records.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-022",
+          "rule": "The sponsor's quality management system must include quality risk management covering risk identification, risk evaluation (considering likelihood, detectability, and impact), risk control, risk communication, risk review, and risk reporting.",
+          "source_section": "Section 3.10.1 — Risk Management",
+          "source_quote": "The sponsor should identify risks that may have a meaningful impact on critical to quality factors prior to trial initiation and throughout trial conduct. The sponsor should evaluate identified risks and existing controls in place to mitigate the risk by considering: (a) The likelihood of harm/hazard occurring; (b) The extent to which such harm/hazard would be detectable; (c) The impact of such harm/hazard on trial participant protection and the reliability of trial results.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-023",
+          "rule": "In emergency situations where prior consent of the participant is not possible, enrollment may proceed if the emergency measures are described in the protocol and have documented IRB/IEC approval; the participant or legally acceptable representative must be informed as soon as possible.",
+          "source_section": "Annex 1, Section 2.8.8 — Emergency Consent",
+          "source_quote": "In emergency situations, when prior consent of the participant is not possible, the consent of the participant's legally acceptable representative, if present, should be requested. When prior consent of the participant is not possible and the participant's legally acceptable representative is not available, enrolment of the participant should require measures described in the protocol and/or elsewhere, with documented approval/favourable opinion by the IRB/IEC, to protect the participant's rights, safety and well-being.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-024",
+          "rule": "The Investigator's Brochure's reference safety information (RSI) provides the reference point for determining the expectedness of adverse reactions and therefore whether SUSARs require expedited reporting; the RSI must be current and accurate.",
+          "source_section": "Appendix A, Section A.1.2 — Reference Safety Information",
+          "source_quote": "The reference safety information (RSI) contained in the IB provides an important reference point for expedited reporting of suspected unexpected serious adverse reactions (SUSARs) in the clinical trial. This RSI should include a list of adverse reactions, including information on their frequency and nature. This list should be used for determining the expectedness of a suspected serious adverse reaction and subsequently whether reporting needs to be expedited.",
+          "verification_status": "VERIFIED"
+        },
+        {
+          "id": "E6R3-025",
+          "rule": "Data corrections in clinical trial systems must be attributed to the person making the correction, justified, supported by source records, and must not obscure the original entry; an audit trail must be maintained.",
+          "source_section": "Section 4.2.4 — Data Corrections",
+          "source_quote": "There should be processes to correct data errors that could impact the reliability of the trial results. Corrections should be attributed to the person or computerised system making the correction, justified and supported by source records around the time of original entry and performed in a timely manner.",
+          "verification_status": "VERIFIED"
+        }
+      ]
+    }
+  ]
+}

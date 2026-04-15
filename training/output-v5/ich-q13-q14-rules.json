@@ -1,0 +1,688 @@
+{
+  "metadata": {
+    "title": "ICH Q13/Q14 Rules Extraction",
+    "source_files": [
+      "ICH_Q13_Step4_Guideline_2022_1116.pdf",
+      "ICH_Q14_Guideline_2023_1130_ErrorCorrection_2025.pdf"
+    ],
+    "source_directory": "training/stage-1/ich-complete/",
+    "extraction_date": "2026-03-24",
+    "total_rules": 60
+  },
+  "guidelines": {
+    "Q13": {
+      "title": "Continuous Manufacturing of Drug Substances and Drug Products",
+      "document_date": "2022-11-16",
+      "document_version": "Step 4",
+      "rules": [
+        {
+          "rule_id": "ICH-Q13-001",
+          "rule_text": "The dossier for a CM process must be in accordance with ICH M4Q and must include CM-specific supplementary information as outlined in Table 1 of the guideline.",
+          "source_section": "Section 4, Regulatory Considerations",
+          "source_page": 7,
+          "verbatim_quote": "The dossier for a CM process should be in accordance with ICH M4Q. Some CM-specific considerations are provided below.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted; all CM submissions must comply.",
+          "cross_references": ["ICH M4Q", "ICH Q7", "ICH Q8", "ICH Q10", "ICH Q11"]
+        },
+        {
+          "rule_id": "ICH-Q13-002",
+          "rule_text": "The CM dossier must include a sequential narrative description of the manufacturing process and process controls in CTD sections 3.2.S.2.2 and 3.2.P.3.3, supplemented with CM-specific information including start-up/shutdown procedures, material collection/diversion strategy, continuous flow parameters, and a detailed flow diagram.",
+          "source_section": "Section 4.1, Description of Manufacturing Process and Process Controls",
+          "source_page": 8,
+          "verbatim_quote": "In line with ICH M4Q, a sequential narrative description of the manufacturing process and process controls should be included in sections 3.2.S.2.2 and 3.2.P.3.3 of the Common Technical Document (CTD) and supported by pharmaceutical development data provided in CTD sections 3.2.S.2.6 or 3.2.P.2. In the case of CM, the information provided in sections 3.2.S.2.2 and 3.2.P.3.3 should be supplemented by the following, when applicable: A summary of start-up, shutdown, pause and restart procedures... The strategy for material collection and diversion including the criteria that should be met for product collection during routine manufacturing... Process parameters related to continuous flow (e.g., mass flow rate(s) or flow rate range)... A flow diagram with the following aspects identified, when applicable...",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Supplemental elements apply 'when applicable' to the specific CM process design.",
+          "cross_references": ["ICH M4Q", "ICH Q13 Section 4.2"]
+        },
+        {
+          "rule_id": "ICH-Q13-003",
+          "rule_text": "The batch size for a CM process must be defined using one of three scientifically justified approaches: quantity of output material, quantity of input material, or run time at a defined mass flow rate. The actual intended size of a given batch must be defined before manufacturing begins.",
+          "source_section": "Section 2.2, Batch definition; Section 4.3, Batch Description and Batch Size",
+          "source_page": 10,
+          "verbatim_quote": "The ICH Q7 definition of a batch is applicable to all modes of CM, for both drug substances and drug products. Based on this definition, the size of a batch produced by CM can be defined in terms of one of the following: Quantity of output material; Quantity of input material; Run time at a defined mass flow rate. Other approaches to define batch size are possible, if scientifically justified based on the characteristics of the CM process and Good Manufacturing Practice... The actual intended size of a given batch should be defined before manufacturing begins.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Other approaches are permissible if scientifically justified. Batch size can also be defined as a range.",
+          "cross_references": ["ICH Q7", "ICH Q13 Section 4.3"]
+        },
+        {
+          "rule_id": "ICH-Q13-004",
+          "rule_text": "The CM control strategy must be developed using a holistic approach incorporating ICH Q7, Q8, Q10, Q11 principles and ICH Q9 risk management, and must address state of control, process dynamics, material characterisation, equipment design, process monitoring, material traceability and diversion, and process models.",
+          "source_section": "Section 3.1, Control Strategy",
+          "source_page": 2,
+          "verbatim_quote": "The development of a control strategy for CM is enabled by a holistic approach, considering aspects specific to CM (discussed below), principles outlined in ICH Q7, Q8, Q10 and Q11, and quality risk management described in ICH Q9.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q7", "ICH Q8", "ICH Q9", "ICH Q10", "ICH Q11"]
+        },
+        {
+          "rule_id": "ICH-Q13-005",
+          "rule_text": "The CM control strategy must include mechanisms to monitor the state of control and take appropriate actions to maintain control of the process, including identifying when parameters drift or trend within specified ranges and identifying root causes of drift.",
+          "source_section": "Section 3.1.1, State of Control",
+          "source_page": 2,
+          "verbatim_quote": "It is important to have mechanisms in place to evaluate the consistency of unit operations and the system, and to identify when parameters drift or trend within the specified range. In addition, the root cause of drift or trend, such as variation of inputs, equipment fatigue, or aging of materials, should be identified.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q10", "ICH Q13 Section 3.1"]
+        },
+        {
+          "rule_id": "ICH-Q13-006",
+          "rule_text": "Process dynamics must be characterised over planned operating ranges and anticipated input material variability using scientifically justified approaches, including RTD characterisation, to understand the impact on material transport, transformation, and output material quality.",
+          "source_section": "Section 3.1.2, Process Dynamics",
+          "source_page": 3,
+          "verbatim_quote": "Process dynamics should be characterised over the planned operating ranges and anticipated input material variability using scientifically justified approaches. Appropriate methodologies (e.g., RTD studies, in silico modeling with experimental confirmation) should be used to understand the impact of process dynamics and its variation on material transport and transformation.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Multiple methodology approaches are acceptable when scientifically justified.",
+          "cross_references": ["ICH Q13 Section 3.1.6", "ICH Q13 Section 4.2"]
+        },
+        {
+          "rule_id": "ICH-Q13-007",
+          "rule_text": "Input material attributes for CM must be evaluated and controlled beyond typical batch manufacturing requirements when those attributes impact feeding, process dynamics, or output material quality; acceptable ranges must be justified when establishing material specifications.",
+          "source_section": "Section 3.1.3, Material Characterisation and Control; Section 4.2, Control Strategy",
+          "source_page": 9,
+          "verbatim_quote": "Input materials may require evaluation and control of attributes beyond those typically considered for a material specification used in batch manufacturing... Impact of input material attributes and their variability (e.g., inter-batch, different suppliers) on continuous processing and product quality should be assessed and proposed material attribute acceptable ranges should be justified when establishing the material specification. For input materials for which pharmacopoeial requirements exist, characterisation and control may extend beyond those requirements.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q13 Section 3.1.3"]
+        },
+        {
+          "rule_id": "ICH-Q13-008",
+          "rule_text": "The CM control strategy must include the ability to detect and divert potential non-conforming material from the product stream during production; criteria must be established to trigger start and end of diversion and restart of product collection.",
+          "source_section": "Section 3.1.6, Material Traceability and Diversion",
+          "source_page": 5,
+          "verbatim_quote": "The ability to detect and divert potential non-conforming material from the product stream during production is an important characteristic of CM and should be considered when developing the control strategy... Criteria should be established to trigger the start and end of the diversion period and restart of product collection.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q13 Section 4.2", "ICH Q13 Annex V"]
+        },
+        {
+          "rule_id": "ICH-Q13-009",
+          "rule_text": "The material diversion and collection strategy must be summarised and justified in the dossier, including criteria for triggering material diversion, determining the extent of diverted materials, and conditions for resuming material collection; the extent of diverted material must incorporate justified safety margins considering RTD uncertainty.",
+          "source_section": "Section 4.2, Control Strategy - Material diversion and collection",
+          "source_page": 9,
+          "verbatim_quote": "The material diversion and collection strategy should be summarised and justified in the dossier. The strategy described should include the criteria for triggering material diversion, the basis for determining the extent of diverted materials, the conditions for resuming material collection, etc. Factors such as sampling frequency, RTD, and amplitude, duration and propagation of disturbances should be considered in developing the diversion strategy. The extent of diverted material should appropriately incorporate justified safety margins, considering the uncertainty of RTD and other measurements.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Procedures for managing material collection, diversion, and disposition do not need to be in the dossier but must be maintained within the PQS (ICH Q10).",
+          "cross_references": ["ICH Q10", "ICH Q13 Section 3.1.6"]
+        },
+        {
+          "rule_id": "ICH-Q13-010",
+          "rule_text": "Process monitoring and control must be described in the dossier to demonstrate a robust approach to maintaining state of control, including sampling strategy, statistical sampling plans, data analysis methods, and how the control system uses measurements to make process- and quality-related decisions.",
+          "source_section": "Section 4.2, Control Strategy - Process monitoring and control",
+          "source_page": 9,
+          "verbatim_quote": "An appropriate description should be provided in the dossier to show a robust approach to process monitoring and maintaining a state of control. How the control system uses process parameters, in-process material attribute measurements, etc., to make process- and quality-related decisions (e.g., to pause the process or divert material) should be described. Other important aspects should be defined, such as the sampling strategy (e.g., location, sample size, frequency, statistical approach and criteria, and their relevance to the intended use)... Therefore, statistical sampling plans and data analysis should be described and justified.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q8", "ICH Q13 Section 3.1.5"]
+        },
+        {
+          "rule_id": "ICH-Q13-011",
+          "rule_text": "When RTRT is proposed for CM, the associated reference test method must be described in the dossier, and a risk assessment must be conducted of how data lapses may affect product quality decisions; the proposed control strategy must include alternative or additional quality controls to mitigate risks posed by data lapses.",
+          "source_section": "Section 4.2, Control Strategy - RTRT",
+          "source_page": 9,
+          "verbatim_quote": "RTRT as described in ICH Q8 can be applied to an output material quality attribute(s). RTRT is not a regulatory requirement for CM implementation. When RTRT is proposed, the associated reference test method should be described. Development of the data collection approach for RTRT implementation should include a risk assessment of how any lapses in data collection (e.g., recalibrating a near infrared (NIR) probe) may affect decisions relating to product quality. The proposed control strategy should include alternative or additional quality controls to mitigate any risks posed by data lapses.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "RTRT is not a regulatory requirement for CM implementation; it is optional.",
+          "cross_references": ["ICH Q8", "ICH Q13 Section 3.3"]
+        },
+        {
+          "rule_id": "ICH-Q13-012",
+          "rule_text": "If RTRT results fail or are trending towards failure, appropriate investigations must be conducted.",
+          "source_section": "Section 4.2, Control Strategy - RTRT",
+          "source_page": 10,
+          "verbatim_quote": "If the results from RTRT fail or are trending towards failure, appropriate investigations should be conducted.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q8", "ICH Q10"]
+        },
+        {
+          "rule_id": "ICH-Q13-013",
+          "rule_text": "A summary of the control strategy must be provided in CTD section 3.2.S.2.6 or 3.2.P.2.3 with links or references to CTD sections containing detailed information enabling understanding and evaluation of the manufacturing process and how it is controlled.",
+          "source_section": "Section 4.2, Control Strategy",
+          "source_page": 10,
+          "verbatim_quote": "A summary of the control strategy should be provided in CTD section 3.2.S.2.6 or 3.2.P.2.3 with links or references to the CTD sections that contain the detailed information to enable the understanding and evaluation of the manufacturing process and how it is controlled.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH M4Q"]
+        },
+        {
+          "rule_id": "ICH-Q13-014",
+          "rule_text": "For a proposed batch size range, the range must be justified and the approach for achieving the range described; post-approval changes beyond the approved range must be supported by data and appropriately managed (i.e., prior approval or notification). A suitable quantitative metric with acceptance criteria must be defined within the PQS to establish batch-to-batch consistency.",
+          "source_section": "Section 4.3, Batch Description and Batch Size",
+          "source_page": 10,
+          "verbatim_quote": "If a range is proposed, it should be justified, and the approach for achieving the range should be described (see Section 2.2). Changes in batch size within the approved batch size range can be managed within the PQS. Any post-approval change beyond the approved range should be supported by data (Section 3.2) and appropriately managed (i.e., prior approval or notification). A suitable quantitative metric with acceptance criteria should be defined within the PQS to establish batch-to-batch consistency and system robustness.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Changes within the approved batch size range can be managed within the PQS without regulatory action.",
+          "cross_references": ["ICH Q10", "ICH Q12"]
+        },
+        {
+          "rule_id": "ICH-Q13-015",
+          "rule_text": "The level of detail provided in the dossier regarding process model development, validation, and maintenance over the lifecycle must be commensurate with the model type and impact category; the process model must be specific to the defined system; information to support models used in commercial manufacturing must be available during site inspection.",
+          "source_section": "Section 4.4, Process Models",
+          "source_page": 10,
+          "verbatim_quote": "The level of detail provided in the dossier regarding model development, validation, and maintenance over the lifecycle should be commensurate with the model type and impact category. The process model should be specific for the defined system (e.g., equipment, layout, connections). Information to support models used as part of commercial manufacturing should be available during site inspection and maintained at or be accessible to the manufacturing site.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q8", "ICH Q9", "ICH Q10"]
+        },
+        {
+          "rule_id": "ICH-Q13-016",
+          "rule_text": "Primary stability batches for CM must be manufactured using a manufacturing process and equipment representative of the commercial process and must incorporate the variability described in ICH stability guidelines.",
+          "source_section": "Section 4.5, Drug Substance and Drug Product Stability",
+          "source_page": 10,
+          "verbatim_quote": "Regulatory expectations for the stability data package generally do not differ between CM and batch manufacturing modes (refer to ICH Q1A, ICH Q5C). Batches used to generate primary stability data should be manufactured using a manufacturing process and equipment representative of the commercial process. Primary stability batches should incorporate the variability described in the ICH stability guidelines (e.g., different drug substance batches).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "For CM, stability batches may be produced from shorter manufacturing runs provided the control strategy, mass flow rate(s), and equipment are representative, and state of control is demonstrated.",
+          "cross_references": ["ICH Q1A", "ICH Q5C"]
+        },
+        {
+          "rule_id": "ICH-Q13-017",
+          "rule_text": "Manufacturers must seek regulatory approval before implementing a conversion of an approved batch process to a CM process; output materials from both processes must have comparable quality demonstrated via a science and risk-based approach.",
+          "source_section": "Section 4.6, Conversion of a Batch Process to CM",
+          "source_page": 11,
+          "verbatim_quote": "Changing the manufacturing mode from batch to continuous necessitates the development of an appropriate control strategy, considering factors identified in Section 3. The output materials from the batch and continuous processes should have comparable quality. A science and risk-based approach should be used for establishing product comparability and assessing the need for additional bioequivalence, non-clinical and/or clinical studies, and stability data... Manufacturers should seek regulatory approval before implementing a conversion of an approved batch process to a CM process.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Manufacturers can seek advice from the regulatory authority on acceptability of the strategy before submitting.",
+          "cross_references": ["ICH Q5E", "ICH Q13 Section 3"]
+        },
+        {
+          "rule_id": "ICH-Q13-018",
+          "rule_text": "The requirements for process validation are similar for CM and batch manufacturing processes; approaches including traditional process validation using a fixed number of validation batches or continuous process verification are acceptable. When continuous process verification is used, this must be justified based on product and process understanding, system design, and overall control strategy, with the justification provided in the dossier.",
+          "source_section": "Section 4.7, Process Validation",
+          "source_page": 11,
+          "verbatim_quote": "The requirements for process validation as established by region are similar for CM and batch manufacturing processes. Approaches such as traditional process validation that uses a fixed number of validation batches or continuous process verification can be used. When continuous process verification is used, the CM system performance and output material quality is continuously monitored, such that the real-time data collected demonstrate the maintenance of a state of control and production of output material with the desired quality for the run time duration. The use of continuous process verification should be justified based on the product and process understanding, system design, and overall control strategy. This justification should be provided in the dossier.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "When continuous process verification is used to support initial product launch, applicants must justify the appropriateness of the validation activities.",
+          "cross_references": ["ICH Q8", "ICH Q13 Section 3.3"]
+        },
+        {
+          "rule_id": "ICH-Q13-019",
+          "rule_text": "PQS expectations are the same for batch and CM processes; procedures for material diversion must be established under the PQS, and an overarching plan or decision tree describing how disturbances are managed for various types of material diversion must be maintained under the PQS.",
+          "source_section": "Section 4.8, Pharmaceutical Quality System",
+          "source_page": 12,
+          "verbatim_quote": "PQS expectations are the same for batch and CM processes and should follow pertinent ICH guidelines. One important operational aspect of CM is that non-conforming materials can be diverted from the rest of the batch when material traceability, process monitoring, and material diversion strategies are well established. Procedures for material diversion, when required, should be established under the PQS (see Section 4.2). An overarching plan or decision tree that describes how disturbances are managed for various types of material diversion should be maintained under the PQS.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Diverted materials from planned events (e.g., system start-up and shutdown) generally do not require investigation when events meet established process performance criteria.",
+          "cross_references": ["ICH Q10", "ICH Q13 Annex V"]
+        },
+        {
+          "rule_id": "ICH-Q13-020",
+          "rule_text": "When unexpected and/or frequent disturbances occur in CM, appropriate investigation, root cause analysis, and corrective action and preventive action (CAPA) must be instituted.",
+          "source_section": "Section 4.8, Pharmaceutical Quality System",
+          "source_page": 12,
+          "verbatim_quote": "As described therein, when unexpected and/or frequent disturbances occur, appropriate investigation, root cause analysis, and corrective action and preventive action (CAPA) should be instituted.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Planned events meeting established process performance criteria generally do not require investigation.",
+          "cross_references": ["ICH Q10", "ICH Q13 Annex V"]
+        },
+        {
+          "rule_id": "ICH-Q13-021",
+          "rule_text": "The principles and approaches described in ICH Q12 are applicable to the lifecycle management of CM; post-approval change management must follow ICH Q12 principles.",
+          "source_section": "Section 4.9, Lifecycle Management",
+          "source_page": 12,
+          "verbatim_quote": "The principles and approaches described in ICH Q12 are applicable to the lifecycle management of CM.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q12"]
+        },
+        {
+          "rule_id": "ICH-Q13-022",
+          "rule_text": "For changes in production output of already approved CM products, the selected approach must be justified, risk assessed, and the control strategy updated to ensure risk control; some changes may require process modification and process validation.",
+          "source_section": "Section 3.2, Changes in Production Output",
+          "source_page": 6,
+          "verbatim_quote": "For already approved products manufactured using a CM process, it is important to justify the selected approach, assess risk and understand its impact on the overall control strategy and process performance, and as needed, update the control strategy to ensure risk control. Some changes may require process modification and process validation.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Decreasing production output below the longest run time previously validated generally would not imply additional risks, given the same equipment, process and control strategy are used.",
+          "cross_references": ["ICH Q13 Section 3.2", "ICH Q13 Section 4.7"]
+        },
+        {
+          "rule_id": "ICH-Q13-023",
+          "rule_text": "For scale-up of CM by increasing equipment size/capacity, the risks of scale-up and applicability of the original control strategy must be assessed at the new scale and the control strategy modified where needed.",
+          "source_section": "Section 3.2, Changes in Production Output",
+          "source_page": 7,
+          "verbatim_quote": "Scale-up by increasing equipment size/capacity: Depending on the process and equipment design, increasing production by increasing equipment size may be possible. General principles of equipment scale-up apply, as in the case of batch manufacturing. As elements such as RTD, process dynamics, and system integration may change, various aspects of the control strategy may be impacted. The risks of scale-up and applicability of the original control strategy should be assessed at the new scale and the control strategy should be modified where needed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q13 Section 3.2"]
+        },
+        {
+          "rule_id": "ICH-Q13-024",
+          "rule_text": "For CM of therapeutic proteins, adventitious agent control must be based on a risk assessment of all potential sources of contamination and must include a strategy for the type and frequency of adventitious agent testing to demonstrate the process remains free of contamination.",
+          "source_section": "Annex III, Section 2.1, Adventitious Agent Control",
+          "source_page": 28,
+          "verbatim_quote": "Control of adventitious agents (e.g., bacteria, viruses, fungi, mycoplasma) should be based on a risk assessment of all potential sources of contamination (e.g., starting and raw materials, manufacturing operations), the ability of the process to remove and inactivate adventitious agents, and the testing capability to ensure the absence of adventitious agents. Based on this assessment, a strategy should be developed to include the type and frequency of adventitious agent testing undertaken to demonstrate that the process remains free of contamination during cell culture and other downstream steps.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q5A", "ICH Q13 Annex III Section 3"]
+        },
+        {
+          "rule_id": "ICH-Q13-025",
+          "rule_text": "For therapeutic protein CM, the integrity of single-use equipment must be ensured to prevent contamination; a control strategy and clearly defined scheme must be in place to allow for filter changes and pre- and post-use integrity testing without interrupting the process, and a clear strategy for material diversion and refiltration must be defined in the event of filter failure.",
+          "source_section": "Annex III, Section 2.2, Equipment Design and System Integration",
+          "source_page": 28,
+          "verbatim_quote": "The integrity of single-use equipment during use should be ensured to prevent contamination... Given these factors, a control strategy and a clearly defined scheme should be put in place to allow for filter changes and pre- and post-use integrity testing, as appropriate, without interrupting the process. In the event of a filter failure, a clear strategy for material diversion and refiltration (reprocessing) should be defined.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q13 Annex III Section 2.1"]
+        },
+        {
+          "rule_id": "ICH-Q13-026",
+          "rule_text": "For CM of therapeutic proteins, the limit of in vitro cell age for production should be based on data derived from production cells expanded under pilot-plant scale or commercial-scale conditions to the proposed in vitro cell age or beyond, as outlined in ICH Q5A, Q5B and Q5D.",
+          "source_section": "Annex III, Section 3.2, Run Time Considerations",
+          "source_page": 30,
+          "verbatim_quote": "The limit of in vitro cell age used for production should be based on data derived from production cells expanded under pilot-plant scale or commercial-scale conditions to the proposed in vitro cell age or beyond as outlined in ICH Q5A, Q5B and Q5D.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Previously established limits of in vitro cell age for a bioreactor operating in batch mode may not be applicable to a bioreactor operating in continuous mode.",
+          "cross_references": ["ICH Q5A", "ICH Q5B", "ICH Q5D"]
+        },
+        {
+          "rule_id": "ICH-Q13-027",
+          "rule_text": "For therapeutic protein CM, the general recommendations outlined in ICH Q5A for viral safety and clearance remain applicable; where recommendations may not be applicable to a CM system, scientifically justified alternatives may be proposed.",
+          "source_section": "Annex III, Section 3.3, Viral Clearance Validation",
+          "source_page": 30,
+          "verbatim_quote": "The general recommendations outlined in ICH Q5A for viral safety and clearance remain applicable for CM. Where recommendations may not be applicable to a CM system, scientifically justified alternatives may be proposed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Scientifically justified alternatives may be proposed where Q5A recommendations are not directly applicable.",
+          "cross_references": ["ICH Q5A"]
+        },
+        {
+          "rule_id": "ICH-Q13-028",
+          "rule_text": "In integrated drug substance and drug product CM processes, even though the drug substance is not isolated, a drug substance specification must be defined and justified in accordance with ICH Q6A; conformance to the drug substance specification must be verified on a periodic and event-driven basis.",
+          "source_section": "Annex IV, Section 3.1, Drug Substance Specification",
+          "source_page": 33,
+          "verbatim_quote": "Even though the drug substance is not isolated in an integrated drug substance and drug product process, a drug substance specification should be defined and justified in accordance with ICH Q6A and other relevant ICH guidelines... conformance to the drug substance specification should be verified on a periodic and event-driven basis by testing the purified drug substance at an appropriate location using a relevant sampling plan.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Drug substance testing may not be required on a routine basis when the integrated process is appropriately controlled.",
+          "cross_references": ["ICH Q6A", "ICH Q13 Annex IV Section 3"]
+        },
+        {
+          "rule_id": "ICH-Q13-029",
+          "rule_text": "In integrated CM processes, the drug product specification must include drug substance-related substances, residual solvents (used in drug substance synthesis), elemental impurities, etc., where appropriate, since attributes typically associated with drug substance quality are generally included in the drug product specification.",
+          "source_section": "Annex IV, Section 3.2, Drug Product Specification",
+          "source_page": 34,
+          "verbatim_quote": "In integrated processes, attributes typically associated with the drug substance quality are generally included in the drug product specification unless justified per ICH Q6A. Therefore, the drug product specification in an integrated process should include drug substance-related substances, residual solvents (used in drug substance synthesis), elemental impurities, etc., when appropriate.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Attributes can be excluded when justified per ICH Q6A.",
+          "cross_references": ["ICH Q6A"]
+        },
+        {
+          "rule_id": "ICH-Q13-030",
+          "rule_text": "For integrated CM processes, small planned diversions during process development must be used to obtain batch data that is representative of commercial drug substance.",
+          "source_section": "Annex IV, Section 3.4, Batch Data",
+          "source_page": 35,
+          "verbatim_quote": "Although the drug substance is not isolated, small, planned diversions during process development should be used to obtain batch data that is representative of commercial drug substance.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q13 Annex IV"]
+        }
+      ]
+    },
+    "Q14": {
+      "title": "Analytical Procedure Development",
+      "document_date": "2023-11-30",
+      "document_version": "Step 4",
+      "rules": [
+        {
+          "rule_id": "ICH-Q14-001",
+          "rule_text": "Analytical procedure development must, at a minimum, include: identifying product attributes requiring testing; selecting appropriate technology and related instruments or suitable apparatus; conducting studies to evaluate analytical procedure performance characteristics such as specificity, accuracy and precision over the reportable range and robustness; and documenting the analytical procedure including the analytical procedure control strategy.",
+          "source_section": "Section 2.1, Minimal versus Enhanced Approaches to Analytical Procedure Development",
+          "source_page": 2,
+          "verbatim_quote": "Analytical procedure development should include the following elements as a minimum: Identifying the attributes of the product which need to be tested; Selecting an appropriate technology and related instruments or suitable apparatus; Conducting studies to evaluate analytical procedure performance characteristics such as specificity, accuracy and precision over the reportable range (including the calibration model, lower and/or higher range limits) and robustness; Documenting the analytical procedure including the analytical procedure control strategy.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted; these are minimum requirements for all approaches.",
+          "cross_references": ["ICH Q2", "ICH Q8", "ICH Q9"]
+        },
+        {
+          "rule_id": "ICH-Q14-002",
+          "rule_text": "The analytical procedure description submitted in CTD section 3.2.S.4.2 for drug substance or section 3.2.P.5.2 for drug product must describe the steps in sufficient detail for a skilled analyst to perform the analysis, including system suitability tests (SST), as elaborated in Section 6 of the guideline.",
+          "source_section": "Section 10.1, General Regulatory Considerations and Documentation",
+          "source_page": 15,
+          "verbatim_quote": "The analytical procedure description(s) should be included in the ICH M4Q CTD section 3.2.S.4.2 for drug substance or section 3.2.P.5.2 for drug product... The analytical procedure should describe the steps in sufficient detail for a skilled analyst to perform the analysis (including SST) as elaborated in Chapter 6.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH M4Q", "ICH Q2", "ICH Q14 Section 6"]
+        },
+        {
+          "rule_id": "ICH-Q14-003",
+          "rule_text": "Validation data and supportive information needed to justify the analytical procedure control strategy must be included in CTD section 3.2.S.4.3 for drug substance or section 3.2.P.5.3 for drug product; submission of validation data must reflect the guidance provided in ICH Q2.",
+          "source_section": "Section 10.1, General Regulatory Considerations and Documentation",
+          "source_page": 15,
+          "verbatim_quote": "Validation data and supportive information needed to justify the analytical procedure control strategy should be included in the CTD section 3.2.S.4.3 for drug substance or section 3.2.P.5.3 for drug product. Submission of validation data should reflect the guidance provided in ICH Q2. The performance criteria used in the validation study should be included in the submission.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In some cases, depending on the intended purpose and/or the selected technique, it may be appropriate to submit development data as justification.",
+          "cross_references": ["ICH Q2", "ICH M4Q"]
+        },
+        {
+          "rule_id": "ICH-Q14-004",
+          "rule_text": "An Analytical Target Profile (ATP) must, when used, consist of a description of the intended purpose of the analytical procedure, details on the product attributes to be measured, and relevant performance characteristics with associated performance criteria; the ATP drives technology selection and serves as a foundation for analytical procedure validation criteria.",
+          "source_section": "Section 3, Analytical Target Profile",
+          "source_page": 3,
+          "verbatim_quote": "An ATP consists of a description of the intended purpose of the analytical procedure, details on the product attributes to be measured and relevant performance characteristics with associated performance criteria. The ATP includes measurement requirements for one or more quality attributes. The ATP drives the choice of analytical technology... Once a technology has been selected, the ATP serves as a foundation to derive the analytical procedure attributes and performance criteria for analytical procedure validation (ICH Q2).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Formal documentation and submission of an ATP is optional but can facilitate regulatory communication irrespective of the chosen development approach.",
+          "cross_references": ["ICH Q2", "ICH Q8", "ICH Q11"]
+        },
+        {
+          "rule_id": "ICH-Q14-005",
+          "rule_text": "The use of quality risk management (QRM) is required to be applied in analytical procedure development to aid in developing a robust analytical procedure that reduces the risk of poor performance and reporting incorrect results; risk assessment outcomes must be documented in the applicant's pharmaceutical quality system (PQS).",
+          "source_section": "Section 4.2, Risk Management",
+          "source_page": 4,
+          "verbatim_quote": "The use of quality risk management (QRM) is encouraged to aid in the development of a robust analytical procedure to reduce risk of poor performance and reporting incorrect results. Risk assessment is typically performed early in analytical procedure development and is updated as more information becomes available... The outcome of quality risk management should be documented in the relevant parts of the applicant's pharmaceutical quality system (PQS) (ICH Q10).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Risk assessment can be formal or informal and can be supported by prior knowledge.",
+          "cross_references": ["ICH Q9", "ICH Q10"]
+        },
+        {
+          "rule_id": "ICH-Q14-006",
+          "rule_text": "Robustness of an analytical procedure must be tested by deliberate variations of analytical procedure parameters and must consider the duration of the analysis including stability of sample preparations and reagents; the outcome of robustness evaluation must be documented and reflected in the analytical procedure control strategy.",
+          "source_section": "Section 5.1, Robustness",
+          "source_page": 5,
+          "verbatim_quote": "The robustness of an analytical procedure is a measure of its capacity to meet the expected performance criteria during normal use. Robustness is tested by deliberate variations of analytical procedure parameters and should consider the duration of the analysis (including stability of sample preparations and reagents)... The outcome of the evaluation of robustness should be documented and also reflected in the analytical procedure control strategy.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "If robustness evaluation was already conducted during development, it does not need to be repeated during validation (as discussed in ICH Q2).",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 6"]
+        },
+        {
+          "rule_id": "ICH-Q14-007",
+          "rule_text": "Set-points, PARs and/or MODRs of an analytical procedure proposed by the applicant based on development and validation data are subject to regulatory approval; analytical procedure validation for a PAR and/or MODR is required only for those performance characteristics not covered by data from analytical procedure development.",
+          "source_section": "Section 5.2, Analytical Procedure Parameter Ranges",
+          "source_page": 5,
+          "verbatim_quote": "Set-points, PARs and/or MODRs of an analytical procedure proposed by the applicant based on development and validation data are subject to regulatory approval. Moving within an approved PAR or MODR does not require regulatory notification. Analytical procedure validation for a PAR and/or an MODR is required only for those performance characteristics not covered by data from analytical procedure development.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Moving within an approved PAR or MODR does not require regulatory notification.",
+          "cross_references": ["ICH Q2", "ICH Q12"]
+        },
+        {
+          "rule_id": "ICH-Q14-008",
+          "rule_text": "An analytical procedure control strategy must ensure that the analytical procedure is fit for the intended purpose during routine use throughout its lifecycle; it must be defined before validation (ICH Q2) and confirmed after validation has been finalised; it must include the system suitability test (SST).",
+          "source_section": "Section 6, Analytical Procedure Control Strategy",
+          "source_page": 6,
+          "verbatim_quote": "An analytical procedure control strategy should ensure that the analytical procedure is fit for the intended purpose during routine use throughout its lifecycle. It consists of a set of controls, derived from current understanding of the analytical procedure including development data, risk assessment, robustness and prior knowledge. The analytical procedure control strategy should be defined before validation (ICH Q2) and should be confirmed after validation has been finalised.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 5.1"]
+        },
+        {
+          "rule_id": "ICH-Q14-009",
+          "rule_text": "The system suitability test (SST) acceptance criteria must be based on analytical procedure performance criteria; the SST must be selected using risk assessment and knowledge from development data; validity of analytical procedure results depends on the outcome of the SST.",
+          "source_section": "Section 6, Analytical Procedure Control Strategy",
+          "source_page": 6,
+          "verbatim_quote": "The SST is designed to verify selected analytical procedure attributes. The acceptance criteria should be based on analytical procedure performance criteria. The components of the SST should be selected using risk assessment as well as knowledge and understanding from development data. The test is used to verify that the measurement system and the analytical operations associated with the analytical procedure are fit for the intended purpose during the time period of analysis and enable the detection of unacceptable performance. Validity of the results of the analytical procedure depends on the outcome of the SST.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 2.1"]
+        },
+        {
+          "rule_id": "ICH-Q14-010",
+          "rule_text": "Ongoing monitoring of selected analytical procedure outputs is required throughout the procedure lifecycle to look for trends and enable proactive intervention to avoid failures, in line with PQS expectations.",
+          "source_section": "Section 6, Analytical Procedure Control Strategy",
+          "source_page": 6,
+          "verbatim_quote": "Ongoing monitoring of selected analytical procedure outputs is recommended to look for any trends, in line with PQS expectations. Review of analytical procedure outputs facilitates the procedure lifecycle management and enables proactive intervention to avoid failures.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q10", "ICH Q12"]
+        },
+        {
+          "rule_id": "ICH-Q14-011",
+          "rule_text": "In line with ICH Q12, applicants may propose Established Conditions (ECs) for analytical procedures; ECs are legally binding information and any change to ECs necessitates a submission to the regulatory authority. ECs and related reporting categories must be proposed by the applicant and assessed by regulatory authorities based on scientific justification.",
+          "source_section": "Section 6.1, Established Conditions for Analytical Procedures",
+          "source_page": 7,
+          "verbatim_quote": "In line with ICH Q12, applicants may propose ECs for an analytical procedure... ECs are legally binding information considered necessary to assure product quality. As a consequence, any change to ECs necessitates a submission to the regulatory authority. (ICH Q12)... ECs and related reporting categories are proposed by the applicant and assessed by the regulatory authorities for approval based on the scientific justification provided.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Parameters that are not ECs do not require regulatory communication upon change.",
+          "cross_references": ["ICH Q12", "ICH Q14 Section 7"]
+        },
+        {
+          "rule_id": "ICH-Q14-012",
+          "rule_text": "Use of the enhanced approach must not lead to providing a less detailed description of analytical procedures in a regulatory submission; suitably detailed descriptions of analytical procedures in Module 3 of the CTD are expected to provide a clear understanding regardless of the approach used to identify ECs.",
+          "source_section": "Section 6.1, Established Conditions for Analytical Procedures",
+          "source_page": 7,
+          "verbatim_quote": "Use of the enhanced approach should not lead to providing a less detailed description of analytical procedures in a regulatory submission. Suitably detailed descriptions of the analytical procedures in Module 3 of the CTD are expected to provide a clear understanding regardless of the approach used to identify ECs for analytical procedures.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH M4Q", "ICH Q14 Section 10.2"]
+        },
+        {
+          "rule_id": "ICH-Q14-013",
+          "rule_text": "When initiating post-approval changes to analytical procedures, QRM must be used to evaluate the impact of changes; the outcome of the risk assessment informs the design and extent of bridging studies needed to demonstrate the revised or new procedure remains fit for intended purpose.",
+          "source_section": "Section 7, Lifecycle Management and Post-Approval Changes of Analytical Procedures",
+          "source_page": 9,
+          "verbatim_quote": "When initiating changes to analytical procedures, QRM can be used to evaluate the impact of the changes and reconfirm that the originally agreed reporting category is still appropriate. The outcome of this risk assessment informs the design and extent of the studies needed to support the change including a bridging strategy to demonstrate that the revised or new procedure remains fit for the intended purpose.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Changes to parameters that are not ECs do not require regulatory communication.",
+          "cross_references": ["ICH Q9", "ICH Q12"]
+        },
+        {
+          "rule_id": "ICH-Q14-014",
+          "rule_text": "When proposing a new analytical procedure, a comprehensive risk assessment and evaluation must be conducted to determine any impact on the performance; the analytical procedure control strategy for the new procedure must be established, and ECs associated with the new procedure must be justified when communicating the change.",
+          "source_section": "Section 7, Lifecycle Management and Post-Approval Changes of Analytical Procedures",
+          "source_page": 10,
+          "verbatim_quote": "If an applicant proposes a new analytical procedure, a comprehensive risk assessment and evaluation should be conducted to determine any impact on the performance. The analytical procedure control strategy for the new procedure should be established. ECs associated with the new procedure should be justified when communicating the change.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q12", "ICH Q14 Section 6.1"]
+        },
+        {
+          "rule_id": "ICH-Q14-015",
+          "rule_text": "For a change in analytical procedure principle (physicochemical/biochemical basis), full validation of the new procedure is required along with comparative analysis of representative samples and reference materials, and/or demonstration that the analytical procedure's ability to discriminate between acceptable and non-acceptable results remains comparable.",
+          "source_section": "Section 7, Table 2: Examples of analytical procedure change evaluation",
+          "source_page": 10,
+          "verbatim_quote": "Change of analytical procedure principle (physicochemical/biochemical basis): Full validation of new procedure And Comparative analysis of representative samples and reference materials. And/or Demonstration that the analytical procedure's ability to discriminate between acceptable and non-acceptable results remains comparable.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 7"]
+        },
+        {
+          "rule_id": "ICH-Q14-016",
+          "rule_text": "For multivariate analytical procedures, the ranges of the multivariate models must be constructed from data covering the sources of variability likely to occur during manufacturing and analysis; a careful strategy for sample selection is essential and the sample population must encompass relevant sources of variability.",
+          "source_section": "Section 8, Development of Multivariate Analytical Procedures: Additional Considerations",
+          "source_page": 11,
+          "verbatim_quote": "Therefore, a careful strategy for sample selection is essential for obtaining the relevant information from the analytical data and contributes to the robustness of the resulting model. Based on the analytical procedure and measurement principle, the sample population should encompass the sources of variability likely to occur during manufacturing and analysis, such as raw material quality, manufacturing process variability, storage conditions, sample preparation and testing.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Development laboratory and pilot scale samples are often utilised when obtaining commercial scale samples with appropriate variability is challenging.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 5"]
+        },
+        {
+          "rule_id": "ICH-Q14-017",
+          "rule_text": "For multivariate analytical procedures, the reference values for calibration and validation must be determined using validated reference analytical procedures or reference samples with known values; the uncertainty of the reference analytical procedure must be sufficiently low in relation to the intended performance of the multivariate analytical procedure.",
+          "source_section": "Section 8, Development of Multivariate Analytical Procedures: Additional Considerations",
+          "source_page": 11,
+          "verbatim_quote": "The reference values are determined using reference analytical procedure(s) or prepared reference samples with known values. Care should be taken to ensure that uncertainty in the reference analytical procedure is sufficiently low in relation to the intended performance of the multivariate analytical procedure and that prepared reference samples are homogeneous. The approach to the reference analytical procedure(s) or prepared reference samples should be explained and justified.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-018",
+          "rule_text": "For multivariate analytical procedures, any transformation of data must be documented and justified; variable selection depends on the measurement principle, application and other factors, and must be justified.",
+          "source_section": "Section 8, Development of Multivariate Analytical Procedures: Data transformation and Variable selection",
+          "source_page": 12,
+          "verbatim_quote": "The selection of the data transformation method(s) can be driven by the type of data, instrument or sample, the intended purpose of the model and/or prior knowledge. Caution should be exercised when performing any transformation because artefacts can be introduced, or essential information can be lost. Any transformation of data should be documented and justified... Variable selection depends on the measurement principle, application and other factors, and should be justified.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-019",
+          "rule_text": "For multivariate analytical procedures, the multivariate model must be validated using independent data not previously used in the calibration set; a multivariate model maintenance plan must be developed including procedures and limits for outlier diagnostics and defining the frequency and circumstances for confirmatory testing.",
+          "source_section": "Section 8, Development of Multivariate Analytical Procedures",
+          "source_page": 13,
+          "verbatim_quote": "Once the model is developed, it is validated using independent data not previously used in the calibration set. The last step in model establishment is development of a multivariate model maintenance plan, which includes the procedures and limits for outlier diagnostics, and defines the frequency and circumstances for confirmatory testing, if needed.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-020",
+          "rule_text": "Continued performance of the calibration model for multivariate analytical procedures must be confirmed on a periodic and event-driven basis by comparison of model predictions with known values of reference samples or reference analytical procedure results; triggers for confirmatory testing include new known process variability, unexpected process events, or scheduled instrument maintenance.",
+          "source_section": "Section 8, Development of Multivariate Analytical Procedures - Recalibration and model maintenance",
+          "source_page": 12,
+          "verbatim_quote": "Additionally, continued performance of the calibration model should be confirmed on a periodic and event-driven basis by comparison of the model predictions with the known values of the reference samples or reference analytical procedure results. This confirmatory testing helps to ensure that the calibration model continues to perform as expected. Examples of events that could trigger confirmatory testing include new known process variability, unexpected process events or scheduled instrument maintenance.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q10", "ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-021",
+          "rule_text": "For RTRT, the RTRT analytical procedure must be validated as recommended in ICH Q2 and it must be demonstrated that process measurements have appropriate specificity for the targeted quality attribute; the relationship between the RTRT approach and the CQAs, as well as acceptance criteria, must be fully justified.",
+          "source_section": "Section 9, Development of Analytical Procedures for Real Time Release Testing: Additional Considerations",
+          "source_page": 14,
+          "verbatim_quote": "RTRT can be based on an appropriate combination of one or more process measurements and/or material attributes to provide a value for one or more CQAs and should be specific for those CQAs. The relationship between the RTRT approach and the CQAs, as well as acceptance criteria, should be fully justified. An RTRT analytical procedure should be validated as recommended in ICH Q2 and it should be demonstrated that the process measurements have appropriate specificity for the targeted quality attribute.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q8", "ICH Q6A", "ICH Q6B"]
+        },
+        {
+          "rule_id": "ICH-Q14-022",
+          "rule_text": "For RTRT, the sample interface must remain consistent over the duration of manufacturing and must be robust to expected processing and environmental variations; the measurement points must be chosen to be representative of the entire material being processed.",
+          "source_section": "Section 9, Development of Analytical Procedures for Real Time Release Testing: Additional Considerations",
+          "source_page": 14,
+          "verbatim_quote": "Sampling and the sample interface are important considerations when designing any on-line or in-line analytical procedure, including those used for RTRT. The measurement point(s) should be chosen to be representative of the entire material being processed with the sample duration or amount appropriately chosen (e.g., relative to a unit dose). Additionally, the sample interface should remain consistent over the duration of manufacturing and should be robust to expected processing and environmental variations.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q8", "ICH Q14 Section 9"]
+        },
+        {
+          "rule_id": "ICH-Q14-023",
+          "rule_text": "The RTRT approach must be included in the product specification in accordance with ICH Q6A and ICH Q6B; quantitative RTRT results must be expressed in the same units as those for traditional testing; the product specification must include the analytical procedures to be used for off-line testing.",
+          "source_section": "Section 9, Development of Analytical Procedures for Real Time Release Testing: Additional Considerations",
+          "source_page": 14,
+          "verbatim_quote": "The RTRT approach should be included in the product specification (ICH-Endorsed Guide for ICH Q8/Q9/Q10 Implementation). In accordance with ICH Q6A Specifications: Test Procedures and Acceptance Criteria For New Drug Substances and New Drug Products: Chemical Substances and ICH Q6B Specifications: Test Procedures and Acceptance Criteria For Biotechnological/Biological Products, this includes a reference to the analytical procedure(s) and the related acceptance criteria. Quantitative RTRT results should be expressed in the same units as those for traditional testing.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q6A", "ICH Q6B", "ICH Q8"]
+        },
+        {
+          "rule_id": "ICH-Q14-024",
+          "rule_text": "If the dossier includes a registered alternative control strategy to RTRT (e.g., traditional end-product testing when process analytics are unavailable), the related analytical procedures and when they would be applied must also be included in the product specifications.",
+          "source_section": "Section 9, Development of Analytical Procedures for Real Time Release Testing: Additional Considerations",
+          "source_page": 14,
+          "verbatim_quote": "If the dossier includes a registered alternative control strategy to RTRT (e.g., traditional end-product testing when process analytics are unavailable), the related analytical procedures and when they would be applied should also be included in the product specifications.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q6A", "ICH Q14 Section 9"]
+        },
+        {
+          "rule_id": "ICH-Q14-025",
+          "rule_text": "For multivariate models used as part of drug substance or drug product specifications including RTRT, the description of the validation approach and results must include: description of the validation set with independent samples; performance criteria to be met during validation; evaluation of model validation results against criteria; discussion of relationship between model performance and attribute specification limits; and a high-level overview of PQS elements for model monitoring and maintenance.",
+          "source_section": "Section 10.3, Documentation for Multivariate Analytical Procedures",
+          "source_page": 16,
+          "verbatim_quote": "For multivariate models used as part of drug substance or drug product specifications, including RTRT approaches, the description of the validation approach and results should include: Description of the validation set with independent samples; The performance criteria to be met during validation of the multivariate model; Evaluation of the model validation results against the performance criteria; Discussion of the relationship between the model performance criteria and the attribute specification limits; High level overview of the PQS elements for model monitoring and maintenance, such as diagnostic tools for determining the appropriateness of the sample data for the model and the approach taken when outliers are identified.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q2", "ICH Q10", "ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-026",
+          "rule_text": "When ECs are proposed in the dossier, they must be clearly differentiated from supportive information; justification must be given for parameters that are ECs and for those that are not ECs; risk-based categorisation of changes and corresponding reporting categories must be included in the submission.",
+          "source_section": "Section 10.1, General Regulatory Considerations and Documentation; Section 10.2, Documentation for the Enhanced Approach",
+          "source_page": 15,
+          "verbatim_quote": "Where ECs are proposed for analytical procedures as elaborated in Chapter 6, the ECs should be clearly differentiated from supportive information... If ECs and related reporting categories are proposed, risk-based categorisation of changes and corresponding reporting categories should be included in the submission. Justification should be given for parameters that are ECs and those that are not ECs, as appropriate (see Chapter 6).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q12", "ICH Q14 Section 6.1"]
+        },
+        {
+          "rule_id": "ICH-Q14-027",
+          "rule_text": "For multivariate analytical procedures, development information must be provided commensurate with the level of impact of the model; process development section of the dossier must include model development information for multivariate models used as part of manufacturing development studies or for in-process controls or tests.",
+          "source_section": "Section 10.3, Documentation for Multivariate Analytical Procedures",
+          "source_page": 15,
+          "verbatim_quote": "Development information related to multivariate analytical procedures should be provided commensurate with the level of impact of the model (ICH-Endorsed Guide for ICH Q8/Q9/Q10 Implementation). The process development section of the dossier (e.g., 3.2.S.2.6 or 3.2.P.2) should include the model development information for multivariate models used as part of manufacturing development studies or for in-process controls or tests.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH M4Q", "ICH Q14 Section 8"]
+        },
+        {
+          "rule_id": "ICH-Q14-028",
+          "rule_text": "Knowledge related to analytical procedures must be actively managed throughout the product lifecycle as additional information is obtained; prior knowledge may be explicitly or implicitly used for informing decisions during analytical procedure development and lifecycle management.",
+          "source_section": "Section 4.1, Knowledge Management",
+          "source_page": 4,
+          "verbatim_quote": "As additional information is obtained, knowledge related to analytical procedures should be actively managed throughout the product lifecycle... Prior knowledge is explicitly or implicitly used for informing decisions during analytical procedure development and lifecycle management.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q10"]
+        },
+        {
+          "rule_id": "ICH-Q14-029",
+          "rule_text": "For analytical procedures relying on multivariate models, data quality must be verified using suitable software tools at each measurement to monitor the appropriateness of every measurement using outlier diagnostics.",
+          "source_section": "Section 6, Analytical Procedure Control Strategy; Section 8, Recalibration and model maintenance",
+          "source_page": 13,
+          "verbatim_quote": "For analytical procedures relying on multivariate models, data quality should be verified using suitable software tools... Routine analysis of the multivariate analytical procedure typically includes monitoring the appropriateness of every measurement using outlier diagnostics.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "None noted.",
+          "cross_references": ["ICH Q14 Section 8", "ICH Q2"]
+        },
+        {
+          "rule_id": "ICH-Q14-030",
+          "rule_text": "For analytical procedures using platform approaches applied to new products, subsequent development can be abbreviated and certain validation tests can be omitted based on a science- and risk-based justification; however, data from development studies such as robustness data from a DoE study can be used as part of validation.",
+          "source_section": "Section 2, General Considerations for Analytical Procedures",
+          "source_page": 2,
+          "verbatim_quote": "In certain cases, an analytical procedure can be applied to multiple products with little or no modification of measurement conditions. For a new application of such platform analytical procedures, the subsequent development can be abbreviated, and certain validation tests can be omitted based on a science- and risk-based justification. Data gained during the development studies (e.g., robustness data from a design of experiments (DoE) study) could be used as part of the validation for the related analytical procedure performance characteristics and studies do not necessarily need to be repeated.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "This flexibility applies only to platform analytical procedures applied to new products within the platform scope.",
+          "cross_references": ["ICH Q2", "ICH Q14 Section 2.1"]
+        }
+      ]
+    }
+  }
+}

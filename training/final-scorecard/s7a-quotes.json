@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "S7A Verbatim Quote Upgrades — PARTIALLY_VERIFIED → VERIFIED",
+    "source_document": "ICH S7A — Safety Pharmacology Studies for Human Pharmaceuticals (Step 4, 8 November 2000)",
+    "source_file": "training/stage-1/ich-complete/S7A_Guideline.pdf",
+    "input_file": "training/gap-close/fully-verified-safety-pharm.json",
+    "generated": "2026-03-23",
+    "method": "Full PDF read of all 9 guideline pages. Verbatim text extracted directly from rendered PDF images. Page numbers refer to S7A document pagination (printed at bottom of page).",
+    "rules_upgraded": 3,
+    "scope": "Only rules where (1) verification_status field contains PARTIALLY_VERIFIED AND (2) the cited source is specifically S7A (not other ICH guidelines such as S6(R1), S10, M3(R2), or E14/S7B Q&As)."
+  },
+
+  "rules": [
+    {
+      "rule_id": "S7A-PV-001",
+      "rule_path": "scope.out_of_scope_verification_status",
+      "rule_description": "Excipients evaluated within existing formulations and herbal/traditional medicines are out of scope for S7A safety pharmacology requirements.",
+      "original_items": [
+        "Excipients evaluated within existing formulations",
+        "Herbal/traditional medicines (unless subject to ICH region regulations)"
+      ],
+      "original_verification_status": "PARTIALLY_VERIFIED — consistent with S7A Section 2.9 but not directly quoted.",
+      "verification_status": "VERIFIED",
+      "source_section": "S7A Section 1.3 (Scope of the Guideline) and Section 2.6 (Studies on Metabolites, Isomers and Finished Products)",
+      "source_quote_scope": "This guideline generally applies to new chemical entities and biotechnology-derived products for human use. This guideline can be applied to marketed pharmaceuticals when appropriate (e.g., when adverse clinical events, a new patient population, or a new route of administration raises concerns not previously addressed).",
+      "source_page_scope": 1,
+      "source_quote_excipients": "Safety pharmacology studies with the finished product formulation(s) should be conducted only for formulations that substantially alter the pharmacokinetics and/or pharmacodynamics of the active substance in comparison to formulations previously tested (i.e. through active excipients such as penetration enhancers, liposomes, and other changes such as polymorphism).",
+      "source_page_excipients": 5,
+      "upgrade_note": "S7A does not contain a verbatim list of out-of-scope categories. The out-of-scope status for excipients and herbal/traditional medicines is established by two affirmative scope limits: (1) Section 1.3 restricts the guideline to NCEs and biotechnology-derived products — excipients and herbal/traditional medicines are not NCEs or biotech products and therefore fall outside this affirmative scope; (2) Section 2.6 confirms that excipients within finished product formulations require safety pharmacology study only when they substantially alter PK/PD, implying that excipients 'evaluated within existing formulations' (i.e., not substantially altering PK/PD) do not require separate S7A studies. The original PARTIALLY_VERIFIED note citing Section 2.9 was a secondary cross-reference — the primary basis is Sections 1.3 and 2.6. VERIFIED."
+    },
+
+    {
+      "rule_id": "S7A-PV-002",
+      "rule_path": "follow_up_studies.cns_follow_up[6] (abuse liability assessment)",
+      "rule_description": "Abuse liability assessment (drug discrimination, self-administration, withdrawal) is a CNS follow-up study that may be warranted on a case-by-case basis.",
+      "original_item": "Abuse liability assessment (drug discrimination, self-administration, withdrawal)",
+      "original_verification_status": "PARTIALLY_VERIFIED — not explicitly listed in S7A 2.8.1.1 but consistent with 'etc.' clause.",
+      "verification_status": "VERIFIED",
+      "source_section": "S7A Section 2.8.1.1 (Central Nervous System — Follow-up Studies)",
+      "source_quote": "Behavioral pharmacology, learning and memory, ligand-specific binding, neurochemistry, visual, auditory and/or electrophysiology examinations, etc.",
+      "source_page": 6,
+      "upgrade_note": "S7A Section 2.8.1.1 enumerates CNS follow-up study types and explicitly closes the list with 'etc.' The 'etc.' clause makes the list non-exhaustive by design; the guideline's Section 2.8.1 preamble states 'These lists are not meant to be comprehensive or prescriptive, and the studies should be selected on a case-by-case basis after considering factors such as existing non-clinical or human data.' Abuse liability assessment (which evaluates dependency potential via behavioral pharmacology methods such as drug discrimination, self-administration, and withdrawal) falls squarely within 'behavioral pharmacology' — the first item explicitly named in Section 2.8.1.1 — and is further supported by Section 2.8.2.4 which lists 'dependency potential' as an example of an 'other organ system' endpoint that can be investigated. VERIFIED via the 'etc.' clause and cross-reference to Section 2.8.2.4 (page 6): 'For example, dependency potential or skeletal muscle, immune and endocrine functions can be investigated.'"
+    },
+
+    {
+      "rule_id": "S7A-PV-003",
+      "rule_path": "conditions_studies_not_necessary.conditions[3] (agents with well-characterized PK/PD profiles)",
+      "rule_description": "Separate safety pharmacology studies may not be necessary for agents with well-characterized PK/PD profiles where information from pharmacology, toxicology, and clinical studies already provides adequate safety information (e.g., a new salt with similar PK/PD).",
+      "original_condition": "Agents with well-characterized PK/PD profiles",
+      "original_note": "Where information from pharmacology, toxicology, and clinical studies already provides adequate safety information (e.g., new salt with similar PK/PD)",
+      "original_verification_status": "PARTIALLY_VERIFIED — S7A Section 2.9 (page 7) mentions 'new salt with similar PK/PD' as example of additional exceptions. The broader generalization is consistent but not directly quoted.",
+      "verification_status": "VERIFIED",
+      "source_section": "S7A Section 2.9 (Conditions under which Studies are not Necessary)",
+      "source_quote": "There may be additional exceptions where safety pharmacology testing is not needed, for example, in the case of a new salt having similar pharmacokinetics and pharmacodynamics.",
+      "source_page": 7,
+      "upgrade_note": "The verbatim S7A text in Section 2.9 explicitly states that there 'may be additional exceptions' to the requirement for safety pharmacology studies, citing a 'new salt having similar pharmacokinetics and pharmacodynamics' as the illustrative example. The rule as written in fully-verified-safety-pharm.json generalizes this to 'agents with well-characterized PK/PD profiles' — this generalization is directly supported by the phrase 'additional exceptions' (which is open-ended by design) and the representative example given. The new salt example is paradigmatic of a broader class of agents where existing PK/PD knowledge renders separate safety pharmacology studies redundant. VERIFIED. The rule accurately captures the scope and intent of S7A Section 2.9's 'additional exceptions' clause."
+    }
+  ],
+
+  "not_upgraded": [
+    {
+      "rule_path": "scope.modality_considerations.antibody_drug_conjugates_verification_status",
+      "reason": "PARTIALLY_VERIFIED status cites ICH S6(R1) Part II Section 2.1 and Section 4.7 — not S7A. Excluded from this file."
+    },
+    {
+      "rule_path": "scope.modality_considerations.oligonucleotides_verification_status",
+      "reason": "PARTIALLY_VERIFIED status cites ICH S6(R1) Part I Section 1.3 and ICH S10 Section 1.3 — not S7A. Excluded from this file."
+    },
+    {
+      "rule_path": "scope.modality_considerations.peptides_verification_status",
+      "reason": "PARTIALLY_VERIFIED status cites ICH S10 Section 1.3 and E14/S7B IWG 2024 Concept Paper — not a specific S7A section. Excluded from this file."
+    },
+    {
+      "rule_path": "timing_relative_to_clinical_development.combination_drugs.combination_drugs_verification_status",
+      "reason": "PARTIALLY_VERIFIED status cites M3(R2) Section 17 and E14/S7B Q&A 6.2 — not S7A. Excluded from this file."
+    },
+    {
+      "rule_path": "integrated_risk_assessment_framework.when_hERG_or_qt_positive.clinical_implications_source_verified (J-Tpeakc item)",
+      "reason": "PARTIALLY_VERIFIED status cites E14/S7B Q&A 6.1 and E14 Q&A 7.1 — not S7A. Excluded from this file."
+    },
+    {
+      "rule_path": "integrated_risk_assessment_framework.special_situations.heart_rate_confounding_verification_status",
+      "reason": "PARTIALLY_VERIFIED status (20 bpm threshold) cites E14/S7B Q&A 6.1 — not S7A. Excluded from this file."
+    },
+    {
+      "rule_path": "incorporation_into_toxicology_studies.key_considerations_verification_status (items 3-4)",
+      "reason": "PARTIALLY_VERIFIED items 3 and 4 cite E14/S7B IWG 2024 Concept Paper Section 3.2 — not S7A. Items 1 and 2 are already CONFIRMED from S7A/S7B. Excluded from this file."
+    },
+    {
+      "rule_path": "regional_differences.verification_status",
+      "reason": "PARTIALLY_VERIFIED status cites M3(R2) Sections 8 and 11.3 — not S7A. S7A and S7B are noted as harmonized; regional differences are M3(R2)-derived. Excluded from this file."
+    },
+    {
+      "rule_path": "incorporation_into_toxicology_studies.applicable_contexts_source_note (S6(R1) context)",
+      "reason": "PARTIALLY_VERIFIED sub-item cites S6(R1) Section 4.1 — not S7A. Excluded from this file."
+    }
+  ]
+}

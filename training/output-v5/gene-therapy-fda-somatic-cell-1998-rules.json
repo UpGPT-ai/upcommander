@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "title": "FDA Guidance for Human Somatic Cell Therapy and Gene Therapy",
+    "source_file": "Human_Somatic_Cell_Gene_Therapy.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "March 1998",
+    "document_version": "March 1998 (replaces 1991 Points to Consider)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 22,
+    "notes": "IMPORTANT: Section VIII (Preclinical Evaluation) has been superseded by the 2013 FDA guidance 'Preclinical Assessment of Investigational Cellular and Gene Therapy Products' (November 2013). Section VI.B (RCR Testing for Retroviral Vectors) has been superseded by the January 2020 FDA guidance on RCR testing. Rules from those sections are included for historical completeness but should be interpreted in light of the superseding documents. CMC and vector characterization sections (I-VII) remain foundational references.",
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-SCT-1998-001",
+      "rule_text": "IND applications for somatic cell and gene therapies must follow the same format and contain the same sections as INDs for any investigational biological product, as described in 21 CFR 312.23. For therapies where patient entry criteria include results of a genetic test, information documenting and validating the test method must be submitted to the IND.",
+      "source_section": "I.C Regulatory Considerations",
+      "source_page": 4,
+      "verbatim_quote": "IND applications for somatic cell and gene therapies should follow the same format and contain the same sections as IND's for any investigational biological product, as described in 21 CFR 312.23. For those therapies for which patient entry criteria include results of a genetic test, information should be submitted to the IND documenting and validating the test method.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 312.23"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-002",
+      "rule_text": "The methods and reagents involved in the production process must be defined. Cell banks and key intermediates must be subject to quality control. Lot-to-lot reproducibility of the final product and critical materials (e.g., vector-containing supernatants) must be examined. Existing general regulations 21 CFR 210, 211, 312, and 600 are relevant and must be consulted.",
+      "source_section": "I.C Regulatory Considerations",
+      "source_page": 4,
+      "verbatim_quote": "Quality control of the manufacturing process as well as the final product is necessary… the methods and reagents involved in the production process should be defined. Also, cell banks and key intermediates in the production process should be subject to quality control. Lot-to-lot reproducibility of both the final product and of critical materials such as vector-containing supernatants should be examined. Existing general regulations (21 CFR 210, 211, 312, and 600) may be relevant and should be consulted for guidance.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 210", "21 CFR 211", "21 CFR 312", "21 CFR 600"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-003",
+      "rule_text": "For allogeneic cell therapy donors, donor selection criteria must specify relevant characteristics (age, sex) and meet at minimum the standards for blood donors (21 CFR 640.3). Testing must exclude HIV-1, HIV-2, hepatitis B, hepatitis C viruses, and HTLV-1. Serological, diagnostic, and clinical history data must be specified.",
+      "source_section": "II.A.2 Donor Selection Criteria",
+      "source_page": 7,
+      "verbatim_quote": "allogeneic donors should meet the standards for blood donors (21 CFR 640.3), the testing and acceptance procedures should be described, and any deviations should be justified… Exclusion criteria should focus on the presence or likelihood of infection by HIV-1 and HIV-2, hepatitis B and C viruses, HTLV-1, and other infectious agents. Serological, diagnostic, and clinical history data to be obtained from donors should be specified.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Autologous cell donors: refer to separate guidance on adventitious agent testing and labeling.",
+      "cross_references": ["21 CFR 640.3", "21 CFR 1271"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-004",
+      "rule_text": "Cell culture media acceptance criteria must be established for all media and components, including validation of serum additives and growth factors, and verification of freedom from adventitious agents. Penicillin and other beta-lactam antibiotics must be avoided during production due to the risk of serious hypersensitivity reactions in patients.",
+      "source_section": "II.B.2 Culture Media",
+      "source_page": 8,
+      "verbatim_quote": "Acceptance criteria should be established for all media and components, including validation of serum additives and growth factors, as well as verification of freedom from adventitious agents… it is recommended that penicillin and other beta-lactam antibiotics be avoided during production, due to the risk of serious hypersensitivity reactions in patients.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If antibiotic selection is used during production, markers conferring resistance to antibiotics in significant clinical use should not be used.",
+      "cross_references": ["21 CFR 610.12"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-005",
+      "rule_text": "Cells must be handled, propagated, and subjected to laboratory procedures under conditions designed to minimize contamination with adventitious agents. During long-term culturing, cells must be tested periodically for contamination. Testing must ensure cells are free of bacteria, yeast, mold, mycoplasma, and adventitious viruses.",
+      "source_section": "II.B.3 Adventitious Agents in Cell Cultures",
+      "source_page": 8,
+      "verbatim_quote": "Documentation should be provided that cells are handled, propagated, and subjected to laboratory procedures under conditions designed to minimize contamination with adventitious agents. During long term culturing, cells should be tested periodically for contamination. Testing should ensure that cells are free of bacteria, yeast, mold, mycoplasma, and adventitious viruses.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.12"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-006",
+      "rule_text": "Cell identity must be monitored during culture by quantitative assessment using cell surface antigens or biochemical markers. The identification method must be able to detect contamination or replacement by other cells in use at the facility. Acceptable limits for culture composition must be defined. Culture longevity limits must be established based on phenotypic markers, functional properties, and stability of these characteristics over time in culture.",
+      "source_section": "II.B.4-6 Cell Identity and Culture Longevity",
+      "source_page": 9,
+      "verbatim_quote": "cell identity should be assessed quantitatively, for example, by monitoring cell surface antigens or biochemical markers. The method of identification chosen should also be able to detect contamination or replacement by other cells in use in the facility. Acceptable limits for culture composition should be defined… The essential characteristics of the cultured cell population…should be defined, and the stability of these characteristics established with respect to time in culture. This profile should be used to define the limits of the culture period.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.14"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-007",
+      "rule_text": "Master Cell Banks (MCB) must be characterized for: (1) identity by appropriate genotypic/phenotypic markers; (2) freedom from adventitious agents including fungi, viruses other than vector, mycoplasma, bacteria, and replication-competent viruses; (3) expiration dating supported by data on frozen cell stability. Tests of viability, cell identity, and function must be repeated after thawing and/or expansion.",
+      "source_section": "II.C Cell Banking — MCB",
+      "source_page": 10,
+      "verbatim_quote": "The identity of the cells should be confirmed by appropriate genotypic and/or phenotypic markers, and the fraction of the cell population having such identity markers measured as an indication of purity… MCB's should be shown to be free of contaminating biological agents, including fungi, viruses other than a vector, mycoplasma, bacteria other than an intended bacterial host strain, and replication-competent viruses related to vector in certain cases… Tests of viability, cell identity, and function should be repeated after thawing and/or expansion.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.18", "FDA-SCT-1998-005"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-008",
+      "rule_text": "Materials used during in vitro manufacturing (e.g., antibodies, cytokines, serum, toxins, antibiotics, beads) must be clearly identified, with a qualification program and set specifications for each. Limits must be established for concentrations of all production components that may persist in the final product, with validated removal methods.",
+      "source_section": "II.D Materials Used During Manufacturing",
+      "source_page": 11,
+      "verbatim_quote": "Materials used during in vitro manipulation procedures… can effect the safety, purity, and potency of the final therapeutic product. These components should be clearly identified and a qualification program with set specifications should be established for each component… Limits should be established for the concentrations of all production components that may persist in the final product. The methods used to remove them and the results of quantitative testing… to show the effectiveness of their removal should be provided.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Country of origin must be certified when there is risk of transmissible spongiform encephalopathy agents.",
+      "cross_references": ["FDA-SCT-1998-002"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-009",
+      "rule_text": "Cell therapy product release testing must include: (A) Cell Identity — quantitative testing by phenotypic and/or biochemical assays per 21 CFR 610.14; (B) Potency — the relevant function of the cells and/or relevant products biosynthesized by the cells must be defined and quantitated per 21 CFR 610.10; (C) Viability — quantitated with a lower limit for acceptability established.",
+      "source_section": "III.A-C Cell Identity, Potency, Viability",
+      "source_page": 12,
+      "verbatim_quote": "Quantitative testing by phenotypic and/or biochemical assays should be used to confirm cell identity and assess heterogeneity (21 CFR 610.14)… The relevant function of the cells, if known, and/or relevant products biosynthesized by the cells should be defined and quantitated as a measure of potency (21 CFR 610.10)… The viability of the cells should be quantitated and a lower limit for acceptability established.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.10", "21 CFR 610.14"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-010",
+      "rule_text": "Cell therapy product release testing must include adventitious agent testing demonstrating absence of bacteria, fungi, mycoplasma, and viruses (21 CFR 610.12), purity testing including endotoxin by validated LAL or equivalent assay (21 CFR 610.13), and a general safety test per 21 CFR 610.11.",
+      "source_section": "III.D-F Adventitious Agents, Purity, General Safety",
+      "source_page": 12,
+      "verbatim_quote": "Tests should demonstrate that the cells are not contaminated with adventitious agents such as bacteria, fungi, (21 CFR 610.12), and mycoplasma… and viruses. Purity (21 CFR 610.13) or validation of endotoxin testing by LAL or other acceptable assays should be established. The general safety test (21 CFR 610.11) must be performed on the final product.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.11", "21 CFR 610.12", "21 CFR 610.13"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-011",
+      "rule_text": "Vector source materials must be generated from cloned and characterized constructs and subjected to confirmatory identity tests. For later phases of product development and licensure, more extensive sequencing information must be provided. Known regulatory elements (promoters, enhancers) must be identified. Stability of the host cell/vector system must be considered.",
+      "source_section": "V.A Vector Construction and Characterization",
+      "source_page": 14,
+      "verbatim_quote": "Viral vectors or plasmids should be generated from cloned and characterized constructs, and subjected to confirmatory identity tests. Information supplied should include vector derivation, including descriptions of any vectors, helper viruses, and producer cell lines used for preparation of the final construct. Known regulatory elements such as promoters or enhancers contained within the construct should be identified.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "For early product development, sequence data of appropriate portions of vectors and/or restriction mapping supplemented by protein characterization is acceptable.",
+      "cross_references": ["21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-012",
+      "rule_text": "When a virus is used as a seed in manufacture of a therapeutic vector, a Master Viral Bank (MVB) must be created and characterized. The genetic integrity and stability (identity) of the seed vector must be confirmed and bioactivity demonstrated. Master seed stocks must be free of adventitious agents including virus, bacteria, fungi, and mycoplasma. For replication-defective vectors, MVBs must be demonstrated to be free of replication-competent viruses.",
+      "source_section": "V.C Master Viral Banks",
+      "source_page": 15,
+      "verbatim_quote": "When a virus, with or without a therapeutic gene, is used as a seed in the manufacture of a therapeutic vector, it is recommended that a Master Viral Bank be created and characterized… The genetic integrity and stability (i.e. identity) of the seed vector should be confirmed and bioactivity of the vector seed should be demonstrated… Master seed stocks should also be demonstrated to be free of adventitious agents, including virus, bacteria, fungi, and mycoplasma. In the case of replication-defective or replication-selective vectors, Master Viral Banks should be demonstrated to be free of replication-competent viruses.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None.",
+      "cross_references": ["21 CFR 610.12", "FDA-SCT-1998-007"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-013",
+      "rule_text": "Lot-to-lot release testing for vector drug substance (bulk product) must include: (a) purity testing (21 CFR 610.13) including DNA/RNA content, structural homogeneity, contaminating host DNA/RNA, protein contaminants, non-infectious particles; (b) identity by restriction enzyme mapping with multiple enzymes or PCR (21 CFR 610.14); (c) adventitious agents — sterility test (21 CFR 610.12), mycoplasma testing, adventitious virus testing; (d) potency (21 CFR 610.10). Assay methods must be validated.",
+      "source_section": "V.D Lot-to-Lot Release Testing",
+      "source_page": 15,
+      "verbatim_quote": "Tests of drug substance (bulk product not necessarily in final formulation): a. Purity (21 CFR 610.13)…b. Identity (21 CFR 610.14) Test for vector identity by methods such as restriction enzyme mapping with multiple enzymes or PCR… c. Adventitious agents: i. Sterility test (21 CFR 610.12)… ii. Mycoplasma testing… iii. Testing for adventitious viruses… d. Potency (21 CFR 610.10)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "If drug substance and drug product are the same, only a single set of tests is necessary.",
+      "cross_references": ["21 CFR 610.10", "21 CFR 610.12", "21 CFR 610.13", "21 CFR 610.14"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-014",
+      "rule_text": "Vector drug product (in its final formulation) must be tested by quantitative, validated assays for: (a) sterility, identity, and potency; (b) purity including endotoxin by LAL or equivalent assay; (c) general safety per 21 CFR 610.11. Potency assays must be validated during product development and should measure biological activity of the expressed gene product, not merely its presence.",
+      "source_section": "V.D.2 Tests of Drug Product",
+      "source_page": 17,
+      "verbatim_quote": "The vector product in final container form should be tested for the properties listed below by quantitative, validated assays… a. Sterility (21 CFR 610.12), identity (21 CFR 610.14), and potency (21 CFR 610.10). b. Purity (21 CFR 610.13) or validation of endotoxin testing by LAL or other acceptable assay… c. General safety, as per 21 CFR 610.11… Potency assays should be validated during the product development process… Whenever possible, a potency assay should measure the biological activity of the expressed gene product, not merely its presence.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Endotoxin and general safety tests performed on drug product need not be repeated on drug substance.",
+      "cross_references": ["21 CFR 610.10", "21 CFR 610.11", "21 CFR 610.12", "21 CFR 610.13", "21 CFR 610.14"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-015",
+      "rule_text": "For plasmid vector products, complete sequencing must be performed. Plasmids must be characterized for specifications with regard to RNA, protein, and bacterial host DNA contaminants; quantities of linear and supercoiled DNA; and absence of toxic chemicals. Toxic chemicals such as ethidium bromide must be avoided during production. Residual antibiotic must be quantitated when possible.",
+      "source_section": "VI.A Plasmid Vector Products",
+      "source_page": 18,
+      "verbatim_quote": "In general, complete sequencing of the plasmid should be performed. Plasmids should be characterized and specifications set with regard to the presence of RNA, protein, and bacterial host DNA contaminants, quantities of linear and supercoiled DNA in the preparation, and presence of toxic chemicals. Toxic chemicals such as ethidium bromide should be avoided during production… residual antibiotic in the final product should be quantitated when possible.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If lipid-based formulation requires toxic solvents, processing must remove them and lot release specs must test for residual solvent.",
+      "cross_references": ["FDA-SCT-1998-013"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-016",
+      "rule_text": "For adenoviral vectors intended to be replication-defective, each lot must be examined for the presence of replication-competent adenovirus (RCA). RCA detection using a cell culture/cytopathic effect method is the preferred approach. The assay must be quantitative to determine the number of RCA per patient dose. Validation must include spiking with decreasing numbers of wild-type adenovirus particles.",
+      "source_section": "VI.C.2 Detection of RCA",
+      "source_page": 21,
+      "verbatim_quote": "adenovirus vectors intended to be replication-defective should be examined for the presence of replication-competent adenovirus (RCA)… Detection of RCA in final vector product by a cell culture/cytopathic effect method is preferred at this time… it is recommended that the assay be quantitative, that is, able to determine the number of RCA present in any patient dose.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Previous guidance stated max 1 pfu RCA per patient dose; FDA recognizes current techniques may make this prohibitive — alternative specifications acceptable with supporting risk data.",
+      "cross_references": ["FDA-SCT-1998-013", "FDA-GT-RCR-001"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-017",
+      "rule_text": "For adenoviral vectors, the ratio of viral particles to biologically active virus must be less than 100:1 for Phase I studies. In vitro infectivity assays must be developed that are reproducible and informative, with appropriately tight specifications on the particle-to-infectious-unit ratio.",
+      "source_section": "VI.C.1 Measurement of Particles vs. Infectious Units",
+      "source_page": 20,
+      "verbatim_quote": "It is currently recommended that a ratio in the product of viral particles to biologically active virus of less than 100:1 be employed in phase I studies. The purpose of this specification is to ensure the consistent manufacture of recombinant viruses and the highest bioactivity/particle/patient dose and to limit possible toxicity due to viral structural proteins.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Phase I specific; ratio requirements may evolve as assays are validated.",
+      "cross_references": ["FDA-SCT-1998-014"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-018",
+      "rule_text": "Because of the association of AAV with adenovirus, testing for AAV must be performed in the Master Cell Bank, the Master Virus Seed Stock, and the final adenoviral gene therapy product.",
+      "source_section": "VI.C.3 Adeno-Associated Virus",
+      "source_page": 22,
+      "verbatim_quote": "Because of the association of AAV with adenovirus, testing for AAV is currently recommended in the Master Cell Bank, the Master Virus Seed Stock, and the final product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies specifically to adenoviral vector products.",
+      "cross_references": ["FDA-SCT-1998-012", "FDA-SCT-1998-013"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-019",
+      "rule_text": "When a vector modification is proposed, sponsors wishing to abbreviate testing and IND submission must verify with CBER the adequacy of the proposed abbreviated testing scheme prior to initiating clinical trials. Minor modifications in the genetic insert or antibiotic resistance gene do not necessarily require a new IND, but derivation of the new vector must be described and the vector must meet release testing specifications.",
+      "source_section": "VII Modifications in Vector Preparations",
+      "source_page": 22,
+      "verbatim_quote": "If a sponsor wishes to abbreviate testing and IND submission for a product or product series, the sponsor should verify with CBER the adequacy of the proposed abbreviated testing scheme prior to initiating clinical trials… In all cases, derivation of a new vector should be described and the vector should meet the specifications for release testing.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Minor modifications such as changes in the genetic insert or antibiotic resistance gene do not necessarily call for a new IND or full product retesting.",
+      "cross_references": ["21 CFR 312"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-020",
+      "rule_text": "All toxicity and localization preclinical studies for directly administered vectors in vivo, including studies of gonadal tissue, must use the final formulated product, since added materials such as liposomes or changes in pH or salt content may alter toxicity or distribution patterns.",
+      "source_section": "VIII.D Direct Administration of Vectors In Vivo",
+      "source_page": 25,
+      "verbatim_quote": "All toxicity and localization studies, including studies of gonadal tissue described below, should use the final formulated product, since added materials such as liposomes, or changes in pH or salt content, may alter the toxicity or distribution pattern.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Superseded for general preclinical principles by November 2013 preclinical guidance, but this specific requirement for final formulated product use remains relevant.",
+      "cross_references": ["FDA-CGT-PRE-003"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-021",
+      "rule_text": "Preclinical safety studies for in vivo gene therapy vectors must include at least one dose level equivalent to and at least one dose escalation level exceeding those proposed for the clinical trial. A no-effect level dose, an overtly toxic dose, and several intermediate doses must be determined. Appropriate controls (naive or vehicle-treated animals) must be included.",
+      "source_section": "VIII.D.3 Selection of Dose",
+      "source_page": 25,
+      "verbatim_quote": "A no-effect level dose, an overtly toxic dose, and several intermediate doses should be determined, and appropriate controls, such as naive or vehicle-treated animals, should be included… Preclinical safety evaluations should include at least one dose equivalent to and at least one dose escalation level exceeding those proposed for the clinical trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Superseded for general principles by November 2013 preclinical guidance, but dose bracketing requirement remains foundational. For limited-supply or inherently low-toxicity products, maximum feasible dose may be administered as the highest level.",
+      "cross_references": ["FDA-CGT-PRE-006"]
+    },
+    {
+      "rule_id": "FDA-SCT-1998-022",
+      "rule_text": "At minimum, preclinical toxicology safety studies for somatic cell and gene-modified cellular therapies must monitor treated animals for general health status, serum biochemistry, and hematologic profiles. Target tissues must be examined microscopically for histopathological changes.",
+      "source_section": "VIII.C.2 Toxicologic Testing",
+      "source_page": 24,
+      "verbatim_quote": "Safety testing of expanded, activated, or genetically modified somatic cells should be conducted in an appropriate animal model. Data on distribution, trafficking, and persistence of these cells in vivo mentioned above should be evaluated for safety implications as well. At a minimum, treated animals should be monitored for general health status, serum biochemistry, and hematologic profiles. Target tissues should be examined microscopically for histopathological changes.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Superseded for general design principles by November 2013 preclinical guidance; minimum safety monitoring requirements remain relevant.",
+      "cross_references": ["FDA-CGT-PRE-006"]
+    }
+  ]
+}

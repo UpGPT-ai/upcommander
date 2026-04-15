@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Population Pharmacokinetics — Guidance for Industry",
+    "source_file": "training/stage-1/fda-guidance-v2/20-population-pharmacokinetics.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "February 2022",
+    "document_version": "Clinical Pharmacology (February 2022); prepared by Office of Clinical Pharmacology, CDER and CBER",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-POPPK-001",
+      "rule_text": "Sponsors seeking advice on the use of population PK analysis for drug development decisions are encouraged to discuss novel applications with the Agency at appropriate milestone meetings, particularly when model-based approaches are used as alternatives to conventional approaches (e.g., for bioequivalence of long-acting injectables or products with sparse PK sampling).",
+      "source_section": "Section III. Application of Population PK Analysis",
+      "source_page": 3,
+      "verbatim_quote": "Sponsors seeking advice on the use of population PK analysis for drug development decisions are encouraged to do so at appropriate milestone meetings with the Agency... Sponsors are encouraged to contact the Agency to discuss such novel applications of population PK analyses to inform drug development and use.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-002",
+      "rule_text": "Confidence in a population PK analysis to support an intended objective requires: (1) understanding of the drug's PK properties, (2) prespecified questions in the population PK data analysis plan, (3) PK data of sufficient quantity and quality from subjects representing the indicated population and subpopulations of interest, and (4) good model performance (acceptable accuracy and precision, evaluated for model misspecification) and validity for the intended objective.",
+      "source_section": "Section III. Application of Population PK Analysis",
+      "source_page": 3,
+      "verbatim_quote": "Confidence in a given population PK analysis to support an intended objective is increased by the following: Understanding of the drug's PK properties; Prespecified questions in the population PK data analysis plan that will be addressed by a population PK analysis; PK data of sufficient quantity and quality (Bonate et al. 2012) from subjects who represent the indicated population and subpopulations of interest; Good model performance (i.e., the model should describe the data with acceptable accuracy and precision and should be evaluated for model misspecification) and validity for the intended objective.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-003",
+      "rule_text": "When population PK analyses based on exposure-response data support approval of dosing regimens not directly evaluated in clinical trials, sponsors are encouraged to seek Agency input in advance of performing the analyses.",
+      "source_section": "Section III.A.1. Selecting Dosing Regimens To Be Tested in Clinical Trials",
+      "source_page": 4,
+      "verbatim_quote": "When appropriately justified, such analyses, in conjunction with exposure-response data, have been used to approve dosing regimens that have not been directly evaluated in the clinical trials (Kimko and Peck 2010). In such cases, sponsors are encouraged to seek Agency input in advance of performing the analyses.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-004",
+      "rule_text": "When deriving exposure metrics for exposure-response analysis, the derivation must account for: (1) dose interruptions or modifications, and (2) variations in pharmacokinetics over time due to intrinsic or extrinsic subject factors (e.g., time-varying exposure due to disease state or anti-drug antibodies for some monoclonal antibodies).",
+      "source_section": "Section III.A.3. Deriving Exposure Metrics for Conducting Exposure-Response Analysis",
+      "source_page": 4,
+      "verbatim_quote": "When relevant, the derivation of exposure metrics should account for: (1) dose interruptions or modifications; and (2) variations in the pharmacokinetics of a drug over time due to intrinsic or extrinsic subject factors (e.g., time-varying exposure due to disease state or anti-drug antibodies for some monoclonal antibodies).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-005",
+      "rule_text": "When parameter shrinkage is high (standard deviation-based shrinkage greater than 20–30%), Empirical Bayes Estimates (EBEs) may be less reliable and the informativeness of individual data should be assessed using individual shrinkage estimates.",
+      "source_section": "Section III.A.3. Deriving Exposure Metrics for Conducting Exposure-Response Analysis",
+      "source_page": 4,
+      "verbatim_quote": "When parameter shrinkage is high (i.e., the standard deviation-based shrinkage is usually greater than 20 to 30 percent), EBEs might be considered less reliable (Savic and Karlsson 2009). The informativeness of individual data (e.g., in cases with sparse data) should be assessed using individual shrinkage estimates.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-006",
+      "rule_text": "Population PK analysis for pediatric trial designs should incorporate principles of allometry, knowledge of developmental changes that influence PK (ontogeny), and data on the bioavailability of the pediatric formulation, when scientifically justified. Dose selection should also consider disease similarity and dose- and exposure-response relationships in adults and pediatrics.",
+      "source_section": "Section III.A.4. Pediatric Trial Designs",
+      "source_page": 5,
+      "verbatim_quote": "Selecting a dosing regimen for pediatric studies can be based on simulations using a population PK model developed with adult PK data and incorporating the following when scientifically justified: (1) principles of allometry; (2) knowledge of developmental changes that can influence the pharmacokinetics of a drug (ontogeny); and (3) data on the bioavailability of the pediatric formulation.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["FDA Guidance: General Clinical Pharmacology Considerations for Pediatric Studies for Drugs and Biological Products (December 2014)"]
+    },
+    {
+      "rule_id": "FDA-POPPK-007",
+      "rule_text": "The need for dose adjustments due to the effect of a covariate on drug exposure must be evaluated in the context of all available data, including the known exposure-response (E-R) relationships for efficacy and safety. E-R relationships should be used to establish concentration boundaries within which dose adjustments are not clinically relevant.",
+      "source_section": "Section III.B. Application of Population PK Analysis to Describe Drug Use in Labeling",
+      "source_page": 5,
+      "verbatim_quote": "The need for dose adjustments due to the effect of a covariate on the exposure of the drug should be evaluated in the context of all available data, including the known E-R relationships for efficacy and safety. The E-R relationships should be used to establish concentration boundaries within which dose adjustments are not clinically relevant (i.e., covariate effects within these boundaries might not warrant a dose alteration; however, covariate effects outside these boundaries could require a dose modification to optimize the benefit-risk profile of the drug).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["FDA Guidance: Exposure-Response Relationships — Study Design, Data Analysis, and Regulatory Applications (May 2003)"]
+    },
+    {
+      "rule_id": "FDA-POPPK-008",
+      "rule_text": "Drug-drug interactions (DDIs) assessed by population PK analysis must be characterized for individual drugs, not therapeutic classes (except when pooling is scientifically justified, e.g., proton pump inhibitors for pH-dependent interactions). Multiple perpetrators can be pooled only if they belong to the same class of index inhibitors/inducers and have the same mechanism of interaction with similar specificity for their respective metabolizing enzymes.",
+      "source_section": "Section III.B.2. DDIs",
+      "source_page": 6,
+      "verbatim_quote": "DDIs should be characterized for individual drugs and not for therapeutic classes of drugs, although exceptions are possible (e.g., multiple proton pump inhibitors can be pooled if the interaction mechanism is pH-dependent). Multiple perpetrators can be pooled to form one covariate category provided that the perpetrators belong to the same class of index inhibitors/inducers (i.e., weak, moderate, or strong) as identified by the Agency.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Exceptions are possible for drugs with same pH-dependent interaction mechanism or same class of index inhibitors/inducers.",
+      "cross_references": ["FDA Guidance: Clinical Drug Interaction Studies - Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (January 2020)"]
+    },
+    {
+      "rule_id": "FDA-POPPK-009",
+      "rule_text": "For population PK DDI assessments, interactions must be investigated on all physiologically plausible structural elements of the PK model (e.g., apparent clearance CL/F, relative bioavailability F_rel, rate of absorption) based on the mechanism of the interaction.",
+      "source_section": "Section III.B.2. DDIs",
+      "source_page": 7,
+      "verbatim_quote": "Interactions should be investigated on all physiologically plausible structural elements of the PK model (e.g., apparent clearance (CL/F), relative bioavailability (Frel), rate of absorption) based on the mechanism of the interaction.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-010",
+      "rule_text": "Sponsors must justify the omission of data from certain studies, certain individuals, or certain time points and prespecify such omissions in the population PK data analysis plan or study protocol whenever possible. Sponsors must demonstrate that the data are adequate for the purpose of the analysis.",
+      "source_section": "Section IV. Data Used for Population PK Analysis",
+      "source_page": 7,
+      "verbatim_quote": "The sponsor should justify the omission of data from certain studies, certain individuals, or certain time points and prespecify such omissions in the population PK data analysis plan or study protocol whenever possible. The sponsor should demonstrate that the data are adequate for the purpose of the analysis in their report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-011",
+      "rule_text": "Covariates cannot be claimed to be influential or not influential on drug exposure if the covariate distribution is narrow (for continuous covariates) or if the number of subjects in the category is inadequate (for categorical covariates). When dosing recommendations are proposed for covariate-defined categories, the range of continuous covariates should preferably span the entire category, not just the upper or lower ends.",
+      "source_section": "Section IV.A. Study Subjects and Covariates",
+      "source_page": 7,
+      "verbatim_quote": "Covariates cannot be claimed to be influential or not influential on the exposure of a drug if the covariate distribution is narrow (for continuous covariates) or if the number of subjects in the category is inadequate (for categorical covariates). Many continuous covariates have established cutoff values that define category levels. If dosing recommendations are proposed for these categories, the range of the continuous covariates should preferably span the entire category and not just the upper or lower ends.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-012",
+      "rule_text": "Sponsors must verify that patients with missing PK data do not differ from other patients (e.g., patients with missing PK data should not have higher dropout rates due to lack of effect or adverse events). If between-occasion variability is to be estimated, the design must include at least multiple samples per individual at more than one occasion.",
+      "source_section": "Section IV.B. PK Sampling Schedule",
+      "source_page": 8,
+      "verbatim_quote": "In any situation, it is important to verify that patients with missing PK data do not differ from other patients. For example, patients with missing PK data should not have higher dropout rates because of a lack of effect or adverse events. If between-occasion variability will be estimated, the design should be sufficient to assess the presence and magnitude of effect, requiring at least multiple samples per individual at more than one occasion.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-013",
+      "rule_text": "Preliminary examination of the data must be performed before model development. Strong correlations between covariates can preclude the ability to make inferences about individual covariate effects; the scientific merits of including highly correlated covariates must be assessed. Relevant preliminary examination of the data must be concisely described in the population PK analysis report.",
+      "source_section": "Section V.A. Preliminary Examination of the Data",
+      "source_page": 9,
+      "verbatim_quote": "Preliminary examination of the data reveals patterns and features in the population dataset using graphical and statistical techniques and can provide powerful diagnostic tools for confirming assumptions or, when the assumptions are not met, for suggesting corrective actions... The scientific (i.e., pharmacologic, biologic, pathophysiologic, or clinical) merits of including highly correlated covariates should be assessed... Relevant preliminary examination of the data should be concisely described in the population PK analysis report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-014",
+      "rule_text": "Sponsors must explicitly describe their model development procedures. The choice of structural model must be informed by exploration of observed data, previous modeling results (when applicable), and a common scientific rationale. Sponsors must justify why a particular covariate analysis approach was used.",
+      "source_section": "Section V.B. Model Development",
+      "source_page": 9,
+      "verbatim_quote": "To facilitate the regulatory review of population PK models, sponsors should explicitly describe their model development procedures... The choice of the structural model should be informed from exploration of the observed data, previous modeling results (when applicable), and a common scientific rationale... In such cases, sponsors should justify why a particular approach was used.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-015",
+      "rule_text": "The sponsor must address missing data, including missing covariates and data below the limit of quantification (LOQ), with appropriate analysis methods, and must justify their methodological approach with regard to missing data using approaches such as sensitivity analysis.",
+      "source_section": "Section V.B. Model Development",
+      "source_page": 10,
+      "verbatim_quote": "Issues regarding missing data, including missing covariates and data below the limit of quantification (LOQ), should be addressed with appropriate analysis methods... The sponsor should justify their methodological approach with regard to missing data using approaches such as sensitivity analysis.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-016",
+      "rule_text": "The sponsor must specify how outliers are identified and handled in the analysis plan (prespecified). Removal of suspected outlying individuals is generally discouraged unless the reason for the outlier is a protocol violation or other human error. The number of excluded outliers must be kept to a minimum and clearly documented in reports and datasets.",
+      "source_section": "Section V.B. Model Development",
+      "source_page": 10,
+      "verbatim_quote": "Removal of suspected outlying individuals is generally discouraged unless the reason for the outlier is a protocol violation or other human error. Sponsors should specify how outliers are identified and handled in the analysis. The reasons for declaring a data point to be an outlier should be prespecified in the data analysis plan... The number of excluded outliers should be kept to a minimum and clearly documented in reports and datasets.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Removal permitted for protocol violations or human error.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-017",
+      "rule_text": "Model validation is a critical step for any population PK analysis and must be conducted to examine whether the developed model can sufficiently characterize the observed data and generate reliable modeling and simulation results. Several methods must generally be used (no single method is sufficient). Submissions to the Agency must contain a detailed description of the model validation methods used, an explanation of why those methods were selected, model diagnostics supporting use of the model, and sensitivity analyses to demonstrate the impact of assumptions.",
+      "source_section": "Section V.C. Model Validation",
+      "source_page": 10,
+      "verbatim_quote": "Model validation is a critical step for any population PK analysis and should be conducted to examine whether the developed model can sufficiently characterize the observed data and generate reliable modeling and simulation results to meet the needs of the analysis. No single model validation method is generally sufficient to evaluate all components of a model... Submissions to the Agency should contain a detailed description of the model validation methods used, an explanation of why those methods were selected, model diagnostics supporting use of the model, and sensitivity analyses, as needed, to demonstrate the impact of assumptions on the conclusions.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-018",
+      "rule_text": "Goodness-of-fit (GOF) plots required for population PK model validation must include at minimum: DV vs. IPRED, DV vs. xPRED, |IWRES| vs. IPRED or time, xWRES vs. xPRED or time, a representative sample of IPRED/xPRED/observations vs. time (one per subject), a histogram or Q-Q plot of random effects, correlations between random effects, and random effects vs. covariates.",
+      "source_section": "Section V.C.1. Common Approaches for Model Validation",
+      "source_page": 11,
+      "verbatim_quote": "The following is a list of some of the GOF plots that are considered informative: The dependent variable (DV) versus the individual predictions (IPRED); The DV versus population predictions (xPRED); The absolute individual weighted residuals (|IWRES|) versus IPRED or time; The appropriate form of weighted residuals (xWRES) versus xPRED or time; A representative sample of IPRED, xPRED, and observations versus time (one plot per subject); A histogram or Quantile-Quantile (Q-Q) plot of random effects; The correlations between random effects; The random effects versus covariates.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-019",
+      "rule_text": "When shrinkage is high (standard deviation-based shrinkage greater than 20–30%), diagnostic plots relying on EBEs, IPRED, or IWRES can become uninformative. In such cases, simulation-based diagnostic plots (e.g., VPC, pcVPC, NPC, NPDE) should be used instead.",
+      "source_section": "Section V.C.1. Common Approaches for Model Validation",
+      "source_page": 12,
+      "verbatim_quote": "When shrinkage is high (the standard deviation-based shrinkage is usually greater than 20-30 percent), diagnostic plots that rely on EBEs, IPRED, or IWRES can become uninformative, and correlations between random effects and covariates can be obscured... simulation-based, diagnostic plots are not affected by shrinkage in a similar manner and can be more informative for diagnostic purposes when shrinkage is high.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-020",
+      "rule_text": "A large condition number (ratio of largest to smallest eigenvalue, typically interpreted as values greater than 1000) indicates that the observed data cannot support the estimation of one or several parameters. Over-parameterized models can be simplified as additional data from well-designed clinical trials become available.",
+      "source_section": "Section V.C.1. Common Approaches for Model Validation",
+      "source_page": 12,
+      "verbatim_quote": "A large condition number (the ratio of the largest and the smallest eigenvalue), typically interpreted as values greater than 1000, indicates that the observed data cannot support the estimation of one or several parameters (Montgomery, Vining, and Peck 2012).",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-021",
+      "rule_text": "An appropriate population PK model must be biologically plausible, consistent with current knowledge, and have mathematically identifiable parameters. When the model is to be used for simulation beyond the clinically studied scenarios, uncertainty can be addressed by a sensitivity analysis of the parameter estimates and their impact on the metric used to inform a decision.",
+      "source_section": "Section V.C.1. Common Approaches for Model Validation",
+      "source_page": 12,
+      "verbatim_quote": "An appropriate model should be biologically plausible, consistent with current knowledge, and have mathematically identifiable parameters... There is an additional level of uncertainty when the purpose of the model is to simulate PK profiles for scenarios that are beyond those that have been clinically studied. Such uncertainty can be addressed by a sensitivity analysis of the parameter estimates and their impact on the metric used to inform a decision.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-022",
+      "rule_text": "Simulations must be based on protocols that outline the simulation study to be performed. The level of detail in the protocol must correspond to the complexity and impact of the question the simulation addresses. Models used for simulations must be validated to address the specific question the simulation is trying to answer and revalidated if the new purpose differs from the original purpose.",
+      "source_section": "Section V.D. Simulations Based on Population PK Models",
+      "source_page": 13,
+      "verbatim_quote": "Simulations should be based on protocols that outline the simulation study to be performed. The level of detail in the protocol should correspond to the complexity and impact of the question the simulation addresses. Models used for simulations should be validated to address the specific question the simulation study is trying to answer. Although a model could have been previously used and validated, it needs to be revalidated if the new purpose is different from the original purpose.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-023",
+      "rule_text": "Simulations that account for between-subject variability and include covariate effects must be conducted in a population with realistic demographic variables, obtained from databases or generated by resampling with replacement of individuals in the original study or by sampling the covariate distributions and their correlations in the target population.",
+      "source_section": "Section V.D.3. Simulations Based on Estimates of Between-Subject Variability",
+      "source_page": 13,
+      "verbatim_quote": "Simulations that account for between-subject variability and include covariate effects should be conducted in a population with realistic demographic variables. Demographic variables can be obtained from databases or generated by resampling with replacement of the individuals in the original study or by sampling the covariate distributions and their correlations in the target population.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-024",
+      "rule_text": "Results from population PK analyses that inform labeling must be presented in the CLINICAL PHARMACOLOGY section of labeling. Other labeling sections should provide only a succinct description or recommendation with a cross-reference to the CLINICAL PHARMACOLOGY section, without repeating detailed information.",
+      "source_section": "Section VI. Labeling Based on the Results of Population PK Analysis",
+      "source_page": 14,
+      "verbatim_quote": "Results from population PK analysis can be presented in the CLINICAL PHARMACOLGY section and summarized in other sections of labeling, as appropriate. Other relevant labeling sections should not repeat this detailed information but rather provide a succinct description or recommendation based upon these results followed by a cross-reference to the CLINICAL PHARMACOLGY section, as appropriate.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["FDA Guidance: Clinical Pharmacology Labeling for Human Prescription Drug and Biological Products — Content and Format (December 2016)"]
+    },
+    {
+      "rule_id": "FDA-POPPK-025",
+      "rule_text": "Population PK study reports that are important for regulatory decisions must be included in the electronic common technical document (eCTD) module 5.3.3.5 and the corresponding programs, datasets, and define files under the datasets folder within eCTD module 5.",
+      "source_section": "Section VII. Population PK Study Reporting",
+      "source_page": 14,
+      "verbatim_quote": "Population PK study reports that are important for regulatory decisions should be included in the electronic common technical document (eCTD) module 5.3.3.5 and the corresponding programs, datasets, and define files under the datasets folder within eCTD module 5.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["eCTD module 5.3.3.5"]
+    },
+    {
+      "rule_id": "FDA-POPPK-026",
+      "rule_text": "The population PK study report must contain the following sections: (1) executive summary, (2) introduction, (3) materials and methods, (4) results, (5) discussion, (6) conclusions, and (7) appendix (if applicable). Sections of annotated labeling that contain information based on population PK analysis must include hyperlinks to the population PK report.",
+      "source_section": "Section VII.A. Format and Content of the Population PK Study Report",
+      "source_page": 14,
+      "verbatim_quote": "The report should contain the following sections: (1) executive summary, (2) introduction, (3) materials and methods, (4) results, (5) discussion, (6) conclusions, and (7) appendix (if applicable)... Sections of the annotated labeling that contain information based on population PK analysis should include hyperlinks to the population PK report.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-027",
+      "rule_text": "The Materials and Methods section of the population PK report must include: a description of trials and trial data (dose, frequency, duration of dosing, number of subjects, number of samples, number of BLOQ samples); reasons for not including potentially informative trials; distinction between all available relevant data vs. final data used for model building; hyperlinks to original trial reports and bioanalytical evaluation reports; detailed demographic and covariate information; planned criteria, table of assumptions, and procedures for model building including handling of outliers/missing data, model-estimation method, equations for all model structures and covariate relationships, and the method for incorporating variability or deriving confidence/prediction intervals; and software and version used.",
+      "source_section": "Section VII.A, Table 1 — Materials and Methods",
+      "source_page": 15,
+      "verbatim_quote": "A description of the trials and the trial data included in the population PK analysis with information on: Dose, including the frequency and duration of dosing, as well as the number of subjects, number of samples, and number of below the level of quantification (BLOQ) samples; Reasons for not including trials with available and potentially informative data, if applicable; A distinction between all available relevant data versus final data used for model building and evaluation; Hyperlinks to the original trial reports of data used for the analysis and the bioanalytical evaluation reports for each trial; Detailed demographic information and other covariate information; Planned criteria, table of assumptions, and procedures for model building and evaluation, including: Handling of outliers and missing data (e.g., methods of imputation); Model-estimation method; Equations for all model structures and covariate relationships; Equations for parameter transformations, if parameters are presented in dimensions other than those in the model output file; The method for incorporating variability or parameter uncertainty or for deriving confidence intervals or prediction intervals; Software and version used for the analysis and simulation.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-028",
+      "rule_text": "The Results section of the population PK report must include: a summary of data and data exploration with graphical and tabular displays; a description of the final model, model building steps, validation, final parameter estimates, and deviations from planned analyses; application of the model to objectives; and parameter estimates with associated uncertainty, with variability reported as coefficient of variation (CV%) and precision as percent relative standard error (RSE%) or 95% confidence interval, with shrinkage included in the parameter estimates table.",
+      "source_section": "Section VII.A, Table 1 — Results",
+      "source_page": 16,
+      "verbatim_quote": "Parameter estimates and their associated uncertainty, with variability reported as the coefficient of variation (CV%) and precision reported as the percent relative standard error (RSE%) or the 95 percent confidence interval. Shrinkage should be included in the parameter estimates table.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-POPPK-029",
+      "rule_text": "Datasets and model files submitted for the base, final, and key intermediate models must be the same as those used for generating the model outputs in the appendices of the report. FDA staff must be able to identify the source data for any dataset constructed using output files or postprocessed results from population PK analyses. All conclusions drawn from the population PK analysis must be reproducible by the Agency with the available codes and data.",
+      "source_section": "Section VII.B. Submitting Electronic Files to the Agency",
+      "source_page": 18,
+      "verbatim_quote": "It is critical that datasets and model files submitted for the base, final, and key intermediate models are the same as those used for generating the model outputs in the appendices of the report. In addition, FDA staff should be able to identify the source data for any dataset constructed using output files or postprocessed results from population PK analyses... All conclusions drawn from the population PK analysis should be reproducible by the Agency with the available codes and data.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["FDA eCTD module 5"]
+    },
+    {
+      "rule_id": "FDA-POPPK-030",
+      "rule_text": "The unique subject identifier information for each subject in the population PK dataset must be included and must be the same identifiers used in the individual clinical trial datasets, to enable data integration between individual-level outputs from the population PK model and the efficacy or safety datasets from individual clinical study reports.",
+      "source_section": "Section VII.B. Submitting Electronic Files to the Agency",
+      "source_page": 18,
+      "verbatim_quote": "It is also important to include the unique subject identifier information for each subject in the population PK dataset and ensure that the identifiers are the same in the individual clinical trial datasets. This information is vital if data integration is required between the individual-level outputs (e.g., individual, post hoc estimates for clearance or volume of distribution generated from the population PK model) and the efficacy or safety datasets from the individual clinical study reports.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    }
+  ]
+}

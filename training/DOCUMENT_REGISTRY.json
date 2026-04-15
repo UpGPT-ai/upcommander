@@ -1,0 +1,3849 @@
+{
+  "meta": {
+    "title": "Regulatory Document Registry — US, EU, Japan, Canada + ICH",
+    "date": "2026-03-24",
+    "purpose": "Master checklist of all documents needed for complete regulatory submission rule extraction. Cross-references existing corpus to identify gaps.",
+    "markets": ["ICH", "US (FDA)", "EU (EMA)", "Japan (PMDA)", "Canada (Health Canada)"],
+    "corpus_base_path": "training/stage-1/",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "total_documents_identified": 547,
+    "documents_in_corpus": 178,
+    "documents_missing": 345,
+    "documents_partial": 24,
+    "by_market": {
+      "ICH": { "identified": 89, "in_corpus": 58, "missing": 22, "partial": 9 },
+      "US_FDA": { "identified": 152, "in_corpus": 68, "missing": 76, "partial": 8 },
+      "EU_EMA": { "identified": 186, "in_corpus": 41, "missing": 137, "partial": 8 },
+      "Japan_PMDA": { "identified": 52, "in_corpus": 18, "missing": 32, "partial": 2 },
+      "Canada_HC": { "identified": 38, "in_corpus": 11, "missing": 25, "partial": 2 },
+      "Cross_Market": { "identified": 30, "in_corpus": 12, "missing": 18, "partial": 0 }
+    }
+  },
+  "categories": [
+    {
+      "id": "ICH-Q",
+      "name": "ICH Quality Guidelines (Q1–Q14)",
+      "market": "ICH",
+      "documents": [
+        {
+          "id": "ICH-Q1A-R2",
+          "title": "Q1A(R2) Stability Testing of New Drug Substances and Products",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q1A(R2) Guideline.pdf",
+          "alt_corpus": ["ich/Q1_Stability_Testing.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q1A%28R2%29%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Foundational stability guideline. Also have Q1 draft revision (2025) at ich-complete/ICH_Q1EWG_Step2_Draft_Guideline_2025_0411.pdf"
+        },
+        {
+          "id": "ICH-Q1B",
+          "title": "Q1B Photostability Testing of New Drug Substances and Products",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q1B Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q1B_Photostability.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q1B%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q1C",
+          "title": "Q1C Stability Testing for New Dosage Forms",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q1C Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/Q1C%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q1D",
+          "title": "Q1D Bracketing and Matrixing Designs for Stability Testing",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q1D Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/Q1D%20Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q1E",
+          "title": "Q1E Evaluation of Stability Data",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q1E Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q1E_Stability_Evaluation.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q1E%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q1-R1-DRAFT",
+          "title": "Q1/Q5C(R1) Stability Testing — Unified Revision (Step 2 Draft 2025)",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q1EWG_Step2_Draft_Guideline_2025_0411.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q1EWG_Step2_Draft_Guideline_2025_0411.pdf",
+          "priority": "HIGH",
+          "notes": "Draft revision merging Q1A-E and Q5C. Not yet finalized."
+        },
+        {
+          "id": "ICH-Q2-R2",
+          "title": "Q2(R2) Validation of Analytical Procedures",
+          "category": "Quality — Analytical",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q2(R2)_Guideline_2023_1130_ErrorCorrection_2025.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q2%28R2%29_Guideline_2023_1130.pdf",
+          "priority": "CRITICAL",
+          "notes": "Revised 2023 version with Q14 companion"
+        },
+        {
+          "id": "ICH-Q3A-R2",
+          "title": "Q3A(R2) Impurities in New Drug Substances",
+          "category": "Quality — Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q3A(R2) Guideline.pdf",
+          "alt_corpus": ["ich/Q3A_Impurities_New_Drug.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q3A%28R2%29%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q3B-R2",
+          "title": "Q3B(R2) Impurities in New Drug Products",
+          "category": "Quality — Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q3B(R2) Guideline.pdf",
+          "alt_corpus": ["ich/Q3B_Impurities_Drug_Product.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q3B%28R2%29%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q3C-R9",
+          "title": "Q3C(R9) Impurities: Guideline for Residual Solvents",
+          "category": "Quality — Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q3C(R9)_Guideline_MinorRevision_2024_2024_Approved.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q3C%28R9%29_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": "R9 minor revision (2024)"
+        },
+        {
+          "id": "ICH-Q3D-R2",
+          "title": "Q3D(R2) Elemental Impurities",
+          "category": "Quality — Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q3D-R2_Guideline_Step4_2022_0308.pdf",
+          "alt_corpus": ["ich/Q3D_Elemental_Impurities.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q3D-R2_Guideline_Step4_2022_0308.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q3E-DRAFT",
+          "title": "Q3E Extractables and Leachables (Step 2 Draft 2025)",
+          "category": "Quality — Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q3E_EWG_Step2_DraftGuideline_2025_0704.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q3E_EWG_Step2_DraftGuideline_2025_0704.pdf",
+          "priority": "HIGH",
+          "notes": "Draft — not yet Step 4 finalized"
+        },
+        {
+          "id": "ICH-Q4B-R1",
+          "title": "Q4B(R1) Evaluation and Recommendation of Pharmacopoeial Texts for Use in the ICH Regions",
+          "category": "Quality — Pharmacopoeial Harmonization",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q4B(R1)_Guideline_2024_0605.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q4B%28R1%29_Guideline_2024_0605.pdf",
+          "priority": "MEDIUM",
+          "notes": "Also have all Q4B Annexes 1-14 in ich-complete"
+        },
+        {
+          "id": "ICH-Q5A-R2",
+          "title": "Q5A(R2) Viral Safety Evaluation of Biotechnology Products",
+          "category": "Quality — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q5A(R2)_Guideline_2023_1101.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q5A%28R2%29_Guideline_2023_1101.pdf",
+          "priority": "CRITICAL",
+          "notes": "R2 finalized 2023"
+        },
+        {
+          "id": "ICH-Q5B",
+          "title": "Q5B Analysis of the Expression Construct in Cells Used for Production of rDNA Derived Protein Products",
+          "category": "Quality — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q5B Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/Q5B%20Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q5C",
+          "title": "Q5C Stability Testing of Biotechnological/Biological Products",
+          "category": "Quality — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q5C Guideline.pdf",
+          "alt_corpus": ["ich/Q5C_Stability_Biotech.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q5C%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": "Being merged into Q1/Q5C(R1) revision"
+        },
+        {
+          "id": "ICH-Q5D",
+          "title": "Q5D Derivation and Characterisation of Cell Substrates Used for Production of Biotechnological/Biological Products",
+          "category": "Quality — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q5D Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q5D_Cell_Substrates.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q5D%20Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q5E",
+          "title": "Q5E Comparability of Biotechnological/Biological Products Subject to Changes in Their Manufacturing Process",
+          "category": "Quality — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q5E Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q5E_Comparability_Biotech.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q5E%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q6A",
+          "title": "Q6A Specifications: Test Procedures and Acceptance Criteria for New Drug Substances and New Drug Products: Chemical Substances",
+          "category": "Quality — Specifications",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q6A Guideline.pdf",
+          "alt_corpus": ["ich/Q6A_Specifications_Chemical.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q6A%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q6B",
+          "title": "Q6B Specifications: Test Procedures and Acceptance Criteria for Biotechnological/Biological Products",
+          "category": "Quality — Specifications",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q6B Guideline.pdf",
+          "alt_corpus": ["ich/Q6B_Specifications_Biotech.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q6B%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q6-R1-DRAFT",
+          "title": "Q6(R1) Specifications — Revision (In Progress)",
+          "category": "Quality — Specifications",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q6%28R1%29_Final_ConceptPaper_2024_0625.pdf",
+          "priority": "LOW",
+          "notes": "Concept paper only in corpus at ich-complete/ICH_Q6(R1)_Final_ConceptPaper_2024_0625.pdf"
+        },
+        {
+          "id": "ICH-Q7",
+          "title": "Q7 Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients",
+          "category": "Quality — GMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q7 Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/Q7%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have Q7 Q&As"
+        },
+        {
+          "id": "ICH-Q8-R2",
+          "title": "Q8(R2) Pharmaceutical Development",
+          "category": "Quality — Development",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q8(R2) Guideline.pdf",
+          "alt_corpus": ["ich/Q8_Pharmaceutical_Development.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q8%28R2%29%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q9-R1",
+          "title": "Q9(R1) Quality Risk Management",
+          "category": "Quality — Risk Management",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q9(R1)_Guideline_Step4_2025_0115_0.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q9_Quality_Risk_Management.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q9%28R1%29_Guideline_Step4_2025_0115.pdf",
+          "priority": "CRITICAL",
+          "notes": "R1 revision finalized 2025"
+        },
+        {
+          "id": "ICH-Q10",
+          "title": "Q10 Pharmaceutical Quality System",
+          "category": "Quality — Quality System",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q10 Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q10_Pharmaceutical_Quality_System.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q10%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q11",
+          "title": "Q11 Development and Manufacture of Drug Substances (Chemical Entities and Biotechnological/Biological Entities)",
+          "category": "Quality — Drug Substance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q11 Guideline.pdf",
+          "alt_corpus": ["ich-quality-advanced/Q11_Drug_Substance_Development.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/Q11%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have Q11 Q&As"
+        },
+        {
+          "id": "ICH-Q12",
+          "title": "Q12 Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management",
+          "category": "Quality — Lifecycle",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/Q12_Guideline_Step4_2019_1119.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/Q12_Guideline_Step4_2019_1119.pdf",
+          "priority": "HIGH",
+          "notes": "Also have Q12 Annexes"
+        },
+        {
+          "id": "ICH-Q13",
+          "title": "Q13 Continuous Manufacturing of Drug Substances and Drug Products",
+          "category": "Quality — Manufacturing",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q13_Step4_Guideline_2022_1116.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q13_Step4_Guideline_2022_1116.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-Q14",
+          "title": "Q14 Analytical Procedure Development",
+          "category": "Quality — Analytical",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Q14_Guideline_2023_1130_ErrorCorrection_2025.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Q14_Guideline_2023_1130.pdf",
+          "priority": "HIGH",
+          "notes": "Published alongside Q2(R2)"
+        }
+      ]
+    },
+    {
+      "id": "ICH-S",
+      "name": "ICH Safety Guidelines (S1–S12)",
+      "market": "ICH",
+      "documents": [
+        {
+          "id": "ICH-S1A",
+          "title": "S1A Need for Carcinogenicity Studies of Pharmaceuticals",
+          "category": "Safety — Carcinogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S1A Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S1A_Carcinogenicity_Need.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S1A%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S1B-R1",
+          "title": "S1B(R1) Testing for Carcinogenicity of Pharmaceuticals",
+          "category": "Safety — Carcinogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S1B-R1_FinalGuideline_2022_0719.pdf",
+          "alt_corpus": ["ich-safety-full/S1B_Carcinogenicity_Testing.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S1B-R1_FinalGuideline_2022_0719.pdf",
+          "priority": "HIGH",
+          "notes": "R1 revision allows alternatives to 2-year rat study"
+        },
+        {
+          "id": "ICH-S1C-R2",
+          "title": "S1C(R2) Dose Selection for Carcinogenicity Studies of Pharmaceuticals",
+          "category": "Safety — Carcinogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S1C(R2) Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S1C_Duration_Chronic_Toxicity.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S1C%28R2%29%20Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S2-R1",
+          "title": "S2(R1) Guidance on Genotoxicity Testing and Data Interpretation",
+          "category": "Safety — Genotoxicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S2(R1) Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S2_Genotoxicity.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S2%28R1%29%20Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S3A",
+          "title": "S3A Note for Guidance on Toxicokinetics",
+          "category": "Safety — Toxicokinetics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S3A_Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S3A_Toxicokinetics.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S3A_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": "Also have S3A Q&As"
+        },
+        {
+          "id": "ICH-S3B",
+          "title": "S3B Pharmacokinetics: Guidance for Repeated Dose Tissue Distribution Studies",
+          "category": "Safety — Toxicokinetics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S3B_Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S3B_Pharmacokinetics_Repeated.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S3B_Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S4",
+          "title": "S4 Duration of Chronic Toxicity Testing in Animals",
+          "category": "Safety — General Toxicology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S4_Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S4_Duration_Chronic_Toxicity.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S4_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S5-R3",
+          "title": "S5(R3) Detection of Reproductive and Developmental Toxicity for Human Pharmaceuticals",
+          "category": "Safety — Reproductive Toxicology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S5-R3_Step4_Guideline_2020_0218_1.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/S5-R3_Step4_Guideline_2020_0218.pdf",
+          "priority": "CRITICAL",
+          "notes": "R3 revision (2020)"
+        },
+        {
+          "id": "ICH-S6-R1",
+          "title": "S6(R1) Preclinical Safety Evaluation of Biotechnology-Derived Pharmaceuticals",
+          "category": "Safety — Biotechnology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S6_R1_Guideline_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/S6_R1_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S7A",
+          "title": "S7A Safety Pharmacology Studies for Human Pharmaceuticals",
+          "category": "Safety — Safety Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S7A_Guideline.pdf",
+          "alt_corpus": ["ich/S7A_Safety_Pharmacology.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S7A_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S7B",
+          "title": "S7B The Non-Clinical Evaluation of the Potential for Delayed Ventricular Repolarization (QT Interval Prolongation)",
+          "category": "Safety — Safety Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S7B_Guideline.pdf",
+          "alt_corpus": ["ich/S7B_Cardiac_Safety.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S7B_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "See also E14/S7B Q&As"
+        },
+        {
+          "id": "ICH-S8",
+          "title": "S8 Immunotoxicity Studies for Human Pharmaceuticals",
+          "category": "Safety — Immunotoxicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S8_Guideline_0.pdf",
+          "alt_corpus": ["ich-safety-full/S8_Immunotoxicity.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S8_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S9",
+          "title": "S9 Nonclinical Evaluation for Anticancer Pharmaceuticals",
+          "category": "Safety — Oncology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S9_Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S9_Nonclinical_Oncology.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S9_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": "Also have S9 Q&As"
+        },
+        {
+          "id": "ICH-S10",
+          "title": "S10 Photosafety Evaluation of Pharmaceuticals",
+          "category": "Safety — Photosafety",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S10_Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/S10_Photosafety.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/S10_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S11",
+          "title": "S11 Nonclinical Safety Testing in Support of Development of Paediatric Pharmaceuticals",
+          "category": "Safety — Paediatric",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/S11_Step4_FinalGuideline_2020_0310.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/S11_Step4_FinalGuideline_2020_0310.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-S12",
+          "title": "S12 Nonclinical Biodistribution Considerations for Gene Therapy Products",
+          "category": "Safety — Gene Therapy",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_S12_Step4_Guideline_2023_0314_WithCorrection_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_S12_Step4_Guideline_2023_0314.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "ICH-E",
+      "name": "ICH Efficacy Guidelines (E1–E22)",
+      "market": "ICH",
+      "documents": [
+        {
+          "id": "ICH-E1",
+          "title": "E1 The Extent of Population Exposure to Assess Clinical Safety for Drugs Intended for Long-Term Treatment of Non-Life-Threatening Conditions",
+          "category": "Efficacy — Safety Exposure",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E1_Guideline.pdf",
+          "alt_corpus": ["ich/E1_Population_Exposure.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E1_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E2A",
+          "title": "E2A Clinical Safety Data Management: Definitions and Standards for Expedited Reporting",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E2A_Guideline.pdf",
+          "alt_corpus": ["ich/E2A_Pharmacovigilance.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E2A_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E2B-R3",
+          "title": "E2B(R3) Electronic Transmission of Individual Case Safety Reports (ICSRs)",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E2B%28R3%29_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Have Step 3 implementation guide and Q&As at ich-complete but not the finalized main guideline PDF. Key corpus files: ICH_E2B(R3)_EWG_IWG_ICSR_Implementation_Guide_(QA integration)_Step3_2025_0718_Assembly_Approved_0.pdf"
+        },
+        {
+          "id": "ICH-E2C-R2",
+          "title": "E2C(R2) Periodic Benefit-Risk Evaluation Report (PBRER)",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E2C_R2_Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E2C_R2_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E2D-R1",
+          "title": "E2D(R1) Post-Approval Safety Data Management",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E2D(R1)_Step4_FinalGuideline_2025_0819.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E2D%28R1%29_Step4_FinalGuideline_2025_0819.pdf",
+          "priority": "CRITICAL",
+          "notes": "R1 revision finalized 2025"
+        },
+        {
+          "id": "ICH-E2E",
+          "title": "E2E Pharmacovigilance Planning",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E2E_Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E2E_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E2F",
+          "title": "E2F Development Safety Update Report",
+          "category": "Efficacy — Pharmacovigilance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E2F_Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E2F_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E3",
+          "title": "E3 Structure and Content of Clinical Study Reports",
+          "category": "Efficacy — Clinical Reports",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E3_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E3_Clinical_Study_Reports.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E3_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have E3 Q&As"
+        },
+        {
+          "id": "ICH-E4",
+          "title": "E4 Dose-Response Information to Support Drug Registration",
+          "category": "Efficacy — Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E4_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E4_Dose_Response.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E4_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E5-R1",
+          "title": "E5(R1) Ethnic Factors in the Acceptability of Foreign Clinical Data",
+          "category": "Efficacy — Ethnic Factors",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E5_R1__Guideline.pdf",
+          "alt_corpus": ["ich/E5_Ethnic_Factors.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E5_R1__Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have E5 Q&As"
+        },
+        {
+          "id": "ICH-E6-R3",
+          "title": "E6(R3) Good Clinical Practice",
+          "category": "Efficacy — GCP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E6(R3)_Step4_FinalGuideline_2025_0106_ErrorCorrections_2025_1024.pdf",
+          "alt_corpus": ["ich/E6_GCP.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+          "priority": "CRITICAL",
+          "notes": "R3 finalized 2025 — major overhaul of GCP"
+        },
+        {
+          "id": "ICH-E7",
+          "title": "E7 Studies in Support of Special Populations: Geriatrics",
+          "category": "Efficacy — Special Populations",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E7_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E7_Elderly_Studies.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E7_Guideline.pdf",
+          "priority": "HIGH",
+          "notes": "Also have E7 Q&As"
+        },
+        {
+          "id": "ICH-E8-R1",
+          "title": "E8(R1) General Considerations for Clinical Studies",
+          "category": "Efficacy — Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E8-R1_Guideline_Step4_2021_1006.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E8-R1_Guideline_Step4_2021_1006.pdf",
+          "priority": "CRITICAL",
+          "notes": "R1 revision (2021)"
+        },
+        {
+          "id": "ICH-E9",
+          "title": "E9 Statistical Principles for Clinical Trials",
+          "category": "Efficacy — Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E9_Guideline.pdf",
+          "alt_corpus": ["ich/E9_Statistical_Principles.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E9_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E9-R1",
+          "title": "E9(R1) Addendum on Estimands and Sensitivity Analysis in Clinical Trials",
+          "category": "Efficacy — Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E9-R1_Step4_Guideline_2019_1203.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf",
+          "priority": "CRITICAL",
+          "notes": "Estimands framework — very important"
+        },
+        {
+          "id": "ICH-E10",
+          "title": "E10 Choice of Control Group and Related Issues in Clinical Trials",
+          "category": "Efficacy — Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E10_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E10_Choice_Control_Group.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E10_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E11-R1",
+          "title": "E11(R1) Clinical Investigation of Medicinal Products in the Pediatric Population",
+          "category": "Efficacy — Paediatric",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E11_R1_Addendum.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E11A",
+          "title": "E11A Pediatric Extrapolation",
+          "category": "Efficacy — Paediatric",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E11A_Guideline_Step4_2024_0821.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf",
+          "priority": "HIGH",
+          "notes": "Finalized 2024"
+        },
+        {
+          "id": "ICH-E12",
+          "title": "E12 Principles for Clinical Evaluation of New Antihypertensive Drugs",
+          "category": "Efficacy — Therapeutic Area",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E12_Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E12_Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E14",
+          "title": "E14 The Clinical Evaluation of QT/QTc Interval Prolongation and Proarrhythmic Potential for Non-Antiarrhythmic Drugs",
+          "category": "Efficacy — Cardiac Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E14_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E14_QT_Prolongation.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E14_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have E14/S7B Q&As: E14-S7B_QAs_Step4_2022_0221.pdf"
+        },
+        {
+          "id": "ICH-E15",
+          "title": "E15 Definitions for Genomic Biomarkers, Pharmacogenomics, Pharmacogenetics, Genomic Data and Sample Coding Categories",
+          "category": "Efficacy — Pharmacogenomics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E15_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E15_Pharmacogenomics.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E15_Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E16",
+          "title": "E16 Biomarkers Related to Drug or Biotechnology Product Development: Context, Structure and Format of Qualification Submissions",
+          "category": "Efficacy — Biomarkers",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E16_Guideline.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E16_Biomarker_Qualification.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E16_Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E17",
+          "title": "E17 General Principles for Planning and Design of Multi-Regional Clinical Trials",
+          "category": "Efficacy — MRCT",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E17EWG_Step4_2017_1116.pdf",
+          "alt_corpus": ["ich-efficacy-advanced/E17_Multi_Regional_Trials.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/E17EWG_Step4_2017_1116.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E18",
+          "title": "E18 Genomic Sampling and Management of Genomic Data",
+          "category": "Efficacy — Genomics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/E18_Guideline.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/E18_Guideline.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "ICH-E19",
+          "title": "E19 Optimisation of Safety Data Collection",
+          "category": "Efficacy — Safety Data",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E19_Guideline_Step4_2022_0826_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E19_Guideline_Step4_2022_0826.pdf",
+          "priority": "HIGH",
+          "notes": "Selective safety data collection"
+        },
+        {
+          "id": "ICH-E20-DRAFT",
+          "title": "E20 Adaptive Clinical Trials (Step 2 Draft)",
+          "category": "Efficacy — Adaptive Trials",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E20_Step2_Presentation.pdf",
+          "priority": "HIGH",
+          "notes": "Still in development. Have concept paper and work plan in ich-complete."
+        },
+        {
+          "id": "ICH-E21-DRAFT",
+          "title": "E21 Use of Real-World Evidence in Regulatory Decision-Making (Step 2 Draft)",
+          "category": "Efficacy — Real World Evidence",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E21_Step2.pdf",
+          "priority": "HIGH",
+          "notes": "Concept paper in corpus: ICH_E21_Final_Concept_Paper_2023_1106_MCApproved.pdf"
+        },
+        {
+          "id": "ICH-E22-DRAFT",
+          "title": "E22 Clinical Pharmacology Characterisation and Biopharmaceutics (Step 2 Draft 2025)",
+          "category": "Efficacy — Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_E22_Step2_draftGuideline_Assembly_Endorsed_FINAL_2025_1119.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_E22_Step2_draftGuideline_Assembly_Endorsed_FINAL_2025_1119.pdf",
+          "priority": "HIGH",
+          "notes": "Step 2 draft — not yet finalized"
+        }
+      ]
+    },
+    {
+      "id": "ICH-M",
+      "name": "ICH Multidisciplinary Guidelines (M1–M15)",
+      "market": "ICH",
+      "documents": [
+        {
+          "id": "ICH-M1",
+          "title": "M1 MedDRA — Medical Dictionary for Regulatory Activities",
+          "category": "Multidisciplinary — Terminology",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://www.meddra.org/",
+          "priority": "HIGH",
+          "notes": "MedDRA is a subscription product. Have M1 PtC Working Group docs in corpus."
+        },
+        {
+          "id": "ICH-M2",
+          "title": "M2 Electronic Standards for the Transfer of Regulatory Information (ESTRI)",
+          "category": "Multidisciplinary — Electronic Standards",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/M2_EWG_Concept_Paper.pdf",
+          "priority": "MEDIUM",
+          "notes": "Have concept paper and terminology list in corpus"
+        },
+        {
+          "id": "ICH-M3-R2",
+          "title": "M3(R2) Nonclinical Safety Studies for the Conduct of Human Clinical Trials and Marketing Authorization for Pharmaceuticals",
+          "category": "Multidisciplinary — Nonclinical-Clinical Bridge",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M3_R2__Guideline.pdf",
+          "alt_corpus": ["ich-safety-full/M3_Nonclinical_Safety_Timing.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/M3_R2__Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have M3(R2) Q&As"
+        },
+        {
+          "id": "ICH-M4",
+          "title": "M4 The Common Technical Document (CTD)",
+          "category": "Multidisciplinary — CTD",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich/M4_CTD_Organization.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M4_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": "CTD organization overview"
+        },
+        {
+          "id": "ICH-M4Q-R1",
+          "title": "M4Q(R1) Quality Overall Summary of Module 2 and Module 3: Quality",
+          "category": "Multidisciplinary — CTD Quality",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich/M4Q_Quality_CMC.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M4Q_R1_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-M4S-R2",
+          "title": "M4S(R2) Safety: Module 2.6 and Module 4",
+          "category": "Multidisciplinary — CTD Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M4S_R2_Guideline.pdf",
+          "alt_corpus": ["ich/M4S_Safety_Nonclinical.pdf"],
+          "source_url": "https://database.ich.org/sites/default/files/M4S_R2_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-M4E-R2",
+          "title": "M4E(R2) Efficacy: Module 2.7 and Module 5",
+          "category": "Multidisciplinary — CTD Efficacy",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich/M4E_Efficacy_Clinical.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M4E_R2_Guideline.pdf",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "ICH-M6",
+          "title": "M6 Gene Therapy Discussion Group Outputs (Appendices)",
+          "category": "Multidisciplinary — Gene Therapy",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M6_Appendix1.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M6_Appendix1.pdf",
+          "priority": "MEDIUM",
+          "notes": "Also have M6 Appendix 2"
+        },
+        {
+          "id": "ICH-M7-R2",
+          "title": "M7(R2) Assessment and Control of DNA Reactive (Mutagenic) Impurities in Pharmaceuticals to Limit Potential Carcinogenic Risk",
+          "category": "Multidisciplinary — Genotoxic Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_M7(R2)_Guideline_Step4_2023_0216_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_M7%28R2%29_Guideline_Step4_2023_0216.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have M7(R2) Addendum and Q&As"
+        },
+        {
+          "id": "ICH-M8",
+          "title": "M8 eCTD (Electronic Common Technical Document)",
+          "category": "Multidisciplinary — eCTD",
+          "status": "PARTIAL",
+          "corpus_path": null,
+          "source_url": "https://database.ich.org/sites/default/files/M8_EWG_IWG_Concept_Paper.pdf",
+          "priority": "HIGH",
+          "notes": "Have concept papers in ich-complete. eCTD v3.2.2 spec in ectd-specs/"
+        },
+        {
+          "id": "ICH-M9",
+          "title": "M9 Biopharmaceutics Classification System-Based Biowaivers",
+          "category": "Multidisciplinary — BCS Biowaivers",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M9_Guideline_Step4_2019_1116.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M9_Guideline_Step4_2019_1116.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have M9 Q&As"
+        },
+        {
+          "id": "ICH-M10",
+          "title": "M10 Bioanalytical Method Validation and Study Sample Analysis",
+          "category": "Multidisciplinary — Bioanalytical",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M10_Guideline_Step4_2022_0524.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M10_Guideline_Step4_2022_0524.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have M10 Q&As and training materials"
+        },
+        {
+          "id": "ICH-M11",
+          "title": "M11 Clinical Electronic Structured Harmonised Protocol (CeSHarP)",
+          "category": "Multidisciplinary — Clinical Protocol",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_Step4_M11_Final_Guideline_2025_1119.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_Guideline_2025_1119.pdf",
+          "priority": "HIGH",
+          "notes": "Finalized 2025. Also have technical spec and template."
+        },
+        {
+          "id": "ICH-M12",
+          "title": "M12 Drug Interaction Studies",
+          "category": "Multidisciplinary — Drug Interactions",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_M12_Step4_Guideline_2024_0521_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_M12_Step4_Guideline_2024_0521.pdf",
+          "priority": "CRITICAL",
+          "notes": "Finalized 2024. Also have M12 Q&As."
+        },
+        {
+          "id": "ICH-M13A",
+          "title": "M13A Bioequivalence for Immediate-Release Solid Oral Dosage Forms",
+          "category": "Multidisciplinary — Bioequivalence",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_M13A_Step4_Final_Guideline_2024_0723.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_M13A_Step4_Final_Guideline_2024_0723.pdf",
+          "priority": "CRITICAL",
+          "notes": "Also have M13A Q&As"
+        },
+        {
+          "id": "ICH-M13B-DRAFT",
+          "title": "M13B Bioequivalence for Modified-Release Dosage Forms (Step 2 Draft 2025)",
+          "category": "Multidisciplinary — Bioequivalence",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/M13B_Draft Guideline_Step2_2025_0212_0.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/M13B_Draft_Guideline_Step2_2025_0212.pdf",
+          "priority": "HIGH",
+          "notes": "Step 2 draft"
+        },
+        {
+          "id": "ICH-M14",
+          "title": "M14 Use of Real-World Data for Clinical Evidence Generation",
+          "category": "Multidisciplinary — Real World Data",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_M14_Step4_Final_Guideline_2025_0905.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_M14_Step4_Final_Guideline_2025_0905.pdf",
+          "priority": "HIGH",
+          "notes": "Finalized 2025"
+        },
+        {
+          "id": "ICH-M15",
+          "title": "M15 General Principles for Model-Informed Drug Development",
+          "category": "Multidisciplinary — MIDD",
+          "status": "IN_CORPUS",
+          "corpus_path": "ich-complete/ICH_M15_Step4_Final_Guideline_2026_0129.pdf",
+          "source_url": "https://database.ich.org/sites/default/files/ICH_M15_Step4_Final_Guideline_2026_0129.pdf",
+          "priority": "HIGH",
+          "notes": "Finalized January 2026"
+        }
+      ]
+    },
+    {
+      "id": "FDA-CLINICAL",
+      "name": "FDA CDER Guidances — Clinical",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-CLIN-001",
+          "title": "Bioanalytical Method Validation (2018)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/01-bioanalytical-method-validation-2018.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioanalytical-method-validation-guidance-industry",
+          "priority": "CRITICAL",
+          "notes": "Superseded by ICH M10 for new studies but still referenced"
+        },
+        {
+          "id": "FDA-CLIN-002",
+          "title": "Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (2020)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/02-clinical-drug-interaction-cyp-transporter.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-drug-interaction-studies-cytochrome-p450-enzyme-and-transporter-mediated-drug-interactions",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-003",
+          "title": "In Vitro Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (2020)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/03-in-vitro-drug-interaction-studies.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/vitro-drug-interaction-studies-cytochrome-p450-enzyme-and-transporter-mediated-drug-interactions",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-004",
+          "title": "Non-Inferiority Clinical Trials to Establish Effectiveness (2016)",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/04-non-inferiority-clinical-trials-2016.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/non-inferiority-clinical-trials-establish-effectiveness",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-005",
+          "title": "Benefit-Risk Assessment for New Drug and Biological Products (2023)",
+          "category": "Regulatory Strategy",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/15-benefit-risk-assessment-2023.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/benefit-risk-assessment-new-drug-and-biological-products",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-006",
+          "title": "Drug-Induced Liver Injury: Premarketing Clinical Evaluation (2009)",
+          "category": "Clinical Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/06-drug-induced-liver-injury-2009.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/drug-induced-liver-injury-premarketing-clinical-evaluation",
+          "priority": "HIGH",
+          "notes": "Also have updated 2023 version"
+        },
+        {
+          "id": "FDA-CLIN-007",
+          "title": "Expedited Programs for Serious Conditions — Drugs and Biologics (2014)",
+          "category": "Regulatory Pathways",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/09-expedited-programs-serious-conditions-2014.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/expedited-programs-serious-conditions-drugs-and-biologics",
+          "priority": "CRITICAL",
+          "notes": "Breakthrough therapy, accelerated approval, priority review, fast track"
+        },
+        {
+          "id": "FDA-CLIN-008",
+          "title": "Clinical Trial Endpoints for the Approval of Cancer Drugs and Biologics (2018)",
+          "category": "Oncology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/30-clinical-trial-endpoints-cancer-2018.pdf",
+          "alt_corpus": ["fda-guidance/Clinical_Trial_Endpoints.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-trial-endpoints-approval-cancer-drugs-and-biologics",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-009",
+          "title": "Adaptive Designs for Clinical Trials of Drugs and Biologics (2019)",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/26-adaptive-designs-clinical-trials-2019.pdf",
+          "alt_corpus": ["fda-guidance/Adaptive_Designs.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-010",
+          "title": "Multiple Endpoints in Clinical Trials (2022)",
+          "category": "Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/27-multiple-endpoints-clinical-trials-2022.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/multiple-endpoints-clinical-trials-guidance-industry",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-011",
+          "title": "Master Protocols: Efficient Clinical Trial Design Strategies (2022)",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/28-master-protocols-2022.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/master-protocols-efficient-clinical-trial-design-strategies-expedite-development-oncology-drugs-and",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-012",
+          "title": "Real-World Data: Assessing Electronic Health Records and Medical Claims Data (2023)",
+          "category": "Real World Evidence",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/29-real-world-evidence-2023.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/real-world-data-assessing-electronic-health-records-and-medical-claims-data-support-regulatory",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-013",
+          "title": "Population Pharmacokinetics (2022)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/16-population-pharmacokinetics-2022.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/population-pharmacokinetics",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-014",
+          "title": "Physiologically Based Pharmacokinetic Analyses — Format and Content (2018)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/17-pbpk-analyses-2018.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/physiologically-based-pharmacokinetic-analyses-format-and-content",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-015",
+          "title": "Pharmacokinetics in Patients with Impaired Renal Function — Study Design, Data Analysis, and Impact on Dosing (2020)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/19-renal-impairment-studies-2020.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pharmacokinetics-patients-impaired-renal-function-study-design-data-analysis-and-impact-dosing",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-016",
+          "title": "Pharmacokinetics in Patients with Impaired Hepatic Function — Study Design, Data Analysis, and Impact on Dosing (2020)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/20-hepatic-impairment-studies-2020.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pharmacokinetics-patients-impaired-hepatic-function-study-design-data-analysis-and-impact-dosing-and",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-017",
+          "title": "Food-Effect Bioavailability and Fed Bioequivalence Studies (2002)",
+          "category": "Biopharmaceutics",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/21-food-effect-bioavailability-2002.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/food-effect-bioavailability-and-fed-bioequivalence-studies",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-018",
+          "title": "Bioavailability and Bioequivalence Studies Submitted in NDAs or INDs — General Considerations (2014)",
+          "category": "Biopharmaceutics",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/22-ba-be-studies-nda-2014.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioavailability-and-bioequivalence-studies-submitted-ndas-or-inds-general-considerations",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-019",
+          "title": "Assessment of Abuse Potential of Drugs (2017)",
+          "category": "Clinical Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/23-assessment-abuse-potential-2017.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/assessment-abuse-potential-drugs",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-020",
+          "title": "Suicidal Ideation and Behavior: Prospective Assessment of Occurrence in Clinical Trials (2012)",
+          "category": "Clinical Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/25-suicidal-ideation-behavior-2012.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/suicidal-ideation-and-behavior-prospective-assessment-occurrence-clinical-trials",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-021",
+          "title": "Exposure-Response Relationships — Study Design, Data Analysis, and Regulatory Applications (2003)",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/18-exposure-response-relationships-2003.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/exposure-response-relationships-study-design-data-analysis-and-regulatory-applications",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-022",
+          "title": "Enrichment Strategies for Clinical Trials to Support Determination of Effectiveness (2019)",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/35-enrichment-strategies.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/enrichment-strategies-clinical-trials-support-determination-effectiveness-human-drugs-and-biological",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-023",
+          "title": "Safety Reporting Requirements for INDs and BA/BE Studies (2012)",
+          "category": "Clinical Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/14-safety-reporting-inds-2012.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/safety-reporting-requirements-inds-and-babe-studies",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-024",
+          "title": "Rare Diseases: Common Issues in Drug Development (2019)",
+          "category": "Rare Diseases",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/31-rare-diseases-common-issues-2019.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/rare-diseases-common-issues-drug-development-guidance-industry",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-025",
+          "title": "REMS: Approved Risk Evaluation and Mitigation Strategies (2019)",
+          "category": "Post-Marketing Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/06-rems-guidance.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/format-and-content-proposed-risk-evaluation-and-mitigation-strategies-rems-rems-assessments-and",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-026",
+          "title": "Premarketing Risk Assessment (2005)",
+          "category": "Clinical Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/13-premarketing-risk-assessment-2005.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/premarketing-risk-assessment",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-027",
+          "title": "Clinical Pharmacology Considerations for Demonstrating Biosimilarity to a Reference Product",
+          "category": "Biosimilars",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/29-clinical-pharmacology-biosimilar.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-pharmacology-data-support-demonstration-biosimilarity-reference-biological-product",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-028",
+          "title": "Scientific Considerations in Demonstrating Biosimilarity to a Reference Product (2015)",
+          "category": "Biosimilars",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/07-scientific-considerations-biosimilarity-2015.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/scientific-considerations-demonstrating-biosimilarity-reference-product",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-029",
+          "title": "Pediatric Study Plans: Content of and Process for Submitting Initial Pediatric Study Plans and Amended Initial Pediatric Study Plans",
+          "category": "Paediatric",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Pediatric_Study_Plans.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pediatric-study-plans-content-and-process-submitting-initial-pediatric-study-plans-and-amended",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-030",
+          "title": "Breakthrough Therapy Designation",
+          "category": "Regulatory Pathways",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Breakthrough_Therapy.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/breakthrough-therapy",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-031",
+          "title": "Immunogenicity Assessment for Therapeutic Protein Products",
+          "category": "Immunogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/26-immunogenicity-therapeutic-proteins.pdf",
+          "alt_corpus": ["fda-guidance/Immunogenicity_Assessment.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/immunogenicity-testing-therapeutic-protein-products-developing-and-validating-assays-anti-drug",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-032",
+          "title": "Providing Clinical Evidence of Effectiveness for Human Drug and Biological Products",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/05-clinical-evidence-effectiveness-1998.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/providing-clinical-evidence-effectiveness-human-drug-and-biological-products",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-033",
+          "title": "Combination Products: Premarket Issues — Current Good Manufacturing Practice (2020)",
+          "category": "Combination Products",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/35-combination-products-premarket-2020.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/current-good-manufacturing-practice-requirements-combination-products",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-034",
+          "title": "E14/S7B Q&As: Clinical and Nonclinical Evaluation of QT/QTc Interval Prolongation",
+          "category": "Cardiac Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/FDA_E14_S7B_QAs_Guidance.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e14-and-s7b-clinical-and-nonclinical-evaluation-qtqtc-interval-prolongation-and-proarrhythmic",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-035",
+          "title": "Clinical Trial Diversity — Eligibility Criteria, Enrollment Practices, and Trial Designs",
+          "category": "Clinical Design",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/diversity-plans-improve-enrollment-participants-underrepresented-racial-and-ethnic-populations",
+          "priority": "HIGH",
+          "notes": "2024 guidance on diversity action plans"
+        },
+        {
+          "id": "FDA-CLIN-036",
+          "title": "Decentralized Clinical Trials for Drugs, Biological Products, and Devices",
+          "category": "Clinical Design",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/decentralized-clinical-trials-drugs-biological-products-and-devices",
+          "priority": "HIGH",
+          "notes": "2024 final guidance on DCTs"
+        },
+        {
+          "id": "FDA-CLIN-037",
+          "title": "Digital Health Technologies for Remote Data Acquisition in Clinical Investigations",
+          "category": "Digital Health",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-038",
+          "title": "Use of Real-World Evidence to Support Regulatory Decision-Making for Medical Devices",
+          "category": "Real World Evidence",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-real-world-evidence-support-regulatory-decision-making-medical-devices",
+          "priority": "MEDIUM",
+          "notes": "Device-focused but principles apply broadly"
+        },
+        {
+          "id": "FDA-CLIN-039",
+          "title": "Clinical Outcome Assessments (COA): Developing and Using Them for Regulatory Decision-Making",
+          "category": "Endpoints",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/drugs/development-approval-process-drugs/fda-patient-focused-drug-development-guidance-series-enhancing-incorporation-patients-voice-medical",
+          "priority": "HIGH",
+          "notes": "Patient-focused drug development series"
+        },
+        {
+          "id": "FDA-CLIN-040",
+          "title": "Complex Innovative Trial Designs for Drugs and Biological Products (2020)",
+          "category": "Clinical Design",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/complex-innovative-trial-design-meeting-program",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CLIN-041",
+          "title": "Interchangeable Biosimilar Product Development (2019)",
+          "category": "Biosimilars",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-demonstrating-interchangeability-reference-product-guidance-industry",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "FDA-CMC",
+      "name": "FDA CDER Guidances — CMC/Quality",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-CMC-001",
+          "title": "Process Validation: General Principles and Practices (2011)",
+          "category": "Manufacturing",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Process_Validation.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/process-validation-general-principles-and-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-002",
+          "title": "Container Closure Systems for Packaging Human Drugs and Biologics (1999)",
+          "category": "Packaging",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Container_Closure_Systems.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/container-closure-system-guidance-human-drugs-and-biologics",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-003",
+          "title": "Stability Testing of New Drug Substances and Products (for NDA/ANDA)",
+          "category": "Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Stability_Testing_NDA_ANDA.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/anda-stability-testing",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-004",
+          "title": "Dissolution Testing of Immediate Release Solid Oral Dosage Forms (1997)",
+          "category": "Specifications",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/38-dissolution-testing-ir-products.pdf",
+          "alt_corpus": ["fda-guidance/Dissolution_Testing.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/dissolution-testing-immediate-release-solid-oral-dosage-forms",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-005",
+          "title": "Analytical Procedures and Methods Validation for Drugs and Biologics",
+          "category": "Analytical",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/39-analytical-procedures-validation.pdf",
+          "alt_corpus": ["fda-guidance/Analytical_Procedures_Validation.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/analytical-procedures-and-methods-validation-drugs-and-biologics",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-006",
+          "title": "Comparability Protocols for Human Drugs and Biologics: Chemistry, Manufacturing, and Controls Information",
+          "category": "Post-Approval Changes",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Comparability_Protocols_CMC.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/comparability-protocols-human-drugs-and-biologics-chemistry-manufacturing-and-controls-information",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-007",
+          "title": "SUPAC-IR: Immediate-Release Solid Oral Dosage Forms — Scale-Up and Post-Approval Changes (1995)",
+          "category": "Post-Approval Changes",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/11-supac-ir-1995.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/supac-ir-immediate-release-solid-oral-dosage-forms-scale-and-post-approval-changes-chemistry",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-008",
+          "title": "Quality Considerations in Demonstrating Biosimilarity of a Therapeutic Protein Product (2015)",
+          "category": "Biosimilars Quality",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/08-quality-considerations-biosimilarity-2015.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/quality-considerations-demonstrating-biosimilarity-therapeutic-protein-product-reference-product",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-009",
+          "title": "Bioequivalence Studies with Pharmacokinetic Endpoints for Drugs Submitted Under an ANDA",
+          "category": "Bioequivalence",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Bioequivalence_Studies.pdf",
+          "alt_corpus": ["fda-guidance/FDA_Bioequivalence_Guidance.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioequivalence-studies-pharmacokinetic-endpoints-drugs-submitted-under-abbreviated-new-drug",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-010",
+          "title": "Data Integrity and Compliance with Drug CGMP (2018)",
+          "category": "Data Integrity",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/FDA_Data_Integrity_CGMP_2018.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/data-integrity-and-compliance-drug-cgmp-questions-and-answers-guidance-industry",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-011",
+          "title": "Control of Nitrosamine Impurities in Human Drugs (2021)",
+          "category": "Impurities",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/31-nitrosamine-impurities.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/control-nitrosamine-impurities-human-drugs",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-012",
+          "title": "Changes to an Approved NDA or ANDA",
+          "category": "Post-Approval Changes",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/18-changes-approved-nda-anda.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/changes-approved-nda-or-anda",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-013",
+          "title": "505(b)(2) Applications",
+          "category": "Regulatory Pathways",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/17-505b2-applications.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/applications-covered-section-505b2",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-014",
+          "title": "Refuse to File: NDA and BLA (2017)",
+          "category": "Regulatory Procedure",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/10-refuse-to-file-2017.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/refuse-file-nda-and-bla-submissions",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-015",
+          "title": "Continuous Manufacturing of Drug Substances and Drug Products",
+          "category": "Manufacturing",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/quality-considerations-continuous-manufacturing",
+          "priority": "HIGH",
+          "notes": "FDA-specific guidance complements ICH Q13"
+        },
+        {
+          "id": "FDA-CMC-016",
+          "title": "Advancement of Emerging Technology Applications for Pharmaceutical Innovation",
+          "category": "Manufacturing Innovation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/emerging-technology-program",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-017",
+          "title": "ANDAs: Pharmaceutical Equivalence and Bioequivalence",
+          "category": "Generics",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/andas-pharmaceutical-equivalence",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-018",
+          "title": "Specification of Drug Substances and Products (Q6A/Q6B Implementation)",
+          "category": "Specifications",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+          "priority": "HIGH",
+          "notes": "FDA-specific guidance on specifications for NDAs/ANDAs"
+        },
+        {
+          "id": "FDA-CMC-019",
+          "title": "CGMP for Phase 1 Investigational Drugs (2008)",
+          "category": "Manufacturing — IND Phase",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cgmp-phase-1-investigational-drugs",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CMC-020",
+          "title": "Nanotechnology Guidance — Considering Whether an FDA-Regulated Product Involves Nanotechnology",
+          "category": "Manufacturing Innovation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considering-whether-fda-regulated-product-involves-application-nanotechnology",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "FDA-LABELING",
+      "name": "FDA Labeling and Post-Marketing",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-LBL-001",
+          "title": "Physician Labeling Rule (PLR) Format and Content",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/FDA_Labeling_PLR_Guidance.pdf",
+          "alt_corpus": ["fda-guidance-v2/15-physician-labeling-rule-format.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/labeling-human-prescription-drug-and-biological-products-implementing-plr-content-and-format",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-LBL-002",
+          "title": "Warnings and Precautions, Contraindications, and Boxed Warning Sections of Labeling (2011)",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance-v2/16-warnings-precautions-boxed-warning.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/warnings-and-precautions-contraindications-and-boxed-warning-sections-labeling",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-LBL-003",
+          "title": "Labeling for Human Prescription Drug and Biological Products — Determining Established Pharmacologic Class",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/Labeling_for_Human_Drugs.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/labeling-human-prescription-drug-and-biological-products-determining-established-pharmacologic-class",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-LBL-004",
+          "title": "Medication Guides — Distribution Requirements and Inclusion in REMS",
+          "category": "Labeling",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/medication-guides-distribution-requirements-and-inclusion-risk-evaluation-and-mitigation-strategies",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-LBL-005",
+          "title": "Pregnancy and Lactation Labeling (PLLR) Final Rule",
+          "category": "Labeling",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/drugs/labeling-information-drug-products/pregnancy-and-lactation-labeling-drugs-final-rule",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "FDA-NONCLINICAL",
+      "name": "FDA CDER Guidances — Safety/Nonclinical",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-NC-001",
+          "title": "S7A Safety Pharmacology Studies for Human Pharmaceuticals (FDA Implementation)",
+          "category": "Safety Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-guidance/FDA_S7A_Safety_Pharmacology_Guidance.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/s7a-safety-pharmacology-studies-human-pharmaceuticals",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-NC-002",
+          "title": "Nonclinical Safety Evaluation of Drug or Biologic Combinations",
+          "category": "General Toxicology",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/nonclinical-safety-evaluation-drug-or-biologic-combinations",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-NC-003",
+          "title": "Immunogenicity Testing of Therapeutic Protein Products — Developing and Validating Assays for Anti-Drug Antibodies",
+          "category": "Immunogenicity",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/immunogenicity-testing-therapeutic-protein-products-developing-and-validating-assays-anti-drug",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-NC-004",
+          "title": "Nonclinical Evaluation of the Immunotoxic Potential of Pharmaceuticals",
+          "category": "Immunotoxicity",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+          "priority": "MEDIUM",
+          "notes": "Supplements ICH S8"
+        },
+        {
+          "id": "FDA-NC-005",
+          "title": "Assessment of the Effects of Drugs on Male and Female Reproductive Performance",
+          "category": "Reproductive Toxicology",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "FDA-CBER",
+      "name": "FDA CBER Guidances (Biologics, Vaccines, Cell & Gene Therapy)",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-CBER-001",
+          "title": "Chemistry, Manufacturing, and Control (CMC) Information for Human Gene Therapy IND Applications",
+          "category": "Gene Therapy — CMC",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/CMC_Gene_Therapy_IND.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/chemistry-manufacturing-and-control-cmc-information-human-gene-therapy-investigational-new-drug",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-002",
+          "title": "Human Gene Therapy for Rare Diseases",
+          "category": "Gene Therapy — Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Human_Gene_Therapy_Rare_Diseases.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/human-gene-therapy-rare-diseases",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-003",
+          "title": "Human Gene Therapy for Retinal Disorders",
+          "category": "Gene Therapy — Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Human_Gene_Therapy_Retinal_Disorders.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/human-gene-therapy-retinal-disorders",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-004",
+          "title": "Human Gene Therapy for Neurodegenerative Diseases",
+          "category": "Gene Therapy — Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Human_Gene_Therapy_Neurodegenerative.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/human-gene-therapy-neurodegenerative-diseases",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-005",
+          "title": "Human Gene Therapy Products Incorporating Human Genome Editing",
+          "category": "Gene Therapy — Genome Editing",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Human_Gene_Therapy_Genome_Editing.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/human-gene-therapy-products-incorporating-human-genome-editing",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-006",
+          "title": "Long Term Follow-Up After Administration of Human Gene Therapy Products",
+          "category": "Gene Therapy — Follow-Up",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Long_Term_Follow_Up_Gene_Therapy.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/long-term-follow-after-administration-human-gene-therapy-products",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-007",
+          "title": "Preclinical Assessment of Investigational Cellular and Gene Therapy Products",
+          "category": "Gene Therapy — Nonclinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Preclinical_Assessment_Cell_Gene_Therapy.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/preclinical-assessment-investigational-cellular-and-gene-therapy-products",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-008",
+          "title": "Potency Tests for Cellular and Gene Therapy Products",
+          "category": "Gene Therapy — Quality",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Potency_Assurance_Cell_Gene_Therapy.pdf",
+          "alt_corpus": ["fda-cber/fda-potency-tests-cell-gene-therapy.pdf"],
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/potency-tests-cellular-and-gene-therapy-products",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-009",
+          "title": "Early Phase Clinical Trials with Cell and Gene Therapy Products",
+          "category": "Gene Therapy — Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Early_Phase_Clinical_Trials_Cell_Gene_Therapy.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-design-early-phase-clinical-trials-cellular-and-gene-therapy-products",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-010",
+          "title": "Testing of Retroviral Vector-Based Human Gene Therapy Products for Replication Competent Retrovirus (RCR)",
+          "category": "Gene Therapy — Safety",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/RCR_Testing_Retroviral_Vectors.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/testing-retroviral-vector-based-human-gene-therapy-products-replication-competent-retrovirus-during",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-011",
+          "title": "Characterization and Qualification of Cell Substrates and Other Biological Materials Used in the Production of Viral Vaccines",
+          "category": "Vaccines — Quality",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-cber/fda-cell-substrates-vaccine-production.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/characterization-and-qualification-cell-substrates-and-other-biological-materials-used-production",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-012",
+          "title": "Clinical Considerations for Therapeutic Cancer Vaccines",
+          "category": "Vaccines — Cancer",
+          "status": "IN_CORPUS",
+          "corpus_path": "fda-cber/fda-therapeutic-cancer-vaccines.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-considerations-therapeutic-cancer-vaccines",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-013",
+          "title": "Content and Format of Chemistry, Manufacturing and Controls Information and Establishment Description Information for a Vaccine or Related Product",
+          "category": "Vaccines — CMC",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/Content_Format_CMC_Vaccines.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/content-and-format-chemistry-manufacturing-and-controls-information-and-establishment-description",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-014",
+          "title": "Clinical Data Needed to Support the Licensure of Seasonal Inactivated Influenza Vaccines",
+          "category": "Vaccines — Influenza",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/Clinical_Data_Seasonal_Influenza_Vaccines.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-data-needed-support-licensure-seasonal-inactivated-influenza-vaccines",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-015",
+          "title": "Development and Licensure of Vaccines to Prevent COVID-19",
+          "category": "Vaccines — COVID-19",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/Development_Licensure_COVID19_Vaccines.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/development-and-licensure-vaccines-prevent-covid-19",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-016",
+          "title": "General Principles for the Development of Vaccines to Protect Against Global Infectious Diseases",
+          "category": "Vaccines — General",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/General_Principles_Vaccines_Global_Infectious_Diseases.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-principles-development-vaccines-protect-against-global-infectious-diseases",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-017",
+          "title": "Considerations for Developmental Toxicity Studies for Preventive and Therapeutic Vaccines for Infectious Disease Indications",
+          "category": "Vaccines — Nonclinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/Developmental_Toxicity_Vaccines.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-developmental-toxicity-studies-preventive-and-therapeutic-vaccines-infectious-disease",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-018",
+          "title": "BLA Lot Release Protocol Submissions",
+          "category": "Vaccines — Lot Release",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-fda/Lot_Release_Protocol_Submissions.pdf",
+          "source_url": "https://www.fda.gov/vaccines-blood-biologics/biologics-guidances/lot-release",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-019",
+          "title": "Considerations for the Development of Chimeric Antigen Receptor (CAR) T Cell Products",
+          "category": "Cell Therapy",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-development-chimeric-antigen-receptor-car-t-cell-products",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-020",
+          "title": "Human Somatic Cell Therapy and Gene Therapy",
+          "category": "Gene/Cell Therapy",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-fda/Human_Somatic_Cell_Gene_Therapy.pdf",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CBER-021",
+          "title": "Recommendations for Microbial Vectors Used for Gene Therapy",
+          "category": "Gene Therapy — Vectors",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-microbial-vectors-used-gene-therapy",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "FDA-CFR",
+      "name": "21 CFR — Key Regulations",
+      "market": "US (FDA)",
+      "documents": [
+        {
+          "id": "FDA-CFR-011",
+          "title": "21 CFR Part 11 — Electronic Records; Electronic Signatures",
+          "category": "Electronic Records",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol1_parts1-99.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11",
+          "priority": "CRITICAL",
+          "notes": "Within the vol1 compilation"
+        },
+        {
+          "id": "FDA-CFR-210",
+          "title": "21 CFR Part 210 — Current Good Manufacturing Practice in Manufacturing, Processing, Packing, or Holding of Drugs; General",
+          "category": "CGMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol4_parts200-299.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-210",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-211",
+          "title": "21 CFR Part 211 — Current Good Manufacturing Practice for Finished Pharmaceuticals",
+          "category": "CGMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol4_parts200-299.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-312",
+          "title": "21 CFR Part 312 — Investigational New Drug Application",
+          "category": "IND",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol5_parts300-499.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-D/part-312",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-314",
+          "title": "21 CFR Part 314 — Applications for FDA Approval to Market a New Drug",
+          "category": "NDA/ANDA",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol5_parts300-499.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-D/part-314",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-320",
+          "title": "21 CFR Part 320 — Bioavailability and Bioequivalence Requirements",
+          "category": "BA/BE",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol5_parts300-499.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-D/part-320",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-600",
+          "title": "21 CFR Parts 600-680 — Biologics (Licensing, Standards, Blood, Vaccines)",
+          "category": "Biologics",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol7_parts600-799.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-F",
+          "priority": "CRITICAL",
+          "notes": "Includes Parts 600 (general), 601 (BLA licensing), 606-640 (blood), 610 (general standards), 680 (allergenic products)"
+        },
+        {
+          "id": "FDA-CFR-58",
+          "title": "21 CFR Part 58 — Good Laboratory Practice for Nonclinical Laboratory Studies",
+          "category": "GLP",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol1_parts1-99.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-58",
+          "priority": "CRITICAL",
+          "notes": "Within vol1 compilation"
+        },
+        {
+          "id": "FDA-CFR-50",
+          "title": "21 CFR Part 50 — Protection of Human Subjects",
+          "category": "Human Subjects",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol1_parts1-99.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-50",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "FDA-CFR-56",
+          "title": "21 CFR Part 56 — Institutional Review Boards",
+          "category": "IRB",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations/title21_vol1_parts1-99.pdf",
+          "source_url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-56",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "EMA-QUALITY",
+      "name": "EMA Scientific Guidelines — Quality",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-Q-001",
+          "title": "Guideline on Process Validation for Finished Products",
+          "category": "Quality — Process Validation",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/process-validation.pdf",
+          "source_url": "https://www.ema.europa.eu/en/process-validation-finished-products-information-data-be-provided-regulatory-submissions-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "EMA/CHMP/CVMP/QWP/BWP/70278/2012 Rev 1"
+        },
+        {
+          "id": "EMA-Q-002",
+          "title": "Guideline on the Chemistry of Active Substances",
+          "category": "Quality — Drug Substance",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-chemistry-active-substances.pdf",
+          "source_url": "https://www.ema.europa.eu/en/chemistry-active-substances-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-003",
+          "title": "Guideline on the Quality of Water for Pharmaceutical Use",
+          "category": "Quality — Pharmaceutical Water",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-quality-water.pdf",
+          "source_url": "https://www.ema.europa.eu/en/quality-water-pharmaceutical-use-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-004",
+          "title": "Guideline on Excipients in the Dossier for Application for Marketing Authorisation",
+          "category": "Quality — Excipients",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/excipients.pdf",
+          "source_url": "https://www.ema.europa.eu/en/excipients-labelling-package-leaflet-human-medicinal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-005",
+          "title": "Guideline on the Pharmaceutical Quality of Inhalation and Nasal Products",
+          "category": "Quality — Dosage Forms",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/pharmaceutical-quality-inhalation-nasal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-006",
+          "title": "Guideline on Real Time Release Testing",
+          "category": "Quality — Testing Strategy",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-real-time-release-testing.pdf",
+          "source_url": "https://www.ema.europa.eu/en/real-time-release-testing-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-007",
+          "title": "Guideline on Finished Dosage Form (Pharmaceutical Development)",
+          "category": "Quality — Development",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/finished-dosage-form.pdf",
+          "source_url": "https://www.ema.europa.eu/en/pharmaceutical-development-new-active-substance-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-008",
+          "title": "Guideline on the Investigation of Bioequivalence",
+          "category": "Quality — Bioequivalence",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/EMA_Bioequivalence.pdf",
+          "source_url": "https://www.ema.europa.eu/en/investigation-bioequivalence-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-009",
+          "title": "Guideline on Similar Biological Medicinal Products",
+          "category": "Quality — Biosimilars",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/similar-biologicals.pdf",
+          "source_url": "https://www.ema.europa.eu/en/similar-biological-medicinal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "Overarching biosimilar guideline"
+        },
+        {
+          "id": "EMA-Q-010",
+          "title": "Guideline on Similar Biological Medicinal Products Containing Biotechnology-Derived Proteins as Active Substance: Quality Issues",
+          "category": "Quality — Biosimilars",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/EMA_Biosimilars_Quality.pdf",
+          "alt_corpus": ["biosimilar-guidelines/guideline-biosimilar-quality-issues.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/similar-biological-medicinal-products-containing-biotechnology-derived-proteins-active-substance-quality-issues-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-011",
+          "title": "Guideline on Setting Specifications for Related Impurities in Antibiotics",
+          "category": "Quality — Impurities",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/setting-specifications-related-impurities-antibiotics-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-012",
+          "title": "Guideline on the Limits of Genotoxic Impurities (ICH M7 Implementation)",
+          "category": "Quality — Genotoxic Impurities",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/ich-m7-assessment-and-control-dna-reactive-mutagenic-impurities-pharmaceuticals-limit-potential-carcinogenic-risk-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "EMA's own implementation of M7"
+        },
+        {
+          "id": "EMA-Q-013",
+          "title": "Guideline on the Sterilisation of the Medicinal Product, Active Substance, Excipient and Primary Container",
+          "category": "Quality — Sterile Products",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/sterilisation-medicinal-product-active-substance-excipient-primary-container-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-014",
+          "title": "Guideline on Plastic Immediate Packaging Materials",
+          "category": "Quality — Packaging",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/plastic-immediate-packaging-materials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "CPMP/QWP/4359/03"
+        },
+        {
+          "id": "EMA-Q-015",
+          "title": "Guideline on Declaration of Herbal Substances and Herbal Preparations in Herbal Medicinal Products/Traditional Herbal Medicinal Products",
+          "category": "Quality — Herbal",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-declaration-herbal-substances-and-herbal-preparations-herbal-medicinal-products-traditional-herbal-medicinal-products_en.pdf",
+          "priority": "LOW",
+          "notes": ""
+        },
+        {
+          "id": "EMA-Q-016",
+          "title": "Questions and Answers on Control of Nitrosamine Impurities in Human Medicinal Products",
+          "category": "Quality — Nitrosamines",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/documents/referral/nitrosamines-emea-h-a53-1490-assessment-report_en.pdf",
+          "priority": "CRITICAL",
+          "notes": "EMA nitrosamine strategy including Article 5(3) referral"
+        },
+        {
+          "id": "EMA-Q-017",
+          "title": "Guideline on Environmental Risk Assessment of Medicinal Products for Human Use",
+          "category": "Quality — Environmental",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-environmental-risk-assessment.pdf",
+          "source_url": "https://www.ema.europa.eu/en/environmental-risk-assessment-medicinal-products-human-use-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "EMA-CLINICAL",
+      "name": "EMA Scientific Guidelines — Efficacy/Clinical",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-CL-001",
+          "title": "Guideline on Adjustment for Baseline Covariates in Clinical Trials",
+          "category": "Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-adjustment-baseline-covariates.pdf",
+          "source_url": "https://www.ema.europa.eu/en/adjustment-baseline-covariates-clinical-trials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-002",
+          "title": "Points to Consider on Missing Data",
+          "category": "Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/missing-data.pdf",
+          "source_url": "https://www.ema.europa.eu/en/missing-data-confirmatory-clinical-trials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-003",
+          "title": "Points to Consider on Multiplicity Issues in Clinical Trials",
+          "category": "Biostatistics",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/multiplicity-issues-clinical-trials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "CPMP/EWP/908/99"
+        },
+        {
+          "id": "EMA-CL-004",
+          "title": "Reflection Paper on the Use of Extrapolation in the Development of Medicines for Paediatrics",
+          "category": "Paediatric",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/use-extrapolation-development-medicines-paediatrics-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-005",
+          "title": "Guideline on Clinical Trials in Small Populations",
+          "category": "Clinical Design",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines/clinical-trials-small-populations.pdf",
+          "source_url": "https://www.ema.europa.eu/en/clinical-trials-small-populations-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-006",
+          "title": "Reflection Paper on Methodological Issues in Confirmatory Clinical Trials Planned with an Adaptive Design",
+          "category": "Clinical Design — Adaptive",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/reflection-paper-adaptive-design.pdf",
+          "source_url": "https://www.ema.europa.eu/en/methodological-issues-confirmatory-clinical-trials-planned-adaptive-design-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-007",
+          "title": "Points to Consider on Meta-Analyses and One Pivotal Study",
+          "category": "Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/points-to-consider-meta-analyses.pdf",
+          "source_url": "https://www.ema.europa.eu/en/documents/scientific-guideline/points-consider-application-meta-analysis-one-pivotal-study_en.pdf",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-008",
+          "title": "Guideline on Reporting the Results of Population Pharmacokinetic Analyses",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-poppk-reporting.pdf",
+          "source_url": "https://www.ema.europa.eu/en/reporting-results-population-pharmacokinetic-analyses-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-009",
+          "title": "Guideline on the Use of Pharmacokinetics and Pharmacodynamics in the Development of Antimicrobial Medicinal Products",
+          "category": "Anti-Infectives",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/use-pharmacokinetics-pharmacodynamics-development-antibacterial-medicinal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-010",
+          "title": "Guideline on the Investigation of Drug Interactions",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-investigation-drug-interactions.pdf",
+          "source_url": "https://www.ema.europa.eu/en/investigation-drug-interactions-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-011",
+          "title": "Guideline on the Qualification and Reporting of Physiologically Based Pharmacokinetic (PBPK) Modelling and Simulation",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-pbpk-modelling.pdf",
+          "source_url": "https://www.ema.europa.eu/en/reporting-physiologically-based-pharmacokinetic-pbpk-modelling-simulation-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-012",
+          "title": "Guideline on the Pharmacokinetic and Clinical Evaluation of Modified Release Dosage Forms",
+          "category": "Biopharmaceutics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-modified-release-pk.pdf",
+          "source_url": "https://www.ema.europa.eu/en/pharmacokinetic-clinical-evaluation-modified-release-dosage-forms-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-013",
+          "title": "Guideline on the Investigation of Subgroups in Confirmatory Clinical Trials",
+          "category": "Biostatistics",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-investigation-subgroups.pdf",
+          "source_url": "https://www.ema.europa.eu/en/investigation-subgroups-confirmatory-clinical-trials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-014",
+          "title": "Guideline on Immunogenicity Assessment of Therapeutic Proteins",
+          "category": "Immunogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-immunogenicity-therapeutic-proteins.pdf",
+          "source_url": "https://www.ema.europa.eu/en/immunogenicity-assessment-therapeutic-proteins-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-015",
+          "title": "Guideline on Immunogenicity Assessment of Monoclonal Antibodies Intended for In Vivo Clinical Use",
+          "category": "Immunogenicity",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-immunogenicity-mabs.pdf",
+          "alt_corpus": ["ema-guidelines/monoclonal-antibodies-immunogenicity.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/immunogenicity-assessment-monoclonal-antibodies-intended-vivo-clinical-use-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-016",
+          "title": "Guideline on SmPC (Summary of Product Characteristics)",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-smpc.pdf",
+          "source_url": "https://www.ema.europa.eu/en/smpc-guideline-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-017",
+          "title": "Guideline on the Readability of the Labelling and Package Leaflet of Medicinal Products for Human Use",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-readability.pdf",
+          "source_url": "https://www.ema.europa.eu/en/readability-labelling-package-leaflet-medicinal-products-human-use-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-ONCO-001",
+          "title": "Guideline on the Evaluation of Anticancer Medicinal Products in Man",
+          "category": "Therapeutic Area — Oncology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-anticancer-medicinal-products.pdf",
+          "alt_corpus": ["ema-guidelines/anticancer-evaluation.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/evaluation-anticancer-medicinal-products-man-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "EMA/CHMP/205/95 Rev 6"
+        },
+        {
+          "id": "EMA-CL-CNS-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Alzheimer's Disease",
+          "category": "Therapeutic Area — CNS",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-alzheimers-investigation.pdf",
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicines-treatment-alzheimers-disease-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CNS-002",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Depression",
+          "category": "Therapeutic Area — Psychiatry",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-depression-investigation.pdf",
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-depression-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-DIAB-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment or Prevention of Diabetes Mellitus",
+          "category": "Therapeutic Area — Diabetes/Metabolic",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-revision-2_en.pdf",
+          "alt_corpus": ["ema-guidelines-v2/guideline-diabetes-investigation.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-prevention-diabetes-mellitus-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "Revision 2"
+        },
+        {
+          "id": "EMA-CL-WEIGHT-001",
+          "title": "Guideline on Clinical Evaluation of Medicinal Products Used in Weight Management",
+          "category": "Therapeutic Area — Metabolic",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-clinical-evaluation-medicinal-products-used-weight-management_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/clinical-evaluation-medicinal-products-used-weight-management-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "Multiple related docs in corpus including revision 1 draft and children addendum"
+        },
+        {
+          "id": "EMA-CL-GI-001",
+          "title": "Guideline on the Evaluation of Medicinal Products for the Treatment of Irritable Bowel Syndrome",
+          "category": "Therapeutic Area — GI",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-evaluation-medicinal-products-treatment-irritable-bowel-syndrome-revision-1_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/evaluation-medicinal-products-treatment-irritable-bowel-syndrome-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-GI-002",
+          "title": "Guideline on the Development of New Medicinal Products for the Treatment of Crohn's Disease",
+          "category": "Therapeutic Area — GI",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-development-new-medicinal-products-treatment-crohns-disease-revision-2_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/development-new-medicinal-products-treatment-crohns-disease-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "Revision 2"
+        },
+        {
+          "id": "EMA-CL-GI-003",
+          "title": "Guideline on the Development of New Medicinal Products for the Treatment of Ulcerative Colitis",
+          "category": "Therapeutic Area — GI",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-development-new-medicinal-products-treatment-ulcerative-colitis-revision-1_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/development-new-medicinal-products-treatment-ulcerative-colitis-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "Revision 1"
+        },
+        {
+          "id": "EMA-CL-GI-004",
+          "title": "Guideline on the Evaluation of Medicinal Products for the Treatment of Chronic Constipation",
+          "category": "Therapeutic Area — GI",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-evaluation-medicinal-products-treatment-chronic-constipation-including-opioid-induced-constipation-and-bowel-cleansing_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/evaluation-medicinal-products-treatment-chronic-constipation-including-opioid-induced-constipation-bowel-cleansing-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-GI-005",
+          "title": "Guideline on the Evaluation of Drugs for the Treatment of Gastro-Oesophageal Reflux Disease (GORD)",
+          "category": "Therapeutic Area — GI",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-evaluation-drugs-treatment-gastro-oesophageal-reflux-disease_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/evaluation-drugs-treatment-gastro-oesophageal-reflux-disease-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-LIVER-001",
+          "title": "Reflection Paper on Regulatory Requirements for Development of Medicinal Products for Chronic Non-Infectious Liver Diseases (PBC, PSC, NASH)",
+          "category": "Therapeutic Area — Hepatology",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/reflection-paper-regulatory-requirements-development-medicinal-products-non-alcoholic-steatohepatitis-nash_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/regulatory-requirements-development-medicinal-products-chronic-non-infectious-liver-diseases-scientific-guideline",
+          "priority": "HIGH",
+          "notes": "Multiple NASH/PBC/PSC reflection papers in corpus"
+        },
+        {
+          "id": "EMA-CL-CVS-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Hypertension",
+          "category": "Therapeutic Area — Cardiovascular",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-hypertension-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CVS-002",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Chronic Heart Failure",
+          "category": "Therapeutic Area — Cardiovascular",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-chronic-heart-failure-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CVS-003",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Lipid Disorders",
+          "category": "Therapeutic Area — Cardiovascular",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-lipid-disorders-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CVS-004",
+          "title": "Guideline on Clinical Investigation of Medicinal Products for the Treatment of Acute Coronary Syndrome (ACS)",
+          "category": "Therapeutic Area — Cardiovascular",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-acute-coronary-syndrome-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CVS-005",
+          "title": "Guideline on the Clinical Investigation of Antithrombotic Medicinal Products in the Prevention and Treatment of Venous Thromboembolic Disease",
+          "category": "Therapeutic Area — Cardiovascular",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-prevention-treatment-venous-thromboembolic-disease-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-RESP-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Asthma",
+          "category": "Therapeutic Area — Respiratory",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-asthma-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-RESP-002",
+          "title": "Guideline on Clinical Investigation of Medicinal Products in the Treatment of Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Therapeutic Area — Respiratory",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-chronic-obstructive-pulmonary-disease-copd-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CNS-003",
+          "title": "Guideline on Clinical Investigation of Medicinal Products for the Treatment of Multiple Sclerosis",
+          "category": "Therapeutic Area — CNS",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-multiple-sclerosis-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CNS-004",
+          "title": "Guideline on the Clinical Investigation of Medicinal Products for the Treatment of Epileptic Disorders",
+          "category": "Therapeutic Area — CNS",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-epileptic-disorders-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-CNS-005",
+          "title": "Guideline on the Clinical Investigation of Medicinal Products for the Treatment of Parkinson's Disease",
+          "category": "Therapeutic Area — CNS",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-parkinsons-disease-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-PAIN-001",
+          "title": "Guideline on the Clinical Development of Medicinal Products Intended for the Treatment of Pain",
+          "category": "Therapeutic Area — Pain",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-development-medicinal-products-intended-treatment-pain-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-RHEUM-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products for the Treatment of Rheumatoid Arthritis",
+          "category": "Therapeutic Area — Immunology/Rheumatology",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-rheumatoid-arthritis-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-ANTIINF-001",
+          "title": "Guideline on the Evaluation of Medicinal Products Indicated for Treatment of Bacterial Infections",
+          "category": "Therapeutic Area — Anti-Infectives",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/evaluation-medicinal-products-indicated-treatment-bacterial-infections-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "CPMP/EWP/558/95 Rev 3"
+        },
+        {
+          "id": "EMA-CL-ANTIINF-002",
+          "title": "Addendum to the Guideline on the Evaluation of Medicinal Products Indicated for Treatment of Bacterial Infections — Targeting Specific Populations",
+          "category": "Therapeutic Area — Anti-Infectives",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/evaluation-medicinal-products-indicated-treatment-bacterial-infections-addendum-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-ANTIINF-003",
+          "title": "Guideline on the Clinical Evaluation of Direct Acting Antivirals for the Treatment of Chronic Hepatitis C",
+          "category": "Therapeutic Area — Anti-Infectives",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-evaluation-direct-acting-antivirals-treatment-chronic-hepatitis-c-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-ANTIINF-004",
+          "title": "Guideline on the Clinical Evaluation of Vaccines",
+          "category": "Therapeutic Area — Vaccines",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-evaluation-vaccines-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "EMA/CHMP/VWP/164653/2005"
+        },
+        {
+          "id": "EMA-CL-RARE-001",
+          "title": "Guideline on Clinical Aspects of Data for Orphan Medicinal Products",
+          "category": "Rare Diseases",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-clinical-aspects-data-orphan-medicinal-products_en.pdf",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-DERM-001",
+          "title": "Guideline on Clinical Investigation of Medicinal Products Indicated for the Treatment of Psoriasis",
+          "category": "Therapeutic Area — Dermatology",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-indicated-treatment-psoriasis-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-HAEM-001",
+          "title": "Guideline on the Clinical Investigation of Recombinant and Human Plasma-Derived Factor VIII Products",
+          "category": "Therapeutic Area — Hematology",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/clinical-investigation-recombinant-human-plasma-derived-factor-viii-products-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-CL-NAUSEA-001",
+          "title": "Guideline on Non-Clinical and Clinical Development of Medicinal Products for Treatment of Nausea and Vomiting Associated with Cancer Chemotherapy",
+          "category": "Therapeutic Area — Oncology Supportive Care",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-non-clinical-and-clinical-development-medicinal-products-treatment-nausea-and-vomiting-associated-cancer-chemotherapy_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/non-clinical-clinical-development-medicinal-products-treatment-nausea-vomiting-associated-cancer-chemotherapy-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "EMA-NONCLINICAL",
+      "name": "EMA Scientific Guidelines — Nonclinical",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-NC-001",
+          "title": "Guideline on Non-Clinical Development of Fixed Combinations of Medicinal Products",
+          "category": "Nonclinical — Combinations",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-guidelines-v2/guideline-non-clinical-development-fixed-combinations-medicinal-products_en.pdf",
+          "source_url": "https://www.ema.europa.eu/en/non-clinical-development-fixed-combinations-medicinal-products-scientific-guideline",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-NC-002",
+          "title": "Guideline on the Non-Clinical Studies Required before First Clinical Use of Gene Therapy Medicinal Products",
+          "category": "Nonclinical — Gene Therapy",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/non-clinical-studies-required-first-clinical-use-gene-therapy-medicinal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-NC-003",
+          "title": "Guideline on the Quality, Non-Clinical and Clinical Aspects of Gene Therapy Medicinal Products",
+          "category": "Nonclinical — Gene Therapy",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-ema/EMA_Gene_Therapy_Quality_NonClinical_Clinical.pdf",
+          "source_url": "https://www.ema.europa.eu/en/quality-non-clinical-clinical-aspects-gene-therapy-medicinal-products-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-NC-004",
+          "title": "Guideline on Strategies to Identify and Mitigate Risks for First-in-Human and Early Clinical Trials with Investigational Medicinal Products",
+          "category": "Nonclinical — FIH Trials",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/strategies-identify-mitigate-risks-first-human-early-clinical-trials-investigational-medicinal-products-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": "EMEA/CHMP/SWP/28367/07 Rev 1"
+        }
+      ]
+    },
+    {
+      "id": "EMA-GVP",
+      "name": "EMA Good Pharmacovigilance Practices (GVP) Modules",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-GVP-I",
+          "title": "GVP Module I — Pharmacovigilance Systems and their Quality Systems",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-I.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-II",
+          "title": "GVP Module II — Pharmacovigilance System Master File",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-II.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-III",
+          "title": "GVP Module III — Pharmacovigilance Inspections",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-III.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-IV",
+          "title": "GVP Module IV — Pharmacovigilance Audits",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-IV.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-V",
+          "title": "GVP Module V — Risk Management Systems",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-V.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": "RMP guidance"
+        },
+        {
+          "id": "EMA-GVP-VI",
+          "title": "GVP Module VI — Collection, Management and Submission of Reports of Suspected Adverse Reactions to Medicinal Products",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-VI.pdf",
+          "alt_corpus": ["ema-gvp-v2/gvp-module-vi-icsr-collection.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-VII",
+          "title": "GVP Module VII — Periodic Safety Update Report",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-VII.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-VIII",
+          "title": "GVP Module VIII — Post-Authorisation Safety Studies",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-VIII.pdf",
+          "alt_corpus": ["ema-gvp-v2/gvp-module-viii-post-authorisation-safety.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-IX",
+          "title": "GVP Module IX — Signal Management",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-IX.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-X",
+          "title": "GVP Module X — Additional Monitoring",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-X.pdf",
+          "alt_corpus": ["ema-gvp-v2/gvp-module-x-additional-monitoring.pdf"],
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-XI",
+          "title": "GVP Module XI — Public Participation in Pharmacovigilance (Reserved)",
+          "category": "GVP",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "LOW",
+          "notes": "Reserved module — not yet published"
+        },
+        {
+          "id": "EMA-GVP-XII",
+          "title": "GVP Module XII — Continuous Pharmacovigilance, Risk-Benefit Assessment (Reserved)",
+          "category": "GVP",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "LOW",
+          "notes": "Reserved module — not yet published"
+        },
+        {
+          "id": "EMA-GVP-XV",
+          "title": "GVP Module XV — Safety Communication",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-XV.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-XVI",
+          "title": "GVP Module XVI — Risk Minimisation Measures: Selection of Tools and Effectiveness Indicators",
+          "category": "GVP",
+          "status": "IN_CORPUS",
+          "corpus_path": "ema-gvp/GVP-Module-XVI.pdf",
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-P-I",
+          "title": "GVP Product- or Population-Specific Considerations I — Vaccines for Prophylaxis Against Infectious Diseases",
+          "category": "GVP",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-GVP-P-II",
+          "title": "GVP Product- or Population-Specific Considerations II — Biological Medicinal Products",
+          "category": "GVP",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "EMA-GMP",
+      "name": "EU GMP (EudraLex Volume 4)",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EU-GMP-CH1", "title": "EU GMP Part I Chapter 1 — Pharmaceutical Quality System", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap1.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-CH2", "title": "EU GMP Part I Chapter 2 — Personnel", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap2.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "HIGH", "notes": "" },
+        { "id": "EU-GMP-CH3", "title": "EU GMP Part I Chapter 3 — Premises and Equipment", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap3.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "HIGH", "notes": "" },
+        { "id": "EU-GMP-CH4", "title": "EU GMP Part I Chapter 4 — Documentation", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap4.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-CH5", "title": "EU GMP Part I Chapter 5 — Production", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap5.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-CH6", "title": "EU GMP Part I Chapter 6 — Quality Control", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap6.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-CH7", "title": "EU GMP Part I Chapter 7 — Outsourced Activities", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap7.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "HIGH", "notes": "" },
+        { "id": "EU-GMP-CH8", "title": "EU GMP Part I Chapter 8 — Complaints, Quality Defects and Product Recalls", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap8.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "HIGH", "notes": "" },
+        { "id": "EU-GMP-CH9", "title": "EU GMP Part I Chapter 9 — Self Inspection", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-chap9.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN1", "title": "EU GMP Annex 1 — Manufacture of Sterile Medicinal Products (2022 Revision)", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an1-sterile.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "Major 2022 revision — extremely important" },
+        { "id": "EU-GMP-AN2", "title": "EU GMP Annex 2 — Manufacture of Biological Active Substances and Medicinal Products for Human Use", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an2.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-AN3", "title": "EU GMP Annex 3 — Manufacture of Radiopharmaceuticals", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an3.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN4", "title": "EU GMP Annex 4 — Manufacture of Veterinary Medicinal Products Other Than Immunological Veterinary Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an4.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN5", "title": "EU GMP Annex 5 — Manufacture of Immunological Veterinary Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an5.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN6", "title": "EU GMP Annex 6 — Manufacture of Medicinal Gases", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an6.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN7", "title": "EU GMP Annex 7 — Manufacture of Herbal Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an7.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN8", "title": "EU GMP Annex 8 — Sampling of Starting and Packaging Materials", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an8.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN9", "title": "EU GMP Annex 9 — Manufacture of Liquids, Creams and Ointments", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an9.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN10", "title": "EU GMP Annex 10 — Manufacture of Pressurised Metered Dose Aerosol Preparations for Inhalation", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an10.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN11", "title": "EU GMP Annex 11 — Computerised Systems", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an11.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "EU equivalent of 21 CFR Part 11" },
+        { "id": "EU-GMP-AN12", "title": "EU GMP Annex 12 — Use of Ionising Radiation in the Manufacture of Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an12.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "LOW", "notes": "" },
+        { "id": "EU-GMP-AN13", "title": "EU GMP Annex 13 — Investigational Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an13.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "GMP for clinical trial supplies" },
+        { "id": "EU-GMP-AN14", "title": "EU GMP Annex 14 — Manufacture of Products Derived from Human Blood or Human Plasma", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an14.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN15", "title": "EU GMP Annex 15 — Qualification and Validation", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an15.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-AN16", "title": "EU GMP Annex 16 — Certification by a Qualified Person and Batch Release", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an16.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "" },
+        { "id": "EU-GMP-AN17", "title": "EU GMP Annex 17 — Parametric Release", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an17.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN19", "title": "EU GMP Annex 19 — Reference and Retention Samples", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an19.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-AN21", "title": "EU GMP Annex 21 — Importation of Medicinal Products", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-an21.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-PT2", "title": "EU GMP Part II — Basic Requirements for Active Substances Used as Starting Materials (ICH Q7)", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-part2.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "CRITICAL", "notes": "Equivalent to ICH Q7" },
+        { "id": "EU-GMP-PT3", "title": "EU GMP Part III — GMP Related Documents", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-part3.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "HIGH", "notes": "" },
+        { "id": "EU-GMP-INTRO", "title": "EU GMP Introduction", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-intro.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" },
+        { "id": "EU-GMP-GLOSS", "title": "EU GMP Glossary", "category": "GMP", "status": "IN_CORPUS", "corpus_path": "eu-gmp/vol4-glossary.pdf", "source_url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "priority": "MEDIUM", "notes": "" }
+      ]
+    },
+    {
+      "id": "EMA-REG",
+      "name": "EU Regulations and Directives",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EU-REG-001",
+          "title": "Directive 2001/83/EC — Community Code Relating to Medicinal Products for Human Use (Consolidated)",
+          "category": "Primary Legislation",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Directive_2001_83_EC.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02001L0083-20220101",
+          "priority": "CRITICAL",
+          "notes": "Core EU pharma law — includes Annex I (analytical, pharmacotoxicological, clinical standards)"
+        },
+        {
+          "id": "EU-REG-002",
+          "title": "Regulation (EC) No 726/2004 — Centralised Procedure",
+          "category": "Primary Legislation",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_726_2004.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02004R0726-20220128",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-003",
+          "title": "Regulation (EU) No 536/2014 — Clinical Trials Regulation",
+          "category": "Clinical Trials",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_536_2014_Clinical_Trials.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014R0536",
+          "priority": "CRITICAL",
+          "notes": "Replaced Directive 2001/20/EC"
+        },
+        {
+          "id": "EU-REG-004",
+          "title": "Regulation (EC) No 1394/2007 — Advanced Therapy Medicinal Products (ATMPs)",
+          "category": "ATMPs",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_1394_2007_ATMPs.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32007R1394",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-005",
+          "title": "Regulation (EC) No 141/2000 — Orphan Medicinal Products",
+          "category": "Orphan",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_141_2000_Orphan.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32000R0141",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-006",
+          "title": "Regulation (EC) No 1901/2006 — Paediatric Regulation",
+          "category": "Paediatric",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_1901_2006_Paediatric.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32006R1901",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-007",
+          "title": "Commission Regulation (EC) No 1234/2008 — Variations Regulation",
+          "category": "Variations",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_1234_2008_Variations.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32008R1234",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-008",
+          "title": "Commission Delegated Regulation (EU) 2017/1569 — GMP for Investigational Medicinal Products",
+          "category": "GMP-IMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "regulations-eu/Regulation_2017_1569_GMP_IMP.pdf",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32017R1569",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EU-REG-009",
+          "title": "Directive 2011/62/EU — Falsified Medicines Directive",
+          "category": "Anti-Counterfeiting",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32011L0062",
+          "priority": "HIGH",
+          "notes": "Includes serialization/safety features requirements"
+        },
+        {
+          "id": "EU-REG-010",
+          "title": "EU Pharmaceutical Legislation Reform (2025) — Proposed Directive and Regulation",
+          "category": "Legislative Reform",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://health.ec.europa.eu/medicinal-products/pharmaceutical-strategy-europe/reform-eu-pharmaceutical-legislation_en",
+          "priority": "HIGH",
+          "notes": "Major reform replacing 2001/83/EC and 726/2004 — still in legislative process"
+        }
+      ]
+    },
+    {
+      "id": "EMA-BIOSIMILAR",
+      "name": "EMA Biosimilar Guidelines",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-BIO-001",
+          "title": "Guideline on Similar Biological Medicinal Products Containing Biotechnology-Derived Proteins as Active Substance: Non-Clinical and Clinical Issues",
+          "category": "Biosimilars — Nonclinical/Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "biosimilar-guidelines/guideline-biosimilar-nonclinical-clinical.pdf",
+          "source_url": "https://www.ema.europa.eu/en/similar-biological-medicinal-products-containing-biotechnology-derived-proteins-active-substance-non-clinical-clinical-issues-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "EMA-BIO-002",
+          "title": "Guideline on Similar Biological Medicinal Products Containing Monoclonal Antibodies — Non-Clinical and Clinical Issues",
+          "category": "Biosimilars — mAbs",
+          "status": "IN_CORPUS",
+          "corpus_path": "biosimilar-guidelines/guideline-biosimilar-mabs.pdf",
+          "source_url": "https://www.ema.europa.eu/en/similar-biological-medicinal-products-containing-monoclonal-antibodies-non-clinical-clinical-issues-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-BIO-003",
+          "title": "Guideline on Comparability of Biotechnology-Derived Medicinal Products After a Change in the Manufacturing Process",
+          "category": "Biosimilars — Comparability",
+          "status": "IN_CORPUS",
+          "corpus_path": "biosimilar-guidelines/guideline-comparability-biotech.pdf",
+          "source_url": "https://www.ema.europa.eu/en/comparability-biotechnology-derived-medicinal-products-after-change-manufacturing-process-non-clinical-clinical-issues-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-BIO-004",
+          "title": "Overarching Guideline on Similar Biological Medicinal Products",
+          "category": "Biosimilars — Overarching",
+          "status": "IN_CORPUS",
+          "corpus_path": "biosimilar-guidelines/guideline-similar-biological-products-overarching.pdf",
+          "source_url": "https://www.ema.europa.eu/en/similar-biological-medicinal-products-overarching-guideline-scientific-guideline",
+          "priority": "CRITICAL",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "EMA-ATMP",
+      "name": "EMA Advanced Therapy Medicinal Products (ATMPs)",
+      "market": "EU (EMA)",
+      "documents": [
+        {
+          "id": "EMA-ATMP-001",
+          "title": "Guideline on Quality, Non-Clinical and Clinical Requirements for Investigational ATMPs in Clinical Trials",
+          "category": "ATMPs",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-ema/EMA_ATMP_Investigational_Clinical_Trials.pdf",
+          "source_url": "https://www.ema.europa.eu/en/quality-non-clinical-clinical-requirements-investigational-advanced-therapy-medicinal-products-clinical-trials-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-ATMP-002",
+          "title": "Guideline on the Quality, Non-Clinical and Clinical Aspects of Medicinal Products Containing Genetically Modified Cells",
+          "category": "ATMPs — Genetically Modified Cells",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-ema/EMA_Genetically_Modified_Cells_Rev1.pdf",
+          "source_url": "https://www.ema.europa.eu/en/quality-non-clinical-clinical-aspects-medicinal-products-containing-genetically-modified-cells-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "EMA-ATMP-003",
+          "title": "Guideline on Follow-Up of Patients Administered with Gene Therapy Medicinal Products",
+          "category": "ATMPs — Follow-Up",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/gene-therapy-ema/EMA_Follow_Up_Gene_Therapy.pdf",
+          "source_url": "https://www.ema.europa.eu/en/follow-patients-administered-gene-therapy-medicinal-products-scientific-guideline",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PMDA-GUIDELINES",
+      "name": "Japan PMDA Guidance Documents",
+      "market": "Japan (PMDA)",
+      "documents": [
+        {
+          "id": "PMDA-001",
+          "title": "PMDA Guideline on Quality of Drug Substances",
+          "category": "Quality",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/PMDA_Quality_Drug_Substances.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-002",
+          "title": "PMDA Guideline on Clinical Evaluation of New Drugs",
+          "category": "Clinical",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/PMDA_Clinical_Evaluation.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-003",
+          "title": "PMDA Guideline on Stability Testing",
+          "category": "Quality — Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/PMDA_Stability_Testing.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-004",
+          "title": "PMDA Guideline on the Quality of Biotechnology/Biological Products",
+          "category": "Quality — Biologics",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/PMDA_Biologics_Quality.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-005",
+          "title": "PMDA Guideline on Ethnic Factors and Foreign Clinical Data (ICH E5 Implementation / Bridging Studies)",
+          "category": "Clinical — Ethnic Bridging",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/PMDA_Ethnic_Factors_Bridging.pdf",
+          "alt_corpus": ["pmda-guidelines-v2/pmda-ethnic-factors-ich-e5.pdf"],
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": "Japan's bridging study requirements are unique and very important"
+        },
+        {
+          "id": "PMDA-006",
+          "title": "PMDA Guideline on Bioequivalence Studies for Generic Products",
+          "category": "Bioequivalence",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/bioequivalence.pdf",
+          "alt_corpus": ["pmda-guidelines-v2/pmda-bioequivalence-generic-products.pdf"],
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-007",
+          "title": "Japanese Pharmacopoeia (JP18)",
+          "category": "Pharmacopoeia",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines/JP18-pharmacopoeia.pdf",
+          "source_url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000066530.html",
+          "priority": "HIGH",
+          "notes": "Available free from NIHS/MHLW"
+        },
+        {
+          "id": "PMDA-008",
+          "title": "PMDA Guideline on Anticancer Drug Clinical Evaluation",
+          "category": "Clinical — Oncology",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-anticancer-clinical-evaluation.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-009",
+          "title": "PMDA Guideline on Bioanalytical Method Validation",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-bioanalytical-method-validation.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": "Also have M10 implementation version"
+        },
+        {
+          "id": "PMDA-010",
+          "title": "PMDA Guideline on Clinical Pharmacokinetics",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-clinical-pharmacokinetics.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-011",
+          "title": "PMDA Guideline on Drug Interaction Studies",
+          "category": "Clinical Pharmacology",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-drug-interaction-studies.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-012",
+          "title": "PMDA Conditional Early Approval System",
+          "category": "Regulatory Pathway",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-conditional-early-approval.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-013",
+          "title": "PMDA SAKIGAKE Designation System",
+          "category": "Regulatory Pathway",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-sakigake-designation.pdf",
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": "Japan's priority review for innovative drugs"
+        },
+        {
+          "id": "PMDA-014",
+          "title": "PMDA eCTD Submission Format Requirements",
+          "category": "Submission Format",
+          "status": "IN_CORPUS",
+          "corpus_path": "pmda-guidelines-v2/pmda-ectd-submission-formats.pdf",
+          "alt_corpus": ["pmda-guidelines-v2/pmda-ectd-v4-implementation-guide.pdf"],
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": "Also have v4 implementation guide"
+        },
+        {
+          "id": "PMDA-015",
+          "title": "MHLW Ministerial Ordinance 179 — GMP Ordinance (Pharmaceutical Affairs Law)",
+          "category": "GMP Regulation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": "Japan's GMP requirements — MHLW MO 179"
+        },
+        {
+          "id": "PMDA-016",
+          "title": "MHLW Ministerial Ordinance 28 — GCP Ordinance",
+          "category": "GCP Regulation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "CRITICAL",
+          "notes": "Japan's GCP requirements — MHLW MO 28"
+        },
+        {
+          "id": "PMDA-017",
+          "title": "MHLW Ministerial Ordinance 135 — GVP Ordinance (Good Vigilance Practice)",
+          "category": "GVP Regulation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-018",
+          "title": "MHLW Ministerial Ordinance 171 — GPSP Ordinance (Good Post-Marketing Study Practice)",
+          "category": "Post-Marketing Regulation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-019",
+          "title": "Pharmaceutical and Medical Devices Act (PMD Act) — Japan's Primary Pharmaceutical Law",
+          "category": "Primary Legislation",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.japaneselawtranslation.go.jp/en/laws/view/3971",
+          "priority": "CRITICAL",
+          "notes": "Formerly the Pharmaceutical Affairs Law (PAL)"
+        },
+        {
+          "id": "PMDA-020",
+          "title": "PMDA Guideline on CTD Format for Japan (JP CTD Module 1)",
+          "category": "Submission Format",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": "Japan-specific Module 1"
+        },
+        {
+          "id": "PMDA-021",
+          "title": "PMDA Guideline on Biosimilar Products",
+          "category": "Biosimilars",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-022",
+          "title": "PMDA Guideline on Regenerative Medicine Products (Including Cell Therapy)",
+          "category": "Regenerative Medicine",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": "Japan has unique regenerative medicine legislation (Act on Safety of Regenerative Medicine)"
+        },
+        {
+          "id": "PMDA-023",
+          "title": "PMDA Guideline on Pediatric Drug Development",
+          "category": "Paediatric",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-024",
+          "title": "PMDA Notification on Impurities in New Drug Substances and Products (Japanese Implementation of Q3A/Q3B)",
+          "category": "Quality — Impurities",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-025",
+          "title": "AMED Research Support for Drug Development",
+          "category": "Funding/Support",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.amed.go.jp/en/program/list/01/02/001.html",
+          "priority": "LOW",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-026",
+          "title": "PMDA Guideline on Nonclinical Safety Evaluation for Gene Therapy Products",
+          "category": "Nonclinical — Gene Therapy",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "PMDA-027",
+          "title": "PMDA Guideline on Use of Real World Data (Notification 2023)",
+          "category": "Real World Data",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.pmda.go.jp/english/rs-sb-std/standards-development/guidance-documents/0001.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "HC-GUIDELINES",
+      "name": "Health Canada Guidance Documents",
+      "market": "Canada (Health Canada)",
+      "documents": [
+        {
+          "id": "HC-001",
+          "title": "Guidance Document: Drug Submission Requirements and Guidelines",
+          "category": "Submissions",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/drugsubmissionguidance.html",
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-002",
+          "title": "Guidance Document: Preparation of Drug Regulatory Activities in CTD Format (Common Technical Document)",
+          "category": "CTD Format",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/HC_CTD_Guidance.pdf",
+          "alt_corpus": ["health-canada/HC_CTD_CTA_Format.pdf", "health-canada/CTDguidance.html"],
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/common-technical-document.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-003",
+          "title": "Food and Drug Regulations (C.R.C., c. 870) — Full Regulations",
+          "category": "Regulations",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/Food_Drug_Regulations_Canada_Full.pdf",
+          "alt_corpus": ["health-canada/food-drug-regulations.html"],
+          "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.%2C_c._870/",
+          "priority": "CRITICAL",
+          "notes": "Division C.08 (new drugs), C.05 (drugs for clinical trials), C.01A (establishment licences)"
+        },
+        {
+          "id": "HC-004",
+          "title": "Food and Drugs Act (R.S.C., 1985, c. F-27)",
+          "category": "Primary Legislation",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/Food_Drugs_Act_Canada.pdf",
+          "source_url": "https://laws-lois.justice.gc.ca/eng/acts/f-27/",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-005",
+          "title": "Good Manufacturing Practices Guide for Drug Products (GUI-0001)",
+          "category": "GMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/GMPguide.html",
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/compliance-enforcement/good-manufacturing-practices/guidance-documents/gmp-guidelines-0001.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-006",
+          "title": "Guidance Document: Clinical Trial Applications (CTAs)",
+          "category": "Clinical Trials",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/clinicaltrialapplications.html",
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/clinical-trial-applications.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-007",
+          "title": "Guidance Document: Basis of Decision (BoD) Documents",
+          "category": "Transparency",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/basisofdecision.html",
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/basis-decision.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "HC-008",
+          "title": "Product Monograph Guidance Document",
+          "category": "Labeling",
+          "status": "IN_CORPUS",
+          "corpus_path": "health-canada/monograph/pm-guid-ld-mp-eng.pdf",
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/product-monograph.html",
+          "priority": "CRITICAL",
+          "notes": "Canada's equivalent of US PI and EU SmPC"
+        },
+        {
+          "id": "HC-009",
+          "title": "Guidance Document: Conduct and Analysis of Comparative Bioavailability Studies",
+          "category": "Bioequivalence",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/bioavailability-bioequivalence/comparative-bioavailability-studies.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-010",
+          "title": "Guidance Document: Post-Notice of Compliance (NOC) Changes — Quality Document",
+          "category": "Post-Approval Changes",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/post-notice-compliance-changes/quality.html",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "HC-011",
+          "title": "Guidance Document: Priority Review of Drug Submissions",
+          "category": "Regulatory Pathway",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/priority-review.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "HC-012",
+          "title": "Guidance Document: Notice of Compliance with Conditions (NOC/c)",
+          "category": "Regulatory Pathway",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/notice-compliance-conditions.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "HC-013",
+          "title": "Guidance Document: Drugs for Rare Diseases (Agile Licensing for Drugs and Medical Devices)",
+          "category": "Rare Diseases",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/agile-licensing.html",
+          "priority": "HIGH",
+          "notes": "New agile licensing pathway"
+        },
+        {
+          "id": "HC-014",
+          "title": "Guidance Document: Submission of Pharmacogenomic Information",
+          "category": "Pharmacogenomics",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "LOW",
+          "notes": ""
+        },
+        {
+          "id": "HC-015",
+          "title": "Guidance Document: Data Protection Under C.08.004.1 of the Food and Drug Regulations",
+          "category": "Data Protection",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/data-protection.html",
+          "priority": "MEDIUM",
+          "notes": "8-year data protection period"
+        },
+        {
+          "id": "HC-016",
+          "title": "Guidance Document: Pharmaceutical Quality of Aqueous Solutions",
+          "category": "Quality",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "HC-017",
+          "title": "Guidance Document: Nonclinical Safety Evaluation",
+          "category": "Nonclinical",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "HC-018",
+          "title": "Guidance Document: Drug Identification Number (DIN) Application Process",
+          "category": "Administrative",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "HC-019",
+          "title": "Guidance Document: Biosimilar Biologic Drugs in Canada",
+          "category": "Biosimilars",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/biologics-radiopharmaceuticals-genetic-therapies/applications-submissions/guidance-documents/information-guidance-document-subsequent-entry-biologics.html",
+          "priority": "HIGH",
+          "notes": "Subsequent Entry Biologics (SEBs)"
+        },
+        {
+          "id": "HC-020",
+          "title": "Guidance Document: Stability Testing of Existing Drug Substances and Products",
+          "category": "Quality — Stability",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "HC-021",
+          "title": "Health Canada Policy on Bioequivalence Standards",
+          "category": "Bioequivalence",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents.html",
+          "priority": "HIGH",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "CROSS-MARKET",
+      "name": "Cross-Market Reference Documents",
+      "market": "Cross-Market",
+      "documents": [
+        {
+          "id": "CROSS-001",
+          "title": "eCTD v3.2.2 Specification",
+          "category": "Submission Format",
+          "status": "IN_CORPUS",
+          "corpus_path": "ectd-specs/eCTD_v3.2.2_Specification.pdf",
+          "source_url": "https://estri.ich.org/eCTD/",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-002",
+          "title": "ICH eCTD Submission Formats v1.2",
+          "category": "Submission Format",
+          "status": "IN_CORPUS",
+          "corpus_path": "ectd-specs/Submission_Formats_v1.2.pdf",
+          "source_url": "https://estri.ich.org/eCTD/",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-003",
+          "title": "ICH eCTD Submission Formats v1.3",
+          "category": "Submission Format",
+          "status": "IN_CORPUS",
+          "corpus_path": "ectd-specs/Submission_Formats_v1.3.pdf",
+          "source_url": "https://estri.ich.org/eCTD/",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-004",
+          "title": "PIC/S Guide to Good Manufacturing Practice for Medicinal Products — Data Integrity (PI 041-1)",
+          "category": "GMP — Data Integrity",
+          "status": "IN_CORPUS",
+          "corpus_path": "pics-guidelines/pics-pi-041-1-data-integrity.pdf",
+          "alt_corpus": ["regulations/PI_041-1.pdf"],
+          "source_url": "https://picscheme.org/en/publications?tri=gmp",
+          "priority": "CRITICAL",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-005",
+          "title": "PIC/S Guidance on Data Management and Integrity in a GMP/GDP Environment",
+          "category": "GMP — Data Integrity",
+          "status": "IN_CORPUS",
+          "corpus_path": "pics-guidelines/pics-data-management-integrity-gmp-gdp.pdf",
+          "source_url": "https://picscheme.org/en/publications?tri=gmp",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-006",
+          "title": "WHO GMP — TRS 986 Annex 2",
+          "category": "GMP",
+          "status": "IN_CORPUS",
+          "corpus_path": "who-guidelines/WHO-GMP-TRS986-Annex2.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs986-annex2",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-007",
+          "title": "WHO Stability Testing — TRS 1010 Annex 10",
+          "category": "Stability",
+          "status": "IN_CORPUS",
+          "corpus_path": "who-guidelines/WHO-Stability-TRS1010-Annex10.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs1010-annex10",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-008",
+          "title": "WHO Good Reliance Practices — TRS 1033",
+          "category": "Regulatory Reliance",
+          "status": "IN_CORPUS",
+          "corpus_path": "who-guidelines-v2/who-good-reliance-practices-trs1033.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs1033",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-009",
+          "title": "WHO Prequalification: Multisource Guidelines",
+          "category": "Generics/Prequalification",
+          "status": "IN_CORPUS",
+          "corpus_path": "who-guidelines-v2/who-prequalification-multisource-guidelines.pdf",
+          "source_url": "https://extranet.who.int/prequal/",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-010",
+          "title": "WHO Clinical Evaluation of Vaccines — TRS 1004 Annex 9",
+          "category": "Vaccines",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-who/WHO_Clinical_Evaluation_Vaccines_TRS1004_Annex9.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs1004-annex9",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-011",
+          "title": "WHO Nonclinical Evaluation of Vaccines — Annex 1",
+          "category": "Vaccines",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-who/WHO_Nonclinical_Evaluation_Vaccines_Annex1.pdf",
+          "source_url": "https://www.who.int/publications/m/item/nonclinical-evaluation-vaccines-annex1",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-012",
+          "title": "WHO mRNA Vaccines — TRS 1039 Annex 3",
+          "category": "Vaccines — mRNA",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-who/WHO_mRNA_Vaccines_TRS1039_Annex3.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs1039-annex3",
+          "priority": "HIGH",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-013",
+          "title": "WHO DNA Vaccines — TRS 1028 Annex 2",
+          "category": "Vaccines — DNA",
+          "status": "IN_CORPUS",
+          "corpus_path": "gap-fill/vaccines-who/WHO_DNA_Vaccines_TRS1028_Annex2.pdf",
+          "source_url": "https://www.who.int/publications/m/item/trs1028-annex2",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-014",
+          "title": "EMA-FDA Parallel Scientific Advice — Joint Application Form and Guidance",
+          "category": "Mutual Recognition",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/parallel-ema-fda-scientific-advice",
+          "priority": "MEDIUM",
+          "notes": ""
+        },
+        {
+          "id": "CROSS-015",
+          "title": "MRA — EU-US Mutual Recognition Agreement on GMP Inspections",
+          "category": "Mutual Recognition",
+          "status": "MISSING",
+          "corpus_path": null,
+          "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/international-activities/mutual-recognition-agreements",
+          "priority": "MEDIUM",
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,850 @@
+{
+  "metadata": {
+    "title": "EU vs FDA Regulatory Divergences — Comprehensive Mapping",
+    "version": "3.0",
+    "generated": "2026-03-22",
+    "description": "Maps specific differences between EU pharmaceutical legislation and US FDA requirements. Each divergence identifies the EU legal basis, the corresponding FDA framework, the nature of the difference, and practical compliance implications.",
+    "total_divergences": 68
+  },
+
+  "divergence_categories": {
+
+    "01_regulatory_structure": {
+      "title": "Regulatory Structure and Authorization Pathways",
+      "divergences": [
+        {
+          "id": "DIV-001",
+          "topic": "Multi-authority system vs single agency",
+          "eu_requirement": "EU has 27 national competent authorities plus EMA. Four authorization pathways: centralised (EMA), mutual recognition, decentralised, and national.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 6, 17, 28-39; Reg 726/2004 Arts. 3-4",
+          "fda_requirement": "Single federal agency (FDA) with one approval pathway (NDA/BLA). No state-level drug approval authority.",
+          "fda_legal_basis": "21 USC §355 (NDA), 42 USC §262 (BLA)",
+          "divergence_type": "structural",
+          "impact": "critical",
+          "compliance_implication": "EU requires strategic choice of authorization pathway. A product may need national translations, local legal representatives, and engagement with multiple authorities. FDA path is simpler but covers only one jurisdiction."
+        },
+        {
+          "id": "DIV-002",
+          "topic": "Mandatory centralised procedure scope",
+          "eu_requirement": "Biotechnology products, ATMPs, orphan drugs, and products with new active substances for specified diseases MUST use centralised procedure.",
+          "eu_legal_basis": "Reg 726/2004 Annex",
+          "fda_requirement": "No mandatory pathway distinction by product type. All drugs/biologics go through FDA regardless of therapeutic area.",
+          "fda_legal_basis": "21 USC §355, 42 USC §262",
+          "divergence_type": "structural",
+          "impact": "high",
+          "compliance_implication": "EU applicants for biotech/ATMP/orphan products have no choice — must file centrally. This determines fees, timelines, and assessment body."
+        },
+        {
+          "id": "DIV-003",
+          "topic": "Mutual recognition and decentralised procedures",
+          "eu_requirement": "Products not in mandatory centralised scope may use decentralised procedure (multi-state simultaneous) or mutual recognition (post-initial authorization). Reference Member State leads assessment; concerned Member States may only disagree on grounds of 'potential serious risk to public health.'",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 28-39",
+          "fda_requirement": "No equivalent. FDA approval covers entire US territory automatically.",
+          "fda_legal_basis": "21 USC §355(a)",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "EU applicants must manage multi-country regulatory strategy, translations, national transposition differences, and potential referral/arbitration procedures."
+        },
+        {
+          "id": "DIV-004",
+          "topic": "Conditional marketing authorisation",
+          "eu_requirement": "MA may be granted for unmet medical needs (serious/life-threatening diseases) prior to comprehensive clinical data. Valid for 1 year, renewable, with annual reassessment of specific obligations. Risk-benefit must be favourable.",
+          "eu_legal_basis": "Reg 726/2004 Art. 14-a",
+          "fda_requirement": "Accelerated Approval allows approval based on surrogate endpoints, but grant is not explicitly time-limited to 1 year. Post-marketing confirmatory trials required. FDA can withdraw if trials fail.",
+          "fda_legal_basis": "21 USC §356(c) (Accelerated Approval)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "EU conditional MA creates annual renewal pressure with strict specific obligations. FDA accelerated approval has confirmatory study requirement but not fixed annual renewal."
+        },
+        {
+          "id": "DIV-005",
+          "topic": "Exceptional circumstances authorisation",
+          "eu_requirement": "MA under exceptional circumstances when comprehensive data cannot be provided for objective, verifiable reasons. Linked to annual reassessment.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 22; Reg 726/2004 Art. 14(8)",
+          "fda_requirement": "No direct equivalent. Closest is Subpart H/I approval or Emergency Use Authorization.",
+          "fda_legal_basis": "21 USC §360bbb-3 (EUA)",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "EU has a distinct long-term authorization pathway for products where full data may never be obtainable, separate from emergency mechanisms."
+        }
+      ]
+    },
+
+    "02_data_exclusivity_and_IP": {
+      "title": "Data Exclusivity, Market Protection, and IP Incentives",
+      "divergences": [
+        {
+          "id": "DIV-006",
+          "topic": "Data exclusivity / marketing protection periods",
+          "eu_requirement": "8 years data exclusivity + 2 years marketing protection (8+2=10 total). Extendable to 11 years for significant new indication. Generic can file at year 8 but not market until year 10.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 10(1); Reg 726/2004 Art. 14(11)",
+          "fda_requirement": "NCE: 5 years data exclusivity; generic filing permitted at year 4 with Paragraph IV certification. New clinical investigation: 3 years additional exclusivity. Biologics: 12 years (4-year filing gate).",
+          "fda_legal_basis": "21 USC §355(c)(3)(E), §355(j)(5)(F) (Hatch-Waxman); 42 USC §262(k) (BPCIA)",
+          "divergence_type": "different_terms",
+          "impact": "critical",
+          "compliance_implication": "EU provides longer small-molecule data exclusivity (8 vs 5 years) but shorter biologic protection (10 vs 12 years). The 8+2+1 EU structure means generics can file at year 8 and market at year 10 (or 11)."
+        },
+        {
+          "id": "DIV-007",
+          "topic": "Orphan market exclusivity",
+          "eu_requirement": "10 years of market exclusivity. Reduced to 6 years if prevalence criteria no longer met at year 5 or if product sufficiently profitable. Derogated if similar product clinically superior.",
+          "eu_legal_basis": "Reg 141/2000 Art. 8",
+          "fda_requirement": "7 years of market exclusivity from date of approval. No reduction mechanism based on profitability. Exclusivity can be overcome by showing clinical superiority.",
+          "fda_legal_basis": "21 USC §360cc (Orphan Drug Act)",
+          "divergence_type": "different_terms",
+          "impact": "high",
+          "compliance_implication": "EU provides longer orphan exclusivity (10 vs 7 years) but with clawback risk. EU definition uses 5/10,000 prevalence threshold vs FDA's 200,000-patient threshold."
+        },
+        {
+          "id": "DIV-008",
+          "topic": "Paediatric rewards",
+          "eu_requirement": "Completed PIP: 6-month SPC extension. Orphan products: 2 additional years market exclusivity (total 12 years). PUMA: 10 years data/marketing protection.",
+          "eu_legal_basis": "Reg 1901/2006 Arts. 36-37",
+          "fda_requirement": "Pediatric exclusivity: 6-month extension of any existing exclusivity/patent protection. Best Pharmaceuticals for Children Act (BPCA) and Pediatric Research Equity Act (PREA).",
+          "fda_legal_basis": "21 USC §355a (BPCA), §355c (PREA)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "EU SPC extension applies only if SPC exists; FDA pediatric exclusivity extends any existing exclusivity. EU PUMA pathway has no US equivalent. EU paediatric obligation is triggered earlier (PIP required at PK study completion) vs US PREA at NDA/BLA stage."
+        },
+        {
+          "id": "DIV-009",
+          "topic": "Well-established use pathway",
+          "eu_requirement": "Where active substance in well-established medicinal use for at least 10 years within the Community with recognised efficacy and acceptable safety, test and trial results may be replaced by scientific literature.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 10a",
+          "fda_requirement": "No direct equivalent. Closest is OTC monograph system or literature-based NDA (505(b)(2)), but these do not provide identical 10-year use substitution.",
+          "fda_legal_basis": "21 USC §355(b)(2)",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "EU offers a pure literature-based pathway for long-established substances. US 505(b)(2) allows reference to published literature but typically requires at least bridging studies."
+        }
+      ]
+    },
+
+    "03_clinical_trials": {
+      "title": "Clinical Trial Requirements",
+      "divergences": [
+        {
+          "id": "DIV-010",
+          "topic": "Multi-state clinical trial authorisation",
+          "eu_requirement": "Single submission through EU portal for multi-country trials. Reporting Member State leads coordinated assessment with defined three-phase timelines (26+12+7 days). Tacit authorisation if Member State fails to respond within timelines.",
+          "eu_legal_basis": "Reg 536/2014 Arts. 5-8",
+          "fda_requirement": "Single IND submission to FDA. 30-day review period; clinical hold if concerns. No multi-country coordination mechanism within US.",
+          "fda_legal_basis": "21 CFR Part 312",
+          "divergence_type": "different_mechanism",
+          "impact": "critical",
+          "compliance_implication": "EU provides a coordinated multi-state approval mechanism with strict timelines and tacit approval. FDA IND process is simpler but covers only the US. EU requires parallel ethics committee integration."
+        },
+        {
+          "id": "DIV-011",
+          "topic": "Ethics committee integration",
+          "eu_requirement": "Ethics committee review integrated into the regulatory assessment timeline (Part II). Each Member State assesses ethical aspects within same 45-day timeline. Ethics committee may cover aspects in both Part I and Part II.",
+          "eu_legal_basis": "Reg 536/2014 Arts. 4, 7",
+          "fda_requirement": "IRB review is a parallel, separate process from IND review. FDA does not integrate IRB timelines into its review. IRB approval required before trial starts but not as part of the IND submission.",
+          "fda_legal_basis": "21 CFR Part 56",
+          "divergence_type": "different_structure",
+          "impact": "high",
+          "compliance_implication": "In the EU, regulatory and ethical review timelines are legally interlinked. A negative ethics opinion can prevent trial authorization. In the US, IRB and FDA processes run independently."
+        },
+        {
+          "id": "DIV-012",
+          "topic": "Low-intervention clinical trials",
+          "eu_requirement": "Distinct category: trials using authorised products within or supported by evidence outside marketing authorisation terms, with minimal additional risk. Subject to less stringent monitoring, master file, and IMP traceability rules.",
+          "eu_legal_basis": "Reg 536/2014 Art. 2(2)(3)",
+          "fda_requirement": "No formal low-intervention category. All trials require IND unless exempt (21 CFR 312.2). Exempt trials must meet specific criteria but are not labeled as a separate regulatory category.",
+          "fda_legal_basis": "21 CFR 312.2(b)",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "EU provides a lighter regulatory pathway for pragmatic trials comparing approved treatments. US sponsors may use IND exemptions but without the same formal framework."
+        },
+        {
+          "id": "DIV-013",
+          "topic": "Mandatory results disclosure and layperson summary",
+          "eu_requirement": "Results summary shall be submitted to EU database within 1 year of trial end (6 months for paediatric). A layperson-understandable summary is mandatory. All trials must be registered in EU database before starting.",
+          "eu_legal_basis": "Reg 536/2014 Art. 37, Annex IV-V",
+          "fda_requirement": "ClinicalTrials.gov registration and results reporting required for applicable clinical trials within 1 year of primary completion date. No mandatory layperson summary.",
+          "fda_legal_basis": "42 USC §282(j) (FDAAA 801)",
+          "divergence_type": "EU_stricter",
+          "impact": "medium",
+          "compliance_implication": "EU mandates layperson summary not required by FDA. EU database is the single portal for all trial communications. Both systems require timely results posting."
+        },
+        {
+          "id": "DIV-014",
+          "topic": "Archival requirement",
+          "eu_requirement": "Clinical trial master file shall be archived for at least 25 years after end of trial.",
+          "eu_legal_basis": "Reg 536/2014 Art. 58",
+          "fda_requirement": "Records retained for 2 years after approval of NDA/ANDA or investigation discontinuation. No 25-year mandate.",
+          "fda_legal_basis": "21 CFR 312.62(c)",
+          "divergence_type": "EU_stricter",
+          "impact": "high",
+          "compliance_implication": "EU's 25-year retention is dramatically longer than FDA's 2-year post-approval minimum. Requires long-term archival infrastructure."
+        },
+        {
+          "id": "DIV-015",
+          "topic": "Damage compensation / trial insurance",
+          "eu_requirement": "Member States shall ensure compensation systems (insurance/guarantee/similar) are in place. Sponsor and investigator shall use the system appropriate to the Member State.",
+          "eu_legal_basis": "Reg 536/2014 Art. 76",
+          "fda_requirement": "No federal mandate for clinical trial insurance. Institutional policies and contractual arrangements govern. Tort liability applies.",
+          "fda_legal_basis": "No specific federal statute",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "EU sponsors must arrange insurance/indemnification per each Member State's requirements. Costs vary significantly by country and trial risk profile."
+        },
+        {
+          "id": "DIV-016",
+          "topic": "Prohibition on germ line modification",
+          "eu_requirement": "No gene therapy clinical trials may be carried out which result in modifications to the subject's germ line genetic identity.",
+          "eu_legal_basis": "Reg 536/2014 Art. 90",
+          "fda_requirement": "FDA does not explicitly prohibit germ line editing trials by statute, but has maintained appropriations rider (since 2015) prohibiting FDA from reviewing applications involving intentional creation/modification of human embryos to include heritable genetic modifications.",
+          "fda_legal_basis": "Annual appropriations rider (Consolidated Appropriations Act)",
+          "divergence_type": "EU_stricter",
+          "impact": "medium",
+          "compliance_implication": "EU prohibition is permanent statute. US restriction is annual appropriations-dependent and technically narrower (embryo-specific vs any germ line modification)."
+        },
+        {
+          "id": "DIV-017",
+          "topic": "Safety reporting — SUSAR timelines",
+          "eu_requirement": "Fatal/life-threatening SUSARs: 7 days. All other SUSARs: 15 days. Reports to centralised Eudravigilance database.",
+          "eu_legal_basis": "Reg 536/2014 Art. 42",
+          "fda_requirement": "IND safety reports for unexpected fatal/life-threatening events: 7 calendar days. Other serious unexpected: 15 calendar days. Reports to FDA.",
+          "fda_legal_basis": "21 CFR 312.32",
+          "divergence_type": "similar_with_differences",
+          "impact": "low",
+          "compliance_implication": "Timelines are similar but reporting destination and format differ. EU uses structured Eudravigilance electronic submission; FDA uses MedWatch/CIOMS forms."
+        },
+        {
+          "id": "DIV-018",
+          "topic": "Layperson in assessment",
+          "eu_requirement": "At least one layperson shall participate in the assessment of each clinical trial application.",
+          "eu_legal_basis": "Reg 536/2014 Art. 9(3)",
+          "fda_requirement": "No layperson participation required in IND review. IRBs require at least one member whose primary concerns are non-scientific.",
+          "fda_legal_basis": "21 CFR 56.107(c)",
+          "divergence_type": "EU_only",
+          "impact": "low",
+          "compliance_implication": "EU builds patient/public input directly into the regulatory assessment. US patient input is primarily through IRBs and advisory committee public hearings."
+        }
+      ]
+    },
+
+    "04_manufacturing_and_GMP": {
+      "title": "Manufacturing, GMP, and Qualified Person",
+      "divergences": [
+        {
+          "id": "DIV-019",
+          "topic": "Qualified Person (QP) system",
+          "eu_requirement": "Legally mandated individual with specified university qualifications (4-year course in pharmacy/medicine/chemistry/biology) and minimum 2 years practical experience. QP must personally certify each production batch in a register. Register retained 5 years.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 48-52",
+          "fda_requirement": "No QP equivalent. cGMP responsibilities are organizational (quality unit/quality control unit). No statutory requirement for a named individual with specified university qualifications to certify each batch.",
+          "fda_legal_basis": "21 CFR Part 211 (cGMP)",
+          "divergence_type": "EU_only",
+          "impact": "critical",
+          "compliance_implication": "EU manufacturers must employ at least one QP per site. QP has personal legal liability for batch release. US firms operating in EU must either hire QPs or contract with EU entities that have them."
+        },
+        {
+          "id": "DIV-020",
+          "topic": "Active substance GMP written confirmation",
+          "eu_requirement": "Active substances imported into EU shall be accompanied by written confirmation from exporting country's competent authority confirming: GMP standards at least equivalent to EU; regular inspections conducted; non-compliance promptly communicated.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 46b",
+          "fda_requirement": "No requirement for written government confirmation from exporting country. FDA relies on its own inspections of foreign API manufacturers and Drug Master Files (DMFs).",
+          "fda_legal_basis": "21 CFR Part 211, 314.420 (DMF)",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "EU requires government-to-government GMP certification for API imports. This can create supply chain bottlenecks for APIs from countries without MRA agreements with the EU."
+        },
+        {
+          "id": "DIV-021",
+          "topic": "GMP certificate and Union database",
+          "eu_requirement": "Within 90 days of inspection, competent authority shall issue GMP certificate if compliant. Certificates entered in publicly accessible Union database (EudraGMDP).",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 111(5)",
+          "fda_requirement": "FDA issues Establishment Inspection Reports (EIRs) and may issue warning letters. No formal GMP certificate system. Inspection outcomes tracked internally.",
+          "fda_legal_basis": "21 USC §374 (inspections)",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "EU GMP certificate is a positive attestation required for supply chain qualification. FDA's system is enforcement-focused (warning letters for non-compliance rather than certificates for compliance)."
+        },
+        {
+          "id": "DIV-022",
+          "topic": "IMP GMP — Product specification file",
+          "eu_requirement": "Product specification file required containing all information necessary for written instructions on processing, packaging, QC, testing, and batch release of investigational medicinal products.",
+          "eu_legal_basis": "Reg 2017/1569 Art. 2(3)",
+          "fda_requirement": "No formal 'product specification file' concept for investigational drugs. IND contains chemistry, manufacturing, and controls (CMC) information. Manufacturing information evolves over development.",
+          "fda_legal_basis": "21 CFR 312.23(a)(7)",
+          "divergence_type": "EU_more_prescriptive",
+          "impact": "medium",
+          "compliance_implication": "EU requires a consolidated reference document (PSF) at the manufacturing site. FDA's CMC requirements are part of the IND application but not structured as a site-level reference file."
+        },
+        {
+          "id": "DIV-023",
+          "topic": "Active substance registration requirement",
+          "eu_requirement": "Importers, manufacturers, and distributors of active substances shall register with competent authority at least 60 days prior to commencement. Entered in Union database.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 52a",
+          "fda_requirement": "Drug establishment registration required (annual, within 5 days of beginning operations). FDA does not have a separate 60-day pre-commencement notification.",
+          "fda_legal_basis": "21 USC §360, 21 CFR Part 207",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "EU's 60-day advance notice requirement means API operations must be planned ahead. FDA registration is concurrent with or shortly after beginning operations."
+        }
+      ]
+    },
+
+    "05_pharmacovigilance": {
+      "title": "Pharmacovigilance and Safety Monitoring",
+      "divergences": [
+        {
+          "id": "DIV-024",
+          "topic": "QPPV requirement",
+          "eu_requirement": "MAH shall have permanently and continuously a Qualified Person Responsible for Pharmacovigilance (QPPV) who shall reside and operate in the Union.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 104(3)(a)",
+          "fda_requirement": "No equivalent named statutory individual. Regulations require adequate number of qualified employees for FDA contact. Typically involves VP of Drug Safety or Medical Officer.",
+          "fda_legal_basis": "21 CFR 314.81(b)(1)",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "Non-EU companies must designate a QPPV based in the EU with personal legal responsibility for the pharmacovigilance system."
+        },
+        {
+          "id": "DIV-025",
+          "topic": "Pharmacovigilance System Master File (PSMF)",
+          "eu_requirement": "MAH shall maintain a PSMF describing the pharmacovigilance system. Location declared to authority. Must be submitted within 7 days upon request.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 104(3)(e), 28e",
+          "fda_requirement": "No equivalent PSMF requirement. FDA may inspect pharmacovigilance procedures but does not mandate a specific master file document.",
+          "fda_legal_basis": "21 CFR 314.81",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "EU-specific document that must be maintained, updated, and made available on short notice. Requires dedicated pharmacovigilance documentation resources."
+        },
+        {
+          "id": "DIV-026",
+          "topic": "Periodic Safety Update Reports (PSURs)",
+          "eu_requirement": "Mandatory PSURs submitted electronically to EMA repository with defined frequency schedule (6 months initially, then annual, then every 3 years). Single assessment procedure with PRAC rapporteur, 60-day assessment, 30-day comment period. EU reference dates harmonise submission across Member States.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 107b-107g",
+          "fda_requirement": "Periodic Adverse Drug Experience Reports (PADERs) required quarterly for first 3 years, then annually. Less structured assessment process. No committee-based assessment comparable to PRAC.",
+          "fda_legal_basis": "21 CFR 314.80(c)(2)",
+          "divergence_type": "EU_more_structured",
+          "impact": "high",
+          "compliance_implication": "EU PSUR system is more elaborate with harmonised reference dates, work-sharing between Member States, PRAC assessment, and potential regulatory consequences. Significant ongoing compliance burden."
+        },
+        {
+          "id": "DIV-027",
+          "topic": "Eudravigilance database and access",
+          "eu_requirement": "Centralised EU-wide database for all suspected adverse reactions. MAH must submit electronically. Healthcare professionals and public have appropriate access to aggregated data.",
+          "eu_legal_basis": "Reg 726/2004 Arts. 24-25",
+          "fda_requirement": "FDA Adverse Event Reporting System (FAERS) is the US database. MedWatch reporting. FAERS data publicly accessible but less structured public access framework.",
+          "fda_legal_basis": "21 CFR 314.80, 314.98",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "Different reporting formats, different databases, different electronic submission requirements. Companies operating in both jurisdictions need dual reporting systems."
+        },
+        {
+          "id": "DIV-028",
+          "topic": "Non-serious adverse reaction reporting",
+          "eu_requirement": "Non-serious suspected adverse reactions within the Union SHALL be reported to Eudravigilance within 90 days.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 107(3)",
+          "fda_requirement": "Non-serious adverse experiences need not be individually reported; included in periodic reports.",
+          "fda_legal_basis": "21 CFR 314.80(c)(2)",
+          "divergence_type": "EU_stricter",
+          "impact": "high",
+          "compliance_implication": "EU requires individual case reporting even for non-serious events. Significantly higher volume of case processing compared to FDA requirements."
+        },
+        {
+          "id": "DIV-029",
+          "topic": "Urgent Union Procedure",
+          "eu_requirement": "Multi-state rapid safety procedure triggered by safety concerns. PRAC recommendation within 60 days. Member States may unilaterally suspend MA pending decision, notifying others next working day. Commission decision binding on all Member States.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 107i-107k",
+          "fda_requirement": "FDA acts unilaterally (market withdrawal, labelling changes, REMS). No multi-authority coordination procedure. FDA can immediately suspend approval.",
+          "fda_legal_basis": "21 USC §355(e)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "EU's system involves multi-stakeholder consultation and binding Commission decisions. Can result in EU-wide suspension. FDA process is faster for individual products but covers only US."
+        },
+        {
+          "id": "DIV-030",
+          "topic": "Additional monitoring (black triangle)",
+          "eu_requirement": "Products on additional monitoring list (new actives, biologicals post-2011, conditional MAs) must include inverted black triangle symbol and statement 'This medicinal product is subject to additional monitoring' in SmPC and leaflet.",
+          "eu_legal_basis": "Reg 726/2004 Art. 23; Dir 2001/83/EC Art. 11",
+          "fda_requirement": "No equivalent symbol or labelling requirement. FDA may require REMS or Boxed Warning for specific safety concerns.",
+          "fda_legal_basis": "21 USC §355-1 (REMS)",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "EU requires visible on-pack symbol encouraging ADR reporting for qualifying products. No labelling equivalent in US."
+        },
+        {
+          "id": "DIV-031",
+          "topic": "Risk management plans (RMPs)",
+          "eu_requirement": "RMP mandatory for all new MA applications (centralised and national). Must describe risk management system, safety specification, pharmacovigilance plan, risk minimisation measures. Submitted with MA application and updated throughout product lifecycle.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 8(3)(iaa), Art. 104",
+          "fda_requirement": "Risk Evaluation and Mitigation Strategies (REMS) required only when FDA determines necessary to ensure benefits outweigh risks. Not mandatory for all products.",
+          "fda_legal_basis": "21 USC §355-1",
+          "divergence_type": "EU_stricter",
+          "impact": "high",
+          "compliance_implication": "EU mandates RMP for every new product. FDA REMS is exception-based. EU RMP is a comprehensive living document; REMS is typically more focused on specific risk mitigation actions."
+        }
+      ]
+    },
+
+    "06_labelling_and_packaging": {
+      "title": "Labelling, Packaging, and Patient Information",
+      "divergences": [
+        {
+          "id": "DIV-032",
+          "topic": "Braille on packaging",
+          "eu_requirement": "Product name shall be expressed in Braille format on packaging. Leaflet available in formats for blind/partially-sighted on request.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 56a",
+          "fda_requirement": "No requirement for Braille on pharmaceutical packaging.",
+          "fda_legal_basis": "21 CFR Part 201",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "All EU-marketed products need Braille-embossed packaging. Affects packaging design, procurement, and costs."
+        },
+        {
+          "id": "DIV-033",
+          "topic": "Safety features (serialisation/anti-tampering)",
+          "eu_requirement": "Mandatory unique identifier and anti-tampering device on prescription products. EU-wide repositories system for verification. Costs borne by manufacturers. Delegated Regulation (EU) 2016/161 specifies technical details.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 54(o), 54a",
+          "fda_requirement": "Drug Supply Chain Security Act (DSCSA) requires serialization (product identifier on each package). Different technical implementation than EU (no anti-tampering device mandate, different verification system).",
+          "fda_legal_basis": "21 USC §360eee et seq. (DSCSA)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "Both require serialization but with different technical specifications, databases, and verification workflows. Dual compliance requires separate packaging lines or configurations."
+        },
+        {
+          "id": "DIV-034",
+          "topic": "Package leaflet patient testing",
+          "eu_requirement": "Package leaflet shall reflect consultations with target patient groups (readability testing mandatory).",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 59(3)",
+          "fda_requirement": "FDA encourages but does not mandate patient readability testing for prescription drug labelling. OTC Drug Facts labelling has specific format requirements but no patient testing mandate.",
+          "fda_legal_basis": "21 CFR 201.56-57 (Rx labelling)",
+          "divergence_type": "EU_stricter",
+          "impact": "medium",
+          "compliance_implication": "EU applicants must conduct and document user testing of leaflets, adding time and cost to the labelling development process."
+        },
+        {
+          "id": "DIV-035",
+          "topic": "Multi-language labelling",
+          "eu_requirement": "Labelling and leaflet shall appear in official language(s) of each Member State where marketed. May be printed in several languages.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 63",
+          "fda_requirement": "English labelling required. No multi-language mandate.",
+          "fda_legal_basis": "21 CFR 201.15(c)",
+          "divergence_type": "EU_only",
+          "impact": "high",
+          "compliance_implication": "EU products marketed in multiple Member States need multi-language packaging, driving multiple SKUs or fold-out leaflets. Significant packaging/supply chain complexity."
+        },
+        {
+          "id": "DIV-036",
+          "topic": "Summary of Product Characteristics (SmPC)",
+          "eu_requirement": "Structured SmPC with 12 defined sections is a legally binding document forming part of the MA decision. SmPC content legally constrains what MAH may claim.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 11",
+          "fda_requirement": "US Prescribing Information (USPI/PI) follows Physician Labeling Rule format with different sections and structure. Also legally binding but with different content requirements.",
+          "fda_legal_basis": "21 CFR 201.56-57",
+          "divergence_type": "different_format",
+          "impact": "medium",
+          "compliance_implication": "SmPC and USPI are not interchangeable. Different section numbering, content requirements, and regulatory status require separate documents."
+        },
+        {
+          "id": "DIV-037",
+          "topic": "Environmental risk assessment",
+          "eu_requirement": "Marketing authorisation application shall include evaluation of potential environmental risks posed by the medicinal product. Specific arrangements to limit environmental impact shall be envisaged on a case-by-case basis.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 8(3)(ca)",
+          "fda_requirement": "Environmental assessment (EA) or categorical exclusion required per NEPA for NDA/BLA submissions. However, most applications qualify for categorical exclusion.",
+          "fda_legal_basis": "21 CFR Part 25",
+          "divergence_type": "EU_stricter",
+          "impact": "medium",
+          "compliance_implication": "EU ERA is substantively evaluated for all applications. FDA categorical exclusions mean most applications bypass environmental assessment entirely."
+        }
+      ]
+    },
+
+    "07_distribution_and_supply_chain": {
+      "title": "Distribution, Supply Chain, and Online Pharmacy",
+      "divergences": [
+        {
+          "id": "DIV-038",
+          "topic": "Supply continuity obligation",
+          "eu_requirement": "MAH and distributors shall ensure appropriate and continued supply to pharmacies so patients' needs are covered.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 81",
+          "fda_requirement": "No binding supply continuity obligation. FDA Drug Shortage Prevention Act requires advance notice of supply disruptions for certain drugs, but does not mandate continued supply.",
+          "fda_legal_basis": "21 USC §356c (shortage notification)",
+          "divergence_type": "EU_stricter",
+          "impact": "high",
+          "compliance_implication": "EU supply obligation can be enforced. Market withdrawal requires 2-month advance notice. US approach is notification-based rather than obligation-based."
+        },
+        {
+          "id": "DIV-039",
+          "topic": "Wholesale distribution authorisation",
+          "eu_requirement": "Wholesale distribution requires specific authorisation. GDP compliance mandatory. Transaction records kept 5 years. Safety feature verification mandatory.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 76-84",
+          "fda_requirement": "State-level wholesale distributor licensing. No federal wholesale distribution authorisation comparable to EU system. DSCSA imposes transaction documentation requirements.",
+          "fda_legal_basis": "State pharmacy/wholesale laws; DSCSA",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "EU has harmonised EU-wide wholesale distribution requirements. US has fragmented state-by-state licensing with federal DSCSA overlay."
+        },
+        {
+          "id": "DIV-040",
+          "topic": "Medicine brokering regulation",
+          "eu_requirement": "Specific regulatory framework for medicine brokers (persons negotiating sale/purchase without physical handling). Must register, have permanent EU address, and comply with wholesale obligations.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 85b",
+          "fda_requirement": "No specific federal regulation of medicine brokers.",
+          "fda_legal_basis": "N/A",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "Any entity brokering medicines in the EU must register and comply with specific obligations. No equivalent US requirement."
+        },
+        {
+          "id": "DIV-041",
+          "topic": "Online pharmacy regulation (common logo)",
+          "eu_requirement": "EU-wide mandatory common logo for legitimate online pharmacies with cryptographic verification, hyperlinks to competent authority verification system. Member States must set up verification websites.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 85c",
+          "fda_requirement": "No federal common logo system for online pharmacies. BeSafeRx is an educational campaign, not a regulatory framework. State pharmacy boards regulate online pharmacies.",
+          "fda_legal_basis": "State pharmacy laws",
+          "divergence_type": "EU_only",
+          "impact": "medium",
+          "compliance_implication": "EU has a technologically integrated verification system for online medicine sales. US relies on fragmented state regulation and voluntary programs."
+        }
+      ]
+    },
+
+    "08_advertising_and_promotion": {
+      "title": "Advertising and Promotion",
+      "divergences": [
+        {
+          "id": "DIV-042",
+          "topic": "Direct-to-consumer (DTC) advertising",
+          "eu_requirement": "Advertising of prescription medicinal products to the general public is PROHIBITED. Only non-prescription products may be advertised to consumers (with restrictions).",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 88",
+          "fda_requirement": "DTC advertising of prescription drugs is PERMITTED, subject to fair balance, adequate provision for brief summary, and major statement requirements.",
+          "fda_legal_basis": "21 CFR Part 202; 21 USC §352(n)",
+          "divergence_type": "fundamentally_different",
+          "impact": "critical",
+          "compliance_implication": "This is one of the most fundamental EU-US divergences. Companies cannot run consumer-facing prescription drug advertising campaigns in the EU. All EU promotional activity for Rx products must target healthcare professionals only."
+        },
+        {
+          "id": "DIV-043",
+          "topic": "Anti-inducement rules",
+          "eu_requirement": "No gifts, pecuniary advantages, or benefits in kind to prescribers unless inexpensive and relevant to practice. Hospitality strictly limited to main scientific purpose. Prescribers shall not solicit or accept prohibited inducements.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 94",
+          "fda_requirement": "FDA does not directly regulate gifts/hospitality to prescribers. Industry self-regulation via PhRMA Code. Sunshine Act requires transparency (Open Payments) but does not prohibit payments.",
+          "fda_legal_basis": "42 USC §1320a-7h (Sunshine Act/Open Payments)",
+          "divergence_type": "EU_stricter",
+          "impact": "high",
+          "compliance_implication": "EU statutory prohibition is stricter than US transparency approach. Companies operating in EU must maintain strict gift/hospitality policies that exceed US requirements."
+        },
+        {
+          "id": "DIV-044",
+          "topic": "Free sample restrictions",
+          "eu_requirement": "Free samples only to prescribers, exceptionally, with specific conditions: limited number per year, written/signed request required, no larger than smallest presentation, marked 'free sample', accompanied by SmPC copy. No samples of psychotropic/narcotic products.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 96",
+          "fda_requirement": "Samples permitted with request by licensed practitioner. PDMA requires written request, record-keeping, and prohibition of sample sales. Fewer restrictions on quantity and presentation size.",
+          "fda_legal_basis": "21 USC §353(d) (PDMA)",
+          "divergence_type": "EU_stricter",
+          "impact": "medium",
+          "compliance_implication": "EU imposes more restrictive conditions on sampling, including annual quantity limits per product and smallest-presentation requirement."
+        }
+      ]
+    },
+
+    "09_special_product_categories": {
+      "title": "Special Product Categories",
+      "divergences": [
+        {
+          "id": "DIV-045",
+          "topic": "Advanced Therapy Medicinal Products (ATMPs)",
+          "eu_requirement": "Comprehensive separate regulation for gene therapy, somatic cell therapy, and tissue engineered products. Mandatory centralised procedure. CAT committee. Hospital exemption for non-routine ATMPs. 30-year traceability.",
+          "eu_legal_basis": "Reg 1394/2007",
+          "fda_requirement": "Gene therapies, cellular therapies, and tissue products regulated under biologics framework (BLA) with CBER oversight. No separate ATMP regulation. No mandatory committee. No 30-year traceability.",
+          "fda_legal_basis": "42 USC §262; 21 CFR Parts 1270-1271",
+          "divergence_type": "EU_more_prescriptive",
+          "impact": "critical",
+          "compliance_implication": "EU ATMP regulation creates additional classification requirements (CAT opinion), mandatory centralised filing, specific traceability obligations (30 years), and hospital exemption pathway with no US equivalent."
+        },
+        {
+          "id": "DIV-046",
+          "topic": "Traditional herbal medicinal products",
+          "eu_requirement": "Simplified registration pathway for herbal products with 30 years of traditional use (15 years in EU). No efficacy data required. Community herbal monographs established by HMPC.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 16a-16i",
+          "fda_requirement": "No equivalent pathway. Herbal products may be marketed as dietary supplements under DSHEA (no pre-market approval) or as drugs (NDA required with efficacy data).",
+          "fda_legal_basis": "21 USC §321(ff) (DSHEA); 21 USC §355",
+          "divergence_type": "fundamentally_different",
+          "impact": "high",
+          "compliance_implication": "EU provides a regulated 'middle ground' for traditional herbals — more regulated than US dietary supplements but less than full drug approval. Products qualifying in one system may not qualify in the other."
+        },
+        {
+          "id": "DIV-047",
+          "topic": "Homeopathic medicinal products",
+          "eu_requirement": "Specific simplified registration procedure for homeopathic products meeting conditions (oral/external, no therapeutic claims, sufficient dilution). Full labelling requirements.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 13-16",
+          "fda_requirement": "Homeopathic products historically marketed under CPG 400.400 enforcement discretion. FDA proposed new framework treating most homeopathic products as unapproved new drugs. HPUS recognition.",
+          "fda_legal_basis": "FDA CPG 400.400 (withdrawn 2023); 21 USC §351, 352",
+          "divergence_type": "fundamentally_different",
+          "impact": "medium",
+          "compliance_implication": "EU has a clear statutory registration pathway for homeopathics. US regulatory status is currently uncertain following withdrawal of enforcement discretion guidance."
+        },
+        {
+          "id": "DIV-048",
+          "topic": "Orphan drug — prevalence threshold",
+          "eu_requirement": "Prevalence-based: not more than 5 in 10,000 persons in the Community (approximately 230,000 patients in EU population). Alternative: unlikely to generate sufficient return without incentives.",
+          "eu_legal_basis": "Reg 141/2000 Art. 3",
+          "fda_requirement": "Patient-count based: fewer than 200,000 persons in the US. Alternative: no reasonable expectation of cost recovery.",
+          "fda_legal_basis": "21 USC §360bb",
+          "divergence_type": "different_threshold",
+          "impact": "medium",
+          "compliance_implication": "A disease may qualify as orphan in one jurisdiction but not the other due to different population bases and threshold calculations."
+        },
+        {
+          "id": "DIV-049",
+          "topic": "Paediatric Investigation Plan (PIP) — mandatory paediatric development",
+          "eu_requirement": "PIP required for all new MAs, line extensions, and new indications. Must be agreed with Paediatric Committee before submission. Triggered at completion of adult pharmacokinetic studies. Waivers/deferrals available.",
+          "eu_legal_basis": "Reg 1901/2006 Arts. 7-8, 15-16",
+          "fda_requirement": "PREA requires pediatric studies for new active ingredients, new indications, new dosage forms, new dosing regimens, and new routes of administration. Triggered at NDA/BLA submission. Waivers/deferrals available.",
+          "fda_legal_basis": "21 USC §355c (PREA)",
+          "divergence_type": "different_timing",
+          "impact": "high",
+          "compliance_implication": "EU PIP must be agreed BEFORE MA submission (triggered at PK studies). FDA PREA requirement arises AT or DURING NDA/BLA review. EU process starts earlier and requires more upfront planning."
+        },
+        {
+          "id": "DIV-050",
+          "topic": "Biosimilar approval pathway",
+          "eu_requirement": "Biosimilar pathway (Art. 10(4)) requires appropriate pre-clinical and clinical data to demonstrate similarity. No automatic interchangeability/substitution at EU level — left to Member States.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 10(4)",
+          "fda_requirement": "BPCIA provides abbreviated licensure pathway for biosimilars. FDA can designate biosimilars as 'interchangeable' with additional data demonstrating switching produces no diminished efficacy or safety.",
+          "fda_legal_basis": "42 USC §262(k) (BPCIA)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "EU does not have a federal interchangeability designation — each Member State decides substitution rules independently. US has a pathway to interchangeability designation at federal level."
+        }
+      ]
+    },
+
+    "10_transparency_and_access": {
+      "title": "Transparency, Public Access, and Patient Rights",
+      "divergences": [
+        {
+          "id": "DIV-051",
+          "topic": "European Public Assessment Report (EPAR)",
+          "eu_requirement": "EMA shall immediately publish assessment report (EPAR) for centrally authorised products with lay-language summary, conditions of use, reasons for opinion. Publicly accessible.",
+          "eu_legal_basis": "Reg 726/2004 Art. 13(3)",
+          "fda_requirement": "FDA publishes approval letters, review documents, and labelling. Full review documentation available after approval but not as a structured public assessment report with lay summary.",
+          "fda_legal_basis": "21 CFR 314.430",
+          "divergence_type": "EU_more_structured",
+          "impact": "medium",
+          "compliance_implication": "EPAR publication means EU approval rationale is immediately and comprehensively public. Companies should prepare for EPAR disclosure as part of launch communications."
+        },
+        {
+          "id": "DIV-052",
+          "topic": "Application withdrawal transparency",
+          "eu_requirement": "If applicant withdraws MA application before opinion, applicant shall communicate reasons. Agency shall make this publicly accessible and publish assessment report (after removing confidential information).",
+          "eu_legal_basis": "Reg 726/2004 Art. 11",
+          "fda_requirement": "FDA does not routinely publish reasons for NDA/BLA withdrawals or publish partial assessment reports for withdrawn applications.",
+          "fda_legal_basis": "N/A",
+          "divergence_type": "EU_more_transparent",
+          "impact": "medium",
+          "compliance_implication": "EU withdrawal is a public event. Applicants must consider reputational impact of withdrawal from centralised procedure."
+        },
+        {
+          "id": "DIV-053",
+          "topic": "Clinical trial data transparency",
+          "eu_requirement": "Clinical study report data in MA applications shall not be considered commercially confidential once MA granted, application withdrawn, or procedure completed. EU Clinical Trials Register publicly accessible.",
+          "eu_legal_basis": "Reg 536/2014 Recital 68; EMA Policy 0070",
+          "fda_requirement": "Trade secret and confidential commercial information protected. Clinical data summaries in review documents published but full clinical study reports not routinely disclosed.",
+          "fda_legal_basis": "5 USC §552 (FOIA); 21 USC §331(j)",
+          "divergence_type": "EU_more_transparent",
+          "impact": "high",
+          "compliance_implication": "EU's proactive publication of clinical data means competitors and the public have access to detailed study-level data. Companies must factor this into their data strategy."
+        },
+        {
+          "id": "DIV-054",
+          "topic": "Compassionate use",
+          "eu_requirement": "Member States may make centrally-eligible products available for compassionate use. CHMP may adopt opinions on conditions. If compassionate use programme exists, applicant shall ensure patient access between authorisation and market placement.",
+          "eu_legal_basis": "Reg 726/2004 Art. 83",
+          "fda_requirement": "Expanded Access (compassionate use) regulated under 21 CFR Part 312 Subpart I. Individual patient, intermediate-size, and treatment IND pathways. No obligation to continue access post-approval.",
+          "fda_legal_basis": "21 CFR 312.300-320; Right to Try Act (21 USC §360bbb-0a)",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "EU has CHMP-level opinions and Member State programmes. US has FDA-regulated expanded access. EU may impose obligation to maintain access between approval and launch."
+        }
+      ]
+    },
+
+    "11_post_authorisation": {
+      "title": "Post-Authorisation Obligations and Variations",
+      "divergences": [
+        {
+          "id": "DIV-055",
+          "topic": "Variations classification system",
+          "eu_requirement": "Formal three-tier variation classification: Type IA (do-and-tell, 12-month notify), Type IB (tell-wait-and-do, 30-day review), Type II (major, 60-day assessment). Extensions as separate category. Work-sharing for multi-country products.",
+          "eu_legal_basis": "Reg 1234/2008",
+          "fda_requirement": "Changes reported via supplements: Prior Approval Supplement (PAS), Changes Being Effected in 30 Days (CBE-30), Changes Being Effected (CBE-0), Annual Report. No formal variation classification system equivalent to EU tiers.",
+          "fda_legal_basis": "21 CFR 314.70",
+          "divergence_type": "different_system",
+          "impact": "high",
+          "compliance_implication": "EU and FDA have different categorization systems for post-approval changes, with different timelines, documentation requirements, and approval mechanisms. Parallel submissions require separate change management strategies."
+        },
+        {
+          "id": "DIV-056",
+          "topic": "Urgent safety restrictions",
+          "eu_requirement": "MAH may implement urgent safety restrictions immediately with simultaneous notification. Authority has 24 hours to accept/refuse. MAH must submit variation application within 15 days.",
+          "eu_legal_basis": "Reg 1234/2008 Arts. 17-19",
+          "fda_requirement": "CBE-0 supplement for labelling changes to add/strengthen safety warnings, contraindications, or precautions. Can be implemented immediately upon filing.",
+          "fda_legal_basis": "21 CFR 314.70(c)(6)",
+          "divergence_type": "different_mechanism",
+          "impact": "medium",
+          "compliance_implication": "EU has 24-hour authority response window and 15-day follow-up variation. FDA CBE-0 has no authority response window — change is self-implementing."
+        },
+        {
+          "id": "DIV-057",
+          "topic": "Post-authorisation safety studies (PASS)",
+          "eu_requirement": "PRAC oversight. Draft protocol submitted 60 days before start. Written endorsement required before commencement. Final report within 12 months of data collection end. Substantial amendments require prior approval.",
+          "eu_legal_basis": "Dir 2001/83/EC Arts. 107m-107q",
+          "fda_requirement": "FDA may require PMR/PMC studies. No equivalent committee oversight of study protocols. FDA reviews study designs but process less formalised than PRAC endorsement.",
+          "fda_legal_basis": "21 USC §355(o)(3) (PMR authority)",
+          "divergence_type": "EU_more_structured",
+          "impact": "high",
+          "compliance_implication": "EU PASS has more regulatory touchpoints (protocol endorsement, amendment approval, 12-month report deadline). FDA PMR/PMC has milestones but less structured protocol review."
+        },
+        {
+          "id": "DIV-058",
+          "topic": "Post-authorisation efficacy studies",
+          "eu_requirement": "Agency may require post-authorisation efficacy studies when understanding of disease/methodology indicates previous evaluations may need significant revision.",
+          "eu_legal_basis": "Reg 726/2004 Art. 10a(1)(b); Dir 2001/83/EC Art. 22a(1)(b)",
+          "fda_requirement": "FDA may require confirmatory trials under Accelerated Approval. FDORA (2022) expanded FDA's authority to require post-market studies/trials.",
+          "fda_legal_basis": "21 USC §356(c); FDORA §3210",
+          "divergence_type": "similar_expanding",
+          "impact": "medium",
+          "compliance_implication": "Both jurisdictions can require post-approval efficacy studies. EU authority is broader (not limited to accelerated approvals)."
+        }
+      ]
+    },
+
+    "12_definitions_and_scope": {
+      "title": "Definitions and Scope Differences",
+      "divergences": [
+        {
+          "id": "DIV-059",
+          "topic": "Definition of 'medicinal product'",
+          "eu_requirement": "Two-limb definition: (a) substance presented as treating/preventing disease; OR (b) substance administered to restore/correct/modify physiological functions by pharmacological/immunological/metabolic action, or for medical diagnosis. Borderline products default to medicinal product classification.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 1(2), Art. 2(2)",
+          "fda_requirement": "Drug defined as articles intended for use in diagnosis, cure, mitigation, treatment, or prevention of disease; or articles intended to affect the structure or any function of the body. Biological product separately defined.",
+          "fda_legal_basis": "21 USC §321(g)(1); 42 USC §262(i)",
+          "divergence_type": "different_scope",
+          "impact": "high",
+          "compliance_implication": "EU's presentation limb can capture products not classified as drugs in the US (e.g., certain health claims). EU borderline rule means doubtful products default to pharmaceutical regulation."
+        },
+        {
+          "id": "DIV-060",
+          "topic": "Falsified vs counterfeit terminology",
+          "eu_requirement": "EU uses 'falsified medicinal product' — false representation of identity (packaging, labelling, name, composition), source (manufacturer, country), or history (distribution records). Distinct from IP infringement and unintentional quality defects.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 1(33)",
+          "fda_requirement": "FDA uses 'counterfeit' — drug sold under another drug's name with or without consent. Federal Anti-Tampering Act. No distinction between falsification categories.",
+          "fda_legal_basis": "21 USC §321(g)(2); 18 USC §1365",
+          "divergence_type": "different_terminology",
+          "impact": "low",
+          "compliance_implication": "EU's broader 'falsified' definition captures more scenarios than 'counterfeit'. Different terminology in anti-falsification policies and reporting."
+        },
+        {
+          "id": "DIV-061",
+          "topic": "Scope exclusion for magistral/officinal formulae",
+          "eu_requirement": "Directive does not apply to: magistral formulae (pharmacy-prepared per individual prescription) or officinal formulae (pharmacy-prepared per pharmacopoeia for direct supply to patients served by that pharmacy).",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 3(1-2)",
+          "fda_requirement": "Pharmacy compounding regulated under §503A (traditional) and §503B (outsourcing facilities). Not exempt from FDA oversight but subject to different requirements than NDA-approved drugs.",
+          "fda_legal_basis": "21 USC §353a (§503A), §353b (§503B)",
+          "divergence_type": "different_scope",
+          "impact": "medium",
+          "compliance_implication": "EU pharmacy exemptions are broader (complete exclusion from Directive scope). US compounding is regulated under FDA with specific conditions."
+        }
+      ]
+    },
+
+    "13_fees_and_financial": {
+      "title": "Fees and Financial Provisions",
+      "divergences": [
+        {
+          "id": "DIV-062",
+          "topic": "Financial penalties for non-compliance",
+          "eu_requirement": "Commission may impose fines up to 5% of EU turnover and periodic penalties up to 2.5% of average daily EU turnover for 22 listed obligation failures. Court of Justice has unlimited jurisdiction.",
+          "eu_legal_basis": "Reg 726/2004 Art. 84a",
+          "fda_requirement": "FDA enforcement includes warning letters, injunctions, seizures, consent decrees, and criminal prosecution. No percentage-of-revenue fine structure for regulatory non-compliance.",
+          "fda_legal_basis": "21 USC §332-334 (injunctions, seizure, criminal penalties)",
+          "divergence_type": "different_mechanism",
+          "impact": "high",
+          "compliance_implication": "EU's revenue-based fine structure can result in very large penalties for large companies. FDA relies more on injunctive/criminal enforcement."
+        },
+        {
+          "id": "DIV-063",
+          "topic": "Pharmacovigilance fee structure",
+          "eu_requirement": "EMA may charge fees to MAHs for pharmacovigilance activities, provided independence is strictly guaranteed. Fees set by Council regulation.",
+          "eu_legal_basis": "Reg 726/2004 Art. 67",
+          "fda_requirement": "PDUFA user fees cover FDA review activities. No separate pharmacovigilance fee. GDUFA covers generic review.",
+          "fda_legal_basis": "21 USC §379h (PDUFA)",
+          "divergence_type": "different_structure",
+          "impact": "medium",
+          "compliance_implication": "EU annual pharmacovigilance fees are separate from MA application fees. US PDUFA fees are primarily application-based."
+        }
+      ]
+    },
+
+    "14_rapid_alert_and_recall": {
+      "title": "Rapid Alert, Recall, and Crisis Management",
+      "divergences": [
+        {
+          "id": "DIV-064",
+          "topic": "24-hour rapid alert system",
+          "eu_requirement": "Structured rapid alert system across all Member States. If suspected serious risk and product reached patients: urgent public announcements within 24 hours with recall order. System operates during and outside normal working hours.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 117a",
+          "fda_requirement": "FDA Recall system (Class I/II/III). MedWatch Safety Alerts. No statutory 24-hour announcement requirement. Recalls may be voluntary or FDA-mandated.",
+          "fda_legal_basis": "21 CFR Part 7 (recalls); 21 USC §360h (mandatory recall for devices only)",
+          "divergence_type": "EU_more_prescriptive",
+          "impact": "high",
+          "compliance_implication": "EU's 24-hour public announcement requirement for patient-level recalls is more prescriptive than FDA's tiered voluntary recall system."
+        },
+        {
+          "id": "DIV-065",
+          "topic": "Market withdrawal notification",
+          "eu_requirement": "MAH shall notify competent authority if product ceases to be placed on market (temporarily or permanently) no less than 2 months before interruption. Shall state reasons, particularly if based on safety grounds.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 23a; Reg 726/2004 Art. 13(4)",
+          "fda_requirement": "Manufacturers must notify FDA of permanent discontinuance or interruption of certain drugs at least 6 months before (or as soon as practicable). FDA Drug Shortage provisions.",
+          "fda_legal_basis": "21 USC §356c",
+          "divergence_type": "different_timelines",
+          "impact": "medium",
+          "compliance_implication": "US requires 6-month advance notice (for qualifying drugs); EU requires 2-month notice. Different triggering criteria and product scope."
+        }
+      ]
+    },
+
+    "15_regulatory_independence": {
+      "title": "Regulatory Authority Independence",
+      "divergences": [
+        {
+          "id": "DIV-066",
+          "topic": "Staff financial interest declarations",
+          "eu_requirement": "Staff of competent authority responsible for authorisations shall have no financial or other interests in pharmaceutical industry. Annual declaration of financial interests mandatory.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 126b; Reg 726/2004 Art. 63",
+          "fda_requirement": "Government ethics rules apply (18 USC §208). Financial disclosure required. FDA employees subject to post-employment restrictions. But pharmaceutical stock ownership is not always prohibited (recusal system).",
+          "fda_legal_basis": "18 USC §208; 5 CFR Part 2635",
+          "divergence_type": "EU_stricter",
+          "impact": "low",
+          "compliance_implication": "EU's explicit prohibition on financial interests (not just disclosure) is stricter than US recusal-based approach."
+        },
+        {
+          "id": "DIV-067",
+          "topic": "Committee member independence",
+          "eu_requirement": "All EMA committee members, rapporteurs, and experts shall make annual declarations of financial interests and specific declarations at each meeting. All indirect interests entered in a public register.",
+          "eu_legal_basis": "Reg 726/2004 Art. 63",
+          "fda_requirement": "FDA Advisory Committee members file financial disclosure. FDA can grant waivers for conflicts. Special Government Employee rules apply.",
+          "fda_legal_basis": "21 USC §379d-1",
+          "divergence_type": "EU_more_transparent",
+          "impact": "low",
+          "compliance_implication": "EU public register of interests provides greater transparency. FDA waiver system allows some conflicted advisors to participate."
+        },
+        {
+          "id": "DIV-068",
+          "topic": "Unused medicine collection",
+          "eu_requirement": "Member States shall ensure appropriate collection systems for unused or expired medicinal products.",
+          "eu_legal_basis": "Dir 2001/83/EC Art. 127b",
+          "fda_requirement": "No federal mandate for collection systems. DEA runs National Prescription Drug Take Back Day. Some state-level requirements.",
+          "fda_legal_basis": "DEA Take Back Programs (voluntary)",
+          "divergence_type": "EU_mandated",
+          "impact": "low",
+          "compliance_implication": "EU Member States must have formal collection systems. US relies on voluntary and DEA-sponsored programs."
+        }
+      ]
+    }
+  }
+}

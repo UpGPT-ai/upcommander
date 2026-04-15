@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "title": "ICH Safety Reporting Rules — Comprehensive Extraction",
+    "sources": [
+      "ICH E2A", "ICH E2B(R3)", "ICH E2C(R2)", "ICH E2D", "ICH E2D(R1)",
+      "ICH E2E", "ICH E2F", "ICH E14", "ICH E14-S7B Q&As", "ICH E19",
+      "ICH E20", "ICH E21", "ICH E22", "ICH E23"
+    ],
+    "document_count": 62,
+    "extraction_date": "2026-03-22",
+    "version": "2.0"
+  },
+
+  "definitions": {
+    "adverse_event": {
+      "term": "Adverse Event (AE)",
+      "source": "E2A",
+      "definition": "Any untoward medical occurrence in a patient or clinical investigation subject administered a pharmaceutical product and which does not necessarily have a causal relationship with this treatment. An AE can be any unfavourable and unintended sign (including an abnormal laboratory finding), symptom, or disease temporally associated with the use of a medicinal (investigational) product, whether or not related to the product."
+    },
+    "adverse_drug_reaction_preapproval": {
+      "term": "Adverse Drug Reaction (ADR) — Pre-Approval",
+      "source": "E2A",
+      "definition": "All noxious and unintended responses to a medicinal product related to any dose. A causal relationship is at least a reasonable possibility (i.e., the relationship cannot be ruled out)."
+    },
+    "adverse_drug_reaction_postmarket": {
+      "term": "Adverse Drug Reaction (ADR) — Post-Market",
+      "source": "E2A/E2D",
+      "definition": "A response to a drug which is noxious and unintended and which occurs at doses normally used in man for prophylaxis, diagnosis, or therapy of diseases or for modification of physiological function (WHO definition). All spontaneous reports are presumed to have a causal relationship."
+    },
+    "unexpected_adr": {
+      "term": "Unexpected Adverse Drug Reaction",
+      "source": "E2A",
+      "definition": "An adverse reaction, the nature or severity of which is not consistent with the applicable product information (e.g., Investigator's Brochure for unapproved products or package insert/SPC for approved products). Includes class effects not specifically mentioned in product information. Reports adding clinically meaningful information on a known, serious ADR also qualify."
+    },
+    "serious_adverse_event": {
+      "term": "Serious Adverse Event (SAE) / Serious ADR",
+      "source": "E2A",
+      "definition": "Any untoward medical occurrence that at any dose meets one or more seriousness criteria.",
+      "criteria": [
+        "Results in death",
+        "Is life-threatening (patient at risk of death at the time of the event)",
+        "Requires inpatient hospitalisation or prolongation of existing hospitalisation",
+        "Results in persistent or significant disability/incapacity",
+        "Is a congenital anomaly/birth defect",
+        "Is an important medical event that may jeopardise the patient or require intervention to prevent one of the above outcomes"
+      ]
+    },
+    "signal": {
+      "term": "Signal",
+      "source": "E2C(R2)",
+      "definition": "Information from one or multiple sources (including observations and experiments) that suggests a new potentially causal association, or a new aspect of a known association, between an intervention and an event or set of related events, that is judged to be of sufficient likelihood to justify further action to verify."
+    },
+    "identified_risk": {
+      "term": "Identified Risk",
+      "source": "E2E/E2F",
+      "definition": "An untoward occurrence with adequate evidence of association with the medicinal product."
+    },
+    "potential_risk": {
+      "term": "Potential Risk",
+      "source": "E2E/E2F",
+      "definition": "An untoward occurrence with some basis for suspicion of association but not confirmed. Examples: non-clinical findings not observed clinically, AEs where magnitude does not suggest causality, known class effects."
+    },
+    "important_missing_information": {
+      "term": "Important Missing Information",
+      "source": "E2E",
+      "definition": "Gaps in knowledge regarding the safety profile, including populations not studied or inadequately studied, long-term safety in chronic use, and special populations exposed in clinical practice but not in trials."
+    },
+    "spontaneous_report": {
+      "term": "Spontaneous Report",
+      "source": "E2D/E2D(R1)",
+      "definition": "Unsolicited communication by an HCP or consumer to a company, regulatory authority, or other organisation describing one or more ADRs in a patient given one or more medicinal products, not deriving from a study or organized data collection scheme."
+    },
+    "stimulated_report": {
+      "term": "Stimulated Report",
+      "source": "E2D/E2D(R1)",
+      "definition": "Reports arising from Dear Healthcare Professional letters, publication in the press, or questioning of HCPs by company representatives. Classified as spontaneous."
+    },
+    "solicited_report": {
+      "term": "Solicited Report",
+      "source": "E2D(R1)",
+      "definition": "Reports derived from organised data collection systems (clinical trials, registries, PSPs, MRPs, surveys). NOT considered spontaneous. Classified as study reports requiring causality assessment."
+    },
+    "other_observations": {
+      "term": "Other Observations",
+      "source": "E2D(R1)",
+      "definition": "Exposure with pregnancy/breastfeeding; lack of efficacy/effect; overdose, abuse, misuse, medication error, occupational exposure; off-label use. May occur with or without associated AEs/ADRs.",
+      "note": "New category in E2D(R1)"
+    },
+    "organised_data_collection_system": {
+      "term": "Organised Data Collection System (ODCS)",
+      "source": "E2D(R1)",
+      "definition": "An activity that gathers data relevant to an MAH's product or medical disease area in a planned manner. Includes clinical trials, non-interventional studies, PSPs, MRPs, and social listening/sentiment analysis."
+    },
+    "digital_platform": {
+      "term": "Digital Platform",
+      "source": "E2D(R1)",
+      "definition": "Software and technology enabling transmission of information between users — includes social media, websites, internet forums, chat rooms, mobile health technologies, and apps."
+    },
+    "severity_vs_seriousness": {
+      "term": "Severity vs. Seriousness Distinction",
+      "source": "E2A",
+      "definition": "Severity describes intensity of a specific event (mild, moderate, severe). Seriousness is defined by regulatory reporting obligations. A severe AE is not necessarily serious (e.g., severe headache)."
+    },
+    "international_birth_date": {
+      "term": "International Birth Date (IBD)",
+      "source": "E2C(R2)",
+      "definition": "Date of the first marketing authorisation for any product containing the active substance granted to any company in any country in the world. Anchors PBRER reporting periodicity."
+    },
+    "development_international_birth_date": {
+      "term": "Development International Birth Date (DIBD)",
+      "source": "E2F",
+      "definition": "Date of the sponsor's first authorisation to conduct a clinical trial in any country worldwide. Determines DSUR annual reporting period."
+    },
+    "data_lock_point": {
+      "term": "Data Lock Point (DLP)",
+      "source": "E2C(R2)/E2F",
+      "definition": "The date that defines the cut-off for data to be included in the periodic report. All data available up to and including the DLP should be incorporated."
+    },
+    "reference_safety_information": {
+      "term": "Reference Safety Information (RSI)",
+      "source": "E2C(R2)/E2F",
+      "definition": "For PBRER: the Company Core Safety Information (CCSI) within the Company Core Data Sheet (CCDS). For DSUR: the Investigator's Brochure (IB) in effect at the start of the reporting period. Serves as the benchmark for determining expectedness."
+    },
+    "adverse_event_of_special_interest": {
+      "term": "Adverse Event of Special Interest (AESI)",
+      "source": "E2F/E19",
+      "definition": "A serious or non-serious event of scientific/medical concern specific to the sponsor's product or programme; warrants ongoing monitoring and rapid communication."
+    }
+  },
+
+  "adverse_event_classification": {
+    "by_seriousness": {
+      "serious": {
+        "criteria": [
+          "Death",
+          "Life-threatening",
+          "Hospitalisation or prolongation",
+          "Persistent/significant disability",
+          "Congenital anomaly/birth defect",
+          "Important medical event"
+        ]
+      },
+      "non_serious": {
+        "definition": "Does not meet any seriousness criterion"
+      }
+    },
+    "by_severity": {
+      "levels": ["Mild", "Moderate", "Severe"],
+      "note": "Severity is distinct from seriousness and does not drive regulatory reporting"
+    },
+    "by_expectedness": {
+      "expected": "Nature, severity, specificity, or outcome IS consistent with Reference Safety Information",
+      "unexpected": "Nature, severity, specificity, or outcome is NOT consistent with Reference Safety Information. A known ADR with fatal outcome is unexpected unless labelling specifically states the ADR might be associated with a fatal outcome."
+    },
+    "by_causality": {
+      "related": "Causal relationship is at least a reasonable possibility (cannot be ruled out)",
+      "not_related": "Evidence suggests no causal relationship",
+      "spontaneous_presumption": "All spontaneous reports are presumed to have a causal relationship"
+    },
+    "by_source": {
+      "spontaneous": "Unsolicited, not from organized data collection",
+      "stimulated": "From Dear HCP letters, press publications — treated as spontaneous",
+      "solicited": "From ODCS (trials, registries, PSPs, MRPs) — treated as study reports",
+      "literature": "From published scientific literature",
+      "digital_platform": "From social media, websites, apps",
+      "regulatory_authority": "From foreign regulatory authority databases"
+    },
+    "by_drug_role": {
+      "codes": {
+        "1": "Suspect",
+        "2": "Concomitant",
+        "3": "Interacting"
+      }
+    },
+    "by_outcome": {
+      "codes": {
+        "1": "Recovered/resolved",
+        "2": "Recovering/resolving",
+        "3": "Not recovered/not resolved/ongoing",
+        "4": "Recovered/resolved with sequelae",
+        "5": "Fatal",
+        "6": "Unknown"
+      }
+    },
+    "by_reporter_qualification": {
+      "codes": {
+        "1": "Physician",
+        "2": "Pharmacist",
+        "3": "Other health professional",
+        "4": "Lawyer",
+        "5": "Consumer or other non-health professional"
+      }
+    },
+    "age_groups": {
+      "1": "Neonate (0-27 days)",
+      "2": "Infant (28 days to 23 months)",
+      "3": "Child (2-11 years)",
+      "4": "Adolescent (12-17 years)",
+      "5": "Adult (18-64 years)",
+      "6": "Elderly (65+ years)"
+    }
+  },
+
+  "reporting_requirements": {
+    "expedited_icsr": {
+      "pre_marketing": {
+        "fatal_or_life_threatening_unexpected_adr": {
+          "timeline": "7 calendar days from first knowledge",
+          "followup": "Additional 8 days (total 15 days)",
+          "source": "E2A"
+        },
+        "other_serious_unexpected_adr": {
+          "timeline": "15 calendar days from first knowledge",
+          "source": "E2A"
+        },
+        "increased_rate_of_expected_serious_adr": {
+          "timeline": "Expedited (judged clinically important)",
+          "source": "E2A"
+        }
+      },
+      "post_marketing": {
+        "serious_unexpected_adr": {
+          "timeline": "15 calendar days after Day 0",
+          "day_zero": "Date any MAH personnel (including third parties) first obtains sufficient information to determine case meets minimum criteria",
+          "source": "E2D/E2D(R1)"
+        },
+        "followup_reports": {
+          "timeline": "15 calendar days — time clock restarts when additional medically relevant information is received",
+          "source": "E2D(R1)"
+        },
+        "reclassification": {
+          "rule": "Day 0 = date of receipt of follow-up triggering reclassification (e.g., non-serious to serious)",
+          "source": "E2D(R1)"
+        }
+      }
+    },
+    "minimum_valid_icsr": {
+      "required_elements": [
+        "An identifiable reporter (name, initials, address, organisation, email, phone, or qualification)",
+        "An identifiable patient (age, age category, sex, initials, DOB, name, or patient ID)",
+        "At least one adverse event/reaction or other observation",
+        "At least one suspect or interacting medicinal product"
+      ],
+      "source": "E2A/E2D(R1)"
+    },
+    "followup_priority": {
+      "priority_1": "Serious + unexpected cases",
+      "priority_2": "Serious + expected cases",
+      "priority_3": "Non-serious + unexpected cases",
+      "special": "Cases of special interest, cases that might lead to labelling changes",
+      "pregnancy": "All pregnancy reports where embryo/foetus could have been exposed (includes paternal exposure per R1)",
+      "source": "E2D/E2D(R1)"
+    },
+    "other_observation_reporting": {
+      "lack_of_efficacy": "ICSR only if required by regional requirements; especially for life-threatening diseases, vaccines, contraceptives",
+      "overdose_abuse_misuse_med_error": "ICSR only if required by regional requirements when no associated AE/ADR; includes near-miss medication errors",
+      "pregnancy_breastfeeding_exposure": "ICSR only if required by regional requirements when no AE/ADR; paternal exposure explicitly included",
+      "off_label_use": "ICSR only if required by regional requirements when no associated AE/ADR",
+      "source": "E2D(R1)"
+    },
+    "important_safety_findings": {
+      "definition": "Safety findings not qualifying for ICSR reporting but that may change the benefit-risk balance",
+      "examples": "Evidence of mutagenicity, teratogenicity, carcinogenicity, immunogenicity, increased mortality",
+      "timeline": "Communicated to authorities as soon as possible",
+      "source": "E2D(R1)"
+    },
+    "literature_screening": {
+      "frequency": "At least every two weeks (per local requirements)",
+      "scope": "Worldwide scientific literature including published abstracts",
+      "rule": "Each case in a publication is a separate report; expedited if serious + unexpected",
+      "source": "E2D/E2D(R1)"
+    },
+    "digital_platform_screening": {
+      "mah_platforms": "Must regularly screen platforms under MAH responsibility",
+      "external_platforms": "NOT expected to screen external platforms, but if MAH conducts planned ODCS activity, must manage identified AEs/ADRs; incidental awareness triggers review obligation",
+      "source": "E2D(R1)"
+    }
+  },
+
+  "icsr_data_elements_e2b_r3": {
+    "format": "XML based on ISO/HL7 27953-2:2011, UTF-8 encoding",
+    "transmission": "ESTRI Gateway with public/private key encryption",
+    "structure": {
+      "batch_wrapper_N1": {
+        "N.1.1": "Type of Messages in Batch (Required, value: 1=ichicsr)",
+        "N.1.2": "Batch Number (Required, 100AN, unique per sender)",
+        "N.1.3": "Batch Sender Identifier (Required, 60AN)",
+        "N.1.4": "Batch Receiver Identifier (Required, 60AN)",
+        "N.1.5": "Date of Batch Transmission (Required, Date/Time to second precision)"
+      },
+      "message_wrapper_N2": {
+        "N.2.r.1": "Message Identifier (Required, 100AN)",
+        "N.2.r.2": "Message Sender Identifier (Required, 60AN)",
+        "N.2.r.3": "Message Receiver Identifier (Required, 60AN)",
+        "N.2.r.4": "Date of Message Creation (Required, Date/Time)"
+      },
+      "case_identification_C1": {
+        "C.1.1": "Sender's Safety Report Unique Identifier (Required, 100AN)",
+        "C.1.2": "Date of Creation (Required, Date/Time to second)",
+        "C.1.3": "Type of Report (Required: 1=Spontaneous, 2=Report from study, 3=Other, 4=Not available)",
+        "C.1.4": "Date Report First Received from Source (Required, Date min day precision)",
+        "C.1.5": "Date of Most Recent Information (Required, Date min day precision)",
+        "C.1.6.1": "Additional Documents Available (Required, Boolean)",
+        "C.1.7": "Fulfils Local Criteria for Expedited Report (Required, Boolean/NI)",
+        "C.1.8.1": "Worldwide Unique Case Identification Number (Required, 100AN)",
+        "C.1.8.2": "First Sender of This Case (Required: 1=Regulator, 2=Other)",
+        "C.1.9.1": "Other Case Identifiers in Previous Transmissions (Required, Boolean/NI)",
+        "C.1.10.r": "Linked Report Identification Number (Optional, repeatable)",
+        "C.1.11.1": "Report Nullification/Amendment (Optional: 1=Nullification, 2=Amendment)",
+        "C.1.11.2": "Reason for Nullification/Amendment (Required when C.1.11.1 populated)"
+      },
+      "primary_source_C2": {
+        "C.2.r.1": "Reporter Name fields (Optional: title, given, middle, family)",
+        "C.2.r.2": "Reporter Address fields (Optional)",
+        "C.2.r.3": "Reporter's Country Code (Required, ISO 3166 alpha-2)",
+        "C.2.r.4": "Qualification (Required: 1=Physician, 2=Pharmacist, 3=Other HCP, 4=Lawyer, 5=Consumer)",
+        "C.2.r.5": "Primary Source for Regulatory Purposes (Required, Boolean)"
+      },
+      "sender_C3": {
+        "C.3.1": "Sender Type (Required: 1=Pharma, 2=Regulator, 3=HCP, 4=Regional PV centre, 5=WHO, 6=Other, 7=Patient/consumer)",
+        "C.3.2": "Sender's Organisation (Required, 60AN)",
+        "C.3.4.5": "Sender's Country Code (Required, ISO 3166 alpha-2)"
+      },
+      "patient_D": {
+        "D.1": "Patient identifier (Required, 60AN)",
+        "D.2": "Age Information (DOB, age at onset, gestation period, age group)",
+        "D.3": "Body Weight kg (Optional)",
+        "D.4": "Height cm (Optional)",
+        "D.5": "Sex (Required, ISO 5218: 0=Not known, 1=Male, 2=Female, 9=Not specified)",
+        "D.7": "Medical History (MedDRA coded, repeatable)",
+        "D.9": "Death Information (date, cause, autopsy, MedDRA coded)",
+        "D.10": "Parent Information (for parent-child/foetus reports)"
+      },
+      "reactions_E": {
+        "E.i.1.1a": "Reaction as Reported — native language (Required, 250AN)",
+        "E.i.1.2": "Reaction MedDRA LLT code (Required)",
+        "E.i.3.1": "Term Highlighted by Reporter (Optional: 1-4 coded)",
+        "E.i.3.2a-f": "Seriousness Criteria at Event Level (Required, 6 Boolean fields: death, life-threatening, hospitalisation, disability, congenital anomaly, other medically important)",
+        "E.i.4": "Date of Start (Optional)",
+        "E.i.5": "Date of End (Optional)",
+        "E.i.7": "Outcome (Optional: 1=Recovered, 2=Recovering, 3=Not recovered, 4=Recovered with sequelae, 5=Fatal, 6=Unknown)",
+        "E.i.9": "Country Where Reaction Occurred (Optional, ISO 3166)"
+      },
+      "tests_F": {
+        "F.r.1": "Date of Test (Optional)",
+        "F.r.2": "Test Name — free text and MedDRA coded (Optional)",
+        "F.r.3": "Test Result — code (1=Positive, 2=Negative, 3=Borderline, 4=Inconclusive) + value + free text"
+      },
+      "drugs_G": {
+        "G.k.1": "Drug Role (Required: 1=Suspect, 2=Concomitant, 3=Interacting)",
+        "G.k.2": "Drug Identification (proprietary name, MPID, nonproprietary name, PhPID, substance/specified substance, strength)",
+        "G.k.3": "Authorisation/Application details",
+        "G.k.4.r": "Dosage Information (dose, frequency, dates, duration, batch/lot, dosage text, dose form, route — repeatable)",
+        "G.k.5": "Cumulative Dose to First Reaction",
+        "G.k.7.r": "Indication for Use (MedDRA coded, repeatable)",
+        "G.k.8": "Action Taken (1=Withdrawn, 2=Dose reduced, 3=Dose increased, 4=Dose not changed, 5=Unknown, 6=N/A)",
+        "G.k.9.i": "Rechallenge/Dechallenge and Relatedness Assessment"
+      },
+      "narrative_H": {
+        "H.1": "Case Narrative (Required, 100000AN)",
+        "H.2": "Reporter's Comments (Optional, 20000AN)",
+        "H.3.r": "Sender's Diagnosis/Reclassification — MedDRA coded (Optional)",
+        "H.4": "Sender's Comments (Optional, 20000AN)"
+      }
+    },
+    "null_flavors": {
+      "NI": "No Information",
+      "MSK": "Masked (withheld for privacy/security)",
+      "UNK": "Unknown",
+      "NA": "Not Applicable",
+      "ASKU": "Asked But Unknown",
+      "NASK": "Not Asked"
+    },
+    "controlled_vocabularies": [
+      "MedDRA (OID: 2.16.840.1.113883.6.163) — AEs, indications, medical history, causes of death, test names, diagnoses",
+      "ISO IDMP (11238 Substances, 11239 Dose Forms & Routes, 11240 Units, 11615 MPID, 11616 PhPID)",
+      "ISO 3166-1 alpha-2 — country codes",
+      "ISO 5218 — sex codes",
+      "ISO 639-2/RA alpha-3 — language codes",
+      "UCUM — units of measure"
+    ],
+    "nullification_amendment_rules": {
+      "nullification": "Used when entire case is void. NEW C.1.1 and C.1.8.1 required for resubmission. Reason required.",
+      "amendment": "Used for corrections after internal review. SAME C.1.1 and C.1.8.1 as original. C.1.5 NOT changed if no new source information. Reason required."
+    },
+    "e2b_r3_study_type_values": {
+      "1": "Clinical trials",
+      "2": "Individual patient use (named patient/compassionate use/expanded access)",
+      "3": "Other studies",
+      "4": "Patient Support Programme (new in R1)",
+      "5": "Market Research Programme (new in R1)",
+      "6": "ODCS with source data from a digital platform (new in R1)"
+    }
+  },
+
+  "periodic_report_structures": {
+    "pbrer_e2c_r2": {
+      "full_title": "Periodic Benefit-Risk Evaluation Report",
+      "sections": [
+        { "number": "1", "title": "Introduction" },
+        { "number": "2", "title": "Worldwide Marketing Approval Status" },
+        { "number": "3", "title": "Actions Taken in the Reporting Interval for Safety Reasons" },
+        { "number": "4", "title": "Changes to Reference Safety Information" },
+        { "number": "5", "title": "Estimated Exposure and Use Patterns", "subsections": [
+          "5.1 Cumulative Subject Exposure in Clinical Trials",
+          "5.2 Cumulative and Interval Patient Exposure from Marketing Experience"
+        ]},
+        { "number": "6", "title": "Data in Summary Tabulations", "subsections": [
+          "6.1 Reference Information",
+          "6.2 Cumulative Summary Tabulations of Serious AEs from Clinical Trials",
+          "6.3 Cumulative and Interval Summary Tabulations from Post-Marketing Data Sources"
+        ]},
+        { "number": "7", "title": "Summaries of Significant Findings from Clinical Trials during the Reporting Period", "subsections": [
+          "7.1 Completed Clinical Trials",
+          "7.2 Ongoing Clinical Trials",
+          "7.3 Long-Term Follow-up",
+          "7.4 Other Therapeutic Use of Medicinal Product",
+          "7.5 New Safety Data Related to Combination Therapies"
+        ]},
+        { "number": "8", "title": "Findings from Non-Interventional Studies" },
+        { "number": "9", "title": "Information from Other Clinical Trials and Sources" },
+        { "number": "10", "title": "Non-Clinical Data" },
+        { "number": "11", "title": "Literature" },
+        { "number": "12", "title": "Other Periodic Reports" },
+        { "number": "13", "title": "Lack of Efficacy in Controlled Clinical Trials" },
+        { "number": "14", "title": "Late-Breaking Information" },
+        { "number": "15", "title": "Overview of Signals: New, Ongoing, or Closed" },
+        { "number": "16", "title": "Signal and Risk Evaluation", "subsections": [
+          "16.1 Summary of Safety Concerns",
+          "16.2 Signal Evaluation",
+          "16.3 Evaluation of Risks and New Information",
+          "16.4 Characterisation of Risks",
+          "16.5 Effectiveness of Risk Minimisation"
+        ]},
+        { "number": "17", "title": "Benefit Evaluation", "subsections": [
+          "17.1 Important Baseline Efficacy/Effectiveness Information",
+          "17.2 Newly Identified Information on Efficacy/Effectiveness",
+          "17.3 Characterisation of Benefits"
+        ]},
+        { "number": "18", "title": "Integrated Benefit-Risk Analysis for Approved Indications", "subsections": [
+          "18.1 Benefit-Risk Context — Medical Need and Important Alternatives",
+          "18.2 Benefit-Risk Analysis Evaluation"
+        ]},
+        { "number": "19", "title": "Conclusions and Actions" },
+        { "number": "20", "title": "Appendices to the PBRER" }
+      ],
+      "periodicity": {
+        "years_1_2_post_IBD": "6-monthly",
+        "years_3_5_post_IBD": "Annual",
+        "after_5_years": "3-yearly (unless otherwise required)",
+        "submission_deadline_6_monthly": "70 calendar days after DLP",
+        "submission_deadline_annual": "90 calendar days after DLP",
+        "submission_deadline_3_yearly": "90 calendar days after DLP"
+      },
+      "data_presentation_rules": {
+        "clinical_trial_exposure": "Cumulative by treatment, age/sex, racial group",
+        "marketing_exposure": "Cumulative AND interval by indication, sex, age, dose, formulation, region",
+        "clinical_trial_SAEs": "Cumulative tabulations by SOC/PT",
+        "post_marketing_ADRs": "Interval AND cumulative counts: serious spontaneous, non-serious spontaneous, total spontaneous, serious solicited/non-interventional"
+      }
+    },
+    "dsur_e2f": {
+      "full_title": "Development Safety Update Report",
+      "sections": [
+        { "number": "Front", "title": "Title Page, Executive Summary, Table of Contents" },
+        { "number": "1", "title": "Introduction" },
+        { "number": "2", "title": "Worldwide Marketing Approval Status" },
+        { "number": "3", "title": "Actions Taken in the Reporting Period for Safety Reasons" },
+        { "number": "4", "title": "Changes to Reference Safety Information" },
+        { "number": "5", "title": "Inventory of Clinical Trials Ongoing and Completed" },
+        { "number": "6", "title": "Estimated Cumulative Exposure", "subsections": [
+          "6.1 Cumulative Subject Exposure in the Development Programme",
+          "6.2 Patient Exposure from Marketing Experience"
+        ]},
+        { "number": "7", "title": "Data in Line Listings and Summary Tabulations", "subsections": [
+          "7.1 Reference Information (coding dictionary version, RSI document)",
+          "7.2 Line Listings of Serious Adverse Reactions (interval, by trial then SOC, 12 data fields)",
+          "7.3 Cumulative Summary Tabulations of Serious Adverse Events (DIBD to current DLP)"
+        ]},
+        { "number": "8", "title": "Significant Findings from Clinical Trials", "subsections": [
+          "8.1 Completed Clinical Trials",
+          "8.2 Ongoing Clinical Trials",
+          "8.3 Long-term Follow-up",
+          "8.4 Other Therapeutic Use of Investigational Drug",
+          "8.5 New Safety Data Related to Combination Therapies"
+        ]},
+        { "number": "9", "title": "Safety Findings from Non-interventional Studies" },
+        { "number": "10", "title": "Other Clinical Trial/Study Safety Information" },
+        { "number": "11", "title": "Safety Findings from Marketing Experience" },
+        { "number": "12", "title": "Non-clinical Data" },
+        { "number": "13", "title": "Literature" },
+        { "number": "14", "title": "Other DSURs" },
+        { "number": "15", "title": "Lack of Efficacy" },
+        { "number": "16", "title": "Region-Specific Information" },
+        { "number": "17", "title": "Late-Breaking Information" },
+        { "number": "18", "title": "Overall Safety Assessment", "subsections": [
+          "18.1 Evaluation of the Risks",
+          "18.2 Benefit-Risk Considerations"
+        ]},
+        { "number": "19", "title": "Summary of Important Risks" },
+        { "number": "20", "title": "Conclusions" }
+      ],
+      "line_listing_fields": [
+        "Study ID and EudraCT number",
+        "Subject clinical trial ID",
+        "Sponsor's adverse reaction case reference number",
+        "Country where case occurred",
+        "Age and sex",
+        "Treatment group (or 'blinded')",
+        "Dose/dosing interval (dosage form, route)",
+        "Date/time of onset of most serious adverse reaction",
+        "Dates of treatment and/or treatment duration",
+        "Serious adverse reaction(s) (MedDRA PT)",
+        "Outcome (resolved, fatal, improved, sequelae, unknown)",
+        "Comments (causality, concomitant meds, dechallenge/rechallenge)"
+      ],
+      "periodicity": {
+        "reporting_period": "Annual, based on DIBD",
+        "submission_deadline": "Within 60 calendar days after data lock point",
+        "duration": "As long as required by national/regional law",
+        "rsi_source": "Investigator's Brochure in effect at start of reporting period"
+      },
+      "standard_appendices": [
+        "Investigator's Brochure (if revised)",
+        "Cumulative Table of Important Regulatory Requests",
+        "Status of Ongoing and Completed Clinical Trials",
+        "Cumulative Summary Tabulations of Demographic Data",
+        "Line Listings of Serious Adverse Reactions",
+        "Cumulative Summary Tabulation of Serious Adverse Events",
+        "Scientific Abstracts"
+      ],
+      "regional_appendices_US_IND": [
+        "R1: Cumulative summary tabulation of SARs",
+        "R2: List of subjects who died",
+        "R3: List of subjects who dropped out with AEs",
+        "R4: Significant Phase I protocol modifications",
+        "R5: Significant manufacturing changes",
+        "R6: General investigation plan for coming year",
+        "R7: Log of outstanding business"
+      ]
+    }
+  },
+
+  "signal_detection_methodology": {
+    "pbrer_signal_framework": {
+      "source": "E2C(R2) Sections 15-16",
+      "signal_types": {
+        "newly_identified": "First identified during the reporting interval, prompting further actions or evaluation. Includes previously closed signals with new information.",
+        "ongoing": "Under evaluation at the DLP",
+        "closed": "Evaluation completed during the interval"
+      },
+      "signal_overview_table_fields": [
+        "Signal term (descriptive name)",
+        "Date detected (month/year)",
+        "Status (ongoing or closed)",
+        "Date closed",
+        "Source of signal",
+        "Reason for evaluation and summary of key data",
+        "Method of signal evaluation",
+        "Action(s) taken or planned"
+      ],
+      "signal_evaluation_methods": [
+        "Case series analysis",
+        "Published literature review",
+        "Comparison with background rates",
+        "Clinical trial data analysis",
+        "Disproportionality analysis",
+        "Meta-analysis",
+        "Targeted follow-up with site visits"
+      ],
+      "signal_sources": [
+        "Spontaneous reports",
+        "Clinical trial data",
+        "Scientific literature",
+        "Non-clinical study results",
+        "Meta-analyses",
+        "Regulatory authority inquiries"
+      ]
+    },
+    "dsur_signal_context": {
+      "source": "E2F Section 18-19",
+      "approach": "Annual re-evaluation of identified and potential risks",
+      "toxicity_domains_to_evaluate": [
+        "Hepatotoxicity",
+        "Cardiovascular effects (QT prolongation)",
+        "Bone marrow toxicity",
+        "Pulmonary toxicity",
+        "Renal toxicity",
+        "CNS toxicity",
+        "Immunogenicity/hypersensitivity"
+      ],
+      "risk_factors_to_characterize": [
+        "Description and laboratory values",
+        "Dose relationship",
+        "Time course",
+        "Reversibility",
+        "Predictive factors",
+        "At-risk populations"
+      ]
+    },
+    "safety_specification_framework": {
+      "source": "E2E",
+      "three_pillars": {
+        "important_identified_risks": "Adverse reactions with adequate evidence of association",
+        "important_potential_risks": "Basis for suspicion but not confirmed",
+        "important_missing_information": "Gaps in knowledge (populations, duration, interactions)"
+      },
+      "pharmacovigilance_activities": {
+        "routine": [
+          "Adverse event/reaction reporting systems (spontaneous reports)",
+          "Processing expedited reports (ICSRs)",
+          "Periodic Safety Update Reports",
+          "Signal detection from spontaneous reporting",
+          "Ongoing benefit-risk evaluation",
+          "Regulatory compliance",
+          "Communication with regulators"
+        ],
+        "additional": {
+          "active_surveillance": ["Sentinel sites", "Drug event monitoring / Prescription Event Monitoring", "Registries (disease, drug/exposure, pregnancy)", "Active follow-up of specific events"],
+          "non_clinical_studies": "Additional preclinical studies to address safety concerns",
+          "clinical_studies": ["Long-term safety studies", "Special population studies", "Drug interaction studies", "Large simple safety studies"],
+          "epidemiological_studies": ["Observational cohort studies", "Case-control studies", "Cross-sectional studies", "Database/record linkage studies"],
+          "other": ["Patient/prescriber surveys", "Targeted questionnaires", "Medication error monitoring", "Drug utilization studies"]
+        }
+      }
+    }
+  },
+
+  "cardiac_safety_e14": {
+    "qtc_thresholds": {
+      "regulatory_concern_levels": {
+        "below_5ms": "No increased risk detected or too small to detect",
+        "5_to_20ms": "Inconclusive; some compounds associated with proarrhythmic risk",
+        "above_20ms": "Substantially increased likelihood of proarrhythmia"
+      },
+      "negative_tqt_definition": "Upper bound of one-sided 95% CI for largest time-matched mean effect on QTc excludes 10 ms (equivalent: upper bound of two-sided 90% CI < 10 ms)",
+      "positive_tqt_definition": "Upper bound of one-sided 95% CI >= 10 ms",
+      "categorical_outlier_thresholds": {
+        "absolute_qtc": [">450 ms", ">480 ms", ">500 ms (particular concern)"],
+        "change_from_baseline": [">30 ms", ">60 ms"]
+      },
+      "discontinuation_thresholds": "QT/QTc > 500 ms or change > 60 ms from baseline"
+    },
+    "tqt_study_requirements": {
+      "design": "Randomized, blinded, placebo-controlled",
+      "preferred_design": "Crossover (smaller N, within-subject control)",
+      "parallel_design_when": "Long half-life, carryover effects, multiple groups",
+      "dose": "Supratherapeutic (commonly 2x high clinical exposure at mean Cmax)",
+      "positive_control": "Moxifloxacin 400 mg (5-10 ms QTc effect)",
+      "assay_sensitivity": "Lower bound of one-sided 95% CI of positive control effect must be > 0 ms",
+      "ecg_method": "12-lead standard; replicate ECGs (~3) at each time point; blinded reading by few skilled readers",
+      "preferred_correction": "Fridericia (QTc = QT/RR^0.33); Bazett no longer warranted as primary",
+      "baseline": "Time-matched for parallel, pre-dose for crossover"
+    },
+    "c_qtc_analysis": {
+      "methodology": "Concentration-QTc modeling using all available dose data",
+      "negative_criterion": "Upper bound of two-sided 90% CI for QTc effect < 10 ms at highest clinically relevant exposure",
+      "data_sources": "Can come from FIH, MAD, or other studies — not limited to dedicated QT study",
+      "models": "Linear, Emax; must be pre-specified; test for hysteresis",
+      "positive_control_waiver": "Not needed if data characterize response at sufficient multiple (commonly 2x) of high clinical exposure"
+    },
+    "tqt_waiver_conditions": {
+      "c_qtc_replacement": {
+        "conditions": [
+          "High-quality ECG recording and analysis",
+          "Concentrations well above max therapeutic dose at steady state",
+          "Wide dose range explored in early phase",
+          "Positive control included or waived per conditions above"
+        ]
+      },
+      "tqt_not_feasible": {
+        "conditions": [
+          "hERG assay + in vivo QT assay following best practice show low risk",
+          "Alternative QT study with as many TQT design features as possible",
+          "Totality of evidence argument at marketing application"
+        ]
+      },
+      "large_proteins_mabs": "TQT not necessary unless proarrhythmic risk suggested by data",
+      "combination_products": "TQT unnecessary if components individually lack relevant QT effects"
+    },
+    "integrated_risk_assessment_e14_s7b": {
+      "low_tdp_risk_criteria": [
+        "hERG safety margin higher than threshold defined from reference drugs with known TdP risk under same protocol",
+        "No QTc prolongation in in vivo assay at exposures exceeding clinical exposures of parent + major metabolites",
+        "Clinical ECG data: upper bound of 90% CI for delta-QTc < 10 ms with no outlier imbalances",
+        "Cardiovascular safety database shows no increased rate of proarrhythmic AEs"
+      ],
+      "herg_safety_margin_calculation": {
+        "numerator": "IC50 for hERG block",
+        "denominator": "Free drug high clinical exposure (Cmax,ss under worst-case intrinsic/extrinsic factor)",
+        "unbound_fraction_floor": "If experimentally < 1%, set to 1% for calculation",
+        "comparison": "Compared to safety margins for reference drugs with known TdP risk under same protocol"
+      },
+      "follow_up_studies": [
+        "Additional ion channel currents (IKs, INaL, ICaL)",
+        "In vitro cardiomyocyte assays (hiPSC-CMs)",
+        "In vivo telemetry studies with exposure-response modeling",
+        "Qualified proarrhythmia risk prediction models (in silico)"
+      ],
+      "proarrhythmic_clinical_events_to_monitor": [
+        "Torsade de pointes (TdP)",
+        "Sudden death",
+        "Ventricular tachycardia",
+        "Ventricular fibrillation and flutter",
+        "Syncope",
+        "Seizures"
+      ]
+    }
+  },
+
+  "selective_safety_data_collection_e19": {
+    "mandatory_data_always_collected": [
+      "Serious adverse events (per E2A/E6)",
+      "Important medical events (per E2A)",
+      "Medication error/overdose (intentional or unintentional)",
+      "Adverse events leading to study drug discontinuation",
+      "Pregnancy and lactation exposure and outcomes",
+      "Adverse events of special interest (AESIs) identified in protocol",
+      "Baseline data (demographics, disease characteristics, concurrent illnesses, concomitant therapies)"
+    ],
+    "criteria_supporting_selective_collection": [
+      "Drug has received marketing authorisation",
+      "Thorough understanding of mechanism of action including off-target effects",
+      "Knowledge of safety profile of same pharmacologic class",
+      "Number of drug-exposed subjects sufficiently exceeds ICH E1 requirements",
+      "Consistency of safety profile across previous trials",
+      "Intensity of safety monitoring in previous trials was adequate",
+      "Planned dose does not exceed previously studied dose",
+      "Duration of prior exposure is adequate",
+      "Comparable drug product (form, substance, excipients, route)",
+      "Similar population (demographics, concurrent illnesses, concomitant therapies, CYP phenotype)",
+      "Drug-drug interactions well characterised",
+      "Drug metabolism and excretion well described",
+      "Nonclinical toxicology well characterised",
+      "Adequate quantity and quality of post-approval safety data"
+    ],
+    "implementation_approaches": [
+      "Selective for all patients throughout the trial",
+      "Comprehensive for specific subsets, selective for others",
+      "Comprehensive for initial period, selective thereafter",
+      "Comprehensive for a representative subset of the population"
+    ],
+    "exclusions": [
+      "Gene therapy clinical trials",
+      "Rare/orphan disease clinical trials"
+    ],
+    "regulatory_requirement": "Prospective agreement with all regulatory authorities required"
+  },
+
+  "adaptive_trials_safety_e20": {
+    "key_requirements": [
+      "Adaptive designs must not lower scientific and regulatory standards for safety",
+      "Stopping for efficacy requires sufficient information to evaluate safety and benefit-risk",
+      "Number and timing of interim analyses must be specified and justified",
+      "Type I error probability must be appropriately controlled",
+      "Assessment must consider heterogeneity between stage-wise results as potential safety signal",
+      "Independent DMC should review unblinded interim data",
+      "Participants, investigators, and sponsor should be blinded to treatment assignments and accumulating summary data"
+    ]
+  },
+
+  "pregnancy_breastfeeding_safety_e21": {
+    "inclusion_framework": {
+      "evidence_needed": [
+        "Indication and intended population assessment",
+        "Nonclinical DART studies evaluated",
+        "Prospect of benefit assessed",
+        "Clinical pharmacology characterized",
+        "Biological plausibility of harm evaluated",
+        "Timing during pregnancy considered",
+        "Novelty of product (availability of data from similar molecules)"
+      ],
+      "monitoring_requirements": [
+        "Close monitoring for pregnancy-related AEs",
+        "Appropriate management plans",
+        "Infant follow-up duration on case-by-case basis",
+        "Account for delayed diagnosis of birth defects and neurodevelopmental disorders",
+        "Ongoing post-marketing safety monitoring for rare or delayed outcomes"
+      ],
+      "breastfeeding_considerations": [
+        "Amount of product in breastmilk",
+        "Extent of absorption by the child",
+        "Potential benefits and risks for patient and child",
+        "Available treatment alternatives",
+        "Benefits of breastfeeding",
+        "Alternatives to breastfeeding"
+      ]
+    }
+  },
+
+  "benefit_risk_evaluation": {
+    "pbrer_methodology": {
+      "risk_characterization": {
+        "section": "16.4",
+        "elements": ["Frequency", "Severity", "Seriousness", "Reversibility", "Outcome"],
+        "scope": "Each important identified and potential risk"
+      },
+      "benefit_characterization": {
+        "section": "17.3",
+        "elements": ["Nature", "Clinical importance", "Duration", "Relevance"]
+      },
+      "integrated_analysis": {
+        "section": "18",
+        "elements": ["Medical need", "Disease severity", "Available alternatives", "Weighing characterized benefits against characterized risks per approved indication"],
+        "conclusion_required": "Clear statement on whether benefit-risk balance remains favourable"
+      }
+    },
+    "dsur_methodology": {
+      "section": "18.2",
+      "approach": "Succinct statement on perceived balance between cumulative safety data and anticipated efficacy/benefits; note changes since previous DSUR. Not intended as full benefit-risk assessment."
+    },
+    "patient_preference_e22": {
+      "role": "PPS can provide measures of risk thresholds that inform benefit-risk assessment",
+      "application": "Acceptability of benefit-risk trade-offs; development of risk-mitigation strategies and risk management plans"
+    }
+  },
+
+  "real_world_evidence_safety_e23": {
+    "framework": "E23 covers RWE for effectiveness, complementing ICH M14 for safety",
+    "data_quality_principles": "FAIR (Findability, Accessibility, Interoperability, Reusability)",
+    "assessment_areas": ["Data provenance", "Collection methods", "Aggregation", "Transportability", "Quality", "Access", "Governance", "Feasibility", "Methodological aspects"],
+    "note": "Together M14 (safety) and E23 (effectiveness) form comprehensive framework for RWD/RWE in regulatory decision-making across full benefit-risk spectrum"
+  }
+}

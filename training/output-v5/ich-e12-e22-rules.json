@@ -1,0 +1,672 @@
+{
+  "metadata": {
+    "title": "ICH E12/E22 Rules Extraction",
+    "source_files": [
+      "E12_Guideline.pdf",
+      "ICH_E22_Step2_draftGuideline_Assembly_Endorsed_FINAL_2025_1119.pdf",
+      "Explainer_ICH E22 Draft Guideline_rev.pdf"
+    ],
+    "source_directory": "training/stage-1/ich-complete/",
+    "extraction_date": "2026-03-24",
+    "total_rules": 58,
+    "notes": "E12 covers principles for clinical evaluation of new antihypertensive drugs. E22 covers general considerations for patient preference studies (PPS) using stated-preference methods. E22 is a Step 2 draft guideline under public consultation."
+  },
+  "guidelines": {
+    "E12": {
+      "title": "Principles for Clinical Evaluation of New Antihypertensive Drugs",
+      "document_date": "2000-03-02",
+      "document_version": "final",
+      "status": "FINAL",
+      "full_code": "E12A",
+      "rules": [
+        {
+          "rule_id": "ICH-E12-001",
+          "rule_text": "The primary basis of assessment of efficacy of antihypertensive drugs must include explicit evaluation of the effect of a drug on both systolic and diastolic blood pressures, with systolic blood pressure explicitly evaluated given its recognition as a significant and remediable risk factor.",
+          "source_section": "Section 1 - General Principles for the Assessment of Efficacy",
+          "source_page": 5,
+          "verbatim_quote": "The primary basis of assessment of efficacy of antihypertensive drugs is the effect of the drug on systolic and diastolic blood pressures... the recognition of isolated or predominant systolic hypertension as a significant and remediable risk factor demands explicit evaluation of the effect of a drug on systolic blood pressure.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Formal mortality and morbidity outcome studies are not ordinarily required for approval of antihypertensive drugs.",
+          "cross_references": ["ICH-E9", "ICH-E10"]
+        },
+        {
+          "rule_id": "ICH-E12-002",
+          "rule_text": "The patient population studied with a new antihypertensive must include a broad range of patients with essential hypertension across the mild to moderate range, with both diastolic and systolic hypertension studied. More severe hypertension must also be studied.",
+          "source_section": "Section 2 - Study Population",
+          "source_page": 6,
+          "verbatim_quote": "The patient population studied with a new antihypertensive should include a broad range of patients with essential hypertension. Most patients will be in the mild to moderate range. Studies of patients with both diastolic and systolic hypertension are expected. More severe hypertension should also be studied.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Patients with secondary hypertension, isolated systolic hypertension, hypertension during pregnancy, and children with hypertension should be studied separately if specific indications are sought.",
+          "cross_references": ["ICH-E1", "ICH-E7", "ICH-E11"]
+        },
+        {
+          "rule_id": "ICH-E12-003",
+          "rule_text": "Patients with relevant concomitant illness such as diabetes mellitus and coronary heart disease must be included in antihypertensive drug studies unless the drugs they need would interfere with the study.",
+          "source_section": "Section 2 - Study Population",
+          "source_page": 6,
+          "verbatim_quote": "Patients with relevant concomitant illness (such as diabetes mellitus and coronary heart disease) should be included unless the drugs they need would interfere with the study; e.g., for patients with heart failure standard treatment requires use of one to several agents affecting blood pressure that could have pharmacologic actions similar to the study drug.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Patients with heart failure may be excluded if standard treatment involves agents with pharmacologic actions similar to the study drug.",
+          "cross_references": ["ICH-E1"]
+        },
+        {
+          "rule_id": "ICH-E12-004",
+          "rule_text": "Patients with target organ damage secondary to hypertension must not be included in placebo-controlled trials of more than very brief duration. However, such patients may be included in active controlled trials.",
+          "source_section": "Section 2 - Study Population",
+          "source_page": 6,
+          "verbatim_quote": "In general, patients with target organ damage secondary to hypertension should not be included in placebo-controlled trials of more than very brief duration, although such patients can be included in active controlled trials.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Patients with target organ damage may participate in active controlled trials.",
+          "cross_references": ["ICH-E10"]
+        },
+        {
+          "rule_id": "ICH-E12-005",
+          "rule_text": "Patient populations studied must include relevant demographic subsets including both men and women, racial/ethnic groups pertinent to the region, and both young and older patients. The very old (patients >75 years old) must be included.",
+          "source_section": "Section 2 - Study Population",
+          "source_page": 6,
+          "verbatim_quote": "Patients from relevant demographic subsets should be studied, including both men and women, racial/ethnic groups pertinent to the region, and both young and older patients. The very old or 'fragile elderly,' i.e., patients >75 years old, should be included.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Severity subgroups may be studied under different designs. Special populations (pregnancy, children, secondary hypertension) should be studied separately if those indications are sought.",
+          "cross_references": ["ICH-E7", "ICH-E11", "ICH-E5"]
+        },
+        {
+          "rule_id": "ICH-E12-006",
+          "rule_text": "The primary endpoint of studies to assess antihypertensive effect must be the absolute change at the end of the dosing interval (trough) from drug-free baseline blood pressure compared to the change in the control group.",
+          "source_section": "Section 3.1 - Studies to Assess Antihypertensive Effect",
+          "source_page": 6,
+          "verbatim_quote": "The primary endpoint of studies to assess antihypertensive effect is the absolute change at the end of the dosing interval (trough) from drug-free baseline blood pressure compared to the change in the control group.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Effects can also be assessed with respect to pre-defined response criteria as a secondary endpoint.",
+          "cross_references": ["ICH-E9"]
+        },
+        {
+          "rule_id": "ICH-E12-007",
+          "rule_text": "Short-term studies (4-12 weeks) must be placebo-controlled and used to characterize the blood pressure effect and dose-response relationship. Long-term studies (six months or more) must also be carried out to demonstrate maintenance of efficacy and to look for withdrawal effects.",
+          "source_section": "Section 3.1 - Studies to Assess Antihypertensive Effect",
+          "source_page": 6,
+          "verbatim_quote": "The effect on blood pressure and the relationship of the response to dose should be characterized in short-term studies (4-12 weeks), whose short duration allows for use of a placebo control. Long-term (six months or more) studies should also be carried out to demonstrate maintenance of efficacy and to look for withdrawal effects.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Long-term studies would usually use active controls, with a placebo-controlled randomized withdrawal study at end of treatment.",
+          "cross_references": ["ICH-E10", "ICH-E9"]
+        },
+        {
+          "rule_id": "ICH-E12-008",
+          "rule_text": "Studies on antihypertensive drugs must be conducted in a blinded fashion with placebo controls because blood pressure readings are subject to systematic error and spontaneous changes can be large.",
+          "source_section": "Section 3.1 - Studies to Assess Antihypertensive Effect",
+          "source_page": 6,
+          "verbatim_quote": "Because blood pressure readings (except perhaps ABPM readings) are subject to systematic error (bias), because spontaneous changes in blood pressure can be large, and because the effect of active drugs is often small (diastolic blood pressure change of 4-5 mm Hg more than placebo), studies conducted in a blinded fashion and with placebo controls are essential (See ICH E10).",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "ABPM readings may be less subject to systematic error. Long-term studies may use active controls with a randomized withdrawal phase.",
+          "cross_references": ["ICH-E10", "ICH-E9"]
+        },
+        {
+          "rule_id": "ICH-E12-009",
+          "rule_text": "The trough/peak ratio of blood pressure effect must be evaluated to ensure adequate blood pressure control late in the dose interval without an excessive fall in blood pressure at peak.",
+          "source_section": "Section 3.1 - Studies to Assess Antihypertensive Effect",
+          "source_page": 7,
+          "verbatim_quote": "The trough/peak ratio should be evaluated. Although strict rules (e.g., placebo-subtracted trough/peak at least 50%) have been suggested, interpretation of these ratios has generally been flexible. The principal concern is that there needs to be an adequate blood pressure control late in the dose interval, without an excessive fall in blood pressure at peak resulting from a desire to have a long dose interval (e.g., to gain a once daily dosing claim for a short-acting drug).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Interpretation of trough/peak ratios has generally been flexible; strict rules (e.g., placebo-subtracted trough/peak at least 50%) are not rigidly mandated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-010",
+          "rule_text": "Conditions of blood pressure measurement must be well described and standardized with respect to time of day, patient position, and specific measurement procedures.",
+          "source_section": "Section 3.1 - Studies to Assess Antihypertensive Effect",
+          "source_page": 7,
+          "verbatim_quote": "Conditions of blood pressure measurement should be well described and standardized with respect to time of day, patient position and specific measurement procedures.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Additional information may be obtained from self (home) measurement of blood pressure with automatic devices, provided the device used is validated.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-011",
+          "rule_text": "The pharmacodynamic properties of antihypertensive drugs must be characterized through placebo-controlled studies evaluating hemodynamic effects, renal effects, and neurohumoral effects, including magnitude, dose-response, and time-course.",
+          "source_section": "Section 3.2 - Pharmacodynamic Studies",
+          "source_page": 7,
+          "verbatim_quote": "The pharmacodynamic properties of antihypertensive drugs should be characterized. Studies should be performed to evaluate such properties as hemodynamic effects, renal effects, and neurohumoral effects. In general, it is useful to characterize the magnitude, dose-response, and time-course of these effects. These studies should usually be placebo-controlled.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-012",
+          "rule_text": "The dose-response relationship for both favorable (blood pressure) and unfavorable effects of antihypertensive drugs must be well-characterized through randomized fixed-dose dose-response studies, using at least three doses in addition to placebo.",
+          "source_section": "Section 3.3 - Dose Response Relationship",
+          "source_page": 7,
+          "verbatim_quote": "The dose-response (D/R) relationship for favorable (blood pressure) and unfavorable effects of anti-hypertensive drugs should be well-characterized through randomized fixed-dose, D/R studies. In these studies, a greater number of dose groups will provide a better D/R assessment. If possible, at least three doses (in addition to placebo) should be used.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Some studies could utilize a placebo-controlled titration design to narrow the range of doses to be studied in fixed-dose studies. A positive D/R slope study can show effectiveness even without a placebo.",
+          "cross_references": ["ICH-E4"]
+        },
+        {
+          "rule_id": "ICH-E12-013",
+          "rule_text": "Dose-response studies must characterize critical parts of the dose-response curve, allowing identification of the lowest dose with some useful effect, a dose on the steep part of the curve, and a maximum useful dose beyond which further effects are absent or small.",
+          "source_section": "Section 3.3 - Dose Response Relationship",
+          "source_page": 8,
+          "verbatim_quote": "These D/R studies (See ICH E4) should characterize critical parts of the D/R curve, allowing identification of the lowest dose with some useful effect, a dose on the steep part of the D/R curve, and a dose beyond which further effects are absent or small (maximum useful dose).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "If all doses show equal effects, a D/R study may be uninformative.",
+          "cross_references": ["ICH-E4"]
+        },
+        {
+          "rule_id": "ICH-E12-014",
+          "rule_text": "Comparative studies against current standard therapy must document assay sensitivity through a placebo arm or a terminal placebo-controlled randomized withdrawal phase.",
+          "source_section": "Section 3.4 - Comparison with Standard Therapy",
+          "source_page": 8,
+          "verbatim_quote": "In order to assess antihypertensive efficacy, these trials need to document assay sensitivity through a placebo arm or a terminal placebo-controlled randomized withdrawal phase.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "The need for comparative studies varies among regions; comparative studies are of interest in all regions but regional requirements differ.",
+          "cross_references": ["ICH-E10"]
+        },
+        {
+          "rule_id": "ICH-E12-015",
+          "rule_text": "A safety database exceeding ICH E1 recommendations must be considered for antihypertensives due to very long and very wide exposure in an asymptomatic population. The standard of about 1500 patients (300-600 for 6 months, 100 for 1 year) may be insufficient.",
+          "source_section": "Section 4 - Assessment of Safety",
+          "source_page": 8,
+          "verbatim_quote": "ICH E1 suggests that a database of about 1500 patients (300-600 for 6 months, 100 for 1 year) is usually sufficient for chronically administered drugs, but as suggested in that guideline, this may be too small for the very long, very wide exposure in an asymptomatic population intended for antihypertensive drugs.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": null,
+          "cross_references": ["ICH-E1"]
+        },
+        {
+          "rule_id": "ICH-E12-016",
+          "rule_text": "Safety assessments for antihypertensive drugs must specifically address excessive fall in blood pressure (hypotension), orthostatic hypotension, and rebound phenomena, in addition to usual safety assessments.",
+          "source_section": "Section 4 - Assessment of Safety",
+          "source_page": 8,
+          "verbatim_quote": "In addition to the usual safety assessments, attention should be paid to excessive fall in blood pressure (hypotension), especially on standing (orthostatic hypotension), and rebound phenomena.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Depending on the particular drug and other observations, additional studies of effects on heart rhythm or cardiac conduction, coronary steal effects, effects on risk factors for cardiovascular disease, and effects on target organ damage may be warranted.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-017",
+          "rule_text": "The efficacy and safety of an antihypertensive drug in combination with other antihypertensives must be studied, as antihypertensive treatments are often used in combination.",
+          "source_section": "Section 5 - Co-Administration with Other Antihypertensives",
+          "source_page": 8,
+          "verbatim_quote": "As antihypertensive treatments are often used in combination, it is important to study the efficacy and safety of the new drug in this situation.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Specific requirements regarding clinical co-administration studies may vary among regions.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-018",
+          "rule_text": "To support fixed combination products, it is essential to consult with regional regulatory authorities regarding the specific data needed to support the specific indications. Combination studies must demonstrate safety and efficacy data.",
+          "source_section": "Section 6 - Fixed Combination Products",
+          "source_page": 9,
+          "verbatim_quote": "There are two approaches to the combination studies needed to obtain safety and efficacy data to support fixed combination products. It is essential to consult with regional regulatory authorities regarding the specific data needed to support the specific indications.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E12-019",
+          "rule_text": "For fixed combination products, a factorial study design must be able to show that the combination has a greater antihypertensive effect than either drug alone. The most informative approach is a factorial dose-response study comparing several doses of each drug and their combinations.",
+          "source_section": "Section 6.1 - Factorial Study",
+          "source_page": 9,
+          "verbatim_quote": "In a factorial study, placebo, and one or more doses of the test drug T and another drug D are studied alone and in the combination in a short-term randomized controlled trial. Such a trial can be used to show that the combination has a greater effect than either drug alone. Most informative for identifying the appropriate dosages for a fixed combination is a factorial D/R study in which several doses of each drug, e.g., a test drug T and another drug D, and their combinations are compared.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "Some regional authorities may only require trials in patients failing to respond to one of the components (non-responder approach).",
+          "cross_references": ["ICH-E4"]
+        },
+        {
+          "rule_id": "ICH-E12-020",
+          "rule_text": "Alternatively, the safety and efficacy of fixed combinations may be assessed by examining the effect of the combination in patients failing to respond to both single drugs, defined as diastolic blood pressure greater than 90 mmHg on that component.",
+          "source_section": "Section 6.2 - Studies in Non-responders to Each Drug",
+          "source_page": 9,
+          "verbatim_quote": "The safety and efficacy of combinations can also be assessed by examining the effect of the combination in patients failing to respond to both of the single drugs, e.g., diastolic blood pressure > 90 mmHg on that component. In some cases, regional authorities only require trials in patients failing to respond to one of the components.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP"],
+          "exceptions": "In some cases, regional authorities only require trials in patients failing to respond to one of the components.",
+          "cross_references": []
+        }
+      ]
+    },
+    "E22": {
+      "title": "General Considerations for Patient Preference Studies",
+      "document_date": "2025-11-19",
+      "document_version": "DRAFT - Step 2",
+      "status": "DRAFT",
+      "draft_warning": "This is a Step 2 draft guideline endorsed by the ICH Assembly on 19 November 2025 and currently under public consultation. Rules extracted are from a non-finalized document and subject to change before final adoption.",
+      "rules": [
+        {
+          "rule_id": "ICH-E22-001",
+          "rule_text": "Patient preference studies (PPS) must comply with applicable ethical and legal requirements for protection of human subjects, including ethical conduct, compliance with the protocol, and protection of personal data.",
+          "source_section": "Section 2.1 - Protection of Study Participants",
+          "source_page": 5,
+          "verbatim_quote": "Principles applicable to other types of studies involving human subjects, such as ethical conduct, compliance with the protocol, and protection of personal data, are applicable to PPS as well. PPS participants should be protected in accordance with the applicable regulatory and legal requirements.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E6", "ICH-E8"]
+        },
+        {
+          "rule_id": "ICH-E22-002",
+          "rule_text": "When designing PPS, researchers must conduct thorough preliminary research (literature reviews, expert consultations, patient interviews) to ensure all relevant information is identified and included in the PPS design.",
+          "source_section": "Section 2.3 - Preliminary Research",
+          "source_page": 5,
+          "verbatim_quote": "Typically, it will be important to conduct thorough preliminary research (e.g., literature reviews, expert consultations, patient interviews) to ensure that all relevant information is identified and included in the PPS design. This step is critical for qualitative research (e.g., interview guide development) and quantitative research (e.g., survey development).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Existing relevant PPS literature of sufficient quality may address the research objective, making de novo work unnecessary.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-003",
+          "rule_text": "Ongoing and future PPS must take existing relevant literature of sufficient quality into consideration to avoid unnecessary burden on the patient community. De novo work is not always justified.",
+          "source_section": "Section 2.4 - De Novo Work May Not Always be Justified",
+          "source_page": 5,
+          "verbatim_quote": "Although most studies are designed for a specific set of attributes and therapeutic context, there may be existing relevant PPS literature that can address the intended research objective and question(s). Ongoing and future studies should take existing relevant literature of sufficient quality into consideration to avoid unnecessary burden on the patient community.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-004",
+          "rule_text": "When PPS conducted in other regions are used to support regulatory decisions in a local region, applicants must justify why the PPS conducted outside of the local region is informative to the local region, evaluating degree of applicability.",
+          "source_section": "Section 2.5 - Global Applicability",
+          "source_page": 5,
+          "verbatim_quote": "The degree of applicability of PPS results from other region(s) to the local region should be evaluated. Applicants should justify why a PPS conducted outside of the local region is informative to the local region. The applicant may find this topic useful to discuss prospectively with the relevant regulatory authorities.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E17"]
+        },
+        {
+          "rule_id": "ICH-E22-005",
+          "rule_text": "PPS must follow the principles of good study design and conduct, including generation of study documents such as informed consent forms, protocol, interview guide, analysis plan, final survey instrument where applicable, and study report. The study design and statistical analysis approaches must be pre-specified and well-documented.",
+          "source_section": "Section 2.7 - Quality Standards",
+          "source_page": 6,
+          "verbatim_quote": "PPS are expected to follow the principles of good study design and conduct. This includes generation of study documents such as informed consent forms, protocol, interview guide, analysis plan, (final) survey instrument, when applicable, and study report. It also includes ensuring that the study design and statistical analysis approaches are pre-specified and well-documented.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E6", "ICH-E8"]
+        },
+        {
+          "rule_id": "ICH-E22-006",
+          "rule_text": "The design, conduct, analysis, and submission of a PPS must be undertaken by a cross-functional study team with the relevant PPS methodology and clinical expertise.",
+          "source_section": "Section 2.8 - Ensuring Multidisciplinary Expertise in the PPS Team",
+          "source_page": 6,
+          "verbatim_quote": "The design, conduct, analysis, and submission of a PPS should be undertaken by a cross-functional study team with the relevant PPS methodology and clinical expertise.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-007",
+          "rule_text": "PPS must have a clearly articulated distinction between research objective and research question(s). The research objective must describe what the PPS is intended to inform in drug development and evaluation, and the research question(s) must refine the research objective into answerable questions.",
+          "source_section": "Section 4.1 - Research Objective and Research Question",
+          "source_page": 8,
+          "verbatim_quote": "As in all research, PPS have a distinction between research objective and research question(s). The research objective describes what the PPS is intended to inform in drug development and evaluation. The research question(s) refine the research objective into answerable question(s).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-008",
+          "rule_text": "The choice of PPS method must have a clear rationale, including explaining why a specific preference elicitation technique was selected and how it supports answering the research question(s).",
+          "source_section": "Section 4.2 - Study Design and Method Selection",
+          "source_page": 8,
+          "verbatim_quote": "There should be a clear rationale for the choice of methods used in the PPS. This includes explaining why a specific preference elicitation technique was selected and how it supports answering the research question(s).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "In small populations such as in very rare diseases, some methodologies may not be feasible.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-009",
+          "rule_text": "The PPS sample must typically be representative of the target population of the regulatory submission. If a different population is included, the study report must include a discussion supporting the relevance of the PPS. The recruitment strategy must be justified.",
+          "source_section": "Section 4.3 - Study Sample",
+          "source_page": 9,
+          "verbatim_quote": "Typically, the PPS would include a sample that is representative of the target population of the regulatory submission. A mismatch between the PPS sample and the target patient population can limit the generalisability and applicability of the PPS findings. If the PPS planned to include different populations than the target population of the regulatory submission, the study report should include a discussion supporting the relevance of the PPS (see Section 4.8).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-010",
+          "rule_text": "The limitations of the PPS recruitment strategy and potential bias must be described, including an assessment of how diagnosis should be evaluated and the approach justified.",
+          "source_section": "Section 4.3 - Study Sample",
+          "source_page": 9,
+          "verbatim_quote": "The limitations of the chosen strategy and potential bias should be described. Researchers should also consider how diagnosis should be assessed and justify the approach.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-011",
+          "rule_text": "For quantitative PPS, sample size must be large enough to ensure the desired level of precision, which depends on the research objective. If subgroup analyses are planned, the sample must include a sufficient number of participants in each subgroup of interest.",
+          "source_section": "Section 4.4 - Sample Size",
+          "source_page": 10,
+          "verbatim_quote": "In quantitative studies, sample size should be large enough to ensure the desired level of precision, which depends on the research objective. If the research question(s) includes assessing differences in preferences between subgroups of interest, the sample should include a sufficient number of participants in each subgroup of interest.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "The sample size for qualitative PPS tends to be smaller than quantitative PPS, but it should include diverse perspectives to capture variability in preferences.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-012",
+          "rule_text": "Attributes included in PPS must be relevant for the patients, research objective, and research question(s). Irrelevant attributes that might increase burden must be avoided. Omitting relevant attributes may limit the usefulness of results.",
+          "source_section": "Section 4.5 - Attributes and Levels",
+          "source_page": 10,
+          "verbatim_quote": "Attributes included should be relevant for the patients, research objective and question(s); It is important to avoid attributes known to be irrelevant that might increase burden; Omitting relevant attributes from the PPS may limit the usefulness of the results, depending on the objective of the study.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-013",
+          "rule_text": "When the PPS objective is to inform benefit-risk assessment, alignment between attributes and clinical endpoints must be ensured. Applicability of PPS to the clinical data may be limited if key endpoints from clinical studies are not included in the PPS.",
+          "source_section": "Section 4.5 - Attributes and Levels",
+          "source_page": 11,
+          "verbatim_quote": "Generally, it is important to consider alignment between attributes and endpoints. It is particularly important when the objective of the PPS is to inform benefit-risk assessment (see ICH M4E(R2)). Applicability of the PPS to the clinical data may be limited if key endpoints from the clinical studies are not included in the PPS.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Sometimes perfect alignment may not be possible. Limitations can be managed, e.g., using generic attributes when trial endpoints are not known at the time of designing the PPS.",
+          "cross_references": ["ICH-M4E(R2)"]
+        },
+        {
+          "rule_id": "ICH-E22-014",
+          "rule_text": "The range of attribute levels included in a PPS must at least cover the attribute's relevant values expected in clinical studies (treatment and control groups). Extrapolation of PPS data beyond the levels included in the study is generally not recommended.",
+          "source_section": "Section 4.5 - Attributes and Levels",
+          "source_page": 11,
+          "verbatim_quote": "The range of attribute levels included in a PPS should at least cover the attribute's relevant values expected in clinical studies (treatment and control groups). Otherwise, this could limit the ability to interpret the clinical results, diminishing the overall usefulness to support the PPS objective. Extrapolation of PPS data beyond the levels included in the study is generally not recommended.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-015",
+          "rule_text": "PPS instruments (interview guides, surveys) must be clear, comprehensible, and relevant to participants. Researchers must take actions to minimise potential bias when designing instruments for preference elicitation.",
+          "source_section": "Section 4.6 - Instrument Design",
+          "source_page": 11,
+          "verbatim_quote": "Instruments (e.g., interview guides, surveys) should be clear, comprehensible, and relevant to participants. When designing instruments for preference elicitation, researchers should take actions to minimise potential bias.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-016",
+          "rule_text": "PPS instruments must define the PPS context by providing a clear description of the scenario that participants are expected to think about when stating their preferences. The information must be presented in a manner that is realistic and does not bias responses.",
+          "source_section": "Section 4.6.1 - Context",
+          "source_page": 11,
+          "verbatim_quote": "Instruments should define the PPS context by providing a clear description of the scenario that participants are expected to think about when stating their preferences. This is important as preferences may differ based on the context. The information should be adequately presented and described in a manner that is realistic and does not bias responses.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-017",
+          "rule_text": "PPS instruments must present attributes and other relevant information such that they are interpreted as intended, consistently, and unambiguously across all participants. Attribute and level definitions must be factual and avoid biased descriptors.",
+          "source_section": "Section 4.6.2 - Presenting the Information During the PPS",
+          "source_page": 12,
+          "verbatim_quote": "Attributes and other relevant information should be described such that they are interpreted as intended, consistently, and unambiguously across all participants... Attribute and level definitions should be carefully designed to be factual and avoid bias (e.g., avoid describing a level as 'good' or 'bad').",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-018",
+          "rule_text": "In multilingual PPS, translation of instruments must emphasise conceptual equivalence across languages and cultures.",
+          "source_section": "Section 4.6.2 - Presenting the Information During the PPS",
+          "source_page": 12,
+          "verbatim_quote": "Translation of instruments should emphasise conceptual equivalence across languages and cultures.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-019",
+          "rule_text": "The instrument design must minimise potential cognitive biases such as framing, anchoring, simplifying heuristics, and ordering effects.",
+          "source_section": "Section 4.6.2 - Presenting the Information During the PPS",
+          "source_page": 12,
+          "verbatim_quote": "The instrument design should minimise potential cognitive biases such as framing (e.g., presenting changes as losses or gains), anchoring (e.g., signalling a reference value), simplifying heuristics (e.g., recoding numerical values or percentages as low, medium, and high), or ordering effect (e.g., influencing the response to a question depending on its relative position in the question sequence).",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-020",
+          "rule_text": "Data quality checks must be incorporated as a critical aspect of PPS design and must be considered early in instrument design. The choice of quality checks must be justified.",
+          "source_section": "Section 4.6.3 - Implementing Quality Checks",
+          "source_page": 13,
+          "verbatim_quote": "Data quality checks are a critical aspect of PPS, which may highlight potential data and study limitations. This should be considered early in instrument design... The choice of quality checks should be justified.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Quality checks should not unnecessarily add to the overall burden of the survey instrument.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-021",
+          "rule_text": "Important issues highlighted by data quality checks must be addressed. Fraudulent responses, including those generated by artificial intelligence or from duplicate survey completions, must be identified and handled.",
+          "source_section": "Section 4.6.3 - Implementing Quality Checks",
+          "source_page": 13,
+          "verbatim_quote": "Important issues highlighted by quality checks should be addressed. It should be noted that most data quality checks, in and of themselves, cannot definitively identify responses that should be removed from the analysis set... Fraudulent responses (e.g., completing the survey multiple times, or synthetic participants generated by artificial intelligence).",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Most data quality checks cannot definitively identify responses that should be removed from the analysis set.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-022",
+          "rule_text": "PPS instruments must undergo pretesting before the main study. For quantitative PPS, pretesting generally involves administering the survey to a small, representative sample via cognitive interviews to assess if questions are understood as intended and to identify any ambiguities.",
+          "source_section": "Section 4.6.4 - Pretesting",
+          "source_page": 14,
+          "verbatim_quote": "In PPS, pretesting and piloting an instrument serve different purposes, and both are essential steps in developing the instrument. Pretesting is an initial evaluation phase where the instrument is reviewed by a set of patients to identify any issues with comprehension or interpretation of content, wording, or format. The goal is to refine the instrument, such that questions are clear, relevant, and understandable, before launching the larger study.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-023",
+          "rule_text": "Following pretesting, PPS instruments must undergo piloting under actual study conditions using a larger sample than the pretesting phase to identify issues regarding feasibility, data quality, and logistics before the full study is launched.",
+          "source_section": "Section 4.6.5 - Piloting",
+          "source_page": 14,
+          "verbatim_quote": "Piloting typically involves a more comprehensive test of the instrument under actual study conditions. This phase uses a larger sample than the pretesting phase. Piloting helps to identify issues regarding feasibility, data quality, and logistics.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-024",
+          "rule_text": "PPS must have a pre-specified analysis plan that defines the research question(s) and the statistical methods to be used, including defining analysis sets, handling of missing data, defining subgroups, and where appropriate testing of hypotheses.",
+          "source_section": "Section 4.7 - Analysis Plan",
+          "source_page": 15,
+          "verbatim_quote": "Researchers should develop a pre-specified analysis plan that defines the research question(s) and the statistical methods to be used, including defining analysis sets, handling of missing data, defining subgroups, and where appropriate testing of hypotheses.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E9"]
+        },
+        {
+          "rule_id": "ICH-E22-025",
+          "rule_text": "The PPS analysis plan must specify all primary and exploratory analyses, the analytical models or modelling plan, and the software package(s) to be used. Justification must be provided for the analytical approach.",
+          "source_section": "Section 4.7 - Analysis Plan",
+          "source_page": 15,
+          "verbatim_quote": "The analysis plan should specify all primary and exploratory analyses, the analytical models or modelling plan, when applicable, and the software package(s) that will be used to perform the analyses. If several analytical models are planned, the researcher can consider outlining the steps or any diagnostics that will guide the selection of the final model.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-026",
+          "rule_text": "If data quality checks result in removing observations to create the primary analysis set, the results of the full analysis set including the removed observations must be presented to demonstrate the impact of removing those observations on the study results.",
+          "source_section": "Section 4.7 - Analysis Plan",
+          "source_page": 15,
+          "verbatim_quote": "If the data quality checks result in removing observations to create the primary analysis set, the results of the full analysis set (including removed observations) should be presented to demonstrate the impact of removing these observations on the study results.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-027",
+          "rule_text": "Sensitivity analyses must be conducted to assess the robustness of the primary analysis results and check if conclusions change under deviations in assumptions and limitations in the data. Justification must be provided for deviations from the pre-specified analysis plan.",
+          "source_section": "Section 4.7 - Analysis Plan",
+          "source_page": 16,
+          "verbatim_quote": "Sensitivity analyses are used to assess the robustness of the primary analysis results and check if conclusions change under deviations in assumptions and limitations in the data. Justification should be provided for deviations from the pre-specified analysis plan.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E9"]
+        },
+        {
+          "rule_id": "ICH-E22-028",
+          "rule_text": "PPS reports must be submitted in CTD modules 2 and 5. Specifically, the PPS report must be included in CTD 5.3.5.4 'other clinical study reports'.",
+          "source_section": "Section 4.8 - Reporting and Submission to Common Technical Document (CTD) Modules",
+          "source_page": 16,
+          "verbatim_quote": "The PPS should be included in CTD modules 2 and 5. The PPS report should be included in CTD 5.3.5.4 'other clinical study reports'.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E3(R1)", "ICH-M4E(R2)"]
+        },
+        {
+          "rule_id": "ICH-E22-029",
+          "rule_text": "When PPS results are used as evidence of medical need or included in the benefit-risk assessment, they must be included in Benefits and Risks Conclusions (CTD 2.5.6) along with a critical assessment of the PPS.",
+          "source_section": "Section 4.8 - Reporting and Submission to Common Technical Document (CTD) Modules",
+          "source_page": 16,
+          "verbatim_quote": "If PPS results are used as evidence of medical need or included in the benefit-risk assessment, they can be included in Benefits and Risks Conclusions (CTD 2.5.6) along with a critical assessment of the PPS.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Optionally, a summary of key elements of PPS results and/or quantitative benefit-risk analyses can be included in the appendix to the Clinical Overview (CTD 2.5.6.5).",
+          "cross_references": ["ICH-M4E(R2)"]
+        },
+        {
+          "rule_id": "ICH-E22-030",
+          "rule_text": "If a PPS was conducted to inform the design of a clinical study, the applicant must include in CTD 2.5.1 a description of how the PPS results were used.",
+          "source_section": "Section 4.8 - Reporting and Submission to Common Technical Document (CTD) Modules",
+          "source_page": 16,
+          "verbatim_quote": "If the PPS was done to inform design of a clinical study, a description should be included in CTD 2.5.1 about how the PPS results were used.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-M4E(R2)"]
+        },
+        {
+          "rule_id": "ICH-E22-031",
+          "rule_text": "The applicant is ultimately responsible for all aspects of PPS studies submitted to regulatory authorities and must explain how the results are intended to support their regulatory submission and justify that the data submitted meet the regulatory requirements.",
+          "source_section": "Section 4 - Recommendations and Practical Considerations for PPS",
+          "source_page": 7,
+          "verbatim_quote": "It is up to the applicant to explain how the results are intended to support their regulatory submission, and to justify that the data submitted meet the regulatory requirements.",
+          "severity": "CRITICAL",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-032",
+          "rule_text": "When pooling PPS data across regions or subpopulations, the pooling strategy must be justified, pre-specified in the study protocol and analysis plan, and aligned with ICH E17 principles for assessing consistency in preferences.",
+          "source_section": "Section 4.7 - Analysis Plan",
+          "source_page": 15,
+          "verbatim_quote": "Aligned with ICH E17, pre-specified pooling of regions or subpopulations may help provide flexibility, facilitate the assessment of consistency in preferences across regions, and support regulatory assessment and decision-making (see also Section 2.5). The pooling strategy should be justified. Pooling strategies should be specified in the study protocol and analysis plan, when applicable.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E17"]
+        },
+        {
+          "rule_id": "ICH-E22-033",
+          "rule_text": "PPS conducted on stated-preference methods must focus on collecting preference data through surveys or interviews where participants are asked to express their choices or acceptable thresholds for trade-offs. Revealed-preference methods are outside the scope of E22.",
+          "source_section": "Section 1.3 - Scope and Direction",
+          "source_page": 4,
+          "verbatim_quote": "This guideline focuses on methods called stated-preference methods. Stated-preference methods involve collecting preference data through surveys or interviews where participants are asked to express (state) their choices or acceptable thresholds for trade-offs for specific outcomes or treatment alternatives. Unlike revealed-preference methods, which rely on actual observed behaviour, stated-preference methods use hypothetical scenarios to understand how patients might behave under different conditions. Revealed-preference methods are outside the scope of this guideline.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": "Caregiver preference studies and healthcare professional preference studies are outside the scope of E22.",
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-034",
+          "rule_text": "Patient input must be incorporated throughout the development of PPS, including identifying the use for a PPS, designing a PPS, identifying feasibility challenges, developing PPS protocols, selecting attributes and levels, and contextualising PPS findings.",
+          "source_section": "Section 2.2 - Patient Input in the Development of PPS",
+          "source_page": 5,
+          "verbatim_quote": "Patient input is valuable throughout drug development, including in the development of PPS. Patient input can support activities, including: Identifying the use for a PPS; Designing a PPS; Identifying feasibility challenges in the conduct of a PPS; Developing PPS protocols; Selecting attributes and levels; Contextualising the PPS findings and highlighting their practical implications.",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-035",
+          "rule_text": "The PPS report structure must be based on (with adaptations as appropriate) the structure of clinical study reports (CSRs) per ICH E3(R1), and must typically address research objective and question(s), study design, method selection, study sample, and sample size.",
+          "source_section": "Section 4.8 - Reporting and Submission to Common Technical Document (CTD) Modules",
+          "source_page": 16,
+          "verbatim_quote": "The PPS report structure can be based on (with adaptations as appropriate) the structure of clinical study reports (CSRs) (ICH E3(R1)). A PPS report typically includes content that addresses the topics covered in ICH E22 e.g., research objective and question(s), study design, method selection, study sample, sample size.",
+          "severity": "HIGH",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E3(R1)"]
+        },
+        {
+          "rule_id": "ICH-E22-036",
+          "rule_text": "Early interaction with regulatory authorities is recommended when available to ensure that the PPS meets regulatory expectations and scientific standards, particularly given that preference research is a large and evolving field.",
+          "source_section": "Section 1.3 - Scope and Direction",
+          "source_page": 4,
+          "verbatim_quote": "When available, interaction early in the process with regulatory authorities can be useful to ensure that the PPS meets regulatory expectations and scientific standards.",
+          "severity": "LOW",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        },
+        {
+          "rule_id": "ICH-E22-037",
+          "rule_text": "PPS must consider the quality by design approach to clinical research, focusing on critical quality factors to ensure the generation of reliable and meaningful results and the management of risks to those critical quality factors using a risk-proportionate approach.",
+          "source_section": "Section 2.7 - Quality Standards",
+          "source_page": 6,
+          "verbatim_quote": "The conduct of PPS should align with the principles of the 'quality by design' approach to clinical research, such as focusing on critical quality factors to ensure the generation of reliable and meaningful results and the management of risks to those critical quality factors, using a risk-proportionate approach (see ICH E8).",
+          "severity": "MEDIUM",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": ["ICH-E8"]
+        },
+        {
+          "rule_id": "ICH-E22-038",
+          "rule_text": "Protocol pre-registration using a registry, a comparable platform, or other formal mechanisms is recommended to enhance research credibility and transparency of PPS.",
+          "source_section": "Section 2.7 - Quality Standards",
+          "source_page": 6,
+          "verbatim_quote": "It may be useful to pre-register protocols using a registry, a comparable platform, or other formal mechanisms to enhance research credibility and transparency.",
+          "severity": "LOW",
+          "jurisdictions": ["US", "EU", "JP", "CA"],
+          "exceptions": null,
+          "cross_references": []
+        }
+      ]
+    }
+  }
+}

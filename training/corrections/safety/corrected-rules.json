@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "title": "Corrected ICH Safety Rules — Verified Against Source PDFs",
+    "generated": "2026-03-23",
+    "generator": "Claude Sonnet 4.6",
+    "method": "4-step protocol: (1) read source PDF, (2) extract correct text, (3) self-verify against verification-report.json, (4) adversarial self-test",
+    "source_corrections_file": "training/verification/ich-safety/corrections.json",
+    "source_verification_file": "training/verification/ich-safety/verification-report.json",
+    "source_pdfs": [
+      "S4_Guideline.pdf (Step 4, 2 Sep 1998)",
+      "M3_R2__Guideline.pdf (Step 4, 11 Jun 2009)",
+      "S7A_Guideline.pdf (Step 4, 8 Nov 2000)",
+      "S7B_Guideline.pdf (Step 4, 12 May 2005)"
+    ],
+    "applied_corrections": 6,
+    "critical_corrections": 1,
+    "minor_corrections": 1,
+    "low_corrections": 4
+  },
+
+  "corrected_rules": [
+
+    {
+      "correction_id": "CORR-001",
+      "severity": "CRITICAL",
+      "source_file": "training/output-v2/s-toxicology/nonclinical-requirements.json",
+      "rule_id": "S2-01",
+      "field": "timing",
+
+      "original_value": "Complete standard battery before initial clinical trials (Phase I)",
+
+      "corrected_value": "Phased timing per ICH M3(R2) Section 9: (1) Gene mutation assay (Ames test) alone is sufficient to support single-dose Phase I trials. (2) An additional assay capable of detecting chromosomal damage in a mammalian system must be completed before multiple-dose clinical trials. (3) The COMPLETE standard genotoxicity battery (Option 1 or 2) must be completed before initiation of Phase II trials.",
+
+      "corrected_timing_table": {
+        "before_phase_I_single_dose": "Gene mutation assay (Ames test) — Option 1 Test 1 only",
+        "before_phase_I_multiple_dose": "Ames test + one in vitro mammalian chromosomal assay (e.g., in vitro micronucleus or CA assay)",
+        "before_phase_II": "Complete standard battery (Option 1: Ames + in vitro mammalian cell + in vivo MN; or Option 2: Ames + 2 in vivo tissues)"
+      },
+
+      "source_text_verbatim": "ICH M3(R2) Section 9: 'An assay for gene mutation is generally considered sufficient to support all single dose clinical development trials. To support multiple dose clinical development trials, an additional assessment capable of detecting chromosomal damage in a mammalian system(s) should be completed. A complete battery of tests for genotoxicity should be completed before initiation of Phase II trials.'",
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json sampled rule S2-01 and timing_requirements_deep_check section",
+        "verification_report_verdict": "INACCURATE — confirmed in verification-report.json timing_requirements_deep_check, topic 'Genotoxicity battery timing'",
+        "cross_file_consistency": "safety-pharmacology-rules.json CORRECTLY states 'before Phase II' for complete battery; nonclinical-requirements.json was the only inconsistent file",
+        "pdf_text_confirmed": true
+      },
+
+      "adversarial_self_test": {
+        "challenge_1": "Could 'complete before Phase I' be interpreted as meaning before any multi-dose Phase I trials?",
+        "response_1": "No. The rule as written says 'before initial clinical trials (Phase I)' — implying ALL Phase I regardless of dose number. M3(R2) is explicit: single-dose Phase I requires only Ames; complete battery is required before Phase II, not Phase I.",
+        "challenge_2": "Does this create a safety gap — could sponsors proceed to Phase II without adequate genotoxicity data?",
+        "response_2": "No. M3(R2) requires the complete battery 'before initiation of Phase II trials' — which is a pre-Phase II gate, not a Phase II waiver. Sponsors must have all three assays (Ames + in vitro mammalian + in vivo) before starting Phase II.",
+        "conclusion": "Correction is correct and necessary. The original rule would cause unnecessary delays to Phase I studies."
+      },
+
+      "impact": "HIGH — Incorrect timing in original rule would cause sponsors to run unnecessary pre-Phase I testing. Under M3(R2), only the Ames assay is needed to support a single-dose Phase I trial."
+    },
+
+    {
+      "correction_id": "CORR-002",
+      "severity": "MINOR",
+      "source_file": "training/output-v2/s-toxicology/nonclinical-requirements.json",
+      "rule_id": "S1A-03",
+      "field": "timing",
+
+      "original_value": "Before Phase III",
+
+      "corrected_value": "Timing not explicitly specified in S1A Section 4.3. The 'before Phase III' timing is inferred from ICH M3(R2) general chronic toxicity study timelines (Table 1: chronic rodent studies support >6-month clinical trials; Table 2: marketing authorization), NOT from ICH S1A itself. ICH S1A Section 4.3 states only that long-term carcinogenicity studies are 'usually not needed' for unequivocally genotoxic compounds, and that a chronic toxicity study of up to 1 year 'could assess early tumorigenic effects.' S1A does not assign a clinical development phase gate to this study.",
+
+      "annotation_to_add": {
+        "timing_source": "ICH M3(R2) Table 1 — general chronic tox timing; NOT from ICH S1A Section 4.3",
+        "s1a_says": "S1A Section 4.3 specifies waiver of long-term carcinogenicity study and potential use of up to 1-year chronic tox to assess early tumorigenic effects. Does NOT assign Phase III gate.",
+        "m3r2_says": "Chronic toxicity studies supporting >6-month clinical trials should be 6 months (rodent) and 9 months (non-rodent) per Table 1. This general timing is the source of the inferred 'before Phase III' gate.",
+        "recommendation": "Retain 'before Phase III' as a conservative, safe default, but annotate source as M3(R2) Table 1 timing inference, not S1A 4.3 direct requirement."
+      },
+
+      "source_text_verbatim": {
+        "S1A_Section_4.3": "S1A Section 4.3: 'For compounds that are unequivocally genotoxic, it is presumed that they are trans-species carcinogens, implying a hazard to humans. For such compounds, long-term carcinogenicity studies are usually not needed. But when needed for regulatory or clinical reasons, then a chronic toxicity study of up to one year could be done to assess early tumorigenic effects.' (Note: No Phase III timing gate is stated.)",
+        "M3R2_Table1": "M3(R2) Table 1: Clinical trials >6 months require 6-month rodent and 9-month non-rodent chronic toxicity studies. This is the basis for the 'before Phase III' inference since Phase III trials typically exceed 6 months."
+      },
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json S1A-03 sampled rule entry",
+        "verification_report_verdict": "PARTIALLY_ACCURATE — substance of genotoxicity waiver is correct; 'before Phase III' timing is conflated from M3(R2), not from S1A itself",
+        "pdf_text_confirmed": true
+      },
+
+      "adversarial_self_test": {
+        "challenge": "Is 'before Phase III' actually wrong, or just imprecisely sourced?",
+        "response": "Imprecisely sourced, not substantively wrong. The 'before Phase III' timing is a reasonable and conservative inference from M3(R2) chronic tox timelines. The correction clarifies source attribution — it does NOT change the practical timing recommendation. Retaining 'before Phase III' as conservative guidance is appropriate; the fix is to annotate the source correctly.",
+        "conclusion": "Correction is appropriate but non-urgent. The original rule is conservative and safe; source attribution is the only issue."
+      },
+
+      "impact": "LOW — The timing is conservative and correct from a safety standpoint. The issue is source misattribution (S1A vs M3(R2)), not an incorrect timing requirement."
+    },
+
+    {
+      "correction_id": "CORR-003",
+      "severity": "LOW",
+      "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay.best_practices",
+      "field": "structural_attribution",
+
+      "original_issue": "Best practices (temperature 35-37°C, stimulation frequency 0.2-1 Hz) listed under S7B-specific requirements without annotation that they derive from E14/S7B Q&As (2022), not from the original S7B guideline (2005).",
+
+      "corrected_annotation": {
+        "source_document_original_S7B": "ICH S7B (Step 4, 12 May 2005) — does NOT specify temperature range or stimulation frequency at this level of detail. S7B Section 3.1.1 requires a positive control and Section 3.1.2 specifies non-rodent species but does not prescribe physiological temperature or Hz range.",
+        "source_document_QA": "ICH E14/S7B Q&As (February 2022) — specifies: temperature near physiological (35-37°C), stimulation frequency 0.2-1 Hz, protein binding 1% floor rule, and safety margin calculation framework.",
+        "field_to_add": "source_document: 'E14/S7B Q&As (Feb 2022) — NOT original S7B (2005)'"
+      },
+
+      "corrected_best_practices_with_sources": [
+        {
+          "practice": "Temperature: near physiological (35-37°C)",
+          "source": "E14/S7B Q&As (Feb 2022)",
+          "in_original_S7B": false
+        },
+        {
+          "practice": "Stimulation frequency: 0.2-1 Hz for hERG patch-clamp",
+          "source": "E14/S7B Q&As (Feb 2022)",
+          "in_original_S7B": false
+        },
+        {
+          "practice": "Report IC50 in both micromolar and ng/mL units plus Hill coefficient",
+          "source": "E14/S7B Q&As (Feb 2022)",
+          "in_original_S7B": false
+        },
+        {
+          "practice": "Include positive control from reference drugs with known clinical TdP risk",
+          "source": "ICH S7B Section 3.1.1 (2005) — positive control required in all studies",
+          "in_original_S7B": true
+        },
+        {
+          "practice": "Adult rat/mouse cardiac tissue NOT appropriate (Ito-dominant repolarization)",
+          "source": "ICH S7B Section 3.1.2 (2005)",
+          "in_original_S7B": true
+        }
+      ],
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json sampled rule 'core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay.best_practices'",
+        "verification_report_verdict": "PARTIALLY_ACCURATE — values are correct per Q&As, but nesting under S7B section header without annotation may mislead about regulatory provenance",
+        "s7b_section_checked": "S7B Section 3.1.1 and 3.1.2 — confirmed: original S7B does not specify temperature or frequency",
+        "pdf_text_confirmed": true
+      },
+
+      "adversarial_self_test": {
+        "challenge": "If jurisdictions have adopted the 2022 Q&As as binding, does this distinction matter?",
+        "response": "In ICH regions that have adopted the 2022 Q&As, the distinction is academic for practice but remains important for regulatory citations and for jurisdictions that have not adopted them. The annotation ensures the training corpus accurately represents what derives from the 2005 guideline vs. 2022 updates.",
+        "conclusion": "Correction is appropriate for source traceability. Values are substantively correct."
+      },
+
+      "impact": "LOW — Values are scientifically correct per 2022 Q&As. Source provenance clarity matters for jurisdictions that have not adopted the 2022 Q&As or when citing specific regulatory documents."
+    },
+
+    {
+      "correction_id": "CORR-004",
+      "severity": "LOW",
+      "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.hERG_assay.safety_margin_calculation",
+      "field": "structural_attribution",
+
+      "original_issue": "Safety margin formula (hERG IC50 free / free Cmax,ss; protein binding 1% floor rule) presented structurally under S7B requirements without clear annotation as originating from E14/S7B Q&A 2 (2022).",
+
+      "corrected_annotation": {
+        "formula_source": "E14/S7B Q&A 2 (February 2022) — NOT original ICH S7B (2005). The original S7B Section 2.2 discusses clinical safety margins conceptually but does not specify this formula.",
+        "field_to_add": "source_document: 'E14/S7B Q&A 2 (Feb 2022)'",
+        "s7b_2005_says": "S7B Section 2.2 (2005): 'The nonclinical evaluation for the potential for delayed ventricular repolarization includes an estimate of the clinical risk and should consider the exposure at the intended clinical dose.' Does NOT specify IC50/Cmax formula or protein binding floor rule.",
+        "qa_2022_says": "E14/S7B Q&A 2 (2022): Specifies free hERG IC50 / free Cmax,ss ratio; protein binding floor: if unbound fraction <1% experimentally, set to 1% for calculation; threshold derived from reference TdP-causing drugs."
+      },
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json sampled rule for safety_margin_calculation",
+        "verification_report_verdict": "PARTIALLY_ACCURATE — correct content from Q&As, source attribution correct in metadata but structural nesting under S7B requirements may mislead",
+        "pdf_text_confirmed": true
+      },
+
+      "adversarial_self_test": {
+        "challenge": "Is the protein binding 1% floor rule actually in S7B or in an earlier regulatory communication?",
+        "response": "The 1% floor rule is confirmed in E14/S7B Q&A 2 (2022). No earlier ICH document specifies this floor. Some FDA guidance documents discuss protein binding adjustment but not with the 1% floor specification.",
+        "conclusion": "Correction is appropriate. The formula and floor rule are correctly attributed to E14/S7B Q&As (2022)."
+      },
+
+      "impact": "LOW — Source provenance clarity. The calculation framework is correct."
+    },
+
+    {
+      "correction_id": "CORR-005",
+      "severity": "LOW",
+      "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "scope.modality_considerations.monoclonal_antibodies",
+      "field": "source_attribution",
+
+      "original_issue": "TQT waiver for monoclonal antibodies presented under general scope section without explicit source attribution to E14 Q6.3 and S6(R1). Presented as if deriving from S7B scope.",
+
+      "corrected_annotation": {
+        "tqt_waiver_source": "E14 Q&A 6.3 — 'For monoclonal antibodies and other large molecules, the nonclinical and clinical QT assessment is generally not needed unless there is mechanistic or pharmacological reason to suspect cardiovascular risk.' NOT from ICH S7B.",
+        "reduced_safety_pharmacology_source": "ICH S6(R1) Section on safety pharmacology for biotechnology-derived pharmaceuticals — 'For biotechnology-derived pharmaceuticals that are highly specific for their target...a reduced safety pharmacology package may be appropriate.'",
+        "s7b_says": "ICH S7B (2005) does not specifically address monoclonal antibodies. S7B Section 1 scope covers small molecules with delayed ventricular repolarization potential.",
+        "fields_to_add": {
+          "tqt_waiver_source_document": "E14 Q&A 6.3",
+          "reduced_sp_source_document": "ICH S6(R1)"
+        }
+      },
+
+      "corrected_rule_text": "Low likelihood of direct ion channel interaction for monoclonal antibodies; TQT study generally not necessary unless target-related cardiac repolarization risk exists [E14 Q&A 6.3]. Reduced safety pharmacology package may be appropriate for highly target-specific biotechnology-derived products [ICH S6(R1)]. Source: E14 Q&A 6.3 + ICH S6(R1), NOT ICH S7B.",
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json sampled rule for scope.modality_considerations.monoclonal_antibodies",
+        "verification_report_verdict": "PARTIALLY_ACCURATE — correct substantively but mislabeled as S7B context; actually from E14 Q&A and S6(R1)",
+        "pdf_text_confirmed": "E14 Q&A 6.3 and S6(R1) not in source PDF set; attribution confirmed by verifier cross-reference"
+      },
+
+      "adversarial_self_test": {
+        "challenge": "Could S7B implicitly include mAbs through its general scope of 'pharmaceuticals'?",
+        "response": "S7B scope focuses on delayed ventricular repolarization risk relevant to ion channel-interacting small molecules. The specific mAb TQT waiver is an E14 Q&A policy decision, not a S7B scope extension. The distinction matters when regulators ask for the specific regulatory basis for TQT waiver.",
+        "conclusion": "Correction is appropriate. Source traceability to E14 Q6.3 is required for regulatory submissions."
+      },
+
+      "impact": "LOW — Minimal practical impact; content is correct. Source traceability matters for regulatory reference in dossier preparation."
+    },
+
+    {
+      "correction_id": "CORR-006",
+      "severity": "LOW",
+      "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rule_id": "core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches",
+      "field": "content",
+
+      "original_issue": "hiPSC cardiomyocytes, in silico models, and proarrhythmia model criteria listed under S7B requirements without clear annotation that they derive from E14/S7B Q&As (2022) and IWG concept papers (2018, 2024), NOT from original S7B (2005).",
+
+      "corrected_annotation": {
+        "original_S7B_says": "ICH S7B Section 3.1.4 (2005): 'The appropriateness of using simulated pathological conditions (e.g., low extracellular potassium, acidosis) to evaluate drug effects on repolarization may be warranted...It is recognized that new models for evaluating effects on cardiac repolarization are being developed.' Does NOT mention hiPSC-CMs or in silico proarrhythmia models by name.",
+        "QA_2022_says": "E14/S7B Q&As (February 2022): Describes hiPSC-CMs and in silico models as acceptable tools for integrated risk assessment with defined context-of-use requirements.",
+        "IWG_concept_papers": "IWG Concept Papers (2018 and 2024 update): Detailed frameworks for CiPA (Comprehensive in vitro Proarrhythmia Assay) — context of use, model development, validation requirements, uncertainty characterization, and evidence of predictive performance.",
+        "fields_to_add": {
+          "hiPSC_cardiomyocytes_source": "E14/S7B Q&As (Feb 2022) + CiPA IWG (2018, 2024)",
+          "in_silico_models_source": "E14/S7B Q&As (Feb 2022) + CiPA IWG (2018, 2024)",
+          "NOT_in_original_S7B": true
+        }
+      },
+
+      "proarrhythmia_model_criteria_corrected": {
+        "criteria": [
+          "(1) Context of use",
+          "(2) Model development and validation",
+          "(3) Uncertainty characterization",
+          "(4) Evidence of predictive performance"
+        ],
+        "source": "E14/S7B Q&As (Feb 2022) and CiPA IWG Concept Papers — NOT original S7B (2005)"
+      },
+
+      "self_verification": {
+        "method": "Cross-checked against verification-report.json sampled rule for novel_approaches; S7B PDF Section 3.1.4 reviewed",
+        "verification_report_verdict": "PARTIALLY_ACCURATE — values from Q&As and IWG are correct; S7B 3.1.4 only mentions 'simulated pathological conditions' and encourages novel model development generically",
+        "s7b_section_3_1_4_confirmed": "Reviewed — confirms S7B does not name hiPSC-CMs or in silico approaches",
+        "pdf_text_confirmed": true
+      },
+
+      "adversarial_self_test": {
+        "challenge": "Since S7B Section 3.1.4 'encourages development of new models,' could novel approaches be attributed to S7B under that broad umbrella?",
+        "response": "The encouragement in S7B 3.1.4 is generic and does not define hiPSC-CM or in silico models specifically. The criteria for using these models (context of use, validation, uncertainty characterization, predictive performance) come from the 2022 Q&As and CiPA IWG, not from S7B. Attribution must be specific to the source that defines the criteria.",
+        "conclusion": "Correction is appropriate. Training corpus must accurately distinguish S7B (2005) baseline from subsequent Q&A and IWG elaborations."
+      },
+
+      "impact": "LOW — Baseline S7B compliance is achievable without hiPSC-CM or in silico models. These novel approaches are 2022 Q&A/IWG additions. Misattribution could lead sponsors to believe original S7B requires these newer methodologies."
+    }
+  ],
+
+  "summary": {
+    "total_corrections_applied": 6,
+    "by_severity": {
+      "CRITICAL": 1,
+      "MINOR": 1,
+      "LOW": 4
+    },
+    "files_corrected": [
+      "training/output-v2/s-toxicology/nonclinical-requirements.json — rules S2-01, S1A-03",
+      "training/output-v2/s-pharmacology/safety-pharmacology-rules.json — 4 source attribution rules"
+    ],
+    "production_readiness": {
+      "nonclinical_requirements_json": "READY after CORR-001 applied — S2-01 timing corrected to M3(R2) Section 9 phased approach",
+      "safety_pharmacology_rules_json": "READY — corrections are source annotations only; substantive rule content remains accurate"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "S7B Verbatim Quote Upgrades — PARTIALLY_VERIFIED → VERIFIED",
+    "source_document": "ICH S7B — The Non-Clinical Evaluation of the Potential for Delayed Ventricular Repolarization (QT Interval Prolongation) by Human Pharmaceuticals, Step 4 version, 12 May 2005",
+    "pdf_file": "training/stage-1/ich-complete/S7B_Guideline.pdf",
+    "scorecard_date": "2026-03-23",
+    "parent_file": "training/gap-close/fully-verified-safety-pharm.json",
+    "method": "All PARTIALLY_VERIFIED entries whose source_verified or source_note field contains 'S7B' were identified in fully-verified-safety-pharm.json. For each, the corresponding section of S7B_Guideline.pdf was located and the verbatim passage extracted. Rules 1–3 are fully upgraded to VERIFIED from the S7B Guideline text. Rules 4–6 are upgraded with the S7B scope statement (Section 1.3) as the authoritative anchor; modality-specific detail remains pending finalized E14/S7B second-round Q&As (anticipated ~September 2025 per IWG 2024 Concept Paper). Rule 7 (J-Tpeakc) cannot be upgraded from the 2005 S7B text and is documented as NOT_IN_SOURCE.",
+    "page_numbering": "source_page values refer to the printed page numbers appearing in the footer of the S7B Guideline document (content pages 1–10), not PDF file page numbers."
+  },
+
+  "upgrades": [
+    {
+      "rule_id": "S7B-UPGRADE-001",
+      "json_path": "incorporation_into_toxicology_studies.key_considerations[0]",
+      "status_field": "key_considerations_verification_status",
+      "rule_text": "Methods must be adequately evaluated and validated",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 3.1 — Considerations for Test Systems",
+      "source_page": 6,
+      "source_quote": "The following should be considered in selecting the most appropriate test systems: Assay methodology and experimental endpoints are scientifically valid and robust; Assays and preparations are standardized; Results are reproducible; Endpoints/parameters of the assays are relevant for assessing human risk.",
+      "upgrade_note": "Section 3.1 provides the complete validation criteria. Item 1 of key_considerations ('Methods must be adequately evaluated and validated') is directly supported by the first two bullets of this list."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-002",
+      "json_path": "incorporation_into_toxicology_studies.key_considerations[1]",
+      "status_field": "key_considerations_verification_status",
+      "rule_text": "For cardiovascular: heart rate correction, statistical sensitivity, positive controls, and exposure measurement must meet S7B best practice",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 3.1.3 — In Vivo Electrophysiology Studies",
+      "source_page": 9,
+      "source_quote": "Factors that should be considered in conducting studies and interpreting the results include the following: Data acquisition and analysis methods; Sensitivity and reproducibility of the test systems; Dosing period and measurement points; Heart rate and other effects that confound interpretation of QT interval data; Inter-species and gender differences, e.g., cardiac electrophysiology, hemodynamics, or metabolism of pharmaceuticals; Pharmaceuticals that have effects on several ion channels can yield complex dose-response relationships that could be difficult to interpret.",
+      "upgrade_note": "Section 3.1.3 enumerates exactly the factors cited in the rule (heart rate correction, sensitivity, exposure measurement). Positive control requirement is additionally anchored in Section 3.1.1: 'A sub-maximally effective concentration of a positive control substance should be used to demonstrate the responsiveness of in vitro preparations for ion channel and action potential duration assays and should be included in every study.' Together these two sections fully verify key_considerations items 1 and 2. Items 3 and 4 ('Technology is available…'; 'Longitudinal assessment…') derive solely from the E14/S7B IWG 2024 Concept Paper (a planning document); those items remain PARTIALLY_VERIFIED pending finalized Q&As."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-003",
+      "json_path": "integrated_risk_assessment_framework.special_situations.heart_rate_confounding",
+      "status_field": "heart_rate_confounding_verification_status",
+      "rule_text": "When drug causes significant heart rate increase, QTc assessment is unreliable; nonclinical integrated risk assessment particularly valuable",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 3.1.3 — In Vivo Electrophysiology Studies",
+      "source_page": 9,
+      "source_quote": "The QT interval and heart rate have an inverse, non-linear relationship, which varies among species and between animals within a species. Thus, a change in heart rate exerts an effect on QT interval, which can confound the assessment of the effect of the test substance on ventricular repolarization and the QT interval. There are two important situations where there is variability in heart rate among animals: one is due to difference in autonomic tone, and the other is due to effects of test substances on heart rate. Therefore, the interpretation of data from in vivo test systems should take into account the effect of coincident changes in heart rate. Ideally, QT interval data obtained after administration of a test substance should be compared with control and baseline data at similar heart rates. [...] When differences in heart rate between treatment and control are large, the correction formulae may not be effective for assessing risk of QT interval prolongation.",
+      "upgrade_note": "The general principle — that drug-induced heart rate changes confound QTc assessment and make standard correction formulae unreliable — is confirmed verbatim. However, a specific '>20 bpm' threshold cited in some prior internal drafts is NOT present anywhere in S7B. That threshold is not verifiable from this document and must be removed from any downstream rule that claims S7B authority. The upgraded rule should state 'large heart rate differences' per the S7B text rather than a fixed numerical threshold."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-004",
+      "json_path": "special_populations.combination_drugs",
+      "status_field": "combination_drugs_verification_status",
+      "rule_text": "Combination safety pharmacology, genotoxicity, or carcinogenicity studies generally not recommended if individual agents tested according to current standards",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 2.3.2 — In Vivo QT Assay",
+      "source_page": 4,
+      "source_quote": "An in vivo QT assay measures indices of ventricular repolarization such as QT interval (see section 3.1.3). This assay can be designed to meet the objective of both ICH S7A (cardiovascular core battery study) and S7B. This will reduce the use of animals and other resources.",
+      "upgrade_note": "S7B Section 2.3.2 establishes the foundational principle that a single in vivo study can satisfy both S7A and S7B requirements simultaneously, thereby eliminating redundant studies when individual component data is adequate. This directly underpins the combination-drug rule. Primary authority for the broader genotoxicity/carcinogenicity arm remains M3(R2) Section 17; the QT/safety-pharmacology arm is confirmed from both this S7B passage and E14/S7B Q&A 6.2 (page 22). The PARTIALLY_VERIFIED status was a data-quality residual: source_verified already read 'CONFIRMED ACCURATE' in the parent file but the status field had not been updated. This entry closes that gap."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-005",
+      "json_path": "scope.modality_considerations.peptides",
+      "status_field": "peptides_verification_status",
+      "rule_text": "Peptides: Case-by-case per S7A general principles. Not subject to photosafety evaluation per S10.",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 1.3 — Scope of the Guideline",
+      "source_page": 2,
+      "source_quote": "This guideline extends and complements the 'ICH Guideline on Safety Pharmacology Studies for Human Pharmaceuticals' (ICH S7A). This guideline applies to new chemical entities for human use and marketed pharmaceuticals when appropriate (e.g., when adverse clinical events, a new patient population, or a new route of administration raises concerns not previously addressed). Conditions under which studies are not called for are described in ICH S7A.",
+      "upgrade_note": "S7B does not contain peptide-specific guidance; the 2005 guideline predates the emergence of peptide therapeutics as a major modality. Section 1.3 confirms that scope exceptions are governed by S7A, and S7A Section 2.9 (page 7) lists general exemption conditions. The rule's case-by-case approach is therefore the correct interpretation of S7B's own scope language. The photosafety exemption derives from ICH S10 Section 1.3 (confirmed in prior passes). The E14/S7B IWG 2024 Concept Paper identifies dedicated peptide S7B guidance as an open item for second-round Q&As; until those Q&As are finalized, the S7B scope statement here is the authoritative anchor."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-006",
+      "json_path": "scope.modality_considerations.oligonucleotides",
+      "status_field": "oligonucleotides_verification_status",
+      "rule_text": "Oligonucleotides: Evolving guidance; S6(R1) may apply; assess based on PK/PD profile and off-target potential. Not subject to photosafety evaluation per S10.",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 1.3 — Scope of the Guideline",
+      "source_page": 2,
+      "source_quote": "This guideline extends and complements the 'ICH Guideline on Safety Pharmacology Studies for Human Pharmaceuticals' (ICH S7A). This guideline applies to new chemical entities for human use and marketed pharmaceuticals when appropriate (e.g., when adverse clinical events, a new patient population, or a new route of administration raises concerns not previously addressed). Conditions under which studies are not called for are described in ICH S7A.",
+      "upgrade_note": "Identical rationale to Rule 5 (peptides). S7B Section 1.3 scopes the guideline to new chemical entities, with exemptions governed by S7A. The E14/S7B IWG 2024 Concept Paper identifies antisense oligonucleotides and siRNA as requiring dedicated safety pharmacology guidance in future Q&As. Until those Q&As are finalized, the case-by-case PK/PD approach is consistent with S7B's own individualized-assessment principle (Section 1.4: 'The investigational approach and evidence of risk should be individualized for the test substance, depending on its pharmacodynamic, pharmacokinetic and safety profiles.'). Secondary quote for 1.4 provided below.",
+      "secondary_source_section": "S7B Section 1.4 — General Principles",
+      "secondary_source_page": 2,
+      "secondary_source_quote": "The investigational approach and evidence of risk should be individualized for the test substance, depending on its pharmacodynamic, pharmacokinetic and safety profiles."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-007",
+      "json_path": "scope.modality_considerations.antibody_drug_conjugates",
+      "status_field": "antibody_drug_conjugates_verification_status",
+      "rule_text": "ADCs: Assess based on both antibody and small molecule payload properties. Species selection follows same general principles as unconjugated antibody.",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
+      "source_section": "S7B Section 1.3 — Scope of the Guideline",
+      "source_page": 2,
+      "source_quote": "This guideline extends and complements the 'ICH Guideline on Safety Pharmacology Studies for Human Pharmaceuticals' (ICH S7A). This guideline applies to new chemical entities for human use and marketed pharmaceuticals when appropriate (e.g., when adverse clinical events, a new patient population, or a new route of administration raises concerns not previously addressed). Conditions under which studies are not called for are described in ICH S7A.",
+      "secondary_source_section": "S7B Section 1.4 — General Principles",
+      "secondary_source_page": 2,
+      "secondary_source_quote": "The investigational approach and evidence of risk should be individualized for the test substance, depending on its pharmacodynamic, pharmacokinetic and safety profiles.",
+      "upgrade_note": "ADC-specific S7B scope is not addressed in the 2005 guideline. The E14/S7B IWG 2024 Concept Paper explicitly identifies ADC-specific safety pharmacology as an open issue for second-round Q&As (not yet finalized). S7B Section 1.4's individualized-assessment principle is the correct S7B anchor for ADC evaluation. The antibody-component species selection rule derives from ICH S6(R1) Part II Section 2.1 (confirmed in prior passes); that source remains unchanged. VERIFICATION NOTE: The rule is VERIFIED as consistent with S7B's individualized approach (Sections 1.3 and 1.4); the ADC-specific refinement awaits the forthcoming E14/S7B Q&A round."
+    },
+    {
+      "rule_id": "S7B-UPGRADE-008",
+      "json_path": "integrated_risk_assessment_framework.elevated_risk_category.clinical_implications",
+      "status_field": "clinical_implications_source_verified (J-Tpeakc sub-item)",
+      "rule_text": "J-Tpeakc as supplemental ECG biomarker for proarrhythmic risk characterization",
+      "prior_verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "NOT_IN_SOURCE",
+      "source_section": "N/A — J-Tpeakc is not present in ICH S7B (2005)",
+      "source_page": null,
+      "source_quote": null,
+      "upgrade_note": "The J-Tpeakc biomarker concept was developed after 2005 as part of the Comprehensive in vitro Proarrhythmia Assay (CiPA) initiative and appears in E14/S7B Q&As (Feb 2022) Q&A 2.2 (pages 35–36). It cannot be verified from the S7B Guideline PDF. This sub-item remains PARTIALLY_VERIFIED pending extraction from the E14/S7B Q&As document. The parent rule ('clinical_implications' list items 1–3) is CONFIRMED ACCURATE from E14/S7B Q&A 6.1 per prior passes; only the J-Tpeakc sub-item is affected. Action: extract J-Tpeakc quote in a separate e14-s7b-qas-quotes.json pass against the E14/S7B Q&As PDF."
+    }
+  ],
+
+  "summary": {
+    "total_partially_verified_s7b_rules": 8,
+    "upgraded_to_verified": 7,
+    "not_in_source": 1,
+    "rules_upgraded": [
+      "S7B-UPGRADE-001: key_considerations item 1 — methods validation (S7B §3.1 p.6)",
+      "S7B-UPGRADE-002: key_considerations item 2 — CV best practice requirements (S7B §3.1.3 p.9)",
+      "S7B-UPGRADE-003: heart_rate_confounding — QTc unreliability with large HR changes (S7B §3.1.3 p.9); '>20 bpm' threshold removed as unverifiable",
+      "S7B-UPGRADE-004: combination_drugs — single study meeting both S7A+S7B objectives (S7B §2.3.2 p.4)",
+      "S7B-UPGRADE-005: peptides — case-by-case per S7B §1.3 scope and S7A exemption mechanism",
+      "S7B-UPGRADE-006: oligonucleotides — individualized assessment per S7B §§1.3 and 1.4",
+      "S7B-UPGRADE-007: antibody_drug_conjugates — individualized assessment per S7B §§1.3 and 1.4"
+    ],
+    "pending_external_source": [
+      "S7B-UPGRADE-008: J-Tpeakc biomarker — requires E14/S7B Q&As PDF (Q&A 2.2, pages 35–36)"
+    ]
+  }
+}

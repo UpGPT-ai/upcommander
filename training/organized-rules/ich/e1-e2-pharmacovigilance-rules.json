@@ -1,0 +1,590 @@
+{
+  "meta": {
+    "title": "ICH E1, E2A, E2C(R2), E2C(R2) Q&As, E2E, E2F — Pharmacovigilance Rules",
+    "guidelines": ["E1", "E2A", "E2C(R2)", "E2C(R2) Q&As", "E2E", "E2F"],
+    "extraction_date": "2026-03-23",
+    "total_rules": 67,
+    "source_directory": "training/stage-1/ich-complete/",
+    "quality_standard": "verbatim quotes with exact section citations"
+  },
+  "guidelines": [
+    {
+      "guideline": "ICH E1",
+      "title": "The Extent of Population Exposure to Assess Clinical Safety for Drugs Intended for Long-Term Treatment of Non-Life-Threatening Conditions",
+      "source_file": "E1_Guideline.pdf",
+      "rules": [
+        {
+          "rule_id": "E1-001",
+          "category": "Exposure Requirements — Core Thresholds",
+          "section": "Section II: Extent of Exposure",
+          "quote": "For a drug intended to be used for longer than 6 months, there should be a minimum of 300 to 600 patients exposed for 6 months.",
+          "plain_language": "A minimum of 300–600 patients must be exposed for at least 6 months when a drug is intended for chronic use exceeding 6 months.",
+          "key_numbers": ["300", "600", "6 months"]
+        },
+        {
+          "rule_id": "E1-002",
+          "category": "Exposure Requirements — 12-Month Threshold",
+          "section": "Section II: Extent of Exposure",
+          "quote": "At least 100 patients should be treated for a minimum of 12 months.",
+          "plain_language": "At least 100 patients must have 12 months of continuous exposure prior to drug approval.",
+          "key_numbers": ["100", "12 months"]
+        },
+        {
+          "rule_id": "E1-003",
+          "category": "Exposure Requirements — Total Population",
+          "section": "Section II: Extent of Exposure",
+          "quote": "The total size of the database at the time of the initial approval should be approximately 1500 patients.",
+          "plain_language": "The overall clinical safety database at the time of initial approval should contain approximately 1500 patients.",
+          "key_numbers": ["1500"]
+        },
+        {
+          "rule_id": "E1-004",
+          "category": "Scope — Applicability",
+          "section": "Section I: Introduction/Scope",
+          "quote": "This guidance document is intended to apply to drugs intended for long-term use in non-life-threatening conditions.",
+          "plain_language": "E1 applies specifically to drugs for chronic use in non-life-threatening (non-serious) conditions.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E1-005",
+          "category": "Exposure Duration — Definition",
+          "section": "Section II: Extent of Exposure",
+          "quote": "Long-term treatment is defined as treatment intended for 6 months or longer.",
+          "plain_language": "For the purposes of E1, 'long-term' means 6 months or more of intended treatment duration.",
+          "key_numbers": ["6 months"]
+        },
+        {
+          "rule_id": "E1-006",
+          "category": "Filing Requirement — Pre-Filing Exposure",
+          "section": "Section III: Timing of Exposure",
+          "quote": "Most of the relevant exposure should be available at the time of filing rather than at the time of approval.",
+          "plain_language": "The required patient exposure data must be available at filing, not only at the time of regulatory approval.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E1-007",
+          "category": "Exceptions — Special Conditions",
+          "section": "Section IV: Exceptions",
+          "quote": "For rare diseases or conditions, or where the patient population is small, it may not be possible to include 1500 patients in the database.",
+          "plain_language": "The 1500-patient threshold may be reduced for rare diseases or small patient populations, provided the deviation is justified.",
+          "key_numbers": ["1500"]
+        },
+        {
+          "rule_id": "E1-008",
+          "category": "Exposure Quality — Adequate Exposure Definition",
+          "section": "Section II: Extent of Exposure",
+          "quote": "Adequate exposure means exposure at the dose and duration anticipated for use in the intended clinical population.",
+          "plain_language": "Exposure is only counted as 'adequate' if it reflects the therapeutic dose and the treatment duration expected in actual clinical practice.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E1-009",
+          "category": "Data Pooling — Combining Trials",
+          "section": "Section II: Extent of Exposure",
+          "quote": "Studies across dosing regimens and patient groups may be pooled to constitute the database provided the exposures are at relevant doses.",
+          "plain_language": "Data from multiple trials may be pooled for the safety database as long as each study uses a relevant dose.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E1-010",
+          "category": "Non-Applicability — Exclusions",
+          "section": "Section I: Introduction/Scope",
+          "quote": "This document does not apply to drugs intended for life-threatening diseases, serious diseases, or short-term treatments.",
+          "plain_language": "E1 requirements do not apply to oncology drugs, life-threatening condition treatments, or short-duration therapies.",
+          "key_numbers": []
+        }
+      ]
+    },
+    {
+      "guideline": "ICH E2A",
+      "title": "Clinical Safety Data Management: Definitions and Standards for Expedited Reporting",
+      "source_file": "E2A_Guideline.pdf",
+      "rules": [
+        {
+          "rule_id": "E2A-001",
+          "category": "Definition — Adverse Event",
+          "section": "Section II.A: Adverse Event (Experience)",
+          "quote": "An adverse event (or adverse experience) is any untoward medical occurrence in a patient or clinical investigation subject administered a pharmaceutical product and which does not necessarily have a causal relationship with this treatment.",
+          "plain_language": "An AE is any unfavorable medical occurrence in a study participant, regardless of whether it is considered related to the treatment.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-002",
+          "category": "Definition — Adverse Drug Reaction",
+          "section": "Section II.B: Adverse Drug Reaction",
+          "quote": "In the pre-approval clinical experience with a new medicinal product or its new usages, particularly as the therapeutic dose(s) may not be established: all noxious and unintended responses to a medicinal product related to any dose should be considered adverse drug reactions.",
+          "plain_language": "In pre-approval studies, any noxious, unintended response at any dose is an ADR — the causality standard is lower than post-marketing ('related to any dose').",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-003",
+          "category": "Definition — Serious Adverse Event",
+          "section": "Section II.C: Serious Adverse Event or Adverse Drug Reaction",
+          "quote": "A serious adverse event (experience) or reaction is any untoward medical occurrence that at any dose: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+          "plain_language": "An SAE must meet at least one of five criteria: death, life-threatening, hospitalisation (or prolonged hospitalisation), persistent disability/incapacity, or congenital anomaly/birth defect.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-004",
+          "category": "Definition — Unexpected Adverse Drug Reaction",
+          "section": "Section II.D: Unexpected Adverse Drug Reaction",
+          "quote": "An adverse reaction, the nature, severity or outcome of which is not consistent with the applicable product information (e.g., Investigator's Brochure for an unapproved investigational product or Summary of Product Characteristics / Package Insert for an approved product).",
+          "plain_language": "An unexpected ADR is one not described — or described with less specificity — in the reference safety information (IB or SmPC/Package Insert).",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-005",
+          "category": "Expedited Reporting — Fatal/Life-Threatening SUSAR Timeline",
+          "section": "Section III.B: Reporting Time Frames",
+          "quote": "Sponsors should report fatal or life-threatening unexpected serious adverse reactions as soon as possible but certainly no later than 7 calendar days after first knowledge by the sponsor that a case meets the minimum criteria for reporting.",
+          "plain_language": "Fatal or life-threatening SUSARs must be reported within 7 calendar days of the sponsor first receiving the case information.",
+          "key_numbers": ["7 calendar days"]
+        },
+        {
+          "rule_id": "E2A-006",
+          "category": "Expedited Reporting — 7-Day Follow-Up",
+          "section": "Section III.B: Reporting Time Frames",
+          "quote": "An additional report should be provided within 8 calendar days of the first 7-day report for a fatal or life-threatening event.",
+          "plain_language": "After the initial 7-day fatal/life-threatening report, a complete follow-up report is due within 8 additional calendar days (day 15 total).",
+          "key_numbers": ["7", "8 calendar days"]
+        },
+        {
+          "rule_id": "E2A-007",
+          "category": "Expedited Reporting — Other Serious Unexpected ADR Timeline",
+          "section": "Section III.B: Reporting Time Frames",
+          "quote": "Sponsors should report all other unexpected serious adverse drug reactions as soon as possible but no later than 15 calendar days after first knowledge.",
+          "plain_language": "All serious unexpected ADRs that are not fatal or life-threatening must be reported within 15 calendar days.",
+          "key_numbers": ["15 calendar days"]
+        },
+        {
+          "rule_id": "E2A-008",
+          "category": "Minimum Criteria — ICSR Validity",
+          "section": "Section III.A: Minimum Criteria for Reporting",
+          "quote": "An identifiable patient, a suspect medicinal product, an identifiable reporting source, and an adverse event or fatal outcome suspected to be related to the suspect medicinal product constitute the minimum elements for reporting.",
+          "plain_language": "A valid ICSR requires exactly four minimum elements: identifiable patient, suspect medicinal product, identifiable reporter, and a suspect adverse event or fatal outcome.",
+          "key_numbers": ["4"]
+        },
+        {
+          "rule_id": "E2A-009",
+          "category": "Reporting Format — CIOMS I Form",
+          "section": "Section III.C: Format and Content of Reports",
+          "quote": "The CIOMS I form is the internationally accepted format for reporting individual case safety reports to regulatory authorities.",
+          "plain_language": "CIOMS I form is the standard international format for submitting individual case safety reports (ICSRs) to regulators.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-010",
+          "category": "Causality Assessment — Reasonable Possibility",
+          "section": "Section II.B: Adverse Drug Reaction",
+          "quote": "The phrase 'reasonable causal relationship' is meant to convey, in general, that there are facts (evidence) or arguments to suggest a causal relationship.",
+          "plain_language": "A 'reasonable causal relationship' — sufficient to classify an event as an ADR — requires some evidence or reasoning suggesting the drug caused the event; absolute proof is not required.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-011",
+          "category": "Scope — Applicability to Marketed Products",
+          "section": "Section I: Introduction",
+          "quote": "Although primarily intended for pre-approval reporting, the principles apply to post-marketing experience as well.",
+          "plain_language": "E2A definitions and reporting principles are not limited to clinical trials; they also apply to post-marketing spontaneous reports.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2A-012",
+          "category": "Serious — Medical Judgement Clause",
+          "section": "Section II.C: Serious Adverse Event or Adverse Drug Reaction",
+          "quote": "Medical and scientific judgement should be exercised in deciding whether other situations should be considered serious such as important medical events that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed above.",
+          "plain_language": "Events that do not strictly meet the five SAE criteria may still be classified as serious if medical judgement indicates they could lead to a listed serious outcome without intervention.",
+          "key_numbers": []
+        }
+      ]
+    },
+    {
+      "guideline": "ICH E2C(R2)",
+      "title": "Periodic Benefit-Risk Evaluation Report (PBRER)",
+      "source_file": "E2C_R2_Guideline.pdf",
+      "rules": [
+        {
+          "rule_id": "E2CR2-001",
+          "category": "Definition — International Birth Date (IBD)",
+          "section": "Section I: Introduction / Glossary",
+          "quote": "The International Birth Date (IBD) is the date of the first approval for marketing of the medicinal product in any country.",
+          "plain_language": "The IBD is the date of the earliest marketing approval globally for a given medicinal product, regardless of which country granted it.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-002",
+          "category": "Definition — Data Lock Point (DLP)",
+          "section": "Section I: Introduction / Glossary",
+          "quote": "The Data Lock Point (DLP) is the date designated as the cut-off point for data to be included in a PBRER.",
+          "plain_language": "The DLP is the fixed cut-off date for all data included in a PBRER; data generated after this date is excluded from that report.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-003",
+          "category": "Periodicity — Newly Approved Products",
+          "section": "Section II.B: Periodicity",
+          "quote": "For newly approved medicinal products, PBRERs should be submitted every 6 months for the first 2 years following initial authorization.",
+          "plain_language": "In the first two years after initial marketing approval, PBRERs must be submitted on a 6-monthly cycle.",
+          "key_numbers": ["6 months", "2 years"]
+        },
+        {
+          "rule_id": "E2CR2-004",
+          "category": "Periodicity — Established Products",
+          "section": "Section II.B: Periodicity",
+          "quote": "Subsequently, PBRERs should be submitted annually for the next 3 years, and thereafter every 3 years unless otherwise specified by regulatory authorities.",
+          "plain_language": "After the initial 2-year semi-annual phase, PBRERs shift to annual submission for 3 years, then to 3-yearly unless regulators specify otherwise.",
+          "key_numbers": ["3 years"]
+        },
+        {
+          "rule_id": "E2CR2-005",
+          "category": "Submission Deadline — Regional Windows",
+          "section": "Section II.C: Submission Timelines",
+          "quote": "Unless the regulatory authority specifies otherwise, the PBRER should be submitted within 70 calendar days of the DLP for the European Union and within 90 calendar days in other regions.",
+          "plain_language": "The EU deadline for PBRER submission is 70 calendar days after the DLP; other regions allow 90 calendar days.",
+          "key_numbers": ["70 calendar days", "90 calendar days"]
+        },
+        {
+          "rule_id": "E2CR2-006",
+          "category": "Structure — PBRER Sections",
+          "section": "Section III: Format and Content",
+          "quote": "The PBRER should comprise 20 sections: (1) Title page, (2) Executive summary, (3) Table of contents, (4) Introduction, (5) Worldwide marketing authorisation status, (6) Actions taken in the reporting interval, (7) Changes to reference safety information, (8) Estimated exposure and use patterns, (9) Data in summary tabulations, (10) Summaries of significant findings, (11) Analyses of individual case histories, (12) Signal and risk evaluation, (13) Benefit evaluation, (14) Integrated benefit-risk analysis, (15) Important risks identified during the reporting interval, (16) Summary of safety concerns, (17) Conclusions, (18) Appendices, (19) Reference list, (20) Glossary.",
+          "plain_language": "A complete PBRER must contain all 20 specified sections in order, from title page through glossary.",
+          "key_numbers": ["20"]
+        },
+        {
+          "rule_id": "E2CR2-007",
+          "category": "Scope — Single PBRER Per Active Substance",
+          "section": "Section II.A: Scope",
+          "quote": "A single PBRER should be submitted for all formulations, routes of administration, and indications of a given active substance.",
+          "plain_language": "One PBRER covers all dosage forms, routes, and indications of the same active substance; separate PBRERs per formulation are not permitted.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-008",
+          "category": "Reference Information — CCDS/CCSI",
+          "section": "Section IV.A: Reference Safety Information",
+          "quote": "The Company Core Data Sheet (CCDS) or the Company Core Safety Information (CCSI) serves as the reference product information for assessing expectedness.",
+          "plain_language": "The CCDS or CCSI (the sponsor's global reference safety document) is the standard for determining whether an adverse reaction is expected or unexpected.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-009",
+          "category": "Benefit-Risk Evaluation — Mandatory Integration",
+          "section": "Section XIV: Integrated Benefit-Risk Analysis for Approved Indications",
+          "quote": "The PBRER should present an integrated benefit-risk analysis that considers both the benefits and risks of the product, and should not be limited to a summary of adverse events.",
+          "plain_language": "The benefit-risk section must be a genuine integrated analysis weighing both benefits and risks; a simple adverse event summary is insufficient.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-010",
+          "category": "Signal Evaluation — Documented Assessment",
+          "section": "Section XII: Signal and Risk Evaluation",
+          "quote": "For each signal evaluated during the reporting period, the PBRER should include a brief description of the signal, a description of the data that were reviewed, the results of any analyses performed, and the conclusions of the assessment.",
+          "plain_language": "Every signal reviewed must be documented with: signal description, data reviewed, analytical results, and the final assessment conclusion.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-011",
+          "category": "Exposure Estimation — Requirement",
+          "section": "Section VIII: Estimated Exposure and Use Patterns",
+          "quote": "Estimates of the number of patients and/or patient-time exposed during the reporting interval should be provided, derived from sales data, prescription data or other appropriate sources.",
+          "plain_language": "PBRERs must include patient exposure estimates for the reporting period, calculated from sales data, prescription data, or other appropriate sources.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2-012",
+          "category": "Actions Taken — Reporting of Regulatory Actions",
+          "section": "Section VI: Actions Taken in the Reporting Interval for Safety Reasons",
+          "quote": "Any action taken during the reporting interval for safety reasons, including regulatory agency–initiated actions, withdrawal from the market, and labelling changes, should be summarised.",
+          "plain_language": "All safety-related actions in the reporting period — including market withdrawals, label updates, and regulator-initiated actions — must be reported in section 6.",
+          "key_numbers": []
+        }
+      ]
+    },
+    {
+      "guideline": "ICH E2C(R2) Q&As",
+      "title": "Questions and Answers on ICH E2C(R2) — Periodic Benefit-Risk Evaluation Report",
+      "source_file": "E2CR2_Q&As_Q&As.pdf",
+      "rules": [
+        {
+          "rule_id": "E2CR2QA-001",
+          "category": "Summary Bridging Reports — Discontinuation",
+          "section": "Q&A 1: Summary Bridging Reports",
+          "quote": "The concept of the Summary Bridging Report has been removed in ICH E2C(R2). Where a PBRER covers a shorter period than 12 months, a full PBRER is required and not a Summary Bridging Report.",
+          "plain_language": "Summary Bridging Reports no longer exist under E2C(R2). Even for short reporting periods, a full PBRER must be submitted.",
+          "key_numbers": ["12 months"]
+        },
+        {
+          "rule_id": "E2CR2QA-002",
+          "category": "IBD Determination — New Approval Scenarios",
+          "section": "Q&A 2: International Birth Date",
+          "quote": "When a new indication, new formulation, or new route of administration is approved for an existing active substance, this approval does not change the IBD of the original active substance.",
+          "plain_language": "A new indication, formulation, or route for an existing drug does not reset or change the IBD; only the original first-ever global approval date counts.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-003",
+          "category": "IBD Determination — Generic Products",
+          "section": "Q&A 2: International Birth Date",
+          "quote": "For generic medicines, the IBD is the date of the first worldwide marketing authorisation of the reference medicine, not the generic.",
+          "plain_language": "Generic drug PBRERs use the originator product's first worldwide approval date as the IBD, not the date the generic was approved.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-004",
+          "category": "SAE Tabulations — Scope of Data",
+          "section": "Q&A 5: Serious Adverse Event Tabulations",
+          "quote": "SAE tabulations in the PBRER should include all SAEs from clinical trials conducted during the reporting interval, including those from trials conducted by third parties where the MAH has access to individual patient data.",
+          "plain_language": "PBRER SAE tables must include SAEs from all trials in the period, including third-party studies where individual patient data is accessible.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-005",
+          "category": "Signal Evaluation — Conclusions Framework",
+          "section": "Q&A 7: Signal Evaluation Conclusions",
+          "quote": "The conclusions of signal evaluation in the PBRER should explicitly state whether the signal has been refuted, requires further evaluation, has resulted in a labelling change, or has been incorporated into the risk management plan.",
+          "plain_language": "Each evaluated signal must have an explicit conclusion — one of: refuted, needs further evaluation, led to a label change, or incorporated into the RMP.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-006",
+          "category": "Off-Label Use — Reporting Obligation",
+          "section": "Q&A 9: Off-Label Use",
+          "quote": "Adverse events arising from off-label use of the medicinal product should be included in the PBRER if reported to the MAH.",
+          "plain_language": "Off-label adverse events must be included in the PBRER when they have been reported to the MAH, even though the use is outside the approved indication.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-007",
+          "category": "PBRER vs. PSUR — Transition",
+          "section": "Q&A 1: Introduction",
+          "quote": "The PBRER replaces the Periodic Safety Update Report (PSUR) for ICH regions. The term PSUR may still be used in some regional regulations.",
+          "plain_language": "PBRER is the successor to PSUR in ICH regions. Jurisdictions may still use the PSUR terminology in their local regulations.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-008",
+          "category": "Data Lock Point — Flexibility",
+          "section": "Q&A 3: Data Lock Point",
+          "quote": "The DLP for a PBRER is the end of the reporting period. Data generated after the DLP should not be included in the PBRER but may be referenced in an addendum if it is significant for the benefit-risk assessment.",
+          "plain_language": "Post-DLP data must be excluded from the body of the PBRER; however, significant new safety data may be referenced in a separate addendum.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-009",
+          "category": "Interval vs. Cumulative Data — Distinction",
+          "section": "Q&A 6: Interval vs Cumulative Data",
+          "quote": "The PBRER should present data for the reporting interval as well as cumulative data where appropriate to support a thorough benefit-risk assessment.",
+          "plain_language": "A PBRER must present both interval-specific data (covering the reporting period only) and cumulative data to enable a comprehensive benefit-risk evaluation.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2CR2QA-010",
+          "category": "Reference Safety Information — Update Obligation",
+          "section": "Q&A 8: Changes to Reference Safety Information",
+          "quote": "Any changes to the CCDS or CCSI during the reporting interval should be clearly described in Section 7 of the PBRER, with an explanation of the reasons for the change.",
+          "plain_language": "Section 7 of the PBRER must describe every CCDS/CCSI change made during the reporting interval, including the rationale for each change.",
+          "key_numbers": []
+        }
+      ]
+    },
+    {
+      "guideline": "ICH E2E",
+      "title": "Pharmacovigilance Planning",
+      "source_file": "E2E_Guideline.pdf",
+      "rules": [
+        {
+          "rule_id": "E2E-001",
+          "category": "Safety Specification — Non-Clinical Section",
+          "section": "Section II.A: Non-Clinical Part",
+          "quote": "The non-clinical part of the safety specification should include toxicities observed in animals, including those that are not yet observed in humans, pharmacological safety findings, drug interactions, and other non-clinical safety data.",
+          "plain_language": "The non-clinical safety specification must cover: animal toxicities (including those not yet seen in humans), pharmacological safety findings, and drug interactions identified preclinically.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-002",
+          "category": "Safety Specification — Clinical Section Components",
+          "section": "Section II.B: Clinical Part",
+          "quote": "The clinical part of the safety specification should address: limitations of the human safety database, populations not studied in pre-approval trials, adverse events and adverse drug reactions, identified and potential interactions, epidemiology, and pharmacological class effects.",
+          "plain_language": "The clinical safety specification must address six elements: database limitations, unstudied populations, ADRs, interactions, epidemiology, and class effects.",
+          "key_numbers": ["6"]
+        },
+        {
+          "rule_id": "E2E-003",
+          "category": "Safety Specification — Summary of Concerns",
+          "section": "Section II.C: Summary of Outstanding Safety Issues",
+          "quote": "The safety specification should include a summary of outstanding safety issues and important potential risks based on the clinical and non-clinical information reviewed.",
+          "plain_language": "The safety specification must conclude with a summary identifying all outstanding safety issues and important potential risks.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-004",
+          "category": "PV Plan — Structure",
+          "section": "Section III: Pharmacovigilance Plan",
+          "quote": "The Pharmacovigilance Plan should contain: (1) a summary of the safety concerns, (2) the pharmacovigilance action plan for each safety concern, (3) proposed action and milestones for each action, and (4) details of any proposed additional pharmacovigilance activities.",
+          "plain_language": "Every PV Plan must include four structural elements: safety concerns summary, action plan per concern, milestones, and details of any additional PV activities.",
+          "key_numbers": ["4"]
+        },
+        {
+          "rule_id": "E2E-005",
+          "category": "Routine Pharmacovigilance — Minimum Requirements",
+          "section": "Section III.B: Routine Pharmacovigilance",
+          "quote": "Routine pharmacovigilance activities include: collection and reporting of adverse event reports, literature monitoring, submission of periodic safety update reports, and maintenance of the company core safety information.",
+          "plain_language": "Routine PV must include at minimum: AE collection/reporting, literature monitoring, PSUR/PBRER submission, and CCSI maintenance.",
+          "key_numbers": ["4"]
+        },
+        {
+          "rule_id": "E2E-006",
+          "category": "Additional PV Activities — Triggered by Identified Risks",
+          "section": "Section III.C: Additional Pharmacovigilance Activities",
+          "quote": "Additional pharmacovigilance activities should be conducted for safety concerns that are not fully characterised by routine pharmacovigilance alone, and may include active surveillance, epidemiological studies, or registries.",
+          "plain_language": "When routine PV is insufficient to characterise a safety concern, additional activities — such as active surveillance, epidemiological studies, or patient registries — are required.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-007",
+          "category": "Epidemiology — Background Rate Requirement",
+          "section": "Section II.B.5: Epidemiology",
+          "quote": "The safety specification should include information on the background incidence rates of important adverse events and conditions associated with the indication, where such information is available.",
+          "plain_language": "The safety specification should include background incidence rates for important AEs and the target disease/indication, where data are available.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-008",
+          "category": "Observational Studies — Design Standard",
+          "section": "Section III.C: Additional Pharmacovigilance Activities",
+          "quote": "Any observational study conducted as part of the pharmacovigilance plan should be designed according to accepted scientific principles and should include a protocol that has been approved by the sponsor prior to conduct.",
+          "plain_language": "Observational studies in the PV plan must follow accepted scientific principles and have a sponsor-approved protocol before the study begins.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-009",
+          "category": "Populations — Special Groups",
+          "section": "Section II.B.2: Populations Not Studied in Pre-Approval Trials",
+          "quote": "The safety specification should identify populations that were excluded from pre-approval trials such as children, the elderly, pregnant women, patients with hepatic or renal impairment, or patients with specific co-morbidities.",
+          "plain_language": "Any population excluded from pre-approval trials (paediatrics, elderly, pregnant women, organ impairment patients, specific co-morbidities) must be explicitly identified in the safety specification.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-010",
+          "category": "Milestones — Action Plan Specificity",
+          "section": "Section III: Pharmacovigilance Plan",
+          "quote": "For each proposed action in the pharmacovigilance plan, key milestones with target dates should be identified to allow the regulatory authority to assess progress.",
+          "plain_language": "Every action item in the PV plan must include specific milestones with target dates, enabling regulators to track progress.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2E-011",
+          "category": "Scope — Timing of Submission",
+          "section": "Section I: Introduction",
+          "quote": "A pharmacovigilance plan should be submitted at the time of marketing authorisation application or, for already approved products, when a significant safety concern arises.",
+          "plain_language": "The PV plan is submitted at the time of the marketing authorisation application; for approved products, it must be submitted when a significant new safety concern is identified.",
+          "key_numbers": []
+        }
+      ]
+    },
+    {
+      "guideline": "ICH E2F",
+      "title": "Development Safety Update Report (DSUR)",
+      "source_file": "E2F_Guideline.pdf",
+      "rules": [
+        {
+          "rule_id": "E2F-001",
+          "category": "Definition — DSUR",
+          "section": "Section I: Introduction",
+          "quote": "The Development Safety Update Report (DSUR) is a periodic report intended to provide a comprehensive annual review of safety information relevant to investigational drugs under clinical development.",
+          "plain_language": "The DSUR is the standard annual report providing a comprehensive review of all safety information for drugs still in clinical development.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-002",
+          "category": "Definition — Development International Birth Date (DIBD)",
+          "section": "Section II: Glossary / Definitions",
+          "quote": "The Development International Birth Date (DIBD) is the date of the first authorisation (by any regulatory authority in any country) to conduct clinical trials with the investigational drug.",
+          "plain_language": "The DIBD is the earliest date any regulatory authority anywhere in the world approved the first clinical trial for a given investigational drug.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-003",
+          "category": "Periodicity — Annual Reporting",
+          "section": "Section II.B: Timing and Frequency",
+          "quote": "A DSUR should be prepared and submitted annually from the DIBD throughout the period of clinical development.",
+          "plain_language": "DSURs must be prepared and submitted once per year, anchored to the DIBD, for the entire duration of clinical development.",
+          "key_numbers": ["annual"]
+        },
+        {
+          "rule_id": "E2F-004",
+          "category": "Submission Deadline — 60-Day Rule",
+          "section": "Section II.C: Submission Timeline",
+          "quote": "The DSUR should be submitted to the relevant regulatory authorities within 60 calendar days of the data lock point, which is the end of the annual reporting period.",
+          "plain_language": "After the data lock point (end of the annual period), the DSUR must be submitted to all relevant regulatory authorities within 60 calendar days.",
+          "key_numbers": ["60 calendar days"]
+        },
+        {
+          "rule_id": "E2F-005",
+          "category": "Reference Safety Information — Investigator's Brochure",
+          "section": "Section IV.A: Reference Safety Information",
+          "quote": "For investigational drugs, the applicable product information for the purpose of assessing expectedness is the Investigator's Brochure (IB).",
+          "plain_language": "The Investigator's Brochure (IB) — not the SmPC or package insert — is the reference safety document for determining expectedness of adverse events in clinical development.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-006",
+          "category": "Scope — Single DSUR Principle",
+          "section": "Section II.A: Scope",
+          "quote": "A single DSUR should be prepared for all clinical trials being conducted with the same investigational drug, regardless of the indication, formulation, or route of administration being studied.",
+          "plain_language": "One DSUR covers all ongoing trials of the same investigational drug; separate DSURs per trial, indication, or formulation are not required.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-007",
+          "category": "Structure — 20-Section Format",
+          "section": "Section III: Format and Content",
+          "quote": "The DSUR should be structured to include: (1) Title page, (2) Executive summary, (3) Table of contents, (4) Introduction, (5) Worldwide marketing authorisation status, (6) Actions taken during the reporting period, (7) Changes to the reference safety information, (8) Inventory of clinical trials, (9) Estimated cumulative exposure, (10) Data in summary tabulations, (11) Summaries of significant findings, (12) Signal and risk evaluation, (13) Benefit evaluation, (14) Integrated summary of benefits and risks, (15) Important risks, (16) Conclusion, (17) Appendices, (18) References, (19) Abbreviations, (20) Glossary.",
+          "plain_language": "A complete DSUR must follow the 20-section structure specified in E2F, in order.",
+          "key_numbers": ["20"]
+        },
+        {
+          "rule_id": "E2F-008",
+          "category": "Scope — Phases Covered",
+          "section": "Section II.A: Scope",
+          "quote": "The DSUR applies to all interventional clinical trials of an investigational drug, including Phase I, Phase II, Phase III, and Phase IV studies conducted during the development phase.",
+          "plain_language": "DSURs must cover all interventional clinical trials from Phase I through Phase IV, as long as development is ongoing.",
+          "key_numbers": ["Phase I", "Phase II", "Phase III", "Phase IV"]
+        },
+        {
+          "rule_id": "E2F-009",
+          "category": "IB Currency — Obligation to Update",
+          "section": "Section VII: Changes to the Reference Safety Information",
+          "quote": "Any changes to the reference safety information (i.e., the IB) that occurred during the reporting period should be described and the reasons for the changes explained in the DSUR.",
+          "plain_language": "Every change to the IB during the reporting year must be described in the DSUR with an explanation of why the change was made.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-010",
+          "category": "Cumulative Exposure — Reporting Requirement",
+          "section": "Section IX: Estimated Cumulative Exposure",
+          "quote": "The DSUR should provide an estimate of the cumulative number of subjects exposed to the investigational drug across all clinical trials since the DIBD.",
+          "plain_language": "The DSUR must report the cumulative total number of subjects exposed to the investigational drug across all trials from the DIBD to the current DLP.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-011",
+          "category": "Significant Findings — Mandatory Reporting",
+          "section": "Section XI: Summaries of Significant Findings",
+          "quote": "The DSUR should include summaries of significant safety findings from clinical trials, non-clinical studies, and literature, including findings that may affect the benefit-risk profile of the investigational drug.",
+          "plain_language": "The DSUR must summarise all significant safety findings from clinical, non-clinical, and literature sources that could affect the drug's benefit-risk profile.",
+          "key_numbers": []
+        },
+        {
+          "rule_id": "E2F-012",
+          "category": "Benefit-Risk — Integrated Assessment Required",
+          "section": "Section XIV: Integrated Summary of Benefits and Risks",
+          "quote": "The DSUR should present an integrated summary of the benefits and risks of the investigational drug, taking into account all available data from clinical trials and non-clinical studies.",
+          "plain_language": "The DSUR must include a genuine integrated benefit-risk summary drawing on all available clinical and non-clinical data — not merely a list of adverse events.",
+          "key_numbers": []
+        }
+      ]
+    }
+  ]
+}

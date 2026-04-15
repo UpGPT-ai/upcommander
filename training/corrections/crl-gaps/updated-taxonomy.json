@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "version": "2.1",
+    "generated": "2026-03-23",
+    "based_on": "crl-deficiency-taxonomy-v2.json (v2.0)",
+    "correction_source": "crl-verification.json + missed-patterns.json (30-CRL audit)",
+    "changes_from_v2": [
+      "Added CAT-09-C: Postmarketing Requirements under 505(o)(3) (subcategory of CAT-09)",
+      "Added CAT-04-H: Clinical Site GCP Inspection Deficiencies (subcategory of CAT-04)",
+      "Added CAT-11: DEVICE_COMBINATION_PRODUCT (new parent category)",
+      "Added CAT-11-A: PMA device component deficiencies (subcategory of CAT-11)",
+      "Fixed miscategorization: impurity qualification studies under NONCLINICAL section now dual-tagged primary=CAT-03-G, secondary=CAT-05-A",
+      "Updated CAT-04-A boilerplate rate from 75.4% to 96.7% based on verification sample (29/30 CRLs)"
+    ],
+    "source_database": "crl-data.json (419 records, 411 CRLs)",
+    "total_crls": 411
+  },
+  "deficiency_taxonomy": {
+    "categories": [
+      {
+        "id": "CAT-01",
+        "name": "LABELING",
+        "total_crls_affected": 380,
+        "percentage": 92.7,
+        "description": "Deficiencies in prescribing information, container labeling, proprietary names, medication guides, and bar codes",
+        "note": "Labeling deficiencies are partially procedural — FDA often reserves comment on final labeling until all other issues are resolved",
+        "subcategories": [
+          {
+            "id": "CAT-01-A",
+            "name": "Prescribing Information format deficiencies",
+            "count": 364,
+            "percentage": 88.6,
+            "cfr_violated": ["21 CFR 201.56", "21 CFR 201.57"],
+            "ectd_module": "M1.3.1",
+            "automatable": true,
+            "automation_method": "SPL/SRPI structure validation against 201.57 required sections and format rules"
+          },
+          {
+            "id": "CAT-01-B",
+            "name": "Carton/Container labeling deficiencies",
+            "count": 284,
+            "percentage": 69.1,
+            "cfr_violated": ["21 CFR 201.10", "21 CFR 201.17", "21 CFR 201.1"],
+            "ectd_module": "M1.3.1",
+            "automatable": true,
+            "automation_method": "Format compliance check against mandatory label elements (name, address, NDC, expiration date, lot number)"
+          },
+          {
+            "id": "CAT-01-C",
+            "name": "Proprietary name issues",
+            "count": 276,
+            "percentage": 67.2,
+            "cfr_violated": ["21 CFR 299.4"],
+            "ectd_module": "M1.3.1",
+            "automatable": "partial",
+            "automation_method": "Similarity database cross-reference (POCA/phonetic/orthographic); final determination requires human review"
+          },
+          {
+            "id": "CAT-01-D",
+            "name": "Medication Guide deficiencies",
+            "count": 48,
+            "percentage": 11.7,
+            "cfr_violated": ["21 CFR 208.24"],
+            "ectd_module": "M1.3.1",
+            "automatable": true,
+            "automation_method": "Required content section presence check per 21 CFR 208"
+          },
+          {
+            "id": "CAT-01-E",
+            "name": "Patient labeling issues",
+            "count": 34,
+            "percentage": 8.3,
+            "cfr_violated": ["21 CFR 201.56(c)", "21 CFR 201.57(a)(13)"],
+            "ectd_module": "M1.3.1",
+            "automatable": true,
+            "automation_method": "Content and format validation"
+          },
+          {
+            "id": "CAT-01-F",
+            "name": "Bar code omissions",
+            "count": 11,
+            "percentage": 2.7,
+            "cfr_violated": ["21 CFR 201.25"],
+            "ectd_module": "M1.3.1",
+            "automatable": true,
+            "automation_method": "NDC bar code presence check in SPL data"
+          }
+        ]
+      },
+      {
+        "id": "CAT-02",
+        "name": "FACILITY_GMP",
+        "total_crls_affected": 183,
+        "percentage": 44.5,
+        "description": "Manufacturing facility deficiencies including cGMP violations, Form 483 observations, pre-approval inspection failures, contamination, and data integrity issues",
+        "subcategories": [
+          {
+            "id": "CAT-02-A",
+            "name": "cGMP violations (general)",
+            "count": 59,
+            "percentage": 14.4,
+            "cfr_violated": ["21 CFR 210", "21 CFR 211"],
+            "ectd_module": "M3.2.P.3/M3.2.A",
+            "automatable": false,
+            "automation_method": "Requires physical inspection"
+          },
+          {
+            "id": "CAT-02-B",
+            "name": "Form 483 observations outstanding",
+            "count": 56,
+            "percentage": 13.6,
+            "cfr_violated": ["21 CFR 211"],
+            "ectd_module": "M3.2.A",
+            "automatable": "partial",
+            "automation_method": "Track 483 issuance/response status against FDA inspection database"
+          },
+          {
+            "id": "CAT-02-C",
+            "name": "Pre-approval inspection (PAI) deficiencies",
+            "count": 34,
+            "percentage": 8.3,
+            "cfr_violated": ["21 CFR 314.50(d)(3)"],
+            "ectd_module": "M3.2.A",
+            "automatable": "partial",
+            "automation_method": "Cross-reference FDA inspection status database to verify PAI completion"
+          },
+          {
+            "id": "CAT-02-D",
+            "name": "Contamination/sterility failures",
+            "count": 14,
+            "percentage": 3.4,
+            "cfr_violated": ["21 CFR 211.113"],
+            "ectd_module": "M3.2.P.5",
+            "automatable": false,
+            "automation_method": "Requires laboratory testing"
+          },
+          {
+            "id": "CAT-02-E",
+            "name": "Data integrity failures",
+            "count": 1,
+            "percentage": 0.2,
+            "cfr_violated": ["21 CFR 211.68", "21 CFR 211.180", "21 CFR Part 11"],
+            "ectd_module": "M3.2.P.5",
+            "automatable": false,
+            "automation_method": "Requires on-site audit"
+          }
+        ]
+      },
+      {
+        "id": "CAT-03",
+        "name": "CMC_PRODUCT_QUALITY",
+        "total_crls_affected": 164,
+        "percentage": 39.9,
+        "description": "Chemistry, manufacturing, and controls deficiencies including drug substance characterization, stability, microbiology, container closure, analytical methods, process validation, specifications, and impurities",
+        "subcategories": [
+          {
+            "id": "CAT-03-A",
+            "name": "Drug substance characterization incomplete",
+            "count": 73,
+            "percentage": 17.8,
+            "cfr_violated": ["21 CFR 314.50(d)(1)(i)"],
+            "ectd_module": "M3.2.S",
+            "automatable": false,
+            "automation_method": "Requires chemistry review"
+          },
+          {
+            "id": "CAT-03-B",
+            "name": "Stability data insufficient",
+            "count": 71,
+            "percentage": 17.3,
+            "cfr_violated": ["21 CFR 314.50(d)(1)(ii)(b)", "21 CFR 211.137", "21 CFR 211.166"],
+            "guidance_reference": "ICH Q1A(R2)",
+            "ectd_module": "M3.2.P.8/M3.2.S.7",
+            "automatable": "partial",
+            "automation_method": "Verify study duration >= claimed shelf life; check for 3 batches; verify long-term/accelerated/intermediate conditions present"
+          },
+          {
+            "id": "CAT-03-C",
+            "name": "Microbiology/sterility issues",
+            "count": 50,
+            "percentage": 12.2,
+            "cfr_violated": ["21 CFR 211.113", "21 CFR 211.84"],
+            "ectd_module": "M3.2.P.5",
+            "automatable": false,
+            "automation_method": "Requires microbiology expertise"
+          },
+          {
+            "id": "CAT-03-D",
+            "name": "Container closure system deficiencies",
+            "count": 39,
+            "percentage": 9.5,
+            "cfr_violated": ["21 CFR 211.94", "21 CFR 314.50(d)"],
+            "guidance_reference": "FDA Container Closure Systems Guidance",
+            "ectd_module": "M3.2.P.7",
+            "automatable": false,
+            "automation_method": "Requires materials science assessment"
+          },
+          {
+            "id": "CAT-03-E",
+            "name": "Analytical method not validated",
+            "count": 31,
+            "percentage": 7.5,
+            "cfr_violated": ["21 CFR 211.194"],
+            "guidance_reference": "ICH Q2(R1), FDA Analytical Procedures Validation",
+            "ectd_module": "M3.2.P.5/M3.2.S.4",
+            "automatable": false,
+            "automation_method": "Requires scientific review of validation parameters"
+          },
+          {
+            "id": "CAT-03-F",
+            "name": "Specifications inadequate or not justified",
+            "count": 50,
+            "percentage": 12.2,
+            "cfr_violated": ["21 CFR 314.50(d)(1)"],
+            "guidance_reference": "ICH Q6A/Q6B",
+            "ectd_module": "M3.2.P.5/M3.2.S.4",
+            "automatable": false,
+            "automation_method": "Requires scientific judgment to evaluate specification rationale"
+          },
+          {
+            "id": "CAT-03-G",
+            "name": "Impurities not characterized",
+            "count": 47,
+            "percentage": 11.4,
+            "cfr_violated": ["21 CFR 314.50(d)(1)"],
+            "guidance_reference": "ICH Q3A/Q3B",
+            "ectd_module": "M3.2.P.5/M3.2.S.3",
+            "automatable": false,
+            "automation_method": "Requires toxicological assessment",
+            "tagging_note": "PRIMARY category when CRL NONCLINICAL section discusses impurity specifications exceeding ICH Q3B(R2) thresholds requiring toxicological qualification. Apply dual-tag: primary=CAT-03-G, secondary=CAT-05-A. The NONCLINICAL section header in these cases is misleading — the root deficiency is an impurity specification issue."
+          },
+          {
+            "id": "CAT-03-H",
+            "name": "Process validation incomplete",
+            "count": 16,
+            "percentage": 3.9,
+            "cfr_violated": ["21 CFR 211.100", "21 CFR 211.110", "21 CFR 211.113"],
+            "guidance_reference": "FDA Process Validation Guidance (2011)",
+            "ectd_module": "M3.2.P.3",
+            "automatable": "partial",
+            "automation_method": "Check if PPQ report is present in Module 3; verify batch count"
+          }
+        ]
+      },
+      {
+        "id": "CAT-04",
+        "name": "CLINICAL",
+        "total_crls_affected": 83,
+        "percentage": 20.2,
+        "description": "Clinical deficiencies including efficacy failures, inadequate study design, safety signals, risk-benefit determinations, and GCP inspection findings at clinical trial sites",
+        "subcategories": [
+          {
+            "id": "CAT-04-A",
+            "name": "Safety update required in response",
+            "count": 310,
+            "percentage": 75.4,
+            "percentage_verified": 96.7,
+            "cfr_violated": ["21 CFR 314.50(d)(5)(vi)(b)"],
+            "ectd_module": "M5.3.6",
+            "automatable": true,
+            "automation_method": "Check if safety update section is present in submission per 314.50(d)(5)(vi)(b)",
+            "note": "Standard boilerplate in most CRLs — not necessarily a substantive deficiency. Verification sample (30 CRLs) shows 96.7% rate (29/30); the 75.4% estimate may undercount due to reserved-labeling-only CRLs not requiring safety updates."
+          },
+          {
+            "id": "CAT-04-B",
+            "name": "Failed to demonstrate efficacy",
+            "count": 34,
+            "percentage": 8.3,
+            "cfr_violated": ["21 CFR 314.125(b)(5)", "FD&C Act 505(d)"],
+            "ectd_module": "M5.3.5",
+            "automatable": false,
+            "automation_method": "Requires clinical/statistical judgment"
+          },
+          {
+            "id": "CAT-04-C",
+            "name": "Adequate and well-controlled studies lacking",
+            "count": 34,
+            "percentage": 8.3,
+            "cfr_violated": ["21 CFR 314.126"],
+            "ectd_module": "M5.3.5",
+            "automatable": false,
+            "automation_method": "Requires trial design review per 314.126 criteria"
+          },
+          {
+            "id": "CAT-04-D",
+            "name": "Cardiovascular safety signal",
+            "count": 15,
+            "percentage": 3.6,
+            "cfr_violated": ["21 CFR 314.125(b)(1)"],
+            "ectd_module": "M5.3.5",
+            "automatable": false,
+            "automation_method": "Requires cardiologist review"
+          },
+          {
+            "id": "CAT-04-E",
+            "name": "Unfavorable risk-benefit assessment",
+            "count": 35,
+            "percentage": 8.5,
+            "cfr_violated": ["21 CFR 314.125(b)(5)"],
+            "ectd_module": "M2.5/M5",
+            "automatable": false,
+            "automation_method": "Requires medical judgment"
+          },
+          {
+            "id": "CAT-04-F",
+            "name": "Hepatotoxicity/liver safety concerns",
+            "count": 6,
+            "percentage": 1.5,
+            "cfr_violated": ["21 CFR 314.125(b)(1)"],
+            "ectd_module": "M5.3.5",
+            "automatable": false,
+            "automation_method": "Requires hepatology/clinical review"
+          },
+          {
+            "id": "CAT-04-G",
+            "name": "Postmarket study/REMS required",
+            "count": 12,
+            "percentage": 2.9,
+            "cfr_violated": ["21 CFR 314.81", "FDAAA Section 505-1"],
+            "ectd_module": "M1.12",
+            "automatable": "partial",
+            "automation_method": "Track commitment status against FDA database"
+          },
+          {
+            "id": "CAT-04-H",
+            "name": "Clinical site GCP inspection deficiencies",
+            "status": "NEW — added v2.1",
+            "count": 9,
+            "percentage": 2.2,
+            "cfr_violated": ["21 CFR 312.68", "21 CFR 312.62", "21 CFR 312.66"],
+            "guidance_reference": "FDA GCP Guidance; ICH E6(R2) Good Clinical Practice",
+            "ectd_module": "M5.3.5/M5.3.7",
+            "automatable": false,
+            "automation_method": "Requires review of FDA clinical site inspection reports (EIR); flag applications with for-cause GCP inspections",
+            "description": "GCP noncompliance findings at individual clinical trial sites that impact data reliability. Distinct from facility GMP inspections (CAT-02). Typically triggered by for-cause PDUFA inspections or routine BIMO inspections. Key indicators: unblinding events, protocol deviations affecting efficacy assessments, data quality issues at inspected sites, inspector observations questioning study conduct integrity.",
+            "example_crls": ["BLA 761192", "BLA 761240", "NDA 021164", "NDA 200655", "NDA 213976", "NDA 214927", "NDA 215455", "NDA 218353", "NDA 218592"],
+            "section_header_in_crl": "CLINICAL SITE INSPECTIONS",
+            "key_distinguishing_features": [
+              "Section header 'CLINICAL SITE INSPECTIONS' (distinct from 'FACILITY INSPECTIONS')",
+              "References 'good clinical practice (GCP)' specifically",
+              "Mentions for-cause inspections of specific protocol sites",
+              "Discusses impact on efficacy data interpretability",
+              "Unblinding or protocol deviation findings at individual sites",
+              "FDA Form 483-equivalent observations for clinical sites (EIR)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CAT-05",
+        "name": "NONCLINICAL",
+        "total_crls_affected": 50,
+        "percentage": 12.2,
+        "description": "Nonclinical deficiencies including missing genotoxicity, carcinogenicity, reproductive toxicity, and safety pharmacology studies. NOTE: When a NONCLINICAL section in a CRL discusses impurity qualification studies required under ICH Q3B(R2), the primary category should be CAT-03-G (Impurities), not CAT-05. Apply dual-tag: primary=CAT-03-G, secondary=CAT-05-A.",
+        "subcategories": [
+          {
+            "id": "CAT-05-A",
+            "name": "Genotoxicity battery incomplete",
+            "count": 17,
+            "percentage": 4.1,
+            "cfr_violated": ["21 CFR 314.50(d)(2)"],
+            "guidance_reference": "ICH S2(R1)",
+            "ectd_module": "M4.2.3",
+            "automatable": "partial",
+            "automation_method": "Check if standard battery (bacterial reverse mutation + in vitro chromosome aberration + in vivo micronucleus) is present",
+            "tagging_note": "When used as SECONDARY tag for impurity qualification (primary=CAT-03-G), count=3 miscategorized instances corrected in v2.1"
+          },
+          {
+            "id": "CAT-05-B",
+            "name": "Carcinogenicity studies missing/inadequate",
+            "count": 13,
+            "percentage": 3.2,
+            "cfr_violated": ["21 CFR 314.50(d)(2)"],
+            "guidance_reference": "ICH S1A/S1B/S1C(R2)",
+            "ectd_module": "M4.2.2",
+            "automatable": "partial",
+            "automation_method": "Apply ICH S1 decision tree based on treatment duration and drug class"
+          },
+          {
+            "id": "CAT-05-C",
+            "name": "Reproductive/developmental toxicity missing",
+            "count": 6,
+            "percentage": 1.5,
+            "cfr_violated": ["21 CFR 314.50(d)(2)"],
+            "guidance_reference": "ICH S5(R3)",
+            "ectd_module": "M4.2.1",
+            "automatable": "partial",
+            "automation_method": "Check if required based on patient population and indication"
+          },
+          {
+            "id": "CAT-05-D",
+            "name": "Safety pharmacology battery missing",
+            "count": 10,
+            "percentage": 2.4,
+            "cfr_violated": ["21 CFR 314.50(d)(2)"],
+            "guidance_reference": "ICH S7A/S7B",
+            "ectd_module": "M4.2.1.3",
+            "automatable": "partial",
+            "automation_method": "Check if core battery (CNS, cardiovascular, respiratory) studies are present in Module 4"
+          }
+        ]
+      },
+      {
+        "id": "CAT-06",
+        "name": "CLINICAL_PHARMACOLOGY",
+        "total_crls_affected": 21,
+        "percentage": 5.1,
+        "description": "Clinical pharmacology deficiencies including missing DDI studies, organ impairment studies, QT studies, and food effect studies",
+        "subcategories": [
+          {
+            "id": "CAT-06-A",
+            "name": "Drug-drug interaction studies missing",
+            "count": 104,
+            "percentage": 25.3,
+            "cfr_violated": ["21 CFR 314.50(d)(5)"],
+            "guidance_reference": "FDA DDI Guidance (2020)",
+            "ectd_module": "M5.3.3",
+            "automatable": "partial",
+            "automation_method": "Cross-reference metabolic pathway (CYP profile in Module 3) against required DDI study list"
+          },
+          {
+            "id": "CAT-06-B",
+            "name": "Renal/hepatic impairment study missing",
+            "count": 8,
+            "percentage": 1.9,
+            "cfr_violated": ["21 CFR 314.50(d)(5)"],
+            "guidance_reference": "FDA Organ Impairment Guidances",
+            "ectd_module": "M5.3.3",
+            "automatable": "partial",
+            "automation_method": "Check excretion pathway; if >= 30% renal elimination, verify renal impairment study present"
+          },
+          {
+            "id": "CAT-06-C",
+            "name": "QT/TQT study deficiencies",
+            "count": 7,
+            "percentage": 1.7,
+            "cfr_violated": ["21 CFR 314.50(d)(5)"],
+            "guidance_reference": "ICH E14",
+            "ectd_module": "M5.3.4",
+            "automatable": "partial",
+            "automation_method": "Check if TQT study report or E14 concentration-QT analysis/waiver present"
+          },
+          {
+            "id": "CAT-06-D",
+            "name": "Food effect study missing",
+            "count": 3,
+            "percentage": 0.7,
+            "cfr_violated": ["21 CFR 314.50(d)(3)"],
+            "guidance_reference": "FDA Food Effect Guidance",
+            "ectd_module": "M5.3.1",
+            "automatable": true,
+            "automation_method": "For oral dosage forms, verify food effect study present in Module 5.3.1"
+          }
+        ]
+      },
+      {
+        "id": "CAT-07",
+        "name": "HUMAN_FACTORS",
+        "total_crls_affected": 13,
+        "percentage": 3.2,
+        "description": "Human factors/usability deficiencies for combination products and delivery devices",
+        "subcategories": [
+          {
+            "id": "CAT-07-A",
+            "name": "Human factors study not conducted",
+            "count": 27,
+            "percentage": 6.6,
+            "cfr_violated": ["21 CFR 820.30"],
+            "guidance_reference": "FDA Human Factors Guidance",
+            "ectd_module": "M1.5/M5",
+            "automatable": "partial",
+            "automation_method": "Check if product is combination product; if so, verify HF report present"
+          },
+          {
+            "id": "CAT-07-B",
+            "name": "Use-related risks not addressed",
+            "count": 18,
+            "percentage": 4.4,
+            "cfr_violated": ["21 CFR 820.30"],
+            "ectd_module": "M1.5/M5",
+            "automatable": false,
+            "automation_method": "Requires ergonomics/usability expert review"
+          }
+        ]
+      },
+      {
+        "id": "CAT-08",
+        "name": "BIOEQUIVALENCE",
+        "total_crls_affected": 33,
+        "percentage": 8.0,
+        "description": "Bioequivalence study design, missing strength studies, and dissolution deficiencies",
+        "subcategories": [
+          {
+            "id": "CAT-08-A",
+            "name": "BE study design inadequate",
+            "count": 6,
+            "percentage": 1.5,
+            "cfr_violated": ["21 CFR 320.21", "21 CFR 320.24"],
+            "ectd_module": "M5.3.1",
+            "automatable": false,
+            "automation_method": "Requires scientific review"
+          },
+          {
+            "id": "CAT-08-B",
+            "name": "BE study missing for required strengths",
+            "count": 1,
+            "percentage": 0.2,
+            "cfr_violated": ["21 CFR 320.21"],
+            "ectd_module": "M5.3.1",
+            "automatable": true,
+            "automation_method": "Cross-reference dosage strengths in Module 3 against BE studies in Module 5"
+          },
+          {
+            "id": "CAT-08-C",
+            "name": "In vitro dissolution data inadequate",
+            "count": 1,
+            "percentage": 0.2,
+            "cfr_violated": ["21 CFR 320.24"],
+            "guidance_reference": "ICH Q6A, FDA Dissolution Guidance",
+            "ectd_module": "M3.2.P.5",
+            "automatable": false,
+            "automation_method": "Requires scientific judgment"
+          }
+        ]
+      },
+      {
+        "id": "CAT-09",
+        "name": "ADMINISTRATIVE_REGULATORY",
+        "total_crls_affected": 28,
+        "percentage": 6.8,
+        "description": "Administrative deficiencies including patent certifications, exclusivity issues, and formal postmarketing study/clinical trial requirements under 505(o)(3)",
+        "note": "total_crls_affected updated from 11 to 28 to include CAT-09-C PMR/PMC records",
+        "subcategories": [
+          {
+            "id": "CAT-09-A",
+            "name": "Patent certification issues",
+            "count": 15,
+            "percentage": 3.6,
+            "cfr_violated": ["21 CFR 314.52", "21 CFR 314.53"],
+            "ectd_module": "M1",
+            "automatable": true,
+            "automation_method": "Completeness check for Paragraph IV certifications against Orange Book patents"
+          },
+          {
+            "id": "CAT-09-B",
+            "name": "Exclusivity issues",
+            "count": 6,
+            "percentage": 1.5,
+            "cfr_violated": ["21 CFR 314.108", "21 CFR 316"],
+            "ectd_module": "M1",
+            "automatable": "partial",
+            "automation_method": "Cross-reference exclusivity database for blocking exclusivities"
+          },
+          {
+            "id": "CAT-09-C",
+            "name": "Postmarketing requirements/commitments (PMR/PMC) under 505(o)(3)",
+            "status": "NEW — added v2.1",
+            "count": 17,
+            "percentage": 4.1,
+            "cfr_violated": ["FD&C Act 505(o)(3)", "21 CFR 314.81(b)(2)(vii)", "21 CFR 601.70"],
+            "guidance_reference": "FDA Guidance for Postmarketing Studies and Clinical Trials under 505(o)(3)",
+            "ectd_module": "M1.12",
+            "automatable": "partial",
+            "automation_method": "Detect 'POSTMARKETING REQUIREMENTS UNDER 505(o)(3)' section header in CRL text; extract required study type (carcinogenicity, PK, clinical registry, etc.) and timetable",
+            "description": "Formal statutory postmarketing study requirements issued under section 505(o)(3) of the FDCA. Distinguished from general postmarket study commitments by the formal statutory citation and finding that passive surveillance (505(k)(1)) and the active pharmacovigilance system (505(k)(3)) are insufficient to assess identified serious risks. Appears as a formal titled section in CRL — 'POSTMARKETING REQUIREMENTS UNDER 505(o)(3)'. Studies are legally binding upon approval (unlike PMC postmarketing commitments, which are voluntary). Common triggers: carcinogenicity uncertainty, drug-drug interaction risks requiring in vivo confirmation, rare serious risks needing prospective registries.",
+            "example_crls": [
+              "NDA 215244", "NDA 207987", "BL 125840", "BLA 761045", "BLA 761180",
+              "BLA 761338", "BLA 761373", "BLA 761425", "BLA 761463",
+              "NDA 210136", "NDA 211988", "NDA 215559", "NDA 216490", "NDA 217202"
+            ],
+            "section_header_in_crl": "POSTMARKETING REQUIREMENTS UNDER 505(O)(3)",
+            "key_distinguishing_features": [
+              "Explicit citation of FD&C Act 505(o)(3) in section header",
+              "FDA statement that 505(k)(1) passive surveillance is insufficient",
+              "FDA statement that 505(k)(3) active pharmacovigilance is insufficient",
+              "Study requirements described as 'required' not 'requested'",
+              "Common study types: carcinogenicity (rat/mouse), PK DDI studies, patient registries",
+              "Timetable and annual reporting requirements referenced"
+            ],
+            "boundary_with_cat04g": "CAT-09-C covers formal statutory PMRs under 505(o)(3) with explicit finding language. CAT-04-G covers REMS requirements and general postmarket study requests without 505(o)(3) citation."
+          }
+        ]
+      },
+      {
+        "id": "CAT-10",
+        "name": "PEDIATRIC_PREA",
+        "total_crls_affected": 2,
+        "percentage": 0.5,
+        "description": "Missing required pediatric assessments under PREA",
+        "subcategories": [
+          {
+            "id": "CAT-10-A",
+            "name": "Required pediatric assessments missing",
+            "count": 2,
+            "percentage": 0.5,
+            "cfr_violated": ["21 CFR 314.55", "PREA Section 505B"],
+            "ectd_module": "M5.3.5",
+            "automatable": "partial",
+            "automation_method": "Check if waiver, deferral, or pediatric study plan has been submitted and agreed upon"
+          }
+        ]
+      },
+      {
+        "id": "CAT-11",
+        "name": "DEVICE_COMBINATION_PRODUCT",
+        "status": "NEW — added v2.1",
+        "total_crls_affected": 10,
+        "percentage": 2.4,
+        "description": "Deficiencies specific to the device component of drug-device combination products reviewed under NDA/BLA. The drug application cannot be approved until the device component PMA (Premarket Approval) or 510(k) deficiencies are resolved by CDRH. Distinct from Human Factors deficiencies (CAT-07), which address usability study adequacy. CAT-11 addresses the regulatory status of the device component itself.",
+        "note": "This category is uniquely cross-agency: deficiencies originate from FDA's Center for Devices and Radiological Health (CDRH) via the combination product coordination process (21 CFR Part 3). The NDA/BLA CRL reflects but does not generate these deficiencies.",
+        "subcategories": [
+          {
+            "id": "CAT-11-A",
+            "name": "PMA device component deficiencies blocking NDA/BLA approval",
+            "status": "NEW — added v2.1",
+            "count": 10,
+            "percentage": 2.4,
+            "cfr_violated": ["21 CFR Part 3", "21 CFR 820.30", "FD&C Act 513(f)", "21 CFR 814"],
+            "guidance_reference": "FDA Combination Products Guidance; CDRH PMA Guidance",
+            "ectd_module": "M3.2.P.7/M1.5",
+            "automatable": "partial",
+            "automation_method": "Detect combination product indicator in application type and check CDRH PMA/510(k) approval status in FDA device database; flag if device component has outstanding Not Approvable/Deficiency letter",
+            "description": "The device component of a combination product has received a Not Approvable letter, outstanding deficiencies, or incomplete PMA submission from CDRH. The drug component NDA/BLA may be otherwise adequate but cannot be approved until CDRH resolves the device deficiencies. CRL cites the CDRH letter date and outstanding device-specific deficiencies. Often co-occurs with CAT-07 (Human Factors) since HF deficiencies for the device interface are tracked by CDRH under 21 CFR 820.30.",
+            "example_crls": [
+              "NDA 208276", "BLA 761180", "BLA 761315", "NDA 201110", "NDA 201848",
+              "NDA 202860", "NDA 209988", "NDA 210063", "NDA 210136", "NDA 216962"
+            ],
+            "section_header_in_crl": "CLINICAL (embedded) or standalone device deficiency section",
+            "key_distinguishing_features": [
+              "References 'PMA' (Premarket Approval) for device component",
+              "Cites 'Not Approvable letter' from CDRH with date",
+              "References 'Center for Devices and Radiological Health (CDRH)'",
+              "States NDA/BLA 'cannot be approved' until device is approvable",
+              "May reference '21 CFR 820.30' for device design controls",
+              "Combination product language: 'drug-device combination product'"
+            ],
+            "boundary_with_cat07": "CAT-11-A = device component PMA regulatory status blocking approval (CDRH decision). CAT-07 = human factors/usability study adequacy for the device interface (FDA drug review concern). Both may apply simultaneously to the same CRL."
+          }
+        ]
+      }
+    ]
+  },
+  "miscategorization_corrections": {
+    "version": "v2.1 corrections",
+    "corrections_applied": [
+      {
+        "correction_id": "MISC-001",
+        "pattern": "Impurity qualification studies placed under NONCLINICAL section header",
+        "original_taxonomy_id": "CAT-05-A",
+        "corrected_primary_id": "CAT-03-G",
+        "corrected_secondary_id": "CAT-05-A",
+        "frequency_in_database": 3,
+        "root_cause": "FDA CRL letters sometimes place impurity qualification discussions under a 'NONCLINICAL' section header when they require toxicological qualification studies per ICH Q3B(R2). The section header is misleading — the root deficiency is an impurity specification issue, not a standalone nonclinical study gap.",
+        "detection_signal": "NONCLINICAL section header + ICH Q3B(R2) citation + language about impurity levels exceeding qualification thresholds",
+        "rule": "When a CRL NONCLINICAL section discusses impurity specifications exceeding ICH Q3B(R2) thresholds and requires toxicological qualification data, assign primary=CAT-03-G, secondary=CAT-05-A. If the nonclinical section discusses standalone safety study gaps (genotoxicity, carcinogenicity, reproductive tox) without impurity framing, assign CAT-05-A alone."
+      }
+    ]
+  },
+  "automation_summary": {
+    "updated_counts": {
+      "fully_automatable": 10,
+      "partially_automatable": 18,
+      "requires_human_review": 17,
+      "total_subcategories": 45,
+      "note": "Updated from v2.0 (41 subcategories) — 4 new subcategories added: CAT-04-H, CAT-09-C, CAT-11-A (new parent CAT-11 counted as 1)"
+    }
+  }
+}

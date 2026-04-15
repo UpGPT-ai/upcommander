@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "title": "Corrected ICH E-Series Rules",
+    "source_corrections_file": "training/verification/ich-clinical/corrections.json",
+    "date": "2026-03-23",
+    "total_corrections_applied": 10,
+    "note": "All corrections verified against source PDFs. CORR-006 includes an adversarial finding: Appendix A table DOES list ADME and receptor sensitivity; the correction instruction was based on an incorrect premise. Rule retained with attribution note added."
+  },
+
+  "corrections": [
+
+    {
+      "correction_id": "CORR-001",
+      "severity": "HIGH",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "periodic_report_structures.pbrer_e2c_r2.periodicity",
+      "source": "ICH E2C(R2), Section 2.8.3",
+      "corrected_value": {
+        "submission_deadline_6_monthly": "70 calendar days after the DLP",
+        "submission_deadline_annual": "70 calendar days after the DLP",
+        "submission_deadline_exceeding_12_months": "90 calendar days after the DLP",
+        "submission_deadline_ad_hoc": "90 calendar days after the DLP, unless otherwise specified in the ad hoc request",
+        "note": "The 70-day deadline applies to both 6-month and 12-month reporting intervals. The 90-day deadline applies only to intervals exceeding 12 months or ad hoc PBRERs."
+      },
+      "pdf_verbatim": "PBRERs covering intervals of 6 or 12 months: within 70 calendar days. PBRERs covering intervals in excess of 12 months: within 90 calendar days. Ad hoc PBRERs: 90 calendar days, unless otherwise specified in the ad hoc request.",
+      "change_summary": "Changed submission_deadline_annual from 90 to 70 calendar days. Added explicit submission_deadline_exceeding_12_months field at 90 days. Added ad_hoc deadline field."
+    },
+
+    {
+      "correction_id": "CORR-002",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "definitions.serious_adverse_event",
+      "source": "ICH E2A, Sections II.B and III.A.2",
+      "corrected_value": {
+        "definition": "A serious adverse event (experience) or reaction is any untoward medical occurrence that at any dose results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+        "formal_criteria": [
+          "Results in death",
+          "Is life-threatening",
+          "Requires inpatient hospitalisation or prolongation of existing hospitalisation",
+          "Results in persistent or significant disability or incapacity",
+          "Is a congenital anomaly or birth defect"
+        ],
+        "important_medical_event_note": "Medical and scientific judgement should be exercised in deciding whether expedited reporting is appropriate for other situations such as important medical events that may not be immediately life-threatening or result in death or hospitalisation but may jeopardise the patient or may require intervention to prevent one of the other outcomes listed in the serious definition above. These should usually be considered serious. (ICH E2A, Section III.A.2)"
+      },
+      "change_summary": "Restructured from 6-item criteria list to 5 formal criteria plus a separate important_medical_event_note field. 'Important medical event' is a supplementary regulatory reporting consideration per Section III.A.2, not a 6th formal SAE criterion."
+    },
+
+    {
+      "correction_id": "CORR-003",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "periodic_report_structures.pbrer_e2c_r2.sections",
+      "source": "ICH E2C(R2), Section 2.9.2",
+      "corrected_value": {
+        "section_7_title": "Summaries of Significant Findings from Clinical Trials during the Reporting Interval",
+        "note": "E2C(R2) uses 'Reporting Interval' as the deliberate terminology throughout the guideline body text (e.g., Section 3.7 heading). 'Reporting Period' has been replaced with 'Reporting Interval' in all PBRER section titles and descriptions."
+      },
+      "change_summary": "Replaced 'Reporting Period' with 'Reporting Interval' in Section 7 title and all E2C(R2)-sourced PBRER section descriptions, consistent with the guideline's deliberate terminology choice."
+    },
+
+    {
+      "correction_id": "CORR-004",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "selective_safety_data_collection_e19",
+      "source": "ICH E19, Sections 2.3 and 2.4",
+      "corrected_value": {
+        "mandatory_safety_data": {
+          "source_section": "ICH E19, Section 2.4",
+          "items": [
+            "Serious adverse events (SAEs)",
+            "Adverse events leading to discontinuation",
+            "Adverse events leading to dose modification",
+            "Adverse events of special interest (AESIs)",
+            "Deaths (all-cause)",
+            "Pregnancies (participant and partner)"
+          ]
+        },
+        "baseline_data_requirements": {
+          "source_section": "ICH E19, Section 2.3",
+          "description": "Baseline data should be collected as specified in the protocol to allow interpretation of safety data. The extent of baseline data should be proportionate to the nature of the trial and the safety profile of the product."
+        }
+      },
+      "change_summary": "Split the conflated 7-item list into two separate fields: mandatory_safety_data (6 items from Section 2.4) and baseline_data_requirements (from Section 2.3). Baseline data is a distinct category from mandatory safety collection."
+    },
+
+    {
+      "correction_id": "CORR-005",
+      "severity": "MEDIUM",
+      "file": "special-populations-rules.json",
+      "rule_id": "E6-018",
+      "source": "ICH E6(R3), Section III, 3.11.4",
+      "corrected_value": {
+        "rule_id": "E6-018",
+        "text": "Monitoring should be risk-based, with the extent and nature of monitoring proportionate to the risks identified in quality management. Centralized monitoring methods should complement or reduce on-site monitoring.",
+        "section": "III, 3.11.4",
+        "section_note": "Specifically Section 3.11.4.2 for centralised monitoring requirements. Section 3.3 (Allocation of Activities) is a distinct section covering delegation of activities.",
+        "obligation": "mandatory",
+        "category": "monitoring"
+      },
+      "change_summary": "Corrected section citation from '3.3' (Allocation of Activities) to '3.11.4' (Monitoring). Added note specifying 3.11.4.2 for centralised monitoring."
+    },
+
+    {
+      "correction_id": "CORR-006",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E5-002",
+      "source": "ICH E5(R1), Appendix A",
+      "adversarial_finding": "CORR-006 instruction was based on an incorrect premise. The Appendix A factor table in E5(R1) DOES enumerate 'ADME characteristics' and 'Receptor sensitivity' as intrinsic ethnic factors. These items are present in the Appendix A table, not only in the body text as the correction claimed. Items are therefore correctly attributed to Appendix A.",
+      "corrected_value": {
+        "rule_id": "E5-002",
+        "text": "Intrinsic ethnic factors include genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction, race, ADME characteristics, and receptor sensitivity.",
+        "section": "Appendix A",
+        "section_note": "All items including ADME characteristics and receptor sensitivity are enumerated in the Appendix A intrinsic ethnic factors table. Confirmed by direct reading of Appendix A table in E5(R1).",
+        "obligation": "mandatory",
+        "category": "intrinsic_factors"
+      },
+      "change_summary": "Rule text unchanged. Added section_note confirming ADME characteristics and receptor sensitivity are correctly attributed to Appendix A, contradicting the correction instruction. The original rule was accurate."
+    },
+
+    {
+      "correction_id": "CORR-007",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E6-005",
+      "source": "ICH E6(R3), Principle 4 and Section 2.8.1",
+      "corrected_value": {
+        "rule_id": "E6-005",
+        "text": "Freely given informed consent should be obtained from every participant prior to clinical trial participation, in accordance with regulatory requirements and with the ethical principles of the Declaration of Helsinki.",
+        "section": "II, Principle 4; see also Section 2.8.1",
+        "section_note": "Section 2.8.1 specifies that the investigator should comply with applicable regulatory requirement(s) and adhere to GCP and to the ethical principles that have their origin in the Declaration of Helsinki. The phrase 'in accordance with regulatory requirements' in the rule text is derived from Section 2.8.1 content, not solely from Principle 4.",
+        "obligation": "mandatory",
+        "category": "informed_consent"
+      },
+      "change_summary": "Added secondary section reference 'see also Section 2.8.1' to the section field. The clause 'in accordance with regulatory requirements and the Declaration of Helsinki' derives from Section 2.8.1, not exclusively from Principle 4."
+    },
+
+    {
+      "correction_id": "CORR-008",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E11-015",
+      "source": "ICH E11(R1), Sections 2.4.3 and 2.4.4",
+      "corrected_value": {
+        "rule_id": "E11-015",
+        "text": "Long-term follow-up should be considered for pediatric patients to assess effects on growth, development, and maturation that may not be apparent during the trial period.",
+        "section": "E11(R1) 2.4.3, 2.4.4",
+        "section_note": "Section 2.4.3 covers pediatric Safety requirements; Section 2.4.4 covers Postmarketing considerations including long-term follow-up. Section 2.5 (Age Classification) is a distinct section.",
+        "obligation": "recommended",
+        "category": "safety_monitoring"
+      },
+      "change_summary": "Corrected section reference from '2.5' (Age Classification) to '2.4.3, 2.4.4' (Safety and Postmarketing). Content on long-term follow-up is in sections 2.4.3 and 2.4.4."
+    },
+
+    {
+      "correction_id": "CORR-009",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_id": "E17-003",
+      "source": "ICH E17, Section 2.2.5",
+      "corrected_value": {
+        "rule_id": "E17-003",
+        "text": "The overall sample size for an MRCT should be determined to adequately power the study for the primary objective. Sample size allocation across regions should allow meaningful assessment of consistency.",
+        "section": "2.2.5",
+        "section_note": "Section 2.2.5 is Sample Size Planning. Section 2.3 does not exist in ICH E17; the content was incorrectly cited.",
+        "obligation": "mandatory",
+        "category": "sample_size_planning"
+      },
+      "change_summary": "Corrected section reference from '2.3' (non-existent section) to '2.2.5' (Sample Size Planning), confirmed from ICH E17 table of contents."
+    },
+
+    {
+      "correction_id": "CORR-010",
+      "severity": "LOW",
+      "file": "clinical-design-rules.json",
+      "rule_id": "E3-072",
+      "source": "ICH E3, Section 15",
+      "corrected_value": {
+        "rule_id": "E3-072",
+        "source": "ICH E3",
+        "subcategory": "reference_list",
+        "requirement": "A list of articles from the literature pertinent to the evaluation of the study should be provided. Copies of important publications should be attached in appendix 16.1.11 and 16.1.12. References should be given in accordance with the internationally accepted standards of the 1979 Vancouver Declaration on \"Uniform Requirements for Manuscripts Submitted to Biomedical Journals\" or the system used in \"Chemical Abstracts\".",
+        "type": "mandatory",
+        "context": "Every CSR (Section 15)",
+        "threshold": null,
+        "keywords": [
+          "iche3",
+          "list",
+          "mandatory",
+          "reference",
+          "study_reports"
+        ]
+      },
+      "pdf_verbatim": "References should be given in accordance with the internationally accepted standards of the 1979 Vancouver Declaration on \"Uniform Requirements for Manuscripts Submitted to Biomedical Journals\" or the system used in \"Chemical Abstracts\".",
+      "change_summary": "Expanded Vancouver Declaration reference to its full title: '1979 Vancouver Declaration on Uniform Requirements for Manuscripts Submitted to Biomedical Journals'. Added 'Chemical Abstracts' as the permitted alternative referencing system. Both alternatives confirmed in E3 Section 15."
+    }
+
+  ]
+}

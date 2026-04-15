@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "title": "Japan (PMDA) vs FDA vs EMA - Regulatory Divergence Map",
+    "description": "Comprehensive mapping of Japan-specific requirements that diverge from FDA and EMA, based on PMDA guidelines and JP18",
+    "extraction_date": "2026-03-22",
+    "version": "3.0"
+  },
+  "divergences": [
+    {
+      "id": "JP-001",
+      "category": "Market Authorization",
+      "area": "Foreign Manufacturer Accreditation",
+      "japan_requirement": "Foreign manufacturers must obtain 'Accredited Foreign Manufacturer' status under PAL Article 13-3 before their products can be marketed in Japan. 5-year renewal required. Requires Japanese MAH as applicant.",
+      "fda_approach": "Foreign establishments register annually via FDA Establishment Registration (no separate 'accreditation'). Drug Listing required. No local agent as applicant required for establishment registration.",
+      "ema_approach": "Manufacturing and Import Authorization (MIA) required for EU importers. QP (Qualified Person) certifies batches. Foreign manufacturers need not independently register but must be listed in marketing authorization.",
+      "gap_severity": "high",
+      "action_required": "Identify Japanese MAH partner early. File Form No. 18 to MHLW + Form No. 16-(2) to PMDA. Budget 5 months for processing. Plan 5-year renewal cycle.",
+      "risk_if_missed": "Cannot legally import or sell in Japan without accreditation"
+    },
+    {
+      "id": "JP-002",
+      "category": "Clinical Development",
+      "area": "Bridging Study Requirement (ICH E5)",
+      "japan_requirement": "Foreign clinical data acceptance requires bridging study demonstrating similarity of drug response in Japanese population. PK bridging in Japanese subjects is almost always required. Full Japanese clinical program needed for ethnically sensitive drugs.",
+      "fda_approach": "No formal bridging study requirement. FDA accepts foreign clinical data if study design is adequate and population is relevant. Multi-regional clinical trials (MRCTs) with US sites are standard.",
+      "ema_approach": "No formal bridging requirement. EMA accepts data from global MRCTs. May request subgroup analysis by ethnicity but does not mandate separate bridging studies.",
+      "gap_severity": "high",
+      "action_required": "Conduct ICH E5 assessment early in development. Design PK bridging study with Japanese healthy volunteers or patients. For MRCTs, ensure adequate Japanese site enrollment. Consult PMDA pre-submission.",
+      "risk_if_missed": "J-NDA rejection or requirement for additional Japanese studies, causing 2-4 year delay"
+    },
+    {
+      "id": "JP-003",
+      "category": "Clinical Development",
+      "area": "Japanese Patient Enrollment in Global Trials",
+      "japan_requirement": "Japanese patients must be included in pivotal trials or separate bridging/confirmatory studies must be conducted. PMDA scrutinizes Japanese subgroup analysis from MRCTs.",
+      "fda_approach": "No country-specific enrollment requirement. Demographic representativeness encouraged but not mandated by country.",
+      "ema_approach": "No country-specific enrollment requirement. EMA may request subgroup analysis but does not mandate European-specific studies.",
+      "gap_severity": "high",
+      "action_required": "Include Japanese sites in Phase III MRCTs from the start. Target sufficient Japanese enrollment for meaningful subgroup analysis. Alternative: plan parallel Japanese Phase II/III study.",
+      "risk_if_missed": "Insufficient Japanese data leads to PMDA requesting additional domestic study post-submission"
+    },
+    {
+      "id": "JP-004",
+      "category": "Clinical Development",
+      "area": "Ethnic Factor Sensitivity Assessment",
+      "japan_requirement": "ICH E5-based framework requires systematic assessment of intrinsic (genetic, physiological) and extrinsic (diet, medical practice, regulatory) ethnic factors that may affect drug response in Japanese population.",
+      "fda_approach": "No formal ethnic sensitivity framework. FDA may request PK in different racial groups but no systematic assessment required.",
+      "ema_approach": "No formal ethnic sensitivity framework. EMA may consider ethnic factors in benefit-risk assessment but no dedicated evaluation required.",
+      "gap_severity": "medium",
+      "action_required": "Prepare ICH E5 ethnic sensitivity assessment document. Evaluate CYP polymorphism frequencies in Japanese vs target populations. Assess body weight and organ function differences.",
+      "risk_if_missed": "Insufficient justification for extrapolation of foreign data"
+    },
+    {
+      "id": "JP-005",
+      "category": "Post-Approval",
+      "area": "Re-examination System (Saishinsaseido)",
+      "japan_requirement": "Mandatory post-marketing surveillance period (typically 8 years for NCEs, 10 years for orphan drugs). During re-examination, generic entry is effectively blocked. MAH must collect and submit use-results survey data.",
+      "fda_approach": "No re-examination system. Market exclusivity periods (5 years NCE, 7 years orphan, 3 years new clinical data) are separate from post-marketing obligations. Phase IV commitments are study-specific.",
+      "ema_approach": "No re-examination equivalent. Data exclusivity (8 years) + market protection (2 years) + possible 1-year extension. Post-authorization safety studies (PASS) may be required but are distinct from re-examination.",
+      "gap_severity": "medium",
+      "action_required": "Plan use-results survey protocol before approval. Budget for post-marketing surveillance infrastructure in Japan. Understand that re-examination period = de facto market exclusivity.",
+      "risk_if_missed": "Non-compliance with re-examination obligations can lead to marketing authorization withdrawal"
+    },
+    {
+      "id": "JP-006",
+      "category": "Quality / CMC",
+      "area": "Japanese Pharmacopoeia (JP) Compliance",
+      "japan_requirement": "Products marketed in Japan must comply with JP18 monographs and general tests. JP has unique monographs (crude drugs/Kampo), unique test methods, and some specifications that differ from USP/EP.",
+      "fda_approach": "USP compliance is the standard. USP monographs and general chapters apply. No crude drug/Kampo section.",
+      "ema_approach": "European Pharmacopoeia (EP/Ph.Eur.) compliance required. EP has herbal drug monographs but different scope than JP crude drugs.",
+      "gap_severity": "medium",
+      "action_required": "Cross-reference JP18 monographs against USP/EP specifications. Identify JP-unique tests (e.g., 6.17 protein drug particulates, Section 5 crude drug tests). Develop JP-specific analytical methods where needed. Review GZ-3 international harmonization status.",
+      "risk_if_missed": "Quality specifications that pass USP/EP may fail JP requirements"
+    },
+    {
+      "id": "JP-007",
+      "category": "Quality / CMC",
+      "area": "Dissolution Testing Differences",
+      "japan_requirement": "JP18 Section 6.10 dissolution test may specify different apparatus, media, or acceptance criteria than USP. JP dissolution method development should be conducted.",
+      "fda_approach": "USP <711> dissolution testing. FDA-approved dissolution methods.",
+      "ema_approach": "Ph.Eur. 2.9.3 dissolution testing. May accept USP methods with justification.",
+      "gap_severity": "medium",
+      "action_required": "Develop JP-specific dissolution method if JP monograph exists. Validate against JP specifications. For new products, consider biorelevant dissolution media for Japanese population.",
+      "risk_if_missed": "Product fails JP dissolution specification despite passing USP"
+    },
+    {
+      "id": "JP-008",
+      "category": "Quality / CMC",
+      "area": "Biologics Characterization (JP-specific methods)",
+      "japan_requirement": "JP18 Section G3 requires specific biologics characterization: peptide mapping, glycan analysis (monosaccharide/oligosaccharide profiling), capillary electrophoresis, SDS-PAGE, host cell protein analysis, SPR, ELISA, isoelectric focusing, mycoplasma negativity testing.",
+      "fda_approach": "ICH Q6B-based characterization. USP <1032>-<1034> for biologics. Methods are generally aligned but specific procedural details may differ.",
+      "ema_approach": "Ph.Eur. monographs for biologics. ICH Q6B framework. Generally aligned with JP but procedural details differ.",
+      "gap_severity": "medium",
+      "action_required": "Review JP18 G3 methods against existing characterization package. Validate any JP-specific analytical methods. Ensure mycoplasma testing follows JP G3-14.",
+      "risk_if_missed": "Characterization package insufficient for Japanese submission"
+    },
+    {
+      "id": "JP-009",
+      "category": "Drug Interactions",
+      "area": "Transporter Evaluation Panel",
+      "japan_requirement": "PMDA DDI guideline (2019) requires evaluation of: P-gp, BCRP, OATP1B1, OATP1B3, OAT1, OAT3, OCT1, OCT2, MATE1, MATE2-K. Also consider MRP2, MRP4, BSEP for hepatobiliary interactions.",
+      "fda_approach": "FDA DDI guidance (2020) requires: P-gp, BCRP, OATP1B1, OATP1B3, OAT1, OAT3, OCT2, MATE1, MATE2-K. Does not routinely require OCT1 or MRP2/MRP4/BSEP.",
+      "ema_approach": "EMA DDI guideline (2012, updated) requires: P-gp, BCRP, OATP1B1, OATP1B3, OAT1, OAT3, OCT1, OCT2, MATE1, MATE2-K. Generally aligned with Japan.",
+      "gap_severity": "low",
+      "action_required": "Ensure in vitro DDI package includes OCT1 and hepatobiliary transporters (MRP2, MRP4, BSEP) if drug is hepatically eliminated. Include full panel in drug interaction section of CTD.",
+      "risk_if_missed": "PMDA queries requesting additional transporter studies"
+    },
+    {
+      "id": "JP-010",
+      "category": "Drug Interactions",
+      "area": "CYP2C19 Polymorphism Emphasis",
+      "japan_requirement": "Japan places special emphasis on CYP2C19 evaluation because Japanese population has higher frequency of poor metabolizers (~18-22%) compared to Caucasians (~2-5%).",
+      "fda_approach": "CYP2C19 evaluated as part of standard panel but no population-specific emphasis.",
+      "ema_approach": "CYP2C19 evaluated as part of standard panel. May flag Asian population differences in assessment.",
+      "gap_severity": "medium",
+      "action_required": "For CYP2C19 substrates: conduct dedicated PK study in CYP2C19 poor metabolizers. Include genotyping in Japanese clinical studies. May need dose adjustment recommendation for Japanese PM population.",
+      "risk_if_missed": "Safety concern for CYP2C19 PMs in Japan leading to restricted labeling or post-marketing requirement"
+    },
+    {
+      "id": "JP-011",
+      "category": "Drug Interactions",
+      "area": "Sorivudine/5-FU Interaction Precedent",
+      "japan_requirement": "PMDA DDI guideline explicitly references the sorivudine/5-FU fatal interaction (1993 event in Japan) as precedent for evaluating non-P450 enzyme-mediated DDIs. DPD (dihydropyrimidine dehydrogenase) inhibition specifically flagged.",
+      "fda_approach": "FDA acknowledges the event but does not give it the same regulatory prominence in DDI guidance.",
+      "ema_approach": "EMA DDI guideline does not specifically reference the sorivudine case.",
+      "gap_severity": "low",
+      "action_required": "For drugs metabolized by non-P450 enzymes (DPD, MAO, XO, AO, ADH): explicitly address inhibition potential in DDI package. Reference sorivudine precedent in risk assessment.",
+      "risk_if_missed": "PMDA may raise safety concerns about non-P450 DDI risk"
+    },
+    {
+      "id": "JP-012",
+      "category": "Labeling",
+      "area": "Japanese Package Insert (Tenpu Bunsho) Format",
+      "japan_requirement": "Japanese package insert follows a unique format mandated by MHLW, different from both FDA Prescribing Information and EMA SmPC. Must be in Japanese. Includes specific sections for Precautions, Interactions, Pharmacokinetics with DDI data placement rules.",
+      "fda_approach": "FDA Prescribing Information (PI) follows PLR (Physician Labeling Rule) format. Highlights + Full Prescribing Information.",
+      "ema_approach": "SmPC (Summary of Product Characteristics) follows EU format. Sections 1-12 standardized.",
+      "gap_severity": "medium",
+      "action_required": "Engage Japanese regulatory writer for package insert preparation. Follow MHLW format requirements. Ensure DDI information placement per PMDA DDI guideline Section 8.",
+      "risk_if_missed": "Labeling rejection requiring reformatting and resubmission"
+    },
+    {
+      "id": "JP-013",
+      "category": "Stability",
+      "area": "Stability Conditions for Japanese Market",
+      "japan_requirement": "Japan is classified as Climatic Zone II. Long-term: 25C/60% RH. Accelerated: 40C/75% RH. Intermediate: 30C/65% RH. Generally aligned with ICH Q1A but PMDA may have specific expectations for photostability per ICH Q1B.",
+      "fda_approach": "USA is Zone II. Same conditions as Japan for stability. Generally aligned.",
+      "ema_approach": "EU is Zone II. Same conditions. Generally aligned.",
+      "gap_severity": "low",
+      "action_required": "Standard ICH Q1A(R2) Zone II conditions are acceptable. Ensure photostability study per ICH Q1B is included. JP-specific container tests may be needed.",
+      "risk_if_missed": "Low risk - conditions are harmonized across Zone II"
+    },
+    {
+      "id": "JP-014",
+      "category": "Quality / CMC",
+      "area": "Container/Closure System Testing",
+      "japan_requirement": "JP18 Section 7 specifies: glass container tests (7.01), plastic container tests (7.02), rubber closure tests (7.03) with potentially different extraction studies, limits, and test procedures than USP/EP.",
+      "fda_approach": "USP <660> glass, <661> plastic, <381> rubber. Extractables/leachables per FDA guidance.",
+      "ema_approach": "Ph.Eur. 3.1-3.2 series for containers. Generally aligned with USP but some procedural differences.",
+      "gap_severity": "medium",
+      "action_required": "Compare JP18 Section 7 test requirements against USP/EP data. Conduct JP-specific tests where methods differ. May need additional extractables data per JP protocols.",
+      "risk_if_missed": "Container/closure system data insufficient for JP submission"
+    },
+    {
+      "id": "JP-015",
+      "category": "Nonclinical",
+      "area": "Carcinogenicity High-Dose Selection",
+      "japan_requirement": "Japan historically accepted doses based on body weight (mg/kg) at 100x clinical dose. Current harmonized position follows ICH S1C with MTD and supplementary AUC ratio (minimum 25x). Japan defines MTD as causing no more than 10% body weight suppression, no poisoning deaths, no serious toxicity.",
+      "fda_approach": "FDA traditionally used MTD exclusively. Now follows ICH S1C with MTD as primary metric.",
+      "ema_approach": "EU CPMP allowed 10% body weight suppression or mild organ toxicity. Now follows ICH S1C.",
+      "gap_severity": "low",
+      "action_required": "Follow ICH S1C for carcinogenicity study design. Document AUC ratio calculation. Ensure high dose definition aligns with Japan's 10% body weight suppression criterion.",
+      "risk_if_missed": "Low risk post-harmonization; document ICH S1C compliance"
+    },
+    {
+      "id": "JP-016",
+      "category": "Quality / CMC",
+      "area": "Crude Drug / Kampo Product Standards",
+      "japan_requirement": "JP18 contains 200+ crude drug (Shoyaku) monographs (pages 1861-2086) for traditional Japanese herbal medicines. Products containing crude drug ingredients must comply with these JP-specific monographs.",
+      "fda_approach": "No equivalent. FDA regulates herbal products as dietary supplements (DSHEA) or botanical drugs (IND/NDA), not via pharmacopoeia monographs for crude drugs.",
+      "ema_approach": "EP has herbal drug monographs and Traditional Herbal Registration (THR), but scope and specific monographs differ significantly from JP crude drug section.",
+      "gap_severity": "high",
+      "action_required": "For products containing crude drug ingredients: comply with JP18 crude drug monographs. Follow Section 5 crude drug test methods. No FDA/EMA equivalent path exists.",
+      "risk_if_missed": "Products with herbal components cannot be marketed in Japan without JP crude drug compliance"
+    },
+    {
+      "id": "JP-017",
+      "category": "Drug Interactions",
+      "area": "PBPK Model Validation for NDA Submission",
+      "japan_requirement": "PMDA guideline explicitly requires that when PBPK simulation results are used in NDA submissions, the model assumptions must be justified and reliability verified from physiological, medical, pharmaceutical AND statistical viewpoints.",
+      "fda_approach": "FDA accepts PBPK modeling per 2018 guidance. Model verification expected but specific multi-viewpoint validation language is less prescriptive.",
+      "ema_approach": "EMA accepts PBPK per 2018 guidance. Qualification and verification expected.",
+      "gap_severity": "low",
+      "action_required": "Document PBPK model validation comprehensively for PMDA. Include statistical validation alongside physiological and pharmaceutical verification.",
+      "risk_if_missed": "PMDA may question PBPK-based DDI predictions and require additional clinical studies"
+    }
+  ],
+  "summary_statistics": {
+    "total_divergences_identified": 17,
+    "high_severity": 4,
+    "medium_severity": 9,
+    "low_severity": 4,
+    "categories": {
+      "market_authorization": 1,
+      "clinical_development": 3,
+      "post_approval": 1,
+      "quality_cmc": 6,
+      "drug_interactions": 4,
+      "nonclinical": 1,
+      "labeling": 1
+    }
+  }
+}

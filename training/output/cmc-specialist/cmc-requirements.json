@@ -1,0 +1,761 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2026-03-22",
+    "sources": [
+      "ICH Q1A(R2) - Stability Testing of New Drug Substances and Products",
+      "ICH Q3A(R2) - Impurities in New Drug Substances",
+      "ICH Q3B(R2) - Impurities in New Drug Products",
+      "ICH Q3D(R2) - Elemental Impurities",
+      "ICH Q5C - Stability Testing of Biotechnological/Biological Products",
+      "ICH Q6A - Specifications: Test Procedures and Acceptance Criteria (Chemical)",
+      "ICH Q6B - Specifications: Test Procedures and Acceptance Criteria (Biotech)",
+      "ICH Q8(R2) - Pharmaceutical Development",
+      "FDA Guidance - Process Validation (Jan 2011)",
+      "FDA Guidance - Stability Testing NDA/ANDA",
+      "FDA Guidance - Container Closure Systems (May 1999)",
+      "FDA Guidance - Comparability Protocols CMC",
+      "FDA Guidance - Analytical Procedures and Methods Validation (Jul 2015)",
+      "FDA Guidance - Dissolution Testing and Acceptance Criteria (Aug 1997)",
+      "FDA Guidance - Bioequivalence Studies"
+    ]
+  },
+
+  "module_3_structure": {
+    "3.2.S": {
+      "title": "Drug Substance",
+      "sections": {
+        "S.1": "General Information (nomenclature, structure, properties)",
+        "S.2": "Manufacture (manufacturer, process description, controls, process validation)",
+        "S.3": "Characterisation (elucidation of structure, impurities)",
+        "S.4": "Control of Drug Substance (specifications, analytical procedures, validation, batch analyses, justification)",
+        "S.5": "Reference Standards",
+        "S.6": "Container Closure System",
+        "S.7": "Stability (stability summary, post-approval protocol, stability data, commitment)"
+      }
+    },
+    "3.2.P": {
+      "title": "Drug Product",
+      "sections": {
+        "P.1": "Description and Composition",
+        "P.2": "Pharmaceutical Development (components, formulation, manufacturing process, container closure, microbiological, compatibility)",
+        "P.3": "Manufacture (manufacturers, batch formula, process description, controls of critical steps, process validation)",
+        "P.4": "Control of Excipients (specifications, analytical procedures, validation)",
+        "P.5": "Control of Drug Product (specifications, analytical procedures, validation, batch analyses, characterisation of impurities, justification)",
+        "P.6": "Reference Standards",
+        "P.7": "Container Closure System",
+        "P.8": "Stability (stability summary, post-approval protocol, stability data, commitment)"
+      }
+    }
+  },
+
+  "stability_requirements": {
+    "source": "ICH Q1A(R2), ICH Q5C, FDA Stability Testing NDA/ANDA",
+    "drug_substance": {
+      "general_case": {
+        "long_term": {
+          "option_a": {"temperature_c": 25, "rh_percent": 60, "tolerance": "+/- 2C, +/- 5% RH"},
+          "option_b": {"temperature_c": 30, "rh_percent": 65, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months_filing": 12,
+          "minimum_duration_months_approval": 24
+        },
+        "intermediate": {
+          "condition": {"temperature_c": 30, "rh_percent": 65, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months": 6,
+          "note": "Not required if Option B is long-term condition"
+        },
+        "accelerated": {
+          "condition": {"temperature_c": 40, "rh_percent": 75, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months": 6
+        }
+      },
+      "refrigerated": {
+        "long_term": {"temperature_c": 5, "tolerance": "+/- 3C", "minimum_duration_months": 12},
+        "accelerated": {"temperature_c": 25, "rh_percent": 60, "tolerance": "+/- 2C, +/- 5% RH", "minimum_duration_months": 6}
+      },
+      "frozen": {
+        "long_term": {"temperature_c": -20, "tolerance": "+/- 5C", "minimum_duration_months": 12},
+        "accelerated": "No defined condition; test single batch at elevated temperature for excursion assessment"
+      }
+    },
+    "drug_product": {
+      "general_case": {
+        "long_term": {
+          "option_a": {"temperature_c": 25, "rh_percent": 60, "tolerance": "+/- 2C, +/- 5% RH"},
+          "option_b": {"temperature_c": 30, "rh_percent": 65, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months_filing": 12,
+          "minimum_duration_months_approval": 24
+        },
+        "intermediate": {
+          "condition": {"temperature_c": 30, "rh_percent": 65, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months": 6,
+          "note": "Not required if Option B is long-term condition"
+        },
+        "accelerated": {
+          "condition": {"temperature_c": 40, "rh_percent": 75, "tolerance": "+/- 2C, +/- 5% RH"},
+          "minimum_duration_months": 6
+        }
+      },
+      "semi_permeable_containers": {
+        "long_term_option_a": {"temperature_c": 25, "rh_percent": 40, "tolerance": "+/- 2C, +/- 5% RH"},
+        "long_term_option_b": {"temperature_c": 30, "rh_percent": 35, "tolerance": "+/- 2C, +/- 5% RH"},
+        "accelerated": {"temperature_c": 40, "rh_percent_max": 25, "tolerance": "+/- 2C"},
+        "water_loss_significant_change": "5% loss from initial value after equivalent of 3 months at 40C/NMT 25% RH"
+      },
+      "refrigerated": {
+        "long_term": {"temperature_c": 5, "tolerance": "+/- 3C", "minimum_duration_months": 12},
+        "accelerated": {"temperature_c": 25, "rh_percent": 60, "tolerance": "+/- 2C, +/- 5% RH", "minimum_duration_months": 6}
+      },
+      "frozen": {
+        "long_term": {"temperature_c": -20, "tolerance": "+/- 5C", "minimum_duration_months": 12},
+        "accelerated": "No defined condition"
+      }
+    },
+    "biotech_products": {
+      "source": "ICH Q5C",
+      "drug_substance": "Store at proposed conditions (often -20C or below)",
+      "drug_product": "Store at proposed conditions (typically 2-8C for liquid, ambient for lyophilized)",
+      "accelerated": "At least 15C above long-term condition",
+      "minimum_batches": 3,
+      "minimum_data_at_filing_months": 6,
+      "required_tests": [
+        "Potency (biological activity assay)",
+        "Purity and molecular characterization (SDS-PAGE, SEC-HPLC)",
+        "Sterility or container closure integrity",
+        "Moisture content (lyophilized)",
+        "pH",
+        "Visual appearance (color, opacity, particulates)",
+        "Degradation products (aggregation, deamidation, oxidation, fragmentation)",
+        "Reconstitution time (lyophilized)"
+      ]
+    },
+    "testing_frequency": {
+      "long_term": "Every 3 months Y1, every 6 months Y2, annually thereafter through proposed shelf life",
+      "accelerated": "Minimum 3 time points (0, 3, 6 months)",
+      "intermediate": "Minimum 4 time points including initial and final (0, 6, 9, 12 months)",
+      "biotech_shelf_life_lte_1yr": "Monthly x3 months, then quarterly through expiry",
+      "biotech_shelf_life_gt_1yr": "Quarterly Y1, biannually Y2, annually thereafter"
+    },
+    "batch_requirements": {
+      "minimum_primary_batches": 3,
+      "drug_substance_scale": "Minimum pilot scale",
+      "drug_product_scale": "2 of 3 batches at least pilot scale; third may be smaller if justified",
+      "pilot_scale_definition": "1/10 of production scale OR 100,000 tablets/capsules, whichever is larger (solid oral)",
+      "photostability": "At least 1 primary batch per ICH Q1B (>= 1.2 million lux-hours visible + >= 200 W-hr/m2 UV)"
+    },
+    "significant_change_drug_product": [
+      ">= 5% change in assay from initial value",
+      "Any degradation product exceeding its acceptance criterion",
+      "Failure to meet appearance/physical attributes specification",
+      "Failure to meet pH acceptance criterion",
+      "Failure of 12 dosage units to meet dissolution specification",
+      "Failure to meet water content specification"
+    ],
+    "statistical_requirements": {
+      "confidence_limit": "95% one-sided confidence limit for shelf-life estimation",
+      "batch_pooling_p_value": "> 0.25 for slopes and intercepts to justify combining batch data",
+      "regression_models": ["linear", "quadratic", "cubic"],
+      "scales": ["arithmetic", "logarithmic"]
+    },
+    "shelf_life_extrapolation": {
+      "maximum_extrapolation": "No more than 2x the period covered by long-term data",
+      "maximum_months_beyond_data": 12,
+      "justification_required": ["mechanism of degradation", "accelerated results", "goodness of fit", "batch size", "supporting data"]
+    },
+    "stability_commitment": {
+      "when_required": "When long-term data on primary batches do not cover proposed shelf life at approval",
+      "minimum_commitment_batches": 3,
+      "drug_product_includes": "Long-term studies through shelf life AND accelerated studies for 6 months"
+    }
+  },
+
+  "impurity_requirements": {
+    "drug_substance_organic": {
+      "source": "ICH Q3A(R2)",
+      "scope": "New drug substances produced by chemical synthesis",
+      "thresholds": {
+        "max_daily_dose_lte_2g": {
+          "reporting": "0.05%",
+          "identification": "0.10% or 1.0 mg/day intake, whichever is lower",
+          "qualification": "0.15% or 1.0 mg/day intake, whichever is lower"
+        },
+        "max_daily_dose_gt_2g": {
+          "reporting": "0.03%",
+          "identification": "0.05%",
+          "qualification": "0.05%"
+        }
+      },
+      "reporting_rules": {
+        "below_1_percent": "Report to 2 decimal places (e.g., 0.06%)",
+        "at_or_above_1_percent": "Report to 1 decimal place (e.g., 1.3%)",
+        "rounding": "Conventional rules"
+      },
+      "specification_must_include": [
+        "Each specified identified impurity",
+        "Each specified unidentified impurity",
+        "Any unspecified impurity with limit <= identification threshold",
+        "Total impurities"
+      ],
+      "qualification_studies": {
+        "genotoxicity": "Point mutation AND chromosomal aberration, both in vitro (minimum screen)",
+        "general_toxicity": "One or more studies, one species, 14-90 days duration"
+      }
+    },
+    "drug_product_degradation": {
+      "source": "ICH Q3B(R2)",
+      "scope": "Degradation products of drug substance or reaction products with excipients/container closure",
+      "reporting_thresholds": {
+        "max_daily_dose_lte_1g": "0.1%",
+        "max_daily_dose_gt_1g": "0.05%"
+      },
+      "identification_thresholds": {
+        "max_daily_dose_lt_1mg": "1.0% or 5 ug TDI, whichever is lower",
+        "max_daily_dose_1mg_to_10mg": "0.5% or 20 ug TDI, whichever is lower",
+        "max_daily_dose_gt_10mg_to_2g": "0.2% or 2 mg TDI, whichever is lower",
+        "max_daily_dose_gt_2g": "0.10%"
+      },
+      "qualification_thresholds": {
+        "max_daily_dose_lt_10mg": "1.0% or 50 ug TDI, whichever is lower",
+        "max_daily_dose_10mg_to_100mg": "0.5% or 200 ug TDI, whichever is lower",
+        "max_daily_dose_gt_100mg_to_2g": "0.2% or 3 mg TDI, whichever is lower",
+        "max_daily_dose_gt_2g": "0.15%"
+      },
+      "batch_documentation_per_batch": [
+        "Batch identity, strength, and size",
+        "Date of manufacture",
+        "Site of manufacture",
+        "Manufacturing process",
+        "Immediate container closure",
+        "Degradation product content (individual and total)",
+        "Use of batch (clinical studies, stability studies)",
+        "Reference to analytical procedure used",
+        "Batch number of drug substance used",
+        "Storage conditions for stability studies"
+      ]
+    },
+    "elemental_impurities": {
+      "source": "ICH Q3D(R2)",
+      "classification": {
+        "class_1": {
+          "description": "Known or suspected human carcinogens/toxicants with limited or no use in pharma manufacturing",
+          "elements": ["Cd", "Pb", "As", "Hg"],
+          "action": "Must be assessed in all cases; control required if PDE may be exceeded"
+        },
+        "class_2A": {
+          "description": "Relatively high probability of occurrence in drug product; known toxicity",
+          "elements": ["Co", "V", "Ni"],
+          "action": "Must always be assessed in risk assessment"
+        },
+        "class_2B": {
+          "description": "Low probability of occurrence unless intentionally added",
+          "elements": ["Tl", "Au", "Pd", "Ir", "Os", "Rh", "Ru", "Se", "Ag", "Pt"],
+          "action": "Assess if intentionally added or known to be present"
+        },
+        "class_3": {
+          "description": "Relatively low toxicity by oral route; higher PDEs",
+          "elements": ["Li", "Sb", "Ba", "Mo", "Cu", "Sn", "Cr"],
+          "action": "Assess if intentionally added"
+        }
+      },
+      "permitted_daily_exposures_ug_per_day": {
+        "Cd":  {"class": "1",  "oral": 5,     "parenteral": 2,    "inhalation": 3},
+        "Pb":  {"class": "1",  "oral": 5,     "parenteral": 5,    "inhalation": 5},
+        "As":  {"class": "1",  "oral": 15,    "parenteral": 15,   "inhalation": 2},
+        "Hg":  {"class": "1",  "oral": 30,    "parenteral": 3,    "inhalation": 1},
+        "Co":  {"class": "2A", "oral": 50,    "parenteral": 5,    "inhalation": 3},
+        "V":   {"class": "2A", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Ni":  {"class": "2A", "oral": 200,   "parenteral": 20,   "inhalation": 6},
+        "Tl":  {"class": "2B", "oral": 8,     "parenteral": 8,    "inhalation": 8},
+        "Au":  {"class": "2B", "oral": 300,   "parenteral": 300,  "inhalation": 3},
+        "Pd":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Ir":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Os":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Rh":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Ru":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Se":  {"class": "2B", "oral": 150,   "parenteral": 80,   "inhalation": 130},
+        "Ag":  {"class": "2B", "oral": 150,   "parenteral": 15,   "inhalation": 7},
+        "Pt":  {"class": "2B", "oral": 100,   "parenteral": 10,   "inhalation": 1},
+        "Li":  {"class": "3",  "oral": 550,   "parenteral": 250,  "inhalation": 25},
+        "Sb":  {"class": "3",  "oral": 1200,  "parenteral": 90,   "inhalation": 20},
+        "Ba":  {"class": "3",  "oral": 1400,  "parenteral": 700,  "inhalation": 300},
+        "Mo":  {"class": "3",  "oral": 3000,  "parenteral": 1500, "inhalation": 10},
+        "Cu":  {"class": "3",  "oral": 3000,  "parenteral": 300,  "inhalation": 30},
+        "Sn":  {"class": "3",  "oral": 6000,  "parenteral": 600,  "inhalation": 60},
+        "Cr":  {"class": "3",  "oral": 11000, "parenteral": 1100, "inhalation": 3}
+      },
+      "concentration_limits_option_1_ug_per_g": {
+        "note": "For daily dose <= 10g; concentration = PDE / 10g",
+        "Cd":  {"oral": 0.5,   "parenteral": 0.2,   "inhalation": 0.3},
+        "Pb":  {"oral": 0.5,   "parenteral": 0.5,   "inhalation": 0.5},
+        "As":  {"oral": 1.5,   "parenteral": 1.5,   "inhalation": 0.2},
+        "Hg":  {"oral": 3,     "parenteral": 0.3,   "inhalation": 0.1},
+        "Co":  {"oral": 5,     "parenteral": 0.5,   "inhalation": 0.3},
+        "V":   {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Ni":  {"oral": 20,    "parenteral": 2,     "inhalation": 0.6},
+        "Tl":  {"oral": 0.8,   "parenteral": 0.8,   "inhalation": 0.8},
+        "Au":  {"oral": 30,    "parenteral": 30,    "inhalation": 0.3},
+        "Pd":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Ir":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Os":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Rh":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Ru":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Se":  {"oral": 15,    "parenteral": 8,     "inhalation": 13},
+        "Ag":  {"oral": 15,    "parenteral": 1.5,   "inhalation": 0.7},
+        "Pt":  {"oral": 10,    "parenteral": 1,     "inhalation": 0.1},
+        "Li":  {"oral": 55,    "parenteral": 25,    "inhalation": 2.5},
+        "Sb":  {"oral": 120,   "parenteral": 9,     "inhalation": 2},
+        "Ba":  {"oral": 140,   "parenteral": 70,    "inhalation": 30},
+        "Mo":  {"oral": 300,   "parenteral": 150,   "inhalation": 1},
+        "Cu":  {"oral": 300,   "parenteral": 30,    "inhalation": 3},
+        "Sn":  {"oral": 600,   "parenteral": 60,    "inhalation": 6},
+        "Cr":  {"oral": 1100,  "parenteral": 110,   "inhalation": 0.3}
+      },
+      "control_threshold": "30% of PDE -- if estimated level is below 30% of PDE, no additional controls needed",
+      "risk_assessment_required_for": {
+        "class_1": "Always",
+        "class_2A": "Always",
+        "class_2B": "Only if intentionally added or if known to be present",
+        "class_3": "Only if intentionally added"
+      },
+      "batch_data_for_risk_assessment": "3 production-scale batches OR 6 pilot-scale batches"
+    },
+    "residual_solvents": {
+      "source": "ICH Q3C (referenced in Q3A, Q6A)",
+      "class_1": "Avoid (known human carcinogens/strongly suspected carcinogens/environmental hazards)",
+      "class_2": "Limited; PDE-based limits",
+      "class_3": "<= 5000 ppm each, <= 50 mg/day total"
+    }
+  },
+
+  "specification_requirements": {
+    "drug_substance_universal_tests": {
+      "source": "ICH Q6A",
+      "tests": {
+        "description": "Qualitative statement of physical form and color",
+        "identification": "At least 2 independent methods; one must be specific (IR, HPLC-MS); must discriminate from related compounds",
+        "assay": "Mass balance or specific stability-indicating procedure; typically 98.0-102.0%",
+        "impurities_organic": "Per Q3A thresholds",
+        "impurities_inorganic": "Pharmacopeial or validated methods; per Q3D",
+        "residual_solvents": "Per Q3C"
+      }
+    },
+    "drug_product_universal_tests": {
+      "source": "ICH Q6A",
+      "tests": {
+        "description": "Qualitative statement",
+        "identification": "At least 2 methods (one specific) for single-active; two specific for multi-active",
+        "assay": "Specific, stability-indicating; typically 90.0-110.0% label claim (oral solids)",
+        "impurities_degradation": "Per Q3B thresholds",
+        "uniformity_of_dosage_units": "USP <905>; L1 limit AV <= 15.0, L2 limit AV <= 25.0",
+        "dissolution": "Per Q6A Decision Trees #7/#7.1",
+        "microbial_limits": "Per pharmacopeial criteria",
+        "water_content": "Karl Fischer or LOD where appropriate"
+      }
+    },
+    "drug_product_specific_tests_by_dosage_form": {
+      "oral_solids": ["Dissolution/disintegration", "Hardness/friability", "Water activity"],
+      "oral_liquids": ["pH", "Antimicrobial preservative content", "Antioxidant", "Extractables", "Alcohol content", "Redispersibility", "Rheology", "Reconstitution", "Particle size (suspensions)"],
+      "parenterals": ["Sterility", "Endotoxins/pyrogens", "Particulate matter", "pH", "Osmolality", "Extractables", "Functionality of delivery systems"],
+      "inhalation": ["Particle size (MMAD)", "Delivered dose uniformity", "Number of actuations", "Leak rate", "Microbial limits", "Water content"],
+      "transdermals": ["Adhesion", "Peel force", "Drug release", "Skin irritation"]
+    },
+    "biotech_product_tests": {
+      "source": "ICH Q6B",
+      "characterization_required_in_filing": [
+        "Amino acid composition",
+        "Terminal amino acid sequence",
+        "Peptide mapping",
+        "Sulfhydryl groups/disulfide bridges",
+        "Molecular weight (SDS-PAGE, SEC, MALLS)",
+        "Isoform pattern (IEF, CE)",
+        "Carbohydrate content and oligosaccharide pattern (glycoproteins)",
+        "Biological activity (in vitro bioassay)",
+        "Immunochemical properties"
+      ],
+      "drug_substance_specification": {
+        "appearance": "Visual; clarity, color, opalescence",
+        "identity": "At least 2 orthogonal methods (peptide map + one other)",
+        "purity": "Orthogonal methods (SEC + IEX or CE-SDS + SEC)",
+        "impurities_product_related": "Aggregates (SEC-HPLC), fragments (reduced CE-SDS), charge variants (IEX or icIEF)",
+        "impurities_process_related": {
+          "HCP": "Immunoassay, typically <= 100 ppm",
+          "residual_DNA": "qPCR or Threshold, typically <= 10 ng/dose per WHO",
+          "protein_A": "If applicable",
+          "endotoxin": "<= 5 EU/kg/hr"
+        },
+        "potency": "Quantitative biological activity assay with dose-response",
+        "quantity": "Protein concentration (mg/mL)"
+      },
+      "drug_product_additional": {
+        "sterility": "Membrane filtration or direct inoculation per pharmacopeia",
+        "endotoxin": "LAL or recombinant Factor C; <= 5 EU/kg/hr",
+        "particulate_matter": {
+          "subvisible_10um": "<= 6000 particles per container",
+          "subvisible_25um": "<= 600 particles per container"
+        },
+        "moisture_lyophilized": "Typically < 1-3%",
+        "reconstitution_time": "Required for lyophilized products"
+      }
+    },
+    "decision_trees": {
+      "DT1": "Impurity acceptance criteria for specified impurities",
+      "DT2": "Particle size: required if bioavailability affected, or inhalation/suspension product",
+      "DT3": "Polymorphism: control if different polymorphs affect solubility and biopharmaceutics",
+      "DT4": "Chirality: control if enantiomer has different safety/activity profile",
+      "DT5": "Microbial quality: TAMC/TYMC limits for non-sterile products",
+      "DT6": "Water content: specify if hygroscopic or if water affects stability/performance",
+      "DT7": "Dissolution: rapidly dissolving (>80% in 15 min) and highly soluble (dose/250 mL) may justify disintegration only",
+      "DT7.1": "Extended-release dissolution: at least 3 time points, variability +/- 10% of mean",
+      "DT8": "Parametric release: may replace sterility test if validated sterilization with Fmin >= 8"
+    }
+  },
+
+  "dissolution_and_bioequivalence": {
+    "source": "FDA Dissolution Testing, FDA Bioequivalence Studies",
+    "bcs_classification": {
+      "class_1": {"solubility": "HIGH", "permeability": "HIGH", "criteria": "Highest dose dissolves in <= 250 mL, pH 1.0-8.0, 37C; >= 90% absorbed"},
+      "class_2": {"solubility": "LOW", "permeability": "HIGH"},
+      "class_3": {"solubility": "HIGH", "permeability": "LOW"},
+      "class_4": {"solubility": "LOW", "permeability": "LOW"}
+    },
+    "dissolution_definitions": {
+      "rapid": ">= 85% dissolved in <= 30 minutes (USP App I at 100 rpm or App II at 50 rpm, <= 900 mL, in 0.1N HCl, pH 4.5, pH 6.8)",
+      "very_rapid": ">= 85% dissolved in <= 15 minutes"
+    },
+    "similarity_factor_f2": {
+      "formula": "f2 = 50 x log { [1 + (1/n) x SUM(Rt - Tt)^2]^(-0.5) x 100 }",
+      "similar": ">= 50 (average difference <= 10% at all time points)",
+      "identical": "100",
+      "not_similar": "< 50",
+      "rules": [
+        "Only use time points where both profiles have mean dissolution < 85%",
+        "Only one time point after 85% dissolution should be used"
+      ]
+    },
+    "difference_factor_f1": {
+      "acceptable_range": "0-15",
+      "not_similar": "> 15"
+    },
+    "profile_comparison_requirements": {
+      "minimum_units": 12,
+      "cv_early_timepoints": "<= 20%",
+      "cv_later_timepoints": "<= 10%",
+      "minimum_timepoints_before_plateau": 3
+    },
+    "apparatus_conditions": {
+      "basket_app_I": {"rpm": "50-100", "temperature_c": "37 +/- 0.5", "volume_mL": "500, 900, or 1000"},
+      "paddle_app_II": {"rpm": "50-75", "temperature_c": "37 +/- 0.5", "volume_mL": "500, 900, or 1000"}
+    },
+    "biowaiver_eligibility": {
+      "requirements": [
+        "BCS Class 1 drug",
+        "Both test and reference demonstrate rapid dissolution (>= 85% in 30 min) in all 3 media",
+        "f2 >= 50 (or both > 85% in 15 min)",
+        "Proportionally similar formulations",
+        "NOT a narrow therapeutic index drug",
+        "NOT designed for buccal/sublingual absorption"
+      ]
+    },
+    "specification_setting": {
+      "bcs_class_1": "Q = 80% (NLT 85% dissolved); time point <= 60 min (preferably 30 min)",
+      "bcs_class_2": "Two-point specification recommended (early + late)",
+      "bcs_class_3": "Q = 80% in <= 60 min in 0.1N HCl",
+      "bcs_class_4": "Case-by-case, most stringent"
+    }
+  },
+
+  "analytical_validation": {
+    "source": "FDA Analytical Procedures Validation, ICH Q2(R1)",
+    "required_characteristics": {
+      "specificity": {
+        "requirement": "Measure analyte unequivocally in presence of degradation products, excipients, impurities",
+        "acceptance": "Peak purity confirmed; no interference; forced degradation demonstrating mass balance"
+      },
+      "linearity": {
+        "requirement": "Direct proportional relationship between response and concentration",
+        "acceptance": "r >= 0.999; y-intercept within +/- 2% of 100% response; minimum 5 concentration levels"
+      },
+      "accuracy": {
+        "requirement": "Closeness to true value",
+        "acceptance": {
+          "drug_substance_assay": "Recovery 98-102%",
+          "drug_product_assay": "Recovery 95-105%",
+          "impurities_low_level": "Recovery 80-120%"
+        }
+      },
+      "precision_repeatability": {
+        "requirement": "Same analyst, same day, same instrument",
+        "acceptance": {
+          "drug_substance_assay": "RSD <= 1.0%",
+          "drug_product_assay": "RSD <= 2.0%",
+          "minimum_determinations": "6 at 100% or 9 across 3 levels"
+        }
+      },
+      "precision_intermediate": {
+        "requirement": "Within-lab variation (different days, analysts, instruments)",
+        "acceptance": "RSD <= 2.0%; minimum 2 days, 2 analysts"
+      },
+      "range": {
+        "assay": "80-120% of target",
+        "content_uniformity": "70-130%",
+        "dissolution": "+/- 20% of specification",
+        "impurities": "Reporting limit to 120% of specification"
+      },
+      "quantitation_limit": {
+        "requirement": "Lowest quantifiable amount",
+        "acceptance": "Signal-to-noise >= 10:1; precision RSD <= 10% at QL"
+      },
+      "detection_limit": {
+        "requirement": "Lowest detectable amount",
+        "acceptance": "Signal-to-noise >= 3:1"
+      }
+    },
+    "stability_indicating_method": {
+      "forced_degradation_conditions": ["Acid hydrolysis", "Base hydrolysis", "Oxidative", "Thermal", "Photolytic"],
+      "target_degradation": "10-30% of parent compound per condition",
+      "mass_balance": "Assay + degradation products = 95-105%",
+      "peak_purity": "Confirmed by PDA or MS"
+    },
+    "system_suitability": {
+      "tailing_factor": "<= 2.0",
+      "resolution_critical_pair": ">= 2.0 (>= 1.5 minimum)",
+      "rsd_replicate_injections_assay": "<= 1.0%",
+      "rsd_replicate_injections_impurities": "<= 5.0% near QL",
+      "minimum_replicate_injections": 5
+    },
+    "compendial_methods": {
+      "full_validation_required": false,
+      "verification_required": true,
+      "verification_per": "USP <1226>",
+      "minimum_verification_characteristics": ["Specificity", "Precision", "Accuracy"]
+    }
+  },
+
+  "process_validation": {
+    "source": "FDA Process Validation Guidance (Jan 2011)",
+    "three_stages": {
+      "stage_1_process_design": {
+        "objective": "Define commercial manufacturing process",
+        "activities": [
+          "Identification of CQAs from QTPP",
+          "Identification of CPPs through DOE",
+          "Establishment of proven acceptable ranges or design space",
+          "Development of control strategy",
+          "Risk assessment (FMEA, fault trees)"
+        ],
+        "ctd_section": "3.2.P.2"
+      },
+      "stage_2_process_qualification": {
+        "part_a_facility": {
+          "IQ": "Verify equipment installed per design specifications",
+          "OQ": "Verify equipment operates across anticipated operating ranges",
+          "PQ": "Demonstrate equipment performs reproducibly under production conditions",
+          "utilities": "HVAC, water systems (WFI, PW), compressed gases, clean steam"
+        },
+        "part_b_PPQ": {
+          "protocol_required_before_execution": true,
+          "protocol_must_specify": [
+            "Manufacturing conditions including CPPs and ranges",
+            "Data to be collected and timing",
+            "Tests and acceptance criteria",
+            "Sampling plan (number, size, frequency, locations)",
+            "Statistical methods for analysis",
+            "Success/failure criteria",
+            "Provisions for non-conforming results"
+          ],
+          "minimum_batches": "Typically 3 consecutive successful batches; more for complex processes",
+          "statistical_confidence": "Typically 95% confidence, 95% coverage tolerance intervals",
+          "sampling": "Enhanced; more intensive than routine production"
+        },
+        "ctd_section": "3.2.P.3.5"
+      },
+      "stage_3_continued_verification": {
+        "activities": [
+          "Statistical process control (SPC) implementation",
+          "Trend analysis (X-bar, R charts, CUSUM, EWMA)",
+          "Annual product review per 21 CFR 211.180(e)",
+          "CAPA for OOT/OOS results"
+        ],
+        "review_frequency": "At least annually",
+        "requalification_triggers": [
+          "Significant process changes",
+          "Adverse trends in quality data",
+          "Product complaints indicating process issues",
+          "Regulatory findings"
+        ]
+      }
+    }
+  },
+
+  "container_closure_requirements": {
+    "source": "FDA Container Closure Systems Guidance (May 1999)",
+    "four_evaluation_dimensions": ["Protection", "Safety", "Compatibility", "Performance"],
+    "level_of_concern": {
+      "highest": {
+        "dosage_forms": ["Injectable SVP/LVP", "Inhalation aerosol/solution", "Sterile powder/suspension for injection"],
+        "required_testing": [
+          "Complete extractables profile (multiple solvents: aqueous, acidic, basic, organic)",
+          "Leachables study using actual drug product",
+          "Toxicological evaluation of all identified extractables",
+          "USP Biological Reactivity In Vivo (Class VI) and In Vitro",
+          "USP Elastomeric Closures for Injections",
+          "USP Chemical Resistance (Glass Type I, II, or III)",
+          "Container integrity/sterility maintenance testing",
+          "Particulate matter per USP <788>",
+          "Functionality testing"
+        ]
+      },
+      "high": {
+        "dosage_forms": ["Ophthalmic solution/suspension", "Transdermal ointment/patch", "Nasal spray solution/suspension"],
+        "required_testing": [
+          "Extractables profile",
+          "Leachables evaluation",
+          "Biological reactivity testing",
+          "Container integrity/microbial challenge",
+          "Functionality testing"
+        ]
+      },
+      "moderate": {
+        "dosage_forms": ["Topical solution/suspension/powder", "Oral solution/suspension", "Oral powder for reconstitution"],
+        "required_testing": [
+          "Extractables evaluation for cosolvents/extended-use",
+          "21 CFR 174-186 compliance (oral)",
+          "USP <661> Container testing",
+          "Moisture permeation per USP <671>"
+        ]
+      },
+      "low": {
+        "dosage_forms": ["Topical ointment/cream", "Oral tablet/capsule/powder in package"],
+        "required_testing": [
+          "21 CFR 174-186 compliance",
+          "Moisture permeation per USP <671>",
+          "Light protection verification (if required)"
+        ]
+      }
+    },
+    "glass_classification": {
+      "type_I_borosilicate": "Required for most injectables; highest chemical resistance",
+      "type_II_treated_soda_lime": "Acceptable for some injectables",
+      "type_III_soda_lime": "Suitable for non-parenteral products",
+      "type_NP": "Not for parenteral use"
+    },
+    "particulate_matter_usp_788": {
+      "SVP": {"particles_gte_10um": "<= 6000 per container", "particles_gte_25um": "<= 600 per container"},
+      "LVP": {"particles_gte_10um": "<= 25 per mL", "particles_gte_25um": "<= 3 per mL"}
+    },
+    "ctd_section": "3.2.P.7"
+  },
+
+  "pharmaceutical_development": {
+    "source": "ICH Q8(R2)",
+    "ctd_section": "3.2.P.2",
+    "required_content": {
+      "P.2.1": "Components of Drug Product: compatibility studies, excipient justification, functional roles, overages",
+      "P.2.2": "Drug Product: formulation development rationale, clinical vs. commercial formulation differences",
+      "P.2.3": "Manufacturing Process Development: selection/optimization rationale, CPPs, scale-up, in-process controls",
+      "P.2.4": "Container Closure System: suitability, extraction/interaction, protection, compatibility, functionality",
+      "P.2.5": "Microbiological Attributes: preservative effectiveness, water activity",
+      "P.2.6": "Compatibility: reconstitution/administration, drug-device, admixture stability"
+    },
+    "qbd_elements": {
+      "QTPP": "Prospective summary of quality characteristics (dosage form, route, strength, container closure, release criteria, stability)",
+      "CQAs": "Physical, chemical, biological, or microbiological property that must be within limits",
+      "risk_assessment_tools": ["Ishikawa/fishbone", "FMEA", "HACCP"],
+      "design_space": "Multidimensional combination of input variables demonstrated to provide quality assurance; working within = not a change",
+      "control_strategy_tiers": {
+        "tier_1": "End-product specification testing (traditional)",
+        "tier_2": "In-process testing at critical steps + reduced end-product testing",
+        "tier_3": "Real-time release testing (RTRT) using PAT"
+      }
+    }
+  },
+
+  "comparability_protocols": {
+    "source": "FDA Comparability Protocols CMC Guidance",
+    "purpose": "Prospectively defined plan for post-approval CMC changes with pre-agreed acceptance criteria",
+    "requirements": [
+      "Specific, bounded description of proposed changes (not open-ended)",
+      "Scientific rationale for change and expected comparability",
+      "Risk assessment of impact on identity, strength, quality, purity, potency",
+      "Complete tests and studies plan with prospective acceptance criteria",
+      "Proposed reporting category",
+      "Contingency plan if criteria not met"
+    ],
+    "filing_category_benefits": {
+      "PAS_to_CBE30": "Well-constructed CP may reduce Prior Approval Supplement to CBE-30",
+      "CBE30_to_CBE0": "CBE-30 may become immediate implementation",
+      "CBE0_to_annual_report": "CBE-0 may become Annual Report"
+    },
+    "acceptance_criteria_principles": [
+      "Must be prospectively defined before change",
+      "Scientifically justified from batch history (15-20 commercial batches preferred)",
+      "Narrower than or equal to approved specifications",
+      "Dissolution: f2 >= 50 across all comparison media",
+      "Assay: within +/- 2-3% of batch history mean",
+      "Stability: accelerated + long-term on post-change product"
+    ]
+  },
+
+  "cross_reference_matrix": {
+    "stability_to_impurities": {
+      "Q1A_to_Q3A": "Stress testing identifies potential degradation impurities",
+      "Q1A_to_Q3B": "Degradation products observed on stability must be reported per Q3B thresholds"
+    },
+    "stability_to_specifications": {
+      "Q1A_to_Q6A": "Stability data informs shelf-life specifications and release vs. shelf-life acceptance criteria",
+      "Q5C_to_Q6B": "Stability-indicating profile uses Q6B specification tests"
+    },
+    "development_to_specifications": {
+      "Q8_to_Q6A": "CQA identification drives specification selection",
+      "Q8_to_Q6B": "CQA risk assessment for biotech product specifications"
+    },
+    "impurities_to_specifications": {
+      "Q3A_to_Q6A_DT1": "Decision Tree #1 for establishing acceptance criteria for specified impurities",
+      "Q3B_to_Q6A_DT2": "Decision Tree #2 for establishing acceptance criteria for specified degradation products"
+    },
+    "elemental_to_specifications": {
+      "Q3D_to_Q6A": "Elemental impurity limits feed into drug substance and drug product specifications"
+    },
+    "process_validation_to_development": {
+      "FDA_PV_to_Q8": "Design space, CQAs, knowledge-based approach inform process validation strategy"
+    },
+    "analytical_to_all": {
+      "Q2_to_Q3A_Q3B": "Validated methods required for impurity detection at specified thresholds",
+      "Q2_to_Q1A": "Stability-indicating methods must be validated",
+      "Q2_to_Q6A_Q6B": "All specification tests require validated analytical procedures"
+    },
+    "module_3_ctd_mapping": {
+      "3.2.S.2": {"content": "Drug Substance Manufacture", "primary_guidance": "FDA Process Validation"},
+      "3.2.S.4.2": {"content": "Analytical Procedures (DS)", "primary_guidance": "FDA Analytical Procedures"},
+      "3.2.S.4.3": {"content": "Validation of Analytical Procedures (DS)", "primary_guidance": "FDA Analytical Procedures"},
+      "3.2.S.7": {"content": "Drug Substance Stability", "primary_guidance": "ICH Q1A(R2), FDA Stability Testing"},
+      "3.2.P.2": {"content": "Pharmaceutical Development", "primary_guidance": "ICH Q8(R2), FDA Process Validation"},
+      "3.2.P.3.3": {"content": "Manufacturing Process Description", "primary_guidance": "FDA Process Validation"},
+      "3.2.P.3.4": {"content": "Controls of Critical Steps", "primary_guidance": "FDA Process Validation"},
+      "3.2.P.3.5": {"content": "Process Validation", "primary_guidance": "FDA Process Validation"},
+      "3.2.P.5.2": {"content": "Analytical Procedures (DP)", "primary_guidance": "FDA Analytical Procedures"},
+      "3.2.P.5.3": {"content": "Validation of Analytical Procedures (DP)", "primary_guidance": "FDA Analytical Procedures"},
+      "3.2.P.5.6": {"content": "Dissolution/Drug Release", "primary_guidance": "FDA Dissolution Testing"},
+      "3.2.P.7": {"content": "Container Closure System", "primary_guidance": "FDA Container Closure Systems"},
+      "3.2.P.8": {"content": "Drug Product Stability", "primary_guidance": "ICH Q1A(R2), FDA Stability Testing"},
+      "3.2.P.8.3": {"content": "Post-approval Stability Protocol", "primary_guidance": "FDA Stability Testing"}
+    }
+  },
+
+  "key_regulatory_citations": {
+    "21_CFR_210_211": "Current Good Manufacturing Practice",
+    "21_CFR_211.22": "Quality control unit responsibilities",
+    "21_CFR_211.84": "Testing and approval of components",
+    "21_CFR_211.100a": "Written procedures; process control",
+    "21_CFR_211.110": "In-process sampling and testing",
+    "21_CFR_211.113": "Control of microbiological contamination",
+    "21_CFR_211.122": "Materials examination and usage criteria",
+    "21_CFR_211.180e": "Annual product review",
+    "21_CFR_211.192": "Production record review",
+    "21_CFR_314.70": "NDA/ANDA supplement filing",
+    "21_CFR_320.22d2": "Biowaiver criteria",
+    "21_CFR_601.12": "BLA supplement filing",
+    "21_CFR_174_186": "Indirect food additives (packaging safety)",
+    "FDC_Act_501a2B": "Adulteration - failure to conform to CGMP"
+  }
+}

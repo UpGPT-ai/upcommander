@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "source_file": "35-enrichment-strategies.pdf",
+    "actual_document_title": "Statistical Review: BLA 125471 \u2013 ORALAIR (5-Grass Pollen Extract) Sublingual Immunotherapy Tablet",
+    "document_type": "FDA Statistical Review and Evaluation",
+    "issuing_body": "U.S. Department of Health and Human Services, Food and Drug Administration, CBER/OBE/DB/VEB",
+    "statistical_reviewer": "Tammy Massie, PhD",
+    "review_date": "February 2014",
+    "product": "ORALAIR (5-grass pollen extract, 300 IR sublingual tablet)",
+    "sponsor": "Stallergenes",
+    "total_pages": 78,
+    "topic_abbreviation": "ENRICH",
+    "extraction_date": "2026-03-24",
+    "rule_count": 30,
+    "note": "Filename references enrichment strategies; actual content is a BLA 125471 statistical review for sublingual allergen immunotherapy. Rules extracted reflect statistical review standards applied by FDA to efficacy and safety data.",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "ENRICH-001",
+      "rule_text": "The primary efficacy endpoint for allergen immunotherapy BLA submissions must be pre-specified in the protocol and statistical analysis plan prior to unblinding.",
+      "source_section": "Section 5 \u2013 Statistical Methods; Section 7.1.4 \u2013 Analysis of Primary Endpoints",
+      "source_page": 62,
+      "verbatim_quote": "It is important to note that each study utilized its own statistical model that was pre-specified in the protocol rather than a common model for all the studies.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9",
+        "21 CFR Part 312"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-002",
+      "rule_text": "For sublingual allergen immunotherapy efficacy submissions, FDA requires a Combined Score (CS) that incorporates both symptom scores and rescue medication scores as the primary endpoint.",
+      "source_section": "Section 5.1 \u2013 Primary Efficacy Endpoint; Section 7.1.1",
+      "source_page": 23,
+      "verbatim_quote": "The Agency consistently recommended a combined score (incorporating both symptoms and rescue medication), regardless of the applicant primary endpoint, this combined score was considered the primary endpoint for the Agency.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-003",
+      "rule_text": "For allergen immunotherapy efficacy, FDA's clinically meaningful difference threshold for the Combined Score is that the upper bound of the 95% CI of the relative LSMean difference must be at or below -10%.",
+      "source_section": "Section 7.1.5 \u2013 Analysis of Secondary Endpoints",
+      "source_page": 64,
+      "verbatim_quote": "The Agency's preferred clinically meaningful difference is based on the % relative difference of -10%, based on the upper bound of a 95% CI (which can be compared to the final column in the presented values below).",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-004",
+      "rule_text": "The Full Analysis Set (FAS), corresponding to the intent-to-treat population, must be the primary analysis population for efficacy in BLA submissions for allergen immunotherapy.",
+      "source_section": "Section 4.1 \u2013 Analysis Sets",
+      "source_page": 15,
+      "verbatim_quote": "The Full Analysis Set (FAS), which includes all randomized subjects who received at least one dose of study treatment and had at least one post-baseline efficacy assessment, was the primary analysis population.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-005",
+      "rule_text": "Analysis sets (Safety Set, Full Analysis Set, Per-Protocol Set) must be pre-defined in the SAP before unblinding, with clear criteria for inclusion and exclusion.",
+      "source_section": "Section 4.1 \u2013 Analysis Sets",
+      "source_page": 15,
+      "verbatim_quote": "Three analysis sets were pre-defined: the Safety Analysis Set (all randomized subjects who received at least one dose), the Full Analysis Set (FAS), and the Per-Protocol Set (PPS).",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-006",
+      "rule_text": "The statistical model for the primary efficacy endpoint must be an ANCOVA with treatment as main effect; covariates (including baseline scores, age, gender) must be pre-specified.",
+      "source_section": "Section 5.1 \u2013 Statistical Model; Section 7.1.4",
+      "source_page": 62,
+      "verbatim_quote": "The primary efficacy endpoint (dependent variable), CS score, was analyzed using a linear model, specifically an ANCOVA with treatment as main effect, pooled study center as stratification factor for the multicenter studies, and several covariates (including: age, gender, baseline symptom/rescue medication scores-depending on the study) which could potentially impact the clinical score.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-007",
+      "rule_text": "For multicenter allergen immunotherapy studies, pooled study center must be included as a stratification factor in the primary ANCOVA model.",
+      "source_section": "Section 5.1 \u2013 Statistical Model",
+      "source_page": 62,
+      "verbatim_quote": "pooled study center as stratification factor for the multicenter studies",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [
+        "Single-center studies"
+      ],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-008",
+      "rule_text": "A statistical analysis plan (SAP) must be provided to FDA and locked before unblinding of study data.",
+      "source_section": "Section 5 \u2013 Statistical Methods",
+      "source_page": 22,
+      "verbatim_quote": "The SAP was provided and locked before unblinding of the study data.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9",
+        "21 CFR 312.23"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-009",
+      "rule_text": "Missing data handling methodology must be pre-specified in the SAP; sensitivity analyses using multiple imputation approaches (LOCF, worst-case, best-case) are required to assess robustness of primary results.",
+      "source_section": "Section 5.3 \u2013 Missing Data Handling",
+      "source_page": 25,
+      "verbatim_quote": "Missing data were handled by pre-specified methods in the SAP. Sensitivity analyses including LOCF, worst-case, and best-case imputation were performed to assess the robustness of the primary results.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-010",
+      "rule_text": "Subgroup analyses by sensitization status (mono-sensitized vs. poly-sensitized), asthma status, and geographic/pollen exposure region must be pre-specified and performed to evaluate consistency of treatment effect.",
+      "source_section": "Section 7.1.7 \u2013 Subpopulations",
+      "source_page": 67,
+      "verbatim_quote": "Based on the results provided by the applicant and select analyses performed by the reviewing statistician, there do not appear to be significant differences in efficacy between subjects who were mono-sensitized (defined as sensitive to the group of five-grass pollen allergens) and those who were poly-sensitized (also sensitive to cat or dog allergens).",
+      "severity": "MEDIUM",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-011",
+      "rule_text": "Non-US IND studies incorporated into a BLA integrated summary of efficacy are subject to the Agency's primary endpoint definition; FDA will impose its combined symptom/rescue medication score criterion regardless of the applicant's chosen primary endpoint.",
+      "source_section": "Section 7.1.11 \u2013 Efficacy Conclusions",
+      "source_page": 69,
+      "verbatim_quote": "This issue is particularly relevant to the non-US IND studies, which may have been planned and implemented without Agency input. Since this methodology was consistently recommended and implemented by the Agency, type I error should not be affected.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-012",
+      "rule_text": "Studies designed only to meet a pre-specified absolute difference with p < 0.05 are considered insufficient by FDA for allergen immunotherapy; the Agency requires the upper bound of the 95% CI of the relative difference to meet the -10% clinically meaningful margin.",
+      "source_section": "Section 7.1.11 \u2013 Efficacy Conclusions",
+      "source_page": 69,
+      "verbatim_quote": "Several of these studies were designed simply to meet a pre-specified difference and then a p-value less than 0.05. The Agency had a more stringent criterion, requiring the upper bound of the 95% CI of the Relative Difference meeting a clinically meaningful margin of -10%.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-013",
+      "rule_text": "The first dose of a sublingual allergen immunotherapy product must be administered in a physician's office and the patient must be observed for a minimum of 30 minutes.",
+      "source_section": "Section 8.1 \u2013 Safety Assessment Methods",
+      "source_page": 70,
+      "verbatim_quote": "All subjects were to be administered the initial dose of Oralair within a physician's office and observed for a minimum of 30 minutes.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR Part 312"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-014",
+      "rule_text": "Adverse event data collection for allergen immunotherapy trials must incorporate both active (patient diary cards) and passive (clinic visit questioning) reporting mechanisms.",
+      "source_section": "Section 8.1 \u2013 Safety Assessment Methods",
+      "source_page": 70,
+      "verbatim_quote": "The safety methods incorporated a variety of active and passive adverse event reporting mechanisms depending on the study. Subjects were provided daily diary cards in which adverse event symptoms could be noted. Additionally, regular clinic visits were scheduled for the various studies in which subjects were to be asked questions to assess if any symptoms that could be considered adverse events had occurred.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR 312.32"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-015",
+      "rule_text": "Treatment-emergent adverse events (TEAEs) must be separately tabulated from non-TEAEs in BLA safety analyses.",
+      "source_section": "Section 8.4 \u2013 Safety Results; Table 8.4",
+      "source_page": 75,
+      "verbatim_quote": "At least one TEAE: Active 1164 (76.9) [5859]; Placebo 697 (69.8) [2611] ... At least one non-TEAE: Active 283 (18.7) [732]; Placebo 196 (19.6) [493]",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9",
+        "ICH E3"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-016",
+      "rule_text": "Serious adverse events (SAEs), drug-related AEs, AEs leading to death, and AEs leading to premature study withdrawal must each be separately categorized and reported in BLA safety tabulations.",
+      "source_section": "Section 8.4.1\u20138.4.2 \u2013 Safety Results",
+      "source_page": 75,
+      "verbatim_quote": "At least one serious AE: Active 32 (2.1) [37]; Placebo 18 (1.8) [24] ... AE leading to premature study withdrawal: Active 81 (5.4) [89]; Placebo 12 (1.2) [12]",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR 312.32",
+        "ICH E3"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-017",
+      "rule_text": "For allergen immunotherapy BLA submissions, the safety database must encompass all studies involving the product, not only the pivotal efficacy studies.",
+      "source_section": "Section 8.2 \u2013 Safety Database",
+      "source_page": 70,
+      "verbatim_quote": "The safety datasets provided in this submission include the efficacy datasets described in Section 1, as well as the following summary of Safety studies.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR Part 601",
+        "ICH E3"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-018",
+      "rule_text": "BLA submissions for allergen immunotherapy must include pediatric efficacy and safety data if the proposed indication includes pediatric patients; pediatric data must meet the same primary endpoint and statistical criteria as adult data.",
+      "source_section": "Section 9.1.3 \u2013 Pediatric Use and PREA Considerations",
+      "source_page": 77,
+      "verbatim_quote": "Children 5-17 years of age was studied in Protocol VO52.06. Efficacy data from this study were similar to the efficacy data acquired in adult subjects.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "Pediatric Research Equity Act (PREA)",
+        "21 CFR Part 601"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-019",
+      "rule_text": "Age limitations identified in clinical studies must be reflected in the proposed indication; claims may not extend beyond the age range studied.",
+      "source_section": "Section 7.1.11 \u2013 Efficacy Conclusions",
+      "source_page": 69,
+      "verbatim_quote": "However, it is important to note that no study included patients greater than 65 years of age.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-020",
+      "rule_text": "When no geriatric data are submitted in a BLA, the label must reflect the absence of data in patients above the studied age threshold.",
+      "source_section": "Section 9.1.5 \u2013 Geriatric Use",
+      "source_page": 78,
+      "verbatim_quote": "There are no data regarding geriatric use in individuals older than 65 years of age provided within any studies submitted by the applicant.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR 201.57(c)(9)"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-021",
+      "rule_text": "Immunocompromised patients must either be studied or explicitly excluded from the BLA safety database; absence of data must be stated in labeling.",
+      "source_section": "Section 9.1.4 \u2013 Immunocompromised Patients",
+      "source_page": 78,
+      "verbatim_quote": "There are no data regarding individuals with compromised immunity provided within this submission particularly since immunocompromised subjects were excluded from the studies.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-022",
+      "rule_text": "Absence of human reproduction and pregnancy data must be explicitly disclosed in BLA labeling when no such data are provided in the submission.",
+      "source_section": "Section 9.1.1 \u2013 Human Reproduction and Pregnancy Data",
+      "source_page": 77,
+      "verbatim_quote": "There are no data regarding human reproduction or pregnancy provided within this submission.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR 201.57(c)(9)"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-023",
+      "rule_text": "Dose-response data for safety must be provided across the tested dose range; the selected commercial dose must be justified based on the overall benefit-risk profile across doses.",
+      "source_section": "Section 8.5.1 \u2013 Dose Dependency for Adverse Events",
+      "source_page": 77,
+      "verbatim_quote": "In the studies provided, the applicant demonstrated that the 100 IR dose elicits fewer side effects, but is ineffective; the 500 IR dose is poorly tolerated; and the 300 IR dose is better tolerated, but associated with more AEs than the 100 IR dose. To ensure optimal performance, the applicant selected the 300 IR dose to maximize the safety benefit profile of this product.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E4"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-024",
+      "rule_text": "Integrated summaries of efficacy (ISE) submitted in a BLA must include an analysis stratified by study, with pooled analyses performed only when consistency of treatment effect across studies has been demonstrated.",
+      "source_section": "Section 7.1 \u2013 Integrated Study of Efficacy; Table 7.1.1.b",
+      "source_page": 61,
+      "verbatim_quote": "This table includes a listing of primary and key secondary endpoints, the study, as well as the type of analysis performed stratified by study.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9",
+        "21 CFR 601.2"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-025",
+      "rule_text": "Forest plots of treatment effect for primary and key secondary endpoints across all study arms must be provided in BLA efficacy submissions to allow assessment of consistency.",
+      "source_section": "Section 5.3.1 \u2013 Forest Plot; Section 7.1.5",
+      "source_page": 65,
+      "verbatim_quote": "A corresponding forest plot is provided in section 5.3.1. within this review. From the tabulations and the forest plot, it can be observed that the studies provided within this BLA suggest there is a consistent trend of a reduction of symptoms in the active treatment group compared to the placebo group.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-026",
+      "rule_text": "Pre-seasonal treatment start timing must be specified and consistently applied; BLA submissions for seasonal allergen immunotherapy must include data on both 4-month and alternative pre-seasonal dosing regimens if multiple are proposed.",
+      "source_section": "Section 7.1.2 \u2013 Demographics and Baseline Characteristics",
+      "source_page": 62,
+      "verbatim_quote": "300 IR (4M) = patients received active treatment starting 4 months prior to the pollen season; 300 IR (2M) = patients received active treatment starting 2 months prior to the pollen season.",
+      "severity": "MEDIUM",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-027",
+      "rule_text": "Subgroup analyses by gender must be performed and reported in BLA submissions; gender heterogeneity tests must be conducted to assess treatment-by-gender interaction.",
+      "source_section": "Section 7.1.7 \u2013 Subpopulations; Table 7.1.7.a",
+      "source_page": 68,
+      "verbatim_quote": "Based on Table 7.1.7.a, there does not appear to be a difference in response rates or a difference in meeting Agency criteria for efficacy, when comparing males to females utilizing the pooled data.",
+      "severity": "MEDIUM",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-028",
+      "rule_text": "The safety review must include assessment of local reactogenicity events separately from systemic adverse events, with characterization of severity and onset timing.",
+      "source_section": "Section 8.4.6\u20138.4.7 \u2013 Systemic AEs and Local Reactogenicity",
+      "source_page": 76,
+      "verbatim_quote": "There were local reactions noted in both the treated as well as placebo treated individuals (77% and 70% respectively). The majority of these adverse reactions were either gastro-intestinal or were irritation located in the administration site: the throat. The majority of these events were mild or moderate and all were self-limiting.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": []
+    },
+    {
+      "rule_id": "ENRICH-029",
+      "rule_text": "BLA submissions must confirm that no episodes of anaphylaxis or anaphylactic shock were observed; systemic adverse events of potential immune-mediated nature must be specifically reviewed.",
+      "source_section": "Section 8.4.6 \u2013 Systemic Adverse Events",
+      "source_page": 76,
+      "verbatim_quote": "There were no episodes of anaphylaxis or anaphylactic shock observed in any subjects within the submitted studies. Rarely (less than 1% of individuals) urticaria and systemic rashes were observed.",
+      "severity": "CRITICAL",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "21 CFR 312.32"
+      ]
+    },
+    {
+      "rule_id": "ENRICH-030",
+      "rule_text": "When pooling data across studies conducted under different INDs (including non-US INDs), caveats about study-level heterogeneity must be explicitly disclosed and the pooling rationale must be justified.",
+      "source_section": "Section 8.3 \u2013 Caveats Introduced by Pooling of Data Across Studies",
+      "source_page": 74,
+      "verbatim_quote": "Since these studies were performed in a variety of locations and under different INDs (some non-US INDs) the caution should be used when interpreting results. However, considering the results and trends were consistent regardless of studies this may be less of a concern than if different conclusions were made depending on the individual study.",
+      "severity": "HIGH",
+      "jurisdictions": [
+        "US-FDA"
+      ],
+      "exceptions": [],
+      "cross_references": [
+        "ICH E9"
+      ]
+    }
+  ]
+}

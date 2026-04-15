@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "title": "Safety Pharmacology Gap-Closure Changes",
+    "source_file": "training/final-fixes/safety-pharm/verified-rules.json",
+    "output_file": "training/gap-close/fully-verified-safety-pharm.json",
+    "gap_closure_date": "2026-03-23",
+    "prior_pass_changes_file": "training/final-fixes/safety-pharm/changes-made.json",
+    "prior_pass_change_count": 13,
+    "this_pass_change_count": 14,
+    "cumulative_change_count": 27,
+    "source_documents_read_this_pass": [
+      "M3_R2__Guideline.pdf (pages 21-31: Sections 8-20, endnotes, references)",
+      "E11_R1_Addendum.pdf (all 25 pages: Sections 1-8 of addendum including age classification, formulations)",
+      "E14-S7B_IWG_Final_Concept_Paper_2024_0312_0.pdf (all 3 pages)"
+    ],
+    "source_documents_already_read": [
+      "M3_R2__Guideline.pdf (pages 1-20: Sections 1-7 including Table 3)",
+      "S6_R1_Guideline_0.pdf (pages 1-20: Sections 1.3, 4.1, 4.7, Part II Sections 2.1, 3.2, 3.4)",
+      "S10_Guideline.pdf (all 19 pages: Section 1.3 scope exclusions, MEC threshold, Note 5 US regional)"
+    ]
+  },
+
+  "changes": [
+    {
+      "id": "GC-001",
+      "type": "correction",
+      "severity": "high",
+      "section": "timing_relative_to_clinical_development.exploratory_clinical_trials",
+      "field": "exploratory_trials_section_note + all 5 approach verification_status fields",
+      "prior_status": "NEEDS_HUMAN_REVIEW (all 5 approaches)",
+      "new_status": "VERIFIED (all 5 approaches)",
+      "description": "All 5 exploratory clinical trial approaches verified against M3(R2) Table 3, Section 7. Also adds missing toxicology details for Approach 2 and corrects the source table reference.",
+      "source_document": "ICH M3(R2) Guideline (Jun 2009), Table 3 (page 14-16), Section 7 (pages 13-16)",
+      "verified_content": {
+        "approach_1": "Total dose ≤100 µg AND ≤1/100th NOAEL AND ≤1/100th pharmacologically active dose. Safety pharmacology NOT required. Tox: Extended single-dose in one rodent species (max 1000-fold clinical dose). Genotoxicity NOT required.",
+        "approach_2": "Total cumulative ≤500 µg, max 5 administrations with ≥6 half-life washout, each dose ≤100 µg AND ≤1/100th NOAEL. Safety pharmacology NOT required. Tox: 7-day repeated-dose in one species (hematology/chemistry/histopath). Genotoxicity NOT required.",
+        "approach_3": "Single dose sub-therapeutic to anticipated therapeutic range. Starting dose from most sensitive species toxicity; max dose up to ½ NOAEL exposure in more sensitive species. Safety pharmacology: abbreviated (in vitro target/receptor profiling + primary pharmacology characterization). Tox: extended single-dose in BOTH rodent AND non-rodent. Genotoxicity: Ames assay required.",
+        "approach_4": "Dosing up to 14 days into therapeutic range, not to evaluate clinical MTD. Safety pharmacology: Core battery required. Tox: 2-week repeated-dose in BOTH rodent AND non-rodent (dose selection based on AUC multiples of anticipated clinical AUC). Genotoxicity: Ames + chromosomal damage assay in mammalian system.",
+        "approach_5": "Dosing up to 14 days therapeutic range, not to evaluate clinical MTD. Starting dose ≤1/50th NOAEL in more sensitive species (mg/m²). Max human exposure ≤ AUC at non-rodent NOAEL OR ≤ ½ AUC at rodent NOAEL, whichever is lower. Safety pharmacology: Core battery required (doses similar to toxicity). Tox: Standard 2-week rodent + confirmatory non-rodent (n=3) at NOAEL AUC with min 3 days duration (or escalating dose study). Genotoxicity: Ames + chromosomal damage assay."
+      },
+      "note": "The rules file previously cited 'M3(R2) Table 1' for exploratory approaches. Table 1 in M3(R2) is the repeated-dose toxicity DURATION table (Section 5.1). The exploratory approaches are in TABLE 3, Section 7. This is a citation correction in addition to the status change."
+    },
+    {
+      "id": "GC-002",
+      "type": "verification",
+      "severity": "medium",
+      "section": "timing_relative_to_clinical_development.before_phase_2",
+      "field": "genotoxicity_battery + before_phase_2_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "VERIFIED",
+      "description": "Genotoxicity timing rule confirmed from M3(R2) Section 9.",
+      "source_document": "ICH M3(R2) Section 9 (page 17)",
+      "verified_quote": "M3(R2) Section 9 (page 17): 'An assay for gene mutation is generally considered sufficient to support all single dose clinical development trials. To support multiple dose clinical development trials, an additional assessment capable of detecting chromosomal damage in a mammalian system(s) should be completed (Ref. 10). A complete battery of tests for genotoxicity should be completed before initiation of Phase II trials (Ref. 10).'"
+    },
+    {
+      "id": "GC-003",
+      "type": "verification",
+      "severity": "medium",
+      "section": "timing_relative_to_clinical_development.pediatric_clinical_trials",
+      "field": "requirements + juvenile_animal_studies + verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "VERIFIED",
+      "description": "Pediatric clinical trial nonclinical requirements confirmed from M3(R2) Section 12.",
+      "source_document": "ICH M3(R2) Section 12 (page 19-20)",
+      "verified_quote": "M3(R2) Section 12 (page 19): 'Results from repeated-dose toxicity studies of appropriate duration in adult animals (see Table 1), the core safety pharmacology package, and the standard battery of genotoxicity tests should be available before initiation of trials in pediatric populations.' Also: 'The conduct of any juvenile animal toxicity studies should be considered only when previous animal data and human safety data, including effects from other drugs of the pharmacological class, are judged to be insufficient to support pediatric studies. If a study is warranted, one relevant species, preferably rodent, is generally considered adequate.' And: 'Generally, juvenile animal toxicity studies are not considered important for short-term PK studies (e.g., 1 to 3 doses) in pediatric populations.'"
+    },
+    {
+      "id": "GC-004",
+      "type": "verification",
+      "severity": "low",
+      "section": "timing_relative_to_clinical_development.before_phase_1_fih",
+      "field": "m3r2_table1_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "VERIFIED",
+      "description": "M3(R2) Table 1 (repeated-dose toxicity duration to support clinical trials) confirmed from M3(R2) Section 5.1. Core safety pharmacology requirement before FIH confirmed.",
+      "source_document": "ICH M3(R2) Section 5.1, Table 1 (pages 7-8)",
+      "note": "Table 1 covers repeated-dose toxicity duration. The core safety pharmacology package requirement before FIH is sourced directly from S7A Section 2.10.1 (already verified in prior pass). M3(R2) Section 5.1 Table 1 confirms duration standards."
+    },
+    {
+      "id": "GC-005",
+      "type": "verification",
+      "severity": "medium",
+      "section": "timing_relative_to_clinical_development.before_phase_3 + before_marketing_approval",
+      "field": "other_before_phase_3_verification_status + other_items_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "PARTIALLY_VERIFIED",
+      "description": "Male fertility timing (before Phase III) confirmed from M3(R2) Section 11.1. WOCBP embryo-fetal timing confirmed from M3(R2) Section 11.3. Carcinogenicity and pre-postnatal timing broadly confirmed from M3(R2) Sections 10 and 11.",
+      "source_document": "ICH M3(R2) Sections 10, 11.1, 11.2, 11.3 (pages 17-19)",
+      "verified_quotes": [
+        "M3(R2) Section 11.1 (page 18): 'A male fertility study (Ref. 3) should be completed before the initiation of large scale or long duration clinical trials (e.g., Phase III trials).'",
+        "M3(R2) Section 10 (page 17): 'If carcinogenicity studies are recommended for the clinical indication, they should be conducted to support the marketing application.'",
+        "M3(R2) Section 11.3 (page 19): 'In all ICH regions, the pre-postnatal development study should be submitted for marketing approval.'"
+      ]
+    },
+    {
+      "id": "GC-006",
+      "type": "verification",
+      "severity": "medium",
+      "section": "regional_differences",
+      "field": "verification_status + us_fda + eu_ema + japan_pmda",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "PARTIALLY_VERIFIED",
+      "description": "Regional differences for embryo-fetal development timing and local tolerance for IV route confirmed from M3(R2) Sections 8 and 11.3. Regional safety pharmacology-specific differences remain UNVERIFIABLE without FDA/EMA standalone guidance.",
+      "source_document": "ICH M3(R2) Sections 8 (page 17), 11.3 (pages 18-19)",
+      "verified_quotes": [
+        "M3(R2) Section 11.3 (page 19): 'In the United States, assessment of embryo-fetal development can be deferred until before Phase III for WOCBP using precautions to prevent pregnancy in clinical trials (see above). In the EU and Japan, other than the situations described in the above paragraphs, definitive nonclinical developmental toxicity studies should be completed before exposure of WOCBP.'",
+        "M3(R2) Section 8 (page 17): 'The approach to such studies differs in the various regions. Such studies are generally not recommended in the United States (an example of an exception would be intrathecal for the epidural route). Japan and the EU recommend single dose paravenous administration for the i.v. route.'"
+      ],
+      "remaining_unverified": "Regional safety pharmacology-specific differences (if any beyond ICH harmonization) require FDA/EMA source guidance documents not in the provided source set."
+    },
+    {
+      "id": "GC-007",
+      "type": "correction_and_annotation",
+      "severity": "medium",
+      "section": "core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches",
+      "field": "proarrhythmia_models + proarrhythmia_models_source_verified",
+      "prior_state": "Lists 4 criteria: (1) context of use, (2) model development/validation, (3) uncertainty characterization, (4) evidence of predictive performance",
+      "new_state": "Lists all 6 criteria per Q&A 4.1: (1) defined endpoint/context of use, (2) fully disclosed algorithm for model development, (3) defined domain of applicability/scope [ADDED], (4) prespecified analysis plan and criteria for model predictivity, (5) mechanistic interpretation [ADDED], (6) uncertainty characterization and propagation",
+      "description": "Two criteria missing from original rules added: criterion 3 (defined domain of applicability/scope) and criterion 5 (mechanistic interpretation). Both confirmed from E14/S7B Q&A 4.1 pages 43-44 as quoted in verified-rules.json source annotation.",
+      "source_document": "ICH E14/S7B Q&As (Feb 2022), Q&A 4.1 (pages 43-44)",
+      "verified_quote": "Q&A 4.1 (pages 43-44) lists six principles: (1) a defined endpoint that is consistent with the context of use; (2) a fully disclosed algorithm used for model development; (3) defined domain of applicability/scope; (4) a prespecified analysis plan and criteria to assess model predictivity; (5) mechanistic interpretation; (6) uncertainty characterization and propagation."
+    },
+    {
+      "id": "GC-008",
+      "type": "verification",
+      "severity": "medium",
+      "section": "scope.modality_considerations",
+      "field": "antibody_drug_conjugates_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "PARTIALLY_VERIFIED",
+      "description": "ADC species selection principle confirmed from S6(R1) Part II Section 2.1. Genotoxicity exemption with organic linker exception confirmed from S6(R1) Section 4.7. Full ADC-specific safety pharmacology assessment approach not yet in a finalized Q&A (identified as open issue in E14/S7B IWG 2024 concept paper).",
+      "source_documents": [
+        "ICH S6(R1) Part II Section 2.1 (page 11): 'Species selection for an antibody-drug/toxin conjugate (ADC) incorporating a novel toxin/toxicant should follow the same general principles as an unconjugated antibody.'",
+        "ICH S6(R1) Section 4.7 (page 8): 'The range and type of genotoxicity studies routinely conducted for pharmaceuticals are not applicable to biotechnology-derived pharmaceuticals and therefore are not needed. However, when there is cause for concern about the product (e.g., because of the presence of an organic linker molecule in a conjugated protein product), genotoxicity studies may be appropriate.'",
+        "E14/S7B IWG 2024 Concept Paper (March 2024, page 1): Identifies ADC safety pharmacology scope as open issue; second-round Q&As in development, not yet finalized."
+      ]
+    },
+    {
+      "id": "GC-009",
+      "type": "verification",
+      "severity": "low",
+      "section": "scope.modality_considerations",
+      "field": "oligonucleotides_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "PARTIALLY_VERIFIED",
+      "description": "S6(R1) scope states the guideline 'may also apply' to oligonucleotide drugs. S10 explicitly excludes oligonucleotides from photosafety evaluation scope. E14/S7B IWG 2024 concept paper identifies oligonucleotides as a key modality requiring dedicated guidance.",
+      "source_documents": [
+        "ICH S6(R1) Section 1.3, Part I (pages 3-4): 'This guideline may also apply to...oligonucleotide drugs.'",
+        "ICH S10 Section 1.3 (page 3): 'This guideline does not generally apply to peptides, proteins, antibody drug conjugates, or oligonucleotides.'",
+        "E14/S7B IWG 2024 Concept Paper (March 2024, pages 1-2): Identifies oligonucleotides (antisense, siRNA) as modalities where S7B scope needs clarification."
+      ]
+    },
+    {
+      "id": "GC-010",
+      "type": "annotation",
+      "severity": "low",
+      "section": "scope.modality_considerations",
+      "field": "peptides_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "PARTIALLY_VERIFIED",
+      "description": "S10 explicitly excludes peptides from photosafety evaluation. E14/S7B IWG 2024 identifies peptides as modality requiring dedicated safety pharmacology guidance. The general S7A principles apply; no peptide-specific deviations confirmed from reviewed sources.",
+      "source_documents": [
+        "ICH S10 Section 1.3 (page 3): 'This guideline does not generally apply to peptides, proteins, antibody drug conjugates, or oligonucleotides.'",
+        "E14/S7B IWG 2024 Concept Paper (March 2024, page 1): Identifies peptides among novel modalities where ICH S7B scope may need expansion."
+      ]
+    },
+    {
+      "id": "GC-011",
+      "type": "reclassification",
+      "severity": "medium",
+      "section": "scope.modality_considerations",
+      "field": "gene_therapies_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "UNVERIFIABLE",
+      "description": "Gene therapies are EXPLICITLY EXCLUDED from ICH S6(R1) scope. No other ICH safety pharmacology guideline (S7A, S7B, E14, M3(R2)) provides rules specific to gene therapies. The rule as stated ('Case-by-case; consider on-target effects on cardiac function') is a reasonable practice but cannot be verified from any available ICH source document.",
+      "source_document": "ICH S6(R1) Part I Section 1.3 (page 3): explicitly states the guideline 'does not cover' gene therapies. ICH S7A scope applies to 'new chemical entities and biotechnology-derived products' per Section 1.3, but does not enumerate gene therapy specifics.",
+      "verification_conclusion": "UNVERIFIABLE from reviewed ICH guidelines. Requires product-specific guidance (e.g., FDA guidance for human gene therapy, EMA gene therapy guidance) not in the provided source set."
+    },
+    {
+      "id": "GC-012",
+      "type": "reclassification",
+      "severity": "medium",
+      "section": "scope.modality_considerations",
+      "field": "vaccines_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "UNVERIFIABLE",
+      "description": "Conventional bacterial or viral vaccines are EXPLICITLY EXCLUDED from ICH S6(R1) scope. DNA vaccines are also excluded. No ICH safety pharmacology guideline addresses vaccine-specific safety pharmacology assessment rules.",
+      "source_document": "ICH S6(R1) Part I Section 1.3 (page 3): 'The guidance does not cover...conventional bacterial or viral vaccines, DNA vaccines...'",
+      "verification_conclusion": "UNVERIFIABLE from reviewed ICH safety pharmacology guidelines. Vaccine safety pharmacology (if any required) is governed by product-specific and WHO guidance not in the provided source set."
+    },
+    {
+      "id": "GC-013",
+      "type": "annotation",
+      "severity": "low",
+      "section": "scope.modality_considerations + core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches",
+      "field": "meta source note for 2024 IWG concept paper",
+      "prior_state": "IWG 2024 listed as source in meta; content not verified",
+      "new_state": "Confirmed as planning document only — no finalized guidance",
+      "description": "The E14/S7B IWG Final Concept Paper (March 2024) was read in full. It is a planning document endorsed 22 March 2024 proposing a SECOND ROUND of Q&As for S7B/E14. It identifies 3 open issues for future Q&As: (1) S7B scope for biotechnology-derived agents including oligonucleotides, ADCs, proteins, peptides, vaccines, gene therapies; (2) when toxicology data can inform integrated risk assessment; (3) framework for novel modalities. NO finalized guidance content is present. The IWG anticipated completing work in ~18 months (by ~September 2025). As of the concept paper date (March 2024), all modality-specific rules in the rules file that reference novel modalities remain the best available guidance but are NOT supported by finalized Q&As.",
+      "source_document": "E14-S7B_IWG_Final_Concept_Paper_2024_0312_0.pdf (all 3 pages, endorsed 22 March 2024)"
+    },
+    {
+      "id": "GC-014",
+      "type": "annotation",
+      "severity": "low",
+      "section": "reporting_requirements",
+      "field": "ctd_placement_verification_status",
+      "prior_status": "NEEDS_HUMAN_REVIEW",
+      "new_status": "UNVERIFIABLE",
+      "description": "CTD Module 4.2.1.3 placement for safety pharmacology studies requires M4S (Safety) guideline. M4S_Safety_Nonclinical.pdf is available in training set but was not in the source documents selected for this verification pass. The Module 4.2.1.3 placement is well-established regulatory practice but cannot be formally verified from the S7A/S7B/E14 PDFs reviewed. S7B Section 2.3.6 references M4 for the integrated risk assessment but does not specify module numbers.",
+      "verification_conclusion": "UNVERIFIABLE from S7A/S7B/E14 source set. Consistent with standard CTD practice; requires M4S guideline to formally verify module numbering."
+    }
+  ],
+
+  "rules_status_changes": {
+    "needs_human_review_to_verified": [
+      "exploratory_clinical_trials.approach_1.verification_status",
+      "exploratory_clinical_trials.approach_2.verification_status",
+      "exploratory_clinical_trials.approach_3.verification_status",
+      "exploratory_clinical_trials.approach_4.verification_status",
+      "exploratory_clinical_trials.approach_5.verification_status",
+      "timing_relative_to_clinical_development.before_phase_2.before_phase_2_verification_status",
+      "timing_relative_to_clinical_development.pediatric_clinical_trials.verification_status",
+      "timing_relative_to_clinical_development.before_phase_1_fih.m3r2_table1_verification_status"
+    ],
+    "needs_human_review_to_partially_verified": [
+      "scope.modality_considerations.antibody_drug_conjugates_verification_status",
+      "scope.modality_considerations.oligonucleotides_verification_status",
+      "scope.modality_considerations.peptides_verification_status",
+      "timing_relative_to_clinical_development.before_phase_3.other_before_phase_3_verification_status",
+      "timing_relative_to_clinical_development.before_marketing_approval.other_items_verification_status",
+      "regional_differences.verification_status",
+      "incorporation_into_toxicology_studies.applicable_contexts_verification_status"
+    ],
+    "needs_human_review_to_unverifiable": [
+      "scope.modality_considerations.gene_therapies_verification_status",
+      "scope.modality_considerations.vaccines_verification_status",
+      "reporting_requirements.ctd_placement_verification_status"
+    ],
+    "new_rules_added_verified": [
+      "core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches.proarrhythmia_model_criteria_complete[criterion_3_domain_of_applicability]",
+      "core_battery.cardiovascular_system.s7b_specific_requirements.novel_approaches.proarrhythmia_model_criteria_complete[criterion_5_mechanistic_interpretation]"
+    ],
+    "still_needs_human_review": [
+      "incorporation_into_toxicology_studies.applicable_contexts.S9_anticancer_reference (S9 PDF not in reviewed source set)"
+    ]
+  }
+}

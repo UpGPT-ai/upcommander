@@ -1,0 +1,1185 @@
+{
+  "metadata": {
+    "extraction_date": "2026-03-23",
+    "guidelines_processed": [
+      "E14",
+      "E17",
+      "E3",
+      "E4",
+      "E7"
+    ],
+    "total_rules": 103,
+    "extractor": "claude-sonnet-4-6",
+    "source_base_path": "training/stage-1/ich-efficacy-advanced/"
+  },
+  "rules": [
+    {
+      "rule_id": "E14-001",
+      "domain": "qt_study_design",
+      "rule_text": "A 'thorough QT/QTc study' (TQT study) should be conducted for non-antiarrhythmic drugs to evaluate the potential for QT/QTc interval prolongation.",
+      "source_section": "Introduction / General",
+      "source_page": 1,
+      "source_quote": "The 'thorough QT/QTc study' is the trial most likely to detect a drug-induced effect on the QT/QTc interval if one exists.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": "Drugs that are clearly proarrhythmic or where a thorough study is clearly not needed based on prior data."
+    },
+    {
+      "rule_id": "E14-002",
+      "domain": "qt_ecg_methodology",
+      "rule_text": "ECG recordings used for QT assessment should be collected under well-controlled conditions and the timing of ECG collection relative to drug administration must be pre-specified.",
+      "source_section": "2.1 ECG Methodology",
+      "source_page": 4,
+      "source_quote": "ECG recordings should be collected under controlled conditions and the timing of ECG collection relative to drug administration should be specified.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-003",
+      "domain": "qt_ecg_methodology",
+      "rule_text": "Multiple ECG replicates should be collected at each time point to reduce measurement variability; replicate recordings within a short time window are preferred.",
+      "source_section": "2.1 ECG Methodology",
+      "source_page": 5,
+      "source_quote": "To reduce the high level of variability associated with single ECG recordings, it is preferable to record multiple ECGs within a short time window and use the mean or median.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-004",
+      "domain": "qt_ecg_methodology",
+      "rule_text": "QT interval measurements should be performed by a central laboratory using a validated, standardised methodology; manual over-read of automated measurements is preferred.",
+      "source_section": "2.1 ECG Methodology",
+      "source_page": 5,
+      "source_quote": "Ideally, all ECG evaluations in the thorough QT/QTc study will be conducted by a central ECG laboratory. Manual over-reading of automated measurements is preferred.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-005",
+      "domain": "qt_heart_rate_correction",
+      "rule_text": "The QT interval must be corrected for heart rate (QTc); both Fridericia (QTcF = QT/RR^(1/3)) and Bazett (QTcB = QT/RR^(1/2)) corrections should be presented, with Fridericia or individual correction preferred.",
+      "source_section": "3.1 Choice of QT Correction Formula",
+      "source_page": 7,
+      "source_quote": "QTc = QT/RR^(1/3) [Fridericia] ... QTc = QT/RR^(1/2) [Bazett] ... Both Fridericia and Bazett corrections should be presented.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-006",
+      "domain": "qt_heart_rate_correction",
+      "rule_text": "The Fridericia correction formula is QTcF = QT / RR^(1/3). The Bazett correction formula is QTcB = QT / RR^(1/2). The Framingham correction is QTc = QT + 0.154(1-RR).",
+      "source_section": "3.1.1 / 3.1.2 Correction Formulae",
+      "source_page": 8,
+      "source_quote": "Fridericia correction [QTcF = QT/RR^(1/3)] ... Bazett correction [QTcB = QT/RR^(1/2)] ... Framingham correction [QTc = QT + 0.154(1-RR)] is one example of a correction derived by linear regression.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-007",
+      "domain": "qt_heart_rate_correction",
+      "rule_text": "Individual subject correction derived from within-subject regression of pre-therapy QT and RR interval data is considered most suitable for the thorough QT/QTc study; ECGs collected during rapid heart rate changes should be excluded due to QT/RR hysteresis.",
+      "source_section": "3.1.2 Correction Formulae Derived from Within-Subject Data",
+      "source_page": 9,
+      "source_quote": "These approaches are considered most suitable for the 'thorough QT/QTc study' and early clinical studies ... care should be taken to exclude ECG recordings collected during times of rapid heart rate changes due to this QT/RR hysteresis effect.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-008",
+      "domain": "qt_data_analysis",
+      "rule_text": "QT/QTc interval data should be presented as both analyses of central tendency (means, medians) and categorical analyses.",
+      "source_section": "3.2 Analysis of QT/QTc Interval Data",
+      "source_page": 9,
+      "source_quote": "The QT/QTc interval data should be presented both as analyses of central tendency (e.g., means, medians) and categorical analyses. Both can provide relevant information on clinical risk assessment.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-009",
+      "domain": "qt_data_analysis",
+      "rule_text": "The primary metric for central tendency analysis is the largest time-matched mean difference between drug and placebo (baseline-adjusted) over the collection period.",
+      "source_section": "3.2.1 Analyses of Central Tendency",
+      "source_page": 9,
+      "source_quote": "The effect of an investigational drug on the QT/QTc interval is most commonly analyzed using the largest time-matched mean difference between the drug and placebo (baseline-adjusted) over the collection period.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-010",
+      "domain": "qt_categorical_thresholds",
+      "rule_text": "Categorical analyses should include multiple absolute QTc thresholds and change-from-baseline thresholds. Recommended absolute thresholds: QTc > 450 ms, > 480 ms, and > 500 ms. Recommended change-from-baseline thresholds: > 30 ms and > 60 ms.",
+      "source_section": "3.2.2 Categorical Analyses",
+      "source_page": 10,
+      "source_quote": "Absolute QTc interval prolongation: QTc interval > 450; QTc interval > 480; QTc interval > 500. Change from baseline in QTc interval: QTc interval increases from baseline > 30; QTc interval increases from baseline > 60.",
+      "severity": "critical",
+      "thresholds": {
+        "absolute_qtc_concern": "> 500 ms during therapy",
+        "absolute_qtc_thresholds": [
+          "> 450 ms",
+          "> 480 ms",
+          "> 500 ms"
+        ],
+        "change_from_baseline_thresholds": [
+          "> 30 ms",
+          "> 60 ms"
+        ]
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-011",
+      "domain": "qt_categorical_thresholds",
+      "rule_text": "A prolongation of QTc > 500 ms during therapy has been a threshold of particular clinical concern.",
+      "source_section": "3.2.2 Categorical Analyses",
+      "source_page": 10,
+      "source_quote": "In clinical trials, a prolongation of QTc > 500 ms during therapy has been a threshold of particular concern.",
+      "severity": "critical",
+      "thresholds": {
+        "absolute_qtc_concern_threshold": "> 500 ms"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-012",
+      "domain": "qt_categorical_thresholds",
+      "rule_text": "Separate categorical analyses should be provided for patients with normal and elevated baseline QTc intervals.",
+      "source_section": "3.2.2 Categorical Analyses",
+      "source_page": 10,
+      "source_quote": "Separate analyses should be provided for patients with normal and elevated baseline QT/QTc intervals.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-013",
+      "domain": "qt_exposure_response",
+      "rule_text": "The relationship between drug concentrations and QT/QTc interval changes should be established to assist in planning and interpretation of cardiac repolarisation studies (exposure-response / E-C modelling).",
+      "source_section": "3.2.3 Analysis of Relationship Between Drug Exposure and QT/QTc Interval Changes",
+      "source_page": 10,
+      "source_quote": "Establishing the relationship of drug concentrations to changes in QT/QTc interval may provide additional information to assist the planning and interpretation of studies assessing cardiac repolarization.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-014",
+      "domain": "qt_ecg_morphology",
+      "rule_text": "Morphological abnormalities of ECG waveforms (e.g., U waves) should be described and presented as the number and percentage of subjects with changes from baseline representing appearance or worsening of the abnormality.",
+      "source_section": "3.3 Morphological Analyses of ECG Waveforms",
+      "source_page": 10,
+      "source_quote": "morphological abnormalities should be described and the data presented in terms of the number and percentage of subjects in each treatment group having changes from baseline that represent the appearance or worsening of the morphological abnormality.",
+      "severity": "medium",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-015",
+      "domain": "qt_adverse_events",
+      "rule_text": "Rates of specific proarrhythmic adverse events must be compared between treated and control patients, particularly when there is evidence of an effect on QT/QTc. Events include: torsade de pointes, sudden death, ventricular tachycardia, ventricular fibrillation and flutter, syncope, and seizures.",
+      "source_section": "4.1 Clinical Trial Adverse Events",
+      "source_page": 10,
+      "source_quote": "The rates of the following clinical events should be compared in the treated and control patients, particularly when there is evidence of an effect on the QT/QTc interval: Torsade de pointes; Sudden death; Ventricular tachycardia; Ventricular fibrillation and flutter; Syncope; Seizures.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-016",
+      "domain": "qt_adverse_events",
+      "rule_text": "The failure to observe an episode of TdP in a drug application database is not considered sufficient grounds for dismissing possible arrhythmogenic risks when suspected on the basis of ECG and other clinical data.",
+      "source_section": "4.1 Clinical Trial Adverse Events",
+      "source_page": 11,
+      "source_quote": "the failure to observe an episode of TdP in a drug application database is not considered sufficient grounds for dismissing the possible arrhythmogenic risks of a drug when these are suspected on the basis of ECG and other clinical data.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-017",
+      "domain": "qt_adverse_events",
+      "rule_text": "Sub-group analyses for adverse events should be conducted by age, gender, pre-existing cardiac disease, electrolyte disturbances, and concomitant medications.",
+      "source_section": "4.1 Clinical Trial Adverse Events",
+      "source_page": 11,
+      "source_quote": "Sub-group analyses should be conducted in terms of age, gender, pre-existing cardiac disease, electrolyte disturbances, and concomitant medications.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-018",
+      "domain": "qt_adverse_events",
+      "rule_text": "If a subject experiences symptoms or ECG findings suggestive of arrhythmia during a clinical trial, immediate evaluation by a cardiac specialist is recommended.",
+      "source_section": "4.1 Clinical Trial Adverse Events",
+      "source_page": 11,
+      "source_quote": "If a subject experiences symptoms or ECG findings suggestive of an arrhythmia during a clinical trial, immediate evaluation by a cardiac specialist is recommended.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-019",
+      "domain": "qt_premature_discontinuation",
+      "rule_text": "Patients who are discontinued from clinical trials due to QT/QTc interval prolongation must be documented, including basis for discontinuation, dose, plasma levels, duration of treatment, and presence/absence of arrhythmia risk factors.",
+      "source_section": "4.2 Premature Discontinuations or Dosage Reductions",
+      "source_page": 11,
+      "source_quote": "Particular attention should be directed to subjects or patients who are discontinued from clinical trials due to QT/QTc interval prolongation. Information should be provided on the basis for premature discontinuation ... as well as the dose and duration of treatment, plasma levels if available, demographic characteristics, and the presence or absence of risk factors for arrhythmia.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-020",
+      "domain": "qt_pharmacogenetics",
+      "rule_text": "Genotyping patients who experience marked QT/QTc prolongation or TdP while on drug therapy should be considered, given that many forms of Long QT Syndrome are linked to mutations in cardiac ion channel proteins.",
+      "source_section": "4.3 Pharmacogenetic Considerations",
+      "source_page": 12,
+      "source_quote": "Genotyping patients who experience marked prolongation of the QT/QTc or TdP while on drug therapy should be considered.",
+      "severity": "medium",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-021",
+      "domain": "qt_post_marketing",
+      "rule_text": "Post-marketing adverse event data should be examined for evidence of QT/QTc prolongation and TdP, including cardiac arrest, sudden cardiac death, and ventricular arrhythmias.",
+      "source_section": "4.4 Post-Marketing Adverse Event Reports",
+      "source_page": 12,
+      "source_quote": "The available post-marketing adverse event data should be examined for evidence of QT/QTc interval prolongation and TdP and for adverse events possibly related to QT/QTc interval prolongation, such as cardiac arrest, sudden cardiac death and ventricular arrhythmias.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-022",
+      "domain": "qt_risk_assessment",
+      "rule_text": "Substantial QT/QTc prolongation can be the basis for non-approval or discontinuation of clinical development, particularly when the drug has no clear advantage over available therapy.",
+      "source_section": "5.1 Relevance of QT/QTc Interval Prolonging Effects to the Evaluation Process",
+      "source_page": 12,
+      "source_quote": "Substantial prolongation of the QT/QTc interval, with or without documented arrhythmias, could be the basis for non-approval of a drug or discontinuation of its clinical development, particularly when the drug has no clear advantage over available therapy.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": "Demonstrated benefit in resistant populations or patients intolerant of approved drugs."
+    },
+    {
+      "rule_id": "E14-023",
+      "domain": "qt_risk_assessment",
+      "rule_text": "Failure to perform an adequate clinical assessment of QT/QTc prolonging properties can likewise be justification to delay or deny marketing authorization.",
+      "source_section": "5.1 Relevance of QT/QTc Interval Prolonging Effects to the Evaluation Process",
+      "source_page": 12,
+      "source_quote": "Failure to perform an adequate clinical assessment of the potential QT/QTc interval prolonging properties of a drug can likewise be justification to delay or deny marketing authorization.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-024",
+      "domain": "qt_risk_assessment",
+      "rule_text": "Drugs prolonging mean QTc by around 5 ms or less do not appear to cause TdP. Drugs prolonging mean QTc by more than around 5 ms and less than 20 ms are inconclusive. Drugs prolonging mean QTc by > 20 ms have a substantially increased likelihood of being proarrhythmic.",
+      "source_section": "5.1 Relevance of QT/QTc Interval Prolonging Effects to the Evaluation Process",
+      "source_page": 13,
+      "source_quote": "Drugs that prolong the mean QT/QTc interval by around 5 ms or less do not appear to cause TdP ... The data on drugs that prolong the mean QT/QTc interval by more than around 5 and less than 20 ms are inconclusive ... Drugs that prolong the mean QT/QTc interval by >20 ms have a substantially increased likelihood of being proarrhythmic.",
+      "severity": "critical",
+      "thresholds": {
+        "low_risk_threshold": "mean QTc prolongation <= ~5 ms",
+        "inconclusive_range": "mean QTc prolongation > ~5 ms and < ~20 ms",
+        "high_risk_threshold": "mean QTc prolongation > 20 ms"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E14-025",
+      "domain": "qt_labelling",
+      "rule_text": "Labelling for drugs that prolong QT/QTc should include: a warning/precautionary statement; description of trial design and results; dosage recommendations; list of conditions increasing proarrhythmic risk; precautionary statement on concomitant QT-prolonging drugs; and monitoring recommendations.",
+      "source_section": "5.2 Labelling Issues for Drugs that Prolong the QT/QTc Interval",
+      "source_page": 13,
+      "source_quote": "it is recommended that the following be considered: A warning/precautionary statement about the risk; A description of the design and results of the trials investigating the effect on the QT/QTc interval, including the absence of demonstrated effect; The dosage recommendations; A list of conditions known to increase the proarrhythmic risk (e.g., congestive heart failure, Long QT Syndrome, hypokalemia); A precautionary statement regarding the concomitant use of two or more QT/QTc interval prolonging drugs and other interactions increasing the risk; Recommendations for patient monitoring (ECG and electrolytes) and management of patients with QT/QTc prolongation or symptoms suggestive of an arrhythmia.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Regional differences in labelling are recognised."
+    },
+    {
+      "rule_id": "E17-001",
+      "domain": "mrct_planning",
+      "rule_text": "An MRCT is defined as a clinical trial conducted in more than one region under a single protocol. A region may refer to a geographical region, country, or regulatory region.",
+      "source_section": "1.3 Scope of the Guideline",
+      "source_page": 2,
+      "source_quote": "MRCT is defined in the present guideline as a clinical trial conducted in more than one region under a single protocol. In this context, a region may refer to a geographical region, country or regulatory region.",
+      "severity": "medium",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-002",
+      "domain": "mrct_planning",
+      "rule_text": "The intrinsic and extrinsic factors important to the drug development programme should be identified early, before the design of confirmatory MRCTs. Information about them should also be collected during the confirmatory trial for evaluation of their impact on treatment effects.",
+      "source_section": "1.4 Basic Principles",
+      "source_page": 3,
+      "source_quote": "The intrinsic and extrinsic factors important to the drug development programme, should be identified early. The potential impact of these factors could be examined in the exploratory phases before the design of confirmatory MRCTs. Information about them should also be collected during the confirmatory trial for evaluation of their impact on treatment effects.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-003",
+      "domain": "mrct_planning",
+      "rule_text": "MRCTs should be planned under the assumption that the treatment effect applies to the entire target population, particularly to the regions included in the trial; strategic allocation of sample size to regions allows evaluation of the extent to which this assumption holds.",
+      "source_section": "1.4 Basic Principles",
+      "source_page": 3,
+      "source_quote": "MRCTs are planned under the assumption that the treatment effect applies to the entire target population, particularly to the regions included in the trial. Strategic allocation of the sample size to regions allows an evaluation of the extent to which this assumption holds.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-004",
+      "domain": "mrct_planning",
+      "rule_text": "A single primary analysis approach for hypothesis testing and estimation of the overall treatment effect should be planned that will be acceptable to all concerned regulatory authorities; a structured exploration to examine consistency of treatment effects across regions and subpopulations should also be planned.",
+      "source_section": "1.4 Basic Principles",
+      "source_page": 3,
+      "source_quote": "A single primary analysis approach for hypothesis testing and estimation of the overall treatment effect should be planned so that it will be acceptable to all concerned regulatory authorities. A structured exploration to examine the consistency of treatment effects across regions and subpopulations should be planned.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-005",
+      "domain": "mrct_gcp",
+      "rule_text": "All sites participating in MRCTs must comply with ICH E6 GCP standards in all regions and sites, including making sites available for GCP inspections by regulatory authorities.",
+      "source_section": "2.1.2 Good Clinical Practice (GCP) Requirements and MRCTs",
+      "source_page": 6,
+      "source_quote": "Specifically, MRCTs should be conducted in compliance with ICH E6 GCP standards in all regions and sites, including making sites available for GCP inspections by regulatory authorities.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-006",
+      "domain": "mrct_regulatory_consultation",
+      "rule_text": "Sponsors of MRCTs are encouraged to have scientific consultation meetings with relevant regulatory authorities during the planning stage to discuss regulatory requirements and the acceptability of MRCT data to support marketing authorisations.",
+      "source_section": "2.1.3 Scientific Consultation Meetings with Regulatory Authorities",
+      "source_page": 6,
+      "source_quote": "Sponsors of MRCTs are encouraged to have scientific consultation meetings with relevant regulatory authorities. These interactions should take place during the planning stage of MRCTs to discuss the regulatory requirements for the overall development plan and the acceptability of MRCT data to support marketing authorisations.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-007",
+      "domain": "mrct_regional_variability",
+      "rule_text": "At the planning stage, regional variability and its potential to influence study results should be carefully considered. Investigators and experts representing participating regions should be consulted in the planning and design of MRCTs.",
+      "source_section": "2.2.1 Pre-consideration of Regional Variability",
+      "source_page": 7,
+      "source_quote": "At the planning stage, regional variability, the extent to which it can be explained by intrinsic and extrinsic factors, and its potential to influence the study results, should be carefully considered ... it is recommended that investigators and experts representing participating regions are consulted in the planning and design of MRCTs.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-008",
+      "domain": "mrct_regional_variability",
+      "rule_text": "Sources of regional variability to be addressed include: (1) disease definitions and diagnostic differences, (2) differences in medical practices and treatments, (3) diet, environmental, cultural, socio-economic factors and healthcare access, and (4) genetic polymorphisms in drug metabolism or receptor sensitivity.",
+      "source_section": "2.2.1 Pre-consideration of Regional Variability",
+      "source_page": 7,
+      "source_quote": "1. Disease definitions, methods of diagnosis and the understanding of certain end-points may vary between regions ... 2. There may be differences in medical practices and treatments across regions ... 3. Diet, environmental factors, cultural or socio-economic factors ... 4. Subjects' responses to different drugs may be more or less sensitive to intrinsic factors ... genetic polymorphisms in drug metabolism or receptor sensitivity.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-009",
+      "domain": "mrct_subject_selection",
+      "rule_text": "Clear and specific inclusion and exclusion criteria that are acceptable and can be applied across all regions must be included in the MRCT protocol. Diagnostic tools and methods should be standardised across regions.",
+      "source_section": "2.2.2 Subject Selection",
+      "source_page": 9,
+      "source_quote": "Clear and specific inclusion and exclusion criteria, that are acceptable and can be applied across regions, should be included in the protocol. ... Imaging methods, as well as methods for specimen collection, handling and storage should be clearly defined and standardised across regions.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-010",
+      "domain": "mrct_dose_selection",
+      "rule_text": "PK and/or PK-PD studies should be executed in the major ethnic groups relevant to the regions to be included in confirmatory MRCTs, if differences are expected. Dose regimens should in principle be the same in all participating ethnic populations unless earlier data show a clear difference justifying a different regimen.",
+      "source_section": "2.2.3 Selection of Doses for Use in Confirmatory MRCTs",
+      "source_page": 10,
+      "source_quote": "PK studies should be undertaken in the major ethnic groups most relevant to the regions to be included in MRCTs, if differences are expected ... The dose regimens in confirmatory MRCTs ... should in principle be the same in all participating ethnic population.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "If earlier trial data show a clear difference in dose-response and/or exposure-response relationships for an ethnic population, a different dosing regimen may be appropriate if it produces similar therapeutic effects with an acceptable safety margin."
+    },
+    {
+      "rule_id": "E17-011",
+      "domain": "mrct_endpoints",
+      "rule_text": "The primary endpoint of an MRCT must be clinically relevant, accepted in medical practice, acceptable to all concerned regulatory authorities, and validated for applicability to all relevant regions before starting the MRCT.",
+      "source_section": "2.2.4 Choice of Endpoints — Primary Endpoint",
+      "source_page": 11,
+      "source_quote": "the primary endpoint, whether efficacy or safety, should satisfy these criteria as well as being acceptable to all concerned regulatory authorities, to ensure that interpretation of the success or failure of the MRCT is consistent across regions and among regulatory authorities ... scales should be validated and their applicability to all relevant regions justified before starting the MRCT.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-012",
+      "domain": "mrct_endpoints",
+      "rule_text": "If regulatory agreement on a single primary endpoint cannot be reached, a single protocol with endpoint-related sub-sections tailored to respective regulatory authority requirements should be developed; no multiplicity adjustment is needed in this case for regulatory decision-making.",
+      "source_section": "2.2.4 Choice of Endpoints — Primary Endpoint",
+      "source_page": 12,
+      "source_quote": "If agreement cannot be reached due to well-justified scientific or regulatory reasons, a single protocol should be developed with endpoint-related sub-sections tailored to meet the respective requirements of the regulatory authorities. In this case, because regulatory approvals are based on different primary endpoints by different authorities, no multiplicity adjustment is needed for regulatory decision-making.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-013",
+      "domain": "mrct_endpoints",
+      "rule_text": "Harmonisation of secondary endpoints is encouraged; all secondary endpoints including those selected only for a particular local stakeholder should be described in the protocol.",
+      "source_section": "2.2.4 Choice of Endpoints — Secondary Endpoints",
+      "source_page": 12,
+      "source_quote": "harmonisation of secondary endpoints is encouraged to maintain the feasibility and improve the quality of trial conduct ... all secondary endpoints, including those selected only for a particular local stakeholder (e.g., regulatory authority), should be described in the protocol.",
+      "severity": "medium",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-014",
+      "domain": "mrct_sample_size",
+      "rule_text": "The overall MRCT sample size must be sufficient to evaluate the overall treatment effect averaged across all subjects in all regions. MRCTs are usually stratified by region for both randomisation and analysis.",
+      "source_section": "2.2.5 Sample Size Planning — Overall Sample Size",
+      "source_page": 14,
+      "source_quote": "The primary objective of an MRCT generally corresponds to an evaluation (estimation and testing) of the treatment effect averaged across all subjects in all regions of the MRCT. The overall sample-size is determined to ensure that this objective can be met. ... MRCTs are usually stratified by region for both randomization and analysis.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-015",
+      "domain": "mrct_sample_size",
+      "rule_text": "Sample size allocation to regions should have a scientific basis, should support consistency evaluation, and should provide the information needed to support regulatory decisions. Five described approaches are: Proportional Allocation, Equal Allocation, Preservation of Effect, Local Significance, and Fixed Minimum Number.",
+      "source_section": "2.2.5 Sample Size Planning — Sample Size Allocation to Regions",
+      "source_page": 15,
+      "source_quote": "Regional allocation should have a scientific basis (rather than arbitrary targets), should support the evaluation of consistency and should provide the information needed to support regulatory decisions. ... 1. Proportional Allocation ... 2. Equal Allocation ... 3. Preservation of Effect ... 4. Local Significance ... 5. Fixed Minimum Number.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Allocating a fixed minimum sample size for regions is not recommended if there is no scientific justification."
+    },
+    {
+      "rule_id": "E17-016",
+      "domain": "mrct_sample_size",
+      "rule_text": "A balance between proportional and equal allocation is recommended to ensure timely recruitment while providing sufficient information to evaluate the drug in its regional context; no single region or regions should dominate enrolment.",
+      "source_section": "2.2.5 Sample Size Planning",
+      "source_page": 15,
+      "source_quote": "A balance between proportional and equal allocation is recommended, to ensure that recruitment is feasible and able to be completed in a timely fashion, but also to provide sufficient information to evaluate the drug in its regional context. ... care should be taken to ensure that no single region or regions dominates enrolment, thereby dominating the trial outcome.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-017",
+      "domain": "mrct_sample_size",
+      "rule_text": "Pre-specified pooling of regions or subpopulations, justified by similarity of intrinsic and/or extrinsic factors, may help provide flexibility in sample size allocation and should be specified in the study protocol and statistical analysis plan.",
+      "source_section": "2.2.5 Pooled Regions and Pooled Subpopulations",
+      "source_page": 16,
+      "source_quote": "Pre-specified pooling of regions or subpopulations may help provide flexibility in sample size allocation to regions, facilitate the assessment of consistency in treatment effects across regions, and support regulatory decision-making. ... Pooling strategies should be specified in the study protocol and statistical analysis plan.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-018",
+      "domain": "mrct_sample_size",
+      "rule_text": "For non-inferiority or equivalence trials in an MRCT, regulatory agreement must be obtained on the relevant non-inferiority margin; if differing scientific requirements persist, the most stringent margin should be used for sample size calculation.",
+      "source_section": "2.2.5 Other Sample Size Considerations",
+      "source_page": 17,
+      "source_quote": "The factors that influence sample size and sample size allocation should be agreed upon in advance with the different regulatory agencies ... For non-inferiority or equivalence trials, regulatory agreement is also needed on the relevant margin. If ... the most stringent margin should be considered for sample size calculation.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-019",
+      "domain": "mrct_data_collection",
+      "rule_text": "Methods of collecting and handling efficacy and safety information must be standardised across participating regions. Standardised training for investigators and study personnel in each region must be provided before initiating the trial in that region.",
+      "source_section": "2.2.6 Collecting and Handling of Efficacy and Safety Information",
+      "source_page": 18,
+      "source_quote": "Methods of collecting and handling efficacy and safety information should be standardised across participating regions. It is also important to provide standardised training for investigators and study personnel in each region before initiating the trial in that region.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-020",
+      "domain": "mrct_data_collection",
+      "rule_text": "Safety reporting in MRCTs must be conducted in accordance with ICH E2. When local regulations specify different requirements for timelines and criteria for expedited reporting, these must also be adhered to locally. Important safety information must be handled per ICH E2A.",
+      "source_section": "2.2.6 Collecting and Handling of Efficacy and Safety Information",
+      "source_page": 18,
+      "source_quote": "Safety reporting should be conducted in accordance with ICH E2. When local regulations specify different requirements, such as timelines and criteria for expedited reporting, these should also be adhered to locally ... important safety information should be handled both with adherence to any local regulations and in adherence to ICH E2A.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-021",
+      "domain": "mrct_data_collection",
+      "rule_text": "For long-duration Phase III MRCTs with special safety concerns, a central independent data monitoring committee (DMC) with representation from participating regions should be considered.",
+      "source_section": "2.2.6 Collecting and Handling of Efficacy and Safety Information",
+      "source_page": 19,
+      "source_quote": "In MRCTs of long duration, where special concerns (e.g., serious adverse events) have been identified, and/or where operational regions are quite large (usually Phase III confirmatory studies), the use of a central independent data monitoring committee (with representation from participating regions to adequately assess the context of the trial) should be considered.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-022",
+      "domain": "mrct_data_collection",
+      "rule_text": "For endpoints based on laboratory or imaging assessments, centralised laboratory use or centralised adjudication of imaging is generally recommended. When multiple laboratories are used, appropriate cross-validation of methods must be conducted before testing clinical samples.",
+      "source_section": "2.2.6 Collecting and Handling of Efficacy and Safety Information",
+      "source_page": 19,
+      "source_quote": "For endpoints based on laboratory or imaging assessments, it is generally recommended to use a centralised laboratory or centralised adjudication of imaging. If multiple laboratories are used, appropriate cross-validation of methods between laboratories should be conducted before testing clinical samples.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-023",
+      "domain": "mrct_statistical_analysis",
+      "rule_text": "The MRCT analysis strategy must be finalised prior to unblinding of treatment assignments to ensure trial integrity. A single primary analysis approach should be specified in the statistical section of the study protocol and agreed upon with authorities in advance.",
+      "source_section": "2.2.7 Statistical Analysis Planning — Obtaining Regulatory Input",
+      "source_page": 20,
+      "source_quote": "The standard is to specify a single primary analysis approach in the statistical section of the study protocol to be agreed upon with the authorities in advance of initiating the trial ... The analysis strategy for an MRCT should be finalized prior to unblinding of treatment assignments, if applicable, to ensure trial integrity.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-024",
+      "domain": "mrct_statistical_analysis",
+      "rule_text": "The statistical analysis strategy must include evaluation of consistency of treatment effects across regions and subpopulations. Consistency is defined as a lack of clinically relevant differences between treatment effects in different regions or subpopulations.",
+      "source_section": "2.2.7 Statistical Analysis Planning — Examination of Consistency",
+      "source_page": 21,
+      "source_quote": "The statistical analysis strategy should include the evaluation of the consistency of treatment effects across regions and subpopulations. For this purpose, consistency in treatment effects is defined as a lack of clinically relevant differences between treatment effects in different regions or subpopulations.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-025",
+      "domain": "mrct_statistical_analysis",
+      "rule_text": "If randomisation is stratified by region, the primary analysis must adjust for regions using appropriate statistical methods; if regions were pooled based on intrinsic/extrinsic factors, this pooling must be reflected in the analysis.",
+      "source_section": "2.2.7 Statistical Analysis Planning — Primary Analysis",
+      "source_page": 20,
+      "source_quote": "If randomisation is stratified by region, the primary analysis should adjust for regions using appropriate statistical methods. If some regions were pooled based on intrinsic and/or extrinsic factors ... then this pooling should be reflected in the analysis.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-026",
+      "domain": "mrct_comparators",
+      "rule_text": "Comparators in MRCTs should in principle be the same in all participating regions. The choice of comparators must be justified in the study protocol based on scientific and other relevant information, including international treatment guidelines.",
+      "source_section": "2.2.8 Selection of Comparators",
+      "source_page": 23,
+      "source_quote": "Comparators in MRCTs should in principle be the same in all participating regions. ... The choice of comparators should be justified in the study protocol based on scientific and other relevant information, including international treatment guidelines.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-027",
+      "domain": "mrct_comparators",
+      "rule_text": "Active controls must in principle be dosed and administered the same way in all regions; if approved dosing regimens differ across regions, the proposed study dosing must be justified with available data. The same source of active comparator should be used in all regions; if different sources are used, justification via Certification of Analysis or equivalence studies must be provided.",
+      "source_section": "2.2.8 Selection of Comparators",
+      "source_page": 24,
+      "source_quote": "Active controls should in principle be dosed and administered in the same way in all regions ... In order to ensure the consistent quality of the active comparators, it is recommended to use the same source in all participating regions. When active comparators from different sources are used in MRCTs, justification should be provided (e.g., in form of Certification of Analysis or report from the manufacturer on equivalence or dissolution studies).",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E17-028",
+      "domain": "mrct_concomitant_medications",
+      "rule_text": "Drugs used concomitantly should be the same throughout all regions to the extent possible. The clinical trial protocol must specify allowable and not allowable concomitant medications and doses.",
+      "source_section": "2.2.9 Handling Concomitant Medications",
+      "source_page": 25,
+      "source_quote": "In general, drugs used concomitantly with the investigational drug should be the same throughout the regions to the extent possible ... The clinical trial protocol should specify allowable and not allowable concomitant medications and doses.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Some differences acceptable if not expected to substantially impact trial results."
+    },
+    {
+      "rule_id": "E3-001",
+      "domain": "csr_structure",
+      "rule_text": "The clinical study report must be a single integrated full report incorporating clinical and statistical descriptions, tables, and figures in the main text, with appendices containing the protocol, case report forms, and technical statistical documentation.",
+      "source_section": "Introduction to the Guideline",
+      "source_page": 1,
+      "source_quote": "The clinical study report described in this guideline is an 'integrated' full report of an individual study ... in which the clinical and statistical description, presentations, and analyses are integrated into a single report.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": "Abbreviated reports may be acceptable for uncontrolled studies, flawed studies, or studies not designed to establish efficacy, subject to regional regulatory review policy."
+    },
+    {
+      "rule_id": "E3-002",
+      "domain": "csr_structure",
+      "rule_text": "The report must be complete, free from ambiguity, well-organised, and easy to review; all analyses, tables, and figures must carry clear identification of the patient set from which they were generated.",
+      "source_section": "Introduction to the Guideline",
+      "source_page": 1,
+      "source_quote": "The guideline is intended to assist sponsors in the development of a report that is complete, free from ambiguity, well organised and easy to review ... it is also particularly important that all analyses, tables, and figures carry, in text or as part of the table, clear identification of the set of patients from which they were generated.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-003",
+      "domain": "csr_title_page",
+      "rule_text": "The CSR title page must include: study title, name of test drug, indication studied, brief design description, sponsor name, protocol identification, development phase, study initiation date, completion date, principal/coordinating investigator name, GCP compliance statement, and date of report.",
+      "source_section": "1. Title Page",
+      "source_page": 3,
+      "source_quote": "The title page should contain the following information: study title; name of test drug/investigational product; indication studied; if not apparent from the title, a brief (1 to 2 sentences) description giving design (parallel, cross-over, blinding, randomised) comparison (placebo, active, dose/response), duration, dose, and patient population; name of the sponsor; protocol identification (code or number); development phase of study; study initiation date ... study completion date ... name and affiliation of principal or coordinating investigator(s) ... statement indicating whether the study was performed in compliance with Good Clinical Practices (GCP), including the archiving of essential documents; date of the report.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-004",
+      "domain": "csr_synopsis",
+      "rule_text": "A brief synopsis, usually limited to 3 pages, that summarises the study must be provided; it must include numerical data to illustrate results, not just text or p-values.",
+      "source_section": "2. Synopsis",
+      "source_page": 3,
+      "source_quote": "A brief synopsis (usually limited to 3 pages) that summarises the study should be provided ... The synopsis should include numerical data to illustrate results, not just text or p-values.",
+      "severity": "high",
+      "thresholds": {
+        "synopsis_length_limit": "usually limited to 3 pages"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-005",
+      "domain": "csr_ethics",
+      "rule_text": "The CSR must confirm that the study and any amendments were reviewed by an Independent Ethics Committee (IEC) or Institutional Review Board (IRB), and that the study was conducted in accordance with the Declaration of Helsinki. Representative written information for the patient and a sample consent form must be provided in appendix 16.1.3.",
+      "source_section": "5. Ethics (5.1, 5.2, 5.3)",
+      "source_page": 4,
+      "source_quote": "It should be confirmed that the study and any amendments were reviewed by an Independent Ethics Committee or Institutional Review Board ... It should be confirmed that the study was conducted in accordance with the ethical principles that have their origins in the Declaration of Helsinki.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-006",
+      "domain": "csr_investigators",
+      "rule_text": "Investigators must be listed in appendix 16.1.4 with their affiliations, role in the study, and brief CVs (1 page) or equivalent summaries of training and experience. Signatures of principal or coordinating investigators or the sponsor's responsible medical officer must be included.",
+      "source_section": "6. Investigators and Study Administrative Structure",
+      "source_page": 4,
+      "source_quote": "There should be provided in appendix 16.1.4 a list of the investigators with their affiliations, their role in the study and their qualifications (curriculum vitae or equivalent). ... Where signatures of the principal or coordinating investigators are required by regulatory authorities, these should be included in appendix 16.1.5.",
+      "severity": "high",
+      "thresholds": {
+        "cv_length": "brief (1 page) CVs or equivalent summaries"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-007",
+      "domain": "csr_investigational_plan",
+      "rule_text": "Section 9.1 must describe the overall study plan and design clearly, including treatments studied, patient population and number, blinding level, control type, method of assignment to treatment, sequence and duration of all study periods, safety/data monitoring committees, and any interim analyses.",
+      "source_section": "9.1 Overall Study Design and Plan – Description",
+      "source_page": 5,
+      "source_quote": "The information provided should include: treatments studied (specific drugs, doses and procedures); patient population studied and the number of patients to be included; level and method of blinding/masking; kind of control(s) ... method of assignment to treatment (randomisation, stratification); sequence and duration of all study periods ... any safety, data monitoring or special steering or evaluation committees; any interim analyses.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-008",
+      "domain": "csr_investigational_plan",
+      "rule_text": "For active-control equivalence studies, the basis for considering the study capable of distinguishing active from inactive therapy must be provided, including discussion of the degree of inferiority (delta value) the study was intended to show was not exceeded.",
+      "source_section": "9.2 Discussion of Study Design, Including the Choice of Control Groups",
+      "source_page": 6,
+      "source_quote": "Specifically there should be provided a basis for considering the study capable of distinguishing active from inactive therapy ... There should also be a discussion of the degree of inferiority of the therapy (often referred to as the delta value) the study was intended to show was not exceeded.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-009",
+      "domain": "csr_investigational_plan",
+      "rule_text": "Blinding procedures must be fully described including how bottles were labelled, conditions for blind-breaking, who had access to patient codes, measures to ensure test drug and placebo were indistinguishable, and procedures to maintain blinding during interim analyses.",
+      "source_section": "9.4.6 Blinding",
+      "source_page": 8,
+      "source_quote": "A description of the specific procedures used to carry out blinding should be provided (e.g., how bottles were labelled, labels that reveal blind-breakage, sealed code list/envelopes, double dummy techniques), including the circumstances in which the blind would be broken ... The procedure to maintain the blinding when interim analyses are performed should also be explained.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-010",
+      "domain": "csr_statistical_methods",
+      "rule_text": "Section 9.7 must describe the statistical analyses planned in the protocol and any changes made before outcome results were available; whether the primary analysis includes adjustment for covariates must be specified; planned monitoring, data monitoring committee composition, and interim analysis frequency and stopping rules must be described.",
+      "source_section": "9.7.1 Statistical and Analytical Plans",
+      "source_page": 11,
+      "source_quote": "The statistical analyses planned in the protocol and any changes made before outcome results were available should be described ... whether the primary analysis is to include adjustment for covariates should be specified. Planned monitoring of the results of the study should be described ... The frequency and nature of any planned interim analysis, any specified circumstances in which the study would be terminated and any statistical adjustments to be employed because of interim analyses should be described.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-011",
+      "domain": "csr_statistical_methods",
+      "rule_text": "Sample size determination, methods, derivations or source of reference, and estimates used in calculations must be provided. For non-inferiority studies, the difference between treatments considered unacceptably large must be specified.",
+      "source_section": "9.7.2 Determination of Sample Size",
+      "source_page": 12,
+      "source_quote": "The planned sample size and the basis for it, such as statistical considerations or practical limitations, should be provided. Methods for sample size calculation should be given together with their derivations or source of reference ... For a positive control study intended to show that a new therapy is at least as effective as the standard therapy, the sample size determination should specify the difference between treatments that would be considered unacceptably large.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-012",
+      "domain": "csr_study_changes",
+      "rule_text": "Any change in study conduct or planned analyses after study start must be documented with the time, reason, decision procedure, responsible person(s), nature of data available at time of change, and whether documented as a formal protocol amendment. The timing of changes relative to blind-breaking must be clearly characterised.",
+      "source_section": "9.8 Changes in the Conduct of the Study or Planned Analyses",
+      "source_page": 12,
+      "source_quote": "Any change in the conduct of the study or planned analyses ... instituted after the start of the study should be described. The time(s) and reason(s) for the change(s) ... should also be described ... It is therefore particularly critical that the timing of changes relative to blind breaking and availability of outcome results be well characterised.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-013",
+      "domain": "csr_patient_disposition",
+      "rule_text": "Section 10.1 must provide a clear accounting of all patients who entered the study, numbers randomised, who entered and completed each phase, and all reasons for post-randomisation discontinuations grouped by treatment and major reason. Protocol deviations must be categorised in section 10.2.",
+      "source_section": "10.1 Disposition of Patients / 10.2 Protocol Deviations",
+      "source_page": 12,
+      "source_quote": "There should be a clear accounting of all patients who entered the study ... The numbers of patients who were randomised, and who entered and completed each phase of the study ... should be provided, as well as the reasons for all post-randomisation discontinuations, grouped by treatment and by major reason.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-014",
+      "domain": "csr_efficacy_analysis",
+      "rule_text": "For all studies intended to establish efficacy, an analysis including all patients with on-study data must be performed in addition to any primary analysis based on a reduced subset. The analysis must show the point estimate of the difference, the associated confidence interval, and hypothesis testing results.",
+      "source_section": "11.1 Data Sets Analysed / 11.4.1 Analysis of Efficacy",
+      "source_page": 13,
+      "source_quote": "Generally, the even if the applicant's proposed primary analysis is based on a reduced subset of the patients with data, there should also be for any trial intended to establish efficacy an additional analysis using all randomised (or otherwise entered) patients with any on-treatment data. ... The analysis should show the size (point estimate) of the difference between the treatments, the associated confidence interval, and where utilised, the results of hypothesis testing.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-015",
+      "domain": "csr_efficacy_analysis",
+      "rule_text": "For active-control equivalence studies, the analysis must show the confidence interval for the comparison between the two agents for critical endpoints and relate that interval to the prespecified degree of inferiority considered unacceptable.",
+      "source_section": "11.4.2.7 Active-Control Studies Intended to Show Equivalence",
+      "source_page": 17,
+      "source_quote": "the analysis should show the confidence interval for the comparison between the two agents for critical end points and the relation of that interval to the prespecified degree of inferiority that would be considered unacceptable.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-016",
+      "domain": "csr_efficacy_analysis",
+      "rule_text": "All interim analyses, formal or informal, pre-planned or ad hoc, by any study participant, sponsor staff member, or data monitoring group must be described in full, even if treatment groups were not identified; the need for statistical adjustment must be addressed.",
+      "source_section": "11.4.2.3 Interim Analyses and Data Monitoring",
+      "source_page": 16,
+      "source_quote": "Therefore, all interim analyses, formal or informal, pre-planned or ad hoc, by any study participant, sponsor staff member, or data monitoring group should be described in full, even if the treatment groups were not identified. The need for statistical adjustment because of such analyses should be addressed.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-017",
+      "domain": "csr_efficacy_analysis",
+      "rule_text": "Multiple comparison/multiplicity issues must be addressed; if more than one primary endpoint, analysis of particular endpoint, multiple treatment groups, or subsets, the statistical analysis must either explain the statistical adjustment used or give reasons why it was considered unnecessary.",
+      "source_section": "11.4.2.5 Multiple Comparison/Multiplicity",
+      "source_page": 17,
+      "source_quote": "If there was more than one primary endpoint (outcome variable), more than one analysis of particular endpoint, or if there were multiple treatment groups, or subsets of the patient population being examined, the statistical analysis should reflect awareness of this and either explain the statistical adjustment used for type I error criteria or give reasons why it was considered unnecessary.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-018",
+      "domain": "csr_safety_evaluation",
+      "rule_text": "Safety analysis must address: (1) extent of exposure (dose, duration, number of patients), (2) adverse events identified, classified, compared by treatment, and analysed for modifying factors, and (3) serious adverse events identified by close examination of premature discontinuations and deaths.",
+      "source_section": "12. Safety Evaluation",
+      "source_page": 19,
+      "source_quote": "Analysis of safety-related data can be considered at three levels. First, the extent of exposure (dose, duration, number of patients) should be examined ... Second, the more common adverse events ... should be identified, classified in some reasonable way, compared for treatment groups, and analysed ... Finally, serious adverse events and other significant adverse events should be identified, usually by close examination of patients who left the study prematurely.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-019",
+      "domain": "csr_safety_evaluation",
+      "rule_text": "All patients entering treatment who received at least one dose must be included in the safety analysis; if not, an explanation must be provided.",
+      "source_section": "12.1 Extent of Exposure",
+      "source_page": 20,
+      "source_quote": "It is assumed that all patients entered into treatment who received at least one dose of the treatment are included in the safety analysis; if that is not so, an explanation should be provided.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": "Explanation required if patients excluded."
+    },
+    {
+      "rule_id": "E3-020",
+      "domain": "csr_adverse_events",
+      "rule_text": "All adverse events occurring after initiation of study treatments must be displayed in summary tables (section 14.3.1), including changes in vital signs and laboratory changes considered serious. A summary table comparing treatment and control groups limited to events in at least 1% of the treated group must also be provided in the body of the report.",
+      "source_section": "12.2.2 Display of Adverse Events",
+      "source_page": 21,
+      "source_quote": "All adverse events occurring after initiation of study treatments ... should be displayed in summary tables (section 14.3.1). The tables should include changes in vital signs and any laboratory changes that were considered serious adverse events or other significant adverse events. ... an additional summary table comparing treatment and control groups, without the patient identifying numbers limited to relatively common adverse events (e.g., those in at least 1% of the treated group), should be provided in the body of the report.",
+      "severity": "high",
+      "thresholds": {
+        "ae_summary_table_threshold": "at least 1% of the treated group"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-021",
+      "domain": "csr_adverse_events",
+      "rule_text": "Individual adverse event listings in appendix 16.2.7 must include: patient identifier, age/race/sex/weight, location of CRF, adverse event (preferred and reported term), duration, severity, seriousness, action taken, outcome, causality assessment, date of onset, timing relative to last dose, and drug dose at time of event.",
+      "source_section": "12.2.4 Listing of Adverse Events by Patient",
+      "source_page": 23,
+      "source_quote": "All adverse events for each patient ... should be listed in appendix 16.2.7 ... The listing should be by investigator and by treatment group and should include: Patient identifier; Age, race, sex, weight; Location of CRFs; The adverse event (preferred term, reported term); Duration of the adverse event; Severity ... Seriousness ... Action taken; Outcome ... Causality assessment ... Date of onset ... Timing of onset ... in relation to last dose ... Study treatment at time of event ... Test drug/investigational product dose in absolute amount, mg/kg or mg/m2 at time of event; Drug concentration (if known); Duration of test drug/investigational product treatment; Concomitant treatment during study.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-022",
+      "domain": "csr_serious_adverse_events",
+      "rule_text": "A serious adverse event is any untoward medical occurrence that: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect. Narratives must be provided for each serious adverse event.",
+      "source_section": "12. Safety Evaluation / 12.3.2 Narratives",
+      "source_page": 19,
+      "source_quote": "a 'serious adverse event' (experience) or reaction is any untoward medical occurrence that at any dose: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-023",
+      "domain": "csr_laboratory",
+      "rule_text": "For each laboratory parameter, laboratory values over time should be described including group mean or median values, range of values, and number of patients with abnormal values or abnormal values of a certain size (e.g., twice the upper limit of normal, 5 times the upper limit).",
+      "source_section": "12.4.2.1 Laboratory Values Over Time",
+      "source_page": 26,
+      "source_quote": "For each parameter at each time over the course of the study (e.g., at each visit) the following should be described: the group mean or median values, the range of values, and the number of patients with abnormal values, or with abnormal values that are of a certain size (e.g., twice the upper limit of normal, 5 times the upper limit; choices should be explained).",
+      "severity": "high",
+      "thresholds": {
+        "lab_abnormality_examples": [
+          "twice the upper limit of normal",
+          "5 times the upper limit"
+        ]
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E3-024",
+      "domain": "csr_appendices",
+      "rule_text": "The CSR must include the following 16 mandatory appendix categories: 16.1 Study Information (including protocol and amendments, sample CRF, IEC/IRB lists, investigator list, signatures, batch listing, randomisation scheme, audit certificates, statistical methods documentation, inter-laboratory standardisation, publications), 16.2 Patient Data Listings, 16.3 Case Report Forms, and 16.4 Individual Patient Data Listings (US archival listings).",
+      "source_section": "16. Appendices",
+      "source_page": 28,
+      "source_quote": "16.1 STUDY INFORMATION: 16.1.1 Protocol and protocol amendments; 16.1.2 Sample case report form; 16.1.3 List of IECs or IRBs; 16.1.4 List and description of investigators; 16.1.5 Signatures; 16.1.6 Listing of patients receiving test drug from specific batches; 16.1.7 Randomisation scheme and codes; 16.1.8 Audit certificates; 16.1.9 Documentation of statistical methods; 16.1.10 Documentation of inter-laboratory standardisation methods; 16.1.11 Publications based on the study; 16.1.12 Important publications referenced in the report.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": "Some appendices need not be submitted with the report but need to be provided only on request; must be finalised by time of filing."
+    },
+    {
+      "rule_id": "E4-001",
+      "domain": "dose_response_general",
+      "rule_text": "Dose-response data are desirable for almost all new chemical entities entering the market. The data must be derived from sound, scientifically-based study designs using well-controlled, accepted approaches to minimise bias. Sponsors must also examine the entire database for possible dose-response information.",
+      "source_section": "IV. Guidance and Advice, Item 1",
+      "source_page": 9,
+      "source_quote": "Dose-response data are desirable for almost all new chemical entities entering the market. These data should be derived from study designs that are sound and scientifically based ... The studies should be well-controlled, using accepted approaches to minimize bias. In addition to carrying out formal dose-response studies, sponsors should examine the entire database for possible dose-response information.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-002",
+      "domain": "dose_response_general",
+      "rule_text": "Dose-response assessment should be an integral component of drug development, built into the development process to usually be accomplished with no loss of time and minimal extra effort.",
+      "source_section": "II. Obtaining Dose-Response Information — Dose-Response Assessment Should Be an Integral Part of Drug Development",
+      "source_page": 3,
+      "source_quote": "Assessment of dose-response should be an integral component of drug development with studies designed to assess dose-response an inherent part of establishing the safety and effectiveness of the drug. If development of dose-response information is built into the development process it can usually be accomplished with no loss of time and minimal extra effort.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-003",
+      "domain": "dose_response_general",
+      "rule_text": "Dose-response information must be used to: (a) identify a reasonable starting dose with specific adjustments for patient size, gender, age, concomitant illness and therapy; (b) identify reasonable response-guided titration steps and intervals; (c) identify a dose or response beyond which titration should not be attempted due to lack of further benefit or unacceptable increases in undesirable effects.",
+      "source_section": "IV. Guidance and Advice, Item 2",
+      "source_page": 9,
+      "source_quote": "The information obtained through targeted studies and analyses of the entire database should be used by the sponsor to: a. Identify a reasonable starting dose ... b. Identify reasonable, response-guided titration steps, and the interval at which they should be taken ... c. Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of a lack of further benefit or an unacceptable increase in undesirable effects.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-004",
+      "domain": "dose_response_study_design",
+      "rule_text": "Dose-ranging or concentration-response studies should be carried out early in development as well as in later stages to avoid failed phase 3 studies or accumulation of a database consisting largely of exposures at ineffective or excessive doses.",
+      "source_section": "IV. Guidance and Advice, Item 3",
+      "source_page": 9,
+      "source_quote": "It is prudent to carry out dose-ranging or concentration-response studies early in development as well as in later stages in order to avoid failed phase 3 studies or accumulation of a database that consists largely of exposures at ineffective or excessive doses.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-005",
+      "domain": "dose_response_study_design",
+      "rule_text": "The widely accepted and acceptable design for obtaining population-average dose-response data is the parallel, randomised dose-response study with three or more dosage levels, one of which may be zero (placebo). At least two active dose levels in addition to placebo are required; study of more than the minimum number of doses is desirable.",
+      "source_section": "IV. Guidance and Advice, Item 4",
+      "source_page": 9,
+      "source_quote": "A widely used, successful and acceptable design, but not the only study design for obtaining population average dose-response data, is the parallel, randomised dose-response study with three or more dosage levels, one of which may be zero (placebo). ... Several dose levels are needed, at least two in addition to placebo, but in general, study of more than the minimum number of doses is desirable.",
+      "severity": "high",
+      "thresholds": {
+        "minimum_dose_levels": "at least 2 active dose levels in addition to placebo (3 total including placebo)"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-006",
+      "domain": "dose_response_study_design",
+      "rule_text": "Dose-response trials must be well-controlled, using randomisation and blinding (unless blinding is unnecessary or impossible) to assure comparability of treatment groups and minimise bias; they must be of adequate size.",
+      "source_section": "III. Study Designs — General",
+      "source_page": 5,
+      "source_quote": "Trials intended to evaluate dose or concentration response should be well-controlled, using randomization and blinding (unless blinding is unnecessary or impossible) to assure comparability of treatment groups and to minimize potential patient, investigator, and analyst bias, and should be of adequate size.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Blinding exceptions where unnecessary or impossible."
+    },
+    {
+      "rule_id": "E4-007",
+      "domain": "dose_response_study_design",
+      "rule_text": "It is important to choose as wide a range of doses as is compatible with practicality and patient safety to discern clinically meaningful differences; this is especially important where there are no pharmacologic or plausible surrogate endpoints to give initial guidance as to dose.",
+      "source_section": "III. Study Designs — General",
+      "source_page": 5,
+      "source_quote": "It is important to choose as wide a range of doses as is compatible with practicality and patient safety to discern clinically meaningful differences. This is especially important where there are no pharmacologic or plausible surrogate endpoints to give initial guidance as to dose.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-008",
+      "domain": "dose_response_study_design",
+      "rule_text": "The parallel dose-response study must maintain the final dose for a time adequate to allow the dose-response comparison. The lowest dose(s) tested that are to be recommended must have a statistically significant and clinically meaningful effect.",
+      "source_section": "III. Specific Trial Designs — 1. Parallel dose-response",
+      "source_page": 6,
+      "source_quote": "the final dose should be maintained for a time adequate to allow the dose-response comparison ... It should be demonstrated, however, that the lowest dose(s) tested, if these are to be recommended, have a statistically significant and clinically meaningful effect.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-009",
+      "domain": "dose_response_study_design",
+      "rule_text": "Titration designs used as standard dose-response approaches have a critical disadvantage: this design by itself cannot distinguish response to increased dose from response to increased time on drug therapy or cumulative drug dosage effect.",
+      "source_section": "III. Specific Trial Designs — 3. Forced titration",
+      "source_page": 7,
+      "source_quote": "A critical disadvantage is that by itself, this study design cannot distinguish response to increased dose from response to increased time on drug therapy or a cumulative drug dosage effect.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-010",
+      "domain": "dose_response_study_design",
+      "rule_text": "Dose-response study periods at a given dose must be long enough for the full effect to be realized, whether delay is the result of pharmacokinetic or pharmacodynamic factors.",
+      "source_section": "I. Introduction — Interactions between Dose-Response and Time",
+      "source_page": 3,
+      "source_quote": "Dose-response studies should take time into account in a variety of other ways. The study period at a given dose should be long enough for the full effect to be realized, whether delay is the result of pharmacokinetic, or pharmacodynamic factors.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-011",
+      "domain": "dose_response_subgroups",
+      "rule_text": "Dose-response data must be explored for possible differences in subsets based on demographic characteristics such as age, gender, or race, including examination for pharmacokinetic differences among these groups due to metabolic differences, body habitus, or composition.",
+      "source_section": "IV. Guidance and Advice, Item 7",
+      "source_page": 10,
+      "source_quote": "Dose-response data should be explored for possible differences in subsets based on demographic characteristics, such as age, gender or race. To do this it is important to know whether there are pharmacokinetic differences among these groups, e.g. due to metabolic differences, differences in body habitus or composition, etc.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-012",
+      "domain": "dose_response_general",
+      "rule_text": "Dose-response data for both beneficial and undesirable effects may provide information allowing approval of a range of doses that encompass an appropriate benefit to risk ratio. A well-controlled dose-response study is also a study that can serve as primary evidence of effectiveness.",
+      "source_section": "IV. Guidance and Advice, Item 5",
+      "source_page": 10,
+      "source_quote": "Dose-response data for both beneficial and undesirable effects may provide information that allows approval of a range of doses that encompass an appropriate benefit to risk ratio. A well-controlled dose-response study is also a study that can serve as primary evidence of effectiveness.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-013",
+      "domain": "dose_response_concentration",
+      "rule_text": "Concentration-response studies are critical to defining concentration monitoring therapeutic 'windows' and are useful when pharmacokinetic variability among patients is great; they can be used to define effects of new dosage forms or new dosage regimens without need for additional clinical data where permitted by regional regulations.",
+      "source_section": "I. Introduction — Uses of Concentration-Response Data",
+      "source_page": 2,
+      "source_quote": "Prospective randomized concentration-response studies are critical to defining concentration monitoring therapeutic 'windows' but are also useful when pharmacokinetic variability among patients is great ... Concentration-response information can also allow selection of doses (based on the range of concentrations they will achieve) most likely to lead to a satisfactory response.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E4-014",
+      "domain": "dose_response_regulatory",
+      "rule_text": "Approval based on data from studies using a fixed single dose or a defined dose range (without valid dose-response information) might be appropriate where benefit from a new therapy in treating or preventing a serious disease is clear. Post-marketing dose-finding studies may be pursued in such cases.",
+      "source_section": "II. Obtaining Dose-Response Information — Regulatory Considerations When Dose-Response Data Are Imperfect",
+      "source_page": 4,
+      "source_quote": "approval based on data from studies using a fixed single dose or a defined dose range (but without valid dose-response information) might be appropriate where benefit from a new therapy in treating or preventing a serious disease is clear.",
+      "severity": "medium",
+      "thresholds": null,
+      "exceptions": "Serious/life-threatening diseases where benefit is clear may allow deferred dose-response requirement."
+    },
+    {
+      "rule_id": "E7-001",
+      "domain": "geriatric_population_definition",
+      "rule_text": "The geriatric population is defined for this guideline as comprising patients aged 65 years or older. Protocols should not ordinarily include arbitrary upper age cutoffs; patients with concomitant illnesses should not be unnecessarily excluded.",
+      "source_section": "IV. Definition of the Population",
+      "source_page": 2,
+      "source_quote": "The geriatric population is arbitrarily defined, for the purpose of this guideline, as comprising patients aged 65 years or older. It is important, however, to seek patients in the older age range, 75 and above, to the extent possible. Protocols should not ordinarily include arbitrary upper age cutoffs.",
+      "severity": "critical",
+      "thresholds": {
+        "geriatric_age_threshold": ">= 65 years",
+        "older_age_range_target": "75 years and above to the extent possible"
+      },
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-002",
+      "domain": "geriatric_clinical_experience",
+      "rule_text": "Geriatric patients must be included in the Phase 3 database (and Phase 2 at the sponsor's option) in meaningful numbers sufficient to permit comparison of drug response to younger patients. For drugs used in diseases not unique to but present in the elderly, a minimum of 100 geriatric patients would usually allow detection of clinically important differences.",
+      "source_section": "V. Clinical Experience",
+      "source_page": 2,
+      "source_quote": "Geriatric patients should be included in the Phase 3 database (and in Phase 2, at the sponsor's option) in meaningful numbers. The geriatric subpopulation should be represented sufficiently to permit the comparison of drug response in them to that of younger patients. For drugs used in diseases not unique to, but present in, the elderly a minimum of 100 patients would usually allow detection of clinically important differences.",
+      "severity": "critical",
+      "thresholds": {
+        "minimum_geriatric_patients": "minimum of 100 patients (for drugs used in diseases not unique to but present in the elderly)"
+      },
+      "exceptions": "For drugs treating relatively uncommon diseases, smaller numbers of the elderly would be expected. For diseases characteristically associated with aging (e.g., Alzheimer's), geriatric patients will constitute the major portion of the clinical database."
+    },
+    {
+      "rule_id": "E7-003",
+      "domain": "geriatric_general_principle",
+      "rule_text": "Drugs should be studied in all age groups, including the elderly, for which they will have significant utility. Patients entering clinical trials should be reasonably representative of the population that will be later treated by the drug.",
+      "source_section": "II. General Principle",
+      "source_page": 1,
+      "source_quote": "Drugs should be studied in all age groups, including the elderly, for which they will have significant utility. Patients entering clinical trials should be reasonably representative of the population that will be later treated by the drug.",
+      "severity": "critical",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-004",
+      "domain": "geriatric_scope",
+      "rule_text": "The guideline applies to new molecular entities likely to have significant use in the elderly (either because disease is characteristically one of aging, or because geriatric patients are known to be a substantial portion of the treated population). It also applies to new formulations and new combinations where conditions common in the elderly are likely to be encountered.",
+      "source_section": "III. Scope of Guideline",
+      "source_page": 1,
+      "source_quote": "This guideline is directed principally toward new Molecular Entities that are likely to have significant use in the elderly, either because the disease intended to be treated is characteristically a disease of aging (e.g., Alzheimer's disease) or because the population to be treated is known to include substantial numbers of geriatric patients (e.g., hypertension).",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Exemptions should be determined in advance by sponsors or sponsor and drug registration authorities, based on estimates of disease prevalence by age."
+    },
+    {
+      "rule_id": "E7-005",
+      "domain": "geriatric_pk_studies",
+      "rule_text": "It is important to determine whether the pharmacokinetic behaviour of the drug in elderly subjects or patients differs from that in younger adults and to characterise the effects of influences more common in the elderly such as abnormal renal or hepatic function. Information may come from a Pharmacokinetic Screen or from formal PK studies.",
+      "source_section": "VI. Pharmacokinetic Studies",
+      "source_page": 2,
+      "source_quote": "It is important to determine whether or not the pharmacokinetic behavior of the drug in elderly subjects or patients is different from that in younger adults and to characterize the effects of influences, such as abnormal renal or hepatic function, that are more common in the elderly even though they can occur in any age group. Information regarding age-related differences in the pharmacokinetics of the drug can come, at the sponsor's option, either from a Pharmacokinetic Screen ... or from formal pharmacokinetic studies.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-006",
+      "domain": "geriatric_pk_studies",
+      "rule_text": "Formal PK studies in geriatric patients may begin with a pilot trial of limited size under steady-state conditions; if large, potentially medically important age-related PK differences are found, the initial PK study must be followed by a multiple-dose PK study of sufficient size to permit statistical comparisons (geriatric vs. younger) at steady-state.",
+      "source_section": "VI.A Formal Pharmacokinetic Studies",
+      "source_page": 3,
+      "source_quote": "In either case, if large (i.e., potentially medically important) age-related differences are found, the initial PK study may need to be followed by a multiple-dose PK study of sufficient size to permit statistical comparisons (geriatric vs. younger) at steady-state.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-007",
+      "domain": "geriatric_pk_screen",
+      "rule_text": "A Pharmacokinetic Screen may be used as an alternative to a separate PK evaluation; it involves obtaining a small number (one or two) of drug blood level determinations at trough or other defined times from sufficient numbers of Phase 2/3 clinical trial patients, both geriatric and younger, to detect age-associated differences in PK behaviour.",
+      "source_section": "VI.B Pharmacokinetic Screening Approach",
+      "source_page": 3,
+      "source_quote": "Sponsors may opt, instead of conducting a separate PK evaluation of the elderly, to utilize a Pharmacokinetic Screen in conjunction with the main Phase 3 (and Phase 2, if the sponsor wishes) clinical trials program. This screening procedure involves obtaining, under steady-state conditions, a small number (one or two) of drug blood level determinations at 'trough' (i.e., just prior to the next dose) or other defined times from sufficient numbers of Phase 2/3 clinical trials patients, geriatric and younger, to detect age-associated differences in pharmacokinetic behavior.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-008",
+      "domain": "geriatric_renal_hepatic",
+      "rule_text": "Drugs significantly excreted through renal mechanisms must be studied to define the effects of altered renal function on their pharmacokinetics. Drugs subject to significant hepatic metabolism and/or excretion or that have active metabolites must have PK studies carried out in hepatically-impaired young or elderly patient volunteers.",
+      "source_section": "VII. Pharmacokinetics in Renally or Hepatically Impaired Patients",
+      "source_page": 3,
+      "source_quote": "drugs excreted (parent drug or active metabolites) significantly through renal mechanisms should be studied to define the effects of altered renal function on their pharmacokinetics. ... drugs subject to significant hepatic metabolism and/or excretion, or that have active metabolites, may pose special problems in the elderly. Pharmacokinetic studies should be carried out in hepatically-impaired young or elderly patient volunteers.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Can be obtained in younger subjects with renal impairment."
+    },
+    {
+      "rule_id": "E7-009",
+      "domain": "geriatric_pharmacodynamics",
+      "rule_text": "Separate pharmacodynamic/dose-response studies in geriatric patients are recommended for: (1) sedative/hypnotic agents and other psychoactive drugs or drugs with important CNS effects, and (2) where subgroup comparisons in Phase 2/3 database indicate potentially medically significant age-associated differences in effectiveness or adverse reaction profile not explainable by PK differences.",
+      "source_section": "VIII. Pharmacodynamic/Dose Response Studies",
+      "source_page": 4,
+      "source_quote": "Separate studies are, however, recommended in the following situations: Sedative/hypnotic agents and other psychoactive drugs or drugs with important CNS effects, such as sedating antihistamines; Where subgroup comparisons (geriatric versus younger) in the Phase 2/3 clinical trials database indicate potentially medically significant age-associated differences in the drug's effectiveness or adverse reaction profile, not explainable by PK differences.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Pharmacodynamic studies in geriatric patients are not a routine requirement."
+    },
+    {
+      "rule_id": "E7-010",
+      "domain": "geriatric_drug_interactions",
+      "rule_text": "Drug-drug interaction studies are particularly important for geriatric patients. The following are ordinarily recommended: (1) digoxin and oral anticoagulant interaction studies; (2) for drugs with extensive hepatic metabolism: hepatic-enzyme inducer/inhibitor studies; (3) for drugs metabolised by cytochrome P-450 enzymes: studies of known inhibitors (e.g., quinidine for CYP2D6; ketoconazole and macrolide antibiotics for CYP3A4); (4) interaction studies with other drugs likely to be co-administered.",
+      "source_section": "IX. Drug-Drug Interaction Studies",
+      "source_page": 4,
+      "source_quote": "the following are ordinarily recommended: Digoxin and oral anticoagulant interaction studies ... For drugs that undergo extensive hepatic metabolism, determination of the effects of hepatic-enzyme inducers (e.g., phenobarbital) and inhibitors (e.g., cimetidine); For drugs metabolized by cytochrome P-450 enzymes, it is critical to examine the effects of known inhibitors, such as quinidine (for cytochrome P-450 2D6) or ketoconazole and macrolide antibiotics (for drugs metabolized by cytochrome P-450 3A4); Interaction studies with other drugs that are likely to be used with the test drug.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": "Interaction studies with other drugs may be waived if important interactions have been ruled out by a Pharmacokinetic Screen."
+    },
+    {
+      "rule_id": "E7-011",
+      "domain": "geriatric_clinical_experience",
+      "rule_text": "The overall database of the dossier must be examined for the presence of age-related differences in adverse event rates, effectiveness, and dose-response. If these relatively crude overview analyses show important differences, further evaluation may be needed.",
+      "source_section": "V. Clinical Experience",
+      "source_page": 2,
+      "source_quote": "The overall database of the dossier should be examined for the presence of age-related differences, e.g., in adverse event rates, in effectiveness, and in dose-response. If these relatively crude overview analyses show important differences, further evaluation may be needed.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    },
+    {
+      "rule_id": "E7-012",
+      "domain": "geriatric_scope",
+      "rule_text": "The guideline applies to new formulations and new combinations of established medicinal products when there is specific reason to expect conditions common in the elderly (e.g., renal or hepatic impairment, impaired cardiac function, concomitant illnesses or medications) are likely to be encountered and not already dealt with in current labelling.",
+      "source_section": "III. Scope of Guideline",
+      "source_page": 1,
+      "source_quote": "The guideline applies also to new formulations and new combinations of established medicinal products when there is specific reason to expect that conditions common in the elderly (e.g., renal or hepatic impairment, impaired cardiac function, concomitant illnesses or concomitant medications) are likely to be encountered and are not already dealt with in current labelling.",
+      "severity": "high",
+      "thresholds": null,
+      "exceptions": null
+    }
+  ]
+}

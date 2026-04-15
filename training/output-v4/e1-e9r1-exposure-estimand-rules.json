@@ -1,0 +1,1107 @@
+{
+  "meta": {
+    "title": "ICH E1 Population Exposure + ICH E9(R1) Estimands",
+    "version": "4.0",
+    "created": "2026-03-23",
+    "guidelines": ["ICH E1", "ICH E9(R1)"],
+    "source_files": [
+      "training/stage-1/ich/E1_Population_Exposure.pdf",
+      "training/stage-1/ich-complete/E9-R1_Step4_Guideline_2019_1203.pdf"
+    ],
+    "quality_standard": "Verbatim quotes. VERIFIED status.",
+    "rule_counts": {
+      "ICH_E1": 30,
+      "ICH_E9R1": 51,
+      "total": 81,
+      "by_severity": {
+        "critical": 31,
+        "high": 37,
+        "medium": 13
+      },
+      "ice_strategy_rules": 6
+    }
+  },
+  "rules": [
+
+    {
+      "rule_id": "E1-EXP-001",
+      "rule_text": "Drugs intended for long-term treatment are those intended for chronic or repeated intermittent use for longer than 6 months. The safety evaluation must characterise and quantify the safety profile over a duration consistent with this intended long-term use.",
+      "source_section": "Introduction / Objective",
+      "source_quote": "The objective of this guideline is to present an accepted set of principles for the safety evaluation of drugs intended for the long-term treatment (chronic or repeated intermittent use for longer than 6 months) of non-life-threatening diseases.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "long_term_definition_months": ">6"
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-002",
+      "rule_text": "The 6-month exposure cohort must be 300–600 patients at dosage levels intended for clinical use. This cohort must be large enough to observe whether frequently occurring adverse drug events (ADEs) increase or decrease over time, and to observe delayed events of reasonable frequency in the range of 0.5%–5%.",
+      "source_section": "Section 4",
+      "source_quote": "To achieve this objective the cohort of exposed subjects should be large enough to observe whether more frequently occurring events increase or decrease over time as well as to observe delayed events of reasonable frequency (e.g., in the general range of 0.5%-5%). Usually 300-600 patients should be adequate.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "minimum_patients_at_6_months": 300,
+        "maximum_patients_at_6_months": 600,
+        "ade_frequency_range_lower_percent": 0.5,
+        "ade_frequency_range_upper_percent": 5.0
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-003",
+      "rule_text": "A minimum of 100 patients must be exposed for at least 12 months (1 year) as part of the safety database. When no serious ADE is observed in a one-year exposure period, 100 patients provides reasonable assurance that the true cumulative one-year incidence is no greater than 3%.",
+      "source_section": "Section 5",
+      "source_quote": "100 patients exposed for a minimum of one-year is considered to be acceptable to include as part of the safety data base. The data should come from prospective studies appropriately designed to provide at least one year exposure at dosage levels intended for clinical use. When no serious ADE is observed in a one-year exposure period this number of patients can provide reasonable assurance that the true cumulative one year incidence is no greater than 3%.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "minimum_patients_at_12_months": 100,
+        "maximum_assured_cumulative_1yr_incidence_percent": 3.0,
+        "minimum_exposure_duration_months": 12
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-004",
+      "rule_text": "The 12-month patient data must come from prospective studies appropriately designed to provide at least one year of exposure at dosage levels intended for clinical use. Open-label or non-concurrent controlled studies are acceptable for this purpose.",
+      "source_section": "Section 5",
+      "source_quote": "The data should come from prospective studies appropriately designed to provide at least one year exposure at dosage levels intended for clinical use.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "study_design": "prospective",
+        "minimum_duration_months": 12
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-005",
+      "rule_text": "The total number of individuals treated with the investigational drug — including short-term exposure across all clinical development — is anticipated to be approximately 1500. Japan currently accepts 500–1500 patients due to post-marketing surveillance requirements.",
+      "source_section": "Section 6",
+      "source_quote": "It is anticipated that the total number of individuals treated with the investigational drug, including short-term exposure, will be about 1500. Japan currently accepts 500-1500 patients: the potential for a smaller number of patients is due to the post-marketing surveillance requirement, the actual number for a specific drug being determined by the information available on the drug and drug class.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "expected_total_subjects": 1500,
+        "japan_acceptable_range_lower": 500,
+        "japan_acceptable_range_upper": 1500
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-006",
+      "rule_text": "Filing for approval will usually be possible based on data from patients treated through 6 months. However, 12-month data must be submitted prior to approval in the United States and Japan. In the European Community, 12-month data may be submitted after approval.",
+      "source_section": "Section 8",
+      "source_quote": "Filing for approval will usually be possible based on the data from patients treated through 6 months. Data on patients treated through 12 months must be submitted as soon as available and prior to approval in the United States and Japan but may be submitted after approval in the E.C..",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "filing_possible_at_months": 6,
+        "prior_to_approval_requirement_US": "12 months data",
+        "prior_to_approval_requirement_Japan": "12 months data",
+        "post_approval_acceptable_EC": "12 months data"
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-007",
+      "rule_text": "For priority drugs in the United States, the initial submission must include the 12-month patient data; the standard allowance to file on 6-month data does not apply.",
+      "source_section": "Section 8",
+      "source_quote": "In the U.S. the initial submission for those drugs designated as priority drugs must include the 12-months patient data.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "us_priority_drug_required_data_months": 12
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-008",
+      "rule_text": "The safety evaluation during clinical drug development is not expected to characterise rare adverse events — for example, those occurring in less than 1 in 1000 patients. The standard database size targets detection of events at approximately 0.5%–5% frequency.",
+      "source_section": "Introduction",
+      "source_quote": "The safety evaluation during clinical drug development is not expected to characterise rare adverse events, for example, those occurring in less than 1 in 1000 patients.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "rare_event_threshold_per_1000_patients": 1,
+        "detection_target_frequency_lower_percent": 0.5,
+        "detection_target_frequency_upper_percent": 5.0
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-009",
+      "rule_text": "Short-term event rates — defined as the cumulative 3-month incidence of approximately 1% — are expected to be well characterised by the standard safety database. Events where the rate of occurrence changes over a longer period may need additional characterisation depending on severity.",
+      "source_section": "Introduction",
+      "source_quote": "It is expected that short-term event rates (cumulative 3-month incidence of about 1%) will be well characterised. Events where the rate of occurrence changes over a longer period of time may need to be characterised depending on their severity and importance to the risk-benefit assessment of the drug.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "short_term_incidence_characterised_percent": 1.0,
+        "short_term_window_months": 3
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-010",
+      "rule_text": "Duration of drug exposure and its relationship to both time and magnitude of occurrence of adverse events are important considerations in determining the size of the safety database. The 300–600 / 100 patient framework is directly driven by these duration-safety considerations.",
+      "source_section": "Introduction",
+      "source_quote": "Thus, duration of drug exposure and its relationship to both time and magnitude of occurrence of adverse events are important considerations in determining the size of the data base necessary to achieve such goals.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-011",
+      "rule_text": "Regulatory standards for the safety evaluation of drugs must be based on three foundations: (1) previous experience with the occurrence and detection of ADEs, (2) statistical considerations of the probability of detecting specified frequencies of ADEs, and (3) practical considerations.",
+      "source_section": "Section 2",
+      "source_quote": "Regulatory standards for the safety evaluation of drugs should be based on previous experience with the occurrence and detection of adverse drug events (ADEs), statistical considerations of the probability of detecting specified frequencies of ADEs, and practical considerations.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-012",
+      "rule_text": "Most ADEs first occur and are most frequent within the first few months of drug treatment. The 6-month exposure requirement is predicated on this finding — 6-month treatment of 300–600 patients should be adequate to characterise the pattern of ADEs over time.",
+      "source_section": "Section 4",
+      "source_quote": "Available information suggests that most ADEs first occur, and are most frequent, within the first few months of drug treatment. The number of patients treated for 6 months at dosage levels intended for clinical use, should be adequate to characterise the pattern of ADEs over time.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "characterisation_duration_months": 6
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-013",
+      "rule_text": "There is concern that some ADEs may increase in frequency or severity with time, or that some serious ADEs may occur only after drug treatment for more than 6 months. This is the scientific justification for requiring 100 patients to be treated for 12 months.",
+      "source_section": "Section 5",
+      "source_quote": "There is concern that, although they are likely to be uncommon, some ADEs may increase in frequency or severity with time or that some serious ADEs may occur only after drug treatment for more than 6 months. Therefore, some patients should be treated with the drug for 12 months.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "concern_threshold_months": 6,
+        "required_12_month_patients": 100
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-014",
+      "rule_text": "Larger and/or longer-term safety databases are required when there is concern about late-developing ADEs or ADEs that increase in severity or frequency over time. This concern may arise from: (1) animal study data, (2) clinical information from related chemical structures or pharmacologic class, or (3) pharmacokinetic or pharmacodynamic properties.",
+      "source_section": "Section 7a",
+      "source_quote": "Instances where there is concern that the drug will cause late developing ADEs, or cause ADEs that increase in severity or frequency over time, would require a larger and/or longer-term safety data base. The concern could arise from: (1) data from animal studies; (2) clinical information from other agents with related chemical structures or from a related pharmacologic class; (3) pharmacokinetic or pharmacodynamic properties known to be associated with such ADEs.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-015",
+      "rule_text": "A greater long-term safety database is required when there is a need to quantitate the occurrence rate of an expected specific low-frequency ADE. This includes situations where a specific serious ADE has been identified in similar drugs or where an alert event is observed in early clinical trials.",
+      "source_section": "Section 7b",
+      "source_quote": "Situations in which there is a need to quantitate the occurrence rate of an expected specific low-frequency ADE will require a greater long-term data base. Examples would include situations where a specific serious ADE has been identified in similar drugs or where a serious event that could represent an alert event is observed in early clinical trials.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-016",
+      "rule_text": "Larger safety databases may be needed for risk/benefit decisions when the benefit from the drug is: (1) small (e.g., symptomatic improvement in less serious medical conditions), (2) will be experienced by only a fraction of treated patients (e.g., preventive therapies in healthy populations), or (3) is of uncertain magnitude (e.g., efficacy on a surrogate endpoint).",
+      "source_section": "Section 7c",
+      "source_quote": "Larger safety data bases may be needed to make risk/benefit decisions in situations where the benefit from the drug is either (1) small (e.g., symptomatic improvement in less serious medical conditions) or (2) will be experienced by only a fraction of the treated patients (e.g., certain preventive therapies administered to healthy populations) or (3) is of uncertain magnitude (e.g., efficacy determination on a surrogate endpoint).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-017",
+      "rule_text": "Where there is concern that a drug may add to an already significant background rate of morbidity or mortality, clinical trials must be designed with sufficient patients to provide adequate statistical power to detect prespecified increases over the baseline morbidity or mortality.",
+      "source_section": "Section 7d",
+      "source_quote": "In situations where there is concern that a drug may add to an already significant background rate of morbidity or mortality, clinical trials may need to be designed with a sufficient number of patients to provide adequate statistical power to detect prespecified increases over the baseline morbidity or mortality.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-018",
+      "rule_text": "In some cases, a smaller number of patients than the standard 300–600 / 100 framework may be acceptable, for example, where the intended treatment population is small.",
+      "source_section": "Section 7e",
+      "source_quote": "In some cases, a smaller number of patients may be acceptable, for example, where the intended treatment population is small.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-019",
+      "rule_text": "A placebo-controlled trial allows the adverse event rate in the drug-treated group to be compared directly with the background event rate in the patient population. This design provides the strongest causality judgement capability. Active-controlled trials allow comparison between drugs but do not allow direct assessment of the background event rate.",
+      "source_section": "Introduction",
+      "source_quote": "A placebo-controlled trial allows the adverse event rate in the drug-treated group to be compared directly with the background event rate in the patient population being studied. Although a study with a positive or active control will allow a comparison of adverse event rates to be made between the test drug and the control drug, no direct assessment of the background event rate in the population studied can be made.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-020",
+      "rule_text": "A study with no concurrent control group makes it more difficult to assess the causality relationship between adverse events observed and the test drug. Concurrently controlled studies are preferred for causal assessment.",
+      "source_section": "Introduction",
+      "source_quote": "A study that has no concurrent control group makes it more difficult to assess the causality relationship between adverse events observed and the test drug.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-021",
+      "rule_text": "A harmonised regulatory standard is of value for the extent and duration of treatment needed to provide the safety database for drugs intended for long-term treatment of non-life-threatening conditions. Although this standard covers many indications and drug classes, there are exceptions.",
+      "source_section": "Section 1",
+      "source_quote": "A harmonised regulatory standard is of value for the extent and duration of treatment needed to provide the safety data base for drugs intended for long-term treatment of non-life-threatening conditions. Although this standard covers many indications and drug classes, there are exceptions.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-022",
+      "rule_text": "The clinical data base required for efficacy testing may be occasionally larger, or may require longer patient observation, than that required by the E1 safety guideline. The efficacy database size does not substitute for compliance with the E1 safety exposure requirements.",
+      "source_section": "Section 7 (preamble)",
+      "source_quote": "It should also be recognised that the clinical data base required for efficacy testing may be occasionally larger or may require longer patient observation than that required by this guideline.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-023",
+      "rule_text": "The selection of the specific number of patients to be followed for 1 year is to a large extent a judgement based on the probability of detecting a given ADE frequency level and practical considerations, given the current absence of complete information about the relationship of ADEs to treatment duration.",
+      "source_section": "Section 5",
+      "source_quote": "In the absence of more information about the relationship of ADEs to treatment duration, selection of a specific number of patients to be followed for 1 year is to a large extent a judgement based on the probability of detecting a given ADE frequency level and practical considerations.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-024",
+      "rule_text": "Information about the occurrence of ADEs in relation to duration of treatment for different drug classes is incomplete, and further investigations to obtain this information would be useful. The guideline standards are therefore based on statistical inference rather than complete empirical evidence.",
+      "source_section": "Section 3",
+      "source_quote": "Information about the occurrence of ADEs in relation to duration of treatment for different drug classes is incomplete, and further investigations to obtain this information would be useful.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-025",
+      "rule_text": "The E1 guideline applies specifically to drugs intended for non-life-threatening conditions requiring long-term treatment. Life-threatening conditions are out of scope — different benefit/risk frameworks apply to those disease areas.",
+      "source_section": "Title / Objective",
+      "source_quote": "The objective of this guideline is to present an accepted set of principles for the safety evaluation of drugs intended for the long-term treatment (chronic or repeated intermittent use for longer than 6 months) of non-life-threatening diseases.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "scope": "non-life-threatening conditions",
+        "excluded_scope": "life-threatening conditions"
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-026",
+      "rule_text": "All exposure data must be collected at dosage levels intended for clinical use. Safety data from doses outside the intended therapeutic range cannot substitute for the 300–600 (6-month) or 100 (12-month) patient requirements.",
+      "source_section": "Sections 4 and 5",
+      "source_quote": "Usually 300-600 patients should be adequate [at] dosage levels intended for clinical use... 100 patients exposed for a minimum of one-year... at dosage levels intended for clinical use.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "dose_requirement": "dosage levels intended for clinical use"
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-027",
+      "rule_text": "The summary 300/600/100/1500 exposure framework is: (a) 300–600 patients at 6 months to characterise ADE patterns; (b) 100 patients at minimum 12 months for late-onset ADE detection with assurance of ≤3% cumulative incidence; (c) approximately 1500 total subjects including short-term exposure. These three tiers together constitute the standard safety database.",
+      "source_section": "Sections 4, 5, and 6",
+      "source_quote": "Usually 300-600 patients should be adequate... 100 patients exposed for a minimum of one-year is considered to be acceptable... It is anticipated that the total number of individuals treated with the investigational drug, including short-term exposure, will be about 1500.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "tier_1_patients_at_6_months_lower": 300,
+        "tier_1_patients_at_6_months_upper": 600,
+        "tier_2_patients_at_12_months": 100,
+        "tier_3_total_subjects": 1500,
+        "tier_2_assured_max_cumulative_incidence_percent": 3.0
+      }
+    },
+
+    {
+      "rule_id": "E1-EXP-028",
+      "rule_text": "The design of clinical studies can significantly influence the ability to make causality judgements about relationships between the drug and adverse events. Study design choice (placebo-controlled, active-controlled, or uncontrolled) must be considered in interpreting the safety data.",
+      "source_section": "Introduction",
+      "source_quote": "The design of the clinical studies can significantly influence the ability to make causality judgements about the relationships between the drug and adverse events.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-029",
+      "rule_text": "It is expected that additional exceptions to the standard E1 exposure requirements may arise beyond those listed. The sponsor and regulator must evaluate each drug and indication individually to determine if the harmonised standard is applicable or if modification is warranted.",
+      "source_section": "Section 7",
+      "source_quote": "There are a number of circumstances where the harmonised general standards for the clinical safety evaluation may not be applicable. Reasons for, and examples of, these exceptions are listed below. It is expected that additional examples may arise.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E1-EXP-030",
+      "rule_text": "The E1 guideline was adopted at Step 4 of the ICH Process on 27 October 1994 and is recommended for adoption to the regulatory bodies of the European Union, Japan, and USA. It represents a tripartite harmonised standard across all three ICH regions.",
+      "source_section": "Document History / Cover",
+      "source_quote": "Having reached Step 4 of the ICH Process at the ICH Steering Committee meeting on 27 October 1994, this guideline is recommended for adoption to the three regulatory parties to ICH.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "population_exposure",
+      "guideline": "ICH E1",
+      "thresholds": {
+        "step4_adoption_date": "27 October 1994",
+        "regions": ["EU", "Japan", "USA"]
+      }
+    },
+
+    {
+      "rule_id": "E9R1-EST-001",
+      "rule_text": "An estimand is a precise description of the treatment effect reflecting the clinical question posed by the trial objective. It summarises at a population level what the outcomes would be in the same patients under different treatment conditions being compared.",
+      "source_section": "Glossary / A.3",
+      "source_quote": "An estimand is a precise description of the treatment effect reflecting the clinical question posed by the trial objective. It summarises at a population-level what the outcomes would be in the same patients under different treatment conditions being compared.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-EST-002",
+      "rule_text": "The description of an estimand involves precise specifications of four attributes: (1) treatment, (2) population, (3) variable (endpoint), and (4) population-level summary. These attributes together with the strategies for addressing intercurrent events fully define the estimand.",
+      "source_section": "A.3.3",
+      "source_quote": "The attributes below are used to construct the estimand, defining the treatment effect of interest. The treatment condition of interest... The population of patients targeted by the clinical question... The variable (or endpoint) to be obtained for each patient... Finally, a population-level summary for the variable should be specified.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "estimand_attributes": [
+          "treatment",
+          "population",
+          "variable (endpoint)",
+          "population-level summary"
+        ]
+      }
+    },
+
+    {
+      "rule_id": "E9R1-EST-003",
+      "rule_text": "The TREATMENT attribute specifies the treatment condition of interest and, as appropriate, the alternative treatment condition to which comparison will be made. These might be individual interventions, combinations of interventions administered concurrently, or complex sequences of interventions.",
+      "source_section": "A.3.3",
+      "source_quote": "The treatment condition of interest and, as appropriate, the alternative treatment condition to which comparison will be made (referred to as 'treatment' through the remainder of this document). These might be individual interventions, combinations of interventions administered concurrently, e.g. as add-on to standard of care, or might consist of an overall regimen involving a complex sequence of interventions.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-EST-004",
+      "rule_text": "The POPULATION attribute specifies the population of patients targeted by the clinical question. This will be represented by the entire trial population, a subgroup defined by a particular characteristic measured at baseline, or a principal stratum defined by the occurrence or non-occurrence of a specific intercurrent event.",
+      "source_section": "A.3.3",
+      "source_quote": "The population of patients targeted by the clinical question. This will be represented by the entire trial population, a subgroup defined by a particular characteristic measured at baseline, or a principal stratum defined by the occurrence (or non-occurrence, depending on context) of a specific intercurrent event.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-EST-005",
+      "rule_text": "The VARIABLE (endpoint) attribute specifies the variable to be obtained for each patient that is required to address the clinical question. The specification of the variable might include whether the patient experiences an intercurrent event.",
+      "source_section": "A.3.3",
+      "source_quote": "The variable (or endpoint) to be obtained for each patient that is required to address the clinical question. The specification of the variable might include whether the patient experiences an intercurrent event.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-EST-006",
+      "rule_text": "The POPULATION-LEVEL SUMMARY attribute specifies the summary measure for the variable, providing a basis for comparison between treatment conditions. When defining a treatment effect of interest, the definition must identify an effect due to treatment and not due to potential confounders such as differences in duration of observation or patient characteristics.",
+      "source_section": "A.3.3",
+      "source_quote": "Finally, a population-level summary for the variable should be specified, providing a basis for comparison between treatment conditions. When defining a treatment effect of interest, it is important to ensure that the definition identifies an effect due to treatment and not due to potential confounders such as differences in duration of observation or patient characteristics.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ICE-001",
+      "rule_text": "Intercurrent events (ICEs) are events occurring after treatment initiation that affect either the interpretation or the existence of the measurements associated with the clinical question of interest. It is necessary to address intercurrent events when describing the clinical question in order to precisely define the treatment effect to be estimated.",
+      "source_section": "A.3.1 / Glossary",
+      "source_quote": "Intercurrent events are events occurring after treatment initiation that affect either the interpretation or the existence of the measurements associated with the clinical question of interest. It is necessary to address intercurrent events when describing the clinical question of interest in order to precisely define the treatment effect that is to be estimated.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ICE-002",
+      "rule_text": "STRATEGY 1 — TREATMENT POLICY STRATEGY: The occurrence of the intercurrent event is considered irrelevant in defining the treatment effect of interest; the value for the variable of interest is used regardless of whether or not the intercurrent event occurs. This reflects the ITT 'effect of a treatment policy' comparison.",
+      "source_section": "A.3.2",
+      "source_quote": "The occurrence of the intercurrent event is considered irrelevant in defining the treatment effect of interest: the value for the variable of interest is used regardless of whether or not the intercurrent event occurs. For example, when specifying how to address use of additional medication as an intercurrent event, the values of the variable of interest are used whether or not the patient takes additional medication.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "strategy_number": 1,
+        "strategy_name": "Treatment Policy Strategy",
+        "key_feature": "Variable used regardless of whether ICE occurs",
+        "limitation": "Cannot be implemented for terminal events (e.g. death) since post-event values do not exist"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-ICE-003",
+      "rule_text": "STRATEGY 2 — COMPOSITE VARIABLE STRATEGY: The intercurrent event is considered in itself to be informative about the patient's outcome and is therefore incorporated into the definition of the variable. For example, a patient who discontinues treatment because of toxicity may be considered not to have been successfully treated, so discontinuation becomes another mode of failure.",
+      "source_section": "A.3.2",
+      "source_quote": "This relates to the variable of interest (see A.3.3.). An intercurrent event is considered in itself to be informative about the patient's outcome and is therefore incorporated into the definition of the variable. For example, a patient who discontinues treatment because of toxicity may be considered not to have been successfully treated. If the outcome variable was already success or failure, discontinuation of treatment for toxicity would simply be considered another mode of failure.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "strategy_number": 2,
+        "strategy_name": "Composite Variable Strategy",
+        "key_feature": "ICE incorporated into definition of the variable itself",
+        "typical_use": "Terminal events, discontinuation due to toxicity, progression-free survival"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-ICE-004",
+      "rule_text": "STRATEGY 3 — HYPOTHETICAL STRATEGY: A scenario is envisaged in which the intercurrent event would not occur; the value of the variable to reflect the clinical question of interest is the value which the variable would have taken in the hypothetical scenario defined. The hypothetical conditions must be clearly specified to avoid ambiguity.",
+      "source_section": "A.3.2",
+      "source_quote": "A scenario is envisaged in which the intercurrent event would not occur: the value of the variable to reflect the clinical question of interest is the value which the variable would have taken in the hypothetical scenario defined... If a hypothetical strategy is proposed, it should be made clear what hypothetical scenario is envisaged.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "strategy_number": 3,
+        "strategy_name": "Hypothetical Strategy",
+        "key_feature": "Estimates outcome in a hypothetical scenario where the ICE did not occur",
+        "requirement": "Hypothetical scenario must be explicitly and unambiguously defined",
+        "limitation": "Often requires strong modelling assumptions"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-ICE-005",
+      "rule_text": "STRATEGY 4 — PRINCIPAL STRATUM STRATEGY: The target population is taken to be the 'principal stratum' — the subset of patients in which an intercurrent event would or would not occur (depending on context). The clinical question of interest relates to the treatment effect only within this principal stratum.",
+      "source_section": "A.3.2",
+      "source_quote": "This relates to the population of interest (see A.3.3.). The target population might be taken to be the 'principal stratum' (see Glossary) in which an intercurrent event would occur. Alternatively, the target population might be taken to be the principal stratum in which an intercurrent event would not occur. The clinical question of interest relates to the treatment effect only within the principal stratum.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "strategy_number": 4,
+        "strategy_name": "Principal Stratum Strategy",
+        "key_feature": "Restricts target population to a subset defined by potential occurrence of ICE",
+        "important_distinction": "Principal stratification (potential ICE) differs from subsetting on actual ICE",
+        "limitation": "Usually requires strong assumptions; target population is not directly observable"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-ICE-006",
+      "rule_text": "STRATEGY 5 — WHILE ON TREATMENT STRATEGY: For this strategy, response to treatment prior to the occurrence of the intercurrent event is of interest. The variable values up to the time of the intercurrent event are considered relevant; the observation time of interest is restricted to before the intercurrent event.",
+      "source_section": "A.3.2",
+      "source_quote": "For this strategy, response to treatment prior to the occurrence of the intercurrent event is of interest. Terminology for this strategy will depend on the intercurrent event of interest; e.g. 'while alive', when considering death as an intercurrent event... Like the composite variable strategy, the while on treatment strategy can hence be thought of as impacting the definition of the variable, in this case by restricting the observation time of interest to the time before the intercurrent event.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "strategy_number": 5,
+        "strategy_name": "While on Treatment Strategy",
+        "key_feature": "Restricts the outcome observation window to the period before the ICE occurs",
+        "typical_use": "Assessing drug effect on symptoms while patient is alive ('while alive') or while on assigned treatment",
+        "caution": "Particular care required if occurrence of ICE differs between treatment groups"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-ICE-007",
+      "rule_text": "It is not necessary to use the same strategy to address all intercurrent events. Different strategies will often be used to reflect the clinical question of interest in respect of different intercurrent events within the same trial.",
+      "source_section": "A.3.2",
+      "source_quote": "It is not necessary to use the same strategy to address all intercurrent events. Indeed, different strategies will often be used to reflect the clinical question of interest in respect of different intercurrent events.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ICE-008",
+      "rule_text": "Intercurrent events are not to be thought of as a drawback to be avoided in clinical trials. Discontinuation of prescribed treatment, use of additional medication, and other such events may occur in clinical practice as they do in clinical trials, and their occurrence must be considered explicitly when defining the clinical question of interest.",
+      "source_section": "A.3.1",
+      "source_quote": "Unlike missing data, intercurrent events are not to be thought of as a drawback to be avoided in clinical trials. Discontinuation of prescribed treatment, use of additional medication, and other such events may occur in clinical practice as they do in clinical trials, and their occurrence needs to be considered explicitly when defining the clinical question of interest.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ICE-009",
+      "rule_text": "The treatment policy strategy cannot be implemented for intercurrent events that are terminal events, since values for the variable after the intercurrent event do not exist. For example, an estimand based on this strategy cannot be constructed with respect to a variable that cannot be measured due to death.",
+      "source_section": "A.3.2",
+      "source_quote": "In general, the treatment policy strategy cannot be implemented for intercurrent events that are terminal events, since values for the variable after the intercurrent event do not exist. For example, an estimand based on this strategy cannot be constructed with respect to a variable that cannot be measured due to death.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ICE-010",
+      "rule_text": "The principal stratum strategy requires distinction between 'principal stratification' (based on potential intercurrent events) and simple subsetting on actual observed intercurrent events. Treatment effects defined by comparing outcomes in subsets of subjects who experienced an event confound treatment effects with differences in subject characteristics.",
+      "source_section": "A.3.2",
+      "source_quote": "It is important to distinguish 'principal stratification' (see Glossary), which is based on potential intercurrent events (for example, subjects who would discontinue therapy if assigned to the test product), from subsetting based on actual intercurrent events (subjects who discontinue therapy on their assigned treatment). The subset of subjects who experience an intercurrent event on the test treatment will often be a different subset from those who experience the same intercurrent event on control.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-001",
+      "rule_text": "The E9(R1) framework aligns trial planning, design, conduct, analysis, and interpretation. The sequence is: (1) define trial objective, (2) construct estimand, (3) select main estimator, (4) conduct sensitivity analysis. The estimand defines 'what is to be estimated'; the estimator is the analytic method; the estimate is the numerical result.",
+      "source_section": "A.2",
+      "source_quote": "Clear trial objectives should be translated into key clinical questions of interest by defining suitable estimands. An estimand defines the target of estimation for a particular trial objective (i.e. 'what is to be estimated', see A.3.). A suitable method of estimation (i.e. the analytic approach, referred to as the main 'estimator', see Glossary) can then be selected (see A.5.1.).",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "framework_sequence": [
+          "Trial Objective",
+          "Estimand",
+          "Main Estimator",
+          "Main Estimate + Sensitivity Analysis"
+        ]
+      }
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-002",
+      "rule_text": "The estimand-estimator distinction is fundamental: the estimand is the target of estimation (i.e. what is to be estimated); the estimator is the method of analysis to compute an estimate; and the estimate is the numerical value computed by the estimator. These three concepts must not be conflated.",
+      "source_section": "A.2 / Glossary",
+      "source_quote": "This framework enables proper trial planning that clearly distinguishes between the target of estimation (trial objective, estimand), the method of estimation (estimator), the numerical result ('estimate', see Glossary), and a sensitivity analysis.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "estimand": "target of estimation — what is to be estimated",
+        "estimator": "method of analysis to compute the estimate",
+        "estimate": "numerical value computed by the estimator"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-003",
+      "rule_text": "The targets of estimation (estimands) are to be defined in advance of a clinical trial. Once defined, a trial can be designed to enable reliable estimation of the targeted treatment effect. The estimand specification will usually be the main determinant for aspects of trial design, conduct, and analysis.",
+      "source_section": "A.3",
+      "source_quote": "The targets of estimation are to be defined in advance of a clinical trial. Once defined, a trial can be designed to enable reliable estimation of the targeted treatment effect... The specification of appropriate estimands (see A.3.) will usually be the main determinant for aspects of trial design, conduct (see A.4.) and analysis (see A.5.).",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-004",
+      "rule_text": "The clinical questions of interest and associated estimands should be specified at the initial stages of planning any clinical trial. Avoiding or over-simplifying the process risks misalignment between trial objectives, trial design, data collection, and method of analysis.",
+      "source_section": "A.3.4",
+      "source_quote": "The clinical questions of interest and associated estimands should be specified at the initial stages of planning any clinical trial... Avoiding or over-simplifying the process of discussing and constructing an estimand risks misalignment between trial objectives, trial design, data collection and method of analysis.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-005",
+      "rule_text": "The process of constructing an estimand must proceed sequentially from the trial objective and clinical question of interest. The choice of data collection method and method of analysis must not determine the estimand; rather, the estimand determines the analysis.",
+      "source_section": "A.3.4",
+      "source_quote": "Whilst an inability to derive a reliable estimate might preclude certain choices of strategy, it is important to proceed sequentially from the trial objective and an understanding of the clinical question of interest, and not for the choice of data collection and method of analysis to determine the estimand.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-006",
+      "rule_text": "The E9(R1) addendum distinguishes discontinuation of randomised treatment from study withdrawal. Discontinuation of treatment represents an intercurrent event to be addressed in the estimand specification. Study withdrawal gives rise to missing data to be addressed in the statistical analysis.",
+      "source_section": "A.1",
+      "source_quote": "The addendum distinguishes discontinuation of randomised treatment from study withdrawal. The former represents an intercurrent event, to be addressed in the precise specification of the trial objective through the estimand. The latter gives rise to missing data to be addressed in the statistical analysis.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "treatment_discontinuation": "intercurrent event — addressed in estimand",
+        "study_withdrawal": "missing data — addressed in statistical analysis"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-007",
+      "rule_text": "The E9(R1) addendum clarifies and extends ICH E9 with respect to the ITT principle. ICH E9 introduced the ITT principle in connection with the effect of a treatment policy in a randomised controlled trial. E9(R1) questions whether estimating an effect under the ITT principle always represents the treatment effect of greatest relevance to regulatory and clinical decision making.",
+      "source_section": "A.1",
+      "source_quote": "This addendum clarifies and extends ICH E9 in respect of the following topics. Firstly, ICH E9 introduced the Intention-To-Treat (ITT) principle in connection with the effect of a treatment policy in a randomised controlled trial... The question remains whether estimating an effect in accordance with the ITT principle always represents the treatment effect of greatest relevance to regulatory and clinical decision making.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-008",
+      "rule_text": "A trial is likely to have multiple objectives translated into multiple estimands, each associated with statistical testing and estimation. The multiplicity issues arising from multiple estimands must be addressed.",
+      "source_section": "A.4",
+      "source_quote": "More generally, a trial is likely to have multiple objectives translated into multiple estimands, each associated with statistical testing and estimation. The multiplicity issues arising should be addressed.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-009",
+      "rule_text": "The E9(R1) principles are relevant whenever a treatment effect is estimated or a hypothesis related to a treatment effect is tested, whether related to efficacy or safety. While the main focus is on randomised clinical trials, the principles are also applicable for single-arm trials and observational studies.",
+      "source_section": "A.1",
+      "source_quote": "The principles outlined in this addendum are relevant whenever a treatment effect is estimated, or a hypothesis related to a treatment effect is tested, whether related to efficacy or safety. While the main focus is on randomised clinical trials, the principles are also applicable for single arm trials and observational studies.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-FRAME-010",
+      "rule_text": "Regulatory interest in the application of the E9(R1) estimand principles will be greater for confirmatory clinical trials and, where used to generate confirmatory conclusions, for data integrated across trials.",
+      "source_section": "A.1",
+      "source_quote": "Regulatory interest in the application of the principles outlined will be greater for confirmatory clinical trials and, where used to generate confirmatory conclusions, for data integrated across trials.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-SENS-001",
+      "rule_text": "Sensitivity analysis must be planned for the main estimators of all estimands that will be important for regulatory decision making and labelling in the product information. A sensitivity analysis evaluates the robustness of inferences from the main estimator to deviations from its underlying assumptions.",
+      "source_section": "A.5.2.1",
+      "source_quote": "Sensitivity analysis should be planned for the main estimators of all estimands that will be important for regulatory decision making and labelling in the product information. This can be a topic for discussion and agreement between sponsor and regulator.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-SENS-002",
+      "rule_text": "Sensitivity analyses must be pre-specified. One or more analyses, focused on the same estimand as the main analysis, should be pre-specified to investigate the assumptions with the objective of verifying whether the estimate from the main estimator is robust to departures from its assumptions.",
+      "source_section": "A.5.2.1",
+      "source_quote": "One or more analyses, focused on the same estimand, should then be pre-specified to investigate these assumptions with the objective of verifying whether or not the estimate derived from the main estimator is robust to departures from its assumptions.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "pre_specification_required": true,
+        "target": "same estimand as main analysis"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-SENS-003",
+      "rule_text": "The statistical assumptions that underpin the main estimator must be documented. Sensitivity analysis may characterise the robustness to departures from assumptions in terms of the extent of departure required to change the interpretation of the results in terms of their statistical or clinical significance — for example, tipping point analysis.",
+      "source_section": "A.5.2.1",
+      "source_quote": "The statistical assumptions that underpin the main estimator should be documented... This might be characterised as the extent of departures from assumptions that change the interpretation of the results in terms of their statistical or clinical significance (e.g. tipping point analysis).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "documentation_required": true,
+        "example_method": "tipping point analysis"
+      }
+    },
+
+    {
+      "rule_id": "E9R1-SENS-004",
+      "rule_text": "When planning and conducting a sensitivity analysis, altering multiple aspects of the main analysis simultaneously makes it challenging to identify which assumptions are responsible for differences seen. A structured approach specifying the changes in assumptions that underlie alternative analyses is therefore desirable.",
+      "source_section": "A.5.2.2",
+      "source_quote": "When planning and conducting a sensitivity analysis, altering multiple aspects of the main analysis simultaneously can make it challenging to identify which assumptions, if any, are responsible for any potential differences seen. It is therefore desirable to adopt a structured approach, specifying the changes in assumptions that underlie the alternative analyses.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-SENS-005",
+      "rule_text": "The need for sensitivity analysis in respect of missing data is established and retains its importance in the E9(R1) framework. Missing data should be defined and considered in respect of a particular estimand. The distinction between data missing in respect of a specific estimand and data not directly relevant to that estimand gives rise to separate sets of assumptions to be examined in sensitivity analysis.",
+      "source_section": "A.5.2.2",
+      "source_quote": "The need for sensitivity analysis in respect of missing data is established and retains its importance in this framework. Missing data should be defined and considered in respect of a particular estimand (see A.4.). The distinction between data that are missing in respect of a specific estimand and data that are not directly relevant to a specific estimand gives rise to separate sets of assumptions to be examined in sensitivity analysis.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-SUPP-001",
+      "rule_text": "Supplementary analyses are analyses conducted in addition to the main and sensitivity analyses, with the intent to provide additional insights into the understanding of the treatment effect. They are distinct from sensitivity analyses, which explore robustness of departures from assumptions.",
+      "source_section": "A.5.3 / A.5.2.1 / Glossary",
+      "source_quote": "Distinct from sensitivity analysis, where investigations are conducted with the intent of exploring robustness of departures from assumptions, other analyses that are conducted in order to more fully investigate and understand the trial data can be termed 'supplementary analysis' (see Glossary; A.5.3.).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-SUPP-002",
+      "rule_text": "Where the primary estimand(s) of interest is agreed between sponsor and regulator, the main estimator is pre-specified unambiguously, and the sensitivity analysis verifies that the estimate is reliable for interpretation, supplementary analyses should generally be given lower priority in assessment.",
+      "source_section": "A.5.2.1",
+      "source_quote": "Where the primary estimand(s) of interest is agreed between sponsor and regulator, the main estimator is pre-specified unambiguously, and the sensitivity analysis verifies that the estimate derived is reliable for interpretation, supplementary analyses should generally be given lower priority in assessment.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DOC-001",
+      "rule_text": "A trial protocol must define and specify explicitly a primary estimand that corresponds to the primary trial objective. The protocol and the analysis plan must pre-specify the main estimator aligned with the primary estimand and leading to the primary analysis, together with a suitable sensitivity analysis.",
+      "source_section": "A.6",
+      "source_quote": "A trial protocol should define and specify explicitly a primary estimand that corresponds to the primary trial objective. The protocol and the analysis plan should pre-specify the main estimator that is aligned with the primary estimand and leads to the primary analysis, together with a suitable sensitivity analysis to explore the robustness under deviations from its assumptions.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DOC-002",
+      "rule_text": "Estimands for secondary trial objectives that are likely to support regulatory decisions must also be defined and specified explicitly, each with a corresponding main estimator and suitable sensitivity analysis.",
+      "source_section": "A.6",
+      "source_quote": "Estimands for secondary trial objectives (e.g. related to secondary variables) that are likely to support regulatory decisions should also be defined and specified explicitly, each with a corresponding main estimator and a suitable sensitivity analysis.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DOC-003",
+      "rule_text": "Results from the main, sensitivity, and supplementary analyses must be reported systematically in the clinical trial report, specifying whether each analysis was pre-specified, introduced while the trial was still blinded, or performed post hoc. Summaries of the number and timings of each intercurrent event in each treatment group must also be reported.",
+      "source_section": "A.6",
+      "source_quote": "Results from the main, sensitivity and supplementary analyses should be reported systematically in the clinical trial report, specifying whether each analysis was pre-specified, introduced while the trial was still blinded, or performed post hoc. Summaries of the number and timings of each intercurrent event in each treatment group should be reported.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DOC-004",
+      "rule_text": "Changes to the estimand during the trial are problematic and can reduce the credibility of the trial. Addressing intercurrent events that were not foreseen at the design stage, and identified during conduct, must discuss not only the analysis choices but also the effect on the estimand. A change to the estimand should usually be reflected through amendment to the protocol.",
+      "source_section": "A.6",
+      "source_quote": "Changes to the estimand during the trial can be problematic and can reduce the credibility of the trial. Addressing intercurrent events that were not foreseen at the design stage, and are identified during the conduct of the trial, should discuss not only the choices made for the analysis, but the effect on the estimand... A change to the estimand should usually be reflected through amendment to the protocol.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DESIGN-001",
+      "rule_text": "The design of a trial must be aligned to the estimands that reflect the trial objectives. A trial design suitable for one estimand might not be suitable for other estimands of potential importance. Clear estimand definitions must inform choices for inclusion/exclusion criteria, allowed/prohibited medications, and data collection planning.",
+      "source_section": "A.4",
+      "source_quote": "The design of a trial needs to be aligned to the estimands that reflect the trial objectives. A trial design that is suitable for one estimand might not be suitable for other estimands of potential importance. Clear definitions for the estimands on which quantification of treatments effects will be based should inform the choices that are made in relation to trial design.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DESIGN-002",
+      "rule_text": "Efforts must be made to collect all data that are relevant to support estimation, including data that inform the characterisation, occurrence, and timing of intercurrent events. The occurrence of intercurrent events such as discontinuation of treatment, treatment switching, or use of additional medication does not imply that the variable cannot be measured thereafter.",
+      "source_section": "A.4",
+      "source_quote": "Efforts should be made to collect all data that are relevant to support estimation, including data that inform the characterisation, occurrence and timing of intercurrent events... On the contrary, the occurrence of intercurrent events such as discontinuation of treatment, treatment switching, or use of additional medication, does not imply that the variable cannot be measured thereafter, though the measures may not be relevant.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-DESIGN-003",
+      "rule_text": "A precise description of the treatment effects of interest should inform sample size calculations. Where all subjects contribute information to the analysis, and where the impact of the strategy to reflect intercurrent events is included in the effect size targeted and expected variance, it is not usually necessary to additionally inflate the sample size by the expected proportion of subject withdrawals.",
+      "source_section": "A.4",
+      "source_quote": "A precise description of the treatment effects of interest should inform sample size calculations... Where all subjects contribute information to the analysis, and where the impact of the strategy to reflect intercurrent events is included in the effect size that is targeted and the expected variance, it is not usually necessary to additionally inflate the calculated sample size by the expected proportion of subject withdrawals from the trial.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-001",
+      "rule_text": "For a given estimand, an aligned method of analysis (the estimator) must be implemented that provides an estimate on which reliable interpretation can be based. Key assumptions must be stated explicitly together with the estimand and accompanying main and sensitivity estimators.",
+      "source_section": "A.5.1",
+      "source_quote": "For a given estimand, an aligned method of analysis, or estimator, should be implemented that is able to provide an estimate on which reliable interpretation can be based... Key assumptions should be stated explicitly together with the estimand and accompanying main and sensitivity estimators.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-002",
+      "rule_text": "Where the impact of deviations from assumptions cannot be comprehensively investigated through sensitivity analysis, that particular combination of estimand and method of analysis might not be acceptable for decision making. Implausible assumptions must be avoided.",
+      "source_section": "A.5.1",
+      "source_quote": "Assumptions should be justifiable and implausible assumptions should be avoided. The robustness of the results to potential departures from the underlying assumptions should be assessed through an estimand-aligned sensitivity analysis (see A.5.2.). Estimation that relies on many or strong assumptions requires more extensive sensitivity analysis. Where the impact of deviations from assumptions cannot be comprehensively investigated through sensitivity analysis, that particular combination of estimand and method of analysis might not be acceptable for decision making.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-003",
+      "rule_text": "Handling of missing data must be based on clinically plausible assumptions and, where possible, guided by the strategies employed in the description of the estimand. Methods may be based on observed covariates and post-baseline data from individual subjects and from other similar subjects.",
+      "source_section": "A.5.1",
+      "source_quote": "Handling of missing data should be based on clinically plausible assumptions and, where possible, guided by the strategies employed in the description of the estimand. The approach taken may be based on observed covariates and post-baseline data from individual subjects and from other similar subjects.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-004",
+      "rule_text": "Analysis aligned with the treatment policy strategy for a given intercurrent event may entail stronger or weaker assumptions depending on trial design and conduct. When most subjects are followed up even after the intercurrent event, the remaining missing data problem may be relatively minor.",
+      "source_section": "A.5.1",
+      "source_quote": "Analysis aligned with a treatment policy strategy to address a given intercurrent event may entail stronger or weaker assumptions depending on the design and conduct of the trial. When most subjects are followed-up even after the respective intercurrent event (e.g. discontinuation of treatment), the remaining problem of missing data may be relatively minor.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-005",
+      "rule_text": "Analysis aligned to a hypothetical strategy involves outcomes different from those actually observed. Observations before the intercurrent event and observations on subjects who did not require the intercurrent event may be informative, but only under strong assumptions.",
+      "source_section": "A.5.1",
+      "source_quote": "Analysis aligned to a hypothetical strategy involves outcomes different from those actually observed; for example, outcomes if rescue medication had not been given when in fact it was. Observations before the rescue medication and observations on subjects who did not require rescue medication may be informative, but only under strong assumptions.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-ANALYSIS-006",
+      "rule_text": "Analysis aligned to a principal stratum strategy usually requires strong assumptions. Simply comparing subjects who do not have an intercurrent event on test treatment to those who do not have the event on control — assuming intercurrent events are unrelated to treatment — is very difficult to justify.",
+      "source_section": "A.5.1",
+      "source_quote": "Analysis aligned to a principal stratum strategy usually requires strong assumptions... simply comparing subjects who do not have an intercurrent event on the test treatment to those who do not have an event on control, assuming intercurrent events are unrelated to treatment, is very difficult to justify.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-NI-001",
+      "rule_text": "For non-inferiority and equivalence trials, the considerations informing estimand construction may differ from those for superiority objectives. Estimands constructed with intercurrent events accounted for using the treatment policy strategy present similar issues for non-inferiority trials as analyses of the Full Analysis Set under the ITT principle.",
+      "source_section": "A.3.4",
+      "source_quote": "The considerations informing the construction of estimand to support regulatory decision making based on a non-inferiority or equivalence objective may differ to those for the choice of estimand for a superiority objective... Estimands that are constructed with one or more intercurrent events accounted for using the treatment policy strategy present similar issues for non-inferiority and equivalence trials as those related to analysis of the FAS under the ITT principle.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-GLOSS-001",
+      "rule_text": "GLOSSARY — Principal Stratification: Classification of subjects according to the potential occurrence of an intercurrent event on all treatments. With two treatments, there are four principal strata with respect to a given intercurrent event: subjects who would not experience the event on either treatment, subjects who would experience it on A but not B, subjects who would experience it on B but not A, and subjects who would experience it on both treatments.",
+      "source_section": "Glossary",
+      "source_quote": "Classification of subjects according to the potential occurrence of an intercurrent event on all treatments. With two treatments, there are four principal strata with respect to a given intercurrent event: subjects who would not experience the event on either treatment, subjects who would experience the event on treatment A but not B, subjects who would experience the event on treatment B but not A, and subjects who would experience the event on both treatments.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {
+        "principal_strata_count_for_two_treatments": 4
+      }
+    },
+
+    {
+      "rule_id": "E9R1-GLOSS-002",
+      "rule_text": "GLOSSARY — Missing Data: Data that would be meaningful for the analysis of a given estimand but were not collected. Missing data should be distinguished from data that do not exist or data that are not considered meaningful because of an intercurrent event.",
+      "source_section": "Glossary",
+      "source_quote": "Data that would be meaningful for the analysis of a given estimand but were not collected. They should be distinguished from data that do not exist or data that are not considered meaningful because of an intercurrent event.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-GLOSS-003",
+      "rule_text": "GLOSSARY — Sensitivity Analysis: A series of analyses conducted with the intent to explore the robustness of inferences from the main estimator to deviations from its underlying modelling assumptions and limitations in the data.",
+      "source_section": "Glossary",
+      "source_quote": "A series of analyses conducted with the intent to explore the robustness of inferences from the main estimator to deviations from its underlying modelling assumptions and limitations in the data.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "E9R1-GLOSS-004",
+      "rule_text": "GLOSSARY — Supplementary Analysis: A general description for analyses that are conducted in addition to the main and sensitivity analyses with the intent to provide additional insights into the understanding of the treatment effect.",
+      "source_section": "Glossary",
+      "source_quote": "A general description for analyses that are conducted in addition to the main and sensitivity analysis with the intent to provide additional insights into the understanding of the treatment effect.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "estimand_framework",
+      "guideline": "ICH E9(R1)",
+      "thresholds": {}
+    }
+
+  ]
+}

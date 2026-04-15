@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "title": "ICH Special Populations, Multi-Regional Trials, GCP & Biomarker Requirements",
+    "version": "2.0",
+    "generated": "2026-03-22",
+    "sources": [
+      "ICH E5(R1) — Ethnic Factors in the Acceptability of Foreign Clinical Data",
+      "ICH E6(R3) — Good Clinical Practice",
+      "ICH E11(R1) — Clinical Investigation of Medicinal Products in the Pediatric Population (Addendum)",
+      "ICH E11A — Pediatric Extrapolation",
+      "ICH E12 — Principles for Clinical Evaluation of New Antihypertensive Drugs",
+      "ICH E15 — Definitions for Genomic Biomarkers, Pharmacogenomics, Pharmacogenetics, Genomic Data and Sample Coding Categories",
+      "ICH E16 — Biomarkers Related to Drug or Biotechnology Product Development: Context, Structure and Format of Qualification Submissions",
+      "ICH E17 — General Principles for Planning and Design of Multi-Regional Clinical Trials",
+      "ICH E18 — Genomic Sampling and Management of Genomic Data"
+    ],
+    "total_rules": 412
+  },
+  "domains": [
+    {
+      "domain_id": "ETHNIC_BRIDGING",
+      "domain_name": "Ethnic Factors & Bridging Studies",
+      "source": "ICH E5(R1)",
+      "rules": [
+        {
+          "rule_id": "E5-001",
+          "text": "Ethnic factors are defined as factors relating to the genetic and physiologic (intrinsic) and the cultural and environmental (extrinsic) characteristics of a population.",
+          "section": "1",
+          "obligation": "mandatory",
+          "category": "intrinsic_extrinsic_factors"
+        },
+        {
+          "rule_id": "E5-002",
+          "text": "Intrinsic ethnic factors include genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction, race, ADME characteristics, and receptor sensitivity.",
+          "section": "Appendix A",
+          "obligation": "mandatory",
+          "category": "intrinsic_factors"
+        },
+        {
+          "rule_id": "E5-003",
+          "text": "Extrinsic ethnic factors include medical practice, diet, tobacco/alcohol use, pollution exposure, socio-economic status, compliance patterns, clinical trial design practices, and regulatory requirements.",
+          "section": "Appendix A",
+          "obligation": "mandatory",
+          "category": "extrinsic_factors"
+        },
+        {
+          "rule_id": "E5-004",
+          "text": "A Complete Clinical Data Package (CCDP) is the clinical data that would be accepted by the regulatory authority in the originating region as the basis for approval. The new region should evaluate the CCDP to determine if it can be extrapolated.",
+          "section": "2",
+          "obligation": "mandatory",
+          "category": "data_extrapolation"
+        },
+        {
+          "rule_id": "E5-005",
+          "text": "Drugs should be categorized by their sensitivity to ethnic factors: Class A (insensitive — PK not affected by extrinsic factors, wide therapeutic range), Class B (moderately sensitive — some PK differences, modest therapeutic range), Class C (highly sensitive — significant PK differences, narrow therapeutic range, ethnically variable PD).",
+          "section": "3.1",
+          "obligation": "recommended",
+          "category": "drug_classification"
+        },
+        {
+          "rule_id": "E5-006",
+          "text": "A bridging study is a study performed in the new region to provide PK, PD, or clinical data on efficacy, safety, dosage, and dose regimen in the new region that will allow extrapolation of the foreign clinical data to the population of the new region.",
+          "section": "Glossary",
+          "obligation": "mandatory",
+          "category": "ethnic_bridging"
+        },
+        {
+          "rule_id": "E5-007",
+          "text": "The new region should evaluate the CCDP and determine whether the medicine is sensitive to ethnic factors using an assessment of intrinsic and extrinsic ethnic factors and available PK, PD, and dose-response data.",
+          "section": "3.2",
+          "obligation": "mandatory",
+          "category": "data_extrapolation"
+        },
+        {
+          "rule_id": "E5-008",
+          "text": "If differences in extrinsic ethnic factors suggest the medicine might be ethnically sensitive, a bridging study may be needed. The bridging study design depends on the nature of the concern (PK, PD, dose-response, or efficacy/safety).",
+          "section": "3.2.2",
+          "obligation": "conditional",
+          "category": "ethnic_bridging",
+          "condition": "When extrinsic ethnic factors suggest sensitivity"
+        },
+        {
+          "rule_id": "E5-009",
+          "text": "For a drug classified as insensitive to ethnic factors (Class A), the CCDP from the originating region may generally be extrapolated to the new region with minimal or no bridging data.",
+          "section": "3.2.1",
+          "obligation": "recommended",
+          "category": "data_extrapolation"
+        },
+        {
+          "rule_id": "E5-010",
+          "text": "For ethnically sensitive drugs with PK differences, the bridging study should demonstrate comparable PK and may be a single PK study in the new population. Dose adjustment may suffice.",
+          "section": "3.2.2",
+          "obligation": "recommended",
+          "category": "ethnic_bridging"
+        },
+        {
+          "rule_id": "E5-011",
+          "text": "For ethnically sensitive drugs with PD differences, dose-response and clinical endpoint studies may be needed in the new region.",
+          "section": "3.2.3",
+          "obligation": "conditional",
+          "category": "ethnic_bridging",
+          "condition": "When PD differences are identified between regions"
+        },
+        {
+          "rule_id": "E5-012",
+          "text": "If the bridging study results are consistent with the CCDP, the foreign data can be extrapolated. If results are not consistent, additional studies in the new region may be needed.",
+          "section": "3.3",
+          "obligation": "mandatory",
+          "category": "data_extrapolation"
+        },
+        {
+          "rule_id": "E5-013",
+          "text": "Genetic polymorphisms of drug metabolizing enzymes (e.g., CYP2D6, CYP2C19, CYP2C9, NAT2) differ in frequency between ethnic groups and should be evaluated for their potential impact on drug response.",
+          "section": "Appendix B",
+          "obligation": "recommended",
+          "category": "pharmacokinetic"
+        },
+        {
+          "rule_id": "E5-014",
+          "text": "Differences in receptor sensitivity, disease prevalence, disease course, and concomitant medication use between ethnic populations should be assessed as part of bridging evaluation.",
+          "section": "Appendix C",
+          "obligation": "recommended",
+          "category": "pharmacodynamic"
+        },
+        {
+          "rule_id": "E5-015",
+          "text": "The regulatory authority in the new region should participate in discussions with the sponsor about the CCDP and the need for, and design of, any bridging study before the bridging study is conducted.",
+          "section": "4",
+          "obligation": "recommended",
+          "category": "regulatory_interaction"
+        }
+      ]
+    },
+    {
+      "domain_id": "GCP_COMPLIANCE",
+      "domain_name": "Good Clinical Practice Compliance",
+      "source": "ICH E6(R3)",
+      "rules": [
+        {
+          "rule_id": "E6-001",
+          "text": "Clinical trials should be conducted in accordance with ethical principles originating in the Declaration of Helsinki and consistent with GCP and applicable regulatory requirements.",
+          "section": "II, Principle 1",
+          "obligation": "mandatory",
+          "category": "trial_conduct"
+        },
+        {
+          "rule_id": "E6-002",
+          "text": "The rights, safety and well-being of participants are the most important considerations and should prevail over interests of science and society.",
+          "section": "II, 1.1",
+          "obligation": "mandatory",
+          "category": "trial_conduct"
+        },
+        {
+          "rule_id": "E6-003",
+          "text": "Before a trial is initiated, foreseeable risks and inconveniences should be weighed against the anticipated benefit for the individual participant and society. A trial should be initiated and continued only if the anticipated benefits justify the risks.",
+          "section": "II, Principle 2",
+          "obligation": "mandatory",
+          "category": "trial_conduct"
+        },
+        {
+          "rule_id": "E6-004",
+          "text": "A trial should be scientifically sound and described in a clear, detailed protocol.",
+          "section": "II, Principle 3",
+          "obligation": "mandatory",
+          "category": "trial_conduct"
+        },
+        {
+          "rule_id": "E6-005",
+          "text": "Freely given informed consent should be obtained from every participant prior to clinical trial participation, in accordance with regulatory requirements and with the ethical principles of the Declaration of Helsinki.",
+          "section": "II, Principle 4",
+          "obligation": "mandatory",
+          "category": "informed_consent"
+        },
+        {
+          "rule_id": "E6-006",
+          "text": "For participants who are not capable of giving consent (e.g., minors, individuals with cognitive impairment), consent from a legally acceptable representative must be obtained. Assent of the participant should be obtained when the participant is capable of providing it.",
+          "section": "II, 4.3",
+          "obligation": "mandatory",
+          "category": "informed_consent",
+          "applies_to": "vulnerable_populations"
+        },
+        {
+          "rule_id": "E6-007",
+          "text": "The informed consent form and process should include adequate explanation of the trial, alternatives, risks, benefits, confidentiality protections, compensation, and the right to withdraw without penalty.",
+          "section": "II, 4.2",
+          "obligation": "mandatory",
+          "category": "informed_consent"
+        },
+        {
+          "rule_id": "E6-008",
+          "text": "Each individual involved in conducting a trial should be qualified by education, training, and experience to perform their respective task(s).",
+          "section": "II, Principle 5",
+          "obligation": "mandatory",
+          "category": "investigator_responsibility"
+        },
+        {
+          "rule_id": "E6-009",
+          "text": "Medical care given to, and medical decisions made on behalf of, participants should always be the responsibility of a qualified physician (or dentist).",
+          "section": "II, Principle 6",
+          "obligation": "mandatory",
+          "category": "investigator_responsibility"
+        },
+        {
+          "rule_id": "E6-010",
+          "text": "An IRB/IEC should be responsible for safeguarding the rights, safety, and well-being of all trial participants. Special attention should be paid to trials that may include vulnerable participants.",
+          "section": "II, Principle 7",
+          "obligation": "mandatory",
+          "category": "irb_iec",
+          "applies_to": "vulnerable_populations"
+        },
+        {
+          "rule_id": "E6-011",
+          "text": "The sponsor should implement a risk-proportionate quality management system (QMS) throughout all stages of the trial process, including trial design, conduct, recording, evaluation, reporting, and archiving.",
+          "section": "II, Principle 8",
+          "obligation": "mandatory",
+          "category": "quality_management"
+        },
+        {
+          "rule_id": "E6-012",
+          "text": "Quality management should identify risks to critical processes and data that are important to the rights, safety, and well-being of participants and to the reliability of results, and should be proportionate to the risks inherent in the trial and the importance of the information collected.",
+          "section": "III, 3.1",
+          "obligation": "mandatory",
+          "category": "quality_management"
+        },
+        {
+          "rule_id": "E6-013",
+          "text": "Certified copies of all essential documents should be available at each site and at the sponsor's facilities. Trial Master File should be maintained throughout the trial.",
+          "section": "V",
+          "obligation": "mandatory",
+          "category": "essential_documents"
+        },
+        {
+          "rule_id": "E6-014",
+          "text": "Clinical trial information should be recorded, handled, and stored in a way that allows accurate reporting, interpretation, and verification while protecting the confidentiality of participants.",
+          "section": "II, Principle 9",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E6-015",
+          "text": "Computerized systems used in clinical trials should be validated. A complete audit trail should be maintained for electronic data.",
+          "section": "II, Principle 10",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E6-016",
+          "text": "The investigator should ensure that adequate medical care is provided to a participant for any adverse events, including clinically significant laboratory values, related to the trial.",
+          "section": "IV, 4.3",
+          "obligation": "mandatory",
+          "category": "safety_monitoring"
+        },
+        {
+          "rule_id": "E6-017",
+          "text": "The sponsor should promptly notify investigators, IRBs/IECs, and regulatory authorities of findings that could adversely affect the safety of participants, impact the conduct of the trial, or alter the IRB/IEC's approval.",
+          "section": "IV, 5.16",
+          "obligation": "mandatory",
+          "category": "safety_reporting"
+        },
+        {
+          "rule_id": "E6-018",
+          "text": "Monitoring should be risk-based, with the extent and nature of monitoring proportionate to the risks identified in quality management. Centralized monitoring methods should complement or reduce on-site monitoring.",
+          "section": "III, 3.3",
+          "obligation": "mandatory",
+          "category": "monitoring"
+        },
+        {
+          "rule_id": "E6-019",
+          "text": "For trials involving vulnerable populations (minors, individuals with impaired decision-making capacity, elderly, economically disadvantaged), additional protections should be in place, including enhanced informed consent processes and additional oversight.",
+          "section": "IV, 4.7",
+          "obligation": "mandatory",
+          "category": "special_populations",
+          "applies_to": "vulnerable_populations"
+        },
+        {
+          "rule_id": "E6-020",
+          "text": "The investigator should comply with the protocol, obtain approval/favorable opinion from IRB/IEC before initiating the trial, and conduct the trial in compliance with the approved protocol.",
+          "section": "IV, 4.1",
+          "obligation": "mandatory",
+          "category": "investigator_responsibility"
+        },
+        {
+          "rule_id": "E6-021",
+          "text": "The sponsor should ensure proper selection of investigators and sites, provide investigators with the Investigator's Brochure, and ensure that the trial is adequately monitored.",
+          "section": "IV, 5.1-5.5",
+          "obligation": "mandatory",
+          "category": "sponsor_obligation"
+        },
+        {
+          "rule_id": "E6-022",
+          "text": "Trial data should be attributable, legible, contemporaneous, original, accurate, and complete (ALCOA+ principles).",
+          "section": "III, 3.2",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E6-023",
+          "text": "Where electronic systems are used for data acquisition, the systems should provide for the attribution of entries, complete audit trails, and the ability to generate accurate and complete copies of records.",
+          "section": "III, 3.2.3",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E6-024",
+          "text": "A protocol amendment should be agreed upon by the sponsor and the investigator, submitted to the IRB/IEC for approval, and to regulatory authorities in accordance with local requirements before implementation, except for amendments to eliminate immediate hazards.",
+          "section": "IV, 4.5",
+          "obligation": "mandatory",
+          "category": "trial_conduct"
+        },
+        {
+          "rule_id": "E6-025",
+          "text": "The sponsor is responsible for the ongoing safety evaluation of the investigational product, including review of aggregate safety data and identification of new safety signals.",
+          "section": "IV, 5.17",
+          "obligation": "mandatory",
+          "category": "sponsor_obligation"
+        }
+      ]
+    },
+    {
+      "domain_id": "PEDIATRIC_STUDIES",
+      "domain_name": "Pediatric Clinical Trials & Extrapolation",
+      "source": "ICH E11(R1), ICH E11A",
+      "rules": [
+        {
+          "rule_id": "E11-001",
+          "text": "Pediatric extrapolation is an approach to providing evidence in support of effective and safe use of drugs in the pediatric population when it can be assumed that the course of the disease and expected response would be sufficiently similar in the pediatric and reference (adult or other pediatric) population.",
+          "section": "E11A 1.2",
+          "obligation": "recommended",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-002",
+          "text": "Similarity of disease, drug pharmacology, and response to treatment between reference and target populations should be assessed on a continuum of similarity/dissimilarity, not as discrete categories (full, partial, none).",
+          "section": "E11A 1.4",
+          "obligation": "recommended",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-003",
+          "text": "The extrapolation framework consists of three parts: (1) development of a pediatric extrapolation concept, (2) creation of a pediatric extrapolation plan, and (3) execution of the pediatric extrapolation plan.",
+          "section": "E11A 2",
+          "obligation": "recommended",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-004",
+          "text": "The pediatric extrapolation concept should include: disease characterization in the target population, analysis of drug pharmacology, evaluation of similarity/differences between reference and target populations, and identification of knowledge gaps.",
+          "section": "E11A 2.1",
+          "obligation": "mandatory",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-005",
+          "text": "The pediatric extrapolation plan should describe how the extrapolation concept will be operationalized, including study designs, endpoints, modeling approaches, and decision criteria.",
+          "section": "E11A 2.2",
+          "obligation": "mandatory",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-006",
+          "text": "Where similarity in disease and response is high, a minimal pediatric development program (e.g., PK study with safety monitoring) may be sufficient to extrapolate efficacy from adults.",
+          "section": "E11A 3.1",
+          "obligation": "conditional",
+          "category": "pediatric_extrapolation",
+          "condition": "High similarity established between adult and pediatric populations"
+        },
+        {
+          "rule_id": "E11-007",
+          "text": "Where similarity is uncertain or limited, additional PD and/or efficacy studies in the pediatric population are required. The extent depends on the degree of uncertainty.",
+          "section": "E11A 3.2",
+          "obligation": "conditional",
+          "category": "pediatric_extrapolation",
+          "condition": "Uncertain or limited similarity between populations"
+        },
+        {
+          "rule_id": "E11-008",
+          "text": "Modeling and simulation (M&S) approaches, including population PK, exposure-response, and disease models, should be used to support pediatric extrapolation by quantifying uncertainty and informing study design.",
+          "section": "E11A 3.3",
+          "obligation": "recommended",
+          "category": "modeling_simulation"
+        },
+        {
+          "rule_id": "E11-009",
+          "text": "Age-appropriate pediatric formulations should be developed. Palatability, dosing accuracy, and ease of administration should be considered for each target age group.",
+          "section": "E11(R1) 2.6",
+          "obligation": "mandatory",
+          "category": "formulation"
+        },
+        {
+          "rule_id": "E11-010",
+          "text": "Pediatric age categories for development planning: preterm neonates, term neonates (0-27 days), infants (28 days to 23 months), children (2-11 years), and adolescents (12-17 years). Development should address each relevant age subset.",
+          "section": "E11(R1) 2.2",
+          "obligation": "mandatory",
+          "category": "age_groups"
+        },
+        {
+          "rule_id": "E11-011",
+          "text": "Studies in neonates (including preterm) should be considered only when there is a specific neonatal indication. Neonatal physiology (immature hepatic/renal function, blood-brain barrier differences) requires special attention.",
+          "section": "E11(R1) 2.3",
+          "obligation": "conditional",
+          "category": "age_groups",
+          "condition": "When neonatal indication exists"
+        },
+        {
+          "rule_id": "E11-012",
+          "text": "Informed consent must be obtained from the parent(s) or legal guardian. Assent should be obtained from the child when capable, considering the child's age and maturity. The child's dissent should be respected unless the therapy is necessary and has no alternative.",
+          "section": "E11(R1) 2.7",
+          "obligation": "mandatory",
+          "category": "informed_consent_assent"
+        },
+        {
+          "rule_id": "E11-013",
+          "text": "Pediatric studies should not delay adult access to treatment. Timing of pediatric development should be based on the therapeutic need, available adult data, and feasibility considerations.",
+          "section": "E11(R1) 2.1",
+          "obligation": "recommended",
+          "category": "ethical_considerations"
+        },
+        {
+          "rule_id": "E11-014",
+          "text": "Pediatric-specific safety monitoring is required, including assessment of growth, development (cognitive, sexual, skeletal maturation), and organ-specific toxicities that may manifest differently in children.",
+          "section": "E11(R1) 2.5",
+          "obligation": "mandatory",
+          "category": "safety_monitoring"
+        },
+        {
+          "rule_id": "E11-015",
+          "text": "Long-term follow-up should be considered for pediatric patients to assess effects on growth, development, and maturation that may not be apparent during the trial period.",
+          "section": "E11(R1) 2.5",
+          "obligation": "recommended",
+          "category": "safety_monitoring"
+        },
+        {
+          "rule_id": "E11-016",
+          "text": "Dosing in pediatrics should be based on body weight or body surface area, with consideration of developmental PK changes across age groups (maturation of metabolic enzymes, renal function, protein binding).",
+          "section": "E11(R1) 2.4",
+          "obligation": "mandatory",
+          "category": "dosing"
+        },
+        {
+          "rule_id": "E11-017",
+          "text": "Population PK studies with sparse sampling in pediatric trials are encouraged to minimize blood volume and burden on pediatric participants.",
+          "section": "E11(R1) 2.4",
+          "obligation": "recommended",
+          "category": "dosing"
+        },
+        {
+          "rule_id": "E11-018",
+          "text": "Placebo use in pediatric trials should be minimized. Active-controlled designs, adaptive designs, or historical controls should be considered to reduce exposure to placebo where effective therapy exists.",
+          "section": "E11(R1) 2.3",
+          "obligation": "recommended",
+          "category": "study_design"
+        },
+        {
+          "rule_id": "E11-019",
+          "text": "Extrapolation from one pediatric age group to another is acceptable when there is scientific justification that disease biology and drug response are sufficiently similar between the two age groups.",
+          "section": "E11A 3.4",
+          "obligation": "conditional",
+          "category": "pediatric_extrapolation",
+          "condition": "When disease biology and drug response similarity is justified between age groups"
+        },
+        {
+          "rule_id": "E11-020",
+          "text": "A Pediatric Investigation Plan (PIP) or Pediatric Study Plan (PSP) should be developed and discussed with regulatory authorities early in the drug development program.",
+          "section": "E11(R1) 2.1",
+          "obligation": "recommended",
+          "category": "regulatory_interaction"
+        },
+        {
+          "rule_id": "E11-021",
+          "text": "Bayesian statistical approaches that formally incorporate prior information from adult studies are encouraged in pediatric extrapolation to reduce sample size requirements while maintaining adequate evidence.",
+          "section": "E11A 3.3",
+          "obligation": "recommended",
+          "category": "study_design"
+        },
+        {
+          "rule_id": "E11-022",
+          "text": "When the reference population data includes prior pediatric age groups, the totality of evidence across all previously studied populations should inform the extrapolation to the next pediatric target population.",
+          "section": "E11A 2.1",
+          "obligation": "recommended",
+          "category": "pediatric_extrapolation"
+        },
+        {
+          "rule_id": "E11-023",
+          "text": "Juvenile animal studies may be needed to support safety assessment in pediatric populations when adult animal data are insufficient to address developmental toxicity concerns.",
+          "section": "E11(R1) 2.5",
+          "obligation": "conditional",
+          "category": "safety_monitoring",
+          "condition": "When adult animal data are insufficient for developmental toxicity assessment"
+        }
+      ]
+    },
+    {
+      "domain_id": "ANTIHYPERTENSIVE_SPECIAL_POPS",
+      "domain_name": "Antihypertensive Drug Evaluation — Special Populations",
+      "source": "ICH E12",
+      "rules": [
+        {
+          "rule_id": "E12-001",
+          "text": "The patient population studied with a new antihypertensive should include a broad range of patients with essential hypertension including both men and women, racial/ethnic groups pertinent to the region, and both young and older patients.",
+          "section": "2",
+          "obligation": "mandatory",
+          "category": "special_populations"
+        },
+        {
+          "rule_id": "E12-002",
+          "text": "The very old or 'fragile elderly' (patients >75 years) should be included in antihypertensive studies.",
+          "section": "2",
+          "obligation": "mandatory",
+          "category": "elderly"
+        },
+        {
+          "rule_id": "E12-003",
+          "text": "Patients with relevant concomitant illness (diabetes mellitus, coronary heart disease) should be included unless their medications would interfere with the study.",
+          "section": "2",
+          "obligation": "mandatory",
+          "category": "special_populations",
+          "condition": "Unless concomitant drugs interfere with study"
+        },
+        {
+          "rule_id": "E12-004",
+          "text": "Patients with target organ damage secondary to hypertension should not be included in placebo-controlled trials of more than very brief duration, but may be included in active-controlled trials.",
+          "section": "2",
+          "obligation": "mandatory",
+          "category": "special_populations"
+        },
+        {
+          "rule_id": "E12-005",
+          "text": "Secondary hypertension, isolated systolic hypertension, hypertension during pregnancy, and children with hypertension should be studied separately if specific indications are being sought.",
+          "section": "2",
+          "obligation": "conditional",
+          "category": "special_populations",
+          "condition": "When specific indications are sought for these populations"
+        },
+        {
+          "rule_id": "E12-006",
+          "text": "All population subsets should generally be included in the same studies rather than conducting separate subgroup studies, to facilitate cross-subset comparisons.",
+          "section": "2",
+          "obligation": "recommended",
+          "category": "study_design"
+        },
+        {
+          "rule_id": "E12-007",
+          "text": "The primary endpoint is absolute change at trough from drug-free baseline BP compared to control. Trough/peak ratio should be evaluated. At least 3 doses plus placebo in randomized parallel fixed-dose design.",
+          "section": "3.1, 3.3",
+          "obligation": "mandatory",
+          "category": "endpoints"
+        },
+        {
+          "rule_id": "E12-008",
+          "text": "Long-term studies (6 months or more) should be conducted to demonstrate maintenance of efficacy and to look for withdrawal effects.",
+          "section": "3.1",
+          "obligation": "mandatory",
+          "category": "study_design"
+        },
+        {
+          "rule_id": "E12-009",
+          "text": "Safety database of approximately 1500 patients (per ICH E1) may be insufficient for antihypertensives given asymptomatic population and long-term use. Attention should be paid to hypotension (especially orthostatic), rebound phenomena, cardiac effects, and metabolic effects.",
+          "section": "4",
+          "obligation": "mandatory",
+          "category": "safety_monitoring"
+        },
+        {
+          "rule_id": "E12-010",
+          "text": "Combination therapy studies are required since antihypertensives are often used together. Formal factorial studies and add-on studies should be conducted. Fixed combination products require regional regulatory consultation.",
+          "section": "5, 6",
+          "obligation": "mandatory",
+          "category": "combination_therapy"
+        }
+      ]
+    },
+    {
+      "domain_id": "PHARMACOGENOMICS",
+      "domain_name": "Pharmacogenomics & Genomic Biomarker Definitions",
+      "source": "ICH E15",
+      "rules": [
+        {
+          "rule_id": "E15-001",
+          "text": "A genomic biomarker is a measurable DNA and/or RNA characteristic that is an indicator of normal biologic processes, pathogenic processes, and/or response to therapeutic or other interventions.",
+          "section": "2.1.1",
+          "obligation": "mandatory",
+          "category": "genomic_biomarker_definition"
+        },
+        {
+          "rule_id": "E15-002",
+          "text": "DNA characteristics constituting genomic biomarkers include: SNPs, short sequence repeats, DNA modifications (methylation), deletions/insertions, copy number variations, and cytogenetic rearrangements. RNA characteristics include: RNA sequences, expression levels, processing (splicing/editing), and microRNA levels.",
+          "section": "2.1.2",
+          "obligation": "mandatory",
+          "category": "genomic_biomarker_definition"
+        },
+        {
+          "rule_id": "E15-003",
+          "text": "Pharmacogenomics (PGx) is the study of variations of DNA and RNA characteristics as related to drug response. Pharmacogenetics (PGt) is a subset restricted to DNA sequence variations only.",
+          "section": "2.2.1",
+          "obligation": "mandatory",
+          "category": "genomic_biomarker_definition"
+        },
+        {
+          "rule_id": "E15-004",
+          "text": "Four coding categories for genomic data and samples: identified, single-coded (standard for clinical research), double-coded, anonymised, and anonymous. The coding implications should be considered in PGx/PGt study design.",
+          "section": "2.3",
+          "obligation": "mandatory",
+          "category": "sample_coding"
+        },
+        {
+          "rule_id": "E15-005",
+          "text": "Single coding is the current standard for clinical research. The clinical investigator maintains the coding key. Identified samples are generally not appropriate for clinical trials.",
+          "section": "2.3.2.1",
+          "obligation": "mandatory",
+          "category": "sample_coding"
+        },
+        {
+          "rule_id": "E15-006",
+          "text": "Conditions under which genomic data can be linked back to personal identifiers, including return of results, should be described in the informed consent document.",
+          "section": "2.3.5",
+          "obligation": "recommended",
+          "category": "informed_consent_genomics"
+        },
+        {
+          "rule_id": "E15-007",
+          "text": "The definition of genomic biomarkers excludes proteins and low molecular weight metabolites. PGx/PGt definitions exclude proteomics and metabolomics.",
+          "section": "2.1.2, 2.2.2",
+          "obligation": "mandatory",
+          "category": "genomic_biomarker_definition"
+        }
+      ]
+    },
+    {
+      "domain_id": "BIOMARKER_QUALIFICATION",
+      "domain_name": "Biomarker Qualification Submissions",
+      "source": "ICH E16",
+      "rules": [
+        {
+          "rule_id": "E16-001",
+          "text": "Qualification is a conclusion that, within the stated context of use, the results of assessment with a biomarker can be relied upon to adequately reflect a biological process, response, or event.",
+          "section": "1.2",
+          "obligation": "mandatory",
+          "category": "biomarker_qualification"
+        },
+        {
+          "rule_id": "E16-002",
+          "text": "The proposed context of use should be clearly detailed in the submission package, supported by data in the initial qualification dossier, and described using a three-part taxonomy: general area, specific biomarker use, and critical parameters.",
+          "section": "1.4, 2.2.1.2",
+          "obligation": "mandatory",
+          "category": "context_of_use"
+        },
+        {
+          "rule_id": "E16-003",
+          "text": "Qualification submissions should follow the five-section CTD-aligned structure: Regional Administrative Info, Summaries (with Biomarker Overview), Quality Reports, Nonclinical Reports, Clinical Reports.",
+          "section": "2",
+          "obligation": "recommended",
+          "category": "data_reporting"
+        },
+        {
+          "rule_id": "E16-004",
+          "text": "Full study reports for biomarker qualification should be provided. Raw data should be available to regulatory authorities upon request. The rationale for population sample selection (species, age, sex) should be clearly described.",
+          "section": "2.4",
+          "obligation": "mandatory",
+          "category": "data_reporting"
+        },
+        {
+          "rule_id": "E16-005",
+          "text": "Qualification submissions should be submitted simultaneously to pertinent regulatory authorities to facilitate global drug development.",
+          "section": "1.4",
+          "obligation": "recommended",
+          "category": "regulatory_interaction"
+        },
+        {
+          "rule_id": "E16-006",
+          "text": "If a biomarker has already been qualified by a regulatory authority, data generated within the qualified context of use do not need re-qualification. A copy of the assessment report suffices in NDA/BLA/MAA.",
+          "section": "1.4",
+          "obligation": "recommended",
+          "category": "biomarker_qualification"
+        },
+        {
+          "rule_id": "E16-007",
+          "text": "The Biomarker Overview should discuss strengths and limitations. Data Summaries should describe study design, replication, statistical analysis, rationale for population sample, and constraints (ethnicity, disease state). Sample suitability criteria and analytical performance characteristics must be included.",
+          "section": "2.2",
+          "obligation": "recommended",
+          "category": "data_reporting"
+        }
+      ]
+    },
+    {
+      "domain_id": "MULTI_REGIONAL_TRIALS",
+      "domain_name": "Multi-Regional Clinical Trial Design",
+      "source": "ICH E17",
+      "rules": [
+        {
+          "rule_id": "E17-001",
+          "text": "MRCTs should be designed to evaluate the overall treatment effect and to enable evaluation of the consistency of treatment effects across regions or subpopulations.",
+          "section": "1.4",
+          "obligation": "mandatory",
+          "category": "mrct_design"
+        },
+        {
+          "rule_id": "E17-002",
+          "text": "MRCT design should account for intrinsic (genetic, physiological) and extrinsic (medical practice, regulatory, cultural) ethnic factors that may influence treatment effects across regions.",
+          "section": "2.1",
+          "obligation": "mandatory",
+          "category": "intrinsic_extrinsic_factors"
+        },
+        {
+          "rule_id": "E17-003",
+          "text": "The overall sample size for an MRCT should be determined to adequately power the study for the primary objective. Sample size allocation across regions should allow meaningful assessment of consistency.",
+          "section": "2.3",
+          "obligation": "mandatory",
+          "category": "sample_size_planning"
+        },
+        {
+          "rule_id": "E17-004",
+          "text": "Regional sample sizes should be planned to allow a sufficient number of subjects from each region to provide information on the treatment effect in that region and to contribute to the evaluation of consistency.",
+          "section": "2.3.1",
+          "obligation": "mandatory",
+          "category": "sample_size_planning"
+        },
+        {
+          "rule_id": "E17-005",
+          "text": "Regions may be pooled at the planning stage if subjects are thought to be similar enough with respect to intrinsic and/or extrinsic factors relevant to the disease and/or drug under study. The rationale for pooling should be pre-specified and justified.",
+          "section": "2.3.2",
+          "obligation": "conditional",
+          "category": "regional_consistency",
+          "condition": "When pooling is justified by similarity of intrinsic/extrinsic factors"
+        },
+        {
+          "rule_id": "E17-006",
+          "text": "Methods for evaluating consistency of treatment effects across regions should be pre-specified in the statistical analysis plan. Both quantitative and qualitative interactions should be assessed.",
+          "section": "3.1",
+          "obligation": "mandatory",
+          "category": "regional_consistency"
+        },
+        {
+          "rule_id": "E17-007",
+          "text": "Preservation of a pre-specified fraction of the overall treatment effect within each region is one acceptable method for evaluating consistency. The fraction and its rationale should be pre-specified.",
+          "section": "3.2",
+          "obligation": "recommended",
+          "category": "regional_consistency"
+        },
+        {
+          "rule_id": "E17-008",
+          "text": "If a qualitative interaction (reversal of treatment effect direction) is observed in any region, the reasons should be thoroughly investigated. A qualitative interaction raises serious concerns about the applicability of the overall result to that region.",
+          "section": "3.3",
+          "obligation": "mandatory",
+          "category": "regional_consistency"
+        },
+        {
+          "rule_id": "E17-009",
+          "text": "Early regulatory interaction is recommended when planning MRCTs. Sponsors should discuss the overall development plan, MRCT design, regional sample sizes, and methods for consistency evaluation with regulatory authorities in each region.",
+          "section": "4.1",
+          "obligation": "recommended",
+          "category": "regulatory_interaction"
+        },
+        {
+          "rule_id": "E17-010",
+          "text": "Standard operating procedures, including data management, training of investigators, and monitoring, should be harmonized across regions to minimize operational heterogeneity.",
+          "section": "2.4",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E17-011",
+          "text": "Endpoint selection should account for regional differences. Endpoints that are interpretable across regions should be preferred. Where endpoints differ across regions, harmonized endpoints should be discussed with regulators.",
+          "section": "2.2",
+          "obligation": "mandatory",
+          "category": "mrct_design"
+        },
+        {
+          "rule_id": "E17-012",
+          "text": "Poolability of data across regions should be assessed. If significant heterogeneity is detected, the impact on the overall treatment effect estimate and its reliability should be evaluated.",
+          "section": "3.1",
+          "obligation": "mandatory",
+          "category": "poolability"
+        },
+        {
+          "rule_id": "E17-013",
+          "text": "Subgroup analyses by region, ethnic subpopulations, and other relevant intrinsic/extrinsic factors should be pre-specified in the analysis plan.",
+          "section": "3.1",
+          "obligation": "mandatory",
+          "category": "subgroup_analysis"
+        },
+        {
+          "rule_id": "E17-014",
+          "text": "When an MRCT includes regions with different regulatory requirements, the protocol should describe how these will be accommodated (e.g., different comparators, labeling requirements).",
+          "section": "4.2",
+          "obligation": "recommended",
+          "category": "regulatory_interaction"
+        },
+        {
+          "rule_id": "E17-015",
+          "text": "Post-approval commitments may be needed to address questions about treatment effects in specific regions or subpopulations that could not be fully answered from the MRCT alone.",
+          "section": "4.3",
+          "obligation": "conditional",
+          "category": "post_approval",
+          "condition": "When regional questions cannot be fully answered from MRCT data"
+        },
+        {
+          "rule_id": "E17-016",
+          "text": "An MRCT should use a single, uniform protocol across all regions. Operational differences (e.g., local standard of care) should be pre-specified and justified. The use of a single protocol supports the poolability of data.",
+          "section": "2.1",
+          "obligation": "mandatory",
+          "category": "mrct_design"
+        },
+        {
+          "rule_id": "E17-017",
+          "text": "Randomization should be stratified by region (or pooled region) to ensure appropriate balance and support regional subgroup analyses.",
+          "section": "2.3",
+          "obligation": "mandatory",
+          "category": "mrct_design"
+        },
+        {
+          "rule_id": "E17-018",
+          "text": "Descriptive analyses of treatment effects within each region should be presented even when the study is not powered for regional subgroup comparisons. These results aid regulatory decision-making in individual regions.",
+          "section": "3.4",
+          "obligation": "mandatory",
+          "category": "subgroup_analysis"
+        },
+        {
+          "rule_id": "E17-019",
+          "text": "Factors known to influence treatment response (e.g., genetic polymorphisms, body weight, concomitant medications, disease severity) should be considered in the planning and analysis as potential sources of between-region variability.",
+          "section": "2.1",
+          "obligation": "recommended",
+          "category": "intrinsic_extrinsic_factors"
+        },
+        {
+          "rule_id": "E17-020",
+          "text": "When Japan, China, or other East Asian countries are included, pharmacogenomic considerations (e.g., CYP2D6, CYP2C19 poor metabolizer prevalence) should be factored into dose selection and regional analyses.",
+          "section": "2.1",
+          "obligation": "recommended",
+          "category": "intrinsic_extrinsic_factors"
+        }
+      ]
+    },
+    {
+      "domain_id": "GENOMIC_SAMPLING",
+      "domain_name": "Genomic Sampling & Data Management",
+      "source": "ICH E18",
+      "rules": [
+        {
+          "rule_id": "E18-001",
+          "text": "Genomic sample acquisition is strongly encouraged in all phases and studies of clinical development.",
+          "section": "1.4",
+          "obligation": "recommended",
+          "category": "sample_collection"
+        },
+        {
+          "rule_id": "E18-002",
+          "text": "Sample collection should be unbiased and systematic, ideally from all subjects participating in the trial, to fully represent the study population.",
+          "section": "1.4",
+          "obligation": "recommended",
+          "category": "sample_collection"
+        },
+        {
+          "rule_id": "E18-003",
+          "text": "Pre-analytical variation should be minimized by developing and documenting standardized procedures for genomic sample collection, processing, transport, and storage. Procedures should be verified prior to implementation.",
+          "section": "2",
+          "obligation": "recommended",
+          "category": "sample_collection"
+        },
+        {
+          "rule_id": "E18-004",
+          "text": "The timing, method, location, and conditions of sample collection must be recorded. Chain of custody at all stages should be documented. Any deviations from procedures must be documented.",
+          "section": "2",
+          "obligation": "recommended",
+          "category": "sample_collection"
+        },
+        {
+          "rule_id": "E18-005",
+          "text": "In pediatric subjects, only limited amounts of blood or tissue may be available; non-invasive alternatives (saliva, dried blood spot, skin scrapings) should be considered.",
+          "section": "2.1.1",
+          "obligation": "recommended",
+          "category": "sample_collection",
+          "applies_to": "pediatric"
+        },
+        {
+          "rule_id": "E18-006",
+          "text": "Long-term sample storage is highly recommended over the course of and beyond a drug development program to enable re-use and/or future use. Samples should be stored as multiple aliquots in separate locations.",
+          "section": "2.2.2",
+          "obligation": "recommended",
+          "category": "sample_storage"
+        },
+        {
+          "rule_id": "E18-007",
+          "text": "Samples should not be stored longer than the allowed retention period described in the informed consent. Procedures must be in place for destruction upon consent withdrawal or retention expiry.",
+          "section": "2.2.2",
+          "obligation": "mandatory",
+          "category": "sample_retention"
+        },
+        {
+          "rule_id": "E18-008",
+          "text": "Single coding is recommended for genomic samples and data. Anonymisation (deletion of coding keys) is NOT recommended because: (1) re-identification may still be possible, (2) it prevents linking genomic to phenotypic data, (3) sample destruction on consent withdrawal becomes impossible.",
+          "section": "4.1",
+          "obligation": "recommended",
+          "category": "sample_coding"
+        },
+        {
+          "rule_id": "E18-009",
+          "text": "Destruction of genomic data once analyzed and incorporated in study results contradicts principles of scientific integrity and should not be done.",
+          "section": "3.2",
+          "obligation": "mandatory",
+          "category": "data_integrity"
+        },
+        {
+          "rule_id": "E18-010",
+          "text": "Genomic data should be treated with the same high standards of confidentiality as other clinical data. Strict access control with user access logs should be implemented.",
+          "section": "4.1, 4.2",
+          "obligation": "recommended",
+          "category": "data_privacy"
+        },
+        {
+          "rule_id": "E18-011",
+          "text": "Informed consent for genomic sample collection should permit broad analysis (gene sets, transcriptome, whole genome sequencing) regardless of timing. Broad consent permitting sharing and distribution is recommended.",
+          "section": "5",
+          "obligation": "recommended",
+          "category": "informed_consent_genomics"
+        },
+        {
+          "rule_id": "E18-012",
+          "text": "Genomic research must be conducted in accordance with applicable local legislation and within the scope of informed consent, which includes collection and storage of genomic samples and data.",
+          "section": "5",
+          "obligation": "mandatory",
+          "category": "informed_consent_genomics"
+        },
+        {
+          "rule_id": "E18-013",
+          "text": "Specific considerations should be given to vulnerable populations (minors, subjects with dementia) regarding genomic consent from legal representatives or guardians.",
+          "section": "5",
+          "obligation": "recommended",
+          "category": "informed_consent_genomics",
+          "applies_to": "vulnerable_populations"
+        },
+        {
+          "rule_id": "E18-014",
+          "text": "Sponsors should adopt a position on return of genomic findings to subjects, including timing, by whom, and to whom. Genetic counseling should be evaluated when communicating results.",
+          "section": "6",
+          "obligation": "recommended",
+          "category": "reporting_requirements"
+        },
+        {
+          "rule_id": "E18-015",
+          "text": "When genomic data are used for clinical decision making, assays must be validated in accordance with local regulations. Even in exploratory settings, sufficient analytical validation should ensure adequate accuracy and consistency.",
+          "section": "3.1",
+          "obligation": "conditional",
+          "category": "data_generation",
+          "condition": "Clinical decision-making requires validated assays; exploratory settings require sufficient validation"
+        },
+        {
+          "rule_id": "E18-016",
+          "text": "Different national and local rules governing sharing of individual-level data with third parties including public databases shall be fully complied with.",
+          "section": "4.2",
+          "obligation": "mandatory",
+          "category": "data_privacy"
+        },
+        {
+          "rule_id": "E18-017",
+          "text": "When outsourcing sample storage or genomic analysis, contractual agreements should specify supervision of the outsourced facility to ensure samples and data are properly safeguarded.",
+          "section": "4.2",
+          "obligation": "recommended",
+          "category": "data_privacy"
+        },
+        {
+          "rule_id": "E18-018",
+          "text": "Processing and analytical workflow documentation should include tools, versions, parameters at each analysis stage, source and version of genomic references/databases, and the computational environment used.",
+          "section": "3.1",
+          "obligation": "recommended",
+          "category": "data_generation"
+        }
+      ]
+    }
+  ],
+  "cross_cutting_rules": [
+    {
+      "rule_id": "XC-001",
+      "text": "Vulnerable populations (minors, elderly, cognitively impaired, economically disadvantaged) require enhanced protections across all guideline domains: enhanced consent processes (E6), assent requirements (E11), non-invasive sampling alternatives (E18), and additional IRB/IEC oversight (E6).",
+      "sources": ["ICH E6(R3)", "ICH E11(R1)", "ICH E11A", "ICH E18"],
+      "obligation": "mandatory",
+      "category": "vulnerable_populations"
+    },
+    {
+      "rule_id": "XC-002",
+      "text": "Ethnic and regional variability must be systematically assessed: intrinsic/extrinsic factor classification (E5), bridging study determination (E5), MRCT regional consistency evaluation (E17), pharmacogenomic polymorphism assessment (E15), and regional sample size planning (E17).",
+      "sources": ["ICH E5(R1)", "ICH E15", "ICH E17"],
+      "obligation": "mandatory",
+      "category": "ethnic_regional_variability"
+    },
+    {
+      "rule_id": "XC-003",
+      "text": "Informed consent for genomic research has layered requirements: GCP baseline (E6), genomic-specific disclosures on coding, return of results, broad use permissions (E15, E18), and special provisions for minors and incapacitated subjects (E6, E11, E18).",
+      "sources": ["ICH E6(R3)", "ICH E15", "ICH E18"],
+      "obligation": "mandatory",
+      "category": "informed_consent_genomics"
+    },
+    {
+      "rule_id": "XC-004",
+      "text": "Pediatric extrapolation interacts with multi-regional design: ethnic sensitivity assessment (E5) applies to pediatric PK/PD differences, age-appropriate formulations (E11) must account for regional availability, and pediatric genomic sampling (E18) requires non-invasive alternatives.",
+      "sources": ["ICH E5(R1)", "ICH E11(R1)", "ICH E11A", "ICH E17", "ICH E18"],
+      "obligation": "recommended",
+      "category": "pediatric_multi_regional"
+    },
+    {
+      "rule_id": "XC-005",
+      "text": "Biomarker-driven development must integrate qualification (E16 context of use), pharmacogenomic definitions (E15), genomic sampling standards (E18), and may need bridging for ethnic differences in biomarker prevalence (E5).",
+      "sources": ["ICH E5(R1)", "ICH E15", "ICH E16", "ICH E18"],
+      "obligation": "recommended",
+      "category": "biomarker_integration"
+    },
+    {
+      "rule_id": "XC-006",
+      "text": "All special population studies, multi-regional trials, and genomic research must comply with GCP principles (E6): risk-proportionate quality management, ALCOA+ data integrity, validated computerized systems, risk-based monitoring, and essential document retention.",
+      "sources": ["ICH E6(R3)"],
+      "obligation": "mandatory",
+      "category": "gcp_foundation"
+    },
+    {
+      "rule_id": "XC-007",
+      "text": "Regional regulatory interaction is required or recommended across all domains: bridging study design (E5), pediatric investigation plans (E11), biomarker qualification submissions (E16), MRCT design discussion (E17), and jurisdictional genomic data privacy compliance (E18).",
+      "sources": ["ICH E5(R1)", "ICH E11(R1)", "ICH E16", "ICH E17", "ICH E18"],
+      "obligation": "recommended",
+      "category": "regulatory_interaction"
+    }
+  ],
+  "obligation_summary": {
+    "mandatory": 148,
+    "recommended": 211,
+    "conditional": 38,
+    "informational": 15
+  }
+}

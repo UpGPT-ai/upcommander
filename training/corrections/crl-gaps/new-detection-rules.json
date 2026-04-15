@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated": "2026-03-23",
+    "purpose": "Machine-readable detection rules for the 3 new taxonomy categories identified in the 30-CRL verification audit. Rules are designed for automated CRL text classification pipelines.",
+    "total_new_rules": 3,
+    "source": "missed-patterns.json + full 419-record crl-data.json search"
+  },
+  "detection_rules": [
+    {
+      "rule_id": "RULE-CAT-11-A",
+      "taxonomy_id": "CAT-11-A",
+      "taxonomy_name": "PMA device component deficiencies blocking NDA/BLA approval",
+      "parent_category": "CAT-11 DEVICE_COMBINATION_PRODUCT",
+      "total_crls_in_database": 10,
+      "percentage_of_all_crls": 2.4,
+      "confirmed_application_numbers": [
+        "NDA 208276",
+        "BLA 761180",
+        "BLA 761315",
+        "NDA 201110",
+        "NDA 201848",
+        "NDA 202860",
+        "NDA 209988",
+        "NDA 210063",
+        "NDA 210136",
+        "NDA 216962"
+      ],
+      "prerequisite_filter": {
+        "description": "Only evaluate this rule for combination product applications",
+        "signals": [
+          "Application involves a drug-device combination product",
+          "Product has both drug and device components requiring separate regulatory review",
+          "CDRH involvement indicated anywhere in the submission record"
+        ]
+      },
+      "primary_detection": {
+        "method": "section_header_match",
+        "high_confidence_signals": [
+          {
+            "signal": "Explicit PMA reference with Not Approvable outcome",
+            "pattern": "(?i)received\\s+a\\s+not\\s+approvable\\s+letter\\s+on\\s+the\\s+PMA",
+            "confidence": "HIGH",
+            "example_text": "the device component of this combination product received a Not Approvable letter on the PMA on March 11, 2016"
+          },
+          {
+            "signal": "CDRH blocking approval",
+            "pattern": "(?i)CDRH.{0,200}(cannot be approved|not approvable|outstanding deficiencies)",
+            "confidence": "HIGH",
+            "example_text": "the original HF deficiencies included in the Not Approvable letter issued by FDA's Center for Devices and Radiological Health (CDRH)"
+          },
+          {
+            "signal": "NDA cannot be approved pending device PMA",
+            "pattern": "(?i)(NDA|BLA).{0,100}cannot be approved.{0,100}(device|PMA)",
+            "confidence": "HIGH",
+            "example_text": "until such time as the device is determined to be approvable for use in combination with your proposed drug under this NDA, your NDA for the drug-device combination product cannot be approved"
+          },
+          {
+            "signal": "PMA resubmission reference",
+            "pattern": "(?i)PMA\\s+resubmission.{0,100}CDRH",
+            "confidence": "HIGH",
+            "example_text": "HF deficiencies identified by CDRH on February 9, 2017, with respect to the PMA resubmission to CDRH, remain outstanding"
+          }
+        ],
+        "supporting_signals": [
+          {
+            "signal": "Device design controls CFR citation",
+            "pattern": "(?i)21\\s+CFR\\s+820\\.30",
+            "confidence": "MEDIUM",
+            "note": "Also present in CAT-07; treat as supporting signal only"
+          },
+          {
+            "signal": "Combination product terminology",
+            "pattern": "(?i)drug.device combination product",
+            "confidence": "MEDIUM"
+          },
+          {
+            "signal": "CDRH mention",
+            "pattern": "(?i)Center for Devices and Radiological Health",
+            "confidence": "MEDIUM"
+          }
+        ]
+      },
+      "exclusion_rules": [
+        {
+          "exclusion": "If PMA is mentioned only in HF context without blocking language, classify as CAT-07 not CAT-11-A",
+          "pattern": "(?i)human factors.{0,500}PMA",
+          "note": "Pure HF deficiencies without PMA not-approvable determination → CAT-07"
+        }
+      ],
+      "co_occurrence_note": "CAT-11-A frequently co-occurs with CAT-07 (Human Factors). Both should be tagged when a CRL cites a CDRH PMA Not Approvable letter that includes HF deficiencies. CAT-11-A is the primary tag (regulatory blocking); CAT-07 is secondary.",
+      "ectd_lookup": "Cross-reference application type in Module 1 cover letter for 'combination product' designation. Check CDRH database for PMA application associated with the same product.",
+      "false_positive_risk": "LOW — 'PMA' + 'not approvable' combination is highly specific to this deficiency type"
+    },
+    {
+      "rule_id": "RULE-CAT-09-C",
+      "taxonomy_id": "CAT-09-C",
+      "taxonomy_name": "Postmarketing requirements/commitments (PMR/PMC) under 505(o)(3)",
+      "parent_category": "CAT-09 ADMINISTRATIVE_REGULATORY",
+      "total_crls_in_database": 17,
+      "percentage_of_all_crls": 4.1,
+      "confirmed_application_numbers": [
+        "NDA 215244",
+        "NDA 207987",
+        "BL 125840",
+        "BLA 761045",
+        "BLA 761180",
+        "BLA 761338",
+        "BLA 761373",
+        "BLA 761425",
+        "BLA 761463",
+        "NDA 210136",
+        "NDA 211988",
+        "NDA 215559",
+        "NDA 216490",
+        "NDA 217202"
+      ],
+      "primary_detection": {
+        "method": "section_header_match",
+        "high_confidence_signals": [
+          {
+            "signal": "Explicit 505(o)(3) section header",
+            "pattern": "(?i)POSTMARKETING\\s+REQUIREMENTS\\s+UNDER\\s+505\\(o\\)\\(3\\)",
+            "confidence": "DEFINITIVE",
+            "note": "This is a formal titled section in the CRL — presence is near-100% reliable",
+            "example_text": "POSTMARKETING REQUIREMENTS UNDER 505(O)(3)"
+          },
+          {
+            "signal": "505(o)(3) statutory citation",
+            "pattern": "(?i)505\\(o\\)\\(3\\).{0,200}(requires|required|authorizes)",
+            "confidence": "HIGH",
+            "example_text": "Section 505(o)(3) of the FDCA authorizes FDA to require holders of approved drug and biological product applications to conduct postmarketing studies and clinical trials"
+          },
+          {
+            "signal": "505(k)(1) insufficiency finding",
+            "pattern": "(?i)505\\(k\\)\\(1\\).{0,200}(not be sufficient|will not be sufficient)",
+            "confidence": "HIGH",
+            "example_text": "an analysis of spontaneous postmarketing adverse events reported under subsection 505(k)(1) of the FDCA will not be sufficient to assess these serious risks"
+          },
+          {
+            "signal": "505(k)(3) insufficiency finding",
+            "pattern": "(?i)505\\(k\\)\\(3\\).{0,200}(not be sufficient|will not be sufficient)",
+            "confidence": "HIGH",
+            "example_text": "the new pharmacovigilance system that FDA is required to establish under section 505(k)(3) of the FDCA will not be sufficient to assess these serious risks"
+          }
+        ],
+        "supporting_signals": [
+          {
+            "signal": "Formal 'you will be required to conduct' language",
+            "pattern": "(?i)you will be required to conduct the following (postmarketing|study|studies|clinical trial)",
+            "confidence": "MEDIUM",
+            "note": "Distinguishes mandatory PMR from voluntary PMC commitments"
+          },
+          {
+            "signal": "PMR study type: carcinogenicity",
+            "pattern": "(?i)(carcinogenicity study|GLP carcinogenicity|TgRasH2|2-year.{0,20}rat).{0,200}required",
+            "confidence": "MEDIUM"
+          },
+          {
+            "signal": "PMR study type: PK/DDI",
+            "pattern": "(?i)(PK study|pharmacokinetic study).{0,200}(MATE|CYP|substrate).{0,200}required",
+            "confidence": "MEDIUM"
+          },
+          {
+            "signal": "PMR study type: registry",
+            "pattern": "(?i)(registry of patients|patient registry).{0,200}(required|conduct)",
+            "confidence": "MEDIUM"
+          }
+        ]
+      },
+      "exclusion_rules": [
+        {
+          "exclusion": "General REMS requirements without 505(o)(3) citation → CAT-04-G, not CAT-09-C",
+          "pattern": "REMS.{0,200}required",
+          "note": "Risk Evaluation and Mitigation Strategies are separate from PMR — assign CAT-04-G"
+        },
+        {
+          "exclusion": "Voluntary postmarketing commitment language → do not assign CAT-09-C",
+          "pattern": "(?i)(encouraged to|may wish to|we recommend that you).{0,200}(postmarket|study|trial)",
+          "note": "Voluntary PMC language does not trigger CAT-09-C"
+        }
+      ],
+      "co_occurrence_note": "CAT-09-C (PMR) can co-occur with CAT-04-B (efficacy failure), CAT-05-B (carcinogenicity), and CAT-04-E (risk-benefit). In such cases, all applicable categories should be tagged. CAT-09-C specifically captures the formal PMR instrument, not the underlying scientific deficiency.",
+      "boundary_with_cat04g": "CAT-04-G = REMS requirements and general postmarket study requests (506B/FDAAA) without 505(o)(3) formal process. CAT-09-C = formal statutory PMR under 505(o)(3) with explicit 505(k)(1) and 505(k)(3) insufficiency findings. The 505(o)(3) section header is the definitive discriminator.",
+      "false_positive_risk": "VERY LOW — section header 'POSTMARKETING REQUIREMENTS UNDER 505(O)(3)' is unique and unambiguous"
+    },
+    {
+      "rule_id": "RULE-CAT-04-H",
+      "taxonomy_id": "CAT-04-H",
+      "taxonomy_name": "Clinical site GCP inspection deficiencies",
+      "parent_category": "CAT-04 CLINICAL",
+      "total_crls_in_database": 9,
+      "percentage_of_all_crls": 2.2,
+      "confirmed_application_numbers": [
+        "BLA 761192",
+        "BLA 761240",
+        "NDA 021164",
+        "NDA 200655",
+        "NDA 213976",
+        "NDA 214927",
+        "NDA 215455",
+        "NDA 218353",
+        "NDA 218592"
+      ],
+      "primary_detection": {
+        "method": "section_header_match",
+        "high_confidence_signals": [
+          {
+            "signal": "Clinical site inspections section header",
+            "pattern": "(?i)CLINICAL\\s+SITE\\s+INSPECTIONS",
+            "confidence": "DEFINITIVE",
+            "note": "Distinct from 'FACILITY INSPECTIONS' section (CAT-02). Presence of this specific header is near-100% reliable.",
+            "example_text": "CLINICAL SITE INSPECTIONS"
+          },
+          {
+            "signal": "GCP noncompliance at clinical site",
+            "pattern": "(?i)good clinical practice.{0,200}(noncompliance|non-compliance|inspection|observed)",
+            "confidence": "HIGH",
+            "example_text": "for-cause good clinical practice (GCP) inspections for Protocol MW2010-03-02, significant issues related to the conduct of the trial and GCP noncompliance were observed"
+          },
+          {
+            "signal": "For-cause GCP inspection finding",
+            "pattern": "(?i)for-cause.{0,100}(GCP|good clinical practice|inspect)",
+            "confidence": "HIGH"
+          },
+          {
+            "signal": "Unblinding event at clinical site",
+            "pattern": "(?i)(unblinding|unblinded).{0,200}(inspect|site|protocol|study conduct)",
+            "confidence": "HIGH",
+            "example_text": "significant unblinding events that occurred during the conduct of the study"
+          }
+        ],
+        "supporting_signals": [
+          {
+            "signal": "Impact on data interpretability from site-level issues",
+            "pattern": "(?i)(inspected sites|inspection observations).{0,200}(poor quality|data.{0,50}reliability|interpretability)",
+            "confidence": "MEDIUM",
+            "example_text": "data generated from the inspected sites of poor quality"
+          },
+          {
+            "signal": "Study conduct issues at specific protocol sites",
+            "pattern": "(?i)(protocol.{0,30}conduct|study conduct).{0,200}(not in accordance|GCP|noncompliance)",
+            "confidence": "MEDIUM"
+          },
+          {
+            "signal": "BIMO inspection reference",
+            "pattern": "(?i)BIMO.{0,200}(inspect|observation|finding)",
+            "confidence": "MEDIUM",
+            "note": "BIMO = Bioresearch Monitoring; FDA program that inspects clinical investigators"
+          },
+          {
+            "signal": "Open-label data equivalence determination post-inspection",
+            "pattern": "(?i)(open.label study|open label).{0,100}(unblinding|inspection|conduct)",
+            "confidence": "MEDIUM",
+            "example_text": "study data generated should be evaluated as if they were obtained from an open label study"
+          }
+        ]
+      },
+      "exclusion_rules": [
+        {
+          "exclusion": "Manufacturing facility GMP inspection → CAT-02, not CAT-04-H",
+          "signal": "FACILITY INSPECTIONS section header (not 'CLINICAL SITE')",
+          "pattern": "(?i)^FACILITY\\s+INSPECTIONS",
+          "note": "Key discriminator: 'CLINICAL SITE INSPECTIONS' vs 'FACILITY INSPECTIONS' — fundamentally different deficiency types"
+        },
+        {
+          "exclusion": "COVID-19 travel restriction preventing facility inspection → CAT-02-C, not CAT-04-H",
+          "pattern": "(?i)(COVID|travel restriction).{0,200}(inspection|inspect)",
+          "note": "COVID-related inspection delays are a facility inspection issue (CAT-02-C), not a GCP conduct issue"
+        },
+        {
+          "exclusion": "Clinical pharmacology site issues without GCP language → do not assign CAT-04-H",
+          "note": "Pharmacokinetic study site issues without GCP noncompliance findings → evaluate under CAT-06"
+        }
+      ],
+      "co_occurrence_note": "CAT-04-H frequently co-occurs with CAT-04-B (efficacy failure) when GCP inspection findings impair the reliability of efficacy data, and with CAT-04-C (adequate/well-controlled studies) when study conduct failures undermine study design validity. Tag all applicable categories.",
+      "boundary_with_cat02": "Critical distinction: CAT-02 covers GMP inspections of MANUFACTURING facilities (drug substance/product plants). CAT-04-H covers GCP inspections of CLINICAL INVESTIGATOR SITES (hospitals, clinics where trials were conducted). The CRL section header is the definitive discriminator: 'FACILITY INSPECTIONS' = CAT-02; 'CLINICAL SITE INSPECTIONS' = CAT-04-H.",
+      "temporal_note": "For-cause GCP inspections are typically triggered by concerns identified during application review. Frequency may increase in years when FDA's BIMO program is more active or when major efficacy concerns prompt deeper site-level scrutiny.",
+      "false_positive_risk": "LOW — 'CLINICAL SITE INSPECTIONS' header is distinct from facility inspection language"
+    }
+  ],
+  "miscategorization_correction_rule": {
+    "rule_id": "RULE-MISC-001",
+    "correction_type": "Dual-tagging override",
+    "original_assignment": "CAT-05-A (Genotoxicity battery incomplete)",
+    "corrected_assignment": {
+      "primary": "CAT-03-G (Impurities not characterized)",
+      "secondary": "CAT-05-A (as supporting context)"
+    },
+    "frequency_corrected": 3,
+    "trigger_pattern": {
+      "description": "CRL NONCLINICAL section discusses impurity specifications exceeding ICH Q3B(R2) thresholds",
+      "pattern": "(?i)NONCLINICAL.{0,2000}(impurit|Q3B|qualification threshold|qualification study|toxicological qualification)",
+      "additional_context": "The CRL section is headed 'NONCLINICAL' but the content discusses impurity levels that require toxicological qualification per ICH Q3B(R2) — the root deficiency is CMC/impurity specification, not a standalone nonclinical study gap"
+    },
+    "disambiguation_logic": [
+      {
+        "condition": "NONCLINICAL section discusses ICH Q3B(R2) impurity qualification thresholds",
+        "action": "primary=CAT-03-G, secondary=CAT-05-A"
+      },
+      {
+        "condition": "NONCLINICAL section discusses missing genotoxicity/carcinogenicity/reproductive tox studies (ICH S-series guidance) without impurity context",
+        "action": "primary=CAT-05-A (or CAT-05-B/C/D as appropriate), no secondary"
+      },
+      {
+        "condition": "NONCLINICAL section discusses both impurity qualification AND standalone safety study gaps",
+        "action": "primary=CAT-03-G + relevant CAT-05 subcategory, all as co-primary"
+      }
+    ]
+  },
+  "implementation_notes": {
+    "pipeline_order": "Apply detection rules in this order: (1) Section header detection for CLINICAL SITE INSPECTIONS, POSTMARKETING REQUIREMENTS UNDER 505(O)(3), and device/PMA language — these are near-definitive. (2) Apply supporting signal scoring if section headers are absent. (3) Apply miscategorization override rule for NONCLINICAL+impurity co-occurrence.",
+    "threshold_recommendation": "For production classification: require >= 1 HIGH confidence signal OR >= 2 MEDIUM confidence signals for category assignment. DEFINITIVE signals alone are sufficient.",
+    "multi_label_note": "CRLs routinely contain multiple deficiency categories. All rules should be applied independently — a single CRL may trigger CAT-11-A + CAT-07 + CAT-04-H simultaneously.",
+    "section_header_extraction": "Pre-processing step: extract all uppercase section headers from CRL text as the primary structural signal. CRL section headers are consistent FDA templates and are the most reliable classification signal available."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "claude-commander",
+  "version": "0.1.0",
+  "description": "Mobile multi-agent orchestration platform for Claude Code sessions",
+  "type": "module",
+  "bin": {
+    "claude-commander": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server/index.ts",
+    "start": "node dist/server/index.js",
+    "cli": "tsx src/cli/index.ts",
+    "audit": "tsx src/cli/audit-csv.ts"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.0",
+    "express": "^5.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

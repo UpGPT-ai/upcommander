@@ -1,0 +1,478 @@
+{
+  "metadata": {
+    "title": "Health Canada Regulatory Divergences from FDA and EMA",
+    "description": "Comprehensive mapping of every Health Canada requirement that differs from FDA (USA) and EMA (EU) regulatory frameworks",
+    "extraction_date": "2026-03-22",
+    "source_jurisdiction": "Canada (Health Canada / HPFB)",
+    "comparison_jurisdictions": ["FDA (USA)", "EMA (EU)"]
+  },
+  "divergences": [
+    {
+      "id": "DIV-CA-001",
+      "category": "Drug Approval Pathway",
+      "topic": "New Drug Submission (NDS) vs NDA vs MAA",
+      "canada_requirement": "New Drug Submission (NDS) filed under C.08.002 of Food and Drug Regulations. Review target: 300 calendar days. Requires Product Monograph, Environmental Assessment Statement, HC/SC 3011 form, and Establishment Licence information in Module 1.",
+      "fda_requirement": "New Drug Application (NDA) under 21 CFR 314. PDUFA review target: 10 months (Standard) or 6 months (Priority). Requires Prescribing Information in SPL format, no environmental assessment in most cases (categorical exclusion), FDA Form 356h.",
+      "ema_requirement": "Marketing Authorisation Application (MAA) via Centralised, Decentralised, Mutual Recognition, or National procedure. 210-day review target (Centralised). Requires SmPC in QRD template, Environmental Risk Assessment (ERA).",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "NDS requires Product Monograph (3-part format) vs FDA PI (17-section PLR format) — completely different structure",
+          "NDS requires Environmental Assessment Statement; FDA grants categorical exclusions for most drugs",
+          "NDS Module 1 requires Establishment Licence information; FDA does not require facility licence documentation in NDA",
+          "NDS requires Submission Certification Form and Submission Fee Application Form — separate Canada-specific forms",
+          "NDS requires bilingual labelling (English/French); FDA requires English only",
+          "Review timeline: 300 days (HC) vs 304 days (FDA Standard) — similar, but HC counting differs",
+          "NDS requires Patent Information per PM(NOC) Regulations — linked but different from FDA Orange Book listing/Paragraph IV"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "MEDIUM",
+        "details": [
+          "NDS is a single national procedure; EMA has multiple pathways (Centralised, DCP, MRP, National)",
+          "Product Monograph format differs from SmPC format (3-part vs 10-section)",
+          "No Rapporteur/Co-rapporteur system — HC uses single review team",
+          "No CHMP opinion process — decision is by the Minister of Health's delegate",
+          "Environmental Assessment approach differs from EMA ERA requirements",
+          "NDS review timeline (300 days) vs EMA Centralised (210 days) — Canada is slower"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-002",
+      "category": "Generic Drug Pathway",
+      "topic": "ANDS vs ANDA vs Generic Article 10 Application",
+      "canada_requirement": "Abbreviated New Drug Submission (ANDS) under C.08.002.1. Must demonstrate bioequivalence to a Canadian Reference Product (CRP) marketed IN Canada. Requires Comprehensive Summary: Bioequivalence (CS-BE), Comparative Bioavailability Data Summary Tables in PM, and Declaration of Equivalence.",
+      "fda_requirement": "ANDA under 21 CFR 314.94. Must demonstrate bioequivalence to a Reference Listed Drug (RLD) in the Orange Book. No CS-BE equivalent. No BE data in PI.",
+      "ema_requirement": "Article 10(1) generic application. Must demonstrate bioequivalence to a reference medicinal product authorised in the EU for ≥8 years. No CS-BE equivalent. No BE data in SmPC.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "ANDS requires Canadian Reference Product (CRP) specifically marketed IN Canada; ANDA uses RLD from Orange Book — any US-approved product",
+          "ANDS requires CS-BE (Comprehensive Summary: Bioequivalence) — unique Canada document with no FDA equivalent",
+          "ANDS requires Comparative Bioavailability Data Summary Tables in the Product Monograph; FDA does not include BE data in PI",
+          "ANDS issues Declaration of Equivalence with the NOC (C.08.004(4)); no FDA equivalent",
+          "Canadian Reference Product purchased outside Canada requires extensive justification; FDA does not have this restriction",
+          "ANDS requires purchase receipts/label photocopy showing DIN as proof of CRP identity; ANDA cites Orange Book listing",
+          "BE data must be submitted in specific ASCII format (*.inf/*.dat files); FDA accepts datasets in different formats",
+          "Drug Product Classification system (4 categories by release/PK type) determines study design — no FDA equivalent classification"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "HIGH",
+        "details": [
+          "CRP must be marketed in Canada; EMA reference product can be from any EU member state",
+          "CS-BE is unique to Canada — no EMA equivalent summary document",
+          "Comparative Bioavailability Tables required in PM; not required in SmPC",
+          "Declaration of Equivalence on the NOC — no EMA equivalent",
+          "Foreign CRP requires justification; EMA has established cross-reference rules between member states",
+          "ASCII data file format requirement (*.inf/*.dat) — no EMA equivalent"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-003",
+      "category": "Clinical Trials",
+      "topic": "CTA vs IND vs EU-CTA",
+      "canada_requirement": "Clinical Trial Application (CTA) under Part C, Division 5 (C.05.001-C.05.016). 30-day default approval via No Objection Letter (NOL). Uses CTD Modules 1-3 format. Requires PSEAT-CTA, QIS, Qualified Investigator (licensed physician in province), REB approval at each site before commencement, Senior Medical/Scientific Officer residing in Canada.",
+      "fda_requirement": "IND under 21 CFR 312. 30-day review with clinical hold mechanism. Different format structure (not CTD-based for IND). No PSEAT equivalent. Requires IRB approval. Principal Investigator must be qualified but no residency requirement for sponsor officers.",
+      "ema_requirement": "EU Clinical Trial Application under EU CTR (Regulation 536/2014). Centralized submission through CTIS portal. 10+14+31 day assessment timeline. Ethics Committee approval. Uses EU-specific application form.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "CTA uses CTD modular format (Modules 1-3); IND has different format structure",
+          "CTA requires PSEAT-CTA (Protocol Safety and Efficacy Assessment Template) — unique Canada form",
+          "Canada requires SEPARATE CTA for each protocol; FDA allows multiple protocols under one IND umbrella",
+          "CTA requires Senior Medical/Scientific Officer RESIDING IN CANADA — no FDA equivalent residency requirement",
+          "REB composition explicitly defined in regulations (min 5 members, majority Canadian citizens, specific expertise areas); IRB requirements less prescriptive on composition",
+          "CTA issues NOL (No Objection Letter) as default approval; FDA IND becomes effective unless clinical hold placed — similar concept, different mechanism",
+          "CTA-N (Notification) pathway for quality-only amendments; no direct FDA equivalent",
+          "CTA requires Quality Information Summary (QIS); no specific FDA equivalent",
+          "Phase IV trials within NOC/DIN parameters do NOT require a CTA; FDA exempts certain Phase IV from IND but differently",
+          "Lot Release Information required for biologics BEFORE trial commencement; FDA lot release is narrower",
+          "CTA requires Quality Overall Summary - Chemical Entities (QOS-CE) specifically for CTAs; no FDA equivalent"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "MEDIUM",
+        "details": [
+          "CTA submitted directly to appropriate Directorate; EU-CTA submitted through centralized CTIS portal",
+          "30-day default approval (NOL) mechanism; EU has structured timeline with Part I and Part II assessment",
+          "REB (not Ethics Committee) with specific Canadian composition rules (Canadian citizenship majority requirement)",
+          "No Rapporteur system for CTA review; EU has reporting member state concept",
+          "CTA-N (quality notification) pathway; EU has substantial and non-substantial amendment categories",
+          "PSEAT-CTA template is Canada-specific; EU uses its own application form structure",
+          "Qualified Investigator must be licensed in the PROVINCE where trial is conducted; EU requires qualification per member state rules"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-004",
+      "category": "Product Labelling",
+      "topic": "Product Monograph vs PI vs SmPC",
+      "canada_requirement": "Product Monograph (PM) — 3-part document: Part I (Health Professional Information), Part II (Scientific Information), Part III (Patient Medication Information). Must be bilingual (English/French). XML template with validation rules. Includes Serious Warnings and Precautions Box. Includes Comparative Bioavailability Tables for generics.",
+      "fda_requirement": "Prescribing Information (PI) in PLR format — 17 numbered sections. English only. SPL XML format. Boxed Warning (Black Box) when required. Patient Package Insert / Medication Guide as separate documents.",
+      "ema_requirement": "Summary of Product Characteristics (SmPC) — 10 numbered sections per QRD template. In language of member state. Package Leaflet (PL) as separate document. No structured serious warnings box equivalent.",
+      "divergence_from_fda": {
+        "severity": "CRITICAL",
+        "details": [
+          "COMPLETELY DIFFERENT FORMAT: PM has 3 parts vs PI has 17 sections",
+          "PM MUST be bilingual (English/French); PI is English only",
+          "PM integrates Patient Medication Information as Part III; FDA separates patient info (PPIs/Medication Guides)",
+          "PM uses Health Canada XML template with specific validation rules; FDA uses SPL XML with different schema",
+          "PM Part II includes full Clinical Trials data, Detailed Pharmacology, and Toxicology sections; PI does not include raw pharmacology/toxicology data",
+          "PM requires Comparative Bioavailability Tables for generics (Appendix A format); PI does not include BE data",
+          "PM Serious Warnings and Precautions Box differs in format/placement from FDA Boxed Warning",
+          "PM uses Health Canada master-template.docx for authoring; FDA has no template — uses SPL authoring tools",
+          "PM validation rules are Health Canada-specific; FDA has SPL validation",
+          "PM must be CURRENT at time of NOC issuance; FDA requires PI to be up to date but different mechanism",
+          "PM for subsequent-entry products must fall WITHIN conditions of use of CRP; FDA generics mirror RLD labelling"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "HIGH",
+        "details": [
+          "PM has 3 parts; SmPC has 10 sections — different organizational structure",
+          "PM integrates patient info (Part III); EMA separates SmPC from Package Leaflet (PL)",
+          "PM bilingual (English/French) in single document; SmPC is in one language per member state",
+          "PM XML template ≠ QRD template",
+          "PM Part II scientific information is more extensive than SmPC pharmacological properties (Section 5)",
+          "PM requires Comparative Bioavailability Tables for generics; SmPC does not",
+          "PM is a single unified document; EMA requires SmPC + PL + labelling text as separate documents",
+          "PM Serious Warnings Box is structured differently from any EMA equivalent"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-005",
+      "category": "Manufacturing",
+      "topic": "GMP and Establishment Licensing",
+      "canada_requirement": "GMP per Division 2 (C.02.001-C.02.030) of Food and Drug Regulations. Mandatory Establishment Licence (EL) under Division 1A (C.01A.001-C.01A.019) with Annual Licence Review. GMP guide: GUI-0001. No Qualified Person (QP) requirement. Schedule D biologics require lot release (C.04.007).",
+      "fda_requirement": "cGMP per 21 CFR 210/211. Facility Registration (21 CFR 207) — not a formal licence. Drug Listing required. No QP. Inspection-based compliance. CBER lot release for select biologics only.",
+      "ema_requirement": "EU GMP per EudraLex Volume 4 + Annexes. Manufacturing Authorisation required from national competent authority. Qualified Person (QP) mandatory for batch release. OCABR (Official Control Authority Batch Release) for biologics.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "Canada requires formal ESTABLISHMENT LICENCE (EL) with annual review; FDA requires only registration (no licence, no annual formal review of registration status)",
+          "EL can be suspended or cancelled; FDA registration does not have this mechanism (relies on warning letters, consent decrees)",
+          "GMP codified in regulations (C.02.xxx with force of law); FDA cGMP in 21 CFR 210/211 also has force of law but guidance plays larger role",
+          "Stability program explicitly required by regulation (C.02.027); FDA has 21 CFR 211.166 but guidance-driven",
+          "Canadian lot release for ALL Schedule D biologics; FDA lot release only for specific CBER-regulated products (vaccines, blood products)",
+          "EL information must be included in drug submission (Module 1.2.5); FDA does not require facility licence info in NDA",
+          "Annual Licence Review (C.01A.009) is a regulatory requirement; no FDA equivalent"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "MEDIUM",
+        "details": [
+          "NO Qualified Person (QP) requirement in Canada; EU REQUIRES QP for batch release — major difference",
+          "Canada uses EL; EU uses Manufacturing Authorisation — similar concept but different implementation",
+          "Canadian GMP guide (GUI-0001) vs EudraLex Volume 4 with numbered Annexes — different structure",
+          "No formal Annex system (e.g., Annex 1 for sterile products); Canadian guidance is more consolidated",
+          "Lot release for Schedule D drugs vs OCABR through national OMCL network — different mechanism",
+          "Annual Licence Review vs EU periodic inspection cycle — different compliance verification approach"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-006",
+      "category": "Data Protection",
+      "topic": "Innovative Drug Data Protection Period",
+      "canada_requirement": "8 years data protection for innovative drugs under C.08.004.1. Additional 6 months for pediatric studies. Total maximum: 8.5 years.",
+      "fda_requirement": "5 years NCE exclusivity under 21 USC 355(j)(5)(F)(ii). 3 years for new clinical investigations. Additional 6 months pediatric exclusivity. Other exclusivities available (orphan 7 years, QIDP 5 years, etc.).",
+      "ema_requirement": "8 years data exclusivity + 2 years market exclusivity + 1 year for new indication = 8+2+1 system. Additional 6 months pediatric extension.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "Canada provides 8 years base data protection; FDA provides only 5 years NCE exclusivity — Canada is MORE protective of innovator data",
+          "Canada does not have separate market exclusivity period; FDA combines data and market exclusivity differently",
+          "Canada has fewer exclusivity types (no orphan drug exclusivity, no QIDP extension); FDA has multiple stacking exclusivities",
+          "Pediatric extension is 6 months in both, but calculated differently relative to base period"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Canada: 8 years base; EMA: 8 years data + 2 years market = 10 years effective protection",
+          "Canada lacks the 2-year market exclusivity add-on that EMA provides",
+          "Canada lacks the +1 year for new indication incentive",
+          "Net effect: EMA provides stronger protection (10-11 years) vs Canada (8-8.5 years)"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-007",
+      "category": "Transparency",
+      "topic": "Summary Basis of Decision (SBD) vs FDA Review vs EPAR",
+      "canada_requirement": "Summary Basis of Decision (SBD) — single narrative document published after NOC issuance. Summarizes clinical, non-clinical, and quality evaluations and regulatory decision rationale.",
+      "fda_requirement": "Detailed review packages published on Drugs@FDA: medical review, chemistry review, pharmacology review, statistical review, clinical pharmacology review, risk assessment. Multiple detailed documents.",
+      "ema_requirement": "European Public Assessment Report (EPAR) — comprehensive multi-section document with scientific discussion, assessment report, conditions of use. Published for centralized procedure products.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "SBD is a single summary narrative; FDA publishes multiple detailed discipline-specific reviews",
+          "FDA reviews are more granular and detailed than SBD",
+          "SBD is published for select submissions; FDA publishes for all approved NDAs/BLAs",
+          "FDA review documents include the actual reviewer analyses; SBD is more of a summary rationale"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "MEDIUM",
+        "details": [
+          "SBD is typically shorter and less detailed than EPAR",
+          "EPAR includes full scientific discussion; SBD is more concise",
+          "EPAR is published for all centralized procedure products; SBD scope differs",
+          "EPAR includes assessment report with detailed scientific analysis; SBD summarizes at higher level"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-008",
+      "category": "Bilingual Requirements",
+      "topic": "Official Languages (English/French) Requirement",
+      "canada_requirement": "ALL labelling, Product Monograph, and patient information must be provided in both English and French per Canada's Official Languages Act. This applies to Product Monograph (all 3 parts), inner/outer labels, patient medication information, and clinical trial drug labels.",
+      "fda_requirement": "English only required. No bilingual requirement.",
+      "ema_requirement": "SmPC and PL must be in the official language(s) of the member state where marketed. Multi-language requirements exist for cross-border procedures.",
+      "divergence_from_fda": {
+        "severity": "CRITICAL",
+        "details": [
+          "Canada requires BILINGUAL (English/French) for ALL labelling and prescribing information — FDA has NO bilingual requirement",
+          "This affects Product Monograph, all labels, patient information, and clinical trial labelling",
+          "Significant cost and operational impact for sponsors — must prepare, validate, and maintain two language versions",
+          "Bilingual validation rules in PM XML template enforce both language versions"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Both require multiple languages, but Canada always requires exactly 2 (English/French)",
+          "EMA requirements vary by member state — may require 1, 2, or more languages depending on country",
+          "Canada's bilingual requirement is universal and consistent; EMA's is member-state-dependent"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-009",
+      "category": "Environmental Assessment",
+      "topic": "Environmental Assessment Statement",
+      "canada_requirement": "Environmental Assessment Statement required in Module 1.5 of drug submissions under CEPA. Must address environmental release and exposure pathways.",
+      "fda_requirement": "Environmental Assessment (EA) under 21 CFR 25 technically required, but categorical exclusions apply to most drug applications — rarely need to submit full EA.",
+      "ema_requirement": "Environmental Risk Assessment (ERA) required for all MAAs per CHMP/SWP/4447/00 guideline. Phase I screening and Phase II detailed assessment if needed.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "Canada requires Environmental Assessment Statement as standard; FDA almost always grants categorical exclusions",
+          "Practical difference: Canadian sponsors must prepare environmental documentation; FDA sponsors typically claim exclusion with minimal documentation"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Both require environmental assessment but differ in scope and framework",
+          "EMA ERA is more detailed and structured (Phase I/Phase II tiered approach)",
+          "Canadian EA uses CEPA framework; EMA ERA uses CHMP/SWP guideline"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-010",
+      "category": "Biologics",
+      "topic": "Schedule D and Lot Release",
+      "canada_requirement": "Schedule D drugs (biologics: vaccines, blood products, sera, toxoids, etc.) require lot release testing per C.04.007. Manufacturer submits samples and protocols to HC. Reference preparations maintained by HC (C.04.006). Periodic Quality Reporting required (C.04.008).",
+      "fda_requirement": "CBER lot release required for specific products only (certain vaccines, blood products). Not all biologics require lot release. BLA pathway under 21 CFR 600-680.",
+      "ema_requirement": "Official Control Authority Batch Release (OCABR) through EU OMCL network for immunologicals and blood products. Centralized through EDQM coordination.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "Canada applies lot release broadly to ALL Schedule D drugs; FDA applies only to specific CBER products",
+          "Canada requires periodic quality reporting (C.04.008); FDA has different post-market reporting structure",
+          "HC maintains its own reference preparations (C.04.006); FDA/CBER has different reference standard approach",
+          "Schedule D classification is unique to Canada — determines lot release obligation by schedule, not product-specific"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Both have lot/batch release requirements for biologics",
+          "Canada does it nationally; EU uses OMCL network with EDQM coordination",
+          "Scope is similar — vaccines, blood products, immunologicals",
+          "Canadian Periodic Quality Reporting (C.04.008) vs EU requirements for annual product quality reviews"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-011",
+      "category": "Post-Market Safety",
+      "topic": "ADR Reporting and Pharmacovigilance",
+      "canada_requirement": "Serious ADR reporting within 15 days (C.01.017). Annual Summary Reports required (C.01.018). Issue-Related Summary Reports on request (C.01.019). Drug shortage reporting (C.01.014.7). Canada Vigilance system for reporting.",
+      "fda_requirement": "15-day alert reports for serious, unexpected ADRs. Periodic safety reports. MedWatch system. REMS (Risk Evaluation and Mitigation Strategy) for certain drugs.",
+      "ema_requirement": "SUSAR reporting. Periodic Safety Update Reports (PSURs/PBRERs). EudraVigilance system. Risk Management Plans (RMPs) required for all new MAAs.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "Canada requires Annual Summary Reports AND Case Reports (C.01.018); FDA has different periodic reporting structure",
+          "Canada uses Canada Vigilance system; FDA uses MedWatch/FAERS",
+          "Canada has Issue-Related Summary Reports on ministerial request (C.01.019); no exact FDA equivalent",
+          "Canada mandates drug shortage reporting in regulations (C.01.014.7); FDA shortage reporting evolved differently",
+          "No formal REMS equivalent in Canada; HC uses terms and conditions on NOC and risk management approaches"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "MEDIUM",
+        "details": [
+          "Canada does not require Risk Management Plans (RMPs) as universally as EMA does for all new MAAs",
+          "Canada uses Canada Vigilance; EMA uses EudraVigilance",
+          "Annual Summary Reports (Canada) vs PSURs/PBRERs (EMA) — different format and scope",
+          "No Signal Management system equivalent to EMA's PRAC-coordinated signal assessment"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-012",
+      "category": "Patent Linkage",
+      "topic": "PM(NOC) Regulations vs Paragraph IV / SPC",
+      "canada_requirement": "Patented Medicines (Notice of Compliance) Regulations create a patent linkage system. Patent information submitted with NDS. ANDS/SANDS filers must address listed patents. Minister shall not issue NOC until patent issues resolved or allegation accepted.",
+      "fda_requirement": "Hatch-Waxman Act: Orange Book listing, Paragraph IV certifications, 30-month stay, 180-day exclusivity for first generic filer.",
+      "ema_requirement": "NO patent linkage in EU regulatory system. Patent disputes handled through court system. Supplementary Protection Certificates (SPCs) provide additional protection. EMA grants marketing authorisation regardless of patent status.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "Both have patent linkage systems but mechanisms differ significantly",
+          "Canada: PM(NOC) Regulations; FDA: Hatch-Waxman / Orange Book system",
+          "Canada: No 180-day first generic exclusivity; FDA provides this incentive",
+          "Canada: Patent register is different from Orange Book",
+          "NOC withheld pending patent dispute resolution; FDA uses 30-month stay mechanism",
+          "Different court/administrative challenge procedures"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "CRITICAL",
+        "details": [
+          "Canada HAS patent linkage (NOC withheld for patent issues); EMA has NO patent linkage at all",
+          "This is a fundamental philosophical difference: Canada links regulatory approval to patent status; EU does not",
+          "EMA grants marketing authorisation regardless of patent status — patent enforcement is purely judicial",
+          "SPCs provide additional protection in EU but are not linked to marketing authorisation process"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-013",
+      "category": "Review Pathways",
+      "topic": "Priority Review and Expedited Pathways",
+      "canada_requirement": "Priority Review (target 180 days vs 300 standard). NOC/c (conditional approval with post-market obligations). Special Access Programme (SAP) for non-marketed drugs.",
+      "fda_requirement": "Priority Review (6 months), Breakthrough Therapy, Fast Track, Accelerated Approval, RMAT. Multiple overlapping designations available.",
+      "ema_requirement": "Accelerated Assessment (150 days), Conditional MA, PRIME designation, Exceptional Circumstances MA.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "Canada has FEWER expedited pathways than FDA — no Breakthrough Therapy or Fast Track equivalents",
+          "Priority Review: HC 180 days vs FDA 6 months — similar",
+          "NOC/c roughly equivalent to Accelerated Approval but different mechanisms",
+          "SAP roughly equivalent to Expanded Access but different administration",
+          "No RMAT (Regenerative Medicine Advanced Therapy) equivalent in Canada"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Priority Review similar to Accelerated Assessment in concept",
+          "NOC/c similar to Conditional MA",
+          "No PRIME designation equivalent in Canada",
+          "SAP similar to Compassionate Use/Named Patient programs"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-014",
+      "category": "Drug Identification",
+      "topic": "DIN System vs NDC vs EU Authorization Numbers",
+      "canada_requirement": "Drug Identification Number (DIN) — unique 8-digit number assigned by Health Canada to each authorized drug product (C.01.014). Must appear on all labels. Assignment and cancellation processes defined in regulations.",
+      "fda_requirement": "National Drug Code (NDC) — 10-digit code identifying labeler, product, and package size. NDA/ANDA number identifies the application. NDC is assigned by manufacturer, not FDA.",
+      "ema_requirement": "Marketing Authorisation number assigned by EMA/national authority. No single universal product identification number equivalent to DIN.",
+      "divergence_from_fda": {
+        "severity": "MEDIUM",
+        "details": [
+          "DIN is assigned BY Health Canada; NDC is assigned BY the manufacturer/labeler",
+          "DIN is a single identifier per drug product; NDC includes labeler, product, and package components",
+          "DIN assignment/cancellation is a regulatory act (C.01.014); NDC registration is administrative",
+          "DIN must appear on labels by regulation; NDC listing is required but different regulatory framework"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "LOW",
+        "details": [
+          "Both are authority-assigned identification numbers",
+          "DIN is a simpler 8-digit number; EU marketing authorization numbers vary by procedure and member state"
+        ]
+      }
+    },
+    {
+      "id": "DIV-CA-015",
+      "category": "Submission Format",
+      "topic": "CS-BE (Comprehensive Summary: Bioequivalence) — Canada-Only Document",
+      "canada_requirement": "CS-BE is a unique Canadian summary document required for ANDS submissions that rely on comparative bioavailability studies. Covers: physicochemical characteristics, pharmacology, pharmacokinetics, drug product classification (4 categories), and BE study summaries. If CS-BE is completed for submissions relying SOLELY on BE studies, CTD Modules 2.4-2.7 do NOT need to be completed.",
+      "fda_requirement": "No equivalent document. BE study data submitted in standard ANDA format sections.",
+      "ema_requirement": "No equivalent document. BE study data submitted per generic application guidelines.",
+      "divergence_from_fda": {
+        "severity": "HIGH",
+        "details": [
+          "CS-BE is unique to Canada — NO FDA equivalent whatsoever",
+          "CS-BE can REPLACE CTD Modules 2.4-2.7 for pure BE submissions — unique regulatory simplification",
+          "Drug Product Classification (4 categories) in CS-BE determines study design — no FDA equivalent classification",
+          "CS-BE requires specific format for physicochemical, pharmacology, and PK summaries"
+        ]
+      },
+      "divergence_from_ema": {
+        "severity": "HIGH",
+        "details": [
+          "CS-BE is unique to Canada — NO EMA equivalent",
+          "No equivalent Module 2.4-2.7 waiver mechanism in EMA submissions",
+          "Drug Product Classification system in CS-BE has no EMA counterpart"
+        ]
+      }
+    }
+  ],
+  "summary_statistics": {
+    "total_divergences_mapped": 15,
+    "critical_divergences_from_fda": ["Product Monograph format (DIV-CA-004)", "Bilingual requirements (DIV-CA-008)"],
+    "critical_divergences_from_ema": ["Patent linkage (DIV-CA-012)"],
+    "high_divergences_from_fda": ["NDS requirements (DIV-CA-001)", "ANDS/CRP system (DIV-CA-002)", "CTA vs IND (DIV-CA-003)", "Establishment Licensing (DIV-CA-005)", "Data protection (DIV-CA-006)", "Patent linkage (DIV-CA-012)", "CS-BE (DIV-CA-015)"],
+    "high_divergences_from_ema": ["ANDS/CRP system (DIV-CA-002)", "Product Monograph (DIV-CA-004)", "CS-BE (DIV-CA-015)"],
+    "canada_unique_requirements": [
+      "Canadian Reference Product (CRP) concept — must be marketed in Canada",
+      "Comprehensive Summary: Bioequivalence (CS-BE)",
+      "Drug Product Classification (4 categories for BE study design)",
+      "Declaration of Equivalence on NOC",
+      "Bilingual (English/French) labelling and Product Monograph (second language PM due within 20 days of NOC)",
+      "3-part Product Monograph format (Version 7, HL7 SPL-based XML with ~70 validation rules)",
+      "PM is legal ceiling for all promotion — C.08.002(2) prohibits advertising beyond PM claims",
+      "Scheduling symbols (Pr, N, T/C) on PM title page",
+      "WHO ATC classification required on PM title page",
+      "Grade 6-8 reading level requirement for Patient Medication Information (PMI)",
+      "Establishment Licence (EL) with Annual Licence Review",
+      "Environmental Assessment Statement in Module 1.5",
+      "PSEAT-CTA template for clinical trials",
+      "Senior Medical/Scientific Officer must reside in Canada",
+      "REB with specific composition requirements (Canadian citizenship majority) — codified in FDR itself (C.05.001)",
+      "Drug Identification Number (DIN) assigned by Health Canada — 8-digit, mandatory on all labels",
+      "Comparative Bioavailability Data Summary Tables in Product Monograph",
+      "BE data in ASCII format (*.inf and *.dat files)",
+      "PM(NOC) Regulations patent linkage system",
+      "Schedule D biologics broad lot release requirement",
+      "Brand name confusion assessment required in NDS (C.08.002(2)(o)) — look-alike/sound-alike",
+      "SGBA Plus (Sex- and Gender-Based Analysis Plus) required in CTAs",
+      "TB screening for Phase I healthy volunteers with immunosuppressant drugs",
+      "New Drug Committee appeal mechanism (C.08.009) — 3-member panel unique to Canada",
+      "Extraordinary Use NDS pathway (C.08.002.01) for CBRN emergency drugs",
+      "Public Health Emergency Drug pre-positioning (C.08.009.01-05) — pre-NOC import/distribution",
+      "Clinical trial record retention: 15 years (C.05.012(4))",
+      "Post-NOC record keeping: 7 years minimum (C.08.007)",
+      "Mandatory hospital reporting of serious ADRs",
+      "Clinical information disclosure — CBI ceases when NOC issued (C.08.009.1-3)",
+      "Certificate of Supplementary Protection (CSP) — Canada's patent term restoration",
+      "Data protection: 6-year filing block + 8-year NOC block + 6-month pediatric extension (CUSMA-aligned)",
+      "Mandatory foreign regulatory action reporting to Health Canada",
+      "PIC/S membership — GMP guide incorporates PIC/S annexes directly"
+    ]
+  }
+}

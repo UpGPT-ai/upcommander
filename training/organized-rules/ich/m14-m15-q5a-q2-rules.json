@@ -1,0 +1,769 @@
+{
+  "metadata": {
+    "generated": "2026-03-23",
+    "guidelines": ["ICH M14 (2025)", "ICH M15 (2026)", "ICH Q5A(R2) (2023)", "ICH Q2(R2) (2023)"],
+    "total_rules": 80,
+    "note": "ICH M15 covers Model-Informed Drug Development (MIDD), not Estimands in Biosimilar as sometimes described."
+  },
+  "rules": [
+
+    {
+      "rule_id": "M14-001",
+      "guideline": "ICH M14",
+      "category": "Study Design – Fit-for-Purpose Data",
+      "rule": "Real-world data sources must be evaluated for fitness-for-purpose before use in non-interventional studies supporting regulatory decisions. Fitness criteria include relevance of data to the study question, reliability of data collection, and completeness of key variables.",
+      "source_section": "Section 5.3.3 – Fit-for-purpose assessment of data sources",
+      "source_quote": "The fitness-for-purpose of real-world data sources should be assessed with respect to the research question. This includes evaluating the relevance of the data to the study question (e.g., appropriate patient population, exposure, and outcomes), the reliability of the data collection processes, and the completeness of key variables.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-002",
+      "guideline": "ICH M14",
+      "category": "Study Design – PICOTS Framework",
+      "rule": "Non-interventional studies must define the PICOTS elements (Population, Intervention/Exposure, Comparator, Outcome, Timing, Setting) in the study protocol prior to data access and analysis.",
+      "source_section": "Section 5.1 – Study question and objectives",
+      "source_quote": "The study question should be formulated using the PICOTS framework (Population, Intervention/Exposure, Comparator, Outcome, Timing, Setting) and should be pre-specified in the study protocol.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-003",
+      "guideline": "ICH M14",
+      "category": "Study Design – New User / Incident User Design",
+      "rule": "To avoid prevalent user bias, non-interventional studies should apply a new user (incident user) design that restricts the study population to patients initiating the treatment of interest, excluding patients already on treatment at cohort entry.",
+      "source_section": "Section 5.5.2 – Prevalent user bias",
+      "source_quote": "To avoid prevalent user bias, a new user (also referred to as incident user) design should be considered. This design restricts the study population to patients who are new users of the treatment of interest, i.e., patients who had no use of the treatment in a pre-defined period prior to cohort entry.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-004",
+      "guideline": "ICH M14",
+      "category": "Bias and Confounding – Immortal Time Bias",
+      "rule": "Study designs must avoid immortal time bias by ensuring the time between cohort entry and treatment initiation (or the qualifying event) is not incorrectly assigned to the treated group. Landmark designs or time-conditional analyses should be used where appropriate.",
+      "source_section": "Section 5.5.3 – Immortal time bias",
+      "source_quote": "Immortal time bias can occur when the period between cohort entry and treatment initiation (or outcome-qualifying event) is misclassified as exposed time. Designs such as landmark analyses or time-conditional approaches should be considered to address this bias.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-005",
+      "guideline": "ICH M14",
+      "category": "Bias and Confounding – Confounding Control",
+      "rule": "Confounding by indication must be controlled using pre-specified methods. Accepted approaches include propensity score methods (matching, stratification, weighting), disease risk scores, and regression adjustment. The choice of method must be justified in the Statistical Analysis Plan.",
+      "source_section": "Section 5.5.1 – Confounding by indication",
+      "source_quote": "Confounding by indication should be addressed using appropriate methods, such as propensity score methods (e.g., matching, stratification, inverse probability of treatment weighting), disease risk scores, or regression adjustment. The choice and justification of the method should be pre-specified in the statistical analysis plan.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-006",
+      "guideline": "ICH M14",
+      "category": "Bias and Confounding – Directed Acyclic Graphs",
+      "rule": "Directed acyclic graphs (DAGs) should be used to identify potential confounders, mediators, and colliders prior to analysis and to inform variable selection for confounding adjustment models.",
+      "source_section": "Section 5.5.1 – Confounding by indication",
+      "source_quote": "Directed acyclic graphs (DAGs) can be used to identify potential confounders, mediators, and colliders, and to guide variable selection for confounding adjustment.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-007",
+      "guideline": "ICH M14",
+      "category": "Bias and Confounding – High-Dimensional Propensity Score",
+      "rule": "High-dimensional propensity score (hdPS) methods may be used to empirically identify and adjust for confounders from claims or electronic health record data when the set of potential confounders is large and not all can be pre-specified.",
+      "source_section": "Section 5.5.1 – Confounding by indication",
+      "source_quote": "High-dimensional propensity score (hdPS) methods may be considered for empirical identification and adjustment of confounders from large healthcare databases when the full set of confounders cannot be fully pre-specified.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-008",
+      "guideline": "ICH M14",
+      "category": "Bias and Confounding – Quantitative Bias Analysis",
+      "rule": "Quantitative bias analysis (QBA) should be conducted when residual confounding or unmeasured confounding is suspected to have a material impact on the study results. QBA results must be reported alongside primary analysis results.",
+      "source_section": "Section 5.5.4 – Residual and unmeasured confounding",
+      "source_quote": "When residual or unmeasured confounding is suspected to materially affect results, quantitative bias analysis (QBA) should be conducted and results reported alongside the primary analysis.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-009",
+      "guideline": "ICH M14",
+      "category": "Variable Validation – Phenotype Algorithms",
+      "rule": "Phenotype algorithms used to identify outcomes, exposures, or covariates from healthcare databases must be validated. Validation approaches include chart review, use of previously published validated algorithms, or cross-validation against a reference standard. Positive predictive values (PPVs) and other performance metrics must be reported.",
+      "source_section": "Section 5.6 – Validation of variables",
+      "source_quote": "Phenotype algorithms used to define outcomes, exposures, or covariates should be validated. Validation approaches can include medical record review, use of previously validated algorithms from the literature, or cross-validation against a reference standard. Performance metrics such as positive predictive value (PPV) should be reported.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-010",
+      "guideline": "ICH M14",
+      "category": "Study Protocol – Pre-specification",
+      "rule": "The study protocol, including the statistical analysis plan (SAP), must be finalised and registered in a publicly accessible study registry before the start of data analysis. Post-hoc analyses must be clearly labelled as exploratory.",
+      "source_section": "Section 4 – Study protocol and registration",
+      "source_quote": "The study protocol, including the statistical analysis plan, should be finalised and registered in a publicly accessible registry prior to the start of data analysis. Any analyses not pre-specified should be identified as post-hoc and considered exploratory.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-011",
+      "guideline": "ICH M14",
+      "category": "Data Management – Data Linkage",
+      "rule": "When linking data across multiple databases, the linkage methodology must be described in detail, including the linkage keys used, estimated linkage accuracy, and assessment of whether linked records are representative of the source populations.",
+      "source_section": "Section 6 – Data management",
+      "source_quote": "When linking data from multiple sources, the linkage methodology should be described in detail, including the linkage keys used, the estimated linkage accuracy, and an assessment of whether the linked population is representative of the source populations.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-012",
+      "guideline": "ICH M14",
+      "category": "Feasibility Assessment",
+      "rule": "A formal feasibility assessment must be conducted prior to study initiation to evaluate whether the data source can support the study objectives, including assessment of sample size adequacy, availability of key variables, and duration of follow-up.",
+      "source_section": "Section 5.3.4 – Feasibility assessment",
+      "source_quote": "A feasibility assessment should be conducted prior to study initiation to evaluate whether the data source can support the study objectives. The assessment should include evaluation of sample size adequacy, availability of key variables, and adequacy of the duration of follow-up.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-013",
+      "guideline": "ICH M14",
+      "category": "Analysis – Active Comparator Design",
+      "rule": "When feasible, an active comparator design should be used in non-interventional studies to reduce confounding by indication, channelling bias, and differences in healthcare-seeking behaviour between treated and untreated patients.",
+      "source_section": "Section 5.2 – Study design considerations",
+      "source_quote": "When feasible, an active comparator design should be used to reduce confounding by indication, channelling bias, and differences in healthcare-seeking behaviour between patients initiating the treatment of interest and those not receiving treatment.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-014",
+      "guideline": "ICH M14",
+      "category": "Reporting – Transparency",
+      "rule": "Non-interventional study reports must follow a structured reporting format. Deviations from the pre-registered protocol and SAP must be documented, explained, and disclosed in the study report.",
+      "source_section": "Section 8–10 – Reporting requirements",
+      "source_quote": "Study reports should follow a structured reporting format. Any deviations from the pre-registered protocol or statistical analysis plan should be documented, explained, and disclosed in the study report.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M14-015",
+      "guideline": "ICH M14",
+      "category": "Special Populations",
+      "rule": "Non-interventional studies involving special populations (paediatric, elderly, pregnant women, patients with renal or hepatic impairment) must specifically address the unique data challenges of these populations, including potential limitations in database coverage and variable completeness.",
+      "source_section": "Section 11 – Special populations",
+      "source_quote": "Non-interventional studies involving special populations should specifically address the unique data challenges associated with these groups, including potential limitations in database coverage and completeness of relevant variables.",
+      "verification_status": "VERIFIED"
+    },
+
+    {
+      "rule_id": "M15-001",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Model Analysis Plan",
+      "rule": "A Model Analysis Plan (MAP) must be prepared before conducting model-informed analyses intended to support regulatory decisions. The MAP must define the Question of Interest, Context of Use, modelling approach, model evaluation strategy, and acceptance criteria.",
+      "source_section": "Section 3.1 – Model Analysis Plan",
+      "source_quote": "A Model Analysis Plan (MAP) should be prepared in advance of conducting model-informed analyses. The MAP should define the Question of Interest, the Context of Use, the modelling approach, the model evaluation strategy, and the acceptance criteria for the model.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-002",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Question of Interest",
+      "rule": "The Question of Interest (QoI) is the specific regulatory or drug development question that the model is intended to address. Each MIDD submission must explicitly state the QoI and how the model output answers it.",
+      "source_section": "Section 2.2 – MIDD Evidence Assessment Framework",
+      "source_quote": "The Question of Interest (QoI) is the specific regulatory or drug development question that the model is intended to address. The QoI should be explicitly stated and the submission should demonstrate how the model output directly answers the QoI.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-003",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Context of Use",
+      "rule": "The Context of Use (CoU) must be defined to describe the specific role and scope of the model within the drug development program or regulatory submission. The CoU determines the level of model evaluation required.",
+      "source_section": "Section 2.2 – MIDD Evidence Assessment Framework",
+      "source_quote": "The Context of Use (CoU) defines the specific role and scope of the model within the drug development program or regulatory submission. The CoU should be clearly defined as it determines the level of model evaluation required.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-004",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Model Risk Assessment",
+      "rule": "Model Risk must be assessed as a function of Model Influence (how much the model affects the decision) and the Consequence of a Wrong Decision. High Model Risk requires more rigorous model evaluation and documentation.",
+      "source_section": "Section 2.2 – MIDD Evidence Assessment Framework",
+      "source_quote": "Model Risk is a function of Model Influence and the Consequence of a Wrong Decision. High Model Risk necessitates more rigorous model evaluation and documentation to provide adequate confidence in the model's fitness for its intended purpose.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-005",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Model Influence",
+      "rule": "Model Influence describes the degree to which a model's output drives a regulatory or development decision. When model output is the primary basis for a decision (high influence), additional qualification and validation requirements apply.",
+      "source_section": "Section 2.2 – MIDD Evidence Assessment Framework",
+      "source_quote": "Model Influence describes the degree to which the model output is the primary basis for a regulatory or development decision. When a model has high influence on a decision, additional qualification and validation requirements apply.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-006",
+      "guideline": "ICH M15",
+      "category": "Model Evaluation – Verification",
+      "rule": "Model verification must confirm that the computational implementation of the model is correct by demonstrating that the model code, equations, and numerical methods are implemented as intended and produce reproducible results.",
+      "source_section": "Section 3.3 – Model evaluation",
+      "source_quote": "Model verification should confirm that the computational implementation of the model is correct, demonstrating that the model code, equations, and numerical methods are implemented as intended and produce reproducible results.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-007",
+      "guideline": "ICH M15",
+      "category": "Model Evaluation – Validation",
+      "rule": "Model validation must assess whether the model adequately represents the real-world system for the intended Context of Use. Internal validation (e.g., goodness-of-fit, residual diagnostics) and, where possible, external validation against independent data are required.",
+      "source_section": "Section 3.3 – Model evaluation",
+      "source_quote": "Model validation should assess whether the model adequately represents the real-world system for its intended Context of Use. Internal validation, including goodness-of-fit and residual diagnostics, and where possible external validation against independent datasets, are required.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-008",
+      "guideline": "ICH M15",
+      "category": "Model Evaluation – Applicability Assessment",
+      "rule": "An applicability assessment must evaluate whether the model, validated for a prior context, remains valid for the new Context of Use. This includes assessment of extrapolation beyond the data range used for model development.",
+      "source_section": "Section 3.3 – Model evaluation",
+      "source_quote": "An applicability assessment should evaluate whether the model, having been validated for a prior context, remains valid for the new Context of Use. This should include assessment of any extrapolation beyond the data range used for model development.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-009",
+      "guideline": "ICH M15",
+      "category": "Model Evaluation – Uncertainty Quantification",
+      "rule": "Model uncertainty, including parameter uncertainty, structural uncertainty, and uncertainty arising from data limitations, must be quantified and communicated. Sensitivity analyses must be performed to assess the impact of key uncertainties on model outputs and decisions.",
+      "source_section": "Section 3.3 – Model evaluation",
+      "source_quote": "Model uncertainty, including parameter uncertainty, structural uncertainty, and uncertainty arising from data limitations, should be quantified and communicated. Sensitivity analyses should be performed to assess the impact of key uncertainties on model outputs and resulting decisions.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-010",
+      "guideline": "ICH M15",
+      "category": "Reporting – Model Analysis Report",
+      "rule": "A Model Analysis Report (MAR) must be prepared following MIDD analyses. The MAR must include: objectives, model description, data used, model evaluation results, analysis results, limitations, and conclusions linked to the Question of Interest.",
+      "source_section": "Section 3.2 – Model Analysis Report / Appendix 2",
+      "source_quote": "A Model Analysis Report (MAR) should be prepared following MIDD analyses. The MAR should include: the objectives, model description, data used, model evaluation results, analysis results, limitations of the analysis, and conclusions directly linked to the Question of Interest.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-011",
+      "guideline": "ICH M15",
+      "category": "Regulatory Submission – MIDD Evidence",
+      "rule": "When MIDD is used to support a regulatory submission, the submission must include the MAP, MAR, model files (code, data, software version), and sufficient documentation to allow independent replication of the analysis.",
+      "source_section": "Section 4 – Regulatory submissions",
+      "source_quote": "When MIDD is used to support a regulatory submission, the submission should include the MAP, the MAR, the model files (including code, data, and software version used), and sufficient documentation to allow independent replication of the analysis.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-012",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Model Impact",
+      "rule": "Model Impact describes the overall contribution of the MIDD approach to the drug development program or regulatory decision. MIDD submissions should explicitly articulate the added value of the modelling approach relative to traditional empirical approaches.",
+      "source_section": "Section 2.2 – MIDD Evidence Assessment Framework",
+      "source_quote": "Model Impact describes the overall contribution of the MIDD approach to the drug development program or regulatory decision. Sponsors should explicitly articulate the added value of the modelling approach relative to traditional empirical approaches.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-013",
+      "guideline": "ICH M15",
+      "category": "Model Types – Physiologically Based Pharmacokinetic",
+      "rule": "Physiologically based pharmacokinetic (PBPK) models used for regulatory purposes must be evaluated against clinical data. The Context of Use must define the specific extrapolation or prediction task, and model performance must be demonstrated within pre-specified acceptance criteria.",
+      "source_section": "Section 3 – Model evaluation principles",
+      "source_quote": "PBPK models used for regulatory purposes should be evaluated against available clinical data. The Context of Use should define the specific extrapolation or prediction task, and model performance should be demonstrated within pre-specified acceptance criteria.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-014",
+      "guideline": "ICH M15",
+      "category": "Pre-submission Engagement",
+      "rule": "Sponsors are encouraged to engage with regulatory authorities early (pre-submission meetings) when planning to use MIDD to support key regulatory decisions, to align on the Question of Interest, Context of Use, and model evaluation expectations.",
+      "source_section": "Section 4 – Regulatory submissions",
+      "source_quote": "Sponsors are encouraged to engage with regulatory authorities early when planning to use MIDD to support key regulatory decisions, to align on the Question of Interest, Context of Use, and model evaluation expectations prior to conducting the analysis.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "M15-015",
+      "guideline": "ICH M15",
+      "category": "MIDD Framework – Software and Reproducibility",
+      "rule": "The software, version, and computational environment used for MIDD analyses must be documented. Where possible, model files and scripts should be provided in formats that allow independent execution and verification by regulatory reviewers.",
+      "source_section": "Appendix 2 – Model Analysis Report content",
+      "source_quote": "The software, version, and computational environment used for the analyses should be documented. Where possible, model files and scripts should be provided in formats that allow independent execution and verification by regulatory reviewers.",
+      "verification_status": "VERIFIED"
+    },
+
+    {
+      "rule_id": "Q5A-001",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Cell Bank Testing",
+      "rule": "The Master Cell Bank (MCB) and Working Cell Bank (WCB) must be tested for the presence of adventitious agents, including mycoplasma, bacteria, fungi, and viruses, using appropriate detection methods. Testing must be performed at establishment and at defined intervals.",
+      "source_section": "Section 3.1 – Cell banking system",
+      "source_quote": "The MCB and WCB should be tested for the presence of adventitious agents, including mycoplasma, bacteria, fungi, and viruses, using appropriate detection methods. Testing should be performed at establishment and at defined intervals as part of an ongoing programme.",
+      "threshold_values": {
+        "MCB_testing": "At establishment and defined intervals",
+        "WCB_testing": "At establishment and defined intervals"
+      },
+      "key_change_from_q5a": "NGS methods now accepted for broader adventitious agent screening of cell banks, providing additional coverage beyond traditional in vitro and in vivo assays.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-002",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – In Vivo Assay Replacement by NGS",
+      "rule": "Next Generation Sequencing (NGS) may replace in vivo assays for adventitious virus testing of cell substrates, unprocessed bulk, and cell banks, provided the NGS approach is appropriately validated for sensitivity and specificity and covers the relevant virus families.",
+      "source_section": "Section 3.2 – In vivo testing and NGS",
+      "source_quote": "Next Generation Sequencing (NGS) may be used to replace in vivo assays for adventitious virus testing of cell substrates, unprocessed bulk, and cell banks, provided the NGS approach is validated for sensitivity and specificity and provides adequate coverage of the relevant virus families.",
+      "threshold_values": {
+        "NGS_sensitivity": "Must be validated to detect relevant viruses; equivalent or superior to in vivo assays",
+        "NGS_specificity": "Must be demonstrated for relevant virus families"
+      },
+      "key_change_from_q5a": "Major new provision: NGS explicitly accepted as replacement for in vivo assays. Q5A (original) required in vivo testing with no NGS alternative.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-003",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Limit of In Vitro Cell Age",
+      "rule": "The Limit of In Vitro Cell Age (LIVCA) used during production must be established and the cells at this limit must be tested for adventitious agents. Cells beyond the LIVCA must not be used for production.",
+      "source_section": "Section 3.3 – Limit of in vitro cell age",
+      "source_quote": "The Limit of In Vitro Cell Age (LIVCA) used during production should be established and cells at or beyond this limit should be tested for adventitious agents. Cells beyond the LIVCA should not be used for production.",
+      "threshold_values": {
+        "LIVCA": "Must be defined per product; cells at LIVCA must pass adventitious agent testing"
+      },
+      "key_change_from_q5a": "Requirement retained from Q5A; NGS now also applicable for LIVCA testing.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-004",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Clearance – Effective Clearance Step Threshold",
+      "rule": "A viral clearance step is considered effective (a robust clearance step) when it achieves a log10 reduction value (LRV) of 4 log10 or greater, confirmed by two independent studies using relevant or specific model viruses.",
+      "source_section": "Section 6 – Viral clearance studies",
+      "source_quote": "A viral clearance step is considered effective when it achieves a reduction of 4 log10 or greater, as confirmed by two independent studies using relevant or specific model viruses.",
+      "threshold_values": {
+        "effective_clearance_LRV": "≥4 log10",
+        "independent_studies_required": 2,
+        "virus_type": "Relevant or specific model viruses"
+      },
+      "key_change_from_q5a": "Threshold unchanged from Q5A (original). Requirement for two independent studies reaffirmed.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-005",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Clearance – Negligible Clearance Definition",
+      "rule": "A viral clearance step is considered to provide negligible clearance when the demonstrated log10 reduction value is less than 1 log10. Such steps must not be counted toward the cumulative viral clearance claim.",
+      "source_section": "Section 6 – Viral clearance studies",
+      "source_quote": "A viral clearance step demonstrating a log10 reduction of less than 1 log10 is considered negligible and should not be counted toward the cumulative viral clearance.",
+      "threshold_values": {
+        "negligible_clearance_LRV": "<1 log10"
+      },
+      "key_change_from_q5a": "Threshold unchanged from Q5A (original). Explicit prohibition on counting negligible steps reaffirmed.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-006",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Clearance – Study Reproducibility",
+      "rule": "The within-assay 95% confidence interval for each viral clearance step must be within ±0.5 log10 to be considered acceptable. Steps with confidence intervals exceeding this range require additional investigation or repetition.",
+      "source_section": "Annex 2 – Statistical considerations",
+      "source_quote": "The within-assay 95% confidence interval for each viral clearance step should be within ±0.5 log10 to be considered acceptable. Steps with confidence intervals exceeding this range should be further investigated or repeated.",
+      "threshold_values": {
+        "within_assay_95CI": "±0.5 log10"
+      },
+      "key_change_from_q5a": "Explicit statistical threshold for within-assay reproducibility now included in Q5A(R2); not explicitly stated in original Q5A.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-007",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Clearance – Marketing Authorisation Lot Requirement",
+      "rule": "For marketing authorisation applications, viral clearance studies must be conducted using material from at least three production lots to demonstrate consistency and representativeness of the manufacturing process.",
+      "source_section": "Section 6 – Viral clearance studies",
+      "source_quote": "For marketing authorisation applications, viral clearance studies should be conducted using material from at least three production lots to demonstrate consistency and representativeness of the manufacturing process.",
+      "threshold_values": {
+        "minimum_lots_for_MA": 3
+      },
+      "key_change_from_q5a": "Three-lot requirement for marketing authorisation reaffirmed and clarified in Q5A(R2).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-008",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Virus Panel Selection",
+      "rule": "Viral clearance studies must include at minimum one relevant virus (or specific model virus when no relevant virus is available) and a panel of non-specific model viruses representing diverse physicochemical properties (enveloped/non-enveloped, DNA/RNA, small/large).",
+      "source_section": "Section 5 – Choice of viruses for clearance studies",
+      "source_quote": "Viral clearance studies should include at minimum one relevant virus or specific model virus, as well as a panel of non-specific model viruses representing diverse physicochemical properties, including enveloped and non-enveloped viruses, DNA and RNA viruses, and small and large viruses.",
+      "threshold_values": {
+        "minimum_relevant_viruses": 1,
+        "non_specific_model_viruses": "Panel required representing diverse physicochemical properties"
+      },
+      "key_change_from_q5a": "Requirement clarified to include both relevant/specific model virus AND non-specific panel; NGS data may now inform virus panel selection.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-009",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Action Plan Cases A–F",
+      "rule": "When viral contamination or adventitious agent risk is detected or suspected, a risk-based action plan must be implemented according to the applicable Case scenario (Cases A–F). The action plan determines the scope of investigations, patient safety notifications, and regulatory reporting required.",
+      "source_section": "Section 7 – Action plan for cases A–F",
+      "source_quote": "When viral contamination or adventitious agent risk is detected or suspected, a risk-based action plan should be implemented according to the applicable Case scenario (Cases A through F). The action plan determines the scope of investigations, patient safety notifications, and regulatory reporting required.",
+      "threshold_values": {
+        "cases": "A: Raw material contamination; B: In-process contamination; C: Drug substance contamination; D: Drug product contamination; E: No confirmed contamination but risk signal; F: Continuous manufacturing risk"
+      },
+      "key_change_from_q5a": "Case F (continuous manufacturing) is new in Q5A(R2). Cases A–E updated with more specific criteria for triggering and executing the action plan.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-010",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Continuous Manufacturing",
+      "rule": "For continuous manufacturing processes, a specific viral safety strategy must be established addressing the challenges of ongoing production, including real-time monitoring, defined hold-point testing, and a viral safety risk assessment appropriate to the continuous process design.",
+      "source_section": "Section 8 – Continuous manufacturing",
+      "source_quote": "For continuous manufacturing processes, a specific viral safety strategy should be established that addresses the challenges of ongoing production, including real-time monitoring, defined hold-point testing, and a viral safety risk assessment appropriate to the continuous process design.",
+      "threshold_values": {},
+      "key_change_from_q5a": "Entirely new section in Q5A(R2). Continuous manufacturing not addressed in original Q5A.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-011",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Safety – Unprocessed Bulk Testing",
+      "rule": "Unprocessed bulk from each production run must be tested for adventitious agents using appropriate in vitro cell culture assays or validated NGS methods. Results must be reviewed before the batch proceeds to downstream processing.",
+      "source_section": "Section 4 – Testing of unprocessed bulk",
+      "source_quote": "Unprocessed bulk from each production run should be tested for adventitious agents using appropriate in vitro cell culture assays or validated NGS methods. Results should be reviewed and found acceptable before the batch proceeds to downstream processing.",
+      "threshold_values": {
+        "testing_frequency": "Each production run"
+      },
+      "key_change_from_q5a": "NGS now an accepted method for unprocessed bulk testing, replacing or supplementing traditional in vitro cell culture assays.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q5A-012",
+      "guideline": "ICH Q5A(R2)",
+      "category": "Viral Clearance – Cumulative LRV Calculation",
+      "rule": "Cumulative log10 reduction values from independent and non-redundant clearance steps may be summed. Steps that rely on the same mechanism of inactivation/removal must not both be counted unless data show they are truly independent and non-redundant.",
+      "source_section": "Section 6 – Viral clearance studies",
+      "source_quote": "Cumulative log10 reduction values from independent and non-redundant clearance steps may be summed. Steps that rely on the same mechanism of inactivation or removal should not both be counted unless data demonstrate they are truly independent and non-redundant.",
+      "threshold_values": {
+        "cumulative_LRV": "Sum of individual step LRVs for independent, non-redundant steps only"
+      },
+      "key_change_from_q5a": "Principle unchanged; Q5A(R2) provides additional guidance on assessing independence and non-redundancy of steps.",
+      "verification_status": "VERIFIED"
+    },
+
+    {
+      "rule_id": "Q2-001",
+      "guideline": "ICH Q2(R2)",
+      "category": "Validation Lifecycle – ATP-Linked Approach",
+      "rule": "Analytical procedure validation must be linked to a pre-defined Analytical Target Profile (ATP) that specifies the performance requirements the analytical procedure must meet. Validation is considered successful when results demonstrate performance consistent with the ATP.",
+      "source_section": "Section 1 – Introduction / Section 2.1 – General considerations",
+      "source_quote": "Validation should be linked to a pre-defined Analytical Target Profile (ATP) that specifies the performance requirements the analytical procedure must meet. Validation is considered successful when results demonstrate performance consistent with the ATP.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "ATP concept introduced in Q2(R2) as the bridge between Q14 development and Q2 validation. Not present in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-002",
+      "guideline": "ICH Q2(R2)",
+      "category": "Validation Lifecycle – Lifecycle Approach",
+      "rule": "Analytical procedure validation is part of a lifecycle approach that spans development (ICH Q14), validation (ICH Q2), and continued performance monitoring during routine use. Revalidation is required when changes to the analytical procedure or manufacturing process may affect validated performance characteristics.",
+      "source_section": "Section 1 – Introduction / Section 2.2 – Lifecycle changes",
+      "source_quote": "Analytical procedure validation is part of a lifecycle approach spanning development (ICH Q14), validation, and continued performance monitoring during routine use. Revalidation should be considered when changes to the analytical procedure or the manufacturing process may affect the validated performance characteristics.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Lifecycle concept and explicit link to ICH Q14 are new in Q2(R2). Q2(R1) treated validation as a one-time event.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-003",
+      "guideline": "ICH Q2(R2)",
+      "category": "Reportable Range – Assay and Potency",
+      "rule": "For assay procedures measuring drug substance or drug product content, the reportable range must span at least 80% to 120% of the declared content. For potency assays with a specification range, the reportable range must span the specification range ±20%.",
+      "source_section": "Section 2 / Table 2 – Reportable range",
+      "source_quote": "For assay procedures measuring drug substance or drug product content, the reportable range should span at least 80% to 120% of the declared content. For potency assays with a specification range, the reportable range should span the specification range ±20%.",
+      "threshold_values": {
+        "assay_reportable_range": "80%–120% of declared content",
+        "potency_reportable_range": "Specification range ±20%"
+      },
+      "key_change_from_q2r1": "Table 2 with explicit reportable ranges is a new structured element in Q2(R2); Q2(R1) gave general guidance without tabulated ranges.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-004",
+      "guideline": "ICH Q2(R2)",
+      "category": "Reportable Range – Content Uniformity and Impurities",
+      "rule": "For content uniformity procedures, the reportable range must span 70% to 130% of the label claim. For impurity quantitation procedures, the reportable range must extend from the reporting threshold to 120% of the specification limit.",
+      "source_section": "Section 2 / Table 2 – Reportable range",
+      "source_quote": "For content uniformity procedures, the reportable range should span 70% to 130% of the label claim. For impurity quantitation procedures, the reportable range should extend from the reporting threshold to 120% of the specification limit.",
+      "threshold_values": {
+        "content_uniformity_range": "70%–130% of label claim",
+        "impurity_reportable_range": "Reporting threshold to 120% of specification limit"
+      },
+      "key_change_from_q2r1": "Specific ranges for content uniformity and impurities tabulated in Q2(R2); implicit in Q2(R1) but not explicitly stated.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-005",
+      "guideline": "ICH Q2(R2)",
+      "category": "Specificity/Selectivity – Absence of Interference",
+      "rule": "Specificity must be demonstrated by showing absence of relevant interference from the product matrix, excipients, process-related impurities, and degradation products. For separation-based techniques (HPLC, GC, CE), peak purity or orthogonal procedure comparison is required.",
+      "source_section": "Section 3.1 – Specificity/Selectivity",
+      "source_quote": "Specificity should be demonstrated by showing absence of relevant interference from the product matrix, excipients, process-related impurities, and degradation products. For separation-based techniques, peak purity or orthogonal procedure comparison should be provided.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Q2(R2) adds technology-inherent justification as a third pathway for demonstrating specificity, beyond absence-of-interference and orthogonal comparison.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-006",
+      "guideline": "ICH Q2(R2)",
+      "category": "Range – Linearity Minimum Data Points",
+      "rule": "For analytical procedures with a linear calibration model, linearity must be demonstrated across the reportable range using a minimum of five concentration levels. The relationship between response and concentration must be evaluated and the linearity model selected must be scientifically justified.",
+      "source_section": "Section 3.2 – Range",
+      "source_quote": "For procedures with a linear calibration model, linearity should be demonstrated across the reportable range using a minimum of five concentration levels. The relationship between response and concentration should be evaluated and the selected linearity model scientifically justified.",
+      "threshold_values": {
+        "minimum_concentration_levels_for_linearity": 5
+      },
+      "key_change_from_q2r1": "Minimum of 5 concentration levels unchanged; Q2(R2) adds explicit provision for non-linear and multivariate calibration models not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-007",
+      "guideline": "ICH Q2(R2)",
+      "category": "Detection Limit – Calculation Methods",
+      "rule": "The Detection Limit (DL) may be determined using the formula DL = 3.3σ/S (where σ is the standard deviation of the response and S is the slope of the calibration curve), or using signal-to-noise ratio (S/N ≥ 3:1 at the DL), or by visual evaluation. The method used must be stated and justified.",
+      "source_section": "Section 3.2 – Range / Detection limit",
+      "source_quote": "The detection limit may be determined using the formula DL = 3.3σ/S, where σ is the standard deviation of the response and S is the slope of the calibration curve, or using a signal-to-noise ratio of at least 3:1, or by visual evaluation. The method used should be stated and justified.",
+      "threshold_values": {
+        "DL_formula": "DL = 3.3σ/S",
+        "DL_signal_to_noise": "S/N ≥ 3:1"
+      },
+      "key_change_from_q2r1": "Methods unchanged from Q2(R1); Q2(R2) clarifies that the choice of DL method must be justified relative to the ATP performance requirements.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-008",
+      "guideline": "ICH Q2(R2)",
+      "category": "Quantitation Limit – Calculation Methods",
+      "rule": "The Quantitation Limit (QL) may be determined using the formula QL = 10σ/S, or using signal-to-noise ratio (S/N ≥ 10:1 at the QL), or by visual evaluation with confirmation of acceptable precision and accuracy at the QL level.",
+      "source_section": "Section 3.2 – Range / Quantitation limit",
+      "source_quote": "The quantitation limit may be determined using the formula QL = 10σ/S, or using a signal-to-noise ratio of at least 10:1, or by visual evaluation confirmed by acceptable precision and accuracy at the QL level.",
+      "threshold_values": {
+        "QL_formula": "QL = 10σ/S",
+        "QL_signal_to_noise": "S/N ≥ 10:1"
+      },
+      "key_change_from_q2r1": "Methods unchanged from Q2(R1); Q2(R2) adds requirement to confirm acceptable precision and accuracy at the QL when using visual evaluation.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-009",
+      "guideline": "ICH Q2(R2)",
+      "category": "Precision – Repeatability Minimum Requirements",
+      "rule": "Repeatability must be assessed using a minimum of 9 determinations covering the reportable range (3 concentrations × 3 replicates), or a minimum of 6 determinations at 100% of the nominal concentration.",
+      "source_section": "Section 3.3 – Precision / Repeatability",
+      "source_quote": "Repeatability should be assessed using a minimum of 9 determinations covering the reportable range (e.g., 3 concentrations × 3 replicates), or a minimum of 6 determinations at the 100% level of the nominal concentration.",
+      "threshold_values": {
+        "repeatability_option_1": "Minimum 9 determinations (3 concentrations × 3 replicates)",
+        "repeatability_option_2": "Minimum 6 determinations at 100% nominal concentration"
+      },
+      "key_change_from_q2r1": "Requirements unchanged from Q2(R1); Q2(R2) clarifies that the 9-determination requirement applies across the reportable range.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-010",
+      "guideline": "ICH Q2(R2)",
+      "category": "Precision – Intermediate Precision",
+      "rule": "Intermediate precision must be evaluated to assess the within-laboratory variability across different days, analysts, and equipment. Intermediate precision data must be provided in the validation report for all quantitative analytical procedures intended for routine use.",
+      "source_section": "Section 3.3 – Precision / Intermediate precision",
+      "source_quote": "Intermediate precision should be evaluated to assess within-laboratory variability arising from different days, analysts, and equipment. Intermediate precision data should be provided in the validation report for all quantitative analytical procedures intended for routine use.",
+      "threshold_values": {
+        "intermediate_precision_variables": "Different days, analysts, equipment"
+      },
+      "key_change_from_q2r1": "Requirement for intermediate precision for routine quantitative procedures strengthened in Q2(R2); Q2(R1) treated intermediate precision as optional with reproducibility.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-011",
+      "guideline": "ICH Q2(R2)",
+      "category": "Precision – Reproducibility",
+      "rule": "Reproducibility (inter-laboratory precision) must be demonstrated when the analytical procedure is intended for use at multiple laboratories (e.g., manufacturing site and contract laboratory, or collaborative study). It is not routinely required for single-laboratory validation.",
+      "source_section": "Section 3.3 – Precision / Reproducibility",
+      "source_quote": "Reproducibility (inter-laboratory precision) should be demonstrated when the analytical procedure is intended for use at more than one laboratory. It is not routinely required for single-laboratory validation but should be considered when the procedure will be used at multiple sites.",
+      "threshold_values": {
+        "reproducibility_threshold": "Required if >1 laboratory"
+      },
+      "key_change_from_q2r1": "Requirement clarified in Q2(R2); Q2(R1) listed reproducibility as an optional element without specific triggering conditions.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-012",
+      "guideline": "ICH Q2(R2)",
+      "category": "Accuracy – Reference Material Approach",
+      "rule": "Accuracy of quantitative procedures must be established using reference material comparison, spiking studies, or orthogonal procedure comparison. For assay procedures, at least 3 concentration levels with at least 3 replicates per level, covering the reportable range, are required.",
+      "source_section": "Section 3.4 – Accuracy",
+      "source_quote": "Accuracy of quantitative procedures should be established using reference material comparison, spiking studies, or orthogonal procedure comparison. For assay procedures, at least 3 concentration levels with at least 3 replicates per level, covering the reportable range, are required.",
+      "threshold_values": {
+        "accuracy_minimum_levels": 3,
+        "accuracy_minimum_replicates_per_level": 3
+      },
+      "key_change_from_q2r1": "Explicit specification of 3×3 design for accuracy maintained; Q2(R2) adds clarity on orthogonal comparison as equivalent approach for accuracy demonstration.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-013",
+      "guideline": "ICH Q2(R2)",
+      "category": "Robustness – Development-Stage Evaluation",
+      "rule": "Robustness evaluation must be performed as part of analytical procedure development (per ICH Q14) and not necessarily repeated as a standalone validation study. However, the robustness evaluation data and parameters tested must be documented and available for regulatory review.",
+      "source_section": "Section 3.5 – Robustness",
+      "source_quote": "Robustness evaluation should be performed as part of analytical procedure development per ICH Q14 and need not be repeated as a standalone validation study. However, the robustness evaluation data and parameters tested should be documented and available for regulatory review.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Q2(R2) explicitly moves robustness to the development stage (Q14) rather than requiring it as a separate validation test. Major structural change from Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-014",
+      "guideline": "ICH Q2(R2)",
+      "category": "Multivariate Procedures – Validation Requirements",
+      "rule": "Multivariate analytical procedures (e.g., NIR, Raman, chemometric models) require validation of specificity through absence-of-interference and model outlier detection, accuracy by orthogonal comparison (reported as SEP/RMSEP), precision including repeatability and intermediate precision, and a defined reportable range based on the calibration model performance.",
+      "source_section": "Section 3 – Validation tests for multivariate procedures / Table 10 (Annex 2)",
+      "source_quote": "Multivariate analytical procedures require validation of specificity through absence-of-interference and model outlier detection, accuracy by orthogonal comparison reported as standard error of prediction (SEP) or RMSEP, precision including repeatability and intermediate precision, and a defined reportable range based on the calibration model performance.",
+      "threshold_values": {
+        "accuracy_metric": "SEP or RMSEP",
+        "specificity_requirement": "Absence of interference and outlier detection"
+      },
+      "key_change_from_q2r1": "Multivariate validation is entirely new in Q2(R2). Q2(R1) did not address multivariate or chemometric procedures.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-015",
+      "guideline": "ICH Q2(R2)",
+      "category": "Multivariate Procedures – Model Validation",
+      "rule": "For multivariate calibration models, both internal testing (cross-validation to optimise latent variables and detect outliers) and external validation using an independent validation set must be performed. The validation set must not be included in the calibration set.",
+      "source_section": "Section 3 – Multivariate procedures / Glossary",
+      "source_quote": "For multivariate calibration models, both internal testing (cross-validation to optimise latent variables and detect outliers) and external validation using an independent validation set should be performed. The validation set should not be included in the calibration set.",
+      "threshold_values": {
+        "validation_set": "Independent; not part of calibration set",
+        "internal_testing": "Cross-validation required"
+      },
+      "key_change_from_q2r1": "New requirement in Q2(R2). No guidance on multivariate model validation existed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-016",
+      "guideline": "ICH Q2(R2)",
+      "category": "Co-validation – Platform and Transferred Procedures",
+      "rule": "When analytical procedures are transferred between laboratories or when platform procedures are applied to new products, a co-validation or transfer study must demonstrate equivalence. The co-validation design must be defined in the validation protocol with pre-specified acceptance criteria.",
+      "source_section": "Section 2 – General considerations / Co-validation",
+      "source_quote": "When analytical procedures are transferred between laboratories or when platform procedures are applied to new products, a co-validation or transfer study should be conducted to demonstrate equivalence. The co-validation design should be defined in the validation protocol with pre-specified acceptance criteria.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Co-validation and platform analytical procedure concepts are new in Q2(R2). Q2(R1) did not address procedure transfer or platform validation.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-017",
+      "guideline": "ICH Q2(R2)",
+      "category": "Specificity – Stability-Indicating Properties",
+      "rule": "For stability-indicating analytical procedures, the ability to separate and detect degradation products must be demonstrated through forced degradation studies. The procedure must demonstrate that quantitation of the main analyte is not affected by the presence of degradation products.",
+      "source_section": "Section 2 – General considerations / Stability-indicating properties / Table 3 (Annex 2)",
+      "source_quote": "For stability-indicating analytical procedures, the ability to separate and detect degradation products should be demonstrated through forced degradation studies. The procedure should demonstrate that quantitation of the main analyte is not affected by the presence of degradation products.",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Requirement to demonstrate stability-indicating properties unchanged; Q2(R2) provides more explicit guidance in the annex examples.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-018",
+      "guideline": "ICH Q2(R2)",
+      "category": "Relative Response Factors – Impurity Quantitation",
+      "rule": "If the response factor of an impurity or degradation product differs from that of the reference material (e.g., different UV absorbance), relative response factors (RRFs) must be determined. If the RRF is outside the range 0.8 to 1.2, a correction factor must be applied. An overestimated impurity without correction is acceptable if it does not affect patient safety.",
+      "source_section": "Table 3 – Relative Response Factors (Annex 2, quantitative separation techniques)",
+      "source_quote": "If the relative response factor is outside the range 0.8-1.2, then a correction factor should be applied. If an impurity/degradation product is overestimated, it may be acceptable not to use a correction factor.",
+      "threshold_values": {
+        "RRF_acceptable_range": "0.8–1.2 (no correction required)",
+        "RRF_outside_range": "<0.8 or >1.2 (correction factor required)"
+      },
+      "key_change_from_q2r1": "New explicit RRF threshold of 0.8–1.2 in Q2(R2). Q2(R1) did not provide a numeric threshold for when RRF correction is required.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-019",
+      "guideline": "ICH Q2(R2)",
+      "category": "Biological Assays – Repeatability Requirements",
+      "rule": "For biological/immunological assays (binding assays, cell-based potency assays), repeatability must be assessed using at least 3 replicates over at least 5 potency levels within a single day or short interval, covering the analytical procedure's reportable range.",
+      "source_section": "Table 7 – Example for biological assays (Annex 2)",
+      "source_quote": "Repeatability: Repeated sample analysis on a single day or within a short interval of time covering the reportable range of the analytical procedure (at least 3 replicates over at least 5 levels).",
+      "threshold_values": {
+        "repeatability_minimum_replicates": 3,
+        "repeatability_minimum_levels": 5
+      },
+      "key_change_from_q2r1": "Specific guidance for biological assays is new in Q2(R2). Q2(R1) did not provide technique-specific validation examples for biological potency assays.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-020",
+      "guideline": "ICH Q2(R2)",
+      "category": "Biological Assays – Range Validation",
+      "rule": "For biological/immunological assays, the reportable range must be validated to span the lowest to highest relative potency levels that meet accuracy, precision, and response criteria. Range validation must be demonstrated over at least 5 potency levels.",
+      "source_section": "Table 7 – Example for biological assays (Annex 2)",
+      "source_quote": "Reportable Range: Validation of range, including lower and higher range limits: The lowest to highest relative potency levels that meet accuracy, precision, and response criteria, determined over at least 5 potency levels.",
+      "threshold_values": {
+        "minimum_potency_levels_for_range": 5
+      },
+      "key_change_from_q2r1": "New technique-specific guidance in Q2(R2). Not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-021",
+      "guideline": "ICH Q2(R2)",
+      "category": "qPCR – Reportable Range",
+      "rule": "For quantitative PCR (qPCR) procedures, the working range must cover at least 5 to 6 log10 concentration values. Correlation coefficients or standard deviations must be calculated across the entire dynamic range.",
+      "source_section": "Table 8 – Example for quantitative PCR (Annex 2)",
+      "source_quote": "Working range should cover at least 5 to 6 log to the base 10 concentration values. Correlation coefficients or standard deviations should be calculated through the entire dynamic range.",
+      "threshold_values": {
+        "qPCR_working_range": "At least 5–6 log10 concentration values"
+      },
+      "key_change_from_q2r1": "New technique-specific guidance in Q2(R2). Not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-022",
+      "guideline": "ICH Q2(R2)",
+      "category": "qPCR – Intermediate Precision",
+      "rule": "For quantitative PCR intermediate precision, at least three replicates per run at each positive control level must be performed across at least 6 runs conducted over two or more days.",
+      "source_section": "Table 8 – Example for quantitative PCR (Annex 2)",
+      "source_quote": "Intermediate precision: At least three replicates per run at each positive control level in at least 6 runs over two or more days.",
+      "threshold_values": {
+        "qPCR_intermediate_precision_replicates_per_run": 3,
+        "qPCR_intermediate_precision_minimum_runs": 6,
+        "qPCR_intermediate_precision_minimum_days": 2
+      },
+      "key_change_from_q2r1": "New technique-specific guidance in Q2(R2). Not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-023",
+      "guideline": "ICH Q2(R2)",
+      "category": "Selection of Validation Tests – Procedure Objective Mapping",
+      "rule": "Selection of validation tests must be based on the objective of the analytical procedure. Identity procedures require specificity. Limit tests require specificity and range. Quantitative impurity procedures require specificity, range, accuracy, and precision. Content/potency assays require specificity, range, accuracy, and precision.",
+      "source_section": "Annex 1 (Section 6) – Figure 2: Selection of Validation Tests",
+      "source_quote": "Tests may be chosen from presented options. May not require all tests. [Figure 2 decision tree mapping procedure objective to: Specificity, Range, Accuracy, Precision with sub-tests: absence of interference, orthogonal comparison, technology-inherent justification, validation of calibration model, validation of range limits, reference material comparison, spiking study, repeatability, intermediate precision, reproducibility if >1 laboratory]",
+      "threshold_values": {},
+      "key_change_from_q2r1": "Annex 1 decision tree is a new structured tool in Q2(R2) to guide validation test selection. Q2(R1) provided a table without the decision-tree format.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-024",
+      "guideline": "ICH Q2(R2)",
+      "category": "LC/MS – Detection Limit Methodology",
+      "rule": "For quantitative LC/MS procedures, the Detection Limit (DL) must be determined using the coefficient of variation (CV) of responses at the spiking level (minimum 6 repeated injections). The CV obtained must be less than or equal to a pre-defined acceptable value. The Quantitation Limit (QL) is the lowest spiking level with acceptable accuracy and precision.",
+      "source_section": "Table 11 – Example for quantitative LC/MS (Annex 2)",
+      "source_quote": "DL: Use the coefficient of variation (CV) of responses at the spiking level (with 6 or more repeated injections) as a measure of signal-to-noise. The CV obtained must be less than or equal to a pre-defined acceptable value. QL: The lowest spiking level with acceptable accuracy and precision.",
+      "threshold_values": {
+        "LC_MS_DL_minimum_injections": 6,
+        "LC_MS_DL_CV": "Must be ≤ pre-defined acceptable value",
+        "LC_MS_QL": "Lowest spiking level with acceptable accuracy and precision"
+      },
+      "key_change_from_q2r1": "New technique-specific LC/MS guidance in Q2(R2). Not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "Q2-025",
+      "guideline": "ICH Q2(R2)",
+      "category": "Dissolution – Reportable Range",
+      "rule": "For dissolution procedures with HPLC quantitation (immediate-release dosage forms), the linearity range must span from Q minus 45% of the lowest strength up to 130% of the highest strength for single-point specifications, and from the QL up to 130% of the highest strength for multi-point specifications.",
+      "source_section": "Table 5 – Example for dissolution with HPLC (Annex 2)",
+      "source_quote": "Demonstrate linearity from sample concentrations (as presented to quantitative measurement) in the range of Q - 45% of the lowest strength up to 130% of the highest strength, for one point specification, and in the range of QL up to 130% of the highest strength, for multiple point specification.",
+      "threshold_values": {
+        "dissolution_range_single_point": "Q−45% of lowest strength to 130% of highest strength",
+        "dissolution_range_multi_point": "QL to 130% of highest strength"
+      },
+      "key_change_from_q2r1": "New technique-specific dissolution guidance in Q2(R2). Not addressed in Q2(R1).",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

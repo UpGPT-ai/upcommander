@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "title": "Testing of Retroviral Vector-Based Human Gene Therapy Products for Replication Competent Retrovirus (RCR) During Product Manufacture and Patient Follow-up",
+    "source_file": "RCR_Testing_Retroviral_Vectors.pdf",
+    "source_directory": "training/stage-1/gap-fill/gene-therapy-fda/",
+    "document_date": "January 2020",
+    "document_version": "January 2020 (replaces 2006 guidance)",
+    "extraction_date": "2026-03-24",
+    "total_rules": 20,
+    "replaces": "None in output-v2/v3/v4 — first extraction"
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-GT-RCR-001",
+      "rule_text": "The Virus Producing Cell (VPC) Master Cell Bank (MCB) must be tested for RCR by testing both cells and supernatant, using a cell line based on the tropism of the parental retrovirus.",
+      "source_section": "III.A.1 VPC MCB",
+      "source_page": 4,
+      "verbatim_quote": "We recommend testing the VPC MCB for RCR by testing both cells and supernatant, using a cell line based on the tropism of the parental retrovirus.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-002",
+      "rule_text": "RCR testing of the Working Cell Bank (WCB) is NOT recommended unless MCB testing is insufficient to ensure absence of RCR.",
+      "source_section": "III.A.2 VPC WCB",
+      "source_page": 5,
+      "verbatim_quote": "Unlike the 2006 guidance, we are no longer recommending RCR testing of the VPC WCB.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Testing may be warranted if MCB testing is insufficient to provide assurance of absence of RCR.",
+      "cross_references": ["FDA-GT-RCR-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-003",
+      "rule_text": "Both the retroviral vector supernatant lots AND the End-of-Production (EOP) cells must be tested for RCR at product release.",
+      "source_section": "III.A.3 Retroviral Vector Supernatant/EOP Cells",
+      "source_page": 5,
+      "verbatim_quote": "We recommend testing both the retroviral vector supernatant lots and EOP cells for RCR at product release.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA-GT-CMC-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-004",
+      "rule_text": "Each lot of ex vivo retroviral transduced cells must be tested for RCR, regardless of the length of time the cells are cultured after transduction.",
+      "source_section": "III.A.4 Ex Vivo Retroviral Transduced Cells",
+      "source_page": 5,
+      "verbatim_quote": "We recommend that each lot of ex vivo retroviral transduced cells be tested for RCR. This recommendation applies regardless of the length of time that the cells are cultured after transduction.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 312.23(a)(7)"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-005",
+      "rule_text": "The volume of retroviral vector supernatant tested must be sufficient to achieve at least a 95% probability of detecting 1 RCR per dose equivalent, calculated using the formula: Vt = -(1/c)ln(1-p), where Vt is volume tested, c is the concentration of RCR, and p is the probability of detection.",
+      "source_section": "III.B.1 Supernatant",
+      "source_page": 7,
+      "verbatim_quote": "The volume of retroviral vector supernatant tested should be sufficient to provide at least a 95% probability of detecting 1 RCR per dose equivalent... Vt = -(1/c)ln(1-p)",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-003", "Appendix 1-1"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-006",
+      "rule_text": "For cell-based RCR testing, the number of cells tested must be 1% of the total cells in the lot or 10^8 cells, whichever is less.",
+      "source_section": "III.B.2 Cells",
+      "source_page": 7,
+      "verbatim_quote": "The number of cells tested should be 1% of the total cells in the lot or 10^8 cells, whichever is less.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-003", "FDA-GT-RCR-004"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-007",
+      "rule_text": "RCR assays must be performed by culturing test material on a permissive cell line for a minimum of 5 passages, and all assays must include both relevant positive and negative controls.",
+      "source_section": "III.C Assays for RCR Testing",
+      "source_page": 8,
+      "verbatim_quote": "Assays for RCR testing should involve culturing the test material on a permissive cell line for a minimum of 5 passages. All assays should include relevant positive and negative controls.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Alternative methods (e.g., PCR) may be acceptable for ex vivo cell lot release under certain conditions.",
+      "cross_references": ["FDA-GT-RCR-008", "FDA-GT-RCR-009"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-008",
+      "rule_text": "All RCR assays must include an inhibitory control consisting of a relevant positive control spiked into the vector supernatant to detect assay inhibition.",
+      "source_section": "III.C Assays for RCR Testing",
+      "source_page": 8,
+      "verbatim_quote": "Assays should include an inhibitory control (a relevant positive control spiked into the vector supernatant) to detect assay inhibition.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-007"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-009",
+      "rule_text": "Alternative methods for RCR detection (e.g., PCR-based assays) are acceptable for ex vivo transduced cell lot release when time constraints prevent culture-based testing, provided that data demonstrating sensitivity, specificity, and reproducibility are submitted and the method is developed in consultation with CBER.",
+      "source_section": "III.C Assays for RCR Testing",
+      "source_page": 8,
+      "verbatim_quote": "Alternative methods (e.g., PCR) may be acceptable for ex vivo cells lot release when time constraints do not permit the use of culture-based assays. Sponsors should provide data on sensitivity, specificity, and reproducibility of the alternative assay and should develop the method in consultation with CBER.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Applicable only when time constraints exist for ex vivo cell products; not a general substitute for culture-based assays.",
+      "cross_references": ["FDA-GT-RCR-007"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-010",
+      "rule_text": "Patients treated with retroviral vector-based gene therapy products must be monitored for RCR on the following schedule: pre-treatment baseline, then at 3, 6, and 12 months post-treatment, then yearly for up to 15 years.",
+      "source_section": "IV.A Patient Monitoring Schedule",
+      "source_page": 9,
+      "verbatim_quote": "Patients should be monitored for RCR at the following time points: pre-treatment, then at 3, 6, and 12 months post-treatment, then yearly for up to 15 years.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "If all year-1 post-treatment assays are negative, yearly sample collection may be discontinued; yearly medical history review is sufficient thereafter.",
+      "cross_references": ["FDA-GT-LTFU-001", "FDA-GT-LTFU-002", "21 CFR 312.32"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-011",
+      "rule_text": "If all patient RCR assay results at pre-treatment and 3, 6, and 12 months post-treatment are negative, yearly sample collection may be discontinued; however, yearly medical history review must continue for the full 15-year monitoring period.",
+      "source_section": "IV.A Patient Monitoring Schedule",
+      "source_page": 9,
+      "verbatim_quote": "If all year-1 post-treatment assays are negative, we recommend that yearly sample collection be discontinued and that medical history review be conducted yearly for up to 15 years.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Does not apply if any year-1 assay is positive; full schedule must continue.",
+      "cross_references": ["FDA-GT-RCR-010"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-012",
+      "rule_text": "Recommended patient assays for RCR monitoring include both serologic detection of RCR-specific antibodies AND analysis of peripheral blood mononuclear cells (PBMCs) by PCR for RCR-specific DNA.",
+      "source_section": "IV.B Recommended Patient Assays",
+      "source_page": 9,
+      "verbatim_quote": "We recommend both serologic detection of RCR-specific antibodies and analysis of PBMCs by PCR for RCR-specific DNA.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-010"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-013",
+      "rule_text": "Positive RCR results from production testing must be documented immediately in an IND amendment submitted as an IND safety report per 21 CFR 312.32.",
+      "source_section": "V. Documentation of RCR Testing Results",
+      "source_page": 10,
+      "verbatim_quote": "Positive results from production RCR testing should be documented in an IND amendment submitted as an IND safety report (21 CFR 312.32).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Negative results are reported in the annual IND report (21 CFR 312.33), not as safety reports.",
+      "cross_references": ["21 CFR 312.32", "21 CFR 312.33"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-014",
+      "rule_text": "Positive RCR results from patient monitoring must be documented immediately in an IND amendment submitted as an IND safety report per 21 CFR 312.32.",
+      "source_section": "V. Documentation of RCR Testing Results",
+      "source_page": 10,
+      "verbatim_quote": "Positive results from patient RCR testing should be documented in an IND amendment submitted as an IND safety report (21 CFR 312.32).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Negative patient results are reported in the annual IND report (21 CFR 312.33).",
+      "cross_references": ["21 CFR 312.32", "21 CFR 312.33", "FDA-GT-RCR-010"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-015",
+      "rule_text": "Negative RCR results from both production testing and patient monitoring must be reported in the annual IND progress report per 21 CFR 312.33.",
+      "source_section": "V. Documentation of RCR Testing Results",
+      "source_page": 10,
+      "verbatim_quote": "Negative results from production and patient RCR testing should be reported in the annual IND progress report (21 CFR 312.33).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Positive results require immediate IND safety report (21 CFR 312.32), not annual reporting.",
+      "cross_references": ["21 CFR 312.33", "FDA-GT-RCR-013", "FDA-GT-RCR-014"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-016",
+      "rule_text": "If RCR testing is discontinued for a patient (per the year-1 negative results protocol), collected samples must be archived for at least 6 months after the product expiration date.",
+      "source_section": "IV.A / V. Documentation",
+      "source_page": 10,
+      "verbatim_quote": "Samples collected but not tested should be archived for at least 6 months after the product expiration date.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-011"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-017",
+      "rule_text": "Post-licensure, RCR testing during manufacture must continue; the Biologics License Application (BLA) must include a provision to test for RCR upon development of any retrovirus-associated disease in treated patients.",
+      "source_section": "VI. Post-Licensure Considerations",
+      "source_page": 10,
+      "verbatim_quote": "Post-licensure, RCR testing during manufacture should continue. The BLA should include a provision to test for RCR upon development of retrovirus-associated disease.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 601", "FDA-GT-RCR-003"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-018",
+      "rule_text": "Post-licensure, patients who die from a retrovirus-associated disease or who develop neoplasms within 15 years of treatment must have biopsy and/or autopsy tissue assayed for RCR.",
+      "source_section": "VI. Post-Licensure Considerations",
+      "source_page": 10,
+      "verbatim_quote": "Patients who die from a retrovirus-associated disease or who develop neoplasms within 15 years of treatment should have biopsy and/or autopsy tissue assayed for RCR.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Applies within 15-year post-treatment window only.",
+      "cross_references": ["FDA-GT-RCR-010", "FDA-GT-LTFU-001"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-019",
+      "rule_text": "Licensed retroviral vector gene therapy product labeling must incorporate RCR risk information.",
+      "source_section": "VI. Post-Licensure Considerations",
+      "source_page": 10,
+      "verbatim_quote": "Product labeling should incorporate RCR risk information.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["21 CFR 601", "21 CFR 201"]
+    },
+    {
+      "rule_id": "FDA-GT-RCR-020",
+      "rule_text": "The VPC MCB RCR test must use a permissive cell line selected based on the tropism of the parental retrovirus; a cell line that does not support the tropism of the parental virus is not acceptable.",
+      "source_section": "III.A.1 VPC MCB",
+      "source_page": 4,
+      "verbatim_quote": "using a cell line based on the tropism of the parental retrovirus",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated.",
+      "cross_references": ["FDA-GT-RCR-001", "FDA-GT-RCR-007"]
+    }
+  ]
+}

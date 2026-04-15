@@ -1,0 +1,346 @@
+{
+  "compiled_at": "2026-03-24T04:29:26.861870Z",
+  "total_rules": 4154,
+  "verified_rules": 2589,
+  "verification_rate_pct": 62.3,
+  "duplicates_removed": 908,
+  "files_processed": 60,
+  "files_skipped": 5,
+  "file_breakdown": [
+    {
+      "file": "output-v2/e-clinical-design/clinical-design-rules.json",
+      "rules_extracted": 591
+    },
+    {
+      "file": "output-v2/e-safety-pharma/safety-reporting-rules.json",
+      "rules_extracted": 6
+    },
+    {
+      "file": "output-v2/e-special-pops/special-populations-rules.json",
+      "rules_extracted": 132
+    },
+    {
+      "file": "output-v2/m-multidisciplinary/multidisciplinary-rules.json",
+      "rules_extracted": 249
+    },
+    {
+      "file": "output-v2/q-biotech/biotech-quality-rules.json",
+      "rules_extracted": 141
+    },
+    {
+      "file": "output-v2/q-cmc-methods/analytical-impurity-rules.json",
+      "rules_extracted": 24
+    },
+    {
+      "file": "output-v2/q-stability/stability-rules.json",
+      "rules_extracted": 8
+    },
+    {
+      "file": "output-v2/q-systems/quality-systems-rules.json",
+      "rules_extracted": 70
+    },
+    {
+      "file": "output-v2/regulations-crl/crl-deficiency-taxonomy-v2.json",
+      "rules_extracted": 23
+    },
+    {
+      "file": "output-v2/regulations-crl/regulatory-requirements.json",
+      "rules_extracted": 101
+    },
+    {
+      "file": "output-v2/s-pharmacology/safety-pharmacology-rules.json",
+      "rules_extracted": 9
+    },
+    {
+      "file": "output-v2/s-toxicology/nonclinical-requirements.json",
+      "rules_extracted": 9
+    },
+    {
+      "file": "output-v3/ema-pharma-gvp/eu-pharmacovigilance-rules.json",
+      "rules_extracted": 84
+    },
+    {
+      "file": "output-v3/ema-pharma-gvp/gvp-unique-requirements.json",
+      "rules_extracted": 18
+    },
+    {
+      "file": "output-v3/eu-gmp-ema/eu-gmp-rules.json",
+      "rules_extracted": 112
+    },
+    {
+      "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+      "rules_extracted": 60
+    },
+    {
+      "file": "output-v3/eu-law/eu-legislation-requirements.json",
+      "rules_extracted": 139
+    },
+    {
+      "file": "output-v3/eu-law/eu-vs-fda-divergences.json",
+      "rules_extracted": 136
+    },
+    {
+      "file": "output-v3/health-canada/canada-vs-fda-ema.json",
+      "rules_extracted": 15
+    },
+    {
+      "file": "output-v3/health-canada/health-canada-requirements.json",
+      "rules_extracted": 43
+    },
+    {
+      "file": "output-v3/who-regs/japan-specific-requirements.json",
+      "rules_extracted": 10
+    },
+    {
+      "file": "output-v3/who-regs/japan-vs-fda-ema.json",
+      "rules_extracted": 17
+    },
+    {
+      "file": "output-v3/who-regs/who-requirements.json",
+      "rules_extracted": 4
+    },
+    {
+      "file": "gap-close/final-4-verified.json",
+      "rules_extracted": 4
+    },
+    {
+      "file": "gap-close/fully-verified-safety-pharm.json",
+      "rules_extracted": 9
+    },
+    {
+      "file": "output-v4/e1-e2-pharmacovigilance-rules.json",
+      "rules_extracted": 67
+    },
+    {
+      "file": "output-v4/e1-e2a-e2c-e5-e9-e11a-rules.json",
+      "rules_extracted": 94
+    },
+    {
+      "file": "output-v4/e1-e9r1-exposure-estimand-rules.json",
+      "rules_extracted": 82
+    },
+    {
+      "file": "output-v4/e10-e15-e16-e18-rules.json",
+      "rules_extracted": 101
+    },
+    {
+      "file": "output-v4/e19-e2d-m9-rules.json",
+      "rules_extracted": 108
+    },
+    {
+      "file": "output-v4/e3-e4-e7-e14-e17-rules.json",
+      "rules_extracted": 103
+    },
+    {
+      "file": "output-v4/e3-e4-e7-e17-e6r3-rules.json",
+      "rules_extracted": 98
+    },
+    {
+      "file": "output-v4/e5-e8-e9-e11a-rules.json",
+      "rules_extracted": 72
+    },
+    {
+      "file": "output-v4/ema-gvp-iii-iv-x-rules.json",
+      "rules_extracted": 79
+    },
+    {
+      "file": "output-v4/ema-gvp-rules.json",
+      "rules_extracted": 126
+    },
+    {
+      "file": "output-v4/ema-gvp-vi-rules.json",
+      "rules_extracted": 105
+    },
+    {
+      "file": "output-v4/ema-pmda-rules.json",
+      "rules_extracted": 109
+    },
+    {
+      "file": "output-v4/eu-gmp-annex1-sterile-rules.json",
+      "rules_extracted": 85
+    },
+    {
+      "file": "output-v4/fda-data-integrity-rules.json",
+      "rules_extracted": 54
+    },
+    {
+      "file": "output-v4/fda-guidance-rules.json",
+      "rules_extracted": 98
+    },
+    {
+      "file": "output-v4/fda-labeling-be-rules.json",
+      "rules_extracted": 55
+    },
+    {
+      "file": "output-v4/gap-fix-adversarial-s7b-e14-q12-gmp.json",
+      "rules_extracted": 11
+    },
+    {
+      "file": "output-v4/m11-e6r3-clinical-ops-rules.json",
+      "rules_extracted": 147
+    },
+    {
+      "file": "output-v4/m12-ddi-rules.json",
+      "rules_extracted": 78
+    },
+    {
+      "file": "output-v4/m13a-bioequivalence-rules.json",
+      "rules_extracted": 82
+    },
+    {
+      "file": "output-v4/m14-m15-q5a-q2-rules.json",
+      "rules_extracted": 67
+    },
+    {
+      "file": "output-v4/m4s-q5d-q3c-rules.json",
+      "rules_extracted": 148
+    },
+    {
+      "file": "output-v4/m7r2-q9r1-q3d-rules.json",
+      "rules_extracted": 63
+    },
+    {
+      "file": "output-v4/pics-pi041-data-integrity-rules.json",
+      "rules_extracted": 82
+    },
+    {
+      "file": "output-v4/q1-q4b-q6a-q6b-rules.json",
+      "rules_extracted": 106
+    },
+    {
+      "file": "output-v4/q1-stability-rules.json",
+      "rules_extracted": 72
+    },
+    {
+      "file": "output-v4/q10-q11-m11-rules.json",
+      "rules_extracted": 57
+    },
+    {
+      "file": "output-v4/q3a-q3b-impurity-rules.json",
+      "rules_extracted": 104
+    },
+    {
+      "file": "output-v4/q5b-q6-q7-q8-q12-m10-rules.json",
+      "rules_extracted": 112
+    },
+    {
+      "file": "output-v4/q8-q12-q5e-s5r3-rules.json",
+      "rules_extracted": 115
+    },
+    {
+      "file": "output-v4/s1-s4-s8-q10-q11-rules.json",
+      "rules_extracted": 79
+    },
+    {
+      "file": "output-v4/s1-s5-s8-rules.json",
+      "rules_extracted": 96
+    },
+    {
+      "file": "output-v4/s11-s1b-carcinogenicity-juvenile-rules.json",
+      "rules_extracted": 90
+    },
+    {
+      "file": "output-v4/stability-pharma-dev-rules.json",
+      "rules_extracted": 103
+    },
+    {
+      "file": "output-v4/verification-pass-1.json",
+      "rules_extracted": 0
+    }
+  ],
+  "index_summary": {
+    "guidelines_count": 59,
+    "top_guidelines_by_rules": [
+      [
+        "ICH E Guidelines",
+        431
+      ],
+      [
+        "EMA GVP",
+        286
+      ],
+      [
+        "FDA Guidance",
+        197
+      ],
+      [
+        "ICH M4S(R2)",
+        148
+      ],
+      [
+        "ICH Q5 Series \u2014 Biologics Quality Requirements",
+        141
+      ],
+      [
+        "Jurisdiction Divergence: EU vs FDA",
+        136
+      ],
+      [
+        "EMA Guidelines and GVP Module Rules",
+        126
+      ],
+      [
+        "Eu Legislation Requirements",
+        125
+      ],
+      [
+        "ICH M11 CeSHarP \u2014 Clinical Electronic Structured Harmonised Protocol, Step 4, November 2025 + ICH E6(R3) \u2014 Good Clinical Practice, Step 4, January 2025 with October 2025 Error Corrections",
+        122
+      ],
+      [
+        "Multidisciplinary Rules",
+        121
+      ],
+      [
+        "Ema Pmda Rules",
+        109
+      ],
+      [
+        "ICH E19 + ICH E2D(R1) + ICH M9",
+        108
+      ],
+      [
+        "Q1A(R2) + Q1B + Q1C",
+        106
+      ],
+      [
+        "E3 E4 E7 E14 E17 Rules",
+        103
+      ],
+      [
+        "ICH E10 + ICH E15 + ICH E16",
+        101
+      ],
+      [
+        "ICH Q3A(R2) + ICH Q3B(R2)",
+        97
+      ],
+      [
+        "Q5B Q6 Q7 Q8 Q12 M10 Rules",
+        92
+      ],
+      [
+        "ICH S11 \u2014 Nonclinical Safety Testing in Support of Development of Paediatric Pharmaceuticals (Step 4, 14 April 2020) + ICH S1B(R1) \u2014 Testing for Carcinogenicity of Pharmaceuticals (Step 4, 4 August 2022; integrates original S1B 1997 + Addendum) + ICH S1C(R2) \u2014 Dose Selection for Carcinogenicity Studies of Pharmaceuticals (Step 4, 11 March 2008)",
+        90
+      ],
+      [
+        "EU GMP",
+        89
+      ],
+      [
+        "Regulatory Requirements",
+        86
+      ]
+    ],
+    "by_severity": {
+      "medium": 2947,
+      "high": 589,
+      "critical": 609,
+      "low": 9
+    },
+    "by_verification": {
+      "UNKNOWN": 1565,
+      "VERIFIED": 2589
+    }
+  }
+}

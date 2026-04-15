@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "title": "Required Corrections from ICH E-Series Verification",
+    "date": "2026-03-23",
+    "total_corrections": 10,
+    "severity_counts": {
+      "HIGH": 1,
+      "MEDIUM": 4,
+      "LOW": 5
+    }
+  },
+
+  "corrections": [
+    {
+      "correction_id": "CORR-001",
+      "severity": "HIGH",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "periodic_report_structures.pbrer_e2c_r2.periodicity.submission_deadline_6_monthly",
+      "source": "ICH E2C(R2), Section 2.8.3",
+      "issue": "PBRER submission deadline of 70 calendar days incorrectly scoped to 6-monthly reports only. JSON assigns 90 days to annual PBRERs.",
+      "current_value": "70 days for 6-monthly; 90 days for annual",
+      "correct_value": "70 days for both 6-month AND 12-month intervals; 90 days only for intervals exceeding 12 months",
+      "pdf_quote": "PBRERs covering intervals of 6 or 12 months: within 70 calendar days. PBRERs covering intervals in excess of 12 months: within 90 calendar days.",
+      "impact": "Could cause missed compliance deadlines for annual PBRERs if 90 days is used instead of the required 70 days.",
+      "action": "UPDATE: Change annual PBRER deadline from 90 to 70 calendar days. Restrict 90-day deadline to >12-month intervals only."
+    },
+    {
+      "correction_id": "CORR-002",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "definitions.serious_adverse_event.criteria",
+      "source": "ICH E2A, Sections II.B and III.A.2",
+      "issue": "'Important medical event' listed as 6th SAE criterion at same level as the 5 formal criteria. E2A structures it separately in Section III.A.2.",
+      "current_value": "6-item criteria list with 'important medical event' as criterion 6",
+      "correct_value": "5 formal criteria (death, life-threatening, hospitalisation, disability, congenital anomaly) + separate note that 'important medical events may jeopardise the patient or require intervention to prevent one of the above outcomes' per Section III.A.2",
+      "pdf_quote": "E2A Section III.A.2: 'Medical and scientific judgement should be exercised in deciding whether expedited reporting is appropriate in other situations, such as important medical events that may not be immediately life-threatening...'",
+      "impact": "Conflation could lead to overclassification of events as SAEs or confusion in regulatory training about the formal SAE definition structure.",
+      "action": "RESTRUCTURE: Move 'important medical event' from criteria array to a separate note field. Clarify it is a supplementary regulatory reporting consideration, not a 6th formal criterion."
+    },
+    {
+      "correction_id": "CORR-003",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "periodic_report_structures.pbrer_e2c_r2.sections (Section 7 title)",
+      "source": "ICH E2C(R2), Section 2.9.2",
+      "issue": "Uses 'Reporting Period' where E2C(R2) consistently uses 'Reporting Interval'. This is a deliberate terminology choice in the guideline.",
+      "current_value": "Summaries of Significant Findings from Clinical Trials during the Reporting Period",
+      "correct_value": "Summaries of Significant Findings from Clinical Trials during the Reporting Interval",
+      "action": "UPDATE: Replace 'Reporting Period' with 'Reporting Interval' throughout PBRER section titles and descriptions. Search for all instances of 'Reporting Period' in E2C(R2)-sourced content."
+    },
+    {
+      "correction_id": "CORR-004",
+      "severity": "MEDIUM",
+      "file": "safety-reporting-rules.json",
+      "rule_path": "selective_safety_data_collection_e19.mandatory_data_always_collected",
+      "source": "ICH E19, Sections 2.3 and 2.4",
+      "issue": "Conflates baseline data (Section 2.3) into the mandatory safety data collection list (Section 2.4), presenting 7 items as a single list when the PDF has them in separate sections.",
+      "current_value": "7-item list including 'Baseline data' as item 7",
+      "correct_value": "6-item mandatory safety collection list from Section 2.4 + separate baseline data requirements from Section 2.3",
+      "action": "RESTRUCTURE: Split into two fields -- 'mandatory_safety_data' (6 items from Section 2.4) and 'baseline_data_requirements' (from Section 2.3)."
+    },
+    {
+      "correction_id": "CORR-005",
+      "severity": "MEDIUM",
+      "file": "special-populations-rules.json",
+      "rule_path": "E6-018 (monitoring rule)",
+      "source": "ICH E6(R3)",
+      "issue": "Section citation error: cites Section III, 3.3 (Allocation of Activities) but content is from Section 3.11.4 (Monitoring).",
+      "current_value": "section: \"III, 3.3\"",
+      "correct_value": "section: \"III, 3.11.4\"",
+      "action": "UPDATE: Change section reference from '3.3' to '3.11.4' (specifically 3.11.4.2 for centralised monitoring)."
+    },
+    {
+      "correction_id": "CORR-006",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_path": "E5-002",
+      "source": "ICH E5(R1), Appendix A",
+      "issue": "Rule adds 'ADME characteristics' and 'receptor sensitivity' to the intrinsic factors list. These are discussed in the body text but not enumerated in Appendix A's factor table.",
+      "current_value": "List includes 'ADME characteristics' and 'receptor sensitivity' attributed to Appendix A",
+      "correct_value": "Appendix A lists: genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction. ADME/receptor sensitivity are body text concepts.",
+      "action": "UPDATE: Either remove the two extra items from the Appendix A-attributed list, or add a note indicating they are derived from body text discussion rather than the Appendix A enumeration."
+    },
+    {
+      "correction_id": "CORR-007",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_path": "E6-005",
+      "source": "ICH E6(R3), Principle 4 / Section 2.8.1",
+      "issue": "Rule appends text from Section 2.8.1 ('in accordance with regulatory requirements and the Declaration of Helsinki') to Principle 4 content, but cites only Principle 4.",
+      "current_value": "section: \"II, Principle 4\" (but includes 2.8.1 content)",
+      "correct_value": "section: \"II, Principle 4; see also 2.8.1\"",
+      "action": "UPDATE: Add secondary section reference to 2.8.1, or split the appended clause into a separate note."
+    },
+    {
+      "correction_id": "CORR-008",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_path": "E11-015",
+      "source": "ICH E11(R1)",
+      "issue": "Section citation error: cites Section 2.5 (Age Classification) but content is from Sections 2.4.3 (Safety) and 2.4.4 (Postmarketing).",
+      "current_value": "section: \"2.5\"",
+      "correct_value": "section: \"2.4.3, 2.4.4\"",
+      "action": "UPDATE: Change section reference from '2.5' to '2.4.3, 2.4.4'."
+    },
+    {
+      "correction_id": "CORR-009",
+      "severity": "LOW",
+      "file": "special-populations-rules.json",
+      "rule_path": "E17-003",
+      "source": "ICH E17",
+      "issue": "Section citation error: cites Section 2.3 which does not exist. Content is from Section 2.2.5 (Sample Size Planning).",
+      "current_value": "section: \"2.3\"",
+      "correct_value": "section: \"2.2.5\"",
+      "action": "UPDATE: Change section reference from '2.3' to '2.2.5'."
+    },
+    {
+      "correction_id": "CORR-010",
+      "severity": "LOW",
+      "file": "clinical-design-rules.json",
+      "rule_path": "E3-072 (study_reports)",
+      "source": "ICH E3, Section 15",
+      "issue": "Omits 'Chemical Abstracts' as an alternative referencing standard and truncates full title of the Vancouver Declaration.",
+      "current_value": "References the 1979 Vancouver Declaration only",
+      "correct_value": "References should follow '1979 Vancouver Declaration on Uniform Requirements for Manuscripts Submitted to Biomedical Journals' OR 'the system used in Chemical Abstracts'",
+      "action": "UPDATE: Add the Chemical Abstracts alternative and expand the Vancouver Declaration title."
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "extraction_date": "2026-03-23",
+  "summary": {
+    "total_files_analyzed": 11,
+    "total_rules_across_all_files": 684,
+    "total_rules_with_source_refs": 684,
+    "notes": "All files use metadata-level source references rather than per-rule source_document fields. Some files also have per-rule legal_ref, article, or source fields pointing to specific legislation sections."
+  },
+
+  "who-regs/who-requirements.json": {
+    "total_rules": 12,
+    "rules_with_sources": 12,
+    "metadata_sources": [
+      "WHO TRS 1010 Annex 10 - Stability Testing of APIs and FPPs (2018)",
+      "WHO TRS 986 Annex 2 - GMP for Pharmaceutical Products (2014)"
+    ],
+    "source_references": [
+      { "rule_id": "who_vs_ich_divergences[0]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1F (withdrawn)", "section_ref": "Climatic Zone IVb Conditions" },
+      { "rule_id": "who_vs_ich_divergences[1]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Intermediate Condition Elimination" },
+      { "rule_id": "who_vs_ich_divergences[2]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Batch Requirements for Generics" },
+      { "rule_id": "who_vs_ich_divergences[3]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Semi-Permeable Container Testing" },
+      { "rule_id": "who_vs_ich_divergences[4]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Minimum Data at Submission for Existing APIs" },
+      { "rule_id": "who_vs_ich_divergences[5]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Significant Change Definition for FPPs" },
+      { "rule_id": "who_vs_ich_divergences[6]", "source_ref": "WHO TRS 1010 Annex 10", "section_ref": "Ongoing Stability Monitoring" },
+      { "rule_id": "who_vs_ich_divergences[7]", "source_ref": "WHO TRS 1010 Annex 10, Appendix 2", "section_ref": "Labelling Statements" },
+      { "rule_id": "who_vs_ich_divergences[8]", "source_ref": "WHO TRS 1010 Annex 10, Appendix 3", "section_ref": "Zone II Data for Zone IV Distribution" },
+      { "rule_id": "who_vs_ich_divergences[9]", "source_ref": "WHO TRS 1010 Annex 10 / ICH Q1A", "section_ref": "Stress Testing Scope" },
+      { "rule_id": "who_vs_ich_divergences[10]", "source_ref": "WHO TRS 1010 Annex 10", "section_ref": "Retest Period vs Shelf Life Distinction" },
+      { "rule_id": "who_vs_ich_divergences[11]", "source_ref": "WHO TRS 1010 Annex 10", "section_ref": "Stability Commitment Thresholds" }
+    ]
+  },
+
+  "who-regs/japan-specific-requirements.json": {
+    "total_rules": 35,
+    "rules_with_sources": 35,
+    "metadata_sources": [
+      "PMDA Clinical Evaluation (ICH E16 Biomarker Qualification - Japanese Implementation)",
+      "PMDA Quality Drug Substances (Foreign Manufacturer Accreditation Guide)",
+      "PMDA Stability Testing (ICH Q1-based Japanese Implementation)",
+      "PMDA Biologics Quality (ICH E16 - Biomarker Qualification for Biologics)",
+      "PMDA Ethnic Factors Bridging (ICH E5 Implementation)",
+      "JP18 - Japanese Pharmacopoeia 18th Edition (2021)",
+      "PMDA Bioequivalence / Drug Interaction Guideline (2019)"
+    ],
+    "source_references": [
+      { "rule_id": "foreign_manufacturer_accreditation", "source_ref": "PAL Article 13-3", "section_ref": "Form No. 18, Form No. 16-(2)" },
+      { "rule_id": "bridging_study_requirements", "source_ref": "ICH E5 (Ethnic Factors in Acceptability of Foreign Clinical Data)", "section_ref": null },
+      { "rule_id": "carcinogenicity_dose_selection_japan", "source_ref": "Japan Toxicity Testing Guidelines / ICH S1C", "section_ref": null },
+      { "rule_id": "j_nda_format.biomarker_qualification_submission", "source_ref": "ICH E16 / MHLW Notification (January 20, 2011, Heisei 23)", "section_ref": "CTD Modules 1-5" },
+      { "rule_id": "j_nda_format.re_examination_system", "source_ref": "PMD Act", "section_ref": "8-year standard / 10-year orphan" },
+      { "rule_id": "jp18_pharmacopoeia", "source_ref": "JP18 - Japanese Pharmacopoeia 18th Edition", "section_ref": "Article 41 of PMD Act, MHLW Notification No. 220, June 7, 2021" },
+      { "rule_id": "jp18.key_differences[0]", "source_ref": "JP18 Pages 1861-2086", "section_ref": "Crude Drug / Kampo Monographs" },
+      { "rule_id": "jp18.key_differences[1]", "source_ref": "JP18 Section G3", "section_ref": "Protein Characterization Methods" },
+      { "rule_id": "jp18.key_differences[2]", "source_ref": "JP18 Section 6.17", "section_ref": "Insoluble Particulate Testing for Protein Drugs" },
+      { "rule_id": "jp18.key_differences[3]", "source_ref": "JP18 Section 6.10", "section_ref": "Dissolution Testing" },
+      { "rule_id": "jp18.key_differences[4]", "source_ref": "JP18 Section 6.09", "section_ref": "Disintegration Testing" },
+      { "rule_id": "jp18.key_differences[5]", "source_ref": "JP18 Section 2.66 / ICH Q3D", "section_ref": "Elemental Impurities" },
+      { "rule_id": "jp18.key_differences[6]", "source_ref": "JP18 Section 7 (7.01, 7.02, 7.03)", "section_ref": "Container Testing" },
+      { "rule_id": "jp18.key_differences[7]", "source_ref": "JP18 GZ-1, GZ-2", "section_ref": "Water Quality Standards" },
+      { "rule_id": "jp18.key_differences[8]", "source_ref": "JP18 GZ-3", "section_ref": "International Harmonization Section" },
+      { "rule_id": "drug_interaction_guidelines", "source_ref": "MHLW Guideline on Drug Interaction (February 8, 2019, Heisei 31)", "section_ref": "Sections 1-8" },
+      { "rule_id": "drug_interaction.transporter_evaluation", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": null },
+      { "rule_id": "drug_interaction.cyp_panel", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": null },
+      { "rule_id": "drug_interaction.pbpk_modeling", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": null },
+      { "rule_id": "drug_interaction.sorivudine_warning", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": "1993 sorivudine/5-FU event" }
+    ]
+  },
+
+  "who-regs/japan-vs-fda-ema.json": {
+    "total_rules": 17,
+    "rules_with_sources": 17,
+    "metadata_sources": ["PMDA guidelines and JP18 (cross-referenced from japan-specific-requirements.json)"],
+    "source_references": [
+      { "rule_id": "JP-001", "source_ref": "PAL Article 13-3", "section_ref": "Foreign Manufacturer Accreditation" },
+      { "rule_id": "JP-002", "source_ref": "ICH E5", "section_ref": "Bridging Study Requirement" },
+      { "rule_id": "JP-003", "source_ref": "PMDA MRCT guidance", "section_ref": "Japanese Patient Enrollment" },
+      { "rule_id": "JP-004", "source_ref": "ICH E5", "section_ref": "Ethnic Factor Sensitivity Assessment" },
+      { "rule_id": "JP-005", "source_ref": "PMD Act (Re-examination System)", "section_ref": "Saishinsaseido" },
+      { "rule_id": "JP-006", "source_ref": "JP18 - Japanese Pharmacopoeia 18th Edition", "section_ref": null },
+      { "rule_id": "JP-007", "source_ref": "JP18 Section 6.10", "section_ref": "Dissolution Testing" },
+      { "rule_id": "JP-008", "source_ref": "JP18 Section G3", "section_ref": "Biologics Characterization" },
+      { "rule_id": "JP-009", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": "Transporter Evaluation Panel" },
+      { "rule_id": "JP-010", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": "CYP2C19 Polymorphism" },
+      { "rule_id": "JP-011", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": "Sorivudine/5-FU Interaction" },
+      { "rule_id": "JP-012", "source_ref": "MHLW format mandate", "section_ref": "Package Insert (Tenpu Bunsho)" },
+      { "rule_id": "JP-013", "source_ref": "ICH Q1A(R2) / ICH Q1B", "section_ref": "Stability Conditions Zone II" },
+      { "rule_id": "JP-014", "source_ref": "JP18 Section 7 (7.01, 7.02, 7.03)", "section_ref": "Container/Closure System" },
+      { "rule_id": "JP-015", "source_ref": "ICH S1C / Japan Toxicity Testing Guidelines", "section_ref": "Carcinogenicity High-Dose" },
+      { "rule_id": "JP-016", "source_ref": "JP18 Pages 1861-2086", "section_ref": "Crude Drug / Kampo" },
+      { "rule_id": "JP-017", "source_ref": "PMDA DDI Guideline (2019)", "section_ref": "PBPK Model Validation" }
+    ]
+  },
+
+  "ema-pharma-gvp/eu-pharmacovigilance-rules.json": {
+    "total_rules": 92,
+    "rules_with_sources": 92,
+    "metadata_sources": [
+      "EMA GVP Modules I, II, V, VII, VIII, IX, XV, XVI"
+    ],
+    "legal_basis_sources": [
+      "Regulation (EC) No 726/2004",
+      "Directive 2001/83/EC",
+      "Commission Implementing Regulation (EU) No 520/2012"
+    ],
+    "source_references": [
+      { "rule_id": "GVP-I-001", "source_ref": "EMA/541760/2011 (GVP Module I)", "section_ref": "I.B.1, DIR Art 104(1), REG Art 21(1)" },
+      { "rule_id": "GVP-I-002", "source_ref": "EMA/541760/2011 (GVP Module I)", "section_ref": "I.B.2, DIR Art 104(3)(a), REG Art 20(1)" },
+      { "rule_id": "GVP-I-003", "source_ref": "EMA/541760/2011 (GVP Module I)", "section_ref": "I.B.2, DIR Art 104(3)" },
+      { "rule_id": "GVP-I-004", "source_ref": "EMA/541760/2011 (GVP Module I)", "section_ref": "I.B.3, DIR Art 104(3)(b), REG Art 21(2)" },
+      { "rule_id": "GVP-I-005", "source_ref": "EMA/541760/2011 (GVP Module I)", "section_ref": "I.B.4, IR Art 4" },
+      { "rule_id": "GVP-II-001", "source_ref": "EMA/816573/2011 Rev 2 (GVP Module II)", "section_ref": "II.B.1, DIR Art 104(3)(b), IR Art 2" },
+      { "rule_id": "GVP-II-002", "source_ref": "EMA/816573/2011 Rev 2 (GVP Module II)", "section_ref": "II.B.2, IR Art 2-3" },
+      { "rule_id": "GVP-II-003", "source_ref": "EMA/816573/2011 Rev 2 (GVP Module II)", "section_ref": "II.B.3, IR Art 5" },
+      { "rule_id": "GVP-V-001", "source_ref": "EMA/838713/2011 Rev 2 (GVP Module V)", "section_ref": "V.B.1, DIR Art 8(3)(iaa), REG Art 6(1)" },
+      { "rule_id": "GVP-V-002", "source_ref": "EMA/838713/2011 Rev 2 (GVP Module V)", "section_ref": "V.B.2, IR Art 30-32" },
+      { "rule_id": "GVP-VII-001", "source_ref": "EMA/816292/2011 Rev 1 (GVP Module VII)", "section_ref": "VII.B.1, DIR Art 107b, REG Art 28(2)" },
+      { "rule_id": "GVP-VII-002", "source_ref": "EMA/816292/2011 Rev 1 (GVP Module VII)", "section_ref": "VII.B.3, IR Art 34(1)" },
+      { "rule_id": "GVP-VIII-001", "source_ref": "EMA/813938/2011 Rev 3 (GVP Module VIII)", "section_ref": "VIII.B.1, DIR Art 1(15)" },
+      { "rule_id": "GVP-VIII-002", "source_ref": "EMA/813938/2011 Rev 3 (GVP Module VIII)", "section_ref": "VIII.B.2, IR Annex III" },
+      { "rule_id": "GVP-IX-001", "source_ref": "EMA/827661/2011 Rev 1 (GVP Module IX)", "section_ref": "IX.C.1.1, DIR Art 23(2), REG Art 16(2)" },
+      { "rule_id": "GVP-IX-002", "source_ref": "EMA/827661/2011 Rev 1 (GVP Module IX)", "section_ref": "IX.C.3, IR Art 18(2)-(3)" },
+      { "rule_id": "GVP-IX-005", "source_ref": "EMA/827661/2011 Rev 1 (GVP Module IX)", "section_ref": "IX.C.2, DIR Art 23(2), REG Art 16(2)" },
+      { "rule_id": "GVP-XV-001", "source_ref": "EMA/118465/2012 Rev 1 (GVP Module XV)", "section_ref": "XV.B.4, DIR Art 106a(1)" },
+      { "rule_id": "GVP-XV-002", "source_ref": "EMA/118465/2012 Rev 1 (GVP Module XV)", "section_ref": "XV.B.5.1, DIR Art 106a" },
+      { "rule_id": "GVP-XV-003", "source_ref": "EMA/118465/2012 Rev 1 (GVP Module XV)", "section_ref": "XV.C.1, DIR Art 106a(2)" },
+      { "rule_id": "GVP-XVI-001", "source_ref": "EMA/204715/2012 Rev 3 (GVP Module XVI)", "section_ref": "XVI.A, DIR Art 104(2)" },
+      { "rule_id": "GVP-XVI-002", "source_ref": "EMA/204715/2012 Rev 3 (GVP Module XVI)", "section_ref": "XVI.B.1.5, DIR Art 62, 107m(3)" },
+      { "rule_id": "GVP-XVI-010", "source_ref": "EMA/204715/2012 Rev 3 (GVP Module XVI)", "section_ref": "XVI.C.2, DIR Art 104(3)(c)-(d)" },
+      { "rule_id": "GVP-XVI-011", "source_ref": "EMA/204715/2012 Rev 3 (GVP Module XVI)", "section_ref": "XVI.B.1.5, GDPR Reg 2016/679, DIR Art 62" },
+      { "rule_id": "GVP-XVI-012", "source_ref": "EMA/204715/2012 Rev 3 (GVP Module XVI)", "section_ref": "XVI.B.7, DIR Art 104(2), GVP Module I" }
+    ]
+  },
+
+  "ema-pharma-gvp/gvp-unique-requirements.json": {
+    "total_rules": 18,
+    "rules_with_sources": 18,
+    "metadata_sources": [
+      "EMA GVP Modules I, II, V, VII, VIII, IX, XV, XVI"
+    ],
+    "source_references": [
+      { "rule_id": "EU-UNIQUE-001", "source_ref": "GVP Module I", "section_ref": "DIR Art 104(3)(a), REG Art 20(1)" },
+      { "rule_id": "EU-UNIQUE-002", "source_ref": "GVP Module II", "section_ref": "DIR Art 104(3)(b), IR Art 2-9" },
+      { "rule_id": "EU-UNIQUE-003", "source_ref": "GVP Module V", "section_ref": "DIR Art 8(3)(iaa), REG Art 6(1), IR Art 30-32" },
+      { "rule_id": "EU-UNIQUE-004", "source_ref": "GVP Module VII", "section_ref": "DIR Art 107b-107l, REG Art 28(2)-(4)" },
+      { "rule_id": "EU-UNIQUE-005", "source_ref": "GVP Module VIII", "section_ref": "DIR Art 107m-107p, IR Annex III" },
+      { "rule_id": "EU-UNIQUE-006", "source_ref": "GVP Module IX", "section_ref": "IR Art 18-22, DIR Art 107h" },
+      { "rule_id": "EU-UNIQUE-007", "source_ref": "GVP Module IX", "section_ref": "DIR Art 23(2), REG Art 16(2)" },
+      { "rule_id": "EU-UNIQUE-008", "source_ref": "GVP Module XV", "section_ref": "DIR Art 106a, GVP Annex II" },
+      { "rule_id": "EU-UNIQUE-009", "source_ref": "GVP Module XV", "section_ref": "DIR Art 106a(2)-(3)" },
+      { "rule_id": "EU-UNIQUE-010", "source_ref": "GVP Module XVI", "section_ref": "DIR Art 21a, 104(2), REG Art 9(4)(ca)" },
+      { "rule_id": "EU-UNIQUE-011", "source_ref": "GVP Module XVI", "section_ref": "DIR Art 104(3)(c)-(d), REG Art 56(1)(aa)" },
+      { "rule_id": "EU-UNIQUE-012", "source_ref": "GVP Module XVI Addendum I", "section_ref": "XVI.C.3.1" },
+      { "rule_id": "EU-UNIQUE-013", "source_ref": "GVP Modules VII, IX, XV", "section_ref": "REG Art 56(1)(aa), DIR Art 107e-107g" },
+      { "rule_id": "EU-UNIQUE-014", "source_ref": "GVP Modules VIII, IX", "section_ref": "IR Art 18, 22(3), DIR Art 107l, REG Art 26" },
+      { "rule_id": "EU-UNIQUE-015", "source_ref": "GVP Modules VII, IX, XV, XVI", "section_ref": "IR Art 22(1)-(3)" },
+      { "rule_id": "EU-UNIQUE-016", "source_ref": "GVP Module IX", "section_ref": "REG Art 23, DIR Art 23(1)" },
+      { "rule_id": "EU-UNIQUE-017", "source_ref": "GVP Module XVI", "section_ref": "XVI.B.1.4, XVI.B.4.1.2" },
+      { "rule_id": "EU-UNIQUE-018", "source_ref": "GVP Module VII", "section_ref": "VII.C.4.3.1, Table VII.1" }
+    ]
+  },
+
+  "eu-law/eu-legislation-requirements.json": {
+    "total_rules": 142,
+    "rules_with_sources": 142,
+    "metadata_sources": [
+      "Directive 2001/83/EC (Community code for medicinal products for human use)",
+      "Regulation (EC) No 726/2004 (Centralised procedure and EMA)",
+      "Regulation (EU) No 536/2014 (Clinical Trials Regulation)",
+      "Commission Delegated Regulation (EU) 2017/1569 (GMP for investigational medicinal products)",
+      "Regulation (EC) No 1394/2007 (Advanced Therapy Medicinal Products)",
+      "Regulation (EC) No 141/2000 (Orphan Medicinal Products)",
+      "Regulation (EC) No 1901/2006 (Paediatric Medicinal Products)",
+      "Regulation (EC) No 1234/2008 (Variations to marketing authorisations)"
+    ],
+    "source_references": [
+      { "rule_id": "MA-001", "source_ref": "Dir 2001/83/EC Art. 6(1)", "section_ref": "Marketing Authorisation" },
+      { "rule_id": "MA-002", "source_ref": "Dir 2001/83/EC Art. 8(2)", "section_ref": "Applicant establishment" },
+      { "rule_id": "MA-003", "source_ref": "Dir 2001/83/EC Art. 8(3)", "section_ref": "Application documentation" },
+      { "rule_id": "MA-004", "source_ref": "Dir 2001/83/EC Art. 10(1)", "section_ref": "Data exclusivity 8+2" },
+      { "rule_id": "MA-005", "source_ref": "Dir 2001/83/EC Art. 10(4)", "section_ref": "Biosimilar requirements" },
+      { "rule_id": "MA-008", "source_ref": "Dir 2001/83/EC Art. 17", "section_ref": "210-day MA procedure" },
+      { "rule_id": "MA-009", "source_ref": "Dir 2001/83/EC Art. 24", "section_ref": "5-year validity" },
+      { "rule_id": "MA-013", "source_ref": "Reg 726/2004 Art. 3(1)", "section_ref": "Mandatory centralised" },
+      { "rule_id": "MA-019", "source_ref": "Reg 726/2004 Art. 14-a", "section_ref": "Conditional MA" },
+      { "rule_id": "MA-020", "source_ref": "Reg 726/2004 Art. 14(11)", "section_ref": "Data protection 8+2+1" },
+      { "rule_id": "CP-001", "source_ref": "Reg 726/2004 Annex point 1", "section_ref": "Biotech mandatory centralised" },
+      { "rule_id": "CP-004", "source_ref": "Reg 726/2004 Annex point 4", "section_ref": "Orphan mandatory centralised" },
+      { "rule_id": "CT-001", "source_ref": "Reg 536/2014 Art. 1", "section_ref": "Scope" },
+      { "rule_id": "CT-004", "source_ref": "Reg 536/2014 Art. 5", "section_ref": "Submission via EU portal" },
+      { "rule_id": "CT-006", "source_ref": "Reg 536/2014 Art. 6", "section_ref": "Part I assessment 45 days" },
+      { "rule_id": "CT-015", "source_ref": "Reg 536/2014 Art. 37", "section_ref": "Results summary 1 year" },
+      { "rule_id": "CT-017", "source_ref": "Reg 536/2014 Art. 42", "section_ref": "SUSAR reporting 7/15 days" },
+      { "rule_id": "CT-020", "source_ref": "Reg 536/2014 Art. 58", "section_ref": "25-year archival" },
+      { "rule_id": "CT-023", "source_ref": "Reg 536/2014 Art. 90", "section_ref": "Germ line prohibition" },
+      { "rule_id": "GMP-IMP-001", "source_ref": "Reg 2017/1569 Art. 3", "section_ref": "IMP GMP compliance" },
+      { "rule_id": "GMP-IMP-009", "source_ref": "Reg 2017/1569 Art. 12", "section_ref": "QP batch certification" },
+      { "rule_id": "MFG-001", "source_ref": "Dir 2001/83/EC Art. 40", "section_ref": "Manufacturing authorisation" },
+      { "rule_id": "MFG-005", "source_ref": "Dir 2001/83/EC Art. 46b", "section_ref": "API import GMP confirmation" },
+      { "rule_id": "MFG-006", "source_ref": "Dir 2001/83/EC Art. 48-52", "section_ref": "Qualified Person requirements" },
+      { "rule_id": "LAB-001", "source_ref": "Dir 2001/83/EC Art. 54", "section_ref": "Outer packaging content" },
+      { "rule_id": "LAB-002", "source_ref": "Dir 2001/83/EC Art. 54a", "section_ref": "Safety features/serialisation" },
+      { "rule_id": "LAB-003", "source_ref": "Dir 2001/83/EC Art. 56a", "section_ref": "Braille" },
+      { "rule_id": "PV-001", "source_ref": "Dir 2001/83/EC Art. 104", "section_ref": "PV system + QPPV" },
+      { "rule_id": "PV-003", "source_ref": "Dir 2001/83/EC Art. 107", "section_ref": "ADR reporting 15/90 days" },
+      { "rule_id": "PV-007", "source_ref": "Dir 2001/83/EC Art. 107i-107k", "section_ref": "Urgent Union Procedure" },
+      { "rule_id": "PV-010", "source_ref": "Reg 726/2004 Art. 84a", "section_ref": "Financial penalties 5% turnover" },
+      { "rule_id": "ATMP-001", "source_ref": "Reg 1394/2007 Art. 1, 4", "section_ref": "Mandatory centralised for ATMPs" },
+      { "rule_id": "ATMP-004", "source_ref": "Reg 1394/2007 Art. 15", "section_ref": "30-year traceability" },
+      { "rule_id": "ORP-001", "source_ref": "Reg 141/2000 Art. 3", "section_ref": "Orphan designation criteria" },
+      { "rule_id": "ORP-004", "source_ref": "Reg 141/2000 Art. 8", "section_ref": "10-year market exclusivity" },
+      { "rule_id": "PAED-001", "source_ref": "Reg 1901/2006 Art. 7-8", "section_ref": "PIP requirement" },
+      { "rule_id": "PAED-007", "source_ref": "Reg 1901/2006 Art. 37", "section_ref": "6-month SPC extension reward" },
+      { "rule_id": "VAR-001", "source_ref": "Reg 1234/2008 Art. 2", "section_ref": "Variation classification IA/IB/II" },
+      { "rule_id": "VAR-006", "source_ref": "Reg 1234/2008 Art. 17-19", "section_ref": "Urgent safety restrictions 24h" },
+      { "rule_id": "ENF-001", "source_ref": "Dir 2001/83/EC Art. 111", "section_ref": "Inspections, 90-day GMP certificate" }
+    ]
+  },
+
+  "health-canada/health-canada-requirements.json": {
+    "total_rules": 95,
+    "rules_with_sources": 95,
+    "metadata_sources": [
+      "Food_Drugs_Act_Canada.pdf",
+      "Food_Drug_Regulations_Canada_Full.pdf",
+      "HC_CTD_Guidance.pdf (Comparative Bioavailability in CTD Format)",
+      "HC_CTD_CTA_Format.pdf (Clinical Trial Applications Guidance)",
+      "clinicaltrialapplications.html",
+      "CTDguidance.html",
+      "GMPguide.html",
+      "basisofdecision.html",
+      "drugsubmissionguidance.html",
+      "food-drug-regulations.html",
+      "monograph/monographpage.html",
+      "monograph/faqs.html",
+      "monograph/validationrules.html",
+      "monograph/pm-guid-ld-mp-eng.pdf"
+    ],
+    "governing_legislation": {
+      "primary_act": "Food and Drugs Act (R.S.C., 1985, c. F-27)",
+      "primary_regulations": "Food and Drug Regulations (C.R.C., c. 870)"
+    },
+    "source_references": [
+      { "rule_id": "DIN", "source_ref": "C.01.014 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "NOC", "source_ref": "C.08.004 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "NDS", "source_ref": "C.08.002 of Food and Drug Regulations", "section_ref": "300-day review target" },
+      { "rule_id": "NDS.brand_name_confusion", "source_ref": "C.08.002(2)(o)", "section_ref": "Brand name confusion assessment" },
+      { "rule_id": "NDS.population_subgroup", "source_ref": "C.08.002(2.01)", "section_ref": "Population subgroup harmonization" },
+      { "rule_id": "ANDS", "source_ref": "C.08.002.1 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "SNDS", "source_ref": "C.08.003 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "CTA", "source_ref": "Part C, Division 5 (C.05.001-C.05.016)", "section_ref": "30-day review" },
+      { "rule_id": "CTA-A", "source_ref": "C.05.008 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "REB_requirements", "source_ref": "C.05.006(1)(c)", "section_ref": "Min 5 members, Canadian citizen majority" },
+      { "rule_id": "CRP_definition", "source_ref": "C.08.001.1 of Food and Drug Regulations", "section_ref": "3 categories (a)(b)(c)" },
+      { "rule_id": "product_monograph", "source_ref": "Health Canada PM Guidance, Version 7", "section_ref": "Adopted 2024-08-30, Effective 2024-12-23" },
+      { "rule_id": "pm_xml_format", "source_ref": "HL7 SPL (Structured Product Labeling)", "section_ref": "Validation rules v2.1, ~70 rules" },
+      { "rule_id": "GMP", "source_ref": "Part C, Division 2 (C.02.001-C.02.030)", "section_ref": null },
+      { "rule_id": "establishment_licensing", "source_ref": "Part C, Division 1A (C.01A.001-C.01A.019)", "section_ref": "Annual review C.01A.009" },
+      { "rule_id": "lot_release", "source_ref": "C.04.007 of Food and Drug Regulations", "section_ref": "Schedule D biologics" },
+      { "rule_id": "ADR_reporting", "source_ref": "C.01.017 of Food and Drug Regulations", "section_ref": "15-day serious ADR" },
+      { "rule_id": "annual_summary_reports", "source_ref": "C.01.018 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "drug_shortage", "source_ref": "C.01.014.7 of Food and Drug Regulations", "section_ref": null },
+      { "rule_id": "data_protection", "source_ref": "C.08.004.1 of Food and Drug Regulations", "section_ref": "6-year filing block + 8-year NOC block" },
+      { "rule_id": "Extraordinary_Use_NDS", "source_ref": "C.08.002.01", "section_ref": "CBRN emergency drugs" },
+      { "rule_id": "New_Drug_Committee_Appeal", "source_ref": "C.08.009", "section_ref": "3-member panel" },
+      { "rule_id": "Emergency_Drug_Auth", "source_ref": "C.08.010", "section_ref": null },
+      { "rule_id": "Public_Health_Emergency", "source_ref": "C.08.009.01-C.08.009.05 (SOR/2021-45, SOR/2024-238)", "section_ref": null },
+      { "rule_id": "clinical_trial_retention", "source_ref": "C.05.012(4)", "section_ref": "15-year retention" },
+      { "rule_id": "post_NOC_records", "source_ref": "C.08.007", "section_ref": "7-year retention" },
+      { "rule_id": "NOC_suspension", "source_ref": "C.08.006", "section_ref": "7 grounds (a)-(g)" },
+      { "rule_id": "clinical_info_disclosure", "source_ref": "C.08.009.1-C.08.009.3", "section_ref": null },
+      { "rule_id": "environmental_assessment", "source_ref": "CEPA (Canadian Environmental Protection Act)", "section_ref": "Module 1.5" },
+      { "rule_id": "CS-BE", "source_ref": "Health Canada CTD Bioavailability Guidance", "section_ref": "Module 1.4.2, Appendix A-B" }
+    ]
+  },
+
+  "eu-gmp-ema/eu-gmp-rules.json": {
+    "total_rules": 96,
+    "rules_with_sources": 96,
+    "metadata_sources": [
+      "43 EU GMP source documents (EudraLex Volume 4 Chapters 1-9, Parts I-III, Annexes 1-21)",
+      "11 EMA Guidelines (Bioequivalence, Biosimilars, Process Validation, Excipients, FDF, Immunogenicity, etc.)"
+    ],
+    "source_references": [
+      { "rule_id": "PQS-001 to PQS-008", "source_ref": "EU GMP Part I Chapter 1", "section_ref": "Directive 2003/94/EC, Directive 91/412/EEC" },
+      { "rule_id": "PER-001 to PER-006", "source_ref": "EU GMP Part I Chapter 2", "section_ref": "Article 51 Directive 2001/83/EC, Article 49" },
+      { "rule_id": "PRE-001 to PRE-005", "source_ref": "EU GMP Part I Chapter 3", "section_ref": null },
+      { "rule_id": "DOC-001 to DOC-004", "source_ref": "EU GMP Part I Chapter 4", "section_ref": null },
+      { "rule_id": "PRD-001 to PRD-005", "source_ref": "EU GMP Part I Chapter 5", "section_ref": null },
+      { "rule_id": "QC-001 to QC-005", "source_ref": "EU GMP Part I Chapter 6", "section_ref": null },
+      { "rule_id": "OUT-001 to OUT-003", "source_ref": "EU GMP Part I Chapter 7", "section_ref": null },
+      { "rule_id": "CR-001 to CR-003", "source_ref": "EU GMP Part I Chapter 8", "section_ref": null },
+      { "rule_id": "SI-001", "source_ref": "EU GMP Part I Chapter 9", "section_ref": null },
+      { "rule_id": "ST-001 to ST-017", "source_ref": "EU GMP Annex 1 (2022 Revision)", "section_ref": "Effective 25 August 2023" },
+      { "rule_id": "BIO-001 to BIO-004", "source_ref": "EU GMP Annex 2", "section_ref": "Directive 2004/23/EC" },
+      { "rule_id": "CS-001 to CS-004", "source_ref": "EU GMP Annex 11", "section_ref": null },
+      { "rule_id": "QV-001 to QV-004", "source_ref": "EU GMP Annex 15", "section_ref": null },
+      { "rule_id": "QP-001 to QP-004", "source_ref": "EU GMP Annex 16", "section_ref": "Directive 2001/83/EC Art 49, 51" },
+      { "rule_id": "PR-001 to PR-002", "source_ref": "EU GMP Annex 17", "section_ref": null },
+      { "rule_id": "RS-001 to RS-002", "source_ref": "EU GMP Annex 19", "section_ref": null },
+      { "rule_id": "BE-001 to BE-007", "source_ref": "EMA Bioequivalence Guideline CPMP/EWP/QWP/1401/98 Rev.1", "section_ref": null },
+      { "rule_id": "BS-001 to BS-005", "source_ref": "EMA Biosimilars Quality Guideline EMA/CHMP/BWP/247713/2012", "section_ref": null },
+      { "rule_id": "PV-001 to PV-007", "source_ref": "EMA Process Validation Guideline EMA/CHMP/CVMP/QWP/BWP/70278/2012-Rev1", "section_ref": null },
+      { "rule_id": "EX-001 to EX-004", "source_ref": "EMA Excipients Guideline EMEA/CHMP/QWP/396951/2006", "section_ref": null },
+      { "rule_id": "FDF-001 to FDF-004", "source_ref": "EMA Finished Dosage Form Guideline EMA/362427/2017", "section_ref": null },
+      { "rule_id": "IM-001 to IM-004", "source_ref": "EMA Immunogenicity Guideline EMEA/CHMP/BMWP/14327/2006 Rev1", "section_ref": null },
+      { "rule_id": "AS-001 to AS-004", "source_ref": "EU GMP Part II (based on ICH Q7)", "section_ref": null }
+    ]
+  },
+
+  "health-canada/canada-vs-fda-ema.json": {
+    "total_rules": 15,
+    "rules_with_sources": 15,
+    "metadata_sources": [
+      "Health Canada / HPFB regulations and guidelines (cross-referenced from health-canada-requirements.json)"
+    ],
+    "source_references": [
+      { "rule_id": "DIV-CA-001", "source_ref": "C.08.002 of Food and Drug Regulations", "section_ref": "NDS vs NDA vs MAA" },
+      { "rule_id": "DIV-CA-002", "source_ref": "C.08.002.1 of Food and Drug Regulations", "section_ref": "ANDS vs ANDA" },
+      { "rule_id": "DIV-CA-003", "source_ref": "Part C, Division 5 (C.05.001-C.05.016)", "section_ref": "CTA vs IND" },
+      { "rule_id": "DIV-CA-004", "source_ref": "Health Canada PM Guidance", "section_ref": "Product Monograph vs PI vs SmPC" },
+      { "rule_id": "DIV-CA-005", "source_ref": "Part C, Division 2 (C.02.001-C.02.030) + Division 1A (C.01A)", "section_ref": "GMP/EL" },
+      { "rule_id": "DIV-CA-006", "source_ref": "C.08.004.1 of Food and Drug Regulations", "section_ref": "8-year data protection" },
+      { "rule_id": "DIV-CA-007", "source_ref": "Health Canada SBD guidance", "section_ref": "Summary Basis of Decision" },
+      { "rule_id": "DIV-CA-008", "source_ref": "Official Languages Act (Canada)", "section_ref": "Bilingual English/French" },
+      { "rule_id": "DIV-CA-009", "source_ref": "CEPA (Canadian Environmental Protection Act)", "section_ref": "Module 1.5" },
+      { "rule_id": "DIV-CA-010", "source_ref": "C.04.007 of Food and Drug Regulations", "section_ref": "Schedule D lot release" },
+      { "rule_id": "DIV-CA-011", "source_ref": "C.01.017-C.01.019 of Food and Drug Regulations", "section_ref": "ADR reporting" },
+      { "rule_id": "DIV-CA-012", "source_ref": "PM(NOC) Regulations", "section_ref": "Patent linkage" },
+      { "rule_id": "DIV-CA-013", "source_ref": "Health Canada expedited review guidance", "section_ref": "Priority Review/NOC-c/SAP" },
+      { "rule_id": "DIV-CA-014", "source_ref": "C.01.014 of Food and Drug Regulations", "section_ref": "DIN system" },
+      { "rule_id": "DIV-CA-015", "source_ref": "Health Canada CTD Bioavailability Guidance", "section_ref": "CS-BE" }
+    ]
+  },
+
+  "eu-gmp-ema/eu-gmp-vs-fda-cgmp.json": {
+    "total_rules": 30,
+    "rules_with_sources": 30,
+    "metadata_sources": [
+      "EudraLex Volume 4 (32 documents)",
+      "EMA Guidelines (11 documents)",
+      "21 CFR Parts 210/211",
+      "FDA Guidance Documents",
+      "ICH Q1-Q14"
+    ],
+    "source_references": [
+      { "rule_id": "DIV-001", "source_ref": "Dir 2001/83/EC Arts. 48-52 vs 21 CFR 211.22", "section_ref": "QP System" },
+      { "rule_id": "DIV-002", "source_ref": "EU GMP Annex 1 Tables 1 & 5 vs ISO 14644", "section_ref": "Cleanroom A/B/C/D" },
+      { "rule_id": "DIV-003", "source_ref": "EU GMP Annex 1 Section 2.3-2.6", "section_ref": "CCS 16 elements" },
+      { "rule_id": "DIV-004", "source_ref": "EU GMP Annex 1 Section 8.87", "section_ref": "PUPSIT" },
+      { "rule_id": "DIV-005", "source_ref": "EU GMP Annex 1 vs FDA Aseptic Processing Guidance (2004)", "section_ref": "APS/media fill frequency" },
+      { "rule_id": "DIV-006", "source_ref": "EU GMP Annex 1 Section 4.9", "section_ref": "Sinks/drains prohibited Grade A/B" },
+      { "rule_id": "DIV-007", "source_ref": "EU GMP Annex 1 Section 8.22", "section_ref": "100% CCIT" },
+      { "rule_id": "DIV-008", "source_ref": "EU GMP Annex 1", "section_ref": "Requalification 6/12 months" },
+      { "rule_id": "DIV-009", "source_ref": "EU GMP Annex 1", "section_ref": "Annual gowning requalification" },
+      { "rule_id": "DIV-010", "source_ref": "EU GMP Chapter 4", "section_ref": "Site Master File" },
+      { "rule_id": "DIV-011", "source_ref": "EU GMP Chapter 4.11 vs 21 CFR 211.180", "section_ref": "Batch record retention" },
+      { "rule_id": "DIV-012", "source_ref": "EU GMP Chapter 1.10 vs 21 CFR 211.180(e)", "section_ref": "PQR 12 elements" },
+      { "rule_id": "DIV-013", "source_ref": "EU GMP Chapters 3 & 5 + EMA HBEL guideline", "section_ref": "HBELs vs 1/1000th dose" },
+      { "rule_id": "DIV-014", "source_ref": "EU GMP Chapter 5 + Annex 8 vs 21 CFR 211.84(d)", "section_ref": "Per-container identity testing" },
+      { "rule_id": "DIV-015", "source_ref": "EU GMP Chapter 2.16 vs 21 CFR 211.28", "section_ref": "Medical exam on recruitment" },
+      { "rule_id": "DIV-016", "source_ref": "EMA BE Guideline vs FDA BE guidance / ICH M9", "section_ref": "RSABE Cmax only; BCS Class I only" },
+      { "rule_id": "DIV-017", "source_ref": "EMA biosimilar pathway Art. 10(4) vs BPCIA", "section_ref": "Reference product + interchangeability" },
+      { "rule_id": "DIV-018", "source_ref": "EMA PV Guideline vs FDA PV Guidance (2011)", "section_ref": "3-batch min + standard/non-standard" },
+      { "rule_id": "DIV-019", "source_ref": "EMA Excipients Guideline vs FDA IID", "section_ref": "Novel excipient full dossier" },
+      { "rule_id": "DIV-020", "source_ref": "Reg 1234/2008 vs 21 CFR 314.70", "section_ref": "Variation IA/IB/II vs PAS/CBE/AR" },
+      { "rule_id": "DIV-021", "source_ref": "Dir 2001/83/EC Art. 8(3)(iaa) vs 21 USC §355-1", "section_ref": "RMP mandatory vs REMS selective" },
+      { "rule_id": "DIV-022", "source_ref": "EU GMP Annex 2 + Dir 2004/23/EC vs 21 CFR 1271", "section_ref": "30-year vs 10-year traceability" },
+      { "rule_id": "DIV-023", "source_ref": "EU GMP Annex 11 vs 21 CFR Part 11", "section_ref": "Risk-based validation" },
+      { "rule_id": "DIV-024", "source_ref": "EMA Immunogenicity Guidelines vs FDA guidance", "section_ref": "ADA + batch traceability" },
+      { "rule_id": "DIV-025", "source_ref": "EU GMP Chapter 8 + FMD 2011/62/EU vs 21 CFR 211.198", "section_ref": "Falsification screening" },
+      { "rule_id": "DIV-026", "source_ref": "European Pharmacopoeia vs USP", "section_ref": "Compendial reference" },
+      { "rule_id": "DIV-027", "source_ref": "EU GMP Annex 7 + Dir 2004/24/EC vs DSHEA", "section_ref": "Herbal product GACP/THR" },
+      { "rule_id": "DIV-028", "source_ref": "EU GMP Annex 1 Section 4.35", "section_ref": "Sterile disinfectants Grade A/B" },
+      { "rule_id": "DIV-029", "source_ref": "EU GMP Annex 1 Section 8.71", "section_ref": "UV irradiation prohibited" },
+      { "rule_id": "DIV-030", "source_ref": "EMA FDF Guideline EMA/362427/2017", "section_ref": "100,000 unit minimum batch" }
+    ]
+  },
+
+  "eu-law/eu-vs-fda-divergences.json": {
+    "total_rules": 68,
+    "rules_with_sources": 68,
+    "metadata_sources": [
+      "EU pharmaceutical legislation (Directives and Regulations) vs FDA 21 CFR / 21 USC framework"
+    ],
+    "source_references": [
+      { "rule_id": "DIV-001", "source_ref": "Dir 2001/83/EC Arts. 6, 17, 28-39; Reg 726/2004 Arts. 3-4 vs 21 USC §355", "section_ref": "Multi-authority vs single agency" },
+      { "rule_id": "DIV-002", "source_ref": "Reg 726/2004 Annex", "section_ref": "Mandatory centralised scope" },
+      { "rule_id": "DIV-003", "source_ref": "Dir 2001/83/EC Arts. 28-39 vs 21 USC §355(a)", "section_ref": "MRP/DCP procedures" },
+      { "rule_id": "DIV-004", "source_ref": "Reg 726/2004 Art. 14-a vs 21 USC §356(c)", "section_ref": "Conditional MA vs Accelerated Approval" },
+      { "rule_id": "DIV-006", "source_ref": "Dir 2001/83/EC Art. 10(1); Reg 726/2004 Art. 14(11) vs Hatch-Waxman/BPCIA", "section_ref": "Data exclusivity 8+2+1 vs 5yr NCE" },
+      { "rule_id": "DIV-007", "source_ref": "Reg 141/2000 Art. 8 vs 21 USC §360cc", "section_ref": "Orphan 10yr vs 7yr" },
+      { "rule_id": "DIV-008", "source_ref": "Reg 1901/2006 Arts. 36-37 vs 21 USC §355a/§355c", "section_ref": "Paediatric PIP/PUMA/SPC vs BPCA/PREA" },
+      { "rule_id": "DIV-010", "source_ref": "Reg 536/2014 Arts. 5-8 vs 21 CFR Part 312", "section_ref": "Multi-state CT authorisation" },
+      { "rule_id": "DIV-014", "source_ref": "Reg 536/2014 Art. 58 vs 21 CFR 312.62(c)", "section_ref": "25-year vs 2-year archival" },
+      { "rule_id": "DIV-019", "source_ref": "Dir 2001/83/EC Arts. 48-52 vs 21 CFR Part 211", "section_ref": "QP system" },
+      { "rule_id": "DIV-020", "source_ref": "Dir 2001/83/EC Art. 46b vs FDA DMF system", "section_ref": "API GMP written confirmation" },
+      { "rule_id": "DIV-024", "source_ref": "Dir 2001/83/EC Art. 104(3)(a) vs 21 CFR 314.81", "section_ref": "QPPV requirement" },
+      { "rule_id": "DIV-025", "source_ref": "Dir 2001/83/EC Arts. 104(3)(e), 28e vs 21 CFR 314.81", "section_ref": "PSMF" },
+      { "rule_id": "DIV-026", "source_ref": "Dir 2001/83/EC Arts. 107b-107g vs 21 CFR 314.80(c)(2)", "section_ref": "PSUR single assessment" },
+      { "rule_id": "DIV-028", "source_ref": "Dir 2001/83/EC Art. 107(3) vs 21 CFR 314.80(c)(2)", "section_ref": "Non-serious ADR 90-day reporting" },
+      { "rule_id": "DIV-031", "source_ref": "Dir 2001/83/EC Art. 8(3)(iaa), Art. 104 vs 21 USC §355-1", "section_ref": "RMP mandatory vs REMS selective" },
+      { "rule_id": "DIV-032", "source_ref": "Dir 2001/83/EC Art. 56a vs 21 CFR Part 201", "section_ref": "Braille on packaging" },
+      { "rule_id": "DIV-033", "source_ref": "Dir 2001/83/EC Arts. 54(o), 54a vs DSCSA", "section_ref": "Safety features/serialisation" },
+      { "rule_id": "DIV-042", "source_ref": "Dir 2001/83/EC Art. 88 vs 21 CFR Part 202", "section_ref": "DTC advertising prohibited" },
+      { "rule_id": "DIV-045", "source_ref": "Reg 1394/2007 vs 42 USC §262", "section_ref": "ATMP regulation" },
+      { "rule_id": "DIV-046", "source_ref": "Dir 2001/83/EC Arts. 16a-16i vs DSHEA", "section_ref": "Traditional herbal pathway" },
+      { "rule_id": "DIV-049", "source_ref": "Reg 1901/2006 Arts. 7-8, 15-16 vs 21 USC §355c", "section_ref": "PIP vs PREA timing" },
+      { "rule_id": "DIV-050", "source_ref": "Dir 2001/83/EC Art. 10(4) vs 42 USC §262(k)", "section_ref": "Biosimilar interchangeability" },
+      { "rule_id": "DIV-055", "source_ref": "Reg 1234/2008 vs 21 CFR 314.70", "section_ref": "Variation IA/IB/II vs PAS/CBE/AR" },
+      { "rule_id": "DIV-057", "source_ref": "Dir 2001/83/EC Arts. 107m-107q vs 21 USC §355(o)(3)", "section_ref": "PASS vs PMR/PMC" },
+      { "rule_id": "DIV-062", "source_ref": "Reg 726/2004 Art. 84a vs 21 USC §332-334", "section_ref": "5% turnover fines vs injunctions" },
+      { "rule_id": "DIV-064", "source_ref": "Dir 2001/83/EC Art. 117a vs 21 CFR Part 7", "section_ref": "24-hour rapid alert" },
+      { "rule_id": "DIV-065", "source_ref": "Dir 2001/83/EC Art. 23a; Reg 726/2004 Art. 13(4) vs 21 USC §356c", "section_ref": "2-month vs 6-month withdrawal notice" }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "title": "Batch 4 Download Manifest — Critical Corpus Gaps",
+    "date": "2026-03-23",
+    "purpose": "Identify and download documents missing from the training corpus. Priority: CRITICAL first, then HIGH. These are the gaps between what exists in training/stage-1/ and what is needed for complete regulatory AI coverage.",
+    "corpus_audit_basis": "training/stage-1/ directory audit performed 2026-03-23",
+    "existing_ema_gvp": ["Module I", "Module II", "Module V", "Module VII", "Module VIII", "Module IX", "Module XV", "Module XVI"]
+  },
+
+  "priority_1_critical": {
+    "description": "Must have — these are either #1 inspection findings globally or cover mandatory post-marketing requirements",
+
+    "ema_gvp_module_vi": {
+      "title": "EMA GVP Module VI — Management and Reporting of Adverse Reactions to Medicinal Products",
+      "priority": "CRITICAL",
+      "why_critical": "Core pharmacovigilance — defines Individual Case Safety Report (ICSR) standards, expedited reporting (15-day rule), aggregate reports (PSURs/PBRERs), EudraVigilance obligations. Every EU MA holder must comply. Covers same ground as E2D(R1) but with EU-specific operational rules.",
+      "source_url_pattern": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-good-pharmacovigilance-practices-gvp-module-vi-collection-management-submission-reports_en.pdf",
+      "filename": "GVP-Module-VI.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-VI.pdf",
+      "estimated_pages": 120
+    },
+
+    "ema_gvp_module_xii": {
+      "title": "EMA GVP Module XII — Signal Management",
+      "priority": "CRITICAL",
+      "why_critical": "Defines signal detection, validation, analysis, and regulatory action obligations. EMA PRAC signal management process. Applies to all MA holders in EU. Directly relevant to post-market safety surveillance AI.",
+      "source_url_pattern": "https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-good-pharmacovigilance-practices-gvp-module-xii-signal-management_en.pdf",
+      "filename": "GVP-Module-XII.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-XII.pdf",
+      "estimated_pages": 35
+    },
+
+    "pics_pi_032": {
+      "title": "PIC/S PI 032 — Good Practices for Data Management and Integrity in Regulated GMP/GDP Environments",
+      "priority": "CRITICAL",
+      "why_critical": "#1 GMP inspection finding globally (2015–2025). Defines data integrity (ALCOA+), audit trails, electronic records, hybrid systems, CSV/CDS requirements. Applies to all GMP-regulated manufacturing. Any AI advising on CMC or manufacturing must know this.",
+      "source_url_pattern": "https://picscheme.org/docviewer/document?id=1874",
+      "filename": "PI_032-3.pdf",
+      "save_to": "training/stage-1/regulations/PI_032-3.pdf",
+      "estimated_pages": 55,
+      "download_note": "PIC/S documents require registration on picscheme.org but are publicly available. Alternate: FDA Data Integrity Guidance (2018) covers much of the same ground and is available at FDA.gov — download both."
+    },
+
+    "pics_pi_041": {
+      "title": "PIC/S PI 041 — Good Manufacturing Practice for Advanced Therapy Medicinal Products",
+      "priority": "CRITICAL",
+      "why_critical": "ATMP GMP is the fastest-growing regulatory frontier (gene therapy, cell therapy, tissue engineering). PI 041 complements EU Annex 2 (ATMP) and fills gaps in ICH Q7/Q10 for ATMPs. Already have gap-fill docs but missing the primary GMP standard.",
+      "source_url_pattern": "https://picscheme.org/docviewer/document?id=1968",
+      "filename": "PI_041-1.pdf",
+      "save_to": "training/stage-1/regulations/PI_041-1.pdf",
+      "estimated_pages": 70,
+      "download_note": "Also download EMA/CAT GMP Annex for ATMPs if not already present."
+    },
+
+    "fda_data_integrity_2018": {
+      "title": "FDA Guidance for Industry: Data Integrity and Compliance with Drug CGMP (2018)",
+      "priority": "CRITICAL",
+      "why_critical": "FDA's definitive data integrity guidance covering ALCOA, audit trails, electronic records (21 CFR Part 11), Computerized System Validation. Complements PIC/S PI 032 for FDA-regulated facilities.",
+      "source_url_pattern": "https://www.fda.gov/media/119267/download",
+      "filename": "FDA_Data_Integrity_CGMP_2018.pdf",
+      "save_to": "training/stage-1/fda-guidance/FDA_Data_Integrity_CGMP_2018.pdf",
+      "estimated_pages": 20
+    }
+  },
+
+  "priority_2_high": {
+    "description": "Strongly recommended — cover high-traffic regulatory areas or mandatory EU/PMDA-specific requirements",
+
+    "ema_gvp_module_x": {
+      "title": "EMA GVP Module X — Additional Monitoring",
+      "priority": "HIGH",
+      "why_high": "Defines black triangle/additional monitoring obligations for new MA holders. Mandatory for all EU approvals since 2013. Governs risk minimisation measures.",
+      "filename": "GVP-Module-X.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-X.pdf"
+    },
+
+    "ema_gvp_module_iii": {
+      "title": "EMA GVP Module III — Pharmacovigilance Inspections",
+      "priority": "HIGH",
+      "filename": "GVP-Module-III.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-III.pdf"
+    },
+
+    "ema_gvp_module_iv": {
+      "title": "EMA GVP Module IV — Pharmacovigilance Audits",
+      "priority": "HIGH",
+      "filename": "GVP-Module-IV.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-IV.pdf"
+    },
+
+    "ema_gvp_module_xi": {
+      "title": "EMA GVP Module XI — PSURs / PBRERs",
+      "priority": "HIGH",
+      "why_high": "Periodic Safety Update Reports / Periodic Benefit-Risk Evaluation Reports — mandatory 6-monthly and annual regulatory submissions. One of the highest-workload post-approval obligations.",
+      "filename": "GVP-Module-XI.pdf",
+      "save_to": "training/stage-1/ema-gvp/GVP-Module-XI.pdf"
+    },
+
+    "pmda_ddi_guidance": {
+      "title": "PMDA Guidance on Drug Interaction Studies for New Drug Applications",
+      "priority": "HIGH",
+      "why_high": "PMDA DDI requirements differ from ICH M12 in key areas (CYP2C19 weighting, transporter panel, clinical study triggers). Already have PMDA biologics/ethnics/stability but missing the DDI guidance.",
+      "filename": "PMDA_DDI_Guidance.pdf",
+      "save_to": "training/stage-1/pmda-guidelines/PMDA_DDI_Guidance.pdf"
+    },
+
+    "pmda_oncology_guidance": {
+      "title": "PMDA Guidance on Clinical Evaluation of Anti-Cancer Drugs",
+      "priority": "HIGH",
+      "why_high": "Japan is a major oncology market. PMDA has specific requirements for oncology trial design, basket/umbrella trial acceptance, and post-approval requirements that differ from FDA/EMA.",
+      "filename": "PMDA_Oncology_Clinical_Evaluation.pdf",
+      "save_to": "training/stage-1/pmda-guidelines/PMDA_Oncology_Clinical_Evaluation.pdf"
+    },
+
+    "fda_ind_regulations_full": {
+      "title": "21 CFR Part 312 — IND Regulations (complete annotated)",
+      "priority": "HIGH",
+      "why_high": "Core IND regulations. Already have title21_vol5_parts300-499 but Part 312 should be extracted standalone for rapid reference. Covers IND application content, safety reporting, protocol amendments.",
+      "note": "Already in corpus as part of title21_vol5 — may just need targeted extraction, not re-download"
+    },
+
+    "fda_505b2_guidance": {
+      "title": "FDA Guidance for Industry: Applications Covered by Section 505(b)(2) (1999, updated)",
+      "priority": "HIGH",
+      "why_high": "505(b)(2) pathway governs NDAs that rely on studies not conducted by the applicant — critical for reformulations, new dosage forms, new indications. Major pathway for novel drug development.",
+      "filename": "FDA_505b2_Guidance.pdf",
+      "save_to": "training/stage-1/fda-guidance/FDA_505b2_Guidance.pdf"
+    },
+
+    "fda_rems_guidance": {
+      "title": "FDA Guidance: Format and Content of Proposed Risk Evaluation and Mitigation Strategies (REMS)",
+      "priority": "HIGH",
+      "why_high": "REMS requirements are mandated for high-risk drugs. Covers REMS elements (MedGuides, communication plans, ETASU), submission content, and FDA review process.",
+      "filename": "FDA_REMS_Guidance.pdf",
+      "save_to": "training/stage-1/fda-guidance/FDA_REMS_Guidance.pdf"
+    }
+  },
+
+  "priority_3_medium": {
+    "description": "Important but not blocking — gaps that matter for complete coverage of niche areas",
+
+    "ich_guidelines_remaining": {
+      "note": "~43 ICH guidelines still unextracted after batch 1+2. See batch 3 agents covering E3/E4/E7/E14/E17 and S1-S8/Q10/Q11. Remaining after batch 3 likely include: E5(R1), E6(R2), E8(R1), E9(R1), Q1A-Q1F, Q4B annexes, Q6A, Q6B, Q8(R2), S2(R1), S3A, S3B, S4, S5(R3), S8.",
+      "priority": "MEDIUM",
+      "approach": "Launch batch 4 extraction agents after batch 3 completes"
+    },
+
+    "eu_clinical_trials_regulation": {
+      "title": "EU Clinical Trials Regulation (EU) No 536/2014 (CTR)",
+      "priority": "MEDIUM",
+      "why_medium": "EU CTR replaced the EU Clinical Trials Directive in 2022. CTIS portal mandatory for all new EU trials. Key changes: single submission for multi-MS trials, harmonized timelines, transparency obligations.",
+      "filename": "EU_CTR_536_2014.pdf",
+      "save_to": "training/stage-1/regulations-eu/EU_CTR_536_2014.pdf"
+    },
+
+    "eu_gvp_product_info": {
+      "title": "EMA Guideline on Smpc, Labelling and Package Leaflet",
+      "priority": "MEDIUM",
+      "why_medium": "EU-specific labeling requirements (SmPC = EU equivalent of FDA Prescribing Information). Governs what must appear in summary of product characteristics. Different structure from FDA labeling PLR format."
+    },
+
+    "health_canada_guidance_package": {
+      "title": "Health Canada: Guidance for Industry — Quality of Biotechnological Products + Clinical Trial Applications",
+      "priority": "MEDIUM",
+      "why_medium": "Canada follows ICH closely but has specific HC-only requirements (Notice of Compliance with Conditions, Priority Review policy, Therapeutic Products Directorate SOPs).",
+      "note": "Check training/stage-1/health-canada/ for existing docs first"
+    }
+  },
+
+  "download_instructions": {
+    "ema_gvp_base_url": "Search EMA website for 'GVP Module [number]' — documents are freely available at ema.europa.eu",
+    "pics_base_url": "https://picscheme.org — free registration required for PI documents",
+    "fda_base_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+    "save_structure": "All documents should be saved to appropriate subdirectory under training/stage-1/ and then extraction agents should be run on them",
+    "immediate_action": "CRITICAL items (EMA GVP VI, XII; PIC/S PI 032, PI 041; FDA Data Integrity) should be downloaded before Batch 4 extraction agents are launched"
+  },
+
+  "batch_4_extraction_plan": {
+    "description": "After downloads complete, run extraction agents in parallel",
+    "proposed_agents": [
+      {
+        "name": "ema_gvp_vi_xii",
+        "inputs": ["GVP-Module-VI.pdf", "GVP-Module-XII.pdf"],
+        "output": "training/output-v4/ema-gvp-vi-xii-rules.json",
+        "focus": "ICSR reporting, expedited timelines, signal management, PRAC process"
+      },
+      {
+        "name": "pics_data_integrity",
+        "inputs": ["PI_032-3.pdf", "FDA_Data_Integrity_CGMP_2018.pdf"],
+        "output": "training/output-v4/pics-fda-data-integrity-rules.json",
+        "focus": "ALCOA+, audit trails, hybrid systems, CSV, electronic records"
+      },
+      {
+        "name": "remaining_ich_batch4",
+        "inputs": ["E5_R1", "E8_R1", "E9_R1", "Q1A-Q1F", "Q8_R2", "S2_R1", "S3A", "S3B"],
+        "output": "training/output-v4/ich-remaining-batch4-rules.json"
+      },
+      {
+        "name": "pmda_additional",
+        "inputs": ["PMDA_DDI_Guidance.pdf", "PMDA_Oncology_Clinical_Evaluation.pdf"],
+        "output": "training/output-v4/pmda-additional-rules.json"
+      }
+    ]
+  }
+}

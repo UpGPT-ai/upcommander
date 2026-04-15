@@ -1,0 +1,934 @@
+{
+  "metadata": {
+    "title": "ICH CMC Analytical Methods, Impurity Limits, Specifications & GMP Rules",
+    "version": "2.0",
+    "generated": "2026-03-22",
+    "sources": [
+      "ICH Q2(R2) — Analytical Procedure Validation",
+      "ICH Q14 — Analytical Procedure Development",
+      "ICH Q3A(R2) — Impurities in New Drug Substances",
+      "ICH Q3B(R2) — Impurities in New Drug Products",
+      "ICH Q3C(R9) — Residual Solvents",
+      "ICH Q3D(R2) — Elemental Impurities",
+      "ICH Q3E (Draft) — Extractables and Leachables",
+      "ICH Q4B(R1) — Pharmacopoeial Harmonisation + 14 Annexes",
+      "ICH Q6A — Specifications: Chemical Substances",
+      "ICH Q6B — Specifications: Biotech/Biological Products",
+      "ICH Q7 — GMP for Active Pharmaceutical Ingredients",
+      "ICH Q7 Q&As",
+      "ICH Q2(R2)/Q14 Training Modules 1-7"
+    ],
+    "coverage": "87 PDF files across ICH Q2, Q3, Q4, Q6, Q7, Q14 guideline families"
+  },
+
+  "analytical_procedure_lifecycle": {
+    "source": "ICH Q14 + Q2(R2)",
+    "stages": {
+      "stage_1_development": {
+        "guideline": "Q14",
+        "description": "Procedure development and understanding",
+        "approaches": {
+          "minimal": "Traditional empirical one-factor-at-a-time evaluation",
+          "enhanced": "Systematic approach using prior knowledge, risk assessment, DoE, multivariate analysis to identify proven acceptable ranges (PARs)"
+        },
+        "key_elements": [
+          "Analytical Target Profile (ATP) definition",
+          "Risk assessment (Ishikawa diagrams)",
+          "Parameter screening and optimization",
+          "Control strategy development",
+          "Proven acceptable ranges (PARs) identification"
+        ]
+      },
+      "stage_2_validation": {
+        "guideline": "Q2(R2)",
+        "description": "Procedure performance qualification / validation",
+        "purpose": "Confirm procedure is fit for intended purpose"
+      },
+      "stage_3_verification": {
+        "guideline": "Q14",
+        "description": "Continued procedure performance verification",
+        "requirements": [
+          "Trend analysis of control samples, SST data, reference material results",
+          "Statistical process control (control charts)",
+          "Periodic verification against reference procedure at justified intervals",
+          "Revalidation triggered by changes, new degradation products, matrix changes, or adverse trends"
+        ]
+      }
+    }
+  },
+
+  "analytical_target_profile": {
+    "source": "ICH Q14 Section 3",
+    "definition": "Prospective summary of performance characteristics describing intended purpose and anticipated performance criteria for the reportable result",
+    "required_elements": [
+      "Intended purpose of the measurement",
+      "Link to the CQA and its specification range",
+      "Performance characteristics with acceptance criteria (accuracy, precision, specificity, reportable range)",
+      "Rationale for each acceptance criterion"
+    ],
+    "key_property": "Technology-independent — multiple technologies may satisfy the same ATP",
+    "example_criteria": {
+      "potency_bioassay": {
+        "accuracy": "95% CI of slope 0.8–1.25; relative bias ≤20%",
+        "precision": "Upper 95% CI for GCV ≤20%",
+        "specificity": "Specific for intended mechanism of action",
+        "reportable_range": "64%–150% relative potency (for 80–125% specification)"
+      },
+      "nir_assay": {
+        "accuracy": "RMSEP ≤3.3%",
+        "precision": "RSD ≤2.0%",
+        "specificity": "API unique spectral features in PLS loadings",
+        "reportable_range": "70.0%–130.0%",
+        "response": "r ≥0.970"
+      },
+      "mam_lc_ms": {
+        "accuracy": "Recovery 80%–120% per CQA",
+        "precision_deamidation": "RSD ≤20%",
+        "precision_oxidation": "RSD ≤30%",
+        "precision_glycosylation": "RSD ≤20%",
+        "linearity": "R² ≥0.98"
+      }
+    }
+  },
+
+  "validation_characteristics": {
+    "source": "ICH Q2(R2)",
+
+    "applicability_matrix": {
+      "identification": {
+        "specificity": true,
+        "repeatability": false,
+        "intermediate_precision": false,
+        "accuracy": false,
+        "reportable_range": false,
+        "detection_limit": false,
+        "quantitation_limit": false
+      },
+      "assay_content_potency": {
+        "specificity": true,
+        "repeatability": true,
+        "intermediate_precision": true,
+        "accuracy": true,
+        "reportable_range": true,
+        "detection_limit": false,
+        "quantitation_limit": false
+      },
+      "impurities_quantitative": {
+        "specificity": true,
+        "repeatability": true,
+        "intermediate_precision": true,
+        "accuracy": true,
+        "reportable_range": true,
+        "detection_limit": false,
+        "quantitation_limit": true
+      },
+      "impurities_limit_test": {
+        "specificity": true,
+        "repeatability": false,
+        "intermediate_precision": false,
+        "accuracy": "may_be_required",
+        "reportable_range": "may_be_required",
+        "detection_limit": true,
+        "quantitation_limit": false
+      },
+      "dissolution": {
+        "specificity": true,
+        "repeatability": true,
+        "intermediate_precision": true,
+        "accuracy": true,
+        "reportable_range": true,
+        "detection_limit": false,
+        "quantitation_limit": false
+      }
+    },
+
+    "specificity": {
+      "definition": "Ability to unequivocally assess the analyte in presence of expected components",
+      "methods": [
+        "Spiking studies at relevant impurity levels",
+        "Comparison with orthogonal procedure",
+        "Forced degradation studies (heat, light, humidity, acid/base, oxidation)",
+        "Peak purity evaluation (DAD, MS)"
+      ],
+      "special_requirements": {
+        "biological_assays": "Demonstrate specificity for intended mechanism of action; no dose-response from cell line alone",
+        "qPCR": "Orthogonal comparison (gel electrophoresis, melting profile, DNA sequencing); BLAST primer/probe specificity",
+        "multivariate_NIR_Raman": "Spectral overlay of DS/tablet/placebo; loading plot comparison; outlier rejection"
+      }
+    },
+
+    "precision": {
+      "repeatability": {
+        "minimum_determinations": "6 at 100% test concentration OR 3 levels × 3 replicates = 9 total",
+        "biological_assays": "≥3 replicates at ≥5 levels covering reportable range",
+        "qPCR": "≥5 DNA concentration levels, ≥3 replicates each, single assay",
+        "reporting": ["SD", "RSD (%CV)", "95% confidence interval of RSD"]
+      },
+      "intermediate_precision": {
+        "minimum_determinations": "≥6 determinations varying days, analysts, equipment",
+        "study_designs": ["Nested", "Staggered nested", "Fully crossed"],
+        "biological_assays": "6 independent determinations at 3 levels, 2 analysts, 3 days",
+        "qPCR": "≥6 runs, ≥3 replicates each, ≥2 days",
+        "reporting": ["SD", "RSD", "95% confidence interval"]
+      },
+      "reproducibility": {
+        "description": "Between-laboratory precision",
+        "when_required": "Method transfer, collaborative studies; not routinely required for registration"
+      }
+    },
+
+    "accuracy": {
+      "methods": [
+        "Comparison to reference standard or CRM",
+        "Spiking/recovery studies (minimum 3 levels × 3 replicates = 9 determinations)",
+        "Standard addition",
+        "Inferred from precision + specificity + linearity (especially bioassays)"
+      ],
+      "reporting": ["% recovery at each level", "Mean % recovery", "95% confidence interval"],
+      "qPCR_criteria": "≥3 spike levels, 6 replicates each; recovery 70%–130%"
+    },
+
+    "reportable_range": {
+      "definition": "Interval between upper and lower concentration with suitable accuracy, precision, and response function",
+      "note": "Replaces former separate 'linearity' and 'range' concepts from Q2(R1)",
+      "minimum_ranges_by_method_type": {
+        "assay_drug_substance": "80%–120% of test concentration",
+        "assay_drug_product_content_uniformity": "70%–130% of test concentration",
+        "dissolution": "±20% over specified range",
+        "impurities_quantitative": "QL to 120% of specification limit",
+        "potency_bioassay": "80%–120% of specification range",
+        "qPCR": "≥5 log₁₀ concentration range"
+      },
+      "response_function": {
+        "linear": {
+          "minimum_levels": 5,
+          "reporting": ["r or R²", "y-intercept", "slope", "residual plot"],
+          "typical_R2": {
+            "chromatographic_assay": "≥0.998",
+            "MAM": "≥0.98",
+            "NIR": "≥0.970"
+          }
+        },
+        "nonlinear": {
+          "bioassays": "4PL or 5PL models, R² ≥0.97",
+          "requirement": "Demonstrate and justify the calibration model"
+        }
+      }
+    },
+
+    "detection_limit": {
+      "definition": "Lowest amount detectable but not necessarily quantitated",
+      "approaches": {
+        "visual_evaluation": "Minimum concentration reliably detected",
+        "signal_to_noise": "S/N ratio of 2:1 or 3:1",
+        "standard_deviation_slope": "DL = 3.3 × σ / S"
+      },
+      "when_required": "Limit tests on impurities; informational for other tests"
+    },
+
+    "quantitation_limit": {
+      "definition": "Lowest amount quantitatively determined with suitable accuracy and precision",
+      "approaches": {
+        "visual_evaluation": "Minimum concentration with acceptable accuracy/precision",
+        "signal_to_noise": "S/N ratio of 10:1",
+        "standard_deviation_slope": "QL = 10 × σ / S"
+      },
+      "verification": "Must demonstrate acceptable accuracy and precision at QL level",
+      "qPCR_criteria": "%CV ≤25%, recovery 70%–130%",
+      "when_required": "Quantitative impurity tests; defines lower boundary of reportable range"
+    },
+
+    "robustness": {
+      "definition": "Capacity to remain unaffected by small deliberate parameter variations",
+      "evaluation_timing": "During development (Q14), informs control strategy",
+      "parameters_to_vary": {
+        "chromatographic": ["Flow rate ±0.3 mL/min", "Mobile phase composition ±5% organic", "Column temperature ±5°C", "Detection wavelength ±5 nm", "pH ±0.05 units", "Different column vendors"],
+        "dissolution": ["Temperature 37.0°C ±0.5°C", "Agitation speed ±3 rpm", "pH ±0.05 units", "Degassed vs non-degassed medium"],
+        "qPCR": ["Digestion time/temperature", "Master mix lots", "Annealing temperature ±0.5°C"],
+        "bioassay": ["Cell density/viability/confluency", "Incubation temperature/duration/CO₂", "Reagent concentrations"],
+        "NIR_Raman": ["DS lot/particle size", "Excipient lot", "Tablet hardness/thickness/moisture", "Environmental temperature/humidity"]
+      }
+    }
+  },
+
+  "system_suitability_criteria": {
+    "source": "ICH Q14 Section 5 + Training Modules",
+    "chromatographic": {
+      "RSD_replicate_injections": "≤2.0%",
+      "resolution": "Per procedure-specific requirement",
+      "column_efficiency": "Minimum theoretical plates specified",
+      "tailing_factor": "Per procedure-specific requirement",
+      "retention_time_reproducibility": "Per procedure-specific requirement"
+    },
+    "bioassay": {
+      "dose_response_curve": "Sigmoid with upper and lower plateaus",
+      "R_squared_reference_curve": "≥0.97",
+      "max_min_ratio": "≥3.0",
+      "parallelism_ratios": "0.8–1.2 for asymptote and Hill slope ratios"
+    },
+    "MAM_LC_MS": {
+      "peptide_resolution": "≥2.0",
+      "delta_RT_run_to_run": "≤0.5 min",
+      "mass_accuracy": "≤5 ppm",
+      "signal_intensity": "≥1E6",
+      "CQA_control_values": "Within 80%–120% of expected"
+    },
+    "MAM_sample_suitability": {
+      "mass_errors": "≤5 ppm",
+      "resolution_modified_unmodified": "≥1.5",
+      "reference_peptide_intensity": "≥1E7"
+    }
+  },
+
+  "biological_assay_criteria": {
+    "source": "ICH Q2(R2) Annex 2, Tables 5-7",
+    "note": "Use geometric coefficient of variation (%GCV) with log transformation",
+    "repeatability": {
+      "min_replicates": "≥3 at ≥5 levels",
+      "max_GCV_per_level": "12%",
+      "GCV_across_all_levels": "10%",
+      "upper_95CI_GCV": "15%"
+    },
+    "intermediate_precision": {
+      "design": "6 independent determinations at 3 levels, 2 analysts, 3 days",
+      "max_GCV_per_level": "14%",
+      "overall_GCV": "11%",
+      "upper_95CI_GCV": "16%"
+    },
+    "accuracy": {
+      "geometric_mean_recovery_range": "91%–118%",
+      "overall_geometric_mean": "107%",
+      "CI_95_percent": "101%–113%",
+      "slope_95CI": "0.8–1.25",
+      "relative_bias_90CI": "≤20%"
+    }
+  },
+
+  "impurity_thresholds": {
+    "Q3A_drug_substance_organic": {
+      "source": "ICH Q3A(R2)",
+      "classification": ["Organic (process-related, drug-related)", "Inorganic (reagents, catalysts, heavy metals)", "Residual solvents (per Q3C)"],
+      "reporting_thresholds": {
+        "max_daily_dose_leq_2g": "0.05%",
+        "max_daily_dose_gt_2g": "0.03%"
+      },
+      "identification_thresholds": [
+        {"max_daily_dose": "≤1 mg/day", "threshold": "1.0% or 5 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">1 mg to 10 mg/day", "threshold": "0.5% or 20 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">10 mg to 2 g/day", "threshold": "0.2% or 2 mg TDI, whichever is lower"},
+        {"max_daily_dose": ">2 g/day", "threshold": "0.10%"}
+      ],
+      "qualification_thresholds": [
+        {"max_daily_dose": "≤10 mg/day", "threshold": "1.0% or 50 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">10 mg to 100 mg/day", "threshold": "0.5% or 200 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">100 mg to 2 g/day", "threshold": "0.2% or 3 mg TDI, whichever is lower"},
+        {"max_daily_dose": ">2 g/day", "threshold": "0.15%"}
+      ],
+      "reporting_format": ["Each specified identified impurity", "Each specified unidentified impurity (by qualitative descriptor)", "Any unspecified impurity with a limit", "Total impurities"],
+      "rounding": "Nearest 0.01% (or 0.001% when threshold < 0.1%)"
+    },
+
+    "Q3B_drug_product_degradation": {
+      "source": "ICH Q3B(R2)",
+      "reporting_thresholds": {
+        "max_daily_dose_leq_1g": "0.1%",
+        "max_daily_dose_gt_1g": "0.05%"
+      },
+      "identification_thresholds": [
+        {"max_daily_dose": "<1 mg", "threshold": "1.0% or 5 µg TDI, whichever is lower"},
+        {"max_daily_dose": "1 mg to 10 mg", "threshold": "0.5% or 20 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">10 mg to 100 mg", "threshold": "0.2% or 2 mg TDI, whichever is lower"},
+        {"max_daily_dose": ">100 mg to 2 g", "threshold": "0.2%"},
+        {"max_daily_dose": ">2 g", "threshold": "0.10%"}
+      ],
+      "qualification_thresholds": [
+        {"max_daily_dose": "<1 mg", "threshold": "1.0% or 50 µg TDI, whichever is lower"},
+        {"max_daily_dose": "1 mg to 10 mg", "threshold": "0.5% or 200 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">10 mg to 100 mg", "threshold": "0.5% or 200 µg TDI, whichever is lower"},
+        {"max_daily_dose": ">100 mg to 2 g", "threshold": "0.2% or 3 mg TDI, whichever is lower"},
+        {"max_daily_dose": ">2 g", "threshold": "0.15%"}
+      ]
+    },
+
+    "Q3C_residual_solvents": {
+      "source": "ICH Q3C(R9)",
+      "classification": {
+        "class_1_avoid": {
+          "description": "Known human carcinogens, strongly suspected carcinogens, environmental hazards",
+          "solvents": [
+            {"name": "Benzene", "limit_ppm": 2, "concern": "Carcinogen"},
+            {"name": "Carbon tetrachloride", "limit_ppm": 4, "concern": "Toxic and environmental"},
+            {"name": "1,2-Dichloroethane", "limit_ppm": 5, "concern": "Toxic"},
+            {"name": "1,1-Dichloroethene", "limit_ppm": 8, "concern": "Toxic"},
+            {"name": "1,1,1-Trichloroethane", "limit_ppm": 1500, "concern": "Environmental"}
+          ]
+        },
+        "class_2_limit": {
+          "description": "Non-genotoxic animal carcinogens or possible causative agents of irreversible toxicity",
+          "solvents": [
+            {"name": "Acetonitrile", "PDE_mg_day": 4.1, "limit_ppm": 410},
+            {"name": "Chloroform", "PDE_mg_day": 0.6, "limit_ppm": 60},
+            {"name": "Dichloromethane", "PDE_mg_day": 6.0, "limit_ppm": 600},
+            {"name": "N,N-Dimethylformamide", "PDE_mg_day": 8.8, "limit_ppm": 880},
+            {"name": "1,4-Dioxane", "PDE_mg_day": 3.8, "limit_ppm": 380},
+            {"name": "Hexane", "PDE_mg_day": 2.9, "limit_ppm": 290},
+            {"name": "Methanol", "PDE_mg_day": 30.0, "limit_ppm": 3000},
+            {"name": "2-Methoxyethanol", "PDE_mg_day": 0.5, "limit_ppm": 50},
+            {"name": "N-Methylpyrrolidone", "PDE_mg_day": 5.3, "limit_ppm": 530},
+            {"name": "Pyridine", "PDE_mg_day": 2.0, "limit_ppm": 200},
+            {"name": "Tetrahydrofuran", "PDE_mg_day": 7.2, "limit_ppm": 720},
+            {"name": "Toluene", "PDE_mg_day": 8.9, "limit_ppm": 890},
+            {"name": "Xylene", "PDE_mg_day": 21.7, "limit_ppm": 2170},
+            {"name": "Chlorobenzene", "PDE_mg_day": 3.6, "limit_ppm": 360},
+            {"name": "Cumene", "PDE_mg_day": 0.7, "limit_ppm": 70},
+            {"name": "Cyclohexane", "PDE_mg_day": 38.8, "limit_ppm": 3880},
+            {"name": "1,2-Dimethoxyethane", "PDE_mg_day": 1.0, "limit_ppm": 100},
+            {"name": "N,N-Dimethylacetamide", "PDE_mg_day": 10.9, "limit_ppm": 1090},
+            {"name": "2-Ethoxyethanol", "PDE_mg_day": 1.6, "limit_ppm": 160},
+            {"name": "Ethyleneglycol", "PDE_mg_day": 6.2, "limit_ppm": 620},
+            {"name": "Formamide", "PDE_mg_day": 2.2, "limit_ppm": 220},
+            {"name": "Methylbutylketone", "PDE_mg_day": 0.5, "limit_ppm": 50},
+            {"name": "Methylcyclohexane", "PDE_mg_day": 11.8, "limit_ppm": 1180},
+            {"name": "Methylisobutylketone", "PDE_mg_day": 45.0, "limit_ppm": 4500},
+            {"name": "Nitromethane", "PDE_mg_day": 0.5, "limit_ppm": 50},
+            {"name": "Sulfolane", "PDE_mg_day": 1.6, "limit_ppm": 160},
+            {"name": "Tetralin", "PDE_mg_day": 1.0, "limit_ppm": 100},
+            {"name": "1,1,2-Trichloroethene", "PDE_mg_day": 0.8, "limit_ppm": 80},
+            {"name": "1,2-Dichloroethene", "PDE_mg_day": 18.7, "limit_ppm": 1870}
+          ]
+        },
+        "class_3_low_toxicity": {
+          "description": "PDE ≥50 mg/day; 5000 ppm acceptable without justification",
+          "default_limit_ppm": 5000,
+          "examples": ["Acetic acid", "Acetone", "Anisole", "1-Butanol", "2-Butanol", "Butyl acetate", "tert-Butylmethyl ether", "DMSO", "Ethanol", "Ethyl acetate", "Ethyl ether", "Formic acid", "Heptane", "Isopropyl acetate", "Methyl acetate", "Methylethylketone", "Pentane", "1-Propanol", "2-Propanol", "Triethylamine"]
+        }
+      },
+      "calculation_options": {
+        "option_1": "Concentration limits in ppm (assumes max 10 g/day dose)",
+        "option_2": "PDE-based: concentration (ppm) = (1000 × PDE) / actual daily dose"
+      },
+      "PDE_derivation": {
+        "formula": "PDE = (NOEL × body_weight) / (F1 × F2 × F3 × F4 × F5)",
+        "body_weight_kg": 50,
+        "F1_interspecies": {"rat": 5, "mouse": 12, "dog": 2, "rabbit": 2.5, "monkey": 3, "other": 10},
+        "F2_individual_variability": 10,
+        "F3_study_duration": {"lifetime": 1, "6mo_rodent": 2, "3mo_rodent": 5, "shorter": 10},
+        "F4_severity": {"fetal_with_maternal": 1, "fetal_without_maternal": 5, "teratogenic_with": 5, "teratogenic_without": 10},
+        "F5_NOEL_confidence": "1–10"
+      }
+    },
+
+    "Q3D_elemental_impurities": {
+      "source": "ICH Q3D(R2)",
+      "classification": {
+        "class_1": {
+          "description": "Human toxicants with limited/no pharmaceutical use; evaluate across ALL routes",
+          "elements": ["Cd", "Pb", "As", "Hg"]
+        },
+        "class_2A": {
+          "description": "High probability of occurrence; risk assessment across ALL routes",
+          "elements": ["Co", "V", "Ni"]
+        },
+        "class_2B": {
+          "description": "Lower probability; include only if intentionally added or identified as risk",
+          "elements": ["Tl", "Au", "Pd", "Ir", "Os", "Rh", "Ru", "Se", "Ag", "Pt"]
+        },
+        "class_3": {
+          "description": "Relatively low oral toxicity (oral PDE >500 µg/day); evaluate only if intentionally added",
+          "elements": ["Li", "Sb", "Ba", "Mo", "Cu", "Sn", "Cr"]
+        }
+      },
+      "PDE_values_ug_per_day": [
+        {"element": "Cd", "class": "1", "oral": 5, "parenteral": 2, "inhalation": 3},
+        {"element": "Pb", "class": "1", "oral": 5, "parenteral": 5, "inhalation": 5},
+        {"element": "As", "class": "1", "oral": 15, "parenteral": 15, "inhalation": 2},
+        {"element": "Hg", "class": "1", "oral": 30, "parenteral": 3, "inhalation": 1},
+        {"element": "Co", "class": "2A", "oral": 50, "parenteral": 5, "inhalation": 3},
+        {"element": "V", "class": "2A", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Ni", "class": "2A", "oral": 200, "parenteral": 20, "inhalation": 6},
+        {"element": "Tl", "class": "2B", "oral": 8, "parenteral": 8, "inhalation": 8},
+        {"element": "Au", "class": "2B", "oral": 300, "parenteral": 300, "inhalation": 3},
+        {"element": "Pd", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Ir", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Os", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Rh", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Ru", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Se", "class": "2B", "oral": 150, "parenteral": 80, "inhalation": 130},
+        {"element": "Ag", "class": "2B", "oral": 150, "parenteral": 15, "inhalation": 7},
+        {"element": "Pt", "class": "2B", "oral": 100, "parenteral": 10, "inhalation": 1},
+        {"element": "Li", "class": "3", "oral": 550, "parenteral": 250, "inhalation": 25},
+        {"element": "Sb", "class": "3", "oral": 1200, "parenteral": 90, "inhalation": 20},
+        {"element": "Ba", "class": "3", "oral": 1400, "parenteral": 700, "inhalation": 300},
+        {"element": "Mo", "class": "3", "oral": 3000, "parenteral": 1500, "inhalation": 10},
+        {"element": "Cu", "class": "3", "oral": 3000, "parenteral": 300, "inhalation": 30},
+        {"element": "Sn", "class": "3", "oral": 6000, "parenteral": 600, "inhalation": 60},
+        {"element": "Cr", "class": "3", "oral": 11000, "parenteral": 1100, "inhalation": 3}
+      ],
+      "permitted_concentrations_ug_per_g_option1": [
+        {"element": "Cd", "oral": 0.5, "parenteral": 0.2, "inhalation": 0.3},
+        {"element": "Pb", "oral": 0.5, "parenteral": 0.5, "inhalation": 0.5},
+        {"element": "As", "oral": 1.5, "parenteral": 1.5, "inhalation": 0.2},
+        {"element": "Hg", "oral": 3, "parenteral": 0.3, "inhalation": 0.1},
+        {"element": "Co", "oral": 5, "parenteral": 0.5, "inhalation": 0.3},
+        {"element": "V", "oral": 10, "parenteral": 1, "inhalation": 0.1},
+        {"element": "Ni", "oral": 20, "parenteral": 2, "inhalation": 0.6}
+      ],
+      "assessment_options": {
+        "option_1": "Compare to permitted concentrations; assumes daily dose ≤10 g",
+        "option_2a": "Apply PDE to drug product; measure in product × daily dose",
+        "option_2b": "Apply PDE across all components; sum DS + excipients + manufacturing + CCS"
+      },
+      "parenteral_PDE_derivation": "When no parenteral data: divide oral PDE by factor of 10"
+    },
+
+    "Q3E_extractables_leachables": {
+      "source": "ICH Q3E (Draft Step 2, 2025)",
+      "scope": "Packaging/delivery systems and manufacturing equipment for all dosage forms",
+      "analytical_evaluation_threshold": {
+        "description": "Threshold above which E&L should be identified, quantified, and reported",
+        "formula": "AET = SCT × UF × dosing conversion factors",
+        "uncertainty_factor": "UF ≤0.5 for semi-quantitative studies",
+        "note": "AET is drug product-specific, not a control threshold"
+      },
+      "safety_concern_threshold": "SCT = lower of TTC and QT",
+      "TTC_mutagenicity_ug_per_day": [
+        {"exposure": ">10 years", "all_routes": 1.5},
+        {"exposure": ">1 to 10 years", "all_routes": 10},
+        {"exposure": ">1 month to 1 year", "all_routes": 20},
+        {"exposure": "≤1 month", "all_routes": 120}
+      ],
+      "QT_non_mutagenic_ug_per_day": [
+        {"exposure": ">1 to 10 years", "oral": 48, "parenteral_dermal_inhalation": 12},
+        {"exposure": "≤1 month", "oral": 136, "parenteral_dermal_inhalation": 26}
+      ],
+      "local_toxicity_thresholds": {
+        "topical_ophthalmic_ppm": 20,
+        "subcutaneous_intradermal_ppm": 50,
+        "dermal_transdermal_ppm": 500,
+        "inhalation_ug_per_day": 5,
+        "intracerebral_intrathecal_epidural_intraocular": "Compound-specific evaluation required"
+      },
+      "leachable_potency_classes": {
+        "class_1_avoid": {
+          "description": "ICH M7 cohort of concern, Class 1 with AI <1.5 µg/day, non-mutagenic with low parenteral PDE",
+          "action": "Avoid; if unavoidable, compound-specific safety limit required"
+        },
+        "class_2_limit": {
+          "description": "Default classification; mutagens with AI ≥1.5 µg/day; non-mutagens with parenteral PDE >QT",
+          "action": "Should not exceed TTC or QT"
+        },
+        "class_3_low_toxicity": {
+          "description": "Non-mutagenic leachables with chronic parenteral PDE ≥1 mg/day",
+          "action": "Qualified up to 1.0 mg/day without further safety justification"
+        }
+      },
+      "dermal_sensitization_threshold": {
+        "high_potency_chemicals": "1 µg/cm²/day",
+        "equivalent_ppm_dermal": 500,
+        "subcutaneous_intradermal": "10-fold lower = 50 ppm"
+      }
+    }
+  },
+
+  "specifications": {
+    "Q6A_chemical_substances": {
+      "source": "ICH Q6A",
+      "drug_substance": {
+        "universal_tests": {
+          "description": "Qualitative statement of state and color",
+          "identification": "Minimum 2 tests; one by IR spectroscopy recommended; second from different technique",
+          "assay": "Specific, stability-indicating procedure; titration acceptable if justified",
+          "impurities": {
+            "organic": "Per ICH Q3A thresholds",
+            "inorganic": "Residue on ignition, heavy metals",
+            "residual_solvents": "Per ICH Q3C"
+          }
+        },
+        "specific_tests": [
+          "Physicochemical properties (melting point, refractive index, optical rotation)",
+          "Particle size (when critical per Decision Tree #3)",
+          "Polymorphic forms (when affecting safety/performance/efficacy per Decision Tree #4)",
+          "Water content (Karl Fischer or loss on drying)",
+          "Microbial limits (per Decision Tree #6)"
+        ]
+      },
+      "drug_product": {
+        "universal_tests": {
+          "description": "Shape, size, color, markings, scoring; clarity/color for solutions",
+          "identification": "Minimum 2 tests; one highly specific",
+          "assay": "Specific, stability-indicating; content as % label claim",
+          "impurities": "Degradation products per ICH Q3B"
+        },
+        "specific_tests_by_dosage_form": {
+          "solid_oral": ["Dissolution", "Disintegration", "Hardness/Friability", "Uniformity of dosage units", "Water content", "Microbial limits"],
+          "parenteral": ["Sterility", "Endotoxins/Pyrogens", "Particulate matter", "pH", "Osmolality", "Extractables/Leachables"],
+          "inhalation": ["Dose content uniformity", "Particle size distribution", "Spray pattern", "Leak rate", "Number of actuations"],
+          "transdermal": ["Peel adhesion", "Drug release rate", "In-vitro release"],
+          "liquid_oral": ["pH", "Microbial limits", "Antimicrobial preservative content", "Dissolution (suspensions)", "Redispersibility", "Particle size"]
+        }
+      },
+      "decision_trees": {
+        "DT1_specified_impurity_acceptance": "Mean batch level + upper confidence limit (3×SD); add stability increase if degradation product; compare to qualified level",
+        "DT2_degradation_product_acceptance": "DS level + manufacturing increase + shelf-life increase; compare to qualified level",
+        "DT3_particle_size": "Required if critical to dissolution, bioavailability, processability, stability, content uniformity, or appearance",
+        "DT4_polymorphism": "Screen → characterize forms → assess impact on safety/performance/efficacy → set acceptance criteria if impacted",
+        "DT5_chirality": "Single enantiomer: chiral identity + chiral assay + enantiomeric impurity testing",
+        "DT6_microbial_quality": "Based on growth support capability; skip-lot testing if consistently below limits",
+        "DT7_dissolution": {
+          "part1": "Modified release → multi-point; High solubility + rapid dissolution + disintegration correlation → disintegration test acceptable; Otherwise → single-point dissolution",
+          "part2": "If dissolution affects bioavailability → discriminating conditions; otherwise → non-discriminating acceptable",
+          "part3": "IVIVC → acceptance ranges from correlation; Extended release ranges >20% of label → provide bioequivalence data"
+        },
+        "DT8_microbial_drug_product": "Preservative-containing → chemical acceptance criteria + effectiveness testing; Dry dosage forms → may not need testing if growth-inhibitory"
+      },
+      "dissolution_criteria": {
+        "rapid_dissolution_definition": ">80% dissolved in 15 min at pH 1.2, 4.0, and 6.8",
+        "high_solubility_definition": "Dose/solubility volume ≤250 mL across pH 1.2–6.8 at 37±0.5°C",
+        "extended_release_timepoints": "Minimum 3 time points",
+        "delayed_release": "2-stage test (acid and buffer)"
+      }
+    },
+
+    "Q6B_biotech_biological": {
+      "source": "ICH Q6B",
+      "scope": "Proteins and polypeptides from recombinant or non-recombinant cell culture",
+      "characterization": {
+        "physicochemical": "Composition, physical properties, primary structure, higher-order structure inferred from biological activity",
+        "biological_activity": {
+          "assay_types": ["Animal-based", "Cell culture-based", "Biochemical (enzymatic, receptor-binding, immunological)"],
+          "potency_expression": "Units calibrated against international/national reference standard",
+          "replacement_by_physicochemical": "Only when (a) sufficient physicochemical + higher-order structure correlation to activity demonstrated AND (b) well-established manufacturing history"
+        },
+        "immunochemical": "Binding, affinity, avidity, immunoreactivity, cross-reactivity (antibody products)"
+      },
+      "impurities": {
+        "process_related": {
+          "cell_substrate": ["Host cell proteins (HCP)", "Host cell DNA (genomic, vector, total)"],
+          "cell_culture": ["Inducers", "Antibiotics", "Serum", "Media components"],
+          "downstream": ["Enzymes", "Processing reagents (CNBr, guanidine)", "Inorganic salts", "Leachables from columns/filters"]
+        },
+        "product_related": {
+          "types": ["Truncated forms", "Deamidated", "Isomerized", "Mismatched S-S", "Oxidized", "Altered glycosylation/phosphorylation", "Aggregates (dimers, multimers)"],
+          "note": "Product-related SUBSTANCES (active variants from anticipated post-translational modification) are NOT impurities"
+        },
+        "contaminants": {
+          "description": "Adventitiously introduced; must be strictly avoided",
+          "types": ["Chemical/biochemical materials", "Microbial proteases", "Microbial species", "Viral contamination"],
+          "viral": "Action limits not applicable; refer to ICH Q5A"
+        }
+      },
+      "drug_substance_spec": ["Appearance/description", "Identity (highly specific, >1 test)", "Purity/impurities (combination of methods)", "Potency (validated assay)", "Quantity (protein content by mass)"],
+      "drug_product_spec": ["Appearance/description", "Identity", "Purity/impurities (if different from DS)", "Potency", "Quantity", "pH", "Osmolarity", "Sterility", "Endotoxins", "Microbial limits", "Volume in container", "Uniformity of dosage units", "Moisture (lyophilized)", "Particulate matter"],
+      "reference_standards": {
+        "requirement": "In-house primary reference material at time of submission",
+        "calibration": "Against international/national standard when available",
+        "documentation": "Characterization, storage conditions, and stability data required"
+      },
+      "structural_characterization_methods": [
+        "Amino acid sequence determination",
+        "Amino acid composition (compare with theoretical)",
+        "Terminal amino acid analysis (N- and C-terminal)",
+        "Peptide mapping (enzymatic/chemical fragmentation, HPLC, MS identification)",
+        "Sulfhydryl groups and disulfide bridge mapping",
+        "Carbohydrate structure (neutral sugars, amino sugars, sialic acids, oligosaccharide pattern, glycosylation sites)"
+      ]
+    }
+  },
+
+  "pharmacopoeial_harmonisation": {
+    "source": "ICH Q4B(R1) + 14 Annexes",
+    "framework": {
+      "definition": "Official texts from JP, EP, USP can be substituted one for another for pharmaceutical registration in ICH regions",
+      "principle": "An analyst reaches the same accept/reject decision irrespective of which PDG pharmacopoeia is used",
+      "regions": ["EU (Ph. Eur. mandatory)", "Japan (MHLW notification)", "USA (FDA)", "Canada (Health Canada, added R1)"]
+    },
+    "fully_interchangeable_tests": [
+      {"annex": "4A", "test": "Microbial Enumeration (Non-Sterile)", "refs": ["Ph.Eur. 2.6.12", "JP 4.05-I", "USP <61>"]},
+      {"annex": "4B", "test": "Specified Micro-organisms (Non-Sterile)", "refs": ["Ph.Eur. 2.6.13", "JP 4.05-II", "USP <62>"]},
+      {"annex": "4C", "test": "Microbial Quality Acceptance Criteria (non-mandatory)", "refs": ["Ph.Eur. 5.1.4", "JP GI-12", "USP <1111>"]},
+      {"annex": "10", "test": "SDS-PAGE", "refs": ["Ph.Eur. 2.2.31", "JP GI-23", "USP <1056>"]},
+      {"annex": "11", "test": "Capillary Electrophoresis", "refs": ["Ph.Eur. 2.2.47", "JP GI-4", "USP <1053>"]},
+      {"annex": "12", "test": "Analytical Sieving", "refs": ["Ph.Eur. 2.9.38", "JP 3.04-M2", "USP <786>"]},
+      {"annex": "13", "test": "Bulk/Tapped Density of Powders", "refs": ["Ph.Eur. 2.9.34", "JP 3.01", "USP <616>"]},
+      {"annex": "9", "test": "Tablet Friability", "refs": ["Ph.Eur. 2.9.7", "JP GI-26", "USP <1216>"]}
+    ],
+    "conditionally_interchangeable_tests": [
+      {
+        "annex": "1",
+        "test": "Residue on Ignition / Sulphated Ash",
+        "conditions": ["Sample weight justified if not in monograph", "Muffle furnace calibrated per regional GMP"]
+      },
+      {
+        "annex": "2",
+        "test": "Extractable Volume of Parenteral Preparations",
+        "conditions": ["Syringe size stated in dossier"]
+      },
+      {
+        "annex": "3",
+        "test": "Particulate Contamination: Sub-Visible Particles",
+        "conditions": ["NOT interchangeable at 100 mL nominal volume (JP more stringent)"],
+        "limits_method1_light_obscuration": {
+          "geq_100mL": "NMT 25 particles/mL ≥10µm; NMT 3 particles/mL ≥25µm",
+          "lt_100mL": "NMT 6000 particles/container ≥10µm; NMT 600 particles/container ≥25µm"
+        },
+        "limits_method2_microscopic": {
+          "geq_100mL": "NMT 12 particles/mL ≥10µm; NMT 2 particles/mL ≥25µm",
+          "lt_100mL": "NMT 3000 particles/container ≥10µm; NMT 300 particles/container ≥25µm"
+        }
+      },
+      {
+        "annex": "5",
+        "test": "Disintegration",
+        "conditions": ["NOT interchangeable for tablets/capsules >18 mm", "NOT for delayed-release/gastro-resistant/enteric-coated", "Media and disc use specified in dossier"]
+      },
+      {
+        "annex": "6",
+        "test": "Uniformity of Dosage Units",
+        "conditions": ["Mass variation NOT interchangeable unless 25 mg/25% threshold met", "FDA rejects 2% RSD exception in JP/EP"],
+        "harmonized_acceptance_criteria": true
+      },
+      {
+        "annex": "7",
+        "test": "Dissolution",
+        "conditions": ["Only Basket (Apparatus 1), Paddle (Apparatus 2), Flow-Through Cell", "NOT interchangeable with enzymes in media", "NOT for delayed-release/enteric-coated", "NOT for JP Interpretation 2", "NOT for large vessels >1L", "Product-specific parameters in dossier"]
+      },
+      {
+        "annex": "8",
+        "test": "Sterility",
+        "conditions": ["Batches >500 containers of ≥100 mL: minimum 20 or 2% of containers, whichever lower"],
+        "harmonized_acceptance_criteria": true
+      },
+      {
+        "annex": "14",
+        "test": "Bacterial Endotoxins",
+        "conditions": ["All 3 techniques (gel-clot, turbidimetric, chromogenic) acceptable", "Gel-clot limit test for dispute resolution", "Reference standards calibrated against WHO International Standard"]
+      }
+    ],
+    "harmonized_numerical_limits": {
+      "tablet_friability": "NMT 1.0% mass loss (single or mean of 3 determinations)",
+      "particulate_contamination_system_suitability": {
+        "volume_accuracy": "Within 5% by mass",
+        "counting_accuracy": "763–1155 particles/mL for ≥5 µm",
+        "threshold_accuracy": "±3% of mean diameter",
+        "sensor_resolution": "Within 10% between 16% and 84% thresholds",
+        "PSL_calibration": "≥5, 10, 25 µm; uncertainty NMT 3%",
+        "particle_free_water": "NMT 5 particles ≥10µm, NMT 2 particles ≥25µm in 10 mL"
+      }
+    },
+    "regional_notes": {
+      "EU": "Ph. Eur. has MANDATORY applicability; use of another pharmacopoeia accepted as fulfilling Ph. Eur. requirements",
+      "FDA": "May request demonstration that chosen method is suitable for specific material/product; rejects 2% RSD exception for Uniformity",
+      "MHLW": "Accepts per annex conditions via Ministerial Notification",
+      "Health_Canada": "Added via R1 revisions (2010) to Annexes 1-10; from inception for 11-14"
+    }
+  },
+
+  "GMP_for_APIs": {
+    "source": "ICH Q7 + Q7 Q&As",
+
+    "quality_management": {
+      "quality_unit": {
+        "independence": "Person responsible for final quality decisions must not have production responsibilities",
+        "responsibilities": [
+          "Release/reject all APIs, intermediates, raw materials",
+          "Review completed batch production and lab records of critical steps",
+          "Investigate critical deviations",
+          "Approve specifications, master production instructions, all quality-impacting procedures",
+          "Ensure internal audits performed",
+          "Approve contract manufacturers",
+          "Approve changes impacting quality",
+          "Review validation protocols and reports",
+          "Investigate complaints",
+          "Maintain equipment calibration systems",
+          "Ensure stability data supports retest/expiry dates",
+          "Perform annual product quality reviews"
+        ]
+      },
+      "product_quality_review": {
+        "frequency": "At minimum annually",
+        "contents": ["Critical IPC and API test results", "All batches failing specification", "All critical deviations", "Process/method changes", "Stability monitoring results", "Returns/complaints/recalls", "Corrective action adequacy"]
+      }
+    },
+
+    "facilities": {
+      "dedicated_areas_mandatory": ["Penicillins", "Cephalosporins (highly sensitizing)"],
+      "dedicated_areas_considered": ["Infectious materials", "High pharmacological activity/toxicity (steroids, cytotoxics)"],
+      "water": {
+        "minimum": "WHO drinking water quality",
+        "sterile_API_final_steps": "Monitor for microbial counts, objectionable organisms, and endotoxins"
+      },
+      "cross_contamination": "No highly toxic non-pharmaceutical materials in API buildings"
+    },
+
+    "equipment": {
+      "cleaning_validation": {
+        "requirements": [
+          "Directed to situations posing greatest risk to API quality",
+          "Protocol: equipment, procedures, materials, acceptable levels, parameters, methods, sample types",
+          "Residue limits: practical, achievable, verifiable, based on most deleterious residue",
+          "Validated analytical methods sensitive to detect residues at acceptable levels",
+          "Maximum dirty hold time established and confirmed",
+          "Microbiological and endotoxin contamination addressed where relevant"
+        ]
+      },
+      "calibration": {
+        "standards": "Traceable to certified standards",
+        "non_conforming": "Must not be used; investigate impact since last successful calibration"
+      },
+      "computerized_systems": {
+        "validation": "IQ and OQ required",
+        "audit_trail": "Record all data changes",
+        "manual_verification": "Required for critical data entry"
+      }
+    },
+
+    "documentation": {
+      "record_retention": {
+        "with_expiry_date": "At least 1 year after batch expiry",
+        "with_retest_date": "At least 3 years after batch completely distributed",
+        "entries": "Made indelibly, directly after performing activities, identify person"
+      },
+      "master_production_instructions": {
+        "approval": "Prepared, dated, signed; independently checked by quality unit",
+        "contents": ["Product name/code", "Complete raw material list with quantities", "Production location/equipment", "Detailed step-by-step instructions", "Process parameter ranges", "Sampling/IPC with acceptance criteria", "Time limits", "Expected yield ranges"]
+      },
+      "batch_production_records": {
+        "contents": ["Unique batch number", "Dates/times", "Equipment identity", "Batch ID of all materials", "Actual process parameters", "Sampling performed", "Operator/supervisor signatures", "Actual yields", "Deviations noted", "Release test results"]
+      }
+    },
+
+    "production_controls": {
+      "critical_operations": "Witnessed or subjected to equivalent control",
+      "time_limits": "Must be met; deviations documented and evaluated",
+      "in_process_controls": {
+        "acceptance_criteria": "Based on development or historical data",
+        "stringency": "Less stringent early steps; tighter later steps (isolation, purification)",
+        "adjustments": "Allowed within pre-established limits approved by quality unit"
+      },
+      "blending": {
+        "rules": ["OOS batches must NOT be blended", "Each batch individually tested before blending", "Traceability to individual batches required", "Expiry/retest based on oldest component"]
+      }
+    },
+
+    "laboratory_controls": {
+      "specifications": {
+        "required_controls": ["Organic impurities", "Inorganic impurities", "Residual solvents"],
+        "microbiological": "Action limits for total microbial counts and objectionable organisms",
+        "endotoxins": "Action limits where applicable"
+      },
+      "impurity_profile": {
+        "requirement": "Established for each API",
+        "contents": ["Identity/qualitative designation", "Range", "Classification (organic/inorganic/solvent)"],
+        "comparison": "At appropriate intervals against historical data"
+      },
+      "OOS_investigation": "Documented procedure; analysis of data, problem assessment, corrective actions",
+      "certificates_of_analysis": {
+        "contents": ["API name, grade, batch number", "Release date, expiry/retest date", "Each test performed with acceptance limits", "Numerical results", "Date, signature of authorized quality unit"]
+      },
+      "stability_program": {
+        "initial": "First 3 commercial production batches",
+        "ongoing": "At least 1 batch per year, tested annually",
+        "short_shelf_life": "≤1 year: monthly for first 3 months, then 3-month intervals",
+        "methods": "Stability-indicating, validated",
+        "containers": "Simulate market containers"
+      },
+      "reserve_samples": {
+        "with_expiry": "Retained 1 year after expiry OR 3 years after distribution, whichever longer",
+        "with_retest": "Retained 3 years after batch completely distributed",
+        "quantity": "Sufficient for at least 2 full compendial/specification analyses",
+        "packaging": "Same or more protective than marketed"
+      }
+    },
+
+    "validation": {
+      "process_validation": {
+        "prospective": "3 consecutive successful batches (guide); completed before commercial distribution",
+        "concurrent": "When limited batches available or infrequent production",
+        "retrospective": "10–30 consecutive batches examined; only for well-established processes"
+      },
+      "cleaning_validation": "See equipment section",
+      "analytical_method_validation": "Per ICH Q2; suitability verified under actual conditions regardless of source",
+      "periodic_review": "Systems/processes periodically re-evaluated"
+    },
+
+    "change_control": {
+      "requirements": [
+        "Formal system for all changes affecting production and control",
+        "Written procedures for identification, documentation, review, approval",
+        "Quality impact evaluation",
+        "Classification as minor or major",
+        "First batches after change evaluated",
+        "Impact on retest/expiry dates evaluated",
+        "Dosage form manufacturers notified of quality-impacting changes"
+      ]
+    },
+
+    "rejection_reuse": {
+      "reprocessing": "Repeating established steps (crystallization, distillation, filtration, chromatography, milling) generally acceptable",
+      "reworking": "Different steps from established process; requires investigation, testing, stability testing, impurity profile comparison, concurrent validation",
+      "solvent_recovery": "Acceptable if procedures controlled/monitored and recovered materials meet specifications",
+      "returns": "Quarantine; if storage/shipping in doubt, reprocess/rework/destroy"
+    },
+
+    "agents_brokers_distributors": {
+      "applicability": "ALL parties after original manufacturer to drug product manufacturer",
+      "traceability_documents": ["Original manufacturer identity/address", "Purchase orders", "Bills of lading", "Receipt documents", "API name/designation", "Manufacturer batch number", "Transportation records", "Authentic CoAs", "Retest/expiry dates"],
+      "repackaging": "Under appropriate GMP; stability studies if different container type",
+      "label_rules": "Distributors should NOT remove original labels; may ADD additional labels"
+    },
+
+    "biotech_fermentation_specific": {
+      "cell_bank": {
+        "access": "Limited to authorized personnel",
+        "monitoring": "Periodic suitability assessment",
+        "storage": "Conditions to maintain viability and prevent contamination"
+      },
+      "cell_culture": {
+        "requirements": ["Aseptic addition in closed/contained systems", "Biosafety cabinet for sensitive manipulations", "Critical parameters monitored (temperature, pH, agitation, gases, pressure)", "Equipment cleaned and sterilized after use", "Media sterilized before use"],
+        "contamination": "Detect, assess impact, decontaminate; foreign organisms assessed for product quality"
+      },
+      "viral_safety": {
+        "requirements": ["Critical steps performed within validated parameters", "Pre-viral to post-viral contamination prevention", "Open processing in separate areas with separate air handling", "Same equipment not normally used for different purification steps"]
+      }
+    },
+
+    "clinical_trial_APIs": {
+      "controls": "Consistent with development stage; flexible procedures allowed",
+      "quality_unit": "Independent from production",
+      "validation": "Process validation normally inappropriate at clinical stage; equipment qualification required",
+      "analytical_methods": "May not yet be validated but must be scientifically sound",
+      "reserve_samples": "Retained for appropriate time after approval, termination, or discontinuation"
+    }
+  },
+
+  "post_approval_change_management": {
+    "source": "ICH Q14 Section 7 (per ICH Q12)",
+    "established_conditions": {
+      "PA_prior_approval": "Changes to high-risk ECs (ATP performance criteria, analytical procedure principle change)",
+      "NM_notification_moderate": "Changes within same technology principle, SST elements",
+      "NL_notification_low": "Cell preparation changes, medium composition, low-risk parameters controlled by SST",
+      "not_reported": "Non-EC parameters with no impact based on development data"
+    },
+    "bridging_strategies": {
+      "high_risk": {
+        "description": "Change of analytical procedure principle",
+        "requirements": ["Full validation of new procedure", "Comparative analysis of representative samples and reference materials", "Demonstrate comparable accept/reject discrimination"]
+      },
+      "medium_risk": {
+        "description": "Change within same principle",
+        "requirements": ["Partial or full revalidation of affected characteristics", "Comparative analysis as appropriate"]
+      },
+      "low_risk": {
+        "description": "Transfer to different site, no procedure change",
+        "requirements": ["Partial/full revalidation AND/OR comparative analysis", "Or justification for not performing transfer experiments"]
+      }
+    },
+    "CTD_placement": {
+      "procedure_description": "S.4.2 / P.5.2",
+      "validation_studies": "S.4.3 / P.5.3",
+      "development_info": "S.2.6 / P.2.4",
+      "ATP": "Development or validation section",
+      "ECs_and_reporting": "S.4.2 / P.5.2 per ICH Q12"
+    }
+  }
+}

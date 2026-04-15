@@ -1,0 +1,987 @@
+{
+  "metadata": {
+    "title": "ICH Quality Guidelines: Q5B, Q5C, Q5E, Q6A, Q6B, Q7, Q7 Q&As, Q8(R2), Q12, M10 — Normative Rules",
+    "extraction_date": "2026-03-23",
+    "guidelines_covered": [
+      "ICH Q5B (Expression Construct Analysis for Biotech Products)",
+      "ICH Q5C (Stability Testing of Biotechnological/Biological Products)",
+      "ICH Q5E (Comparability of Biotechnological/Biological Products)",
+      "ICH Q6A (Specifications: Chemical Substances and Drug Products)",
+      "ICH Q6B (Specifications: Biotechnological/Biological Products)",
+      "ICH Q7 (Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients)",
+      "ICH Q7 Q&As (Questions and Answers to Q7)",
+      "ICH Q8(R2) (Pharmaceutical Development)",
+      "ICH Q12 (Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management)",
+      "ICH M10 (Bioanalytical Method Validation)"
+    ],
+    "total_rules": 120
+  },
+  "guidelines": [
+    {
+      "guideline_id": "Q5B",
+      "guideline_title": "Analysis of the Expression Construct in Cells Used for Production of r-DNA Derived Protein Products",
+      "scope": "Characterization of expression constructs and cell banks used for production of recombinant DNA-derived protein products",
+      "rules": [
+        {
+          "rule_id": "Q5B-001",
+          "category": "Expression Construct Characterization",
+          "requirement": "The complete nucleotide sequence of the expression construct, including any regulatory elements, should be determined and documented prior to submission. If this is not feasible, the sequence of the insert and flanking control elements should be determined.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.1",
+          "verbatim_quote": "The complete nucleotide sequence of the expression construct, including any regulatory elements, should be determined and documented prior to submission."
+        },
+        {
+          "rule_id": "Q5B-002",
+          "category": "Cell Bank System",
+          "requirement": "A cell banking system consisting of a Master Cell Bank (MCB) and Working Cell Bank (WCB) should be established and characterized. The MCB should be prepared from a well-characterized cell clone.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.2",
+          "verbatim_quote": "A cell banking system consisting of a Master Cell Bank (MCB) and Working Cell Bank (WCB) should be established and characterized."
+        },
+        {
+          "rule_id": "Q5B-003",
+          "category": "Nucleic Acid Analysis",
+          "requirement": "The copy number and chromosomal localization of the integrated sequence should be determined using appropriate nucleic acid techniques such as Southern blot analysis. For episomally maintained vectors, copy number per cell should be determined.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.3",
+          "verbatim_quote": "The copy number and chromosomal localization of the integrated sequence should be determined using appropriate nucleic acid techniques such as Southern blot analysis."
+        },
+        {
+          "rule_id": "Q5B-004",
+          "category": "Genetic Stability",
+          "requirement": "The genetic stability of the expression construct through the in vitro cell age used for production should be demonstrated. Stability studies should be conducted to the limit of the in vitro cell age proposed for production, or beyond.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.4",
+          "verbatim_quote": "The genetic stability of the expression construct through the in vitro cell age used for production should be demonstrated. Stability studies should be conducted to the limit of the in vitro cell age proposed for production, or beyond."
+        },
+        {
+          "rule_id": "Q5B-005",
+          "category": "In Vitro Cell Age Limits",
+          "requirement": "The in vitro cell age limit for production should be clearly defined. Cell culture beyond the approved limit of in vitro cell age should not be used for production.",
+          "normative_keyword": "should not",
+          "source_section": "Section 2.4",
+          "verbatim_quote": "The in vitro cell age limit for production should be clearly defined. Cell culture beyond the approved limit of in vitro cell age should not be used for production."
+        },
+        {
+          "rule_id": "Q5B-006",
+          "category": "Protein Expression Analysis",
+          "requirement": "The expressed protein should be analyzed for identity, purity, and biological activity. The N-terminal amino acid sequence should be determined. The molecular weight and relevant physicochemical properties should be characterized.",
+          "normative_keyword": "should",
+          "source_section": "Section 3",
+          "verbatim_quote": "The expressed protein should be analyzed for identity, purity, and biological activity."
+        },
+        {
+          "rule_id": "Q5B-007",
+          "category": "MCB/WCB Testing",
+          "requirement": "The MCB and representative WCBs should be tested for the presence of adventitious agents, including viruses, bacteria, fungi, mycoplasma, and other potential contaminants, using appropriate tests.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.2",
+          "verbatim_quote": "The MCB and representative WCBs should be tested for the presence of adventitious agents, including viruses, bacteria, fungi, mycoplasma, and other potential contaminants."
+        },
+        {
+          "rule_id": "Q5B-008",
+          "category": "mRNA Analysis",
+          "requirement": "The transcription of the desired mRNA sequence should be demonstrated. The size and relative amount of the desired mRNA species, relative to the total mRNA present in the host cell, should be determined.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.3",
+          "verbatim_quote": "The transcription of the desired mRNA sequence should be demonstrated. The size and relative amount of the desired mRNA species, relative to the total mRNA present in the host cell, should be determined."
+        },
+        {
+          "rule_id": "Q5B-009",
+          "category": "Flanking Sequences",
+          "requirement": "The structure of flanking sequences, including the presence of repetitive sequences that may facilitate deletion or rearrangement, should be analyzed. Where promoter elements have been inserted adjacent to host cell genes, the potential for their activation should be assessed.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.3",
+          "verbatim_quote": "The structure of flanking sequences, including the presence of repetitive sequences that may facilitate deletion or rearrangement, should be analyzed."
+        },
+        {
+          "rule_id": "Q5B-010",
+          "category": "Restriction Mapping",
+          "requirement": "Restriction endonuclease mapping of the expression construct should be performed to confirm the structure of the construct. Comparison to the predicted restriction map should demonstrate consistency with the DNA sequence.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.1",
+          "verbatim_quote": "Restriction endonuclease mapping of the expression construct should be performed to confirm the structure of the construct."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q5C",
+      "guideline_title": "Quality of Biotechnological Products: Stability Testing of Biotechnological/Biological Products",
+      "scope": "Stability testing requirements for well-characterized biotechnology and biological products",
+      "rules": [
+        {
+          "rule_id": "Q5C-001",
+          "category": "Real-Time/Real-Temperature Studies",
+          "requirement": "Real-time/real-temperature stability studies should be the primary stability studies. Data from accelerated and/or stressed conditions may support the proposed shelf-life but cannot be used as the sole basis for establishing a shelf-life.",
+          "normative_keyword": "should",
+          "source_section": "Section 3",
+          "verbatim_quote": "Real-time/real-temperature stability studies should be the primary stability studies."
+        },
+        {
+          "rule_id": "Q5C-002",
+          "category": "Stability Testing Frequency",
+          "requirement": "Stability samples should be tested at a frequency that allows the statistical analysis of data to describe the stability profile. For products with a proposed shelf-life of 12 months or less, testing at 0, 3, 6, 9, 12 months is typical. For products with a proposed shelf-life greater than 12 months, testing at 0, 3, 6, 9, 12, 18, and 24 months is typical.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2",
+          "verbatim_quote": "Stability samples should be tested at a frequency that allows the statistical analysis of data to describe the stability profile."
+        },
+        {
+          "rule_id": "Q5C-003",
+          "category": "Potency Stability",
+          "requirement": "For products having biological activity, potency should be assessed at defined intervals throughout the stability study. Potency assays should be suitable for detecting the range of degradation products that may form during storage.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "For products having biological activity, potency should be assessed at defined intervals throughout the stability study."
+        },
+        {
+          "rule_id": "Q5C-004",
+          "category": "Storage Conditions",
+          "requirement": "Stability studies should be conducted under storage conditions that reflect those intended for the drug substance and drug product, including the proposed shipping conditions. The influence of environmental factors such as temperature, humidity, light, and pH should be evaluated where relevant.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1",
+          "verbatim_quote": "Stability studies should be conducted under storage conditions that reflect those intended for the drug substance and drug product, including the proposed shipping conditions."
+        },
+        {
+          "rule_id": "Q5C-005",
+          "category": "Stability-Indicating Tests",
+          "requirement": "A wide range of stability-indicating tests should be employed at each time point of the stability study. These should include physicochemical, biochemical, and biological tests appropriate to the product. The protocol should include tests for identity, purity, potency, and quantity.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "A wide range of stability-indicating tests should be employed at each time point of the stability study."
+        },
+        {
+          "rule_id": "Q5C-006",
+          "category": "Accelerated Studies",
+          "requirement": "Accelerated stability studies may be used to support the proposed shelf-life but cannot be the sole basis for establishing the shelf-life. Results from accelerated studies, in conjunction with real-time studies, may be used to evaluate the potential effects of short-term temperature excursions.",
+          "normative_keyword": "may",
+          "source_section": "Section 3",
+          "verbatim_quote": "Accelerated stability studies may be used to support the proposed shelf-life but cannot be the sole basis for establishing the shelf-life."
+        },
+        {
+          "rule_id": "Q5C-007",
+          "category": "Container/Closure",
+          "requirement": "The stability program should include samples stored in the same container-closure system(s) as that proposed for storage and distribution of the final product.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.3",
+          "verbatim_quote": "The stability program should include samples stored in the same container-closure system(s) as that proposed for storage and distribution of the final product."
+        },
+        {
+          "rule_id": "Q5C-008",
+          "category": "Degradation Products",
+          "requirement": "Degradation products present in sufficient quantities to be of toxicological, pharmacological, or clinical concern should be characterized and their formation kinetics understood.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "Degradation products present in sufficient quantities to be of toxicological, pharmacological, or clinical concern should be characterized and their formation kinetics understood."
+        },
+        {
+          "rule_id": "Q5C-009",
+          "category": "Drug Substance Stability",
+          "requirement": "At minimum, three batches of drug substance should be placed on long-term stability at the proposed storage conditions. At least one batch should be placed on stability with accelerated conditions.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2",
+          "verbatim_quote": "At minimum, three batches of drug substance should be placed on long-term stability at the proposed storage conditions."
+        },
+        {
+          "rule_id": "Q5C-010",
+          "category": "Biological Activity Monitoring",
+          "requirement": "Assays measuring biological activity that are validated and shown to detect potential changes in protein conformation, aggregation, or degradation should be included in the stability protocol.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "Assays measuring biological activity that are validated and shown to detect potential changes in protein conformation, aggregation, or degradation should be included in the stability protocol."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q5E",
+      "guideline_title": "Comparability of Biotechnological/Biological Products Subject to Changes in Their Manufacturing Process",
+      "scope": "Post-manufacturing change comparability exercises for biotechnological/biological products",
+      "rules": [
+        {
+          "rule_id": "Q5E-001",
+          "category": "Comparability Exercise Design",
+          "requirement": "A comparability exercise should be designed to assess whether a manufacturing change has resulted in a change in quality attributes of the drug substance or drug product that could potentially affect safety or efficacy. The exercise should compare pre- and post-change material.",
+          "normative_keyword": "should",
+          "source_section": "Section 2",
+          "verbatim_quote": "A comparability exercise should be designed to assess whether a manufacturing change has resulted in a change in quality attributes of the drug substance or drug product that could potentially affect safety or efficacy."
+        },
+        {
+          "rule_id": "Q5E-002",
+          "category": "Physicochemical Characterization",
+          "requirement": "Physicochemical characterization studies should include, but not be limited to, primary structure, higher-order structure, post-translational modifications (e.g., glycosylation), biological activity, and impurity profile. The scope of the studies should be based on the nature and extent of the manufacturing change.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1",
+          "verbatim_quote": "Physicochemical characterization studies should include, but not be limited to, primary structure, higher-order structure, post-translational modifications, biological activity, and impurity profile."
+        },
+        {
+          "rule_id": "Q5E-003",
+          "category": "Biological Activity Comparison",
+          "requirement": "Biological activity studies should be conducted to compare the pre- and post-change material. The biological assays selected should be validated and relevant to the proposed mechanism of action of the product.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2",
+          "verbatim_quote": "Biological activity studies should be conducted to compare the pre- and post-change material. The biological assays selected should be validated and relevant to the proposed mechanism of action of the product."
+        },
+        {
+          "rule_id": "Q5E-004",
+          "category": "Post-Change Stability",
+          "requirement": "A stability study with post-change material should be initiated to confirm that the shelf-life of the drug substance or drug product established with pre-change material is not affected by the manufacturing change. Real-time stability data should be provided when available.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.4",
+          "verbatim_quote": "A stability study with post-change material should be initiated to confirm that the shelf-life of the drug substance or drug product established with pre-change material is not affected by the manufacturing change."
+        },
+        {
+          "rule_id": "Q5E-005",
+          "category": "Clinical Relevance Assessment",
+          "requirement": "If differences are observed between pre- and post-change material, their potential clinical impact should be assessed. The assessment should consider the nature of the difference, the clinical context, and whether additional clinical data are needed.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "If differences are observed between pre- and post-change material, their potential clinical impact should be assessed."
+        },
+        {
+          "rule_id": "Q5E-006",
+          "category": "Acceptance Criteria",
+          "requirement": "Acceptance criteria for comparability should be predefined and scientifically justified before performing the comparability exercise. The criteria should be based on the established quality attributes and their known impact on safety and efficacy.",
+          "normative_keyword": "should",
+          "source_section": "Section 2",
+          "verbatim_quote": "Acceptance criteria for comparability should be predefined and scientifically justified before performing the comparability exercise."
+        },
+        {
+          "rule_id": "Q5E-007",
+          "category": "Representativeness of Lots",
+          "requirement": "Multiple batches/lots of pre- and post-change material should be used in comparability studies where possible to account for batch-to-batch variability. The lots selected should be representative of the manufacturing process.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.1",
+          "verbatim_quote": "Multiple batches/lots of pre- and post-change material should be used in comparability studies where possible to account for batch-to-batch variability."
+        },
+        {
+          "rule_id": "Q5E-008",
+          "category": "Immunogenicity",
+          "requirement": "When a manufacturing change may affect immunogenicity, the comparability exercise should include an assessment of the potential for altered immunogenicity. This may require additional nonclinical or clinical immunogenicity assessments.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.3",
+          "verbatim_quote": "When a manufacturing change may affect immunogenicity, the comparability exercise should include an assessment of the potential for altered immunogenicity."
+        },
+        {
+          "rule_id": "Q5E-009",
+          "category": "Documentation",
+          "requirement": "All comparability exercise data, including analytical test methods used, their validation status, and the results of comparisons, should be fully documented and available for regulatory review.",
+          "normative_keyword": "should",
+          "source_section": "Section 5",
+          "verbatim_quote": "All comparability exercise data, including analytical test methods used, their validation status, and the results of comparisons, should be fully documented and available for regulatory review."
+        },
+        {
+          "rule_id": "Q5E-010",
+          "category": "Scope of Comparability",
+          "requirement": "The comparability exercise may include physicochemical tests, biological assays, and if needed, nonclinical and clinical studies. The extent of the exercise is determined by the potential impact of the change on quality, safety, and efficacy.",
+          "normative_keyword": "may",
+          "source_section": "Section 2",
+          "verbatim_quote": "The comparability exercise may include physicochemical tests, biological assays, and if needed, nonclinical and clinical studies."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q6A",
+      "guideline_title": "Specifications: Test Procedures and Acceptance Criteria for New Drug Substances and New Drug Products: Chemical Substances",
+      "scope": "Setting specifications for new drug substances and drug products of chemical origin",
+      "rules": [
+        {
+          "rule_id": "Q6A-001",
+          "category": "Universal Drug Substance Tests",
+          "requirement": "All drug substance specifications should include: description (physical state and color), identification, assay, and impurities (organic and inorganic impurities, and residual solvents where applicable).",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1",
+          "verbatim_quote": "All drug substance specifications should include: description (physical state and color), identification, assay, and impurities."
+        },
+        {
+          "rule_id": "Q6A-002",
+          "category": "Identification Specificity",
+          "requirement": "Identification tests should be specific enough to distinguish the drug substance from compounds of closely related structure which are likely to be present. The use of a single chromatographic retention time as the sole identification test is generally considered insufficient.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1",
+          "verbatim_quote": "Identification tests should be specific enough to distinguish the drug substance from compounds of closely related structure which are likely to be present. The use of a single chromatographic retention time as the sole identification test is generally considered insufficient."
+        },
+        {
+          "rule_id": "Q6A-003",
+          "category": "Assay Procedure",
+          "requirement": "A specific, stability-indicating assay procedure should be included in the specification. Where a non-specific assay is used (e.g., titration), other tests in the specification, taken together, should enable the overall control of the drug substance.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1",
+          "verbatim_quote": "A specific, stability-indicating assay procedure should be included in the specification. Where a non-specific assay is used, other tests in the specification, taken together, should enable the overall control of the drug substance."
+        },
+        {
+          "rule_id": "Q6A-004",
+          "category": "Universal Drug Product Tests — Oral Solid",
+          "requirement": "Specifications for oral solid dosage forms should include: description, identification, assay, impurities, dissolution, water content (if appropriate), and uniformity of dosage units.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.2",
+          "verbatim_quote": "Specifications for oral solid dosage forms should include: description, identification, assay, impurities, dissolution, water content (if appropriate), and uniformity of dosage units."
+        },
+        {
+          "rule_id": "Q6A-005",
+          "category": "Dissolution Criteria",
+          "requirement": "For immediate release solid oral dosage forms, a dissolution specification should be established. For a drug substance that is highly soluble (>250 mg/mL at pH 1-7.5) and a drug product that dissolves rapidly (>85% in 15 minutes at pH 1.2, 4.0, and 6.8), a waiver of in vivo BE studies and dissolution specification may be granted provided the product contains no excipients that will affect absorption.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.2 / Decision Tree 7",
+          "verbatim_quote": "For immediate release solid oral dosage forms, a dissolution specification should be established."
+        },
+        {
+          "rule_id": "Q6A-006",
+          "category": "Specification Definition",
+          "requirement": "A specification is defined as a list of tests, references to analytical procedures, and appropriate acceptance criteria which are numerical limits, ranges, or other criteria for the tests described. A specification establishes the set of criteria to which a drug substance or drug product should conform to be considered acceptable for its intended use.",
+          "normative_keyword": "should",
+          "source_section": "Glossary",
+          "verbatim_quote": "A specification is defined as a list of tests, references to analytical procedures, and appropriate acceptance criteria which are numerical limits, ranges, or other criteria for the tests described."
+        },
+        {
+          "rule_id": "Q6A-007",
+          "category": "Justification of Specifications",
+          "requirement": "Proposed specifications and their acceptance criteria should be justified by the applicant. The justification should consider: the relevant development data, pharmacopoeial standards, data from preclinical and clinical studies, manufacturing data, and results from stability studies.",
+          "normative_keyword": "should",
+          "source_section": "Section 2.6",
+          "verbatim_quote": "Proposed specifications and their acceptance criteria should be justified by the applicant."
+        },
+        {
+          "rule_id": "Q6A-008",
+          "category": "Impurity Limits",
+          "requirement": "Organic impurity acceptance criteria should be expressed as a percentage of the drug substance. Individual unspecified impurities should be limited to 0.10% or reporting threshold, whichever is less restrictive. The sum of unspecified impurities should be controlled.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1",
+          "verbatim_quote": "Individual unspecified impurities should be limited to 0.10% or reporting threshold, whichever is less restrictive."
+        },
+        {
+          "rule_id": "Q6A-009",
+          "category": "Analytical Procedure Reference",
+          "requirement": "Specifications should include a reference to specific analytical procedures. Where a pharmacopoeial method is cited, it is not necessary to reproduce the procedure, but the specific edition should be referenced.",
+          "normative_keyword": "should",
+          "source_section": "Glossary",
+          "verbatim_quote": "Specifications should include a reference to specific analytical procedures."
+        },
+        {
+          "rule_id": "Q6A-010",
+          "category": "New Drug Product — Parenteral",
+          "requirement": "Specifications for parenteral drug products should include: description, identification, assay, impurities, pH, particulate matter (per pharmacopoeial requirements), sterility, endotoxins/pyrogens, uniformity of dosage units, extractable volume, and specific tests relevant to the dosage form.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.2",
+          "verbatim_quote": "Specifications for parenteral drug products should include: description, identification, assay, impurities, pH, particulate matter, sterility, endotoxins/pyrogens."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q6B",
+      "guideline_title": "Specifications: Test Procedures and Acceptance Criteria for Biotechnological/Biological Products",
+      "scope": "Specification-setting for proteins and polypeptides derived from cell culture, fermentation, and extraction from natural sources",
+      "rules": [
+        {
+          "rule_id": "Q6B-001",
+          "category": "Biological Activity Assays",
+          "requirement": "A test for biological activity should be part of the specification for all biological products where feasible. Biological activity assays should be capable of detecting changes in the biological molecule that may result from the manufacturing process, storage, or degradation, and that could have an impact on safety or efficacy.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.3",
+          "verbatim_quote": "A test for biological activity should be part of the specification for all biological products where feasible."
+        },
+        {
+          "rule_id": "Q6B-002",
+          "category": "Potency Definition",
+          "requirement": "Potency is defined as the specific ability or capacity of the product to achieve a defined biological effect. Potency assays should be validated and calibrated against the appropriate reference standard. In cases where validated biological assays are not available, physicochemical and/or biochemical assays may be used.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.3",
+          "verbatim_quote": "Potency assays should be validated and calibrated against the appropriate reference standard."
+        },
+        {
+          "rule_id": "Q6B-003",
+          "category": "Product-Related Impurities",
+          "requirement": "Product-related impurities (e.g., precursors, certain degradation products) should be measured or controlled by appropriate analytical tests. These tests should be specific and should reflect the nature of the degradation products expected based on the manufacturing process and storage conditions.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1.2",
+          "verbatim_quote": "Product-related impurities should be measured or controlled by appropriate analytical tests."
+        },
+        {
+          "rule_id": "Q6B-004",
+          "category": "Process-Related Impurities",
+          "requirement": "Process-related impurities (e.g., cell substrate-derived proteins, host cell proteins, DNA, cell culture media components, downstream processing reagents) should be controlled at appropriate limits. Each impurity should be assessed for its potential safety impact.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1.3",
+          "verbatim_quote": "Process-related impurities should be controlled at appropriate limits. Each impurity should be assessed for its potential safety impact."
+        },
+        {
+          "rule_id": "Q6B-005",
+          "category": "Characterization Requirements",
+          "requirement": "Extensive characterization of the drug substance should be performed using appropriate analytical techniques (e.g., peptide mapping, amino acid sequencing, mass spectrometry, spectroscopic analysis) to establish the structure of the desired product, its variants, and impurities.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1",
+          "verbatim_quote": "Extensive characterization of the drug substance should be performed using appropriate analytical techniques to establish the structure of the desired product, its variants, and impurities."
+        },
+        {
+          "rule_id": "Q6B-006",
+          "category": "Reference Standard",
+          "requirement": "Appropriate reference standards should be established and used for assay calibration and to characterize the product. Where available, an internationally recognized reference standard should be used or compared to the in-house standard.",
+          "normative_keyword": "should",
+          "source_section": "Section 4",
+          "verbatim_quote": "Appropriate reference standards should be established and used for assay calibration and to characterize the product."
+        },
+        {
+          "rule_id": "Q6B-007",
+          "category": "Glycosylation",
+          "requirement": "For glycoproteins, the carbohydrate content (carbohydrate type, amount, glycan profile) should be evaluated. The degree of glycosylation and its lot-to-lot consistency should be monitored. Significant changes in the glycan profile should be correlated with changes in biological activity and safety.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1.1",
+          "verbatim_quote": "For glycoproteins, the carbohydrate content should be evaluated. The degree of glycosylation and its lot-to-lot consistency should be monitored."
+        },
+        {
+          "rule_id": "Q6B-008",
+          "category": "Potency Validation",
+          "requirement": "Potency assays should be validated to demonstrate specificity, linearity, precision, and accuracy. For cell-based bioassays, critical assay components such as cell line stability, reference standard, and assay suitability criteria should be defined.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.3",
+          "verbatim_quote": "Potency assays should be validated to demonstrate specificity, linearity, precision, and accuracy."
+        },
+        {
+          "rule_id": "Q6B-009",
+          "category": "Aggregate and Degradation Products",
+          "requirement": "Aggregates and fragmentation products should be identified and quantified using appropriate techniques. Limits should be established based on their potential impact on immunogenicity and efficacy.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.1.2",
+          "verbatim_quote": "Aggregates and fragmentation products should be identified and quantified using appropriate techniques. Limits should be established based on their potential impact on immunogenicity and efficacy."
+        },
+        {
+          "rule_id": "Q6B-010",
+          "category": "Sterility and Purity — Drug Product",
+          "requirement": "Drug product specifications for biological products should include tests for sterility, endotoxin/pyrogen, container/closure integrity, particulate matter, and, where applicable, preservative effectiveness testing.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.2",
+          "verbatim_quote": "Drug product specifications for biological products should include tests for sterility, endotoxin/pyrogen, container/closure integrity, particulate matter."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q7",
+      "guideline_title": "Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients",
+      "scope": "GMP requirements for the manufacture of active pharmaceutical ingredients (APIs)",
+      "rules": [
+        {
+          "rule_id": "Q7-001",
+          "category": "Quality Unit Independence",
+          "requirement": "The quality unit(s) must be independent of production and must have the authority to approve or reject all components, containers, closures, labeling, packaging materials, in-process materials, and APIs. The quality unit must have the authority to approve or reject procedures, processes, or specifications affecting the identity, strength, purity, and quality of the API.",
+          "normative_keyword": "must",
+          "source_section": "Section 2.1",
+          "verbatim_quote": "The quality unit(s) must be independent of production and must have the authority to approve or reject all components, containers, closures, labeling, packaging materials, in-process materials, and APIs."
+        },
+        {
+          "rule_id": "Q7-002",
+          "category": "Reduced Testing — Supplier Qualification",
+          "requirement": "The identity and conformance to specifications of incoming materials should be confirmed based on at least initial tests of the material. Subsequent testing may be reduced for well-established materials from approved suppliers if adequate in-process controls and validation data demonstrate conformance. At least three batches should be analyzed before reducing testing frequency.",
+          "normative_keyword": "should",
+          "source_section": "Section 7.31",
+          "verbatim_quote": "At least three batches should be analyzed before reducing testing frequency."
+        },
+        {
+          "rule_id": "Q7-003",
+          "category": "Deviation Documentation",
+          "requirement": "Any deviation from established procedures should be documented and explained. Critical deviations should be investigated. A written record of the investigation, including conclusions and follow-up, should be prepared.",
+          "normative_keyword": "should",
+          "source_section": "Section 8.15",
+          "verbatim_quote": "Any deviation from established procedures should be documented and explained. Critical deviations should be investigated."
+        },
+        {
+          "rule_id": "Q7-004",
+          "category": "In-Process Controls",
+          "requirement": "Critical in-process controls and their acceptance criteria should be stated in writing and approved by the quality unit. In-process tests may be performed by qualified production personnel without quality unit approval if the results do not cause concern about product quality.",
+          "normative_keyword": "should",
+          "source_section": "Section 8.32",
+          "verbatim_quote": "Critical in-process controls and their acceptance criteria should be stated in writing and approved by the quality unit."
+        },
+        {
+          "rule_id": "Q7-005",
+          "category": "Blending Prohibition",
+          "requirement": "Out-of-specification batches must not be blended with other batches for the purpose of meeting specifications. In-process blending operations, where multiple portions of a single batch are combined, are acceptable provided they are properly designed and documented.",
+          "normative_keyword": "must not",
+          "source_section": "Section 8.41",
+          "verbatim_quote": "Out-of-specification batches must not be blended with other batches for the purpose of meeting specifications."
+        },
+        {
+          "rule_id": "Q7-006",
+          "category": "OOS Investigation",
+          "requirement": "Out-of-specification results should be investigated per a documented procedure. The investigation should include a review of laboratory data, assay methods, instrument calibration, and analyst training. A written record should be prepared and the root cause determined where possible.",
+          "normative_keyword": "should",
+          "source_section": "Section 11.15",
+          "verbatim_quote": "Out-of-specification results should be investigated per a documented procedure."
+        },
+        {
+          "rule_id": "Q7-007",
+          "category": "Impurity Profile",
+          "requirement": "An impurity profile should be established for each API that describes the identified and unidentified impurities present in a typical batch. The impurity profile should be compared with those of earlier batches to detect any significant change.",
+          "normative_keyword": "should",
+          "source_section": "Section 11.21",
+          "verbatim_quote": "An impurity profile should be established for each API that describes the identified and unidentified impurities present in a typical batch."
+        },
+        {
+          "rule_id": "Q7-008",
+          "category": "Stability Monitoring — Initial",
+          "requirement": "At least the first three commercial batches of the API should be placed on a stability monitoring program to confirm the retest date or expiry date. Subsequent batches should be placed on stability at a rate of at least one batch per year.",
+          "normative_keyword": "should",
+          "source_section": "Section 11.53-11.54",
+          "verbatim_quote": "At least the first three commercial batches of the API should be placed on a stability monitoring program to confirm the retest date or expiry date. Subsequent batches should be placed on stability at a rate of at least one batch per year."
+        },
+        {
+          "rule_id": "Q7-009",
+          "category": "Reserve Samples",
+          "requirement": "Reserve samples of each API batch should be retained for one year after the expiry date of the batch or for three years after distribution of the batch, whichever is longer. Reserve samples should be retained in sufficient quantity to allow at least two full analyses of the batch by the specification methods.",
+          "normative_keyword": "should",
+          "source_section": "Section 11.71-11.72",
+          "verbatim_quote": "Reserve samples of each API batch should be retained for one year after the expiry date of the batch or for three years after distribution of the batch, whichever is longer. Reserve samples should be retained in sufficient quantity to allow at least two full analyses of the batch."
+        },
+        {
+          "rule_id": "Q7-010",
+          "category": "Prospective Validation",
+          "requirement": "Prospective validation should be performed for all new manufacturing processes. The traditional approach to process validation requires three consecutive successful production batches as a guide for validation. Retrospective validation using 10 to 30 consecutive batches may be acceptable for well-established processes.",
+          "normative_keyword": "should",
+          "source_section": "Section 12.50",
+          "verbatim_quote": "The traditional approach to process validation requires three consecutive successful production batches as a guide for validation. Retrospective validation using 10 to 30 consecutive batches may be acceptable for well-established processes."
+        },
+        {
+          "rule_id": "Q7-011",
+          "category": "Cleaning Validation",
+          "requirement": "Cleaning procedures should normally be validated. The detection limit of the analytical method used should be sufficiently sensitive to detect established acceptable residue or contamination levels. The method should be validated to verify the recovery of residues.",
+          "normative_keyword": "should",
+          "source_section": "Section 12.70-12.74",
+          "verbatim_quote": "Cleaning procedures should normally be validated. The detection limit of the analytical method used should be sufficiently sensitive to detect established acceptable residue or contamination levels."
+        },
+        {
+          "rule_id": "Q7-012",
+          "category": "Change Control",
+          "requirement": "A formal change control system should be in place to evaluate all changes that may affect the production and control of an API. The potential impact of the change on product quality should be evaluated. The first batches produced after a change should be evaluated.",
+          "normative_keyword": "should",
+          "source_section": "Section 13.10-13.15",
+          "verbatim_quote": "A formal change control system should be in place to evaluate all changes that may affect the production and control of an API. The first batches produced after a change should be evaluated."
+        },
+        {
+          "rule_id": "Q7-013",
+          "category": "Biotech Cell Culture Controls",
+          "requirement": "Process controls for cell culture/fermentation operations must include: maintenance of Working Cell Bank, inoculation and expansion, critical operating parameters (temperature, pH, agitation, aeration gases, pressure) during fermentation/cell culture, monitoring for growth, viability, and productivity where applicable, harvest and purification, bioburden and endotoxin control, and viral safety procedures per Q5A.",
+          "normative_keyword": "must",
+          "source_section": "Section 18.16",
+          "verbatim_quote": "Process controls for cell culture/fermentation operations must include: maintenance of Working Cell Bank, inoculation and expansion, critical operating parameters during fermentation/cell culture, monitoring for growth, viability, and productivity where applicable, harvest and purification, bioburden and endotoxin control, and viral safety procedures per Q5A."
+        },
+        {
+          "rule_id": "Q7-014",
+          "category": "Viral Removal/Inactivation",
+          "requirement": "Viral removal/inactivation steps are critical processing steps and should be performed within validated parameters. These steps should be validated to demonstrate the required level of viral reduction consistent with Q5A requirements.",
+          "normative_keyword": "should",
+          "source_section": "Section 18.51",
+          "verbatim_quote": "Viral removal/inactivation steps are critical processing steps and should be performed within validated parameters."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q7_QA",
+      "guideline_title": "Q7 Good Manufacturing Practice Guide: Questions and Answers",
+      "scope": "Clarifications and interpretations of ICH Q7 GMP requirements",
+      "rules": [
+        {
+          "rule_id": "Q7QA-001",
+          "category": "Quality Unit Independence Interpretation",
+          "requirement": "The term 'independent' in the context of the quality unit means there should be no conflict of interest. The person responsible for approving batch release should not have production responsibilities.",
+          "normative_keyword": "should",
+          "source_section": "Q2.1",
+          "verbatim_quote": "The term 'independent' means there should be no conflict of interest. The person responsible for approving batch release should not have production responsibilities."
+        },
+        {
+          "rule_id": "Q7QA-002",
+          "category": "Non-Delegable Quality Unit Responsibility",
+          "requirement": "The quality unit is responsible for the system to release or reject raw materials and intermediates. This responsibility cannot be delegated to production personnel.",
+          "normative_keyword": "cannot",
+          "source_section": "Q2.3",
+          "verbatim_quote": "The quality unit is responsible for the system to release or reject raw materials and intermediates. This responsibility cannot be delegated to production personnel."
+        },
+        {
+          "rule_id": "Q7QA-003",
+          "category": "Product Quality Review Frequency",
+          "requirement": "Product quality review is generally expected to be performed annually. The timeframe for the review can be adjusted based on the manufacturing and campaign duration, but deviations from annual frequency should be justified.",
+          "normative_keyword": "should",
+          "source_section": "Q2.5",
+          "verbatim_quote": "Product quality review is generally expected to be performed annually. The timeframe for the review can be adjusted based on the manufacturing and campaign duration."
+        },
+        {
+          "rule_id": "Q7QA-004",
+          "category": "Trend Analysis in PQR",
+          "requirement": "Trend analysis is usually an important element of the product quality review. Statistical methods should be used where applicable to identify trends in the data.",
+          "normative_keyword": "should",
+          "source_section": "Q2.6",
+          "verbatim_quote": "Trend analysis is usually an important element of product quality review."
+        },
+        {
+          "rule_id": "Q7QA-005",
+          "category": "Retest Date Extension",
+          "requirement": "An API manufacturer can extend the retest date of a batch beyond the initially assigned date if good science and long-term stability results for that specific batch support the extension. The extension must be scientifically justified and documented.",
+          "normative_keyword": "can/must",
+          "source_section": "Q11.3",
+          "verbatim_quote": "An API manufacturer can extend the retest date based on good science and long-term stability results for that specific batch."
+        },
+        {
+          "rule_id": "Q7QA-006",
+          "category": "Prospective vs. Retrospective Validation",
+          "requirement": "Prospective validation is normally expected for processes introduced since the publication of Q7. Retrospective validation is acceptable as an exception for existing well-established products manufactured prior to Q7 implementation, where historical data clearly demonstrate process consistency.",
+          "normative_keyword": "should",
+          "source_section": "Q12.4",
+          "verbatim_quote": "Prospective validation is normally expected for processes introduced since the publication of Q7. Retrospective validation is acceptable as an exception for existing well-established products prior to Q7 implementation."
+        },
+        {
+          "rule_id": "Q7QA-007",
+          "category": "Mother Liquor Recovery",
+          "requirement": "Recovery of API from mother liquor (e.g., recycling of isolated impurities into the batch) is a critical process step and should be validated. The impact on impurity profile must be assessed.",
+          "normative_keyword": "should",
+          "source_section": "Q14.3",
+          "verbatim_quote": "Recovery of API from mother liquor is a critical process step and should be validated."
+        },
+        {
+          "rule_id": "Q7QA-008",
+          "category": "Deviation vs. Non-Conformance",
+          "requirement": "A deviation is defined as a 'departure from an approved instruction or established standard.' A non-conformance is the failure of a material to meet specifications or established standards that has an impact on quality. These terms have distinct meanings and should be used appropriately.",
+          "normative_keyword": "should",
+          "source_section": "Q20.1",
+          "verbatim_quote": "A deviation is defined as a 'departure from an approved instruction or established standard.' A non-conformance is the failure of a material to meet specifications or established standards that impacts quality."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q8R2",
+      "guideline_title": "Pharmaceutical Development (Revision 2)",
+      "scope": "Information to be submitted in regulatory applications for pharmaceutical development of drug substances and products",
+      "rules": [
+        {
+          "rule_id": "Q8-001",
+          "category": "Drug Substance Properties",
+          "requirement": "The physicochemical and biological properties of the drug substance that can influence the performance of the drug product and its manufacturability should be identified and discussed. The compatibility of the drug substance with excipients should be evaluated.",
+          "normative_keyword": "should",
+          "source_section": "Part I, Section 2.1",
+          "verbatim_quote": "The physicochemical and biological properties of the drug substance that can influence the performance of the drug product and its manufacturability should be identified and discussed."
+        },
+        {
+          "rule_id": "Q8-002",
+          "category": "Excipient Functionality",
+          "requirement": "Excipients should demonstrate their intended functionality and be shown to be compatible with the drug substance and with other excipients throughout the proposed shelf-life of the drug product. Overages to compensate for degradation during manufacture or storage are generally discouraged and must be justified if used.",
+          "normative_keyword": "should/must",
+          "source_section": "Part I, Section 2.2",
+          "verbatim_quote": "Excipients should demonstrate their intended functionality and be shown to be compatible with the drug substance and with other excipients throughout the proposed shelf-life. Overages to compensate for degradation during manufacture or storage are generally discouraged."
+        },
+        {
+          "rule_id": "Q8-003",
+          "category": "Critical Process Parameters",
+          "requirement": "Manufacturing process development must identify the critical process parameters (CPPs). A CPP is defined as 'a process parameter whose variability has an impact on a critical quality attribute and therefore should be monitored or controlled to assure the process produces the desired product quality.'",
+          "normative_keyword": "must",
+          "source_section": "Part II (Annex), Glossary",
+          "verbatim_quote": "A CPP is a process parameter whose variability has an impact on a critical quality attribute and therefore should be monitored or controlled to assure the process produces the desired product quality."
+        },
+        {
+          "rule_id": "Q8-004",
+          "category": "QTPP and CQA Identification",
+          "requirement": "Pharmaceutical development must at minimum: define the Quality Target Product Profile (QTPP), identify potential Critical Quality Attributes (CQAs) of the drug product, determine CQAs of the drug substance, excipients, and drug product, select an appropriate manufacturing process, and define a control strategy.",
+          "normative_keyword": "must",
+          "source_section": "Part II (Annex), Section 2",
+          "verbatim_quote": "Pharmaceutical development must at minimum define the QTPP, identify potential CQAs of the drug product, determine CQAs of the drug substance, excipients, and drug product, select an appropriate manufacturing process, and define a control strategy."
+        },
+        {
+          "rule_id": "Q8-005",
+          "category": "CQA Definition",
+          "requirement": "A Critical Quality Attribute (CQA) is defined as 'a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality.' CQAs are generally associated with the drug substance, excipients, intermediates, and drug product.",
+          "normative_keyword": "should",
+          "source_section": "Part II (Annex), Glossary",
+          "verbatim_quote": "A Critical Quality Attribute (CQA) is a physical, chemical, biological, or microbiological property or characteristic that should be within an appropriate limit, range, or distribution to ensure the desired product quality."
+        },
+        {
+          "rule_id": "Q8-006",
+          "category": "Design Space Definition",
+          "requirement": "A Design Space is defined as 'the multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process.'",
+          "normative_keyword": "definition",
+          "source_section": "Part II (Annex), Glossary",
+          "verbatim_quote": "Design Space is the multidimensional combination and interaction of input variables (e.g., material attributes) and process parameters that have been demonstrated to provide assurance of quality. Working within the design space is not considered as a change. Movement out of the design space is considered to be a change and would normally initiate a regulatory post approval change process."
+        },
+        {
+          "rule_id": "Q8-007",
+          "category": "Design Space — Regulatory Status",
+          "requirement": "The design space is proposed by the applicant and is subject to regulatory assessment and approval. A combination of proven acceptable ranges (PARs) does not by itself constitute a design space.",
+          "normative_keyword": "is",
+          "source_section": "Part II (Annex), Section 2.4",
+          "verbatim_quote": "The design space is proposed by the applicant and is subject to regulatory assessment and approval. A combination of proven acceptable ranges does not constitute a design space."
+        },
+        {
+          "rule_id": "Q8-008",
+          "category": "Control Strategy",
+          "requirement": "A control strategy derived from the current product and process understanding must include at minimum: control of critical process parameters and material attributes. The control strategy should include tests at appropriate stages of manufacturing.",
+          "normative_keyword": "must",
+          "source_section": "Part II (Annex), Section 2.5",
+          "verbatim_quote": "A control strategy derived from the current product and process understanding must include at minimum: control of critical process parameters and material attributes."
+        },
+        {
+          "rule_id": "Q8-009",
+          "category": "Sterilization Method — Sterile Products",
+          "requirement": "For sterile drug products, the sterilization method should be chosen and justified, with reference to the relevant guidance documents. Terminal sterilization should be preferred over aseptic processing where feasible.",
+          "normative_keyword": "should",
+          "source_section": "Part I, Section 2.4",
+          "verbatim_quote": "The sterilization method should be chosen and justified. Terminal sterilization should be preferred over aseptic processing where feasible."
+        },
+        {
+          "rule_id": "Q8-010",
+          "category": "Risk-Based Pharmaceutical Development",
+          "requirement": "A systematic and risk-based approach should be used to link material attributes and process parameters to the CQAs of intermediates and drug products. Risk assessment tools should be used to identify and control CPPs.",
+          "normative_keyword": "should",
+          "source_section": "Part II (Annex), Section 2.3",
+          "verbatim_quote": "A systematic and risk-based approach should be used to link material attributes and process parameters to the CQAs of intermediates and drug products."
+        }
+      ]
+    },
+    {
+      "guideline_id": "Q12",
+      "guideline_title": "Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management",
+      "scope": "Tools and enablers for managing post-approval CMC changes throughout a product's lifecycle",
+      "rules": [
+        {
+          "rule_id": "Q12-001",
+          "category": "Established Conditions (EC) Definition",
+          "requirement": "Established Conditions (ECs) are defined as 'legally binding information considered necessary to assure product quality. As a consequence, any change to ECs necessitates a submission to the regulatory authority.' ECs are contained within the approved marketing application.",
+          "normative_keyword": "definition",
+          "source_section": "Section 3.1",
+          "verbatim_quote": "Established Conditions (ECs) are legally binding information considered necessary to assure product quality. As a consequence, any change to ECs necessitates a submission to the regulatory authority."
+        },
+        {
+          "rule_id": "Q12-002",
+          "category": "CMC Change Categorization",
+          "requirement": "CMC changes must be categorized as: Prior Approval (change with sufficient risk to patient safety or product quality that requires regulatory review and approval before implementation) or Notification (change with moderate-to-low risk, requiring formal notification before or after implementation). Changes not required to be reported are managed within the PQS only.",
+          "normative_keyword": "must",
+          "source_section": "Section 4",
+          "verbatim_quote": "CMC changes must be categorized as Prior Approval or Notification. Changes not required to be reported are managed within the PQS only."
+        },
+        {
+          "rule_id": "Q12-003",
+          "category": "CPPs as Established Conditions",
+          "requirement": "Critical Process Parameters (CPPs) and process parameters where the impact of variability on product quality cannot be reasonably excluded should be identified as Established Conditions. The reporting category for changes to ECs should be derived from a risk assessment using ICH Q9.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2",
+          "verbatim_quote": "Critical Process Parameters (CPPs) and process parameters where the impact of variability on product quality cannot be reasonably excluded should be identified as Established Conditions."
+        },
+        {
+          "rule_id": "Q12-004",
+          "category": "PACMP Requirements",
+          "requirement": "A Post-Approval Change Management Protocol (PACMP) requires regulatory authority approval. The conditions and acceptance criteria defined in the PACMP must be met before implementing any changes described in the protocol. No change described in a PACMP should introduce additional risks to patient safety, product quality, or efficacy.",
+          "normative_keyword": "must/should",
+          "source_section": "Section 5",
+          "verbatim_quote": "The conditions and acceptance criteria defined in the PACMP must be met before implementing any changes described in the protocol. No change described in a PACMP should introduce additional risks to patient safety, product quality, or efficacy."
+        },
+        {
+          "rule_id": "Q12-005",
+          "category": "PLCM Document",
+          "requirement": "The Product Lifecycle Management (PLCM) document serves as the central repository for Established Conditions and their associated reporting categories. The PLCM document should be updated throughout the product lifecycle and should be maintained by the Marketing Authorisation Holder (MAH).",
+          "normative_keyword": "should",
+          "source_section": "Section 6",
+          "verbatim_quote": "The PLCM document serves as the central repository for Established Conditions and their associated reporting categories. The PLCM document should be updated throughout the product lifecycle."
+        },
+        {
+          "rule_id": "Q12-006",
+          "category": "Risk-Based EC Reporting",
+          "requirement": "The reporting category for a change to an Established Condition should be derived from a risk assessment that considers the potential impact on product quality, safety, and efficacy. The risk assessment should use the principles of ICH Q9.",
+          "normative_keyword": "should",
+          "source_section": "Section 4.2",
+          "verbatim_quote": "The reporting category for a change to an Established Condition should be derived from a risk assessment that considers the potential impact on product quality, safety, and efficacy."
+        },
+        {
+          "rule_id": "Q12-007",
+          "category": "PQS Failures Affecting Q12 Tools",
+          "requirement": "A critical failure in the Pharmaceutical Quality System (PQS) anywhere in the supply chain may impact the ability to use the tools described in Q12. Regulatory authorities may withdraw the use of these tools if the PQS is found to be inadequate.",
+          "normative_keyword": "may",
+          "source_section": "Section 7",
+          "verbatim_quote": "A critical failure in the PQS anywhere in the supply chain may impact the ability to use tools described in this guideline."
+        },
+        {
+          "rule_id": "Q12-008",
+          "category": "Structured Approaches for Frequent CMC Changes",
+          "requirement": "Structured approaches for frequent CMC post-approval changes may be applied when: the company's PQS change management process is effective and in compliance with Chapter 6, and a structured approach can be found in Annex II describing the scope, steps, and criteria. Compliance with internationally-agreed standards may be specified as part of the structured approach.",
+          "normative_keyword": "may",
+          "source_section": "Section 8",
+          "verbatim_quote": "These approaches may be applied when the company's PQS change management process is effective and in compliance as described in Chapter 6 and incorporates an appropriate risk management system."
+        },
+        {
+          "rule_id": "Q12-009",
+          "category": "Stability Data for CMC Changes",
+          "requirement": "Stability data approaches to support evaluation of CMC changes should consider: identifying stability-related quality attributes relative to the intended change, using appropriate tools (accelerated/stress studies, pre- and post-change comparability studies, statistical evaluation), and may include use of confirmatory post-change stability studies instead of submission of data as part of a regulatory change submission.",
+          "normative_keyword": "should",
+          "source_section": "Section 9",
+          "verbatim_quote": "Stability data approaches should consider identifying stability-related quality attributes and shelf-life-limiting attributes relative to the intended CMC changes, based on risk assessments and previously generated data."
+        },
+        {
+          "rule_id": "Q12-010",
+          "category": "Change Management System Requirements",
+          "requirement": "An effective change management system consistent with ICH Q10 must: capture stimuli for change, ensure full understanding of scope and implications for ECs, require science-based risk management, determine data needed, ensure appropriate regulatory submissions are filed, use a defined change control process, ensure implementation is verified post-change, and be available for review during audit/inspection.",
+          "normative_keyword": "must",
+          "source_section": "Appendix 2",
+          "verbatim_quote": "An effective change management system consistent with the basic requirements of ICH Q10 captures stimuli for change, requires science-based risk management and risk categorisation of the intended change, ensures that an appropriate regulatory submission is filed when required, and verifies post-implementation that relevant changes have been effective with no unintended consequences for product quality."
+        }
+      ]
+    },
+    {
+      "guideline_id": "M10",
+      "guideline_title": "Bioanalytical Method Validation and Study Sample Analysis",
+      "scope": "Validation of bioanalytical methods for quantification of drugs and their metabolites in biological matrices; applies to chromatographic methods (LC, GC/MS) and ligand binding assays (LBAs)",
+      "rules": [
+        {
+          "rule_id": "M10-001",
+          "category": "Chromatographic — Selectivity",
+          "requirement": "Selectivity should be evaluated using biological matrices from at least 6 individual sources/lots (non-haemolysed, non-lipaemic). The interfering response in blank matrix should be no greater than 20% of the analyte response at the LLOQ and no greater than 5% of the IS response.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1.1",
+          "verbatim_quote": "Selectivity should be evaluated using biological matrices from at least 6 individual sources/lots. The interfering response in blank matrix should be no greater than 20% of the analyte response at the LLOQ and no greater than 5% of the IS response."
+        },
+        {
+          "rule_id": "M10-002",
+          "category": "Chromatographic — Matrix Effect",
+          "requirement": "Matrix effect should be evaluated using at least 3 replicates at both low and high QC levels from at least 6 individual lots of matrix. The accuracy should be within ±15% of the nominal concentration and the precision (CV) should not exceed 15%.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1.3",
+          "verbatim_quote": "Matrix effect should be evaluated using at least 3 replicates at both low and high QC levels from at least 6 individual lots of matrix. The accuracy should be within ±15% and the precision (CV) should not exceed 15%."
+        },
+        {
+          "rule_id": "M10-003",
+          "category": "Chromatographic — Calibration Curve",
+          "requirement": "The calibration curve should consist of a blank sample, a zero sample, and at least 6 concentration levels, including the LLOQ and ULOQ, prepared in the same biological matrix as the study samples. A minimum of 3 independent runs over at least 2 different days should be used. At least 75% of calibration standards, with a minimum of 6 levels, must meet the criteria. Back-calculated concentrations must be within ±20% of nominal at the LLOQ and ±15% at all other levels.",
+          "normative_keyword": "should/must",
+          "source_section": "Section 3.1.4",
+          "verbatim_quote": "The calibration curve should consist of a blank sample, a zero sample, and at least 6 concentration levels, including the LLOQ and ULOQ. A minimum of 3 independent runs over at least 2 different days should be used. At least 75% of calibration standards, with a minimum of 6 levels, must meet the criteria. Back-calculated concentrations must be within ±20% of nominal at the LLOQ and ±15% at all other levels."
+        },
+        {
+          "rule_id": "M10-004",
+          "category": "Chromatographic — Accuracy and Precision",
+          "requirement": "QC levels for accuracy and precision assessment should include: LLOQ, low QC (within 3× LLOQ), medium QC (30-50% of range), and high QC (≥75% of ULOQ). Within-run: minimum 5 replicates per level. Between-run: minimum 3 analytical runs over at least 2 days. Acceptance: accuracy ±15% (±20% at LLOQ); precision ≤15% CV (≤20% at LLOQ). For non-accuracy/precision runs: at least 2/3 of total QCs and at least 50% at each level must be within ±15%.",
+          "normative_keyword": "should/must",
+          "source_section": "Section 3.2",
+          "verbatim_quote": "Within-run: minimum 5 replicates at each level. Between-run: minimum 3 analytical runs over at least 2 days. Accuracy ±15% (±20% at LLOQ); precision ≤15% CV (≤20% at LLOQ). For non-accuracy/precision runs: at least 2/3 of total QCs and at least 50% at each level must be within ±15%."
+        },
+        {
+          "rule_id": "M10-005",
+          "category": "Chromatographic — Carry-Over",
+          "requirement": "Carry-over should be assessed by injecting a blank sample after the highest calibration standard (ULOQ). The response in the blank sample should not exceed 20% of the analyte response at the LLOQ and 5% of the IS response.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.1.5",
+          "verbatim_quote": "The response in the blank sample injected after the ULOQ should not exceed 20% of the analyte response at the LLOQ and 5% of the IS response."
+        },
+        {
+          "rule_id": "M10-006",
+          "category": "Chromatographic — Freeze-Thaw Stability",
+          "requirement": "Freeze-thaw stability should be evaluated over a minimum of 3 freeze-thaw cycles. QC samples should be kept frozen for at least 12 hours between each thawing cycle.",
+          "normative_keyword": "should",
+          "source_section": "Section 3.2.8",
+          "verbatim_quote": "Freeze-thaw stability should be evaluated over a minimum of 3 freeze-thaw cycles. QC samples should be kept frozen for at least 12 hours between each thawing cycle."
+        },
+        {
+          "rule_id": "M10-007",
+          "category": "Chromatographic — Study Sample Analytical Run",
+          "requirement": "Each analytical run during study sample analysis must contain: a blank sample, a zero sample, at least 6 calibration levels, and at least 3 QC levels in duplicate (or at least 5% of the number of study samples, whichever is higher). Run acceptance: at least 75% of calibration standards (minimum 6 levels) within ±15% (±20% at LLOQ); at least 2/3 of total QCs and at least 50% at each level within ±15%.",
+          "normative_keyword": "must",
+          "source_section": "Section 3.3.1",
+          "verbatim_quote": "Each analytical run must contain: a blank sample, a zero sample, at least 6 calibration levels, and at least 3 QC levels in duplicate. Run acceptance: at least 75% of calibration standards within ±15% (±20% at LLOQ); at least 2/3 of total QCs and at least 50% at each level within ±15%."
+        },
+        {
+          "rule_id": "M10-008",
+          "category": "LBA — Selectivity",
+          "requirement": "LBA selectivity should be evaluated using blank samples from at least 10 individual sources, with samples spiked at the LLOQ and at the high QC level. The response of blank samples should be below the LLOQ in at least 80% of the individual sources. Accuracy should be within ±25% at the LLOQ and within ±20% at the high QC level in at least 80% of the individual sources evaluated.",
+          "normative_keyword": "should",
+          "source_section": "Section 4.2.2",
+          "verbatim_quote": "Selectivity should be evaluated using blank samples obtained from at least 10 individual sources. The response of blank samples should be below the LLOQ in at least 80% of the individual sources. Accuracy should be within ±25% at the LLOQ and within ±20% at the high QC level in at least 80% of the individual sources."
+        },
+        {
+          "rule_id": "M10-009",
+          "category": "LBA — Calibration Curve",
+          "requirement": "LBA calibration curves should be generated with at least 6 concentration levels, including LLOQ and ULOQ, plus a blank sample. A minimum of 6 independent runs should be evaluated over several days. The accuracy and precision of back-calculated concentrations should be within ±25% of the nominal concentration at LLOQ and ULOQ, and within ±20% at all other levels. At least 75% of calibration standards excluding anchor points must meet the criteria.",
+          "normative_keyword": "should/must",
+          "source_section": "Section 4.2.3",
+          "verbatim_quote": "A calibration curve should be generated with at least 6 concentration levels including LLOQ and ULOQ. A minimum of 6 independent runs should be evaluated over several days. Accuracy and precision should be within ±25% at LLOQ and ULOQ, and within ±20% at all other levels. At least 75% of calibration standards excluding anchor points must meet the above criteria."
+        },
+        {
+          "rule_id": "M10-010",
+          "category": "LBA — Accuracy and Precision",
+          "requirement": "LBA QC accuracy and precision should be determined by analysing at least 3 replicates per run at each QC concentration level in at least 6 runs over 2 or more days. Overall within-run and between-run accuracy should be within ±20% (±25% at LLOQ and ULOQ). Precision should not exceed 20% CV (25% at LLOQ and ULOQ). The total error (sum of absolute values of accuracy % and precision %) should not exceed 30% (40% at LLOQ and ULOQ). For non-accuracy/precision runs: at least 2/3 of total QCs and at least 50% at each level should be within ±20%.",
+          "normative_keyword": "should",
+          "source_section": "Section 4.2.4",
+          "verbatim_quote": "Overall within-run and between-run accuracy should be within ±20% (±25% at LLOQ and ULOQ). Precision should not exceed 20% CV (25% at LLOQ and ULOQ). The total error should not exceed 30% (40% at LLOQ and ULOQ)."
+        },
+        {
+          "rule_id": "M10-011",
+          "category": "LBA — Dilution Linearity",
+          "requirement": "LBA dilution linearity should be demonstrated by spiking the matrix above the ULOQ, analysing undiluted (for hook effect) and diluting to at least 3 different dilution factors. At least 3 independently prepared dilution series per dilution factor should be performed. The calculated mean concentration for each dilution should be within ±20% of the nominal concentration after correction for dilution and precision should not exceed 20%.",
+          "normative_keyword": "should",
+          "source_section": "Section 4.2.6",
+          "verbatim_quote": "The calculated mean concentration for each dilution should be within ±20% of the nominal concentration after correction for dilution and the precision should not exceed 20%."
+        },
+        {
+          "rule_id": "M10-012",
+          "category": "LBA — Specificity",
+          "requirement": "LBA specificity is evaluated by spiking blank matrix with structurally related molecules at their maximal anticipated concentrations in study samples. The response of blank samples spiked with related molecules should be below the LLOQ. The accuracy of the target analyte in the presence of related molecules should be within ±25% of the nominal values.",
+          "normative_keyword": "should",
+          "source_section": "Section 4.2.1",
+          "verbatim_quote": "The response of blank samples spiked with related molecules should be below the LLOQ. The accuracy of the target analyte in presence of related molecules should be within ±25% of the nominal values."
+        },
+        {
+          "rule_id": "M10-013",
+          "category": "LBA — Study Sample Analytical Run",
+          "requirement": "LBA study sample analytical runs should contain: a blank sample, calibration standards at a minimum of 6 concentration levels, at least 3 QC levels (low, medium, high) applied as two sets (or at least 5% of the number of study samples, whichever is higher). Study samples must always be bracketed by QCs. LBA run acceptance: at least 75% calibration standards within ±25% at LLOQ/ULOQ and ±20% at other levels; at least 2/3 of total QCs and at least 50% at each level within ±20%.",
+          "normative_keyword": "should/must",
+          "source_section": "Section 4.3",
+          "verbatim_quote": "LBA analytical runs should contain calibration standards at a minimum of 6 concentration levels, at least 3 QC levels applied as two sets. Study samples must always be bracketed by QCs. At least 2/3 of the QCs and 50% at each concentration level should be within ±20% of the nominal value."
+        },
+        {
+          "rule_id": "M10-014",
+          "category": "ISR — When Required",
+          "requirement": "Incurred Sample Reanalysis (ISR) should be performed at least in the following situations: for nonclinical studies within scope, at least once per species; all pivotal comparative BA/BE studies; first clinical trial in subjects; pivotal early patient trial(s), once per patient population; and first or pivotal trial in patients with impaired hepatic and/or renal function.",
+          "normative_keyword": "should",
+          "source_section": "Section 5",
+          "verbatim_quote": "ISR should be performed at least in the following situations: for nonclinical studies within the scope of this guideline, ISR should, in general, be performed at least once per species; all pivotal comparative BA/BE studies; first clinical trial in subjects; pivotal early patient trial(s), once per patient population."
+        },
+        {
+          "rule_id": "M10-015",
+          "category": "ISR — Sample Size",
+          "requirement": "If the total number of study samples is less than or equal to 1000, then 10% of the samples should be reanalysed. If the total number of samples is greater than 1000, then 10% of the first 1000 samples (100) plus 5% of the number of samples that exceed 1000 should be assessed.",
+          "normative_keyword": "should",
+          "source_section": "Section 5",
+          "verbatim_quote": "If the total number of study samples is less than or equal to 1000, then 10% of the samples should be reanalysed; if the total number of samples is greater than 1000, then 10% of the first 1000 samples (100) plus 5% of the number of samples that exceed 1000 should be assessed."
+        },
+        {
+          "rule_id": "M10-016",
+          "category": "ISR — Acceptance Criteria",
+          "requirement": "The percent difference between the initial concentration and the concentration measured during ISR repeat analysis should be calculated as: % difference = (repeat value - initial value) / mean value × 100. For chromatographic methods, the percent difference should be within ±20% for at least 2/3 of the repeats. For LBAs, the percent difference should be within ±30% for at least 2/3 of the repeats.",
+          "normative_keyword": "should",
+          "source_section": "Section 5",
+          "verbatim_quote": "For chromatographic methods, the percent difference should be within ±20% for at least 2/3 of the repeats. For LBAs, the percent difference should be within ±30% for at least 2/3 of the repeats."
+        },
+        {
+          "rule_id": "M10-017",
+          "category": "ISR — BA/BE Reanalysis Restriction",
+          "requirement": "For comparative BA/BE studies, reanalysis of study samples for a pharmacokinetic (PK) reason (e.g., a sample concentration does not fit with the expected profile) is not acceptable, as it may bias the study result. ISR sample data should not replace the original study sample data.",
+          "normative_keyword": "is not acceptable",
+          "source_section": "Section 3.3.4 / Section 5",
+          "verbatim_quote": "For comparative BA/BE studies, reanalysis of study samples for a PK reason (e.g., a sample concentration does not fit with the expected profile) is not acceptable, as it may bias the study result. ISR sample data should not replace the original study sample data."
+        },
+        {
+          "rule_id": "M10-018",
+          "category": "Cross Validation",
+          "requirement": "Cross validation is required when: data are obtained from different fully validated methods within a study; data are obtained within a study from different laboratories with the same bioanalytical method; or data are obtained from different fully validated methods across studies that are to be combined or compared to support regulatory decisions regarding safety, efficacy, and labelling. Cross validation should be performed using the same set of QCs (low, medium, high) at least in triplicate and study samples (n≥30) where available.",
+          "normative_keyword": "is required",
+          "source_section": "Section 6.2",
+          "verbatim_quote": "Cross validation is required when data are obtained from different fully validated methods within a study, when data are obtained from different laboratories with the same bioanalytical method, or when data are obtained from different fully validated methods across studies that are going to be combined or compared to support regulatory decisions."
+        },
+        {
+          "rule_id": "M10-019",
+          "category": "Reinjection",
+          "requirement": "Reinjection of processed samples can be made in the case of equipment failure if reinjection reproducibility has been demonstrated during validation. Reinjection of a full analytical run or of individual calibration standards or QCs simply because the calibration standards or QCs failed, without any identified analytical cause, is not acceptable.",
+          "normative_keyword": "is not acceptable",
+          "source_section": "Section 3.3.5",
+          "verbatim_quote": "Reinjection of a full analytical run or of individual calibration standards or QCs simply because the calibration standards or QCs failed, without any identified analytical cause, is not acceptable."
+        },
+        {
+          "rule_id": "M10-020",
+          "category": "Long-Term Stability — Temperature Extrapolation",
+          "requirement": "For chemical drugs, long-term stability demonstrated at one temperature (e.g., -20°C) can be extrapolated to lower temperatures (e.g., -70/-80°C). For biological drugs, a bracketing approach can be applied; if stability has been demonstrated at -70/-80°C and at -20°C, it is not necessary to investigate stability at temperatures in between.",
+          "normative_keyword": "can",
+          "source_section": "Section 3.2.8 / Section 4.2.7",
+          "verbatim_quote": "For chemical drugs, the stability at one temperature (e.g., -20°C) can be extrapolated to lower temperatures (e.g., -70/-80°C). For biological drugs, a bracketing approach can be applied."
+        }
+      ]
+    }
+  ]
+}

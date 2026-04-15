@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "title": "WHO-Specific Regulatory Requirements Diverging from ICH",
+    "sources": [
+      "WHO TRS 1010 Annex 10 - Stability Testing of APIs and FPPs (2018)",
+      "WHO TRS 986 Annex 2 - GMP for Pharmaceutical Products (2014)"
+    ],
+    "extraction_date": "2026-03-22",
+    "version": "3.0"
+  },
+  "climatic_zones": {
+    "description": "WHO defines climatic zones for stability testing that go beyond ICH Q1A(R2) which only covers Zones I and II. ICH Q1F was withdrawn, leaving Zones III/IV to WHO and regional authorities.",
+    "ich_q1f_withdrawal": {
+      "background": "ICH Q1F originally defined 30C/65% RH for Climatic Zones III/IV. Some Zone IV countries wanted stricter conditions (30C/75% RH). Due to this divergence, ICH withdrew Q1F and delegated Zone III/IV conditions to WHO and regional authorities.",
+      "consequence": "WHO now sets the definitive global stability conditions for hot/humid climates not covered by ICH"
+    },
+    "zone_definitions": {
+      "zone_I": {
+        "climate": "Temperate",
+        "long_term": "21C / 45% RH",
+        "countries_example": "Northern Europe, UK, Canada"
+      },
+      "zone_II": {
+        "climate": "Subtropical and Mediterranean",
+        "long_term": "25C / 60% RH",
+        "countries_example": "USA, Japan, Southern Europe"
+      },
+      "zone_III": {
+        "climate": "Hot and dry",
+        "long_term": "30C / 35% RH",
+        "countries_example": "Iraq, Sudan, parts of Middle East"
+      },
+      "zone_IVa": {
+        "climate": "Hot and humid",
+        "long_term": "30C / 65% RH",
+        "countries_example": "Iran, Egypt, parts of Southeast Asia"
+      },
+      "zone_IVb": {
+        "climate": "Hot and very humid",
+        "long_term": "30C / 75% RH",
+        "countries_example": "Brazil, Ghana, Indonesia, Philippines, Tanzania, Nigeria"
+      }
+    }
+  },
+  "stability_testing_conditions": {
+    "api_general_case": {
+      "long_term": {
+        "conditions": [
+          "25C +/- 2C / 60% RH +/- 5% RH (Zone I/II)",
+          "30C +/- 2C / 65% RH +/- 5% RH (Zone III/IVa)",
+          "30C +/- 2C / 75% RH +/- 5% RH (Zone IVb)"
+        ],
+        "minimum_duration": "12 months or 6 months as described in section 2.1.7",
+        "note": "Condition selected based on climatic zone where API is intended to be stored"
+      },
+      "intermediate": {
+        "condition": "30C +/- 2C / 65% RH +/- 5% RH",
+        "minimum_duration": "6 months",
+        "note": "If 30C/65% RH or 30C/75% RH is the long-term condition, there is no intermediate condition"
+      },
+      "accelerated": {
+        "condition": "40C +/- 2C / 75% RH +/- 5% RH",
+        "minimum_duration": "6 months"
+      }
+    },
+    "api_refrigerator": {
+      "long_term": "5C +/- 3C",
+      "accelerated_options": [
+        "25C +/- 2C / 60% RH +/- 5% RH",
+        "30C +/- 2C / 65% RH +/- 5% RH",
+        "30C +/- 2C / 75% RH +/- 5% RH"
+      ],
+      "accelerated_duration": "6 months",
+      "note": "Accelerated condition selection is risk-based"
+    },
+    "api_freezer": {
+      "long_term": "-20C +/- 5C",
+      "minimum_duration": "12 months or 6 months",
+      "note": "No accelerated condition defined; single batch at elevated temperature may be used"
+    },
+    "fpp_general_case": {
+      "long_term": {
+        "conditions": [
+          "25C +/- 2C / 60% RH +/- 5% RH (Zone I/II)",
+          "30C +/- 2C / 65% RH +/- 5% RH (Zone III/IVa)",
+          "30C +/- 2C / 75% RH +/- 5% RH (Zone IVb)"
+        ],
+        "minimum_duration_new_api": "12 months or as described in section 2.2.7",
+        "minimum_duration_existing_api": "6 months"
+      },
+      "intermediate": {
+        "condition": "30C +/- 2C / 65% RH +/- 5% RH",
+        "minimum_duration": "6 months"
+      },
+      "accelerated": {
+        "condition": "40C +/- 2C / 75% RH +/- 5% RH",
+        "minimum_duration": "6 months"
+      }
+    },
+    "fpp_semi_permeable_containers": {
+      "description": "Aqueous products in semi-permeable containers require low-RH testing to evaluate water loss",
+      "long_term": [
+        "25C +/- 2C / 40% RH +/- 5% RH",
+        "30C +/- 2C / 35% RH +/- 5% RH"
+      ],
+      "intermediate": "30C +/- 2C / 35% RH +/- 5% RH",
+      "accelerated": "40C +/- 2C / NMT 25% RH",
+      "accelerated_duration": "6 months",
+      "water_loss_threshold": "5% loss in water from initial value is significant change",
+      "water_loss_rate_ratios": {
+        "25C_40RH_to_60RH": 1.5,
+        "30C_35RH_to_65RH": 1.9,
+        "30C_35RH_to_75RH": 2.6,
+        "40C_25RH_to_75RH": 3.0
+      },
+      "who_unique": "This low-RH testing regime for semi-permeable containers is a WHO-specific elaboration not found in ICH Q1A"
+    }
+  },
+  "who_vs_ich_divergences": [
+    {
+      "area": "Climatic Zone IVb Conditions",
+      "ich_position": "ICH Q1F (now withdrawn) defined 30C/65% RH for all Zone III/IV",
+      "who_position": "WHO defines Zone IVb at 30C/75% RH, a more stringent humidity requirement",
+      "impact": "Products for Zone IVb markets must test at higher humidity; data from Zone II studies may be insufficient",
+      "severity": "HIGH"
+    },
+    {
+      "area": "Intermediate Condition Elimination",
+      "ich_position": "ICH Q1A always requires intermediate testing consideration",
+      "who_position": "When long-term condition is 30C/65% or 30C/75%, no intermediate condition exists",
+      "impact": "Fewer study arms required for Zone IVa/IVb products",
+      "severity": "MEDIUM"
+    },
+    {
+      "area": "Batch Requirements for Generics (FPPs with existing APIs)",
+      "ich_position": "ICH Q1A requires 3 batches for all initial submissions",
+      "who_position": "WHO allows 2 batches for uncomplicated FPPs with existing APIs (at least pilot scale); 3rd batch may be smaller",
+      "impact": "Reduced batch requirement for generic manufacturers targeting WHO prequalification",
+      "severity": "MEDIUM"
+    },
+    {
+      "area": "Semi-Permeable Container Testing",
+      "ich_position": "ICH Q1A provides limited guidance on semi-permeable containers",
+      "who_position": "WHO provides detailed low-RH testing protocol with water loss rate ratio calculations and 5% threshold",
+      "impact": "WHO-specific methodology for aqueous products in HDPE, PET containers",
+      "severity": "MEDIUM"
+    },
+    {
+      "area": "Minimum Data at Submission for Existing APIs",
+      "ich_position": "ICH requires minimum 12 months long-term data",
+      "who_position": "WHO allows 6 months minimum for FPPs containing existing APIs",
+      "impact": "Faster time-to-submission for generic products",
+      "severity": "MEDIUM"
+    },
+    {
+      "area": "Significant Change Definition for FPPs",
+      "ich_position": "ICH Q1A defines significant change generally",
+      "who_position": "WHO explicitly defines: 5% change in API content by assay, any degradation product exceeding criterion, failure of appearance/functionality tests, pH criterion failure, dissolution failure for 12 dosage units",
+      "impact": "More prescriptive criteria for triggering intermediate testing",
+      "severity": "LOW"
+    },
+    {
+      "area": "Ongoing Stability Monitoring",
+      "ich_position": "ICH recommends ongoing stability",
+      "who_position": "WHO mandates at least 1 production batch/year added to monitoring, tested every 6 months year 1 then annually; OOS results must be reported to finished product manufacturer and competent authorities",
+      "impact": "More explicit post-approval obligations",
+      "severity": "MEDIUM"
+    },
+    {
+      "area": "Labelling Statements",
+      "ich_position": "ICH provides general guidance",
+      "who_position": "WHO prohibits terms like 'ambient conditions' or 'room temperature'; requires specific storage statements from defined list in Appendix 2",
+      "impact": "Stricter labelling requirements for WHO-prequalified products",
+      "severity": "LOW"
+    },
+    {
+      "area": "Zone II Data for Zone IV Distribution",
+      "ich_position": "Not addressed (Q1F withdrawn)",
+      "who_position": "Appendix 3 provides specific interpretation for products approved in Zone II but distributed in Zone IV, including additional testing requirements",
+      "impact": "Products approved in temperate climates need additional stability justification for tropical markets",
+      "severity": "HIGH"
+    },
+    {
+      "area": "Stress Testing Scope",
+      "ich_position": "ICH Q1A provides general stress testing guidance",
+      "who_position": "WHO specifies 10C increments (50C, 60C), 75% RH or greater for humidity stress, and mandates photolysis across pH range for solutions/suspensions",
+      "impact": "More prescriptive stress testing protocol",
+      "severity": "LOW"
+    },
+    {
+      "area": "Retest Period vs Shelf Life Distinction",
+      "ich_position": "ICH uses both terms",
+      "who_position": "WHO explicitly states APIs get 'retest period' (can be retested and reused if compliant) while FPPs get 'shelf life' (absolute expiry); APIs can be retested multiple times",
+      "impact": "Clearer operational distinction for API manufacturers",
+      "severity": "LOW"
+    },
+    {
+      "area": "Stability Commitment Thresholds",
+      "ich_position": "ICH requires commitment if data does not cover proposed shelf life",
+      "who_position": "WHO provides tiered commitment requirements: 3 production batches = no commitment; <3 batches = continue + add to total of 3; no production batch data = place first 3 production batches on stability",
+      "impact": "Explicit commitment tiers for WHO prequalification",
+      "severity": "MEDIUM"
+    }
+  ],
+  "who_gmp_unique_requirements": {
+    "description": "WHO GMP (TRS 986 Annex 2) supplements ICH Q7 with requirements specific to resource-limited settings and WHO prequalification",
+    "key_differences": [
+      {
+        "area": "Carcinogenicity Testing - High Dose Selection",
+        "who_detail": "Japan and EU historically accepted doses at 100x clinical dose (mg/kg), while US traditionally accepted only MTD-based dose selection. ICH S1C harmonized around MTD with AUC ratio alternatives.",
+        "japan_specific": "Japan defined high dose as causing no more than 10% body weight suppression vs control, no poisoning deaths, and no serious toxicity findings",
+        "eu_specific": "EU CPMP defined high dose as producing mild toxic effects (e.g., 10% body weight suppression or mild organ toxicity)",
+        "us_specific": "US traditionally used MTD only",
+        "harmonized": "Minimum AUC ratio of 25x proposed as pharmacokinetic metric"
+      },
+      {
+        "area": "Foreign Manufacturer Accreditation",
+        "who_detail": "Not WHO-specific but PMDA requires 'Accredited Foreign Manufacturer' status under PAL Article 13-3 for any foreign manufacturer exporting drugs to Japan. 5-year renewal cycle.",
+        "impact": "Additional site registration burden beyond FDA establishment registration or EU MIA"
+      }
+    ]
+  },
+  "who_prequalification_context": {
+    "description": "WHO stability guidelines are primarily designed for the WHO Prequalification Programme for multisource/generic products",
+    "applicable_to": [
+      "Generic pharmaceutical products seeking WHO prequalification",
+      "APIs supplied to WHO-prequalified FPP manufacturers",
+      "Products distributed through UN agencies (UNICEF, UNFPA, Global Fund)",
+      "National regulatory authorities using WHO guidelines as reference"
+    ],
+    "relationship_to_ich": "WHO guidelines cross-reference ICH Q1A(R2), Q1B, Q1C, Q1D, Q1E, Q5C but add requirements for climatic zones III/IV and resource-limited settings"
+  }
+}

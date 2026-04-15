@@ -1,0 +1,904 @@
+{
+  "meta": {
+    "title": "ICH E1 + E2A + E2C(R2) + E5(R1) + E9(R1) Addendum on Estimands + E11A Training Rules",
+    "guidelines": ["E1", "E2A", "E2C(R2)", "E5(R1)", "E9(R1) Addendum on Estimands", "E11A"],
+    "extraction_date": "2026-03-23",
+    "total_rules": 96,
+    "source_directory": "/training/stage-1/ich-complete/",
+    "notes": "Rules extracted from verbatim PDF content. All quotes verified against source pages."
+  },
+
+  "e1_population_exposure": {
+    "guideline": "E1",
+    "full_title": "The Extent of Population Exposure to Assess Clinical Safety for Drugs Intended for Long-Term Treatment of Non-Life-Threatening Conditions",
+    "version": "Step 4, 27 October 1994",
+    "rules": [
+      {
+        "rule_id": "E1-001",
+        "rule_text": "Long-term treatment is defined as chronic or repeated intermittent use for longer than 6 months. Safety evaluation must characterise and quantify the safety profile over a reasonable duration consistent with the intended long-term use.",
+        "source_section": "Introduction",
+        "source_page": 3,
+        "source_quote": "drugs intended for the long-term treatment (chronic or repeated intermittent use for longer than 6 months) of non-life-threatening diseases. The safety evaluation during clinical drug development is expected to characterise and quantify the safety profile of a drug over a reasonable duration of time consistent with the intended long-term use of the drug.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-002",
+        "rule_text": "Short-term event rates (cumulative 3-month incidence of about 1%) should be well characterised by the clinical trial programme.",
+        "source_section": "Introduction",
+        "source_page": 3,
+        "source_quote": "It is expected that short-term event rates (cumulative 3-month incidence of about 1%) will be well characterised.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-003",
+        "rule_text": "The safety evaluation during clinical drug development is not expected to characterise rare adverse events occurring in less than 1 in 1000 patients.",
+        "source_section": "Introduction",
+        "source_page": 3,
+        "source_quote": "The safety evaluation during clinical drug development is not expected to characterise rare adverse events, for example, those occurring in less than 1 in 1000 patients.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-004",
+        "rule_text": "The 6-month exposure cohort must be large enough (usually 300-600 patients) to observe whether more frequently occurring events increase or decrease over time and to observe delayed events of reasonable frequency (0.5%-5%).",
+        "source_section": "Principle 4",
+        "source_page": 4,
+        "source_quote": "To achieve this objective the cohort of exposed subjects should be large enough to observe whether more frequently occurring events increase or decrease over time as well as to observe delayed events of reasonable frequency (e.g., in the general range of 0.5%-5%). Usually 300-600 patients should be adequate.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-005",
+        "rule_text": "A minimum of 100 patients must be exposed for at least one year as part of the safety database. This data must come from prospective studies providing at least one year of exposure at dosage levels intended for clinical use.",
+        "source_section": "Principle 5",
+        "source_page": 4,
+        "source_quote": "100 patients exposed for a minimum of one-year is considered to be acceptable to include as part of the safety data base. The data should come from prospective studies appropriately designed to provide at least one year exposure at dosage levels intended for clinical use.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-006",
+        "rule_text": "When no serious ADE is observed in a one-year exposure period in 100 patients, this provides reasonable assurance that the true cumulative one-year incidence is no greater than 3%.",
+        "source_section": "Principle 5",
+        "source_page": 4,
+        "source_quote": "When no serious ADE is observed in a one-year exposure period this number of patients can provide reasonable assurance that the true cumulative one year incidence is no greater than 3%.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-007",
+        "rule_text": "The total number of individuals treated with the investigational drug, including short-term exposure, should be approximately 1500. Japan accepts 500-1500 patients due to post-marketing surveillance requirements.",
+        "source_section": "Principle 6",
+        "source_page": 4,
+        "source_quote": "It is anticipated that the total number of individuals treated with the investigational drug, including short-term exposure, will be about 1500. Japan currently accepts 500-1500 patients: the potential for a smaller number of patients is due to the post-marketing surveillance requirement.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-008",
+        "rule_text": "A larger and/or longer-term safety database is required when there is concern that the drug will cause late-developing ADEs, or ADEs that increase in severity or frequency over time, based on animal studies, related chemical structures, or pharmacokinetic/pharmacodynamic properties.",
+        "source_section": "Principle 7a (Exceptions)",
+        "source_page": 4,
+        "source_quote": "Instances where there is concern that the drug will cause late developing ADEs, or cause ADEs that increase in severity or frequency over time, would require a larger and/or longer-term safety data base. The concern could arise from: (1) data from animal studies; (2) clinical information from other agents with related chemical structures or from a related pharmacologic class; (3) pharmacokinetic or pharmacodynamic properties known to be associated with such ADEs.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-009",
+        "rule_text": "A greater long-term database is required when there is a need to quantitate the occurrence rate of an expected specific low-frequency ADE, such as when a serious ADE has been identified in similar drugs or when an alert event is observed in early clinical trials.",
+        "source_section": "Principle 7b (Exceptions)",
+        "source_page": 5,
+        "source_quote": "Situations in which there is a need to quantitate the occurrence rate of an expected specific low-frequency ADE will require a greater long-term data base. Examples would include situations where a specific serious ADE has been identified in similar drugs or where a serious event that could represent an alert event is observed in early clinical trials.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-010",
+        "rule_text": "Larger safety databases may be needed when the benefit from the drug is (1) small, (2) experienced by only a fraction of treated patients (e.g., certain preventive therapies), or (3) of uncertain magnitude (e.g., surrogate endpoint efficacy).",
+        "source_section": "Principle 7c (Exceptions)",
+        "source_page": 5,
+        "source_quote": "Larger safety data bases may be needed to make risk/benefit decisions in situations where the benefit from the drug is either (1) small (e.g., symptomatic improvement in less serious medical conditions) or (2) will be experienced by only a fraction of the treated patients (e.g., certain preventive therapies administered to healthy populations) or (3) is of uncertain magnitude (e.g., efficacy determination on a surrogate endpoint).",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-011",
+        "rule_text": "When a drug may add to a significant background rate of morbidity or mortality, clinical trials must be designed with sufficient statistical power to detect pre-specified increases over baseline morbidity or mortality.",
+        "source_section": "Principle 7d (Exceptions)",
+        "source_page": 5,
+        "source_quote": "In situations where there is concern that a drug may add to an already significant background rate of morbidity or mortality, clinical trials may need to be designed with a sufficient number of patients to provide adequate statistical power to detect prespecified increases over the baseline morbidity or mortality.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E1-012",
+        "rule_text": "Filing for approval may be based on 6-month patient data. Data on patients treated through 12 months must be submitted as soon as available and prior to approval in the US and Japan. In the EU, 12-month data may be submitted after approval. US priority drugs must include 12-month data in the initial submission.",
+        "source_section": "Principle 8",
+        "source_page": 5,
+        "source_quote": "Filing for approval will usually be possible based on the data from patients treated through 6 months. Data on patients treated through 12 months must be submitted as soon as available and prior to approval in the United States and Japan but may be submitted after approval in the E.C.. In the U.S. the initial submission for those drugs designated as priority drugs must include the 12-months patient data.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E1-013",
+        "rule_text": "A smaller number of patients may be acceptable where the intended treatment population is small.",
+        "source_section": "Principle 7e (Exceptions)",
+        "source_page": 5,
+        "source_quote": "In some cases, a smaller number of patients may be acceptable, for example, where the intended treatment population is small.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      }
+    ]
+  },
+
+  "e2a_expedited_reporting": {
+    "guideline": "E2A",
+    "full_title": "Clinical Safety Data Management: Definitions and Standards for Expedited Reporting",
+    "version": "Step 4, 27 October 1994",
+    "rules": [
+      {
+        "rule_id": "E2A-001",
+        "rule_text": "An adverse event (AE) is defined as any untoward medical occurrence in a patient or clinical investigation subject administered a pharmaceutical product, which does not necessarily have a causal relationship with the treatment.",
+        "source_section": "II.A.1 Basic Terms",
+        "source_page": 4,
+        "source_quote": "Any untoward medical occurrence in a patient or clinical investigation subject administered a pharmaceutical product and which does not necessarily have to have a causal relationship with this treatment.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-002",
+        "rule_text": "In pre-approval clinical experience, all noxious and unintended responses to a medicinal product related to any dose should be considered adverse drug reactions (ADRs). For marketed products, the threshold is doses normally used for prophylaxis, diagnosis, or therapy.",
+        "source_section": "II.A.2 Adverse Drug Reaction",
+        "source_page": 4,
+        "source_quote": "all noxious and unintended responses to a medicinal product related to any dose should be considered adverse drug reactions.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-003",
+        "rule_text": "An unexpected adverse drug reaction is one whose nature or severity is not consistent with the applicable product information (e.g., Investigator's Brochure for an unapproved investigational medicinal product). Until source documents are amended, expedited reporting is required for all additional occurrences.",
+        "source_section": "II.A.3 / II.C Unexpected ADR",
+        "source_page": 4,
+        "source_quote": "An adverse reaction, the nature or severity of which is not consistent with the applicable product information (e.g., Investigator's Brochure for an unapproved investigational medicinal product).",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-004",
+        "rule_text": "A serious adverse event or reaction is any untoward medical occurrence that at any dose: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+        "source_section": "II.B Serious Adverse Event",
+        "source_page": 5,
+        "source_quote": "A serious adverse event (experience) or reaction is any untoward medical occurrence that at any dose: results in death, is life-threatening, requires inpatient hospitalisation or prolongation of existing hospitalisation, results in persistent or significant disability/incapacity, or is a congenital anomaly/birth defect.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-005",
+        "rule_text": "The term 'life-threatening' in the definition of 'serious' refers to an event in which the patient was at risk of death at the time of the event; it does not refer to an event which hypothetically might have caused death if it were more severe.",
+        "source_section": "II.B NOTE",
+        "source_page": 5,
+        "source_quote": "The term \"life-threatening\" in the definition of \"serious\" refers to an event in which the patient was at risk of death at the time of the event; it does not refer to an event which hypothetically might have caused death if it were more severe.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-006",
+        "rule_text": "Seriousness (not severity) serves as the guide for defining regulatory reporting obligations. 'Severe' describes intensity; 'serious' is based on patient/event outcome or action criteria.",
+        "source_section": "II.B",
+        "source_page": 5,
+        "source_quote": "Seriousness (not severity) serves as a guide for defining regulatory reporting obligations.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-007",
+        "rule_text": "All adverse drug reactions that are both serious and unexpected are subject to expedited reporting, regardless of source (spontaneous, clinical investigation, epidemiological), including cases not reported directly to a sponsor.",
+        "source_section": "III.A.1",
+        "source_page": 6,
+        "source_quote": "All adverse drug reactions (ADRs) that are both serious and unexpected are subject to expedited reporting. This applies to reports from spontaneous sources and from any type of clinical or epidemiological investigation, independent of design or purpose.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-008",
+        "rule_text": "Expedited reporting of reactions that are serious but expected will ordinarily be inappropriate. Similarly, non-serious adverse reactions, whether expected or not, will ordinarily not be subject to expedited reporting.",
+        "source_section": "III.A.1",
+        "source_page": 6,
+        "source_quote": "Expedited reporting of reactions which are serious but expected will ordinarily be inappropriate. Expedited reporting is also inappropriate for serious events from clinical investigations that are considered not related to study product, whether the event is expected or not. Similarly, non-serious adverse reactions, whether expected or not, will ordinarily not be subject to expedited reporting.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-009",
+        "rule_text": "For fatal or life-threatening unexpected ADRs occurring in clinical investigations, regulatory agencies must be notified as soon as possible but no later than 7 calendar days after first knowledge by the sponsor that a case qualifies, followed by a complete report within 8 additional calendar days.",
+        "source_section": "III.B.1",
+        "source_page": 7,
+        "source_quote": "Regulatory agencies should be notified (e.g., by telephone, facsimile transmission, or in writing) as soon as possible but no later than 7 calendar days after first knowledge by the sponsor that a case qualifies, followed by as complete a report as possible within 8 additional calendar days.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-010",
+        "rule_text": "Serious, unexpected ADRs that are not fatal or life-threatening must be filed as soon as possible but no later than 15 calendar days after the sponsor first knows the case meets minimum criteria for expedited reporting.",
+        "source_section": "III.B.2",
+        "source_page": 7,
+        "source_quote": "Serious, unexpected reactions (ADRs) that are not fatal or life-threatening must be filed as soon as possible but no later than 15 calendar days after first knowledge by the sponsor that the case meets the minimum criteria for expedited reporting.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-011",
+        "rule_text": "Minimum criteria for initial expedited reports are: an identifiable patient, a suspect medicinal product, an identifiable reporting source, and an event or outcome that can be identified as serious and unexpected, with a reasonable suspected causal relationship for clinical investigation cases.",
+        "source_section": "III.B.3",
+        "source_page": 7,
+        "source_quote": "initial reports should be submitted within the prescribed time as long as the following minimum criteria are met: an identifiable patient; a suspect medicinal product; an identifiable reporting source; and an event or outcome that can be identified as serious and unexpected, and for which, in clinical investigation cases, there is a reasonable suspected causal relationship.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-012",
+        "rule_text": "Follow-up information for expedited reports should be actively sought and submitted as it becomes available.",
+        "source_section": "III.B.3",
+        "source_page": 7,
+        "source_quote": "Follow-up information should be actively sought and submitted as it becomes available.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-013",
+        "rule_text": "Causality assessment is required for clinical investigation cases. All cases judged by either the reporting health care professional or the sponsor as having a reasonable suspected causal relationship to the medicinal product qualify as ADRs.",
+        "source_section": "III.A.1",
+        "source_page": 6,
+        "source_quote": "Causality assessment is required for clinical investigation cases. All cases judged by either the reporting health care professional or the sponsor as having a reasonable suspected causal relationship to the medicinal product qualify as ADRs.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-014",
+        "rule_text": "For a medicinal product not yet approved, the Investigator's Brochure serves as the source document for determining expectedness of an adverse reaction in that country.",
+        "source_section": "II.C",
+        "source_page": 6,
+        "source_quote": "For a medicinal product not yet approved for marketing in a country, a company's Investigator's Brochure will serve as the source document in that country.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-015",
+        "rule_text": "When the blind is broken for an individual patient due to a serious adverse reaction, it is recommended that the blind be broken only for that specific patient by the sponsor, even if the investigator has not broken the blind.",
+        "source_section": "III.D",
+        "source_page": 8,
+        "source_quote": "it is recommended that the blind be broken only for that specific patient by the sponsor even if the investigator has not broken the blind.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-016",
+        "rule_text": "Sponsors must report active comparator drug reactions to either the manufacturer of the active control or to appropriate regulatory agencies. Events associated with placebo will usually not satisfy the criteria for an ADR and therefore do not require expedited reporting.",
+        "source_section": "III.E.1",
+        "source_page": 9,
+        "source_quote": "Sponsors must report such events to either the manufacturer of the active control or to appropriate regulatory agencies. Events associated with placebo will usually not satisfy the criteria for an ADR and, therefore, for expedited reporting.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-017",
+        "rule_text": "All expedited reports must be sent to those regulators or other official parties requiring them in countries where the drug is under development.",
+        "source_section": "III.C",
+        "source_page": 8,
+        "source_quote": "All reports must be sent to those regulators or other official parties requiring them (as appropriate for the local situation) in countries where the drug is under development.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2A-018",
+        "rule_text": "An increase in the rate of occurrence of an expected serious ADR judged to be clinically important constitutes an 'other observation' requiring rapid communication to regulatory authorities beyond single case expedited reports.",
+        "source_section": "III.A.2",
+        "source_page": 7,
+        "source_quote": "For an \"expected,\" serious ADR, an increase in the rate of occurrence which is judged to be clinically important.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2A-019",
+        "rule_text": "Post-study serious adverse events that occurred after the patient completed a clinical study should be regarded for expedited reporting purposes as though they were study reports, requiring causality assessment and determination of expectedness.",
+        "source_section": "III.E.3",
+        "source_page": 9,
+        "source_quote": "serious adverse events that occurred after the patient had completed a clinical study (including any protocol-required post-treatment follow-up) will possibly be reported by an investigator to the sponsor. Such cases should be regarded for expedited reporting purposes as though they were study reports.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      }
+    ]
+  },
+
+  "e2c_r2_pbrer": {
+    "guideline": "E2C(R2)",
+    "full_title": "Periodic Benefit-Risk Evaluation Report (PBRER)",
+    "version": "Step 4, 17 December 2012",
+    "rules": [
+      {
+        "rule_id": "E2C-001",
+        "rule_text": "Each medicinal product must have an International Birth Date (IBD): the date of first marketing approval for any product containing the active substance granted to any company anywhere in the world. The IBD determines the Data Lock Point (DLP) for PBRERs.",
+        "source_section": "2.8.1",
+        "source_page": 8,
+        "source_quote": "Each medicinal product should have an IBD: the IBD is the date of the first marketing approval for any product containing the active substance granted to any company in any country in the world.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2C-002",
+        "rule_text": "PBRERs covering intervals of 6 or 12 months must be submitted within 70 calendar days of the Data Lock Point. PBRERs covering intervals in excess of 12 months must be submitted within 90 calendar days of the DLP.",
+        "source_section": "2.8.3",
+        "source_page": 11,
+        "source_quote": "PBRERs covering intervals of 6 or 12 months: within 70 calendar days; PBRERs covering intervals in excess of 12 months: within 90 calendar days.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2C-003",
+        "rule_text": "Ad hoc PBRERs must be submitted within 90 calendar days, unless otherwise specified in the ad hoc request.",
+        "source_section": "2.8.3",
+        "source_page": 11,
+        "source_quote": "ad hoc PBRERs: 90 calendar days, unless otherwise specified in the ad hoc request.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-004",
+        "rule_text": "For newly approved products, a 6-monthly PBRER periodicity applies in many regions for at least the first 2 years after approval.",
+        "source_section": "2.8.2",
+        "source_page": 9,
+        "source_quote": "For newly approved products, a 6-monthly periodicity applies in many regions, for at least the first 2 years after approval.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E2C-005",
+        "rule_text": "Each PBRER should be stand-alone and reflect new and cumulative information currently available to the MAH, regardless of the length of the reporting interval.",
+        "source_section": "2.8.2",
+        "source_page": 9,
+        "source_quote": "Each PBRER should be stand-alone and reflect new and cumulative information currently available to the MAH.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-006",
+        "rule_text": "Each MAH is responsible for submitting PBRERs for its own products. When companies are in contractual relationships (e.g., licensor-licensee), respective responsibilities for preparation and submission must be clearly specified in the written agreement.",
+        "source_section": "2.3",
+        "source_page": 6,
+        "source_quote": "Each MAH is responsible for submitting PBRERs for its own products. When companies are involved in contractual relationships (e.g., licensor-licensee), respective responsibilities for preparation and submission of the PBRER to the regulatory authorities should be clearly specified in the written agreement.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-007",
+        "rule_text": "The full ICH Guideline E2C(R2) format should be used for all PBRERs. When no relevant information is available for a PBRER section, this should be stated. All sections should be completed.",
+        "source_section": "2.9.1 / Section 3",
+        "source_page": 11,
+        "source_quote": "The full ICH Guideline E2C(R2) format should be used for all PBRERs. When no relevant information is available or a PBRER section is not applicable, this should be stated... All sections should be completed, and when no information is available, this should be stated.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-008",
+        "rule_text": "The PBRER title page must include: date of the report, medicinal product(s), IBD, reporting interval, MAH name(s) and address(es), and any statement on the confidentiality of information.",
+        "source_section": "3 (Title Page)",
+        "source_page": 12,
+        "source_quote": "The title page of the PBRER should include the following information: Date of the report; Medicinal product(s); IBD; Reporting interval; MAH(s) name(s) and address(es); and Any statement on the confidentiality of the information included in the PBRER.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E2C-009",
+        "rule_text": "The MAH should continuously evaluate whether any revision of the reference product information/RSI is needed whenever new safety information is obtained throughout the reporting interval. Significant changes must be described in Section 4 of the PBRER.",
+        "source_section": "2.4",
+        "source_page": 7,
+        "source_quote": "The MAH should continuously evaluate whether any revision of the reference product information/RSI is needed whenever new safety information is obtained throughout the reporting interval. Significant changes to the reference product information/RSI made during the interval should be described in Section 4 of the PBRER.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-010",
+        "rule_text": "The PBRER must include a single PBRER for the active substance covering all approved indications, dosage forms, and regimens, with a single DLP. Separate PBRERs may only be submitted in exceptional cases with prior notification to and agreement from regulatory authorities.",
+        "source_section": "2.1",
+        "source_page": 6,
+        "source_quote": "The PBRER should provide information on all approved indications, dosage forms, and regimens for the active substance, with a single DLP... In exceptional cases, submission of separate PBRERs might be appropriate... In these cases, the regulatory authorities should be notified and their agreement obtained, preferably at the time of approval.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-011",
+        "rule_text": "The PBRERs submitted on a routine/regular basis should be based on cumulative data, with interval data sets of 6 months, or multiples thereof.",
+        "source_section": "2.8.2",
+        "source_page": 9,
+        "source_quote": "For PBRERs submitted on a routine/regular basis, the reports should be based on cumulative data, with interval data sets of 6 months, or multiples thereof.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E2C-012",
+        "rule_text": "The cumulative summary tabulation of SAEs from clinical trials (PBRER Section 6.2) should be organised by System Organ Class (SOC) and include MedDRA Preferred Term (PT) level when MedDRA terminology is used.",
+        "source_section": "3.6.2",
+        "source_page": 16,
+        "source_quote": "When the Medical Dictionary for Regulatory Activities (MedDRA) terminology is used for coding the adverse event/reaction terms, the Preferred Term (PT) level and SOC should be presented in the summary tabulations.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E2C-013",
+        "rule_text": "Urgent safety information should be reported through the appropriate mechanism; the PBRER is not intended to provide initial notification of significant new safety information or to detect new safety concerns.",
+        "source_section": "1.2",
+        "source_page": 5,
+        "source_quote": "Urgent safety information should be reported through the appropriate mechanism; the PBRER is not intended to be used to provide initial notification of significant new safety information or to provide the means by which new safety concerns are detected.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-014",
+        "rule_text": "PBRER Section 3 must include a description of significant actions related to safety taken during the reporting interval, including refusal to authorise a clinical trial, clinical trial suspension, recall of investigational drug, withdrawal of marketing approval, and risk management activities.",
+        "source_section": "3.3",
+        "source_page": 13,
+        "source_quote": "Section 3 of the PBRER should include a description of significant actions related to safety that have been taken during the reporting interval, related to either investigational uses or marketing experience by the MAH, sponsor of a clinical trial(s), regulatory authorities, data monitoring committees, or ethics committees.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E2C-015",
+        "rule_text": "Post-marketing patient exposure data should be presented by indication, sex, age, dose, formulation, and region where applicable. Estimated number of patients should be provided when possible, using patient-days, prescriptions, or defined daily dose as alternative measures.",
+        "source_section": "3.5.2",
+        "source_page": 15,
+        "source_quote": "the data should be routinely presented by indication, sex, age, dose, formulation, and region, where applicable.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      }
+    ]
+  },
+
+  "e5_r1_ethnic_factors": {
+    "guideline": "E5(R1)",
+    "full_title": "Ethnic Factors in the Acceptability of Foreign Clinical Data",
+    "version": "Step 4, 5 February 1998 (Post Step 4 corrections 11 March 1998)",
+    "rules": [
+      {
+        "rule_id": "E5-001",
+        "rule_text": "All data in the clinical data package, including foreign data, must meet the standards of the new region with respect to study design and conduct, and the available data should satisfy the regulatory requirements in the new region.",
+        "source_section": "1.3 Scope",
+        "source_page": 5,
+        "source_quote": "All data in the clinical data package, including foreign data, should meet the standards of the new region with respect to study design and conduct and the available data should satisfy the regulatory requirements in the new region.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E5-002",
+        "rule_text": "A Complete Clinical Data Package submitted to a new region must contain: adequate characterisation of PK, PD, dose-response, efficacy and safety in the foreign region, and clinical trials that are designed and conducted according to GCP and regulatory standards of the new region.",
+        "source_section": "2",
+        "source_page": 6,
+        "source_quote": "Before extrapolation can be considered, the Complete Clinical Data Package, including foreign clinical data, submitted to the new region should contain: Adequate characterization of pharmacokinetics, pharmacodynamics, dose-response, efficacy and safety in the population of the foreign region(s). Clinical trials establishing dose response, efficacy and safety. These trials should: Be designed and conducted according to regulatory standards in the new region... Be adequate and well-controlled.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E5-003",
+        "rule_text": "The sponsor and regional regulatory authority must assess a registration application for: (1) its completeness with respect to the regulatory requirements of the new region, and (2) the ability to extrapolate to the new region those parts based on studies from the foreign region.",
+        "source_section": "2",
+        "source_page": 6,
+        "source_quote": "the sponsor and the regional regulatory authority of the new region would assess an application for registration for: 1. its completeness with respect to the regulatory requirements of the new region; and 2. the ability to extrapolate to the new region those parts of the application (which could be most or all of the application) based on studies from the foreign region.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E5-004",
+        "rule_text": "A bridging study is defined as a study performed in the new region to provide pharmacodynamic or clinical data on efficacy, safety, dosage, and dose regimen that allows extrapolation of the foreign clinical data to the new region's population.",
+        "source_section": "3.2.1",
+        "source_page": 8,
+        "source_quote": "A bridging study is defined as a study performed in the new region to provide pharmacodynamic or clinical data on efficacy, safety, dosage and dose regimen in the new region that will allow extrapolation of the foreign clinical data to the population in the new region.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-005",
+        "rule_text": "In most cases, a single trial that successfully confirms the ability to extrapolate data from the original region should suffice and should not need further replication.",
+        "source_section": "3.2.2",
+        "source_page": 8,
+        "source_quote": "In most cases, a single trial that successfully provides these data in the new region and confirms the ability to extrapolate data from the original region should suffice and should not need further replication.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-006",
+        "rule_text": "When the regulatory authority requests or the sponsor decides to conduct a bridging study, discussion between the regional regulatory authority and sponsor is encouraged to determine what kind of bridging study will be needed.",
+        "source_section": "3.2.2",
+        "source_page": 8,
+        "source_quote": "When the regulatory authority requests, or the sponsor decides to conduct, a bridging study, discussion between the regional regulatory authority and sponsor is encouraged, when possible, to determine what kind of bridging study will be needed.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E5-007",
+        "rule_text": "No bridging study is needed when the medicine is ethnically insensitive and extrinsic factors such as medical practice are generally similar between regions. Similarly, no bridging study is needed if the medicine is ethnically sensitive but the two regions are ethnically similar and there is sufficient clinical experience with related compounds.",
+        "source_section": "3.2.3",
+        "source_page": 9,
+        "source_quote": "If the medicine is ethnically insensitive and extrinsic factors such as medical practice and conduct of clinical trials in the two regions are generally similar. If the medicine is ethnically sensitive but the two regions are ethnically similar and there is sufficient clinical experience with pharmacologically related compounds to provide reassurance that the class behaves similarly in patients in the two regions.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-008",
+        "rule_text": "A controlled clinical trial bridging study is usually necessary in the new region when: there are doubts about the choice of dose, there is little experience with acceptance of controlled clinical trials from the foreign region, medical practice is different, or the drug class is not familiar in the new region.",
+        "source_section": "3.2.3",
+        "source_page": 9,
+        "source_quote": "It will usually be necessary to carry out a controlled clinical trial, often a randomized, fixed dose, dose-response study, in the new region when: 1. there are doubts about the choice of dose, 2. there is little or no experience with acceptance of controlled clinical trials carried out in the foreign region, 3. medical practice, e.g., use of concomitant medications and design and/or conduct of clinical trials are different, or 4. the drug class is not a familiar one in the new region.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-009",
+        "rule_text": "If pharmacodynamic data suggest interregional differences in response, a controlled trial with clinical endpoints in the new region will generally be necessary. Any substantial difference in metabolic pattern may often indicate a need for a controlled clinical trial.",
+        "source_section": "3.2.3",
+        "source_page": 10,
+        "source_quote": "If pharmacodynamic data suggest that there are interregional differences in response, it will generally be necessary to carry out a controlled trial with clinical endpoints in the new region. Pharmacokinetic differences may not always create that necessity, as dosage adjustments in some cases might be made without new trials. However, any substantial difference in metabolic pattern may often indicate a need for a controlled clinical trial.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-010",
+        "rule_text": "For bridging studies for safety: if no efficacy bridging study is needed or if the efficacy bridging study is too small or of insufficient duration, a separate safety study may be needed. Detection of serious adverse events in the 1% range generally requires approximately 300 patients.",
+        "source_section": "3.2.4",
+        "source_page": 10,
+        "source_quote": "Safety concerns could include the accurate determination of the rates of relatively common adverse events in the new region and the detection of serious adverse events (in the 1% range and generally needing about 300 patients to assess).",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E5-011",
+        "rule_text": "Any candidate medicine for global development should be characterised as ethnically sensitive or insensitive during the early clinical phases of drug development (human pharmacology and therapeutic exploratory studies).",
+        "source_section": "4",
+        "source_page": 10,
+        "source_quote": "Any candidate medicine for global development should be characterized as ethnically sensitive or insensitive (Appendix D). Ideally, this characterization should be conducted during the early clinical phases of drug development, i.e., human pharmacology and therapeutic exploratory studies.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E5-012",
+        "rule_text": "Characteristics that make a medicine ethnically sensitive include clearance by an enzyme showing genetic polymorphism and a steep dose-response curve. A lack of metabolism or active excretion and a wide therapeutic dose range make ethnic differences less likely.",
+        "source_section": "3.1",
+        "source_page": 7,
+        "source_quote": "such characteristics as clearance by an enzyme showing genetic polymorphism and a steep dose-response curve will make ethnic differences more likely. Conversely, a lack of metabolism or active excretion, a wide therapeutic dose range, and a flat dose response curve will make ethnic differences less likely.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      }
+    ]
+  },
+
+  "e9_r1_estimands": {
+    "guideline": "E9(R1)",
+    "full_title": "Addendum on Estimands and Sensitivity Analysis in Clinical Trials",
+    "version": "Final, adopted 20 November 2019",
+    "rules": [
+      {
+        "rule_id": "E9R1-001",
+        "rule_text": "A trial protocol must define and specify explicitly a primary estimand that corresponds to the primary trial objective. The estimand defines the target of estimation for a particular trial objective.",
+        "source_section": "A.6",
+        "source_page": 20,
+        "source_quote": "A trial protocol should define and specify explicitly a primary estimand that corresponds to the primary trial objective.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-002",
+        "rule_text": "The protocol and analysis plan must pre-specify the main estimator aligned with the primary estimand and a suitable sensitivity analysis to explore robustness under deviations from its assumptions.",
+        "source_section": "A.6",
+        "source_page": 20,
+        "source_quote": "The protocol and the analysis plan should pre-specify the main estimator that is aligned with the primary estimand and leads to the primary analysis, together with a suitable sensitivity analysis to explore the robustness under deviations from its assumptions.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-003",
+        "rule_text": "The targets of estimation (estimands) are to be defined in advance of a clinical trial. Once defined, a trial can be designed to enable reliable estimation of the targeted treatment effect.",
+        "source_section": "A.3",
+        "source_page": 7,
+        "source_quote": "The targets of estimation are to be defined in advance of a clinical trial. Once defined, a trial can be designed to enable reliable estimation of the targeted treatment effect.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-004",
+        "rule_text": "Intercurrent events (events occurring after treatment initiation that affect either the interpretation or the existence of measurements) must be addressed when describing the clinical question of interest in order to precisely define the treatment effect to be estimated.",
+        "source_section": "A.3.1",
+        "source_page": 7,
+        "source_quote": "Intercurrent events are events occurring after treatment initiation that affect either the interpretation or the existence of the measurements associated with the clinical question of interest. It is necessary to address intercurrent events when describing the clinical question of interest in order to precisely define the treatment effect that is to be estimated.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-005",
+        "rule_text": "The description of an estimand involves precise specifications of: the treatment condition, the population of patients, the variable (endpoint), the handling of intercurrent events via a chosen strategy, and a population-level summary.",
+        "source_section": "A.3.3",
+        "source_page": 11,
+        "source_quote": "The attributes below are used to construct the estimand, defining the treatment effect of interest. The treatment condition of interest... The population of patients targeted by the clinical question... The variable (or endpoint) to be obtained for each patient... Finally, a population-level summary for the variable should be specified.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-006",
+        "rule_text": "Five strategies for addressing intercurrent events in estimand construction are: treatment policy strategy, hypothetical strategy, composite variable strategy, while-on-treatment strategy, and principal stratum strategy. Different strategies may be used for different intercurrent events within the same estimand.",
+        "source_section": "A.3.2",
+        "source_page": 9,
+        "source_quote": "It is not necessary to use the same strategy to address all intercurrent events. Indeed, different strategies will often be used to reflect the clinical question of interest in respect of different intercurrent events.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-007",
+        "rule_text": "Key assumptions underpinning the main estimator must be stated explicitly together with the estimand. Assumptions should be justifiable and implausible assumptions should be avoided.",
+        "source_section": "A.5.1",
+        "source_page": 17,
+        "source_quote": "Key assumptions should be stated explicitly together with the estimand and accompanying main and sensitivity estimators. Assumptions should be justifiable and implausible assumptions should be avoided.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-008",
+        "rule_text": "Sensitivity analysis should be planned for the main estimators of all estimands important for regulatory decision making and labelling. Sensitivity analysis targets the same estimand as the main analysis and investigates robustness of the estimate to departures from assumptions.",
+        "source_section": "A.5.2.1",
+        "source_page": 19,
+        "source_quote": "Sensitivity analysis should be planned for the main estimators of all estimands that will be important for regulatory decision making and labelling in the product information. This can be a topic for discussion and agreement between sponsor and regulator.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E9R1-009",
+        "rule_text": "The statistical assumptions underpinning the main estimator should be documented. One or more sensitivity analyses, focused on the same estimand, should then be pre-specified to investigate these assumptions.",
+        "source_section": "A.5.2.1",
+        "source_page": 19,
+        "source_quote": "The statistical assumptions that underpin the main estimator should be documented. One or more analyses, focused on the same estimand, should then be pre-specified to investigate these assumptions with the objective of verifying whether or not the estimate derived from the main estimator is robust to departures from its assumptions.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-010",
+        "rule_text": "The design of a trial needs to be aligned to the estimands that reflect the trial objectives. A trial design that is suitable for one estimand might not be suitable for other estimands of potential importance.",
+        "source_section": "A.4",
+        "source_page": 15,
+        "source_quote": "The design of a trial needs to be aligned to the estimands that reflect the trial objectives. A trial design that is suitable for one estimand might not be suitable for other estimands of potential importance.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-011",
+        "rule_text": "Efforts should be made to collect all data relevant to support estimation, including data that inform the characterisation, occurrence, and timing of intercurrent events.",
+        "source_section": "A.4",
+        "source_page": 15,
+        "source_quote": "Efforts should be made to collect all data that are relevant to support estimation, including data that inform the characterisation, occurrence and timing of intercurrent events.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-012",
+        "rule_text": "Handling of missing data should be based on clinically plausible assumptions and, where possible, guided by the strategies employed in the description of the estimand.",
+        "source_section": "A.5.1",
+        "source_page": 18,
+        "source_quote": "Handling of missing data should be based on clinically plausible assumptions and, where possible, guided by the strategies employed in the description of the estimand.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-013",
+        "rule_text": "A precise description of the treatment effects of interest should inform sample size calculations. Particular care should be taken when referencing historical studies that may have reported treatment effects based on a different estimand.",
+        "source_section": "A.4",
+        "source_page": 16,
+        "source_quote": "A precise description of the treatment effects of interest should inform sample size calculations. Particular care should be taken when making reference to historical studies that might, implicitly or explicitly, have reported estimated treatment effects or variability based on a different estimand.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-014",
+        "rule_text": "For clinical trials intended to generate confirmatory conclusions, regulatory interest in applying estimand principles is greatest. The framework applies to any data type including longitudinal, time-to-first event, and recurrent event data.",
+        "source_section": "A.1",
+        "source_page": 5,
+        "source_quote": "Regulatory interest in the application of the principles outlined will be greater for confirmatory clinical trials and, where used to generate confirmatory conclusions, for data integrated across trials. The framework applies to any data type, including longitudinal, time-to-first event, and recurrent event data.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E9R1-015",
+        "rule_text": "The treatment policy strategy considers the intercurrent event irrelevant to the treatment effect of interest: the variable is used regardless of whether the intercurrent event occurs. This reflects the ITT principle when applied to treatment discontinuation and changes in background therapy.",
+        "source_section": "A.3.2",
+        "source_page": 9,
+        "source_quote": "The occurrence of the intercurrent event is considered irrelevant in defining the treatment effect of interest: the value for the variable of interest is used regardless of whether or not the intercurrent event occurs.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E9R1-016",
+        "rule_text": "The treatment policy strategy generally cannot be implemented for intercurrent events that are terminal events (e.g., death), since values for the variable after the intercurrent event do not exist.",
+        "source_section": "A.3.2",
+        "source_page": 9,
+        "source_quote": "In general, the treatment policy strategy cannot be implemented for intercurrent events that are terminal events, since values for the variable after the intercurrent event do not exist.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E9R1-017",
+        "rule_text": "Supplementary analyses should generally be given lower priority in assessment when the primary estimand and main estimator are agreed between sponsor and regulator and the sensitivity analysis verifies reliability for interpretation.",
+        "source_section": "A.5.3",
+        "source_page": 19,
+        "source_quote": "Where the primary estimand(s) of interest is agreed between sponsor and regulator, the main estimator is pre-specified unambiguously, and the sensitivity analysis verifies that the estimate derived is reliable for interpretation, supplementary analyses should generally be given lower priority in assessment.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E9R1-018",
+        "rule_text": "When constructing estimands for non-inferiority or equivalence objectives, the importance of minimising protocol violations, non-adherence, and study withdrawals is heightened, as estimands based on treatment policy strategy present similar issues as FAS analysis under the ITT principle.",
+        "source_section": "A.3.4",
+        "source_page": 14,
+        "source_quote": "the importance of minimising the number of protocol violations and deviations, non-adherence and study withdrawals is indicated.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      }
+    ]
+  },
+
+  "e11a_pediatric_extrapolation": {
+    "guideline": "E11A",
+    "full_title": "Pediatric Extrapolation",
+    "version": "Final, adopted 21 August 2024",
+    "rules": [
+      {
+        "rule_id": "E11A-001",
+        "rule_text": "A sufficient prospect of clinical benefit is required to justify the risks of exposing the pediatric population to an investigational product, as per ICH E11(R1). Pediatric populations should only participate in clinical trials when necessary to further scientific understanding of the pediatric use of a medicinal product.",
+        "source_section": "1.4",
+        "source_page": 15,
+        "source_quote": "The use of pediatric extrapolation ensures that the pediatric population only participates in clinical trials when necessary to further the scientific understanding of the pediatric use of a medicinal product. As per ICH E11(R1), a sufficient prospect of clinical benefit is required to justify the risks of exposing the pediatric population to an investigational product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-002",
+        "rule_text": "The pediatric extrapolation framework consists of three mandatory parts: (1) development of a pediatric extrapolation concept, (2) creation of a pediatric extrapolation plan, and (3) execution of the extrapolation plan.",
+        "source_section": "2",
+        "source_page": 16,
+        "source_quote": "The framework consists of three parts: development of a pediatric extrapolation concept, the creation, and then execution of a pediatric extrapolation plan.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-003",
+        "rule_text": "Development of a pediatric extrapolation concept requires a comprehensive and detailed review of existing information about the disease, drug pharmacology, and clinical response to treatment across the reference and target populations. The concept must be developed before the extrapolation plan is created.",
+        "source_section": "2",
+        "source_page": 17,
+        "source_quote": "The first step is the development of a pediatric extrapolation concept, which serves as the justification for the pediatric extrapolation plan. The pediatric extrapolation concept evaluates what is known and unknown about the similarities and differences of a disease, drug pharmacology, and response to treatment between a reference and target population.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-004",
+        "rule_text": "The evaluation of disease similarity should assess pathophysiology, disease definition, diagnostic criteria, course of disease, and outcomes in both reference and target populations. This evaluation is not static and should be updated as additional knowledge is gained.",
+        "source_section": "3.1",
+        "source_page": 18,
+        "source_quote": "The assessment of similarities and differences of the disease between a reference and target population is a key factor in developing the pediatric extrapolation concept... the evaluation of disease similarity is not a static or 'one-time' exercise. As additional knowledge is gained, it should be incorporated into the evaluation of disease similarity in the pediatric extrapolation concept.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-005",
+        "rule_text": "Evaluation of drug pharmacology for pediatric extrapolation must include ADME properties, pharmacodynamics (PD), and mechanism of action (MOA). Consideration must be given to the potential influence of maturation-related factors on ADME including weight, body surface area, age, organ maturation, concomitant medications, protein binding, metabolic enzymes, transporters, and renal function.",
+        "source_section": "3.2",
+        "source_page": 23,
+        "source_quote": "Evaluation of the drug pharmacology for the purposes of pediatric extrapolation includes absorption, distribution, metabolism, and excretion (ADME) properties, pharmacodynamics (PD) (see Section 3.3) and the mechanism of action (MOA) of the study drug. Consideration should be given to the potential influence of intrinsic and extrinsic factors on ADME such as weight, body surface area, age, organ maturation, concomitant medications, and other relevant factors.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-006",
+        "rule_text": "The evaluation of safety extrapolation should be included in the extrapolation concept and plan. Similarities and differences in the safety profile between a reference and target population should be understood as a continuum, and the source and amount of safety data to support extrapolation should be considered early in drug development and planning.",
+        "source_section": "3.4.1",
+        "source_page": 22,
+        "source_quote": "Evaluation of the suitability and extent to which safety can be extrapolated should be included in the extrapolation concept and plan. Similarities and differences in the safety profile between a reference and target population should be understood as a continuum. The source and amount of safety data to support the extrapolation of safety data to a target population should be considered early in drug development and planning.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-007",
+        "rule_text": "Additional collection of pediatric safety data should be considered when: the drug is a new molecular entity for a new class of drugs, there are known on- or off-target age-related safety concerns, there are significant safety findings in the reference population important to pediatrics, or the drug has a narrow therapeutic index.",
+        "source_section": "3.4.2",
+        "source_page": 23,
+        "source_quote": "Additional consideration as part of the pediatric extrapolation concept should be given to the collection of pediatric safety data in certain situations. Examples include: When the drug is a new molecular entity for a new class of drugs; When there are known on- or off-target age-related safety concerns; When there are significant safety findings noted in the reference population that would be of special importance in pediatrics; When the drug has a narrow therapeutic index.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-008",
+        "rule_text": "Arbitrarily setting the size of the safety dataset is discouraged. Clinical justification based on relevant available data should be the basis for establishing the size of the safety dataset. Early discussion with regulatory authorities is recommended.",
+        "source_section": "3.4.2",
+        "source_page": 23,
+        "source_quote": "clinical justification based on relevant available data should be the basis for establishing the size of the safety dataset; arbitrarily setting the size of the safety dataset is discouraged. Early discussion with regulatory authorities is recommended.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-009",
+        "rule_text": "Real-world data (RWD) can be used to support pediatric extrapolation. The adequacy, relevance, and extent to which RWD can be used should be discussed with regulatory authorities as appropriate. Sources include electronic health records, claims databases, and registries.",
+        "source_section": "3.5",
+        "source_page": 25,
+        "source_quote": "The extent to which RWD can be used to support pediatric extrapolation, both the pediatric extrapolation concept and plan, is evolving. Therefore, the adequacy, relevance, and extent to which RWD can be used to support pediatric extrapolation should be discussed with regulatory authorities as appropriate.",
+        "verification_status": "VERIFIED",
+        "severity": "medium"
+      },
+      {
+        "rule_id": "E11A-010",
+        "rule_text": "Reliance on expert opinion or standard of care alone without an assessment of the strength of the evidence is generally not sufficient to support a pediatric extrapolation concept.",
+        "source_section": "3.5",
+        "source_page": 25,
+        "source_quote": "Reliance on expert opinion or standard of care without an assessment of the strength of the evidence is generally not sufficient.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-011",
+        "rule_text": "Establishment of the pediatric extrapolation concept should include: an assessment of the evidence (strengths and weaknesses) of similarities and differences between populations (disease, drug pharmacology, response to treatment), an assessment of available safety information, and an assessment of gaps in knowledge and how they will be addressed.",
+        "source_section": "3.7",
+        "source_page": 27,
+        "source_quote": "Establishment of the pediatric extrapolation concept should include the following: An assessment of the evidence (i.e., overall strengths and weaknesses) of the similarities and differences between the reference and target population (disease, drug pharmacology, response to treatment)... An assessment of the available safety information and how this safety information affects the extrapolation concept. An assessment of the gaps in knowledge and how they affect the confidence and uncertainties in the extrapolation concept.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-012",
+        "rule_text": "Once a pediatric extrapolation concept has been established, proposed studies and/or data analyses and their rationale should be detailed in an extrapolation plan. The design should reflect the similarities and differences identified between reference and target populations.",
+        "source_section": "4",
+        "source_page": 27,
+        "source_quote": "Once a pediatric extrapolation concept has been established, the proposed study(ies) and/or data analyses (including model-based analyses), and their rationale should be detailed in an extrapolation plan. The design of the study(ies) and/or analyses should reflect the similarities and differences that have been identified between a reference and target population.",
+        "verification_status": "VERIFIED",
+        "severity": "critical"
+      },
+      {
+        "rule_id": "E11A-013",
+        "rule_text": "When the disease, drug pharmacology, and response to treatment are sufficiently similar between adolescent and adult participants, adolescents being included in an adult clinical trial or studied in a parallel trial is strongly recommended.",
+        "source_section": "4.1.1",
+        "source_page": 29,
+        "source_quote": "when the disease, drug pharmacology, and response to treatment are sufficiently similar between adolescent and adult participants, adolescents being included in an adult clinical trial or studied in a parallel trial is strongly recommended.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-014",
+        "rule_text": "Modeling and simulation (M&S) is an essential tool in pediatric drug development. Models should be developed and evaluated for adequacy and applicability for their intended purpose. When simulations are used for regulatory decisions, model assumptions, input data quality, and simulation setup must be clearly reported.",
+        "source_section": "4.1.2",
+        "source_page": 29,
+        "source_quote": "Modeling and simulation is an essential tool in pediatric drug development because it provides a means to address ethical constraints, data gaps, and logistical challenges, optimize dosing, and accelerate the development of safe and effective treatments for children... Consistent with standard M&S practices, models should be developed and evaluated for adequacy and applicability for its intended purpose. When simulations are used for regulatory decisions, it is important to provide information that the models are fit for simulation purposes and that model assumptions, input data quality, and the simulation set up are clearly reported.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-015",
+        "rule_text": "The results of the pediatric extrapolation plan execution should be submitted to support a pediatric risk-benefit assessment and should also be considered a new source of evidence for incorporation in subsequent pediatric development programs.",
+        "source_section": "2",
+        "source_page": 17,
+        "source_quote": "The results should be submitted to support a pediatric risk-benefit assessment. These results should also be considered a new source of evidence for incorporation in subsequent pediatric development programs.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-016",
+        "rule_text": "Use of existing data for pediatric extrapolation should be fit-for-purpose: the context in which data were generated must be applicable to the context in which it is intended to be used. Both quantity and quality of data must be considered.",
+        "source_section": "3.5",
+        "source_page": 24,
+        "source_quote": "Use of existing data should be fit-for-purpose (i.e., the context in which it was generated is applicable to the context in which it is intended to be used). It is important to consider both the quantity and quality of data to evaluate the similarities and differences between the reference and target populations.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      },
+      {
+        "rule_id": "E11A-017",
+        "rule_text": "Longer-term safety data should be collected in target pediatric populations post-approval when there are remaining gaps and/or age-specific safety concerns (e.g., effect of corticosteroids on growth velocity in prepubertal children with open epiphyseal growth plates).",
+        "source_section": "3.4.2",
+        "source_page": 23,
+        "source_quote": "it may be that longer-term safety data should be collected in target pediatric populations post-approval.",
+        "verification_status": "VERIFIED",
+        "severity": "high"
+      }
+    ]
+  }
+}

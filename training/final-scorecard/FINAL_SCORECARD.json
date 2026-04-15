@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Safety Pharmacology Training Dataset — Final Scorecard (SUPERSEDED)",
+    "superseded_by": "training/final-scorecard/FINAL_100_SCORECARD.json — authoritative final state (Passes 1–9, composite 99.9/100, D1 131/132 = 99.2%)",
+    "historical_note": "This file reflects state after Pass 4 only (composite 86.4/100, D1 80/100, 26 PARTIALLY_VERIFIED). Retained for audit trail. Do not use for current scores.",
+    "date": "2026-03-23",
+    "passes_completed": [
+      "Pass 1: Initial verification (S7A, S7B, E14/S7B Q&As, E14, S6(R1), S10, M3(R2) pp.1-20)",
+      "Pass 2: Gap-closure (M3(R2) pp.21-31, E11(R1) Addendum, IWG 2024 Concept Paper)",
+      "Pass 3: Final-4 verification (FDA CGT guidance, WHO vaccines Annex 1, M4S(R2), ICH S9)",
+      "Pass 4: FIX-003 — M3(R2) doc pages 17-20 direct verbatim re-read; 3 PARTIALLY_VERIFIED rules upgraded to VERIFIED"
+    ],
+    "rules_basis": {
+      "total_tracked": 132,
+      "total_estimated": 144,
+      "gap_of_12_note": "Estimated total of 144 exceeds tracked count of 132. Gap represents rules in scope not yet enumerated in structured rules file."
+    }
+  },
+
+  "dimensions": {
+    "D1_rule_verification_depth": {
+      "label": "Rule Verification Depth — Fully Verified / Total Tracked",
+      "score": 80,
+      "numerator": 106,
+      "denominator": 132,
+      "unit": "rules_fully_verified / rules_tracked",
+      "detail": {
+        "fully_verified": 106,
+        "partially_verified": 26,
+        "unverifiable_remaining": 0,
+        "needs_human_review_remaining": 0,
+        "pass4_upgrades": [
+          "before_phase_3.other_before_phase_3_verification_status: PARTIALLY_VERIFIED → VERIFIED (M3(R2) Section 11.1 and 11.3 direct quotes)",
+          "before_marketing_approval.other_items_verification_status: PARTIALLY_VERIFIED → VERIFIED (M3(R2) Section 10 and 11.3 direct quotes)",
+          "incorporation_into_toxicology_studies.applicable_contexts_verification_status: PARTIALLY_VERIFIED → VERIFIED (S9 Section 2.2 confirmed in Pass 3, now applied)"
+        ]
+      },
+      "status": "BELOW_100",
+      "root_cause": "26 rules remain PARTIALLY_VERIFIED. Root causes: (a) ADC/oligo/peptide modality rules blocked by IWG Q&As not yet in source set; (b) safety pharmacology regional differences blocked by FDA/EMA standalone guidance not in source set; (c) minor items (out_of_scope, CNS abuse liability, well-characterized PK/PD exception, combination drugs, J-Tpeakc biomarker, 20 bpm HR threshold) not directly quoted from source PDFs."
+    },
+
+    "D2_gap1_exploratory_trials": {
+      "label": "Gap-1: Exploratory Clinical Trials — Approaches Fully Verified",
+      "score": 100,
+      "numerator": 5,
+      "denominator": 5,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "CLOSED",
+      "detail": {
+        "approach_1": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_2": "VERIFIED — M3(R2) Table 3, Section 7 (tox: 7-day repeat-dose in one species added)",
+        "approach_3": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_4": "VERIFIED — M3(R2) Table 3, Section 7",
+        "approach_5": "VERIFIED — M3(R2) Table 3, Section 7",
+        "source_correction": "Prior citation 'Table 1' corrected to 'Table 3, Section 7' — Table 1 covers repeat-dose duration; Table 3 covers exploratory approaches."
+      }
+    },
+
+    "D3_gap2_modality_considerations": {
+      "label": "Gap-2: Modality Considerations — Topics Fully Covered",
+      "score": 50,
+      "numerator": 3,
+      "denominator": 6,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "BELOW_100 — PARTIALLY_CLOSED",
+      "detail": {
+        "pediatric_timing": "VERIFIED — M3(R2) Section 12",
+        "gene_therapies": "VERIFIED (Pass 3) — FDA CGT guidance Section III.B.5 confirms no standalone safety pharmacology section; functional parameters embedded in comprehensive toxicology study design (behavioral, neurological, cardiac assessments)",
+        "vaccines": "VERIFIED (Pass 3) — WHO Nonclinical Evaluation of Vaccines (TRS 927, Annex 1) Section 4 confirms no standalone safety pharmacology section; safety addressed entirely through toxicity assessment framework",
+        "antibody_drug_conjugates": "PARTIALLY_VERIFIED — S6(R1) species selection and genotoxicity exemption confirmed; dedicated S7B/E14 safety pharmacology approach for ADCs pending IWG second-round Q&As",
+        "oligonucleotides": "PARTIALLY_VERIFIED — S6(R1) 'may apply' confirmed; S10 photosafety exclusion confirmed; dedicated safety pharmacology scope pending IWG Q&As",
+        "peptides": "PARTIALLY_VERIFIED — S10 photosafety exclusion confirmed; no peptide-specific deviations from S7A identified; IWG Q&As may clarify"
+      },
+      "blocking_factor": "ICH E14/S7B second-round Q&As for novel modalities (ADC, oligo, peptides). IWG Concept Paper (March 2024) anticipated ~18 month timeline; Q&As may have been published by March 2026 but are not in the training source set."
+    },
+
+    "D4_gap3_regional_differences": {
+      "label": "Gap-3: Regional Differences — Topics Fully Covered",
+      "score": 75,
+      "numerator": 3,
+      "denominator": 4,
+      "unit": "topics_fully_covered / total_topics",
+      "status": "BELOW_100 — PARTIALLY_CLOSED",
+      "detail": {
+        "us_embryo_fetal_deferral": "VERIFIED — M3(R2) Section 11.3: US allows deferral to before Phase III for WOCBP with precautions",
+        "eu_japan_embryo_fetal": "VERIFIED — M3(R2) Section 11.3: EU and Japan require definitive developmental tox studies before exposure of WOCBP",
+        "local_tolerance_iv_route": "VERIFIED — M3(R2) Section 8: US generally does not require local tolerance studies for IV; Japan and EU recommend single-dose paravenous for IV route",
+        "safety_pharm_specific_regional": "UNRESOLVED — safety pharmacology-specific regional differences (if any beyond ICH harmonization) not confirmed from available source set; would require FDA S7A implementation guidance or EMA S7A/S7B reflection papers"
+      },
+      "blocking_factor": "FDA implementation guidance for S7A (e.g., FDA guidance documents on safety pharmacology) and EMA reflection papers not available in training source set."
+    },
+
+    "D5_gap4_proarrhythmia": {
+      "label": "Gap-4: Proarrhythmia Model Qualification — Criteria Covered",
+      "score": 100,
+      "numerator": 6,
+      "denominator": 6,
+      "unit": "criteria_covered / total_criteria",
+      "status": "CLOSED",
+      "detail": {
+        "criterion_1": "Defined endpoint consistent with context of use — VERIFIED",
+        "criterion_2": "Fully disclosed algorithm for model development — VERIFIED",
+        "criterion_3": "Defined domain of applicability/scope — ADDED in Pass 2 (was missing)",
+        "criterion_4": "Prespecified analysis plan and criteria to assess model predictivity — VERIFIED",
+        "criterion_5": "Mechanistic interpretation — ADDED in Pass 2 (was missing)",
+        "criterion_6": "Uncertainty characterization and propagation — VERIFIED",
+        "source": "ICH E14/S7B Q&As (Feb 2022), Q&A 4.1 (pages 43-44)"
+      }
+    },
+
+    "D6_gap5_iwg_2024": {
+      "label": "Gap-5: IWG 2024 — New Guidance Applicable",
+      "score": 100,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "gaps_confirmed_closed / gaps_to_check",
+      "status": "CLOSED",
+      "detail": "E14/S7B IWG Final Concept Paper (March 2024) read in full. Confirmed as planning document only — proposes second-round Q&As; no finalized guidance applicable to current rules. Meta annotation updated. Novel modality rules remain best-available guidance pending Q&A development."
+    },
+
+    "D7_safety_pharm_final4": {
+      "label": "Safety Pharmacology Final-4 — Unverifiable Remaining",
+      "score": 100,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "rules_resolved / rules_targeted",
+      "status": "COMPLETE",
+      "detail": {
+        "ctd_placement": "VERIFIED — Module 4, section 4.2.1.3 confirmed from M4S(R2) document page 12",
+        "s9_anticancer_integration": "VERIFIED — Section 2.2 confirmed; endpoints incorporated into general tox studies; standalone studies not called for",
+        "gene_therapy_safety_pharm": "VERIFIED — FDA CGT guidance has no standalone section; functional safety embedded in tox study design (Section III.B.5)",
+        "vaccine_safety_pharm": "VERIFIED — WHO vaccine guidelines have no standalone safety pharmacology section; Section 4 toxicity assessment is the governing framework",
+        "unverifiable_remaining": 0
+      }
+    }
+  },
+
+  "composite_scores": {
+    "simple_average_all_dimensions": 86.4,
+    "calculation": "(80 + 100 + 50 + 75 + 100 + 100 + 100) / 7 = 86.4",
+    "prior_composite_after_pass3": 86.1,
+    "improvement_from_fix003": "+0.3 points (D1: 78 → 80)",
+    "dimensions_at_100": ["D2_gap1_exploratory_trials", "D5_gap4_proarrhythmia", "D6_gap5_iwg_2024", "D7_safety_pharm_final4"],
+    "dimensions_below_100": ["D1_rule_verification_depth (80)", "D3_gap2_modality_considerations (50)", "D4_gap3_regional_differences (75)"]
+  },
+
+  "rule_counts_final": {
+    "fully_verified": 106,
+    "partially_verified": 26,
+    "unverifiable": 0,
+    "needs_human_review": 0,
+    "total_tracked": 132,
+    "coverage_pct": 100.0,
+    "full_verification_pct": 80.3,
+    "note": "Coverage 100% means 0 unresolved (unverifiable or NHR). Full_verification 80.3% means 26/132 rules are verified but not to full-text confirmation standard. Pass 4 (FIX-003) upgraded 3 rules: before_phase_3 timing, before_marketing_approval timing, and incorporation_into_toxicology S9 context."
+  },
+
+  "accuracy_assessment": {
+    "total_factual_errors_found_and_fixed": 4,
+    "total_source_attribution_errors_found_and_fixed": 6,
+    "accuracy_pct_of_verified_rules": 99.0,
+    "accuracy_pct_of_all_tracked_rules": "Unknown for 26 partially verified rules"
+  }
+}

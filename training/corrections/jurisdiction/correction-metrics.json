@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "title": "Jurisdiction Divergence Correction Metrics",
+    "generated": "2026-03-23",
+    "generated_by": "Claude Sonnet 4.6 — adversarial verification pass",
+    "scope": "All 151 divergences across 5 source files in the jurisdiction training data"
+  },
+
+  "overall_accuracy": {
+    "total_divergences_reviewed": 151,
+    "confirmed_accurate": 126,
+    "false_divergences_found": 3,
+    "needs_clarification": 17,
+    "cannot_verify_from_sources": 5,
+    "accuracy_rate_percent": 83.4,
+    "accuracy_rate_excluding_unverifiable_percent": 87.5,
+    "note": "Accuracy rate is the proportion of claims that are fully confirmed correct. The 3 false divergences represent 2.0% of total claims — concentrated entirely in the Bioequivalence domain."
+  },
+
+  "false_divergences_corrected": {
+    "count": 3,
+    "all_in_same_domain": true,
+    "domain": "Bioequivalence",
+    "root_cause": "Failure to incorporate ICH M9 (Nov 2019) harmonization into training data updates. Additionally one factual error about FDA RSABE scope (not attributable to M9 — this was an inaccuracy in the original data).",
+    "items": [
+      {
+        "id": "FALSE-001",
+        "correction_id": "CORR-001",
+        "source_file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "divergence_id": "DIV-004",
+        "topic": "BCS biowaivers — pre-ICH M9 position",
+        "original_error": "FDA: Class I only; EMA: Class I AND III; PMDA: case-by-case",
+        "correct_position": "ALL three jurisdictions accept Class I AND Class III per ICH M9 (FDA: May 2021; EMA: Nov 2019; PMDA: Nov 2019)",
+        "severity": "CRITICAL",
+        "client_financial_risk": "$500K-$2M per unnecessary in vivo BE study",
+        "regulatory_basis": "ICH M9 Step 4 Nov 2019; FDA Guidance May 2021",
+        "adversarial_test_result": "PASSED — no ICH region still restricts to Class I only post-M9"
+      },
+      {
+        "id": "FALSE-002",
+        "correction_id": "CORR-002 (error 1)",
+        "source_file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "divergence_id": "DIV-016",
+        "topic": "BCS biowaivers — positions reversed AND wrong",
+        "original_error": "EU: Class I only; FDA: Class I AND Class III (reversed from v2 file, and both wrong)",
+        "correct_position": "Both EU and FDA accept Class I AND Class III per ICH M9",
+        "severity": "CRITICAL",
+        "client_financial_risk": "$500K-$2M per unnecessary in vivo BE study",
+        "regulatory_basis": "ICH M9 Step 4 Nov 2019; FDA Guidance May 2021; EMA 2010 Bioequivalence guideline Appendix III",
+        "adversarial_test_result": "PASSED — EU accepted Class III before M9; FDA accepted Class III from May 2021"
+      },
+      {
+        "id": "FALSE-003",
+        "correction_id": "CORR-002 (error 2)",
+        "source_file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "divergence_id": "DIV-016",
+        "topic": "RSABE applicability — AUC claim",
+        "original_error": "FDA RSABE allowed for BOTH AUC and Cmax",
+        "correct_position": "FDA RSABE is for Cmax ONLY. AUC remains 80-125% in both FDA and EMA. The claimed divergence (FDA allows AUC widening; EMA does not) does not exist — both restrict AUC to 80-125%.",
+        "severity": "HIGH",
+        "client_financial_risk": "Undersized BE study; failed regulatory submission; repeat study $1-5M; 12-24 month delay",
+        "regulatory_basis": "EMA Guideline Section 4.1.10 (explicit); FDA RSABE guidance (implicit — Cmax-only application)",
+        "adversarial_test_result": "PASSED — no FDA guidance document allows RSABE for AUC in standard HVD context"
+      }
+    ]
+  },
+
+  "needs_clarification_items": {
+    "count": 17,
+    "action_priority": "Medium — these are not false divergences but contain inaccuracies of fact, precision, or completeness",
+    "breakdown_by_file": {
+      "eu_vs_fda_divergences_v3": 5,
+      "eu_gmp_vs_fda_cgmp_v3": 4,
+      "japan_vs_fda_ema_v3": 3,
+      "canada_vs_fda_ema_v3": 3,
+      "jurisdiction_divergences_v2": 2
+    },
+    "highest_priority_items": [
+      {
+        "id": "DIV-011 (eu-gmp)",
+        "issue": "FDA batch record retention described as two-option rule; actually 1-year-after-expiry as primary rule",
+        "severity": "MEDIUM",
+        "action": "Correct FDA retention description"
+      },
+      {
+        "id": "DIV-CA-006 (canada)",
+        "issue": "Internal inconsistency — body text says '8 years' but summary says CUSMA-aligned 6+8+0.5 structure",
+        "severity": "MEDIUM",
+        "action": "Reconcile to CUSMA 2020 structure"
+      },
+      {
+        "id": "JP-009 (japan)",
+        "issue": "OCT1 transporter divergence overstated; FDA 2020 DDI guidance update narrowed gap",
+        "severity": "MEDIUM",
+        "action": "Add note that this is an evolving area and recharacterize as 'narrowing divergence'"
+      }
+    ]
+  },
+
+  "cannot_verify_items": {
+    "count": 5,
+    "files_affected": ["japan-vs-fda-ema.json (2)", "canada-vs-fda-ema.json (3)"],
+    "cannot_verify_due_to": [
+      "PAL/PMD Act English translation not in source document collection (Japan)",
+      "PMDA DDI guideline (2019) not in source collection (Japan)",
+      "Health Canada Food and Drug Regulations — deep sections inaccessible due to PDF size (Canada)"
+    ],
+    "risk_assessment": "LOW to MEDIUM — the unverifiable claims are consistent with well-established regulatory practice. The two Japan items (JP-001, JP-011) are low-risk: JP-001 is established PMDA practice; JP-011 is historical fact. The three Canada items (DIV-CA-002, DIV-CA-003, DIV-CA-011) are plausible FDR section references that should be verified when the full FDR text is accessible.",
+    "recommended_action": "Add PAL/PMD Act English translation and PMDA DDI 2019 guideline to stage-1/pmda-guidelines/. Extract C.05, C.08, C.01A sections from Health Canada FDR PDF into separate searchable files."
+  },
+
+  "domain_accuracy_breakdown": {
+    "description": "Accuracy rates by regulatory domain across all source files",
+    "domains": [
+      {
+        "domain": "Bioequivalence",
+        "total_claims": 12,
+        "confirmed": 7,
+        "false": 3,
+        "needs_clarification": 2,
+        "accuracy_rate_percent": 58.3,
+        "note": "Lowest accuracy domain. All 3 false divergences are here. Root cause: ICH M9 harmonization not incorporated and one factual RSABE error."
+      },
+      {
+        "domain": "EU GMP / Sterile Manufacturing",
+        "total_claims": 22,
+        "confirmed": 20,
+        "false": 0,
+        "needs_clarification": 2,
+        "accuracy_rate_percent": 90.9,
+        "note": "High accuracy. EU GMP Annex 1 divergences well-documented with specific section citations."
+      },
+      {
+        "domain": "EU Regulatory Structure / Data Exclusivity",
+        "total_claims": 20,
+        "confirmed": 18,
+        "false": 0,
+        "needs_clarification": 2,
+        "accuracy_rate_percent": 90.0,
+        "note": "High accuracy. Legal basis citations verified against Dir 2001/83/EC and Reg 726/2004."
+      },
+      {
+        "domain": "Japan / PMDA",
+        "total_claims": 17,
+        "confirmed": 12,
+        "false": 0,
+        "needs_clarification": 3,
+        "cannot_verify": 2,
+        "accuracy_rate_percent": 70.6,
+        "note": "Accuracy limited by unavailability of PAL/PMD Act and PMDA DDI guideline in source documents. No false divergences found."
+      },
+      {
+        "domain": "Health Canada",
+        "total_claims": 15,
+        "confirmed": 9,
+        "false": 0,
+        "needs_clarification": 3,
+        "cannot_verify": 3,
+        "accuracy_rate_percent": 60.0,
+        "note": "Accuracy limited by inaccessibility of deep FDR sections and one internal data inconsistency (CA-006). No false divergences found."
+      },
+      {
+        "domain": "Biosimilars",
+        "total_claims": 10,
+        "confirmed": 9,
+        "false": 0,
+        "needs_clarification": 1,
+        "accuracy_rate_percent": 90.0,
+        "note": "High accuracy."
+      },
+      {
+        "domain": "Manufacturing / Change Notification / Process Validation",
+        "total_claims": 18,
+        "confirmed": 17,
+        "false": 0,
+        "needs_clarification": 1,
+        "accuracy_rate_percent": 94.4,
+        "note": "High accuracy."
+      },
+      {
+        "domain": "Labeling / Pharmacovigilance / Other",
+        "total_claims": 37,
+        "confirmed": 34,
+        "false": 0,
+        "needs_clarification": 3,
+        "accuracy_rate_percent": 91.9,
+        "note": "High accuracy across these domains."
+      }
+    ]
+  },
+
+  "pre_2020_regulatory_positions_audit": {
+    "total_claims_potentially_pre_2020": 12,
+    "confirmed_still_current": 9,
+    "false_due_to_post_2020_harmonization": 3,
+    "needs_monitoring_evolving_area": 2,
+    "items_requiring_ongoing_monitoring": [
+      {
+        "id": "DIV-014 (v2)",
+        "topic": "Japan pregnancy risk categories",
+        "monitoring_reason": "Japan has been evolving toward narrative-based descriptions. Verify PMDA pregnancy labeling requirements annually."
+      },
+      {
+        "id": "JP-009",
+        "topic": "OCT1 transporter — FDA vs PMDA",
+        "monitoring_reason": "FDA 2020 DDI guidance included OCT1. This divergence is narrowing. Re-evaluate with each FDA/PMDA DDI guidance update."
+      }
+    ]
+  },
+
+  "corrections_made": {
+    "files_modified_recommended": [
+      {
+        "file": "output-v2/regulations-crl/jurisdiction-divergences.json",
+        "changes": [
+          "DIV-004: Complete rewrite of BCS biowaiver divergence to reflect ICH M9 harmonization. Change divergence_level from 'significant' to 'minor'. Update summary_matrix row.",
+          "DIV-017: Minor wording change — remove 'longest' superlative for Japan; replace with 'tied for longest with EU at 10 years'"
+        ]
+      },
+      {
+        "file": "output-v3/eu-gmp-ema/eu-gmp-vs-fda-cgmp.json",
+        "changes": [
+          "DIV-016: Complete rewrite. Split into three divergences (DIV-016a reference product, DIV-016b RSABE methodology, DIV-016c BCS biowaivers). Correct BCS positions. Remove RSABE-for-AUC claim. Reduce DIV-016c from 'critical' to 'minor' severity.",
+          "DIV-011: Correct FDA retention description to match 21 CFR 211.180(a) — 1 year after expiry; not a two-option rule for standard products.",
+          "DIV-012: Change 'annual' PQR to 'periodic or rolling (typically annual)'"
+        ]
+      },
+      {
+        "file": "output-v3/health-canada/canada-vs-fda-ema.json",
+        "changes": [
+          "DIV-CA-006: Reconcile body text and summary_statistics. Update to CUSMA-aligned 6+8+0.5 structure.",
+          "DIV-CA-001: Add clarification that 300-day target is a service standard, not a statutory requirement."
+        ]
+      }
+    ]
+  },
+
+  "quality_gates": {
+    "description": "Minimum quality thresholds that should be met before using jurisdiction divergence training data",
+    "gates": [
+      {
+        "gate": "No CRITICAL false divergences",
+        "status": "FAILING before correction / PASSING after correction",
+        "details": "2 CRITICAL false divergences existed (FALSE-001, FALSE-002). Both corrected in corrected-divergences.json."
+      },
+      {
+        "gate": "No HIGH false divergences",
+        "status": "FAILING before correction / PASSING after correction",
+        "details": "1 HIGH false divergence existed (FALSE-003). Corrected in corrected-divergences.json."
+      },
+      {
+        "gate": "BCS biowaiver position consistent across all files",
+        "status": "FAILING before correction / PASSING after correction",
+        "details": "v2 and v3 files directly contradicted each other AND both were wrong. Both corrected to ICH M9 harmonized position."
+      },
+      {
+        "gate": "RSABE scope accurately described",
+        "status": "FAILING before correction / PASSING after correction",
+        "details": "RSABE-for-AUC claim removed. Both FDA and EMA now correctly described as Cmax-only."
+      },
+      {
+        "gate": "No pre-2020 superseded positions in Bioequivalence domain",
+        "status": "FAILING before correction / PASSING after correction",
+        "details": "ICH M9 harmonization (2019-2021) now incorporated."
+      },
+      {
+        "gate": "Overall accuracy rate >= 80%",
+        "status": "PASSING (83.4% confirmed, higher when excluding unverifiable items)",
+        "details": "Meets threshold. Target for next verification cycle: >= 90% with additional source documents."
+      }
+    ]
+  },
+
+  "recommended_verification_cycle": {
+    "next_review_date": "2027-03-23",
+    "triggers_for_earlier_review": [
+      "New ICH guideline reaches Step 4",
+      "FDA or EMA publishes new bioequivalence guidance",
+      "PMDA DDI guideline update",
+      "Health Canada regulatory modernization initiative affecting FDR",
+      "Any jurisdiction formally changes BCS biowaiver criteria"
+    ],
+    "high_priority_gaps_to_close": [
+      "Add PAL/PMD Act English translation to stage-1/pmda-guidelines/ to enable verification of JP-001",
+      "Add PMDA DDI guideline (2019) to stage-1/pmda-guidelines/ for JP-009, JP-011, JP-017",
+      "Extract Health Canada FDR sections C.05, C.08, C.01A into searchable sub-files",
+      "Add PM(NOC) Regulations to stage-1/health-canada/ for patent linkage verification"
+    ]
+  }
+}

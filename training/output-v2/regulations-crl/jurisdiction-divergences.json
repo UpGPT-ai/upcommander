@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "generated": "2026-03-22",
+    "jurisdictions": [
+      "US_FDA",
+      "EU_EMA",
+      "Japan_PMDA"
+    ],
+    "description": "Maps where FDA, EMA, and PMDA requirements diverge across key regulatory domains relevant to eCTD submissions"
+  },
+  "divergences": [
+    {
+      "id": "DIV-001",
+      "domain": "Bioequivalence",
+      "ectd_module": "M5.3.1",
+      "aspect": "Standard BE acceptance criteria",
+      "fda": "90% CI for AUC and Cmax within 80.00-125.00%",
+      "ema": "90% CI for AUC(0-t) and Cmax within 80.00-125.00%",
+      "pmda": "90% CI for AUC and Cmax within 80.00-125.00% (harmonized via ICH)",
+      "divergence_level": "low",
+      "notes": "Core standard is harmonized across all three jurisdictions"
+    },
+    {
+      "id": "DIV-002",
+      "domain": "Bioequivalence",
+      "ectd_module": "M5.3.1",
+      "aspect": "Narrow Therapeutic Index (NTI) drugs",
+      "fda": "90% CI within 90.00-111.11% for AUC and Cmax (reference-scaled, per 2020 guidance)",
+      "ema": "90% CI within 90.00-111.11% for AUC; Cmax also tightened if clinically relevant",
+      "pmda": "Case-by-case; no published NTI-specific interval \u2014 follows ICH general principles",
+      "divergence_level": "medium",
+      "notes": "FDA and EMA largely aligned on 90-111% interval; Japan lacks explicit NTI guidance, creating uncertainty for global programs"
+    },
+    {
+      "id": "DIV-003",
+      "domain": "Bioequivalence",
+      "ectd_module": "M5.3.1",
+      "aspect": "Highly Variable Drug Products (HVDP)",
+      "fda": "Reference-scaled average BE for Cmax when intra-subject CV >= 30%; GMR constraint 80-125%",
+      "ema": "Scaled average BE with replicate crossover; Cmax widened up to 69.84-143.19%; AUC remains 80-125%",
+      "pmda": "No published scaled BE approach; standard 80-125% applied; replicate designs acceptable",
+      "divergence_level": "high",
+      "notes": "FDA and EMA both allow widened Cmax intervals but use different scaling formulas. Japan does not allow widened intervals, requiring larger sample sizes for HVDPs"
+    },
+    {
+      "id": "DIV-004",
+      "domain": "Bioequivalence",
+      "ectd_module": "M5.3.1/M3.2.P.2",
+      "aspect": "BCS-based biowaivers",
+      "fda": "Class I only (high solubility + high permeability + rapid dissolution); Class III more restrictive",
+      "ema": "Class I AND Class III accepted (high solubility + very rapid dissolution + similar excipients for Class III)",
+      "pmda": "Class I accepted; Class III under case-by-case evaluation",
+      "divergence_level": "high",
+      "notes": "EMA is most permissive (accepts Class III); FDA is most restrictive; Japan is intermediate. Global programs targeting BCS Class III drugs must conduct in vivo BE for US market even if EMA accepts biowaiver"
+    },
+    {
+      "id": "DIV-005",
+      "domain": "Bioequivalence",
+      "ectd_module": "M5.3.1",
+      "aspect": "Reference product",
+      "fda": "US-licensed Reference Listed Drug (RLD) from Orange Book",
+      "ema": "EU-authorized innovator (reference medicinal product)",
+      "pmda": "Japan-authorized reference product",
+      "divergence_level": "high",
+      "notes": "Each jurisdiction requires studies against its own reference product. A single global BE study cannot serve all three jurisdictions unless bridging is accepted"
+    },
+    {
+      "id": "DIV-006",
+      "domain": "Biosimilars",
+      "ectd_module": "M3-M5",
+      "aspect": "Regulatory pathway",
+      "fda": "Section 351(k) of PHS Act (BPCIA); FDA can designate interchangeable biosimilars",
+      "ema": "Article 10(4) of Directive 2001/83/EC; no formal interchangeability concept at EMA level (left to member states)",
+      "pmda": "PAL pathway; biosimilar designation available; interchangeability not formally designated",
+      "divergence_level": "high",
+      "notes": "FDA is the only jurisdiction with a formal interchangeability designation. EU leaves switching/substitution decisions to member states. Japan allows biosimilar designation but no interchangeability pathway"
+    },
+    {
+      "id": "DIV-007",
+      "domain": "Biosimilars",
+      "ectd_module": "M5.3.5",
+      "aspect": "Immunogenicity follow-up duration",
+      "fda": "Generally 1 year recommended; timing flexible based on product risk profile",
+      "ema": "Minimum 1-year pre-authorization follow-up for chronic-use products (binding)",
+      "pmda": "Duration based on clinical development plan; no fixed minimum published",
+      "divergence_level": "medium",
+      "notes": "EMA has the most explicit binding requirement for 1-year immunogenicity follow-up. FDA and PMDA are more flexible but practically expect similar duration"
+    },
+    {
+      "id": "DIV-008",
+      "domain": "Biosimilars",
+      "ectd_module": "M1.8.2",
+      "aspect": "Risk Management Plan",
+      "fda": "REMS required only if necessary for safe use per FDAAA; not mandatory for all products",
+      "ema": "Risk Management Plan (RMP) mandatory at submission for all biologics",
+      "pmda": "Risk Management Plan required (aligned with ICH E2E)",
+      "divergence_level": "high",
+      "notes": "EMA and PMDA mandate RMP for all biologics. FDA only requires REMS if safety concerns warrant it \u2014 most biosimilars do not receive REMS"
+    },
+    {
+      "id": "DIV-009",
+      "domain": "Stability Testing",
+      "ectd_module": "M3.2.S.7/M3.2.P.8",
+      "aspect": "Long-term storage conditions",
+      "fda": "25C/60%RH or 30C/65%RH (ICH Zones I/II); 12 months minimum at submission",
+      "ema": "25C/60%RH (Zone II default); 12 months minimum; 30C/65%RH if justified for Zone III/IV",
+      "pmda": "25C/60%RH or 30C/75%RH (Zone II/IVb); Japan is ICH Zone II but accepts Zone IVb data for tropical export markets",
+      "divergence_level": "medium",
+      "notes": "Core ICH Q1A is harmonized but Japan's unique Zone IVb acceptance means stability data generated for tropical markets may need additional conditions for Japan-specific label claims"
+    },
+    {
+      "id": "DIV-010",
+      "domain": "Manufacturing",
+      "ectd_module": "M1/M3.2.A",
+      "aspect": "Foreign manufacturer oversight",
+      "fda": "Registration required under FD&C Act 510; annual renewal; FDA retains inspection authority",
+      "ema": "Manufacturing authorization from member state authority; QP (Qualified Person) release required; GMP certificate from EU authority",
+      "pmda": "Accreditation required from MHLW (PAL Art. 13-3); 5-year mandatory renewal; document examination primary (not routine inspection)",
+      "divergence_level": "high",
+      "notes": "Three fundamentally different approaches: FDA = registration + inspection authority; EMA = member state authorization + QP release; Japan = ministerial accreditation with 5-year renewal. A manufacturer exporting to all three must maintain compliance with all three systems independently"
+    },
+    {
+      "id": "DIV-011",
+      "domain": "Manufacturing",
+      "ectd_module": "M1",
+      "aspect": "Change notification timelines",
+      "fda": "Major changes = Prior Approval Supplement; Moderate = CBE-30; Minor = Annual Report (21 CFR 314.70/601.12)",
+      "ema": "Type IA variation (do and tell, 12 months); Type IB variation (tell and do, 30 days); Type II variation (prior approval); Extensions",
+      "pmda": "Notification within 30 days of change (PAL Art. 100); partial change approval for significant changes",
+      "divergence_level": "high",
+      "notes": "Three different change classification systems with different timelines. A global change requires parallel regulatory strategies for each jurisdiction"
+    },
+    {
+      "id": "DIV-012",
+      "domain": "Carcinogenicity Testing",
+      "ectd_module": "M4.2.2",
+      "aspect": "Study requirements",
+      "fda": "ICH S1 harmonized: 1 long-term rodent study + 1 alternative short/medium-term model",
+      "ema": "ICH S1 harmonized: same as FDA",
+      "pmda": "ICH S1 adopted: 1 rodent species (rat preferred, 24-30 months) + 1 alternative system; high-dose AUC >= 25x human AUC; limit dose 1,500 mg/kg/day",
+      "divergence_level": "low",
+      "notes": "Fully harmonized via ICH S1. Japan's formal adoption specifies explicit thresholds consistent with ICH"
+    },
+    {
+      "id": "DIV-013",
+      "domain": "Labeling",
+      "ectd_module": "M1.3.1",
+      "aspect": "Prescribing Information format",
+      "fda": "17-section Highlights + Full PI format per 21 CFR 201.56/201.57; Highlights limited to 20 lines for boxed warning; Drug Facts format for OTC per 201.66",
+      "ema": "Summary of Product Characteristics (SmPC) per QRD template; 12 sections; Patient Information Leaflet (PIL) required separately",
+      "pmda": "Japanese Package Insert (JPI) per MHLW notification format; separate from eCTD labeling; Japanese language required",
+      "divergence_level": "high",
+      "notes": "Three completely different labeling formats. A single set of labeling cannot serve all three jurisdictions \u2014 each requires jurisdiction-specific Module 1 labeling in the eCTD"
+    },
+    {
+      "id": "DIV-014",
+      "domain": "Labeling",
+      "ectd_module": "M1.3.1",
+      "aspect": "Pregnancy risk categorization",
+      "fda": "Pregnancy and Lactation Labeling Rule (PLLR): narrative risk summary format since 2015; old A/B/C/D/X categories removed for new drugs",
+      "ema": "Narrative format in SmPC Section 4.6; no letter categories",
+      "pmda": "Pregnancy classification system using unique Japanese categories; additional contraindication requirements for certain teratogenic drugs",
+      "divergence_level": "medium",
+      "notes": "FDA and EMA both use narrative formats but with different structures. Japan maintains its own classification system. Pregnancy labeling must be jurisdiction-specific"
+    },
+    {
+      "id": "DIV-015",
+      "domain": "Clinical Trials",
+      "ectd_module": "M5.3",
+      "aspect": "Ethnic bridging studies",
+      "fda": "No formal ethnic bridging requirement; accepts foreign clinical data per ICH E5 if applicable to US population",
+      "ema": "No formal ethnic bridging requirement; accepts foreign data with justification for relevance to EU population",
+      "pmda": "Ethnic factors bridging studies may be required per ICH E5 to extrapolate foreign clinical data to Japanese population; PMDA frequently requires Japan-specific PK/PD and clinical data",
+      "divergence_level": "high",
+      "notes": "Japan is the primary jurisdiction requiring ethnic bridging studies. Programs relying entirely on non-Japanese clinical data face significant regulatory risk at PMDA"
+    },
+    {
+      "id": "DIV-016",
+      "domain": "Clinical Trials",
+      "ectd_module": "M5.3.5",
+      "aspect": "Pediatric study requirements",
+      "fda": "PREA: required for new active ingredient, indication, dosage form, dosing regimen, route; iPSP due 60 days after EOP2; orphan exemption",
+      "ema": "Paediatric Regulation (EC) No 1901/2006: Paediatric Investigation Plan (PIP) required before MAA; approved by PDCO; more granular age-group requirements",
+      "pmda": "No mandatory pediatric study law equivalent to PREA/PIP; pediatric development encouraged but driven by clinical need assessment",
+      "divergence_level": "high",
+      "notes": "EMA has the most prescriptive pediatric requirements (PIP with PDCO approval). FDA requires iPSP with negotiation. Japan has no equivalent mandate \u2014 greatest flexibility but also greatest uncertainty"
+    },
+    {
+      "id": "DIV-017",
+      "domain": "Orphan Drugs",
+      "ectd_module": "M1",
+      "aspect": "Exclusivity/incentives",
+      "fda": "7-year market exclusivity; orphan drug tax credit (25% post-TCJA); priority review eligibility",
+      "ema": "10-year market exclusivity (reduced to 6 years if criteria no longer met); protocol assistance fee reductions",
+      "pmda": "Re-examination period up to 10 years; 15% R&D tax credit; priority review; development grants available",
+      "divergence_level": "medium",
+      "notes": "Japan offers the longest potential exclusivity (10 years) and highest tax credit (15%). EU offers 10 years but with sunset clause. US offers shortest exclusivity (7 years) but with additional incentive programs"
+    },
+    {
+      "id": "DIV-018",
+      "domain": "Adverse Event Reporting",
+      "ectd_module": "M5.3.6/M5.3.7",
+      "aspect": "Postmarketing safety reporting timelines",
+      "fda": "15-day alert for serious/unexpected; 7-day for fatal/life-threatening; quarterly for 3 years then annual; 10-year recordkeeping",
+      "ema": "15 days for serious/unexpected (EudraVigilance); PSURs per ICH E2C(R2); RMP updates",
+      "pmda": "15 days for serious/unexpected; 30 days for non-serious; drug use results surveys required for new drugs during re-examination period",
+      "divergence_level": "medium",
+      "notes": "Core 15-day serious/unexpected reporting is harmonized. Japan uniquely requires drug use results surveys (post-marketing surveillance) during re-examination period \u2014 no equivalent in FDA or EMA"
+    },
+    {
+      "id": "DIV-019",
+      "domain": "Electronic Submission",
+      "ectd_module": "All",
+      "aspect": "eCTD format requirements",
+      "fda": "eCTD v4.0 mandatory for NDA/BLA/ANDA; electronic format per 21 CFR 314.50/601.14",
+      "ema": "eCTD mandatory for centralized procedure; national procedures may accept NeeS or eCTD depending on member state",
+      "pmda": "eCTD mandatory for new drug applications; Japan-specific Module 1 (JP Module 1) with CTD-JP format requirements",
+      "divergence_level": "medium",
+      "notes": "All three jurisdictions accept eCTD but Japan requires unique Module 1 format (CTD-JP). Regional administrative sections are jurisdiction-specific in all cases"
+    },
+    {
+      "id": "DIV-020",
+      "domain": "Accelerated Pathways",
+      "ectd_module": "M1",
+      "aspect": "Expedited review programs",
+      "fda": "4 programs: Fast Track, Breakthrough Therapy, Accelerated Approval (surrogate endpoint), Priority Review (6 months)",
+      "ema": "PRIME (Priority Medicines) designation; Accelerated Assessment (150 days vs 210); Conditional Marketing Authorization; Marketing Authorization Under Exceptional Circumstances",
+      "pmda": "Priority Review; Sakigake designation (for innovative drugs developed first in Japan); Conditional Early Approval; Orphan priority",
+      "divergence_level": "high",
+      "notes": "Each jurisdiction has unique expedited pathway names and criteria. Japan's Sakigake designation uniquely rewards Japan-first development. FDA's Breakthrough Therapy has no exact equivalent in EMA or PMDA"
+    },
+    {
+      "id": "DIV-021",
+      "domain": "Data Exclusivity",
+      "ectd_module": "M1",
+      "aspect": "Regulatory data protection period",
+      "fda": "5 years for NCE (NDA); 3 years for new clinical investigations; 12 years for biologics (BLA)",
+      "ema": "8 years data exclusivity + 2 years market exclusivity + 1 year pediatric extension = 8+2+1 formula",
+      "pmda": "Re-examination period: 8 years for NCE; 4-6 years for new indications; 10 years for orphan drugs",
+      "divergence_level": "high",
+      "notes": "Biologics data protection diverges most: US 12 years, EU 10 years, Japan 8 years. This affects biosimilar launch timing strategy across jurisdictions"
+    }
+  ],
+  "summary_matrix": {
+    "headers": [
+      "Domain",
+      "Divergence Level",
+      "Key Implication for Global Programs"
+    ],
+    "rows": [
+      [
+        "Bioequivalence (standard)",
+        "low",
+        "Single BE standard works globally"
+      ],
+      [
+        "Bioequivalence (NTI)",
+        "medium",
+        "Japan lacks explicit NTI guidance \u2014 seek scientific advice"
+      ],
+      [
+        "Bioequivalence (HVDP)",
+        "high",
+        "Japan may require larger studies without scaled approach"
+      ],
+      [
+        "BCS Biowaivers",
+        "high",
+        "US restricts Class III; separate BE may be needed for US"
+      ],
+      [
+        "Reference Product",
+        "high",
+        "Jurisdiction-specific reference products required"
+      ],
+      [
+        "Biosimilar Pathway",
+        "high",
+        "US-only interchangeability; EU leaves to member states"
+      ],
+      [
+        "Immunogenicity Follow-up",
+        "medium",
+        "EMA mandates 1 year; others flexible"
+      ],
+      [
+        "Risk Management",
+        "high",
+        "RMP mandatory (EMA/PMDA) vs. REMS if needed (FDA)"
+      ],
+      [
+        "Stability Conditions",
+        "medium",
+        "Zone-specific conditions may differ"
+      ],
+      [
+        "Foreign Manufacturer",
+        "high",
+        "Three different oversight systems"
+      ],
+      [
+        "Change Notification",
+        "high",
+        "Three different classification/timeline systems"
+      ],
+      [
+        "Labeling Format",
+        "high",
+        "Three completely different formats"
+      ],
+      [
+        "Ethnic Bridging",
+        "high",
+        "Japan may require bridging studies"
+      ],
+      [
+        "Pediatric Requirements",
+        "high",
+        "EMA most prescriptive; Japan most flexible"
+      ],
+      [
+        "Orphan Incentives",
+        "medium",
+        "Japan offers longest exclusivity/highest tax credit"
+      ],
+      [
+        "AE Reporting",
+        "medium",
+        "Japan uniquely requires drug use results surveys"
+      ],
+      [
+        "Accelerated Pathways",
+        "high",
+        "Unique programs per jurisdiction"
+      ],
+      [
+        "Data Exclusivity",
+        "high",
+        "12 vs 10 vs 8 years affects biosimilar timing"
+      ]
+    ]
+  }
+}

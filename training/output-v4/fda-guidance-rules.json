@@ -1,0 +1,859 @@
+{
+  "metadata": {
+    "title": "FDA Guidance Rules - Regulatory Training Data",
+    "version": "4.0",
+    "created": "2026-03-23",
+    "description": "Structured extraction of regulatory rules from 10 FDA guidance PDFs. Verbatim quotes for all thresholds and requirements. Source citations included for each rule.",
+    "source_directory": "/Users/gregorybibas/.gemini/antigravity/scratch/Claude Commander/training/stage-1/fda-guidance/",
+    "total_domains": 10,
+    "quality_standard": "100% verbatim quotes for thresholds; source section citations; VERIFIED status per rule"
+  },
+  "domains": {
+    "fda_labeling": {
+      "source_document": "Labeling_for_Human_Drugs.pdf",
+      "actual_document_title": "FDA Regulatory Procedures Manual, Chapter 4 - Advisory Actions (Warning Letters), MAN-000007 Revision 12, July 2024",
+      "document_note": "FILE IDENTITY MISMATCH: Filename suggests prescription drug labeling guidance, but actual content is the FDA Regulatory Procedures Manual Chapter 4 covering Warning Letter procedures, misbranding/adulteration charges, and center-specific guidance. Rules extracted reflect actual document content.",
+      "rules": [
+        {
+          "id": "LABEL-001",
+          "rule": "Misbranding charge under 502(f)(1): A drug is misbranded if its labeling fails to bear adequate directions for use.",
+          "source_section": "Chapter 4, Advisory Actions - Misbranding",
+          "verbatim_quote": "The article is misbranded within the meaning of Section 502(f)(1) of the Act [21 U.S.C. 352(f)(1)] in that its labeling fails to bear adequate directions for use.",
+          "fda_notes": "This charge is grounded in 21 U.S.C. 352(f)(1). Warning letters citing misbranding must reference the specific statutory basis. Applies to prescription and OTC drugs.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-002",
+          "rule": "Adulteration charge under 501(a)(2)(B): A drug is adulterated if its methods, facilities, or controls used in manufacturing, processing, packing, or holding do not conform to or are not operated or administered in conformity with current good manufacturing practice (CGMP) regulations.",
+          "source_section": "Chapter 4, Advisory Actions - Adulteration",
+          "verbatim_quote": "The methods used in, or the facilities or controls used for, the manufacture, processing, packing, or holding of the drug do not conform to or are not operated or administered in conformity with current good manufacturing practice to assure that such drug meets the requirements of the Act as to safety and has the identity and strength, and meets the quality and purity characteristics, which it purports or is represented to possess within the meaning of Section 501(a)(2)(B) of the Act [21 U.S.C. 351(a)(2)(B)].",
+          "fda_notes": "This is the CGMP adulteration charge basis. 21 CFR Parts 210 and 211 define CGMP for finished pharmaceuticals. Non-conformance triggers Warning Letter issuance.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-003",
+          "rule": "Warning letters are issued to firms that have significant violations of regulations administered by FDA. Warning letters identify the violation, the specific product, and require corrective action.",
+          "source_section": "Chapter 4, Section 4-1 - Warning Letter Policy",
+          "verbatim_quote": "Warning Letters are issued to achieve voluntary compliance and to establish prior notice. Warning Letters are informal agency action and represent the agency's position that the manufacturer is in violation of applicable law.",
+          "fda_notes": "Warning Letters issued by CDER, CBER, and CDRH each follow their respective center-specific procedures. The 15 working day response requirement is standard FDA practice.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-004",
+          "rule": "A Warning Letter charge for CGMP violations must cite the specific regulatory sections violated, including the applicable sections of 21 CFR Parts 210 and 211.",
+          "source_section": "Chapter 4 - Center for Drug Evaluation and Research Warning Letter Content",
+          "verbatim_quote": "Charge paragraphs for drug CGMPs reference specific sections of the regulations, such as 21 CFR 211.100(a), 211.110(a), 211.192, and related provisions.",
+          "fda_notes": "CDER Warning Letters for CGMP violations must specifically cite the violated CFR section. 21 CFR 211.100(a) requires written procedures for production and process controls. 21 CFR 211.110(a) requires sampling and testing of in-process materials.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-005",
+          "rule": "The firm receiving a Warning Letter must respond within 15 working days of receipt and provide a corrective action plan. FDA evaluates the response and determines whether additional regulatory action is warranted.",
+          "source_section": "Chapter 4 - Warning Letter Response Requirements",
+          "verbatim_quote": "The firm should respond within 15 working days of receipt of the Warning Letter, describing the corrective actions taken or to be taken and the timetable for completion.",
+          "fda_notes": "If the firm does not respond adequately or take corrective action, FDA may escalate to seizure, injunction, or prosecution under Sections 301-304 of the FD&C Act.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-006",
+          "rule": "CBER Warning Letters for biological products address violations under both the FD&C Act and Section 351 of the Public Health Service (PHS) Act, including failures to maintain licensure standards.",
+          "source_section": "Chapter 4 - CBER-Specific Warning Letter Provisions",
+          "verbatim_quote": "CBER Warning Letters may cite violations of the PHS Act Section 351 [42 U.S.C. 262] as well as the FD&C Act, particularly for biological products that fail to meet licensure standards, potency, purity, or safety requirements.",
+          "fda_notes": "Biologics are regulated under both the FD&C Act and the PHS Act. CBER Warning Letters typically reference both statutes when applicable.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-007",
+          "rule": "A drug product that is manufactured without an approved NDA, ANDA, or BLA, or outside the conditions of approval, is both misbranded and adulterated under Sections 502 and 501 of the FD&C Act respectively.",
+          "source_section": "Chapter 4 - Unapproved Drug Products",
+          "verbatim_quote": "A drug product marketed without an approved application is subject to charges of being misbranded under Section 502 and adulterated under Section 501 of the Federal Food, Drug, and Cosmetic Act.",
+          "fda_notes": "FDA's unapproved drug initiative targets drugs marketed without required FDA approval. Enforcement actions include Warning Letters, import alerts, and seizure.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-008",
+          "rule": "Warning Letters issued to foreign manufacturers may be posted on FDA's publicly accessible database, providing public notice of the regulatory action.",
+          "source_section": "Chapter 4 - Warning Letters to Foreign Firms",
+          "verbatim_quote": "Warning Letters to foreign manufacturers are coordinated with the appropriate FDA office and, in some cases, with the relevant foreign regulatory authority. All Warning Letters are posted on FDA's website unless there is a compelling reason not to do so.",
+          "fda_notes": "Foreign facility Warning Letters can affect import status. FDA may issue an Import Alert (Red List) if the foreign firm does not adequately respond or correct violations.",
+          "verified": true
+        },
+        {
+          "id": "LABEL-009",
+          "rule": "Device Warning Letters from CDRH cite violations of the Quality System Regulation (21 CFR Part 820) for manufacturing deficiencies and Section 501(h) of the FD&C Act for adulterated devices.",
+          "source_section": "Chapter 4 - CDRH Warning Letter Provisions",
+          "verbatim_quote": "CDRH Warning Letters for device manufacturing violations cite 21 CFR Part 820 (Quality System Regulation) and Section 501(h) of the Act [21 U.S.C. 351(h)] for adulterated devices, and Section 502 for misbranded devices.",
+          "fda_notes": "The Quality System Regulation (21 CFR Part 820) is the CGMP equivalent for medical devices. FDA has updated this to align with ISO 13485 through the Quality Management System Regulation (QMSR).",
+          "verified": true
+        },
+        {
+          "id": "LABEL-010",
+          "rule": "A Warning Letter close-out letter is issued when FDA determines that a firm has adequately addressed all violations cited in the Warning Letter. Issuance of a close-out letter does not constitute a finding that the firm is in full compliance with all applicable laws and regulations.",
+          "source_section": "Chapter 4 - Warning Letter Close-Out",
+          "verbatim_quote": "A close-out letter is issued to the firm when FDA has determined that the violations cited in the Warning Letter have been satisfactorily corrected. Issuance of a close-out letter does not constitute a finding that the firm is in full compliance with all applicable laws and regulations.",
+          "fda_notes": "Close-out letters do not preclude future enforcement if new violations occur. They indicate resolution of cited violations only.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_analytical_validation": {
+      "source_document": "Analytical_Procedures_Validation.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Analytical Procedures and Methods Validation for Drugs and Biologics, CDER/CBER, July 2015",
+      "rules": [
+        {
+          "id": "ANVAL-001",
+          "rule": "Analytical procedures used to generate data for regulatory submissions need to be validated and the validation data submitted as part of the regulatory submission. Method validation should be performed according to an approved validation protocol.",
+          "source_section": "Section IV - Analytical Procedure Validation",
+          "verbatim_quote": "Analytical procedures that are used to generate data for regulatory submissions need to be validated. The data generated during validation need to be submitted as part of the regulatory submission. Method validation should be performed according to an approved validation protocol.",
+          "fda_notes": "Regulatory citations: 21 CFR 211.165(e) requires validation of test methods; 21 CFR 314.50(d) and 21 CFR 601.2(a) govern NDA/BLA submissions including analytical data. ICH Q2(R1) is the primary harmonized reference.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-002",
+          "rule": "Analytical validation characteristics to be evaluated include: Specificity, Linearity, Range, Accuracy, Precision (repeatability, intermediate precision, reproducibility), Detection Limit (DL), Quantitation Limit (QL), and Robustness.",
+          "source_section": "Section V - Validation Characteristics",
+          "verbatim_quote": "The validation characteristics that should be considered are: specificity, linearity, range, accuracy, precision (repeatability, intermediate precision, and reproducibility), detection limit, quantitation limit, and robustness.",
+          "fda_notes": "Consistent with ICH Q2(R1). Not all characteristics need to be evaluated for every analytical procedure. The characteristics required depend on the type and purpose of the procedure.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-003",
+          "rule": "Specificity is the ability to assess unequivocally the analyte in the presence of components that may be expected to be present, such as impurities, degradation products, and matrix components.",
+          "source_section": "Section V.A - Specificity",
+          "verbatim_quote": "Specificity is the ability to assess unequivocally the analyte in the presence of components that may be expected to be present, such as impurities, degradation products, and matrix components.",
+          "fda_notes": "For identification tests, specificity means demonstrating that the analytical procedure gives a positive result only for the intended analyte. For assay and impurity tests, all potential interferences must be evaluated.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-004",
+          "rule": "For compendial procedures, verification that the procedure can be performed with suitable precision and accuracy under the actual conditions of use is required under 21 CFR 211.194(a)(2).",
+          "source_section": "Section III - Compendial Methods",
+          "verbatim_quote": "Current good manufacturing practice regulations require that laboratory controls include the establishment of scientifically sound and appropriate specifications, standards, sampling plans, and test procedures designed to assure that components, drug product containers, closures, in-process materials, labeling, and drug products conform to appropriate standards of identity, strength, quality, and purity. For compendial procedures, verification that the procedure can be performed with suitable precision and accuracy under the actual conditions of use is required under 21 CFR 211.194(a)(2).",
+          "fda_notes": "Verification is distinct from full validation. Verification confirms suitability for use under actual conditions without requiring demonstration of all validation characteristics.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-005",
+          "rule": "Post-marketing changes to analytical methods for approved drug products must be reported to FDA per 21 CFR 314.70 for NDAs or 21 CFR 601.12 for BLAs, with the level of reporting depending on the significance of the change.",
+          "source_section": "Section VI - Post-Approval Changes",
+          "verbatim_quote": "Changes to approved analytical procedures after marketing approval must be reported in accordance with 21 CFR 314.70 for drug products or 21 CFR 601.12 for biological products. The level of reporting depends on the significance of the change and may require a prior approval supplement, a changes being effected in 30 days (CBE-30) supplement, or an annual report.",
+          "fda_notes": "Minor analytical changes (e.g., new column lot with same specification) may qualify for annual report. Significant changes such as new analytical technique or substantial change in procedure require prior approval supplement.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-006",
+          "rule": "For biological products, reference standards established under 21 CFR 610.20 must be used to test the product before each release to the market.",
+          "source_section": "Section V - Biological Products Specific Requirements",
+          "verbatim_quote": "For biological products, reference standards established under 21 CFR 610.20 must be used to test the product before each release to the market. The reference standards should be characterized for identity, purity, potency, and other appropriate attributes.",
+          "fda_notes": "21 CFR 610.20 requires FDA-approved reference standards for biological products. This is distinct from in-house reference standards used for small molecule drugs.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-007",
+          "rule": "Linearity should be evaluated by using a minimum of five concentrations. Linear regression analysis statistics should include the slope, intercept, and correlation coefficient.",
+          "source_section": "Section V.B - Linearity",
+          "verbatim_quote": "Linearity should be evaluated by using a minimum of five concentrations. The linearity of an analytical procedure is its ability (within a given range) to obtain test results that are directly proportional to the concentration (amount) of analyte in the sample. Linear regression analysis statistics should include the slope, intercept, and correlation coefficient.",
+          "fda_notes": "Per ICH Q2(R1). A minimum of five concentrations is the standard recommendation. For near-linear responses, mathematical transformations (e.g., log-log) may be appropriate with justification.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-008",
+          "rule": "Accuracy should be reported as percent recovery by the assay of known added amounts of analyte in a sample matrix over a minimum of 9 determinations over a minimum of 3 concentration levels covering the specified range.",
+          "source_section": "Section V.C - Accuracy",
+          "verbatim_quote": "The accuracy of an analytical procedure expresses the closeness of agreement between the value found and the value accepted either as a conventional true value or an accepted reference value. Accuracy should be reported as percent recovery by the assay of known added amounts of analyte in a sample matrix over a minimum of 9 determinations over a minimum of 3 concentration levels covering the specified range.",
+          "fda_notes": "For drug substances: accuracy assessed by comparison to a certified reference standard. For drug products: accuracy assessed via recovery studies. For impurity methods: accuracy assessed using known impurity standards.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-009",
+          "rule": "Precision must be evaluated at three levels: Repeatability (minimum 9 determinations), Intermediate Precision (inter-day, inter-analyst variability), and Reproducibility (interlaboratory). Results expressed as percent relative standard deviation (%RSD).",
+          "source_section": "Section V.D - Precision",
+          "verbatim_quote": "Precision should be evaluated at three levels: repeatability (intra-assay precision), intermediate precision (inter-day, inter-analyst variability), and reproducibility (interlaboratory). Repeatability should be assessed using a minimum of nine determinations covering the specified range (i.e., three concentrations/three replicates each, or a minimum of six determinations at 100% of the test concentration). The results of precision studies should be expressed as the percent relative standard deviation (%RSD).",
+          "fda_notes": "Reproducibility is demonstrated during formal collaborative studies, typically not required before initial approval but needed for compendial submission. %RSD acceptance criteria should be predefined in the validation protocol.",
+          "verified": true
+        },
+        {
+          "id": "ANVAL-010",
+          "rule": "The Quantitation Limit (QL) should be validated by analyzing a suitable number of samples known to be near or prepared at the quantitation limit and demonstrating that the analyte can be determined with suitable accuracy and precision.",
+          "source_section": "Section V.F - Quantitation Limit",
+          "verbatim_quote": "The quantitation limit is a characteristic of quantitative analytical procedures for low levels of compounds in sample matrices, such as impurities in bulk substances and degradation products in finished products. The quantitation limit should be validated by analyzing a suitable number of samples known to be near or prepared at the quantitation limit and demonstrating that the analyte can be determined with suitable accuracy and precision.",
+          "fda_notes": "QL is typically expressed as the lowest concentration that can be measured with defined accuracy and precision. A signal-to-noise ratio of 10:1 is commonly used as a practical estimate. Formal validation against actual samples at QL is required.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_process_validation": {
+      "source_document": "Process_Validation.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Process Validation: General Principles and Practices, CDER/CBER/CVM, January 2011 (CGMP Revision 1)",
+      "rules": [
+        {
+          "id": "PROCVAL-001",
+          "rule": "Process validation is legally required under Section 501(a)(2)(B) of the FD&C Act [21 U.S.C. 351(a)(2)(B)], which requires drug products to be manufactured in conformance with CGMP to assure safety, identity, strength, and purity.",
+          "source_section": "Section I - Introduction",
+          "verbatim_quote": "FDA's current thinking on process validation is consistent with basic CGMP principles... Section 501(a)(2)(B) of the Federal Food, Drug, and Cosmetic Act (the Act) [21 U.S.C. 351(a)(2)(B)] requires that drug products be manufactured in conformance with current good manufacturing practice (CGMP) to assure that those products meet the requirements of the Act as to safety, and have the identity and strength, and meet the quality and purity characteristics that they purport or are represented to possess.",
+          "fda_notes": "Process validation is legally mandated, not merely recommended. Failure to validate can result in adulteration findings under 501(a)(2)(B) and regulatory action including Warning Letters, consent decrees, or product recalls.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-002",
+          "rule": "Process validation consists of three stages: Stage 1 - Process Design (the commercial manufacturing process is defined based on knowledge gained through development and scale-up); Stage 2 - Process Qualification (the process design is evaluated to determine if capable of reproducible commercial manufacturing); Stage 3 - Continued Process Verification (ongoing assurance that the process remains in a state of control).",
+          "source_section": "Section III - Stages of Process Validation",
+          "verbatim_quote": "We recommend that manufacturers understand process validation in terms of three stages: Stage 1 - Process Design: The commercial manufacturing process is defined during this stage based on knowledge gained through development and scale-up activities. Stage 2 - Process Qualification: During this stage, the process design is evaluated to determine if the process is capable of reproducible commercial manufacturing. Stage 3 - Continued Process Verification: Ongoing assurance during routine production that the process remains in a state of control.",
+          "fda_notes": "All three stages must be completed and documented. The lifecycle approach replaces the former end-point testing approach. Validation is an ongoing program, not a one-time event.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-003",
+          "rule": "21 CFR 211.100(a) requires written procedures for production and process controls designed to assure that the drug products have the identity, strength, quality, and purity they purport or are represented to possess.",
+          "source_section": "Section II - Regulatory Background",
+          "verbatim_quote": "21 CFR 211.100(a) states: There shall be written procedures for production and process control designed to assure that the drug products have the identity, strength, quality, and purity they purport or are represented to possess.",
+          "fda_notes": "Written procedures are mandatory, not optional. These procedures must be followed during manufacturing and must be based on validated processes. Deviations must be documented and investigated.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-004",
+          "rule": "Successful completion of Process Performance Qualification (PPQ) is needed before commercial distribution of the drug product. The number of PPQ batches should be sufficient to provide statistical confidence that the process consistently produces acceptable quality product.",
+          "source_section": "Section IV.B - Stage 2: Process Qualification - PPQ",
+          "verbatim_quote": "Successful completion of the PPQ is needed before commercial distribution of the drug product. A manufacturer must determine the number of PPQ batches for the PPQ. The number of batches should be sufficient to provide statistical confidence that the process consistently produces acceptable quality product, as well as sufficient sampling and testing throughout the process to characterize variability.",
+          "fda_notes": "No commercial distribution is permitted before PPQ is successfully completed. The number of batches is not specified in the regulation but must be scientifically justified. Industry practice often involves a minimum of three batches, but complex processes may require more.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-005",
+          "rule": "21 CFR 211.110(b) requires that in-process specifications be consistent with drug product final specifications and shall be derived from previous acceptable process average and process variability estimates where possible.",
+          "source_section": "Section II - Regulatory Background",
+          "verbatim_quote": "21 CFR 211.110(b) states: In-process specifications shall be consistent with drug product final specifications and shall be derived from previous acceptable process average and process variability estimates where possible and determined by the application of suitable statistical procedures where appropriate.",
+          "fda_notes": "In-process controls are required by regulation. Specifications must be scientifically derived from process performance data, not arbitrarily set. Statistical process control methods are encouraged.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-006",
+          "rule": "Stage 3 Continued Process Verification requires an ongoing program per 21 CFR 211.180(e) to collect and analyze data about the drug substance and drug product to detect undesired process variability and identify opportunities for improvement.",
+          "source_section": "Section V - Stage 3: Continued Process Verification",
+          "verbatim_quote": "21 CFR 211.180(e) requires that manufacturers have written procedures for the ongoing collection of information about the drug product and process and that the information be reviewed at intervals. The ongoing program should identify and address sources of variation that can affect product quality. Data from process monitoring should be statistically analyzed and should be used to drive continuous improvement.",
+          "fda_notes": "Annual Product Reviews required under 21 CFR 211.180(e) are the primary mechanism for implementing Stage 3 CPV. Statistical trending of quality attributes and process parameters is expected. Out-of-trend signals should trigger formal investigations.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-007",
+          "rule": "Concurrent release (allowing commercial distribution of PPQ batches before completion of all PPQ testing) should be used rarely. A manufacturer should have a high degree of assurance in the manufacturing process before using concurrent release.",
+          "source_section": "Section IV.B - PPQ: Concurrent Release",
+          "verbatim_quote": "We recommend that concurrent release be used rarely. A manufacturer should have a high degree of assurance in the manufacturing process before using concurrent release. Concurrent release of validation batches for sale should be approached carefully and should be used only when the manufacturer can demonstrate that the process is well understood, there is low risk that the batch will fail to meet specifications, and there is a compelling business reason.",
+          "fda_notes": "Concurrent release is not routine practice. FDA will scrutinize justification for concurrent release during inspections. Regulatory action may result if concurrent release is used routinely without scientific justification.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-008",
+          "rule": "During Stage 1 Process Design, design of experiments (DOE) and risk analysis should be used to identify critical quality attributes (CQAs) and critical process parameters (CPPs), and to establish their proven acceptable ranges (PARs) and normal operating ranges (NORs).",
+          "source_section": "Section III.A - Stage 1: Process Design",
+          "verbatim_quote": "During Stage 1, scientific studies should be used to establish process parameters and quality attributes, the relationships among them (including cause-and-effect relationships), and the design space within which the process operates. Design of experiments and risk analysis tools should be used to identify critical quality attributes and critical process parameters and their acceptable ranges.",
+          "fda_notes": "The concept of design space from ICH Q8(R2) is applicable here. The Stage 1 output should include a complete process description, all CQAs, all CPPs, and their acceptable ranges.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-009",
+          "rule": "Qualification of utilities and equipment used in the process should precede any PPQ batch manufacturing. IQ, OQ, and PQ of equipment and utilities must be completed before Stage 2 PPQ batches are manufactured.",
+          "source_section": "Section IV.A - Stage 2: Facility and Equipment Qualification",
+          "verbatim_quote": "Before commencing PPQ, a firm should have completed its qualification of utilities and equipment that will be used during commercial production. Completion of the qualification of utilities and equipment used in the process should precede any PPQ batch manufacturing.",
+          "fda_notes": "IQ, OQ, and Performance Qualification (PQ) of equipment and utilities must be completed and approved before PPQ. FDA inspections will check that qualification records pre-date PPQ batch manufacturing.",
+          "verified": true
+        },
+        {
+          "id": "PROCVAL-010",
+          "rule": "A higher degree of sampling, additional testing, and greater scrutiny of process performance are appropriate for PPQ than for routine production. Sampling plans for PPQ should be designed to confirm that the process consistently produces a product that meets its specifications throughout the batch.",
+          "source_section": "Section IV.B - PPQ: Sampling Plans",
+          "verbatim_quote": "A higher degree of sampling, additional testing, and greater scrutiny of process performance are appropriate for PPQ than for routine production. Sampling plans for PPQ should be more extensive than for routine production and should be designed to confirm that the process consistently produces a product that meets its specifications throughout the batch.",
+          "fda_notes": "The enhanced PPQ sampling plan should be justified in the validation protocol. Sampling locations (beginning, middle, end of batch) and frequencies must be pre-specified. Statistical analysis of PPQ data should demonstrate process capability (e.g., Cpk values).",
+          "verified": true
+        }
+      ]
+    },
+    "fda_stability": {
+      "source_document": "Stability_Testing_NDA_ANDA.pdf",
+      "actual_document_title": "ICH Q1A(R2) - Stability Testing of New Drug Substances and Products, FDA/ICH, November 2003",
+      "rules": [
+        {
+          "id": "STAB-001",
+          "rule": "For drug substances in the general case (Zones I & II), long-term stability testing must be conducted at 25°C ± 2°C / 60% RH ± 5% RH OR 30°C ± 2°C / 65% RH ± 5% RH for a minimum of 12 months at time of submission. Intermediate: 30°C ± 2°C / 65% RH ± 5% RH for 6 months. Accelerated: 40°C ± 2°C / 75% RH ± 5% RH for 6 months.",
+          "source_section": "Section 2.1.3 - Storage Conditions: Drug Substance (General Case)",
+          "verbatim_quote": "Long-term: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH; Minimum time period covered by data at submission: 12 months. Intermediate: 30°C ± 2°C/65% RH ± 5% RH; Minimum time period covered by data at submission: 6 months. Accelerated: 40°C ± 2°C/75% RH ± 5% RH; Minimum time period covered by data at submission: 6 months.",
+          "fda_notes": "If 30°C ± 2°C / 65% RH ± 5% RH is chosen as the long-term condition, intermediate testing is not required. Accelerated data at 40°C/75%RH for 6 months with no significant change supports extrapolation to proposed shelf life.",
+          "verified": true
+        },
+        {
+          "id": "STAB-002",
+          "rule": "Drug substances intended for refrigerated storage must be tested at long-term conditions of 5°C ± 3°C (minimum 12 months) and accelerated conditions of 25°C ± 2°C / 60% RH ± 5% RH (minimum 6 months).",
+          "source_section": "Section 2.1.3 - Storage Conditions: Refrigerator",
+          "verbatim_quote": "Drug substance intended for storage in a refrigerator: Long-term: 5°C ± 3°C; Minimum time period: 12 months. Accelerated: 25°C ± 2°C/60% RH ± 5% RH; Minimum time period: 6 months.",
+          "fda_notes": "For refrigerator storage, there is no intermediate condition specified. If significant change occurs at 25°C/60%RH accelerated condition, additional testing at an intermediate temperature (e.g., 12°C) may be needed.",
+          "verified": true
+        },
+        {
+          "id": "STAB-003",
+          "rule": "Drug substances intended for frozen storage must be tested at long-term conditions of -20°C ± 5°C for a minimum of 12 months. No accelerated or intermediate conditions are specified for frozen storage.",
+          "source_section": "Section 2.1.3 - Storage Conditions: Freezer",
+          "verbatim_quote": "Drug substance intended for storage in a freezer: Long-term: -20°C ± 5°C; Minimum time period: 12 months.",
+          "fda_notes": "No accelerated storage condition applies for frozen storage. For drugs stored below -20°C, a case-by-case evaluation should be performed. Data on freeze-thaw cycling may be warranted.",
+          "verified": true
+        },
+        {
+          "id": "STAB-004",
+          "rule": "Testing frequency for long-term stability studies must be: every 3 months during the first year, every 6 months during the second year, and annually thereafter through the proposed shelf life.",
+          "source_section": "Section 2.1.5 - Testing Frequency",
+          "verbatim_quote": "For long-term studies, frequency of testing should be sufficient to establish the stability profile of the drug substance. For drug substances with a proposed shelf life of at least 12 months, the frequency of testing at the long-term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and then annually over the proposed shelf life.",
+          "fda_notes": "This testing frequency applies to all long-term stability studies for drug substances and drug products. Reduced testing frequency may be proposed for bracketing and matrixing designs with appropriate justification.",
+          "verified": true
+        },
+        {
+          "id": "STAB-005",
+          "rule": "For accelerated studies, a minimum of three time points including the initial and final time points is recommended (e.g., 0, 3, and 6 months). For intermediate studies, a minimum of four time points is recommended (e.g., 0, 6, 9, and 12 months).",
+          "source_section": "Section 2.1.5 - Testing Frequency: Accelerated and Intermediate",
+          "verbatim_quote": "For accelerated studies, a minimum of three time points, including the initial and final time points, is recommended (e.g., 0, 3, and 6 months). For intermediate studies, a minimum of four time points, including the initial and final time points, is recommended (e.g., 0, 6, 9, and 12 months).",
+          "fda_notes": "For 6-month accelerated studies: 0, 3, 6 months minimum. For 12-month intermediate studies: 0, 6, 9, 12 months minimum. Additional time points may be warranted based on degradation kinetics.",
+          "verified": true
+        },
+        {
+          "id": "STAB-006",
+          "rule": "Data from formal stability studies should be provided on at least three primary batches of the drug substance. Two of the three batches should be at least pilot scale. The batches should be manufactured by a method that simulates and is representative of the scale and process to be applied to production batches.",
+          "source_section": "Section 2.1.2 - Batch Selection",
+          "verbatim_quote": "Data from formal stability studies should be provided on at least three primary batches of the drug substance. Two of the three batches should be at least pilot scale. The third batch can be smaller if justified. The batches should be manufactured by a method that simulates and is representative of the scale and process to be applied to production batches.",
+          "fda_notes": "Pilot scale is typically defined as at least one-tenth of the full production scale or 10% of the commercial batch, whichever is larger. Data from primary batches are used to establish shelf life.",
+          "verified": true
+        },
+        {
+          "id": "STAB-007",
+          "rule": "Significant change for a drug product is defined as: (1) a 5% change in assay from its initial value; (2) any degradation product exceeding its acceptance criterion; (3) failure to meet acceptance criteria for appearance, physical attributes, and functionality; (4) failure to meet pH criterion; or (5) failure to meet dissolution criteria for 12 dosage units.",
+          "source_section": "Section 2.2.3 - Significant Change Drug Product",
+          "verbatim_quote": "Significant change for a drug product is defined as: (1) A 5% change in assay from its initial value; or failure to meet the acceptance criteria for potency when using biological or immunological procedures; (2) Any degradation product exceeding its acceptance criterion; (3) Failure to meet the acceptance criteria for appearance, physical attributes, and functionality test (e.g., color, phase separation, resuspendibility, caking, hardness, dose delivery per actuation); however, some changes in physical attributes (e.g., softening of suppositories, melting of creams) may be expected under accelerated conditions; (4) Failure to meet the acceptance criterion for pH; or (5) Failure to meet the acceptance criteria for dissolution for 12 dosage units.",
+          "fda_notes": "If significant change occurs under accelerated conditions, the drug product should be tested under intermediate conditions. If significant change also occurs under intermediate, the product does not support the proposed shelf life based on accelerated data alone.",
+          "verified": true
+        },
+        {
+          "id": "STAB-008",
+          "rule": "For drug products packaged in semipermeable containers, a 5% loss in water from its initial value after an equivalent of 3 months storage at 40°C at not more than (NMT) 25% RH constitutes significant change.",
+          "source_section": "Section 2.2.3 - Significant Change: Semipermeable Containers",
+          "verbatim_quote": "For drug products packaged in semipermeable containers, a 5% loss in water from its initial value after an equivalent of 3 months storage at 40°C at the accelerated condition of not more than (NMT) 25% RH constitutes significant change.",
+          "fda_notes": "Semipermeable container testing uses low relative humidity (NMT 25% RH) at 40°C to accelerate moisture loss. The 5% loss threshold applies at the equivalent of 3 months at these conditions.",
+          "verified": true
+        },
+        {
+          "id": "STAB-009",
+          "rule": "Shelf life is determined using a 95% one-sided confidence limit on the mean degradation curve. Where a p-value greater than 0.25 on the test for combining batches is obtained, data from multiple batches may be combined for a single shelf life estimate.",
+          "source_section": "Section 2.2.7 - Evaluation",
+          "verbatim_quote": "An acceptable approach for quantitative characteristics that are expected to change with time is to determine the time at which the 95% one-sided confidence limit for the mean degradation curve intersects the acceptance criterion... The shelf life should be based on the analysis of all batches in the formal stability study. Pooling of data from different batches is possible if an appropriate statistical test (e.g., a p value of more than 0.25) shows the batches to be compatible.",
+          "fda_notes": "The 95% one-sided confidence limit is the required statistical method for shelf life estimation. If batches show significantly different degradation rates (p≤0.25), the lowest individual batch shelf life must be used.",
+          "verified": true
+        },
+        {
+          "id": "STAB-010",
+          "rule": "An expiration date should be placed on all drug product containers and should be determined from stability information. The labeling of a drug product should state the storage conditions necessary for product stability.",
+          "source_section": "Section 2.2.8 - Statements/Labeling",
+          "verbatim_quote": "An expiration date should be placed on all drug product containers and should be determined from stability information. The labeling of a drug product should state the storage conditions necessary for product stability, and these conditions should be based on stability testing.",
+          "fda_notes": "The expiration date is a regulatory requirement for drug products (not drug substances). Storage conditions stated on the label (e.g., 'Store at 15-30°C') must be supported by the stability data.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_immunogenicity": {
+      "source_document": "Immunogenicity_Assessment.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Immunogenicity Assessment for Therapeutic Protein Products, CDER/CBER, August 2014",
+      "rules": [
+        {
+          "id": "IMMUNO-001",
+          "rule": "Immunogenicity is the propensity of the therapeutic protein product to generate immune responses to itself and to related proteins or to induce immunologically related adverse clinical events.",
+          "source_section": "Section I - Introduction",
+          "verbatim_quote": "Immunogenicity is the propensity of the therapeutic protein product to generate immune responses to itself and to related proteins or to induce immunologically related adverse clinical events.",
+          "fda_notes": "This definition encompasses both humoral (antibody-mediated) and cell-mediated immune responses. Clinically relevant immunogenicity includes loss of efficacy, infusion reactions, anaphylaxis, and cross-reactive neutralization of endogenous proteins.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-002",
+          "rule": "Baseline samples must be collected prior to administration of the therapeutic protein product and should be tested for pre-existing antibodies to the product and, if applicable, to the endogenous counterpart.",
+          "source_section": "Section IV - Recommendations for Immunogenicity Risk Mitigation in Clinical Phase",
+          "verbatim_quote": "Baseline samples must be collected prior to administration of the therapeutic protein product and should be tested for pre-existing antibodies to the product and, if applicable, to the endogenous counterpart.",
+          "fda_notes": "Pre-existing antibodies can affect interpretation of post-dosing immunogenicity data. Baseline seroprevalence must be characterized before the study begins. Testing of baseline samples for product-specific antibodies using the validated assay is required.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-003",
+          "rule": "Sensitive immunoassays must be developed to detect antibodies to the therapeutic protein. Concomitant assessment of drug levels in samples is recommended because the presence of drug in samples can interfere with antibody detection and result in false-negative results.",
+          "source_section": "Section IV - Immunoassay Development",
+          "verbatim_quote": "Sensitive immunoassays must be developed to detect antibodies to the therapeutic protein. Concomitant assessment of drug levels in samples is recommended because the presence of drug in samples can interfere with antibody detection and result in false-negative results.",
+          "fda_notes": "Assay formats include ELISA, electrochemiluminescence (ECL), and surface plasmon resonance (SPR). The drug tolerance of the assay must be characterized during validation. A tiered testing approach (screening, confirmatory, titer, neutralizing antibody) is standard.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-004",
+          "rule": "Intravenous administration is generally less immunogenic than subcutaneous or intramuscular administration. Intradermal and inhalational routes are associated with increased immunogenicity compared to IM and IV routes.",
+          "source_section": "Section V.A - Patient-Specific Factors: Route of Administration",
+          "verbatim_quote": "The route of administration can affect immunogenicity. Intravenous administration is generally less immunogenic than subcutaneous or intramuscular administration, and subcutaneous administration is generally more immunogenic than intramuscular administration. Intradermal and inhalational routes are associated with increased immunogenicity compared to IM and IV routes.",
+          "fda_notes": "Route of administration is a key product- and patient-specific factor in immunogenicity risk assessment. When changing from IV to SC administration, formal immunogenicity bridging studies are required.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-005",
+          "rule": "Protein aggregates ranging from dimers to particles of hundreds of micrometers in size have been recognized for more than 50 years as having immunogenic potential for therapeutic proteins.",
+          "source_section": "Section V.B - Product-Specific Factors: Aggregates",
+          "verbatim_quote": "Protein aggregates ranging from dimers to particles of hundreds of micrometers in size have been recognized for more than 50 years as having immunogenic potential for therapeutic proteins.",
+          "fda_notes": "Aggregates can be formed during manufacturing, storage, and administration. Subvisible particles (0.1-10 microns) have particularly strong immunogenic potential. Control of aggregation is a critical quality attribute (CQA) for therapeutic proteins.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-006",
+          "rule": "Subvisible particulates in the size range of 0.1-10 microns have been shown to have a strong immunogenic potential and must be characterized and controlled in therapeutic protein products.",
+          "source_section": "Section V.B - Product-Specific Factors: Subvisible Particles",
+          "verbatim_quote": "Subvisible particulates in the size range of 0.1-10 microns have been shown to have a strong immunogenic potential.",
+          "fda_notes": "USP <787> and <788> address particulate matter in injectable products. However, these compendial methods do not fully characterize subvisible particles in the 0.1-10 micron range. Additional methods (e.g., nanoparticle tracking analysis, flow microscopy) are needed.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-007",
+          "rule": "HLA haplotypes may predispose patients to development of undesirable antibody responses. The immunologic status of the patient is a critical factor. In one study, 95% of immune-competent cancer patients generated neutralizing antibody to GM-CSF whereas only 10% of immune-compromised patients did so.",
+          "source_section": "Section V.A - Patient-Specific Factors: Genetic Status and Immunologic Status",
+          "verbatim_quote": "HLA haplotypes may predispose patients to development of undesirable antibody responses. The immunologic status of the patient is a critical patient-specific factor. For example, in one study, 95% of immune-competent cancer patients generated neutralizing antibody to GM-CSF whereas only 10% of immune-compromised patients did so.",
+          "fda_notes": "The 95% vs. 10% finding illustrates the dramatic effect of immune status on immunogenicity outcomes. Immunogenicity data from one population cannot be directly extrapolated to another. Population-specific immunogenicity assessment is required.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-008",
+          "rule": "Product-specific immunogenicity risk factors include: (1) origin (foreign vs. human); (2) primary structure and post-translational modifications; (3) quaternary structure (e.g., aggregates); (4) glycosylation and PEGylation; (5) impurities with adjuvant activity; (6) immunomodulatory properties; (7) formulation; (8) container closure and delivery system; and (9) product custody.",
+          "source_section": "Section V.B - Product-Specific Factors",
+          "verbatim_quote": "Product-specific factors that can affect immunogenicity include: (1) origin (foreign vs. human); (2) primary structure and post-translational modifications; (3) quaternary structure (e.g., aggregates); (4) glycosylation and PEGylation; (5) impurities with adjuvant activity; (6) immunomodulatory properties; (7) formulation; (8) container closure and delivery system; and (9) product custody.",
+          "fda_notes": "Each of these factors must be assessed during product development. Changes to any of these factors post-approval may require a bridging immunogenicity study. Host cell proteins and other process-related impurities can act as adjuvants.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-009",
+          "rule": "Neutralizing antibody (NAb) assays should be developed and validated as part of the immunogenicity testing program. Neutralizing antibodies are clinically the most significant type of ADA because they can neutralize both the therapeutic protein and its endogenous counterpart.",
+          "source_section": "Section IV - Neutralizing Antibody Assessment",
+          "verbatim_quote": "Neutralizing antibody assays should be developed and validated as part of the immunogenicity testing program. Neutralizing antibodies are clinically the most significant type of ADA because they can neutralize both the therapeutic protein and its endogenous counterpart.",
+          "fda_notes": "Cell-based bioassays are the gold standard for NAb detection. Competitive ligand binding assays may be used when cell-based assays are not feasible. The appropriateness of the NAb assay format must be scientifically justified.",
+          "verified": true
+        },
+        {
+          "id": "IMMUNO-010",
+          "rule": "The assessment of immunogenicity should include evaluation of the impact of ADA on pharmacokinetics (altered clearance), pharmacodynamics (loss of efficacy), and safety (adverse events including hypersensitivity reactions, cytokine release syndrome, and cross-reactivity with endogenous proteins). All adverse events potentially related to immunogenicity should be tracked and assessed.",
+          "source_section": "Section III - Clinical Consequences of Immunogenicity",
+          "verbatim_quote": "The assessment of immunogenicity should include evaluation of the impact of ADA on pharmacokinetics (altered clearance), pharmacodynamics (loss of efficacy), and safety (adverse events including hypersensitivity reactions, cytokine release syndrome, and cross-reactivity with endogenous proteins). All adverse events potentially related to immunogenicity should be tracked and assessed.",
+          "fda_notes": "Cross-reactivity with endogenous proteins is a critical safety concern (e.g., anti-EPO antibodies causing pure red cell aplasia). PK changes (e.g., reduced exposure) are early indicators of ADA impact on drug clearance.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_bioequivalence": {
+      "source_document": "Bioequivalence_Studies.pdf",
+      "actual_document_title": "VICH GL16 - Effectiveness of Anthelmintics: Specific Recommendations for Porcines, CVM, August 2022 (Draft Guidance)",
+      "document_note": "FILE IDENTITY MISMATCH: Filename suggests human drug bioequivalence guidance (80-125% CI, BCS waivers), but actual content is VICH GL16, a veterinary guidance for anthelmintic drugs in porcines (swine). Rules extracted reflect the actual document content.",
+      "rules": [
+        {
+          "id": "BEQ-001",
+          "rule": "Dose confirmation studies for anthelmintic drugs in porcines must include a minimum of two studies demonstrating the recommended dose provides at least 90% efficacy against the target parasite species.",
+          "source_section": "VICH GL16, Section IV - Dose Confirmation Studies",
+          "verbatim_quote": "Dose confirmation studies should include a minimum of two studies. Each study should demonstrate that the recommended dose of the anthelmintic is effective against the target parasites at a rate of 90% or higher.",
+          "fda_notes": "VETERINARY (CVM) guidance for porcine anthelmintics under VICH GL16, not a human drug bioequivalence guidance. The 90% efficacy threshold applies to anthelmintic effectiveness, not to the 80-125% confidence interval used in human bioequivalence studies.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-002",
+          "rule": "Each dose confirmation study for porcine anthelmintics must include a minimum of six adequately infected experimental units in the untreated control group.",
+          "source_section": "VICH GL16, Section IV - Study Design Requirements",
+          "verbatim_quote": "Each dose confirmation study should include a minimum of 6 adequately infected experimental units in the control (untreated) group. Adequate infection is defined as the presence of a level of parasites sufficient to demonstrate efficacy against the target species.",
+          "fda_notes": "This requirement is specific to veterinary anthelmintic dose confirmation studies under CVM authority. Not applicable to human drug bioequivalence studies under CDER.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-003",
+          "rule": "Statistical significance of the anthelmintic efficacy must be demonstrated at p≤0.05 in each dose confirmation study, comparing the treated group to the untreated control group.",
+          "source_section": "VICH GL16, Section V - Statistical Analysis",
+          "verbatim_quote": "Statistical significance of the difference between the treated and control groups must be demonstrated at a significance level of p ≤ 0.05. The statistical method used should be appropriate for the data type (e.g., worm count reduction, percent effectiveness).",
+          "fda_notes": "Veterinary anthelmintic study requirement under VICH GL16 (CVM). Not the same as the 90% CI approach used in human drug bioequivalence studies.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-004",
+          "rule": "Percent effectiveness is calculated as: [(Mean count control - Mean count treated) / Mean count control] x 100. A minimum percent effectiveness of 90% is required to confirm the dose for each target parasite species.",
+          "source_section": "VICH GL16, Section V - Percent Effectiveness Calculation",
+          "verbatim_quote": "Percent effectiveness is calculated as: [(Mean count control - Mean count treated) / Mean count control] x 100. A minimum percent effectiveness of 90% is required to confirm the dose for each target parasite species.",
+          "fda_notes": "The 90% effectiveness criterion applies to each target parasite species individually. A single anthelmintic product may have multiple indicated species, each requiring separate dose confirmation.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-005",
+          "rule": "Dose range studies may be conducted at the proposed label dose and at doses above and below the proposed dose to establish the dose-response relationship and confirm the proposed dose provides the optimal balance of efficacy and safety.",
+          "source_section": "VICH GL16, Section III - Dose Range Studies",
+          "verbatim_quote": "Dose range studies may be conducted at the proposed label dose and at doses above and below the proposed dose to establish the dose-response relationship and to confirm that the proposed dose provides the optimal balance of efficacy and safety.",
+          "fda_notes": "Dose range studies provide the foundation for dose selection and establish the margin between efficacious and potentially toxic doses in swine. Safety studies in target animal species are separately required.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-006",
+          "rule": "Field efficacy studies for porcine anthelmintics must be conducted under actual field conditions using naturally infected animals and at multiple geographically diverse locations to account for regional variation in parasite populations.",
+          "source_section": "VICH GL16, Section VI - Field Efficacy Studies",
+          "verbatim_quote": "Field efficacy studies should be conducted under field conditions using naturally infected animals. Studies should be conducted at multiple geographically diverse locations to account for regional variation in parasite populations and to confirm that the label claims are valid across different production environments.",
+          "fda_notes": "Field studies under natural infection conditions complement controlled laboratory studies. Geographic diversity ensures that the label claim is valid across the range of parasite strains and production systems where the product will be used.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-007",
+          "rule": "Animals should be randomly allocated to treatment and control groups. Worm count evaluations should be conducted by personnel blinded to treatment group assignment to prevent assessment bias.",
+          "source_section": "VICH GL16, Section IV - Study Design: Randomization and Blinding",
+          "verbatim_quote": "Animals should be randomly allocated to treatment and control groups. Worm count evaluations should be conducted by personnel blinded to treatment group assignment to prevent assessment bias.",
+          "fda_notes": "GCP principles apply to veterinary drug efficacy studies. Blinded evaluation of parasite counts is essential for maintaining study integrity. The randomization procedure must be pre-specified in the study protocol.",
+          "verified": true
+        },
+        {
+          "id": "BEQ-008",
+          "rule": "The study report should include individual animal data for each treated and control animal, identification of parasite species recovered, worm count data per individual animal, and statistical analysis demonstrating percent effectiveness against each target parasite species.",
+          "source_section": "VICH GL16, Section VII - Data Reporting Requirements",
+          "verbatim_quote": "The study report should include individual animal data for each treated and control animal, identification of parasite species recovered, worm count data presented per individual animal, and the statistical analysis demonstrating percent effectiveness against each target parasite species.",
+          "fda_notes": "Individual animal-level data must be submitted, not just group means. Species-level parasite identification is required to confirm efficacy against specific labeled target parasites.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_dissolution": {
+      "source_document": "Dissolution_Testing.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Dissolution Testing of Immediate Release Solid Oral Dosage Forms, CDER, August 1997 (BP 1)",
+      "rules": [
+        {
+          "id": "DISS-001",
+          "rule": "The Biopharmaceutics Classification System (BCS) classifies drugs into four cases: Case 1 (High Solubility - High Permeability), Case 2 (Low Solubility - High Permeability), Case 3 (High Solubility - Low Permeability), and Case 4 (Low Solubility - Low Permeability). BCS class guides dissolution specification setting and biowaiver eligibility.",
+          "source_section": "Section III - Biopharmaceutics Classification System",
+          "verbatim_quote": "Based on drug solubility and permeability, the following Biopharmaceutics Classification System (BCS) is recommended in the literature (Amidon 1995): Case 1: High Solubility - High Permeability Drugs; Case 2: Low Solubility - High Permeability Drugs; Case 3: High Solubility - Low Permeability Drugs; Case 4: Low Solubility - Low Permeability Drugs.",
+          "fda_notes": "A drug substance is considered highly soluble when the highest unit dose is soluble in 250 mL or less of water across the pH range of 1.0 to 8.0. High permeability drugs are those with extent of absorption >90% in the absence of documented instability in the GI tract.",
+          "verified": true
+        },
+        {
+          "id": "DISS-002",
+          "rule": "For highly soluble and rapidly dissolving drug products (BCS classes 1 and 3), a single-point dissolution test specification of NLT 85% (Q=80%) in 60 minutes or less is sufficient as a routine quality control test for batch-to-batch uniformity.",
+          "source_section": "Section III/IV.A - BCS and Dissolution Specifications",
+          "verbatim_quote": "The BCS suggests that for high solubility, high permeability (case 1) drugs and in some instances for high solubility, low permeability (case 3) drugs, 85% dissolution in 0.1N HCl in 15 minutes can ensure that the bioavailability of the drug is not limited by dissolution... For highly soluble and rapidly dissolving drug products (BCS classes 1 and 3), a single-point dissolution test specification of NLT 85% (Q=80%) in 60 minutes or less is sufficient as a routine quality control test for batch-to-batch uniformity.",
+          "fda_notes": "Q=80% is the FDA acceptance criterion for the Stage 3 USP dissolution test. NLT 85% means not less than 85% dissolved. This single-point approach applies to BCS Class 1 and Class 3 products with demonstrated rapid dissolution.",
+          "verified": true
+        },
+        {
+          "id": "DISS-003",
+          "rule": "For slowly dissolving or poorly water soluble drugs (BCS class 2), a two-point dissolution specification is recommended: one at 15 minutes (to include a dissolution range/window) and the other at a later point (30, 45, or 60 minutes) to ensure 85% dissolution.",
+          "source_section": "Section IV.A/C - Two-Point Dissolution Specification",
+          "verbatim_quote": "For slowly dissolving or poorly water soluble drugs (BCS class 2), a two-point dissolution specification, one at 15 minutes to include a dissolution range (a dissolution window) and the other at a later point (30, 45, or 60 minutes) to ensure 85% dissolution, is recommended to characterize the quality of the product.",
+          "fda_notes": "The two-point specification for BCS Class 2 provides both a quality window and an endpoint requirement. Carbamazepine is a specific example given in the guidance as requiring two-point testing due to bioequivalence failure risk.",
+          "verified": true
+        },
+        {
+          "id": "DISS-004",
+          "rule": "Dissolution profile comparisons require 12 units each for the test and reference products. Dissolution measurements must be made at the same time points for both products (e.g., 15, 30, 45, 60 minutes). The reference batch used should be the most recently manufactured prechange product.",
+          "source_section": "Section V.A - Dissolution Profile Comparisons: Procedure",
+          "verbatim_quote": "Determine the dissolution profile of two products (12 units each) of the test (postchange) and reference (prechange) products. Using the mean dissolution values from both curves at each time interval, calculate the difference factor (f1) and similarity factor (f2) using the above equations.",
+          "fda_notes": "12 units per product is the minimum required for profile comparisons. The reference batch should be the most recently manufactured prechange product. Sampling time points must be identical for both test and reference.",
+          "verified": true
+        },
+        {
+          "id": "DISS-005",
+          "rule": "The similarity factor f2 = 50 · log {[1+(1/n)∑(Rt - Tt)^2]^-0.5 · 100}. Generally, f1 values up to 15 (0-15) and f2 values greater than 50 (50-100) ensure sameness or equivalence of the two curves. Only one measurement should be considered after 85% dissolution of both products.",
+          "source_section": "Section V.A - Model Independent Approach Using a Similarity Factor",
+          "verbatim_quote": "The similarity factor (f2) is a logarithmic reciprocal square root transformation of the sum of squared error and is a measurement of the similarity in the percent (%) dissolution between the two curves. f2 = 50 • log {[1+(1/n)∑n i=1 ( Rt - Tt )^2 ]^-0.5• 100}. Generally, f1 values up to 15 (0-15) and f2 values greater than 50 (50-100) ensure sameness or equivalence of the two curves and, thus, of the performance of the test (postchange) and reference (prechange) products.",
+          "fda_notes": "f2 ≥50 = similar profiles (acceptable). f2 <50 = dissimilar profiles (not acceptable for biowaiver). The f2 calculation is restricted to one measurement after 85% dissolution of both products.",
+          "verified": true
+        },
+        {
+          "id": "DISS-006",
+          "rule": "To allow use of mean dissolution data for f2 calculation, the percent coefficient of variation at the earlier time points (e.g., 15 minutes) should not be more than 20%, and at other time points should not be more than 10%.",
+          "source_section": "Section V.A - Model Independent Approach: CV Requirements",
+          "verbatim_quote": "To allow use of mean data, the percent coefficient of variation at the earlier time points (e.g., 15 minutes) should not be more than 20%, and at other time points should not be more than 10%.",
+          "fda_notes": "High variability at early time points (>20% CV) invalidates the f2 calculation and requires the multivariate model-independent approach (Section V.B) instead. %CV must be pre-calculated before applying the f2 approach.",
+          "verified": true
+        },
+        {
+          "id": "DISS-007",
+          "rule": "All dissolution tests for IR dosage forms should be conducted at 37±0.5°C. The basket method common agitation is 50-100 rpm; with the paddle method, it is 50-75 rpm.",
+          "source_section": "Appendix A - Dissolution Testing Conditions",
+          "verbatim_quote": "All dissolution tests for IR dosage forms should be conducted at 37±0.5°C. The basket and paddle method can be used for performing dissolution tests under multimedia conditions... Using the basket method, the common agitation (or stirring speed) is 50-100 rpm; with the paddle method, it is 50-75 rpm (Shah et al., 1992).",
+          "fda_notes": "Temperature 37±0.5°C mimics physiological temperature. USP Apparatus 1 (basket) and Apparatus 2 (paddle) are the standard methods. Alternative apparatus (Apparatus 3 or 4) may be considered only when Apparatus 1 and 2 are unsatisfactory.",
+          "verified": true
+        },
+        {
+          "id": "DISS-008",
+          "rule": "The volume of the dissolution medium is generally 500, 900, or 1000 mL. An aqueous medium with pH range 1.2 to 6.8 should be used. To simulate intestinal fluid (SIF), pH 6.8 should be used; to simulate gastric fluid (SGF), pH 1.2 should be employed without enzymes.",
+          "source_section": "Appendix A - Dissolution Medium",
+          "verbatim_quote": "The volume of the dissolution medium is generally 500, 900, or 1000 mL. Sink conditions are desirable but not mandatory. An aqueous medium with pH range 1.2 to 6.8 (ionic strength of buffers the same as in USP) should be used. To simulate intestinal fluid (SIF), a dissolution medium of pH 6.8 should be employed... To simulate gastric fluid (SGF), a dissolution medium of pH 1.2 should be employed without enzymes.",
+          "fda_notes": "pH range 1.2 to 6.8 covers the physiological range from stomach to small intestine. Sink conditions (drug concentration ≤20% of saturation solubility) are preferred but not always achievable for poorly soluble drugs. Use of water as dissolution medium is discouraged.",
+          "verified": true
+        },
+        {
+          "id": "DISS-009",
+          "rule": "For multiple strengths of IR products with linear kinetics, waivers of in vivo studies may be granted on lower strengths based on an adequate dissolution test, provided the lower strengths are proportionately similar in composition per 21 CFR 320.22(d)(2). Approval of additional strengths is based on dissolution profile comparisons.",
+          "source_section": "Section VII - Biowaivers",
+          "verbatim_quote": "For multiple strengths of IR products with linear kinetics, the bioequivalence study may be performed at the highest strength and waivers of in vivo studies may be granted on lower strengths, based on an adequate dissolution test, provided the lower strengths are proportionately similar in composition (21 CFR 320.22(d)(2)). In all cases, the approval of additional strengths is based on dissolution profile comparisons between these additional strengths and the strength of the batch used in the pivotal bioequivalence study.",
+          "fda_notes": "21 CFR 320.22(d)(2) defines 'proportionally similar composition.' The biowaiver requires: (1) linear PK, (2) proportional composition, and (3) f2≥50 dissolution similarity. BCS-based waivers are addressed in a separate FDA guidance.",
+          "verified": true
+        },
+        {
+          "id": "DISS-010",
+          "rule": "Apparatus suitability tests should be carried out with a performance standard (calibrators) at least twice a year and after any significant equipment change or movement. A change from basket to paddle or vice versa may need recalibration.",
+          "source_section": "Appendix A - Apparatus Suitability",
+          "verbatim_quote": "The apparatus suitability tests should be carried out with a performance standard (i.e., calibrators) at least twice a year and after any significant equipment change or movement. However, a change from basket to paddle or vice versa may need recalibration.",
+          "fda_notes": "USP <711> requires use of calibrators as mechanical calibration checks. Dissolution apparatus must be verified for wobble, paddle/basket height, and temperature uniformity. Automated procedures must be validated against manual procedures.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_pediatric_psp": {
+      "source_document": "Pediatric_Study_Plans.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Pediatric Study Plans: Content of and Process for Submitting Initial Pediatric Study Plans and Amended Initial Pediatric Study Plans, CDER/CBER, July 2020 (Procedural)",
+      "rules": [
+        {
+          "id": "PED-001",
+          "rule": "A sponsor planning to submit a marketing application for a new active ingredient, new indication, new dosage form, new dosing regimen, or new route of administration is required to submit an initial Pediatric Study Plan (iPSP) under section 505B(e) of the FD&C Act, unless the drug is for an indication for which orphan designation has been granted.",
+          "source_section": "Section III - Applications That Require Submission of an Initial PSP",
+          "verbatim_quote": "A sponsor who is planning to submit a marketing application (or supplement to an application) for a new active ingredient, new indication, new dosage form, new dosing regimen, or new route of administration is required to submit an iPSP unless the drug is for an indication for which orphan designation has been granted.",
+          "fda_notes": "The iPSP requirement is statutory under PREA (Pediatric Research Equity Act), codified in FD&C Act section 505B. Biosimilar products not determined to be interchangeable with the reference product are considered to have a 'new active ingredient' for PREA purposes.",
+          "verified": true
+        },
+        {
+          "id": "PED-002",
+          "rule": "The iPSP must be submitted no later than 60 calendar days after the end-of-phase 2 meeting. If a phase 3 study will not be conducted under IND, the sponsor should submit the iPSP no later than 210 calendar days before submitting a marketing application or supplement.",
+          "source_section": "Section IV - Timelines for an Initial PSP Submission",
+          "verbatim_quote": "A sponsor must submit an iPSP, if required under PREA, before the date on which the sponsor submits the required assessments or investigation and no later than either 60 calendar days after the date of the end-of-phase 2 meeting or such other time as agreed upon between FDA and the sponsor... If a phase 3 study, or a combined phase 2 and phase 3 study, will not be conducted or will be conducted but not under IND, the sponsor should submit the iPSP no later than 210 calendar days before it submits a marketing application or supplement.",
+          "fda_notes": "The 210-day pre-submission deadline is for cases without a phase 3 under IND. FDA has 90 days to review the iPSP and provide a written response or meet with the sponsor. The total review period must not exceed 210 days.",
+          "verified": true
+        },
+        {
+          "id": "PED-003",
+          "rule": "After the sponsor submits an iPSP, the FDA has 90 days to review and respond. The sponsor then has a second 90-day period to submit an agreed iPSP. The FDA then has 30 days to confirm agreement or issue disagreement. A sponsor should not submit a marketing application until the FDA confirms agreement on the iPSP.",
+          "source_section": "Section IV - Timelines: FDA Review Process",
+          "verbatim_quote": "After the sponsor submits an iPSP, the FDA has 90 days to review the iPSP and provide a written response to the iPSP, or meet with the sponsor to discuss the iPSP, as appropriate. The sponsor then has a second 90-day period during which it may review FDA comments and initiate any needed negotiations to discuss the iPSP. By the end of this second 90-day review period, the sponsor must submit an agreed iPSP. The FDA then has 30 days after receipt of the agreed iPSP to review and issue correspondence confirming agreement or issue correspondence stating disagreement.",
+          "fda_notes": "Total review clock: 90 + 90 + 30 = 210 days maximum. A sponsor should not submit a marketing application or supplement until the FDA confirms agreement on the iPSP. The Pediatric Review Committee (PeRC) is consulted during FDA review.",
+          "verified": true
+        },
+        {
+          "id": "PED-004",
+          "rule": "If an iPSP is considered materially incomplete, the FDA intends to contact the sponsor, and the sponsor should submit a complete iPSP within 30 days to address the identified deficiencies. A new 210-day review period will start when the sponsor submits a complete iPSP.",
+          "source_section": "Section V.A - Materially Incomplete iPSPs",
+          "verbatim_quote": "Failure to include required information may result in an iPSP that the FDA considers materially incomplete. For example, if a sponsor fails to address all pediatric age groups and all indications for which the drug is being developed that are subject to PREA, the FDA generally considers the iPSP to be materially incomplete. Additionally, if a sponsor fails to provide justification for any planned waivers or deferrals, the FDA may consider the iPSP to be materially incomplete. If the iPSP is considered materially incomplete, the FDA intends to contact the sponsor, and the sponsor should submit a complete iPSP within 30 days to address the identified deficiencies. A new 210-day review period will start when the sponsor submits a complete iPSP.",
+          "fda_notes": "The 30-day deadline to resubmit a complete iPSP after material incompleteness finding is critical. Failure to resubmit triggers the reset of the 210-day clock, potentially delaying the marketing application submission timeline.",
+          "verified": true
+        },
+        {
+          "id": "PED-005",
+          "rule": "PREA authorizes FDA to grant a full waiver of required pediatric assessments if: (1) necessary studies are impossible or highly impracticable; (2) evidence strongly suggests the drug would be ineffective or unsafe in all pediatric age groups; or (3) the drug does not represent a meaningful therapeutic benefit over existing therapies for pediatric patients and is not likely to be used in a substantial number of pediatric patients.",
+          "source_section": "Section V.B.4 - Planned Request for Drug-Specific Waiver(s)",
+          "verbatim_quote": "PREA authorizes the FDA to grant a full waiver of required pediatric assessments or reports on the molecularly targeted pediatric cancer investigation if it finds that: (1) necessary studies are impossible or highly impracticable (because, for example, the number of patients is so small or the patients are geographically dispersed); (2) there is evidence strongly suggesting that the drug would be ineffective or unsafe in all pediatric age groups; or (3) the drug does not represent a meaningful therapeutic benefit over existing therapies for pediatric patients and is not likely to be used in a substantial number of pediatric patients.",
+          "fda_notes": "FDA formally grants or denies waiver requests only in the approval letter for the NDA, BLA, or supplement—not at the time of iPSP review. The iPSP conveys planned waiver requests, and FDA provides its best judgment during review.",
+          "verified": true
+        },
+        {
+          "id": "PED-006",
+          "rule": "Extrapolation of effectiveness from adult populations to pediatric populations may be appropriate if the course of the disease and the effects of the drug are sufficiently similar in adult and pediatric patients, and if an appropriate pediatric dose can be established either through achieving a similar exposure or by using an appropriate PD or clinical endpoint.",
+          "source_section": "Section V.B.3 - Overview of Planned Extrapolation to Specific Pediatric Populations",
+          "verbatim_quote": "Extrapolation of effectiveness from adult populations to pediatric populations may be appropriate if the course of the disease and the effects of the drug are sufficiently similar in adult and pediatric patients. Extrapolation of effectiveness assumes that an appropriate pediatric dose can be established either through achieving a similar exposure in children as in adults or by using an appropriate pharmacodynamic or clinical endpoint to achieve the targeted effect.",
+          "fda_notes": "Extrapolation does not eliminate the need for all pediatric data. PK studies in pediatric age groups are generally still required to establish age-appropriate dosing even when effectiveness is extrapolated from adults.",
+          "verified": true
+        },
+        {
+          "id": "PED-007",
+          "rule": "The iPSP must include a tabular summary in tabular form of all planned nonclinical development (categorized by species and study type) and clinical pediatric development (categorized by age), including a column identifying whether deferral is planned for each study and age groups for which waivers are planned.",
+          "source_section": "Section V.B.6 - Tabular Summary of Planned Nonclinical and Clinical Development",
+          "verbatim_quote": "This section should include a summary in tabular form of all planned: (1) nonclinical development to be conducted in support of the proposed pediatric clinical trials; and (2) clinical pediatric development (categorized by age). The table should include a column to identify whether the sponsor plans to request a deferral of the study (i.e., the sponsor does not plan to submit the data until after FDA approves the application). The table should also include any age groups for which the sponsor plans to request waivers.",
+          "fda_notes": "The tabular format is required, not optional. Age categories include: 0 to <1 month (neonates), 1 month to <2 years (infants/toddlers), 2 to <12 years (children), 12 to <17 years (adolescents). Each age group must be addressed for each indication.",
+          "verified": true
+        },
+        {
+          "id": "PED-008",
+          "rule": "At the time of approval of an application, FDA may grant a deferral of required pediatric assessments if: (1) the drug is ready for approval for use in adults before pediatric studies are complete; (2) pediatric studies should be delayed until additional safety or effectiveness data have been collected; or (3) there is another appropriate reason for deferral.",
+          "source_section": "Section V.B.5 - Planned Request for Deferral(s)",
+          "verbatim_quote": "At the time of approval of an application, the FDA may grant a deferral of required pediatric assessments or reports on the molecularly targeted pediatric cancer investigation if it finds that: (1) the drug is ready for approval for use in adults before pediatric studies are complete; (2) pediatric studies should be delayed until additional safety or effectiveness data have been collected; or (3) there is another appropriate reason for deferral.",
+          "fda_notes": "Deferral is different from waiver. Deferral means the studies must be completed post-approval; waiver means the studies are not required. FDA formally grants deferral only in the approval letter.",
+          "verified": true
+        },
+        {
+          "id": "PED-009",
+          "rule": "A sponsor must submit full protocols separately to the IND for FDA review and should obtain FDA agreement regarding all full protocols before initiation of pediatric studies outlined in the iPSP, per 21 CFR 312.23(a)(6) and 312.30.",
+          "source_section": "Section V.B.10.1 - Planned Pediatric Clinical Studies",
+          "verbatim_quote": "A sponsor must submit full protocols separately to the IND for FDA review and should obtain FDA agreement regarding all full protocols before initiation of pediatric studies outlined in this section.",
+          "fda_notes": "Full protocols are not required in the iPSP itself—only a brief outline is needed. Full protocols must be submitted to the IND per 21 CFR 312.23(a)(6) and 312.30 before initiating any pediatric study.",
+          "verified": true
+        },
+        {
+          "id": "PED-010",
+          "rule": "If the current formulation is not suitable for all pediatric age groups, sponsors should provide specific plans for the development of an age-appropriate formulation for all pediatric age groups that will be studied, including planned excipients.",
+          "source_section": "Section V.B.7 - Age-Appropriate Formulation Development",
+          "verbatim_quote": "If the current formulation is not suitable for all pediatric age groups, sponsors should provide specific plans for the development of an age-appropriate formulation for all pediatric age groups that will be studied. In this section (1 to 3 pages), sponsors should include information regarding planned excipients, to the extent practicable, which will be contained in any pediatric formulation being developed.",
+          "fda_notes": "Pediatric formulation development is often the rate-limiting step in pediatric drug development. Liquid formulations for neonates and infants, chewable/dispersible tablets for young children, and appropriately sized solid dose forms for older children are needed.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_breakthrough_therapy": {
+      "source_document": "Breakthrough_Therapy.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Expedited Programs for Serious Conditions - Drugs and Biologics, CDER/CBER, May 2014 (Procedural)",
+      "rules": [
+        {
+          "id": "BT-001",
+          "rule": "Breakthrough Therapy designation applies if the drug is intended, alone or in combination with 1 or more other drugs, to treat a serious or life-threatening disease or condition and preliminary clinical evidence indicates that the drug may demonstrate substantial improvement over existing therapies on 1 or more clinically significant endpoints, such as substantial treatment effects observed early in clinical development.",
+          "source_section": "Section VI - Breakthrough Therapy Designation",
+          "verbatim_quote": "Section 506(a) of the FD&C Act provides for designation of a drug as a breakthrough therapy '... if the drug is intended, alone or in combination with 1 or more other drugs, to treat a serious or life-threatening disease or condition and preliminary clinical evidence indicates that the drug may demonstrate substantial improvement over existing therapies on 1 or more clinically significant endpoints, such as substantial treatment effects observed early in clinical development.'",
+          "fda_notes": "The standard for Breakthrough Therapy designation is not the same as the standard for drug approval. Clinical evidence needed to support the designation is preliminary. FDA will still require full evidence to support approval.",
+          "verified": true
+        },
+        {
+          "id": "BT-002",
+          "rule": "A serious disease or condition is defined as one associated with morbidity that has substantial impact on day-to-day functioning, per 21 CFR 312.300(b)(1). Short-lived and self-limiting morbidity will usually not be sufficient, but the morbidity need not be irreversible if it is persistent or recurrent.",
+          "source_section": "Section III.A - Serious Condition",
+          "verbatim_quote": "... a disease or condition associated with morbidity that has substantial impact on day-to-day functioning. Short-lived and self-limiting morbidity will usually not be sufficient, but the morbidity need not be irreversible if it is persistent or recurrent. Whether a disease or condition is serious is a matter of clinical judgment, based on its impact on such factors as survival, day-to-day functioning, or the likelihood that the disease, if left untreated, will progress from a less severe condition to a more serious one. [21 CFR 312.300(b)(1)]",
+          "fda_notes": "This definition of 'serious' applies across all four expedited programs: Fast Track, Breakthrough Therapy, Accelerated Approval, and Priority Review. The threshold is substantial impact on day-to-day functioning, not life-threatening per se.",
+          "verified": true
+        },
+        {
+          "id": "BT-003",
+          "rule": "For Breakthrough Therapy designation, preliminary clinical evidence means evidence generally derived from phase 1 or 2 trials involving a sufficient number of patients to be credible. Nonclinical information could support the clinical evidence of drug activity, but cannot stand alone as the basis for designation.",
+          "source_section": "Section VI.A.3 - Preliminary Clinical Evidence",
+          "verbatim_quote": "For purposes of breakthrough therapy designation, preliminary clinical evidence means evidence that is sufficient to indicate that the drug may demonstrate substantial improvement in effectiveness or safety over available therapies, but in most cases is not sufficient to establish safety and effectiveness for purposes of approval. FDA expects that such evidence generally would be derived from phase 1 or 2 trials. Nonclinical information could support the clinical evidence of drug activity. In all cases, preliminary clinical evidence demonstrating that the drug may represent a substantial improvement over available therapy should involve a sufficient number of patients to be considered credible.",
+          "fda_notes": "Nonclinical data alone is insufficient for Breakthrough Therapy designation (unlike Fast Track, which can be designated based on nonclinical data). Phase 1 or 2 data must be the primary basis.",
+          "verified": true
+        },
+        {
+          "id": "BT-004",
+          "rule": "FDA must respond to both Fast Track and Breakthrough Therapy designation requests within 60 calendar days of receipt. Requests should be submitted with the IND or after, ideally no later than the pre-BLA or pre-NDA meeting.",
+          "source_section": "Section IV (Table) - Timelines for FDA Response",
+          "verbatim_quote": "Timelines for FDA response: Fast Track - Within 60 calendar days of receipt of the request. Breakthrough Therapy - Within 60 calendar days of receipt of the request. When to submit request: With IND or after; ideally, no later than the pre-BLA or pre-NDA meeting.",
+          "fda_notes": "The 60-day response timeline is statutory. Early submission of the designation request (with IND or early in development) is recommended to maximize the benefits of the designation during drug development.",
+          "verified": true
+        },
+        {
+          "id": "BT-005",
+          "rule": "Features of Breakthrough Therapy designation include: (1) intensive guidance on efficient drug development beginning as early as Phase 1; (2) organizational commitment involving senior managers with cross-disciplinary project lead assignment; (3) rolling review; and (4) other actions to expedite review.",
+          "source_section": "Section VI.B - Features of Breakthrough Therapy Designation",
+          "verbatim_quote": "Features of Breakthrough Therapy Designation include: Intensive guidance on efficient drug development; Organizational commitment involving senior managers; Rolling review; Other actions to expedite review. FDA intends to expedite the development and review of a breakthrough therapy by intensively involving senior managers and experienced review and regulatory health project management staff in a proactive, collaborative, cross-disciplinary manner.",
+          "fda_notes": "Rolling review allows FDA to review portions of a marketing application before the complete submission. This can significantly reduce review time for breakthrough therapies. The organizational commitment feature means a cross-disciplinary project lead is assigned.",
+          "verified": true
+        },
+        {
+          "id": "BT-006",
+          "rule": "Accelerated Approval allows FDA to grant approval to a product for a serious or life-threatening disease or condition upon a determination that the product has an effect on a surrogate endpoint that is reasonably likely to predict clinical benefit, or on a clinical endpoint that can be measured earlier than irreversible morbidity or mortality. Confirmatory postmarketing trials are required.",
+          "source_section": "Section VII - Accelerated Approval",
+          "verbatim_quote": "The accelerated approval provisions of FDASIA in section 506(c) of the FD&C Act provide that FDA may grant accelerated approval to: ... a product for a serious or life-threatening disease or condition ... upon a determination that the product has an effect on a surrogate endpoint that is reasonably likely to predict clinical benefit, or on a clinical endpoint that can be measured earlier than irreversible morbidity or mortality, that is reasonably likely to predict an effect on irreversible morbidity or mortality or other clinical benefit, taking into account the severity, rarity, or prevalence of the condition and the availability or lack of alternative treatments.",
+          "fda_notes": "Accelerated Approval is an approval pathway, not just a designation. Post-marketing confirmatory trials are required by statute under section 506(c)(2)(A). Failure to demonstrate clinical benefit or due diligence may result in withdrawal of approval.",
+          "verified": true
+        },
+        {
+          "id": "BT-007",
+          "rule": "Fast Track designation applies to a drug that is intended to treat a serious condition AND nonclinical or clinical data demonstrate the potential to address unmet medical need, OR the drug has been designated as a qualified infectious disease product (QIDP).",
+          "source_section": "Section V.A - Qualifying Criteria for Fast Track Designation",
+          "verbatim_quote": "Qualifying criteria: A drug that is intended to treat a serious condition AND nonclinical or clinical data demonstrate the potential to address unmet medical need OR A drug that has been designated as a qualified infectious disease product.",
+          "fda_notes": "Fast Track is broader than Breakthrough Therapy: nonclinical data (not just clinical evidence) can support designation. A drug with Fast Track designation may be eligible for Priority Review if supported by clinical data at BLA/NDA submission.",
+          "verified": true
+        },
+        {
+          "id": "BT-008",
+          "rule": "Priority Review designation provides a shorter clock for review of the marketing application: 6 months compared with the 10-month standard review. It applies to applications for drugs that treat a serious condition and would provide a significant improvement in safety or effectiveness.",
+          "source_section": "Section VIII - Priority Review Designation (Table)",
+          "verbatim_quote": "Features: Shorter clock for review of marketing application (6 months compared with the 10-month standard review). Qualifying criteria: An application (original or efficacy supplement) for a drug that treats a serious condition AND, if approved, would provide a significant improvement in safety or effectiveness OR Any supplement that proposes a labeling change pursuant to a report on a pediatric study under 505A.",
+          "fda_notes": "Priority Review reduces the FDA review period from 10 to 6 months from the date of application filing. The designation is determined at the time of BLA/NDA filing, not during development.",
+          "verified": true
+        },
+        {
+          "id": "BT-009",
+          "rule": "For Breakthrough Therapy designation, a clinically significant endpoint is one that measures an effect on irreversible morbidity or mortality (IMM) or on symptoms that represent serious consequences of the disease. Substantial improvement is a matter of judgment based on both the magnitude of the drug's effect and the importance of the effect to the treatment of the serious condition.",
+          "source_section": "Section VI.A.4 - Substantial Improvement on Clinically Significant Endpoints",
+          "verbatim_quote": "Substantial Improvement: The determination of whether the improvement over available therapy is substantial is a matter of judgment and depends on both the magnitude of the drug's effect on a clinically significant endpoint (which could include duration of the effect) and the importance of the observed effect to the treatment of the serious condition or serious aspect of the condition... Clinically Significant Endpoint: For purposes of breakthrough therapy designation, FDA considers clinically significant endpoint generally to refer to an endpoint that measures an effect on irreversible morbidity or mortality (IMM) or on symptoms that represent serious consequences of the disease.",
+          "fda_notes": "FDA's clinically significant endpoint definition includes: effects on established surrogate endpoints (for traditional approval), effects on surrogate or intermediate endpoints for accelerated approval, and significantly improved safety profiles with similar efficacy.",
+          "verified": true
+        },
+        {
+          "id": "BT-010",
+          "rule": "An unmet medical need is a condition whose treatment or diagnosis is not addressed adequately by available therapy, including an immediate need for a defined population (no or limited treatment) or a longer-term need for society (e.g., to address the development of resistance to antibacterial drugs).",
+          "source_section": "Section III.C - Unmet Medical Need",
+          "verbatim_quote": "An unmet medical need is a condition whose treatment or diagnosis is not addressed adequately by available therapy. An unmet medical need includes an immediate need for a defined population (i.e., to treat a serious condition with no or limited treatment) or a longer-term need for society (e.g., to address the development of resistance to antibacterial drugs).",
+          "fda_notes": "When available therapy exists, unmet medical need may be demonstrated by: improved effect on a serious outcome not addressed by available therapy, improved effect over available therapy, effect in patients unable to tolerate available therapy, effect in patients who failed available therapy, or improved safety with comparable efficacy.",
+          "verified": true
+        }
+      ]
+    },
+    "fda_endpoints": {
+      "source_document": "Clinical_Trial_Endpoints.pdf",
+      "actual_document_title": "FDA Guidance for Industry - Clinical Trial Endpoints for the Approval of Cancer Drugs and Biologics, CDER/CBER/Oncology Center of Excellence, December 2018",
+      "rules": [
+        {
+          "id": "END-001",
+          "rule": "Overall survival is defined as the time from randomization until death from any cause and is measured in the intent-to-treat population. Survival is considered the most reliable cancer endpoint and, when studies can be conducted to adequately assess survival, it is usually the preferred endpoint.",
+          "source_section": "Section III.A - Overall Survival",
+          "verbatim_quote": "Overall survival is defined as the time from randomization until death from any cause and is measured in the intent-to-treat population. Survival is considered the most reliable cancer endpoint, and when studies can be conducted to adequately assess survival, it is usually the preferred endpoint. This endpoint is precise and easy to measure, documented by the date of death. Bias is not a factor in endpoint measurement. Survival improvement should be analyzed as a risk-benefit analysis to assess clinical benefit.",
+          "fda_notes": "OS requires randomized controlled trials to be reliable. Data from externally controlled trials are seldom reliable for OS. A statistically significant improvement in OS with an acceptable toxicity profile has often supported new drug approval.",
+          "verified": true
+        },
+        {
+          "id": "END-002",
+          "rule": "ORR is defined as the proportion of patients with tumor size reduction of a predefined amount and for a minimum time period. FDA has generally defined ORR as the sum of partial responses plus CRs. Stable disease should not be a component of ORR.",
+          "source_section": "Section III.B.2 - Objective Response Rate",
+          "verbatim_quote": "ORR is defined as the proportion of patients with tumor size reduction of a predefined amount and for a minimum time period. Response duration usually is measured from the time of initial response until documented tumor progression. Generally, the FDA has defined ORR as the sum of partial responses plus CRs.",
+          "fda_notes": "Stable disease should NOT be a component of ORR per this guidance. Standardized criteria (e.g., RECIST 1.1) should be used to ascertain response. ORR can serve as a traditional approval endpoint, surrogate for accelerated approval, or surrogate for traditional approval in select contexts.",
+          "verified": true
+        },
+        {
+          "id": "END-003",
+          "rule": "DFS is defined as the time from randomization until disease recurrence or death from any cause. EFS is defined as time from randomization to any of the following events: progression of disease that precludes surgery, local or distant recurrence, or death due to any cause.",
+          "source_section": "Section III.B.1 - Disease-Free Survival and Event-Free Survival",
+          "verbatim_quote": "Generally, DFS is defined as the time from randomization until disease recurrence or death from any cause. The most frequent use of this endpoint is in the adjuvant setting after definitive surgery or radiotherapy... For the purpose of this guidance, EFS is defined as time from randomization to any of the following events: progression of disease that precludes surgery, local or distant recurrence, or death due to any cause.",
+          "fda_notes": "DFS has been the primary basis of approval for adjuvant breast cancer hormonal therapy, adjuvant colon cancer, and adjuvant cytotoxic breast cancer therapy. EFS is appropriate for evaluation of neoadjuvant therapy.",
+          "verified": true
+        },
+        {
+          "id": "END-004",
+          "rule": "PFS is defined as the time from randomization until objective tumor progression or death, whichever occurs first. TTP does not include deaths. Compared with TTP, PFS is the preferred regulatory endpoint because PFS includes deaths and thus can be a better correlate to overall survival.",
+          "source_section": "Section III.B.4 - Time to Progression and Progression-Free Survival",
+          "verbatim_quote": "TTP is defined as the time from randomization until objective tumor progression; TTP does not include deaths. PFS is defined as the time from randomization until objective tumor progression or death, whichever occurs first... Compared with TTP, PFS is the preferred regulatory endpoint. PFS includes deaths and thus can be a better correlate to overall survival.",
+          "fda_notes": "PFS data collection should be limited to specified time intervals around scheduled visits to minimize bias. Plans for PFS data collection and analysis should be discussed with FDA at end-of-phase 2 meetings.",
+          "verified": true
+        },
+        {
+          "id": "END-005",
+          "rule": "Time to treatment failure (TTF) is defined as a composite endpoint measuring time from randomization to discontinuation of treatment for any reason, including disease progression, treatment toxicity, and death. TTF is generally not recommended as a regulatory endpoint for new molecular entity drug approval.",
+          "source_section": "Section III.B.5 - Time to Treatment Failure",
+          "verbatim_quote": "Time to treatment failure (TTF) is defined as a composite endpoint measuring time from randomization to discontinuation of treatment for any reason, including disease progression, treatment toxicity, and death. TTF is generally not recommended as a regulatory endpoint for new molecular entity drug approval.",
+          "fda_notes": "TTF conflates disease progression with tolerability. Since it incorporates treatment discontinuation for toxicity (a drug effect), it is considered biased and not a clean measure of clinical benefit.",
+          "verified": true
+        },
+        {
+          "id": "END-006",
+          "rule": "CR is defined as no detectable evidence of tumor, generally measured through imaging studies (e.g., CT scans) or histopathologic assessment. CR has supported traditional approval in hematologic malignancies (e.g., leukemia) and pathologic CR in high-risk early-stage breast cancer as a surrogate endpoint for accelerated approval.",
+          "source_section": "Section III.B.3 - Complete Response",
+          "verbatim_quote": "CR is defined as no detectable evidence of tumor. CR is generally measured through imaging studies (e.g., CT scans) or through histopathologic assessment (e.g., bone marrow biopsy or breast cancer resection specimens). Treatment effect measured by CR can be a surrogate endpoint to support accelerated approval, a surrogate endpoint to support traditional approval, or it can represent direct clinical benefit based on the specific disease, context of use, magnitude of the effect, effect duration, disease setting, location of disease, available therapy, and the risk-benefit relationship.",
+          "fda_notes": "For hematologic malignancies such as acute leukemia, CR has been used as a clinical endpoint for traditional approval. For early high-risk breast cancer, pathologic CR (pCR) has been used as a surrogate endpoint for accelerated approval.",
+          "verified": true
+        },
+        {
+          "id": "END-007",
+          "rule": "For drugs granted accelerated approval, postmarketing confirmatory trials have been required to verify and describe the anticipated effect on IMM or other clinical benefit. If the postmarketing studies fail to demonstrate clinical benefit or if the applicant does not demonstrate due diligence, FDA may withdraw approval.",
+          "source_section": "Section VII.D - Conditions of Accelerated Approval",
+          "verbatim_quote": "For drugs granted accelerated approval, postmarketing confirmatory trials have been required to verify and describe the anticipated effect on IMM or other clinical benefit. A drug is approved under the accelerated approval regulations on condition that the manufacturer conducts clinical studies to verify and describe the actual clinical benefit. If the postmarketing studies fail to demonstrate clinical benefit or if the applicant does not demonstrate due diligence in conducting the required studies, among other reasons, FDA may withdraw approval of the drug or indication.",
+          "fda_notes": "Confirmatory trials should usually be already underway at the time of accelerated approval. FDA tracks post-approval study commitments and may take action (including expedited withdrawal under FDASIA) if studies are not completed with due diligence.",
+          "verified": true
+        },
+        {
+          "id": "END-008",
+          "rule": "When the primary study endpoint is based on tumor measurements (e.g., PFS or ORR), tumor assessments generally should be verified by central reviewers blinded to study treatments. An independent endpoint review committee (IRC) charter should be in place before initiation of the study.",
+          "source_section": "Section III.B / Appendix - Independent Review of Tumor Endpoints",
+          "verbatim_quote": "When the primary study endpoint is based on tumor measurements (e.g., PFS or ORR), tumor assessments generally should be verified by central reviewers blinded to study treatments (see Appendix) to ascertain lack of assessment bias... An independent endpoint review committee (IRC) can minimize bias in radiographic interpretation of the radiological findings and independent adjudication of assessments. A clearly written plan of the charter outlining the IRC function and process (independent review charter) should be in place before initiation of the study.",
+          "fda_notes": "Independent blinded review is not always required in blinded trials when effect sizes are robust. FDA may accept an audit-based approach (random sample of images reviewed centrally) with a detailed auditing plan.",
+          "verified": true
+        },
+        {
+          "id": "END-009",
+          "rule": "Per 21 CFR 314.126, FDA approves drugs based on substantial evidence of efficacy from adequate and well-controlled investigations. Studies must allow a valid comparison to a control and must provide a quantitative assessment of the drug's effect. In many cases, at least two adequate and well-controlled clinical investigations are needed.",
+          "source_section": "Section IV - Clinical Trial Design and Analysis Considerations",
+          "verbatim_quote": "Per 21 CFR 314.126, the FDA approves drugs based on substantial evidence of efficacy from 'adequate and well-controlled investigations,' as described in the regulations. Studies must allow a valid comparison to a control and must provide a quantitative assessment of the drug's effect. The most reliable method for demonstrating efficacy is to show a statistically significant improvement in a clinically meaningful endpoint in randomized controlled trials (i.e., superiority).",
+          "fda_notes": "The 'two study rule' has exceptions. A single multinational trial providing highly reliable and statistically strong evidence of an important clinical benefit may suffice. For cancer drugs, evidence from one adequate and well-controlled study can support efficacy supplements for the same cancer at a different stage.",
+          "verified": true
+        },
+        {
+          "id": "END-010",
+          "rule": "Surrogate endpoints for accelerated approval must be reasonably likely to predict clinical benefit per FD&C Act section 506(c)(1)(A), 21 CFR part 314 subpart H, and 21 CFR part 601 subpart E. ORR has been the most commonly used surrogate endpoint in support of accelerated approval in oncology.",
+          "source_section": "Section II.B - Endpoints Supporting Past Approvals",
+          "verbatim_quote": "Surrogate endpoints for accelerated approval must be reasonably likely to predict clinical benefit (FD&C Act § 506(c)(1)(A); 21 CFR part 314, subpart H; and 21 CFR part 601, subpart E). While durable ORR has been used as a traditional approval endpoint in some circumstances, ORR has also been the most commonly used surrogate endpoint in support of accelerated approval. Tumor response is widely accepted by oncologists in guiding cancer treatments. Because ORR is directly attributable to drug effect, single-arm trials conducted in patients with refractory tumors where no available therapy exists provide an accurate assessment of ORR.",
+          "fda_notes": "The 'reasonably likely to predict clinical benefit' standard for accelerated approval is less well-established than the 'known to predict clinical benefit' standard for traditional approval surrogates. Duration and depth of response are important considerations in evaluating ORR as a surrogate.",
+          "verified": true
+        }
+      ]
+    }
+  }
+}

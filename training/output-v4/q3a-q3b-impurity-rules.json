@@ -1,0 +1,1303 @@
+{
+  "meta": {
+    "title": "ICH Q3A(R2) + Q3B(R2) — Drug Substance and Drug Product Impurity Rules",
+    "version": "4.0",
+    "created": "2026-03-23",
+    "guidelines": ["ICH Q3A(R2)", "ICH Q3B(R2)"],
+    "quality_standard": "Verbatim quotes for all thresholds. VERIFIED status.",
+    "source_documents": [
+      "ICH Q3A(R2) Impurities in New Drug Substances, Step 4, 25 October 2006",
+      "ICH Q3B(R2) Impurities in New Drug Products, Step 4, 2 June 2006"
+    ],
+    "total_rules": 96
+  },
+  "rules": [
+
+    {
+      "rule_id": "Q3A-001",
+      "rule_text": "For drug substances with a maximum daily dose of ≤2 g/day, any organic impurity must be reported at or above 0.05%.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose ≤ 2g/day | Reporting Threshold 0.05%",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "≤2 g/day",
+        "reporting_threshold_percent": 0.05,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-002",
+      "rule_text": "For drug substances with a maximum daily dose of >2 g/day, any organic impurity must be reported at or above 0.03%.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose > 2g/day | Reporting Threshold 0.03%",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">2 g/day",
+        "reporting_threshold_percent": 0.03,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-003",
+      "rule_text": "For drug substances with a maximum daily dose of ≤2 g/day, any impurity present above 0.10% or 1.0 mg per day total daily intake (whichever is lower) must be identified.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose ≤ 2g/day | Identification Threshold 0.10% or 1.0 mg per day intake (whichever is lower)",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "≤2 g/day",
+        "identification_threshold_percent": 0.10,
+        "identification_threshold_mg_tdi": 1.0,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-004",
+      "rule_text": "For drug substances with a maximum daily dose of >2 g/day, any impurity present above 0.05% must be identified.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose > 2g/day | Identification Threshold 0.05%",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">2 g/day",
+        "identification_threshold_percent": 0.05,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-005",
+      "rule_text": "For drug substances with a maximum daily dose of ≤2 g/day, any impurity present above 0.15% or 1.0 mg per day total daily intake (whichever is lower) must be qualified.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose ≤ 2g/day | Qualification Threshold 0.15% or 1.0 mg per day intake (whichever is lower)",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "≤2 g/day",
+        "qualification_threshold_percent": 0.15,
+        "qualification_threshold_mg_tdi": 1.0,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-006",
+      "rule_text": "For drug substances with a maximum daily dose of >2 g/day, any impurity present above 0.05% must be qualified.",
+      "source_section": "Attachment 1 — Thresholds",
+      "source_quote": "Maximum Daily Dose > 2g/day | Qualification Threshold 0.05%",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">2 g/day",
+        "qualification_threshold_percent": 0.05,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-007",
+      "rule_text": "Higher reporting thresholds must be scientifically justified. Lower thresholds can be appropriate if the impurity is unusually toxic.",
+      "source_section": "Attachment 1 — Notes",
+      "source_quote": "Higher reporting thresholds should be scientifically justified. Lower thresholds can be appropriate if the impurity is unusually toxic.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-008",
+      "rule_text": "Any impurity at a level greater than the reporting threshold must be summed and reported as total impurities. Below 1.0%, results should be reported to two decimal places; at and above 1.0%, results should be reported to one decimal place.",
+      "source_section": "Section 5 — Reporting Impurity Content of Batches",
+      "source_quote": "Any impurity at a level greater than (>) the reporting threshold (see Attachment 1) and total impurities observed in these batches of the new drug substance should be reported with the analytical procedures indicated. Below 1.0%, the results should be reported to two decimal places (e.g., 0.06%, 0.13%); at and above 1.0%, the results should be reported to one decimal place (e.g., 1.3%).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_format",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "below_1_percent_decimal_places": 2,
+        "at_or_above_1_percent_decimal_places": 1
+      }
+    },
+
+    {
+      "rule_id": "Q3A-009",
+      "rule_text": "Any impurity at a level greater than the identification threshold in any batch manufactured by the proposed commercial process must be identified. Any degradation product observed in stability studies at recommended storage conditions at a level greater than the identification threshold must also be identified.",
+      "source_section": "Section 3.1 — Organic Impurities",
+      "source_quote": "Note that any impurity at a level greater than (>) the identification threshold in any batch manufactured by the proposed commercial process should be identified. In addition, any degradation product observed in stability studies at recommended storage conditions at a level greater than (>) the identification threshold should be identified.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "trigger": "greater than identification threshold",
+        "applies_to": ["commercial process batches", "stability study degradation products"]
+      }
+    },
+
+    {
+      "rule_id": "Q3A-010",
+      "rule_text": "Identification of impurities present at not more than the identification threshold is generally not considered necessary. However, analytical procedures should be developed for those potential impurities that are expected to be unusually potent, producing toxic or pharmacological effects at a level not more than the identification threshold.",
+      "source_section": "Section 3.1 — Organic Impurities",
+      "source_quote": "Identification of impurities present at an apparent level of not more than (≤) the identification threshold is generally not considered necessary. However, analytical procedures should be developed for those potential impurities that are expected to be unusually potent, producing toxic or pharmacological effects at a level not more than (≤) the identification threshold.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "exception_condition": "unusually potent impurity",
+        "threshold_applicability": "≤ identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-011",
+      "rule_text": "Qualification is the process of acquiring and evaluating data that establishes the biological safety of an individual impurity or a given impurity profile at the level(s) specified.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "Qualification is the process of acquiring and evaluating data that establishes the biological safety of an individual impurity or a given impurity profile at the level(s) specified.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_definition",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-012",
+      "rule_text": "The level of any impurity present in a new drug substance that has been adequately tested in safety and/or clinical studies is considered qualified. Impurities that are also significant metabolites present in animal and/or human studies are generally considered qualified.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "The level of any impurity present in a new drug substance that has been adequately tested in safety and/or clinical studies would be considered qualified. Impurities that are also significant metabolites present in animal and/or human studies are generally considered qualified.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_conditions",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-013",
+      "rule_text": "If data are unavailable to qualify the proposed acceptance criterion of an impurity, studies to obtain such data can be appropriate when the usual qualification thresholds given in Attachment 1 are exceeded.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "If data are unavailable to qualify the proposed acceptance criterion of an impurity, studies to obtain such data can be appropriate when the usual qualification thresholds given in Attachment 1 are exceeded.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_requirement",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "trigger": "exceeds qualification thresholds in Attachment 1"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-014",
+      "rule_text": "Higher or lower thresholds for qualification of impurities can be appropriate for some individual drugs based on scientific rationale and level of concern, including drug class effects and clinical experience. Proposals for alternative thresholds would be considered on a case-by-case basis.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "Higher or lower thresholds for qualification of impurities can be appropriate for some individual drugs based on scientific rationale and level of concern, including drug class effects and clinical experience... Proposals for alternative thresholds would be considered on a case-by-case basis.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-015",
+      "rule_text": "When an impurity identified structure has known human relevant risks, it must be reduced to a safe level (per Decision Tree, Attachment 3).",
+      "source_section": "Attachment 3 — Decision Tree for Identification and Qualification",
+      "source_quote": "Any known human relevant risks? Yes → Reduce to safe level",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_action",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "action": "reduce to safe level",
+        "trigger": "known human relevant risks identified after structure determination"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-016",
+      "rule_text": "When an impurity cannot be identified and cannot be reduced to ≤ the identification threshold, and is greater than the qualification threshold, the applicant must consider conducting genotoxicity studies (point mutation, chromosomal aberration), general toxicity studies (one species, usually 14 to 90 days), and other specific toxicity endpoints as appropriate.",
+      "source_section": "Attachment 3 — Decision Tree, Notes on Attachment 3",
+      "source_quote": "Consider patient population and duration of use and consider conducting: Genotoxicity studies (point mutation, chromosomal aberration); General toxicity studies (one species, usually 14 to 90 days); Other specific toxicity endpoints, as appropriate",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_studies",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "trigger": "exceeds qualification threshold and cannot be reduced",
+        "study_duration_min_days": 14,
+        "study_duration_max_days": 90
+      }
+    },
+
+    {
+      "rule_id": "Q3A-017",
+      "rule_text": "If general toxicity studies result in any clinically relevant adverse effects, the impurity level must be reduced to a safe level.",
+      "source_section": "Attachment 3 — Decision Tree for Identification and Qualification",
+      "source_quote": "Any clinically relevant adverse effects? Yes → Reduce to safe level",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_action",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "action": "reduce to safe level",
+        "trigger": "clinically relevant adverse effects found in toxicity studies"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-018",
+      "rule_text": "The minimum genotoxicity screen consists of a study to detect point mutations and a study to detect chromosomal aberrations, both in vitro.",
+      "source_section": "Attachment 3 — Notes on Attachment 3 (a)",
+      "source_quote": "A study to detect point mutations and one to detect chromosomal aberrations, both in vitro, are considered an appropriate minimum screen.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "genotoxicity_screen",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-019",
+      "rule_text": "The new drug substance specification should include each specified identified impurity, each specified unidentified impurity, any unspecified impurity with an acceptance criterion of not more than (≤) the identification threshold, and total impurities.",
+      "source_section": "Section 6 — Listing of Impurities in Specifications",
+      "source_quote": "In summary, the new drug substance specification should include, where applicable, the following list of impurities: Each specified identified impurity; Each specified unidentified impurity; Any unspecified impurity with an acceptance criterion of not more than (≤) the identification threshold; Total impurities",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "specification_content",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "unspecified_impurity_limit": "≤ identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-020",
+      "rule_text": "Specified identified impurities should be included along with specified unidentified impurities estimated to be present at a level greater than (>) the identification threshold. For unusually potent or toxic impurities, the quantitation/detection limit of analytical procedures should be commensurate with the level at which impurities should be controlled.",
+      "source_section": "Section 6 — Listing of Impurities in Specifications",
+      "source_quote": "Specified identified impurities should be included along with specified unidentified impurities estimated to be present at a level greater than (>) the identification threshold given in Attachment 1. For impurities known to be unusually potent or to produce toxic or unexpected pharmacological effects, the quantitation/detection limit of the analytical procedures should be commensurate with the level at which the impurities should be controlled.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "specification_content",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "threshold_for_specification_inclusion": "> identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-021",
+      "rule_text": "Acceptance criteria for impurities should be set no higher than the level that can be justified by safety data and should be consistent with the level achievable by the manufacturing process and the analytical capability.",
+      "source_section": "Section 6 — Listing of Impurities in Specifications",
+      "source_quote": "Acceptance criteria should be set no higher than the level that can be justified by safety data, and should be consistent with the level achievable by the manufacturing process and the analytical capability.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "specification_criteria",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-022",
+      "rule_text": "The quantitation limit for the analytical procedure used for impurity testing should be not more than (≤) the reporting threshold.",
+      "source_section": "Section 4 — Analytical Procedures",
+      "source_quote": "The quantitation limit for the analytical procedure should be not more than (≤) the reporting threshold.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "quantitation_limit_requirement": "≤ reporting threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-023",
+      "rule_text": "Impurities can be classified into three categories: organic impurities (process- and drug-related), inorganic impurities, and residual solvents.",
+      "source_section": "Section 2 — Classification of Impurities",
+      "source_quote": "Impurities can be classified into the following categories: Organic impurities (process- and drug-related); Inorganic impurities; Residual solvents",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_classification",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-024",
+      "rule_text": "Organic impurities arising during the manufacturing process and/or storage of a new drug substance can include: starting materials, by-products, intermediates, degradation products, and reagents, ligands and catalysts.",
+      "source_section": "Section 2 — Classification of Impurities",
+      "source_quote": "Organic impurities can arise during the manufacturing process and/or storage of the new drug substance. They can be identified or unidentified, volatile or non-volatile, and include: Starting materials; By-products; Intermediates; Degradation products; Reagents, ligands and catalysts",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_classification",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-025",
+      "rule_text": "Enantiomeric impurities, polymorphic forms, and extraneous contaminants are excluded from the scope of Q3A. Extraneous contaminants are more appropriately addressed as GMP issues.",
+      "source_section": "Section 2 / Section 3.3 — Scope Exclusions",
+      "source_quote": "Excluded from this document are: (1) extraneous contaminants that should not occur in new drug substances and are more appropriately addressed as Good Manufacturing Practice (GMP) issues, (2) polymorphic forms, and (3) enantiomeric impurities.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "scope_exclusion",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-026",
+      "rule_text": "Residual solvents used in the manufacturing process must be controlled and presented according to the ICH Q3C Guideline for Residual Solvents.",
+      "source_section": "Section 3.3 — Solvents",
+      "source_quote": "The control of residues of the solvents used in the manufacturing process for the new drug substance should be discussed and presented according to the ICH Q3C Guideline for Residual Solvents.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "residual_solvents",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-027",
+      "rule_text": "Inorganic impurity acceptance criteria should be based on pharmacopoeial standards or known safety data. Carry-over of catalysts to the new drug substance should be evaluated during development.",
+      "source_section": "Section 3.2 — Inorganic Impurities",
+      "source_quote": "Inorganic impurities are normally detected and quantified using pharmacopoeial or other appropriate procedures. Carry-over of catalysts to the new drug substance should be evaluated during development... Acceptance criteria should be based on pharmacopoeial standards or known safety data.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "inorganic_impurities",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-028",
+      "rule_text": "A potential impurity is defined as an impurity that theoretically can arise during manufacture or storage. It may or may not actually appear in the new drug substance.",
+      "source_section": "Section 8 — Glossary",
+      "source_quote": "Potential Impurity: An impurity that theoretically can arise during manufacture or storage. It may or may not actually appear in the new drug substance.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_definitions",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-029",
+      "rule_text": "The applicant should summarise the actual and potential impurities most likely to arise during the synthesis, purification, and storage of the new drug substance, based on sound scientific appraisal of the chemical reactions involved.",
+      "source_section": "Section 3.1 — Organic Impurities",
+      "source_quote": "The applicant should summarise the actual and potential impurities most likely to arise during the synthesis, purification, and storage of the new drug substance. This summary should be based on sound scientific appraisal of the chemical reactions involved in the synthesis, impurities associated with raw materials that could contribute to the impurity profile of the new drug substance, and possible degradation products.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "actual_vs_potential_impurities",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-030",
+      "rule_text": "The impurity profile of drug substance batches intended for marketing should be compared with those used in development and any differences discussed.",
+      "source_section": "Section 3.1 — Organic Impurities",
+      "source_quote": "The impurity profile of the drug substance batches intended for marketing should be compared with those used in development, and any differences discussed.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "impurity_profiling",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-031",
+      "rule_text": "A tabulation (e.g., spreadsheet) linking each new drug substance batch to each safety study and each clinical study in which it was used should be provided.",
+      "source_section": "Section 5 — Reporting Impurity Content of Batches",
+      "source_quote": "A tabulation should be provided that links the specific new drug substance batch to each safety study and each clinical study in which the new drug substance has been used.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "batch_reporting",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-032",
+      "rule_text": "When identification of an impurity is not feasible, a summary of the laboratory studies demonstrating the unsuccessful effort to identify it should be included in the application.",
+      "source_section": "Section 3.1 — Organic Impurities",
+      "source_quote": "When identification of an impurity is not feasible, a summary of the laboratory studies demonstrating the unsuccessful effort should be included in the application.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "identification_requirement",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-033",
+      "rule_text": "The qualification threshold for new impurities observed during later stages of drug development should be considered if the level is greater than the qualification threshold given in Attachment 1. Any new impurity should be identified if its level is greater than the identification threshold.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "Any new impurity observed in later stages of development should be identified if its level is greater than (>) the identification threshold given in Attachment 1... Similarly, the qualification of the impurity should be considered if its level is greater than (>) the qualification threshold given in Attachment 1.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {
+        "identification_trigger": "> identification threshold (Attachment 1)",
+        "qualification_trigger": "> qualification threshold (Attachment 1)"
+      }
+    },
+
+    {
+      "rule_id": "Q3A-034",
+      "rule_text": "Safety assessment studies to qualify an impurity should compare the new drug substance containing a representative amount of the new impurity with previously qualified material. Studies using isolated impurity samples can also be considered.",
+      "source_section": "Section 7 — Qualification of Impurities",
+      "source_quote": "Safety assessment studies to qualify an impurity should compare the new drug substance containing a representative amount of the new impurity with previously qualified material. Safety assessment studies using a sample of the isolated impurity can also be considered.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_studies",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-035",
+      "rule_text": "When evaluating thresholds, if the threshold is described in %, the reported result rounded to the same decimal place as the threshold should be compared directly to the threshold. When the threshold is described in TDI, the reported result should be converted to TDI, rounded to the same decimal place as the threshold and compared to it.",
+      "source_section": "Attachment 2 — Notes",
+      "source_quote": "To verify if a threshold is exceeded, a reported result has to be evaluated against the thresholds as follows: when the threshold is described in %, the reported result rounded to the same decimal place as the threshold should be compared directly to the threshold. When the threshold is described in TDI, the reported result should be converted to TDI, rounded to the same decimal place as the threshold and compared to the threshold.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "threshold_evaluation_method",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-001",
+      "rule_text": "For drug products with a maximum daily dose of ≤1 g, degradation products must be reported at or above 0.1%.",
+      "source_section": "Attachment 1 — Reporting Thresholds",
+      "source_quote": "Maximum Daily Dose ≤ 1 g | Threshold 0.1%",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "≤1 g",
+        "reporting_threshold_percent": 0.1,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-002",
+      "rule_text": "For drug products with a maximum daily dose of >1 g, degradation products must be reported at or above 0.05%.",
+      "source_section": "Attachment 1 — Reporting Thresholds",
+      "source_quote": "Maximum Daily Dose > 1 g | Threshold 0.05%",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">1 g",
+        "reporting_threshold_percent": 0.05,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-003",
+      "rule_text": "For drug products with a maximum daily dose of <1 mg, degradation products must be identified at or above 1.0% or 5 µg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Identification Thresholds",
+      "source_quote": "Maximum Daily Dose < 1 mg | Threshold 1.0% or 5 µg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "<1 mg",
+        "identification_threshold_percent": 1.0,
+        "identification_threshold_tdi_ug": 5,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-004",
+      "rule_text": "For drug products with a maximum daily dose of 1 mg to 10 mg, degradation products must be identified at or above 0.5% or 20 µg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Identification Thresholds",
+      "source_quote": "Maximum Daily Dose 1 mg - 10 mg | Threshold 0.5% or 20 µg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "1 mg to 10 mg",
+        "identification_threshold_percent": 0.5,
+        "identification_threshold_tdi_ug": 20,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-005",
+      "rule_text": "For drug products with a maximum daily dose of >10 mg to 2 g, degradation products must be identified at or above 0.2% or 2 mg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Identification Thresholds",
+      "source_quote": "Maximum Daily Dose >10 mg - 2 g | Threshold 0.2% or 2 mg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">10 mg to 2 g",
+        "identification_threshold_percent": 0.2,
+        "identification_threshold_tdi_mg": 2,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-006",
+      "rule_text": "For drug products with a maximum daily dose of >2 g, degradation products must be identified at or above 0.10%.",
+      "source_section": "Attachment 1 — Identification Thresholds",
+      "source_quote": "Maximum Daily Dose > 2 g | Threshold 0.10%",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">2 g",
+        "identification_threshold_percent": 0.10,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-007",
+      "rule_text": "For drug products with a maximum daily dose of <10 mg, degradation products must be qualified at or above 1.0% or 50 µg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Qualification Thresholds",
+      "source_quote": "Maximum Daily Dose < 10 mg | Threshold 1.0% or 50 µg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "<10 mg",
+        "qualification_threshold_percent": 1.0,
+        "qualification_threshold_tdi_ug": 50,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-008",
+      "rule_text": "For drug products with a maximum daily dose of 10 mg to 100 mg, degradation products must be qualified at or above 0.5% or 200 µg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Qualification Thresholds",
+      "source_quote": "Maximum Daily Dose 10 mg - 100 mg | Threshold 0.5% or 200 µg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": "10 mg to 100 mg",
+        "qualification_threshold_percent": 0.5,
+        "qualification_threshold_tdi_ug": 200,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-009",
+      "rule_text": "For drug products with a maximum daily dose of >100 mg to 2 g, degradation products must be qualified at or above 0.2% or 3 mg TDI, whichever is lower.",
+      "source_section": "Attachment 1 — Qualification Thresholds",
+      "source_quote": "Maximum Daily Dose >100 mg - 2 g | Threshold 0.2% or 3 mg TDI, whichever is lower",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">100 mg to 2 g",
+        "qualification_threshold_percent": 0.2,
+        "qualification_threshold_tdi_mg": 3,
+        "rule": "whichever is lower"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-010",
+      "rule_text": "For drug products with a maximum daily dose of >2 g, degradation products must be qualified at or above 0.15%.",
+      "source_section": "Attachment 1 — Qualification Thresholds",
+      "source_quote": "Maximum Daily Dose > 2 g | Threshold 0.15%",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_daily_dose_condition": ">2 g",
+        "qualification_threshold_percent": 0.15,
+        "unit": "percent"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-011",
+      "rule_text": "Q3B applies only to degradation products in new drug products, defined as impurities resulting from chemical change in the drug substance brought about during manufacture and/or storage by the effect of light, temperature, pH, water, or by reaction with an excipient and/or the immediate container closure system.",
+      "source_section": "Section 7 — Glossary",
+      "source_quote": "Degradation Product: An impurity resulting from a chemical change in the drug substance brought about during manufacture and/or storage of the new drug product by the effect of, for example, light, temperature, pH, water, or by reaction with an excipient and/or the immediate container closure system.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "degradation_product_definition",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-012",
+      "rule_text": "Q3B addresses impurities in new drug products classified as degradation products of the drug substance or reaction products of the drug substance with an excipient and/or immediate container closure system. Enantiomeric impurities are excluded from Q3B.",
+      "source_section": "Section 1.3 — Scope of the guideline",
+      "source_quote": "This guideline addresses only those impurities in new drug products classified as degradation products of the drug substance or reaction products of the drug substance with an excipient and/or immediate container closure system (collectively referred to as 'degradation products' in this guideline)... Also excluded from this document are: (1) extraneous contaminants... (2) polymorphic forms, and (3) enantiomeric impurities.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "scope_definition",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-013",
+      "rule_text": "Impurities present in the new drug substance need not be monitored or specified in the new drug product unless they are also degradation products.",
+      "source_section": "Section 1.3 — Scope of the guideline",
+      "source_quote": "Generally, impurities present in the new drug substance need not be monitored or specified in the new drug product unless they are also degradation products (see ICH Q6A guideline on specifications).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "scope_definition",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-014",
+      "rule_text": "Any degradation product observed in stability studies conducted at the recommended storage condition should be identified when present at a level greater than the identification threshold.",
+      "source_section": "Section 2 — Rationale for the Reporting and Control of Degradation Products",
+      "source_quote": "Any degradation product observed in stability studies conducted at the recommended storage condition should be identified when present at a level greater than (>) the identification thresholds given in Attachment 1.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "trigger": "> identification threshold",
+        "applies_to": "stability studies at recommended storage conditions"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-015",
+      "rule_text": "The applicant should summarise the degradation products observed during manufacture and/or stability studies of the new drug product, based on sound scientific appraisal of potential degradation pathways and impurities arising from interaction with excipients and/or the immediate container closure system.",
+      "source_section": "Section 2 — Rationale for the Reporting and Control of Degradation Products",
+      "source_quote": "The applicant should summarise the degradation products observed during manufacture and/or stability studies of the new drug product. This summary should be based on sound scientific appraisal of potential degradation pathways in the new drug product and impurities arising from the interaction with excipients and/or the immediate container closure system.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "degradation_product_characterisation",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-016",
+      "rule_text": "Degradation products present at a level of not more than (≤) the identification threshold generally would not need to be identified. However, analytical procedures should be developed for those degradation products that are suspected to be unusually potent, producing toxic or significant pharmacological effects.",
+      "source_section": "Section 2 — Rationale for the Reporting and Control of Degradation Products",
+      "source_quote": "Degradation products present at a level of not more than (≤) the identification threshold generally would not need to be identified. However, analytical procedures should be developed for those degradation products that are suspected to be unusually potent, producing toxic or significant pharmacological effects at levels not more than (≤) the identification threshold.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "exception_condition": "unusually potent or toxic degradation product",
+        "threshold_applicability": "≤ identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-017",
+      "rule_text": "Any degradation product at a level greater than the reporting threshold, and total degradation products, should be reported in the registration application. All degradation products at a level greater than the reporting threshold should be summed and reported as total degradation products.",
+      "source_section": "Section 4 — Reporting Degradation Products Content of Batches",
+      "source_quote": "Any degradation product at a level greater than (>) the reporting threshold (see Attachment 1), and total degradation products observed in the relevant batches of the new drug product, should be reported with the analytical procedures indicated... All degradation products at a level greater than (>) the reporting threshold should be summed and reported as total degradation products.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_requirement",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "trigger": "> reporting threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-018",
+      "rule_text": "For Q3B reporting, below 1.0%, results should be reported to the number of decimal places in the applicable reporting threshold; at and above 1.0%, results should be reported to one decimal place.",
+      "source_section": "Section 4 — Reporting Degradation Products Content of Batches",
+      "source_quote": "Below 1.0%, the results should be reported to the number of decimal places (e.g., 0.06%) in the applicable reporting threshold; at and above 1.0%, the results should be reported to one decimal place (e.g., 1.3%).",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "reporting_format",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "below_1_percent": "match decimal places of applicable reporting threshold",
+        "at_or_above_1_percent_decimal_places": 1
+      }
+    },
+
+    {
+      "rule_id": "Q3B-019",
+      "rule_text": "The specification for a new drug product should include each specified identified degradation product, each specified unidentified degradation product, any unspecified degradation product with an acceptance criterion of not more than (≤) the identification threshold, and total degradation products.",
+      "source_section": "Section 5 — Listing of Degradation Products in Specifications",
+      "source_quote": "In summary, the new drug product specification should include, where applicable, the following list of degradation products: Each specified identified degradation product; Each specified unidentified degradation product; Any unspecified degradation product with an acceptance criterion of not more than (≤) the identification threshold; Total degradation products.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "specification_content",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "unspecified_degradation_product_limit": "≤ identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-020",
+      "rule_text": "Specified identified degradation products should be included along with specified unidentified degradation products estimated to be present at a level greater than (>) the identification threshold. For degradation products known to be unusually potent or to produce toxic or unexpected pharmacological effects, the quantitation/detection limit of the analytical procedures should be commensurate with the level at which degradation products should be controlled.",
+      "source_section": "Section 5 — Listing of Degradation Products in Specifications",
+      "source_quote": "Specified identified degradation products should be included along with specified unidentified degradation products estimated to be present at a level greater than (>) the identification threshold given in Attachment 1. For degradation products known to be unusually potent or to produce toxic or unexpected pharmacological effects, the quantitation/detection limit of the analytical procedures should be commensurate with the level at which the degradation products should be controlled.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "specification_content",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "threshold_for_inclusion": "> identification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-021",
+      "rule_text": "For each degradation product, its acceptance criterion should be established by taking into account its acceptance criterion in the drug substance (if applicable), its qualified level, its increase during stability studies, and the proposed shelf life and recommended storage conditions. Each acceptance criterion should be set no higher than the qualified level.",
+      "source_section": "Section 5 — Listing of Degradation Products in Specifications",
+      "source_quote": "For a given degradation product, its acceptance criterion should be established by taking into account its acceptance criterion in the drug substance (if applicable), its qualified level, its increase during stability studies, and the proposed shelf life and recommended storage conditions for the new drug product. Furthermore, each acceptance criterion should be set no higher than the qualified level of the given degradation product.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "specification_criteria",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "maximum_acceptance_criterion": "qualified level"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-022",
+      "rule_text": "Qualification of degradation products establishes the biological safety of an individual degradation product or a given degradation profile at the level(s) specified. A degradation product present in a new drug product that has been adequately tested in safety and/or clinical studies is considered qualified.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "Qualification is the process of acquiring and evaluating data that establishes the biological safety of an individual degradation product or a given degradation profile at the level(s) specified... The level of any degradation product present in a new drug product that has been adequately tested in safety and/or clinical studies would be considered qualified.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_definition",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-023",
+      "rule_text": "Degradation products that are also significant metabolites present in animal and/or human studies are generally considered qualified.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "Degradation products that are also significant metabolites present in animal and/or human studies are generally considered qualified.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_conditions",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-024",
+      "rule_text": "Degradation products could be considered qualified at levels higher than those administered in safety studies based on a comparison between actual doses given in the safety studies and the intended dose of the new drug product. Justification must include consideration of: (1) the amount administered in previous safety/clinical studies and found safe; (2) the increase in the amount of the degradation product; and (3) other safety factors.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "Degradation products could be considered qualified at levels higher than those administered in safety studies based on a comparison between actual doses given in the safety studies and the intended dose of the new drug product. Justification of such higher levels should include consideration of factors such as: (1) the amount of degradation product administered in previous safety and/or clinical studies and found to be safe; (2) the increase in the amount of the degradation product; and (3) other safety factors, as appropriate.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_conditions",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-025",
+      "rule_text": "If qualification thresholds given in Attachment 1 (Q3B) are exceeded and data are unavailable to qualify the proposed acceptance criterion of a degradation product, additional studies to obtain such data can be appropriate.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "If the qualification thresholds given in Attachment 1 are exceeded and data are unavailable to qualify the proposed acceptance criterion of a degradation product, additional studies to obtain such data can be appropriate (see Attachment 3).",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_requirement",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "trigger": "exceeds qualification thresholds in Attachment 1 (Q3B)"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-026",
+      "rule_text": "When degradation product qualification thresholds are exceeded, the applicant should consider conducting: genotoxicity studies (point mutation, chromosomal aberration), general toxicity studies (one species, usually 14 to 90 days), and other specific toxicity endpoints as appropriate.",
+      "source_section": "Attachment 3 — Decision Tree Notes (Q3B)",
+      "source_quote": "Consider patient population and duration of use and consider conducting: Genotoxicity studies (point mutation, chromosomal aberration); General toxicity studies (one species, usually 14 to 90 days); Other specific toxicity endpoints, as appropriate",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_studies",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "study_duration_min_days": 14,
+        "study_duration_max_days": 90
+      }
+    },
+
+    {
+      "rule_id": "Q3B-027",
+      "rule_text": "When a degradation product's structure has been identified and has known human relevant risks, it must be reduced to a safe level. If no known human relevant risks exist and the level is not greater than the qualification threshold, no further action is required.",
+      "source_section": "Attachment 3 — Decision Tree for Identification and Qualification of a Degradation Product (Q3B)",
+      "source_quote": "Any known human relevant risks? Yes → Reduce to safe level. No → Greater than qualification threshold? No → No action.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "qualification_action",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "action_if_known_risk": "reduce to safe level",
+        "action_if_no_risk_below_threshold": "no action"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-028",
+      "rule_text": "The quantitation limit for the analytical procedure used for degradation product testing should be not more than (≤) the reporting threshold.",
+      "source_section": "Section 3 — Analytical Procedures (Q3B)",
+      "source_quote": "The quantitation limit for the analytical procedure should be not more than (≤) the reporting threshold.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "quantitation_limit_requirement": "≤ reporting threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-029",
+      "rule_text": "Analytical procedures for Q3B must demonstrate specificity for the specified and unspecified degradation products, validated against stress conditions including light, heat, humidity, acid/base hydrolysis, and oxidation.",
+      "source_section": "Section 3 — Analytical Procedures (Q3B)",
+      "source_quote": "In particular, analytical procedures should be validated to demonstrate specificity for the specified and unspecified degradation products. As appropriate, this validation should include samples stored under relevant stress conditions: light, heat, humidity, acid/base hydrolysis, and oxidation.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-030",
+      "rule_text": "The Q3B guideline is complementary to ICH Q3A. Impurities present in the new drug substance need not be monitored in the drug product unless they are also degradation products. The ICH Q3C guideline for residual solvents should be consulted where appropriate.",
+      "source_section": "Section 1.2 — Background (Q3B)",
+      "source_quote": "This guideline is complementary to the ICH Q3A(R) guideline 'Impurities in New Drug Substances', which should be consulted for basic principles. The ICH Q3C guideline 'Residual Solvents' should also be consulted, if appropriate.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "guideline_relationship",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-031",
+      "rule_text": "Where there is no safety concern, degradation product acceptance criteria should be based on data generated from batches of the new drug product manufactured by the proposed commercial process, allowing sufficient latitude for normal manufacturing and analytical variation and the stability characteristics of the new drug product.",
+      "source_section": "Section 5 — Listing of Degradation Products in Specifications",
+      "source_quote": "Where there is no safety concern, degradation product acceptance criteria should be based on data generated from batches of the new drug product manufactured by the proposed commercial process, allowing sufficient latitude to deal with normal manufacturing and analytical variation and the stability characteristics of the new drug product.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "specification_criteria",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-032",
+      "rule_text": "Significant variation in batch-to-batch degradation product levels can indicate that the manufacturing process of the new drug product is not adequately controlled and validated.",
+      "source_section": "Section 5 — Listing of Degradation Products in Specifications",
+      "source_quote": "Although normal manufacturing variations are expected, significant variation in batch-to-batch degradation product levels can indicate that the manufacturing process of the new drug product is not adequately controlled and validated (see ICH Q6A guideline on specifications, decision tree #2, for establishing an acceptance criterion for a specified degradation product in a new drug product).",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "process_control",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-033",
+      "rule_text": "Impurities arising from excipients present in the new drug product, or extracted or leached from the container closure system, are not covered by Q3B.",
+      "source_section": "Section 1.3 — Scope of the guideline",
+      "source_quote": "Impurities arising from excipients present in the new drug product or extracted or leached from the container closure system are not covered by this guideline.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "scope_exclusion",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-034",
+      "rule_text": "Safety studies for Q3B should provide a comparison of results of safety testing of the new drug product or drug substance containing a representative level of the degradation product with previously qualified material. Studies using isolated degradation products can also be considered.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "Safety studies should provide a comparison of results of safety testing of the new drug product or drug substance containing a representative level of the degradation product with previously qualified material, although studies using the isolated degradation products can also be considered.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_studies",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-035",
+      "rule_text": "Higher or lower qualification thresholds for individual new drug products can be appropriate based on scientific rationale and level of concern, including drug class effects and clinical experience. Proposals for alternative thresholds are considered on a case-by-case basis.",
+      "source_section": "Section 6 — Qualification of Degradation Products",
+      "source_quote": "Higher or lower thresholds for qualification of degradation products can be appropriate for some individual new drug products based on scientific rationale and level of concern, including drug class effects and clinical experience... Proposals for alternative thresholds would be considered on a case-by-case basis.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-036",
+      "rule_text": "The minimum genotoxicity screen for Q3B qualification consists of a study to detect point mutations and a study to detect chromosomal aberrations, both in vitro.",
+      "source_section": "Attachment 3 — Notes on Attachment 3 (Q3B) (a)",
+      "source_quote": "A study to detect point mutations and one to detect chromosomal aberrations, both in vitro, are considered an appropriate minimum screen.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "genotoxicity_screen",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-037",
+      "rule_text": "Lower thresholds can be appropriate for Q3B if the degradation product is unusually toxic.",
+      "source_section": "Attachment 3 — Notes on Attachment 3 (Q3B) (c)",
+      "source_quote": "Lower thresholds can be appropriate if the degradation product is unusually toxic.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-038",
+      "rule_text": "When evaluating Q3B thresholds, if the threshold is described in %, the reported result rounded to the same decimal place as the threshold should be compared directly. When the threshold is described in TDI, the reported result should be converted to TDI, rounded, and compared.",
+      "source_section": "Attachment 2 — Notes on Attachment 2 (Q3B)",
+      "source_quote": "To verify if a threshold is exceeded, a reported result has to be evaluated against the thresholds as follows: when the threshold is described in %, the reported result rounded to the same decimal place as the threshold should be compared directly to the threshold. When the threshold is described in TDI, the reported result should be converted to TDI, rounded to the same decimal place as the threshold and compared to the threshold e.g. an amount of 0.18% degradation level corresponds to a TDI of 3.4 mg impurity (absolute amount) which is then rounded down to 3 mg; so the qualification threshold expressed in TDI (3 mg) is not exceeded.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "threshold_evaluation_method",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-039",
+      "rule_text": "The impurity profile of the batches representative of the proposed commercial process should be compared with the profiles of batches used in development and any differences discussed.",
+      "source_section": "Section 2 — Rationale for the Reporting and Control of Degradation Products",
+      "source_quote": "The impurity profiles of the batches representative of the proposed commercial process should be compared with the profiles of batches used in development and any differences discussed.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "degradation_product_characterisation",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-040",
+      "rule_text": "A rationale should be provided for exclusion of those impurities that are not degradation products (e.g., process impurities from the drug substance and impurities arising from excipients).",
+      "source_section": "Section 2 — Rationale for the Reporting and Control of Degradation Products",
+      "source_quote": "A rationale should be provided for exclusion of those impurities that are not degradation products (e.g., process impurities from the drug substance and impurities arising from excipients).",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_exclusion_rationale",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-001",
+      "rule_text": "Both Q3A and Q3B exclude biological/biotechnological products, peptides, oligonucleotides, radiopharmaceuticals, fermentation products, semi-synthetic products derived therefrom, herbal products, and crude products of animal or plant origin from their scope.",
+      "source_section": "Q3A Section 1 / Q3B Section 1.3 — Scope Exclusions",
+      "source_quote": "The following types of drug substances are not covered in this guideline: biological/biotechnological, peptide, oligonucleotide, radiopharmaceutical, fermentation product and semi-synthetic products derived therefrom, herbal products, and crude products of animal or plant origin.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "scope_exclusion",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-002",
+      "rule_text": "Neither Q3A nor Q3B applies to drug substances or drug products used during the clinical research stage of development.",
+      "source_section": "Q3A Section 1 / Q3B Section 1.3 — Scope",
+      "source_quote": "It is not intended to apply to new drug substances used during the clinical research stage of development. [Q3A]; This guideline also does not apply to new drug products used during the clinical research stages of development. [Q3B]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "scope_exclusion",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-003",
+      "rule_text": "The reporting threshold concept under both Q3A and Q3B is defined as a limit above which an impurity or degradation product should be reported. The reporting threshold is the same as the reporting level in Q2B.",
+      "source_section": "Q3A Section 8 Glossary / Q3B Section 7 Glossary",
+      "source_quote": "Reporting Threshold: A limit above (>) which an impurity should be reported. Reporting threshold is the same as reporting level in Q2B. [Q3A]; Reporting Threshold: A limit above (>) which a degradation product should be reported. [Q3B]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "threshold_definitions",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-004",
+      "rule_text": "An identified impurity (Q3A) or identified degradation product (Q3B) is defined as a compound for which a structural characterisation has been achieved.",
+      "source_section": "Q3A Section 8 Glossary / Q3B Section 7 Glossary",
+      "source_quote": "Identified Impurity: An impurity for which a structural characterisation has been achieved. [Q3A]; Identified Degradation Product: A degradation product for which a structural characterisation has been achieved. [Q3B]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_definitions",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-005",
+      "rule_text": "An unspecified impurity (Q3A) or unspecified degradation product (Q3B) is limited by a general acceptance criterion, but not individually listed with its own specific acceptance criterion in the specification.",
+      "source_section": "Q3A Section 8 Glossary / Q3B Section 7 Glossary",
+      "source_quote": "Unspecified impurity: An impurity that is limited by a general acceptance criterion, but not individually listed with its own specific acceptance criterion, in the new drug substance specification. [Q3A]; Unspecified Degradation Product: A degradation product that is limited by a general acceptance criterion, but not individually listed with its own specific acceptance criterion, in the new drug product specification. [Q3B]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "impurity_definitions",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-006",
+      "rule_text": "Identification threshold (Q3A/Q3B) is defined as a limit above which an impurity or degradation product should be identified. Qualification threshold is a limit above which it should be qualified.",
+      "source_section": "Q3A Section 8 Glossary / Q3B Section 7 Glossary",
+      "source_quote": "Identification Threshold: A limit above (>) which an impurity should be identified. [Q3A]; Qualification Threshold: A limit above (>) which an impurity should be qualified. [Q3A]; Identification Threshold: A limit above (>) which a degradation product should be identified. [Q3B]; Qualification Threshold: A limit above (>) which a degradation product should be qualified. [Q3B]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "threshold_definitions",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-007",
+      "rule_text": "Under both Q3A and Q3B, registration applications must include analytical results for all batches used in clinical, safety, and stability testing, as well as batches representative of the proposed commercial process. Quantitative results must be presented numerically.",
+      "source_section": "Q3A Section 5 / Q3B Section 4",
+      "source_quote": "Analytical results should be provided in the application for all batches of the new drug substance used for clinical, safety, and stability testing, as well as for batches representative of the proposed commercial process. Quantitative results should be presented numerically, and not in general terms such as 'complies', 'meets limit' etc. [Q3A]",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "batch_reporting",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-008",
+      "rule_text": "Enantiomeric impurity is defined as a compound with the same molecular formula as the drug substance that differs in the spatial arrangement of atoms within the molecule and is a non-superimposable mirror image. Enantiomeric impurities are excluded from both Q3A and Q3B.",
+      "source_section": "Q3A Section 8 Glossary",
+      "source_quote": "Enantiomeric Impurity: A compound with the same molecular formula as the drug substance that differs in the spatial arrangement of atoms within the molecule and is a non-superimposable mirror image.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "enantiomeric_impurity",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-009",
+      "rule_text": "Both Q3A and Q3B stress that lower thresholds for identification, qualification and reporting can be appropriate if the impurity or degradation product is unusually toxic. The standard thresholds in the attachments assume normal toxicity levels.",
+      "source_section": "Q3A Attachment 1 Notes / Q3B Attachment 1 Notes",
+      "source_quote": "Lower thresholds can be appropriate if the impurity is unusually toxic. [Q3A Att.1 note 3]; Lower thresholds can be appropriate if the degradation product is unusually toxic. [Q3B Att.3 note c]",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "unusually_toxic_impurity",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {
+        "note": "Standard thresholds may not apply; case-specific lower thresholds required"
+      }
+    },
+
+    {
+      "rule_id": "CROSS-010",
+      "rule_text": "Higher reporting thresholds may be proposed but must be scientifically justified. Under both Q3A and Q3B, the default thresholds in Attachment 1 should apply unless a scientifically justified alternative is provided.",
+      "source_section": "Q3A Attachment 1 Notes / Q3B Attachment 1 Notes",
+      "source_quote": "Higher reporting thresholds should be scientifically justified. [Q3A Att.1 note 2]; Higher thresholds should be scientifically justified. [Q3B Att.1 note 3]",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "reporting_threshold",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-011",
+      "rule_text": "The use of two decimal places for thresholds in both Q3A and Q3B Attachment 1 does not necessarily reflect the precision of the analytical procedure for routine quality control. Lower precision techniques can be acceptable where justified and appropriately validated.",
+      "source_section": "Q3A Section 4 / Q3B Section 5",
+      "source_quote": "The use of two decimal places for thresholds (See Attachment 1) does not necessarily reflect the precision of the analytical procedure used for routine quality control purposes. Thus, the use of lower precision techniques (e.g., thin-layer chromatography) can be acceptable where justified and appropriately validated. [Q3A Section 4]",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-012",
+      "rule_text": "Stress testing (ICH Q1A) should be used in both Q3A and Q3B to identify potential impurities arising during storage. Stress conditions for drug products include: light, heat, humidity, acid/base hydrolysis, and oxidation.",
+      "source_section": "Q3A Section 3.1 / Q3B Section 3",
+      "source_quote": "the results of stress testing (see ICH Guideline Q1A on Stability) used to identify potential impurities arising during storage. [Q3A]; this validation should include samples stored under relevant stress conditions: light, heat, humidity, acid/base hydrolysis, and oxidation. [Q3B Section 3]",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "stability_testing",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-013",
+      "rule_text": "Q3A Attachment 1 defines maximum daily dose as the amount of drug substance administered per day. Q3B Attachment 1 uses the same definition. The maximum daily dose drives the applicable tier for all three threshold types (reporting, identification, qualification).",
+      "source_section": "Q3A Attachment 1 Note 1 / Q3B Attachment 1 Note 1",
+      "source_quote": "The amount of drug substance administered per day. [Q3A Att.1 note 1]; The amount of drug substance administered per day. [Q3B Att.1 note 1]",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "threshold_definitions",
+      "guideline": "ICH Q3A(R2) + ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "CROSS-014",
+      "rule_text": "Q3B thresholds for degradation products are expressed either as a percentage of the drug substance or as total daily intake (TDI) of the degradation product.",
+      "source_section": "Q3B Attachment 1 Note 2",
+      "source_quote": "Thresholds for degradation products are expressed either as a percentage of the drug substance or as total daily intake (TDI) of the degradation product. Lower thresholds can be appropriate if the degradation product is unusually toxic.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "threshold_definitions",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-036",
+      "rule_text": "The drug substance can be used as a standard to estimate impurity levels. Where response factors of the drug substance and the relevant impurity are not close, a correction factor must be applied or the impurity must be treated as being overestimated.",
+      "source_section": "Section 4 — Analytical Procedures (Q3A)",
+      "source_quote": "In cases where the response factors of the drug substance and the relevant impurity are not close, this practice can still be appropriate, provided a correction factor is applied or the impurities are, in fact, being overestimated.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-041",
+      "rule_text": "When an analytical procedure reveals the presence of peaks in addition to those of the degradation products (e.g., drug substance, synthesis impurities, excipient peaks), these peaks should be labelled in the chromatograms and their origins discussed in validation documentation.",
+      "source_section": "Section 3 — Analytical Procedures (Q3B)",
+      "source_quote": "When an analytical procedure reveals the presence of other peaks in addition to those of the degradation products (e.g., the drug substance, impurities arising from the synthesis of the drug substance, excipients and impurities arising from the excipients), these peaks should be labeled in the chromatograms and their origin(s) discussed in the validation documentation.",
+      "verification_status": "VERIFIED",
+      "severity": "medium",
+      "category": "analytical_procedure",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-037",
+      "rule_text": "Where attempts have been made to identify impurities present at levels not more than (≤) the identification thresholds, it is useful to report the results of these studies, even if unsuccessful.",
+      "source_section": "Section 3.1 — Organic Impurities (Q3A)",
+      "source_quote": "Where attempts have been made to identify impurities present at levels of not more than (≤) the identification thresholds, it is useful also to report the results of these studies.",
+      "verification_status": "VERIFIED",
+      "severity": "low",
+      "category": "identification_requirement",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-042",
+      "rule_text": "Any new degradation product observed in later stages of development should be identified if its level is greater than the identification threshold, and qualification should be considered if its level is greater than the qualification threshold.",
+      "source_section": "Section 6 — Qualification of Degradation Products (Q3B)",
+      "source_quote": "Any new degradation product observed in later stages of development should be identified (see the 'Decision Tree for Identification and Qualification of a Degradation Product' in Attachment 3) if its level is greater than (>) the identification threshold given in Attachment 1. Similarly, qualification of the degradation product should be considered if its level is greater than (>) the qualification threshold given in Attachment 1.",
+      "verification_status": "VERIFIED",
+      "severity": "critical",
+      "category": "identification_threshold",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {
+        "identification_trigger": "> identification threshold",
+        "qualification_trigger": "> qualification threshold"
+      }
+    },
+
+    {
+      "rule_id": "Q3B-043",
+      "rule_text": "In Q3B, in some cases, reducing the level of degradation product (e.g., use of a more protective container closure or modified storage conditions) to not more than (≤) the threshold can be simpler than providing safety data.",
+      "source_section": "Section 6 — Qualification of Degradation Products (Q3B)",
+      "source_quote": "In some cases, reducing the level of degradation product (e.g., use of a more protective container closure or modified storage conditions) to not more than (≤) the threshold can be simpler than providing safety data.",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "qualification_action",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3B-044",
+      "rule_text": "Q3B batch documentation for each new drug product batch in the registration application must include: batch identity, strength, and size; date of manufacture; site of manufacture; manufacturing process; immediate container closure; degradation product content individual and total; use of batch; reference to analytical procedure used; batch number of drug substance; and storage conditions for stability studies.",
+      "source_section": "Section 4 — Reporting Degradation Products Content of Batches (Q3B)",
+      "source_quote": "For each batch of the new drug product described in the registration application, the documentation should include: Batch identity, strength, and size; Date of manufacture; Site of manufacture; Manufacturing process; Immediate container closure; Degradation product content, individual and total; Use of batch (e.g., clinical studies, stability studies); Reference to analytical procedure used; Batch number of the drug substance used in the new drug product; Storage conditions for stability studies",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "batch_documentation",
+      "guideline": "ICH Q3B(R2)",
+      "thresholds": {}
+    },
+
+    {
+      "rule_id": "Q3A-038",
+      "rule_text": "Q3A batch documentation for each new drug substance batch must include: batch identity and size; date of manufacture; site of manufacture; manufacturing process; impurity content (individual and total); use of batch; and reference to analytical procedure used.",
+      "source_section": "Section 5 — Reporting Impurity Content of Batches (Q3A)",
+      "source_quote": "For each batch of the new drug substance, the report should include: Batch identity and size; Date of manufacture; Site of manufacture; Manufacturing process; Impurity content, individual and total; Use of batches; Reference to analytical procedure used",
+      "verification_status": "VERIFIED",
+      "severity": "high",
+      "category": "batch_documentation",
+      "guideline": "ICH Q3A(R2)",
+      "thresholds": {}
+    }
+
+  ]
+}

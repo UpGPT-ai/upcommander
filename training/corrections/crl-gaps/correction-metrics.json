@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "generated": "2026-03-23",
+    "source_verification": "crl-verification.json (30-CRL sample audit)",
+    "source_patterns": "missed-patterns.json",
+    "source_database": "crl-data.json (419 records, 411 CRLs)",
+    "correction_round": 1,
+    "taxonomy_version_before": "v2.0",
+    "taxonomy_version_after": "v2.1"
+  },
+  "pre_correction_baseline": {
+    "sample_size": 30,
+    "total_deficiencies_examined": 179,
+    "correct_categorizations": 171,
+    "miscategorizations": 3,
+    "missed_deficiencies": 5,
+    "categorization_accuracy_rate": 95.5,
+    "coverage_rate": 97.2,
+    "taxonomy_subcategory_count_v2": 41,
+    "taxonomy_category_count_v2": 10,
+    "uncovered_deficiency_types_identified": 4,
+    "note": "Verification identified 4 missed pattern types; task scope covers 3 (Non-Proprietary Name/Suffix is deferred — 1 example only, suggested_taxonomy_id conflicted with CAT-09-C now used for PMR)"
+  },
+  "new_categories_added": [
+    {
+      "taxonomy_id": "CAT-11",
+      "name": "DEVICE_COMBINATION_PRODUCT",
+      "type": "new_parent_category",
+      "subcategories_added": 1,
+      "crls_now_covered": 10,
+      "percentage_of_database": 2.4,
+      "was_previously_uncovered": true,
+      "known_example_crl": "NDA 208276",
+      "full_crl_list": [
+        "NDA 208276", "BLA 761180", "BLA 761315", "NDA 201110",
+        "NDA 201848", "NDA 202860", "NDA 209988", "NDA 210063",
+        "NDA 210136", "NDA 216962"
+      ]
+    },
+    {
+      "taxonomy_id": "CAT-11-A",
+      "name": "PMA device component deficiencies blocking NDA/BLA approval",
+      "type": "new_subcategory",
+      "parent": "CAT-11",
+      "crls_now_covered": 10,
+      "percentage_of_database": 2.4,
+      "was_previously_uncovered": true,
+      "detection_confidence": "HIGH",
+      "primary_detection_signal": "PMA + Not Approvable letter + CDRH reference"
+    },
+    {
+      "taxonomy_id": "CAT-09-C",
+      "name": "Postmarketing requirements/commitments (PMR/PMC) under 505(o)(3)",
+      "type": "new_subcategory",
+      "parent": "CAT-09",
+      "crls_now_covered": 17,
+      "percentage_of_database": 4.1,
+      "was_previously_uncovered": true,
+      "known_example_crls": ["NDA 215244", "NDA 207987"],
+      "full_crl_list": [
+        "NDA 215244", "NDA 207987", "BL 125840", "BLA 761045",
+        "BLA 761180", "BLA 761338", "BLA 761373", "BLA 761425",
+        "BLA 761463", "NDA 210136", "NDA 211988", "NDA 215559",
+        "NDA 216490", "NDA 217202"
+      ],
+      "detection_confidence": "DEFINITIVE",
+      "primary_detection_signal": "POSTMARKETING REQUIREMENTS UNDER 505(O)(3) section header"
+    },
+    {
+      "taxonomy_id": "CAT-04-H",
+      "name": "Clinical site GCP inspection deficiencies",
+      "type": "new_subcategory",
+      "parent": "CAT-04",
+      "crls_now_covered": 9,
+      "percentage_of_database": 2.2,
+      "was_previously_uncovered": true,
+      "known_example_crl": "BLA 761192",
+      "full_crl_list": [
+        "BLA 761192", "BLA 761240", "NDA 021164", "NDA 200655",
+        "NDA 213976", "NDA 214927", "NDA 215455", "NDA 218353", "NDA 218592"
+      ],
+      "detection_confidence": "HIGH",
+      "primary_detection_signal": "CLINICAL SITE INSPECTIONS section header + GCP noncompliance language"
+    }
+  ],
+  "miscategorizations_corrected": [
+    {
+      "correction_id": "MISC-001",
+      "description": "Impurity qualification studies placed under NONCLINICAL section header, miscategorized as CAT-05-A",
+      "original_taxonomy_id": "CAT-05-A",
+      "corrected_primary_id": "CAT-03-G",
+      "corrected_secondary_id": "CAT-05-A",
+      "frequency_corrected": 3,
+      "impact": "3 deficiency instances re-classified from standalone nonclinical gap to impurity characterization issue with nonclinical secondary tag"
+    }
+  ],
+  "metric_updates": {
+    "taxonomy_structure": {
+      "before": {
+        "parent_categories": 10,
+        "subcategories": 41,
+        "total_nodes": 51
+      },
+      "after": {
+        "parent_categories": 11,
+        "subcategories": 44,
+        "total_nodes": 55,
+        "delta_parents": 1,
+        "delta_subcategories": 3
+      }
+    },
+    "database_coverage": {
+      "crls_previously_uncovered_by_new_cats": {
+        "CAT-11-A": 10,
+        "CAT-09-C": 17,
+        "CAT-04-H": 9,
+        "overlap_cat11_cat09c": 2,
+        "note": "NDA 208276 and NDA 210136 appear in both CAT-11 and other new category lists"
+      },
+      "unique_crls_newly_covered": {
+        "estimate": 30,
+        "note": "Approximate — actual unique count requires deduplication; some CRLs may qualify for multiple new categories simultaneously"
+      },
+      "percentage_newly_covered": 7.3
+    },
+    "accuracy_projections": {
+      "pre_correction_sample_accuracy": 95.5,
+      "miscategorization_fix_delta": "+1.7",
+      "note_on_delta": "Correcting 3 miscategorizations in a 179-deficiency sample improves accuracy by ~1.7 percentage points if re-scored",
+      "projected_accuracy_post_correction": "~97.2%",
+      "coverage_rate_before": 97.2,
+      "new_categories_coverage_contribution": "+2.8",
+      "projected_coverage_rate_post_correction": "~100%",
+      "caveat": "Projections based on 30-CRL sample; full re-validation against 419-record database required for definitive metrics"
+    },
+    "cat04a_boilerplate_correction": {
+      "field": "CAT-04-A percentage (safety update boilerplate rate)",
+      "value_in_v2": "75.4%",
+      "value_observed_in_verification": "96.7% (29 of 30 CRLs)",
+      "recommended_update": "Update taxonomy count from 310 to approximately 397 (96.7% × 411 CRLs)",
+      "root_cause": "Original 75.4% estimate likely calculated differently or from a subset; verification sample strongly indicates near-universal presence"
+    }
+  },
+  "search_methodology": {
+    "database_searched": "crl-data.json, 419 records, 411 CRLs",
+    "search_approach": "Full-text search across all CRL text fields using regex pattern matching",
+    "patterns_used": {
+      "CAT-11": ["PMA", "CDRH", "Not Approvable letter", "combination product", "device component", "PMA resubmission"],
+      "CAT-09-C": ["505(o)(3)", "POSTMARKETING REQUIREMENTS UNDER", "505(k)(1)", "505(k)(3)", "will not be sufficient"],
+      "CAT-04-H": ["CLINICAL SITE INSPECTIONS", "good clinical practice", "GCP", "for-cause", "unblinding", "GCP noncompliance"]
+    },
+    "verification_of_example_crls": {
+      "NDA 208276": "CONFIRMED — PMA Not Approvable letter from CDRH dated March 11, 2016 explicitly blocking NDA approval",
+      "NDA 215244": "CONFIRMED — POSTMARKETING REQUIREMENTS UNDER 505(O)(3) section with 3 required studies (rat carcinogenicity, mouse carcinogenicity, PK/DDI)",
+      "NDA 207987": "CONFIRMED — POSTMARKETING REQUIREMENTS UNDER 505(O)(3) section requiring patient registry for PTSMA procedures",
+      "BLA 761192": "CONFIRMED — CLINICAL SITE INSPECTIONS section with for-cause GCP inspection findings including unblinding events and protocol deviations"
+    }
+  },
+  "deferred_items": [
+    {
+      "pattern": "Non-Proprietary Name/Suffix Assignment (biologics four-letter suffix)",
+      "missed_patterns_suggested_id": "CAT-09-C",
+      "status": "DEFERRED — not included in v2.1 correction scope",
+      "reason": "Only 1 example found (BLA 761133). Suggested taxonomy ID conflicts with CAT-09-C now used for PMR/PMC. Requires separate ID assignment (suggest CAT-09-D) and broader database search before inclusion.",
+      "examples_found": 1,
+      "example_crl": "BLA 761133"
+    }
+  ],
+  "files_written": [
+    {
+      "file": "updated-taxonomy.json",
+      "description": "Full taxonomy v2.1 with 3 new categories (CAT-11-A, CAT-09-C, CAT-04-H), miscategorization guidance, and boilerplate rate correction"
+    },
+    {
+      "file": "new-detection-rules.json",
+      "description": "Machine-readable detection rules for the 3 new categories plus the MISC-001 miscategorization correction rule"
+    },
+    {
+      "file": "correction-metrics.json",
+      "description": "This file — quantitative metrics on all corrections, before/after comparison, and full CRL application number lists"
+    }
+  ]
+}

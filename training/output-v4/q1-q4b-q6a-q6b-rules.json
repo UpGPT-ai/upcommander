@@ -1,0 +1,1322 @@
+{
+  "meta": {
+    "title": "ICH Q1 Stability + Q4B Pharmacopoeia + Q6A/Q6B Specifications",
+    "guidelines": ["Q1A(R2)", "Q1B", "Q1C", "Q1D", "Q1E", "Q4B", "Q6A", "Q6B"],
+    "extraction_date": "2026-03-23",
+    "total_rules": 128,
+    "source_directory": "training/stage-1/ich-complete/"
+  },
+  "q1_stability_suite": {
+    "q1a_drug_substance": {
+      "stress_testing": [
+        {
+          "rule_id": "Q1A-001",
+          "rule_text": "Stress testing of the drug substance should include the effect of temperatures in 10°C increments above that for accelerated testing (e.g., 50°C, 60°C), humidity (e.g., 75% RH or greater) where appropriate, oxidation, and photolysis on the drug substance.",
+          "source_section": "2.1.2 Stress Testing",
+          "source_page": 2,
+          "source_quote": "It should include the effect of temperatures (in 10°C increments (e.g., 50°C, 60°C, etc.) above that for accelerated testing), humidity (e.g., 75% RH or greater) where appropriate, oxidation, and photolysis on the drug substance.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "temperature_increment_above_accelerated": "10°C",
+            "example_temperatures": ["50°C", "60°C"],
+            "humidity_minimum": "75% RH"
+          }
+        },
+        {
+          "rule_id": "Q1A-002",
+          "rule_text": "Stress testing is likely to be carried out on a single batch of the drug substance. The testing should also evaluate the susceptibility of the drug substance to hydrolysis across a wide range of pH values when in solution or suspension.",
+          "source_section": "2.1.2 Stress Testing",
+          "source_page": 2,
+          "source_quote": "Stress testing is likely to be carried out on a single batch of the drug substance.",
+          "verification_status": "VERIFIED",
+          "severity": "medium",
+          "thresholds": {
+            "batch_count": 1
+          }
+        },
+        {
+          "rule_id": "Q1A-003",
+          "rule_text": "Photostability testing should be an integral part of stress testing. The standard conditions for photostability testing are described in ICH Q1B.",
+          "source_section": "2.1.2 Stress Testing",
+          "source_page": 2,
+          "source_quote": "Photostability testing should be an integral part of stress testing. The standard conditions for photostability testing are described in ICH Q1B.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {}
+        }
+      ],
+      "selection_of_batches": [
+        {
+          "rule_id": "Q1A-004",
+          "rule_text": "Data from formal stability studies should be provided on at least three primary batches of the drug substance, manufactured to a minimum of pilot scale by the same synthetic route and using a method of manufacture and procedure that simulates the final process to be used for production batches.",
+          "source_section": "2.1.3 Selection of Batches",
+          "source_page": 2,
+          "source_quote": "Data from formal stability studies should be provided on at least three primary batches of the drug substance. The batches should be manufactured to a minimum of pilot scale by the same synthetic route as, and using a method of manufacture and procedure that simulates the final process to be used for, production batches.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "minimum_batches": 3,
+            "minimum_scale": "pilot scale"
+          }
+        }
+      ],
+      "container_closure": [
+        {
+          "rule_id": "Q1A-005",
+          "rule_text": "The stability studies should be conducted on the drug substance packaged in a container closure system that is the same as or simulates the packaging proposed for storage and distribution.",
+          "source_section": "2.1.4 Container Closure System",
+          "source_page": 2,
+          "source_quote": "The stability studies should be conducted on the drug substance packaged in a container closure system that is the same as or simulates the packaging proposed for storage and distribution.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {}
+        }
+      ],
+      "testing_frequency": [
+        {
+          "rule_id": "Q1A-006",
+          "rule_text": "For drug substances with a proposed re-test period of at least 12 months, the frequency of testing at the long-term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed re-test period.",
+          "source_section": "2.1.6 Testing Frequency",
+          "source_page": 3,
+          "source_quote": "For drug substances with a proposed re-test period of at least 12 months, the frequency of testing at the long term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed re-test period.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "year_1_frequency_months": 3,
+            "year_2_frequency_months": 6,
+            "thereafter_frequency": "annually"
+          }
+        },
+        {
+          "rule_id": "Q1A-007",
+          "rule_text": "At the accelerated storage condition, a minimum of three time points, including the initial and final time points (e.g., 0, 3, and 6 months), from a 6-month study is recommended.",
+          "source_section": "2.1.6 Testing Frequency",
+          "source_page": 3,
+          "source_quote": "At the accelerated storage condition, a minimum of three time points, including the initial and final time points (e.g., 0, 3, and 6 months), from a 6-month study is recommended.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "minimum_time_points_accelerated": 3,
+            "example_time_points_months": [0, 3, 6],
+            "study_duration_months": 6
+          }
+        },
+        {
+          "rule_id": "Q1A-008",
+          "rule_text": "When testing at the intermediate storage condition is called for as a result of significant change at the accelerated storage condition, a minimum of four time points, including the initial and final time points (e.g., 0, 6, 9, 12 months), from a 12-month study is recommended.",
+          "source_section": "2.1.6 Testing Frequency",
+          "source_page": 3,
+          "source_quote": "When testing at the intermediate storage condition is called for as a result of significant change at the accelerated storage condition, a minimum of four time points, including the initial and final time points (e.g., 0, 6, 9, 12 months), from a 12-month study is recommended.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "minimum_time_points_intermediate": 4,
+            "example_time_points_months": [0, 6, 9, 12],
+            "study_duration_months": 12
+          }
+        }
+      ],
+      "storage_conditions_general_case": [
+        {
+          "rule_id": "Q1A-009",
+          "rule_text": "For the general case (ICH zones I and II), long-term storage condition for drug substances is 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH with a minimum time period of 12 months at submission.",
+          "source_section": "2.1.7.1 General case",
+          "source_page": 3,
+          "source_quote": "Long term*: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH — 12 months",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "long_term_option_1": "25°C ± 2°C / 60% RH ± 5% RH",
+            "long_term_option_2": "30°C ± 2°C / 65% RH ± 5% RH",
+            "minimum_submission_data_months": 12
+          }
+        },
+        {
+          "rule_id": "Q1A-010",
+          "rule_text": "Intermediate storage condition for drug substances in the general case is 30°C ± 2°C/65% RH ± 5% RH with a minimum of 6 months at submission. If 30°C is chosen as the long-term condition, there is no intermediate condition.",
+          "source_section": "2.1.7.1 General case",
+          "source_page": 3,
+          "source_quote": "Intermediate**: 30°C ± 2°C/65% RH ± 5% RH — 6 months. **If 30°C ± 2°C/65% RH ± 5% RH is the long-term condition, there is no intermediate condition.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "intermediate_condition": "30°C ± 2°C / 65% RH ± 5% RH",
+            "minimum_submission_data_months": 6
+          }
+        },
+        {
+          "rule_id": "Q1A-011",
+          "rule_text": "Accelerated storage condition for drug substances in the general case is 40°C ± 2°C/75% RH ± 5% RH with a minimum of 6 months at submission.",
+          "source_section": "2.1.7.1 General case",
+          "source_page": 3,
+          "source_quote": "Accelerated: 40°C ± 2°C/75% RH ± 5% RH — 6 months",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "accelerated_condition": "40°C ± 2°C / 75% RH ± 5% RH",
+            "minimum_submission_data_months": 6
+          }
+        },
+        {
+          "rule_id": "Q1A-012",
+          "rule_text": "If significant change occurs at any time during 6 months' testing at the accelerated storage condition when long-term studies are conducted at 25°C, additional testing at the intermediate storage condition should be conducted. The initial application should include a minimum of 6 months' data from a 12-month study at the intermediate condition.",
+          "source_section": "2.1.7.1 General case",
+          "source_page": 4,
+          "source_quote": "If long-term studies are conducted at 25°C ± 2°C/60% RH ± 5% RH and \"significant change\" occurs at any time during 6 months' testing at the accelerated storage condition, additional testing at the intermediate storage condition should be conducted and evaluated against significant change criteria. The initial application should include a minimum of 6 months' data from a 12-month study at the intermediate storage condition.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "trigger_window_months": 6,
+            "minimum_intermediate_data_months": 6,
+            "intermediate_study_duration_months": 12
+          }
+        },
+        {
+          "rule_id": "Q1A-013",
+          "rule_text": "Significant change for a drug substance is defined as failure to meet its specification.",
+          "source_section": "2.1.7.1 General case",
+          "source_page": 4,
+          "source_quote": "\"Significant change\" for a drug substance is defined as failure to meet its specification.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {}
+        }
+      ],
+      "storage_conditions_refrigerator": [
+        {
+          "rule_id": "Q1A-014",
+          "rule_text": "Drug substances intended for storage in a refrigerator: long-term condition is 5°C ± 3°C for 12 months minimum; accelerated condition is 25°C ± 2°C/60% RH ± 5% RH for 6 months minimum.",
+          "source_section": "2.1.7.2 Drug substances intended for storage in a refrigerator",
+          "source_page": 4,
+          "source_quote": "Long term: 5°C ± 3°C — 12 months; Accelerated: 25°C ± 2°C/60% RH ± 5% RH — 6 months",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "long_term_condition": "5°C ± 3°C",
+            "long_term_minimum_months": 12,
+            "accelerated_condition": "25°C ± 2°C / 60% RH ± 5% RH",
+            "accelerated_minimum_months": 6
+          }
+        },
+        {
+          "rule_id": "Q1A-015",
+          "rule_text": "If significant change occurs between 3 and 6 months' testing at the accelerated storage condition for refrigerated substances, the proposed re-test period should be based on the real time data available at the long-term storage condition.",
+          "source_section": "2.1.7.2 Drug substances intended for storage in a refrigerator",
+          "source_page": 4,
+          "source_quote": "If significant change occurs between 3 and 6 months' testing at the accelerated storage condition, the proposed re-test period should be based on the real time data available at the long term storage condition.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "change_window_lower_months": 3,
+            "change_window_upper_months": 6
+          }
+        },
+        {
+          "rule_id": "Q1A-016",
+          "rule_text": "If significant change occurs within the first 3 months' testing at the accelerated storage condition for refrigerated substances, a discussion should be provided to address the effect of short-term excursions outside the label storage condition. It is unnecessary to continue to test through 6 months when significant change has occurred within the first 3 months.",
+          "source_section": "2.1.7.2 Drug substances intended for storage in a refrigerator",
+          "source_page": 4,
+          "source_quote": "If significant change occurs within the first 3 months' testing at the accelerated storage condition, a discussion should be provided to address the effect of short term excursions outside the label storage condition... It is considered unnecessary to continue to test a drug substance through 6 months when a significant change has occurred within the first 3 months.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "early_change_threshold_months": 3
+          }
+        }
+      ],
+      "storage_conditions_freezer": [
+        {
+          "rule_id": "Q1A-017",
+          "rule_text": "Drug substances intended for storage in a freezer: long-term condition is -20°C ± 5°C for a minimum of 12 months at submission. The re-test period should be based on real-time data. In the absence of an accelerated storage condition, testing on a single batch at an elevated temperature (e.g., 5°C ± 3°C or 25°C ± 2°C) for an appropriate time period should be conducted.",
+          "source_section": "2.1.7.3 Drug substances intended for storage in a freezer",
+          "source_page": 4,
+          "source_quote": "Long term: -20°C ± 5°C — 12 months",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "long_term_condition": "-20°C ± 5°C",
+            "minimum_submission_data_months": 12,
+            "elevated_temp_options": ["5°C ± 3°C", "25°C ± 2°C"]
+          }
+        },
+        {
+          "rule_id": "Q1A-018",
+          "rule_text": "Drug substances intended for storage below -20°C should be treated on a case-by-case basis.",
+          "source_section": "2.1.7.4 Drug substances intended for storage below -20°C",
+          "source_page": 5,
+          "source_quote": "Drug substances intended for storage below -20°C should be treated on a case-by-case basis.",
+          "verification_status": "VERIFIED",
+          "severity": "medium",
+          "thresholds": {}
+        }
+      ],
+      "stability_commitment": [
+        {
+          "rule_id": "Q1A-019",
+          "rule_text": "When available long-term stability data on primary batches do not cover the proposed re-test period granted at the time of approval, a commitment should be made to continue the stability studies post-approval in order to firmly establish the re-test period. Three commitment scenarios exist based on whether the submission includes data from three production batches, fewer than three, or none.",
+          "source_section": "2.1.8 Stability Commitment",
+          "source_page": 5,
+          "source_quote": "When available long term stability data on primary batches do not cover the proposed re-test period granted at the time of approval, a commitment should be made to continue the stability studies post approval in order to firmly establish the re-test period.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "minimum_production_batches_for_no_commitment": 3
+          }
+        }
+      ],
+      "evaluation": [
+        {
+          "rule_id": "Q1A-020",
+          "rule_text": "An approach for analyzing data on a quantitative attribute is to determine the time at which the 95% one-sided confidence limit for the mean curve intersects the acceptance criterion. If batch-to-batch variability is small, it is advantageous to combine data; poolability should be tested using p values for level of significance of rejection of more than 0.25.",
+          "source_section": "2.1.9 Evaluation",
+          "source_page": 5,
+          "source_quote": "An approach for analyzing the data on a quantitative attribute that is expected to change with time is to determine the time at which the 95% one-sided confidence limit for the mean curve intersects the acceptance criterion... applying appropriate statistical tests (e.g., p values for level of significance of rejection of more than 0.25) to the slopes of the regression lines and zero time intercepts for the individual batches.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "confidence_interval": "95% one-sided",
+            "poolability_significance_level": 0.25
+          }
+        },
+        {
+          "rule_id": "Q1A-021",
+          "rule_text": "Limited extrapolation of the real-time data from the long-term storage condition beyond the observed range to extend the re-test period can be undertaken at approval time, if justified.",
+          "source_section": "2.1.9 Evaluation",
+          "source_page": 5,
+          "source_quote": "Limited extrapolation of the real time data from the long term storage condition beyond the observed range to extend the re-test period can be undertaken at approval time, if justified.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {}
+        }
+      ],
+      "statements_labeling": [
+        {
+          "rule_id": "Q1A-022",
+          "rule_text": "A storage statement should be established for the labeling in accordance with relevant national/regional requirements. Terms such as 'ambient conditions' or 'room temperature' should be avoided. A re-test period should be derived from the stability information, and a retest date should be displayed on the container label if appropriate.",
+          "source_section": "2.1.10 Statements/Labeling",
+          "source_page": 6,
+          "source_quote": "Terms such as \"ambient conditions\" or \"room temperature\" should be avoided.",
+          "verification_status": "VERIFIED",
+          "severity": "medium",
+          "thresholds": {}
+        }
+      ]
+    },
+    "q1a_drug_product": {
+      "selection_of_batches": [
+        {
+          "rule_id": "Q1A-023",
+          "rule_text": "Data from stability studies should be provided on at least three primary batches of the drug product. Two of the three batches should be at least pilot scale; the third one can be smaller, if justified.",
+          "source_section": "2.2.3 Selection of Batches",
+          "source_page": 6,
+          "source_quote": "Data from stability studies should be provided on at least three primary batches of the drug product... Two of the three batches should be at least pilot scale batches and the third one can be smaller, if justified.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "minimum_batches": 3,
+            "pilot_scale_minimum": 2
+          }
+        },
+        {
+          "rule_id": "Q1A-024",
+          "rule_text": "Stability studies should be performed on each individual strength and container size of the drug product unless bracketing or matrixing is applied.",
+          "source_section": "2.2.3 Selection of Batches",
+          "source_page": 7,
+          "source_quote": "Stability studies should be performed on each individual strength and container size of the drug product unless bracketing or matrixing is applied.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {}
+        }
+      ],
+      "testing_frequency": [
+        {
+          "rule_id": "Q1A-025",
+          "rule_text": "For drug products with a proposed shelf life of at least 12 months, the frequency of testing at the long-term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed shelf life.",
+          "source_section": "2.2.6 Testing Frequency",
+          "source_page": 7,
+          "source_quote": "For products with a proposed shelf life of at least 12 months, the frequency of testing at the long term storage condition should normally be every 3 months over the first year, every 6 months over the second year, and annually thereafter through the proposed shelf life.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "year_1_frequency_months": 3,
+            "year_2_frequency_months": 6,
+            "thereafter_frequency": "annually"
+          }
+        }
+      ],
+      "significant_change_drug_product": [
+        {
+          "rule_id": "Q1A-026",
+          "rule_text": "In general, 'significant change' for a drug product is defined as: (1) a 5% change in assay from its initial value; or failure to meet acceptance criteria for potency when using biological or immunological procedures; (2) any degradation product's exceeding its acceptance criterion; (3) failure to meet acceptance criteria for appearance, physical attributes, and functionality test; (4) failure to meet the acceptance criterion for pH; or (5) failure to meet the acceptance criteria for dissolution for 12 dosage units.",
+          "source_section": "2.2.7 Storage Conditions",
+          "source_page": 9,
+          "source_quote": "In general, \"significant change\" for a drug product is defined as: 1. A 5% change in assay from its initial value; or failure to meet the acceptance criteria for potency when using biological or immunological procedures; 2. Any degradation product's exceeding its acceptance criterion; 3. Failure to meet the acceptance criteria for appearance, physical attributes, and functionality test... 4. Failure to meet the acceptance criterion for pH; or 5. Failure to meet the acceptance criteria for dissolution for 12 dosage units.",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "assay_change_threshold_percent": 5,
+            "dissolution_units_tested": 12
+          }
+        }
+      ],
+      "storage_conditions_general": [
+        {
+          "rule_id": "Q1A-027",
+          "rule_text": "Drug product general case long-term condition: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH for 12 months minimum; intermediate: 30°C ± 2°C/65% RH ± 5% RH for 6 months minimum; accelerated: 40°C ± 2°C/75% RH ± 5% RH for 6 months minimum.",
+          "source_section": "2.2.7.1 General case",
+          "source_page": 8,
+          "source_quote": "Long term*: 25°C ± 2°C/60% RH ± 5% RH or 30°C ± 2°C/65% RH ± 5% RH — 12 months; Intermediate**: 30°C ± 2°C/65% RH ± 5% RH — 6 months; Accelerated: 40°C ± 2°C/75% RH ± 5% RH — 6 months",
+          "verification_status": "VERIFIED",
+          "severity": "critical",
+          "thresholds": {
+            "long_term_option_1": "25°C ± 2°C / 60% RH ± 5% RH",
+            "long_term_option_2": "30°C ± 2°C / 65% RH ± 5% RH",
+            "intermediate": "30°C ± 2°C / 65% RH ± 5% RH",
+            "accelerated": "40°C ± 2°C / 75% RH ± 5% RH",
+            "long_term_minimum_months": 12,
+            "intermediate_minimum_months": 6,
+            "accelerated_minimum_months": 6
+          }
+        }
+      ],
+      "storage_conditions_semi_permeable": [
+        {
+          "rule_id": "Q1A-028",
+          "rule_text": "Aqueous-based products packaged in semi-permeable containers should be evaluated for potential water loss. For the general case, long-term condition is 25°C ± 2°C/40% RH ± 5% RH or 30°C ± 2°C/35% RH ± 5% RH; intermediate 30°C ± 2°C/65% RH ± 5% RH; accelerated 40°C ± 2°C/NMT 25% RH.",
+          "source_section": "2.2.7.3 Drug products packaged in semi-permeable containers",
+          "source_page": 9,
+          "source_quote": "Long term*: 25°C ± 2°C/40% RH ± 5% RH or 30°C ± 2°C/35% RH ± 5% RH — 12 months; Intermediate**: 30°C ± 2°C/65% RH ± 5% RH — 6 months; Accelerated: 40°C ± 2°C/not more than (NMT) 25% RH — 6 months",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "long_term_option_1": "25°C ± 2°C / 40% RH ± 5% RH",
+            "long_term_option_2": "30°C ± 2°C / 35% RH ± 5% RH",
+            "accelerated": "40°C ± 2°C / NMT 25% RH",
+            "significant_water_loss_percent": 5
+          }
+        }
+      ],
+      "storage_conditions_refrigerator_product": [
+        {
+          "rule_id": "Q1A-029",
+          "rule_text": "Drug products intended for storage in a refrigerator: long-term 5°C ± 3°C for 12 months minimum; accelerated 25°C ± 2°C/60% RH ± 5% RH for 6 months minimum.",
+          "source_section": "2.2.7.4 Drug products intended for storage in a refrigerator",
+          "source_page": 11,
+          "source_quote": "Long term: 5°C ± 3°C — 12 months; Accelerated: 25°C ± 2°C/60% RH ± 5% RH — 6 months",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "long_term_condition": "5°C ± 3°C",
+            "long_term_minimum_months": 12,
+            "accelerated_condition": "25°C ± 2°C / 60% RH ± 5% RH",
+            "accelerated_minimum_months": 6
+          }
+        }
+      ],
+      "storage_conditions_freezer_product": [
+        {
+          "rule_id": "Q1A-030",
+          "rule_text": "Drug products intended for storage in a freezer: long-term -20°C ± 5°C for 12 months minimum at submission. The shelf life should be based on real-time data.",
+          "source_section": "2.2.7.5 Drug products intended for storage in a freezer",
+          "source_page": 11,
+          "source_quote": "Long term: -20°C ± 5°C — 12 months",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "long_term_condition": "-20°C ± 5°C",
+            "minimum_submission_data_months": 12
+          }
+        }
+      ],
+      "stability_commitment_product": [
+        {
+          "rule_id": "Q1A-031",
+          "rule_text": "For drug products, stability commitment scenarios: (1) if data from at least 3 production batches, commit to continue long-term studies through proposed shelf life and accelerated for 6 months; (2) if fewer than 3 production batches, add additional batches to reach 3 total; (3) if no production batch data, place first 3 production batches on stability.",
+          "source_section": "2.2.8 Stability Commitment",
+          "source_page": 12,
+          "source_quote": "1. If the submission includes data from stability studies on at least three production batches, a commitment should be made to continue the long term studies through the proposed shelf life and the accelerated studies for 6 months.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "minimum_production_batches": 3,
+            "accelerated_commitment_months": 6
+          }
+        }
+      ],
+      "evaluation_product": [
+        {
+          "rule_id": "Q1A-032",
+          "rule_text": "For drug products, shelf life is established based on testing a minimum of three batches. The 95% one-sided confidence limit approach applies. An expiration date should be displayed on the container label.",
+          "source_section": "2.2.9 Evaluation / 2.2.10 Statements/Labeling",
+          "source_page": 12,
+          "source_quote": "An approach for analyzing data of a quantitative attribute that is expected to change with time is to determine the time at which the 95 one-sided confidence limit for the mean curve intersects the acceptance criterion.",
+          "verification_status": "VERIFIED",
+          "severity": "high",
+          "thresholds": {
+            "confidence_interval": "95% one-sided",
+            "minimum_batches": 3
+          }
+        }
+      ]
+    },
+    "q1b_photostability": [
+      {
+        "rule_id": "Q1B-001",
+        "rule_text": "For confirmatory studies, samples should be exposed to light providing an overall illumination of not less than 1.2 million lux hours and an integrated near ultraviolet energy of not less than 200 watt hours/square meter.",
+        "source_section": "1.C Procedure",
+        "source_page": 2,
+        "source_quote": "For confirmatory studies, samples should be exposed to light providing an overall illumination of not less than 1.2 million lux hours and an integrated near ultraviolet energy of not less than 200 watt hours/square meter to allow direct comparisons to be made between the drug substance and drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "minimum_illumination_lux_hours": 1200000,
+          "minimum_uv_energy_wh_per_m2": 200
+        }
+      },
+      {
+        "rule_id": "Q1B-002",
+        "rule_text": "Light Source Option 1: Any light source designed to produce an output similar to the D65/ID65 emission standard, such as an artificial daylight fluorescent lamp combining visible and UV outputs, xenon, or metal halide lamp. D65 is the internationally recognized standard for outdoor daylight as defined in ISO 10977 (1993).",
+        "source_section": "1.B Light Sources - Option 1",
+        "source_page": 2,
+        "source_quote": "Any light source that is designed to produce an output similar to the D65/ID65 emission standard such as an artificial daylight fluorescent lamp combining visible and ultraviolet (UV) outputs, xenon, or metal halide lamp.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "standard": "D65/ID65",
+          "iso_reference": "ISO 10977 (1993)"
+        }
+      },
+      {
+        "rule_id": "Q1B-003",
+        "rule_text": "Light Source Option 2: The same sample should be exposed to both a cool white fluorescent lamp (similar to ISO 10977:1993) and a near UV fluorescent lamp with spectral distribution from 320 nm to 400 nm with maximum energy emission between 350 nm and 370 nm.",
+        "source_section": "1.B Light Sources - Option 2",
+        "source_page": 2,
+        "source_quote": "For option 2 the same sample should be exposed to both the cool white fluorescent and near ultraviolet lamp... A near UV fluorescent lamp having a spectral distribution from 320 nm to 400 nm with a maximum energy emission between 350 nm and 370 nm.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "near_uv_range_nm": "320-400",
+          "max_emission_nm": "350-370"
+        }
+      },
+      {
+        "rule_id": "Q1B-004",
+        "rule_text": "For drug substances, photostability testing should consist of two parts: forced degradation testing and confirmatory testing. Normally, only one batch of drug substance is tested during the development phase; confirmatory testing on a single batch selected as described in the parent guideline.",
+        "source_section": "2. Drug Substance",
+        "source_page": 4,
+        "source_quote": "For drug substances, photostability testing should consist of two parts: forced degradation testing and confirmatory testing... Normally, only one batch of drug substance is tested during the development phase.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "confirmatory_batches_standard": 1,
+          "equivocal_result_additional_batches": 2
+        }
+      },
+      {
+        "rule_id": "Q1B-005",
+        "rule_text": "For solid drug substances, an appropriate amount of sample should be placed in a glass or plastic dish and protected with a suitable transparent cover. Solid drug substances should be spread across the container to give a thickness of typically not more than 3 millimeters.",
+        "source_section": "2.A Presentation of Samples",
+        "source_page": 4,
+        "source_quote": "Solid drug substances should be spread across the container to give a thickness of typically not more than 3 millimeters.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {
+          "max_thickness_mm": 3
+        }
+      },
+      {
+        "rule_id": "Q1B-006",
+        "rule_text": "For drug product photostability testing, studies should be carried out in a sequential manner: testing fully exposed product first, then in the immediate pack, then in the marketing pack. Testing should progress until results demonstrate the drug product is adequately protected from light.",
+        "source_section": "3. Drug Product",
+        "source_page": 5,
+        "source_quote": "Normally, the studies on drug products should be carried out in a sequential manner starting with testing the fully exposed product then progressing as necessary to the product in the immediate pack and then in the marketing pack.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1B-007",
+        "rule_text": "For solid oral dosage form products (drug product), testing should be conducted on an appropriately sized composite of, for example, 20 tablets or capsules.",
+        "source_section": "3.B Analysis of Samples",
+        "source_page": 6,
+        "source_quote": "For solid oral dosage form products, testing should be conducted on an appropriately sized composite of, for example, 20 tablets or capsules.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {
+          "example_composite_units": 20
+        }
+      }
+    ],
+    "q1c_new_dosage_forms": [
+      {
+        "rule_id": "Q1C-001",
+        "rule_text": "A new dosage form is defined as a drug product which is a different pharmaceutical product type, but contains the same active substance as included in the existing drug product approved by the pertinent regulatory authority. Stability protocols for new dosage forms should follow the guidance in the parent stability guideline in principle.",
+        "source_section": "2. New Dosage Forms",
+        "source_page": 1,
+        "source_quote": "A new dosage form is defined as a drug product which is a different pharmaceutical product type, but contains the same active substance as included in the existing drug product approved by the pertinent regulatory authority.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1C-002",
+        "rule_text": "For new dosage forms, a reduced stability database at submission time (e.g., 6 months accelerated and 6 months long-term data from ongoing studies) may be acceptable in certain justified cases.",
+        "source_section": "2. New Dosage Forms",
+        "source_page": 1,
+        "source_quote": "However, a reduced stability database at submission time (e.g., 6 months accelerated and 6 months long term data from ongoing studies) may be acceptable in certain justified cases.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {
+          "reduced_accelerated_minimum_months": 6,
+          "reduced_long_term_minimum_months": 6
+        }
+      }
+    ],
+    "q1d_bracketing_matrixing": [
+      {
+        "rule_id": "Q1D-001",
+        "rule_text": "A full study design is one in which samples for every combination of all design factors are tested at all time points. A reduced design can be a suitable alternative to a full design when multiple design factors are involved. Any reduced design should have the ability to adequately predict the retest period or shelf life.",
+        "source_section": "2.1 General",
+        "source_page": 1,
+        "source_quote": "A full study design is one in which samples for every combination of all design factors are tested at all time points. A reduced design is one in which samples for every factor combination are not all tested at all time points.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1D-002",
+        "rule_text": "For drug substances, matrixing is of limited utility and bracketing is generally not applicable.",
+        "source_section": "2.2 Applicability of Reduced Designs",
+        "source_page": 1,
+        "source_quote": "For the study of drug substances, matrixing is of limited utility and bracketing is generally not applicable.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1D-003",
+        "rule_text": "Bracketing is the design of a stability schedule such that only samples on the extremes of certain design factors (e.g., strength, container size and/or fill) are tested at all time points as in a full design. The use of a bracketing design would not be considered appropriate if it cannot be demonstrated that the strengths or container sizes and/or fills selected for testing are indeed the extremes.",
+        "source_section": "2.3 Bracketing",
+        "source_page": 2,
+        "source_quote": "The use of a bracketing design would not be considered appropriate if it cannot be demonstrated that the strengths or container sizes and/or fills selected for testing are indeed the extremes.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1D-004",
+        "rule_text": "Bracketing can be applied to studies with multiple strengths of identical or closely related formulations. In cases where different excipients are used among strengths, bracketing generally should not be applied.",
+        "source_section": "2.3.1.1 Strength",
+        "source_page": 2,
+        "source_quote": "In cases where different excipients are used among strengths, bracketing generally should not be applied.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1D-005",
+        "rule_text": "In a matrixing design where time points are matrixed, all selected factor combinations should be tested at the initial and final time points, while only certain fractions of the designated combinations should be tested at each intermediate time point. Data from at least three time points, including initial, should be available for each selected combination through the first 12 months.",
+        "source_section": "2.4.2 Design Considerations",
+        "source_page": 4,
+        "source_quote": "In a design where time points are matrixed, all selected factor combinations should be tested at the initial and final time points... data from at least three time points, including initial, should be available for each selected combination through the first 12 months of the study.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "minimum_time_points_per_combination_first_12_months": 3,
+          "mandatory_time_points": ["initial", "final"]
+        }
+      },
+      {
+        "rule_id": "Q1D-006",
+        "rule_text": "For matrixing at an accelerated or intermediate storage condition, care should be taken to ensure testing occurs at a minimum of three time points, including initial and final, for each selected combination of factors.",
+        "source_section": "2.4.2 Design Considerations",
+        "source_page": 4,
+        "source_quote": "For matrixing at an accelerated or intermediate storage condition, care should be taken to ensure testing occurs at a minimum of three time points, including initial and final, for each selected combination of factors.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "minimum_time_points_accelerated_intermediate": 3
+        }
+      },
+      {
+        "rule_id": "Q1D-007",
+        "rule_text": "A matrixing design is applicable if the supporting data indicate predictable product stability. Matrixing is appropriate when the supporting data exhibit only small variability.",
+        "source_section": "2.4.4 Applicability and Degree of Reduction",
+        "source_page": 6,
+        "source_quote": "In general, a matrixing design is applicable if the supporting data indicate predictable product stability. Matrixing is appropriate when the supporting data exhibit only small variability.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {}
+      }
+    ],
+    "q1e_evaluation": [
+      {
+        "rule_id": "Q1E-001",
+        "rule_text": "The purpose of a stability study is to establish, based on testing a minimum of three batches of the drug substance or product, a retest period or shelf life and label storage instructions applicable to all future batches manufactured and packaged under similar circumstances.",
+        "source_section": "2.1 General Principles",
+        "source_page": 1,
+        "source_quote": "The purpose of a stability study is to establish, based on testing a minimum of three batches of the drug substance or product, a retest period or shelf life and label storage instructions applicable to all future batches manufactured and packaged under similar circumstances.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "minimum_batches": 3
+        }
+      },
+      {
+        "rule_id": "Q1E-002",
+        "rule_text": "The stability information should include results from the physical, chemical, biological, and microbiological tests, including those related to particular attributes of the dosage form (e.g., dissolution rate for solid oral dosage forms). The adequacy of the mass balance should be assessed.",
+        "source_section": "2.1 General Principles",
+        "source_page": 2,
+        "source_quote": "A systematic approach should be adopted in the presentation and evaluation of the stability information. The stability information should include, as appropriate, results from the physical, chemical, biological, and microbiological tests, including those related to particular attributes of the dosage form (for example, dissolution rate for solid oral dosage forms).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1E-003",
+        "rule_text": "Extrapolation to extend the retest period or shelf life beyond the period covered by long-term data can be proposed, particularly if no significant change is observed at the accelerated condition. The proposed retest period or shelf life can be up to twice, but should not be more than 12 months beyond, the period covered by long-term data (when there is little or no change and variability).",
+        "source_section": "2.3 Extrapolation / 2.4.1.1",
+        "source_page": 3,
+        "source_quote": "The proposed retest period or shelf life can be up to twice, but should not be more than 12 months beyond, the period covered by long-term data.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "max_extrapolation_multiplier": 2,
+          "max_extrapolation_beyond_data_months": 12,
+          "condition": "little or no change and variability at accelerated"
+        }
+      },
+      {
+        "rule_id": "Q1E-004",
+        "rule_text": "Where long-term data are not amenable to statistical analysis but relevant supporting data are provided, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+        "source_section": "2.4.1.2 Data not amenable to statistical analysis",
+        "source_page": 4,
+        "source_quote": "Where long-term data are not amenable to statistical analysis, but relevant supporting data are provided, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "max_extrapolation_multiplier": 1.5,
+          "max_extrapolation_beyond_data_months": 6,
+          "condition": "data not amenable to statistical analysis"
+        }
+      },
+      {
+        "rule_id": "Q1E-005",
+        "rule_text": "Where significant change occurs at the accelerated condition and there is no significant change at the intermediate condition, extrapolation beyond the period covered by long-term data can be proposed. When data are amenable to statistical analysis and analysis is performed, the proposed shelf life can be up to 1.5 times but not more than 6 months beyond the long-term data period.",
+        "source_section": "2.4.2.1 No significant change at intermediate condition",
+        "source_page": 5,
+        "source_quote": "When the long-term data for an attribute are amenable to statistical analysis but no analysis is performed, the extent of extrapolation should be the same as when data are not amenable to statistical analysis. However, if a statistical analysis is performed, the proposed retest period or shelf life can be up to one-and-half times, but should not be more than 6 months beyond, the period covered by long-term data.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "max_extrapolation_months_with_statistics": 6,
+          "max_multiplier_with_statistics": 1.5
+        }
+      },
+      {
+        "rule_id": "Q1E-006",
+        "rule_text": "Where significant change occurs at both the accelerated and intermediate conditions, the proposed retest period or shelf life should not exceed the period covered by long-term data. A retest period or shelf life shorter than the period covered by long-term data could be called for.",
+        "source_section": "2.4.2.2 Significant change at intermediate condition",
+        "source_page": 5,
+        "source_quote": "Where significant change occurs at the intermediate condition, the proposed retest period or shelf life should not exceed the period covered by long-term data. In addition, a retest period or shelf life shorter than the period covered by long-term data could be called for.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "max_extrapolation": "none (cannot exceed long-term data period)"
+        }
+      },
+      {
+        "rule_id": "Q1E-007",
+        "rule_text": "For drug substances or products intended for storage in a refrigerator where no significant change occurs at accelerated condition, the proposed retest period or shelf life can be up to 1.5 times but should not be more than 6 months beyond the period covered by long-term data (without statistical analysis).",
+        "source_section": "2.5.1.1 No significant change at accelerated condition (refrigerator)",
+        "source_page": 6,
+        "source_quote": "If the long-term and accelerated data show little change over time and little variability, the proposed retest period or shelf life can be up to one-and-a-half times, but should not be more than 6 months beyond, the period covered by long-term data normally without the support of statistical analysis.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "max_extrapolation_multiplier": 1.5,
+          "max_extrapolation_beyond_data_months": 6,
+          "applies_to": "refrigerator storage"
+        }
+      },
+      {
+        "rule_id": "Q1E-008",
+        "rule_text": "For drug substances or products intended for storage in a freezer, the retest period or shelf life should be based on long-term data. Extrapolation is not considered appropriate when significant change occurs at the accelerated condition.",
+        "source_section": "2.5.2 Drug substances or products intended for storage in a freezer",
+        "source_page": 6,
+        "source_quote": "For drug substances or products intended for storage in a freezer, the retest period or shelf life should be based on long-term data.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q1E-009",
+        "rule_text": "The general statistical approach for stability data involves linear regression analysis. Data poolability should be tested first using appropriate statistical tests (p > 0.25 for combining slopes and intercepts). If data cannot be combined, the overall shelf life should be based on the minimum time a batch can be expected to remain within acceptance criteria.",
+        "source_section": "2.6 General Statistical Approaches",
+        "source_page": 7,
+        "source_quote": "This can be done by first applying appropriate statistical tests (e.g., p values for level of significance of rejection of more than 0.25) to the slopes of the regression lines and zero time intercepts for the individual batches.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "poolability_p_value_threshold": 0.25,
+          "confidence_interval_type": "95% one-sided"
+        }
+      }
+    ]
+  },
+  "q4b_pharmacopoeia": {
+    "general_principles": [
+      {
+        "rule_id": "Q4B-001",
+        "rule_text": "The Q4B process enables the evaluation and recommendation of pharmacopoeial texts (JP, EP/Ph. Eur., USP) to facilitate their recognition by regulatory authorities as interchangeable in the ICH regions (EU, Japan, USA). Following favourable evaluations, ICH will issue topic-specific annexes.",
+        "source_section": "1.1 Objective(s) of the Guideline",
+        "source_page": 1,
+        "source_quote": "This document describes a process for the evaluation and recommendation by the Q4B Expert Working Group (EWG) of selected pharmacopoeial texts to facilitate their recognition by regulatory authorities for use as interchangeable in the ICH regions.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "pharmacopoeias_covered": ["JP", "Ph. Eur. (EP)", "USP"]
+        }
+      },
+      {
+        "rule_id": "Q4B-002",
+        "rule_text": "Initially, the Q4B process focused on evaluating the 11 General Test Chapters discussed during the development of ICH Q6A: Dissolution, Disintegration, Uniformity of Content, Uniformity of Mass (harmonised as Uniformity of Dosage Units), Extractable Volume, Particulate Matter, Sterility, Microbiological Quality, Bacterial Endotoxins, Residue on Ignition/Sulphated Ash, and Colour.",
+        "source_section": "1.3 Scope of the Guideline / Attachment I",
+        "source_page": 1,
+        "source_quote": "Initially, the Q4B process will focus on evaluating the 11 General Test Chapters discussed during the development of ICH Q6A (refer to Attachment I).",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {
+          "initial_chapters_count": 11,
+          "chapters": ["Dissolution", "Disintegration", "Uniformity of Dosage Units", "Extractable Volume", "Particulate Matter", "Sterility", "Microbiological Quality", "Bacterial Endotoxins", "Residue on Ignition/Sulphated Ash", "Colour"]
+        }
+      },
+      {
+        "rule_id": "Q4B-003",
+        "rule_text": "Interchangeable means: where such status is indicated, any of the official texts from JP, EP, or USP can be substituted one for the other (appropriately referenced) in the ICH regions for pharmaceutical registration/approval purposes. Using any of the interchangeable methods, an analyst will reach the same accept or reject decisions irrespective of which PDG pharmacopoeia is used.",
+        "source_section": "3. Glossary - Interchangeable",
+        "source_page": 5,
+        "source_quote": "Where such status is indicated, any of the official texts from JP, EP, or USP can be substituted one for the other (appropriately referenced) in the ICH regions for purposes of the pharmaceutical registration/approval process. Using any of the interchangeable methods, an analyst will reach the same accept or reject decisions irrespective of which PDG pharmacopoeia is used.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q4B-004",
+        "rule_text": "After a regulatory ICH region has implemented the Q4B annex, the official pharmacopoeial texts referenced in the annex can be used as interchangeable in that region. Any change notification, variation, and/or prior approval procedures should be handled in accordance with established regional regulatory mechanisms pertaining to compendial changes.",
+        "source_section": "2.3.1 Considerations for Implementation",
+        "source_page": 3,
+        "source_quote": "After a regulatory ICH region has implemented the Q4B annex, the official pharmacopoeial texts referenced in the annex can be used as interchangeable in that region. Any change notification, variation, and/or prior approval procedures should be handled in accordance with established regional regulatory mechanisms pertaining to compendial changes.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q4B-005",
+        "rule_text": "FDA consideration: Based on the Q4B annex recommendation, pharmacopoeial texts referenced in Section 2 of the annex can be considered interchangeable. However, FDA might request that a company demonstrate that the chosen method is acceptable and suitable for a specific material or product.",
+        "source_section": "2.3.1 Considerations for Implementation - FDA",
+        "source_page": 4,
+        "source_quote": "FDA consideration: Based on the recommendation above, and in accordance with the conditions set forth in the annex, the pharmacopoeial texts as referenced in Section 2 of the annex can be considered interchangeable. However, FDA might request that a company demonstrate that the chosen method is acceptable and suitable for a specific material or product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q4B-006",
+        "rule_text": "Any change to a pharmacopoeial text that has been proposed to, or recommended through, the Q4B evaluation process will prompt a Q4B EWG review to assess both the merit of the change and the appropriateness of any subsequent Q4B activity related to that text. This is the regional variance signaling mechanism.",
+        "source_section": "2.1 Q4B Evaluation Process",
+        "source_page": 2,
+        "source_quote": "Any change to pharmacopoeial text that has been proposed to, or recommended through, the Q4B evaluation process will prompt a Q4B EWG review to assess both the merit of the change and the appropriateness of any subsequent Q4B activity related to that text.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q4B-007",
+        "rule_text": "The Q4B evaluation process follows a 5-step ICH procedure: Step 1 (independent evaluation by Q4B parties), Step 2 (Steering Committee agreement to proceed), Step 3 (regulatory consultation for 3 months), Step 4 (adoption of annex), Step 5 (regional regulatory implementation).",
+        "source_section": "2.1 Q4B Evaluation Process",
+        "source_page": 2,
+        "source_quote": "The draft Q4B annex is made available for regulatory consultation in the three regions (generally for 3 months).",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {
+          "consultation_period_months": 3
+        }
+      }
+    ]
+  },
+  "q6a_chemical_specs": {
+    "general_concepts": [
+      {
+        "rule_id": "Q6A-001",
+        "rule_text": "A specification is defined as a list of tests, references to analytical procedures, and appropriate acceptance criteria, which are numerical limits, ranges, or other criteria for the tests described. It establishes the set of criteria to which a new drug substance or new drug product should conform to be considered acceptable for its intended use.",
+        "source_section": "1.2 Background / 3.1.1 Definition of Specifications",
+        "source_page": 1,
+        "source_quote": "A specification is defined as a list of tests, references to analytical procedures, and appropriate acceptance criteria, which are numerical limits, ranges, or other criteria for the tests described.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-002",
+        "rule_text": "Periodic or skip testing is the performance of specified tests at release on pre-selected batches and/or at predetermined intervals, rather than on a batch-by-batch basis. This concept should generally be implemented post-approval. When tested, any failure to meet acceptance criteria for the periodic test should be handled by proper notification of the appropriate regulatory authority.",
+        "source_section": "2.1 Periodic or Skip Testing",
+        "source_page": 2,
+        "source_quote": "Periodic or skip testing is the performance of specified tests at release on pre-selected batches and / or at predetermined intervals, rather than on a batch-by-batch basis with the understanding that those batches not being tested still must meet all acceptance criteria established for that product.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-003",
+        "rule_text": "The concept of different acceptance criteria for release versus shelf-life specifications applies to drug products only. In Japan and the United States, this concept may only be applicable to in-house criteria. In the European Union there is a regulatory requirement for distinct specifications for release and shelf-life where different.",
+        "source_section": "2.2 Release vs. Shelf-life Acceptance Criteria",
+        "source_page": 2,
+        "source_quote": "The concept of different acceptance criteria for release vs. shelf-life specifications applies to drug products only; it pertains to the establishment of more restrictive criteria for the release of a drug product than are applied to the shelf-life.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-004",
+        "rule_text": "Pharmacopoeial procedures should be utilized wherever appropriate. A harmonized specification is possible only if the procedures and acceptance criteria defined are acceptable to regulatory authorities in all regions. No pharmacopoeia shall revise unilaterally any monograph or chapter after sign-off or after publication.",
+        "source_section": "2.8 Pharmacopoeial Tests and Acceptance Criteria",
+        "source_page": 4,
+        "source_quote": "According to the PDG procedure for the revision of harmonized monographs and chapters, \"no pharmacopoeia shall revise unilaterally any monograph or chapter after sign-off or after publication.\"",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "universal_tests_drug_substance": [
+      {
+        "rule_id": "Q6A-005",
+        "rule_text": "Universal tests for all new drug substances include: (a) Description — a qualitative statement about state and color; (b) Identification — testing should optimally discriminate between closely related structures; IR spectroscopy is generally acceptable; identification solely by a single chromatographic retention time is not regarded as specific; (c) Assay — a specific, stability-indicating procedure should be included; (d) Impurities — organic, inorganic, and residual solvents should be addressed.",
+        "source_section": "3.2.1 New Drug Substances",
+        "source_page": 6,
+        "source_quote": "b) Identification: identification testing should optimally be able to discriminate between compounds of closely related structure which are likely to be present. Identification tests should be specific for the new drug substance, e.g., infrared spectroscopy. Identification solely by a single chromatographic retention time, for example, is not regarded as being specific.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-006",
+        "rule_text": "For identification of drug substances, the use of two chromatographic procedures where the separation is based on different principles, or a combination of tests into a single procedure such as HPLC/UV diode array, HPLC/MS, or GC/MS, is generally acceptable.",
+        "source_section": "3.2.1 New Drug Substances - b) Identification",
+        "source_page": 6,
+        "source_quote": "However, the use of two chromatographic procedures, where the separation is based on different principles or a combination of tests into a single procedure, such as HPLC/UV diode array, HPLC/MS, or GC/MS is generally acceptable.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "universal_tests_drug_product": [
+      {
+        "rule_id": "Q6A-007",
+        "rule_text": "Universal tests for all new drug products include: (a) Description; (b) Identification; (c) Assay — a specific, stability-indicating assay to determine strength should be included for all new drug products; (d) Impurities — organic and inorganic impurities (degradation products) and residual solvents.",
+        "source_section": "3.2.2 New Drug Products",
+        "source_page": 7,
+        "source_quote": "c) Assay: A specific, stability-indicating assay to determine strength (content) should be included for all new drug products.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      }
+    ],
+    "specific_tests_drug_substance": [
+      {
+        "rule_id": "Q6A-008",
+        "rule_text": "Particle size testing: For some new drug substances intended for use in solid or suspension drug products, particle size can have a significant effect on dissolution rates, bioavailability, and/or stability. In such instances, testing for particle size distribution should be carried out using an appropriate procedure, and acceptance criteria should be provided.",
+        "source_section": "3.3.1 b) Particle size",
+        "source_page": 8,
+        "source_quote": "For some new drug substances intended for use in solid or suspension drug products, particle size can have a significant effect on dissolution rates, bioavailability, and / or stability. In such instances, testing for particle size distribution should be carried out using an appropriate procedure, and acceptance criteria should be provided.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-009",
+        "rule_text": "Polymorphic forms: Some new drug substances exist in different crystalline forms that differ in their physical properties. Where differences have been shown to affect drug product performance, bioavailability or stability, the appropriate solid state should be specified. Techniques include melting point, solid state IR, X-ray powder diffraction, DSC, TGA, DTA, Raman spectroscopy.",
+        "source_section": "3.3.1 c) Polymorphic forms",
+        "source_page": 8,
+        "source_quote": "Some new drug substances exist in different crystalline forms which differ in their physical properties... In cases where differences exist which have been shown to affect drug product performance, bioavailability or stability, then the appropriate solid state should be specified.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-010",
+        "rule_text": "Tests for chiral new drug substances: For chiral drug substances developed as a single enantiomer, control of the other enantiomer should be considered in the same manner as for other impurities. An enantioselective determination of the drug substance should be part of the specification.",
+        "source_section": "3.3.1 d) Tests for chiral new drug substances",
+        "source_page": 9,
+        "source_quote": "Drug Substance: Impurities. For chiral drug substances which are developed as a single enantiomer, control of the other enantiomer should be considered in the same manner as for other impurities.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-011",
+        "rule_text": "Water content testing: This test is important in cases where the new drug substance is known to be hygroscopic or degraded by moisture or when the drug substance is known to be a stoichiometric hydrate. A detection procedure specific for water (e.g., Karl Fischer titration) is preferred over a Loss on Drying procedure.",
+        "source_section": "3.3.1 e) Water content",
+        "source_page": 10,
+        "source_quote": "This test is important in cases where the new drug substance is known to be hygroscopic or degraded by moisture or when the drug substance is known to be a stoichiometric hydrate... however, a detection procedure that is specific for water (e.g., Karl Fischer titration) is preferred.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-012",
+        "rule_text": "Microbial limits: There may be a need to specify the total count of aerobic microorganisms, the total count of yeasts and molds, and the absence of specific objectionable bacteria (e.g., Staphylococcus aureus, Escherichia coli, Salmonella, Pseudomonas aeruginosa). These should be determined using pharmacopoeial procedures.",
+        "source_section": "3.3.1 g) Microbial limits",
+        "source_page": 10,
+        "source_quote": "There may be a need to specify the total count of aerobic microorganisms, the total count of yeasts and molds, and the absence of specific objectionable bacteria (e.g., Staphylococcus aureus, Escherichia coli, Salmonella, Pseudomonas aeruginosa).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "specific_tests_drug_product_solid_oral": [
+      {
+        "rule_id": "Q6A-013",
+        "rule_text": "Dissolution testing for solid oral dosage forms: Single-point measurements are normally considered suitable for immediate-release dosage forms. For modified-release dosage forms, multiple time point sampling should be performed. For delayed-release forms, two-stage testing may be appropriate.",
+        "source_section": "3.3.2.1 a) Dissolution",
+        "source_page": 11,
+        "source_quote": "Single-point measurements are normally considered to be suitable for immediate-release dosage forms. For modified-release dosage forms, appropriate test conditions and sampling procedures should be established. For example, multiple time point sampling should be performed for extended-release dosage forms.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-014",
+        "rule_text": "Dissolution testing for immediate-release drug products may be replaced by disintegration testing for rapidly dissolving products (dissolution >80% in 15 minutes at pH 1.2, 4.0 and 6.8) containing highly soluble drugs (dose/solubility volume < 250 mL from pH 1.2 to 6.8).",
+        "source_section": "3.3.2.1 b) Disintegration",
+        "source_page": 11,
+        "source_quote": "For rapidly dissolving (dissolution >80% in 15 minutes at pH 1.2, 4.0 and 6.8) products containing drugs which are highly soluble throughout the physiological range (dose/solubility volume < 250 mL from pH 1.2 to 6.8), disintegration may be substituted for dissolution.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "rapid_dissolution_threshold_percent": 80,
+          "rapid_dissolution_time_minutes": 15,
+          "dissolution_ph_values": [1.2, 4.0, 6.8],
+          "high_solubility_volume_ml": 250,
+          "solubility_ph_range": "1.2 to 6.8"
+        }
+      },
+      {
+        "rule_id": "Q6A-015",
+        "rule_text": "For extended-release drug products, the permitted variability in mean release rate at any given time point should normally not exceed a total numerical difference of +/-10% of the labeled content of drug substance (i.e., a total variability of 20%), unless a wider range is supported by a bioequivalency study.",
+        "source_section": "3.3.2.1 a) Dissolution (extended release)",
+        "source_page": 11,
+        "source_quote": "Normally, the permitted variability in mean release rate at any given time point should not exceed a total numerical difference of +/-10% of the labeled content of drug substance (i.e., a total variability of 20%: a requirement of 50 +/- 10% thus means an acceptable range from 40% to 60%), unless a wider range is supported by a bioequivalency study.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "max_release_rate_variability_percent": 10,
+          "total_variability_percent": 20
+        }
+      },
+      {
+        "rule_id": "Q6A-016",
+        "rule_text": "Uniformity of dosage units: This term includes both the mass of the dosage form and the content of the active substance in the dosage form. A pharmacopoeial procedure should be used. In general, the specification should include one or the other but not both.",
+        "source_section": "3.3.2.1 d) Uniformity of dosage units",
+        "source_page": 12,
+        "source_quote": "This term includes both the mass of the dosage form and the content of the active substance in the dosage form; a pharmacopoeial procedure should be used. In general, the specification should include one or the other but not both.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "specific_tests_parenteral": [
+      {
+        "rule_id": "Q6A-017",
+        "rule_text": "All parenteral products should have a test procedure and acceptance criterion for evaluation of sterility. Where data generated during development and validation justify parametric release, this approach may be proposed for terminally sterilized drug products.",
+        "source_section": "3.3.2.3 c) Sterility",
+        "source_page": 15,
+        "source_quote": "All parenteral products should have a test procedure and acceptance criterion for evaluation of sterility.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-018",
+        "rule_text": "For parenteral products, a test procedure and acceptance criterion for endotoxins, using a procedure such as the limulus amoebocyte lysate test, should be included in the specification. Pyrogenicity testing may be proposed as an alternative to endotoxin testing where justified.",
+        "source_section": "3.3.2.3 d) Endotoxins/Pyrogens",
+        "source_page": 15,
+        "source_quote": "A test procedure and acceptance criterion for endotoxins, using a procedure such as the limulus amoebocyte lysate test, should be included in the specification.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6A-019",
+        "rule_text": "Parenteral products should have appropriate acceptance criteria for particulate matter. This will normally include acceptance criteria for visible particulates and/or clarity of solution, as well as for sub-visible particulates as appropriate.",
+        "source_section": "3.3.2.3 e) Particulate matter",
+        "source_page": 15,
+        "source_quote": "Parenteral products should have appropriate acceptance criteria for particulate matter. This will normally include acceptance criteria for visible particulates and / or clarity of solution, as well as for sub-visible particulates as appropriate.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "residual_solvents": [
+      {
+        "rule_id": "Q6A-020",
+        "rule_text": "Residual solvents are included in the impurities category for both new drug substances and drug products. Refer to the ICH Guidelines on Residual Solvents in Pharmaceuticals (Q3C) for detailed information on thresholds and classification.",
+        "source_section": "3.2.1 d) Impurities / 3.2.2 d) Impurities",
+        "source_page": 7,
+        "source_quote": "Organic and inorganic impurities and residual solvents are included in this category. Refer to the ICH Guidelines Impurities in New Drug Substances and Residual Solvents in Pharmaceuticals for detailed information.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {
+          "reference_guideline": "ICH Q3C"
+        }
+      }
+    ],
+    "antimicrobial_preservative": [
+      {
+        "rule_id": "Q6A-021",
+        "rule_text": "For oral liquids needing an antimicrobial preservative, acceptance criteria for preservative content should be established based on levels necessary to maintain microbiological quality throughout the proposed usage and shelf-life. The lowest specified concentration should be demonstrated to be effective using a pharmacopoeial antimicrobial preservative effectiveness test.",
+        "source_section": "3.3.2.2 d) Antimicrobial preservative content",
+        "source_page": 13,
+        "source_quote": "For oral liquids needing an antimicrobial preservative, acceptance criteria for preservative content should be established. Acceptance criteria for preservative content should be based upon the levels of antimicrobial preservative necessary to maintain microbiological quality of the product at all stages throughout its proposed usage and shelf-life.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ]
+  },
+  "q6b_biotech_specs": {
+    "general_principles": [
+      {
+        "rule_id": "Q6B-001",
+        "rule_text": "Characterization of a biotechnological or biological product (determination of physicochemical properties, biological activity, immunochemical properties, purity and impurities) by appropriate techniques is necessary to allow relevant specifications to be established. Acceptance criteria should be established and justified based on data obtained from lots used in preclinical and/or clinical studies, data from lots used for demonstration of manufacturing consistency, and data from stability studies.",
+        "source_section": "2.1 Characterization",
+        "source_page": 2,
+        "source_quote": "Characterization of a biotechnological or biological product (which includes the determination of physicochemical properties, biological activity, immunochemical properties, purity and impurities) by appropriate techniques is necessary to allow relevant specifications to be established. Acceptance criteria should be established and justified based on data obtained from lots used in preclinical and/or clinical studies, data from lots used for demonstration of manufacturing consistency and data from stability studies.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-002",
+        "rule_text": "Q6B applies to proteins and polypeptides, their derivatives, and products of which they are components (e.g., conjugates) produced from recombinant or non-recombinant cell-culture expression systems. It does not cover antibiotics, synthetic peptides and polypeptides, heparins, vitamins, cell metabolites, DNA products, allergenic extracts, conventional vaccines, cells, whole blood, and cellular blood components.",
+        "source_section": "1.3 Scope",
+        "source_page": 1,
+        "source_quote": "The principles adopted and explained in this document apply to proteins and polypeptides, their derivatives, and products of which they are components (e.g., conjugates)... This document does not cover antibiotics, synthetic peptides and polypeptides, heparins, vitamins, cell metabolites, DNA products, allergenic extracts, conventional vaccines, cells, whole blood, and cellular blood components.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "biological_activity_potency": [
+      {
+        "rule_id": "Q6B-003",
+        "rule_text": "A valid biological assay to measure the biological activity should be provided by the manufacturer. Potency (expressed in units) is the quantitative measure of biological activity based on the attribute of the product which is linked to the relevant biological properties. The results of biological assays should be expressed in units of activity calibrated against an international or national reference standard, when available and appropriate.",
+        "source_section": "2.1.2 Biological activity",
+        "source_page": 3,
+        "source_quote": "A valid biological assay to measure the biological activity should be provided by the manufacturer... The results of biological assays should be expressed in units of activity calibrated against an international or national reference standard, when available and appropriate for the assay utilized.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-004",
+        "rule_text": "A biological assay to measure the biological activity of the product may be replaced by physicochemical tests only in those instances where: (1) sufficient physicochemical information about the drug can be thoroughly established and relevant correlation to biologic activity demonstrated; and (2) there exists a well-established manufacturing history.",
+        "source_section": "2.1.2 Biological activity",
+        "source_page": 3,
+        "source_quote": "a biological assay to measure the biological activity of the product may be replaced by physicochemical tests only in those instances where: sufficient physicochemical information about the drug, including higher-order structure, can be thoroughly established by such physicochemical methods, and relevant correlation to biologic activity demonstrated; and there exists a well-established manufacturing history.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "purity_and_impurities": [
+      {
+        "rule_id": "Q6B-005",
+        "rule_text": "The purity of biotechnological/biological drug substances and products is assessed by a combination of analytical procedures because the determination of absolute purity presents considerable analytical challenges and the results are highly method-dependent. The choice and optimization of analytical procedures should focus on the separation of the desired product from product-related substances and from impurities.",
+        "source_section": "2.1.4 Purity, impurities and contaminants / 4.1.3",
+        "source_page": 4,
+        "source_quote": "The determination of absolute, as well as relative purity, presents considerable analytical challenges, and the results are highly method-dependent... Consequently, the purity of the drug substance and drug product is assessed by a combination of analytical procedures.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-006",
+        "rule_text": "Process-related impurities in the drug substance may include cell culture media, host cell proteins, DNA, monoclonal antibodies or chromatographic media used in purification, solvents and buffer components. These impurities should be minimized by the use of appropriate well-controlled manufacturing processes.",
+        "source_section": "4.1.3 Purity and impurities",
+        "source_page": 9,
+        "source_quote": "Process-related impurities (section 2.1.4) in the drug substance may include cell culture media, host cell proteins, DNA, monoclonal antibodies or chromatographic media used in purification, solvents and buffer components. These impurities should be minimized by the use of appropriate well-controlled manufacturing processes.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-007",
+        "rule_text": "Individual and/or collective acceptance criteria for product-related impurities (process-related and product-related) should be set, as appropriate. Under certain circumstances, acceptance criteria for selected impurities may not be necessary (e.g., when clearance studies demonstrate removal).",
+        "source_section": "2.1.4 Impurities / 4.1.3",
+        "source_page": 4,
+        "source_quote": "Individual and/or collective acceptance criteria for impurities (product-related and process-related) should be set, as appropriate. Under certain circumstances, acceptance criteria for selected impurities may not be necessary (section 2.3).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-008",
+        "rule_text": "Contaminants in a biotechnological/biological product include all adventitiously introduced materials not intended to be part of the manufacturing process. Contaminants should be strictly avoided and/or suitably controlled. For adventitious viral or mycoplasma contamination, the concept of action limits is not applicable; viral safety evaluation strategies per ICH Q5A should be followed.",
+        "source_section": "2.1.4 Contaminants",
+        "source_page": 5,
+        "source_quote": "Contaminants in a product include all adventitiously introduced materials not intended to be part of the manufacturing process... For the special case of adventitious viral or mycoplasma contamination, the concept of action limits is not applicable.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {
+          "reference_guideline": "ICH Q5A"
+        }
+      }
+    ],
+    "reference_standards": [
+      {
+        "rule_id": "Q6B-009",
+        "rule_text": "For drug applications for new molecular entities, it is unlikely that an international or national standard will be available. At the time of submission, the manufacturer should have established an appropriately characterized in-house primary reference material, prepared from lot(s) representative of production and clinical materials. In-house working reference material(s) used in testing of production lots should be calibrated against this primary reference material.",
+        "source_section": "2.2.1 Reference standards and reference materials",
+        "source_page": 5,
+        "source_quote": "At the time of submission, the manufacturer should have established an appropriately characterized in-house primary reference material, prepared from lot(s) representative of production and clinical materials. In-house working reference material(s) used in the testing of production lots should be calibrated against this primary reference material.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "drug_substance_specifications": [
+      {
+        "rule_id": "Q6B-010",
+        "rule_text": "Drug substance specifications for biotechnological/biological products generally include: (a) Appearance and description; (b) Identity — based on unique aspects of molecular structure and/or other specific properties, may require more than one test; (c) Purity and impurities — combination of methods; (d) Potency — a relevant, validated potency assay; (e) Quantity — based on protein content (mass).",
+        "source_section": "4.1 Drug Substance Specification",
+        "source_page": 9,
+        "source_quote": "Generally, the following tests and acceptance criteria are considered applicable to all drug substances (for analytical procedures see section 2.2.2)... 4.1.1 Appearance and description... 4.1.2 Identity... 4.1.3 Purity and impurities... 4.1.4 Potency... 4.1.5 Quantity",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-011",
+        "rule_text": "A relevant, validated potency assay should be part of the specifications for a biotechnological or biological drug substance and/or drug product. When an appropriate potency assay is used for the drug product, an alternative method (physicochemical and/or biological) may suffice for quantitative assessment at the drug substance stage.",
+        "source_section": "4.1.4 Potency",
+        "source_page": 9,
+        "source_quote": "A relevant, validated potency assay (section 2.1.2) should be part of the specifications for a biotechnological or biological drug substance and/or drug product.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      }
+    ],
+    "drug_product_specifications": [
+      {
+        "rule_id": "Q6B-012",
+        "rule_text": "Drug product specifications for biotechnological/biological products generally include: (a) Appearance and description; (b) Identity; (c) Purity and impurities; (d) Potency; (e) Quantity; (f) General tests (pH, osmolarity); (g) Additional testing for unique dosage forms. Pharmacopoeial requirements apply to relevant dosage forms including sterility, endotoxin, microbial limits, volume in container, uniformity of dosage units.",
+        "source_section": "4.2 Drug Product Specification",
+        "source_page": 10,
+        "source_quote": "Generally, the following tests and acceptance criteria are considered applicable to all drug products... Typical tests found in the pharmacopoeia include, but are not limited to sterility, endotoxin, microbial limits, volume in container, uniformity of dosage units, and moisture content for lyophilized drug products.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-013",
+        "rule_text": "If impurities in a drug product are qualitatively and quantitatively the same as those occurring in the drug substance, testing is not necessary in the drug product. If impurities are known to be introduced or formed during the production and/or storage of the drug product, the levels of these impurities should be determined and acceptance criteria established.",
+        "source_section": "4.2.3 Purity and impurities",
+        "source_page": 10,
+        "source_quote": "If impurities are qualitatively and quantitatively (i.e., relative amounts and/or concentrations) the same as in the drug substance, testing is not necessary. If impurities are known to be introduced or formed during the production and/or storage of the drug product, the levels of these impurities should be determined and acceptance criteria established.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "product_related_impurities": [
+      {
+        "rule_id": "Q6B-014",
+        "rule_text": "Product-related impurities are molecular variants of the desired product (e.g., precursors, certain degradation products) arising during manufacture and/or storage which do not have properties comparable to those of the desired product with respect to activity, efficacy, and safety. These include: (a) Truncated forms (detectable by HPLC or SDS-PAGE); (b) Other modified forms (deamidated, isomerized, oxidized, altered glycosylation); (c) Aggregates (dimers and higher multiples — quantitated by size exclusion chromatography).",
+        "source_section": "6.2.2 Product-related impurities including degradation products",
+        "source_page": 16,
+        "source_quote": "Degradation products arising during manufacture and/or storage in significant amounts should be tested for and monitored against appropriately established acceptance criteria. a) Truncated forms... b) Other modified forms: Deamidated, isomerized, mismatched S-S linked, oxidized or altered conjugated forms... c) Aggregates: The category of aggregates includes dimers and higher multiples of the desired product.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-015",
+        "rule_text": "Process-related impurities and contaminants in biotechnological/biological products are classified into three major categories: (a) Cell substrate-derived (host cell proteins, nucleic acids including host cell genomic/vector/total DNA); (b) Cell culture-derived (inducers, antibiotics, serum, other media components); (c) Downstream-derived (enzymes, processing reagents, inorganic salts including heavy metals, solvents, carriers, ligands such as monoclonal antibodies, leachables).",
+        "source_section": "6.2.1 Process-related impurities and contaminants",
+        "source_page": 15,
+        "source_quote": "These are derived from the manufacturing process (section 2.1.4) and are classified into three major categories: cell substrate-derived, cell culture-derived and downstream-derived.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ],
+    "process_controls": [
+      {
+        "rule_id": "Q6B-016",
+        "rule_text": "For certain impurities, testing of either the drug substance or the drug product may not be necessary if efficient control or removal to acceptable levels is demonstrated by suitable studies. This testing can include verification at commercial scale in accordance with regional regulations.",
+        "source_section": "2.3.1 Process-related considerations",
+        "source_page": 6,
+        "source_quote": "For certain impurities, testing of either the drug substance or the drug product may not be necessary and may not need to be included in the specifications if efficient control or removal to acceptable levels is demonstrated by suitable studies.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-017",
+        "rule_text": "In-process testing for adventitious agents at the end of cell culture is an example of testing for which acceptance criteria should be established. In-process test results may be recorded as action limits or reported as acceptance criteria.",
+        "source_section": "2.3.2 In-process acceptance criteria and action limits",
+        "source_page": 6,
+        "source_quote": "In-process testing for adventitious agents at the end of cell culture is an example of testing for which acceptance criteria should be established.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      }
+    ],
+    "physicochemical_characterization": [
+      {
+        "rule_id": "Q6B-018",
+        "rule_text": "Structural characterization of biotechnological/biological products should include determination of: (a) amino acid sequence; (b) amino acid composition; (c) terminal amino acid sequence; (d) peptide map; (e) sulfhydryl groups and disulfide bridges; (f) carbohydrate structure (for glycoproteins). Physicochemical properties should include: molecular weight/size, isoform pattern, extinction coefficient, electrophoretic patterns, liquid chromatographic patterns, spectroscopic profiles.",
+        "source_section": "6.1 Appendix for Physicochemical Characterization",
+        "source_page": 13,
+        "source_quote": "a) Amino acid sequence... b) Amino acid composition... c) Terminal amino acid sequence... d) Peptide map... e) Sulfhydryl group(s) and disulfide bridges... f) Carbohydrate structure",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-019",
+        "rule_text": "Molecular weight or size of biotechnological/biological products is determined using size exclusion chromatography, SDS-polyacrylamide gel electrophoresis (under reducing and/or non-reducing conditions), mass spectrometry, and other appropriate techniques.",
+        "source_section": "6.1.2 Physicochemical properties - a) Molecular weight or size",
+        "source_page": 14,
+        "source_quote": "Molecular weight (or size) is determined using size exclusion chromatography, SDS-polyacrylamide gel electrophoresis (under reducing and/or non-reducing conditions), mass spectrometry, and other appropriate techniques.",
+        "verification_status": "VERIFIED",
+        "severity": "medium",
+        "thresholds": {}
+      }
+    ],
+    "justification_of_specification": [
+      {
+        "rule_id": "Q6B-020",
+        "rule_text": "Specifications for biotechnological/biological products should be: (1) linked to a manufacturing process — based on data demonstrating manufacturing consistency; (2) account for the stability of drug substance and drug product — the manufacturer should propose a stability-indicating profile; (3) linked to preclinical and clinical studies — based on lots used in those studies; (4) linked to analytical procedures — critical quality attributes assessed by multiple analytical procedures.",
+        "source_section": "3. Justification of the Specification",
+        "source_page": 7,
+        "source_quote": "Specifications are linked to a manufacturing process... Specifications should account for the stability of drug substance and drug product... Specifications are linked to preclinical and clinical studies... Specifications are linked to analytical procedures.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "thresholds": {}
+      },
+      {
+        "rule_id": "Q6B-021",
+        "rule_text": "An inherent degree of structural heterogeneity occurs in proteins due to biosynthetic processes. The desired product can be a mixture of anticipated post-translationally modified forms (e.g., glycoforms). The manufacturer should define the pattern of heterogeneity of the desired product and demonstrate consistency with that of the lots used in preclinical and clinical studies.",
+        "source_section": "2.1.1 Physicochemical properties",
+        "source_page": 2,
+        "source_quote": "An inherent degree of structural heterogeneity occurs in proteins due to the biosynthetic processes used by living organisms to produce them; therefore, the desired product can be a mixture of anticipated post-translationally modified forms (e.g., glycoforms)... The manufacturer should define the pattern of heterogeneity of the desired product and demonstrate consistency with that of the lots used in preclinical and clinical studies.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "thresholds": {}
+      }
+    ]
+  }
+}

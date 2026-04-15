@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Multiple Endpoints in Clinical Trials: Guidance for Industry",
+    "source_file": "training/stage-1/fda-guidance-v2/14-multiple-endpoints-clinical-trials.pdf",
+    "source_directory": "training/stage-1/fda-guidance-v2",
+    "document_date": "October 2022",
+    "document_version": "Final Guidance",
+    "extraction_date": "2026-03-24",
+    "total_rules": 30
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-MULTIEP-001",
+      "rule_text": "Sponsors must account for multiplicity when several endpoints are evaluated in a study to prevent an increased chance of false conclusions regarding drug effects; failure to do so can lead to false or misleading representations regarding a drug's effects.",
+      "source_section": "Section II: Background and Scope",
+      "source_page": 2,
+      "verbatim_quote": "Failure to account for multiplicity when there are several endpoints evaluated in a study can increase the chance of false conclusions regarding the effects of the drug. ... Basing a conclusion on an analysis where the risk of false conclusions has not been appropriately controlled can lead to false or misleading representations regarding a drug's effects.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Multiplicity problems for safety analyses not part of a prespecified set of hypotheses for formal statistical testing are outside the scope of this guidance.",
+      "cross_references": ["ICH E9", "21 CFR 314.126"]
+    },
+    {
+      "rule_id": "FDA-MULTIEP-002",
+      "rule_text": "To control the Type I error rate when there is more than one primary or secondary endpoint, sponsors must prospectively specify all endpoints in the primary and secondary families and all data analyses that will be performed to test hypotheses about those endpoints.",
+      "source_section": "Section II.B: Type I Error",
+      "source_page": 4,
+      "verbatim_quote": "To control the Type I error rate, it is critical that sponsors prospectively specify the following: all endpoints in the primary and secondary families (see section III. for definitions). all data analyses that will be performed to test hypotheses about the prespecified endpoints, regardless of whether they are considered primary or secondary.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["ICH E9"]
+    },
+    {
+      "rule_id": "FDA-MULTIEP-003",
+      "rule_text": "For a study with multiple endpoints, the analysis plan must describe the testing procedure for the hypotheses being tested with proper control of overall Type I error rate.",
+      "source_section": "Section II.B: Type I Error",
+      "source_page": 5,
+      "verbatim_quote": "For a study with multiple endpoints, the analysis plan should describe the testing procedure for the hypotheses being tested with a proper control of overall Type I error rate.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-004",
+      "rule_text": "The statistical analysis plan must not be changed after unmasking of treatment assignments and performing statistical analyses.",
+      "source_section": "Section II.C: Multiplicity",
+      "source_page": 6,
+      "verbatim_quote": "The statistical analysis plan should not be changed after unmasking of treatment assignments and performing statistical analyses.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Changes to the analytic plan may be made prior to data analysis if appropriate multiplicity adjustments are also performed.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-005",
+      "rule_text": "For controlling multiplicity, all planned endpoints, time points, analysis populations, doses, and analyses must first be prospectively specified before appropriate adjustments for multiple endpoints and analyses can be selected.",
+      "source_section": "Section II.C: Multiplicity",
+      "source_page": 6,
+      "verbatim_quote": "For controlling multiplicity, an important principle is to first prospectively specify all planned endpoints, time points, analysis populations, doses, and analyses; then, once these factors are specified, appropriate adjustments for multiple endpoints and analyses can be selected, prespecified, and applied, as appropriate.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-006",
+      "rule_text": "A descriptive analysis not included in the prespecified multiple-testing strategy must not be presented in FDA-approved labeling in ways that imply a statistically rigorous conclusion or convey certainty about drug effects not supported by that trial.",
+      "source_section": "Section II.C: Multiplicity",
+      "source_page": 6,
+      "verbatim_quote": "A descriptive analysis that is not included in the prespecified multiple-testing strategy should not be presented in FDA-approved labeling in ways that imply a statistically rigorous conclusion or convey certainty about the effects that are not supported by that trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Descriptive analyses may be included in FDA-approved labeling without presenting p-values.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-007",
+      "rule_text": "Endpoints in adequate and well-controlled drug trials must be grouped hierarchically according to clinical importance and anticipated drug effects, with primary endpoints designated to establish effectiveness for approval and secondary endpoints to demonstrate additional clinically important effects.",
+      "source_section": "Section III.A: The Hierarchy of Families of Endpoints",
+      "source_page": 6,
+      "verbatim_quote": "Endpoints in adequate and well-controlled drug trials are usually grouped hierarchically, often according to their clinical importance, but also taking into consideration the expected frequency of the endpoint events and anticipated drug effects. The critical determination for grouping endpoints is whether they are intended to establish effectiveness to support approval or intended to demonstrate additional meaningful effects. Endpoints critical to establish effectiveness for approval are often designated as primary endpoints.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": ["21 CFR 314.126"]
+    },
+    {
+      "rule_id": "FDA-MULTIEP-008",
+      "rule_text": "The overall Type I error rate must control for both the primary and secondary endpoint families all together.",
+      "source_section": "Section III.A.3: Selecting and Interpreting the Endpoints in the Primary and Secondary Endpoint Families",
+      "source_page": 7,
+      "verbatim_quote": "The overall Type I error rate should control for the primary and secondary endpoint families all together.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Exploratory endpoints do not need multiplicity adjustment because they are generally not used to support conclusions.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-009",
+      "rule_text": "Secondary endpoints can be formally tested only when an effect on the primary endpoint is shown; positive results on the secondary endpoints are interpretable only if there is first a demonstration of a treatment effect on the primary endpoint family.",
+      "source_section": "Section III.A.3: Selecting and Interpreting the Endpoints in the Primary and Secondary Endpoint Families",
+      "source_page": 7,
+      "verbatim_quote": "Positive results on the secondary endpoints can be interpretable if there is first a demonstration of a treatment effect on the primary endpoint family (O'Neill 1997). The overall Type I error rate should control for the primary and secondary endpoint families all together.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-010",
+      "rule_text": "The sample size calculation must account for statistical adjustments to control the Type I error rate for multiplicity; if a lower alpha is used for a study endpoint, the sample size must be adjusted to provide the desired statistical power for that endpoint.",
+      "source_section": "Section III.B: Type II Error Rate and Sample Size",
+      "source_page": 8,
+      "verbatim_quote": "The sample size of a study is generally chosen to provide a reasonably high power to show a treatment effect if an effect of a specified size on the primary endpoint(s) is in fact present. The sample size calculation may need to account for the statistical adjustments to control the Type I error rate for multiplicity. For example, if a lower α level is used for a study endpoint, then the sample size should be adjusted to provide desired statistical power for this endpoint.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-011",
+      "rule_text": "When co-primary endpoints are used, the sample size must be increased to maintain desired study power, with individual endpoints powered at approximately 90% to ensure the probability of success is at least 80%.",
+      "source_section": "Section III.B: Type II Error Rate and Sample Size",
+      "source_page": 8,
+      "verbatim_quote": "Using two or more endpoints for which demonstration of an effect on each is recommended to support regulatory approval (called co-primary endpoints; see section III.C.1. below) will increase the Type II error rate and decrease study power. ... To maintain desired study power, a larger sample size is recommended, and the individual endpoints could be powered at approximately 90% to ensure the probability of success is at least 80%.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "The calculation would be different if the endpoints were highly positively correlated or the power was not equal for each endpoint.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-012",
+      "rule_text": "When multiple primary endpoints each could be sufficient to establish drug efficacy (multiple primary endpoints), Type I error rate inflation must be controlled for the primary endpoint family through appropriate multiplicity adjustment.",
+      "source_section": "Section III.C: Types of Multiple Endpoints",
+      "source_page": 8,
+      "verbatim_quote": "This use of multiple endpoints creates a multiplicity problem because there are several ways for the study to successfully demonstrate a treatment effect. Control of the Type I error rate for the primary endpoint family is critical. A variety of approaches can be used to address this multiplicity problem",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "When co-primary endpoints require demonstration on all endpoints to establish efficacy, there is no multiplicity problem for Type I error rate inflation.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-013",
+      "rule_text": "For co-primary endpoints, the alpha level for each co-primary endpoint must not be increased (e.g., tested at alpha 0.06 or 0.07 when the targeted alpha is 0.05) to accommodate loss in statistical power.",
+      "source_section": "Section III.C.1: Co-Primary Endpoints",
+      "source_page": 9,
+      "verbatim_quote": "Increasing α for each co-primary endpoint is not acceptable because doing so may undermine the ability to interpret a treatment effect on each disease aspect considered critical to show that the drug is effective in support of approval.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-014",
+      "rule_text": "Unless clinically very important, the use of more than two co-primary endpoints should be carefully considered because of the loss of statistical power.",
+      "source_section": "Section III.C.1: Co-Primary Endpoints",
+      "source_page": 9,
+      "verbatim_quote": "In general, unless clinically very important, the use of more than two co-primary endpoints should be carefully considered because of the loss of power.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": "Combination vaccines that require effectiveness endpoints for each pathogen may justify more than two co-primary endpoints.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-015",
+      "rule_text": "The choice of components of a composite endpoint must be made carefully; all components should have reasonably similar clinical importance, and a component with greater importance must not be adversely affected by the treatment while components of lesser importance are favorably affected.",
+      "source_section": "Section III.C.3: Composite Endpoints",
+      "source_page": 10,
+      "verbatim_quote": "The choice of the components of a composite endpoint should be made carefully. The treatment effect on the composite event rate can be interpreted as characterizing the overall clinical effect when the individual events all have reasonably similar clinical importance. ... it is possible that a component with greater importance would be adversely affected by the treatment, even if one or more event types of lesser importance are favorably affected, so that although the overall outcome still has a favorable statistical result, doubt may arise about the treatment's clinical value.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-016",
+      "rule_text": "Results for each component event of a composite endpoint must be individually examined and included in study reports, even if they will not alter the conclusion about the statistical significance of the composite primary endpoint.",
+      "source_section": "Section III.D.1: Evaluating and Reporting the Results of Composite Endpoints",
+      "source_page": 12,
+      "verbatim_quote": "Results for each component event should therefore be individually examined and should be included in study reports. These analyses will not alter a conclusion about the statistical significance of the composite primary endpoint; however, interpretation of the result of the composite endpoint can be uncertain",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-017",
+      "rule_text": "If any component of a composite endpoint is to be analyzed as a distinct hypothesis to demonstrate drug effects, those hypotheses must be part of the prospectively specified statistical analysis plan that accounts for the multiplicity of such analyses.",
+      "source_section": "Section III.D.1: Evaluating and Reporting the Results of Composite Endpoints",
+      "source_page": 12,
+      "verbatim_quote": "If there is an interest in analyzing one or more of the components of a composite endpoint as distinct hypotheses to demonstrate effects of the drug, the hypotheses should be part of the prospectively specified statistical analysis plan that accounts for the multiplicity this analysis will entail",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-018",
+      "rule_text": "Pre-specification of specific components or subdomains as endpoints with appropriate multiplicity control is required if the intent is to demonstrate an effect of a drug on one or more of those endpoints in addition to the overall multi-component endpoint.",
+      "source_section": "Section III.D.2: Evaluating and Reporting the Results on Other Multi-Component Endpoints",
+      "source_page": 13,
+      "verbatim_quote": "Pre-specification of specific components or subdomains as endpoints with appropriate multiplicity control is recommended if the intent is to demonstrate an effect of a drug on one or more of these endpoints in addition to the overall multi-component endpoint.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-019",
+      "rule_text": "The overall Type I error rate for a family of endpoints is typically held to 0.05 (or 0.025 for one-sided tests), and statistical methods controlling this error rate at the desired level must be used to permit effectiveness conclusions on individual endpoints.",
+      "source_section": "Section IV: Methodological Considerations",
+      "source_page": 13,
+      "verbatim_quote": "When there is a family of endpoints (discussed in section III.A.), the probability of erroneously finding a statistically significant treatment effect in at least one endpoint regardless of the presence or absence of treatment effects in the other endpoints is the overall Type I error rate. This error rate is typically held to 0.05 (or 0.025 for one-sided tests). Statistical methods that control this error rate at the desired level can permit an effectiveness conclusion on individual endpoints.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-020",
+      "rule_text": "Sponsors should discuss early with FDA plans to use non-hypothesis-testing approaches (e.g., Bayesian approaches) for a specific development program such as for pediatrics.",
+      "source_section": "Section II.A: Demonstrating the Study Objective of Effectiveness",
+      "source_page": 4,
+      "verbatim_quote": "Sponsors should discuss early with FDA plans to use other approaches (e.g., Bayesian approaches) for a specific development program such as for pediatrics.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-021",
+      "rule_text": "When non-inferiority and superiority are both tested for a single endpoint (when it is the only endpoint), testing may proceed without multiplicity adjustment because the null hypotheses are naturally ordered. When additional endpoints are included, adjustments must be made to control the overall Type I error probability.",
+      "source_section": "Section IV: Methodological Considerations",
+      "source_page": 14,
+      "verbatim_quote": "In some cases, a primary endpoint can be tested for non-inferiority (with a fixed margin), followed by testing it for superiority. If this endpoint is the only endpoint being tested, then non-inferiority and superiority can be tested without multiplicity adjustment because the null hypotheses of non-inferiority and superiority are naturally ordered ... However, if at least one more endpoint is included for testing, then multiplicity issues arise, and adjustments should be made to control the overall Type I error probability.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-022",
+      "rule_text": "The multiplicity adjustment method should be selected prospectively at the study planning stage, with the most powerful method that is suitable for the design and objective of the study and maintains Type I error rate control.",
+      "source_section": "Appendix: Statistical Methods",
+      "source_page": 18,
+      "verbatim_quote": "the method, however, should be decided upon prospectively. ... Sponsors should consider the variety of methods available and in the prospective analysis plan select the most powerful method that is suitable for the design and objective of the study and maintains Type I error rate control.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-023",
+      "rule_text": "When the Bonferroni method is used, the weights assigned to endpoints must be prespecified in the design of the trial, taking into consideration the clinical importance of the endpoints, the likelihood of success, or other factors.",
+      "source_section": "Appendix Section 1: The Bonferroni Method",
+      "source_page": 18,
+      "verbatim_quote": "The Bonferroni test can also be performed with different weights assigned to endpoints, with the sum of the relative weights equal to 1.0 (e.g., 0.4, 0.3, 0.2, and 0.1 for four endpoints). These weights should be prespecified in the design of the trial, taking into consideration the clinical importance of the endpoints, the likelihood of success, or other factors.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-024",
+      "rule_text": "When the fixed-sequence method is used, further testing must stop as soon as there is a failure of an endpoint in the sequence to show significance at level alpha; testing cannot continue once any test in the sequence is not significant.",
+      "source_section": "Appendix Section 5: The Fixed-Sequence Method",
+      "source_page": 20,
+      "verbatim_quote": "Such a testing procedure requires (1) prospective specification of the testing sequence and (2) no further testing once the sequence breaks; that is, further testing stops as soon as there is a failure of an endpoint in the sequence to show significance at level alpha (e.g., α = 0.05).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-025",
+      "rule_text": "Resampling-based multiple-testing procedures require simulations to ensure the data-based distribution of test statistics from the limited trial data is applicable and adequate Type I error rate control is confirmed, particularly for small study sample sizes.",
+      "source_section": "Appendix Section 6: Resampling-Based, Multiple-Testing Procedures",
+      "source_page": 21,
+      "verbatim_quote": "These methods, consequently, usually require large study sample sizes (particularly bootstrap methods) and often require simulations to ensure the data-based distribution of the test statistics from the limited trial data is applicable and to ensure adequate Type I error rate control.",
+      "severity": "MEDIUM",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-026",
+      "rule_text": "For gatekeeping testing strategies, if at least one null hypothesis in the primary endpoint family fails to be rejected, the secondary endpoint family must not be tested.",
+      "source_section": "Appendix Section 7: Gatekeeping Testing Strategies",
+      "source_page": 21,
+      "verbatim_quote": "If, however, at least one of the null hypotheses of the primary family fails to be rejected, the primary family criterion has not been met and the secondary endpoint family is not tested.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "In a parallel gatekeeping strategy, the second endpoint family is examined when at least one of the endpoints in the first family has shown statistical significance.",
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-027",
+      "rule_text": "In a graphical testing approach, the sum of all endpoint-specific alpha levels must equal the total alpha level available for the study (the overall Type I error rate), and all study hypotheses intended to provide firm conclusions of efficacy must be shown in the graph.",
+      "source_section": "Appendix Section 8: Graphical Approaches Based on Sequentially Rejective Tests",
+      "source_page": 23,
+      "verbatim_quote": "A key requirement is that the sum of all of the endpoint-specific alpha levels is equal to the total alpha level available for the study (the overall Type I error rate). ... All study hypotheses that are intended to potentially provide firm conclusions of efficacy are shown in the graph.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-028",
+      "rule_text": "In a graphical approach with multiple branches from a single node, the alpha must be split across the multiple branches; the sum of the weights across all paths leaving a vertex must be 1.0.",
+      "source_section": "Appendix Section 8: Graphical Approaches Based on Sequentially Rejective Tests",
+      "source_page": 23,
+      "verbatim_quote": "Note that for this type of procedure, if multiple branches split off from a single node, the alpha should be split across the multiple branches. ... The sum of the weights across all the paths leaving a vertex should be 1.0, so that the entire preserved alpha is used in testing subsequent hypotheses.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-029",
+      "rule_text": "For clinically critical endpoints that are too infrequent for use as a primary endpoint (e.g., mortality or major morbidity events), these must still be collected, analyzed, and included as a composite endpoint or as a planned secondary endpoint if the primary composite endpoint effect is demonstrated.",
+      "source_section": "Section III.C.5: Clinically Critical Endpoints Too Infrequent for Use as a Primary Endpoint",
+      "source_page": 12,
+      "verbatim_quote": "For many serious diseases, there is an endpoint of such great clinical importance that it is unreasonable not to collect and analyze the endpoint data; the usual example is mortality or major morbidity events (e.g., stroke, fracture, pulmonary exacerbation). Even if relatively few of these events are expected to occur in the trial, they can be included in a composite endpoint (see section III.C.3.) and also designated as a planned secondary endpoint to potentially support a conclusion regarding effect on that separate endpoint, if the effect of the drug on the composite primary endpoint is demonstrated.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    },
+    {
+      "rule_id": "FDA-MULTIEP-030",
+      "rule_text": "Individual component analyses of a multi-component endpoint must not be presented in FDA-approved labeling in ways that imply a statistically rigorous conclusion or convey certainty about effects not supported by the trial, unless pre-specified with appropriate multiplicity control.",
+      "source_section": "Section III.D.2: Evaluating and Reporting the Results on Other Multi-Component Endpoints",
+      "source_page": 13,
+      "verbatim_quote": "analysis of the study results on the individual components is usually important but, as stated previously, if undertaken, should not be presented in FDA-approved labeling in ways that imply a statistically rigorous conclusion or convey certainty about the effects that are not supported by that trial.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": null,
+      "cross_references": []
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "title": "Characterization and Qualification of Cell Substrates and Other Biological Materials Used in the Production of Viral Vaccines for Infectious Disease Indications",
+    "source_file": "fda-cell-substrates-vaccine-production.pdf",
+    "source_directory": "training/stage-1/fda-cber/",
+    "document_date": "2010-02-01",
+    "document_version": "FDA/CBER February 2010",
+    "effective_date": "2010-02-01",
+    "extraction_date": "2026-03-24",
+    "total_rules": 20,
+    "notes": "No prior extraction found in output-v2, v3, or v4. Replaces portions of 'Points to Consider in the Characterization of Cell Lines Used to Produce Biologicals' (1993) and the infectious disease sections of that document. Full extraction performed. Regulated under PHS Act Section 351, 21 CFR Parts 211, 610, 58."
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CBER-CS-001",
+      "rule_text": "Viral vaccine products must be free of extraneous material except that which is unavoidable in the manufacturing process described in the approved biologics license application; purity is defined as relative freedom from extraneous matter, whether or not harmful to the recipient.",
+      "source_section": "Section III.A.1 - Vaccine Purity",
+      "source_page": 3,
+      "verbatim_quote": "The regulations, in 21 CFR 610.13, state in part that \"Products shall be free of extraneous material except that which is unavoidable in the manufacturing process described in the approved biologics license application.\" In 21 CFR 600.3(r), purity is defined as the \"relative freedom from extraneous matter in the finished product, whether or not harmful to the recipient or deleterious to the product.\"",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "For live viral vaccines, comprehensive testing and qualification of biological starting materials and lot-by-lot testing for adventitious agents are required because viral clearance validation is not possible",
+      "cross_references": ["21 CFR 610.13", "21 CFR 600.3(r)", "PHS Act Section 351"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-002",
+      "rule_text": "Manufacturers must identify and examine all potential sources of contamination of the vaccine product, including the person or animal from which the viral seed was isolated, cells and raw materials used in isolation and attenuation, materials used in cell banking, and all materials used during production and filling; retrovirus testing must address both endogenous and exogenous retroviruses.",
+      "source_section": "Section III.A.2 - Potential Sources of Contamination",
+      "source_page": 4,
+      "verbatim_quote": "It is important that you identify and examine all potential sources of contamination of your product. For example, a viral seed could be exposed to the following potential sources of contamination: the person or animal from which it was isolated; the cells and raw materials (e.g., serum or trypsin) used in its isolation and attenuation; materials used in banking and propagation of cells for viral seed growth... Retrovirus testing should address the possibility that either type of retrovirus could contaminate a product.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 610.13", "21 CFR 610.18", "ICH Q5A"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-003",
+      "rule_text": "Concepts of quality design consistent with current Good Manufacturing Practices (cGMP) under 21 CFR Part 211 are relevant to the selection of suitable cell substrates and viral seeds; if a cell substrate or viral seed was not originally derived under cGMP concepts, additional documentation, testing, and production steps may be necessary to support its use.",
+      "source_section": "Section III.A.3 - cGMP and Cell Substrate Development",
+      "source_page": 4,
+      "verbatim_quote": "Concepts of quality design consistent with cGMP (see 21 CFR Part 211) are relevant to the selection of suitable cell substrates and viral seeds. If your cell substrate or viral seed was not originally derived under concepts consistent with cGMP, additional documentation (e.g., donor and source of raw materials), testing, and production steps might be necessary to support its use. This may include having some virus seeds re-derived or further purified to reduce the possibility of adventitious agent contamination.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR Part 211", "21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-004",
+      "rule_text": "When it is not feasible to directly test cells or product at various stages of manufacture, control-cell cultures must be produced and tested in parallel; control cells must be propagated under the same conditions as the production culture, processed simultaneously but left uninfected, and evaluated for adventitious agents using the same tests that would be performed on production cultures.",
+      "source_section": "Section III.A.4 - Use of Control-Cell Cultures",
+      "source_page": 4,
+      "verbatim_quote": "We recommend the use of control cells when it is not feasible to directly test cells or product at various stages of manufacture... when possible, you should produce and test uninfected control-cell cultures that are derived in parallel with, and handled in the same manner as, the production culture. Control cell cultures should be propagated under conditions similar to conditions of manufacture for a time appropriate to the reason for performing the cultures... Control cells should be evaluated for the presence of adventitious agents using the same tests that would have been performed on the production cultures, if it were feasible.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Testing of control cells does not always eliminate the need for testing final product",
+      "cross_references": ["21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-005",
+      "rule_text": "Assays used to evaluate cell substrates must be demonstrated to be reliable in the context of intended use; assays related to safety assurance must be scientifically valid (by formal validation and/or inclusion of appropriate controls or standards) prior to initiation of clinical trials; validation should follow ICH Q2(R1) principles.",
+      "source_section": "Section III.A.5 - Assay Validation",
+      "source_page": 5,
+      "verbatim_quote": "You should demonstrate the reliability of assays or tests used to evaluate your cell substrate in the context of intended use. Assays related to assurance of safety should be scientifically valid (for example, by formal validation and/or inclusion of appropriate controls or standards) prior to initiation of clinical trials. Guidance regarding validation of analytical assays may be obtained from the ICH Q2(R1) documents (Ref. 6). Test methods should be validated according to the principles defined in these guidance documents.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Compendial tests (e.g., USP) may not require full validation as long as suitability for intended purpose under actual conditions of use is verified",
+      "cross_references": ["ICH Q2(R1)", "21 CFR Part 58"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-006",
+      "rule_text": "The history (including identifying characteristics) of vaccine cell substrates must be documented under 21 CFR 610.18(c)(1)(i) and must include, to the extent available: sources and testing of raw materials in passage history, listing of other agents handled in the same biosafety cabinet, conditions of passage, results of all identity testing (including cytogenetic characteristics per 21 CFR 610.18(c)(1)(ii)), results of all adventitious agent testing, donor medical history, and culture history including isolation methods and passage history.",
+      "source_section": "Section III.B.3 - History and Identifying Characteristics",
+      "source_page": 7,
+      "verbatim_quote": "The history of your vaccine cell substrate must be identified under 21 CFR 610.18(c)(1)(i) and should include, to the extent available: sources and testing of the raw materials to which it was exposed in its passage history; listing of any other agents handled or grown in the same biosafety cabinet or incubators around the time of cell substrate passage; and the conditions under which it was passaged (including adherence to cGMPs, if applicable).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "If specified information is not available, data derived from testing of the cell substrate by other methods may prove supportive and may be sufficient",
+      "cross_references": ["21 CFR 610.18(c)(1)(i)", "21 CFR 610.18(c)(1)(ii)", "21 CFR 610.18(c)(1)(iv)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-007",
+      "rule_text": "In vitro growth characteristics of cell substrates must be characterized under 21 CFR 610.18(c)(1)(iii); a description of tumorigenic properties is required for all diploid and non-diploid cells including continuous cell lines under 21 CFR 610.18(c)(1)(ii); for cells with a finite life expectancy, the total number of population doubling levels through senescence must be determined.",
+      "source_section": "Section III.B.4 - Growth Characteristics",
+      "source_page": 8,
+      "verbatim_quote": "You must characterize the in vitro growth characteristics (e.g., suspension or monolayer cultures, rate of growth) of your cell substrate (21 CFR 610.18(c)(1)(iii)), except if you use primary cell cultures exempted from that requirement by 21 CFR 610.18(c)(3). If the cells have a finite life expectancy, the total number of population doubling levels through senescence should be determined. A description of the tumorigenic property of cells is required for all diploid and non-diploid cells, including continuous cell lines (21 CFR 610.18(c)(1)(ii)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Primary cell cultures may be exempted from growth characteristics testing per 21 CFR 610.18(c)(3); tumorigenicity testing not needed for previously characterized diploid strains MRC-5, WI-38, FRhL-2 if not genetically or phenotypically modified",
+      "cross_references": ["21 CFR 610.18(c)(1)(ii)", "21 CFR 610.18(c)(1)(iii)", "21 CFR 610.18(c)(3)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-008",
+      "rule_text": "Cell banking must ordinarily use a two-tier system consisting of a master cell bank (MCB) and a working cell bank (WCB); at least one cell bank (MCB or WCB) must be extensively characterized; cell banks must be stored under conditions shown to be suitable for long-term stability per 21 CFR 610.18(a) and stored in two or more separate locations; records of location, identity, and inventory of individual ampoules must be maintained per 21 CFR 610.18(d).",
+      "source_section": "Section III.C.1 - Cell Banking Strategies and Methods",
+      "source_page": 9,
+      "verbatim_quote": "Ordinarily, the cell bank system consists of two tiers: a master cell bank (MCB); and a working cell bank (WCB)... Cell banks should be stored under conditions shown to be suitable for long-term stability (e.g., liquid nitrogen, ultra-low temperature freezer) (21 CFR 610.18(a))... You should store the MCB and WCB in two or more separate locations within the facility or at a distant site in order to avoid loss of the cell substrate due to local disaster or equipment malfunction. Under 21 CFR 610.18(d), appropriate records must be maintained.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Alternative cell banking systems may be used when original source is limited or low passage level must be maintained; in such cases cells at some level of expansion must still be characterized completely",
+      "cross_references": ["21 CFR 610.18(a)", "21 CFR 610.18(d)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-009",
+      "rule_text": "End-of-Production Cells (EOPC) — cells expanded to or beyond the end-of-production passage level — must be characterized for stability; characterization must include, if applicable, growth characteristics, tumorigenic phenotype, expression of endogenous viruses, stability of expression of inserted or engineered genes, and genetic stability.",
+      "source_section": "Section III.C.2 - Qualification of Cell Banks and Primary Cell Cultures",
+      "source_page": 11,
+      "verbatim_quote": "You should characterize cells that are expanded to or beyond the end of production passage level. Such cells are referred to as End-of-Production Cells (EOPC). You should demonstrate the stability of the cell substrate characteristics using your EOPC. Your characterization should include, if applicable, growth characteristics, tumorigenic phenotype, expression of endogenous viruses, stability of expression of the inserted or engineered genes, and genetic stability of the cells (such as karyotyping or DNA fingerprinting).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 610.18(c)(1)(ii)", "ICH Q5A"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-010",
+      "rule_text": "Animals from which primary cell cultures are established must be from specific-pathogen-free (SPF) closed flocks, herds, or colonies when feasible; non-SPF animals must be quarantined and evaluated for a period sufficient to detect signs of disease or infection before use; animals must be screened serologically for appropriate adventitious agents; embryonated chicken eggs must be from flocks certified free of Salmonella pullorum, avian tuberculosis, fowl pox, Rous sarcoma virus, avian leukosis virus, and other adventitious agents.",
+      "source_section": "Section III.C.3 - Special Considerations for Primary Cell Cultures",
+      "source_page": 11,
+      "verbatim_quote": "Animals from which primary cultures are established should be from specific-pathogen-free (SPF) closed flocks, herds, or colonies, when feasible... Animals that are not from closed flocks, herds, or colonies should be quarantined and thoroughly evaluated for a period sufficient to detect signs of disease or infection before introducing them into the flock, herd, or colony. Animals should be screened serologically for appropriate adventitious agents... Embryonated chicken eggs used as the source of chick embryo tissue for the propagation of viral vaccines should be derived from flocks certified to be free of Salmonella pullorum, avian tuberculosis, fowl pox, Rous sarcoma virus, avian leukosis virus, reticuloendotheliosis virus, and other adventitious agents pathogenic for chickens. Appropriate records must be retained for documentation (21 CFR 610.18(d)).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "If eggs are procured from non-SPF flocks, assurance that the vaccine is free of such agents may be provided by testing or by validating the process for their removal",
+      "cross_references": ["21 CFR 610.18(d)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-011",
+      "rule_text": "For novel diploid cell substrates, tumorigenicity testing must be performed to satisfy the requirement in 21 CFR 610.18(c)(1)(ii) to describe tumorigenic properties; karyotyping must be performed on new diploid cell strains to establish identity and characterize the strain; genetic stability of diploid cell strains must be monitored throughout production.",
+      "source_section": "Section III.C.4 - Special Considerations for Diploid Cell Strains",
+      "source_page": 12,
+      "verbatim_quote": "You should determine the karyotype of new diploid cell strains to establish identity and to characterize a cell strain. Such analyses will establish the diploid character of your cells and determine its freedom from contamination with other cell lines. We recommend that you monitor the genetic stability of the diploid cell strain throughout production... Animal tumorigenicity testing is not needed if you are using genetically or phenotypically unmodified previously characterized diploid cell strains, such as MRC-5, WI-38, and FRhL-2... However, tumorigenicity testing must be performed for a novel diploid cell substrate because such testing is needed to satisfy the requirement in 21 CFR 610.18(c)(1)(ii) that you describe its tumorigenicity.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Tumorigenicity testing not required for genetically or phenotypically unmodified, previously characterized diploid cell strains MRC-5, WI-38, and FRhL-2",
+      "cross_references": ["21 CFR 610.18(c)(1)(ii)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-012",
+      "rule_text": "Products prepared in continuous cell lines must be purified to be free of adventitious agents and residual cells and must have low levels of cell-substrate DNA; under 21 CFR 610.18(c)(1)(ii), cell lines must be described with respect to tumorigenicity; passage levels in production must be limited and an end-of-production limit must be established based on data from production cells expanded under comparable conditions; tumorigenicity testing must be performed at or beyond the end-of-production passage limit.",
+      "source_section": "Section III.C.5 - Special Considerations for Continuous Cell Lines",
+      "source_page": 13,
+      "verbatim_quote": "Products prepared in cell lines (including viral vaccines) should be purified to be free (see Section V. Glossary) of adventitious agents and residual cells and should have low levels of cell-substrate DNA... Under 21 CFR 610.18(c)(1)(ii), you must describe cell lines with respect to tumorigenicity. Cell lines could acquire tumorigenic properties with increasing passage levels. It is therefore important that you limit the passage level of the cells used in production and that you characterize cells at or beyond this end-of-production limit. The maximum end-of-production passage level should be based on data derived from production cells expanded under comparable or analogous conditions to the production conditions.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Retrovirus testing guidance in ICH Q5A applies for viral clearance from continuous cell lines",
+      "cross_references": ["21 CFR 610.18(c)(1)(ii)", "ICH Q5A"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-013",
+      "rule_text": "Cell lines that are tumorigenic or tumor-derived must be assessed for potential oncogenic viruses and oncogenic substances (including nucleic acids) that could be associated with induction of a neoplastic process in a vaccine recipient; when the transforming event is known, testing must demonstrate that the final product is free of the transforming agent; for unknown transformation mechanisms, additional testing must be performed and sponsors must consult with CBER.",
+      "source_section": "Section III.C.6 - Tumorigenic or Tumor-derived Cell Lines",
+      "source_page": 14,
+      "verbatim_quote": "You should perform additional testing if your cell lines are tumorigenic or derived from a tumor. You should assess cell lines that are tumorigenic or tumor-derived for potential oncogenic viruses and oncogenic substances (including nucleic acids), which could be associated with induction of a neoplastic process in a vaccine recipient... In cases where you know the transforming event (e.g., if the cells were transformed by a known oncogene), your testing should demonstrate that your final product is free of the transforming agent... Tumorigenic or tumor-derived cell lines for which the mechanism of transformation is unknown will require additional testing to ensure the absence of potential transforming and oncogenic agents. You should consult with CBER on which tests you should perform.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "This document does not provide guidance on a pathway for licensure of live-attenuated or minimally purified vaccine produced in tumorigenic or tumor-derived cells",
+      "cross_references": ["21 CFR 610.18(c)(1)(ii)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-014",
+      "rule_text": "The Master Viral Seed (MVS) must be extensively characterized; under 21 CFR Part 610, tests for safety, purity, and potency must be performed including tests for identity, bacterial and fungal sterility, mycoplasmas, Mycobacterium tuberculosis (if appropriate), and adventitious viruses (in vitro and in vivo); genotypic and phenotypic stability beyond the production passage level must be demonstrated.",
+      "source_section": "Section III.D.1 - Master Viral Seed",
+      "source_page": 15,
+      "verbatim_quote": "We recommend that you extensively characterize your MVS, as this characterization also provides assurance regarding the characteristics of subsequent passages, including the WVS... Under 21 CFR Part 610, you must perform tests for safety, purity, and potency of a product, as required. This includes tests for identity, bacterial and fungal sterility, the presence of mycoplasmas, Mycobacterium tuberculosis (if appropriate), and adventitious viruses (in vitro and in vivo tests). You should also consider specific tests for agents that might be present in the seed due to its passage history.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Neurovirulence testing appropriate only for MVSs derived from wild type viruses known or suspected to possess neurotropic or neurovirulent properties",
+      "cross_references": ["21 CFR Part 610", "21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-015",
+      "rule_text": "All biological raw materials and ancillary reagents must be tested to assure they are appropriate for use at all stages of vaccine production; raw materials derived from animals or humans must be shown to be free from adventitious agents of the species from which they are derived; appropriate records must be retained for all reagents and biological raw materials per 21 CFR 610.18(d); under 21 CFR 610.15(c), penicillin may not be added to viral vaccine production substrates.",
+      "source_section": "Section III.E - Biological Raw Materials and Ancillary Reagents",
+      "source_page": 16,
+      "verbatim_quote": "You should test your raw materials and ancillary reagents to assure that they are appropriate for use in all stages of vaccine production, including the production of your cell banks and viral seeds. Raw materials derived from animals or humans should be shown to be free from adventitious agents of the species from which they are derived. Appropriate records must be retained for all reagents and biological raw materials used for vaccine production (21 CFR 610.18(d))... Under 21 CFR 610.15(c), you may not add penicillin to the production substrate of viral vaccines. Also, other beta-lactam antibiotics should not be present in production cell cultures.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Human-derived raw materials may use documentation of sourcing from appropriately screened donors per 21 CFR 640.3 and 640.63 or licensed products",
+      "cross_references": ["21 CFR 610.18(d)", "21 CFR 610.15(c)", "21 CFR 640.3", "21 CFR 640.63"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-016",
+      "rule_text": "Pre-filtered harvest (the stage at which adventitious agents are most likely to be found) must be tested for cultivatable mycoplasmas per 21 CFR 610.30, non-cultivatable mycoplasmas (and spiroplasmas, if appropriate), and adventitious viruses by in vitro methods; in vivo testing must be included if cells and vaccine seeds have not already been tested; if multiple harvests are performed, testing must be on each individual harvest rather than the pooled harvest.",
+      "source_section": "Section III.F.3 - Pre-Filtered Harvest or Post-Production Cells",
+      "source_page": 18,
+      "verbatim_quote": "In addition to testing the viral or vaccine harvest for cultivatable mycoplasmas, as required under 21 CFR 610.30, you should also test the viral or vaccine harvest for non-cultivatable mycoplasmas (and spiroplasmas, if appropriate), and adventitious viruses by in vitro methods. Adventitious virus tests should also include in vivo methods if the cells and vaccine seeds have not already been tested... If multiple harvests are performed for a single vaccine lot, testing should be performed on each individual harvest (rather than the pooled harvest) in order to avoid dilution of a potentially contaminated harvest with uncontaminated harvests.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 610.30", "21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-017",
+      "rule_text": "Each lot of final filled product must be tested for potency, general safety, sterility, purity, and identity per 21 CFR Part 610; sterility must be demonstrated per 21 CFR 610.12; general safety testing per 21 CFR 610.11 is required on final filled containers; endotoxin levels must be assessed for all final filled products; tests for safety, identity, purity, potency, and quality must be described in IND and BLA submissions.",
+      "source_section": "Section III.F.6 - Final Filled Product",
+      "source_page": 19,
+      "verbatim_quote": "The regulations for General Biological Products Standards under 21 CFR Part 610 provide that each lot must be tested for potency, general safety, sterility, purity and identity. Sterility must be demonstrated as required under 21 CFR 610.12... Under 21 CFR 610.11a, general safety testing for each lot of inactivated influenza vaccine includes a demonstration that it contains less endotoxin than a reference preparation provided by FDA. Other final filled products should also be assessed for endotoxin levels. In addition, a general safety test for detecting extraneous toxic contaminants, under 21 CFR 610.11, is required on final filled containers.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Products excepted from sterility requirements under 21 CFR 610.12(g)(4)(ii) must still be assessed by microbial limits test for bioburden",
+      "cross_references": ["21 CFR Part 610", "21 CFR 610.11", "21 CFR 610.11a", "21 CFR 610.12"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-018",
+      "rule_text": "Assurance that products are free of adventitious agents is a critical component of meeting the 21 CFR 610.13 purity requirement; cultures must be tested for detectable microbial agents per 21 CFR 610.18; biological starting materials must be characterized sufficiently to ensure they do not contaminate the final product with bacteria, fungi, mycoplasmas, mycobacteria, viruses, or TSE agents; for a substance to be considered free of a contaminant, the assay must demonstrate at a predefined level of sensitivity that a certain quantity of the substance is free of that contaminant.",
+      "source_section": "Section IV.A - Testing for Adventitious Agents",
+      "source_page": 19,
+      "verbatim_quote": "Assurance that products are free of adventitious agents is a critical component of meeting the 21 CFR 610.13 requirement for purity. Cultures must be tested for the presence of detectable microbial agents and tests necessary to assure the safety and purity of the product may be required (21 CFR 610.18). Your biological starting materials should be characterized sufficiently to ensure that they do not contaminate the final product with extraneous infectious organisms, such as bacteria, fungi, cultivatable and non-cultivatable mycoplasmas and spiroplasma, mycobacteria, viruses, and the agent(s) responsible for transmissible spongiform encephalopathies (TSEs). For a substance to be considered free of a contaminant, your assay should demonstrate, at a predefined level of sensitivity, that a certain quantity of the substance is free of that contaminant.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "A validated process known to remove a contaminant to a defined level may be used to demonstrate absence; if an adventitious agent is known to be present, the production process must be sufficiently robust to eliminate or inactivate it",
+      "cross_references": ["21 CFR 610.13", "21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-019",
+      "rule_text": "In vivo adventitious agent testing must include inoculation of adult mice, suckling mice, and embryonated chicken eggs; animal studies must be performed in accordance with Good Laboratory Practices (GLP) per 21 CFR Part 58; adult mouse test: at least 20 mice, 0.5 mL i.p. and 0.03 mL i.c., observed 21 days, passes only if at least 80% remain healthy; suckling mouse test: at least 20 suckling mice less than 24 hours old, observed 14 days with blind passage.",
+      "source_section": "Section IV.A.1 - In Vivo Tests",
+      "source_page": 20,
+      "verbatim_quote": "In vivo adventitious agent testing for vaccines includes inoculation of adult and suckling mice and inoculation of embryonated chicken eggs... The described animal studies must be performed in accordance with Good Laboratory Practices (GLP) regulations (21 CFR Part 58)... Each of at least 20 adult mice weighing 15-20 grams should be inoculated intraperitoneally with 0.5 mL and intracerebrally with 0.03 mL of the material to be tested. The mice should be observed daily for 21 days... The material may be used only if at least 80% of the originally inoculated mice and at least 80% of each subsequently inoculated group of mice remain healthy and survive the observation period.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Alternative tests recommended by WHO or EP, or different inoculation strategies, will be considered when justified in the context of the entire testing program",
+      "cross_references": ["21 CFR Part 58", "21 CFR 610.18"]
+    },
+    {
+      "rule_id": "FDA-CBER-CS-020",
+      "rule_text": "Retrovirus testing using PCR-based reverse transcriptase (PBRT) assay must be performed on cell-free culture medium on cell substrates, viral seeds, and/or harvests of all viral vaccines produced in mammalian and insect cell substrates or those using mammalian-derived materials; if a conventional RT assay is used instead, a strong justification must be provided; PBRT assay performance must be validated for the specific product, including lower limit of detection for both manganese- and magnesium-dependent retroviral RTs.",
+      "source_section": "Section IV.A.2.c - Biochemical Tests for Retroviruses",
+      "source_page": 26,
+      "verbatim_quote": "Retrovirus testing using reverse transcriptase (RT) assays should be performed on cell-free culture medium to detect retroviruses... You should test cell substrates, viral seeds, and/or harvests of all viral vaccines produced in mammalian and insect cell substrates (or that use or include mammalian-derived materials) using a highly sensitive PCR-based RT (PBRT) assay. In certain situations, it may be appropriate to pre-treat the cells with chemical inducers of endogenous retroviruses. If you plan to use conventional RT assays, you should provide a strong justification for using a less sensitive assay. You should validate the performance of the PBRT assay for your product, especially with regard to the lower limit of detection for both manganese- and magnesium-dependent retroviral RTs, the specificity, and the reproducibility of the assay.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "For avian cells with RT activity (e.g., chick embryo fibroblasts), specific testing for exogenous retroviruses such as ALV is required; documentation of SPF flock health may sometimes be adequate",
+      "cross_references": ["21 CFR 610.18", "ICH Q5A"]
+    }
+  ]
+}

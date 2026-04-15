@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "CORR-006 — Adversarial Failure Root Cause & Proper Correction",
+    "date": "2026-03-23",
+    "rule_id": "E5-002",
+    "source_file": "output-v2/e-special-pops/special-populations-rules.json",
+    "source_guideline": "ICH E5(R1) — Ethnic Factors in the Acceptability of Foreign Clinical Data",
+    "adversarial_outcome": "FAILED — correction instruction contained an incorrect factual premise",
+    "resolution": "Original rule retained unchanged; section_note added confirming accuracy"
+  },
+
+  "original_rule": {
+    "rule_id": "E5-002",
+    "text": "Intrinsic ethnic factors include genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction, race, ADME characteristics, and receptor sensitivity.",
+    "section": "Appendix A",
+    "obligation": "mandatory",
+    "category": "intrinsic_factors",
+    "assessment": "FACTUALLY CORRECT — confirmed by direct reading of ICH E5(R1) Appendix A"
+  },
+
+  "correction_instruction_that_failed": {
+    "correction_id": "CORR-006",
+    "instruction_claimed": "ADME characteristics and receptor sensitivity are 'discussed in body text but NOT enumerated in Appendix A's factor table.' Instruction directed removal or re-attribution of these items from Appendix A to body text citation.",
+    "instruction_source_error": "The correction instruction appears to have relied on the ICH E5(R1) Glossary definition of intrinsic factors (page 8), which does not enumerate ADME characteristics and receptor sensitivity. The Glossary uses a shorter, conceptual definition. However, Appendix A contains a separate, more detailed factor table that does enumerate both items explicitly.",
+    "verdict": "INSTRUCTION WAS WRONG — the correction would have introduced a factual error by removing valid Appendix A citations from an accurate rule"
+  },
+
+  "source_verification": {
+    "guideline": "ICH E5(R1) — Ethnic Factors in the Acceptability of Foreign Clinical Data",
+    "step_4_date": "February 5, 1998",
+    "source_document": "ich-e5r1.pdf",
+    "source_section": "Appendix A",
+    "source_page": "11-14",
+    "finding": "Appendix A of ICH E5(R1) contains a table titled 'Intrinsic Ethnic Factors' that explicitly enumerates BOTH 'ADME characteristics' and 'Receptor sensitivity' as separate line items under the intrinsic factors category.",
+    "confusion_source": {
+      "glossary_page": 8,
+      "glossary_text": "Intrinsic Ethnic Factors: Factors that help define and identify a sub-population; these can include genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction, and race.",
+      "note": "The Glossary definition (page 8) is abbreviated and does not include ADME or receptor sensitivity. Appendix A (pages 11-14) contains the full enumerated table which is the authoritative source for the complete list. The correction instruction conflated the Glossary definition with the Appendix A table."
+    },
+    "appendix_a_intrinsic_factors_confirmed": [
+      "Genetic polymorphism",
+      "Age",
+      "Gender",
+      "Height / Weight / Lean body mass / Body composition",
+      "Organ dysfunction",
+      "Race",
+      "ADME characteristics",
+      "Receptor sensitivity"
+    ]
+  },
+
+  "correct_rule": {
+    "rule_id": "E5-002",
+    "text": "Intrinsic ethnic factors include genetic polymorphism, age, gender, height, weight, lean body mass, body composition, organ dysfunction, race, ADME characteristics, and receptor sensitivity.",
+    "source_document": "ich-e5r1.pdf",
+    "source_section": "Appendix A",
+    "source_page": "11-14",
+    "section_note": "All items including ADME characteristics and receptor sensitivity are enumerated in the Appendix A intrinsic ethnic factors table. Note: the Glossary definition (page 8) uses a shorter list and does not enumerate ADME/receptor sensitivity — this is the source of the erroneous correction instruction. Appendix A is the authoritative source for the complete factor list.",
+    "obligation": "mandatory",
+    "category": "intrinsic_factors",
+    "change_from_original": "NONE — rule text unchanged. Added source_document, source_page, and section_note fields to confirm accuracy and prevent future misidentification."
+  },
+
+  "lessons_learned": {
+    "lesson_1": "When verifying ICH guideline citations, distinguish between Glossary definitions (abbreviated, conceptual) and Appendix/Annex tables (detailed, enumerated). The two may cover different levels of detail for the same concept.",
+    "lesson_2": "Adversarial testing of correction instructions is essential — a correction instruction can itself contain an incorrect premise, particularly when it relies on one section of a guideline without checking the more detailed appendix.",
+    "lesson_3": "For E5(R1) specifically: the Glossary (page 8) and Appendix A (pages 11-14) both define intrinsic ethnic factors but at different levels of granularity. Appendix A is the authoritative enumeration for training rule purposes.",
+    "impact": "LOW — the original rule was correct; no patient safety or regulatory risk from retaining it unchanged. The correction instruction, if blindly applied, would have made the training data less accurate."
+  }
+}

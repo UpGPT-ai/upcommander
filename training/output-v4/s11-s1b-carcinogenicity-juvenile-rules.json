@@ -1,0 +1,956 @@
+{
+  "meta": {
+    "guidelines": [
+      "ICH S11 — Nonclinical Safety Testing in Support of Development of Paediatric Pharmaceuticals (Step 4, 14 April 2020)",
+      "ICH S1B(R1) — Testing for Carcinogenicity of Pharmaceuticals (Step 4, 4 August 2022; integrates original S1B 1997 + Addendum)",
+      "ICH S1C(R2) — Dose Selection for Carcinogenicity Studies of Pharmaceuticals (Step 4, 11 March 2008)"
+    ],
+    "extraction_date": "2026-03-23",
+    "extractor": "claude-sonnet-4-6",
+    "notes": "All rules extracted verbatim from PDF images. S1C(R2) included because S1B(R1) Addendum Section 3 directly modifies its 25-fold AUC ratio for rasH2-Tg mice to 50-fold."
+  },
+
+  "s11_rules": [
+    {
+      "rule_id": "S11-001",
+      "category": "trigger_criteria / general_principle",
+      "rule": "A weight of evidence (WoE) based decision must be made to determine whether additional nonclinical investigations are warranted to support the paediatric population; additional nonclinical investigations should be undertaken only when previous nonclinical and human data are judged to be insufficient.",
+      "conditions": "Required before initiating any paediatric clinical development plan",
+      "source_section": "1.4 General Principles",
+      "source_quote": "A weight of evidence (WoE; see Section 2) based decision should be made to determine whether additional nonclinical investigations are warranted to support the paediatric population. As clinical development progresses, adjustments to the WoE can be made based on all the available data at that time.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-002",
+      "category": "trigger_criteria / scope",
+      "rule": "Juvenile animal toxicity studies are generally NOT considered important to support short-term PK studies in paediatric populations, in accordance with ICH M3.",
+      "conditions": "Short-term PK studies only",
+      "source_section": "1.4 General Principles",
+      "source_quote": "Note that in accordance with ICH M3, juvenile animal toxicity studies are generally not considered important to support short-term PK studies in paediatric populations.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-003",
+      "category": "trigger_criteria / scope",
+      "rule": "A JAS is not considered important to support initiation of short-term PK studies in paediatric patients when adult clinical data are available and exposure is not occurring at a vulnerable time of organ development.",
+      "conditions": "Adult clinical data available; exposure not at a vulnerable developmental time window",
+      "source_section": "2.3.1",
+      "source_quote": "If adult clinical data are available and exposure is not occurring at a vulnerable time of organ development, a JAS is not considered important to support initiation of short-term PK studies in paediatric patients (see ICH M3).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-004",
+      "category": "trigger_criteria / woe_factor",
+      "rule": "The two most important (highest-weighted) WoE factors are: (1) youngest intended patient age, and (2) whether there are suspected adverse effects on developing organ systems. These must be assessed first in any WoE evaluation.",
+      "conditions": "All WoE evaluations for paediatric development",
+      "source_section": "2.2 Weight of Evidence Approach / Figure 1",
+      "source_quote": "The most important factors (i.e., the most highly weighted) are the youngest intended patient age, and whether there are suspected adverse effects on developing organ systems of the patients.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-005",
+      "category": "trigger_criteria / patient_age",
+      "rule": "Further nonclinical studies are MORE LIKELY warranted when the youngest intended patient age is neonates (<1 month) or infants (1-23 months); LESS LIKELY when patients are adolescents (>=12 years).",
+      "conditions": "Age-based risk gradient from Figure 1",
+      "source_section": "2.2 / Figure 1 / 2.3.1",
+      "source_quote": "Additional nonclinical studies are more likely to be warranted to support younger paediatric age ranges.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-006",
+      "category": "trigger_criteria / treatment_duration",
+      "rule": "Longer durations of clinical treatment (e.g., 3-month, 6-month, chronic intermittent) are more likely to warrant further nonclinical studies than short-term treatments, because they expose a paediatric subject during a developmentally sensitive window.",
+      "conditions": "Chronic or long-duration paediatric use",
+      "source_section": "2.3.1",
+      "source_quote": "Longer durations of treatment (e.g., 3-month, 6-month, chronic intermittent) are more likely to expose a paediatric subject during a developmentally sensitive window and are, therefore, more likely to warrant further nonclinical studies than short-term treatments.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-007",
+      "category": "trigger_criteria / existing_data",
+      "rule": "Additional nonclinical studies are NOT warranted when existing clinical safety data and risk mitigation strategies are considered sufficient to support paediatric use.",
+      "conditions": "Sufficient existing clinical safety data plus adequate risk mitigation",
+      "source_section": "2.3.1",
+      "source_quote": "Additional nonclinical studies are not warranted when existing clinical safety data and risk mitigation strategies are considered sufficient to support paediatric use.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-008",
+      "category": "trigger_criteria / existing_data",
+      "rule": "A JAS is NOT warranted to confirm toxicity in target organs in which sensitivity to toxicity is not expected to differ between adults and paediatric patients.",
+      "conditions": "Target organ sensitivity expected to be same in adults and paediatric patients",
+      "source_section": "2.3.1",
+      "source_quote": "In addition, a JAS is not warranted to confirm toxicity in target organs in which sensitivity to toxicity is not expected to differ between adults and paediatric patients.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-009",
+      "category": "trigger_criteria / pharmacology",
+      "rule": "If the known pharmacology of a pharmaceutical has the potential to impact development in the intended paediatric population, or the role of the pharmacology on development is not understood or not reasonably predictable, further nonclinical investigations should be considered.",
+      "conditions": "Pharmacological target expressed during development; role unknown or potentially impactful",
+      "source_section": "2.3.2",
+      "source_quote": "If the known pharmacology of a pharmaceutical has the potential to impact development in the intended paediatric population, or the role of the pharmacology on development is not understood or not reasonably predictable, further nonclinical investigations should be considered.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-010",
+      "category": "trigger_criteria / pharmacology",
+      "rule": "Pharmaceuticals with lower selectivity or specificity for their pharmacological target are more likely to warrant further nonclinical investigations due to secondary pharmacodynamic effects.",
+      "conditions": "Low selectivity or specificity pharmaceutical (e.g., not a monoclonal or bispecific antibody)",
+      "source_section": "2.3.2",
+      "source_quote": "Pharmaceuticals with lower selectivity or specificity can have secondary pharmacodynamic effects and thus are more likely to warrant further nonclinical investigations.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-011",
+      "category": "trigger_criteria / nonclinical_safety_data",
+      "rule": "Existing nonclinical safety data should be evaluated for findings in organs undergoing development. Findings occurring in animals at similar exposures as those likely to be achieved in paediatric subjects are of increased concern, particularly if in organs undergoing critical postnatal development at the intended paediatric age.",
+      "conditions": "Review of adult nonclinical toxicity studies prior to paediatric development",
+      "source_section": "2.3.4",
+      "source_quote": "Existing nonclinical data should be evaluated for findings that could indicate potential effects in organs undergoing development in paediatric subjects. Findings occurring in animals at similar exposures as those likely to be achieved in paediatric subjects are of increased concern, particularly if the findings occur in organs/tissues that undergo critical postnatal development at the intended paediatric age (see Appendix A).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-012",
+      "category": "trigger_criteria / nonclinical_safety_data",
+      "rule": "Safety signals in adult animals in more than one species are of increased concern for paediatric relevance.",
+      "conditions": "Toxicity findings replicated across multiple adult animal species",
+      "source_section": "2.3.4",
+      "source_quote": "Safety signals in adult animals in more than one species are of increased concern.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-013",
+      "category": "trigger_criteria / ppnd_data",
+      "rule": "If PPND/ePPND study data are available and have shown clinically relevant systemic exposures in offspring during the postnatal period, these data can contribute to the WoE evaluation and may reduce the need for a separate JAS.",
+      "conditions": "PPND or ePPND study available with postnatal TK data in offspring",
+      "source_section": "2.3.4",
+      "source_quote": "If PPND/ePPND study data are available and have shown clinically relevant systemic exposures in offspring during the postnatal period, these data can contribute to the WoE evaluation (see Section 1.4).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-014",
+      "category": "trigger_criteria / ppnd_data",
+      "rule": "Observations of adverse effects in offspring from PPND/ePPND studies do NOT, on their own, indicate that a JAS is recommended; however, if a safety concern was identified in the PPND/ePPND study, it should be considered in the WoE evaluation.",
+      "conditions": "Adverse effects observed in PPND/ePPND offspring",
+      "source_section": "2.3.4",
+      "source_quote": "Observations of adverse effects in offspring would not, on their own, indicate that a JAS is recommended. However, if a safety concern was identified in the PPND/ePPND study, it should be considered in the WoE evaluation.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-015",
+      "category": "trigger_criteria / feasibility",
+      "rule": "If a dose range finding (DRF) study in juvenile animals indicates that a definitive JAS cannot be conducted at appropriate systemic exposures or relevant ages in the range of those expected in paediatric patients, such a study might not be informative or warranted.",
+      "conditions": "DRF fails to achieve clinically relevant exposures at appropriate juvenile ages",
+      "source_section": "2.3.5",
+      "source_quote": "In addition, if a dose range finding (DRF) study in juvenile animals indicates that a definitive JAS cannot be conducted at appropriate systemic exposures or relevant ages in the range of those expected in paediatric patients, such a study might not be informative or warranted.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-016",
+      "category": "trigger_criteria / genotoxicity_safety_pharmacology",
+      "rule": "Additional genotoxicity and safety pharmacology assessments in juvenile animals are generally NOT appropriate to support paediatric indications.",
+      "conditions": "Standard nonclinical safety package development",
+      "source_section": "2.3.4",
+      "source_quote": "Additional genotoxicity and safety pharmacology assessments in juvenile animals are generally not appropriate to support paediatric indications.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-017",
+      "category": "trigger_criteria / severely_debilitating_disease",
+      "rule": "For severely debilitating or life-threatening diseases with serious unmet medical need in a paediatric population, the sponsor and regulatory agencies should consider the benefit of producing additional data versus the potential delay in patient access. Nonclinical studies could be conducted in parallel with ongoing paediatric clinical investigations.",
+      "conditions": "Severely debilitating or life-threatening paediatric indication with unmet need",
+      "source_section": "2.1",
+      "source_quote": "For severely debilitating or life-threatening diseases, or diseases with serious unmet medical need in a paediatric population, the sponsor and regulatory agencies should consider the benefit of producing data in addition to existing studies versus the potential delay in patient access to a pharmaceutical caused by additional nonclinical testing.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-018",
+      "category": "woe_reassessment",
+      "rule": "The WoE evaluation should be conducted when designing the initial paediatric development plan, but reassessed if there are new safety signals, changes in age ranges, route of administration, treatment duration, drug product formulation, or indications.",
+      "conditions": "Ongoing reassessment throughout development",
+      "source_section": "2.2",
+      "source_quote": "The WoE evaluation should be conducted when designing the initial paediatric development plan, but reassessed if there are new safety signals in nonclinical or clinical studies, changes in age ranges, route of administration, treatment duration, drug product formulation and/or indications.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-019",
+      "category": "study_design / general",
+      "rule": "A JAS should be conducted according to Good Laboratory Practices. A JAS design including all potential additional endpoints is NOT recommended without a rationale for each additional endpoint.",
+      "conditions": "All JAS designs",
+      "source_section": "3.1",
+      "source_quote": "A JAS design including all potential additional endpoints is not recommended without a rationale for each additional endpoint. A JAS should be conducted according to Good Laboratory Practices.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-020",
+      "category": "study_design / drf",
+      "rule": "A DRF study with small group sizes of juvenile animals is recommended to assess tolerability in relation to exposure and age, particularly valuable when dosing starts prior to weaning. DRF studies are not necessarily conducted according to GLP.",
+      "conditions": "Prior to definitive JAS, especially when preweaning dosing is planned",
+      "source_section": "3.2",
+      "source_quote": "A DRF study with small group sizes of juvenile animals is recommended to assess tolerability in relation to exposure and age. This is particularly valuable to design a definitive JAS when dosing starts prior to weaning to avoid unexpected mortality or excessive toxicity, often due to irrelevant exposures. [...] DRF studies are not necessarily conducted according to Good Laboratory Practices.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-021",
+      "category": "study_design / drf",
+      "rule": "DRF dosing should include the youngest planned starting age of the animals in the definitive JAS. DRF studies are typically of short duration, have limited endpoints and are not expected to include all core endpoints (e.g., pathology).",
+      "conditions": "DRF study design",
+      "source_section": "3.2",
+      "source_quote": "Dosing should include the youngest planned starting age of the animals in the definitive JAS to evaluate the most critical period for tolerability and exposure differences. DRF studies typically are of short duration, have limited endpoints and are not expected to include all core endpoints (e.g., pathology).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-022",
+      "category": "species_selection",
+      "rule": "When a JAS is warranted, in most cases a single species is considered sufficient. The same species as used in adult repeated-dose studies should initially be considered, preferably a rodent. Nonclinical studies in a pharmacologically non-relevant species are NOT recommended.",
+      "conditions": "Species selection for JAS",
+      "source_section": "3.3",
+      "source_quote": "When a JAS is warranted, in most cases a single species is considered sufficient. In principle, the same species as used in adult repeated-dose studies should initially be considered as the species for a JAS, preferably a rodent. In all cases, the selected species should be justified, as nonclinical studies in a pharmacologically non-relevant species can give rise to misinterpretation and are not recommended.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-023",
+      "category": "species_selection / nhp",
+      "rule": "There is limited added value of performing a JAS in postweaning NHP. Only in rare cases is a preweaning NHP JAS justifiable (e.g., intended neonatal paediatric use and inadequate exposure from an ePPND study). Alternative approaches are encouraged.",
+      "conditions": "NHP as candidate species for JAS",
+      "source_section": "3.3",
+      "source_quote": "There is limited added value of performing a JAS in postweaning NHP. In postweaning NHPs, organ system maturity is generally beyond that relevant for many paediatric ages (see Appendix A). Only in rare cases is the value of a JAS conducted in preweaning NHP justifiable (e.g., intended neonatal paediatric use and inadequate exposure from an ePPND study). Therefore, alternative approaches are encouraged.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-024",
+      "category": "species_selection / two_species",
+      "rule": "JAS in two species can be warranted in a paediatric-first situation (Section 4) or where there are multiple specific concerns for postnatal development and one species alone is not able to address them. A second species to CONFIRM findings in the first species is generally NOT warranted.",
+      "conditions": "Paediatric-first development or multiple concerns not addressable in one species",
+      "source_section": "3.3",
+      "source_quote": "JAS in two species can be warranted in a paediatric-first situation (see Section 4) or where there are multiple specific concerns for postnatal development and one species alone is not able to address them. [...] The conduct of a JAS in a second species to confirm findings in the first species is generally not warranted.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-025",
+      "category": "species_selection / biopharmaceuticals",
+      "rule": "Biopharmaceuticals should only be assessed in pharmacologically relevant species, consistent with ICH S6. A homologous protein as discussed in ICH S6 can be considered for hazard identification in the juvenile rodent or non-rodent species.",
+      "conditions": "Biotechnology-derived pharmaceutical requiring JAS",
+      "source_section": "3.3",
+      "source_quote": "Biopharmaceuticals should only be assessed in pharmacologically relevant species, consistent with ICH S6. Use of an available homologous protein, as discussed in ICH S6, can be considered for the purposes of hazard identification in the juvenile rodent or non-rodent species.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-026",
+      "category": "species_selection / factors",
+      "rule": "Factors for species selection include: (1) ontogeny of pharmacological/toxicological target in animals vs. intended paediatric population; (2) preference for species with adult repeated-dose toxicity data; (3) toxicological target organs; (4) relative stage of organ/system development in the juvenile animal vs. intended paediatric population; (5) ability to detect toxicity endpoints of concern; (6) similarity to human ADME; (7) technical/practical feasibility.",
+      "conditions": "Species selection decision",
+      "source_section": "3.3",
+      "source_quote": "The following factors should be considered when selecting a relevant species: An understanding of the ontogeny of the pharmacological or toxicological target (e.g., the receptor) in animals in comparison to that in the intended paediatric population[...] Preference for a species and strain for which adult repeated-dose toxicity data are available to facilitate a comparison of the toxicity and systemic exposure profiles between juvenile and adult animals[...] Toxicological target organs[...] the relative stage of organ/system development in the juvenile animal as compared to the intended paediatric population[...] Similarity to human ADME characteristics[...] The technical/practical feasibility to conduct the study in the selected species.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-027",
+      "category": "timing / age_at_initiation",
+      "rule": "The age of animals at dosing initiation should developmentally correspond to the youngest intended patient age and will depend on a human-to-animal comparison of developmental periods of organ system(s) of toxicological concern. The animal age at dosing initiation should be justified using relevant information (such as provided in Appendix A).",
+      "conditions": "All JAS designs",
+      "source_section": "3.4",
+      "source_quote": "The age of animals at dosing initiation should developmentally correspond to the youngest intended patient age and will depend on a human-to-animal comparison of developmental periods of organ system(s) of toxicological concern. [...] The animal age at dosing initiation should be justified using relevant information (such as provided in Appendix A).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-028",
+      "category": "timing / dosing_period",
+      "rule": "In contrast to adult studies, the recommended dosing period in a JAS is NOT always directly related to the clinical treatment duration. When determining duration, consider: (1) the paediatric age range, (2) the shorter developmental period of animals compared to humans, (3) the safety concern for the intended paediatric population, and (4) the relevant period of organ development for the target organ of concern. Dosing should usually occur during the critical and active periods of growth and development identified in Appendix A.",
+      "conditions": "JAS dosing period design",
+      "source_section": "3.4",
+      "source_quote": "In contrast to nonclinical studies for adult populations (see ICH M3), the recommended dosing period is not always directly related to the clinical treatment duration for the paediatric population. When determining the duration of administration in a JAS, it is important to consider the paediatric age range and the shorter developmental period of animals compared to humans, the safety concern for the intended paediatric population, and the relevant period of organ development for the target organ of concern. Dosing in a JAS should usually occur during the critical and active periods of growth and development identified in the tables in Appendix A for a system of concern.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-029",
+      "category": "timing / dosing_to_maturity",
+      "rule": "If clinical treatment is intended through adolescence, dosing to maturity is typically conducted in rodents. The interval between birth and maturity for NHPs is several years, making dosing to maturity impractical in NHPs.",
+      "conditions": "Clinical treatment intended through adolescence",
+      "source_section": "3.4",
+      "source_quote": "If clinical treatment is intended through adolescence, dosing to maturity is typically conducted in rodents. The interval between birth and maturity for NHPs is several years, making dosing to maturity impractical.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-030",
+      "category": "timing / dose_regimen",
+      "rule": "The dosing regimen should be designed to achieve and maintain relevant exposures during developmental periods of concern. Dosing regimens in a JAS may not be exactly the same as in the clinic (e.g., even if clinical regimen is once a week, more frequent dosing in juvenile animals might be more appropriate).",
+      "conditions": "JAS dosing regimen design",
+      "source_section": "3.4",
+      "source_quote": "The dosing regimen should be designed to achieve and maintain relevant exposures during developmental periods of concern. Therefore, dosing regimens in a JAS may not be exactly the same as in the clinic. For example, even though a clinical regimen is once a week, more frequent dosing in juvenile animals might be more appropriate.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-031",
+      "category": "post_treatment_period",
+      "rule": "Inclusion of an evaluation period after treatment has stopped in a JAS is generally recommended to address: (1) whether any effects observed during treatment are reversible, persistent, or progressive; and (2) whether any effects emerge later in development as a result of early life exposure (delayed onset).",
+      "conditions": "Standard JAS design",
+      "source_section": "3.5",
+      "source_quote": "Inclusion of an evaluation period after treatment has stopped in a JAS is generally recommended to help address two issues: 1) whether any effects observed during treatment are reversible, persistent, or progressive and 2) whether any effects emerge later in development as a result of early life exposure (i.e., delayed onset).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-032",
+      "category": "post_treatment_period",
+      "rule": "The demonstration of full reversibility is NOT considered essential. A trend towards reversibility and a scientific assessment that this would eventually progress to full reversibility could be sufficient.",
+      "conditions": "Interpretation of reversibility findings in post-treatment period",
+      "source_section": "3.5",
+      "source_quote": "However, the demonstration of full reversibility is not considered essential. A trend towards reversibility (e.g., decreased incidence and/or severity) and a scientific assessment that this would eventually progress to full reversibility could be sufficient.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-033",
+      "category": "route_of_administration",
+      "rule": "The intended clinical route of administration should be used when feasible, but obtaining adequate systemic exposure is paramount. If the pharmaceutical is intended for two or more clinical routes, a JAS with a single route of administration is sufficient but should provide adequate exposure in juvenile animals for all intended clinical routes.",
+      "conditions": "JAS route of administration selection",
+      "source_section": "3.6",
+      "source_quote": "The intended clinical route of administration should be used when feasible, but obtaining adequate systemic exposure is paramount (see Section 3.7). [...] If the pharmaceutical is intended for use by two or more clinical routes of administration, a JAS with a single route of administration is sufficient but should provide adequate exposure in juvenile animals for all intended clinical routes of administration.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-034",
+      "category": "dose_selection",
+      "rule": "It is desirable to establish a dose-response relationship and determine a NOAEL in juvenile animals. Dose levels should be selected to achieve some overlap in the range of exposure in adult animals. The high dose should NOT result in marked toxicity that can confound growth and development endpoints. Body weight loss or lack of weight gain during rapid growth periods is therefore not desirable in a JAS.",
+      "conditions": "JAS dose selection",
+      "source_section": "3.7",
+      "source_quote": "It is desirable to establish a dose-response relationship for adverse effects and to determine a no-observed adverse effect level (NOAEL) in juvenile animals. Dose levels should be selected to achieve some overlap in the range of exposure in adult animals to enable comparison of effects between young and adult animals. However, the high dose should not result in marked toxicity that can confound the growth and development endpoints and complicate the assessment. Body weight loss or lack of weight gain during rapid growth periods has the potential to confound results, and is therefore not desirable in a JAS.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-035",
+      "category": "dose_selection",
+      "rule": "At least one dose should result in exposure levels similar to the anticipated exposure in the intended clinical population if tolerable. For small molecules, selection of the high dose in accordance with ICH M3 applies. For biotechnology-derived products, principles for dose selection in ICH S6 apply.",
+      "conditions": "JAS dose selection — small molecules vs. biopharmaceuticals",
+      "source_section": "3.7",
+      "source_quote": "At least one dose should result in exposure levels similar to the anticipated exposure in the intended clinical population if tolerable. For small molecules, selection of the high dose in accordance with ICH M3 applies. For biotechnology-derived products, the principles for dose selection described in ICH S6 apply.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-036",
+      "category": "dose_selection / dose_adjustment",
+      "rule": "Dose adjustment (increase or decrease) during the course of a JAS should be considered in cases of substantial changes in systemic exposure due to maturation of the ADME systems. Generally, more than one dose adjustment during a JAS would not be expected.",
+      "conditions": "JAS where ADME maturation causes significant exposure changes during the study",
+      "source_section": "3.7",
+      "source_quote": "Dose adjustment (increase or decrease) during the course of a JAS should be considered in cases of substantial changes in systemic exposure due to maturation of the ADME systems. Adjusting doses is intended to keep the exposures somewhat consistent and clinically relevant. Generally, more than one dose adjustment during a JAS would not be expected.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-037",
+      "category": "endpoints / core",
+      "rule": "Generally, each JAS should include the core endpoints defined in Section 3.8.1: (1) Mortality and Clinical Observations; (2) Growth (body weights + long bone length); (3) Food Consumption; (4) Sexual Development (puberty markers); (5) Clinical Pathology (chemistry and haematology at terminal necropsy); (6) Anatomic Pathology (gross pathology, organ weights, histopathology of major organs); (7) Toxicokinetics.",
+      "conditions": "All definitive JAS designs (unless justified otherwise)",
+      "source_section": "3.8.1",
+      "source_quote": "Generally, each JAS should include the core endpoints defined in Section 3.8.1 below. Each additional endpoint (see Section 3.8.2) should be considered and justified to address an identified safety concern. In some cases, such as a follow-up investigational JAS, all core endpoints might not be included when justified.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-038",
+      "category": "endpoints / core / growth",
+      "rule": "Growth should be assessed by body weights in conjunction with long bone length. Individual weight measurements should be assessed at intervals appropriate for informing dose calculations. Generally, one long bone (e.g., femur) measured for length at necropsy is sufficient.",
+      "conditions": "Core endpoint for all JAS",
+      "source_section": "3.8.1.2",
+      "source_quote": "Growth should be assessed by body weights in conjunction with long bone length. As body weight increases dramatically during the early postnatal period, individual weight measurements should be assessed at intervals appropriate for informing dose calculations. Generally, one long bone (e.g., femur) measured for length at necropsy is sufficient.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-039",
+      "category": "endpoints / core / sexual_development",
+      "rule": "Physical indicators of onset of puberty (e.g., vaginal opening in females and balanopreputial separation in males for rodents) are recommended when the study design encompasses the relevant developmental window.",
+      "conditions": "JAS that covers the pubertal developmental window",
+      "source_section": "3.8.1.4",
+      "source_quote": "The physical indicators of onset of puberty (e.g., for rodents, the age of vaginal opening in females and balanopreputial separation in males) are recommended when the study design encompasses the relevant developmental window.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-040",
+      "category": "endpoints / core / anatomic_pathology",
+      "rule": "Microscopic evaluation should be performed on major organs (e.g., bone/marrow, brain, GI tract, heart, kidney, liver, lung, ovary, testis with qualitative evaluation of spermatogenic progression in mature males), those with macroscopic lesions and previously identified target organs.",
+      "conditions": "Terminal necropsy anatomic pathology core endpoint",
+      "source_section": "3.8.1.6",
+      "source_quote": "Microscopic evaluation should be performed on major organs (e.g., bone/marrow, brain, gastrointestinal tract, heart, kidney, liver, lung, ovary, testis with qualitative evaluation of spermatogenic progression in mature males), those with macroscopic lesions and previously identified target organs.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-041",
+      "category": "endpoints / core / anatomic_pathology",
+      "rule": "If a JAS is supporting first-in-paediatric trials (Section 4), then a standard set of tissues as used in adult toxicity studies is recommended for histopathology.",
+      "conditions": "JAS supporting first-in-paediatric trials",
+      "source_section": "3.8.1.6",
+      "source_quote": "If a JAS is supporting first-in-paediatric trials (see Section 4) then a standard set of tissues as used in adult toxicity studies is recommended for histopathology.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-042",
+      "category": "endpoints / core / toxicokinetics",
+      "rule": "Use of microsampling and sparse sampling (see ICH S3A) is strongly encouraged for the TK component of a JAS. TK sampling should be conducted near the beginning and end of the dosing period. If dosing starts preweaning, interim TK assessments should be considered. The TK assessment should consider both active pharmaceutical ingredient and relevant major human metabolites.",
+      "conditions": "TK component design for all JAS",
+      "source_section": "3.8.1.7",
+      "source_quote": "When designing the TK component of a JAS, the use of microsampling and sparse sampling (see ICH S3A) is strongly encouraged. Toxicokinetic sampling should be conducted near the beginning and end of the dosing period. If dosing is started preweaning, interim TK assessment(s) should be considered. [...] The TK assessment should consider both active pharmaceutical ingredient and relevant major human metabolites.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-043",
+      "category": "endpoints / additional / bone",
+      "rule": "When there is an identified concern specific to bone metabolism or structure, additional endpoints should be considered: assessments of bone mass and geometry using densitometric techniques, serum and urinary biomarkers of bone formation and resorption, and bone histomorphometry.",
+      "conditions": "WoE identifies specific concern for bone metabolism or structure",
+      "source_section": "3.8.2.2",
+      "source_quote": "When there is an identified concern specific to bone metabolism or structure, additional endpoints should be considered. Examples include assessments of bone mass and geometry using densitometric techniques, serum and urinary biomarkers of bone formation and resorption, and bone histomorphometry.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-044",
+      "category": "endpoints / additional / ophthalmology",
+      "rule": "Standard ophthalmologic examinations (e.g., palpebral reflex, ophthalmoscopy) are NOT routinely included in a JAS, because structural development of the eye is largely completed during the prenatal period in humans. However, when there is concern for ocular toxicity, assessment of ocular endpoints should be considered.",
+      "conditions": "Concern for ocular toxicity identified in WoE",
+      "source_section": "3.8.2.5",
+      "source_quote": "Standard ophthalmologic examinations (e.g., palpebral reflex, ophthalmoscopy) are not routinely included in a JAS, because structural development of the eye is largely completed during the prenatal period in humans. However, when there is concern for ocular toxicity, assessment of ocular endpoints should be considered.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-045",
+      "category": "endpoints / additional / cns",
+      "rule": "CNS assessments (detailed clinical observations, behavioural tests, learning and memory tests, expanded neurohistopathology evaluations) should be selected based on concerns identified in the WoE evaluation. The functional observational battery (FOB) or modified Irwin test are considered to have relatively low sensitivity in juvenile rodents and are of limited utility.",
+      "conditions": "CNS concern identified in WoE evaluation",
+      "source_section": "3.8.2.6",
+      "source_quote": "The selection of any additional CNS assessments should be based on concerns identified in the WoE evaluation. [...] The functional observational battery (FOB) or modified Irwin test are considered to have relatively low sensitivity in juvenile rodents and are of limited utility.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-046",
+      "category": "endpoints / additional / cns",
+      "rule": "For evaluation of persistent or delayed effects on learning and memory, assessments should be conducted in the post-treatment period.",
+      "conditions": "Learning and memory concern; JAS where dosing stops at an immature age",
+      "source_section": "3.8.2.6",
+      "source_quote": "For evaluation of persistent or delayed effects on learning and memory, these assessments should be conducted in the post-treatment period.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-047",
+      "category": "endpoints / additional / reproductive",
+      "rule": "It is NOT important to confirm in a JAS reproductive system effects that were identified as irreversible in adult animals. For prepubertal clinical treatment, if there is concern about delayed effects on sexual maturation or reproductive function in adulthood, a JAS should be designed to treat only during immaturity, then allow the animal to mature without further treatment and conduct assessments after maturation is reached.",
+      "conditions": "Reproductive concern; prepubertal clinical treatment",
+      "source_section": "3.8.2.7",
+      "source_quote": "It is not important to confirm in a JAS reproductive system effects that were identified as irreversible in adult animals. [...] If the clinical treatment is only during prepubertal stages, a JAS should be designed to treat only during immaturity, and then allow the animal to mature without further treatment and conduct assessments after maturation is reached.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-048",
+      "category": "endpoints / additional / reproductive",
+      "rule": "Mating assessments are NOT generally recommended in a JAS. Hormonal assessments are generally NOT recommended in a JAS due to considerable variability in hormone levels especially during puberty.",
+      "conditions": "Standard JAS design",
+      "source_section": "3.8.2.7",
+      "source_quote": "Mating assessments are not generally recommended in a JAS. [...] Hormonal assessments are generally not recommended in a JAS as there is considerable variability in hormone levels, especially during puberty.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-049",
+      "category": "endpoints / additional / immunology",
+      "rule": "Immunotoxicity assessments in a JAS should be considered as outlined in ICH S8 when pharmacological class or data gives cause for concern for development of the immune system. Functional assays should be performed at appropriate stages of development (e.g., TDAR after PND 45 for the rat). Confirmation of immunotoxicity is generally NOT warranted in a JAS if toxicity is already well characterised.",
+      "conditions": "Immunotoxicity concern identified from pharmacological class or animal/human data",
+      "source_section": "3.8.2.8",
+      "source_quote": "If the pharmacological class or data in animals or humans gives cause for concern for the development of the immune system, assessments for immunotoxicity should be considered as outlined in ICH S8. [...] Functional assays should be performed at appropriate stages of development, e.g., for T-Cell-Dependent Antibody Response (TDAR) after PND 45 for the rat. Confirmation of immunotoxicity is generally not warranted in a JAS if the toxicity is already well characterised.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-050",
+      "category": "animal_allocation / preweaning",
+      "rule": "Study litters should be standardised with respect to number of offspring and sex ratio (e.g., 4 to 5 pups/sex/litter in rats) at the same postnatal age. Maintaining a consistent litter size across and within dose groups is recommended during the preweaning phase. For JAS, maternal care and litter size are generally considered more important confounders than genetics.",
+      "conditions": "Preweaning JAS litter allocation and standardisation",
+      "source_section": "3.9.1",
+      "source_quote": "It is advisable that study litters be standardised with respect to number of offspring and sex ratio (i.e., 4 to 5 pups/sex/litter in rats) at the same postnatal age. [...] maintaining a consistent litter size across and within dose groups is recommended during the preweaning phase.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-051",
+      "category": "paediatric_first",
+      "rule": "For paediatric-first/only development (Section 4), the nonclinical package needs to be tailored differently, potentially requiring JAS in two species and use of a standard histopathology tissue set as for adult toxicity studies.",
+      "conditions": "Initial clinical use intended in paediatric population (no prior adult use data)",
+      "source_section": "4 CONSIDERATIONS FOR PAEDIATRIC-FIRST/ONLY DEVELOPMENT",
+      "source_quote": "This guideline recommends an approach for the nonclinical safety evaluation of pharmaceuticals intended for development in paediatric populations. This can include products with prior adult use, as well as products being considered for initial human use in paediatrics (see Section 4).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-052",
+      "category": "scope / exclusions",
+      "rule": "Tissue engineered products, gene and cellular therapies, and vaccines are EXCLUDED from the scope of S11 because dedicated juvenile animal safety studies are generally not warranted for such products. The ICH S9 guideline should be consulted for anticancer pharmaceuticals on whether to conduct a JAS (S11 should still be consulted for JAS study design).",
+      "conditions": "Product type scoping",
+      "source_section": "1.3",
+      "source_quote": "Tissue engineered products, gene and cellular therapies, and vaccines are excluded from the scope of this guideline because dedicated juvenile animal safety studies are generally not warranted for such products. [...] The ICH S9 guideline should be consulted for recommendations on whether to conduct a JAS for those pharmaceuticals included in the scope of the ICH S9 guideline, i.e., anticancer pharmaceuticals. The ICH S11 guideline should be consulted for study design in all cases.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S11-053",
+      "category": "excipients",
+      "rule": "Excipients in paediatric formulations may require separate evaluation if they have not been adequately evaluated for the relevant paediatric age range. The WoE approach described in Section 2 may apply.",
+      "conditions": "Excipients not previously evaluated for the relevant paediatric age range",
+      "source_section": "6.1",
+      "source_quote": "Excipients in paediatric formulations may require separate evaluation if they have not been adequately evaluated for the relevant paediatric age range.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "s11_trigger_criteria": {
+    "description": "When juvenile animal studies (JAS) are needed — structured summary of the WoE framework from ICH S11 Section 2",
+    "decision_framework": "Weight of Evidence (WoE) approach combining all factors; no single factor is determinative",
+    "most_important_factors": [
+      "Youngest intended patient age (neonates/infants drive higher likelihood; adolescents lower likelihood)",
+      "Suspected adverse effects on developing organ systems during the paediatric trial"
+    ],
+    "triggers": [
+      {
+        "trigger_id": "T01",
+        "factor": "Youngest Intended Patient Age",
+        "further_studies_likely_if": "Neonates (<1 month) or Infants (1-23 months)",
+        "further_studies_unlikely_if": "Adolescents (>=12 years)",
+        "source_quote": "Additional nonclinical studies are more likely to be warranted to support younger paediatric age ranges.",
+        "source_section": "2.3.1"
+      },
+      {
+        "trigger_id": "T02",
+        "factor": "Effects on Developing Organ Systems",
+        "further_studies_likely_if": "Known or suspected pharmacological effects on developing organ systems",
+        "further_studies_unlikely_if": "No known or suspected effects on developing organ systems",
+        "source_quote": "The most important factors (i.e., the most highly weighted) are the youngest intended patient age, and whether there are suspected adverse effects on developing organ systems of the patients.",
+        "source_section": "2.2 / Figure 1"
+      },
+      {
+        "trigger_id": "T03",
+        "factor": "Amount/Type of Existing Data",
+        "further_studies_likely_if": "No nonclinical or clinical data available",
+        "further_studies_unlikely_if": "Paediatric clinical data available",
+        "source_quote": "This established clinical safety profile is usually one of the first points to consider when determining if additional nonclinical studies are warranted.",
+        "source_section": "2.3.1"
+      },
+      {
+        "trigger_id": "T04",
+        "factor": "Pharmacological Target has Role in Organ Development",
+        "further_studies_likely_if": "Target has a known or potential role in organ development",
+        "further_studies_unlikely_if": "Target has no known role in organ development",
+        "source_quote": "A review of the literature on the developmental expression and ontogeny of the pharmacological target(s) (e.g., receptors, enzymes, ion channels, proteins), or the known or potential role of the target during development is recommended.",
+        "source_section": "2.3.2"
+      },
+      {
+        "trigger_id": "T05",
+        "factor": "Selectivity and Specificity of Pharmaceutical",
+        "further_studies_likely_if": "Low selectivity/specificity (potential secondary PD effects)",
+        "further_studies_unlikely_if": "High selectivity and specificity (e.g., monoclonal antibody)",
+        "source_quote": "Pharmaceuticals with lower selectivity or specificity can have secondary pharmacodynamic effects and thus are more likely to warrant further nonclinical investigations.",
+        "source_section": "2.3.2"
+      },
+      {
+        "trigger_id": "T06",
+        "factor": "Clinical Treatment Duration",
+        "further_studies_likely_if": "Chronic use (e.g., 3-month, 6-month, chronic intermittent)",
+        "further_studies_unlikely_if": "Acute/short-term use",
+        "source_quote": "Longer durations of treatment (e.g., 3-month, 6-month, chronic intermittent) are more likely to expose a paediatric subject during a developmentally sensitive window and are, therefore, more likely to warrant further nonclinical studies than short-term treatments.",
+        "source_section": "2.3.1"
+      }
+    ],
+    "negative_triggers_not_warranted": [
+      "Existing clinical safety data and risk mitigation strategies sufficient (Section 2.3.1)",
+      "JAS not needed to confirm toxicity in target organs where adult/paediatric sensitivity does not differ (Section 2.3.1)",
+      "Short-term PK studies with adult clinical data available and no vulnerable developmental window exposure (Section 2.3.1, M3)",
+      "DRF shows clinically relevant exposures cannot be achieved at relevant juvenile ages (Section 2.3.5)",
+      "Tissue engineered products, gene/cellular therapies, vaccines (Section 1.3)"
+    ]
+  },
+
+  "s1b_r1_rules": [
+    {
+      "rule_id": "S1BR1-001",
+      "category": "study_design / basic_principle",
+      "rule": "The basic scheme for carcinogenicity testing comprises one long-term rodent carcinogenicity study PLUS one other study (additional in vivo test or second long-term study) that supplements the long-term study and provides additional information not readily available from the long-term assay.",
+      "source_section": "S1B Part I, Section 4.2 (original S1B 1997)",
+      "source_quote": "The basic scheme comprises one long-term rodent carcinogenicity study, plus one other study of the type mentioned in §4.2.2 that supplements the long term carcinogenicity study and provides additional information that is not readily available from the long term assay.",
+      "key_change_from_s1b": "Addendum (S1BR1) modifies this by providing a WoE pathway to conclude whether the 2-year rat study would add value; if unlikely, may be replaced by WoE assessment + mouse study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-002",
+      "category": "species_selection / long_term",
+      "rule": "In the absence of clear evidence favouring one species, the rat should be selected for the long-term carcinogenicity study. Species selected should be appropriate based on: (a) Pharmacology; (b) Repeated-dose toxicology; (c) Metabolism; (d) Toxicokinetics; (e) Route of administration.",
+      "source_section": "S1B Part I, Section 4.2.1",
+      "source_quote": "In the absence of clear evidence favoring one species, it is recommended that the rat be selected. [...] The species selected should be appropriate, based on considerations that include the following: (a) Pharmacology. (b) Repeated-dose toxicology. (c) Metabolism (see also Guidelines S1C and S3A). (d) Toxicokinetics (see also Guidelines S1C, S3A, and S3B). (e) Route of administration (e.g., less common routes such as dermal and inhalation).",
+      "key_change_from_s1b": "No change; retained in S1B(R1) Addendum.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-003",
+      "category": "study_design / additional_in_vivo",
+      "rule": "The additional in vivo test (second study) may be either: (a) Short or medium-term in vivo rodent test systems (e.g., initiation-promotion models, transgenic or neonatal rodents); or (b) A long-term carcinogenicity study in a second rodent species. The rationale for choice should document the strengths and weaknesses of the method selected for the pharmaceutical.",
+      "source_section": "S1B Part I, Section 4.2.2 and 4.2.3",
+      "source_quote": "Additional tests may be either (a) or (b) (see Note 2). (a) Short or medium-term in vivo rodent test systems. [...] (b) A long-term carcinogenicity study in a second rodent species is still considered acceptable. [...] Emphasis should be placed on selection of a test method that can contribute information valuable to the overall 'weight of evidence' for the assessment of carcinogenic potential.",
+      "key_change_from_s1b": "Addendum (S1BR1) establishes that rasH2-Tg mouse is the preferred short-term model and provides specific high dose selection (50-fold AUC ratio) for this model.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-004",
+      "category": "study_design / second_study_waiver",
+      "rule": "If the findings of a short or long-term carcinogenicity study and genotoxicity tests and other data indicate that a pharmaceutical clearly poses a carcinogenic hazard to humans, a second carcinogenicity study would not usually be useful.",
+      "source_section": "S1B Part I, Note 2",
+      "source_quote": "If the findings of a short or long-term carcinogenicity study and of genotoxicity tests and other data indicate that a pharmaceutical clearly poses a carcinogenic hazard to humans, a second carcinogenicity study would not usually be useful.",
+      "key_change_from_s1b": "No change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-005",
+      "category": "weight_of_evidence / framework",
+      "rule": "The WoE assessment approach may support a conclusion that the human carcinogenic potential of the pharmaceutical is: (1) LIKELY — such that a 2-year rat study would not add value; (2) UNLIKELY — such that a 2-year rat study would not add value; or (3) UNCERTAIN — such that a 2-year rat study would add value to human risk assessment.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2",
+      "source_quote": "The integrative WoE assessment approach described in Sections 2.1 and 2.2 may support a conclusion that the carcinogenic potential of the pharmaceutical in humans is: likely, such that a 2-year rat carcinogenicity study would not add value; or unlikely, such that a 2-year rat carcinogenicity study would not add value; or uncertain, such that a 2-year rat carcinogenicity study would add value to human risk assessment.",
+      "key_change_from_s1b": "NEW in S1B(R1) Addendum — introduces the three-outcome WoE framework as an alternative decision pathway to the standard S1B approach.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-006",
+      "category": "weight_of_evidence / uncertain_outcome",
+      "rule": "In cases where the WoE assessment leads to a conclusion of uncertainty regarding human carcinogenicity potential, the approach described in S1B of conducting a long-term carcinogenicity study together with an additional in vivo carcinogenicity study remains the most appropriate strategy.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2",
+      "source_quote": "In cases where the WoE assessment leads to a conclusion of uncertainty regarding human carcinogenicity potential, the approach described in S1B of conducting a long-term carcinogenicity study together with an additional in vivo carcinogenicity study remains the most appropriate strategy (Figure 1).",
+      "key_change_from_s1b": "Confirms S1B standard approach remains for uncertain cases.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-007",
+      "category": "weight_of_evidence / factors",
+      "rule": "WoE factors for assessing human carcinogenic potential include six categories: (1) Target Biology (drug target biology and primary pharmacologic mechanism); (2) Secondary Pharmacology (off-target activity, especially nuclear receptor binding); (3) Histopathology from Chronic Studies (emphasis on 6-month rat study findings); (4) Hormonal Effects/Endocrine perturbation; (5) Genotoxicity (per S2(R1) criteria); (6) Immune Modulation (per ICH S8).",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1",
+      "source_quote": "A WoE approach is based on a comprehensive assessment of the totality of data relevant to carcinogenic potential available from public sources and from relevant drug development studies. These factors include, but are not limited to: 1) data that inform carcinogenic potential based on drug target biology and the primary pharmacologic mechanism [...] 2) results from secondary pharmacology screens [...] especially those that inform carcinogenic risk (e.g., binding to nuclear receptors), 3) histopathology data from repeated-dose toxicity studies completed with the compound, with particular emphasis on the 6-month rat study [...] 4) evidence for hormonal perturbation [...] 5) genetic toxicology study data using criteria from ICH S2(R1) [...] 6) evidence of immune modulation in accordance with ICH S8.",
+      "key_change_from_s1b": "NEW in S1B(R1) Addendum — explicit enumeration and weighting of WoE factors.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-008",
+      "category": "weight_of_evidence / target_biology",
+      "rule": "Target biology WoE assessment should include: drug target distribution in rats and humans; pharmacologic activity and potency of parent compound and major metabolites in both species; information from genetically engineered models; human genetic association studies; cancer gene databases; and carcinogenicity information on class effects.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1, item 1",
+      "source_quote": "data that inform carcinogenic potential based on drug target biology and the primary pharmacologic mechanism of the parent compound and major human metabolites; this includes drug target distribution in rats and humans along with the pharmacologic activity and potency of the parent compound and major metabolites in these species; available information from genetically engineered models; human genetic association studies; cancer gene databases; and carcinogenicity information on class effects, if available.",
+      "key_change_from_s1b": "NEW — detailed specification of what constitutes target biology WoE data.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-009",
+      "category": "weight_of_evidence / histopathology",
+      "rule": "Histopathology findings from the 6-month rat toxicity study are the primary study for identifying carcinogenic potential relevant to a 2-year rat study. Findings of particular interest include: cellular hypertrophy, cellular hyperplasia, persistent tissue injury and/or chronic inflammation, foci of cellular alteration, preneoplastic changes, and tumors.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1, footnote 4",
+      "source_quote": "Histopathology findings from 6-month rat toxicity studies of particular interest for identifying carcinogenic potential in a 2-year rat study include cellular hypertrophy, cellular hyperplasia, persistent tissue injury and/or chronic inflammation, foci of cellular alteration, preneoplastic changes, and tumors. It is important to provide an understanding of the likely pathogenesis of, and/or address the human relevance of such findings. While the 6-month rat toxicity study is the primary study to be used for assessing the likely outcome and value of conducting a 2-year rat study, shorter-term rat studies can sometimes also provide histopathologic conclusions of value.",
+      "key_change_from_s1b": "NEW — specific identification of the 6-month rat study as primary WoE histopathology source.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-010",
+      "category": "weight_of_evidence / hormonal",
+      "rule": "Findings from rat toxicity studies suggesting hormonal perturbation include: microscopic changes in endocrine or reproductive tissues (atrophy, hypertrophy, hyperplasia) and/or biologically significant endocrine/reproductive organ weight changes not explained by secondary processes such as stress or altered body weight. Such findings may be suggestive of potential carcinogenic risk unless investigated for human relevance and demonstrated otherwise.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1, footnote 5",
+      "source_quote": "Findings from rat toxicity studies suggesting hormonal perturbation may include microscopic changes in endocrine or reproductive tissues of atrophy, hypertrophy, and hyperplasia and/or biologically significant endocrine and reproductive organ weight changes which are not explained as findings secondary to processes such as stress or altered body weight. Changes of this nature may be considered evidence of functional hormonal perturbation even when changes in hormone levels are not documented. Such findings may be suggestive of potential carcinogenic risk unless investigated for human relevance and demonstrated otherwise.",
+      "key_change_from_s1b": "NEW — detailed clarification of hormonal perturbation as WoE factor.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-011",
+      "category": "weight_of_evidence / genotoxicity",
+      "rule": "Equivocal genotoxicity data that cannot be resolved in accordance with ICH S2(R1) recommendations increases uncertainty with respect to the carcinogenic potential and weighs towards conducting the 2-year rat study.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1, item 5",
+      "source_quote": "genetic toxicology study data using criteria from ICH S2(R1) Genotoxicity Testing and Data Interpretation for Pharmaceuticals Intended for Human Use; equivocal genotoxicity data that cannot be resolved in accordance with ICH S2(R1) recommendations increases uncertainty with respect to the carcinogenic potential.",
+      "key_change_from_s1b": "NEW — explicit link between equivocal genotoxicity and uncertainty in WoE.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-012",
+      "category": "weight_of_evidence / immune_modulation",
+      "rule": "Evidence of broad immunosuppression may provide sufficient concern for human risk that would NOT be further informed by standard rat and mouse carcinogenicity studies. Therefore, broad immunosuppression in humans can support a conclusion that further rat/mouse carcinogenicity studies are less likely to add value.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1, item 6 and Figure 2",
+      "source_quote": "evidence of immune modulation in accordance with ICH S8 Immunotoxicity Studies for Human Pharmaceuticals. Evidence of broad immunosuppression may provide sufficient concern for human risk that would not be further informed by standard rat and mouse carcinogenicity studies (16,17).",
+      "key_change_from_s1b": "NEW — immunosuppression identified as a factor that can support waiving the 2-year rat study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-013",
+      "category": "weight_of_evidence / integration",
+      "rule": "2-year rat study and/or investigative approaches are MORE LIKELY needed when: poorly characterised target biology/unknown class effects; low target selectivity/off-target activity; hyperplastic or other lesions of concern in histopathology; endocrine/reproductive organ perturbation; positive genotoxicity data of uncertain human relevance; immune effects of uncertain human relevance.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.2 / Figure 2",
+      "source_quote": "Figure 2: Integration of key WoE factors [...] more likely if: Poorly characterized biologic pathways, unknown class effects [Target Biology]; Low target selectivity, off-target activity [Secondary Pharmacology]; Hyperplastic or other lesions of concern [Histopathology Chronic Studies]; Endocrine/reproductive organ perturbation [Hormonal Effects]; Positive genotoxicity data of uncertain human relevance [Genotoxicity]; Immune effects of uncertain human relevance [Immune Modulation].",
+      "key_change_from_s1b": "NEW — explicit decision matrix with directionality per WoE factor.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-014",
+      "category": "weight_of_evidence / integration",
+      "rule": "2-year rat study is LESS LIKELY to add value when: well characterised target biology/known class effects; high target selectivity/no off-target activity; no histopathology findings of concern or human-irrelevant findings; no hormonal findings of concern or human-irrelevant findings; no genotoxicity risk OR unequivocal genotoxicity (per S1A); no effects on immune cells/tissues OR broad immunosuppression in humans.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.2 / Figure 2",
+      "source_quote": "less likely if: Well characterized biologic pathways, known class effects; High target selectivity, no off-target activity; No findings of concern or human-irrelevant findings [Histopathology]; No findings of concern or human-irrelevant findings [Hormonal Effects]; No genotoxicity risk or Unequivocal genotoxicity (S1A) [Genotoxicity]; No effect on immune cells/tissues or Broad immunosuppression in humans [Immune Modulation].",
+      "key_change_from_s1b": "NEW — explicit right-side criteria of Figure 2.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-015",
+      "category": "weight_of_evidence / regulatory",
+      "rule": "When the WoE assessment supports a conclusion that conduct of a 2-year rat study does NOT add value, the sponsor should seek consultation with the applicable Drug Regulatory Agency (DRA). When a sponsor decides to conduct a 2-year rat study in accordance with ICH S1B, there is NO obligation to seek consultation with the DRA.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.2",
+      "source_quote": "When the WoE assessment supports a conclusion that conduct of a 2-year rat study does not add value to the assessment of human carcinogenic risk, the sponsor should seek consultation with the applicable DRA in accordance with the established regulatory consultation procedure for that region. When a sponsor decides to conduct a 2-year rat study in accordance with ICH S1B, there is no obligation to seek consultation with the DRA.",
+      "key_change_from_s1b": "NEW — establishes regulatory consultation requirement for WoE-based waiver of 2-year rat study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-016",
+      "category": "weight_of_evidence / first_in_class",
+      "rule": "Compounds with novel drug targets (first-in-class) are eligible for an integrative WoE assessment. For such compounds, further evidence that there is no cause-for-concern in regard to target biology is needed to compensate for the lack of precedent.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.2",
+      "source_quote": "Experience from the ICH S1 study indicates that an established profile of other compound(s) in a drug class contributes substantially to assessing human carcinogenic risk associated with modulation of the pharmacologic target. Compounds with novel drug targets (i.e., first-in-class) are, nevertheless, considered eligible for an integrative WoE assessment. For such compounds, further evidence that there is no cause-for-concern in regard to target biology is needed to compensate for the lack of precedent.",
+      "key_change_from_s1b": "NEW — explicit guidance on first-in-class compounds in WoE framework.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-017",
+      "category": "rasH2 / mouse_study",
+      "rule": "A carcinogenicity study in mice (either a 2-year study in a standard strain OR a short-term study in a transgenic model such as rasH2-Tg) remains a RECOMMENDED component of a carcinogenicity assessment plan, even for compounds for which the WoE assessment indicates a 2-year rat study would not contribute significant value. Use of a transgenic model is preferred (3R principles) unless there is a scientific rationale for conducting a 2-year study in mice.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.3",
+      "source_quote": "A carcinogenicity study in mice, either a 2-year study in a standard strain of mice or a short-term study in a transgenic model as in ICH S1B, remains a recommended component of a carcinogenicity assessment plan, even for those compounds for which the WoE assessment indicates a 2-year rat study would not contribute significant value. Use of a transgenic model is consistent with the 3R (reduce/refine/replace) principles and this model should be prioritized unless there is a scientific rationale for conducting a 2-year study in mice.",
+      "key_change_from_s1b": "NEW — explicitly recommends rasH2-Tg as default mouse model, prioritised over 2-year mouse study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-018",
+      "category": "rasH2 / mouse_study_waiver",
+      "rule": "A mouse carcinogenicity study may NOT be appropriate when: (1) the WoE evaluation strongly indicates no carcinogenic risk to humans AND only subtherapeutic and pharmacologically inactive drug levels relative to human exposure can be achieved in the mouse; OR (2) the WoE assessment indicates the compound is likely to be carcinogenic in humans.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.3",
+      "source_quote": "There are cases where it may not be appropriate to conduct a mouse carcinogenicity study. As one example, a mouse study may not be appropriate when the WoE evaluation strongly indicates no carcinogenic risk to humans and the data indicate that only subtherapeutic and pharmacologically inactive drug levels relative to human exposure can be achieved in the mouse. As an additional example, when the WoE assessment indicates that a compound is likely to be carcinogenic in humans, the conduct of a mouse study may not be appropriate.",
+      "key_change_from_s1b": "NEW — two specific criteria for waiving mouse study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-019",
+      "category": "rasH2 / high_dose_selection",
+      "rule": "For rasH2-Tg mouse carcinogenicity studies, a plasma AUC exposure ratio (rodent:human) of 50-fold is an adequate criterion for high dose selection (in the absence of dose-limiting toxicity or other criteria outlined in ICH S1C(R2)). This replaces the 25-fold ratio used for 2-year studies in standard rodent strains.",
+      "source_section": "S1B(R1) Addendum Part II, Section 3",
+      "source_quote": "Therefore, all criteria for selection of the high dose as specified in S1C(R2) for 2-year rodent carcinogenicity studies are applicable to rasH2-Tg mice, including a plasma exposure ratio, except that the plasma exposure ratio will be 50-fold in rasH2-Tg mice rather than 25-fold as for 2-year studies conducted in standard strains of rodents.",
+      "key_change_from_s1b": "NEW — establishes 50-fold AUC ratio for rasH2-Tg mice (vs. 25-fold in S1C(R2) for standard rodents). Based on retrospective analysis of 53 compounds.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-020",
+      "category": "rasH2 / woe_document",
+      "rule": "A rasH2-Tg mouse study is NOT expected to be completed to support a WoE assessment for determining whether to conduct a 2-year rat study. However, if rasH2-Tg mouse study results are available, they should be included in the WoE document.",
+      "source_section": "S1B(R1) Addendum Part II, Section 2.1",
+      "source_quote": "A rasH2-Tg mouse study is not expected to be completed to support a WoE assessment. However, if rasH2-Tg mouse study results are available, they should be included in the WoE document.",
+      "key_change_from_s1b": "NEW clarification on timing of WoE assessment relative to mouse study.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-021",
+      "category": "mechanistic_studies",
+      "rule": "Mechanistic studies are often useful for interpretation of tumor findings in a carcinogenicity study. These should evaluate dose dependency and the relationship to carcinogenicity study conditions. Approaches include: cellular changes (morphological/histochemical/functional), biochemical measurements (plasma hormones T3/T4/TSH/prolactin, growth factors, binding to proteins such as alpha-2u-globulin, tissue enzyme activity), additional genotoxicity testing in appropriate models, and modified protocols.",
+      "source_section": "S1B Part I, Section 5",
+      "source_quote": "Mechanistic studies are often useful for the interpretation of tumor findings in a carcinogenicity study and can provide a perspective on their relevance to human risk assessment. [...] Dose dependency and the relationship to carcinogenicity study conditions should be evaluated in these investigational studies.",
+      "key_change_from_s1b": "No change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-022",
+      "category": "evaluation / carcinogenic_potential",
+      "rule": "Evidence of tumorigenic effects in rodent models should be evaluated in light of: tumor incidence and latency; pharmacokinetics of the drug in rodent models compared to humans; and data from any ancillary or mechanistic studies informative with respect to the relevance of observed effects to humans. Results from all tests should be considered as part of the overall weight of evidence taking into account the scientific status of the test systems.",
+      "source_section": "S1B Part I, Section 7",
+      "source_quote": "Evidence of tumorigenic effects of the drug in rodent models should be evaluated in light of the tumor incidence and latency, the pharmacokinetics of the drug in the rodent models as compared to humans, and data from any ancillary or mechanistic studies that are informative with respect to the relevance of the observed effects to humans. The results from any tests cited above should be considered as part of the overall 'weight of evidence' taking into account the scientific status of the test systems.",
+      "key_change_from_s1b": "No change to this principle; WoE application now formalised in Addendum.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-023",
+      "category": "strategy / preamble",
+      "rule": "The strategy for testing the carcinogenic potential of a pharmaceutical is developed only after acquisition of key information: results of genetic toxicology (S2A and S2B), intended patient population, clinical dosage regimen (S1A), pharmacodynamics in animals and in humans (S1C), and repeated-dose toxicology studies. Data from repeated-dose toxicology studies indicating immunosuppressant properties, hormonal activity, or other activity considered a risk factor must be considered in carcinogenicity study design.",
+      "source_section": "S1B Part I, Section 4.1",
+      "source_quote": "The strategy for testing the carcinogenic potential of a pharmaceutical is developed only after the acquisition of certain key units of information, including the results of genetic toxicology (Guidelines S2A and S2B), intended patient population, clinical dosage regimen (Guideline S1A), pharmacodynamics in animals and in humans (selectivity, dose-response) (Guideline S1C), and repeated-dose toxicology studies. Repeated-dose toxicology studies in any species (including nonrodents) may indicate that the test compound possesses immunosuppressant properties, hormonal activity, or other activity considered to be a risk factor for humans, and this information should be considered in the design of any further studies for the assessment of carcinogenic potential.",
+      "key_change_from_s1b": "No change",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1BR1-024",
+      "category": "woe_appendix / attributes_for_unlikely",
+      "rule": "WoE attributes more likely to support a conclusion that results of a 2-year rat study would NOT contribute value include all of: (1) Target biology well-characterised and not associated with cellular pathways known to be involved with human cancer; (2) No secondary pharmacology concerns informing off-target potential; (3) No hyperplastic, hypertrophic, atypical cellular alterations, or degenerative/regenerative changes without adequate explanation in chronic toxicity studies; (4) No perturbation of endocrine and reproductive organs; (5) Genotoxic potential concluded negative based on S2(R1) criteria; (6) No evidence of immune modulation or immunotoxicity.",
+      "source_section": "S1B(R1) Addendum Part II, Appendix (Preamble to Case Studies)",
+      "source_quote": "One outcome of the ICH S1 study was the recognition that programs with the following WoE attributes are more likely to support a conclusion that the results of a 2-year rat study would not contribute value to human carcinogenicity risk assessment: Target biology is well-characterized and not associated with cellular pathways known to be involved with human cancer development. [...] No identified concerns from secondary pharmacology intended to inform off-target potential for the pharmaceutical. Results from chronic toxicity studies indicate no hyperplastic, hypertrophic, atypical cellular alterations, or degenerative/regenerative changes without adequate explanation of pathogenesis or human relevance, indicative of no on- or off-target potential of carcinogenic concern. No perturbation of endocrine and reproductive organs observed, or endocrine findings adequately explained with respect to potential human relevance. The overall assessment of genotoxic potential is concluded to be negative based on criteria from ICH S2(R1) Guidance. No evidence of immune modulation or immunotoxicity based on target biology and repeat-dose toxicology studies.",
+      "key_change_from_s1b": "NEW — from prospective ICH S1 study findings codified in Appendix.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "s1b_r1_woe_framework": {
+    "description": "Weight of evidence assessment framework for determining human carcinogenic potential and need for 2-year rat carcinogenicity study (ICH S1B(R1) Addendum, Part II, Sections 2.1 and 2.2)",
+    "three_outcomes": [
+      {
+        "outcome": "LIKELY carcinogenic in humans",
+        "consequence": "Document WoE assessment and seek regulatory consultation on not conducting a 2-year rat study AND/OR a mouse study. Mouse study may not be appropriate.",
+        "source_section": "S1B(R1) Addendum Part II, Section 2 and Figure 1"
+      },
+      {
+        "outcome": "UNLIKELY carcinogenic in humans",
+        "consequence": "Document WoE assessment and seek regulatory consultation on not conducting a 2-year rat study. Mouse carcinogenicity study (preferably rasH2-Tg) still recommended.",
+        "source_section": "S1B(R1) Addendum Part II, Section 2 and Figure 1"
+      },
+      {
+        "outcome": "UNCERTAIN — carcinogenic potential in humans is uncertain",
+        "consequence": "Proceed with standard S1B approach: long-term (2-year) carcinogenicity study PLUS additional in vivo carcinogenicity study. No DRA consultation required.",
+        "source_section": "S1B(R1) Addendum Part II, Section 2 and Figure 1"
+      }
+    ],
+    "six_woe_factors": [
+      {
+        "factor_number": 1,
+        "factor_name": "Target Biology",
+        "more_likely_2yr_rat_needed": "Poorly characterized biologic pathways, unknown class effects",
+        "less_likely_2yr_rat_needed": "Well characterized biologic pathways, known class effects",
+        "source_section": "2.1 item 1; Figure 2"
+      },
+      {
+        "factor_number": 2,
+        "factor_name": "Secondary Pharmacology",
+        "more_likely_2yr_rat_needed": "Low target selectivity, off-target activity",
+        "less_likely_2yr_rat_needed": "High target selectivity, no off-target activity",
+        "source_section": "2.1 item 2; Figure 2"
+      },
+      {
+        "factor_number": 3,
+        "factor_name": "Histopathology / Chronic Studies",
+        "more_likely_2yr_rat_needed": "Hyperplastic or other lesions of concern",
+        "less_likely_2yr_rat_needed": "No findings of concern or human-irrelevant findings",
+        "primary_study": "6-month rat toxicity study",
+        "key_findings": "Cellular hypertrophy, hyperplasia, persistent tissue injury, chronic inflammation, foci of cellular alteration, preneoplastic changes, tumors",
+        "source_section": "2.1 item 3; Figure 2; footnote 4"
+      },
+      {
+        "factor_number": 4,
+        "factor_name": "Hormonal Effects",
+        "more_likely_2yr_rat_needed": "Endocrine/reproductive organ perturbation",
+        "less_likely_2yr_rat_needed": "No findings of concern or human-irrelevant findings",
+        "source_section": "2.1 item 4; Figure 2; footnote 5"
+      },
+      {
+        "factor_number": 5,
+        "factor_name": "Genotoxicity",
+        "more_likely_2yr_rat_needed": "Positive genotoxicity data of uncertain human relevance",
+        "less_likely_2yr_rat_needed": "No genotoxicity risk OR unequivocal genotoxicity (per S1A criteria — positive in humans)",
+        "note": "Equivocal genotoxicity increases uncertainty",
+        "source_section": "2.1 item 5; Figure 2"
+      },
+      {
+        "factor_number": 6,
+        "factor_name": "Immune Modulation",
+        "more_likely_2yr_rat_needed": "Immune effects of uncertain human relevance",
+        "less_likely_2yr_rat_needed": "No effect on immune cells/tissues OR broad immunosuppression in humans",
+        "note": "Broad immunosuppression is a special case where standard carcinogenicity studies would not further inform human risk",
+        "source_section": "2.1 item 6; Figure 2"
+      }
+    ],
+    "investigative_approaches_for_uncertainty": [
+      "Additional investigative studies or analyses of specimens collected from prior studies (e.g., special histochemical stains, molecular biomarkers, serum hormone levels, immune cell function, in vitro or in vivo test systems, data from emerging technologies)",
+      "Clinical data generated to inform human mechanistic relevance at therapeutic doses and exposures (e.g., urine drug concentrations and evidence of crystal formation, targeted measurements of clinical plasma hormonal alterations, human imaging data)"
+    ],
+    "rasH2_high_dose_rule": {
+      "standard_rodent_2yr": "25-fold plasma AUC ratio (rodent:human) as per S1C(R2)",
+      "rasH2_tg_mouse": "50-fold plasma AUC ratio (rodent:human)",
+      "rationale": "Retrospective analysis of 53 compounds tested in rasH2-Tg model showed detection of compound-related tumors within a systemic rodent-to-human exposure ratio up to 50-fold",
+      "source_quote": "all criteria for selection of the high dose as specified in S1C(R2) for 2-year rodent carcinogenicity studies are applicable to rasH2-Tg mice, including a plasma exposure ratio, except that the plasma exposure ratio will be 50-fold in rasH2-Tg mice rather than 25-fold as for 2-year studies conducted in standard strains of rodents.",
+      "source_section": "S1B(R1) Addendum Part II, Section 3"
+    }
+  },
+
+  "s1c_r2_rules": [
+    {
+      "rule_id": "S1CR2-001",
+      "category": "high_dose_selection / overview",
+      "rule": "Six criteria are acceptable for selection of the high dose for carcinogenicity studies: (1) Maximum Tolerated Dose (MTD); (2) Pharmacokinetic endpoint (25-fold AUC ratio, rodent:human); (3) Dose-limiting pharmacodynamic effects; (4) Saturation of absorption; (5) Maximum feasible dose; (6) Limit dose (1500 mg/kg/day). The approach should be documented and justified with scientific rationale.",
+      "source_section": "S1C(R2) Section 2 Summary",
+      "source_quote": "This guidance outlines six criteria for selection of the high dose for carcinogenicity studies of therapeutics: the maximum tolerated dose, 25-fold AUC ratio (rodent:human), dose-limiting pharmacodynamic effects, saturation of absorption, maximum feasible dose, and limit dose.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-002",
+      "category": "high_dose_selection / mtd",
+      "rule": "The MTD is defined as the top dose or maximum tolerated dose predicted to produce a minimum toxic effect over the course of the carcinogenicity study, which can be predicted from a 90-day dose range-finding study in which minimal toxicity is observed. Factors: no more than 10% decrease in body weight gain relative to controls; target organ toxicity; significant alterations in clinical pathological parameters.",
+      "source_section": "S1C(R2) Section 1.2",
+      "source_quote": "The top dose or maximum tolerated dose is that which is predicted to produce a minimum toxic effect over the course of the carcinogenicity study. Such an effect can be predicted from a 90-day dose range-finding study in which minimal toxicity is observed. Factors to consider are alterations in physiological function which would be predicted to alter the animal's normal life span or interfere with interpretation of the study. Such factors include: no more than 10% decrease in body weight gain relative to controls; target organ toxicity; significant alterations in clinical pathological parameters.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-003",
+      "category": "high_dose_selection / auc_ratio",
+      "rule": "A systemic exposure representing a 25-fold AUC ratio (rodent:human, at the maximum recommended daily dose) is an appropriate endpoint for high dose selection for carcinogenicity studies for pharmaceuticals which have similar metabolic profiles in rodents and humans AND low organ toxicity in rodents (i.e., high doses are well tolerated in rodents). Note: S1B(R1) Addendum modifies this to 50-fold for rasH2-Tg mouse studies.",
+      "source_section": "S1C(R2) Section 1.3",
+      "source_quote": "A systemic exposure representing a large multiple of the human area under the exposure curve (AUC) (at the maximum recommended daily dose) can be an appropriate endpoint for dose selection for carcinogenicity studies for pharmaceuticals which have similar metabolic profiles in animals and rodents and low organ toxicity in rodents (i.e., high doses are well tolerated in rodents). [...] the selection of a high dose for carcinogenicity studies which represents a 25-to-1 exposure ratio of rodent to human plasma AUC of parent compound and/or metabolites is considered pragmatic.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-004",
+      "category": "high_dose_selection / auc_ratio / criteria",
+      "rule": "Criteria for valid pharmacokinetically-defined AUC-based exposure for high dose selection: (1) Rodent PK data from carcinogenicity study strains using planned route/dose ranges; (2) PK data from studies of sufficient duration to account for time-dependent changes; (3) Documented similarity of metabolism between rodents and humans; (4) Scientific judgement on whether AUC comparison is based on parent, parent+metabolite(s), or metabolite(s); (5) Interspecies differences in protein binding considered; (6) Human PK data derived from studies encompassing the maximum recommended human daily dose.",
+      "source_section": "S1C(R2) Section 1.4",
+      "source_quote": "The following criteria are especially applicable for use in determining a pharmacokinetically-defined exposure for high dose selection. 1. Rodent pharmacokinetic data are derived from the strains used for the carcinogenicity studies [...] 2. Pharmacokinetic data are derived from studies of sufficient duration [...] 3. Documentation is provided on the similarity of metabolism between rodents and humans [...] 4. In assessing exposure, scientific judgement is used to determine whether the AUC comparison is based on data for the parent, parent and metabolite(s), or metabolite(s) [...] 5. Interspecies differences in protein binding are taken into consideration [...] 6. Human pharmacokinetic data are derived from studies encompassing the maximum recommended human daily dose.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-005",
+      "category": "high_dose_selection / limit_dose",
+      "rule": "The limit dose for carcinogenicity studies is 1500 mg/kg/day. This limit dose applies where the maximum recommended human dose does not exceed 500 mg/day. If the human dose exceeds 500 mg/day, the high dose can be increased up to the maximum feasible dose. The rodent systemic exposure at 1500 mg/kg/day should be greater by at least an order of magnitude than human exposure at the intended human therapeutic dose.",
+      "source_section": "S1C(R2) Section 1.8",
+      "source_quote": "In determining the high dose for carcinogenicity studies using the approaches outlined in this guideline it is appropriate to limit this dose to 1500 mg/kg/day (Note 10). This limit dose applies where the maximum recommended human dose does not exceed 500 mg/day. [...] The rodent systemic exposure at 1500 mg/kg/day should be greater by at least an order of magnitude than human exposure measured at the intended human therapeutic dose.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-006",
+      "category": "high_dose_selection / pharmacodynamic",
+      "rule": "Pharmacodynamic endpoints for high dose selection should produce a pharmacodynamic response of such magnitude as would preclude further dose escalation, but should NOT produce disturbances of physiology or homeostasis which would compromise the validity of the study (e.g., hypotension, inhibition of blood clotting).",
+      "source_section": "S1C(R2) Section 1.6",
+      "source_quote": "The high dose selected should produce a pharmacodynamic response in dosed animals of such magnitude as would preclude further dose escalation. However, the dose should not produce disturbances of physiology or homeostasis which would compromise the validity of the study. Examples include hypotension and inhibition of blood clotting (because of the risk of spontaneous bleeding).",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-007",
+      "category": "high_dose_selection / saturation",
+      "rule": "High dose selection based on saturation of absorption measured by systemic availability of drug-related substances can be considered. The mid and low doses selected for the carcinogenicity study should take into account saturation of metabolic and elimination pathways.",
+      "source_section": "S1C(R2) Section 1.5",
+      "source_quote": "High dose selection based on saturation of absorption measured by systemic availability of drug-related substances can be considered. The mid and low doses selected for the carcinogenicity study should take into account saturation of metabolic and elimination pathways.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-008",
+      "category": "high_dose_selection / maximum_feasible",
+      "rule": "The maximum feasible dose by dietary administration is considered to be 5% of diet. When routes other than dietary administration are appropriate, the high dose can be limited based on considerations including practicality and local tolerance.",
+      "source_section": "S1C(R2) Section 1.7",
+      "source_quote": "Currently, the maximum feasible dose by dietary administration is considered to be 5% of diet. [...] When routes other than dietary administration are appropriate, the high dose can be limited based on considerations including practicality and local tolerance.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-009",
+      "category": "dose_ranging",
+      "rule": "Dose-ranging studies for carcinogenicity high dose selection should be conducted for both males and females for all strains and species to be tested. Dose selection is generally determined from 90-day studies using the route and method of administration that will be used in the bioassay. Selection of dosing schedule and regimen should be based on clinical use and exposure patterns, pharmacokinetics, and practical considerations.",
+      "source_section": "S1C(R2) Section 1.1",
+      "source_quote": "Dose-ranging studies should be conducted for both males and females for all strains and species to be tested in the carcinogenicity bioassay; [...] Dose selection is generally determined from 90-day studies using the route and method of administration that will be used in the bioassay; [...] Selection of an appropriate dosing schedule and regimen should be based on clinical use and exposure patterns, pharmacokinetics, and practical considerations.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-010",
+      "category": "mid_low_dose_selection",
+      "rule": "The selection of mid and low doses for carcinogenicity studies should provide information to aid in assessing the relevance of study findings to humans and should consider: (1) linearity of PK and saturation of metabolic pathways; (2) human exposure and therapeutic dose; (3) pharmacodynamic response in rodents; (4) alterations in normal rodent physiology; (5) mechanistic information and potential for threshold effects; (6) unpredictability of progression of toxicity from short-term studies.",
+      "source_section": "S1C(R2) Section 1.10",
+      "source_quote": "Regardless of the method used for the selection of the high dose, the selection of the mid and low doses for the carcinogenicity study should provide information to aid in assessing the relevance of study findings to humans. [...] 1. Linearity of pharmacokinetics and saturation of metabolic pathways; 2. Human exposure and therapeutic dose; 3. Pharmacodynamic response in rodents; 4. Alterations in normal rodent physiology; 5. Mechanistic information and potential for threshold effects; 6. The unpredictability of the progression of toxicity observed in short-term studies.",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_id": "S1CR2-011",
+      "category": "auc_ratio / scientific_basis",
+      "rule": "A minimum systemic exposure ratio of 25 (rodent:human AUC) can be considered a useful pharmacokinetic endpoint for high dose selection. This value was attained by approximately 25% of compounds tested in the FDA database, is high enough to detect known or probable (IARC 1, 2A) human carcinogenic drugs, and represents an adequate margin of safety.",
+      "source_section": "S1C(R2) Note 3",
+      "source_quote": "As a result of the evaluations described above, a minimum systemic exposure ratio of 25 can be considered as a useful pharmacokinetic endpoint for high dose selection. This value was attained by approximately 25% of compounds tested in the FDA database (see Note 10), is high enough to detect known or probable (IARC 1, 2A) human carcinogenic drugs, and represents an adequate margin of safety.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+
+  "cross_guideline_relationships": {
+    "s1b_r1_modifies_s1c_r2": "S1B(R1) Addendum Section 3 modifies S1C(R2) Section 1.3 specifically for rasH2-Tg mice: the plasma AUC ratio endpoint changes from 25-fold (standard rodents) to 50-fold (rasH2-Tg mice). All other S1C(R2) high dose criteria remain applicable.",
+    "s11_references_m3": "S11 Section 1.4 and 2.3.1 reference ICH M3 for the principle that juvenile animal toxicity studies are generally not important to support short-term PK studies.",
+    "s11_references_s9": "S11 Section 1.3 defers to ICH S9 for whether to conduct a JAS for anticancer pharmaceuticals; S11 governs study design in all oncology cases.",
+    "s11_references_s6": "S11 Section 3.3 defers to ICH S6 for pharmacologically relevant species selection and dose selection principles for biotechnology-derived products.",
+    "s1b_addendum_complements_s1a": "S1B(R1) Addendum is complementary to S1A (Need for Carcinogenicity Studies), S1B (Testing for Carcinogenicity), and S1C(R2) (Dose Selection). All S1 guidelines should be read together."
+  }
+}

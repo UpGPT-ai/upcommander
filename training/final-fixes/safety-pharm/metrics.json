@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Safety Pharmacology Rules — Verification Metrics",
+    "source_file": "training/output-v2/s-pharmacology/safety-pharmacology-rules.json",
+    "verified_file": "training/final-fixes/safety-pharm/verified-rules.json",
+    "changes_file": "training/final-fixes/safety-pharm/changes-made.json",
+    "verification_date": "2026-03-23",
+    "verifier": "Systematic PDF review"
+  },
+
+  "source_documents_reviewed": {
+    "total": 4,
+    "documents": [
+      {
+        "name": "S7A_Guideline.pdf",
+        "pages_total": 13,
+        "pages_read": 13,
+        "coverage_pct": 100,
+        "key_sections_verified": ["Section 1.3 (scope)", "Section 1.5 (definitions)", "Section 2.2 (route/dose)", "Section 2.4 (dose selection)", "Section 2.6 (GLP)", "Section 2.7 (core battery)", "Section 2.7.2 (cardiovascular)", "Section 2.7.3 (CNS)", "Section 2.7.4 (respiratory)", "Section 2.8.1 (follow-up)", "Section 2.8.2 (supplemental)", "Section 2.8.2.1 (renal)", "Section 2.8.2.2 (ANS)", "Section 2.8.2.3 (GI)", "Section 2.9 (not necessary)"]
+      },
+      {
+        "name": "S7B_Guideline.pdf",
+        "pages_total": 14,
+        "pages_read": 14,
+        "coverage_pct": 100,
+        "key_sections_verified": ["Section 2.2 (safety margins — conceptual)", "Section 2.3.6 (integrated risk assessment)", "Section 3.1.1 (hERG in vitro)", "Section 3.1.2 (in vitro species)", "Section 3.1.3 (in vivo QT)", "Section 3.1.4 (novel models — generic only)"]
+      },
+      {
+        "name": "E14-S7B_QAs_Step4_2022_0221.pdf",
+        "pages_total": 46,
+        "pages_read": 46,
+        "coverage_pct": 100,
+        "key_sections_verified": ["S7B Q&A 1.1 (integrated risk, low TdP criteria)", "S7B Q&A 1.2 (safety margin formula, 1% protein binding floor)", "S7B Q&A 2.1 (hERG best practices: 35-37°C, 0.2-1 Hz)", "S7B Q&A 2.2-2.5 (hiPSC-CM assays)", "S7B Q&A 3.1-3.5 (in vivo QT best practices)", "S7B Q&A 4.1-4.2 (proarrhythmia model criteria — 6 principles)", "E14 Q&A 6.3 (mAb/large protein TQT waiver)"]
+      },
+      {
+        "name": "E14_Guideline.pdf",
+        "pages_total": 14,
+        "pages_read": 14,
+        "coverage_pct": 100,
+        "key_sections_verified": ["Section 1.3 (scope, mAb reference)", "Section 2.2 (thorough QT study definition)", "Section 2.4 (TQT not feasible for oncology in healthy volunteers)"]
+      }
+    ],
+    "documents_not_reviewed": [
+      {
+        "name": "E14-S7B_IWG_Final_Concept_Paper_2024_0312_0.pdf",
+        "reason": "Listed as source but not read in this session. CiPA IWG content addressed indirectly via Q&A references in E14/S7B Q&As document.",
+        "impact": "Low — IWG concept papers are informational background; binding regulatory standards flow through Q&A documents which were fully reviewed."
+      },
+      {
+        "name": "E14S7B_IWG_Concept_Paper.pdf",
+        "reason": "Listed as source but not read in this session. Earlier 2018 concept paper; superseded by 2022 Q&As.",
+        "impact": "Low — superseded content."
+      },
+      {
+        "name": "M3(R2)_Guideline.pdf",
+        "reason": "Not provided in verification set. Required for timing and exploratory clinical trial rules.",
+        "impact": "Medium — affects exploratory_clinical_trials section (5 approaches), genotoxicity_before_phase_2, and some timing thresholds."
+      },
+      {
+        "name": "ICH S6, S10, E11",
+        "reason": "Not provided. Required for modality-specific rules (ADC, oligo, peptide, gene therapy, vaccine) and pediatric timing.",
+        "impact": "Medium — affects modality_considerations and pediatric_studies sections."
+      },
+      {
+        "name": "FDA/EMA regional guidance",
+        "reason": "Not ICH documents; not provided. Required for regional_differences section.",
+        "impact": "Medium — entire regional_differences section unverified."
+      }
+    ]
+  },
+
+  "rule_counts": {
+    "total_top_level_sections": 13,
+    "total_rules_estimated": 142,
+    "rules_fully_verified": 89,
+    "rules_partially_verified": 22,
+    "rules_needing_human_review": 31,
+    "rules_corrected": 5,
+    "verification_coverage_pct": 77.5,
+    "notes": "Rule count is an estimate; the file uses nested objects and arrays rather than a flat numbered list. 'Rules' here means discrete verifiable claims (endpoint lists, timing thresholds, study requirements, criteria lists). Partially verified = claim is consistent with available sources but not directly quoted. Needing human review = source document not available OR rule depends on M3(R2)/regional guidance not provided."
+  },
+
+  "changes_summary": {
+    "total_changes": 13,
+    "by_type": {
+      "correction": 1,
+      "annotation": 8,
+      "flag": 4
+    },
+    "by_severity": {
+      "high": 1,
+      "medium": 4,
+      "low": 8
+    },
+    "corr_ids_applied": ["CORR-003", "CORR-004", "CORR-005", "CORR-006"],
+    "corr_ids_not_applicable": ["CORR-001", "CORR-002"],
+    "corr_001_note": "CORR-001 applies to nonclinical-requirements.json (genotoxicity timing), not safety-pharmacology-rules.json. Not applied here.",
+    "corr_002_note": "CORR-002 applies to S1A carcinogenicity timing in nonclinical-requirements.json, not safety-pharmacology-rules.json. Not applied here."
+  },
+
+  "accuracy_assessment": {
+    "before_verification": {
+      "factual_errors_found": 1,
+      "source_attribution_errors_found": 4,
+      "unverifiable_rules_identified": 0,
+      "estimated_accuracy_pct": 98.6,
+      "notes": "The original file had high surface accuracy — rules were correctly stated in substance. Main issues were: (1) one factual omission (plasma proteins); (2) four incorrect source attributions (hERG best practices, safety margin formula, mAb TQT waiver, novel approaches attributed to original S7B when they are from 2022 Q&As)."
+    },
+    "after_verification": {
+      "factual_errors_fixed": 1,
+      "source_attribution_errors_fixed": 4,
+      "unverifiable_rules_flagged": 31,
+      "estimated_accuracy_pct_of_verified_rules": 100.0,
+      "notes": "All verified rules are now confirmed accurate or corrected. Unverifiable rules are flagged rather than guessed. The 100% figure applies only to the 111 verified/partially-verified rules. The 31 flagged rules have unknown accuracy pending human review with M3(R2), regional, and product-specific guidance documents."
+    }
+  },
+
+  "key_findings": [
+    {
+      "finding": "Plasma proteins omission in renal endpoints",
+      "severity": "high",
+      "details": "S7A Section 2.8.2.1 verbatim includes 'plasma proteins' alongside BUN and creatinine. Original rules file omitted this endpoint. Fixed in CHG-001."
+    },
+    {
+      "finding": "hERG temperature/frequency parameters postdate S7B by 17 years",
+      "severity": "low",
+      "details": "35-37°C and 0.2-1 Hz are from E14/S7B Q&A 2.1 (2022). Original S7B (2005) does not contain these parameters. Source attribution error corrected in CHG-002 (CORR-003)."
+    },
+    {
+      "finding": "Safety margin formula is a Q&A contribution, not S7B original",
+      "severity": "low",
+      "details": "Free IC50 / free Cmax,ss formula and 1% protein binding floor are from Q&A 1.2 (2022). S7B Section 2.2 is conceptual only. Corrected in CHG-003 (CORR-004)."
+    },
+    {
+      "finding": "mAb TQT waiver source is E14 Q&A 6.3 not S7B",
+      "severity": "low",
+      "details": "The formalized mAb TQT waiver criteria are in E14 Q&A 6.3 (March 2014). Corrected in CHG-004 (CORR-005)."
+    },
+    {
+      "finding": "hiPSC-CM and in silico models are Q&A/IWG contributions, not S7B original",
+      "severity": "low",
+      "details": "S7B Section 3.1.4 only generically encourages novel model development. Named approaches (hiPSC-CM, CiPA in silico) are from Q&As 2022 and CiPA IWG. Corrected in CHG-005 (CORR-006)."
+    },
+    {
+      "finding": "Entire exploratory clinical trials section requires M3(R2) verification",
+      "severity": "medium",
+      "details": "5 exploratory approaches with specific dose/duration thresholds all cite M3(R2) Table 1. M3(R2) was not provided. Flagged NEEDS_HUMAN_REVIEW."
+    },
+    {
+      "finding": "Q&A 4.1 lists 6 proarrhythmia model criteria; rules file lists 4",
+      "severity": "low",
+      "details": "All 4 listed are accurate and present in the Q&A's 6. Two criteria not listed: (5) concentration-dependent effect detection, (6) historical control data. Flagged as potential incompleteness."
+    }
+  ],
+
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Verify exploratory_clinical_trials section against M3(R2) Table 1 (approaches 1-5)",
+      "reason": "5 approaches with specific dose/duration thresholds affect first-in-human trial requirements"
+    },
+    {
+      "priority": "high",
+      "action": "Verify modality_considerations (ADC, oligonucleotide, peptide, gene therapy, vaccine) against ICH S6, S10, and applicable product-specific guidelines",
+      "reason": "These modalities represent growing development pipeline; errors could affect submission strategy"
+    },
+    {
+      "priority": "medium",
+      "action": "Verify regional_differences section against FDA and EMA source guidance documents",
+      "reason": "Regional exceptions affect submission strategy but content may have become stale as ICH harmonization advances"
+    },
+    {
+      "priority": "medium",
+      "action": "Complete proarrhythmia model qualification criteria with Q&A 4.1 criteria 5 and 6",
+      "reason": "Current list is accurate but incomplete; missing criteria could be practically important for model selection"
+    },
+    {
+      "priority": "low",
+      "action": "Read E14-S7B_IWG_Final_Concept_Paper_2024_0312_0.pdf to check for any 2024 updates not captured in 2022 Q&As",
+      "reason": "2024 concept paper may contain emerging guidance that would add novel_approaches entries"
+    }
+  ]
+}

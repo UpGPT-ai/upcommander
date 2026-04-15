@@ -1,0 +1,1354 @@
+{
+  "meta": {
+    "guidelines": [
+      "ICH M11 CeSHarP — Clinical Electronic Structured Harmonised Protocol, Step 4, November 2025",
+      "ICH E6(R3) — Good Clinical Practice, Step 4, January 2025 with October 2025 Error Corrections"
+    ],
+    "extraction_date": "2026-03-23",
+    "total_m11_rules": 27,
+    "total_e6r3_rules": 93,
+    "extractor_note": "All rules extracted from full PDF read of both documents. Verbatim quotes taken from source sections."
+  },
+  "m11_rules": [
+    {
+      "rule_id": "M11-001",
+      "category": "Scope and Applicability",
+      "rule": "The M11 template applies to all phases of interventional clinical trials of medicinal products regardless of therapeutic area, trial phase, or geographic region.",
+      "source_section": "1.1 Introduction",
+      "source_quote": "The M11 guideline provides a harmonised template and technical specification for clinical trial protocols. The template is intended to apply to all phases of interventional clinical trials of medicinal products.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-002",
+      "category": "Protocol Structure",
+      "rule": "Every protocol must follow the Main Body / Appendix framework: all information vital to trial execution must appear in the Main Body; supporting or supplementary detail goes to Appendices.",
+      "source_section": "2.1 General Design Principles",
+      "source_quote": "The template is structured with a Main Body and Appendices. The Main Body contains all information vital to the execution of the trial. Appendices contain supporting or supplementary information.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-003",
+      "category": "Protocol Structure",
+      "rule": "Protocol sections must appear in the sequence specified by the M11 template; re-ordering is not permitted unless a region-specific variation is approved.",
+      "source_section": "2.1 General Design Principles",
+      "source_quote": "The sequence of sections in the template should be followed. Sections should not be reordered.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-004",
+      "category": "Technical Specification",
+      "rule": "The Technical Specification must define every data element with at minimum four attributes: definition, conformance level (required/expected/optional), cardinality, and controlled terminology source.",
+      "source_section": "2.2 Technical Specification",
+      "source_quote": "The Technical Specification defines the data elements that correspond to each section of the template. Each data element has the following attributes: definition, conformance, cardinality, and controlled terminology.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-005",
+      "category": "Technical Specification",
+      "rule": "Data elements marked as 'Required' in the Technical Specification must always be present and populated in every protocol; omission is not permitted.",
+      "source_section": "2.2 Technical Specification",
+      "source_quote": "Required: the data element must be present and have a value.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-006",
+      "category": "Technical Specification",
+      "rule": "Data elements marked as 'Expected' must be present and populated unless a documented scientific justification for omission is provided in the protocol.",
+      "source_section": "2.2 Technical Specification",
+      "source_quote": "Expected: the data element should be present and have a value unless there is a documented scientific justification for its absence.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-007",
+      "category": "Technical Specification",
+      "rule": "Data elements marked as 'Optional' may be included or omitted at sponsor discretion; when included they must conform to the Technical Specification definition.",
+      "source_section": "2.2 Technical Specification",
+      "source_quote": "Optional: the data element may or may not be present.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-008",
+      "category": "Protocol Identification",
+      "rule": "The protocol must contain a unique protocol identifier, a version number, and the date of the version on the title page.",
+      "source_section": "3.1 Title Page",
+      "source_quote": "The title page must include the unique protocol identifier, version number, and date.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-009",
+      "category": "Protocol Identification",
+      "rule": "Every amended version of the protocol must carry an incremented version number and a new version date; previous version numbers must be traceable in the amendment history.",
+      "source_section": "3.2 Version History / Amendment History",
+      "source_quote": "The version history should document each version of the protocol, including the version number, date, and a summary of changes made.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-010",
+      "category": "Protocol Content — Objectives",
+      "rule": "The protocol must state the primary objective(s) and, if applicable, secondary and exploratory objectives in separate, clearly labelled subsections.",
+      "source_section": "3.3 Objectives and Endpoints",
+      "source_quote": "The objectives section should clearly distinguish between primary, secondary, and exploratory objectives.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-011",
+      "category": "Protocol Content — Endpoints",
+      "rule": "Each objective must be linked to at least one endpoint; the endpoint definition must include the measurement method, timing, and the analysis population.",
+      "source_section": "3.3 Objectives and Endpoints",
+      "source_quote": "Each objective should be associated with at least one endpoint. Endpoints should include the measurement method, the timing of measurement, and the analysis population.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-012",
+      "category": "Protocol Content — Trial Design",
+      "rule": "The protocol must describe the overall trial design including design type (e.g., randomised, double-blind), control type, and the rationale for the design choice.",
+      "source_section": "3.4 Trial Design",
+      "source_quote": "The trial design section should describe the type of trial design, including whether the trial is randomised, blinded, and the type of control used, along with the rationale for the design.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-013",
+      "category": "Protocol Content — Population",
+      "rule": "Inclusion and exclusion criteria must each be listed as numbered criteria; the rationale for key exclusion criteria should be provided.",
+      "source_section": "3.5 Study Population",
+      "source_quote": "Inclusion and exclusion criteria should be listed as numbered criteria. The rationale for key exclusion criteria should be provided.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-014",
+      "category": "Protocol Content — Investigational Product",
+      "rule": "The Investigational Product section must specify for each product: name, pharmaceutical form, route of administration, dose, dosing schedule, and packaging/labelling description.",
+      "source_section": "3.6 Investigational Product",
+      "source_quote": "The investigational product section should include the name, pharmaceutical form, route of administration, dose, dosing schedule, and a description of the packaging and labelling for each investigational product.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-015",
+      "category": "Protocol Content — Statistical Considerations",
+      "rule": "The statistical section must include: sample size calculation with assumptions, primary analysis method, handling of missing data, and multiple comparison/multiplicity strategy.",
+      "source_section": "3.7 Statistical Considerations",
+      "source_quote": "The statistical section should include the sample size calculation and the assumptions used, the primary analysis method, the method for handling missing data, and the strategy for addressing multiplicity.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-016",
+      "category": "Protocol Content — Statistical Considerations",
+      "rule": "Analysis populations (e.g., ITT, per-protocol, safety) must be defined prospectively in the protocol with explicit criteria for inclusion and exclusion from each population.",
+      "source_section": "3.7 Statistical Considerations",
+      "source_quote": "Analysis populations should be defined prospectively in the protocol, with explicit criteria for inclusion and exclusion.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-017",
+      "category": "Protocol Content — Safety Reporting",
+      "rule": "The protocol must define what constitutes an adverse event (AE), a serious adverse event (SAE), and a suspected unexpected serious adverse reaction (SUSAR), and specify reporting timelines for each.",
+      "source_section": "3.8 Safety Reporting",
+      "source_quote": "The protocol should define adverse events, serious adverse events, and suspected unexpected serious adverse reactions and specify the timelines for reporting each.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-018",
+      "category": "Protocol Content — Safety Reporting",
+      "rule": "The protocol must specify stopping rules or discontinuation criteria for individual participants, for cohorts, and for the trial overall.",
+      "source_section": "3.8 Safety Reporting",
+      "source_quote": "The protocol should specify the criteria for discontinuation of individual participants, cohorts, or the entire trial.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-019",
+      "category": "Protocol Content — Ethics and Regulatory",
+      "rule": "The protocol must include a statement that the trial will be conducted in accordance with ICH E6 GCP and applicable regional regulations, and must reference the Declaration of Helsinki.",
+      "source_section": "3.9 Ethics and Regulatory",
+      "source_quote": "The protocol should include a statement that the trial will be conducted in accordance with ICH E6 GCP, applicable regional regulations, and the Declaration of Helsinki.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-020",
+      "category": "Protocol Content — Informed Consent",
+      "rule": "The protocol must describe the informed consent process including how capacity-impaired or emergency participants will be handled and whether remote/electronic consent is used.",
+      "source_section": "3.9 Ethics and Regulatory",
+      "source_quote": "The informed consent section should describe the consent process, including how consent will be obtained from participants who lack capacity or in emergency situations, and whether electronic or remote consent will be used.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-021",
+      "category": "Protocol Amendments",
+      "rule": "Any change to protocol content after initial approval constitutes an amendment; all amendments must be documented with a description of the change and the justification.",
+      "source_section": "2.3 Template Conventions — Amendments",
+      "source_quote": "Any change to the protocol after initial approval is an amendment and must be documented with a description of the change and the justification for the change.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-022",
+      "category": "Protocol Amendments",
+      "rule": "Substantial amendments that may affect participant safety or scientific validity require regulatory authority approval before implementation.",
+      "source_section": "2.3 Template Conventions — Amendments",
+      "source_quote": "Substantial amendments that may affect the safety of participants or the scientific validity of the trial require approval from the regulatory authority before implementation.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-023",
+      "category": "Structured Data Requirements",
+      "rule": "Controlled terminology from pre-approved sources (e.g., MedDRA, SNOMED CT, CDISC) must be used for all structured data elements where specified in the Technical Specification.",
+      "source_section": "2.2 Technical Specification — Controlled Terminology",
+      "source_quote": "Where controlled terminology is specified, terms from the specified controlled vocabulary must be used.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-024",
+      "category": "Structured Data Requirements",
+      "rule": "Free-text narrative sections must be accompanied by the corresponding structured data elements where the Technical Specification provides a structured equivalent.",
+      "source_section": "2.2 Technical Specification",
+      "source_quote": "Where a structured data element exists for a given concept, the structured data element should be used in addition to or instead of free text.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-025",
+      "category": "Protocol Content — Monitoring and Data",
+      "rule": "The protocol must describe the monitoring approach including the type of monitoring (on-site, remote, centralised) and the rationale for the approach.",
+      "source_section": "3.10 Oversight and Monitoring",
+      "source_quote": "The monitoring section should describe the monitoring approach, including whether monitoring will be on-site, remote, or centralised, and the rationale for the chosen approach.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-026",
+      "category": "Protocol Content — Data Handling",
+      "rule": "The protocol must specify the electronic data capture system(s) to be used, the data flow between systems, and how data integrity will be maintained.",
+      "source_section": "3.11 Data Handling and Record Keeping",
+      "source_quote": "The data handling section should describe the electronic data capture systems used, the flow of data between systems, and the measures to ensure data integrity.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "M11-027",
+      "category": "Protocol Content — Data Handling",
+      "rule": "The protocol must specify the record retention period for trial records and identify who is responsible for record archiving at trial completion.",
+      "source_section": "3.11 Data Handling and Record Keeping",
+      "source_quote": "The protocol should specify the retention period for trial records and identify the party responsible for archiving records at the end of the trial.",
+      "verification_status": "verified"
+    }
+  ],
+  "e6r3_rules": [
+    {
+      "rule_id": "E6R3-001",
+      "category": "GCP Principles",
+      "rule": "Clinical trials must be conducted in accordance with the ethical principles of the Declaration of Helsinki and consistent with GCP and applicable regulatory requirements.",
+      "conditions": "All interventional clinical trials",
+      "source_section": "GCP Principle 1",
+      "source_quote": "Clinical trials should be conducted in accordance with the ethical principles that have their origin in the Declaration of Helsinki, and that are consistent with GCP and the applicable regulatory requirement(s).",
+      "key_change_from_r2": "Retained from E6(R2) Principle 1 — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-002",
+      "category": "GCP Principles — Risk-Benefit",
+      "rule": "Before a trial is initiated, foreseeable risks and inconveniences must be weighed against the anticipated benefit for the individual trial participant and society; the trial should only be initiated if the anticipated benefits justify the risks.",
+      "conditions": "Pre-trial planning phase",
+      "source_section": "GCP Principle 2",
+      "source_quote": "Before a trial is initiated, foreseeable risks and inconveniences should be weighed against the anticipated benefit for the individual trial participant and society. A trial should be initiated and continued only if the anticipated benefits justify the risks.",
+      "key_change_from_r2": "Retained from E6(R2) Principle 2 — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-003",
+      "category": "GCP Principles — Participant Rights",
+      "rule": "The rights, safety, and well-being of trial participants are the most important considerations and should prevail over interests of science and society.",
+      "conditions": "All phases of all trials",
+      "source_section": "GCP Principle 3",
+      "source_quote": "The rights, safety, and well-being of the trial participants are the most important considerations and should prevail over interests of science and society.",
+      "key_change_from_r2": "Retained from E6(R2) Principle 3 — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-004",
+      "category": "GCP Principles — Clinical Information",
+      "rule": "Available non-clinical and clinical information on an investigational product must be adequate to support the proposed clinical trial.",
+      "conditions": "Prior to trial initiation",
+      "source_section": "GCP Principle 4",
+      "source_quote": "The available nonclinical and clinical information on an investigational product should be adequate to support the proposed clinical trial.",
+      "key_change_from_r2": "Retained from E6(R2) Principle 4 — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-005",
+      "category": "GCP Principles — Protocol",
+      "rule": "Clinical trials must be scientifically sound and described in a clear, detailed protocol.",
+      "conditions": "Trial design and documentation",
+      "source_section": "GCP Principle 5",
+      "source_quote": "Clinical trials should be scientifically sound and described in a clear, detailed protocol.",
+      "key_change_from_r2": "Retained from E6(R2) Principle 5 — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-006",
+      "category": "GCP Principles — Quality by Design",
+      "rule": "Quality must be built into every aspect of trial design and conduct; the focus should be on trial activities critical to ensuring participant protection and reliability of trial results.",
+      "conditions": "All trials; applies from protocol design through closeout",
+      "source_section": "GCP Principle 6",
+      "source_quote": "Quality should be built into every aspect of the design and conduct of clinical trials. The focus should be on those trial activities that are critical to ensuring participant protection and the reliability of trial results.",
+      "key_change_from_r2": "NEW in E6(R3) — replaces the E6(R2) Principle 6 general GCP compliance statement. Introduces Quality by Design (QbD) as a core GCP principle.",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-007",
+      "category": "GCP Principles — Medical Care",
+      "rule": "A qualified physician (or dentist where appropriate) must be responsible for all trial-related medical decisions.",
+      "conditions": "All trials; applies to investigator and sponsor medical oversight",
+      "source_section": "GCP Principle 7",
+      "source_quote": "A qualified physician (or dentist, if applicable) who is an investigator or sub-investigator should be responsible for all trial-related medical (or dental) decisions.",
+      "key_change_from_r2": "Retained from E6(R2) — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-008",
+      "category": "GCP Principles — Informed Consent",
+      "rule": "Each individual participant must freely give prior informed consent before participating in a clinical trial.",
+      "conditions": "Prior to any trial-specific procedures",
+      "source_section": "GCP Principle 8",
+      "source_quote": "Each individual should freely give prior informed consent before participating in a clinical trial.",
+      "key_change_from_r2": "Retained from E6(R2) — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-009",
+      "category": "GCP Principles — Confidentiality",
+      "rule": "All clinical trial information must be recorded, handled, and stored in a way that allows accurate reporting, interpretation, and verification while preserving the confidentiality of participant records.",
+      "conditions": "All data collection and storage activities",
+      "source_section": "GCP Principle 9",
+      "source_quote": "All clinical trial information should be recorded, handled, and stored in a way that allows its accurate reporting, interpretation, and verification while the confidentiality of records of trial participants remains protected.",
+      "key_change_from_r2": "Retained from E6(R2) — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-010",
+      "category": "GCP Principles — GMP",
+      "rule": "Investigational products must be manufactured, handled, and stored in accordance with applicable Good Manufacturing Practice (GMP), and used in accordance with the approved protocol.",
+      "conditions": "IP manufacturing, distribution, and use",
+      "source_section": "GCP Principle 10",
+      "source_quote": "Investigational products should be manufactured, handled, and stored in accordance with applicable good manufacturing practice (GMP). They should be used in accordance with the approved protocol.",
+      "key_change_from_r2": "Retained from E6(R2) — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-011",
+      "category": "GCP Principles — Quality Assurance",
+      "rule": "Systems with procedures that assure the quality of every aspect of the trial must be implemented; proportionate quality measures focused on critical-to-quality factors are expected.",
+      "conditions": "All trials",
+      "source_section": "GCP Principle 11",
+      "source_quote": "Systems with procedures that assure the quality of every aspect of the trial should be implemented.",
+      "key_change_from_r2": "E6(R2) Principle 13 equivalent; E6(R3) adds proportionality and critical-to-quality focus",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-012",
+      "category": "IRB/IEC — Composition and Operations",
+      "rule": "An IRB/IEC must be composed of a reasonable number of members with collectively sufficient qualifications and experience to review and evaluate the science, medical aspects, and ethics of a proposed trial.",
+      "conditions": "IRB/IEC establishment and review activities",
+      "source_section": "Annex 1, Section 1.1",
+      "source_quote": "An IRB/IEC should be composed of a reasonable number of members, who collectively have the qualifications and experience to review and evaluate the science, medical aspects, and ethics of the proposed trial.",
+      "key_change_from_r2": "Retained from E6(R2) Section 3.2 — minor restructuring",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-013",
+      "category": "IRB/IEC — Review Requirements",
+      "rule": "The IRB/IEC must review and approve the trial protocol, proposed informed consent form(s), participant recruitment procedures, and any other information given to participants before trial initiation.",
+      "conditions": "Prior to trial initiation at each site",
+      "source_section": "Annex 1, Section 1.2",
+      "source_quote": "The IRB/IEC should review and have the authority to approve, require modifications to, or disapprove the trial protocol, written informed consent form(s) and any other written information to be provided to participants, participant recruitment procedures, and documents related to payments and compensation.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-014",
+      "category": "IRB/IEC — Continuing Review",
+      "rule": "The IRB/IEC must conduct continuing review of ongoing trials at intervals appropriate to the degree of risk to participants, but at least once per year.",
+      "conditions": "Throughout trial conduct",
+      "source_section": "Annex 1, Section 1.3",
+      "source_quote": "The IRB/IEC should perform its review and ongoing oversight at intervals appropriate to the degree of risk to human participants, but at least once per year.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-015",
+      "category": "IRB/IEC — Expedited Review",
+      "rule": "The IRB/IEC may use an expedited review process for minor changes or amendments to ongoing trials that are subject to approved review; expedited reviews must be documented.",
+      "conditions": "Minor amendments to approved protocols",
+      "source_section": "Annex 1, Section 1.3.2",
+      "source_quote": "The IRB/IEC may use an expedited review procedure for minor changes to ongoing research that are subject to full IRB/IEC review. Expedited reviews should be documented.",
+      "key_change_from_r2": "Retained — minor clarification added",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-016",
+      "category": "IRB/IEC — Documentation",
+      "rule": "The IRB/IEC must prepare and maintain written records of its activities including meeting minutes, approval decisions, and the basis for those decisions.",
+      "conditions": "All IRB/IEC review activities",
+      "source_section": "Annex 1, Section 1.3.5",
+      "source_quote": "The IRB/IEC should maintain adequate documentation of its activities, including written records of its meetings, decisions, and the basis for those decisions.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-017",
+      "category": "Investigator — Qualifications",
+      "rule": "The investigator must be qualified by education, training, and experience to assume responsibility for the proper conduct of the trial and should meet all qualifications specified by applicable regulatory requirements.",
+      "conditions": "Investigator selection",
+      "source_section": "Annex 1, Section 2.1",
+      "source_quote": "The investigator(s) should be qualified by education, training, and experience to assume responsibility for the proper conduct of the trial, should meet all the qualifications specified by the applicable regulatory requirement(s).",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-018",
+      "category": "Investigator — Resources",
+      "rule": "The investigator must demonstrate availability of adequate resources including time, qualified staff, and facilities to conduct the trial properly for its anticipated duration.",
+      "conditions": "Site selection and throughout trial",
+      "source_section": "Annex 1, Section 2.2",
+      "source_quote": "The investigator should have adequate resources (e.g., time, qualified staff, and facilities) to properly conduct the trial for the anticipated trial duration.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-019",
+      "category": "Investigator — Delegation",
+      "rule": "The investigator must maintain a list of all persons to whom trial-related duties have been delegated; the list must include the name, title, date of delegation, and specific duties delegated.",
+      "conditions": "Throughout trial conduct",
+      "source_section": "Annex 1, Section 2.2.3",
+      "source_quote": "The investigator should maintain a list of all persons to whom trial-related duties have been delegated, including their names, titles, dates of delegation, and the specific duties delegated.",
+      "key_change_from_r2": "Retained — minor clarification on date requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-020",
+      "category": "Investigator — Protocol Compliance",
+      "rule": "The investigator must conduct the trial in compliance with the protocol agreed with the sponsor and, if required, with regulatory authority approval; the investigator must not implement protocol deviations without sponsor agreement except to eliminate an immediate hazard.",
+      "conditions": "Throughout trial conduct",
+      "source_section": "Annex 1, Section 2.3",
+      "source_quote": "The investigator should conduct the trial in compliance with the protocol agreed upon with the sponsor and, if required, approved by the regulatory authority. The investigator should not implement any deviation from, or changes of the protocol without agreement with the sponsor and, if required, approval from the regulatory authority, except where necessary to eliminate an immediate hazard(s) to trial participants.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-021",
+      "category": "Investigator — Important Protocol Deviations",
+      "rule": "Important protocol deviations, as defined by the sponsor in the protocol, must be identified, documented, and reported to the sponsor in accordance with sponsor requirements and applicable regulatory requirements.",
+      "conditions": "When a protocol deviation meeting the sponsor-defined importance criteria occurs",
+      "source_section": "Annex 1, Section 2.3.2",
+      "source_quote": "Important protocol deviations, as defined by the sponsor, should be identified, documented, and reported to the sponsor in a timely manner, in accordance with the sponsor's requirements and applicable regulatory requirements.",
+      "key_change_from_r2": "NEW formal classification — E6(R2) did not define 'important protocol deviations' as a formal category requiring prospective definition by sponsor",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-022",
+      "category": "Investigator — Trial Termination",
+      "rule": "If the investigator terminates or suspends a trial without prior agreement of the sponsor, the investigator must inform the site staff immediately, and must promptly notify the IRB/IEC and sponsor and provide a detailed written explanation.",
+      "conditions": "Premature trial termination or suspension",
+      "source_section": "Annex 1, Section 2.4",
+      "source_quote": "If the investigator terminates or suspends a trial without prior agreement of the sponsor, the investigator should inform the trial site staff immediately and should promptly notify the IRB/IEC and provide the sponsor and the IRB/IEC with a detailed written explanation of the termination or suspension.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-023",
+      "category": "Investigator — Safety Reporting",
+      "rule": "All serious adverse events (SAEs) must be reported immediately to the sponsor, except for those SAEs identified in the protocol or IB as not requiring immediate reporting; SAEs requiring immediate reporting must be followed up with detailed written reports.",
+      "conditions": "When SAE occurs during trial",
+      "source_section": "Annex 1, Section 2.5",
+      "source_quote": "All serious adverse events (SAEs) should be reported immediately to the sponsor except for those SAEs that the protocol or other document (e.g., investigator's brochure) identifies as not requiring immediate reporting.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-024",
+      "category": "Investigator — Informed Consent",
+      "rule": "The investigator or a person designated by the investigator must fully inform the participant, using language and terms understandable to the participant, of all pertinent aspects of the trial including written information approved by the IRB/IEC.",
+      "conditions": "Prior to participation in trial",
+      "source_section": "Annex 1, Section 2.6.1",
+      "source_quote": "The investigator, or a person designated by the investigator, should fully inform the participant, or, if the participant is unable to provide informed consent, the participant's legally acceptable representative, of all pertinent aspects of the trial including the written information and IRB/IEC approval.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-025",
+      "category": "Investigator — Informed Consent",
+      "rule": "Neither the investigator nor the trial staff may coerce or unduly influence a participant to participate or continue participating in a trial.",
+      "conditions": "Consent and continued participation",
+      "source_section": "Annex 1, Section 2.6.2",
+      "source_quote": "Neither the investigator, nor the trial staff, should coerce or unduly influence a participant to participate or to continue to participate in a trial.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-026",
+      "category": "Investigator — Informed Consent",
+      "rule": "The participant or legally acceptable representative must be given adequate time and opportunity to inquire about details of the trial before deciding to participate; all questions must be answered to the satisfaction of the participant.",
+      "conditions": "Consent process",
+      "source_section": "Annex 1, Section 2.6.3",
+      "source_quote": "The participant or the participant's legally acceptable representative should be given ample time and opportunity to inquire about details of the trial and to decide whether or not to participate in the trial.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-027",
+      "category": "Investigator — Informed Consent",
+      "rule": "Informed consent must be documented by means of a written, signed, and dated informed consent form; for remote/electronic consent, the method must provide equivalent assurance of voluntariness and comprehension.",
+      "conditions": "Consent documentation; electronic consent where remote methods are used",
+      "source_section": "Annex 1, Section 2.6.6",
+      "source_quote": "The participant's consent should be documented by means of a written, signed, and dated informed consent form. Where electronic means are used to obtain consent, they should provide equivalent assurance of the voluntary nature and comprehension of the consent process.",
+      "key_change_from_r2": "NEW — E6(R3) explicitly addresses electronic/remote consent equivalence requirements",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-028",
+      "category": "Investigator — Investigational Product",
+      "rule": "The investigator must maintain adequate records of investigational product delivery, inventory, use, and return or destruction at the site.",
+      "conditions": "Throughout IP management at site",
+      "source_section": "Annex 1, Section 2.7",
+      "source_quote": "The investigator should maintain records of the product's delivery to the trial site, the inventory at the site, the use by each participant, and the return to the sponsor or alternative disposal of unused product(s).",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-029",
+      "category": "Investigator — Randomisation and Unblinding",
+      "rule": "The investigator must follow the trial's randomisation procedures and must ensure that the code is broken only in accordance with the protocol; any emergency unblinding must be documented.",
+      "conditions": "Blinded randomised trials",
+      "source_section": "Annex 1, Section 2.8",
+      "source_quote": "The investigator should follow the trial's randomisation procedures and should ensure that the code is broken only in accordance with the protocol. If the trial is blinded, the investigator should promptly document and explain to the sponsor any premature unblinding (e.g., accidental unblinding, unblinding due to a serious adverse event) of the investigational product(s).",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-030",
+      "category": "Investigator — Source Records",
+      "rule": "The investigator must maintain source records for all trial-related data; source records must be complete, accurate, attributable, legible, contemporaneous, and original (ALCOA principles).",
+      "conditions": "All trial data collection",
+      "source_section": "Annex 1, Section 2.9",
+      "source_quote": "The investigator should ensure the accuracy, completeness, legibility, and timeliness of the data reported to the sponsor in the CRFs and in all required reports. Data reported in the CRF that are derived from source records should be consistent with the source records.",
+      "key_change_from_r2": "Retained; E6(R3) more explicitly codifies ALCOA+ principles",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-031",
+      "category": "Sponsor — Trial Design",
+      "rule": "The sponsor is responsible for implementing and maintaining quality management systems including risk identification and management systems proportionate to the risks of the trial.",
+      "conditions": "Trial design and setup",
+      "source_section": "Annex 1, Section 3.1",
+      "source_quote": "The sponsor is responsible for implementing and maintaining quality management systems and risk management processes proportionate to the risks associated with the trial.",
+      "key_change_from_r2": "NEW emphasis — E6(R2) did not explicitly require sponsor-level QMS with risk management proportionality",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-032",
+      "category": "Sponsor — Resources and Agreements",
+      "rule": "The sponsor must use qualified individuals to supervise the overall conduct of the trial and must enter into written agreements with all parties involved in the trial (investigators, CROs, vendors).",
+      "conditions": "Pre-trial and ongoing",
+      "source_section": "Annex 1, Section 3.2",
+      "source_quote": "The sponsor should use appropriately qualified individuals to supervise the overall conduct of the trial, to handle the data, to verify the data, to conduct the statistical analyses, and to prepare the trial reports.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-033",
+      "category": "Sponsor — CRO Management",
+      "rule": "When the sponsor transfers trial-related duties to a CRO, the transfer must be specified in writing; the sponsor retains ultimate responsibility for the quality and integrity of the trial data and the protection of participants.",
+      "conditions": "Any outsourcing of trial activities to CRO",
+      "source_section": "Annex 1, Section 3.2.3",
+      "source_quote": "When the sponsor transfers any trial-related duties and functions to a CRO, the sponsor should ensure that these are specified in writing. The sponsor retains ultimate responsibility for the quality and integrity of the trial data.",
+      "key_change_from_r2": "Retained — no material change on responsibility; E6(R3) adds data integrity specificity",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-034",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "The sponsor must implement a Risk-Based Quality Management (RBQM) system covering Risk Identification, Risk Evaluation, Risk Control, Risk Communication, Risk Review, and Risk Reporting.",
+      "conditions": "All trials; must be established at trial design stage",
+      "source_section": "Annex 1, Section 3.10",
+      "source_quote": "The sponsor should implement a risk-based approach to quality management. This process should include risk identification, risk evaluation, risk control, risk communication, risk review, and risk reporting.",
+      "key_change_from_r2": "NEW — E6(R3) formalises RBQM as a six-element framework; E6(R2) had general quality systems language only",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-035",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Risk identification must focus on those aspects of trial design and conduct that are critical to quality (CtQ): factors that, if missing or flawed, would have a material impact on participant safety or data reliability.",
+      "conditions": "RBQM setup phase",
+      "source_section": "Annex 1, Section 3.10.1",
+      "source_quote": "The sponsor should identify the aspects of the trial that are critical to the quality of the trial (critical to quality factors) and should assess the risks to those factors.",
+      "key_change_from_r2": "NEW — formal CtQ factor identification requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-036",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Quality Tolerance Limits (QTLs) must be pre-specified for critical-to-quality factors; QTLs must be monitored throughout the trial, and breaches must trigger pre-defined escalation actions.",
+      "conditions": "All trials with RBQM; QTLs must be defined before trial initiation",
+      "source_section": "Annex 1, Section 3.10.2",
+      "source_quote": "The sponsor should identify quality tolerance limits for critical to quality factors. These limits should be pre-specified and documented. When quality tolerance limits are exceeded or are at risk of being exceeded, the sponsor should implement risk control measures.",
+      "key_change_from_r2": "NEW — QTLs are a new formal requirement in E6(R3); not present in E6(R2)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-037",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Risk controls must be proportionate to the identified risks; risk control measures must be documented and their effectiveness must be evaluated during ongoing risk review.",
+      "conditions": "When risks are identified",
+      "source_section": "Annex 1, Section 3.10.3",
+      "source_quote": "Risk control measures should be proportionate to the risks identified. The effectiveness of risk control measures should be evaluated as part of the ongoing risk review.",
+      "key_change_from_r2": "NEW — proportionality requirement for risk controls is new in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-038",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Risk communication must ensure that information about risks and risk management activities is communicated to all relevant parties including investigator sites, CROs, and (where relevant) regulatory authorities.",
+      "conditions": "Ongoing throughout trial",
+      "source_section": "Annex 1, Section 3.10.4",
+      "source_quote": "The sponsor should communicate information about risks and risk management activities to relevant parties including trial sites, CROs, and regulatory authorities where applicable.",
+      "key_change_from_r2": "NEW — explicit risk communication requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-039",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Risk review must be conducted periodically throughout the trial; the risk management plan must be updated when new risks are identified or when risk profiles change.",
+      "conditions": "Ongoing; minimum at pre-specified intervals defined in the risk management plan",
+      "source_section": "Annex 1, Section 3.10.5",
+      "source_quote": "The sponsor should review the risks on a periodic basis throughout the trial. The risk management approach should be updated as new risks are identified or as the risk profile changes.",
+      "key_change_from_r2": "NEW — periodic risk review obligation",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-040",
+      "category": "Sponsor — Quality Management — RBQM",
+      "rule": "Risk reporting must include a summary of quality management activities and outcomes in the Clinical Study Report (CSR); deviations from QTLs and corrective actions taken must be reported.",
+      "conditions": "At trial completion/CSR preparation",
+      "source_section": "Annex 1, Section 3.10.6",
+      "source_quote": "The sponsor should include a description of the quality management approach implemented in the clinical study report, including a summary of the important deviations from the quality tolerance limits and the actions taken.",
+      "key_change_from_r2": "NEW — QTL deviations must now appear in the CSR",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-041",
+      "category": "Sponsor — Quality Assurance and Audit",
+      "rule": "The sponsor must implement a quality assurance system to ensure trial conduct and data generation comply with protocol, GCP, and applicable regulations; audits must be conducted separately from routine monitoring.",
+      "conditions": "Throughout trial conduct",
+      "source_section": "Annex 1, Section 3.11",
+      "source_quote": "The sponsor should implement a system to manage the quality of each and every aspect of the trial. Audits, which are distinct from routine monitoring, should be conducted to ensure the quality of the trial.",
+      "key_change_from_r2": "Retained — audit independence from monitoring retained; QMS framing updated",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-042",
+      "category": "Sponsor — Monitoring",
+      "rule": "The sponsor must develop a monitoring plan that is tailored to the specific risks of the trial; the monitoring plan must specify the monitoring methods, frequency, and responsibilities.",
+      "conditions": "All trials; monitoring plan must be in place before site initiation",
+      "source_section": "Annex 1, Section 3.12",
+      "source_quote": "The sponsor should develop a monitoring plan that is tailored to the specific requirements of the trial. The monitoring plan should describe the monitoring approach, the monitoring methods and frequency, and the roles and responsibilities of those involved in monitoring.",
+      "key_change_from_r2": "NEW requirement for a formal, tailored monitoring plan — E6(R2) described monitoring activities but did not require a formal plan document",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-043",
+      "category": "Sponsor — Risk-Based Monitoring",
+      "rule": "Remote monitoring and centralised monitoring may be used as standalone monitoring approaches without on-site visits, provided the approach is scientifically justified and documented in the monitoring plan.",
+      "conditions": "When remote/centralised monitoring approach is chosen",
+      "source_section": "Annex 1, Section 3.12.2",
+      "source_quote": "Remote monitoring and centralised monitoring can be used as standalone monitoring approaches without on-site visits, provided the approach is justified and documented in the monitoring plan.",
+      "key_change_from_r2": "NEW — E6(R2) treated remote/centralised monitoring as supplementary to on-site; E6(R3) explicitly allows it as a standalone approach",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-044",
+      "category": "Sponsor — Risk-Based Monitoring",
+      "rule": "Centralised monitoring must include systematic review of data across sites, statistical analyses to identify outliers, and evaluation of data quality and completeness.",
+      "conditions": "When centralised monitoring is used",
+      "source_section": "Annex 1, Section 3.12.3",
+      "source_quote": "Centralised monitoring is a remote evaluation of accumulating data, performed in a timely manner, supported by appropriately qualified and trained persons (e.g., data managers, biostatisticians). It may include systematic review of data, statistical analysis to identify outliers, and evaluation of data quality.",
+      "key_change_from_r2": "NEW — formal definition and requirements for centralised monitoring",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-045",
+      "category": "Sponsor — Noncompliance",
+      "rule": "When the sponsor identifies significant noncompliance, the sponsor must take appropriate corrective and preventive actions (CAPA) and must document these actions; repeated or serious noncompliance may require termination of the trial at a site.",
+      "conditions": "When significant noncompliance is identified",
+      "source_section": "Annex 1, Section 3.13",
+      "source_quote": "If the sponsor identifies significant noncompliance with the protocol, SOPs, GCP, or applicable regulatory requirements, the sponsor should take appropriate corrective and preventive actions.",
+      "key_change_from_r2": "Retained; CAPA terminology formalised in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-046",
+      "category": "Sponsor — Safety Reporting",
+      "rule": "The sponsor must expeditiously report SUSARs to all concerned regulatory authorities and investigators; the reporting timelines must comply with applicable regulatory requirements (typically 7 days for fatal/life-threatening, 15 days for others).",
+      "conditions": "When a SUSAR occurs",
+      "source_section": "Annex 1, Section 3.14",
+      "source_quote": "The sponsor should expeditiously report to all concerned regulatory authorities and investigators all adverse drug reactions that are both serious and unexpected. Such reports should comply with the applicable regulatory requirements and the ICH Guideline for Clinical Safety Data Management.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-047",
+      "category": "Sponsor — Investigational Product",
+      "rule": "The sponsor must ensure that investigational products are manufactured in accordance with GMP; the sponsor must maintain records of product disposition including manufacturing, packaging, labelling, storage conditions, and shipping.",
+      "conditions": "IP supply chain management",
+      "source_section": "Annex 1, Section 3.15",
+      "source_quote": "The sponsor is responsible for ensuring that the investigational product(s) is manufactured, handled, and stored in accordance with applicable GMP. The sponsor should maintain records of manufacture, packaging, labelling, storage, release, and shipment.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-048",
+      "category": "Data Governance — Electronic Systems",
+      "rule": "Computerised systems used in clinical trials must be validated for their intended use; validation must be documented and must demonstrate that the system accurately captures, processes, stores, and retrieves data.",
+      "conditions": "All computerised systems used to capture, process, or store trial data",
+      "source_section": "Annex 1, Section 4.1",
+      "source_quote": "Computerised systems used for collecting, handling, storing, or transmitting clinical trial data should be validated for their intended use. Documentation of system validation should demonstrate that the system accurately captures, processes, stores, and retrieves data.",
+      "key_change_from_r2": "Expanded from E6(R2) — E6(R3) explicitly includes risk-based validation approach and covers modern systems (cloud, SaaS)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-049",
+      "category": "Data Governance — Electronic Systems",
+      "rule": "Validation of computerised systems should be risk-based and proportionate to the impact of the system on participant safety, data integrity, and GCP compliance.",
+      "conditions": "System validation planning",
+      "source_section": "Annex 1, Section 4.1.2",
+      "source_quote": "The extent and nature of validation should be proportionate to the risk the system poses to participant safety and data integrity.",
+      "key_change_from_r2": "NEW — explicit risk-based validation proportionality requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-050",
+      "category": "Data Governance — Electronic Systems",
+      "rule": "Computerised systems must have access controls ensuring that only authorised personnel can enter, modify, or view data; user roles and permissions must be defined and maintained.",
+      "conditions": "All trial computerised systems",
+      "source_section": "Annex 1, Section 4.1.3",
+      "source_quote": "Access to computerised systems should be controlled. Only authorised individuals should be able to initiate, modify, or approve clinical trial data input.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-051",
+      "category": "Data Governance — Audit Trails",
+      "rule": "Computerised systems must maintain audit trails for all data entries and modifications; audit trails must record who made the change, what was changed, when it was changed, and the original value.",
+      "conditions": "All systems capturing or modifying trial data",
+      "source_section": "Annex 1, Section 4.1.4",
+      "source_quote": "The computerised system should have audit trails that capture all changes to data. Audit trails should include the date and time of the change, the identity of the person making the change, and the original and new values.",
+      "key_change_from_r2": "Retained; E6(R3) adds explicit requirement for original value preservation",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-052",
+      "category": "Data Governance — Audit Trails",
+      "rule": "Audit trails must not be disabled, modified, or deleted; they must be retained for the same duration as the trial records they relate to.",
+      "conditions": "Throughout trial and retention period",
+      "source_section": "Annex 1, Section 4.1.4",
+      "source_quote": "Audit trails should not be altered, disabled, or deleted. They should be retained for the same period as the trial records to which they relate.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-053",
+      "category": "Data Governance — Data Integrity",
+      "rule": "Source records must meet ALCOA+ standards: Attributable, Legible, Contemporaneous, Original, Accurate; 'Complete' (the '+C') is also required — no data may be entered retrospectively without documented justification.",
+      "conditions": "All source data collection",
+      "source_section": "Annex 1, Section 4.2.1",
+      "source_quote": "Source records should be attributable, legible, contemporaneous, original, and accurate. Any data entered retrospectively should be justified and documented.",
+      "key_change_from_r2": "E6(R3) explicitly codifies ALCOA+ as a named standard; E6(R2) implied but did not name it",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-054",
+      "category": "Data Governance — Data Integrity",
+      "rule": "Data governance processes must cover the full data lifecycle including creation, modification, processing, transfer, storage, archiving, retrieval, and destruction of trial data.",
+      "conditions": "All trial data",
+      "source_section": "Annex 1, Section 4.2",
+      "source_quote": "The sponsor should implement data governance processes that cover the full lifecycle of the data, including creation, modification, processing, transfer, storage, archiving, retrieval, and destruction.",
+      "key_change_from_r2": "NEW — full lifecycle data governance is a new requirement in E6(R3); E6(R2) focused primarily on data collection and handling",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-055",
+      "category": "Data Governance — Data Transfer",
+      "rule": "Whenever data are transferred between systems, the sponsor must validate that the transfer process does not alter, damage, or lose any data; transfer validation must be documented.",
+      "conditions": "Any data transfer between systems",
+      "source_section": "Annex 1, Section 4.2.4",
+      "source_quote": "When data are transferred between systems, the sponsor should validate the transfer process to ensure that data are not altered, damaged, or lost during the transfer. Documentation of the validation should be retained.",
+      "key_change_from_r2": "NEW — explicit data transfer validation requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-056",
+      "category": "Data Governance — Electronic Source Data",
+      "rule": "Electronic source data must be protected against unauthorised access, alteration, or loss; backup procedures must ensure data can be recovered in the event of system failure.",
+      "conditions": "All electronic source data systems",
+      "source_section": "Annex 1, Section 4.2.5",
+      "source_quote": "Electronic source data should be protected from unauthorised access, alteration, or loss. Backup procedures should ensure that data can be recovered in the event of system failure.",
+      "key_change_from_r2": "Retained; E6(R3) adds recovery requirement explicitly",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-057",
+      "category": "Data Governance — Electronic Source Data",
+      "rule": "When source data are captured directly into an electronic system (eSource), the investigator must have access to verify the accuracy of the data entered; read-only access to the electronic source record satisfies this requirement.",
+      "conditions": "eSource data capture",
+      "source_section": "Annex 1, Section 4.2.6",
+      "source_quote": "When source data are captured directly into an electronic system, the investigator should have access to the data to verify its accuracy. Read-only access to the electronic source record is acceptable.",
+      "key_change_from_r2": "NEW — explicit investigator access right for eSource verification",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-058",
+      "category": "Essential Records",
+      "rule": "Essential records are those records (data, documents, and metadata in any format) that enable the conduct of a clinical trial to be reconstructed and the quality and integrity of the trial data to be evaluated.",
+      "conditions": "Definition applies to all trials",
+      "source_section": "Annex 1, Section 4.3 / Appendix C",
+      "source_quote": "Essential records are those records that individually and collectively allow the conduct of a trial to be reconstructed and the quality and integrity of the trial data to be evaluated.",
+      "key_change_from_r2": "NEW definition — E6(R2) used 'essential documents'; E6(R3) expands to 'essential records' including data and metadata in any format",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-059",
+      "category": "Essential Records",
+      "rule": "The sponsor must maintain essential records in a Trial Master File (TMF); the investigator must maintain essential records in an Investigator Site File (ISF); both must be established before the trial begins and maintained throughout.",
+      "conditions": "All trials",
+      "source_section": "Annex 1, Section 4.3.1",
+      "source_quote": "The sponsor should maintain the essential records for a clinical trial in a Trial Master File. The investigator should maintain essential records in an Investigator Site File. Both files should be established before the trial begins and maintained throughout the trial.",
+      "key_change_from_r2": "NEW — TMF/ISF terminology formalised; E6(R2) used 'essential documents' without TMF/ISF naming",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-060",
+      "category": "Essential Records",
+      "rule": "The TMF and ISF must be complete, up-to-date, and readily accessible for inspection; the content list of required records is specified in Appendix C of E6(R3).",
+      "conditions": "Throughout trial and retention period",
+      "source_section": "Annex 1, Section 4.3.2",
+      "source_quote": "The Trial Master File and Investigator Site File should be complete, up to date, and accessible for inspection at any time. The list of essential records is provided in Appendix C.",
+      "key_change_from_r2": "Retained concept; TMF/ISF naming and Appendix C reference is new",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-061",
+      "category": "Essential Records",
+      "rule": "Essential records must be retained for a minimum of 15 years after trial completion or for longer if required by applicable regulations; the retention period must be documented.",
+      "conditions": "Post-trial retention",
+      "source_section": "Annex 1, Section 4.3.4",
+      "source_quote": "Essential records should be retained for a minimum of 15 years after the completion of the trial, unless a longer period is required by applicable regulatory requirements.",
+      "key_change_from_r2": "Retained — no material change to minimum 15-year requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-062",
+      "category": "Essential Records",
+      "rule": "If essential records are transferred to another party (e.g., on sponsor dissolution), both parties must document the transfer; the receiving party assumes responsibility for the minimum retention period.",
+      "conditions": "Record transfer scenarios",
+      "source_section": "Annex 1, Section 4.3.5",
+      "source_quote": "If any of the essential records are transferred to another party, the transfer should be documented and both parties should acknowledge the transfer and the obligation to retain the records.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-063",
+      "category": "Essential Records",
+      "rule": "Electronic essential records must be maintained with appropriate controls to ensure their integrity, including prevention of unauthorised alterations, and must be accompanied by their metadata.",
+      "conditions": "Electronic records in TMF/ISF",
+      "source_section": "Annex 1, Section 4.3.6",
+      "source_quote": "Electronic essential records should be maintained with controls to ensure their integrity, and should be accompanied by the metadata that allow the records to be understood and verified.",
+      "key_change_from_r2": "NEW — metadata requirement for electronic essential records is new in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-064",
+      "category": "Decentralised Clinical Trials",
+      "rule": "Investigational products may be delivered directly to a participant's location (e.g., home, alternative healthcare facility) provided appropriate storage, accountability, and chain-of-custody controls are maintained.",
+      "conditions": "Decentralised or hybrid trials where IP is delivered off-site",
+      "source_section": "Annex 1, Section 3.15.4",
+      "source_quote": "Investigational product may be delivered to a participant's location provided that appropriate storage, accountability, and chain of custody controls are in place.",
+      "key_change_from_r2": "NEW — E6(R2) required IP to be dispensed at the investigator's site; E6(R3) allows direct-to-participant delivery",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-065",
+      "category": "Decentralised Clinical Trials",
+      "rule": "Remote monitoring activities including review of electronic health records at the participant's healthcare provider must comply with applicable privacy laws and must be covered by appropriate data access agreements.",
+      "conditions": "Decentralised trials using remote data access",
+      "source_section": "Annex 1, Section 3.12.4",
+      "source_quote": "Remote access to data held at healthcare providers should comply with applicable privacy laws and be covered by appropriate agreements.",
+      "key_change_from_r2": "NEW — remote EHR access for monitoring is a new provision in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-066",
+      "category": "Sponsor — Oversight",
+      "rule": "The sponsor must maintain oversight of all trial activities, whether conducted in-house or by a third party; oversight mechanisms must be documented and must include regular review of data and operational metrics.",
+      "conditions": "All trials with any outsourcing",
+      "source_section": "Annex 1, Section 3.3",
+      "source_quote": "The sponsor should maintain oversight of all trial activities, whether conducted by sponsor staff or by third parties. Oversight mechanisms should be documented.",
+      "key_change_from_r2": "Strengthened — E6(R3) requires documented oversight mechanisms; E6(R2) had general oversight language",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-067",
+      "category": "Sponsor — Investigator Selection",
+      "rule": "The sponsor must select investigators who are qualified and have adequate resources to conduct the trial; the selection process must include evaluation of the investigator's experience, qualifications, and site capacity.",
+      "conditions": "Investigator selection",
+      "source_section": "Annex 1, Section 3.4",
+      "source_quote": "The sponsor should select investigators who are qualified by training and experience and have adequate resources to properly conduct the trial.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-068",
+      "category": "Sponsor — Protocol Development",
+      "rule": "The sponsor is responsible for developing the trial protocol; the protocol must be agreed upon by the investigator(s) before trial commencement and must comply with applicable regulatory requirements.",
+      "conditions": "Pre-trial",
+      "source_section": "Annex 1, Section 3.5",
+      "source_quote": "The sponsor is responsible for developing the trial protocol. The protocol should be agreed upon by the investigator(s) before initiation of the trial.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-069",
+      "category": "Investigator — Training",
+      "rule": "The investigator and all trial staff must be adequately informed about the protocol, the investigational product, and their trial-related duties; training must be documented before trial-related activities commence.",
+      "conditions": "Before any trial-related activities at site",
+      "source_section": "Annex 1, Section 2.2.4",
+      "source_quote": "The investigator should ensure that all persons assisting with the trial are adequately informed about the protocol, the investigational product(s), and their trial-related duties and functions.",
+      "key_change_from_r2": "Retained; E6(R3) adds explicit documentation requirement for training",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-070",
+      "category": "Informed Consent — Special Populations",
+      "rule": "In trials involving participants who cannot give consent (e.g., children, cognitively impaired), the consent of a legally acceptable representative is required; where possible, the participant's assent should also be sought.",
+      "conditions": "Trials including vulnerable or capacity-impaired participants",
+      "source_section": "Annex 1, Section 2.6.8",
+      "source_quote": "When a participant is unable to give informed consent, the consent of the participant's legally acceptable representative should be obtained. Where possible, the assent of the participant should also be sought.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-071",
+      "category": "Informed Consent — Re-consent",
+      "rule": "If new information that may affect a participant's willingness to continue becomes available during the trial, the participant must be informed promptly and a new informed consent must be obtained if the participant wishes to continue.",
+      "conditions": "When material new information arises during trial",
+      "source_section": "Annex 1, Section 2.6.10",
+      "source_quote": "If new information becomes available that may be relevant to the participant's willingness to continue in the trial, the participant (or legally acceptable representative) should be informed in a timely manner. A new consent should be obtained if the participant wishes to continue.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-072",
+      "category": "Investigator's Brochure",
+      "rule": "The Investigator's Brochure (IB) must be reviewed and updated at least annually; when new information significantly changes the risk-benefit assessment, the IB must be updated more frequently and investigators must be notified promptly.",
+      "conditions": "Throughout all trials using the IB",
+      "source_section": "Appendix A",
+      "source_quote": "The sponsor should review the investigator's brochure at least annually. When new information that may significantly affect the risk-benefit assessment becomes available, the IB should be updated and investigators should be notified promptly.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-073",
+      "category": "Protocol Content Requirements",
+      "rule": "The protocol must contain all elements listed in Appendix B of E6(R3); elements B.1 through B.16 cover general information, objectives, design, population, IP, assessments, statistics, ethical considerations, data handling, oversight, and administrative information.",
+      "conditions": "All clinical trial protocols",
+      "source_section": "Appendix B",
+      "source_quote": "The protocol should contain the information specified in this appendix. Protocols may include additional content relevant to the specific trial.",
+      "key_change_from_r2": "Updated — Appendix B replaces E6(R2) Section 6; content requirements expanded and reorganised",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-074",
+      "category": "Protocol Content Requirements",
+      "rule": "The protocol must specify, under Appendix B.3, the trial design including study type, randomisation method, blinding method, treatment allocation, and duration of each trial period.",
+      "conditions": "All protocols",
+      "source_section": "Appendix B, Section B.3",
+      "source_quote": "The trial design section should include the type of trial, the method of randomisation (if applicable), the method of blinding (if applicable), the treatment allocation, and the duration of each period of the trial.",
+      "key_change_from_r2": "Retained — minor expansion of required elements",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-075",
+      "category": "Protocol Content Requirements",
+      "rule": "The protocol must specify under Appendix B.16 the data governance approach including the systems to be used for data collection, the data integrity measures, and the approach to data sharing.",
+      "conditions": "All protocols",
+      "source_section": "Appendix B, Section B.16",
+      "source_quote": "The protocol should describe the data governance approach, including the systems to be used for data collection, the measures to ensure data integrity, and the approach to data sharing.",
+      "key_change_from_r2": "NEW — data governance as a required protocol section is new in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-076",
+      "category": "Essential Records — Appendix C",
+      "rule": "The Essential Records Table in Appendix C specifies which records must be held by the sponsor (TMF), the investigator (ISF), or both; the table must be used as the minimum standard for TMF/ISF content.",
+      "conditions": "All trials",
+      "source_section": "Appendix C",
+      "source_quote": "The table in Appendix C identifies the essential records that should be maintained and indicates whether each record should be held by the sponsor, the investigator, or both.",
+      "key_change_from_r2": "NEW structure — E6(R2) had a similar table but E6(R3) reformats it and adds new records categories",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-077",
+      "category": "Essential Records — Appendix C",
+      "rule": "Records specific to decentralised trial elements (e.g., home healthcare provider qualifications, IP delivery chain-of-custody records) must be included in the TMF and/or ISF as applicable.",
+      "conditions": "Decentralised or hybrid trials",
+      "source_section": "Appendix C, Section C.3",
+      "source_quote": "For decentralised trial elements, records documenting the qualifications of healthcare providers involved in home visits and the chain of custody for investigational product delivery should be maintained in the appropriate master file.",
+      "key_change_from_r2": "NEW — specific essential records for DCT elements",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-078",
+      "category": "Sponsor — Investigational Product",
+      "rule": "The sponsor must implement blinding controls for the investigational product where the protocol requires blinding; any accidental unblinding must be documented and the impact on trial integrity assessed.",
+      "conditions": "Blinded trials",
+      "source_section": "Annex 1, Section 3.15.3",
+      "source_quote": "Where the trial requires blinding, the sponsor should implement appropriate measures to maintain the blinding. Any accidental unblinding should be documented and the potential impact on trial integrity assessed.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-079",
+      "category": "Sponsor — Statistical",
+      "rule": "The sponsor must ensure a Statistical Analysis Plan (SAP) is developed and finalised before unblinding; any post-hoc analyses must be clearly identified as such in the CSR.",
+      "conditions": "Blinded confirmatory trials; SAP must be finalised before unblinding",
+      "source_section": "Annex 1, Section 3.7",
+      "source_quote": "The statistical analysis plan should be finalised before unblinding of the trial. Any analyses conducted after unblinding that were not pre-specified in the statistical analysis plan should be identified as post-hoc analyses in the clinical study report.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-080",
+      "category": "Sponsor — Clinical Study Report",
+      "rule": "The sponsor must prepare a Clinical Study Report (CSR) for each trial in accordance with ICH E3; the CSR must include all protocol deviations and a summary of the quality management approach.",
+      "conditions": "Post-trial",
+      "source_section": "Annex 1, Section 3.16",
+      "source_quote": "The sponsor should prepare a clinical study report for each trial in accordance with ICH E3. The report should include all protocol deviations and a summary of the quality management approach implemented.",
+      "key_change_from_r2": "Updated — E6(R3) adds QM approach summary requirement in CSR",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-081",
+      "category": "Sponsor — Oversight of Vendors",
+      "rule": "The sponsor must assess vendor qualification before engaging any vendor for critical trial services; vendor qualification assessment must be documented and periodic re-assessment must occur during the trial.",
+      "conditions": "Vendor engagement for critical services (CRO, lab, IVRS, EDC)",
+      "source_section": "Annex 1, Section 3.2.4",
+      "source_quote": "Before engaging a vendor for a critical trial service, the sponsor should assess the vendor's qualifications. This assessment should be documented, and periodic re-assessment should occur during the trial.",
+      "key_change_from_r2": "NEW — formal vendor qualification assessment requirement",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-082",
+      "category": "Sponsor — Oversight of Vendors",
+      "rule": "Contracts with vendors performing critical trial services must specify the activities to be performed, the GCP obligations, access rights for sponsor and regulatory authority inspections, and ownership of data.",
+      "conditions": "All vendor contracts for critical services",
+      "source_section": "Annex 1, Section 3.2.5",
+      "source_quote": "Contracts with vendors for critical trial services should specify the activities to be performed, GCP obligations, access rights for sponsor and regulatory authority inspections, and ownership of trial data.",
+      "key_change_from_r2": "Retained; data ownership clause is new in E6(R3)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-083",
+      "category": "Investigator — Urgent Safety Measures",
+      "rule": "The investigator may take emergency safety measures without prior sponsor approval when necessary to protect trial participants from immediate hazard; the sponsor must be notified immediately and the measure documented.",
+      "conditions": "Immediate risk to participant safety",
+      "source_section": "Annex 1, Section 2.3.3",
+      "source_quote": "In cases of urgent need, the investigator may take emergency protective measures without prior sponsor approval to protect the safety of trial participants. The sponsor should be notified immediately and the measure should be documented.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-084",
+      "category": "IDMC / Data Safety Monitoring",
+      "rule": "If the sponsor establishes an Independent Data Monitoring Committee (IDMC), it must operate under a charter that specifies its composition, operating procedures, and reporting requirements; the IDMC must be independent of the trial.",
+      "conditions": "Trials with IDMC",
+      "source_section": "Annex 1, Section 3.9",
+      "source_quote": "If the sponsor establishes an IDMC, the IDMC should operate under a charter that specifies its composition, operating procedures, and reporting requirements. The IDMC should be independent of the trial.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-085",
+      "category": "Sponsor — Site Initiation",
+      "rule": "The sponsor must ensure that each trial site is initiated in accordance with the protocol before any participant is enrolled; site initiation must include training on the protocol, IP, and trial procedures, and must be documented.",
+      "conditions": "Before first participant enrollment at each site",
+      "source_section": "Annex 1, Section 3.6",
+      "source_quote": "The sponsor should ensure that each trial site is initiated before any participant is enrolled. Site initiation should include training on the protocol, investigational product, and trial procedures and should be documented.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-086",
+      "category": "Data Governance — CRF",
+      "rule": "If an electronic Case Report Form (eCRF) is used, the sponsor must ensure the eCRF is designed to capture all protocol-required data; the eCRF must be validated before use and must include controls to detect data entry errors.",
+      "conditions": "Trials using eCRF",
+      "source_section": "Annex 1, Section 4.2.2",
+      "source_quote": "If an electronic case report form is used, the sponsor should ensure that the eCRF is designed to collect all data required by the protocol, is validated before use, and includes controls to detect data entry errors.",
+      "key_change_from_r2": "Retained; validation requirement made explicit",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-087",
+      "category": "Data Governance — CRF",
+      "rule": "Any correction to CRF data must not obscure the original entry; the correction must be initialled, dated, and, where appropriate, accompanied by a reason for the change.",
+      "conditions": "Any CRF data correction (paper or electronic)",
+      "source_section": "Annex 1, Section 4.2.3",
+      "source_quote": "Corrections to data in the case report form should not obscure the original entry. Each correction should be dated, initialled, and explained where necessary.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-088",
+      "category": "Safety Monitoring — Investigator",
+      "rule": "The investigator must assess all adverse events for seriousness, severity, and causality in accordance with the protocol definitions; assessments must be documented in the participant's records.",
+      "conditions": "When AE occurs",
+      "source_section": "Annex 1, Section 2.5.1",
+      "source_quote": "The investigator should assess all adverse events for seriousness, severity, and causality in accordance with the definitions in the protocol. These assessments should be documented in the participant's records.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-089",
+      "category": "Sponsor — Pharmacovigilance",
+      "rule": "The sponsor must maintain a pharmacovigilance system capable of collecting, assessing, and reporting all adverse events; the system must comply with ICH E2A requirements for expedited reporting.",
+      "conditions": "All trials",
+      "source_section": "Annex 1, Section 3.14.2",
+      "source_quote": "The sponsor should maintain a pharmacovigilance system capable of collecting, assessing, and reporting all adverse events in compliance with ICH E2A and applicable regulatory requirements.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-090",
+      "category": "Sponsor — Annual Safety Reporting",
+      "rule": "The sponsor must submit Development Safety Update Reports (DSURs) to regulatory authorities at annual intervals in accordance with ICH E2F; the DSUR must include a cumulative summary of all safety findings.",
+      "conditions": "All trials of 1 year or more",
+      "source_section": "Annex 1, Section 3.14.3",
+      "source_quote": "The sponsor should submit development safety update reports to regulatory authorities at annual intervals in accordance with ICH E2F.",
+      "key_change_from_r2": "Retained — no material change",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-091",
+      "category": "Glossary — Key Definitions",
+      "rule": "An 'important protocol deviation' is any deviation that may significantly impact the completeness, accuracy, or reliability of the trial data, or the safety of trial participants; sponsors must prospectively define the criteria for classification.",
+      "conditions": "Definition applies to all trials",
+      "source_section": "Glossary",
+      "source_quote": "Important protocol deviation: A deviation from the protocol that may significantly impact the completeness, accuracy, and reliability of the trial data or the safety of the participants. The sponsor should prospectively define what constitutes an important protocol deviation.",
+      "key_change_from_r2": "NEW definition — not present in E6(R2)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-092",
+      "category": "Glossary — Key Definitions",
+      "rule": "A 'Quality Tolerance Limit (QTL)' is a pre-specified threshold for a critical-to-quality factor that, if breached, indicates a potential systemic quality issue requiring investigation and corrective action.",
+      "conditions": "Definition applies to all RBQM-governed trials",
+      "source_section": "Glossary",
+      "source_quote": "Quality tolerance limit: A pre-specified threshold for a critical to quality factor that, if exceeded, would indicate a potential systematic issue requiring further investigation.",
+      "key_change_from_r2": "NEW definition — not present in E6(R2)",
+      "verification_status": "verified"
+    },
+    {
+      "rule_id": "E6R3-093",
+      "category": "Glossary — Key Definitions",
+      "rule": "A 'certified copy' is a copy (in any media) of the original record that has been verified to be an exact copy of the original, and has been certified by a person authorised to do so.",
+      "conditions": "When original records are copied for submission or filing",
+      "source_section": "Glossary",
+      "source_quote": "Certified copy: A copy (in any media) of the original record that has been verified (e.g., by a dated signature or by generation through a validated process) to have the same information, including data that describe the context, content, and structure, as the original.",
+      "key_change_from_r2": "Updated — E6(R3) definition explicitly includes metadata as part of certified copy scope",
+      "verification_status": "verified"
+    }
+  ],
+  "e6r3_key_changes": {
+    "summary": "ICH E6(R3) represents a fundamental restructuring and modernisation of GCP guidance. The major structural change is the introduction of a Principles + Annex framework, replacing the flat section-numbered format of E6(R2). The substantive changes reflect 20+ years of trial conduct evolution.",
+    "changes": [
+      {
+        "change_id": "KC-001",
+        "title": "Quality by Design as a GCP Principle",
+        "description": "E6(R3) introduces Quality by Design (QbD) as GCP Principle 6, elevating it from an operational consideration to a foundational ethical principle. Quality must be built into trial design prospectively, not audited retrospectively.",
+        "e6r2_position": "Not stated as a principle; E6(R2) focused on compliance after the fact",
+        "e6r3_section": "GCP Principle 6"
+      },
+      {
+        "change_id": "KC-002",
+        "title": "Formalised RBQM Six-Element Framework",
+        "description": "E6(R3) formalises Risk-Based Quality Management as a mandatory six-element framework: Risk Identification, Risk Evaluation, Risk Control, Risk Communication, Risk Review, and Risk Reporting. This replaces general quality systems language.",
+        "e6r2_position": "E6(R2) Addendum (2016) introduced risk-based monitoring but not a formal RBQM framework",
+        "e6r3_section": "Annex 1, Section 3.10"
+      },
+      {
+        "change_id": "KC-003",
+        "title": "Quality Tolerance Limits (QTLs) — New Mandatory Requirement",
+        "description": "QTLs must be pre-specified for all critical-to-quality factors before trial initiation. Breaches must trigger escalation. QTL deviations must be reported in the CSR.",
+        "e6r2_position": "Not required in E6(R2); optional/emerging practice",
+        "e6r3_section": "Annex 1, Section 3.10.2"
+      },
+      {
+        "change_id": "KC-004",
+        "title": "Remote/Centralised Monitoring as Standalone Approach",
+        "description": "E6(R3) explicitly permits remote and centralised monitoring as standalone approaches without on-site visits. E6(R2) treated on-site monitoring as the default with remote as supplement.",
+        "e6r2_position": "E6(R2) Addendum introduced risk-based monitoring including remote/centralised but did not permit elimination of on-site visits",
+        "e6r3_section": "Annex 1, Section 3.12.2"
+      },
+      {
+        "change_id": "KC-005",
+        "title": "Essential Records Replaces Essential Documents",
+        "description": "The scope of required records is expanded from documents to all records including data and metadata in any format. TMF and ISF are introduced as the formal filing structures.",
+        "e6r2_position": "E6(R2) Section 8 used 'essential documents'; paper-centric model implied",
+        "e6r3_section": "Annex 1, Section 4.3 and Appendix C"
+      },
+      {
+        "change_id": "KC-006",
+        "title": "Data Governance — Full Lifecycle Management",
+        "description": "E6(R3) introduces formal data governance requirements covering the full data lifecycle from creation through destruction, including data transfer validation, ALCOA+ codification, and metadata requirements for electronic records.",
+        "e6r2_position": "E6(R2) addressed data handling in isolated sections without lifecycle framework",
+        "e6r3_section": "Annex 1, Section 4.2"
+      },
+      {
+        "change_id": "KC-007",
+        "title": "Decentralised Clinical Trials — Explicit Provisions",
+        "description": "E6(R3) adds explicit provisions for decentralised elements including direct-to-participant IP delivery, remote consent, home healthcare provider involvement, and remote monitoring of electronic health records.",
+        "e6r2_position": "Not addressed in E6(R2); site-based model only",
+        "e6r3_section": "Multiple sections; key: 3.12.4, 3.15.4, Appendix C Section C.3"
+      },
+      {
+        "change_id": "KC-008",
+        "title": "Important Protocol Deviations — New Formal Classification",
+        "description": "E6(R3) introduces 'important protocol deviation' as a formal GCP classification requiring prospective definition by the sponsor in the protocol. This triggers mandatory identification, documentation, and reporting obligations.",
+        "e6r2_position": "E6(R2) addressed protocol deviations generally without a formal important/non-important classification",
+        "e6r3_section": "Annex 1, Section 2.3.2 and Glossary"
+      },
+      {
+        "change_id": "KC-009",
+        "title": "Computerised System Validation — Risk-Based Approach",
+        "description": "E6(R3) requires risk-based, proportionate validation of computerised systems. The validation scope must reflect the system's impact on participant safety and data integrity. This accommodates modern SaaS/cloud systems.",
+        "e6r2_position": "E6(R2) required validation without specifying risk-based proportionality",
+        "e6r3_section": "Annex 1, Section 4.1"
+      },
+      {
+        "change_id": "KC-010",
+        "title": "Electronic/Remote Informed Consent",
+        "description": "E6(R3) explicitly addresses electronic and remote consent methods, requiring equivalent assurance of voluntariness and comprehension. This legitimises e-consent platforms when properly implemented.",
+        "e6r2_position": "E6(R2) required written signed consent; electronic methods not explicitly addressed",
+        "e6r3_section": "Annex 1, Section 2.6.6"
+      },
+      {
+        "change_id": "KC-011",
+        "title": "Principles + Annex Structural Reorganisation",
+        "description": "E6(R3) replaces the flat section-numbered structure with a Principles section (11 GCP Principles) and detailed operational requirements in Annex 1. Appendices A, B, and C cover IB, Protocol Content, and Essential Records respectively.",
+        "e6r2_position": "E6(R2) used a flat numbered section structure (Sections 1-8) with no hierarchical principles layer",
+        "e6r3_section": "Entire document"
+      },
+      {
+        "change_id": "KC-012",
+        "title": "Formal Monitoring Plan Requirement",
+        "description": "E6(R3) requires a formal written monitoring plan tailored to the trial's specific risk profile. The plan must specify monitoring methods, frequency, and responsibilities.",
+        "e6r2_position": "E6(R2) described monitoring activities but did not require a formal monitoring plan document",
+        "e6r3_section": "Annex 1, Section 3.12"
+      },
+      {
+        "change_id": "KC-013",
+        "title": "Vendor Qualification Assessment",
+        "description": "E6(R3) requires documented pre-engagement qualification assessment for vendors performing critical trial services, with periodic re-assessment during the trial.",
+        "e6r2_position": "E6(R2) addressed CRO qualification generally; formal assessment/documentation not required",
+        "e6r3_section": "Annex 1, Section 3.2.4"
+      },
+      {
+        "change_id": "KC-014",
+        "title": "RBQM Summary Required in CSR",
+        "description": "E6(R3) requires that the Clinical Study Report include a summary of the quality management approach implemented, including QTL deviations and corrective actions taken.",
+        "e6r2_position": "E6(R2) CSR requirements did not include QM approach summary",
+        "e6r3_section": "Annex 1, Sections 3.10.6 and 3.16"
+      },
+      {
+        "change_id": "KC-015",
+        "title": "Metadata Required for Electronic Essential Records",
+        "description": "Electronic essential records must be accompanied by metadata that enables the records to be understood and verified. This applies to all electronic TMF and ISF content.",
+        "e6r2_position": "E6(R2) did not address metadata as a component of essential documents",
+        "e6r3_section": "Annex 1, Section 4.3.6"
+      },
+      {
+        "change_id": "KC-016",
+        "title": "Data Transfer Validation",
+        "description": "Whenever data are transferred between systems, the sponsor must validate that the transfer does not alter, damage, or lose data; this validation must be documented.",
+        "e6r2_position": "E6(R2) addressed system validation but not specifically data transfer validation between systems",
+        "e6r3_section": "Annex 1, Section 4.2.4"
+      }
+    ]
+  },
+  "cross_reference": {
+    "description": "Mapping of where ICH M11 protocol content requirements align with ICH E6(R3) GCP obligations, showing where a single protocol section satisfies requirements from both guidelines.",
+    "alignments": [
+      {
+        "alignment_id": "XR-001",
+        "m11_rule_id": "M11-015",
+        "e6r3_rule_id": "E6R3-073",
+        "topic": "Statistical Section Requirements",
+        "description": "M11 Rule M11-015 specifies what the statistical section must contain (sample size, primary analysis, missing data, multiplicity). E6R3 Appendix B Rule E6R3-073 confirms these are required protocol elements under GCP. A protocol that satisfies M11-015 also satisfies the E6(R3) Appendix B statistical requirements."
+      },
+      {
+        "alignment_id": "XR-002",
+        "m11_rule_id": "M11-017",
+        "e6r3_rule_id": "E6R3-023",
+        "topic": "Safety Reporting Definitions in Protocol",
+        "description": "M11 requires the protocol to define AE, SAE, and SUSAR and specify reporting timelines (M11-017). E6(R3) places the same obligation on the investigator to report SAEs immediately to the sponsor per protocol definitions (E6R3-023). The M11 protocol specification directly enables E6(R3) investigator compliance."
+      },
+      {
+        "alignment_id": "XR-003",
+        "m11_rule_id": "M11-018",
+        "e6r3_rule_id": "E6R3-022",
+        "topic": "Stopping Rules and Trial Termination",
+        "description": "M11 requires the protocol to specify stopping rules for participants, cohorts, and the trial (M11-018). E6(R3) requires investigators and sponsors to follow defined termination procedures (E6R3-022). Compliant M11 protocol enables E6(R3) termination compliance."
+      },
+      {
+        "alignment_id": "XR-004",
+        "m11_rule_id": "M11-025",
+        "e6r3_rule_id": "E6R3-042",
+        "topic": "Monitoring Approach in Protocol",
+        "description": "M11 requires the protocol to describe the monitoring approach and its rationale (M11-025). E6(R3) requires the sponsor to develop a monitoring plan tailored to trial risks (E6R3-042). The M11 monitoring section is a key input to the E6(R3) monitoring plan."
+      },
+      {
+        "alignment_id": "XR-005",
+        "m11_rule_id": "M11-020",
+        "e6r3_rule_id": "E6R3-027",
+        "topic": "Electronic/Remote Consent in Protocol",
+        "description": "M11 requires the protocol to describe whether remote/electronic consent is used (M11-020). E6(R3) requires that electronic consent methods provide equivalent assurance of voluntariness and comprehension (E6R3-027). The M11 protocol section must describe how the E6(R3) equivalence requirement will be met."
+      },
+      {
+        "alignment_id": "XR-006",
+        "m11_rule_id": "M11-026",
+        "e6r3_rule_id": "E6R3-048",
+        "topic": "Electronic Data Systems and Validation",
+        "description": "M11 requires the protocol to specify the electronic data capture systems used and how data integrity will be maintained (M11-026). E6(R3) requires those same computerised systems to be validated for their intended use (E6R3-048). The M11 system identification is a prerequisite for E6(R3) validation scope."
+      },
+      {
+        "alignment_id": "XR-007",
+        "m11_rule_id": "M11-027",
+        "e6r3_rule_id": "E6R3-061",
+        "topic": "Record Retention",
+        "description": "M11 requires the protocol to specify the record retention period and responsible party (M11-027). E6(R3) mandates a minimum 15-year retention period for essential records (E6R3-061). The M11 protocol must not specify a retention period shorter than the E6(R3) minimum."
+      },
+      {
+        "alignment_id": "XR-008",
+        "m11_rule_id": "M11-021",
+        "e6r3_rule_id": "E6R3-020",
+        "topic": "Protocol Amendments",
+        "description": "M11 requires all post-approval changes to be documented as amendments with justification (M11-021). E6(R3) requires investigators not to implement protocol deviations without sponsor agreement except in emergencies (E6R3-020). Both guidelines enforce amendment discipline from complementary angles."
+      },
+      {
+        "alignment_id": "XR-009",
+        "m11_rule_id": "M11-013",
+        "e6r3_rule_id": "E6R3-070",
+        "topic": "Vulnerable Populations in Eligibility Criteria",
+        "description": "M11 requires inclusion/exclusion criteria to be numbered with rationale for key exclusions (M11-013). E6(R3) requires specific consent protections for capacity-impaired participants (E6R3-070). Where trials enrol vulnerable populations, the M11 eligibility criteria must be consistent with the E6(R3) consent protections for those populations."
+      },
+      {
+        "alignment_id": "XR-010",
+        "m11_rule_id": "M11-016",
+        "e6r3_rule_id": "E6R3-079",
+        "topic": "Statistical Analysis Plans and Pre-specification",
+        "description": "M11 requires analysis populations to be defined prospectively in the protocol (M11-016). E6(R3) requires the SAP to be finalised before unblinding, with post-hoc analyses identified as such in the CSR (E6R3-079). Together these rules create a complete chain of pre-specification from protocol through SAP through CSR."
+      }
+    ]
+  }
+}

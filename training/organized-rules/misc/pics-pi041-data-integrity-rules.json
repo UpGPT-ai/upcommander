@@ -1,0 +1,922 @@
+{
+  "meta": {
+    "title": "PIC/S PI 041-1: Good Practices for Data Management and Integrity in Regulated GMP/GDP Environments",
+    "source_document": "PI_041-1.pdf",
+    "source_authority": "PIC/S (Pharmaceutical Inspection Co-operation Scheme)",
+    "document_date": "1 July 2021",
+    "extraction_date": "2026-03-23",
+    "total_pages": 63,
+    "importance": "CRITICAL — #1 GMP inspection finding globally (2015-2025)",
+    "total_rules_extracted": 82
+  },
+
+  "alcoa_plus_principles": {
+    "overview": "ALCOA+ is the foundational framework for all GMP/GDP data integrity. Applies equally to paper and electronic systems.",
+    "rules": [
+      {
+        "rule_id": "PI041-001",
+        "rule_text": "Data must be Attributable: it must be possible to identify the individual or computerised system that performed a recorded task, when the task was performed, and who made any changes including corrections, deletions, and when and why.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 16,
+        "source_quote": "It should be possible to identify the individual or computerised system that performed a recorded task and when the task was performed. This also applies to any changes made to records, such as corrections, deletions, and changes where it is important to know who made a change, when, and why.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-002",
+        "rule_text": "Data must be Legible: all records must be readable and unambiguous. For electronic records, where dynamic functionality (search, query, trend) is important, the ability to interact with the data using a suitable application is required.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 16,
+        "source_quote": "All records should be legible – the information should be readable and unambiguous in order for it to be understandable and of use. This applies to all information that would be required to be considered Complete, including all Original records or entries. Where the 'dynamic' nature of electronic data (the ability to search, query, trend, etc.) is important to the content and meaning of the record, the ability to interact with the data using a suitable application is important to the 'availability' of the record.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Legible"
+      },
+      {
+        "rule_id": "PI041-003",
+        "rule_text": "Data must be Contemporaneous: evidence of actions, events, or decisions must be recorded as they take place, serving as an accurate attestation of what was done, what was decided, and why the decision was made at that time.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 16,
+        "source_quote": "The evidence of actions, events or decisions should be recorded as they take place. This documentation should serve as an accurate attestation of what was done, or what was decided and why, i.e. what influenced the decision at that time.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Contemporaneous"
+      },
+      {
+        "rule_id": "PI041-004",
+        "rule_text": "Data must be Original: the original record is the first-capture of information, whether on paper (static) or electronically (usually dynamic). Information originally captured in a dynamic state must remain available in that state.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 16,
+        "source_quote": "The original record can be described as the first-capture of information, whether recorded on paper (static) or electronically (usually dynamic, depending on the complexity of the system). Information that is originally captured in a dynamic state should remain available in that state.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Original"
+      },
+      {
+        "rule_id": "PI041-005",
+        "rule_text": "Data must be Accurate: records must be a truthful representation of facts, achieved through equipment qualification/calibration, policies and procedures including data review, deviation management, and trained personnel who document their actions and decisions.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 16,
+        "source_quote": "Records need to be a truthful representation of facts to be accurate. Ensuring records are accurate is achieved through many elements of a robust Pharmaceutical Quality System.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Accurate"
+      },
+      {
+        "rule_id": "PI041-006",
+        "rule_text": "Data must be Complete: all information critical to recreating an event must be retained and not lost or deleted. For electronically generated data, a complete record includes relevant metadata.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 17,
+        "source_quote": "All information that would be critical to recreating an event is important when trying to understand the event. It is important that information is not lost or deleted. The level of detail required for an information set to be considered complete would depend on the criticality of the information (see section 5.4 Data criticality). A complete record of data generated electronically includes relevant metadata (see section 9).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      },
+      {
+        "rule_id": "PI041-007",
+        "rule_text": "Data must be Consistent: information must be created, processed, and stored in a logical manner with defined consistency, including chronological sequencing, date formats, units of measurement, approaches to rounding, and significant digits.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 17,
+        "source_quote": "Information should be created, processed, and stored in a logical manner that has a defined consistency. This includes policies or procedures that help control or standardize data (e.g. chronological sequencing, date formats, units of measurement, approaches to rounding, significant digits, etc.).",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Consistent"
+      },
+      {
+        "rule_id": "PI041-008",
+        "rule_text": "Data must be Enduring: records must be kept intact and accessible as an indelible/durable record throughout the entire record retention period.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 17,
+        "source_quote": "Records should be kept in a manner such that they exist for the entire period during which they might be needed. This means they need to remain intact and accessible as an indelible/durable record throughout the record retention period.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Enduring"
+      },
+      {
+        "rule_id": "PI041-009",
+        "rule_text": "Data must be Available: records must be available for review at any time during the required retention period, accessible in a readable format to all applicable personnel for routine release decisions, investigations, trending, annual reports, audits, or inspections.",
+        "source_section": "7.5 — ALCOA+ Table",
+        "source_page": 17,
+        "source_quote": "Records should be available for review at any time during the required retention period, accessible in a readable format to all applicable personnel who are responsible for their review whether for routine release decisions, investigations, trending, annual reports, audits or inspections.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Available"
+      },
+      {
+        "rule_id": "PI041-010",
+        "rule_text": "Good Documentation Practices (GdocPs) apply equally to paper and electronic records. The acronym ALCOA+ summarises the key concepts that ensure events are properly documented and data can be used to support informed decisions.",
+        "source_section": "7.4 — General Data Integrity Principles",
+        "source_page": 15,
+        "source_quote": "Some key concepts of GdocPs are summarised by the acronym ALCOA: Attributable, Legible, Contemporaneous, Original, And Accurate. The following attributes can be added to the list: Complete, Consistent, Enduring and Available (ALCOA+). Together, these expectations ensure that events are properly documented and the data can be used to support informed decisions.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "ALCOA+"
+      }
+    ]
+  },
+
+  "data_governance": {
+    "overview": "Data governance is the sum total of arrangements providing assurance of data integrity across all formats, processes, technologies, and the full data lifecycle.",
+    "rules": [
+      {
+        "rule_id": "PI041-011",
+        "rule_text": "Data governance systems must be integral to the Pharmaceutical Quality System and must address data ownership throughout the lifecycle, including the design, operation, and monitoring of processes and systems to control intentional and unintentional changes to and deletion of information.",
+        "source_section": "5.2.1 — Data governance systems",
+        "source_page": 6,
+        "source_quote": "Data governance systems should be integral to the Pharmaceutical Quality System described in PIC/S GMP/GDP. It should address data ownership throughout the lifecycle, and consider the design, operation and monitoring of processes and systems in order to comply with the principles of data integrity, including control over intentional and unintentional changes to, and deletion of information.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-012",
+        "rule_text": "The organisation's data governance arrangements must be documented within the Pharmaceutical Quality System and regularly reviewed.",
+        "source_section": "5.2.5 — Data governance systems",
+        "source_page": 6,
+        "source_quote": "The organisation's arrangements for data governance should be documented within their Pharmaceutical Quality System and regularly reviewed.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-013",
+        "rule_text": "Senior management is responsible for implementing systems and procedures to minimise data integrity risk and for identifying residual risk using ICH Q9 principles. Contract Givers must review contract acceptors' data management policies as part of their vendor assurance programme.",
+        "source_section": "5.3.1 — Risk management approach to data governance",
+        "source_page": 7,
+        "source_quote": "Senior management is responsible for the implementation of systems and procedures to minimise the potential risk to data integrity, and for identifying the residual risk, using the principles of ICH Q9. Contract Givers should perform a review of the contract acceptor's data management policies and control strategies as part of their vendor assurance programme.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-014",
+        "rule_text": "The effectiveness of data integrity control measures must be assessed periodically as part of self-inspection or other periodic review processes. Self-inspection activities must include: personnel understanding checks, consistency review of reported data against raw entries, risk-based sampling of audit trail logs, and quality system metrics trending.",
+        "source_section": "5.6.1–5.6.2 — Data governance system review",
+        "source_page": 9,
+        "source_quote": "The effectiveness of data integrity control measures should be assessed periodically as part of self-inspection (internal audit) or other periodic review processes. This should ensure that controls over the data lifecycle are operating as intended.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-015",
+        "rule_text": "Senior Management must have appropriate level of understanding and commitment to data governance, including communication of expectations to all personnel levels in a manner that empowers reporting of failures and opportunities for improvement, reducing incentive to falsify, alter or delete data.",
+        "source_section": "6.1.10 — General organisational influences",
+        "source_page": 11,
+        "source_quote": "Senior Management should have an appropriate level of understanding and commitment to effective data governance practices including the necessity for a combination of appropriate organisational culture and behaviours (section 6) and an understanding of data criticality, data risk and data lifecycle. There should also be evidence of communication of expectations to personnel at all levels within the organisation in a manner which ensures empowerment to report failures and opportunities for improvement. This reduces the incentive to falsify, alter or delete data.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-016",
+        "rule_text": "A confidential escalation programme must be supported by company policies and procedures, encouraging personnel to bring instances of possible breaches to the attention of senior management without consequence for the informer/employee. A suitable reporting mechanism for breaches by senior management must also be available.",
+        "source_section": "6.2.6 — Policies related to organisational values, quality, staff conduct and ethics",
+        "source_page": 12,
+        "source_quote": "There should be a confidential escalation program supported by company policies and procedures whereby it encourages personnel to bring instances of possible breaches of policies to the attention of senior management without consequence for the informer/employee. The potential for breaches of the policies by senior management should be recognised and a suitable reporting mechanism for those cases should be available.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-017",
+        "rule_text": "Personnel must be qualified and trained for their specific duties with appropriate segregation of duties, including training on the importance of Good Documentation Practices. Evidence of effectiveness of training on critical procedures, such as electronic data review, must exist.",
+        "source_section": "6.6.4 — Resource allocation",
+        "source_page": 14,
+        "source_quote": "Personnel should be qualified and trained for their specific duties, with appropriate segregation of duties, including the importance of good documentation practices (GdocPs). There should be evidence of the effectiveness of training on critical procedures, such as electronic data review.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-018",
+        "rule_text": "Data integrity lapses found internally must be handled as deviations within the Pharmaceutical Quality System: determining the full extent and root cause, correcting the issue, and implementing preventive measures. Corrections, corrective action plans and their implementation must be recorded and monitored.",
+        "source_section": "6.7.1, 6.7.3 — Dealing with data integrity issues found internally",
+        "source_page": 15,
+        "source_quote": "In the event that data integrity lapses are found, they should be handled as any deviation would be according to the Pharmaceutical Quality System... Corrections and corrective action plans and their implementation should be recorded and monitored.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      }
+    ]
+  },
+
+  "raw_data_definition": {
+    "overview": "Raw data is the original record — the first-capture of information. Its definition has significant implications for what must be retained.",
+    "rules": [
+      {
+        "rule_id": "PI041-019",
+        "rule_text": "Raw data is defined as the original record (data) which is the first-capture of information, whether recorded on paper or electronically. Information originally captured in a dynamic state must remain available in that state.",
+        "source_section": "13 — Glossary: Raw Data",
+        "source_page": 63,
+        "source_quote": "Raw data is defined as the original record (data) which can be described as the first-capture of information, whether recorded on paper or electronically. Information that is originally captured in a dynamic state should remain available in that state.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Original"
+      },
+      {
+        "rule_id": "PI041-020",
+        "rule_text": "For computerised systems, the complete capture and retention of raw data would normally be required in order to reconstruct the manufacturing event or analysis.",
+        "source_section": "9.1.5.1 — Structure of Pharmaceutical Quality System and control of computerised systems",
+        "source_page": 32,
+        "source_quote": "In dealing with raw data, the complete capture and retention of raw data would normally be required in order to reconstruct the manufacturing event or analysis.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Original"
+      },
+      {
+        "rule_id": "PI041-021",
+        "rule_text": "Critical metadata — including user identification, times, critical process parameters, and units of measure — must be fully captured and managed as it is required for reconstruction of events. Non-critical metadata may not require full capture where justified using risk management.",
+        "source_section": "9.1.5.2 — Structure of Pharmaceutical Quality System and control of computerised systems",
+        "source_page": 32,
+        "source_quote": "In dealing with metadata, some metadata is critical in reconstruction of events, (e.g. user identification, times, critical process parameters, units of measure), and would be considered as 'relevant metadata' that should be fully captured and managed.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      },
+      {
+        "rule_id": "PI041-022",
+        "rule_text": "For records of analysis, raw data includes: raw data, metadata, relevant audit trail and result files, software/system configuration settings specific to each analytical run, and all data processing runs (including methods and audit trails) necessary for reconstruction of a given raw data set.",
+        "source_section": "7.7.2 — True copies",
+        "source_page": 18,
+        "source_quote": "the data retention process should record all data, (including metadata) for all activities which directly or indirectly impact on all aspects of the quality of medicinal products, (e.g. for records of analysis this may include: raw data, metadata, relevant audit trail and result files, software / system configuration settings specific to each analytical run, and all data processing runs (including methods and audit trails) necessary for reconstruction of a given raw data set).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      },
+      {
+        "rule_id": "PI041-023",
+        "rule_text": "Many electronic records are important to retain in their dynamic format to enable interaction with the data. Data must be retained in a dynamic form where this is critical to its integrity or later verification. Risk management principles must be used to justify whether and how long data should be stored in dynamic format.",
+        "source_section": "7.7.3 — True copies",
+        "source_page": 18,
+        "source_quote": "Many electronic records are important to retain in their dynamic format, to enable interaction with the data. Data should be retained in a dynamic form where this is critical to its integrity or later verification. Risk management principles should be utilised to support and justify whether and how long data should be stored in a dynamic format.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Original"
+      }
+    ]
+  },
+
+  "audit_trail_requirements": {
+    "overview": "Audit trails are GMP/GDP-critical metadata that record the creation, modification, or deletion of GMP/GDP relevant data, permitting reconstruction of GMP/GDP activities.",
+    "rules": [
+      {
+        "rule_id": "PI041-024",
+        "rule_text": "Audit trail functionality must be verified during validation to ensure all changes and deletions of critical data associated with each manual activity are recorded and meet ALCOA+ principles.",
+        "source_section": "9.6 Item 1 — Audit trails for computerised systems",
+        "source_page": 45,
+        "source_quote": "Audit trail functionality should be verified during validation of the system to ensure that all changes and deletions of critical data associated with each manual activity are recorded and meet ALCOA+ principles.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-025",
+        "rule_text": "Audit trail functionalities must be enabled and locked at all times and it must not be possible to deactivate, delete, or modify the functionality. If administrative users can deactivate, delete, or modify audit trail functionality, an automatic entry must be made in the audit trail indicating that this has occurred.",
+        "source_section": "9.6 Item 1 — Audit trails for computerised systems",
+        "source_page": 45,
+        "source_quote": "Audit trail functionalities should be enabled and locked at all times and it should not be possible to deactivate, delete or modify the functionality. If it is possible for administrative users to deactivate, delete or modify the audit trail functionality, an automatic entry should be made in the audit trail indicating that this has occurred.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-026",
+        "rule_text": "Audit trails must capture: (1) details of the user that undertook the action; (2) what action occurred and was changed, including old and new values; (3) when the action was taken, including date and time; (4) why the action was taken (reason); and (5) in the case of changes or modifications, the name of any person authorising the change.",
+        "source_section": "9.6 Item 2 — Audit trails for computerised systems",
+        "source_page": 46,
+        "source_quote": "The audit trail should include the following parameters: - details of the user that undertook the action; - what action occurred, was changed, incl. old and new values; - when the action was taken, incl. date and time; - why the action was taken (reason); and - in the case of changes or modifications to data, the name of any person authorising the change.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-027",
+        "rule_text": "The audit trail must allow for reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record. The system must be able to provide both printed and electronic copies of the audit trail in a meaningful format.",
+        "source_section": "9.6 Item 2 — Audit trails for computerised systems",
+        "source_page": 47,
+        "source_quote": "The audit trail should allow for reconstruction of the course of events relating to the creation, modification, or deletion of an electronic record. The system should be able to print and provide an electronic copy of the audit trail, and whether viewing in the system online or in a hardcopy, the audit trail should be available in a meaningful format.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Available"
+      },
+      {
+        "rule_id": "PI041-028",
+        "rule_text": "Critical audit trails must be independently reviewed as part of routine data review and prior to batch release. For changes to electronic data that can directly impact product quality, audit trail review is expected prior to the point that the data is relied upon to make a critical decision.",
+        "source_section": "9.8 Item 1 — Review of data within computerised systems",
+        "source_page": 49,
+        "source_quote": "The review of audit trails should be part of the routine data review within the approval process. The frequency, roles and responsibilities of audit trail review should be based on a risk assessment according to the GMP/GDP relevant value of the data recorded in the computerised system. For example, for changes of electronic data that can have a direct impact on the quality of the medicinal products, it would be expected to review audit trails prior to the point that the data is relied upon to make a critical decision, e.g. batch release.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-029",
+        "rule_text": "The quality unit must establish a programme and schedule to conduct ongoing reviews of audit trails based on their criticality and system complexity. Audit trail reviews must be both random (selected by chance) and targeted (selected based on criticality or risk), and incorporated into the self-inspection programme.",
+        "source_section": "9.8 Item 2 — Review of data within computerised systems",
+        "source_page": 50,
+        "source_quote": "The company's quality unit should establish a program and schedule to conduct ongoing reviews of audit trails based upon their criticality and the system's complexity in order to verify the effective implementation of current controls and to detect potential non-compliance issues. These reviews should be incorporated into the company's self-inspection programme... Audit trail reviews should be both random (selected based on chance) and targeted (selected based on criticality or risk).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-030",
+        "rule_text": "Any significant variation from expected outcomes found during audit trail review must be fully investigated and recorded. Procedures must describe the actions to take if audit trail review identifies serious issues impacting product quality or data integrity.",
+        "source_section": "9.8 Item 1 — Review of data within computerised systems",
+        "source_page": 49,
+        "source_quote": "Any significant variation from the expected outcome found during the audit trail review should be fully investigated and recorded. A procedure should describe the actions to be taken if a review of audit trails identifies serious issues that can impact the quality of the medicinal products or the integrity of data.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-031",
+        "rule_text": "Audit trail entries must be recorded in true time and reflect the actual time of activities. Systems recording the same time for sequential interactions may not comply with data integrity expectations, particularly where each discrete interaction or sequence is critical.",
+        "source_section": "9.6 Item 2 — Audit trails for computerised systems",
+        "source_page": 47,
+        "source_quote": "Audit trail entries should be recorded in true time and reflect the actual time of activities. Systems recording the same time for a number of sequential interactions, or which only make an entry in the audit trail, once all interactions have been completed, may not be in compliance with expectations to data integrity, particularly where each discrete interaction or sequence is critical.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Contemporaneous"
+      }
+    ]
+  },
+
+  "electronic_records": {
+    "overview": "Computerised systems must be managed under the Pharmaceutical Quality System with protection from accidental or deliberate manipulation, modification, or any other activity impacting data quality and integrity.",
+    "rules": [
+      {
+        "rule_id": "PI041-032",
+        "rule_text": "Individual Login IDs and passwords must be set up and assigned for all staff accessing electronic systems. Shared login credentials are prohibited as they do not allow traceability to the individual who performed the activity.",
+        "source_section": "9.5 Item 1 — System security for computerised systems",
+        "source_page": 40,
+        "source_quote": "Individual Login IDs and passwords should be set up and assigned for all staff needing to access and utilise the specific electronic system. Shared login credentials do not allow for traceability to the individual who performed the activity. For this reason, shared passwords, even for reasons of financial savings, should be prohibited.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-033",
+        "rule_text": "Systems must support different user access roles following the least-privilege rule: assigning the minimum necessary access level for any job function. Administrator access rights must not be given to normal users. Normal users must not have access to critical system aspects such as system clocks or file deletion functions.",
+        "source_section": "9.5 Item 1 — System security for computerised systems",
+        "source_page": 40,
+        "source_quote": "Systems should support different user access roles (levels) and assignment of a role should follow the least-privilege rule, i.e. assigning the minimum necessary access level for any job function... Normal users should not have access to critical aspects of the computerised system, e.g. system clocks, file deletion functions, etc.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-034",
+        "rule_text": "System administrators must normally be independent from users performing the task and have no involvement or interest in the outcome of the data. QC supervisors and managers must not be assigned as system administrators for electronic systems in their laboratories (e.g. HPLC, GC, UV-Vis).",
+        "source_section": "9.5 Item 1 — System security for computerised systems",
+        "source_page": 41,
+        "source_quote": "System administrators should normally be independent from users performing the task, and have no involvement or interest in the outcome of the data generated or available in the electronic system. For example, QC supervisors and managers should not be assigned as the system administrators for electronic systems in their laboratories (e.g. HPLC, GC, UV-Vis).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-035",
+        "rule_text": "Computerised systems giving access to GMP/GDP critical data must have an inactivity logout that logs out a user who has been inactive longer than a predefined time. Upon activation, the system must require the user to go through the normal authentication procedure to login again.",
+        "source_section": "9.5 Item 1 — System security for computerised systems",
+        "source_page": 41,
+        "source_quote": "Computerised systems giving access to GMP/GDP critical data or operations should have an inactivity logout, which, either at the application or the operating system level, logs out a user who has been inactive longer than a predefined time. The time should be shorter, rather than longer and should typically be set to prevent unauthorised access to systems.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-036",
+        "rule_text": "Electronic signatures used in place of handwritten signatures must be permanently linked to their respective record. If a later change is made to a signed record, the record must indicate the amendment and appear as unsigned. Electronic signature functionality must automatically log the date and time when a signature was applied.",
+        "source_section": "9.5 Item 4 — System security for computerised systems",
+        "source_page": 44,
+        "source_quote": "Electronic signatures should be permanently linked to their respective record, i.e. if a later change is made to a signed record; the record should indicate the amendment and appear as unsigned. Where used, electronic signature functionality should automatically log the date and time when a signature was applied.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-037",
+        "rule_text": "The operating system clock must be synchronised with the clock of connected systems and access to all clocks must be restricted to authorised personnel. Appropriate network security measures must be applied including intrusion prevention and detection systems.",
+        "source_section": "9.5 Item 2 — System security for computerised systems",
+        "source_page": 42,
+        "source_quote": "The operating system clock should be synchronized with the clock of connected systems and access to all clocks restricted to authorised personnel. Appropriate network security measures should be applied, including intrusion prevention and detection systems.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Contemporaneous"
+      },
+      {
+        "rule_id": "PI041-038",
+        "rule_text": "USB memory sticks and storage devices must be controlled on computer clients and servers hosting GMP/GDP critical data. Private USB devices on company computers and company USB devices on private computers must be controlled to prevent security breaches.",
+        "source_section": "9.5 Item 5 — Restrictions on use of USB devices",
+        "source_page": 44,
+        "source_quote": "For reasons of system security, computerised systems should be configured to prevent vulnerabilities from the use of USB memory sticks and storage devices on computer clients and servers hosting GMP/GDP critical data. If necessary, ports should only be opened for approved purposes and all USB devices should be properly scanned before use.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-039",
+        "rule_text": "Any necessary changes to data must be authorised and controlled in accordance with approved procedures. Original (unchanged) data must be retained in its original context. All changes and modifications to raw data must be fully documented and reviewed and approved by at least one appropriately trained and qualified individual.",
+        "source_section": "9.7 Item 2 — Data capture/entry for computerised systems",
+        "source_page": 48,
+        "source_quote": "Any necessary changes to data should be authorised and controlled in accordance with approved procedures... Any and all changes and modifications to raw data should be fully documented and should be reviewed and approved by at least one appropriately trained and qualified individual.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-040",
+        "rule_text": "True copies of electronic documents must be created by electronic means (electronic file copy) including all required metadata. Creating PDF versions of electronic data is prohibited where there is potential for loss of metadata.",
+        "source_section": "7.7.5, Table Item 1 — True copies",
+        "source_page": 18,
+        "source_quote": "A 'true copy' of an electronic record should be created by electronic means (electronic file copy), including all required metadata. Creating pdf versions of electronic data should be prohibited, where there is the potential for loss of metadata.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      }
+    ]
+  },
+
+  "computerised_system_validation": {
+    "overview": "Computerised system validation (CSV) must be performed per GMP/GDP guidelines with specific attention to data integrity controls. Validation alone does not guarantee data protection — it must be supplemented by administrative and physical controls.",
+    "rules": [
+      {
+        "rule_id": "PI041-041",
+        "rule_text": "Validation alone does not necessarily guarantee that records generated are adequately protected. Validated systems may be vulnerable to loss and alteration by accidental or malicious means. Validation must be supplemented by appropriate administrative and physical controls as well as training of users.",
+        "source_section": "9.2.2 — Qualification and validation of computerised systems",
+        "source_page": 33,
+        "source_quote": "Validation alone does not necessarily guarantee that records generated are necessarily adequately protected and validated systems may be vulnerable to loss and alteration by accidental or malicious means. Thus, validation should be supplemented by appropriate administrative and physical controls, as wells as training of users.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-042",
+        "rule_text": "Regulated users must have an inventory of all computerised systems in use, including: name, location and primary function; assessment of function and criticality (direct GMP/GDP impact, indirect impact, none); and current validation status with reference to existing validation documents.",
+        "source_section": "9.3 Item 2 — Validation and Maintenance",
+        "source_page": 34,
+        "source_quote": "Regulated users should have an inventory of all computerised systems in use. The list should include reference to: The name, location and primary function of each computerised system; Assessments of the function and criticality of the system and associated data; (e.g. direct GMP/GDP impact, indirect impact, none) The current validation status of each system and reference to existing validation documents.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-043",
+        "rule_text": "The Validation Summary Report for each computerised system must include at minimum: critical system configuration details and change control, list of all approved users with usernames and roles, frequency of audit trail review, and procedures for user management, back-up, disaster recovery, data archiving, and data storage locations.",
+        "source_section": "9.3 Item 3 — Validation and Maintenance",
+        "source_page": 35,
+        "source_quote": "For new systems, a Validation Summary Report for each computerised system (written and approved in accordance with Annex 15 requirements) should be in place and state (or provide reference to) at least the following items: Critical system configuration details and controls for restricting access to configuration and any changes (change management). A list of all currently approved normal and administrative users specifying the username and the role of the user. Frequency of review of audit trails and system logs. Procedures for: creating new system user; modifying or changing privileges for an existing user; defining the combination or format of passwords for each system; reviewing and deleting users; back-up processes and frequency; disaster recovery; data archiving (processes and responsibilities); approving locations for data storage.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-044",
+        "rule_text": "Computerised systems must include a Validation Master Plan with specific policies and validation requirements. The extent of validation must be determined based on risk. Computerised system validation must be designed according to GMP Annex 15 with URS, DQ, FAT, SAT, IQ, OQ, and PQ tests as necessary.",
+        "source_section": "9.3 Item 4 — Validation and Maintenance",
+        "source_page": 36,
+        "source_quote": "Companies should have a Validation Master Plan in place that includes specific policies and validation requirements for computerised systems and the integrity of such systems and associated data... Computerised system validation should be designed according to GMP Annex 15 with URS, DQ, FAT, SAT, IQ, OQ and PQ tests as necessary.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-045",
+        "rule_text": "Computerised systems must be evaluated periodically to ensure continued compliance with data integrity controls. Periodic evaluations must include: deviations, changes (including cumulative effects), upgrade history, performance and maintenance, and assessment of any detrimental effect on data management and integrity controls. Frequency must be based on risk assessment and criticality.",
+        "source_section": "9.3 Item 5 — Validation and Maintenance (Periodic System Evaluation)",
+        "source_page": 37,
+        "source_quote": "Computerised systems should be evaluated periodically in order to ensure continued compliance with respect to data integrity controls. The evaluation should include deviations, changes (including any cumulative effect of changes), upgrade history, performance and maintenance, and assess whether these changes have had any detrimental effect on data management and integrity controls. The frequency of the re-evaluation should be based on a risk assessment depending on the criticality of the computerised systems considering the cumulative effect of changes to the system since last review.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-046",
+        "rule_text": "Operating systems and network components must be updated in a timely manner according to vendor recommendations. Security patches must be applied in a controlled and timely manner per change management principles. Unsupported operating systems must be isolated from the rest of the network as much as possible.",
+        "source_section": "9.3 Item 6 — Validation and Maintenance",
+        "source_page": 37,
+        "source_quote": "Operating systems and network components (including hardware) should be updated in a timely manner according to vendor recommendations... Security patches for operating systems and network components should be applied in a controlled and timely manner according to vendor recommendations in order to maintain data security... Where unsupported operating systems are maintained... the systems (servers) should be isolated as much as possible from the rest of the network.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-047",
+        "rule_text": "Data interfaces between computerised systems must be assessed and addressed during validation to ensure correct and complete data transfer. Interfaces must include appropriate built-in checks (secure transfer, encryption, checksums) for correct and secure entry and processing of data to minimise data integrity risks.",
+        "source_section": "9.4 Item 1 — Data Transfer",
+        "source_page": 38,
+        "source_quote": "Interfaces should be assessed and addressed during validation to ensure the correct and complete transfer of data. Interfaces should include appropriate built-in checks for the correct and secure entry and processing of data, in order to minimise data integrity risks. Verification methods may include the use of: Secure transfer; Encryption; Checksums.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Accurate"
+      },
+      {
+        "rule_id": "PI041-048",
+        "rule_text": "When system software is installed or updated, the user must ensure that existing and archived data can be read by the new software. If conversion to the new data format is not possible, the old software must be maintained and also available as a backup media to read archived data for investigations.",
+        "source_section": "9.4 Item 2 — Data Transfer",
+        "source_page": 38,
+        "source_quote": "Where system software (including operating system) is installed or updated, the user should ensure that existing and archived data can be read by the new software. Where necessary this may require conversion of existing archived data to the new format. Where conversion to the new data format of the new software is not possible, the old software should be maintained, e.g. installed in one computer or other technical solution, and also available as a backup media in order to have the opportunity to read the archived data in case of an investigation.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Available"
+      }
+    ]
+  },
+
+  "hybrid_systems": {
+    "overview": "Hybrid systems combine electronic systems generating electronic data with defined manual paper-based systems. Their use is discouraged and they should be replaced whenever possible due to increased vulnerability to data manipulation.",
+    "rules": [
+      {
+        "rule_id": "PI041-049",
+        "rule_text": "Hybrid systems require specific and additional controls due to their complexity and potential increased vulnerability to manipulation of data. The use of hybrid systems is discouraged and should be replaced whenever possible. Each element of the hybrid system must be qualified and controlled in accordance with guidance for both manual and computerised systems.",
+        "source_section": "9.10 Item 1 — Management of Hybrid Systems",
+        "source_page": 52,
+        "source_quote": "Hybrid systems require specific and additional controls in reflection of their complexity and potential increased vulnerability to manipulation of data. For this reason, the use of hybrid systems is discouraged and such systems should be replaced whenever possible. Each element of the hybrid system should be qualified and controlled in accordance with the guidance relating to manual and computerised systems as specified above.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-050",
+        "rule_text": "A detailed system description of the entire hybrid system must be available, outlining all major components, the function of each component, controls for data management and integrity, and how system components interact. Procedures and records must be in place to manage and control the interface between manual and automated systems.",
+        "source_section": "9.10 Item 1 — Management of Hybrid Systems",
+        "source_page": 53,
+        "source_quote": "A detailed system description of the entire system should be available that outlines all major components of the system, the function of each component, controls for data management and integrity, and the manner in which system components interact. Procedures and records should be available to manage and appropriately control the interface between manual and automated systems.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-051",
+        "rule_text": "Procedures must be in place to manage review of data generated by hybrid systems, clearly outlining the process for evaluation and approval of electronic and paper-based data, including how electronic and paper data is correlated to form a complete record, and expectations for approval of data outputs for each system.",
+        "source_section": "9.10 Item 2 — Management of Hybrid Systems",
+        "source_page": 53,
+        "source_quote": "Procedures should be in place to manage the review of data generated by hybrid systems which clearly outline the process for the evaluation and approval of electronic and paper-based data. Procedures should outline: Instructions for how electronic data and paper-based data is correlated to form a complete record. Expectations for approval of data outputs for each system. Risks identified with hybrid systems, with a focus on verification of the effective application of controls.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-052",
+        "rule_text": "In hybrid systems, original data must be retained following transcription and processing. Where no electronic audit trail exists, a paper-based record to demonstrate changes to data may be acceptable as an interim measure until a fully audit-trailed system becomes available.",
+        "source_section": "9.6 Item 1 — Audit trails for computerised systems",
+        "source_page": 46,
+        "source_quote": "If no electronic audit trail system exists a paper based record to demonstrate changes to data may be acceptable until a fully audit trailed (integrated system or independent audit software using a validated interface) system becomes available. These hybrid systems are permitted, where they achieve equivalence to integrated audit trail, such as described in Annex 11 of the PIC/S GMP Guide.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Original"
+      }
+    ]
+  },
+
+  "backup_archiving": {
+    "overview": "Backup is a copy of current data for disaster recovery. Archiving is long-term, permanent retention of completed data and relevant metadata in its final form for reconstruction of the process or activity.",
+    "rules": [
+      {
+        "rule_id": "PI041-053",
+        "rule_text": "Storage of electronic data must include the entire original data and all relevant metadata, including audit trails, using a secure and validated process. Backup copies must have the same appropriate levels of controls to prohibit unauthorised access, changes to, and deletion of data.",
+        "source_section": "9.9 Item 1 — Storage, archival and disposal of electronic data",
+        "source_page": 50,
+        "source_quote": "Storage of data should include the entire original data and all relevant metadata, including audit trails, using a secure and validated process. If the data is backed up, or copies of it are made, then the backup and copies should also have the same appropriate levels of controls so as to prohibit unauthorised access to, changes to and deletion of data or their alteration.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      },
+      {
+        "rule_id": "PI041-054",
+        "rule_text": "Routine backup copies must be stored in a remote location (physically separated) in the event of disasters. Back-up data must be readable for all the period of the defined regulatory retention period, even if a new version of the software has been updated or substituted.",
+        "source_section": "9.9 Item 1 — Storage, archival and disposal of electronic data",
+        "source_page": 51,
+        "source_quote": "Routine backup copies should be stored in a remote location (physically separated) in the event of disasters. Back-up data should be readable for all the period of the defined regulatory retention period, even if a new version of the software has been updated or substituted for one with better performance.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Available"
+      },
+      {
+        "rule_id": "PI041-055",
+        "rule_text": "Record retention procedures must include provisions for retaining metadata to allow future queries or investigations to reconstruct the activities that occurred related to a batch.",
+        "source_section": "9.9 Item 2 — Storage, archival and disposal of electronic data",
+        "source_page": 51,
+        "source_quote": "The record retention procedures should include provisions for retaining the metadata. This allows for future queries or investigations to reconstruct the activities that occurred related to a batch.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Complete"
+      },
+      {
+        "rule_id": "PI041-056",
+        "rule_text": "Data must be backed up periodically and archived in accordance with written procedures. Archive copies must be physically (or virtually) secured in a separate and remote location from where backup and original data are stored. A procedure for restoring archived data must be in place and regularly tested.",
+        "source_section": "9.9 Item 3 — Storage, archival and disposal of electronic data",
+        "source_page": 51,
+        "source_quote": "Data should be backed-up periodically and archived in accordance with written procedures. Archive copies should be physically (or virtually, where relevant) secured in a separate and remote location from where back up and original data are stored. The data should be accessible and readable and its integrity maintained for all the period of archiving. There should be in place a procedure for restoring archived data in case an investigation is needed. The procedure in place for restoring archived data should be regularly tested.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Available"
+      },
+      {
+        "rule_id": "PI041-057",
+        "rule_text": "The retention period of each type of record must at a minimum meet the periods specified by GMP/GDP requirements. Consideration must be given to local or national legislation that may stipulate longer storage periods. Where records are retained by outside storage services, quality agreements must be in place.",
+        "source_section": "8.10.1–8.10.2 — Document retention",
+        "source_page": 29,
+        "source_quote": "The retention period of each type of records should (at a minimum) meet those periods specified by GMP/GDP requirements. Consideration should be given to other local or national legislation that may stipulate longer storage periods. The records can be retained internally or by using an outside storage service subject to quality agreements.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Enduring"
+      },
+      {
+        "rule_id": "PI041-058",
+        "rule_text": "All hardcopy quality records must be archived in: secure locations to prevent damage or loss; in a manner that is easily traceable and retrievable; and in a manner that ensures records are durable for their archived life. Records must be protected from fire, liquids, rodents, humidity, and unauthorised personnel access.",
+        "source_section": "8.10 Items 2–3 — Document retention",
+        "source_page": 30,
+        "source_quote": "All hardcopy quality records should be archived in: secure locations to prevent damage or loss, such a manner that it is easily traceable and retrievable, and a manner that ensures that records are durable for their archived life... All records should be protected from damage or destruction by: fire; liquids (e.g. water, solvents and buffer solution); rodents; humidity etc; and unauthorised personnel access, who may attempt to amend, destroy or replace records.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Enduring"
+      },
+      {
+        "rule_id": "PI041-059",
+        "rule_text": "A documented process for disposal of records must be in place to ensure correct original records or true copies are disposed of after the defined retention period. The system must ensure current records are not destroyed by accident and historical records do not inadvertently enter the current record stream.",
+        "source_section": "8.11.1 — Disposal of original records or true copies",
+        "source_page": 30,
+        "source_quote": "A documented process for the disposal of records should be in place to ensure that the correct original records or true copies are disposed of after the defined retention period. The system should ensure that current records are not destroyed by accident and that historical records do not inadvertently make their way back into the current record stream.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": "Available"
+      }
+    ]
+  },
+
+  "data_integrity_risk_assessment": {
+    "overview": "Risk management must be applied to data governance, considering both data criticality (impact to decision making and product quality) and data risk (opportunity for data alteration and likelihood of detection).",
+    "rules": [
+      {
+        "rule_id": "PI041-060",
+        "rule_text": "Risk management must be applied to determine the importance of each data/processing step by considering: (1) data criticality — impact to decision making and product quality; and (2) data risk — opportunity for data alteration and deletion, and likelihood of detection/visibility of changes by the manufacturer's routine review processes.",
+        "source_section": "5.3.4 — Risk management approach to data governance",
+        "source_page": 7,
+        "source_quote": "Risk management should be utilised to determine the importance of each data/processing step. An effective risk management approach to data governance will consider: Data criticality (impact to decision making and product quality) and Data risk (opportunity for data alteration and deletion, and likelihood of detection / visibility of changes by the manufacturer's routine review processes).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-061",
+        "rule_text": "Data risk assessments must consider vulnerability to: involuntary alteration, deletion, loss (accidental or by security failure), re-creation, or deliberate falsification; and the likelihood of detection. Consideration must also include ensuring complete and timely data recovery in the event of a disaster.",
+        "source_section": "5.5.2 — Data risk",
+        "source_page": 8,
+        "source_quote": "Data risk assessments should consider the vulnerability of data to involuntary alteration, deletion, loss (either accidental or by security failure) or re-creation or deliberate falsification, and the likelihood of detection of such actions. Consideration should also be given to ensuring complete and timely data recovery in the event of a disaster.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-062",
+        "rule_text": "Risk assessments must focus on business processes (e.g. production, QC), evaluating data flows and methods of generating and processing data — not just IT system functionality or complexity. Factors include process complexity, methods of storing and archiving data, process consistency, degree of automation/human interaction, and inherent data integrity controls.",
+        "source_section": "5.5.4–5.5.5 — Data risk",
+        "source_page": 8,
+        "source_quote": "Risk assessments should focus on a business process (e.g. production, QC), evaluate data flows and the methods of generating and processing data, and not just consider information technology (IT) system functionality or complexity.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-063",
+        "rule_text": "For computerised systems, a fully automated and validated process with a configuration that does not allow human intervention, or reduces human intervention to a minimum, is preferable as this design lowers the data integrity risk. Procedural controls must be installed and verified where integrated controls are not possible for technical reasons.",
+        "source_section": "5.5.5 — Data risk",
+        "source_page": 9,
+        "source_quote": "A fully automated and validated process together with a configuration that does not allow human intervention, or reduces human intervention to a minimum, is preferable as this design lowers the data integrity risk. Appropriate procedural controls should be installed and verified where integrated controls are not possible for technical reasons.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-064",
+        "rule_text": "Where long-term measures are identified to achieve the desired state of control, interim measures must be implemented to mitigate risk and monitored for effectiveness. Residual data integrity risk must be communicated to senior management and kept under review. Reverting from automated to paper-based systems will not remove the need for data governance.",
+        "source_section": "5.3.3 — Risk management approach to data governance",
+        "source_page": 7,
+        "source_quote": "Where long term measures are identified in order to achieve the desired state of control, interim measures should be implemented to mitigate risk, and should be monitored for effectiveness. Where interim measures or risk prioritisation are required, residual data integrity risk should be communicated to senior management, and kept under review. Reverting from automated and computerised systems to paper-based systems will not remove the need for data governance.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      }
+    ]
+  },
+
+  "paper_based_systems": {
+    "overview": "Specific data integrity requirements for paper records covering control, filling out, corrections, and verification.",
+    "rules": [
+      {
+        "rule_id": "PI041-065",
+        "rule_text": "All paper documents must have a unique identifier (including version number) and must be checked, approved, signed, and dated. The use of uncontrolled documents must be prohibited by local procedures. The use of temporary recording practices, such as scraps of paper, must be prohibited.",
+        "source_section": "8.4 Item Generation 1 — Expectations for the generation, distribution and control of records",
+        "source_page": 21,
+        "source_quote": "All documents should have a unique identifier (including the version number) and should be checked, approved, signed and dated. The use of uncontrolled documents should be prohibited by local procedures. The use of temporary recording practices, e.g. scraps of paper should be prohibited.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-066",
+        "rule_text": "Handwritten entries must be made by the person who executed the task. Unused, blank fields within documents must be voided (e.g. crossed-out), dated, and signed. Handwritten entries must be made in clear and legible writing. Date fields must be completed in an unambiguous format defined for the site.",
+        "source_section": "8.6 Item 1 — Filling out records",
+        "source_page": 25,
+        "source_quote": "Handwritten entries should be made by the person who executed the task. Unused, blank fields within documents should be voided (e.g. crossed-out), dated and signed. Handwritten entries should be made in clear and legible writing. The completion of date fields should be done in an unambiguous format defined for the site. E.g. dd/mm/yyyy or mm/dd/yyyy.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-067",
+        "rule_text": "Records relating to operations must be completed contemporaneously. Records must be available in the immediate areas in which they are used so that sequential recording can be performed at the site of operations at the time of occurrence.",
+        "source_section": "8.6 Item 2 — Filling out records",
+        "source_page": 25,
+        "source_quote": "Records relating to operations should be completed contemporaneously.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Contemporaneous"
+      },
+      {
+        "rule_id": "PI041-068",
+        "rule_text": "Records must be enduring (indelible): written entries must be in ink that is not erasable and will not smudge or fade during the retention period. Records must not be filled out in pencil. Paper printouts from systems that may fade over time (e.g. thermal paper) must have indelible, signed, and dated true copies produced and kept.",
+        "source_section": "8.6 Item 3 — Filling out records",
+        "source_page": 26,
+        "source_quote": "Records should be enduring (indelible)... Check that written entries are in ink, which is not erasable, and/or will not smudge or fade (during the retention period). Check that the records were not filled out using pencil prior to use of pen (overwriting). Note that some paper printouts from systems may fade over time, e.g. thermal paper. Indelible signed and dated true copies of these should be produced and kept.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Enduring"
+      },
+      {
+        "rule_id": "PI041-069",
+        "rule_text": "Corrections to paper records must maintain full traceability: cross out the original with a single line (original must remain readable), initial and date the change, and where appropriate clearly record the reason for the correction. Use of liquid paper/correction fluid to obscure original entries and overwriting are not permitted.",
+        "source_section": "8.7 Item 1 — Making corrections on records",
+        "source_page": 26,
+        "source_quote": "Corrections to the records should be made in such way that full traceability is maintained. Cross out what is to be changed with a single line. Where appropriate, the reason for the correction should be clearly recorded and verified if critical. Initial and date the change made... Check that the original data is readable not obscured (e.g. not obscured by use of liquid paper; overwriting is not permitted).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-070",
+        "rule_text": "Records of critical process steps must be: (1) reviewed/witnessed by independent and designated personnel at the time of operations; (2) reviewed by an approved person within the production department before sending to the Quality unit; and (3) reviewed and approved by the Quality Unit before release or distribution of the batch produced.",
+        "source_section": "8.8 Item 1 — Verification of records (secondary checks)",
+        "source_page": 27,
+        "source_quote": "Records of critical process steps, e.g. critical steps within batch records, should be: reviewed/witnessed by independent and designated personnel at the time of operations occurring; and reviewed by an approved person within the production department before sending them to the Quality unit; and reviewed and approved by the Quality Unit (e.g. Authorised Person / Qualified Person) before release or distribution of the batch produced.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Accurate"
+      }
+    ]
+  },
+
+  "outsourced_activities": {
+    "overview": "Data integrity responsibilities cannot be outsourced. The regulated entity retains full responsibility for ensuring outsourced services meet GMP/GDP data integrity requirements.",
+    "rules": [
+      {
+        "rule_id": "PI041-071",
+        "rule_text": "Quality agreements (or equivalent) must be in place between manufacturers and all supply chain partners, with specific provisions for ensuring data integrity across the supply chain, including expectations for data governance, transparent error/deviation reporting, and a requirement to notify the contract giver of any data integrity failures identified at the contract acceptor site.",
+        "source_section": "10.3.2 — Strategies for assessing data integrity in the supply chain",
+        "source_page": 55,
+        "source_quote": "Quality agreements (or equivalent) should be in place between manufacturers and suppliers of materials, service providers, contract manufacturing organisations (CMOs) and (in the case of distribution) suppliers of medicinal products, with specific provisions for ensuring data integrity across the supply chain. This may be achieved by setting out expectations for data governance, and transparent error/deviation reporting by the contract acceptor to the contract giver. There should also be a requirement to notify the contract giver of any data integrity failures identified at the contract acceptor site.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-072",
+        "rule_text": "Audits of suppliers must include verification of data integrity measures at the contract organisation. Contract acceptors are expected to provide reasonable access to data generated on behalf of the contract giver during audits so that compliance with data integrity and management principles can be assessed.",
+        "source_section": "10.3.3 — Strategies for assessing data integrity in the supply chain",
+        "source_page": 55,
+        "source_quote": "Audits of suppliers and manufacturers of APIs, critical intermediate suppliers, primary and printed packaging materials suppliers, contract manufacturers and service providers conducted by the manufacturer (or by a third party on their behalf) should include a verification of data integrity measures at the contract organisation. Contract acceptors are expected to provide reasonable access to data generated on behalf of the contract giver during audits, so that compliance with data integrity and management principles can be assessed and demonstrated.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-073",
+        "rule_text": "The principles for computerised systems apply equally to circumstances where the provision of computerised systems is outsourced. The regulated entity retains the responsibility to ensure outsourced services are managed and assessed in accordance with GMP/GDP requirements.",
+        "source_section": "9.1.10 — Structure of Pharmaceutical Quality System and control of computerised systems",
+        "source_page": 32,
+        "source_quote": "The principles herein apply equally to circumstances where the provision of computerised systems is outsourced. In these cases, the regulated entity retains the responsibility to ensure that outsourced services are managed and assessed in accordance with GMP/GDP requirements, and that appropriate data management and integrity controls are understood by both parties and effectively implemented.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      }
+    ]
+  },
+
+  "inspection_expectations": {
+    "overview": "Key areas inspectors focus on during GMP/GDP inspections for data integrity compliance, including deficiency classification criteria.",
+    "rules": [
+      {
+        "rule_id": "PI041-074",
+        "rule_text": "A critical deficiency is a practice or process that has produced, or leads to, a significant risk of producing either a product harmful to the patient or that occurs when it is observed that the manufacturer has engaged in fraud, misrepresentation, or falsification of products or data. Data integrity failures involving falsification are automatically classified as critical.",
+        "source_section": "11.2.2–11.2.3 — Classification of deficiencies",
+        "source_page": 57,
+        "source_quote": "A critical deficiency is a practice or process that has produced, or leads to a significant risk of producing either a product which is harmful to the human or veterinary patient or a product which could result in a harmful residue in a food producing animal. A critical deficiency also occurs when it is observed that the manufacturer has engaged in fraud, misrepresentation or falsification of products or data.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-075",
+        "rule_text": "Data integrity deficiencies must be classified into four levels: (1) Critical — product risk or fraud/falsification; (2) Major — data misreporting with no patient risk, or reporting 'desired' results; (3) Major — bad practices across multiple functional areas; (4) Other — limited failure or bad practice in a discrete area.",
+        "source_section": "11.2.4 — Classification of deficiencies",
+        "source_page": 58,
+        "source_quote": "Impact to product with actual or potential risk to patient health: Critical deficiency... Impact to product with no risk to patient health: Major deficiency... No impact to product; evidence of moderate failure: Major deficiency... No impact to product; limited evidence of failure: Other deficiency.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-076",
+        "rule_text": "Inspectors must verify: individual user log-in IDs are in use; password policies enforce strong passwords; user access levels are appropriately defined, documented and controlled; and that authority checks ensure only authorised individuals can use the system, electronically sign records, or alter records.",
+        "source_section": "9.5 Item 1 — System security (Potential risk section)",
+        "source_page": 41,
+        "source_quote": "Check that individual user log-in IDs are in use. Where the system configuration allows the use of individual user log-in IDs, these should be used... Inspect that the system uses authority checks to ensure that only authorised individuals can use the system, electronically sign a record, access the operation or computerised system input or output device, alter a record, or perform the operation at hand.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": "Attributable"
+      },
+      {
+        "rule_id": "PI041-077",
+        "rule_text": "Inspectors must verify that self-inspection programs incorporate checks of audit trails, with the intent to verify the effectiveness of existing controls and compliance with internal procedures regarding the review of data. Audit trail reviews must be both random and targeted.",
+        "source_section": "9.8 Item 2 — Review of data within computerised systems (Potential risk section)",
+        "source_page": 50,
+        "source_quote": "Verify that self-inspection programs incorporate checks of audit trails, with the intent to verify the effectiveness of existing controls and compliance with internal procedures regarding the review of data. Audit trail reviews should be both random (selected based on chance) and targeted (selected based on criticality or risk).",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-078",
+        "rule_text": "Inspectors must verify that re-validation reviews for computerised systems are outlined within validation schedules and that systems have been subject to periodic review, particularly regarding any potential vulnerabilities regarding data integrity.",
+        "source_section": "9.3 Item 5 — Periodic System Evaluation (Potential risk section)",
+        "source_page": 37,
+        "source_quote": "Check that re-validation reviews for computerised systems are outlined within validation schedules. Verify that systems have been subject to periodic review, particularly with respect to any potential vulnerabilities regarding data integrity.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-079",
+        "rule_text": "Inspectors must verify that validation documentation includes specific provisions for data integrity. Validation reports should specifically address data integrity principles and demonstrate through design and testing that adequate controls are in place. System configuration and segregation of duties must be defined prior to validation and verified as effective during testing.",
+        "source_section": "9.3 Item 3 — Validation and Maintenance (Potential risk section)",
+        "source_page": 35,
+        "source_quote": "Check that validation documents include specific provisions for data integrity; validation reports should specifically address data integrity principles and demonstrate through design and testing that adequate controls are in place. System configuration and segregation of duties (e.g. authorisation to generate data should be separate to authorisation to verify data) should be defined prior to validation, and verified as effective during testing.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-080",
+        "rule_text": "An organisation claiming there is 'no risk' of data integrity failure is unlikely to have made an adequate assessment of inherent risks in the data lifecycle. This is an indicator of immature data governance. Inspectors must examine the approach to assessment of data lifecycle, criticality, and risk in detail.",
+        "source_section": "5.5.6 — Data risk",
+        "source_page": 9,
+        "source_quote": "An indicator of data governance maturity is an organisational understanding and acceptance of residual risk, which prioritises actions. An organisation which believes that there is 'no risk' of data integrity failure is unlikely to have made an adequate assessment of inherent risks in the data lifecycle. The approach to assessment of data lifecycle, criticality and risk should therefore be examined in detail.",
+        "verification_status": "VERIFIED",
+        "severity": "high",
+        "alcoa_principle": null
+      }
+    ]
+  },
+
+  "remediation": {
+    "overview": "When significant data integrity failures are identified, a comprehensive investigation and corrective/preventive action plan is required.",
+    "rules": [
+      {
+        "rule_id": "PI041-081",
+        "rule_text": "Remediation for significant data integrity issues must include: a comprehensive investigation protocol covering all laboratories, manufacturing operations, products, and systems; employee interviews; assessment of extent of deficiencies (omissions, alterations, deletions, record destruction, non-contemporaneous completion); and a comprehensive retrospective evaluation to identify root causes.",
+        "source_section": "12.1.1.1 — Responding to Significant Data Integrity issues",
+        "source_page": 59,
+        "source_quote": "A comprehensive investigation into the extent of the inaccuracies in data records and reporting, to include: A detailed investigation protocol and methodology; a summary of all laboratories, manufacturing operations, products and systems to be covered by the assessment... Interviews of current and where possible and appropriate, former employees to identify the nature, scope, and root cause of data inaccuracies... An assessment of the extent of data integrity deficiencies at the facility. Identify omissions, alterations, deletions, record destruction, non-contemporaneous record completion, and other deficiencies.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      },
+      {
+        "rule_id": "PI041-082",
+        "rule_text": "A management strategy (CAPA plan) submitted to the regulatory authority must include: a comprehensive description of root causes of data integrity lapses; a detailed corrective action plan describing how the regulated user intends to ensure ALCOA+ attributes for all data generated including analytical data, manufacturing records, and all data submitted or presented to the Competent Authority.",
+        "source_section": "12.1.2 — Responding to Significant Data Integrity issues",
+        "source_page": 60,
+        "source_quote": "A management strategy should be submitted to the regulatory authority that includes the details of the global corrective action and preventive action plan. The strategy should include: A comprehensive description of the root causes of the data integrity lapses... A detailed corrective action plan that describes how the regulated user intends to ensure the 'ALOCA+' attributes (see section 7.4) of all of the data generated, including analytical data, manufacturing records, and all data submitted or presented to the Competent Authority.",
+        "verification_status": "VERIFIED",
+        "severity": "critical",
+        "alcoa_principle": null
+      }
+    ]
+  },
+
+  "key_definitions": {
+    "audit_trail": "GMP/GDP audit trails are metadata that are a record of GMP/GDP critical information (for example the creation, modification, or deletion of GMP/GDP relevant data), which permit the reconstruction of GMP/GDP activities. (Section 13, p.61)",
+    "backup": "A copy of current (editable) data, metadata and system configuration settings (e.g. variable settings which relate to an analytical run) maintained for the purpose of disaster recovery. (Section 13, p.61)",
+    "archiving": "Long term, permanent retention of completed data and relevant metadata in its final form for the purposes of reconstruction of the process or activity. (Section 13, p.61)",
+    "data_governance": "The sum total of arrangements to ensure that data, irrespective of the format in which it is generated, recorded, processed, retained and used to ensure a complete, consistent and accurate record throughout the data lifecycle. (Section 13, p.61)",
+    "data_integrity": "The degree to which data are complete, consistent, accurate, trustworthy, reliable and that these characteristics of the data are maintained throughout the data life cycle. (Section 2.5 / Section 13, p.62)",
+    "data_lifecycle": "All phases in the life of the data (including raw data) from initial generation and recording through processing (including transformation or migration), use, data retention, archive/retrieval and destruction. (Section 13, p.62)",
+    "hybrid_system": "A system for the management and control of data that typically consists of an electronic system generating electronic data, supplemented by a defined manual system that typically generates a paper-based record. The complete data set from a hybrid system therefore consists of both electronic and paper data together. (Section 13, p.62)",
+    "raw_data": "The original record (data) which can be described as the first-capture of information, whether recorded on paper or electronically. Information that is originally captured in a dynamic state should remain available in that state. (Section 13, p.63)",
+    "metadata": "In-file data that describes the attributes of other data, and provides context and meaning. Metadata also permit data to be attributable to an individual (or if automatically generated, to the original data source). Metadata form an integral part of the original record. Without the context provided by metadata the data has no meaning. (Section 13, p.63)"
+  }
+}

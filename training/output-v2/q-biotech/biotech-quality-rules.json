@@ -1,0 +1,1146 @@
+{
+  "meta": {
+    "title": "ICH Q5 Series — Biologics Quality Requirements",
+    "version": "1.0.0",
+    "created": "2026-03-22",
+    "sources": [
+      "ICH Q5A(R2) — Viral Safety Evaluation of Biotechnology Products (2023)",
+      "ICH Q5B — Analysis of the Expression Construct in Cells Used for Production of r-DNA Derived Protein Products (1995)",
+      "ICH Q5C — Stability Testing of Biotechnological/Biological Products (1995)",
+      "ICH Q5D — Derivation and Characterisation of Cell Substrates (1997)",
+      "ICH Q5E — Comparability of Biotechnological/Biological Products Subject to Changes in Their Manufacturing Process (2004)",
+      "Q5A(R2) Concept Papers (2019, 2023)",
+      "Q5A(R2) Business Papers",
+      "Q5A(R2) Training Materials (2025)",
+      "Q5E Concept Paper (2002)",
+      "Q1/Q5C Concept and Business Papers (2022)"
+    ],
+    "scope": "Proteins, polypeptides, mAbs, conjugates, viral vectors, VLPs, vaccines produced from cell lines of human or animal origin via rDNA or non-recombinant methods",
+    "total_rules": 147
+  },
+  "domains": {
+    "viral_safety": {
+      "id": "VS",
+      "guideline": "ICH Q5A(R2)",
+      "description": "Three-pronged approach: testing cell banks and bulk, evaluating viral clearance, selecting appropriate cell lines",
+      "rules": [
+        {
+          "id": "VS-001",
+          "category": "cell_bank_virus_testing",
+          "requirement": "MCB must be tested for retroviruses and other endogenous viruses using retrovirus tests (TEM, RT assay, infectivity assays, cocultivation)",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5A(R2) Section 3.2.1, Table 1"
+        },
+        {
+          "id": "VS-002",
+          "category": "cell_bank_virus_testing",
+          "requirement": "In vitro cell culture infectivity assays must be performed on MCB, WCB, and LIVCA cells using indicator cell lines from the species of origin, human diploid cells (MRC-5), and monkey kidney cells (Vero)",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB", "LIVCA"],
+          "reference": "Q5A(R2) Section 3.2.2, Table 1"
+        },
+        {
+          "id": "VS-003",
+          "category": "cell_bank_virus_testing",
+          "requirement": "For MCB, WCB, and LIVCA qualification, 28-day testing on permissive cells must be performed with at least one sub-passage at two weeks",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB", "LIVCA"],
+          "reference": "Q5A(R2) Section 3.2.2"
+        },
+        {
+          "id": "VS-004",
+          "category": "cell_bank_virus_testing",
+          "requirement": "Assay duration may be reduced to 14 days with justification based on risk assessment considering cell substrate, cultivation period, use of animal-derived materials, and viral clearance level",
+          "severity": "recommended",
+          "applies_to": ["unprocessed_bulk"],
+          "reference": "Q5A(R2) Section 4"
+        },
+        {
+          "id": "VS-005",
+          "category": "cell_bank_virus_testing",
+          "requirement": "In vivo testing may be performed based on risk assessment but is not necessary for extensively used well-characterised cell lines (CHO, NS0, SP2/0) based on prior knowledge",
+          "severity": "conditional",
+          "applies_to": ["MCB"],
+          "reference": "Q5A(R2) Section 3.2.3"
+        },
+        {
+          "id": "VS-006",
+          "category": "cell_bank_virus_testing",
+          "requirement": "Non-targeted NGS is encouraged as replacement for in vivo assays due to breadth and sensitivity of virus detection and to replace, reduce, and refine animal testing",
+          "severity": "recommended",
+          "applies_to": ["MCB", "WCB", "LIVCA"],
+          "reference": "Q5A(R2) Section 3.2.3, 3.2.5.2"
+        },
+        {
+          "id": "VS-007",
+          "category": "cell_bank_virus_testing",
+          "requirement": "Tests for specific viruses must be defined based on viral contamination risk assessment considering origin of cells, biological raw materials, and exposure to human or animal derived materials",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5A(R2) Section 3.2.4"
+        },
+        {
+          "id": "VS-008",
+          "category": "cell_bank_virus_testing",
+          "requirement": "For cell lines with exposure to bovine serum and porcine trypsin, tests for human, bovine, and porcine viruses must be performed",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5A(R2) Section 3.2.4"
+        },
+        {
+          "id": "VS-009",
+          "category": "cell_bank_virus_testing",
+          "requirement": "For rodent cell lines, MAP, RAP, and/or HAP tests (or equivalent NAT/NGS) must be performed to detect species-specific viruses",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5A(R2) Section 3.2.4, Table 3"
+        },
+        {
+          "id": "VS-010",
+          "category": "cell_bank_virus_testing",
+          "requirement": "TEM is generally recommended for characterisation of cell banks to detect retroviral particles and other agents",
+          "severity": "recommended",
+          "applies_to": ["MCB", "LIVCA"],
+          "reference": "Q5A(R2) Section 3.2.1"
+        },
+        {
+          "id": "VS-011",
+          "category": "cell_bank_virus_testing",
+          "requirement": "If cell line produces retroviral particles, both TEM and PCR-based RT assay (PERT) should be performed on cells and clarified supernatant",
+          "severity": "critical",
+          "applies_to": ["MCB", "LIVCA"],
+          "reference": "Q5A(R2) Section 3.2.1"
+        },
+        {
+          "id": "VS-012",
+          "category": "cell_bank_virus_testing",
+          "requirement": "Positive RT result or positive TEM result must be followed by testing to detect infectious retroviruses in permissive cells including human cell lines with sensitive readout assays",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5A(R2) Section 3.2.1"
+        },
+        {
+          "id": "VS-013",
+          "category": "cell_bank_virus_testing",
+          "requirement": "NGS method validation/qualification must include method validation and matrix-specific verification, with performance criteria per ICH Q2 principles",
+          "severity": "critical",
+          "applies_to": ["any_NGS_application"],
+          "reference": "Q5A(R2) Section 3.2.5.2"
+        },
+        {
+          "id": "VS-014",
+          "category": "cell_bank_virus_testing",
+          "requirement": "NGS workflow must address: (1) sample pre-treatment and virus enrichment, (2) nucleic acid extraction efficiency, (3) sequencing platform selection, (4) bioinformatics analysis against comprehensive viral database",
+          "severity": "critical",
+          "applies_to": ["any_NGS_application"],
+          "reference": "Q5A(R2) Section 3.2.5.2"
+        },
+        {
+          "id": "VS-015",
+          "category": "unprocessed_bulk_testing",
+          "requirement": "Manufacturers must develop programs to routinely test for adventitious viruses in production batches at the unprocessed bulk stage",
+          "severity": "critical",
+          "applies_to": ["production_batches"],
+          "reference": "Q5A(R2) Section 4"
+        },
+        {
+          "id": "VS-016",
+          "category": "unprocessed_bulk_testing",
+          "requirement": "Adventitious virus testing must be routinely applied to each unprocessed bulk harvest using in vitro assays with indicator cell lines or non-targeted NGS",
+          "severity": "critical",
+          "applies_to": ["each_unprocessed_bulk"],
+          "reference": "Q5A(R2) Section 4"
+        },
+        {
+          "id": "VS-017",
+          "category": "unprocessed_bulk_testing",
+          "requirement": "Indicator cell cultures must be observed for 28 days including at least one sub-passage at two weeks; may be reduced to 14 days with justification",
+          "severity": "critical",
+          "applies_to": ["each_unprocessed_bulk"],
+          "reference": "Q5A(R2) Section 4"
+        },
+        {
+          "id": "VS-018",
+          "category": "unprocessed_bulk_testing",
+          "requirement": "If adventitious viruses are detected at unprocessed bulk stage, the product harvest should not be used unless justified per Section 5 action plan",
+          "severity": "critical",
+          "applies_to": ["contaminated_bulk"],
+          "reference": "Q5A(R2) Section 4"
+        },
+        {
+          "id": "VS-019",
+          "category": "unprocessed_bulk_testing",
+          "requirement": "For continuous manufacturing processes, final release of a batch must include documented absence of viral contamination for the entire cultivation period",
+          "severity": "critical",
+          "applies_to": ["continuous_manufacturing"],
+          "reference": "Q5A(R2) Section 4, 7"
+        },
+        {
+          "id": "VS-020",
+          "category": "viral_clearance_studies",
+          "requirement": "Viral clearance evaluation must include both process evaluation (using relevant/specific model viruses) and process characterisation (using non-specific model viruses)",
+          "severity": "critical",
+          "applies_to": ["purification_process"],
+          "reference": "Q5A(R2) Section 5, 6"
+        },
+        {
+          "id": "VS-021",
+          "category": "viral_clearance_studies",
+          "requirement": "Clearance studies must use viruses representing a wide range of physicochemical properties; process should be assessed for ability to clear at least three different viruses with differing characteristics",
+          "severity": "critical",
+          "applies_to": ["purification_process"],
+          "reference": "Q5A(R2) Section 6.1"
+        },
+        {
+          "id": "VS-022",
+          "category": "viral_clearance_studies",
+          "requirement": "Viral clearance studies must be conducted in a separate laboratory equipped for virological work, not in production facility",
+          "severity": "critical",
+          "applies_to": ["study_design"],
+          "reference": "Q5A(R2) Section 6.2.1"
+        },
+        {
+          "id": "VS-023",
+          "category": "viral_clearance_studies",
+          "requirement": "Scale-down model must represent the production process as closely as possible and demonstrate comparable yield and purity",
+          "severity": "critical",
+          "applies_to": ["scale_down_model"],
+          "reference": "Q5A(R2) Section 6.2.2"
+        },
+        {
+          "id": "VS-024",
+          "category": "viral_clearance_studies",
+          "requirement": "For chromatographic steps, scale-down model must match column bed-height, linear flow-rate, flow-rate-to-bed-volume ratio, buffer/resin types, pH, temperature, conductivity, and product concentration",
+          "severity": "critical",
+          "applies_to": ["chromatography_steps"],
+          "reference": "Q5A(R2) Section 6.2.2"
+        },
+        {
+          "id": "VS-025",
+          "category": "viral_clearance_studies",
+          "requirement": "Each production step must be individually assessed for ability to remove or inactivate virus; virus titre before and after each step must be determined",
+          "severity": "critical",
+          "applies_to": ["each_clearance_step"],
+          "reference": "Q5A(R2) Section 6.2.3"
+        },
+        {
+          "id": "VS-026",
+          "category": "viral_clearance_studies",
+          "requirement": "For inactivation steps, time-dependent inactivation curve must be constructed with samples at different times including at least one time point less than minimum exposure time and greater than zero",
+          "severity": "critical",
+          "applies_to": ["inactivation_steps"],
+          "reference": "Q5A(R2) Section 6.2.5"
+        },
+        {
+          "id": "VS-027",
+          "category": "viral_clearance_studies",
+          "requirement": "Reproducible viral clearance must be confirmed in at least two independent experiments unless justified by prior knowledge",
+          "severity": "critical",
+          "applies_to": ["clearance_validation"],
+          "reference": "Q5A(R2) Section 6.2.3"
+        },
+        {
+          "id": "VS-028",
+          "category": "viral_clearance_studies",
+          "requirement": "An effective viral clearance step generally gives reproducible reduction of virus load in the order of 4 log10 or more shown by at least two independent studies",
+          "severity": "benchmark",
+          "applies_to": ["clearance_validation"],
+          "reference": "Q5A(R2) Section 6.3"
+        },
+        {
+          "id": "VS-029",
+          "category": "viral_clearance_studies",
+          "requirement": "Reduction in virus load less than 1 log10 is considered negligible and should be ignored unless justified",
+          "severity": "critical",
+          "applies_to": ["clearance_calculation"],
+          "reference": "Q5A(R2) Section 6.3"
+        },
+        {
+          "id": "VS-030",
+          "category": "viral_clearance_studies",
+          "requirement": "Individual reduction factor used for overall calculation must be greater than 1 log10",
+          "severity": "critical",
+          "applies_to": ["reduction_factor_calculation"],
+          "reference": "Q5A(R2) Annex 3"
+        },
+        {
+          "id": "VS-031",
+          "category": "viral_clearance_studies",
+          "requirement": "Overall reduction factor is the sum of individual logarithmic reduction factors; must not add factors from steps with similar inactivation mechanisms",
+          "severity": "critical",
+          "applies_to": ["reduction_factor_calculation"],
+          "reference": "Q5A(R2) Section 6.3, Annex 3"
+        },
+        {
+          "id": "VS-032",
+          "category": "viral_clearance_studies",
+          "requirement": "Downstream process should implement at least two distinct complementary viral clearance steps, one of which should provide effective clearance of non-enveloped virus",
+          "severity": "critical",
+          "applies_to": ["process_design"],
+          "reference": "Q5A(R2) Section 6.3"
+        },
+        {
+          "id": "VS-033",
+          "category": "viral_clearance_studies",
+          "requirement": "Virus reduction factor = log10 of (virus load pre-step / virus load post-step), accounting for both titres and volumes",
+          "severity": "critical",
+          "applies_to": ["reduction_factor_calculation"],
+          "reference": "Q5A(R2) Annex 3"
+        },
+        {
+          "id": "VS-034",
+          "category": "viral_clearance_studies",
+          "requirement": "95% confidence limits for reduction factors should be calculated for relevant and specific model virus clearance studies",
+          "severity": "recommended",
+          "applies_to": ["statistical_analysis"],
+          "reference": "Q5A(R2) Annex 2"
+        },
+        {
+          "id": "VS-035",
+          "category": "viral_clearance_studies",
+          "requirement": "Chromatography media/resin lifetime use should be indicated and parameters with potential impact on viral clearance defined; clearance studies should support media/resin reuse",
+          "severity": "critical",
+          "applies_to": ["chromatography_resin"],
+          "reference": "Q5A(R2) Section 6.2.6"
+        },
+        {
+          "id": "VS-036",
+          "category": "action_plan",
+          "requirement": "Case A (no virus/VLP detected): Perform virus removal and inactivation studies with non-specific model viruses only",
+          "severity": "critical",
+          "applies_to": ["case_A_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-037",
+          "category": "action_plan",
+          "requirement": "Case B (rodent retrovirus only): Process evaluation using specific model virus (e.g., MLV) plus non-specific clearance evaluation; provide RVLP quantification from 3+ lots of purified bulk",
+          "severity": "critical",
+          "applies_to": ["case_B_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-038",
+          "category": "action_plan",
+          "requirement": "Case B — CHO cells: For non-infectious endogenous retroviruses, value of ≤10^-4 particles/dose is considered acceptable for RVLPs if testing fails to identify infectious retroviruses",
+          "severity": "benchmark",
+          "applies_to": ["CHO_derived_products"],
+          "reference": "Q5A(R2) Annex 4"
+        },
+        {
+          "id": "VS-039",
+          "category": "action_plan",
+          "requirement": "Case C (virus not infectious to humans): Use identified virus for removal/inactivation studies; time-dependent inactivation data required; test purified bulk from 3+ batches at pilot/commercial scale",
+          "severity": "critical",
+          "applies_to": ["case_C_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-040",
+          "category": "action_plan",
+          "requirement": "Case D (virus infectious to humans): Product acceptable only under exceptional circumstances; virus removal/inactivation studies with identified virus required; purified bulk from 3+ batches tested",
+          "severity": "critical",
+          "applies_to": ["case_D_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-041",
+          "category": "action_plan",
+          "requirement": "Case E (unclassifiable virus detected): Product usually considered unacceptable; discuss with regulatory authorities before proceeding",
+          "severity": "critical",
+          "applies_to": ["case_E_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-042",
+          "category": "action_plan",
+          "requirement": "Case F (production virus used): Clearance of production virus must be demonstrated; test for absence in each purified bulk unless justified by robust excess clearance",
+          "severity": "critical",
+          "applies_to": ["case_F_products"],
+          "reference": "Q5A(R2) Section 5, Table 4"
+        },
+        {
+          "id": "VS-043",
+          "category": "platform_validation",
+          "requirement": "Platform validation approach may be used when manufacturer develops similar products on established and well-characterised processes (same platform technology)",
+          "severity": "recommended",
+          "applies_to": ["platform_products"],
+          "reference": "Q5A(R2) Section 6.6"
+        },
+        {
+          "id": "VS-044",
+          "category": "platform_validation",
+          "requirement": "Prior knowledge for platform validation must include understanding of mechanism, process parameters, virus-product interactions, composition of process intermediate, and limitations per Section 6.4",
+          "severity": "critical",
+          "applies_to": ["platform_validation"],
+          "reference": "Q5A(R2) Section 6.6"
+        },
+        {
+          "id": "VS-045",
+          "category": "platform_validation",
+          "requirement": "Detergent inactivation platform conditions: ≥0.5% Triton X-100 with clarified HCCF for ≥60 minutes at ≥15°C effectively inactivates XMLV",
+          "severity": "benchmark",
+          "applies_to": ["detergent_inactivation"],
+          "reference": "Q5A(R2) Annex 5, Section 5.2"
+        },
+        {
+          "id": "VS-046",
+          "category": "platform_validation",
+          "requirement": "Low pH inactivation platform conditions: ≤pH 3.6, ≥15°C for ≥30 minutes at ≤500 mmol/L NaCl effectively inactivates XMLV",
+          "severity": "benchmark",
+          "applies_to": ["low_pH_inactivation"],
+          "reference": "Q5A(R2) Annex 5, Section 5.3"
+        },
+        {
+          "id": "VS-047",
+          "category": "platform_validation",
+          "requirement": "Virus filtration: At least one confirmatory product-specific parvovirus validation run under worst-case conditions required when using prior knowledge",
+          "severity": "critical",
+          "applies_to": ["virus_filtration"],
+          "reference": "Q5A(R2) Annex 5, Section 5.4"
+        },
+        {
+          "id": "VS-048",
+          "category": "platform_validation",
+          "requirement": "HCCF must be clarified including filtration step of ≤0.2 μm nominal pore size before detergent inactivation",
+          "severity": "critical",
+          "applies_to": ["detergent_inactivation"],
+          "reference": "Q5A(R2) Annex 5, Section 5.2"
+        },
+        {
+          "id": "VS-049",
+          "category": "re_evaluation",
+          "requirement": "Whenever significant changes are made in upstream or downstream manufacturing processes, viral clearance must be re-evaluated",
+          "severity": "critical",
+          "applies_to": ["process_changes"],
+          "reference": "Q5A(R2) Section 6.7"
+        },
+        {
+          "id": "VS-050",
+          "category": "continuous_manufacturing",
+          "requirement": "CM viral safety strategy must be based on risk assessment of potential contamination sources, process removal capability, and testing capability across extended culture durations",
+          "severity": "critical",
+          "applies_to": ["continuous_manufacturing"],
+          "reference": "Q5A(R2) Section 7.1"
+        },
+        {
+          "id": "VS-051",
+          "category": "continuous_manufacturing",
+          "requirement": "For CM, appropriate process monitoring must detect (a) process disturbance impacting viral clearance and (b) adventitious virus contamination",
+          "severity": "critical",
+          "applies_to": ["continuous_manufacturing"],
+          "reference": "Q5A(R2) Section 7.2"
+        },
+        {
+          "id": "VS-052",
+          "category": "viral_vector_products",
+          "requirement": "For genetically engineered viral vectors and viral vector-derived products, Annex 6 testing scheme (Table A-5) applies: test virus seeds, unprocessed bulk, and drug substance for adventitious, endogenous, production, and replication competent viruses",
+          "severity": "critical",
+          "applies_to": ["viral_vectors", "VLPs", "gene_therapy"],
+          "reference": "Q5A(R2) Annex 6, Table A-5"
+        },
+        {
+          "id": "VS-053",
+          "category": "viral_vector_products",
+          "requirement": "Replication Competent Virus (RCV) testing is recommended at multiple stages of manufacture: virus seed/bank, each unprocessed bulk harvest, and drug substance/product",
+          "severity": "critical",
+          "applies_to": ["viral_vectors"],
+          "reference": "Q5A(R2) Annex 6, Table A-5"
+        },
+        {
+          "id": "VS-054",
+          "category": "viral_vector_products",
+          "requirement": "Production virus should be quantified at unprocessed bulk stage using at least three cell culture lots/batches to determine target for viral clearance",
+          "severity": "critical",
+          "applies_to": ["viral_vectors"],
+          "reference": "Q5A(R2) Annex 6, Table A-5 footnote e"
+        }
+      ]
+    },
+    "expression_construct": {
+      "id": "EC",
+      "guideline": "ICH Q5B",
+      "description": "Analysis of expression construct for r-DNA derived protein products",
+      "rules": [
+        {
+          "id": "EC-001",
+          "category": "construct_characterisation",
+          "requirement": "Manufacturer must describe origin of nucleotide sequence coding for the protein, identification and source of the cell from which the sequence was obtained, and methods used to prepare the DNA",
+          "severity": "critical",
+          "applies_to": ["BLA_submission"],
+          "reference": "Q5B Section III.A"
+        },
+        {
+          "id": "EC-002",
+          "category": "construct_characterisation",
+          "requirement": "Detailed component map and complete annotated sequence of the plasmid must be provided, indicating sequenced regions and those taken from literature",
+          "severity": "critical",
+          "applies_to": ["BLA_submission"],
+          "reference": "Q5B Section III.A"
+        },
+        {
+          "id": "EC-003",
+          "category": "construct_characterisation",
+          "requirement": "Assembly steps of expression construct must be described in detail including source and function of all component parts: origins of replication, antibiotic resistance genes, promoters, enhancers",
+          "severity": "critical",
+          "applies_to": ["BLA_submission"],
+          "reference": "Q5B Section III.A"
+        },
+        {
+          "id": "EC-004",
+          "category": "construct_characterisation",
+          "requirement": "Nucleotide sequence of the coding region and associated flanking regions including junctions of insertion must be determined by DNA sequencing",
+          "severity": "critical",
+          "applies_to": ["expression_vector"],
+          "reference": "Q5B Section III.A"
+        },
+        {
+          "id": "EC-005",
+          "category": "cell_bank_analysis",
+          "requirement": "Restriction endonuclease mapping or other suitable techniques must analyse expression construct for copy number, insertions/deletions, and number of integration sites",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5B Section III.B"
+        },
+        {
+          "id": "EC-006",
+          "category": "cell_bank_analysis",
+          "requirement": "For extrachromosomal expression systems, the percent of host cells retaining the expression construct must be determined",
+          "severity": "critical",
+          "applies_to": ["extrachromosomal_systems"],
+          "reference": "Q5B Section III.B"
+        },
+        {
+          "id": "EC-007",
+          "category": "cell_bank_analysis",
+          "requirement": "Protein coding sequence of the expression construct must be verified in MCB; for extrachromosomal systems, construct must be isolated and sequence verified without further cloning",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5B Section III.B"
+        },
+        {
+          "id": "EC-008",
+          "category": "production_cells",
+          "requirement": "Expression construct of production cells must be analysed once (at MCB level per III.B) except that protein coding sequence in production cells may be verified by either nucleic acid testing or analysis of final protein product",
+          "severity": "critical",
+          "applies_to": ["production_cells"],
+          "reference": "Q5B Section III.C"
+        },
+        {
+          "id": "EC-009",
+          "category": "cell_age_limit",
+          "requirement": "Limit for in vitro cell age for production must be based on data from production cells expanded at pilot plant or full scale to the proposed in vitro cell age or beyond",
+          "severity": "critical",
+          "applies_to": ["production_cells"],
+          "reference": "Q5B Section III.C"
+        },
+        {
+          "id": "EC-010",
+          "category": "cell_age_limit",
+          "requirement": "Increases in defined limit for in vitro cell age must be supported by data from cells expanded to the proposed new limit",
+          "severity": "critical",
+          "applies_to": ["production_cells"],
+          "reference": "Q5B Section III.C"
+        },
+        {
+          "id": "EC-011",
+          "category": "analytical_validation",
+          "requirement": "Analytical methodologies for sequence confirmation must be validated with documentation including estimates of limits of detection for variant sequences",
+          "severity": "critical",
+          "applies_to": ["methods"],
+          "reference": "Q5B Section III"
+        },
+        {
+          "id": "EC-012",
+          "category": "multiple_copies",
+          "requirement": "Where production cells have multiple integrated copies, examination of mRNA or cDNA transcription product may be more appropriate than analysis of genomic DNA",
+          "severity": "recommended",
+          "applies_to": ["multi_copy_integrants"],
+          "reference": "Q5B Section II"
+        }
+      ]
+    },
+    "biotech_stability": {
+      "id": "BS",
+      "guideline": "ICH Q5C",
+      "description": "Stability testing requirements specific to biotechnological/biological products (supplement to Q1A)",
+      "rules": [
+        {
+          "id": "BS-001",
+          "category": "drug_substance_stability",
+          "requirement": "Stability data must be provided on at least 3 batches representative of manufacturing scale; minimum 6 months data at time of submission for storage periods >6 months",
+          "severity": "critical",
+          "applies_to": ["drug_substance"],
+          "reference": "Q5C Section 4.1"
+        },
+        {
+          "id": "BS-002",
+          "category": "drug_substance_stability",
+          "requirement": "Pilot-plant scale batch data may be provided at submission with commitment to place first 3 manufacturing scale batches into long-term stability program after approval",
+          "severity": "critical",
+          "applies_to": ["drug_substance"],
+          "reference": "Q5C Section 4.1"
+        },
+        {
+          "id": "BS-003",
+          "category": "drug_product_stability",
+          "requirement": "Stability information must be provided on at least 3 batches of final container product representative of manufacturing scale",
+          "severity": "critical",
+          "applies_to": ["drug_product"],
+          "reference": "Q5C Section 4.3"
+        },
+        {
+          "id": "BS-004",
+          "category": "drug_product_stability",
+          "requirement": "Product expiration dating must be based on real-time/real-temperature data; continuing updates of initial stability data should occur during review process",
+          "severity": "critical",
+          "applies_to": ["drug_product"],
+          "reference": "Q5C Section 4.3"
+        },
+        {
+          "id": "BS-005",
+          "category": "intermediates",
+          "requirement": "Manufacturers must identify critical intermediates and generate in-house data and process limits assuring their stability within bounds of the developed process",
+          "severity": "critical",
+          "applies_to": ["intermediates"],
+          "reference": "Q5C Section 4.2"
+        },
+        {
+          "id": "BS-006",
+          "category": "stability_indicating_profile",
+          "requirement": "Manufacturer must propose a stability-indicating profile that provides assurance that changes in identity, purity, and potency of the product will be detected",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 5"
+        },
+        {
+          "id": "BS-007",
+          "category": "stability_indicating_profile",
+          "requirement": "Methods comprising the stability-indicating profile must be validated and data available for review at time of submission",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 5"
+        },
+        {
+          "id": "BS-008",
+          "category": "potency",
+          "requirement": "When product has definable and measurable biological activity, potency testing must be part of stability studies; results reported in units calibrated against national or international reference standards",
+          "severity": "critical",
+          "applies_to": ["products_with_biological_activity"],
+          "reference": "Q5C Section 5.2"
+        },
+        {
+          "id": "BS-009",
+          "category": "potency",
+          "requirement": "For conjugated products, dissociation of active ingredient from carrier/adjuvant must be examined in real-time/real-temperature studies including shipment conditions",
+          "severity": "critical",
+          "applies_to": ["conjugated_products", "ADCs"],
+          "reference": "Q5C Section 5.2"
+        },
+        {
+          "id": "BS-010",
+          "category": "purity",
+          "requirement": "Purity of biotech product must be assessed by more than one method; tests should focus on degradation products (deamidation, oxidation, aggregation, fragmentation)",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 5.3"
+        },
+        {
+          "id": "BS-011",
+          "category": "purity",
+          "requirement": "Analytical methods for purity characterisation should include SDS-PAGE, immunoelectrophoresis, Western blot, IEF, HPLC (gel filtration, RP, IEX, affinity), and peptide mapping",
+          "severity": "recommended",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 5.3"
+        },
+        {
+          "id": "BS-012",
+          "category": "purity",
+          "requirement": "Limits of acceptable degradation must be proposed and justified based on levels observed in material used in preclinical and clinical studies",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 5.3"
+        },
+        {
+          "id": "BS-013",
+          "category": "other_characteristics",
+          "requirement": "Visual appearance, particulates, pH, moisture level (for lyophilised products), and sterility testing must be monitored in stability program for drug product",
+          "severity": "critical",
+          "applies_to": ["drug_product"],
+          "reference": "Q5C Section 5.4"
+        },
+        {
+          "id": "BS-014",
+          "category": "other_characteristics",
+          "requirement": "Sterility testing or container/closure integrity testing must be performed at minimum initially and at end of proposed shelf-life",
+          "severity": "critical",
+          "applies_to": ["drug_product"],
+          "reference": "Q5C Section 5.4"
+        },
+        {
+          "id": "BS-015",
+          "category": "storage_conditions",
+          "requirement": "Since biotech products need precisely defined storage temperatures, real-time/real-temperature stability studies may be confined to the proposed storage temperature",
+          "severity": "recommended",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 6.1"
+        },
+        {
+          "id": "BS-016",
+          "category": "storage_conditions",
+          "requirement": "Accelerated and stress conditions for biotech products should be carefully selected on a case-by-case basis; standard accelerated conditions from Q1A may not be appropriate",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 6.3"
+        },
+        {
+          "id": "BS-017",
+          "category": "container_closure",
+          "requirement": "For liquid products (other than sealed ampoules), stability studies must include samples in inverted/horizontal position (in contact with closure) and upright position",
+          "severity": "critical",
+          "applies_to": ["liquid_products"],
+          "reference": "Q5C Section 6.5"
+        },
+        {
+          "id": "BS-018",
+          "category": "container_closure",
+          "requirement": "For multi-dose vials, closure must demonstrate capability of withstanding repeated insertions and withdrawals while maintaining potency, purity, and quality",
+          "severity": "critical",
+          "applies_to": ["multi_dose_vials"],
+          "reference": "Q5C Section 6.5"
+        },
+        {
+          "id": "BS-019",
+          "category": "reconstitution",
+          "requirement": "Stability of freeze-dried products after reconstitution must be demonstrated for conditions and maximum storage period specified on labelling",
+          "severity": "critical",
+          "applies_to": ["lyophilised_products"],
+          "reference": "Q5C Section 6.6"
+        },
+        {
+          "id": "BS-020",
+          "category": "testing_frequency",
+          "requirement": "For shelf-lives ≤1 year: test monthly for first 3 months, then at 3-month intervals; for >1 year: every 3 months in year 1, every 6 months in year 2, then annually",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 7"
+        },
+        {
+          "id": "BS-021",
+          "category": "specifications",
+          "requirement": "Each product must retain its specifications within established limits for safety, purity, and potency throughout proposed shelf-life; specifications derived from all available data using appropriate statistical methods",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 8"
+        },
+        {
+          "id": "BS-022",
+          "category": "labelling",
+          "requirement": "Precisely defined storage temperatures must be recommended on labelling; include protection against light and/or humidity where appropriate",
+          "severity": "critical",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 9"
+        },
+        {
+          "id": "BS-023",
+          "category": "sample_selection",
+          "requirement": "Matrixing and bracketing may be applied per Q1D principles but should not be applied to samples where differences may affect stability (different strengths, different container/closures)",
+          "severity": "recommended",
+          "applies_to": ["all_products"],
+          "reference": "Q5C Section 4.4"
+        }
+      ]
+    },
+    "cell_substrate": {
+      "id": "CS",
+      "guideline": "ICH Q5D",
+      "description": "Derivation and characterisation of cell substrates used for production",
+      "rules": [
+        {
+          "id": "CS-001",
+          "category": "cell_history",
+          "requirement": "Complete documented history of the cell substrate must be maintained including parental cell line history, manipulation records, and all events during R&D phases",
+          "severity": "critical",
+          "applies_to": ["all_cell_substrates"],
+          "reference": "Q5D Section 2.1.1"
+        },
+        {
+          "id": "CS-002",
+          "category": "cell_history",
+          "requirement": "For human cell lines: tissue/organ of origin, ethnic and geographical origin, age, sex, health/medical history of donor, and results of tests for pathogenic agents must be described",
+          "severity": "critical",
+          "applies_to": ["human_cell_lines"],
+          "reference": "Q5D Section 2.1.2"
+        },
+        {
+          "id": "CS-003",
+          "category": "cell_history",
+          "requirement": "For animal cell lines: species, strains, breeding conditions, tissue/organ of origin, geographical origin, age, sex, test results for pathogenic agents, and physiological condition must be described",
+          "severity": "critical",
+          "applies_to": ["animal_cell_lines"],
+          "reference": "Q5D Section 2.1.2"
+        },
+        {
+          "id": "CS-004",
+          "category": "cell_history",
+          "requirement": "Culture medium constituents must be described in detail including information on exposure to materials of human or animal origin (serum, enzymes, hydrolysates)",
+          "severity": "critical",
+          "applies_to": ["all_cell_substrates"],
+          "reference": "Q5D Section 2.1.2"
+        },
+        {
+          "id": "CS-005",
+          "category": "cell_banking",
+          "requirement": "Two-tiered cell bank system (MCB generating WCBs) is generally accepted as the most practical approach for continued product manufacture",
+          "severity": "recommended",
+          "applies_to": ["all_cell_substrates"],
+          "reference": "Q5D Section 2.2.1"
+        },
+        {
+          "id": "CS-006",
+          "category": "cell_banking",
+          "requirement": "MCB is generally made from an initial clone; WCBs are derived from one or more MCB containers; newly prepared WCBs must be appropriately qualified by characterisation and testing",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5D Section 2.2.1"
+        },
+        {
+          "id": "CS-007",
+          "category": "cell_banking",
+          "requirement": "Banking procedures must describe type of banking system, container types, closure systems, preparation methods, cryoprotectants, media, and cryopreservation/storage conditions",
+          "severity": "critical",
+          "applies_to": ["cell_banks"],
+          "reference": "Q5D Section 2.2.2"
+        },
+        {
+          "id": "CS-008",
+          "category": "cell_banking",
+          "requirement": "Procedures to avoid microbial contamination and cross-contamination by other cell types must be described including documentation and labelling systems for traceability",
+          "severity": "critical",
+          "applies_to": ["cell_banks"],
+          "reference": "Q5D Section 2.2.2"
+        },
+        {
+          "id": "CS-009",
+          "category": "cell_banking",
+          "requirement": "Catastrophic event protection measures must be described: redundant storage in multiple freezers, back-up power, automatic LN2 fill, storage at remote sites, and MCB regeneration procedures",
+          "severity": "critical",
+          "applies_to": ["cell_banks"],
+          "reference": "Q5D Section 2.2.2"
+        },
+        {
+          "id": "CS-010",
+          "category": "identity_testing",
+          "requirement": "Tests of identity must be performed on MCB to confirm banked cell is what it is represented to be; limited identity testing on each WCB",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5D Section 2.3.1"
+        },
+        {
+          "id": "CS-011",
+          "category": "identity_testing",
+          "requirement": "For metazoan cells, isoenzyme analysis is sufficient to confirm species of origin; alternatives include banding cytogenetics, species-specific antisera, DNA analysis (RFLP, VNTR, STR)",
+          "severity": "recommended",
+          "applies_to": ["metazoan_cells"],
+          "reference": "Q5D Section 2.3.1.1"
+        },
+        {
+          "id": "CS-012",
+          "category": "purity_testing",
+          "requirement": "MCB and WCB must be assessed for biological purity (freedom from adventitious microbial agents and adventitious cellular contaminants)",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5D Section 2.3.2"
+        },
+        {
+          "id": "CS-013",
+          "category": "purity_testing",
+          "requirement": "Bioburden (bacteria and fungi) testing must be performed on individual containers (1% of total, not less than 2 containers) of MCB and WCB per Ph. Eur./JP/USP methods",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5D Section 2.3.2.1"
+        },
+        {
+          "id": "CS-014",
+          "category": "purity_testing",
+          "requirement": "Mycoplasma testing must be performed on MCB and WCB using both agar/broth media procedures and indicator cell culture procedures",
+          "severity": "critical",
+          "applies_to": ["MCB", "WCB"],
+          "reference": "Q5D Section 2.3.2.1"
+        },
+        {
+          "id": "CS-015",
+          "category": "purity_testing",
+          "requirement": "Virus testing of cell substrates must detect wide spectrum of viruses using appropriate screening tests and specific tests based on cultivation history",
+          "severity": "critical",
+          "applies_to": ["MCB"],
+          "reference": "Q5D Section 2.3.2.1"
+        },
+        {
+          "id": "CS-016",
+          "category": "stability_testing",
+          "requirement": "Cell substrate stability must be evaluated at minimum two time points: cells with minimal subcultivations and cells at/beyond the limit of in vitro cell age for production",
+          "severity": "critical",
+          "applies_to": ["cell_substrate"],
+          "reference": "Q5D Section 2.3.3"
+        },
+        {
+          "id": "CS-017",
+          "category": "stability_testing",
+          "requirement": "For rDNA cell lines, coding sequence consistency of expression construct must be verified in cells cultivated to the limit of in vitro cell age or beyond",
+          "severity": "critical",
+          "applies_to": ["rDNA_cell_lines"],
+          "reference": "Q5D Section 2.3.3"
+        },
+        {
+          "id": "CS-018",
+          "category": "stability_testing",
+          "requirement": "Banked cell stability under storage conditions must be monitored: viability upon reconstitution verified when thawed for production, WCB preparation, or at defined intervals",
+          "severity": "critical",
+          "applies_to": ["banked_cells"],
+          "reference": "Q5D Section 2.3.3"
+        },
+        {
+          "id": "CS-019",
+          "category": "karyology_tumorigenicity",
+          "requirement": "For new or uncharacterised diploid cell substrates, diploid karyology confirmation and tumorigenic potential must be established using cells from the MCB",
+          "severity": "critical",
+          "applies_to": ["new_diploid_cell_lines"],
+          "reference": "Q5D Section 2.3.4"
+        },
+        {
+          "id": "CS-020",
+          "category": "karyology_tumorigenicity",
+          "requirement": "Karyology and tumorigenicity testing is not necessary for highly purified products that contain no cells, provided residual host cell DNA limits are consistently met",
+          "severity": "conditional",
+          "applies_to": ["highly_purified_products"],
+          "reference": "Q5D Section 2.3.4"
+        },
+        {
+          "id": "CS-021",
+          "category": "primary_cells",
+          "requirement": "Primary cell substrates: tissue must be from healthy animals from closed SPF colonies; animals must be quarantined and not previously used for experimental studies",
+          "severity": "critical",
+          "applies_to": ["primary_cell_substrates"],
+          "reference": "Q5D Appendix 1, Section II"
+        },
+        {
+          "id": "CS-022",
+          "category": "primary_cells",
+          "requirement": "All reagents of human or animal origin used in primary cell substrate preparation must be identified and tested for absence of detectable contaminants and adventitious agents",
+          "severity": "critical",
+          "applies_to": ["primary_cell_substrates"],
+          "reference": "Q5D Appendix 1, Section II"
+        },
+        {
+          "id": "CS-023",
+          "category": "microbial_cells",
+          "requirement": "For microbial cells, species, strain, genotypic and phenotypic characteristics, pathogenicity, toxin production, and biohazard information must be described",
+          "severity": "critical",
+          "applies_to": ["microbial_cells"],
+          "reference": "Q5D Section 2.1.2"
+        },
+        {
+          "id": "CS-024",
+          "category": "microbial_cells",
+          "requirement": "For E. coli where variety of strains may be used, biological characterisation methods such as phage typing should be considered as supplementary identity tests",
+          "severity": "recommended",
+          "applies_to": ["E_coli"],
+          "reference": "Q5D Section 2.3.1.2"
+        }
+      ]
+    },
+    "comparability": {
+      "id": "CP",
+      "guideline": "ICH Q5E",
+      "description": "Comparability of biotech/biological products subject to manufacturing process changes",
+      "rules": [
+        {
+          "id": "CP-001",
+          "category": "general_principles",
+          "requirement": "Comparability exercise must determine whether quality, safety, and efficacy of drug product are maintained after manufacturing process changes through collection of relevant technical data",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 1.4"
+        },
+        {
+          "id": "CP-002",
+          "category": "general_principles",
+          "requirement": "Comparability does not mean identical; products must be highly similar with any quality attribute differences sufficiently predictive of no adverse impact on safety or efficacy",
+          "severity": "critical",
+          "applies_to": ["comparability_assessment"],
+          "reference": "Q5E Section 1.4"
+        },
+        {
+          "id": "CP-003",
+          "category": "general_principles",
+          "requirement": "Comparability determination can be based on analytical testing, biological assays, and in some cases nonclinical and clinical data",
+          "severity": "critical",
+          "applies_to": ["comparability_assessment"],
+          "reference": "Q5E Section 1.4"
+        },
+        {
+          "id": "CP-004",
+          "category": "quality_considerations",
+          "requirement": "Product must be evaluated at process step most appropriate to detect changes; may require evaluation at multiple manufacturing stages (intermediate, drug substance, drug product)",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.1"
+        },
+        {
+          "id": "CP-005",
+          "category": "quality_considerations",
+          "requirement": "Battery of tests for comparability must be carefully selected and optimised to maximise potential for detecting relevant differences; may require multiple analytical procedures per quality attribute",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.1"
+        },
+        {
+          "id": "CP-006",
+          "category": "characterisation",
+          "requirement": "Comparability characterisation must address: physicochemical properties (including higher order structure), biological activity, immunochemical properties, purity/impurities/contaminants, and quantity",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.2"
+        },
+        {
+          "id": "CP-007",
+          "category": "characterisation",
+          "requirement": "Following process change, manufacturer must attempt to determine that higher order structure (secondary, tertiary, quaternary) is maintained",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.2"
+        },
+        {
+          "id": "CP-008",
+          "category": "characterisation",
+          "requirement": "For products with multiple biological activities, a set of relevant functional assays evaluating all relevant activities (enzymatic, receptor-mediated) must be considered",
+          "severity": "critical",
+          "applies_to": ["multi_activity_products"],
+          "reference": "Q5E Section 2.2.2"
+        },
+        {
+          "id": "CP-009",
+          "category": "characterisation",
+          "requirement": "For antibodies/antibody-based products, immunochemical properties must be confirmed as comparable in post-change product",
+          "severity": "critical",
+          "applies_to": ["antibody_products"],
+          "reference": "Q5E Section 2.2.2"
+        },
+        {
+          "id": "CP-010",
+          "category": "characterisation",
+          "requirement": "If purity/impurity profile differences observed, assess potential impact on safety and efficacy; new impurities must be identified and characterised",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.2"
+        },
+        {
+          "id": "CP-011",
+          "category": "specifications",
+          "requirement": "Widening of acceptance criteria post-change is generally not considered appropriate unless justified",
+          "severity": "critical",
+          "applies_to": ["specifications_update"],
+          "reference": "Q5E Section 2.2.3"
+        },
+        {
+          "id": "CP-012",
+          "category": "specifications",
+          "requirement": "Results within acceptance criteria but outside historical manufacturing control trends may indicate product differences warranting additional study or analysis",
+          "severity": "recommended",
+          "applies_to": ["specifications_update"],
+          "reference": "Q5E Section 2.2.3"
+        },
+        {
+          "id": "CP-013",
+          "category": "stability",
+          "requirement": "Any change with potential to alter protein structure, purity, or impurity profiles must be evaluated for impact on stability; real-time/real-temperature studies should be initiated",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.4"
+        },
+        {
+          "id": "CP-014",
+          "category": "stability",
+          "requirement": "Accelerated and stress stability studies should be used to establish degradation profiles and provide direct comparison of pre- and post-change product",
+          "severity": "recommended",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.2.4"
+        },
+        {
+          "id": "CP-015",
+          "category": "manufacturing_process",
+          "requirement": "Post-change process must be re-evaluated and/or re-validated as appropriate; in-process controls including critical control points must ensure quality is maintained",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.3"
+        },
+        {
+          "id": "CP-016",
+          "category": "manufacturing_process",
+          "requirement": "Demonstration of state of control for post-change process must include: bioburden/viral safety testing of post-change cell banks, adventitious agent clearance, removal of residual HCP/DNA, and maintenance of purity",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.3"
+        },
+        {
+          "id": "CP-017",
+          "category": "manufacturing_process",
+          "requirement": "For approved products, appropriate number of post-change commercial-scale batches must be analysed to demonstrate consistent process performance",
+          "severity": "critical",
+          "applies_to": ["approved_products"],
+          "reference": "Q5E Section 2.3"
+        },
+        {
+          "id": "CP-018",
+          "category": "manufacturing_process",
+          "requirement": "Side-by-side description summarising pre- and post-change manufacturing process must be prepared, clearly highlighting modifications and changes in controls",
+          "severity": "critical",
+          "applies_to": ["any_process_change"],
+          "reference": "Q5E Section 2.3"
+        },
+        {
+          "id": "CP-019",
+          "category": "development_changes",
+          "requirement": "For late-stage development changes with no additional clinical studies planned, comparability exercise should be as comprehensive and thorough as for approved product",
+          "severity": "critical",
+          "applies_to": ["late_stage_development"],
+          "reference": "Q5E Section 2.4"
+        },
+        {
+          "id": "CP-020",
+          "category": "nonclinical_clinical",
+          "requirement": "Nonclinical/clinical studies are warranted when: quality data are insufficient, relationship between quality attributes and safety/efficacy is not established, or quality differences are observed with possible adverse impact that cannot be excluded",
+          "severity": "critical",
+          "applies_to": ["comparability_assessment"],
+          "reference": "Q5E Section 2.5"
+        },
+        {
+          "id": "CP-021",
+          "category": "nonclinical_clinical",
+          "requirement": "Factors for determining need for nonclinical/clinical studies include: product complexity, structure-activity relationship, therapeutic window, immunogenicity risk, PK/PD relationship, mode of action",
+          "severity": "critical",
+          "applies_to": ["comparability_assessment"],
+          "reference": "Q5E Section 2.5.1"
+        },
+        {
+          "id": "CP-022",
+          "category": "nonclinical_clinical",
+          "requirement": "Comparability nonclinical/clinical studies may include PK, PD, efficacy, safety, immunogenicity, and pharmacovigilance studies; should be direct comparative studies where appropriate",
+          "severity": "recommended",
+          "applies_to": ["comparability_bridging"],
+          "reference": "Q5E Section 2.5.2"
+        },
+        {
+          "id": "CP-023",
+          "category": "drift_monitoring",
+          "requirement": "Historical data must be monitored for potential drift of quality attributes following single or serial manufacturing process changes to confirm no unacceptable impact on safety/efficacy profiles",
+          "severity": "critical",
+          "applies_to": ["lifecycle_management"],
+          "reference": "Q5E Section 2.1"
+        }
+      ]
+    }
+  }
+}

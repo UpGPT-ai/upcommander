@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "title": "Guidance for Industry: Potency Tests for Cellular and Gene Therapy Products",
+    "source_file": "fda-potency-tests-cell-gene-therapy.pdf",
+    "source_directory": "training/stage-1/fda-cber/",
+    "document_date": "2011-01-01",
+    "document_version": "FDA/CBER January 2011",
+    "extraction_date": "2026-03-24",
+    "total_rules": 16,
+    "notes": "No prior extraction found in output-v2, v3, or v4. Non-binding recommendations (guidance document). Full extraction performed. Applies to CGT products reviewed by FDA OCTGT/CBER only — not CDER or CBER OVRR/OBRR."
+  },
+  "rules": [
+    {
+      "rule_id": "FDA-CBER-CGT-001",
+      "rule_text": "All biological products regulated under section 351 of the PHS Act must meet prescribed requirements of safety, purity and potency for BLA approval; no lot of any licensed product shall be released prior to the completion of tests for conformity with standards applicable to such product.",
+      "source_section": "Section II.B - Regulatory Requirements for Potency of Licensed Biological Products",
+      "source_page": 2,
+      "verbatim_quote": "All biological products regulated under section 351 of the PHS Act must meet prescribed requirements of safety, purity and potency for BLA approval; Federal Food, Drug and Cosmetic Act, (FDC Act), (21 U.S.C. 321 et seq.); (21 CFR 601.2). 'No lot of any licensed product shall be released by the manufacturer prior to the completion of tests for conformity with standards applicable to such product,' (21 CFR 610.1), which include tests for potency, sterility, purity, and identity (21 CFR Part 610, Subpart B).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Requirements apply to all biological products, including autologous and single patient allogeneic products where a lot may be defined as a single dose",
+      "cross_references": ["21 CFR 601.2", "21 CFR 610.1", "21 CFR Part 610 Subpart B", "PHS Act Section 351"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-002",
+      "rule_text": "All potency assays used for release testing of licensed biological drug products must comply with applicable biologics and CGMP regulations: they must indicate product-specific potency, provide test results for release, provide quantitative data, meet pre-defined acceptance/rejection criteria, include appropriate reference materials/standards/controls, and establish validated accuracy, sensitivity, specificity and reproducibility.",
+      "source_section": "Section II.B - Regulatory Requirements for Potency of Licensed Biological Products",
+      "source_page": 3,
+      "verbatim_quote": "However, all potency assays used for release testing of licensed biological drug products must comply with applicable biologics and CGMP regulations including: Indicate potency (biological activity/activities) specific to the product (21 CFR 600.3(s) and 610.10; and 21 CFR 210.3(b)(16)(ii)); Provide test results for release of the product (21 CFR 610.1; 21 CFR 211.165(a)); Provide quantitative data (21 CFR 211.194); Meet pre-defined acceptance and/or rejection criteria (21 CFR 211.165(d)); Include appropriate reference materials, standards, and/or controls; Establish and document the accuracy, sensitivity, specificity and reproducibility of the test methods employed through validation (21 CFR 211.165(e) and 211.194(a)(2)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "FDA regulations allow considerable flexibility in determining the appropriate measurement(s) of potency for each product, evaluated on a case-by-case basis",
+      "cross_references": ["21 CFR 600.3(s)", "21 CFR 610.10", "21 CFR 211.165", "21 CFR 211.194"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-003",
+      "rule_text": "For investigational CGT products, sponsors must submit data to assure the identity, quality, purity and strength of products used during all phases of clinical study; an adjuvant shall not be introduced unless there is satisfactory evidence that it does not affect adversely the safety or potency of the product.",
+      "source_section": "Section II.C - Potency Requirements for Investigational CGT Products",
+      "source_page": 4,
+      "verbatim_quote": "Nonetheless, you must submit data to assure the identity, quality, purity and strength (21 CFR 312.23(a)(7)(i)) as well as stability (21 CFR 312.23(a)(7)(ii)) of products used during all phases of clinical study... 'an adjuvant shall not be introduced into a product unless there is satisfactory evidence that it does not affect adversely the safety or potency of the product' (21 CFR 610.15(a)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Amount of information needed varies with phase of investigation, proposed duration, dosage form, and amount of information otherwise available",
+      "cross_references": ["21 CFR 312.23(a)(7)", "21 CFR 610.15(a)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-004",
+      "rule_text": "Sufficient product characterization data (molecular, biochemical, immunologic, phenotypic, physical and biological properties) must be collected throughout preclinical and clinical development to inform and refine the approach to measuring potency.",
+      "source_section": "Section III.A.1 - Product Characterization",
+      "source_page": 6,
+      "verbatim_quote": "You should collect sufficient product characterization data (i.e., molecular, biochemical, immunologic, phenotypic, physical and biological properties) throughout preclinical and clinical development to inform and refine your approach to measuring potency.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA/CBER Potency Guidance 2011"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-005",
+      "rule_text": "All attempts must be made to develop potency measurements that reflect the product's relevant biological properties, ideally representing the product's mechanism of action; for gene therapy vectors, the potency assay must incorporate both a measure of gene transfer and the biological effect of the transferred gene.",
+      "source_section": "Section III.A.2 - Mechanism of Action (MOA)",
+      "source_page": 6,
+      "verbatim_quote": "Ideally, the potency assay will represent the product's mechanism of action (i.e., relevant therapeutic activity or intended biological effect)... all attempts should be made to develop potency measurements that reflect the product's relevant biological properties. For example, a gene therapy vector relies on at least two biological activities for its potency: the ability to transfer a genetic sequence to a cell; and the biological effect of the expressed genetic sequence. Therefore, the potency assay should incorporate both a measure of gene transfer and the biological effect of the transferred gene.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Many CGT products have complex and/or not fully characterized mechanisms of action, making it difficult to determine which attributes are most relevant",
+      "cross_references": ["21 CFR 211.165", "FDA/CBER Potency Guidance 2011"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-006",
+      "rule_text": "If a product contains more than one active ingredient, more than one potency assay may be needed; when designing assays, the potential non-additive effects between active ingredients (such as interference or synergy) must be considered.",
+      "source_section": "Section III.A.2 - Mechanism of Action (MOA)",
+      "source_page": 7,
+      "verbatim_quote": "Note that under 21 CFR 211.165, for each batch of drug product, there must be appropriate laboratory determination of satisfactory conformance to final specifications for the drug product, including the identity and strength of each active ingredient prior to release. Thus, if your product contains more than one active ingredient you might need more than one assay to measure potency of the product... Additionally, when designing your assay(s), you should also consider the potential non-additive effects between active ingredients, such as interference or synergy.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 211.165"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-007",
+      "rule_text": "When development of a quantitative bioassay is not feasible, a non-biological analytical assay may be used as a surrogate measurement of biological activity for potency; however, meaningful correlations to a relevant product-specific biological activity must be established through rigorous product characterization testing.",
+      "source_section": "Section III.B.2 - Non-biological Analytical Assays",
+      "source_page": 7,
+      "verbatim_quote": "In cases where development of a suitable bioassay is not feasible it may be necessary to identify a surrogate measurement of biological activity... These attributes may be used to demonstrate potency if the surrogate measurement(s) can be substantiated by correlation to a relevant product-specific biological activity(s)... To establish meaningful correlations, you should conduct rigorous product characterization testing.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 211.165", "ICH Q6B", "FDA/CBER Potency Guidance 2011"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-008",
+      "rule_text": "When a single assay is not sufficient to measure potency, a matrix of complementary assays measuring different product attributes may be used; qualitative assays used in an assay matrix must be accompanied by one or more quantitative assays.",
+      "source_section": "Section III.B.3 - Multiple Assays (Assay Matrix)",
+      "source_page": 8,
+      "verbatim_quote": "If one assay is not sufficient to measure the product attribute(s) that indicates potency, then an alternative approach could be used, such as developing multiple complementary assays that measure different product attributes associated with quality, consistency and stability... If qualitative assays are used as part of an assay matrix to determine potency for lot release, stability or comparability studies, they should be accompanied by one or more quantitative assays.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 211.165", "FDA/CBER Potency Guidance 2011"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-009",
+      "rule_text": "Potency assay development must begin during product characterization during preclinical and early clinical investigations to obtain as much product information as possible; potency assay acceptance criteria must be set as a numerical range and adjusted throughout product development stages.",
+      "source_section": "Section III.D - When Should Potency Assay Development Begin?",
+      "source_page": 9,
+      "verbatim_quote": "Because the ability to measure potency is fundamentally related to product characterization, you should initiate potency assay development by way of product characterization during preclinical and early clinical investigations to obtain as much product information as possible... Assay acceptance criteria should be set as a numerical range and should be adjusted throughout the product development stages to reflect manufacturing and clinical experience.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 312.23(a)(7)", "FDA/CBER Potency Guidance 2011"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-010",
+      "rule_text": "For later phase (Phase 3/pivotal) clinical studies, the potency assay or assay matrix design and acceptance criteria must establish appropriate limits to assure that product lots are well-defined, biologically active, and consistently manufactured; failure to provide sufficient potency assurance may result in the trial being placed on clinical hold.",
+      "source_section": "Section III.E.2 - Later Phase Product Development",
+      "source_page": 10,
+      "verbatim_quote": "Your potency assay or assay matrix design and acceptance criteria should establish appropriate limits for potency to assure that product lots are well-defined, biologically active, and consistently manufactured. If you do not provide sufficient assurance of potency of product lots to be used in your pivotal trial(s), your trial may be considered 'deficient in design to meet its stated objectives' and may be placed on clinical hold (21 CFR 312.42(b)(2)(ii)).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 312.42(b)(2)(ii)", "21 CFR 610.53"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-011",
+      "rule_text": "To obtain a biologics license, a validated potency assay or assay matrix with defined acceptance criteria must be described and justified in the BLA; acceptance criteria should be based on manufacturing experience and data collected from assays performed during all phases of product development and clinical investigation.",
+      "source_section": "Section III.E.3 - Biologics License",
+      "source_page": 10,
+      "verbatim_quote": "To obtain a biologics license, a validated potency assay or assay matrix with defined acceptance criteria must be described and justified in the BLA (21 CFR 601.2(a) and 211.165(e))... The acceptance criteria should be based on knowledge gained through manufacturing experience and data collected from assays performed during all phases of product development and clinical investigation.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 601.2(a)", "21 CFR 211.165(e)", "FDC Act Section 505(d)", "21 U.S.C. 351"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-012",
+      "rule_text": "The potency assay acceptance criteria defined in the BLA for subsequent lot release testing must reflect the potency limits established for product lots used in the pivotal clinical studies demonstrating clinical effectiveness.",
+      "source_section": "Section III.E.3 - Biologics License",
+      "source_page": 10,
+      "verbatim_quote": "The potency assay acceptance criteria defined in your BLA, which are intended for subsequent lot release testing, should reflect the potency limits established for product lots used in the pivotal clinical studies demonstrating clinical effectiveness (see FDC Act, Section 505(d), 21 U.S.C. 351).",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["FDC Act Section 505(d)", "21 U.S.C. 351", "21 CFR 601.2"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-013",
+      "rule_text": "If a potency assay used during an investigational study is modified or replaced, the sponsor must qualify the assay and provide justification for the proposed change(s); validation studies must demonstrate that the modified or new assay continues to be an appropriate measure of potency.",
+      "source_section": "Section III.E.4 - Potency Assay Evaluation and Modification",
+      "source_page": 11,
+      "verbatim_quote": "If you plan to modify an assay that is used in an approved application or propose a new assay, you must perform validation studies to demonstrate that the modified or new assay continues to be an appropriate measure of potency (21 CFR 211.165(e))... If you modify the potency measurement used during an investigational study, you should qualify the assay and provide justification for the proposed change(s).",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 211.165(e)", "21 CFR 601.12(b)(3)(vi)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-014",
+      "rule_text": "Potency assay design must allow collection of data to evaluate suitability for its intended use, incorporating a sufficient number of replicates to allow for statistical analysis, using sample randomization to reduce biases, and including appropriate controls; assay variability must be considered and sources of variability limited in the assay design.",
+      "source_section": "Section IV.A - What Should be Considered During Potency Assay Design?",
+      "source_page": 11,
+      "verbatim_quote": "In accordance with CGMP regulations, assay design should allow you to collect data that will permit you to evaluate if your assay(s) is suitable for its intended use (Refs. 9 through 11; see e.g., 21 CFR 211.165 and 21 CFR 211.194). This includes incorporating a sufficient number of replicates to allow for statistical analysis, using sample randomization to reduce biases (e.g., sources of bias associated with placement in a 96-well plate), and including appropriate controls.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "None stated",
+      "cross_references": ["21 CFR 211.165", "21 CFR 211.194"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-015",
+      "rule_text": "For BLA licensure, the potency assay must be validated; validation must include analysis of all relevant assay parameters including: accuracy, precision (repeatability, intermediate precision), specificity, linearity and range, system suitability, and robustness.",
+      "source_section": "Section IV.C.1 - Potency Assay Validation - Regulations",
+      "source_page": 13,
+      "verbatim_quote": "To obtain a biologics license, you must submit data in your BLA demonstrating, among other things, that your product meets prescribed requirements of potency (21 CFR 601.2), which requires that you validate your potency assay (see 21 CFR 211.165(e))... You should perform analysis and validation of all relevant assay parameters, including: Accuracy; Precision (Repeatability, Intermediate Precision); Specificity; Linearity and Range; System Suitability; and Robustness.",
+      "severity": "CRITICAL",
+      "jurisdictions": ["US"],
+      "exceptions": "Certain parameters (e.g., linearity) may not be applicable to qualitative assays with pass/fail readouts; rationale for non-applicable parameters must be provided",
+      "cross_references": ["21 CFR 601.2", "21 CFR 211.165(e)", "ICH Q2(R1)"]
+    },
+    {
+      "rule_id": "FDA-CBER-CGT-016",
+      "rule_text": "Product-specific reference materials must be developed and subjected to stability studies; each new batch of reference material must be appropriately characterized, compared with the original, and appropriate procedures established to qualify and validate new reference materials; retention samples of each lot must be maintained for comparison.",
+      "source_section": "Section IV.B - How Should Reference Materials and Controls be Used?",
+      "source_page": 12,
+      "verbatim_quote": "You should develop your own 'in house' reference material(s) as part of product development when feasible... Because you will use in house reference materials at various stages of product development and characterization, you should subject reference materials to stability studies in parallel with your product stability studies... Moreover, you should appropriately characterize each new batch of reference material, compare it with the original, and establish appropriate procedures to qualify and eventually validate new reference materials. When possible, you should retain samples of each lot of in house reference material for comparison with newly manufactured reference material.",
+      "severity": "HIGH",
+      "jurisdictions": ["US"],
+      "exceptions": "Universal or standardized reference materials for CGT products may not be available; development of such materials is encouraged",
+      "cross_references": ["21 CFR 210.3(b)(16)(ii)", "21 CFR 211.160", "FDA/CBER Potency Guidance 2011"]
+    }
+  ]
+}
