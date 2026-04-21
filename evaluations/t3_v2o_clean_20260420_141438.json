@@ -1,0 +1,331 @@
+{
+  "timestamp": "2026-04-20T14:14:38Z",
+  "note": "V2O clean retest \u2014 full file content, no truncation (fixes confound)",
+  "n_per_condition": 5,
+  "results": {
+    "V2": [
+      {
+        "condition": "V2",
+        "run_id": 1,
+        "elapsed_s": 235.8,
+        "cost_usd": 0.86334,
+        "output_tokens": 14774,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All 5 endpoints import types from '@/lib/platform/notes/types', every policy is wrapped in DO $$ IF NOT EXISTS, 16 tests cover happy/404/401 paths, and all 5 interfaces are defined.",
+          "grader_cost": 0.24837
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 2,
+        "elapsed_s": 413.6,
+        "cost_usd": 1.18846,
+        "output_tokens": 24437,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import types from '@/lib/platform/notes/types', both policies wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 17 tests cover happy path + 404 + 401, and all 5 interfaces are present.",
+          "grader_cost": 0.24479
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 3,
+        "elapsed_s": 178.8,
+        "cost_usd": 0.73159,
+        "output_tokens": 14858,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All types imported from '@/lib/platform/notes/types', every policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 15 tests cover happy/404/401 paths, and all 5 interfaces are present.",
+          "grader_cost": 0.2498
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 4,
+        "elapsed_s": 239.6,
+        "cost_usd": 0.72722,
+        "output_tokens": 20096,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import from '@/lib/platform/notes/types', policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 16 tests cover happy path/404/401, and all 5 interfaces present.",
+          "grader_cost": 0.23726
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 5,
+        "elapsed_s": 154.9,
+        "cost_usd": 0.64958,
+        "output_tokens": 12586,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types.ts, DO $$ IF NOT EXISTS wraps the single policy, all 5 endpoints with consistent response envelope, all 5 interfaces present; test file has 15 tests covering happy/404/401 \u2014 full 2pts for coverage (correcting: 15\u226512, so 2pts).",
+          "grader_cost": 0.24166
+        }
+      }
+    ],
+    "V2O": [
+      {
+        "condition": "V2O",
+        "run_id": 1,
+        "elapsed_s": 166.3,
+        "cost_usd": 1.16242,
+        "output_tokens": 10247,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types module, DO $$ IF NOT EXISTS wraps the policy, all 5 endpoints with consistent {success, data/error}, 5 interfaces present; test count is 14 covering happy/401/404/400 paths but lacks explicit 401 tests for several endpoints \u2014 still solid at 2pts, losing 1 for minor depth gaps.",
+          "grader_cost": 0.2303
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 2,
+        "elapsed_s": 278.1,
+        "cost_usd": 1.24503,
+        "output_tokens": 21796,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All 5 endpoints with unified response envelope, 19 tests covering 401/404/happy paths, single policy guarded by DO $$ IF NOT EXISTS, all 5 interfaces present, and routes/tests import from '@/lib/platform/notes/types'.",
+          "grader_cost": 0.24717
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 3,
+        "elapsed_s": 225.9,
+        "cost_usd": 1.24193,
+        "output_tokens": 14663,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes and tests import from '@/lib/platform/notes/types', migration wraps the policy in DO $$ IF NOT EXISTS, all 5 endpoints use {success, data/error} format, 14 tests cover happy/401/404/400 paths, and all 5 interfaces are defined.",
+          "grader_cost": 0.24087
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 4,
+        "elapsed_s": 435.4,
+        "cost_usd": 1.81571,
+        "output_tokens": 30261,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from '@/lib/platform/notes/types', policy wrapped in DO $$ IF NOT EXISTS, 5 endpoints with {success, data/error} format, 18 tests covering happy/404/401, and all 5 interfaces defined.",
+          "grader_cost": 0.22591
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 5,
+        "elapsed_s": 283.9,
+        "cost_usd": 1.02752,
+        "output_tokens": 19119,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports use @/lib/platform/notes/types, every policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 17 tests cover happy paths plus 401/404/400/500, and all 5 interfaces are defined.",
+          "grader_cost": 0.24856
+        }
+      }
+    ]
+  },
+  "summary": {
+    "V2": {
+      "avg_acs": 3.0,
+      "avg_quality": 9.8,
+      "avg_cost": 0.832038,
+      "avg_time": 244.54000000000002,
+      "scores": [
+        10,
+        10,
+        10,
+        10,
+        9
+      ],
+      "n": 5
+    },
+    "V2O": {
+      "avg_acs": 4.0,
+      "avg_quality": 9.8,
+      "avg_cost": 1.298522,
+      "avg_time": 277.91999999999996,
+      "scores": [
+        9,
+        10,
+        10,
+        10,
+        10
+      ],
+      "n": 5
+    }
+  }
+}

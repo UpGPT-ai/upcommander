@@ -1,0 +1,456 @@
+{
+  "timestamp": "2026-04-19T22:09:02Z",
+  "n_per_condition": 5,
+  "task": "two-file cross-boundary TypeScript (bench-types + bench/route)",
+  "summaries": {
+    "A": {
+      "label": "A",
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 8.9,
+      "avg_cost_usd": 0.12929,
+      "avg_elapsed_s": 20.8,
+      "avg_input_tokens_total": 121878,
+      "avg_input_uncached": 6,
+      "avg_cache_create": 22705,
+      "avg_cache_read": 99168,
+      "avg_output_tokens": 914,
+      "avg_attempts": 1.0
+    },
+    "C": {
+      "label": "C",
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 8.7,
+      "avg_cost_usd": 0.01251,
+      "avg_elapsed_s": 30.6,
+      "avg_input_tokens_total": 0,
+      "avg_input_uncached": 0,
+      "avg_cache_create": 0,
+      "avg_cache_read": 0,
+      "avg_output_tokens": 834,
+      "avg_attempts": 1.0
+    }
+  },
+  "raw": {
+    "A": [
+      {
+        "run_id": 1,
+        "condition": "A_sequential",
+        "elapsed_s": 16.8,
+        "success": true,
+        "input_tokens_uncached": 5,
+        "input_tokens_cache_create": 22541,
+        "input_tokens_cache_read": 78527,
+        "input_tokens_total": 101073,
+        "output_tokens": 798,
+        "cost_usd": 0.12074,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only `BenchResult` interface with all 7 required fields\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks typed as `BenchResult[]`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "correctness": 2,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, well-typed App Router implementation with correct import path and named exports, but BenchResult has 8 fields instead of the 7 specified in the rubric, suggesting a minor deviation from spec.",
+          "grader_cost_usd": 0.21028
+        },
+        "total_cost_usd": 0.33102
+      },
+      {
+        "run_id": 2,
+        "condition": "A_sequential",
+        "elapsed_s": 17.8,
+        "success": true,
+        "input_tokens_uncached": 6,
+        "input_tokens_cache_create": 22964,
+        "input_tokens_cache_read": 112532,
+        "input_tokens_total": 135502,
+        "output_tokens": 1075,
+        "cost_usd": 0.13668,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only the `BenchResult` interface with all 7 fields\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 mock `BenchResult` objects (2 pass, 1 fail) with realistic values",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9.5,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1.5,
+            "clarity": 1
+          },
+          "reasoning": "Clean, type-safe App Router implementation with correct imports and realistic mocks; minor completeness note since spec called for 7 fields but code has 8 (extra createdAt, all populated).",
+          "grader_cost_usd": 0.2101
+        },
+        "total_cost_usd": 0.34678
+      },
+      {
+        "run_id": 3,
+        "condition": "A_sequential",
+        "elapsed_s": 24.2,
+        "success": true,
+        "input_tokens_uncached": 7,
+        "input_tokens_cache_create": 22935,
+        "input_tokens_cache_read": 146908,
+        "input_tokens_total": 169850,
+        "output_tokens": 1076,
+        "cost_usd": 0.14691,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 `BenchResult` interface, no other exports\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 typed mock results (pass/pass/fail) with realistic values across all 7 fields",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean implementation with correct App Router pattern and proper typing, but rubric specifies 7 BenchResult fields while code has 8 (extra createdAt), suggesting minor spec deviation.",
+          "grader_cost_usd": 0.21108
+        },
+        "total_cost_usd": 0.35799
+      },
+      {
+        "run_id": 4,
+        "condition": "A_sequential",
+        "elapsed_s": 20.4,
+        "success": true,
+        "input_tokens_uncached": 5,
+        "input_tokens_cache_create": 22541,
+        "input_tokens_cache_read": 78936,
+        "input_tokens_total": 101482,
+        "output_tokens": 817,
+        "cost_usd": 0.12115,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only the `BenchResult` interface with all 7 fields, no default export\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks typed as `BenchResult[]`, using exact import path and `NextResponse` from `next/server`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, idiomatic App Router handler with correct types and imports; minor ding on completeness since the interface/mocks include 8 fields while rubric specifies 7.",
+          "grader_cost_usd": 0.21074
+        },
+        "total_cost_usd": 0.33189
+      },
+      {
+        "run_id": 5,
+        "condition": "A_sequential",
+        "elapsed_s": 24.7,
+        "success": true,
+        "input_tokens_uncached": 5,
+        "input_tokens_cache_create": 22543,
+        "input_tokens_cache_read": 78935,
+        "input_tokens_total": 101483,
+        "output_tokens": 805,
+        "cost_usd": 0.12097,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only the `BenchResult` interface with all 7 required fields\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks with realistic values, typed as `BenchResult[]`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, well-typed code with correct Next.js App Router structure; interface has 8 fields vs the 7 specified in rubric, so completeness loses a point despite all mock objects being complete.",
+          "grader_cost_usd": 0.20888
+        },
+        "total_cost_usd": 0.32985
+      }
+    ],
+    "C": [
+      {
+        "run_id": 1,
+        "condition": "C_self_evolution",
+        "elapsed_s": 28.7,
+        "input_tokens": 0,
+        "output_tokens": 809,
+        "cost_usd": 0.01213,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 14.8,
+            "cost_usd": 0.12095,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "correctness": 2,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, well-typed Next.js App Router code with proper named exports, but interface has 8 fields instead of the 7 specified in the rubric, indicating a spec mismatch.",
+          "grader_cost_usd": 0.20696
+        },
+        "total_cost_usd": 0.2191
+      },
+      {
+        "run_id": 3,
+        "condition": "C_self_evolution",
+        "elapsed_s": 33.4,
+        "input_tokens": 0,
+        "output_tokens": 813,
+        "cost_usd": 0.0122,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 18.2,
+            "cost_usd": 0.12098,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, type-safe Next.js App Router code with correct imports and named exports, but interface has 8 fields vs rubric's expected 7 (extra createdAt); mocks are consistent and realistic.",
+          "grader_cost_usd": 0.20938
+        },
+        "total_cost_usd": 0.22158
+      },
+      {
+        "run_id": 2,
+        "condition": "C_self_evolution",
+        "elapsed_s": 34.4,
+        "input_tokens": 0,
+        "output_tokens": 824,
+        "cost_usd": 0.01236,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 15.3,
+            "cost_usd": 0.12115,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, type-safe implementation with correct App Router pattern, but adds an 8th field (createdAt) beyond the specified 7 BenchResult fields.",
+          "grader_cost_usd": 0.21071
+        },
+        "total_cost_usd": 0.22307
+      },
+      {
+        "run_id": 4,
+        "condition": "C_self_evolution",
+        "elapsed_s": 28.5,
+        "input_tokens": 0,
+        "output_tokens": 806,
+        "cost_usd": 0.01209,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 16.6,
+            "cost_usd": 0.12098,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 8.5,
+          "breakdown": {
+            "correctness": 2.5,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1.5,
+            "clarity": 1
+          },
+          "reasoning": "Clean, well-typed App Router handler with proper named imports; minor deduction because the interface declares 8 fields while the rubric specifies 7, suggesting a field (likely createdAt or attemptsUsed) beyond spec.",
+          "grader_cost_usd": 0.21105
+        },
+        "total_cost_usd": 0.22314
+      },
+      {
+        "run_id": 5,
+        "condition": "C_self_evolution",
+        "elapsed_s": 27.8,
+        "input_tokens": 0,
+        "output_tokens": 918,
+        "cost_usd": 0.01377,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 17.2,
+            "cost_usd": 0.13337,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "correctness": 3,
+            "type_safety": 2,
+            "conventions": 2,
+            "completeness": 1,
+            "clarity": 1
+          },
+          "reasoning": "Clean, type-safe implementation with correct App Router pattern; interface defines 8 fields rather than the spec's 7, though all mocks are internally consistent.",
+          "grader_cost_usd": 0.20939
+        },
+        "total_cost_usd": 0.22316
+      }
+    ]
+  }
+}

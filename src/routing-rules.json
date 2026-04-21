@@ -1,0 +1,82 @@
+{
+  "_version": "1.0.0",
+  "_updated": "2026-04-16",
+  "_notes": "Declarative routing rules for UpCommander. Hot-reloaded by orchestrator without app restart. Update this file as benchmark results improve.",
+
+  "default_strategy": "k2",
+
+  "strategies": {
+    "k2": {
+      "description": "Sonnet 4.6 + Karpathy CLAUDE.md + verified CONTRACT.md. Best cost/quality ratio at $0.08/run (53/60 avg quality). Benchmark V3 winner.",
+      "model": "claude-sonnet-4-6",
+      "use_contract": true,
+      "use_karpathy": true,
+      "use_index": "L1"
+    },
+    "pipeline": {
+      "description": "Opus 4.7 generates CONTRACT → cheap model implements → Sonnet 4.6 reviews. Higher quality ceiling, ~5x cost. Use for high-stakes tasks.",
+      "stages": [
+        { "role": "contract_generator", "model": "claude-opus-4-7", "use_karpathy": true },
+        { "role": "implementer", "model": "deepseek/deepseek-chat-v3.1", "use_contract": true },
+        { "role": "reviewer", "model": "claude-sonnet-4-6", "use_contract": true }
+      ]
+    },
+    "sonnet_raw": {
+      "description": "Sonnet 4.6 with no scaffolding. Baseline. Use only for trivial single-file tasks.",
+      "model": "claude-sonnet-4-6",
+      "use_contract": false,
+      "use_karpathy": false,
+      "use_index": null
+    },
+    "opus_raw": {
+      "description": "Opus 4.7 with no scaffolding. Best for deep architecture review or greenfield design. High cost.",
+      "model": "claude-opus-4-7",
+      "use_contract": false,
+      "use_karpathy": false,
+      "use_index": null
+    }
+  },
+
+  "routing_rules": [
+    {
+      "condition": "task.file_count === 1 && task.type === 'bug_fix'",
+      "strategy": "k2",
+      "note": "Single-file bug fixes: K2 is cost-optimal"
+    },
+    {
+      "condition": "task.file_count >= 3 && task.is_greenfield",
+      "strategy": "k2",
+      "note": "Greenfield 3+ files: K2 with CONTRACT"
+    },
+    {
+      "condition": "task.file_count >= 3 && !task.is_greenfield",
+      "strategy": "k2",
+      "note": "Refactor 3+ files: K2 with L1 index to locate affected modules"
+    },
+    {
+      "condition": "task.type === 'architecture_review'",
+      "strategy": "opus_raw",
+      "note": "Architecture review: Opus for depth, no scaffolding needed"
+    },
+    {
+      "condition": "task.type === 'high_stakes' || task.estimated_cost_usd > 0.50",
+      "strategy": "pipeline",
+      "note": "High-stakes or expensive tasks: 3-tier pipeline for verified quality"
+    }
+  ],
+
+  "index_strategy": {
+    "description": "Which codebase index level to feed each agent role",
+    "contract_generator": "L0",
+    "implementer": "L1",
+    "reviewer": "L1",
+    "solo_agent": "L1"
+  },
+
+  "worker_budget_usd": {
+    "contract_generator": 0.25,
+    "implementer": 0.15,
+    "reviewer": 0.15,
+    "solo_agent": 0.30
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "timestamp": "2026-04-19T22:21:35Z",
+  "n": 5,
+  "task": "hard-modify-existing+alias-import",
+  "summaries": {
+    "A": {
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 10.0,
+      "avg_cost": 0.14485,
+      "avg_attempts": 1.0,
+      "avg_elapsed": 32.1,
+      "avg_input_total": 177976,
+      "avg_output": 757,
+      "first_attempt_pass_rate": 1.0
+    },
+    "C": {
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 10.0,
+      "avg_cost": 0.14625,
+      "avg_attempts": 1.0,
+      "avg_elapsed": 27.7,
+      "avg_input_total": 177989,
+      "avg_output": 789,
+      "first_attempt_pass_rate": 1.0
+    }
+  },
+  "raw": {
+    "A": [
+      {
+        "run_id": 2,
+        "condition": "A",
+        "elapsed_s": 30.9,
+        "cost_usd": 0.14247,
+        "input_tokens_total": 171121,
+        "output_tokens": 738,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface appended with all 8 correctly typed fields, route imports from @/lib/coordination, uses WorkerMetrics[] and explicit Promise<NextResponse> return type, follows Next.js App Router named export convention.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14247,
+            "pass_count": 5,
+            "elapsed_s": 16.5
+          }
+        ],
+        "grader_cost": 0.2049
+      },
+      {
+        "run_id": 1,
+        "condition": "A",
+        "elapsed_s": 41.6,
+        "cost_usd": 0.15483,
+        "input_tokens_total": 205570,
+        "output_tokens": 815,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface correctly appended with all 8 fields and proper types, route imports from correct path with explicit return type using Next.js App Router conventions.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.15483,
+            "pass_count": 5,
+            "elapsed_s": 28.8
+          }
+        ],
+        "grader_cost": 0.20418
+      },
+      {
+        "run_id": 3,
+        "condition": "A",
+        "elapsed_s": 29.1,
+        "cost_usd": 0.1423,
+        "input_tokens_total": 170995,
+        "output_tokens": 745,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface added with all 8 correctly-typed fields, route imports from @/lib/coordination, uses WorkerMetrics[] with explicit Promise<NextResponse> return type, follows App Router conventions with no default export on types.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.1423,
+            "pass_count": 5,
+            "elapsed_s": 19.2
+          }
+        ],
+        "grader_cost": 0.20493
+      },
+      {
+        "run_id": 4,
+        "condition": "A",
+        "elapsed_s": 31.1,
+        "cost_usd": 0.14231,
+        "input_tokens_total": 171097,
+        "output_tokens": 744,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface appended with all 8 correctly typed fields, route imports via @/lib/coordination with explicit Promise<NextResponse> return type, follows Next.js App Router named export pattern.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14231,
+            "pass_count": 5,
+            "elapsed_s": 20.2
+          }
+        ],
+        "grader_cost": 0.20461
+      },
+      {
+        "run_id": 5,
+        "condition": "A",
+        "elapsed_s": 28.0,
+        "cost_usd": 0.14233,
+        "input_tokens_total": 171099,
+        "output_tokens": 745,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface has all 8 fields with correct types, route imports from @/lib/coordination, uses WorkerMetrics[] with explicit Promise<NextResponse> return type, follows App Router conventions.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14233,
+            "pass_count": 5,
+            "elapsed_s": 19.6
+          }
+        ],
+        "grader_cost": 0.20468
+      }
+    ],
+    "C": [
+      {
+        "run_id": 1,
+        "condition": "C",
+        "elapsed_s": 28.9,
+        "cost_usd": 0.14483,
+        "input_tokens_total": 170723,
+        "output_tokens": 747,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface added with all 8 correctly-typed fields, route imports from @/lib/coordination, uses WorkerMetrics[] with explicit Promise<NextResponse> return type, and follows App Router conventions without touching existing code.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14483,
+            "pass_count": 5,
+            "elapsed_s": 15.9
+          }
+        ],
+        "grader_cost": 0.20496
+      },
+      {
+        "run_id": 2,
+        "condition": "C",
+        "elapsed_s": 29.4,
+        "cost_usd": 0.14213,
+        "input_tokens_total": 170693,
+        "output_tokens": 740,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface appended with all 8 correctly-typed fields, route uses proper App Router GET with explicit Promise<NextResponse> return and typed WorkerMetrics[], existing coordination.ts code is untouched.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14213,
+            "pass_count": 5,
+            "elapsed_s": 17.2
+          }
+        ],
+        "grader_cost": 0.20483
+      },
+      {
+        "run_id": 3,
+        "condition": "C",
+        "elapsed_s": 24.7,
+        "cost_usd": 0.14267,
+        "input_tokens_total": 171145,
+        "output_tokens": 763,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface appended with all 8 correctly-typed fields, route imports from @/lib/coordination, uses WorkerMetrics[] and explicit Promise<NextResponse> return, follows App Router conventions without disturbing existing code.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.14267,
+            "pass_count": 5,
+            "elapsed_s": 15.5
+          }
+        ],
+        "grader_cost": 0.20496
+      },
+      {
+        "run_id": 4,
+        "condition": "C",
+        "elapsed_s": 25.6,
+        "cost_usd": 0.1445,
+        "input_tokens_total": 171095,
+        "output_tokens": 738,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface has all 8 fields with correct types, route imports from @/lib/coordination, uses WorkerMetrics[] and explicit Promise<NextResponse> return, follows Next.js App Router conventions.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.1445,
+            "pass_count": 5,
+            "elapsed_s": 16.3
+          }
+        ],
+        "grader_cost": 0.20478
+      },
+      {
+        "run_id": 5,
+        "condition": "C",
+        "elapsed_s": 29.9,
+        "cost_usd": 0.1571,
+        "input_tokens_total": 206288,
+        "output_tokens": 956,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5
+        },
+        "quality_score": 10,
+        "quality_breakdown": {
+          "correctness": 3,
+          "non_regression": 2,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1
+        },
+        "quality_reasoning": "WorkerMetrics interface has all 8 fields with correct types, route imports from correct path and uses explicit types, and existing coordination.ts code appears untouched.",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.1571,
+            "pass_count": 5,
+            "elapsed_s": 16.8
+          }
+        ],
+        "grader_cost": 0.20421
+      }
+    ]
+  }
+}

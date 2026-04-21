@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.env
+.env.*
+.claude-coord/
+.codebase-index/
+.codebase-index-l0.json
+*.log
+.DS_Store
+
+# Internal / product-specific material — never publish
+docs/
+training/
+vscode-extension/
+pwa/
+public/
+*.local.json
+
+# Explicit guards for previously-leaked files
+src/connectors/uplift-bridge.ts
+src/templates/sem-audit.ts
+src/templates/

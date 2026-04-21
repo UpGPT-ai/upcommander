@@ -1,0 +1,149 @@
+{
+  "timestamp": "2026-04-20T09:16:44Z",
+  "note": "V2 vs V2+Opus one-shot fix (no retry loop)",
+  "n_per_condition": 2,
+  "results": {
+    "V2": [
+      {
+        "condition": "V2",
+        "run_id": 1,
+        "elapsed_s": 177.9,
+        "cost_usd": 0.65644,
+        "output_tokens": 11334,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes and tests import from '@/lib/platform/notes/types', RLS policy uses DO $$ IF NOT EXISTS pattern, endpoints return {success, data/error} format, all 5 interfaces present, and commit message confirms 18 Vitest tests.",
+          "grader_cost": 0.19655
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 2,
+        "elapsed_s": 132.6,
+        "cost_usd": 0.52009,
+        "output_tokens": 10955,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 5,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 1,
+            "api_completeness": 0,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Imports and types are clean, but the migration is truncated mid-policy (update/delete incomplete), only 2 of 5 endpoints are implemented, and the test file cuts off before any actual tests are defined.",
+          "grader_cost": 0.20838
+        }
+      }
+    ],
+    "V2O": [
+      {
+        "condition": "V2O",
+        "run_id": 1,
+        "elapsed_s": 204.6,
+        "cost_usd": 1.04463,
+        "output_tokens": 13868,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Types imported from '@/lib/platform/notes/types', policy wrapped in DO $$ IF NOT EXISTS, all 5 interfaces present, consistent {success, data/error} envelope, and test file header indicates 12 Vitest tests.",
+          "grader_cost": 0.19712
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 2,
+        "elapsed_s": 356.0,
+        "cost_usd": 1.4007,
+        "output_tokens": 27372,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Imports from types module correctly, SQL uses DO $$ IF NOT EXISTS pattern, types complete, but only GET/POST shown (PUT/DELETE/GET-by-id truncated) and test file truncated preventing full coverage verification.",
+          "grader_cost": 0.19698
+        }
+      }
+    ]
+  },
+  "summary": {
+    "V2": {
+      "avg_acs": 4.0,
+      "avg_quality": 7.5,
+      "avg_cost": 0.588265,
+      "avg_time": 155.25,
+      "scores": [
+        10,
+        5
+      ]
+    },
+    "V2O": {
+      "avg_acs": 4.0,
+      "avg_quality": 9.5,
+      "avg_cost": 1.2226650000000001,
+      "avg_time": 280.3,
+      "scores": [
+        10,
+        9
+      ]
+    }
+  }
+}

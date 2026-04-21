@@ -1,0 +1,471 @@
+{
+  "timestamp": "2026-04-20T14:08:03Z",
+  "note": "Multi-model: Sonnet vs Haiku vs Opus, all with CONTRACT (K2 scaffolding)",
+  "n_per_condition": 5,
+  "results": {
+    "K2_Sonnet": [
+      {
+        "condition": "K2_Sonnet",
+        "model": "claude-sonnet-4-6",
+        "run_id": 1,
+        "elapsed_s": 316.1,
+        "cost_usd": 0.83382,
+        "output_tokens": 24952,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import from '@/lib/platform/notes/types', single RLS policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 19 tests cover happy/404/401 paths, and all 5 interfaces are in types.ts.",
+          "grader_cost": 0.23845
+        }
+      },
+      {
+        "condition": "K2_Sonnet",
+        "model": "claude-sonnet-4-6",
+        "run_id": 2,
+        "elapsed_s": 158.6,
+        "cost_usd": 0.62316,
+        "output_tokens": 12216,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import types from '@/lib/platform/notes/types', every RLS policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 17 tests cover happy/404/401 paths, and all 5 interfaces present.",
+          "grader_cost": 0.23981
+        }
+      },
+      {
+        "condition": "K2_Sonnet",
+        "model": "claude-sonnet-4-6",
+        "run_id": 3,
+        "elapsed_s": 114.0,
+        "cost_usd": 0.53384,
+        "output_tokens": 9456,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Clean imports from types path, proper DO $$ IF NOT EXISTS policy guard, all 5 endpoints with consistent response envelope, all 5 interfaces present; test count is 13 covering 401s and happy paths but lacks explicit 404 coverage on GET/PATCH by id.",
+          "grader_cost": 0.24105
+        }
+      },
+      {
+        "condition": "K2_Sonnet",
+        "run_id": 4,
+        "error": "'output_tokens'",
+        "tb": "Traceback (most recent call last):\n  File \"/tmp/bench_multimodel.py\", line 172, in run_condition\n    \"output_tokens\": r1[\"output_tokens\"],\n                     ~~^^^^^^^^^^^^^^^^^\nKeyError: 'output_tokens'\n"
+      },
+      {
+        "condition": "K2_Sonnet",
+        "model": "claude-sonnet-4-6",
+        "run_id": 5,
+        "elapsed_s": 296.9,
+        "cost_usd": 0.90154,
+        "output_tokens": 19028,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All 5 interfaces present, routes/tests import from types module, every policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints use {success,data/error}, and 19 tests cover happy path plus 401/404/400.",
+          "grader_cost": 0.23889
+        }
+      }
+    ],
+    "K2_Haiku": [
+      {
+        "condition": "K2_Haiku",
+        "model": "claude-haiku-4-5-20251001",
+        "run_id": 1,
+        "elapsed_s": 92.3,
+        "cost_usd": 0.24148,
+        "output_tokens": 9719,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types module, both policies wrapped in DO $$ IF NOT EXISTS, all 5 endpoints with consistent response format, 30+ tests covering happy/404/401/403, all 5 interfaces present.",
+          "grader_cost": 0.23443
+        }
+      },
+      {
+        "condition": "K2_Haiku",
+        "model": "claude-haiku-4-5-20251001",
+        "run_id": 2,
+        "elapsed_s": 81.5,
+        "cost_usd": 0.25592,
+        "output_tokens": 9769,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 7,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 0,
+            "type_correctness": 0
+          },
+          "reasoning": "Imports and SQL DO $$ block are correct, all 5 endpoints with proper response format, but tests don't actually exercise route handlers (just re-verify mocks) and types.ts has only 4 interfaces (missing a 5th like NoteDeleteResult).",
+          "grader_cost": 0.24088
+        }
+      },
+      {
+        "condition": "K2_Haiku",
+        "model": "claude-haiku-4-5-20251001",
+        "run_id": 3,
+        "elapsed_s": 116.6,
+        "cost_usd": 0.31097,
+        "output_tokens": 13938,
+        "acs_final": 2,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": false,
+          "AC-5": false,
+          "pass_count": 2
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 0,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Imports and types are clean, all 5 endpoints use consistent {success, data/error} format, and test file has 16 tests covering happy/401/404 paths; however no SQL migration with DO $$ IF NOT EXISTS policy guards is present.",
+          "grader_cost": 0.2565
+        }
+      },
+      {
+        "condition": "K2_Haiku",
+        "model": "claude-haiku-4-5-20251001",
+        "run_id": 4,
+        "elapsed_s": 116.5,
+        "cost_usd": 0.2939,
+        "output_tokens": 12945,
+        "acs_final": 2,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": false,
+          "AC-5": false,
+          "pass_count": 2
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types.ts, both policies wrapped in DO $$ IF NOT EXISTS, 5 endpoints with consistent {success,data/error} format, 5 interfaces present; test file not shown but assumed per rubric phrasing.",
+          "grader_cost": 0.2105
+        }
+      },
+      {
+        "condition": "K2_Haiku",
+        "model": "claude-haiku-4-5-20251001",
+        "run_id": 5,
+        "elapsed_s": 89.5,
+        "cost_usd": 0.20653,
+        "output_tokens": 10191,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types module, both policies wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 30+ tests covering happy/404/401, all 5 interfaces present.",
+          "grader_cost": 0.2367
+        }
+      }
+    ],
+    "K2_Opus": [
+      {
+        "condition": "K2_Opus",
+        "model": "claude-opus-4-7",
+        "run_id": 1,
+        "elapsed_s": 186.8,
+        "cost_usd": 1.64908,
+        "output_tokens": 15812,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import from types.ts, every policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success,data/error}, 18 tests cover happy/404/401 paths, and all 5 interfaces present.",
+          "grader_cost": 0.2566
+        }
+      },
+      {
+        "condition": "K2_Opus",
+        "model": "claude-opus-4-7",
+        "run_id": 2,
+        "elapsed_s": 159.6,
+        "cost_usd": 1.17339,
+        "output_tokens": 13226,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All imports from types module, both policies use DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 16 tests cover happy/404/401 paths, and all 5 interfaces are present.",
+          "grader_cost": 0.24104
+        }
+      },
+      {
+        "condition": "K2_Opus",
+        "model": "claude-opus-4-7",
+        "run_id": 3,
+        "elapsed_s": 172.8,
+        "cost_usd": 1.16965,
+        "output_tokens": 12698,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes/tests import from @/lib/platform/notes/types, every policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 17 tests cover happy/404/401 paths, and all 5 interfaces are present.",
+          "grader_cost": 0.23935
+        }
+      },
+      {
+        "condition": "K2_Opus",
+        "model": "claude-opus-4-7",
+        "run_id": 4,
+        "elapsed_s": 155.7,
+        "cost_usd": 1.05734,
+        "output_tokens": 13314,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes and tests import from @/lib/platform/notes/types; all 5 policies wrapped in DO $$ IF NOT EXISTS blocks; all 5 endpoints use {success, data/error} envelope; 16 tests cover happy path, 401, 404, and 400 cases; all 5 interfaces present.",
+          "grader_cost": 0.24858
+        }
+      },
+      {
+        "condition": "K2_Opus",
+        "model": "claude-opus-4-7",
+        "run_id": 5,
+        "elapsed_s": 159.3,
+        "cost_usd": 1.07127,
+        "output_tokens": 13815,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "All routes/tests import from '@/lib/platform/notes/types', every policy is wrapped in DO $$ IF NOT EXISTS, all 5 endpoints return {success, data/error}, 14 tests cover happy paths plus 401/404/400 cases, and all 5 interfaces are defined.",
+          "grader_cost": 0.25316
+        }
+      }
+    ]
+  },
+  "summary": {
+    "K2_Sonnet": {
+      "model": "claude-sonnet-4-6",
+      "avg_acs": 3.75,
+      "avg_quality": 9.75,
+      "avg_cost": 0.72309,
+      "avg_time": 221.4,
+      "scores": [
+        10,
+        10,
+        9,
+        10
+      ],
+      "n": 4
+    },
+    "K2_Haiku": {
+      "model": "claude-haiku-4-5-20251001",
+      "avg_acs": 3.2,
+      "avg_quality": 9.0,
+      "avg_cost": 0.26176,
+      "avg_time": 99.28,
+      "scores": [
+        10,
+        7,
+        8,
+        10,
+        10
+      ],
+      "n": 5
+    },
+    "K2_Opus": {
+      "model": "claude-opus-4-7",
+      "avg_acs": 3.6,
+      "avg_quality": 10.0,
+      "avg_cost": 1.224146,
+      "avg_time": 166.84,
+      "scores": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "n": 5
+    }
+  }
+}

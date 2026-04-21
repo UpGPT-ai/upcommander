@@ -1,0 +1,361 @@
+{
+  "timestamp": "2026-04-20T08:07:12Z",
+  "n": 3,
+  "task": "T3-Notes-CRUD",
+  "conditions": {
+    "V1": "vague",
+    "V2": "contract",
+    "NS": "contract+self-evolution"
+  },
+  "summaries": {
+    "V1": {
+      "n": 2,
+      "all_pass_rate": 0.0,
+      "avg_ac_pass": 0.4,
+      "avg_quality": 0.0,
+      "avg_cost": 0.91126,
+      "avg_attempts": 1.0,
+      "avg_elapsed": 267.4,
+      "avg_output": 15313,
+      "quality_scores": [
+        0,
+        0
+      ]
+    },
+    "V2": {
+      "n": 3,
+      "all_pass_rate": 0.0,
+      "avg_ac_pass": 0.667,
+      "avg_quality": 0.0,
+      "avg_cost": 0.58376,
+      "avg_attempts": 1.0,
+      "avg_elapsed": 194.1,
+      "avg_output": 11760,
+      "quality_scores": [
+        0,
+        0,
+        0
+      ]
+    },
+    "NS": {
+      "n": 3,
+      "all_pass_rate": 0.0,
+      "avg_ac_pass": 0.8,
+      "avg_quality": 0.0,
+      "avg_cost": 1.39992,
+      "avg_attempts": 3.0,
+      "avg_elapsed": 493.4,
+      "avg_output": 28578,
+      "quality_scores": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "historical": {
+    "V1_cmd": {
+      "quality": 7.9,
+      "cost_usd": 1.25,
+      "elapsed_s": 138
+    },
+    "V2_seq": {
+      "quality": 9.4,
+      "cost_usd": 0.35,
+      "elapsed_s": 124
+    },
+    "V3_cmd": {
+      "quality": 10.0,
+      "cost_usd": 0.41,
+      "elapsed_s": 83
+    }
+  },
+  "raw": {
+    "V1": [
+      {
+        "run_id": 1,
+        "condition": "V1",
+        "elapsed_s": 257.0,
+        "cost_usd": 0.85957,
+        "output_tokens": 15361,
+        "grades": {
+          "AC-1": true,
+          "AC-2": false,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 2,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.85957,
+            "elapsed_s": 248.9,
+            "cache_create": 53454,
+            "cache_read": 872653
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 2,
+        "condition": "V1",
+        "elapsed_s": 277.8,
+        "cost_usd": 0.96296,
+        "output_tokens": 15265,
+        "grades": {
+          "AC-1": true,
+          "AC-2": false,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 2,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.96296,
+            "elapsed_s": 269.6,
+            "cache_create": 57664,
+            "cache_read": 1207774
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 3,
+        "condition": "V1",
+        "error": "Command '['claude', '--model', 'claude-sonnet-4-6', '--output-format', 'json', '--dangerously-skip-permissions', \"Build a Notes CRUD feature for the platform. Create these 5 files:\\n\\n1. supabase/migrations/20260414400000_platform_notes.sql \u2014 platform.notes table, RLS policies\\n2. src/lib/platform/notes/types.ts \u2014 TypeScript interfaces for Note, NoteCreateInput, NoteUpdateInput\\n3. src/app/api/v1/platform/notes/route.ts \u2014 GET list + POST create\\n4. src/app/api/v1/platform/notes/[id]/route.ts \u2014 GET + PATCH + DELETE\\n5. src/__tests__/platform/notes.test.ts \u2014 Vitest tests, minimum 12 tests\\n\\nFollow the project's existing patterns. Use authentication. Commit all files.\"]' timed out after 300 seconds",
+        "tb": "Traceback (most recent call last):\n  File \"/tmp/benchmark_t3_comparison.py\", line 195, in run_one\n    r = run_claude(prompt, wt)\n  File \"/tmp/benchmark_t3_comparison.py\", line 120, in run_claude\n    r = subprocess.run(\n        [\"claude\",\"--model\",model,\"--output-format\",\"json\",\"--dangerously-skip-pe",
+        "elapsed_s": 303.0930886268616
+      }
+    ],
+    "V2": [
+      {
+        "run_id": 1,
+        "condition": "V2",
+        "elapsed_s": 187.0,
+        "cost_usd": 0.61366,
+        "output_tokens": 10537,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.61366,
+            "elapsed_s": 173.3,
+            "cache_create": 45540,
+            "cache_read": 945688
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 2,
+        "condition": "V2",
+        "elapsed_s": 242.0,
+        "cost_usd": 0.68634,
+        "output_tokens": 16025,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.68634,
+            "elapsed_s": 232.1,
+            "cache_create": 51566,
+            "cache_read": 838309
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 3,
+        "condition": "V2",
+        "elapsed_s": 153.2,
+        "cost_usd": 0.45128,
+        "output_tokens": 8717,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.45128,
+            "elapsed_s": 140.5,
+            "cache_create": 39280,
+            "cache_read": 573726
+          }
+        ],
+        "grader_cost": 0
+      }
+    ],
+    "NS": [
+      {
+        "run_id": 1,
+        "condition": "NS",
+        "elapsed_s": 482.1,
+        "cost_usd": 1.47415,
+        "output_tokens": 25850,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 3,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.82758,
+            "pass_count": 4,
+            "elapsed_s": 200.2
+          },
+          {
+            "attempt": 2,
+            "cost": 0.42253,
+            "pass_count": 4,
+            "elapsed_s": 203.2
+          },
+          {
+            "attempt": 3,
+            "cost": 0.22404,
+            "pass_count": 4,
+            "elapsed_s": 65.0
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 2,
+        "condition": "NS",
+        "elapsed_s": 434.1,
+        "cost_usd": 1.22844,
+        "output_tokens": 27291,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 3,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.5027,
+            "pass_count": 3,
+            "elapsed_s": 144.5
+          },
+          {
+            "attempt": 2,
+            "cost": 0.3158,
+            "pass_count": 4,
+            "elapsed_s": 98.6
+          },
+          {
+            "attempt": 3,
+            "cost": 0.40994,
+            "pass_count": 4,
+            "elapsed_s": 176.5
+          }
+        ],
+        "grader_cost": 0
+      },
+      {
+        "run_id": 3,
+        "condition": "NS",
+        "elapsed_s": 563.9,
+        "cost_usd": 1.49716,
+        "output_tokens": 32592,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4,
+          "total": 5
+        },
+        "quality_score": 0,
+        "quality_breakdown": {},
+        "quality_reasoning": "",
+        "num_attempts": 3,
+        "attempts": [
+          {
+            "attempt": 1,
+            "cost": 0.42269,
+            "pass_count": 3,
+            "elapsed_s": 153.1
+          },
+          {
+            "attempt": 2,
+            "cost": 0.56959,
+            "pass_count": 4,
+            "elapsed_s": 232.4
+          },
+          {
+            "attempt": 3,
+            "cost": 0.50488,
+            "pass_count": 4,
+            "elapsed_s": 164.4
+          }
+        ],
+        "grader_cost": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-04-20T08:24:22Z",
+  "note": "N=1 quality pass with fixed grader",
+  "results": {
+    "V1": {
+      "condition": "V1",
+      "run_id": 1,
+      "elapsed_s": 319.7,
+      "cost_usd": 0.91436,
+      "output_tokens": 14531,
+      "cache_create_tokens": 49114,
+      "cache_read_tokens": 1047620,
+      "num_attempts": 1,
+      "acs": {
+        "AC-1": true,
+        "AC-2": false,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 2
+      },
+      "quality": {
+        "score": 5,
+        "breakdown": {
+          "import_consistency": 0,
+          "sql_conventions": 0,
+          "api_completeness": 1,
+          "test_coverage": 1,
+          "type_correctness": 1,
+          "reasoning": "Types file only has 3 interfaces (missing 2), routes don't import from types.ts (inline type assertions), policies use DROP+CREATE instead of DO $$ IF NOT EXISTS, only GET/POST shown (missing GET-by-id/PATCH/DELETE visibility), tests truncated."
+        },
+        "reasoning": "Types file only has 3 interfaces not 5, routes use inline types instead of importing from types.ts, SQL uses DROP POLICY + bare CREATE POLICY rather than DO $$ IF NOT EXISTS guards, and only 2 of 5 endpoints are visible with tests truncated.",
+        "grader_cost": 0.1959,
+        "grader_elapsed": 10.6
+      }
+    },
+    "V2": {
+      "condition": "V2",
+      "run_id": 1,
+      "elapsed_s": 296.5,
+      "cost_usd": 0.68837,
+      "output_tokens": 17398,
+      "cache_create_tokens": 51853,
+      "cache_read_tokens": 764208,
+      "num_attempts": 1,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 3
+      },
+      "quality": {
+        "score": 9,
+        "breakdown": {
+          "import_consistency": 3,
+          "sql_conventions": 2,
+          "api_completeness": 2,
+          "test_coverage": 2,
+          "type_correctness": 0
+        },
+        "reasoning": "Clean imports from types module, proper DO $$ IF NOT EXISTS guards on policies, correct {success, data/error} envelope, 15 tests per commit exceeds threshold, but types.ts defines only 4 interfaces (Note, NoteCreateInput, NoteUpdateInput, NoteListResult) \u2014 missing a 5th.",
+        "grader_cost": 0.20101,
+        "grader_elapsed": 12.5
+      }
+    },
+    "NS": {
+      "condition": "NS",
+      "error": "Command '['claude', '--model', 'claude-sonnet-4-6', '--output-format', 'json', '--dangerously-skip-permissions', \"Build a Notes CRUD feature. Create these 5 files exactly per the contract.\\nFILES: supabase/migrations/20260414400000_platform_notes.sql, src/lib/platform/notes/types.ts,\\nsrc/app/api/v1/platform/notes/route.ts, src/app/api/v1/platform/notes/[id]/route.ts,\\nsrc/__tests__/platform/notes.test.ts (12+ Vitest tests)\\n\\nCONTRACT:\\nTypeScript interfaces \u2014 copy EXACTLY into types.ts, never define inline elsewhere:\\n```typescript\\nexport interface Note { id: string; license_id: string; user_id: string; title: string; content: string; tags: string[]; is_pinned: boolean; created_at: string; updated_at: string; }\\nexport interface NoteCreateInput { title: string; content?: string; tags?: string[]; is_pinned?: boolean; }\\nexport interface NoteUpdateInput { title?: string; content?: string; tags?: string[]; is_pinned?: boolean; }\\nexport interface NoteListResult { data: Note[]; total: number; limit: number; offset: number; }\\n```\\nImport paths: `import { authenticateV1 } from '@/lib/api-v1/auth';`\\nTypes: `import type { Note, NoteCreateInput, NoteUpdateInput, NoteListResult } from '@/lib/platform/notes/types';`\\nSQL: `CREATE TABLE IF NOT EXISTS platform.notes (...)`, every policy in `DO $$ BEGIN IF NOT EXISTS ... END $$;`\\nResponse: `return NextResponse.json({ success: true, data: result });`\\nRules: Import types from '@/lib/platform/notes/types' NEVER inline. Commit all files.\"]' timed out after 300 seconds",
+      "tb": "Traceback (most recent call last):\n  File \"/tmp/benchmark_t3_quality.py\", line 146, in run_condition\n    r = run_claude(V2_PROMPT, wt)\n  File \"/tmp/benchmark_t3_quality.py\", line 69, in run_claude\n    r = subprocess.run(\n        [\"claude\",\"--model\",model,\"--output-format\",\"json\",\"--dangerously-skip-"
+    }
+  }
+}

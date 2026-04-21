@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-20T08:41:31Z",
+  "note": "NS quality with 600s timeout",
+  "result": {
+    "run_id": 1,
+    "elapsed_s": 671.9,
+    "cost_usd": 1.65264,
+    "output_tokens": 39308,
+    "num_attempts": 3,
+    "acs": {
+      "AC-1": true,
+      "AC-2": true,
+      "AC-3": false,
+      "AC-4": true,
+      "AC-5": true,
+      "pass_count": 4
+    },
+    "quality": {
+      "score": 7,
+      "breakdown": {
+        "import_consistency": 3,
+        "sql_conventions": 2,
+        "api_completeness": 1,
+        "test_coverage": 1,
+        "type_correctness": 0
+      },
+      "reasoning": "Strong imports and SQL DO-block policies, but only 2 of 5 endpoints shown, types.ts has 4 (not 5) interfaces, and tests not visible in provided code despite commit claiming 18.",
+      "grader_cost": 0.20669
+    }
+  }
+}

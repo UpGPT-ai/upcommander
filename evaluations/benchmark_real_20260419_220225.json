@@ -1,0 +1,395 @@
+{
+  "timestamp": "2026-04-19T22:02:25Z",
+  "n_per_condition": 5,
+  "task": "two-file cross-boundary TypeScript (bench-types + bench/route)",
+  "summaries": {
+    "A": {
+      "label": "A",
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 0.0,
+      "avg_cost_usd": 0.01306,
+      "avg_elapsed_s": 18.7,
+      "avg_input_tokens": 5,
+      "avg_output_tokens": 870,
+      "avg_attempts": 1.0
+    },
+    "C": {
+      "label": "C",
+      "n": 5,
+      "pass_rate": 1.0,
+      "avg_quality": 0.0,
+      "avg_cost_usd": 0.01478,
+      "avg_elapsed_s": 32.9,
+      "avg_input_tokens": 6,
+      "avg_output_tokens": 984,
+      "avg_attempts": 1.0
+    }
+  },
+  "raw": {
+    "A": [
+      {
+        "run_id": 3,
+        "condition": "A_sequential",
+        "elapsed_s": 16.2,
+        "success": true,
+        "input_tokens": 5,
+        "output_tokens": 799,
+        "cost_usd": 0.012,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only the `BenchResult` interface with all 7 fields\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks typed as `BenchResult[]`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 2,
+          "clarity": 0.5,
+          "grader_cost_usd": 0.00581
+        },
+        "total_cost_usd": 0.01781
+      },
+      {
+        "run_id": 2,
+        "condition": "A_sequential",
+        "elapsed_s": 16.8,
+        "success": true,
+        "input_tokens": 5,
+        "output_tokens": 810,
+        "cost_usd": 0.01217,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports only the `BenchResult` interface with all 7 required fields\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks with the exact import path and `NextResponse.json()`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1,
+          "clarity": 1,
+          "grader_cost_usd": 0.0072
+        },
+        "total_cost_usd": 0.01937
+      },
+      {
+        "run_id": 1,
+        "condition": "A_sequential",
+        "elapsed_s": 24.0,
+        "success": true,
+        "input_tokens": 5,
+        "output_tokens": 812,
+        "cost_usd": 0.01219,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports `BenchResult` interface with all 7 fields, no default export.\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded `BenchResult[]` mocks via `NextResponse.json()`.",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1,
+          "clarity": 1,
+          "grader_cost_usd": 0.00388
+        },
+        "total_cost_usd": 0.01607
+      },
+      {
+        "run_id": 4,
+        "condition": "A_sequential",
+        "elapsed_s": 18.1,
+        "success": true,
+        "input_tokens": 6,
+        "output_tokens": 1016,
+        "cost_usd": 0.01526,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 exports `BenchResult` interface with all 7 fields, nothing else\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 hardcoded mocks with realistic values, typed as `BenchResult[]`",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 2.5,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1.5,
+          "clarity": 1,
+          "grader_cost_usd": 0.00515
+        },
+        "total_cost_usd": 0.02041
+      },
+      {
+        "run_id": 5,
+        "condition": "A_sequential",
+        "elapsed_s": 18.4,
+        "success": true,
+        "input_tokens": 6,
+        "output_tokens": 911,
+        "cost_usd": 0.01368,
+        "response": "Both files created:\n\n- `src/lib/upcommander/bench-types.ts` \u2014 `BenchResult` interface with all 7 fields, no other exports\n- `src/app/api/upcommander/bench/route.ts` \u2014 GET handler returning 3 mock `BenchResult[]` objects with realistic values",
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1,
+          "clarity": 1,
+          "grader_cost_usd": 0.00501
+        },
+        "total_cost_usd": 0.01869
+      }
+    ],
+    "C": [
+      {
+        "run_id": 1,
+        "condition": "C_self_evolution",
+        "elapsed_s": 31.0,
+        "input_tokens": 6,
+        "output_tokens": 910,
+        "cost_usd": 0.01367,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 16.4,
+            "cost_usd": 0.01367,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 2.5,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 2,
+          "clarity": 1,
+          "grader_cost_usd": 0.00485
+        },
+        "total_cost_usd": 0.01852
+      },
+      {
+        "run_id": 2,
+        "condition": "C_self_evolution",
+        "elapsed_s": 33.5,
+        "input_tokens": 7,
+        "output_tokens": 1099,
+        "cost_usd": 0.01651,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 21.0,
+            "cost_usd": 0.01651,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 1,
+          "clarity": 1,
+          "grader_cost_usd": 0.00328
+        },
+        "total_cost_usd": 0.01979
+      },
+      {
+        "run_id": 3,
+        "condition": "C_self_evolution",
+        "elapsed_s": 33.8,
+        "input_tokens": 7,
+        "output_tokens": 1076,
+        "cost_usd": 0.01616,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 21.1,
+            "cost_usd": 0.01616,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 2,
+          "clarity": 1,
+          "grader_cost_usd": 0.00387
+        },
+        "total_cost_usd": 0.02003
+      },
+      {
+        "run_id": 5,
+        "condition": "C_self_evolution",
+        "elapsed_s": 29.6,
+        "input_tokens": 6,
+        "output_tokens": 1037,
+        "cost_usd": 0.01557,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 20.0,
+            "cost_usd": 0.01557,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 2,
+          "clarity": 1,
+          "grader_cost_usd": 0.00336
+        },
+        "total_cost_usd": 0.01893
+      },
+      {
+        "run_id": 4,
+        "condition": "C_self_evolution",
+        "elapsed_s": 36.7,
+        "input_tokens": 5,
+        "output_tokens": 800,
+        "cost_usd": 0.01201,
+        "attempts": [
+          {
+            "attempt": 1,
+            "elapsed_s": 21.0,
+            "cost_usd": 0.01201,
+            "pass_count": 5,
+            "failed_acs": [
+              "AC-1",
+              "AC-2",
+              "AC-3",
+              "AC-4",
+              "AC-5"
+            ]
+          }
+        ],
+        "num_attempts": 1,
+        "grades": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": true,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 5,
+          "total": 5,
+          "pass_rate": 1.0
+        },
+        "quality": {
+          "correctness": 3,
+          "type_safety": 2,
+          "conventions": 2,
+          "completeness": 2,
+          "clarity": 0.5,
+          "grader_cost_usd": 0.00627
+        },
+        "total_cost_usd": 0.01828
+      }
+    ]
+  }
+}

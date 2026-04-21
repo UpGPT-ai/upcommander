@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-04-20T14:02:35Z",
+  "note": "Cross-vendor verifier: same V2 outputs graded by Opus, GPT-4o, Gemini-Flash",
+  "n_runs": 5,
+  "results": [
+    {
+      "run_id": 1,
+      "gen_cost": 0.77368,
+      "elapsed_s": 239.9,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": true,
+        "pass_count": 4
+      },
+      "grades": {
+        "opus": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "All 5 endpoints present with consistent type imports, RLS policy uses DO $$ IF NOT EXISTS guard, 21 tests cover happy/401/404/400/500 paths, and all 5 interfaces are defined in types.ts.",
+          "verifier": "opus",
+          "verifier_cost": 0.24565
+        },
+        "gpt4o": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "The implementation meets all rubric criteria with consistent imports, proper SQL conventions, complete API, comprehensive test coverage, and correct type definitions.",
+          "verifier": "gpt4o",
+          "verifier_cost": 0.01627
+        },
+        "gemini": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 0
+          },
+          "issues": [
+            "The `NoteListResult` and `NoteListOptions` interfaces are not used in the `src/app/api/v1/platform/notes/[id]/route.ts` file, leading to a type correctness deduction.",
+            "The `NoteListResult` and `NoteListOptions` interfaces are not used in the `src/__tests__/platform/notes.test.ts` file, leading to a type correctness deduction."
+          ],
+          "reasoning": "The implementation is generally strong, with good import consistency, correct SQL conventions, complete API endpoints, and comprehensive test coverage, but falls short on type correctness due to unused interfaces in some files.",
+          "verifier": "gemini",
+          "verifier_cost": 0.00061
+        }
+      },
+      "score_opus": 10,
+      "score_gpt4o": 10,
+      "score_gemini": 9
+    },
+    {
+      "run_id": 2,
+      "gen_cost": 1.36048,
+      "elapsed_s": 425.2,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 3
+      },
+      "grades": {
+        "opus": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "All 5 endpoints present with consistent imports from types.ts, all RLS policies use DO $$ IF NOT EXISTS guards, 16 Vitest tests cover happy/404/401 paths, and all 5 interfaces are defined.",
+          "verifier": "opus",
+          "verifier_cost": 0.2469
+        },
+        "gpt4o": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "The implementation meets all rubric criteria with consistent imports, correct SQL conventions, complete API, comprehensive test coverage, and correct type definitions.",
+          "verifier": "gpt4o",
+          "verifier_cost": 0.01675
+        },
+        "gemini": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "issues": [
+            "The PATCH endpoint returns a 400 status code for a 'not found' scenario, but the API completeness rubric expects a 404.",
+            "The test coverage for the PATCH endpoint's 404 case is incorrect; it expects a 400 when the API returns a 400, but the rubric implies a 404 is expected for 'not found' scenarios.",
+            "The `NoteListOptions` interface is defined in `types.ts` but not imported or used in the `GET /notes` route, meaning its type safety isn't fully leveraged for query parameter parsing."
+          ],
+          "reasoning": "The implementation is largely solid, with good type consistency, correct SQL RLS policies, and complete API endpoints, but has a minor inconsistency in the PATCH 404/400 handling and could improve test coverage for specific error cases.",
+          "verifier": "gemini",
+          "verifier_cost": 0.00064
+        }
+      },
+      "score_opus": 10,
+      "score_gpt4o": 10,
+      "score_gemini": 9
+    },
+    {
+      "run_id": 3,
+      "gen_cost": 1.36241,
+      "elapsed_s": 406.9,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 3
+      },
+      "grades": {
+        "opus": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "All 5 endpoints implemented with consistent type imports, DO $$ policy guard, 14 Vitest tests covering 401/404/happy paths, and all 5 interfaces present in types.ts.",
+          "verifier": "opus",
+          "verifier_cost": 0.24007
+        },
+        "gpt4o": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "issues": [
+            "Test coverage is slightly below 12 tests",
+            "Some tests do not cover 404 scenarios"
+          ],
+          "reasoning": "The implementation is strong in import consistency, SQL conventions, API completeness, and type correctness, but slightly lacks in test coverage.",
+          "verifier": "gpt4o",
+          "verifier_cost": 0.01419
+        },
+        "gemini": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 1,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [
+            "The SQL RLS policy uses `DO $$ BEGIN IF NOT EXISTS ... END $$;` for the policy creation, but not for the `ALTER TABLE ... ENABLE ROW LEVEL SECURITY;` statement. While `ALTER TABLE` is idempotent, the rubric specifically asks for the `DO $$ BEGIN IF NOT EXISTS ... END $$;` guard for *every* RLS policy, which implies all RLS-related statements.",
+            "The `GET /notes` endpoint does not return the `NoteListOptions` in its response, only `NoteListResult`. While `NoteListResult` contains `limit` and `offset`, it doesn't include `tags`, `is_pinned`, or `search` from the options, which could be useful for client-side state management or debugging."
+          ],
+          "reasoning": "The implementation is largely excellent, with strong type consistency, comprehensive API endpoints, and good test coverage. The only minor issues are a slight deviation from the strict SQL RLS convention and a small omission in the GET /notes response structure.",
+          "verifier": "gemini",
+          "verifier_cost": 0.00055
+        }
+      },
+      "score_opus": 10,
+      "score_gpt4o": 9,
+      "score_gemini": 9
+    },
+    {
+      "run_id": 4,
+      "gen_cost": 0.5496,
+      "elapsed_s": 150.4,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 3
+      },
+      "grades": {
+        "opus": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "All rubric criteria met: types imported from shared module, RLS policy wrapped in DO $$ IF NOT EXISTS, all 5 endpoints with consistent envelope, 15+ tests covering happy/404/401, all 5 interfaces present.",
+          "verifier": "opus",
+          "verifier_cost": 0.22781
+        },
+        "gpt4o": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "The implementation meets all rubric criteria with consistent imports, correct SQL conventions, complete API, comprehensive test coverage, and correct type definitions.",
+          "verifier": "gpt4o",
+          "verifier_cost": 0.01241
+        },
+        "gemini": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 0
+          },
+          "issues": [
+            "The `Note` interface in `types.ts` is missing `license_id` and `user_id` fields, which are present in the database schema and used in the API routes.",
+            "The `Note` interface in `types.ts` has `id: string` but the database schema defines `id` as `uuid`. While `uuid` can be represented as a string in TypeScript, it's a slight mismatch.",
+            "The `NoteListResult` interface in `types.ts` has `data: Note[]` but the `GET /notes` route casts `(data ?? []) as Note[]` which implies `data` could be `null` or `undefined` from the database. The interface should reflect this possibility or the casting should be more robust.",
+            "The `NoteListOptions` interface in `types.ts` defines `tags?: string[]` but the `GET /notes` route uses `searchParams.get('tags')!.split(',')` which assumes `tags` will always be a string if present, and `split` could result in an empty array if the string is empty. The interface and parsing could be more precise.",
+            "The `RouteParams` type in `src/app/api/v1/platform/notes/[id]/route.ts` is defined inline instead of being imported from a shared types file, which is a minor consistency issue."
+          ],
+          "reasoning": "The implementation is generally well-structured with good API completeness and test coverage, but has minor type correctness issues in the `types.ts` file and one inline type definition.",
+          "verifier": "gemini",
+          "verifier_cost": 0.00053
+        }
+      },
+      "score_opus": 10,
+      "score_gpt4o": 10,
+      "score_gemini": 9
+    },
+    {
+      "run_id": 5,
+      "gen_cost": 0.56995,
+      "elapsed_s": 134.8,
+      "acs": {
+        "AC-1": true,
+        "AC-2": true,
+        "AC-3": false,
+        "AC-4": true,
+        "AC-5": false,
+        "pass_count": 3
+      },
+      "grades": {
+        "opus": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "All rubric criteria met: typed imports from types.ts, DO $$ guarded RLS policy, all 5 endpoints with {success, data/error} format, 15 tests covering 401/404/happy paths, and all 5 interfaces present.",
+          "verifier": "opus",
+          "verifier_cost": 0.24574
+        },
+        "gpt4o": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "issues": [],
+          "reasoning": "The implementation meets all rubric criteria with consistent imports, correct SQL conventions, complete API, comprehensive test coverage, and correct type definitions.",
+          "verifier": "gpt4o",
+          "verifier_cost": 0.01647
+        },
+        "gemini": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 0
+          },
+          "issues": [
+            "The `Note` interface in `types.ts` is missing `license_id` and `user_id` as optional fields, which are present in the database schema and used in the API.",
+            "The `Note` interface in `types.ts` should reflect the actual data returned by the API, which includes `license_id` and `user_id`."
+          ],
+          "reasoning": "The implementation is strong in most areas, with good API completeness, SQL conventions, and test coverage, but falls short on type correctness for the main Note interface.",
+          "verifier": "gemini",
+          "verifier_cost": 0.0006
+        }
+      },
+      "score_opus": 10,
+      "score_gpt4o": 10,
+      "score_gemini": 9
+    }
+  ],
+  "summary": {
+    "avg_scores": {
+      "opus": 10.0,
+      "gpt4o": 9.8,
+      "gemini": 9.0
+    },
+    "avg_spread": 1.0,
+    "n_runs": 5
+  }
+}

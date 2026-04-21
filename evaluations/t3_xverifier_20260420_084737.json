@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-04-20T08:47:37Z",
+  "note": "Cross-model verifier test: NS (Sonnet self-grade) vs NSX (Opus reads actual files)",
+  "n_per_condition": 2,
+  "results": {
+    "NS": [
+      {
+        "condition": "NS",
+        "run_id": 1,
+        "elapsed_s": 542.8,
+        "cost_usd": 1.61018,
+        "output_tokens": 34134,
+        "num_attempts": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 5,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 0,
+            "test_coverage": 0,
+            "type_correctness": 0
+          },
+          "reasoning": "Types file only shows 5 interfaces but NoteListResult.data uses Note[] correctly; however only GET+POST shown (missing GET/:id, PUT, DELETE), no tests provided, and types.ts is missing a dedicated Note response wrapper \u2014 though all 5 interfaces are present so type_correctness earns 1.",
+          "grader_cost": 0.19702,
+          "grader_elapsed": 9.8
+        }
+      },
+      {
+        "condition": "NS",
+        "run_id": 2,
+        "elapsed_s": 409.4,
+        "cost_usd": 1.15724,
+        "output_tokens": 28769,
+        "num_attempts": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 6,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 0,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean and SQL policies correctly use DO $$ IF NOT EXISTS guards, but only 2 of 5 endpoints (GET list, POST) are present \u2014 GET/:id, PATCH, DELETE are missing \u2014 and the test file is truncated before any test cases are visible, so coverage cannot be credited.",
+          "grader_cost": 0.20787,
+          "grader_elapsed": 12.4
+        }
+      }
+    ],
+    "NSX": [
+      {
+        "condition": "NSX",
+        "run_id": 1,
+        "elapsed_s": 581.0,
+        "cost_usd": 1.90949,
+        "output_tokens": 27479,
+        "num_attempts": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes/tests import types from shared module, both policies wrapped in DO $$ IF NOT EXISTS guards, all 5 endpoints return {success, data/error}, commit indicates 16 tests, and all 5 interfaces are defined.",
+          "grader_cost": 0.20596,
+          "grader_elapsed": 11.5
+        }
+      },
+      {
+        "condition": "NSX",
+        "run_id": 2,
+        "elapsed_s": 512.5,
+        "cost_usd": 1.906,
+        "output_tokens": 23191,
+        "num_attempts": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 6,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 0,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean and the single policy uses DO $$ IF NOT EXISTS, but only 2 of 5 endpoints (GET/POST collection) are implemented and the test file is truncated mid-helper with no visible test cases.",
+          "grader_cost": 0.20628,
+          "grader_elapsed": 10.8
+        }
+      }
+    ]
+  },
+  "summary": {
+    "NS": {
+      "avg_acs": 4.0,
+      "avg_quality": 5.5,
+      "avg_cost": 1.38371,
+      "avg_time": 476.09999999999997,
+      "avg_attempts": 3.0,
+      "scores": [
+        5,
+        6
+      ]
+    },
+    "NSX": {
+      "avg_acs": 4.0,
+      "avg_quality": 8.0,
+      "avg_cost": 1.9077449999999998,
+      "avg_time": 546.75,
+      "avg_attempts": 3.0,
+      "scores": [
+        10,
+        6
+      ]
+    }
+  }
+}

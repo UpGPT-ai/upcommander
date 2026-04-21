@@ -1,0 +1,329 @@
+{
+  "timestamp": "2026-04-20T10:01:11Z",
+  "note": "V2 vs V2+Opus one-shot fix (no retry loop)",
+  "n_per_condition": 5,
+  "results": {
+    "V2": [
+      {
+        "condition": "V2",
+        "run_id": 1,
+        "elapsed_s": 315.7,
+        "cost_usd": 1.18018,
+        "output_tokens": 20859,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Clean imports and all 5 types present; SQL uses DO $$ guards on policies; only GET/POST visible in truncated snippet so can't confirm all 5 endpoints, though commit message indicates 16 tests satisfying coverage.",
+          "grader_cost": 0.20642
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 2,
+        "elapsed_s": 444.3,
+        "cost_usd": 1.28946,
+        "output_tokens": 27646,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and SQL conventions are textbook-correct; only GET/POST visible in truncated route code and test file is cut off before assertions, so API completeness and test coverage can't be fully verified.",
+          "grader_cost": 0.20822
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 3,
+        "elapsed_s": 376.7,
+        "cost_usd": 0.97965,
+        "output_tokens": 24012,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 6,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 0,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and SQL conventions are clean and imports are consistent, but only 2 of 5 endpoints (GET list, POST) are implemented and the test file is truncated/missing so coverage cannot be verified.",
+          "grader_cost": 0.20764
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 4,
+        "elapsed_s": 209.4,
+        "cost_usd": 0.85699,
+        "output_tokens": 13467,
+        "acs_after_v2": 3,
+        "acs_final": 3,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": false,
+          "pass_count": 3
+        },
+        "quality": {
+          "score": 10,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 2,
+            "type_correctness": 1
+          },
+          "reasoning": "Routes/tests import types from '@/lib/platform/notes/types', policy wrapped in DO $$ IF NOT EXISTS, response format consistent with {success, data/error}, 14 tests claimed covering happy/404/401, and all 5 interfaces present.",
+          "grader_cost": 0.19603
+        }
+      },
+      {
+        "condition": "V2",
+        "run_id": 5,
+        "elapsed_s": 169.1,
+        "cost_usd": 0.54634,
+        "output_tokens": 10003,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 7,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean and SQL uses DO $$ IF NOT EXISTS on every policy, but only 2 of 5 endpoints (GET/POST) are shown with no PATCH/DELETE/GET-by-id, and the test file is truncated mid-declaration so no tests are verifiable.",
+          "grader_cost": 0.1968
+        }
+      }
+    ],
+    "V2O": [
+      {
+        "condition": "V2O",
+        "run_id": 1,
+        "elapsed_s": 403.8,
+        "cost_usd": 1.49821,
+        "output_tokens": 26176,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 7,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean and SQL uses DO $$ IF NOT EXISTS on both policies, but the [id] route (GET/PATCH/DELETE) isn't shown and the test file is truncated at imports so endpoint completeness and 12+ test coverage can't be verified.",
+          "grader_cost": 0.20855
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 2,
+        "elapsed_s": 258.8,
+        "cost_usd": 1.37468,
+        "output_tokens": 16743,
+        "acs_after_v2": 4,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 6,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 0,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean and SQL uses DO $$ IF NOT EXISTS, but only GET/POST are shown (truncated), test file is truncated with no visible test cases to count, so API completeness and test coverage cannot be fully credited.",
+          "grader_cost": 0.19614
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 3,
+        "elapsed_s": 475.2,
+        "cost_usd": 1.63341,
+        "output_tokens": 31272,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Types and imports are clean, SQL uses DO $$ IF NOT EXISTS on both policies, but only GET/POST on collection route are shown (POST truncated, no [id] route for GET/PATCH/DELETE visible) and test file is truncated so 12+ test coverage cannot be verified.",
+          "grader_cost": 0.20418
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 4,
+        "elapsed_s": 213.0,
+        "cost_usd": 1.06466,
+        "output_tokens": 12621,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 8,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 1,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Imports and types are clean and the single policy uses DO $$ IF NOT EXISTS, but only GET/POST endpoints are visible (missing GET-by-id/PATCH/DELETE) and the test file is truncated mid-setup so 12+ tests with 404/401 coverage cannot be verified.",
+          "grader_cost": 0.20936
+        }
+      },
+      {
+        "condition": "V2O",
+        "run_id": 5,
+        "elapsed_s": 511.0,
+        "cost_usd": 2.08543,
+        "output_tokens": 26003,
+        "acs_after_v2": 3,
+        "acs_final": 4,
+        "acs": {
+          "AC-1": true,
+          "AC-2": true,
+          "AC-3": false,
+          "AC-4": true,
+          "AC-5": true,
+          "pass_count": 4
+        },
+        "quality": {
+          "score": 9,
+          "breakdown": {
+            "import_consistency": 3,
+            "sql_conventions": 2,
+            "api_completeness": 2,
+            "test_coverage": 1,
+            "type_correctness": 1
+          },
+          "reasoning": "Imports use '@/lib/platform/notes/types', SQL policies wrapped in DO $$ IF NOT EXISTS, all 5 interfaces present, API uses proper {success, data/error} format \u2014 but test file is truncated mid-import so coverage cannot be fully verified.",
+          "grader_cost": 0.19945
+        }
+      }
+    ]
+  },
+  "summary": {
+    "V2": {
+      "avg_acs": 3.6,
+      "avg_quality": 8.0,
+      "avg_cost": 0.9705239999999999,
+      "avg_time": 303.04,
+      "scores": [
+        9,
+        8,
+        6,
+        10,
+        7
+      ]
+    },
+    "V2O": {
+      "avg_acs": 4.0,
+      "avg_quality": 7.6,
+      "avg_cost": 1.531278,
+      "avg_time": 372.36,
+      "scores": [
+        7,
+        6,
+        8,
+        8,
+        9
+      ]
+    }
+  }
+}

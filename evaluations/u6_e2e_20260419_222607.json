@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-04-19T22:26:07Z",
+  "n": 5,
+  "test": "U6-haiku-orch-vs-direct-sonnet",
+  "summary": {
+    "avg_haiku_orch": 0.0770256,
+    "avg_sonnet_worker": 0.112048,
+    "avg_total_e2e": 0.1890736,
+    "avg_direct_sonnet": 0.10053000000000001,
+    "orch_overhead_pct": 40.73842144011644,
+    "haiku_success_rate": 1.0,
+    "direct_success_rate": 1.0
+  },
+  "haiku_runs": [
+    {
+      "run": 1,
+      "haiku_cost": 0.048544,
+      "sonnet_cost": 0.097548,
+      "total_e2e": 0.146092,
+      "readme_exists": true,
+      "haiku_elapsed": 17.9,
+      "sonnet_elapsed": 8.6,
+      "haiku_cache_create": 18498,
+      "haiku_output": 1150,
+      "sonnet_output": 188
+    },
+    {
+      "run": 2,
+      "haiku_cost": 0.047812,
+      "sonnet_cost": 0.096742,
+      "total_e2e": 0.144554,
+      "readme_exists": true,
+      "haiku_elapsed": 15.2,
+      "sonnet_elapsed": 12.5,
+      "haiku_cache_create": 18675,
+      "haiku_output": 980,
+      "sonnet_output": 188
+    },
+    {
+      "run": 3,
+      "haiku_cost": 0.11329,
+      "sonnet_cost": 0.097563,
+      "total_e2e": 0.210853,
+      "readme_exists": true,
+      "haiku_elapsed": 17.1,
+      "sonnet_elapsed": 6.0,
+      "haiku_cache_create": 74249,
+      "haiku_output": 1289,
+      "sonnet_output": 188
+    },
+    {
+      "run": 4,
+      "haiku_cost": 0.073935,
+      "sonnet_cost": 0.097357,
+      "total_e2e": 0.171292,
+      "readme_exists": true,
+      "haiku_elapsed": 10.4,
+      "sonnet_elapsed": 10.4,
+      "haiku_cache_create": 47618,
+      "haiku_output": 630,
+      "sonnet_output": 188
+    },
+    {
+      "run": 5,
+      "haiku_cost": 0.101547,
+      "sonnet_cost": 0.17103,
+      "total_e2e": 0.27257699999999996,
+      "readme_exists": true,
+      "haiku_elapsed": 30.1,
+      "sonnet_elapsed": 5.4,
+      "haiku_cache_create": 49890,
+      "haiku_output": 2293,
+      "sonnet_output": 188
+    }
+  ],
+  "direct_runs": [
+    {
+      "run": 1,
+      "cost": 0.09801,
+      "readme_exists": true,
+      "elapsed": 7.0,
+      "output_tokens": 193
+    },
+    {
+      "run": 2,
+      "cost": 0.110885,
+      "readme_exists": true,
+      "elapsed": 17.9,
+      "output_tokens": 288
+    },
+    {
+      "run": 3,
+      "cost": 0.097921,
+      "readme_exists": true,
+      "elapsed": 9.0,
+      "output_tokens": 188
+    },
+    {
+      "run": 4,
+      "cost": 0.097917,
+      "readme_exists": true,
+      "elapsed": 8.4,
+      "output_tokens": 188
+    },
+    {
+      "run": 5,
+      "cost": 0.097917,
+      "readme_exists": true,
+      "elapsed": 5.5,
+      "output_tokens": 188
+    }
+  ]
+}
